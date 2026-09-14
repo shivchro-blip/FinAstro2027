@@ -1,0 +1,2631 @@
+# FinAstro 2027 Calendar — locked conventions
+# Every decision here was either confirmed by the user or empirically validated
+# against the Parth Prophecies 2026 source. Do not change without re-running
+# tests/test_2026_regression.py.
+
+year: 2027
+
+# ---------------------------------------------------------------- astronomy
+ayanamsha: LAHIRI          # validated: 2026 source Sun->Capricorn 14-Jan 15:08 IST
+                           # Lahiri 15:07 | KP 12:50 | Raman 13-Jan. Lahiri wins.
+node: mean                 # validated: Rahu->Capricorn 05-Dec-26 21:52 source
+                           # mean 22:32 | true 25-Nov. Mean wins.
+nakshatra_scheme: 27       # 27 for transits; 28 (with Abhijit) only for Vedha tables
+abhijit_span_deg: [276.6667, 280.8889]   # 276d40' - 280d53'20"
+ephemeris:
+  preferred: swisseph_files      # uses sepl_*.se1 / semo_*.se1 if SE_EPHE_PATH set
+  fallback: moshier              # sub-arcsecond 1900-2100; adequate but diff before publishing
+  se_ephe_path_env: SE_EPHE_PATH
+
+# ---------------------------------------------------------------- locations
+locations:
+  mumbai:
+    label: Mumbai
+    lat: 18.9667            # 18d58'N
+    lon: 72.8333            # 72d50'E
+    alt: 0
+    tz: Asia/Kolkata
+    role: primary           # source's own reference; NSE/BSE/MCX
+  new_york:
+    label: New York
+    lat: 40.7128
+    lon: -74.0060
+    alt: 0
+    tz: America/New_York
+    role: secondary         # evaluated separately, emits its own rows
+
+# ---------------------------------------------------------------- time display
+display:
+  primary_tz: Asia/Kolkata
+  secondary_tz: America/New_York
+  date_format: "%d-%b-%Y"
+  time_format: "%H:%M"
+  show_weekday: true
+  mark_day_shift: true      # prefix shifted secondary dates
+  day_shift_marker: "<"
+# 2027 US DST: begins 14-Mar 02:00 local, ends 07-Nov 02:00 local.
+# Offsets are resolved through the IANA zone, never hardcoded.
+
+# ---------------------------------------------------------------- weekday rules
+# VALIDATED: 74/75 source rows reproduced by civil-day overlap.
+#   sunrise-at-dawn  51/75 | civil-day overlap 74/75 | sunrise-to-sunrise 73/75
+#   market-session   64/75
+# Source From/Till times match civil-day span boundaries exactly
+#   (Mrigashira Thu 01-Jan "From 22:50" -> computed 22:50).
+# G-4 CLOSED. The convention is now locked against every weekday-conditioned
+# per-date table in the document, not a sample: 12 families, 64 printed rows.
+# 63/63 reproduce once the one source defect above is subtracted, and no rule
+# family systematically fails -- every family reproduces 100% of its printed
+# rows. The 27 extra dates the convention emits are recorded, not tuned away;
+# see weekday_rule.extras below and gap G-5 in build/STEP3_REPORT.md.
+weekday_rule:
+  convention: civil_day_overlap
+  emit_span: true           # From/Till within the local civil day
+  session_flag: true        # in-session / off-market annotation
+  evaluate_per_location: true   # Mumbai and New York produce separate rows
+                                # 2026 divergence: 103 IST vs 119 NY, 90 shared
+
+  # ------------------------------------------------------- complete coverage
+  # Which tables the convention is locked against. Stated so "all weekday rules
+  # are covered" is checkable rather than an impression.
+  coverage:
+    families_fixtured: 12
+    printed_rows: 64
+    reproduced: "63/63 after subtracting the 28-Jun-26 Anuradha defect"
+    families_with_zero_extras: 4      # Ekadashi/Fri, Mrigashira/Thu, Vyatipata, Uttara Ashadha/Mon
+    tables_excluded_with_reason: 5    # see WEEKDAY_TABLES_NOT_FIXTURED in the harness
+    fixtures: "tests/test_2026_regression.py::SOURCE_WEEKDAY_RULES"
+
+  # ------------------------------------------------------------------ extras
+  # Dates the convention emits that the source does not print. NOT tuned away:
+  # they are the source's omissions unless evidence says otherwise, and no
+  # evidence yet says otherwise. Recorded so the margin is known rather than
+  # hidden.
+  extras:
+    total: 27
+    status: unexplained
+    by_family:
+      "Ashtami on Tuesday/Saturday/Sunday (p.62)": 12
+      "Ashtami on Monday/Thursday/Friday (p.63)": 6
+      "Shatabhisha on Tuesday (p.80)": 2
+      "Shukla Shasthi on Friday (p.80)": 2
+      "Ashwini on Tuesday (p.61)": 2
+      "Shukla Pratipada on Saturday/Sunday (p.77)": 1
+      "Shukla Trayodashi on Tuesday/Saturday (p.86)": 1
+      "Anuradha on Sunday (p.80)": 1
+      "Ekadashi on Friday (p.54)": 0
+      "Mrigashira on Thursday (p.82)": 0
+      "Vyatipata on Tue/Sat/Sun (p.77)": 0
+      "Uttara Ashadha on Monday (p.83)": 0
+    pattern: >
+      The extras cluster by FAMILY, not by month -- 1 to 5 per month across the
+      whole year, with no part of the year favoured. Two-thirds of them (18 of
+      27) are the two Ashtami tables. Four families have none at all and
+      reproduce the source exactly, so those four read as exhaustive lists while
+      the other eight read as selected ones. The selection criterion is not
+      recoverable from the document.
+    discriminators_tested_and_rejected:
+      duration: >
+        Extras skew short -- median 6.4h of condition inside the civil day
+        against 16.0h for printed rows, and 13 of 27 extras are under 6h against
+        6 of 63 printed rows -- but the distributions OVERLAP. One printed row
+        holds for only 1.2h (Mrigashira Thu 01-Jan-26) and one extra holds for
+        20.6h, so no duration threshold separates them.
+      prevailing_at_sunrise: >
+        Decisively rejected. A sunrise filter would keep 15 of the 27 extras
+        while discarding 48 of the 63 printed rows. This is the same result the
+        original convention sweep found (sunrise-at-dawn reproduced 51/75) and
+        rules sunrise out as a secondary filter as well as a primary rule.
+      occurrence_deduplication: >
+        Rejected. Tested as "the source prints one row per occurrence, so an
+        extra is the second civil day of a run already printed". Emitted days
+        were grouped by the contiguous run of the underlying condition and each
+        extra asked whether it shares a run with a printed row. Only 7 of the 27
+        extras do: Ashtami Tue/Sat/Sun 4 of 12 (10-Jan, 09-May, 24-May, 04-Oct),
+        Ashtami Mon/Thu/Fri 2 of 6 (09-Apr, 23-Apr), Shukla Pratipada Sat/Sun
+        1 of 1 (10-Oct). The other five families with extras contribute none --
+        Shatabhisha 0 of 2, Shukla Shasthi 0 of 2, Ashwini 0 of 2, Anuradha
+        0 of 1, Shukla Trayodashi 0 of 1. A one-row-per-occurrence rule leaves
+        20 of 27 extras unexplained, so it is not the selection criterion. It
+        is, however, the whole of the p.62 Sunday story -- see p62_reread.
+      one_day_per_occurrence_selection: >
+        The general form of the discriminator above, and rejected with it.
+        Occurrences were grouped by contiguous condition run under each
+        family's PRINTED weekday set, and each candidate selection rule scored
+        across all 12 families against 63 printed rows in scope:
+
+          all qualifying days     63/63 printed,  27 extras,  0 missed
+          first qualifying day    58/63 printed,  25 extras,  5 missed
+          last qualifying day     61/63 printed,  22 extras,  2 missed
+          longest overlap         62/63 printed,  21 extras,  1 missed
+
+        Every rule buys a smaller extras count with printed rows it can no
+        longer reproduce, and the exchange rate is close to one for one: the
+        best of them, longest overlap, discards 6 extras and loses a printed
+        row doing it. A criterion that were really the source's would cut extras
+        while leaving all 63 standing. None does. That is the signature of an
+        absent criterion rather than an unidentified one, and it generalises
+        past de-duplication: it rejects the whole family of one-row-per-
+        occurrence rules at once, so the shape does not need retrying.
+
+        An independent sweep run separately reported 62 printed and 26 extras
+        on the baseline, one lower in each column throughout with identical
+        missed counts. The difference is scope, not arithmetic: it dropped
+        Anuradha p.80 whole for containing a defective row, where the figures
+        above drop only the defective row (28-Jun-26) and keep the family's one
+        remaining printed row and its one extra. Anuradha is never missed under
+        any rule, which is why only two columns shift. Conclusion identical
+        either way.
+
+    # --------------------------------------------------- p.62 re-read, per cell
+    # The lead was that p.62's two oddities -- Sunday rows under a Tuesday /
+    # Saturday title, and a reported column shear -- were one fact, a misaligned
+    # date column. Tested cell by cell. They are one fact, but not that one.
+    p62_reread:
+      column_shear: >
+        NOT PRESENT. Every one of the nine printed rows has its printed weekday
+        equal to the true weekday of its printed date -- 11-Jan Sunday,
+        24-Feb Tuesday, 10-May Sunday, 23-May Saturday, 21-Jul Tuesday,
+        19-Sep Saturday, 03-Oct Saturday, 17-Nov Tuesday, 01-Dec Tuesday, all
+        nine agreeing. Date and Day are internally consistent with each other,
+        so neither column needs to be preferred and no re-derivation is
+        warranted. The transcription note claiming "5 headers, 4 values per row"
+        is wrong: the table has five headers and five cells per row.
+      the_third_column_is_data: >
+        The column mistaken for a shear is headed "Monday" and carries a date.
+        It is populated on exactly the Saturday and Sunday rows and empty on
+        every Tuesday row, and it always lands on a Monday -- Saturday+2d for
+        23-May, 19-Sep, 03-Oct; Sunday+1d for 11-Jan and 10-May. It is the
+        table's own note made into a column: "Whenever Asthami falls on a
+        Saturday, the following Monday is Bullish."
+      what_the_sunday_rows_are: >
+        The note's rule is conditioned on SATURDAY, yet both Sunday rows carry a
+        Monday value. Both are the tail of a Saturday-Sunday Ashtami run whose
+        Saturday the engine emits as an extra: 10-Jan-26 Sat with 11-Jan-26 Sun
+        printed, 09-May-26 Sat with 10-May-26 Sun printed. So p.62's Sunday rows
+        are Saturday occurrences dated to the second civil day, not evidence of
+        a third qualifying weekday.
+      narrowing_to_the_title_set_is_refuted: >
+        An earlier note here claimed {Tue, Sat} plus one-row-per-occurrence
+        would reproduce 9 of 9 printed rows with 4 extras. That was wrong, and
+        wrong in a specific way worth remembering: it counted an OCCURRENCE as
+        matched (emitted 10-Jan shares a condition run with printed 11-Jan) and
+        reported it as a DATE reproduced. Under date equality the figure is 7
+        of 9. De-duplication selects from the qualifying set, it cannot step
+        outside it, and under {Tue, Sat} that set is a single Saturday per
+        occurrence -- 10-Jan-26 Sat for the January run, 09-May-26 Sat for the
+        May run. The source prints 11-Jan and 10-May, both Sundays. No selection
+        rule over a Sunday-excluding weekday set can emit a Sunday, so the
+        printed rows themselves require {6} to qualify. {Tue, Sat} is refuted,
+        not supported, and the fixture correctly carries {Tue, Sat, Sun}.
+
+# ---------------------------------------------------------------- combustion
+# VALIDATED against all 23 source combust/rise dates.
+#   fixed ecliptic orbs  REJECTED (Mercury spread 10.0-15.4 deg)
+#   SE heliacal_ut       REJECTED (Venus off 9-10 days, Mars 13)
+#   classical kalamsha   CONFIRMED
+# kalamsha = time-degree gap between planet and Sun rise (morning) or set (evening),
+# measured at the primary location. 1 hour = 15 degrees.
+# Thresholds below are CALIBRATED from the 2026 source, not the textbook table.
+# They sit a uniform ~2.3 deg below classical values, a rise/set convention offset.
+combustion:
+  method: kalamsha
+  rise_set_flags: disc_center_no_refraction
+  thresholds_deg:
+    mercury:  {direct: 11.60, retrograde: 11.60}   # classical 14 / 12
+    venus:    {direct: 6.90,  retrograde: 5.40}    # classical 10 / 8
+    mars:     {direct: 15.25, retrograde: 15.25}   # classical 17
+    jupiter:  {direct: 9.43,  retrograde: 9.43}    # classical 11
+    saturn:   {direct: 12.70, retrograde: 12.70}   # classical 15
+  # Honest precision, derived from the scatter of the source calibration points
+  # divided by the body's daily rate of change in kalamsha. Not a target -- a
+  # measured limit. Mercury has 13 points spanning 1.66 deg at ~0.45 deg/day.
+  precision_days:
+    mercury: 2      # 13 calibration points, spread 1.66 deg
+    venus:   1      # 4 points, spread 0.17 deg within each motion state
+    mars:    2      # 2 points only (15.48, 15.03) -- weakest calibration
+    jupiter: 1      # 2 points, spread 0.02 deg
+    saturn:  1      # 2 points, spread 0.21 deg
+  certainty:
+    mercury: B
+    venus:   A
+    mars:    B      # upgrade to A if more calibration points become available
+    jupiter: A
+    saturn:  A
+  direction_from_elongation_sign: true   # east/morning if planet behind Sun
+
+# ---------------------------------------------------------------- derived lists
+# VALIDATED: dd + mm = yy reproduces 12/12 source dates, zero extras.
+# Pure arithmetic -- certainty A, no ephemeris involved.
+total_days:
+  rule: "dd + mm == yy"
+  certainty: A
+
+big_volatile:
+  rule: undocumented
+  certainty: C
+  note: >
+    All 51 source dates carry at least one major configuration (inner-planet
+    conjunction, station, lunation, Sun ingress, or a slow-pair aspect within
+    1 deg), but the list is over-determined and the source weighting is not
+    recoverable. Reconstructed candidates are emitted flagged, never as fact.
+
+rainfall:
+  include: false            # dropped by user decision
+
+sankranti_muhurta:
+  include: false
+  status: deferred          # 15/30/45 division rule undocumented; revisit later
+
+# ---------------------------------------------------------------- eclipses
+eclipses:
+  include_penumbral: true
+  penumbral_impact: low
+  store_global_and_local_contacts: true
+# 2027 (preliminary, Moshier): annular solar 06-Feb, total solar 02-Aug,
+# penumbral lunar 20/21-Feb, 18-Jul, 17-Aug. No umbral lunar eclipse all year.
+
+# ---------------------------------------------------------------- markets
+instruments:
+  - {code: NIFTY,    label: "Nifty 50",        venue: NSE,         session_tz: Asia/Kolkata}
+  - {code: BANKNIFTY,label: "Bank Nifty",      venue: NSE,         session_tz: Asia/Kolkata}
+  - {code: SPX,      label: "S&P 500",         venue: US_cash,     session_tz: America/New_York}
+  - {code: NDX,      label: "Nasdaq 100",      venue: US_cash,     session_tz: America/New_York}
+  - {code: GC,       label: "COMEX Gold",      venue: CME_Globex,  session_tz: America/New_York}
+  - {code: SI,       label: "COMEX Silver",    venue: CME_Globex,  session_tz: America/New_York}
+  - {code: MCXGOLD,  label: "MCX Gold",        venue: MCX,         session_tz: Asia/Kolkata}
+  - {code: MCXSILVER,label: "MCX Silver",      venue: MCX,         session_tz: Asia/Kolkata}
+  - {code: CL,       label: "WTI Crude",       venue: CME_Globex,  session_tz: America/New_York}
+  - {code: USDINR,   label: "USD/INR",         venue: NSE_FX,      session_tz: Asia/Kolkata}
+  # ADDED at Step-4 coverage definition. The 2026 source carries full "Sugar and
+  # Jaggery -- Bullish Configuration" (pp.168-173) and "-- Bearish Configuration"
+  # (pp.174-175) sections, the same section type it gives gold and silver. The
+  # instrument was absent from this list, so that evidence was being discarded.
+  # It is added as a tier-1 instrument rather than dropped.
+  # venue is UNRESOLVED on purpose: the source treats sugar/jaggery as a physical
+  # commodity and names no exchange. Indian sugar/gur futures sat on NCDEX and are
+  # not currently live, so no venue is asserted here.
+  - {code: SUGAR,    label: "Sugar & Jaggery",  venue: physical_IN, session_tz: Asia/Kolkata,
+     venue_status: unresolved_no_live_futures_contract}
+
+sessions:
+  NSE:        {open: "09:15", close: "15:30", tz: Asia/Kolkata,      days: [0,1,2,3,4]}
+  NSE_FX:     {open: "09:00", close: "17:00", tz: Asia/Kolkata,      days: [0,1,2,3,4]}
+  MCX:        {open: "09:00", close: "23:30", tz: Asia/Kolkata,      days: [0,1,2,3,4]}
+  US_cash:    {open: "09:30", close: "16:00", tz: America/New_York,  days: [0,1,2,3,4]}
+  CME_Globex: {open: "18:00", close: "17:00", tz: America/New_York,  days: [0,1,2,3,4], overnight: true}
+
+# ---------------------------------------------------------------- labels
+labels:
+  data_certainty:
+    A: "computed exact, under 1 minute"
+    B: "computed but definition-sensitive (stations, combust/rise, Abhijit boundaries)"
+    C: "depends on an undocumented source rule"
+  claim_tag: [Classical, Framework, Observed, Historical, Verify]
+  confidence_default: untested
+  # The six buckets the source prints. ONLY THREE SURVIVE TRANSFER TO 2027 --
+  # Reasonable, Good and High. Every Low, every Very High and the single
+  # Intense and High Reliable is excluded by the transfer test, so the usable
+  # range after transfer is 2-4. The map is kept complete because it describes
+  # the SOURCE, not the carried field. See top-level source_probability, and
+  # source_probability.scale_collapse in particular, before using either.
+  source_probability_map: {Low: 1, Reasonable: 2, Good: 3, High: 4, "Very High": 5, "Intense and High Reliable": 5}
+  source_probability_layer: source_probability   # the carried-label block, defined 13-Sep-2026
+  impact_tier:
+    T1: "eclipses, slow-planet ingresses and stations, major conjunctions"
+    T2: "inner-planet stations, combust/rise, ingresses"
+    T3: "lunar and panchang daily events"
+
+# ---------------------------------------------------------------- still open
+open_questions:
+  - speed_class_thresholds        # Atichari / Fast / Normal / Slow / Vakri; drives Vedha
+  - mercury_shar_lag              # source Mercury latitude rows lag computed by 2-7 days
+  - aspect_orbs                   # graha drishti vs degree orbs
+  - month_system_confirmation     # Purnimanta inferred from eclipse labelling
+  # sector_mapping was CLOSED at the coverage step and is now REOPENED. The two
+  # decisions it raised are both DECIDED (12-Sep-2026) and are no longer open:
+  #
+  #   crude_significator_saturn_vs_rahu  DECIDED -- deliberately NOT resolved to
+  #       one planet. Saturn and Rahu are BOTH emitted, neither primary, every CL
+  #       verdict flagged. See rulership.conflicts.crude_saturn_vs_rahu.
+  #   civil_day_for_gc_si                DECIDED -- the VENUE determines the civil
+  #       day. See verdict_coverage.civil_day_by_venue.
+  #
+  # The crude decision is what reopens sector_mapping: ruling that the source's
+  # own sector map is load-bearing enough to be emitted alongside the book means
+  # the source's map is evidence EVERYWHERE, not only where it is convenient.
+  - sector_mapping                      # REOPENED. 7 source-vs-book sector
+                                        # disagreements owed the same dual
+                                        # treatment CL just got, each at the
+                                        # point its instrument enters scope.
+                                        # See rulership.sector_mapping_reopened.
+                                        # Not blocking now: no instrument in
+                                        # this config maps to any of the seven.
+  - label_scheme_signoff                # still blocks writing any verdict rule
+
+# ---------------------------------------------------------------- dignity
+# SOURCE-VALIDATED. Re-derived from data/source_2026.html (437578 bytes,
+# md5 5e098446d6dd13d3df8443528db5dd95) by sweeping every table cell in the
+# document for a parenthetical dignity word. Provenance is no longer owner
+# assertion: every label below is quoted from a named section.
+#
+# The labels the source actually prints, with the section each was read from:
+#   Mars     "Capricorn (Exalted)"          Journey of Mars p.5
+#            "Aries (Own, Trine)"           Journey of Mars p.5
+#            "Cancer (Debilitated)"         Journey of Mars p.5
+#            "Scorpio (Own)"                Mars Combust Rise Cycle p.6
+#   Mercury  "Gemini (Own)"                 Journey of Mercury p.8
+#            "Virgo (Own, Trine, Exalted)"  Journey of Mercury p.8
+#            "Pisces (Debilitated)"         Journey of Mercury p.8
+#   Venus    "Taurus (Own)"                 Journey of Venus p.12-13
+#            "Libra (Own, Trine)"           Journey of Venus p.12-13
+#            "Pisces (Exalted)"             Journey of Venus p.12-13
+#            "Virgo (Debilitated)"          Journey of Venus p.12-13
+#   Jupiter  "Cancer (Exalted)"             Journey of Jupiter p.18-19
+#            "Sagittarius (Own, Trine)"     Jupiter in Navmansh (D9) p.22
+#            "Pisces (Own)"                 Jupiter in Navmansh (D9) p.22
+#            "Capricorn (Debilitated)"      Jupiter in Navmansh (D9) p.22
+#   Saturn   "Capricorn (Own)"              Saturn in Navmansh (D9) p.25
+#
+# No planet/sign pair outside the Parashari table below is labelled anywhere in
+# the document, so the source contradicts nothing here and adds nothing here.
+# The scheme is still Parashari; what changed is that five of the seven planets
+# now have it witnessed rather than assumed. See source_witness below for which.
+dignity:
+  scheme: parashari_sign_level
+  source: parth_2026_labels_source_validated
+  signs:
+    Sun:     {own: [Leo],                  trine: [Leo],         exalted: Aries,     debilitated: Libra}
+    Moon:    {own: [Cancer],               trine: [Taurus],      exalted: Taurus,    debilitated: Scorpio}
+    Mars:    {own: [Aries, Scorpio],       trine: [Aries],       exalted: Capricorn, debilitated: Cancer}
+    Mercury: {own: [Gemini, Virgo],        trine: [Virgo],       exalted: Virgo,     debilitated: Pisces}
+    Jupiter: {own: [Sagittarius, Pisces],  trine: [Sagittarius], exalted: Cancer,    debilitated: Capricorn}
+    Venus:   {own: [Taurus, Libra],        trine: [Libra],       exalted: Pisces,    debilitated: Virgo}
+    Saturn:  {own: [Capricorn, Aquarius],  trine: [Aquarius],    exalted: Libra,     debilitated: Aries}
+  nodes:
+    dignity: null
+    use_lord_relationship: true
+  # Informational only. Exposed as deep_exaltation_deg for later depth-of-
+  # exaltation work. NEVER used to decide a dignity label -- dignity is
+  # whole-sign, exactly as the source labels it.
+  exaltation_degrees:
+    Sun: 10
+    Moon: 3
+    Mars: 28
+    Mercury: 15
+    Jupiter: 5
+    Venus: 27
+    Saturn: 20
+  # Frame: this omission is a row in the NAVAMSA (D9) table, so the engine
+  # checks it against the navamsa sign and flags it as
+  # navamsa_dignity_corrects_source_omission. Checked against the rashi sign it
+  # could never fire -- Saturn's rashi sign never reaches Libra in 2026 or 2027.
+  source_omissions:
+    - "Saturn in Libra (exalted) is unlabelled in the 2026 source D9 table"
+  # The omission, located exactly. Saturn's D9 row reads a bare "Libra", with
+  # no "(Exalted)", while rows in the same table label "Capricorn (Own)" twice
+  # -- so the table does carry dignity labels and simply missed this one. The
+  # engine emits the label and flags the record with
+  # dignity_corrects_source_omission rather than reproducing the gap.
+  source_omission_detail:
+    Saturn_Libra_D9:
+      section: "Saturn in Navmansh (D9) p.25"
+      row: "Libra | 21-Mar-26 15:00 | 17-Apr-26 14:57 | Venus"
+      frame: navamsa
+      rashi_sign_at_the_time: Pisces
+      printed_label: null
+      correct_label: exalted
+
+  # ------------------------------------------------- what the source witnesses
+  # Which of the seven planets' dignities are observed in the 2026 document and
+  # which are carried from the Parashari scheme with no direct source evidence.
+  # Derived, not asserted: "occupied" means the planet is shown in that sign by
+  # a journey, navamsa, motion or combust table somewhere in the document.
+  source_witness:
+    derived_from: "data/source_2026.html md5 5e098446d6dd13d3df8443528db5dd95"
+    witnessed: [Mars, Mercury, Venus, Jupiter, Saturn]
+    not_witnessed: [Sun, Moon]
+    # ------------------------------------------- which CHART witnessed each row
+    # The block above is a single Parashari sign-dignity table, but the labels
+    # that confirm it were not all read off the same chart. Three planets were
+    # confirmed from rashi (D1) journey tables and two from navamsa (D9) tables,
+    # and the two frames give different answers for the same planet at the same
+    # instant -- so a reader has to be able to see which frame each row came
+    # from rather than assume one. Held to the same standard as `witnessed`
+    # above: stated, not left to be inferred from the section names.
+    #
+    # The frames are measurably distinguishable, not a distinction on paper:
+    # Saturn's rashi sign is Pisces for the whole of 2026 ("Saturn remains in
+    # Pisces throughout the year", Journey of Saturn p.23), which carries no
+    # dignity at all, while Saturn in Navmansh (D9) p.25 prints Capricorn (Own)
+    # for 02-Jul-26 05:58 to 20-Aug-26 22:50. Read in the rashi frame that row
+    # would be blank. The source is therefore using the D9 sign, unambiguously.
+    witness_frame:
+      rashi: [Mars, Mercury, Venus]
+      navamsa: [Jupiter, Saturn]
+      detail:
+        Mars:    "rashi (D1) -- Journey of Mars p.5, with Vargottam Mars p.7 as the inconsistent second printing"
+        Mercury: "rashi (D1) -- Journey of Mercury p.8"
+        Venus:   "rashi (D1) -- Journey of Venus p.12-13"
+        Jupiter: "navamsa (D9) -- Jupiter in Navmansh (D9) p.22. Sagittarius (Own, Trine), Capricorn (Debilitated), Pisces (Own), Cancer (Exalted, Vargottam), all against the D9 sign. Jupiter's rashi sign is Cancer from 02-Jun-26 to 31-Oct-26, so the rashi frame would print Exalted for the Sagittarius, Capricorn and Pisces rows alike."
+        Saturn:  "navamsa (D9) -- Saturn in Navmansh (D9) p.25, Capricorn (Own), printed twice. Rashi Pisces all year, which is unlabelled, so this row exists only in the D9 frame."
+      # One row cannot separate the frames and is recorded as such rather than
+      # counted as evidence: Jupiter's Cancer window, 02-Jun-26 01:49 to
+      # 18-Jun-26 20:59, is labelled Vargottam precisely because rashi and
+      # navamsa agree there. Both frames say Cancer, both say Exalted. The
+      # separation comes from Jupiter's other three rows and from Saturn.
+      undetermined_by:
+        - "Jupiter Cancer D9 02-Jun-26 01:49 to 18-Jun-26 20:59 -- Vargottam, so rashi == navamsa == Cancer and the two frames agree by construction"
+      # Consequence for the engine: dignity is emitted per chart and under a
+      # distinct name -- `dignity` from `sign` on rashi and positional records,
+      # `navamsa_dignity` from `navamsa` on navamsa_ingress records. They are
+      # never collapsed into one field, because the block above was assembled
+      # from both frames and a single field would silently pick one.
+      engine_fields: {rashi: dignity, navamsa: navamsa_dignity}
+    detail:
+      Mars:    "all four states labelled (Aries own+trine, Scorpio own, Capricorn exalted, Cancer debilitated)"
+      Mercury: "all four states labelled (Gemini own, Virgo own+trine+exalted, Pisces debilitated)"
+      Venus:   "all four states labelled (Taurus own, Libra own+trine, Pisces exalted, Virgo debilitated)"
+      Jupiter: "all four states labelled (Sagittarius own+trine, Pisces own, Cancer exalted, Capricorn debilitated)"
+      Saturn:  "own (Capricorn) labelled; exalted (Libra) occupied but UNLABELLED -- the omission above; Aquarius own+trine and Aries debilitated never occupied in 2026, so untested"
+      Sun:     "NO dignity label anywhere in the document. Recorded once, in full, under source_findings.sun_never_labelled -- this is one half of a single editorial absence that also covers the Sun's vargottama, not a separate finding. In short: the Sun occupies all twelve signs in Sun Transgression (Sankranti) p.2 -- Aries (exalted), Leo (own+trine) and Libra (debilitated) among them -- and that table carries no dignity column at all."
+      Moon:    "NO dignity label, and no opportunity for one: the document gives the Moon no journey or navamsa table, so Cancer, Taurus and Scorpio never appear as Moon positions. Carried from Parashari, untested by the source."
+    # Labels the source prints inconsistently for a pair it labels elsewhere.
+    # Evidence about the source's reliability, not about the scheme: the engine
+    # always emits the full state set.
+    internal_inconsistencies:
+      - "Mars in Aries: 'Own, Trine' in Journey of Mars p.5, bare 'Own' in Vargottam Mars p.7"
+      - "Venus in Libra: 'Own, Trine' in Journey of Venus p.12-13, bare 'Own' in Venus Motion p.14 and Venus Combust Rise Cycle p.14"
+      - "Mercury in Virgo: 'Own, Trine, Exalted' in Journey of Mercury p.8, 'Exalted, Trine' (no Own, reordered) in Mars With or Aspecting Mercury"
+    # Not dignity. The Constellation (Nakshtra) tables print "(Own)" against a
+    # nakshatra LORD -- Jupiter Constellation p.21, Saturn Constellation p.24 --
+    # and the journey tables' Relationship column uses Own/Trine as a relation
+    # between a body and its dispositor. Neither is a sign dignity and neither
+    # feeds this block.
+    not_dignity_uses_of_the_same_words: ["nakshatra lordship", "journey Relationship column"]
+
+# ----------------------------------------------------------- vargottama
+# D1 sign == D9 sign. A separate state, NOT a dignity and never folded into the
+# dignity list: the 2026 source prints the two together -- "Cancer (Exalted,
+# Vargottam)" in Jupiter in Navmansh (D9) p.22 -- so they are states a planet
+# holds at the same time, not alternatives.
+vargottama:
+  definition: rashi_sign == navamsa_sign
+  scheme: parashari
+  # Frames, named the same way the dignity block names them. Vargottama is the
+  # only value in the record that is a RELATION between the two charts rather
+  # than a reading of one, so both must be read off the same longitude. At an
+  # ingress the sampled position can sit either side of the cusp, and a sign
+  # cusp is always also a navamsa cusp -- so the engine derives whichever frame
+  # it is not overriding from the crossing index instead of from the sample.
+  frames: {rashi: sign, navamsa: navamsa}
+  engine_field: vargottama
+  emitted_on: every_positional_record
+  # Not on navamsa_ingress alone: vargottama is a property of a position, not of
+  # a D9 boundary crossing, and the source's own Vargottam Mars p.7 windows open
+  # at RASHI ingresses (Aries 11-May-26 12:39) as often as at D9 ones.
+
+  # ------------------------------------------------ what the source witnesses
+  # Same standard as dignity.source_witness: which planets the document actually
+  # shows in a vargottama state, and which are merely computable by the rule.
+  source_witness:
+    derived_from: "data/source_2026.html md5 5e098446d6dd13d3df8443528db5dd95"
+    witnessed: [Mars, Jupiter, Rahu, Ketu, Moon, Mercury, Venus]
+    not_witnessed: [Sun, Saturn, Uranus, Neptune, Pluto]
+    # Three surfaces, all verified against D1 == D9. The word never appears in
+    # any "Journey of X" rashi table.
+    surfaces:
+      dedicated_section:
+        section: "Vargottam Mars p.7 (section 6)"
+        planets: [Mars]
+        rows: 9
+        note: >
+          Its own section, not a journey table. Columns Sign / Start / End /
+          Sign Lord, with the dignity printed in the same parenthesis --
+          "Capricorn (Exalted)", "Aries (Own)", "Cancer (Debilitated)" -- which
+          is the clearest evidence that vargottama sits beside a dignity rather
+          than replacing it. Remark: "Vargottam Mars is Bullish event (more
+          powerful if in its own house)", so own-house is a strength modifier
+          and not part of the condition.
+      inline_in_d9_tables:
+        sections:
+          - "Jupiter in Navmansh (D9) p.22 -- Gemini (Retrograde) Vargottam; Gemini (Vargottam); Cancer (Exalted, Vargottam)"
+          - "Mars in Pisces Navmansh (D9) p.6 -- Pisces - Vargottam"
+          - "Rahu in Navmansh (D9) p.28 -- Aquarius (Vargottam)"
+          - "Ketu in Navmansh (D9) p.30 -- Leo (Vargottam)"
+        planets: [Jupiter, Mars, Rahu, Ketu]
+        rows: 6
+      own_nakshatra_appendix:
+        section: "Planet Vargottam in Their Own Nakshatra p.133"
+        planets: [Moon, Rahu, Mercury, Jupiter, Venus]
+        rows: 19
+        condition: vargottama AND planet_in_nakshatra_it_rules
+        note: >
+          A NARROWER set, not a different rule: every row is vargottama and also
+          has the planet in a nakshatra it lords (Moon/Rohini, Rahu/Shatabhisha,
+          Mercury/Revati, Jupiter/Punarvasu, Venus/Purva Phalguni). The engine
+          does not emit this intersection as a state; it is an appendix filter
+          over the same boolean. Recorded so a reader does not mistake the
+          appendix for the definition.
+    detail:
+      Mars:    "witnessed, 9 windows, Vargottam Mars p.7, plus the Pisces row in Mars in Pisces Navmansh (D9) p.6"
+      Jupiter: "witnessed, 3 windows in Jupiter in Navmansh (D9) p.22 and 2 own-nakshatra rows in the p.133 appendix"
+      Rahu:    "witnessed, Aquarius 25-Jan-26 09:39 to 29-Mar-26 07:11, printed in both the D9 table and the appendix"
+      Ketu:    "witnessed, Leo, the same window as Rahu and 180 degrees from it"
+      Moon:    "witnessed ONLY in the p.133 appendix, 13 rows, all Rohini pada 2. The document gives the Moon no D9 table at all, so the appendix is the only place its vargottama could appear -- the opposite of its dignity, which is witnessed nowhere."
+      Mercury: "witnessed ONLY in the p.133 appendix, 1 row, Revati pada 4"
+      Venus:   "witnessed ONLY in the p.133 appendix, 1 row, Purva Phalguni pada 1"
+      Sun:     "NOT witnessed. Recorded once, in full, under source_findings.sun_never_labelled -- the other half of the same editorial absence as the Sun's dignity, not a separate finding. In short: the Sun is vargottama on 163 of 1460 six-hourly 2026 samples and the document never says so, so the absence is editorial and not an impossibility. Contrast Saturn and the outers immediately below, whose absence IS an impossibility."
+      Saturn:  "NOT witnessed, and could not have been: Saturn's rashi sign is Pisces all year while its D9 runs Cancer to Scorpio, so the two never coincide. 0 of 1460 samples. A structural absence, not an omission."
+      Uranus:  "NOT witnessed and never vargottama in 2026 (0 samples), despite having its own D9 table"
+      Neptune: "NOT witnessed and never vargottama in 2026 (0 samples), despite having its own D9 table"
+      Pluto:   "NOT witnessed and never vargottama in 2026 (0 samples), despite having its own D9 table"
+
+  # ------------------------------------------------------- source defects here
+  # The appendix prints four end DATES one day late. The end TIMES are right to
+  # within two minutes, so this is a date typo and not a different rule --
+  # the same class of defect as the 17-Apr-25 year typo recorded elsewhere.
+  # Listed so the regression harness can assert the times and not the dates.
+  source_defects:
+    appendix_p133_end_date_off_by_one_day:
+      - "Moon Rohini 2nd 28-Jan-26 15:00 -> printed 29-Jan-26 20:33, computed 28-Jan-26 20:31"
+      - "Moon Rohini 2nd 20-Apr-26 09:59 -> printed 21-Apr-26 15:20, computed 20-Apr-26 15:21"
+      - "Moon Rohini 2nd 11-Jul-26 16:28 -> printed 12-Jul-26 21:50, computed 11-Jul-26 21:49"
+      - "Moon Rohini 2nd 01-Oct-26 11:39 -> printed 02-Oct-26 17:15, computed 01-Oct-26 17:16"
+    note: >
+      Each printed end is 24 hours plus 1-2 minutes after the true end of the
+      Rohini pada-2 window, and the other 15 appendix rows have end times that
+      land inside the window. Nine of the thirteen Moon rows are clean.
+    # A control was checked alongside the four, so "the source prints the end
+    # date one day late" is separated from "the source's day rolls over at a
+    # different hour than ours". This row genuinely crosses midnight: the
+    # window opens 24-Feb and the pada ends after 00:00 the next day, and the
+    # source prints the NEXT date correctly. A convention difference would
+    # have moved this row too; it did not, so the defect is confined to the
+    # four above.
+    control_rows_that_legitimately_cross_midnight:
+      rows:
+        - "Moon Rohini 2nd 24-Feb-26 20:46 -> printed 25-Feb-26 02:24, computed 25-Feb-26 02:23 -- CORRECT as printed"
+        - "Moon Rohini 2nd 28-Oct-26 18:55 -> printed 29-Oct-26 00:20, computed 29-Oct-26 00:18 -- CORRECT as printed"
+      why_they_matter: >
+        These are the appendix's only other rows whose window genuinely runs
+        past midnight, and the source advances the date on both of them
+        correctly. That separates "the source typed the end date one day late
+        on four rows" from "the source's day rolls over at an hour other than
+        midnight". A rollover or epoch convention we had not identified would
+        have moved these two as well; it did not, so the defect is editorial
+        and confined to the four rows above. Recorded because a defect claimed
+        without a control is a convention difference waiting to be discovered
+        later.
+    verification:
+      method: independent_swiss_ephemeris_recomputation
+      by: project_owner
+      scope: "the four defect rows and the two control rows"
+      result: >
+        Four confirmed as date typos (end time right to within 2 minutes, end
+        date 24 hours late); both controls confirmed correct as printed. The
+        engine reproduces the same six windows from the Rohini pada-2 boundary,
+        so the finding does not rest on a single recomputation.
+
+  # The document spells the appendix heading three different ways. Recorded so a
+  # future sweep on any one spelling does not conclude the section is missing.
+  title_spellings:
+    body_heading: "Planet Vargottam in Their Own Nakshatra"
+    table_of_contents: "Planet Vargottam in their own Nakshtra"
+    nav_list: "Planet Vargottam in Own Nakshatra"
+
+# ---------------------------------------------------------- source findings
+# Findings ABOUT the 2026 document, as distinct from conventions derived from
+# it. One entry per finding, cross-referenced from the blocks it touches, so a
+# single editorial habit is not recorded twice as two unrelated notes.
+source_findings:
+
+  sun_never_labelled:
+    summary: >
+      The document never labels the Sun's state in any frame -- not its sign
+      dignity and not its vargottama -- although it prints the Sun's position
+      all year and labels every other classical planet it shows. This is ONE
+      finding about the source's editorial treatment of the Sun, not two
+      coincidental gaps, which is why it is recorded here once and referenced
+      from both blocks rather than written out in each.
+    cross_referenced_from:
+      - dignity.source_witness.detail.Sun
+      - vargottama.source_witness.detail.Sun
+    derived_from: "data/source_2026.html md5 5e098446d6dd13d3df8443528db5dd95"
+    evidence:
+      dignity: >
+        The Sun occupies all twelve signs in Sun Transgression (Sankranti) p.2,
+        Aries (exalted), Leo (own + trine) and Libra (debilitated) among them,
+        and that table carries no dignity column at all. Every other journey
+        table in the document does carry dignity inline -- "Pisces
+        (Debilitated)" in Journey of Mercury p.8, "Capricorn (Exalted)" in
+        Journey of Mars p.5 -- so the column was omitted for the Sun
+        specifically, not missing from the document's vocabulary.
+      vargottama: >
+        The Sun is vargottama on 163 of 1460 six-hourly 2026 samples, in eight
+        separate windows (Sagittarius, Aquarius, Pisces, Taurus, Gemini, Leo,
+        Virgo, Scorpio). The Leo window, 31-Aug-26 to 03-Sep-26, is vargottama
+        AND the Sun's own sign at once -- exactly the pairing the source prints
+        for other bodies as "Cancer (Exalted, Vargottam)" -- and it is not
+        printed. The Sun also has no D9 table, and does not appear in the
+        p.133 own-nakshatra appendix.
+    classification: editorial_absence
+    # The distinction that makes this finding usable rather than merely true.
+    contrast_with_structural_absence: >
+      The Sun's absence is EDITORIAL: the state obtains in 2026, the source
+      could have printed it, and did not. Saturn and the outers are a different
+      kind of absence entirely -- STRUCTURAL, meaning the state never obtains,
+      so there was nothing to print. Saturn's rashi sign is Pisces for the whole
+      of 2026 while its D9 runs Cancer to Scorpio, so the two never coincide:
+      0 of 1460 samples. Uranus, Neptune and Pluto are likewise 0 of 1460
+      despite each having its own D9 table. An editorial absence is evidence
+      about the source's reliability; a structural absence is evidence about
+      the sky and says nothing about the source.
+    engine_consequence: >
+      None. The engine computes the Sun's dignity and vargottama by the same
+      Parashari rule it applies to every other body and emits them normally.
+      What this finding changes is the PROVENANCE claim: the Sun's rows are
+      carried from the scheme and are untested by the source, so they must not
+      be counted as source-witnessed in any later audit. It is not an omission
+      to correct, because the source never opened a slot to leave blank -- and
+      so it is deliberately NOT listed under dignity.source_omissions, which is
+      reserved for a row the source printed and left unlabelled (Saturn/Libra
+      D9).
+    status: recorded_not_blocking
+
+# ------------------------------------------------------- cross-section defects
+# Defects that show up as a disagreement BETWEEN two printings of the same event,
+# rather than inside one table. The appendix end-date defect lives with the block
+# it belongs to, at vargottama.source_defects, and is not repeated here.
+source_defects:
+
+  anuradha_on_sunday_28_jun_one_day_late:
+    summary: >
+      "Anuradha on Sunday - Bearish p.80" prints two rows, 31-May-26 and
+      28-Jun-26. The Moon is in Jyeshtha for the whole of 28-Jun-26. Anuradha
+      runs 26-Jun-26 19:16 (Fri) to 27-Jun-26 22:11 (Sat) and never touches a
+      Sunday in that lunation, so the rule cannot fire on 28-Jun under any
+      convention.
+    correct_value: "no qualifying Sunday in that window; the Anuradha day is Saturday 27-Jun-26"
+    incorrect_value: "28-Jun-26 (Anuradha on Sunday p.80)"
+    classification: off_by_one_day
+    same_class_as: "vargottama.source_defects.appendix_p133_end_date_off_by_one_day -- the printed date is one day after the true one, and the Anuradha window ends 27-Jun 22:11, just before the printed day begins"
+    verification:
+      method: nakshatra_span_scan_over_the_whole_civil_day
+      implemented_in: "tests/test_2026_regression.py::test_weekday_source_defects"
+      convention_independent: >
+        Asserted as absence across the ENTIRE civil day at 10-minute resolution,
+        not as a miss under one convention. Sunrise-at-dawn, civil-day overlap,
+        sunrise-to-sunrise and market-session therefore all agree it is not a
+        qualifying day. This is what separates a source defect from a
+        convention difference: no choice of day boundary can produce the row.
+    engine_consequence: >
+      The row is excluded from the weekday pass rate via
+      WEEKDAY_SOURCE_DEFECTS and asserted as a defect in its own check, so it
+      is subtracted from the denominator openly rather than silently tolerated.
+
+  monthly_calendar_bhadra_13_jan_start:
+    summary: >
+      The document prints its Bhadra (Vishti karana) windows twice and the two
+      printings disagree on one row. "Bhadra -- verified against Swiss
+      Ephemeris" pp.120-124 prints 13-Jan-26 02:00 -> 15:18; "JANUARY 2026
+      EVENTS" pg.270-271 prints 13-Jan-26 3:59 -> 15:18. Same event, same end
+      time, starts 1h58m54s apart.
+    resolved: true
+    correct_value: "13-Jan-26 02:00 -> 13-Jan-26 15:18 IST (the section is right)"
+    incorrect_value: "13-Jan-26 3:59 (monthly calendar, pg.270-271)"
+    error_magnitude: "the monthly start is printed 1h 58m 54s late"
+    computed: "opens 13-Jan-26 02:00:06 IST, closes 13-Jan-26 15:18:25 IST"
+    verification:
+      method: vishti_karana_elongation_bisection
+      implemented_in: "tests/test_2026_regression.py::test_bhadra_two_printings"
+      rule_source: >
+        The Bhadra section states its own method, which was implemented rather
+        than trusted: a Vishti karana is a 6-degree step of Moon-Sun elongation,
+        the eight windows of each lunar month fall on karana numbers 8, 15, 22,
+        29, 36, 43, 50 and 57, boundaries by bisection on the exact 6-degree
+        multiples, times IST. Karana n spans [(n-1)*6, n*6) degrees; 13-Jan-26
+        is karana 50, elongation 294 to 300 degrees.
+      frame_independent: >
+        Elongation is a DIFFERENCE of two longitudes, so the ayanamsha cancels
+        and the computation is identical in the sidereal and tropical frames.
+        No frame choice can move these times.
+      timezone_independent_cross_check: >
+        The section's Day/Night column is read from karana parity -- odd number
+        = Day Bhadra, even = Night Bhadra -- which is a property of the
+        tithi-half and not of daylight, so it cannot shift with timezone.
+        Computed parity reproduces the printed column 8/8, which confirms the
+        karana NUMBERING is aligned and is what the start times depend on. A
+        timezone error therefore cannot explain the 1h59m gap: one printing is
+        simply wrong.
+    why_it_is_a_bad_cell_and_not_a_different_rule: >
+      The row's END time, 15:18, is correct in BOTH printings and matches the
+      computed 300-degree crossing. A different window definition would have
+      moved both boundaries; only the start moved. The same reasoning that the
+      control rows provide for the appendix defect, supplied here by the row's
+      own other boundary. No boundary of any kind sits near 3:59 either -- the
+      neighbouring tithi start is 12-Jan 12:43, the Moon's nakshatra change
+      12-Jan 21:05, its sign change 13-Jan 17:21 -- so 3:59 corresponds to no
+      rule, only to a mistyped cell.
+    all_eight_january_windows_checked:
+      # computed | which printing each agrees with
+      - "02-Jan-26 18:53 -> 03-Jan-26 05:11  (karana 29, Day)   section only; ABSENT from the monthly table"
+      - "05-Jan-26 20:54 -> 06-Jan-26 08:02  (karana 36, Night) section only; ABSENT from the monthly table"
+      - "09-Jan-26 07:05 -> 09-Jan-26 19:39  (karana 43, Day)   section and monthly both agree"
+      - "13-Jan-26 02:00 -> 13-Jan-26 15:18  (karana 50, Night) section agrees; MONTHLY START WRONG by 1h58m54s"
+      - "16-Jan-26 22:22 -> 17-Jan-26 11:16  (karana 57, Day)   section only; ABSENT from the monthly table"
+      - "22-Jan-26 14:41 -> 23-Jan-26 02:28  (karana 8,  Night) section and monthly both agree"
+      - "25-Jan-26 23:10 -> 26-Jan-26 10:17  (karana 15, Day)   section only; ABSENT from the monthly table"
+      - "29-Jan-26 03:17 -> 29-Jan-26 13:55  (karana 22, Night) section and monthly both agree"
+    agreement_measured:
+      bhadra_section: "all 16 January boundaries within 25 seconds of the computed value -- the section's 'verified against Swiss Ephemeris' claim holds"
+      monthly_calendar: "7 of its 8 boundaries within 79 seconds; the eighth is the 13-Jan start, off by 7134 seconds"
+    scope: >
+      A single bad row, not a systematic offset. The monthly calendar also omits
+      four of the eight January windows entirely (02-Jan, 05-Jan, 16-Jan,
+      25-Jan), so it is an incomplete secondary printing; where it does print a
+      window it is otherwise right to the minute.
+    engine_consequence: >
+      None yet -- Bhadra is not an emitted event class in the astronomy layer.
+      The consequence is for Step 4: when Bhadra enters the rule layer, it must
+      be computed by the karana rule above and must NOT be read from the monthly
+      calendar. Recorded here so the precedence between the two printings is
+      settled before anything depends on it.
+
+  chaturthi_krishna_03_jun_end_time_against_the_wrong_date:
+    summary: >
+      "Chaturthi - Krishna Paksh (Dark Fortnight) - Bearish p.65" annotates its
+      03-Jun-26 row "Till 23:31". Krishna Chaturthi that month runs 03-Jun-26
+      21:21:45 to 04-Jun-26 23:30:59 IST. The printed time is the correct END
+      of the tithi to one second; the date beside it is the day the tithi
+      STARTED.
+    resolved: true
+    correct_value: "either '04-Jun-26, Till 23:31' or '03-Jun-26, From 21:22'"
+    incorrect_value: "03-Jun-26, Till 23:31 (p.65)"
+    error_magnitude: "2h 09m after the last boundary on the printed date, and 1 second from the boundary on the next"
+    classification: right_value_wrong_cell
+    same_class_as: >
+      source_defects.monthly_calendar_bhadra_13_jan_start -- a correct computed
+      value typed into the wrong cell, identified by the fact that the value
+      itself lands on a real boundary to the second while nothing sits near it
+      on the printed date.
+    verification:
+      method: tithi_elongation_bisection
+      implemented_in: "tests/test_2026_regression.py::test_printed_tithi_times_reproduce"
+      frame_independent: >
+        A tithi is a 12-degree step of the Moon-Sun elongation, which is a
+        DIFFERENCE of two longitudes, so the ayanamsha cancels exactly as it
+        does for the Bhadra karana. No frame choice can move this boundary.
+      why_it_is_a_bad_cell: >
+        Thirty-six tithi boundary times are printed across B65, B73, B74, B75,
+        B76 and B109. Thirty-five reproduce within 68 seconds. This one is 7755
+        seconds out against its own date and 1 second out against the next,
+        which is not a tolerance question.
+    engine_consequence: >
+      None. b076_chaturthi_krishna_paksha fires on the tithi span itself and
+      emits both 03-Jun and 04-Jun as days that Chaturthi touches, so the
+      printed date is reproduced and the printed time is reproduced; only the
+      pairing in the document is wrong.
+
+  amavasya_ghadi_third_row_date_cell:
+    summary: >
+      "Amavasya Ghadi Lesser than Chaturdashi - Bearish p.84" prints four rows.
+      Its third reads "28-Mar-25 *" with a start time of 08:27. The Amavasya
+      satisfying the condition in that lunation opens 18-Mar-26 08:25 IST. The
+      time identifies the row; the date is wrong in the day (28 for 18) and in
+      the year (25 inside a 2026 calendar), and the document marks the cell
+      with its own asterisk.
+    resolved: true
+    correct_value: "18-Mar-26, 08:25 IST"
+    incorrect_value: "28-Mar-25 *, 08:27 (p.84)"
+    classification: right_value_wrong_cell
+    same_class_as: >
+      The year typo README records at "17-Apr-25 inside a 2026 calendar", with
+      a transposed day on top of it. Identified the way the Bhadra row was: by
+      the value that is right, not by the cell that is wrong.
+    verification:
+      method: consecutive_tithi_length_comparison
+      implemented_in: "tests/test_2026_regression.py::test_b106_ghadi_comparison_and_its_broken_date_cell"
+      note: >
+        A ghadi is 24 minutes, a sixtieth of the day, and a tithi's length is
+        the difference of two consecutive boundaries -- so the condition needs
+        the boundary series and no other input. The condition holds six times
+        in 2026 (18-Jan, 16-Feb, 18-Mar, 16-Apr, 16-May, 14-Jun); the section
+        prints four of them, each within two minutes of the computed start, and
+        stops in April.
+    engine_consequence: >
+      None. b106_amavasya_ghadi_lesser_than_chaturdashi computes the comparison
+      from the tithi series; the section's broken cell is never read.
+
+  yoga_in_panchak_06_jun_row_has_no_overlap:
+    summary: >
+      "Aindra, Vaidhrati and Vyatipat Yog in Panchak - Bullish p.44" prints six
+      rows. Five reproduce within a minute at both ends. The sixth asks for
+      Indra ("Endra") inside Panchak on 06-Jun-26, ending 10:05. Indra ends
+      that day at 10:04:39 and Panchak opens at 19:03 -- and the source's OWN
+      Panchak table (p.43) prints that window as starting 06-Jun-26 19:05. The
+      two share a civil date and no instant, on the document's own figures.
+    resolved: false
+    correct_value: "no Indra-in-Panchak overlap on 06-Jun-26 under the instant reading"
+    incorrect_value: "Endra, 06-Jun-26, ending 06-Jun-26 10:05 (p.44)"
+    classification: printed_row_its_own_sections_disagree_about
+    competing_reading_not_rejected: >
+      Reading "in Panchak" as sharing a CIVIL DAY rather than an instant
+      recovers this row and costs one additional row elsewhere, so the evidence
+      between the two readings is a single row either way. The instant reading
+      is used because every other conjunction of two conditions in the rule
+      layer intersects spans, and because STEP4_DECISIONS section 12.4 already
+      ruled on this shape once: B102's 28-Jun-2026 row names a day its own
+      title cannot reach and was recorded as a defect rather than absorbed by
+      widening the reading.
+    verification:
+      implemented_in: "tests/test_2026_regression.py::test_the_tithi_is_frame_free_and_the_yoga_is_not"
+      internal_witness: >
+        The contradiction is between two sections of the same document, p.43
+        and p.44, not between the document and this engine. Our computed
+        Panchak start for that window, 06-Jun-26 19:03, agrees with the
+        source's printed 19:05 to two minutes.
+    engine_consequence: >
+      b056_aindra_vaidhriti_or_vyatipata_yoga_in_panchak fires on the instant
+      reading and does not emit this row. It is a resolved_ambiguity rather
+      than an executable rule, because its Panchak half rests on the supplied
+      definition recorded at panchak.
+
+  pradosh_24_aug_one_day_before_its_own_trayodashi:
+    summary: >
+      "Pradosh pp.52-53" prints 24 dated rows and one of them, 24-Aug-26
+      (Monday, Bright), names a day on which no Trayodashi is in force at any
+      hour. Shukla Trayodashi that month opens 25-Aug-26 06:21:21 and closes
+      26-Aug 07:59:37; Mumbai sunset on 24-Aug falls at 18:55 inside Dwadashi.
+      No reading of Pradosh -- sunset, pradosh kala, sunrise or civil-day
+      overlap -- can reach 24-Aug, because the tithi the word names has not
+      begun.
+    correct_value: "25-Aug-26 (Mumbai sunset 18:55:32, inside Shukla Trayodashi)"
+    incorrect_value: "24-Aug-26 (Pradosh pp.52-53)"
+    classification: off_by_one_day
+    internal_contradiction: >
+      The strongest class of finding available: the document contradicts
+      itself. "Vriddhi Tithi - Shukla Paksh p.57" (B68) lists the same tithi as
+      a Vriddhi Trayodashi on 25-Aug-26 -- the day this engine computes --
+      while the Pradosh table dates its Pradosh to 24-Aug. Two of the
+      document's own pages disagree by one day about one tithi, exactly as p.43
+      and p.44 disagree about the 06-Jun Panchak start.
+    same_class_as: >
+      source_defects.anuradha_on_sunday_28_jun_one_day_late and
+      vargottama.source_defects.appendix_p133_end_date_off_by_one_day -- a
+      printed date one day away from the true one, with the rest of the row
+      correct.
+    verification:
+      method: tithi_boundary_bisection_against_mumbai_sunset
+      implemented_in: "tests/test_2026_regression.py::test_pradosh_reproduces_against_mumbai_sunset"
+      scope: >
+        All 25 Trayodashis of 2026 were computed and set against the section's
+        24 printed rows. 23 reproduce exactly and in the right fortnight. The
+        two remaining divergences are held apart and are different findings:
+        24-Aug is this defect, and 01-Jan-26 is an occurrence the section
+        simply does not print.
+      convention_independent: >
+        Checked under all four Swiss Ephemeris rise/set conventions. The
+        nearest sunset to that tithi's opening is eleven hours away, so no
+        convention, disc rule or refraction choice moves this row.
+    engine_consequence: >
+      b064_pradosh fires on 25-Aug and not on 24-Aug. The rule is a
+      resolved_ambiguity -- the document names Pradosh 22 times and defines it
+      nowhere -- so this row is a divergence from a table, recorded, and not a
+      reason to widen the supplied reading until it fits.
+
+  pradosh_01_jan_occurrence_not_printed:
+    summary: >
+      The same section omits a Pradosh it should print. Shukla Trayodashi runs
+      01-Jan-26 01:48:28 to 22:22:45 and Mumbai sunset falls at 18:08:43 inside
+      it, so 01-Jan-26 is a Pradosh under every reading tested. The section's
+      table begins at 16-Jan-26.
+    classification: omitted_occurrence
+    not_the_same_as: >
+      The two-day artefact. A tithi runs about 23h40m and touches two civil
+      days more often than one, so a section printing one of them is omitting
+      nothing -- that is the B75 and B95 shape. This is the B74 and B100 shape
+      instead: a whole occurrence, on a day no printed row is adjacent to. The
+      distinction is kept per section rather than reported as one
+      undifferentiated count of extras.
+    engine_consequence: >
+      b064_pradosh emits the row. The title is the rule, per STEP4_DECISIONS
+      section 12.4.
+
+# ------------------------------------------------------------- rise and set
+# Sunrise and sunset are a LOCATION PROPERTY and the only emitted classes that
+# are. A tithi or yoga boundary is an angle reaching an exact multiple and the
+# whole Earth shares the instant; the Sun meets one horizon at one place. So
+# every record of these two classes carries its venue, events.LOCATION_REQUIRED
+# makes a location-free one a build error, and both configured venues are
+# generated, with neither a default nor a fallback for the other.
+rise_set:
+  convention: disc_center_no_refraction     # same string as combustion.rise_set_flags
+  certainty: B
+  stated_in_code: "finastro/panchang.py::RISE_SET_CONVENTION"
+  why_b: >
+    A rise depends on which part of the disc is taken to touch the horizon, on
+    whether refraction is applied, and on the horizon's own height. Across the
+    four Swiss Ephemeris conventions a Mumbai sunrise moves by about four and a
+    half minutes, so the quantity is definition-sensitive however exactly it is
+    computed. That is what grade B means, and it is not a statement about the
+    arithmetic.
+  why_this_convention:
+    - >
+      It is the one the kalamsha calibration was fitted under. Kalamsha is the
+      gap between a planet's rise and the Sun's rise, so a sunrise taken under
+      a different convention from the combustion thresholds would not be the
+      quantity those thresholds are thresholds on. One convention, stated in
+      two places, checked by test_the_convention_matches_the_combustion_calibration.
+    - >
+      One row of the document decides it independently, and it is worth exactly
+      what one row is worth. B66 prints 23-Feb-26, Saptami, as a Kshay tithi.
+      Shukla Saptami runs 23-Feb 09:09:45 to 24-Feb 07:02:37, and Mumbai
+      sunrise on 24-Feb is 07:05:07 without refraction and 07:02:29 with it --
+      one side of the tithi's end and then the other. Without refraction the
+      Saptami holds no sunrise and is Kshay on 23-Feb, which is the printed
+      row; with refraction it is not Kshay and the following Ashtami is, on
+      24-Feb. An eight-second margin, one row in twenty-eight, pointing the
+      same way as the kalamsha calibration. Corroboration, not the ground.
+  what_the_source_prints: >
+    No rise or set table. Four Mumbai times to the minute, inside the Bhadra
+    section's prose explaining why its reference place matters -- 09-Jan
+    sunrise 07:13, 27-Apr sunrise 06:16, 28-Jul sunset 19:16, 29-Sep sunrise
+    06:29. The engine reproduces all four within 4m43s.
+  the_four_do_not_decide_the_convention: >
+    Measured rather than assumed. Worst error over the four: disc-centre
+    no-refraction 283 s, disc-centre with refraction 114 s, upper-limb
+    no-refraction 208 s, upper-limb with refraction 168 s. Every convention has
+    errors of BOTH signs across the four, so none is a fixed offset from the
+    source's and no correction recovers one from another. Times printed to the
+    minute cannot separate conventions whose spread is 4.5 minutes. Recorded so
+    that "the convention is pinned" is never read as "the source pinned it".
+  where_the_b_grade_lands: >
+    On the published time of a rise, and almost never on a rule conditioned on
+    one. Twenty-seven of the twenty-eight Kshay and Vriddhi rows are identical
+    under all four conventions; the twenty-eighth is B66's 23-Feb Saptami
+    above. Pradosh is convention-independent on all 25 of its 2026 rows.
+  venues_are_not_interchangeable: >
+    The two venues' sunrises are about ten and a half hours apart, and the
+    consequence is not cosmetic. Of the Kshay tithis in the generated span,
+    Mumbai has 10 in the bright fortnight and New York 11, with NONE in common:
+    a Kshay tithi is one whose 21-hour span falls entirely between two
+    consecutive sunrises, so agreement between two venues half a world apart
+    would be a coincidence rather than a rule.
+
+# ------------------------------------------------ node lord relationship
+# The nodes carry no dignity, so the source prints a Relationship column
+# instead: the sign-count relation between the node's sign and the sign its
+# dispositor occupies. It is a PERIOD value, not an instant value.
+node_lord_relationship:
+  evaluation: at_node_sign_ingress
+  period_constant: true
+  anchor: most_recent_node_sign_ingress_at_or_before_instant
+  source: >
+    2026 source Rahu/Ketu journey tables print one Relationship value per
+    sign-period. All four 2026 values reproduce at the 05-Dec-2026 21:52 IST
+    node ingress; year-start and year-end each fail two of four. Moon case
+    holds only ~36h of a 26-day period, beginning at the ingress instant.
+  # The engine's own mean-node ingress lands 05-Dec-2026 22:32 IST; 21:52 is
+  # the time the source prints. The 40-minute gap is the same one recorded
+  # under `node: mean` above and does not move any of the four values.
+  # Quantified rather than merely noted: the mean node moves 360 deg per
+  # 6798.38 days = 190.6 arcsec/day, so 40 minutes is 5.3 arcseconds of node
+  # motion. That is the scale that separates one mean-node formulation from
+  # another, and one Lahiri variant from another -- i.e. the gap is inside the
+  # noise floor of the convention choice itself, not evidence of a different
+  # rule. A sign boundary is 108000 arcsec away from the next one, so nothing
+  # sign-level can turn on 5.3 arcsec; the four Relationship values are
+  # unmoved, and the dispositor positions read at the anchor shift by far less
+  # than the sign granularity the Relationship column is computed at.
+  no_anchor_flag: no_anchor_ingress_in_span
+
+# --------------------------------------------------- conjunctions/oppositions
+conjunctions:
+  bodies: [Sun, Mercury, Venus, Mars, Jupiter, Saturn, Uranus, Neptune, Pluto]
+  exclude_moon: true
+  source: >
+    SOURCE-VALIDATED against data/source_2026.html (md5
+    5e098446d6dd13d3df8443528db5dd95). The two headings carrying the exclusion,
+    quoted exactly: "Pluto Conjunction with Other Planets (Except Moon) p.41"
+    and "Pluto Opposition with Other Planets (Except Moon) p.42". All eight
+    pair tables in the document were then read row by row -- those two,
+    "Herschel Conjunction with Other Planets p.34", "Herschel Opposition with
+    Other Planets p.34", "Neptune Conjunction with Other Planets p.37",
+    "Neptune Opposition with Other Planets p.37", "Mars Mercury Conjunction
+    p.12" and "Venus Mercury Conjunction p.16" -- and none carries a Moon row.
+    The exclusion is stated twice and honoured everywhere. Moon-planet
+    relationships are handled in the rule layer at sign/nakshatra granularity,
+    not as degree-exact conjunctions.
+  sun_moon: lunation_class_only
+
+# ------------------------------------------------------- deferred to Step 4
+# Moon-planet material the conjunction class deliberately drops. Recorded here
+# so it is not silently lost; implemented in the rule layer at sign/nakshatra
+# granularity, never as degree-exact conjunctions.
+rule_layer_pending:
+  # Not Moon material. Carried here because it was briefly mis-mapped as the
+  # 2026 equivalent of Mars's navamsa_ingress class and is not one: its Sign
+  # column is Mars's RASHI sign during the six windows in which Mars's NAVAMSA
+  # is Pisces (verified 6/6 -- rashi Capricorn, Aquarius, Pisces, Taurus,
+  # Gemini, Cancer, with the navamsa Pisces at each window's start, midpoint
+  # and end). Its dignity labels are therefore RASHI-FRAME labels: "Capricorn
+  # (Exalted)" and "Cancer (Debilitated)" are Mars's rashi dignities, and Mars
+  # holds neither in Pisces. It is a residency rule over a D9 position, not a
+  # D9 ingress series, which is why it belongs in the rule layer and why the
+  # mapping was removed from build_2027.py rather than annotated. The source
+  # prints no Mars D9 ingress table at all, so Mars's navamsa_ingress records
+  # now carry source_section_not_printed_in_2026 truthfully.
+  - "Mars in Pisces Navmansh (D9) p.6 -- Mars's rashi windows while its navamsa is Pisces; RASHI-frame dignity labels; source remark 'Mars transit from Pisces Navmansh (D9) is bearish unless there is some contrary event'"
+  - "Moon Mars together in the same sign (p.74)"
+  - "Moon and Rahu in the same nakshatra (p.70)"
+  - "Shani Chandra Dwidwadash Yog (p.75)"
+  - "Chandra Rahu Vedh (p.102)"
+  - "Venus Vedh of Moon (p.103)"
+  - "Mercury Vedh of Moon (p.104)"
+  - "Moon Mercury in the same Navamsa"
+  - "Sun Moon on the same degree"
+  - "Moon in Mrigashira on Monday (p.78)"
+  - "Moon Rashi Parivartan Yog with other planets in D1"
+  - "Moonrise on Monday or Friday, Moonrise in Libra, Moon Darshan on Saturday"
+
+# ================================================================ rulership
+# The planet -> instrument/sector map, reconciled across the three sections of
+# the user's book that carry one, plus the map the 2026 SOURCE prints for
+# itself. Recorded here because verdict_coverage.tier_3 derives from it and
+# because the four witnesses do not agree.
+#
+# WITNESSES (all read in full, not sampled):
+#   book_ch15  "The Celestial Ledger" Ch15 Commodities -- Gold, Silver & the Metals
+#   book_ch16  "The Celestial Ledger" Ch16 Sector & Stock Selection
+#   book_appB  "The Celestial Ledger" Appendix B.5 "The sector -> planet map"
+#   source     data/source_2026.html, the map the source prints for its OWN
+#              verdicts (pp.210, 214-218) and uses throughout its monthly tables
+#              via the phrase "sectors ruled by X"
+#
+# The book is NOT in the project tree. It was read from
+#   C:/Shiva/Horoscopes/FinAstro/FinAstro_Guide/raw/
+#     Kindle_Ch15_Commodities.html
+#     Kindle_Ch16_Sector_Stock_Selection.html
+#     Kindle_Appendices_A-C.html   (Appendix B is inside this file)
+# Recorded so the provenance is checkable and so the next reader does not search
+# config/ and data/ for it.
+rulership:
+  status: reconciled_pending_signoff
+
+  # --------------------------------------------------- corrections on record
+  # Two claims in the instruction that built this table were wrong. Recorded as
+  # the user's own, at the user's instruction, rather than silently repaired.
+  # Provenance of a table is not only where the evidence came from; it is also
+  # which assertions about the evidence did not survive checking.
+  corrections_on_record:
+
+    - id: ch15_silence_read_as_agreement
+      claimed: "Ch15 agrees with Ch16 and Appendix B across the sector map -- three-way agreement."
+      attributed_to: user_prompt
+      status: corrected_and_applied_to_table
+      corrected_to: >
+        Ch15 is a COMMODITIES chapter. It takes part in three-way book agreement
+        on exactly THREE mappings -- Sun -> gold, Mars -> base metals and
+        defence, Saturn -> oil. It says nothing whatever about IT, banking,
+        autos, FMCG or Rahu, and silence is not agreement. Every `witnesses`
+        list in the table below therefore names only sections that actually make
+        the assignment, and Mercury -> IT and Venus -> autos are recorded as
+        TWO-way (book_ch16 + book_appB), not three-way.
+      consequence: >
+        Two of the map's most-used rows are weaker than the instruction assumed,
+        and both are ALSO contradicted by the source -- see
+        rulership.sector_mapping_reopened.items.it_telecom and .automobiles.
+
+    - id: bphs_venus_silver
+      claimed: "BPHS gives Venus silver alongside the diamond; the Moon holds silver alongside the pearl."
+      attributed_to: user_prompt
+      status: unverified_by_source
+      source_checked: none
+      note: >
+        Cited from recall and never checked against BPHS. BPHS is not in the
+        project tree and was not read. The claim may well be right -- nothing
+        here refutes it -- but none of the four sections this table was
+        reconciled from witnesses it, so it must not be recorded as a witnessed
+        classical claim. It is kept as the STATED grounds for the Venus rival,
+        marked unverified, and it does not move the Moon-primary decision, which
+        rests on book_ch15's own Sun-Moon-spread construction instead.
+      see: rulership.conflicts.silver_moon_vs_venus
+
+  # ------------------------------------------------------- the reconciled map
+  # "witnesses" lists only the sections that make the assignment. SILENCE IS NOT
+  # AGREEMENT: Ch15 is a commodities chapter and says nothing about IT, banking,
+  # autos or Rahu, so it cannot be counted as agreeing with Ch16/App B on them.
+  table:
+    Sun:
+      primary: [gold]
+      also: [government, power_energy, PSU, precious_stones, gilt_edged, renewables]
+      witnesses: [book_ch15, book_ch16, book_appB, source]
+      claim_tag: Classical          # book_ch15 calls Sun->gold one of only two
+                                    # pedigreed asset rulerships in the whole book
+      note: >
+        Three-way book agreement AND source agreement. book_ch16 adds the Sun to
+        Oil/Energy/PSU ("the Sun for power and government") and to gold-miners;
+        book_appB prints "Government, power/energy, gold"; the source prints
+        "Public Sector Enterprises, PSU Banks, Precious Stones, Gilt-edged
+        securities, ... Gold (western astro)". The source additionally ties Nifty
+        to the Sun -- "Vedh of Abhijeet is positive for sectors ruled by Sun and
+        Nifty" and "Positive for sectors ruled by Sun including Nifty".
+    Moon:
+      primary: [silver]
+      also: [FMCG, dairy, liquids, public_sentiment, agricultural_produce_water_linked]
+      witnesses: [book_ch15, book_appB]
+      claim_tag: Classical
+      note: >
+        See rulership.conflicts.silver_moon_vs_venus. book_ch16 does not assign
+        silver at all (it is a sector chapter); the source prints no Moon sector
+        row, though its monthly tables do say "Positive for Sectors ruled by
+        Moon", so the source has a Moon rulership it never tabulates.
+    Mars:
+      primary: [base_metals, copper, defence]
+      also: [real_estate, engineering, capital_goods, iron_steel_shared_with_saturn,
+             healthcare_pharma_source_only, gold_source_only]
+      witnesses: [book_ch15, book_ch16, book_appB, source]
+      claim_tag: Framework
+      note: >
+        Three-way book agreement on base metals + defence. book_ch15 hedges iron
+        ("also iron, in some schemes"); book_ch16 resolves it -- "Mars for base
+        metals; Saturn for iron and coal". The source keeps iron DOUBLE-ruled and
+        says so explicitly: "Iron and Steel ... the sector is ruled by Mars and
+        Saturn both". The source also puts Gold and Healthcare/Pharma under Mars,
+        which no book section does.
+    Mercury:
+      primary: [IT, telecom, media]
+      also: [trading_brokerage, grains_as_commerce, money_flows_with_venus]
+      witnesses: [book_ch16, book_appB]
+      claim_tag: Framework
+      note: >
+        TWO-way, not three-way. book_ch15 gives Mercury only "agricultural trade
+        and grains as commerce" and never mentions IT or telecom. The SOURCE
+        prints no Mercury sector row at all and assigns Information Technology and
+        Telecommunications to RAHU instead. So Mercury->IT is a book-only mapping
+        that the source contradicts by omission-plus-reassignment.
+    Jupiter:
+      primary: [banking, finance]
+      also: [education, pharma_appB_only, expansion_inflation_backdrop]
+      witnesses: [book_ch16, book_appB, source]
+      claim_tag: Framework
+      note: >
+        book_ch15 gives Jupiter only "the broad expansion/inflation backdrop",
+        not banking. The source agrees with the book on banking through two
+        constructs rather than a sector row: the Yearly Cabinet ("King (Raja) |
+        Jupiter | Excess Liquidity in the Banking system; Banking and Finance will
+        be in focus") and "Vargottam Jupiter is Positive for the sectors ruled by
+        Jupiter, particularly Banking and Finance".
+    Venus:
+      primary: [autos, luxury, FMCG_ch16_only, entertainment, textiles]
+      also: [sugar_and_soft_goods, silver_secondary_only]
+      witnesses: [book_ch16, book_appB]
+      claim_tag: Framework
+      note: >
+        TWO-way. book_ch15 gives Venus "an alternate silver/'value' significator;
+        sugar and soft/luxury goods" and no autos. The source puts Automobiles
+        under SATURN (heavy commercial vehicles) and under MARS, never Venus.
+        Venus->silver is demoted to secondary -- see rulership.conflicts.
+    Saturn:
+      primary: [oil, crude, PSU, mining, infrastructure, labour]
+      also: [iron, coal, cement, real_estate, logistics, heavy_industry]
+      witnesses: [book_ch15, book_ch16, book_appB]
+      claim_tag: Framework
+      note: >
+        Three-way BOOK agreement on oil -- one of only three mappings Ch15 takes
+        part in at all (see corrections_on_record.ch15_silence_read_as_agreement).
+        CONTRADICTED BY THE SOURCE, which gives Saturn "Oil-seeds" (not crude)
+        and assigns "Crude oil" to Rahu. DECIDED 12-Sep-2026: not resolved to one
+        planet. Saturn stays here AND Rahu's crude stays on Rahu's row; CL emits
+        both. See rulership.conflicts.crude_saturn_vs_rahu.
+    Rahu:
+      primary: [speculation, tech, crypto]
+      also: [aviation, media_entertainment, telecom, IT, AI, drones, logistics,
+             crude_oil_source_only, pharmaceuticals_source_only, wind_power]
+      witnesses: [book_ch16, book_appB, source]
+      claim_tag: Framework
+      note: >
+        book_ch15 never mentions Rahu. The source's Rahu row is the widest of any
+        planet and carries a scope clause the book has no equivalent for: "Rahu
+        rules all the commodities of any Nakshatra (Star) or Sign where it stays".
+        crude_oil_source_only is LIVE, not merely recorded: CL emits a Rahu path
+        alongside its Saturn path -- see rulership.conflicts.crude_saturn_vs_rahu
+        and verdict_coverage.tiers.tier_3.derivations.CL.paths. IT, telecom,
+        pharmaceuticals and logistics on this row are the same kind of
+        source-only assignment and are queued for the same treatment under
+        rulership.sector_mapping_reopened.
+    Ketu:
+      primary: [pharma_niches]
+      also: [spirituality, sudden_moves]
+      witnesses: [book_ch16, book_appB]
+      claim_tag: Framework
+      note: "No source sector row. Not used by any tier below."
+
+  # ------------------------------------------------ where the witnesses differ
+  # Reported rather than averaged away. Each entry names the sections and quotes
+  # them, so a later reader can re-adjudicate without re-reading the book.
+  disagreements:
+
+    crude_oil:
+      severity: blocking
+      book_ch15: "Saturn -- 'Iron, oil and crude, coal'; significator table 'Saturn | Oil / iron'"
+      book_ch16: "Saturn (with Sun) -- 'Oil, Energy, PSU, Heavy Industry'; table 'Saturn | oil / PSU / metals'"
+      book_appB: "Saturn -- 'Oil, PSUs, mining, infrastructure, labour'"
+      source: "Rahu -- '... Logistics, Crude oil, Pharmaceuticals ...'; Saturn's row has 'Oil-seeds', an agricultural commodity, NOT crude"
+      resolution: both_carried_neither_primary
+      resolution_date: 2026-09-12
+      resolution_kind: deliberate_non_resolution
+      see: rulership.conflicts.crude_saturn_vs_rahu
+
+    silver:
+      severity: recorded
+      book_ch15_primary: "Moon -- 'the lunar metal', Classical, and the Sun-Moon spread IS the gold-silver spread"
+      book_ch15_rival: "Venus -- 'an alternate silver/value significator', listed under 'Framework ... modern practitioner convention, not classical'"
+      book_appB: "Moon -- 'FMCG, dairy, liquids, silver, public sentiment'. Venus's row carries no silver."
+      resolution: moon_primary_venus_secondary
+      see: rulership.conflicts.silver_moon_vs_venus
+
+    FMCG:
+      severity: recorded
+      book_ch16: "Venus -- 'Autos, FMCG, Luxury, Hospitality'; table 'Venus | autos / FMCG'"
+      book_appB: "Moon -- 'FMCG, dairy, liquids, silver, public sentiment'. Venus's row is 'Autos, luxury, entertainment, textiles' -- no FMCG."
+      resolution: not_resolved_no_instrument_depends_on_it
+      note: "A flat contradiction between two book sections. No instrument in this config maps to FMCG, so nothing turns on it yet."
+
+    pharma:
+      severity: recorded
+      book_ch16: "Moon, Mars, Ketu -- and the chapter itself says 'Assignment varies by scheme -- another reminder the map is convention'"
+      book_appB: "Jupiter -- 'Banking/financials, education, pharma'; Ketu -- 'Pharma niches'"
+      source: "Mars -- 'Healthcare & Pharma'; Rahu -- 'Pharmaceuticals'"
+      resolution: not_resolved_no_instrument_depends_on_it
+
+    iron_and_steel:
+      severity: recorded
+      book_ch15: "double-assigned inside one chapter -- Mars 'also iron, in some schemes' AND Saturn 'Iron, oil and crude, coal'"
+      book_ch16: "resolves it -- 'Mars for base metals; Saturn for iron and coal'"
+      source: "keeps both and says so -- 'the sector is ruled by Mars and Saturn both'"
+      resolution: not_resolved_no_instrument_depends_on_it
+
+    automobiles:
+      severity: recorded
+      book_ch16: "Venus -- 'Autos, FMCG, Luxury, Hospitality'"
+      book_appB: "Venus -- 'Autos, luxury, entertainment, textiles'"
+      source: "Saturn -- 'Automobiles (particularly Heavy Commercial Vehicles)'; Mars -- 'Automobile'. Venus gets no sector row at all."
+      resolution: not_resolved_no_instrument_depends_on_it
+
+    sugar:
+      severity: coverage_gap_not_contradiction
+      book_ch15: "Venus -- 'sugar and soft/luxury goods'"
+      book_ch16: absent
+      book_appB: absent
+      source: "carries full Bullish and Bearish CONFIGURATION sections for Sugar and Jaggery (pp.168-173, 174-175) and names no ruling planet for it"
+      resolution: >
+        Irrelevant to coverage. SUGAR is tier 1 and takes its verdicts from the
+        source's own configuration sections, so no rulership is needed to reach it.
+
+  # ----------------------------------------------- the two encoded resolutions
+  conflicts:
+
+    silver_moon_vs_venus:
+      decision: "SILVER = MOON, primary. Venus may enter only as a SECONDARY modifier, never as primary."
+      status: settled_by_user
+      reason_recorded: >
+        Not convention-following. book_ch15 CONSTRUCTS the gold-silver spread as
+        the Sun-Moon spread -- "The Sun-Moon separation of roughly 96.9 degrees is
+        the celestial analogue a practitioner would map onto the gold/silver
+        ratio" -- so a Venus-ruled silver collapses the chapter's own
+        construction. That is a structural argument, not a popularity one.
+      rival: Venus
+      rival_status: secondary_modifier_only
+      rival_never: primary
+      # Recorded so the disagreement does not read as settled.
+      rival_grounds_as_stated_by_user: >
+        BPHS gives Venus silver alongside the diamond; the Moon holds silver
+        alongside the pearl. The conflict is real in the classical literature.
+      rival_grounds_attributed_to: user_prompt
+      rival_grounds_status: unverified_by_source
+      rival_grounds_source_checked: none
+      rival_grounds_correction_ref: rulership.corrections_on_record.bphs_venus_silver
+      rival_grounds_as_witnessed_in_these_three_sections: >
+        DIVERGENT FROM THE ABOVE, and recorded rather than reconciled. The book
+        does not cite BPHS and does not treat Venus-silver as classical. It files
+        Venus under "Framework -- The extensions are modern practitioner
+        convention, not classical" and calls Venus "an alternate silver/value
+        significator". Appendix B.5 gives Venus no silver at all. So WITHIN THESE
+        THREE SECTIONS the conflict is Classical(Moon) vs Framework(Venus), not
+        Classical vs Classical. The classical-literature claim may well be right;
+        it is simply not witnessed by the sections this table was reconciled from,
+        and must not be recorded as if it were.
+      emit:
+        primary_significator: Moon
+        secondary_significator: Venus
+        flag_on_any_venus_contribution: silver_venus_secondary_modifier
+        claim_tag_primary: Classical
+        claim_tag_secondary: Framework
+
+    crude_saturn_vs_rahu:
+      decision: "CRUDE = SATURN **and** RAHU. Both significators are carried, both are emitted, NEITHER is marked primary."
+      decision_date: 2026-09-12
+      decided_by: user
+      status: DELIBERATELY_UNRESOLVED_BOTH_EMITTED
+      blocking_for: nothing        # was verdict_rule_signoff; no longer blocks
+      resolved_by_precedence: false
+
+      # ---------------------------------------------------------------- why
+      # This is NOT an oversight, NOT a deferral, and NOT a failure to choose.
+      # The reasoning is recorded in full so a later reader cannot mistake it
+      # for one, and cannot "tidy it up" by picking a winner.
+      why_not_resolved: >
+        Neither witness refutes the other. The classical weight is with Saturn --
+        that which is extracted from underground, dark and heavy, of which
+        mineral oil is the paradigm case -- and the book says so in three
+        separate sections; a book/calendar contradiction has a real cost.
+        But the source says Rahu, the source is what this project reproduces,
+        and Rahu-as-crude is coherent on its own terms as the modern
+        imported/speculative reading. Resolving by precedence would be resolving
+        by fiat: the precedence rule ranks EVIDENCE for verdicts, and applying
+        it to a rulership dispute would silently convert a question about the
+        world into a question about filing order.
+      why_both_is_cheap: >
+        Carrying both costs nothing and discards nothing. It converts an
+        unresolvable rulership dispute into a TESTABLE DIVERGENCE, which is the
+        only way it can actually be settled in a project built to test
+        astro-financial signals empirically. Deciding by fiat now would destroy
+        the experiment to save 34 rows.
+      deciding_fact: >
+        Volume. 26 Saturn-conditioned 2027 events against 8 Rahu-conditioned
+        ones. Choosing Rahu alone would have shrunk CL's addressable population
+        by roughly two thirds; choosing Saturn alone would have discarded the
+        source's own map. Keeping both costs 34 rows.
+
+      # ------------------------------------------------- the intended test
+      divergence_is_the_point: true
+      test_design:
+        intent: >
+          The two paths are the experiment. Once verdicts exist and outcomes are
+          scored, the question "is crude Saturn's or Rahu's?" is answered by
+          which path's verdicts land, not by which witness is older.
+        not_a_per_event_test: >
+          CHECKED, NOT ASSUMED, and it constrains the test. In calendar 2027 the
+          Saturn set and the Rahu set are DISJOINT -- 26 + 8 = 34 with an empty
+          intersection; no 2027 event carries both bodies. So every CL verdict
+          comes from exactly one path, and the two paths can never contradict
+          each other on the same event. The test is therefore a POPULATION-level
+          comparison of hit rates, not a per-event agreement count.
+        power_caveat: >
+          8 Rahu-conditioned events in a year is a small sample. A single year
+          cannot settle this; several years of scored outcomes will be needed
+          before the divergence means anything. Recorded here so the first
+          year's numbers are not over-read.
+        overlap_2027: 0
+
+      # ------------------------------------------------------- what is emitted
+      emit:
+        both_paths: true
+        primary: null                     # MUST remain null in the OUTPUT.
+        primary_note: >
+          This config records that the BOOK favours Saturn (three sections) and
+          that the SOURCE favours Rahu (its own sector map). The emitted record
+          must not pre-judge between them: no emitted CL verdict carries a
+          primary/secondary ranking, and no consumer may infer one from field
+          order.
+        flag_on_every_cl_verdict: crude_significator_contested
+        cross_reference_required: true
+        cross_reference_note: >
+          Every emitted CL verdict names the other path explicitly, so a
+          consumer reading one path can never be unaware of the other.
+        paths_defined_at: verdict_coverage.tiers.tier_3.derivations.CL.paths
+
+      # ------------------------------------------- superseded prior position
+      superseded_decision: >
+        The earlier instruction "CRUDE = SATURN, tier 3 book_derived" is
+        superseded. It is kept in the record below because the CL Saturn path is
+        still exactly that rule, unchanged, with its three citations intact --
+        what changed is that it is no longer the ONLY thing emitted.
+      user_instruction_basis_original: >
+        "crude: Saturn. Backed three ways (Ch15 oil/iron, Ch16 oil/PSU/metals,
+        App B oil/PSUs/mining)." All three book citations verified correct and
+        quoted in rulership.disagreements.crude_oil.
+      evidence_for_rahu: >
+        The 2026 SOURCE prints its own planet->sector map twice (pp.210 and
+        214-218) and assigns "Crude oil" to RAHU. Saturn's row in the same table
+        carries "Oil-seeds" -- an agricultural commodity, not crude. The
+        source's map is not decorative: the phrase "sectors ruled by X" drives
+        verdicts throughout its monthly event tables (e.g. "Positive for Sectors
+        ruled by Rahu", "especially in sectors ruled by Saturn"), so this is the
+        map the source's own verdicts run on.
+      scope_consequence_recorded:
+        saturn_conditioned_events_2027: 26
+        rahu_conditioned_events_2027: 8
+        union_2027: 34
+        intersection_2027: 0
+
+      reopens: sector_mapping
+      reopens_reason: >
+        Ruling the source's map load-bearing here makes it load-bearing
+        everywhere. The other seven source-vs-book sector disagreements are owed
+        the same dual treatment when their instruments come into scope. See
+        rulership.sector_mapping_reopened.
+
+  # ------------------------------------------------- sector_mapping REOPENED
+  # Closed at the coverage step, reopened by the crude decision on 12-Sep-2026.
+  sector_mapping_reopened:
+    status: reopened
+    reopened_date: 2026-09-12
+    trigger: rulership.conflicts.crude_saturn_vs_rahu
+    trigger_reason: >
+      The crude case proves the source's sector map is load-bearing. A map that
+      outweighs three book sections on crude cannot be treated as decorative on
+      autos, pharma, FMCG or iron.
+    blocking_now: false
+    blocking_now_reason: >
+      No instrument currently in `instruments` maps to any of the seven. Nothing
+      in the 2027 build turns on them yet.
+    trigger_point: "when an instrument mapping to that sector enters `instruments`"
+    treatment_owed: >
+      The same shape CL just got: both mappings carried, each with its own tier,
+      claim_tag and citation, NEITHER marked primary, every affected verdict
+      flagged <sector>_significator_contested and cross-referenced to the rival
+      path, and the divergence recorded as the intended test rather than as a
+      defect.
+    items:
+
+      it_telecom:
+        book: "Mercury -- book_ch16 'IT, telecom, media'; book_appB same. TWO-way only; book_ch15 never mentions IT or telecom."
+        source: "Rahu -- 'Information Technology', 'Telecommunications'. The source prints NO Mercury sector row at all."
+        kind: omission_plus_reassignment
+        severity: high_if_scoped
+        note: >
+          The strongest source-vs-book disagreement after crude, and structurally
+          worse: the source does not merely disagree, it gives Mercury no sector
+          row at all. Would bite immediately if any IT instrument is added.
+
+      automobiles:
+        book: "Venus -- book_ch16 'Autos, FMCG, Luxury, Hospitality'; book_appB 'Autos, luxury, entertainment, textiles'. TWO-way only."
+        source: "Saturn -- 'Automobiles (particularly Heavy Commercial Vehicles)'; Mars -- 'Automobile'. Venus gets no sector row at all."
+        kind: reassignment_to_two_other_planets
+        severity: high_if_scoped
+
+      pharma:
+        book: "book_ch16 Moon/Mars/Ketu, and the chapter itself concedes 'Assignment varies by scheme'; book_appB Jupiter + Ketu."
+        source: "Mars -- 'Healthcare & Pharma'; Rahu -- 'Pharmaceuticals'."
+        kind: four_way_disagreement_including_book_internal
+        severity: high_if_scoped
+        note: "The book is not internally agreed here either, so a dual emit would be a triple."
+
+      iron_and_steel:
+        book: "book_ch15 double-assigns inside one chapter (Mars 'also iron, in some schemes' AND Saturn 'Iron, oil and crude, coal'); book_ch16 resolves it to 'Mars for base metals; Saturn for iron and coal'."
+        source: "keeps BOTH and says so outright -- 'the sector is ruled by Mars and Saturn both'."
+        kind: source_declines_the_books_resolution
+        severity: medium_if_scoped
+        note: "Here the SOURCE is the one refusing to resolve. Dual emit is what the source itself prescribes."
+
+      FMCG:
+        book: "FLAT CONTRADICTION between two book sections -- book_ch16 Venus, book_appB Moon."
+        source: "no FMCG row. The source has a Moon rulership it invokes ('Positive for Sectors ruled by Moon') but never tabulates."
+        kind: book_internal_contradiction_plus_source_gap
+        severity: medium_if_scoped
+
+      gold_secondary:
+        book: "Sun -- the only three-way-plus-source agreement in the table, and book_ch15 calls Sun->gold one of just two pedigreed asset rulerships in the whole book."
+        source: "agrees (Sun, 'Gold (western astro)') but ALSO puts Gold under MARS."
+        kind: source_internal_double_assignment
+        severity: low_but_live
+        note: >
+          LIVE NOW, unlike the other six -- GC and MCXGOLD are in scope. It does
+          not disturb them: gold reaches tier 1 through the source's own Gold
+          configuration sections, not through any rulership, so no significator
+          path is used and nothing here is load-bearing yet. It becomes live the
+          moment a gold verdict is derived from rulership rather than read from a
+          configuration section.
+
+      logistics:
+        book: "Saturn -- book_appB 'Oil, PSUs, mining, infrastructure, labour' with logistics in the extended row."
+        source: "Rahu -- 'Logistics, Crude oil, Pharmaceuticals'."
+        kind: same_row_same_dispute_as_crude
+        severity: low_if_scoped
+        note: >
+          The identical Saturn-vs-Rahu split as crude, on the adjacent item of
+          the same source row. Whatever settles crude should settle this.
+
+    excluded_as_sub_threshold:
+      - "Sun 'renewables' vs Rahu 'wind_power' -- adjacent rather than contradictory; no section denies the other."
+      - "Mercury 'money_flows_with_venus' vs Venus -- the book states the sharing itself, so it is not a disagreement."
+    excluded_note: >
+      Listed so the count of seven is auditable and not the result of a quiet
+      trim.
+
+# ========================================================== verdict coverage
+# WHAT THIS BLOCK IS: the definition of WHICH instruments may carry a verdict,
+# on WHAT evidence, and at what PROVENANCE tier. It defines coverage only.
+# NO VERDICTS ARE GENERATED HERE and no verdict rule is written here -- the rule
+# layer needs labels.claim_tag / confidence sign-off first
+# (open_questions.label_scheme_signoff).
+verdict_coverage:
+  status: axes_canonical_rules_pending_signoff
+
+  # ======================================================================= axes
+  # CANONICAL 13-Sep-2026. The coverage model has TWO fields, not one. They are
+  # `evidence_source` and `construction`, and they are what a rule is written
+  # against. `tier` is a DERIVED convenience name over the pair -- kept because
+  # eleven instruments and three reports already speak in tier names, demoted
+  # because it answers two questions at once and therefore answers neither
+  # cleanly. See build/STEP4_DECISIONS.md section 3.
+  #
+  # Made canonical BEFORE any rule reads it, deliberately. Nothing emits these
+  # fields today -- no verdict record exists to carry them -- so this block
+  # changes no output. It exists so the rule layer is built against the right
+  # shape instead of being retrofitted once it has consumers.
+  axes:
+    canonical: true
+    canonical_since: 2026-09-13
+    fields: [evidence_source, construction]
+    emitted_today: false
+    emitted_today_note: >
+      No verdict record exists yet, so nothing carries either field. This block
+      is a schema decision, not an emit. The build hash must not move when it
+      lands, and that is checked.
+
+    evidence_source:
+      question: "Where does the claim come from?"
+      values: [source, book, source_and_book, none]
+      meanings:
+        source:          "data/source_2026.html states it."
+        book:            "The Celestial Ledger states it; the source does not."
+        source_and_book: "Both state it and they agree."
+        none:            "No witness states it."
+      widened_from_three_values: >
+        STEP4_DECISIONS section 3.1 named three values -- source / book / none --
+        and section 3.2's cross-tabulation then used a fourth, "source + book",
+        on the BANKNIFTY Jupiter sector overlay row, where book_ch16, book_appB
+        and the source all make the same assignment. The cross-tabulation
+        enumerates actual rows and governs, so the value list is widened to four
+        rather than the row being flattened into one witness. Recorded because
+        collapsing it to `source` would have hidden a two-witness agreement and
+        collapsing it to `book` would have dropped the source's own map -- the
+        exact error rulership.corrections_on_record.ch15_silence_read_as_agreement
+        was raised against.
+
+    construction:
+      question: "How is the verdict produced?"
+      values: [printed, derived, null]
+      meanings:
+        printed: "The witness states the VERDICT itself. Nothing is inferred."
+        derived: "A rulership is applied to a significator's condition."
+        "null":  "No verdict is produced. The verdict field is null."
+      null_is_a_value: >
+        YAML null, not the string "null". It is a real member of the value set
+        -- tier_4 constructs nothing -- and is the one construction under which
+        a null verdict is legal.
+
+    # -------------------------------------------- the pair is not sufficient
+    # Checked against section 3.2 rather than assumed. (source, printed) appears
+    # TWICE in that table with two different tiers: the Indian-equity rows at
+    # tier 1 and the SPX/NDX rows at tier 2. The pair alone therefore cannot
+    # reproduce the tier, and a third discriminator is required.
+    #
+    # This is not a third axis. It is a property of the EVALUATION, not of the
+    # claim: whether the rule is evaluated on a civil day other than the one it
+    # was authored against. Both axes are about the claim; this is about where
+    # the claim is being applied.
+    localized:
+      is_an_axis: false
+      is_a: evaluation_property
+      question: "Is the rule evaluated on a civil day other than its authored one?"
+      values: [true, false]
+      set_by: civil_day_by_venue
+      carried_as: >
+        Already carried as flags, not invented here: SPX and NDX carry
+        source_authored_for_indian_equities, and GC, SI and CL carry
+        authored_ist_evaluated_venue_day. Both mean "authored against one civil
+        day, evaluated against another" about two different mismatches.
+      why_recorded_here: >
+        Because without it the derivation below is not a function. Stated rather
+        than resolved by picking one of the two (source, printed) rows, which
+        would have silently reassigned either the Indian equities or SPX/NDX.
+
+  # ================================================================ tier
+  # DERIVED. Not a field a rule is written against; a name computed from the
+  # pair above plus `localized`, kept for continuity with the eleven-instrument
+  # table and the three reports that already use the names.
+  tier_derivation:
+    status: derived_convenience_mapping
+    derived_from: [evidence_source, construction, localized]
+    authority: >
+      The axes are authoritative. Where a tier name and the pair disagree, the
+      pair is right and the tier name is the lossy rendering -- which is the
+      whole reason for the demotion. The known case is CL_rahu: the pair reads
+      (source, derived), unambiguous and needing no flag, while the tier name
+      reads source_backed, whose own definition says "nothing is derived".
+    rules:
+      # First match wins; the list is ordered, and `localized` is only consulted
+      # where the pair is ambiguous.
+      - {evidence_source: none,            construction: null,    tier: no_rule}
+      # ADDED 13-Sep-2026, by the rule layer rather than by design. Catalogue B
+      # contains sections that state a CONDITION and print no verdict at all --
+      # Mars Combust Rise Cycle p.6 and Mercury Combust Rise Cycle p.10 are two
+      # of them, bare tables with no remark and no inference. Ported faithfully,
+      # such a rule fires with no verdict, and the pair it emits is
+      # (source, null), which the six rows below did not cover.
+      #
+      # Its tier is NULL, and that is not the same as no_rule. no_rule means no
+      # defensible rulership exists and nothing will ever attach; here the rule
+      # exists, is source-backed and fires on real dates -- the source simply
+      # declined to say what it means. The tier names classify a VERDICT, and
+      # there is no verdict to classify.
+      - {evidence_source: source,          construction: null,    tier: null,
+         note: "condition-only section; the source prints no verdict"}
+      - {evidence_source: source,          construction: printed, localized: false, tier: source_backed}
+      - {evidence_source: source,          construction: printed, localized: true,  tier: localized}
+      - {evidence_source: source,          construction: derived, tier: source_backed}
+      - {evidence_source: book,            construction: derived, tier: book_derived}
+      - {evidence_source: source_and_book, construction: derived, tier: book_derived}
+    unmapped_is_an_error: >
+      A pair with no rule above is a build error, not a default. In particular
+      (book, printed) has no row: the book prints no dated verdict for any
+      instrument in scope, and inventing a tier for it would invent the claim.
+    cross_tabulation: "build/STEP4_DECISIONS.md section 3.2"
+
+  # ------------------------------------------------------------------- emit
+  # `evidence_source` and `construction` are the REQUIRED fields on every
+  # emitted verdict. `tier` is emitted too, but as a derived rendering of them:
+  # it is not a comment, not a footnote and not inferable from the instrument,
+  # so it travels with the verdict and no downstream consumer can mistake a
+  # localized or derived verdict for a source-backed one.
+  emit:
+    canonical_fields: [evidence_source, construction]
+    evidence_source_values: [source, book, source_and_book, none]
+    construction_values: [printed, derived, null]
+    tier_field: tier                 # DERIVED from the pair; still emitted
+    tier_values: [source_backed, localized, book_derived, no_rule]
+    tier_is_derived: true
+    tier_must_agree_with_axes: >
+      The emitted tier must equal tier_derivation applied to the emitted pair.
+      A record where they disagree is a build error: it means one of the two was
+      set by hand.
+    also_required:
+      - claim_tag                    # from labels.claim_tag
+      - provenance                   # section or derivation the verdict came from
+      - flags                        # list; may be empty, never absent
+    null_verdict_allowed_only_at: {evidence_source: none, construction: null}
+    null_verdict_allowed_only_at_tier: no_rule   # the same rule, in tier names
+    rejection_rule: >
+      A verdict record without evidence_source or construction, or with a value
+      outside the sets above, is a build error and must fail the emit, not be
+      defaulted. The same applies to a tier that is absent, outside tier_values,
+      or disagreeing with the pair it is supposed to be derived from.
+
+  # ------------------------------------------------------------------ tiers
+  # Retained in full. The four entries below are no longer the model -- they are
+  # the four DERIVED names, each now carrying the axis pair it renders. The
+  # evidence, instrument lists, derivations and civil-day rulings inside them are
+  # unchanged and remain load-bearing.
+  tiers:
+
+    tier_1:
+      name: source_backed
+      means: "The 2026 source states the verdict itself. Nothing is derived."
+      # The pair this name renders. Two pairs render to it, which is precisely
+      # why the name was demoted: the CL Rahu path is (source, derived) and its
+      # means clause above says "nothing is derived".
+      axes: {evidence_source: source, construction: printed, localized: false}
+      axes_also_rendering_to_this_name:
+        - {evidence_source: source, construction: derived, applies_to: CL_rahu}
+      claim_tag: Classical           # as printed by the source; per-rule tag may
+                                     # be narrowed at rule-writing time
+      flags_added: []
+      instruments: [MCXGOLD, GC, MCXSILVER, SI, SUGAR, NIFTY, BANKNIFTY]
+      evidence:
+        gold: >
+          "Gold -- Bullish Configuration" pp.136-144 and "Gold -- Bearish
+          Configuration" pp.145-148. 17 named rule groups across the two.
+        silver: >
+          "Silver -- Bullish Configuration" pp.149-161 and "Silver -- Bearish
+          Configuration" pp.162-167. 29 named rule groups across the two -- the
+          largest configuration set in the document.
+        sugar: >
+          "Sugar and Jaggery -- Bullish Configuration" pp.168-173 and "Sugar and
+          Jaggery -- Bearish Configuration" pp.174-175. 9 named rule groups.
+          The bearish section closes with the source's own note "*Moon aspects to
+          be added" -- an admitted incompleteness, carried forward as-is.
+        indian_equities: >
+          The source's general verdicts -- the weekday/panchang/transit rule
+          families already fixtured under weekday_rule.coverage (12 families, 64
+          printed rows) plus the p.44-p.104 named families. These are market-wide
+          verdicts, not instrument-specific ones.
+      banknifty_note: >
+        BANKNIFTY reaches tier 1 through the general verdicts like NIFTY. It ALSO
+        has a Jupiter sector path on which book_ch16, book_appB and the source all
+        agree (source: "Vargottam Jupiter is Positive for the sectors ruled by
+        Jupiter, particularly Banking and Finance"). That path is a derived
+        overlay and must be emitted at tier 3 with the derived flags if it is used
+        at all -- it does not upgrade, and is not merged into, the tier-1 rows.
+      civil_day: by_venue            # DECIDED 12-Sep-2026. See
+                                     # verdict_coverage.civil_day_by_venue.
+      civil_day_resolved:
+        was: >
+          OPEN. GC and SI are COMEX/Globex instruments carrying IST-stamped
+          source rules. Tier 2 localizes MARKET-GENERAL rule families by venue
+          civil day, but the gold/silver configurations are INSTRUMENT rules, not
+          market rules, so the tier-2 argument does not automatically extend to
+          them. Until decided, GC/SI inherited the Mumbai civil day.
+        now: >
+          RESOLVED. The venue determines the civil day, for instrument rules as
+          well as market rules. MCXGOLD and MCXSILVER evaluate on the Mumbai day;
+          GC and SI evaluate on the New York day. The gold/silver configurations
+          keep their IST authorship in provenance and every affected verdict
+          carries the flag authored_ist_evaluated_venue_day.
+        reason: >
+          The alternative has COMEX gold firing on a day the contract was not
+          trading. This is not a new convention -- it is the dual-location
+          evaluation already in the build, keyed on VENUE rather than on tier.
+
+      # CL also emits a tier-1-tagged row, via the SOURCE's own sector map
+      # (Rahu -> Crude oil) rather than via a configuration section. It is
+      # deliberately NOT added to `instruments` above, which lists instruments
+      # whose VERDICTS the source prints.
+      instruments_via_source_rulership: [CL]
+      instruments_via_source_rulership_note: >
+        OBJECTION RECORDED, IMPLEMENTED AS RULED. tier_1.means is "The 2026
+        source states the verdict itself. Nothing is derived." The CL Rahu path
+        does not meet that: the source states the RULERSHIP, and the verdict is
+        still derived by applying it to Rahu's condition -- which is tier_3's
+        definition. The tier was assigned by verdict_coverage.precedence, which
+        ranks EVIDENCE, not verdict CONSTRUCTION. Consequence: a consumer
+        filtering on tier == source_backed will pick up a CL row whose verdict no
+        section of the source prints. That is mitigated, not removed, by the flag
+        rulership_source_stated_verdict_derived carried on every CL_rahu row.
+        Raised so the tier's meaning stays honest; the ruling stands.
+      see_cl: verdict_coverage.tiers.tier_3.derivations.CL.paths
+
+    tier_2:
+      name: localized
+      axes: {evidence_source: source, construction: printed, localized: true}
+      axes_note: >
+        Same pair as tier_1. `localized` is what separates them, which is the
+        row that proves the pair alone cannot reproduce the tier. See axes.localized.
+      means: >
+        The SAME rule families as Indian equities, evaluated on the New York
+        civil day. Not a new rule, and not a chart substitution.
+      justification: >
+        The source's rule families here are TRANSIT and PANCHANG rules. They
+        reference no natal chart -- they condition on planetary position, tithi,
+        nakshatra, yoga, karana and weekday, all of which are defined
+        independently of any location's chart. Evaluating them on a different
+        civil day is therefore a change of DAY BOUNDARY, not a change of rule.
+        The machinery already exists: weekday_rule.evaluate_per_location is true,
+        Mumbai and New York already produce separate rows, and the 2026
+        divergence is measured (103 IST vs 119 NY, 90 shared).
+      claim_tag: Framework
+      flags_added: [source_authored_for_indian_equities]
+      instruments: [SPX, NDX]
+      civil_day: new_york           # = by_venue for US_cash; see civil_day_by_venue
+      rule_families: "identical to tier_1.indian_equities -- no additions, no substitutions"
+      explicitly_not: >
+        Not a US natal/foundation chart, not the NYSE 1792 chart, not a
+        re-derivation. Any verdict requiring a natal chart is OUT of tier 2.
+      narrative_layer: excluded      # see verdict_coverage.narrative_layer
+
+    tier_3:
+      name: book_derived
+      axes: {evidence_source: book, construction: derived}
+      axes_also_rendering_to_this_name:
+        - {evidence_source: source_and_book, construction: derived,
+           applies_to: "BANKNIFTY Jupiter sector overlay, if used at all"}
+      means: >
+        No source verdict exists for the instrument. The verdict is derived by
+        applying the reconciled rulership to the significator's condition.
+      claim_tag: Framework
+      flags_added: [book_derived, no_source_verdict]
+      instruments: [CL]
+      derivations:
+        CL:
+          # DECIDED 12-Sep-2026. CL carries TWO significator paths. Both are
+          # emitted. NEITHER is primary. This is a deliberate non-resolution --
+          # rulership.conflicts.crude_saturn_vs_rahu records why, at length, so
+          # it cannot later be read as an oversight.
+          significator_resolution: dual_path_deliberately_unresolved
+          emit_both: true
+          primary: null
+          primary_note: >
+            MUST stay null in the emitted record. The config records that the
+            book favours Saturn; the OUTPUT must not pre-judge. Path order in
+            this list is alphabetical by id and carries no ranking.
+          flag_on_every_cl_verdict: crude_significator_contested
+          contested: rulership.conflicts.crude_saturn_vs_rahu
+          civil_day: new_york        # CME_Globex venue; see civil_day_by_venue
+          path_overlap_2027: 0
+          path_overlap_note: >
+            The two paths are DISJOINT in 2027: 26 Saturn events + 8 Rahu events
+            = 34, intersection empty. No CL verdict is ever produced by both
+            paths, so they cannot contradict each other on a single event. The
+            intended divergence test is population-level, not per-event. See
+            rulership.conflicts.crude_saturn_vs_rahu.test_design.
+
+          paths:
+
+            - id: CL_rahu
+              significator: Rahu
+              axes: {evidence_source: source, construction: derived}
+              axes_note: >
+                Unambiguous under the canonical pair, and needs no flag to be
+                legible. rulership_source_stated_verdict_derived stays on the
+                row for consumers reading the derived tier name, and becomes
+                redundant rather than load-bearing once the pair is emitted.
+              tier: source_backed        # DERIVED from the pair above
+              tier_number: 1
+              tier_basis: verdict_coverage.precedence
+              claim_tag: Classical
+              flags: [crude_significator_contested,
+                      source_sector_map,
+                      rulership_source_stated_verdict_derived]
+              rulership_witnesses: [source]
+              cited_sections:
+                - "source pp.210 and 214-218 -- Rahu row: '... Logistics, Crude oil, Pharmaceuticals ...'"
+                - "source, same table -- Saturn's row carries 'Oil-seeds', an agricultural commodity, NOT crude"
+                - "source scope clause -- 'Rahu rules all the commodities of any Nakshatra (Star) or Sign where it stays'"
+                - "source usage -- 'Positive for Sectors ruled by Rahu' drives verdicts throughout the monthly event tables, so this map is the one the source's own verdicts run on"
+              scope: "events whose bodies include Rahu -- 8 in calendar 2027, on the New York civil day"
+              cross_reference: CL_saturn
+              tier_objection: verdict_coverage.tiers.tier_1.instruments_via_source_rulership_note
+
+            - id: CL_saturn
+              significator: Saturn
+              axes: {evidence_source: book, construction: derived}
+              tier: book_derived         # DERIVED from the pair above
+              tier_number: 3
+              tier_basis: "no source verdict and no source rulership for this path"
+              claim_tag: Framework
+              flags: [crude_significator_contested,
+                      book_derived,
+                      no_source_verdict,
+                      rulership_contested_by_source]
+              rulership_witnesses: [book_ch15, book_ch16, book_appB]
+              cited_sections:
+                - "book_ch15 -- 'Saturn ... Iron, oil and crude, coal'; significator table 'Saturn | Oil / iron'"
+                - "book_ch16 -- 'Saturn . Sun -> Oil, Energy, PSU, Heavy Industry'; table 'Saturn | oil / PSU / metals'"
+                - "book_appB -- B.5 'Saturn | Oil, PSUs, mining, infrastructure, labour'"
+              scope: "events whose bodies include Saturn -- 26 in calendar 2027, on the New York civil day"
+              cross_reference: CL_rahu
+
+    tier_4:
+      name: no_rule
+      axes: {evidence_source: none, construction: null}
+      means: "No defensible rulership exists. The verdict field is null."
+      verdict: null
+      claim_tag: null
+      flags_added: [no_defensible_rulership]
+      instruments: [USDINR]
+      reason: >
+        A currency pair is a RATIO OF TWO ECONOMIES, not a thing a significator
+        maps to. Do not assign Mercury, and do not assign anything else.
+      corroborated_by_absence: >
+        Checked rather than assumed. None of book_ch15, book_ch16, book_appB or
+        the source's own sector map contains a currency row. The nearest item in
+        any of them is book_appB's Mercury -> "trading/brokerage", which is about
+        brokers, not FX.
+      emit_anyway: true
+      emit_anyway_reason: >
+        USDINR rows are still emitted with verdict null, so the absence is VISIBLE
+        in the output rather than looking like a gap in the build.
+
+  # ------------------------------------------------------- civil day by venue
+  # DECIDED 12-Sep-2026. The evaluation civil day is a property of the VENUE,
+  # not of the rule type and not of the tier. This is NOT a new convention: it
+  # is the dual-location evaluation already in the build
+  # (weekday_rule.evaluate_per_location, Mumbai and New York rows already
+  # produced side by side), re-keyed from rule type onto venue.
+  civil_day_by_venue:
+    rule: "Every instrument evaluates on the civil day of its venue's location."
+    supersedes: >
+      The provisional rule under tier_1 that had GC and SI inheriting the Mumbai
+      civil day because their rules were authored in IST. Authorship is not
+      venue.
+    reason: >
+      The alternative has COMEX gold firing on a day the contract was not
+      trading. A verdict that cannot be acted on at its own venue is not a
+      verdict about that instrument.
+    map:
+      NSE:         mumbai
+      NSE_FX:      mumbai
+      MCX:         mumbai
+      physical_IN: mumbai
+      US_cash:     new_york
+      CME_Globex:  new_york
+    by_instrument:
+      mumbai:   [NIFTY, BANKNIFTY, MCXGOLD, MCXSILVER, USDINR, SUGAR]
+      new_york: [SPX, NDX, GC, SI, CL]
+    changed_by_this_decision: [GC, SI, CL]
+    unchanged_by_this_decision:
+      already_new_york: [SPX, NDX]        # tier 2 was always evaluated on the NY day
+      already_mumbai:   [NIFTY, BANKNIFTY, MCXGOLD, MCXSILVER, USDINR, SUGAR]
+
+    provenance_unchanged: >
+      The source's gold and silver configuration sections keep their IST
+      authorship in provenance. Nothing about the rule text, its page citation or
+      its authored timezone is re-stamped. Only the day boundary the rule is
+      evaluated against moves.
+    flag_on_every_affected_verdict: authored_ist_evaluated_venue_day
+    flag_means: >
+      "This rule was authored against the Mumbai civil day and is being evaluated
+      against the venue civil day." Carried on every GC, SI and CL verdict. SPX
+      and NDX already carry source_authored_for_indian_equities, which says the
+      same thing about a different mismatch; both flags may appear together.
+
+    # ------------------------------------------------------ measured divergence
+    # The user asked how many gold/silver verdicts land on a different date under
+    # the venue day than under the Mumbai day. No verdicts exist yet, so this is
+    # measured on the ADDRESSABLE EVENTS -- the upper bound on affected verdicts.
+    measured_divergence_2027:
+      basis: >
+        build/astronomy_2027.json, comparing time.start_stamp.ist_date against
+        time.start_stamp.et_date on the event classes each instrument addresses.
+        Scope is every event landing in calendar 2027 under EITHER civil day.
+      gold_classes:
+        in_scope: 1277
+        different_calendar_date: 536
+        pct: 42.0
+      silver_classes:
+        in_scope: 1282
+        different_calendar_date: 537
+        pct: 41.9
+      cl_classes:
+        in_scope: 34
+        different_calendar_date: 19
+        pct: 55.9
+        split: {saturn_path: "17 of 26", rahu_path: "2 of 8"}
+      direction: >
+        Always -1, never +1. IST is UTC+5:30 and ET is UTC-5/-4, so the New York
+        civil date is either the same day or one day EARLIER; it is never later.
+        Every one of the 536/537 shifts is a same-or-previous-day shift.
+      year_membership_effect:
+        gold:   {mumbai_day_2027: 1276, new_york_day_2027: 1276, shared: 1275}
+        silver: {mumbai_day_2027: 1281, new_york_day_2027: 1281, shared: 1280}
+        boundary_events:
+          - "sign_ingress:moon:20261231T231708Z -- 01-Jan-2027 IST / 31-Dec-2026 ET. IN under the Mumbai day, OUT under the New York day."
+          - "sign_ingress:moon:20271231T211011Z -- 01-Jan-2028 IST / 31-Dec-2027 ET. OUT under the Mumbai day, IN under the New York day."
+      reading: >
+        THE NUMBER IS LARGE AND THE USER ASKED TO SEE IT IF SO: roughly 42% of
+        addressable gold and silver events -- 536 and 537 respectively -- land on
+        a different calendar date under the venue day than under the Mumbai day.
+        This is not a defect and not a surprise: a 9.5-to-10.5 hour offset moves
+        any event stamped before about 10:30 IST back a day, and the Moon
+        ingresses that dominate these populations are uniformly distributed
+        across the clock, so a ~40% shift rate is exactly what a uniform
+        distribution predicts. What it means practically: the SIZE of the
+        gold/silver population is nearly unchanged (1276 vs 1276; one event in,
+        one out, both Moon sign ingresses on a New Year boundary), but the DATE
+        two in five of them carry changes. Anything that joins these verdicts to
+        price data by date must key on the instrument's venue day, not on a
+        single global date column, or roughly two in five GC/SI rows will be
+        joined to the wrong session.
+      cl_reading: >
+        CL's shift rate is higher (19 of 34, 55.9%) purely because Saturn's 2027
+        events cluster in the Indian morning; the population size is unchanged at
+        26 + 8 under either day.
+
+  # ------------------------------------------------------------- precedence
+  precedence:
+    rule: "Where a source-backed verdict and a derived verdict would both apply to the same event AND the same instrument, source-backed wins."
+    loser_is_retained: true
+    loser_flag: superseded_by_source
+    do_not_drop: >
+      The derived verdict is kept alongside the winner, flagged. A SYSTEMATIC
+      disagreement between the two is a finding about the derivation -- if
+      derived verdicts are silently dropped, that finding can never surface.
+    audit_intent: "Count agreements and disagreements between the kept pairs once the rule layer runs."
+
+  # --------------------------------------------------------- narrative layer
+  narrative_layer:
+    scope: "The source's Salient Features / prophecy prose (pp.192-231 and the dated prophecy entries)."
+    anchored_to: india_chart
+    localizes: false
+    flag: india_chart_anchored
+    do_not_extend_to: [SPX, NDX, GC, SI, CL, USDINR]
+    reason: >
+      This layer is natal, not transit. The source computes it from a chart cast
+      for "January 1, 2026, 0:00:00, 72E50'00, 18N58'00 -- Mumbai, India" and
+      reasons in house lords off that chart ("Presence of Mercury (1st and 10th
+      Lord) ... in the 4th house"), and it repeatedly invokes India's own natal
+      chart ("There are many planets in Ashlesha in India's natal chart";
+      "Venus is Lagnesh in the natal chart of India"). Tier 2's justification --
+      that the rules reference no natal chart -- is exactly what fails here, so
+      tier 2 does not reach this layer.
+    tier_2_covers: rule_layer_verdicts_only
+
+  # ------------------------------------------------- addressable event counts
+  # NOT a verdict count -- no verdicts exist yet. This is the count of 2027
+  # astronomy records a tier's rules could attach to: the UPPER BOUND on how many
+  # events could carry a verdict once the rules are written. Method: map each
+  # named rule group in the governing sections to the event_class it anchors on,
+  # then count build/astronomy_2027.json records of those classes whose civil
+  # date falls in calendar 2027.
+  addressable_events_2027:
+    basis: "build/astronomy_2027.json, 1569 records over 01-Dec-2026 -> 01-Feb-2028"
+    in_year_total: {ist_civil_2027: 1347, et_civil_2027: 1348}
+    # UPDATED 12-Sep-2026 for two decisions: (a) the civil day is now set by
+    # venue, so gold and silver split into a Mumbai-day and a New-York-day
+    # count; (b) CL carries two significator paths, so tier 3 is the UNION of
+    # both, counted on the New York day.
+    recount_note: >
+      Counts are per CIVIL DAY now, not per instrument-family. Where a family
+      splits across venues the two counts are given separately even when they
+      are numerically equal -- equal size does not mean the same events, and on
+      the New Year boundary it demonstrably is not (see
+      civil_day_by_venue.measured_divergence_2027.year_membership_effect).
+    tier_1:
+      gold:
+        classes: [sign_ingress, nakshatra_ingress, navamsa_ingress, conjunction, station, combustion, lunation]
+        MCXGOLD: {count: 1276, civil_day: mumbai}
+        GC:      {count: 1276, civil_day: new_york}
+        same_size_different_membership: true
+        date_shifted_between_the_two: 536
+      silver:
+        classes: [sign_ingress, nakshatra_ingress, navamsa_ingress, conjunction, station, combustion, eclipse, lunation]
+        MCXSILVER: {count: 1281, civil_day: mumbai}
+        SI:        {count: 1281, civil_day: new_york}
+        same_size_different_membership: true
+        date_shifted_between_the_two: 537
+      sugar:    {count: 795,  civil_day: mumbai, classes: [sign_ingress, nakshatra_ingress, conjunction, combustion, eclipse, lunation]}
+      indian_equities: {count: 1347, civil_day: mumbai, classes: all_eleven}
+      distinct_union_mumbai_day: 1347
+      cl_rahu_path: {count: 8, civil_day: new_york, basis: "events whose bodies include Rahu", see: tier_3}
+      cl_rahu_path_note: >
+        Counted here as well as under tier 3 because the CL Rahu path emits at
+        tier 1. It is NOT added into distinct_union_mumbai_day -- different
+        instrument, different civil day, and the union above is the Indian-day
+        population.
+    tier_2: {count: 1348, civil_day: new_york, classes: all_eleven}
+    tier_3:
+      CL_total: {count: 34, civil_day: new_york, basis: "union of both significator paths"}
+      by_path:
+        CL_saturn: {count: 26, tier: book_derived,  basis: "events whose bodies include Saturn"}
+        CL_rahu:   {count: 8,  tier: source_backed, basis: "events whose bodies include Rahu"}
+      overlap: 0
+      overlap_note: >
+        Verified against the build, not assumed: no 2027 record carries both
+        Saturn and Rahu, so 26 + 8 = 34 exactly and the union is a clean sum.
+      previous_ceiling: 26
+      change: "+8, from adding the Rahu path. Nothing was removed."
+      civil_day_effect_on_count: >
+        None. Both paths count 26 and 8 under either civil day; only the DATES
+        move (17 of 26 Saturn events and 2 of 8 Rahu events shift by one day).
+      book_derived_subtotal: 26
+      book_derived_subtotal_note: >
+        tier_3's own name is book_derived, but only 26 of the 34 CL rows are.
+        The other 8 sit under tier 3 structurally, as CL derivations, while
+        emitting tier source_backed. Recorded so the tier-3 count is not read as
+        a count of book-derived verdicts.
+    tier_4: {count: 0, reason: "verdict is null by construction"}
+    caveat: >
+      Gold's and silver's counts are dominated by Moon nakshatra/navamsa
+      ingresses, which are in scope as ANCHORS but which most rule groups will
+      further condition on planet, sign, vedha or weekday. The realised verdict
+      count will be far smaller. These are ceilings, not forecasts.
+
+# ====================================================== source probability
+# WHAT THIS BLOCK IS: the 2026 source's own probability labels, carried forward
+# as PROVENANCE and as nothing else. It records which labels transfer, to what,
+# and -- at length, because the populated count is tiny and the field is easy to
+# misread -- what the field must never be used for.
+#
+# NO VERDICTS ARE GENERATED HERE. Nothing in build/astronomy_2027.json carries
+# this field: tests/test_2027_astronomy.py::test_no_interpretation_leaked bans
+# `source_probability` from the astronomy layer, and that ban STAYS. The field
+# attaches to rule-layer verdicts, when a rule layer exists.
+#
+# Every count in this block was verified against data/source_2026.html
+# (437578 bytes, md5 5e098446d6dd13d3df8443528db5dd95) and against
+# build/astronomy_2027.json, and is locked by the harness -- see `asserted_by`
+# at the foot of the block.
+source_probability:
+  status: annotation_layer_defined_no_verdicts_generated
+  defined: 2026-09-13
+  field: source_probability
+  emitted_on_astronomy_records: false
+  attaches_to: rule_layer_verdicts
+
+  # -------------------------------------------------------------- description
+  # REQUIRED READING BEFORE USING THE FIELD. This text exists so that a later
+  # reader who meets a mostly-empty column does not draw the wrong conclusion
+  # from its emptiness.
+  description: >
+    AN ANNOTATION, NOT A COMPUTABLE COLUMN. source_probability records that the
+    2026 source asserted a likelihood for a named configuration, in the source's
+    own words. It is populated on roughly 26 rows out of thousands -- 15
+    astronomy records and about 11 rule-layer firings, against a Step-4
+    denominator that runs into the thousands once the weekday and panchang
+    families are written (12 weekday families alone produced 103 Mumbai and 119
+    New York qualifying dates in 2026, and the source's rule catalogue holds 141
+    sections). The populated share is under 1%.
+
+    It is therefore NOT FILTERABLE, NOT WEIGHTABLE and NOT AGGREGABLE: no query
+    may select on it, no scoring may weight by it, and no summary may average,
+    rank or count over it. It carries NO CALIBRATION -- the source states no
+    basis, no sample and no hit rate for any label, and the labels are shown
+    below to be per-occurrence editorial judgements rather than properties of a
+    rule (see headline_finding).
+
+    THE REASON THIS IS WRITTEN HERE: a field this sparse looks like a field that
+    failed to populate. It did not. 26 rows is the true and complete extent of
+    what the source's label scheme transfers to 2027, measured rather than
+    estimated. Sparsity here is the finding, not a defect, and must never be
+    read as absence of signal or as missing data awaiting a backfill.
+
+  # ---------------------------------------------- separation from `confidence`
+  # The two fields are unrelated and must stay unrelated in code as well as in
+  # documentation.
+  not_a_confidence:
+    separate_field: confidence
+    confidence_value: untested              # labels.confidence_default
+    confidence_raised_only_by: pre_registered_backtest
+    no_derivation_in_either_direction: >
+      source_probability MUST NOT feed confidence, and confidence MUST NOT be
+      derived from source_probability. No code path may map one onto the other,
+      in either direction, by any rule -- not as a default, not as a prior, not
+      as a tie-break. A label with no stated basis, no sample and no hit rate
+      cannot raise a confidence, and naming it confidence would import an
+      authority the source never earned.
+    why_the_name: >
+      The field is named for what it is: the SOURCE's probability, as printed.
+      The name states its provenance rather than its standing.
+
+  # ------------------------------------------------------------ transfer test
+  # All three must hold. Objective, not editorial; each was computed rather than
+  # judged by reading.
+  transfer_test:
+    test_1_generic_configuration: >
+      The block's title names a CONFIGURATION generically, not an instance.
+      "Venus Combust in the East" transfers although its 2026 window is dated --
+      the dates are that year's occurrence of a recurring rule. "Jupiter
+      Vargottam in Gemini" and "Rahu in Dhanistha" do not: the sign or nakshatra
+      binding IS the configuration.
+    test_2_recurs_in_span: >
+      The configuration actually recurs inside the generated span
+      (01-Dec-2026 -> 01-Feb-2028 IST). Computed from build/astronomy_2027.json,
+      never judged by reading.
+    test_3_maps_to_a_catalogue: >
+      The configuration maps to a rule family that exists. Evaluated against the
+      union of BOTH catalogues -- see catalogues below. A label mapping to
+      neither is an ORPHAN: recorded, never given a family of its own.
+    catalogues:
+      A:
+        what: "the 20 emitted rule_family values in build/astronomy_2027.json"
+        count: 20
+      B:
+        what: >
+          the 141 Chapter-1 rule sections of data/source_2026.html -- every
+          h3.section element in the document (142) except the Table of Contents
+          heading. This is the catalogue Step 4's rule layer is being built FROM.
+        count: 141
+        carries_labels: 0
+      union_rule: "a label passes test 3 if it maps into A or into B"
+      # RULED 2026-09-13. Catalogue B counts.
+      b_counts_ruling: >
+        DECIDED: catalogue B counts for test 3. The 141 Chapter-1 sections are
+        the rule catalogue Step 4 is being built from; excluding them because the
+        astronomy layer has not reached them yet would make the answer depend on
+        BUILD ORDER rather than on evidence. Pass count is 19. Under catalogue A
+        alone it would have been 14, and the five co-location labels (blocks 13,
+        26, 29, 42, 50) would have joined the orphan list.
+    where_the_labels_live: >
+      All 44 labels sit in prophecy blocks in the salient-features chapter, lines
+      4335-4909 of data/source_2026.html. The monthly calendar carries none and
+      the 141-section rule catalogue carries none, so there is no per-rule
+      probability to inherit except through these blocks. Verified by line range,
+      not by sampling.
+
+  # ---------------------------------------------------------- classification
+  classification:
+    prophecy_blocks: 50
+    labelled: 44
+    unlabelled: 6
+    passes: 19
+    fails: 25
+    fail_by_test:
+      test_1_instance_bound: 12
+      test_2_does_not_recur: 12
+      test_3_orphan: 1
+    arithmetic: "19 + 12 + 12 + 1 = 44"
+    carried_families: 11
+    # The pre-implementation report classified block 20 under test 2. The
+    # no-split ruling below moves it to test 1, which is why test 1 reads 12 and
+    # test 2 reads 12 rather than 11 and 13. Block 20 fails test 2 independently
+    # as well; the ruling changes which test is NAMED, not whether it is excluded.
+    reclassified_by_the_no_split_ruling: [20]
+
+  # ----------------------------------------------------- the no-split ruling
+  # RULED 2026-09-13. Applies to the two compound blocks, 10 and 20.
+  no_split_ruling:
+    blocks: [10, 20]
+    decision: DO_NOT_SPLIT
+    recorded_as: test_1_failures
+    reason: >
+      Splitting a block re-authors a source block into two blocks it did not
+      write. The author labelled the COINCIDENCE of Venus Rise (01-Feb-2026) and
+      Mercury Rise (04-Feb-2026) falling three days apart -- that pairing IS the
+      configuration judged, and halving it invents two judgements out of one. The
+      same holds for block 20, where the hemisphere turning and the Sun-Neptune
+      conjunction are judged together, two days apart.
+    halves_are_individually_generic: >
+      Recorded because it is true and because it is the argument FOR splitting:
+      each half of block 10 and of block 20 would pass test 1 on its own. That is
+      not enough. A generic half is not evidence that the author labelled the
+      half.
+    consequence_left_latent: >
+      Because block 10 is not split, visibility/rise Venus carries one label only
+      (High, from block 46). The Reasonable that a split would have produced does
+      not exist, so the rise-Venus conflict stays LATENT. We do not create it
+      ourselves. See disputed_families.latent_not_created.
+
+  # ------------------------------------------------ carried families and values
+  # 11 distinct families receive a carried label. `keyed` states the key the
+  # label attaches to -- load-bearing for the combust family, below.
+  carried_families:
+
+    - id: conj_sun_mercury
+      family: "aspect/conjunction Sun-Mercury"
+      catalogue: [A]
+      blocks: [8, 17, 24, 31, 38, 48]
+      value: [Reasonable, Good]
+      disputed: true
+      note: >
+        Six blocks, two values: Reasonable x5, Good on the 04-Nov-2026 instance.
+        The source prints no Sun-Mercury pair table, so this family passes test 3
+        through catalogue A only.
+
+    - id: conj_mercury_venus
+      family: "aspect/conjunction Mercury-Venus"
+      catalogue: [A, B]
+      source_section: "Venus Mercury Conjunction p.16"
+      blocks: [9, 14]
+      value: [Reasonable, High]
+      disputed: true
+      note: "29-Jan-2026 Reasonable, 28-Feb-2026 High. Five weeks apart, same configuration."
+
+    - id: conj_venus_uranus
+      family: "aspect/conjunction Venus-Uranus"
+      catalogue: [A, B]
+      source_section: "Herschel Conjunction p.34"
+      blocks: [23]
+      value: High
+
+    # ---- visibility/combust is KEYED PER BODY, not at family level ----------
+    # RULED 2026-09-13, and the ruling is what keeps this out of the disputed
+    # list. At family level visibility/combust carries Venus Reasonable, Saturn
+    # High and Jupiter Good -- a three-way conflict. Per body it is three
+    # families with one value each and no conflict at all. The source labels a
+    # BODY's combustion, never "combustion"; family-level keying would be our
+    # aggregation, not the source's claim.
+    - id: combust_venus
+      family: "visibility/combust"
+      keyed: [rule_family, body]
+      body: Venus
+      catalogue: [A, B]
+      source_section: "Venus Combust Rise Cycle p.14"
+      blocks: [2, 44]
+      value: Reasonable
+      note: "Two blocks, SAME value. Agreement, not dispute."
+
+    - id: combust_saturn
+      family: "visibility/combust"
+      keyed: [rule_family, body]
+      body: Saturn
+      catalogue: [A, B]
+      source_section: "Saturn Combust Rise Cycle p.24"
+      blocks: [18]
+      value: High
+
+    - id: combust_jupiter
+      family: "visibility/combust"
+      keyed: [rule_family, body]
+      body: Jupiter
+      catalogue: [A, B]
+      source_section: "Jupiter Combust Rise Cycle p.20"
+      blocks: [32]
+      value: Good
+
+    - id: rise_venus
+      family: "visibility/rise"
+      keyed: [rule_family, body]
+      body: Venus
+      catalogue: [A, B]
+      source_section: "Venus Combust Rise Cycle p.14"
+      blocks: [46]
+      value: High
+      note: "See no_split_ruling.consequence_left_latent."
+
+    # ---- catalogue-B-only families: no emitted astronomy class matches them --
+    - id: mercury_venus_alone
+      family: "Mercury Venus Alone in Any Sign p.16"
+      catalogue: [B]
+      blocks: [26, 42]
+      value: [Reasonable, High]
+      disputed: true
+      note: "THE HEADLINE PAIR. See headline_finding."
+
+    - id: rahu_mars_together
+      family: "Rahu Mars Together in Any Sign"
+      catalogue: [B]
+      blocks: [13]
+      value: Reasonable
+
+    - id: venus_jupiter_same_sign
+      family: "Venus Jupiter in the Same Sign p.67"
+      catalogue: [B]
+      blocks: [29]
+      value: High
+
+    - id: mars_ahead_of_jupiter
+      family: "Mars Ahead of Jupiter in Same Sign p.69"
+      catalogue: [B]
+      blocks: [50]
+      value: High
+
+  # ------------------------------------------------------- disputed families
+  # RULED 2026-09-13. Where a family's blocks disagree, EMIT THE SET.
+  disputed_families:
+    count: 3
+    of_carried: 11
+    ids: [conj_sun_mercury, conj_mercury_venus, mercury_venus_alone]
+    emit:
+      source_probability: "the SET of values the source assigned, e.g. [Reasonable, Good]"
+      source_probability_disputed: true
+    never_collapse_to_one_value: >
+      NOT min, NOT max, NOT mode, NOT first, NOT most-recent. Picking one
+      manufactures an agreement the source never expressed. The set is the honest
+      record and is trivially filterable; a single value would be a claim we were
+      making on the source's behalf.
+    why_not_per_occurrence_instead: >
+      The alternative -- attach the label to the 2026 occurrence rather than to
+      the rule -- is incoherent here: a 2027 occurrence then has no occurrence to
+      inherit from, and the whole premise of the transfer is that the label
+      attaches to a repeatable rule.
+    latent_not_created:
+      family: rise_venus
+      would_be: [Reasonable, High]
+      status: LATENT_AND_LEFT_LATENT
+      reason: >
+        This conflict exists only if block 10 is split into its Venus-Rise and
+        Mercury-Rise halves. It is not split (see no_split_ruling), so the
+        conflict does not exist and we do not create it. Recorded so that anyone
+        who later argues for splitting knows exactly what splitting would cost.
+    not_disputed_because_keyed_per_body:
+      family: "visibility/combust"
+      family_level_values: [Reasonable, High, Good]
+      per_body_values: {Venus: Reasonable, Saturn: High, Jupiter: Good}
+      see: "carried_families.combust_venus and the ruling comment above it"
+
+  # ---------------------------------------------------------- HEADLINE FINDING
+  # This is the ground for every ruling in this block. It is stated here, in the
+  # config, and again in build/STEP4_DECISIONS.md, because every constraint above
+  # follows from it and none of them makes sense without it.
+  headline_finding:
+    what: >
+      THE TWO "Mercury Venus Alone in Any Sign" BLOCKS CARRY CHARACTER-IDENTICAL
+      PROPHECY TEXT AND DIFFERENT LABELS. Block 26 (02-Jun to 08-Jun-2026, p.240)
+      is labelled REASONABLE; block 42 (26-Sep to 17-Oct-2026, p.259) is labelled
+      HIGH. Both print, character for character: "Whenever Mercury Venus are
+      alone in any sign without any other Planet(s), Markets are sluggish." Only
+      the dates and the remarks differ. The rule does not.
+    verified: >
+      Independently verified against data/source_2026.html by re-parsing all 50
+      prophecy blocks and grouping them by exact prophecy string: 50 blocks, 44
+      labelled, and the two blocks' prophecy strings compare equal.
+    what_it_establishes: >
+      The labels are PER-OCCURRENCE EDITORIAL JUDGEMENTS, not properties of a
+      rule. Where the rule text is identical and only the date changes, the label
+      still moves. Carrying such a label as a rule-level field asserts a
+      stability the source does not have -- which is why the field is an
+      annotation (see description), why disputes are emitted as sets rather than
+      resolved (see disputed_families), and why the field may never feed
+      confidence (see not_a_confidence).
+    two_further_identical_text_groups:
+      - blocks: [17, 24, 31, 38, 48]
+        rule: "Sun Mercury Conjunction is a high vibration time and a Major Turning Date."
+        labels: "Reasonable x4, Good x1 (block 48)"
+        note: >
+          Five blocks whose prophecy text is identical character for character.
+          Block 8 is the sixth Sun-Mercury block and carries the same first
+          sentence plus one extra clause, so it is not in this exact-match group;
+          it is Reasonable, and it is counted in the family above.
+      - blocks: [34, 49]
+        rule: "Mercury Manifestation is a major Turning date."
+        labels: "Reasonable (block 34), Good (block 49)"
+        note: >
+          Both are excluded by test 2 -- Mercury Manifestation is not an emitted
+          class -- so this pair changes nothing downstream. It is recorded
+          because it is a third independent instance of the same behaviour.
+    strength_of_the_evidence: >
+      Three groups of blocks in the document share character-identical prophecy
+      text, and ALL THREE disagree with themselves on the label -- the two above
+      plus the headline pair. Every repeated rule text in the document is
+      labelled inconsistently; there is no counter-example. The finding does not
+      rest on the single pair, and the earlier wording "two of the three"
+      understated it.
+
+  # --------------------------------------------------------- the six unlabelled
+  # Evidence about the label scheme, and it belongs beside the disputed-family
+  # finding rather than in a footnote.
+  unlabelled_blocks:
+    count: 6
+    blocks:
+      11: "Solar Eclipse"
+      15: "Moon Eclipse"
+      35: "Solar Eclipse"
+      37: "Mutual Vedh of Jupiter in Ashlesha and Ketu in Magha"
+      39: "Moon Eclipse"
+      47: "Mutual Vedh of Mars in Ashlesha and Ketu in Magha"
+    finding: >
+      FOUR OF THE SIX ARE THE FOUR ECLIPSE BLOCKS -- every eclipse block in the
+      document is unlabelled -- although eclipses are impact tier T1, the highest
+      tier this config defines. A systematic scheme would have labelled its own
+      top-tier events first. That absence is itself evidence that the labels are
+      EDITORIAL rather than systematic, and it corroborates the headline finding
+      from the opposite direction: the headline shows the labels moving where the
+      rule does not; this shows them missing where the impact is greatest.
+    consequence: >
+      eclipse/solar and eclipse/lunar inherit no source_probability at all. Their
+      verdicts carry the field ABSENT, not null-because-unknown.
+
+  # ------------------------------------------------------------------ orphans
+  orphans:
+    count: 1
+    mars_tenth_to_saturn:
+      block: 4
+      title: "Mars (Sagittarius) Tenth to Saturn"
+      label: High
+      failed_test: test_3_no_rule_family
+      do_not_create_a_family: >
+        RULED 2026-09-13. Recorded as an orphan; no rule family is created for
+        it. Inventing a relative-house family to receive one label would build
+        the catalogue around the annotation instead of the other way round.
+      recurs_in_span: true
+      recurrence_2027: "18-Nov-2027 -> 27-Dec-2027, 39 days -- Mars in Sagittarius, 10th from Saturn in Pisces"
+      recurrence_verified_from: build/astronomy_2027.json
+      explicitly_repeatable: >
+        The source states the rule generically -- "Whenever Mars comes 10th to
+        Saturn in transit" -- so this is a genuine rule with no home, not a
+        one-off observation.
+      first_in_line: >
+        If a relative-house family is ever added to the catalogue, this is the
+        first candidate: it passes tests 1 and 2 outright and fails only for want
+        of a family to attach to.
+
+  # --------------------------------------------------------------- exclusions
+  exclusions:
+    saturn_neptune_conjunction:
+      label: "Intense and High Reliable"
+      source_block: "Event of the Year -- 2026, Saturn Neptune Conjunction, pg. 211-213"
+      excluded_by: transfer_test_2_recurrence
+      reason: >
+        The configuration does not recur in the generated span. Zero
+        Saturn-Neptune conjunction records exist in build/astronomy_2027.json
+        across 01-Dec-2026 -> 01-Feb-2028 IST; the pair's synodic period is
+        ~36 years. The exclusion follows from the recurrence test alone and
+        required no editorial judgement.
+      note: >
+        Independently, this is the block whose 2026 instant the source prints
+        12h42m wrong (STEP3_REPORT section 6.1). The label was assigned to an
+        event the source had mis-timed. That is not the ground of exclusion --
+        test 2 excludes it on its own -- but it is recorded here because the
+        source's single highest label sits on its single largest verified
+        defect, and that bears on how much authority the label scheme is owed.
+
+  # ------------------------------------------------------------ scale collapse
+  scale_collapse:
+    defined_buckets: 6                      # labels.source_probability_map
+    survive_transfer: 3
+    surviving: [Reasonable, Good, High]
+    usable_range_after_transfer: "2-4 of the 1-5 map"
+    excluded_values:
+      Low: {blocks: [16], count: 1}
+      "Very High": {blocks: [12, 21], count: 2}
+      "Intense and High Reliable": {blocks: [1], count: 1}
+    finding: >
+      Both extremes of the scale are lost. Every Low, every Very High and the
+      single Intense and High Reliable fails the transfer test -- the Low on test
+      1 (Mars Vedh of Pushya: nakshatra-bound), the two Very Highs and the Intense
+      and High Reliable on test 2. The source's STRONGEST claims all sit on
+      once-in-decades configurations -- a Saturn-Neptune conjunction, a
+      Saturn-Mars conjunction, a Mars-twelfth-to-Saturn window -- which is
+      entirely coherent editorially (the rarest configuration is the most
+      newsworthy) and useless for transfer (the rarest configuration is the one
+      least likely to recur next year).
+    consequence: >
+      The carried field's range is Reasonable / Good / High only. A consumer must
+      not read "no Very High in 2027" as a claim about 2027; it is a fact about
+      which 2026 blocks survived a recurrence test.
+
+  # -------------------------------------------------- projected population
+  # THE EXACT COUNTS THE HARNESS ASSERTS. A field this sparse will otherwise
+  # drift invisibly: if a later change populates 400 rows or zero, that must fail
+  # loudly rather than pass quietly.
+  projected_population:
+    basis: "build/astronomy_2027.json, 1569 records, 01-Dec-2026 -> 01-Feb-2028 IST"
+    astronomy_records_total: 15
+    astronomy_records_by_family:
+      conj_sun_mercury: 7
+      conj_mercury_venus: 3
+      conj_venus_uranus: 1
+      combust_venus: 1
+      combust_saturn: 1
+      combust_jupiter: 1
+      rise_venus: 1
+    all_15_fall_in_ist_civil_2027: true
+    pct_of_astronomy_layer: 0.96
+    rule_layer_firings_total: 11
+    rule_layer_firings_by_family:
+      mercury_venus_alone: 5
+      rahu_mars_together: 2          # 1 same-sign window + 1 same-nakshatra window
+      venus_jupiter_same_sign: 1
+      mars_ahead_of_jupiter: 3
+    combined_total: 26
+    computed_windows_2027:
+      mercury_venus_alone: ["01-Dec-2026 Libra", "21-Mar-2027 Aquarius", "17-Jul-2027 Gemini",
+                            "09-Sep-2027 Virgo", "08-Oct-2027 Libra"]
+      rahu_mars_together: ["same sign 27-Dec-2027 -> 01-Feb-2028 Capricorn",
+                           "same nakshatra 23-Dec-2027 -> 09-Jan-2028 Uttara Ashadha"]
+      venus_jupiter_same_sign: ["16-Aug-2027 -> 09-Sep-2027 Leo"]
+      mars_ahead_of_jupiter: ["01-Dec-2026 -> 25-Jan-2027 Leo", "10-Mar-2027 -> 26-Apr-2027 Cancer",
+                              "26-Jun-2027 -> 05-Jul-2027 Leo"]
+      mars_ahead_verified: >
+        Mars is ahead of Jupiter in longitude at the start, midpoint and end of
+        all three shared-sign windows, so block 50 (ahead) fires three times and
+        block 41 (behind) fires zero times. That is why block 41 is a test-2
+        failure and block 50 is a pass: the pair is decided by computation, not by
+        reading.
+    denominator_note: >
+      1569 is the most favourable denominator available. The Step-4 verdict layer
+      adds the weekday and panchang families and the 141-section catalogue, so the
+      real denominator runs into the thousands and the populated share lands below
+      1%. Stated plainly rather than buried: this is a small minority, and it is
+      small enough that the field's only honest use is as provenance on about 26
+      specific rows.
+
+  # ------------------------------------------------------ corrections on record
+  # Claims made while this layer was being scoped that did not survive checking.
+  # Recorded rather than silently repaired, to the same standard as
+  # rulership.corrections_on_record.
+  corrections_on_record:
+
+    - id: label_count_45_vs_44
+      claimed: "There are 45 probability labels in the source."
+      attributed_to: user_prompt
+      status: corrected
+      corrected_to: >
+        44. All 44 are probability spans inside div.prophecy-block, lines
+        4335-4909. The likely 45th is line 4971, a div.summary in the January
+        calendar reading "PROBABILITY OF POSITIVITY TILL 21ST JANUARY, THEREAFTER
+        NEGATIVE TILL 29TH JANUARY" -- narrative prose, no probability class, no
+        block. Two further suspects were checked and are neither labels nor
+        artefacts of the label scheme: "Chapter 4" is a div.chapter-label and
+        "Astro-Event Calendar & Inference Tables -- 2026" is a div.subtitle.
+
+    - id: sun_mercury_label_count
+      claimed: "Sun-Mercury Conjunction carries 4 labels."
+      attributed_to: user_prompt
+      status: corrected
+      corrected_to: "6 -- blocks 8, 17, 24, 31, 38, 48 (21-Jan, 07-Mar, 14-May, 13-Jul, 27-Aug, 04-Nov)."
+
+    - id: five_catalogue_b_families
+      claimed: "the five catalogue-B-only families"
+      attributed_to: this_project_pre_implementation_report
+      status: corrected
+      corrected_to: >
+        FOUR families carrying FIVE labels. Blocks 26 and 42 are two labels on one
+        family (Mercury Venus Alone in Any Sign p.16), which is exactly why that
+        family is disputed. The firing count of 11 was computed per family and is
+        unaffected.
+
+  # ------------------------------------------------------------- asserted by
+  asserted_by:
+    source_side: "tests/test_2026_regression.py::test_source_probability_labels"
+    build_side: "tests/test_2027_astronomy.py::test_source_probability_population"
+    ban_on_leaking: "tests/test_2027_astronomy.py::test_no_interpretation_leaked"
+    drift_intent: >
+      The population counts are asserted EXACTLY, not as a range. The point of the
+      assertion is that a field populated on 26 rows cannot drift without someone
+      noticing: if a later change populates 400 rows or zero rows, the harness
+      fails.

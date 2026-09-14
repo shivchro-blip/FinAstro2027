@@ -1,0 +1,36 @@
+# --- Python bytecode / caches -------------------------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- virtualenvs --------------------------------------------------------
+.venv/
+venv/
+env/
+
+# --- Swiss Ephemeris data files ----------------------------------------
+# Downloaded third-party binary ephemeris data, not project source.
+ephe/
+
+# --- scratchpad: throwaway patch scripts and local run logs ------------
+# A bad patch is recoverable from HEAD precisely while these stay out of it.
+patch_*.py
+tmp_*.py
+tmp_*.json
+scratch*.py
+*.log
+commit_message.txt
+
+# --- editor / OS noise --------------------------------------------------
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+
+# NOTE: build/ is deliberately NOT ignored.
+#   build/astronomy_2027.json        deterministic artifact whose sha256 we track
+#   build/STEP3_REPORT.md            project record
+#   build/STEP4_DECISIONS.md         project record
+# Their diffs are the most valuable thing this repo provides: "the build hash
+# moved, and here is exactly which records changed" is answerable by `git diff`.
