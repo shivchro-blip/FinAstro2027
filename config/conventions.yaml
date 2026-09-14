@@ -381,53 +381,79 @@ labels:
 
 # ---------------------------------------------------------------- still open
 open_questions:
-  # speed_class_thresholds: BLOCKED, not merely open. Calibrated 14-Sep-2026
-  # against all 38 printed rows of the nine Speed-and-Vedh tables (B120-B127)
-  # and every Atichari row of the twenty-one Nakshtra Vedh tables (B128-B141).
+  # speed_class_thresholds: RESOLVED FOR THE INNER PLANETS, BLOCKED FOR THE SLOW
+  # ONES. Recalibrated 14-Sep-2026. THIS SUPERSEDES an earlier entry that
+  # reported "no threshold exists" -- that result was a METHOD ARTEFACT and the
+  # correction is recorded here in full, because the wrong version is the kind
+  # of finding that gets quoted for years.
   #
-  # WHAT WAS TESTED. For each planet, the speed_deg_day the astronomy layer
-  # emits was read at every printed interior boundary, and the boundaries were
-  # grouped by the class they enter. A threshold exists only if the classes are
-  # separable on that quantity:
+  # THE ERROR. The first pass read speed_deg_day AT each printed boundary date
+  # and asked whether the Fast and Normal samples separate. A printed boundary
+  # is a DAY, not an instant. Near a speed maximum the whole above-threshold
+  # window can be a few days wide -- Mercury's February maximum is 1.773 against
+  # a threshold near 1.745 -- so an arbitrary sample inside the boundary day
+  # lands on whichever side the sample instant happens to fall, and the samples
+  # "overlap" whether or not a clean threshold exists. Mercury's case, which the
+  # first pass called decisive, was exactly this. The kalāṃśā work never did it
+  # that way: it proposed a threshold, computed the instants the body CROSSES it,
+  # and scored those against the printed dates. That is what is done here.
   #
-  #   planet   boundaries entering Fast/Atichari   entering Normal
-  #   Jupiter  0.20622, 0.22088                   -0.00128, 0.20622, 0.22088, 0.00082
-  #   Mercury  1.71453 .. 1.77558 (n=6)           0.08423, -0.00433, 0.07411,
-  #                                               -0.01759, 0.06880, -0.16937,
-  #                                               1.71453 .. 1.77558
-  #   Venus    1.22398                            1.22398, 0.02045, -0.01006
-  #   Saturn   0.08693, 0.09178                   0.09178, 0.08693, 0.00003, -0.00046
-  #   Mars     0.65965                            0.65829
+  # THE METHOD NOW. For each printed Fast/Normal boundary, compute the interval
+  # of threshold values T that could place a crossing on that date (+/-1 day),
+  # restricted to the correct branch -- a rising crossing into a speed maximum
+  # for a Normal->Fast boundary, a falling crossing out of one for Fast->Normal.
+  # The threshold of a planet exists iff those intervals share a point. A
+  # Normal->Retrograde or Retrograde->Normal boundary is a STATION and is NOT
+  # fitted; the stations are already reproduced by the sign of the speed.
   #
-  # The ranges OVERLAP on every planet with more than one boundary. Jupiter's
-  # Normal-entering boundaries span -0.001 to +0.221 while its Fast-entering
-  # ones span 0.206 to 0.221: no value separates them. Mercury is decisive --
-  # 1.77558 ENTERS Normal and 1.71453 ENTERS Fast, so the Normal set strictly
-  # contains the Fast set. So there is no threshold, and the failure is not
-  # precision: a distribution that overlaps cannot be cut by any value however
-  # wide the tolerance. Widening one would be manufacturing a class boundary the
-  # source does not have.
+  # RESULT. Threshold intervals, at the tolerance each needs:
+  #   Mercury  T = 1.7438 .. 1.7460   needs +/-1.1 d   precision_days 0.08
+  #   Venus    T = 1.2234 .. 1.2246   needs +/-1.0 d   precision_days 2.00
+  #   Mars     T = 0.6569 .. 0.6596   needs +/-1.0 d   precision_days 2.00
+  #   Jupiter  NO INTERSECTION -- the two boundaries are 0.013750 apart in
+  #            threshold space, about 4.8 days of tolerance. An orbital-period
+  #            result, not a tolerance.
+  #   Saturn   NO INTERSECTION at +/-1 d (0.002594 apart). A T does exist at
+  #            +/-2.2 d but the feasible window is 0.000125 wide -- a sliver
+  #            fitted to a 2.2-day rounding, which is not a threshold.
   #
-  # WHAT DOES SURVIVE. Retrograde/Direct is the sign of the same emitted
-  # quantity, and it reproduces the source's own periods: Jupiter's station is
-  # 11-Mar-26 against a printed 11-Mar-26, Saturn's 27-Jul-26 against 27-Jul-26,
-  # Herschel's 11-Sep-26 against 10-Sep-26, Neptune's 07-Jul-26 against
-  # 07-Jul-26, Pluto's 06-May-26 against 06-May-26. Mercury's is the documented
-  # outlier: its printed retrograde boundaries lag the computed stations by
-  # +6 d, +1 d, +6 d, -7 d, +3 d, +8 d against 26-Feb/21-Mar, 29-Jun/24-Jul,
-  # 24-Oct/13-Nov, which is the same 2-7 day lag mercury_shar_lag records.
+  # Note the thresholds are ABSOLUTE and planet-specific: Mercury's 1.7449 and
+  # Mars's 0.6583 are in the same units and differ by 2.6x. They are NOT
+  # fractions of each planet's maximum, which was tested and rejected: that
+  # reading forces Mercury's two crossings to be equidistant from its maximum,
+  # and they are not.
   #
-  # SO: two of the classes are recoverable and one is not. A rule may condition
-  # on retrograde/direct today. It may NOT condition on Fast-or-Normal, and that
-  # is what still blocks the Vedha families: B120-B127 print a Vedha DIRECTION
-  # per period and B128-B141 print one per nakshatra row, and in both the
-  # direction branch is selected by the class the source printed, so a port
-  # needs the class at an arbitrary 2027 instant. The evidence for the direction
-  # rule itself is recorded under vedha_direction below.
-  - speed_class_thresholds        # BLOCKED. No threshold exists: Fast and Normal
-                                  # overlap on emitted speed on every planet with
-                                  # more than one boundary. Retrograde/Direct IS
-                                  # recoverable (sign of speed), Fast/Normal is not.
+  # WHAT THIS UNBLOCKS. Mercury, Venus and Mars can be given a speed class at an
+  # arbitrary instant, so the Vedha families are unblocked FOR THOSE THREE. The
+  # class is: Fast/Atichari when speed >= T, Retrograde when speed < 0, Normal
+  # otherwise. Doing so needs a speed-crossing series in the astronomy layer --
+  # the layer emits speed on every record but emits no crossing of a level, so a
+  # rule cannot build the spans today. That is new Step-3 work of exactly the
+  # kind the tithi, yoga and sunrise series were, NOT a rule-layer approximation.
+  #
+  # WHAT STAYS BLOCKED. Jupiter and Saturn, on a SLOW-PLANET SPEED DOCTRINE
+  # rather than on a failed threshold. The source carries a dedicated section
+  # "Demoted and Shadow Speed of Saturn" (B30, p.26) precisely because the slow
+  # planets are treated differently, and B30 defines its interval by LONGITUDE,
+  # not by speed: Saturn is "in Demoted or Shadow Speed" from 11-Dec-2026 to
+  # 15-Mar-2027, the interval between its 20 deg 31' crossing retrograde and the
+  # same 20 deg 31' crossing direct. Verified: the engine puts Saturn at
+  # 20.508963 deg in Pisces on both 27-Jul-2026 and 15-Mar-2027, which is
+  # 20 deg 31' to the arcminute as the table prints it. What that section does
+  # NOT supply is a speed level, so it does not give Jupiter or Saturn a
+  # threshold. The missing input is therefore named as the slow-planet doctrine.
+  #
+  # Retrograde/Direct is unaffected and remains the sign of the emitted speed,
+  # reproducing the source's stations to the day (Jupiter 11-Mar-26, Saturn
+  # 27-Jul-26, Neptune 07-Jul-26, Pluto 06-May-26, Herschel 11-Sep vs 10-Sep),
+  # with Mercury the documented 2-7 day lag that mercury_shar_lag records.
+  - speed_class_thresholds        # RESOLVED for Mercury (1.745), Venus (1.224),
+                                  # Mars (0.658) -- absolute, planet-specific.
+                                  # BLOCKED for Jupiter and Saturn on a
+                                  # slow-planet speed doctrine (see B30), not on
+                                  # a failed threshold. Porting the Vedha
+                                  # families for the inner three needs a
+                                  # speed-crossing series in the astronomy layer.
   - mercury_shar_lag              # source Mercury latitude rows lag computed by 2-7 days
   - aspect_orbs                   # graha drishti vs degree orbs
   - month_system_confirmation     # Purnimanta inferred from eclipse labelling
@@ -453,8 +479,9 @@ open_questions:
   - label_scheme_signoff                # still blocks writing any verdict rule
 
 # ------------------------------------------------------------- vedha geometry
-# Recorded, NOT used. Nothing conditions on this yet, because the class that
-# selects the branch is the one speed_class_thresholds cannot supply.
+# Recorded, NOT used. The class that selects the branch is now available for
+# Mercury, Venus and Mars, and the layer still cannot supply spans of it because
+# it emits no speed-crossing series -- see open_questions.speed_class_thresholds.
 #
 # THE DIRECTION RULE. Across the thirteen per-planet Nakshtra Vedh tables
 # (B131-B141 plus the two Moon tables B129-B130), every printed row fills exactly
@@ -464,18 +491,31 @@ open_questions:
 #     Normal           -> Front cell
 #     Retrograde       -> Right cell
 #
-# Counted over all 111 directional rows: 109 agree, 2 do not. Both exceptions
-# are in B136 (Saturn Nakshtra Vedh) and both are rows whose Speed column reads
-# Atichari while the filled cell is Right: Uttara Bhadrapada from 25-Jan-26 and
-# Revati from 17-May-26, against the Left rule. B124, Saturn's own Speed and
-# Vedh table, prints Fast/Left for 26-Jan to 30-May, the same window -- so the
-# source disagrees with itself about Saturn's direction there, and the two
-# tables are not reconcilable from the page.
+# Counted over all 111 directional rows: 109 agree, 2 do not -- and the split is
+# PER PLANET, which the first report of "109/111" buried:
 #
-# So the relationship is a CORRELATION at 109/111, not a derivation. A single
-# exception is enough to demote it, and there are two, both named above. Any
-# rule that reads a direction off a speed class is reading a regularity the
-# source does not keep, and must say so on the row.
+#     Mars (B132)     21/21     Mercury (B133)  45/45
+#     Venus (B134)    30/30     Jupiter (B135)   7/7
+#     Saturn (B136)    6/8      <-- the only planet with a mismatch
+#
+# So the rule holds without exception on every planet whose speed class is
+# defined, and BOTH exceptions are Saturn rows. The relationship is still
+# reported as a correlation at 109/111 rather than a derivation, because two
+# printed rows do contradict the rule; but the counterexamples are confined to
+# the one planet that also has no speed threshold, and that is a materially
+# different statement from "the source contradicts itself somewhere".
+#
+# WHAT THE TWO B136 ROWS ACTUALLY SAY. Re-derived from the 28-name wheel rather
+# than asserted:
+#     Uttara Bhadrapada  Atichari  Right -> Ardra       (offset +7)
+#     Revati             Atichari  Right -> Mrigsira   (offset +5)
+# The Normal rows of the same table use offset +14 for both nakshatras and the
+# Retrograde rows use +19 and +21, so each class has a consistent offset there
+# EXCEPT Atichari, whose two rows use different offsets (+7 and +5) and sit in
+# the Right cell when the class->cell rule says Left. The B124 speed table
+# prints Fast/Left for 26-Jan to 30-May, the same window. Saturn is therefore
+# anomalous in the direction table as well as in the threshold fit -- which is
+# the expected signature of a slow-planet doctrine, not of a rule that failed.
 #
 # THE TARGETS ARE A LOOKUP, NOT A FORMULA. For each table, the target nakshatra
 # in a given cell is a function of the planet's OWN nakshatra and nothing else:
@@ -487,6 +527,13 @@ open_questions:
 # table to be transcribed and not an arithmetic expression to be evaluated.
 vedha_direction:
   direction_follows_speed_class: correlation_109_of_111
+  per_planet:
+    Mars:    {section: B132, match: 21, mismatch: 0}
+    Mercury: {section: B133, match: 45, mismatch: 0}
+    Venus:   {section: B134, match: 30, mismatch: 0}
+    Jupiter: {section: B135, match: 7, mismatch: 0}
+    Saturn:  {section: B136, match: 6, mismatch: 2}
+  exceptions_confined_to: Saturn
   counterexamples:
     - section: B136
       planet: Saturn
@@ -495,6 +542,8 @@ vedha_direction:
       filled_cell: Right
       expected_cell: Left
       from: 25-Jan-26
+      target: Ardra
+      target_offset_in_28_scheme: 7
       conflicts_with: "B124, which prints Fast/Left for 26-Jan to 30-May-26"
     - section: B136
       planet: Saturn
@@ -503,12 +552,65 @@ vedha_direction:
       filled_cell: Right
       expected_cell: Left
       from: 17-May-26
+      target: Mrigashira
+      target_offset_in_28_scheme: 5
+  same_table_other_classes_are_consistent: >-
+    In B136 the Normal rows both use offset +14 and the Retrograde rows use +19
+    and +21, so the anomaly is specific to the two Atichari rows, which also
+    disagree with each other (+7 and +5) while filling the same cell.
   target_generation: per_planet_lookup_on_own_nakshatra
   constant_offset_rejected: >-
     No single forward offset reproduces any table's cells. In the 28-name scheme
     (Abhijeet inserted after Uttara Ashadha) the Front offset spans
     8,10,12,14,16,18,20 and Left spans 1,3,5,7,9,11,13 within B132 alone.
-  blocked_on: speed_class_thresholds
+  usable_when: >-
+    Mercury, Venus and Mars only. Saturn's direction data is internally
+    inconsistent and Jupiter, though 7/7 on the direction rule, has no threshold,
+    so neither can be given a class and the rule cannot be evaluated for them.
+  blocked_on: speed_class_thresholds  # for Jupiter and Saturn only
+
+# ---------------------------------------------------------------- speed classes
+# RESOLVED 14-Sep-2026 by crossing-instant calibration. See
+# open_questions.speed_class_thresholds for the method and the correction that
+# produced it. The thresholds are ABSOLUTE and planet-specific, and the class at
+# an instant is:
+#
+#     Retrograde  when speed < 0
+#     Fast        when speed >= threshold      (Atichari in the nakshatra tables)
+#     Normal      otherwise
+#
+# NOT a fraction of the planet's maximum: that reading was tested and rejected,
+# because it forces each Fast window's two crossings to be equidistant from the
+# speed maximum, and Mars's are not (the rising crossing is 39 days before its
+# maximum and the falling one 98 days after).
+speed_classes:
+  Mars:    {threshold: 0.658287, interval: [0.656927, 0.659648], precision_days: 2.00, needs_tolerance_days: 1.0, section: B120}
+  Venus:   {threshold: 1.223981, interval: [1.223368, 1.224595], precision_days: 2.00, needs_tolerance_days: 1.0, section: B123}
+  Mercury: {threshold: 1.744909, interval: [1.743780, 1.746038], precision_days: 0.08, needs_tolerance_days: 1.1, section: B122}
+  Jupiter: {threshold: null, reason: "no intersection: the two printed boundaries are 0.013750 apart in threshold space, about 4.8 days of tolerance. An orbital-period result, not a tolerance", section: B121}
+  Saturn:  {threshold: null, reason: "no intersection at +/-1 d (0.002594 apart); the sliver that exists at +/-2.2 d is 0.000125 wide, which is not a threshold. Blocked on the slow-planet speed doctrine of B30", section: B124}
+  #: The tolerance each planet NEEDS is part of the finding, not a knob. Mercury
+  #: misses the 1.0-day scoring by 6e-5 deg/day, i.e. by 1.8 days -- so an
+  #: earlier sweep at +/-1.0 d was correct to report "5/6" and wrong to conclude
+  #: that no threshold exists.
+  retrograde_rule: "speed < 0; reproduces the source's stations to the day"
+  slow_planet_doctrine:
+    section: B30
+    title: "Demoted and Shadow Speed of Saturn"
+    defines: >-
+      A LONGITUDE band, not a speed. Saturn is in Demoted or Shadow Speed from
+      11-Dec-2026 until it crosses back over 20 deg 31' of Pisces direct on
+      15-Mar-2027; the interval runs from its retrograde crossing of that
+      longitude to the direct crossing of the same longitude.
+    verified: >-
+      The engine puts Saturn at 20.508963 deg of Pisces on 27-Jul-2026 and
+      20.507990 deg on 15-Mar-2027, both 20 deg 31' to the arcminute as the
+      table prints, and at 13.694991 deg (13 deg 42') on 11-Dec-2026, which is
+      the Direct row's printed value.
+    supplies_a_speed_threshold: false
+    therefore: >-
+      Jupiter and Saturn stay blocked, and the missing input is a slow-planet
+      speed doctrine -- not a failed absolute threshold.
 
 # ---------------------------------------------------------------- dignity
 # SOURCE-VALIDATED. Re-derived from data/source_2026.html (437578 bytes,

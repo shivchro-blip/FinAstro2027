@@ -379,24 +379,42 @@ project generates is investment advice.
 
 ## Known gaps
 
-Carried in `open_questions` in the config: **speed-class thresholds** — now
-**blocked rather than open**, see below — the 2–7 day lag on the source's Mercury
-latitude rows, aspect orb policy, confirmation of Purnimanta month reckoning,
-sector mapping, and sign-off on the label scheme.
+Carried in `open_questions` in the config: **speed-class thresholds** — resolved
+for the inner planets, still open for the slow ones, see below — the 2–7 day lag
+on the source's Mercury latitude rows, aspect orb policy, confirmation of
+Purnimanta month reckoning, sector mapping, and sign-off on the label scheme.
 
-**The speed-class thresholds are blocked, and the block is a measurement.** For
-every printed boundary of the nine Speed-and-Vedh tables and every Atichari row
-of the twenty-one Nakshtra Vedh tables, the emitted `speed_deg_day` was read and
-grouped by the class the boundary enters. The two sets **overlap on every planet
-with more than one boundary**: Mercury has 1.77558 entering Normal and 1.71453
-entering Fast, so the Normal range strictly contains the Fast range, and
-Jupiter's Fast boundaries fall inside the range its Normal ones span. A
-distribution that overlaps cannot be cut by any value, so this is not a
-precision problem and widening a tolerance would manufacture a class boundary the
-source does not have. Retrograde/Direct **is** recoverable — it is the sign of
-the same quantity, and it reproduces the source's stations to the day, with
-Mercury the documented 2–7 day exception. The Vedha family needs Fast/Normal at
-an arbitrary instant, so it stays blocked on that and is not approximated.
+**The speed-class thresholds calibrate for the inner planets and not the slow
+ones.** An earlier report that no threshold exists was a **method artefact** and
+is retracted in `build/STEP4_DECISIONS.md` §12.8: it read the speed *at* the
+printed boundary dates instead of computing crossing instants, and near a speed
+maximum the whole above-threshold window is only a few days wide, so the samples
+"overlapped" whether or not a threshold existed. Done the kalāṃśā way — propose a
+threshold, compute the crossings, score them against the printed dates — the
+thresholds are **Mercury 1.7449**, **Venus 1.2240** and **Mars 0.6583** deg/day.
+They are absolute and planet-specific, not fractions of each planet's maximum
+(that reading is rejected: it forces a Fast window's two crossings to be
+equidistant from the speed maximum, and Mars's are not).
+
+Jupiter and Saturn have **no** threshold, and the reason is a doctrine rather
+than a failure: the source carries **B30 "Demoted and Shadow Speed of Saturn"
+p.26**, which defines its interval by **longitude** (Saturn at 20°31′ of Pisces,
+crossed retrograde on 27-Jul-2026 and direct again on 15-Mar-2027 — both
+reproduced to the arcminute by the engine) and supplies no speed level. So those
+two stay blocked with a **slow-planet speed doctrine** named as the missing
+input.
+
+**Vedha direction: 109/111, and both exceptions are Saturn.** The rule —
+Fast/Atichari→Left, Normal→Front, Retrograde→Right — holds **without exception**
+on Mars (21/21), Mercury (45/45), Venus (30/30) and Jupiter (7/7); only Saturn
+(B136) has two rows against it, and those two rows use inconsistent offsets even
+with each other. It stays a correlation because two printed rows do contradict
+it. **Atichari** is the nakshatra-residency frame's name for the period the speed
+frame calls **Fast**: every Atichari row begins and ends on a nakshatra ingress.
+The Vedha families are unblocked for Mercury, Venus and Mars — but nothing has
+been ported, because the astronomy layer emits no **speed-crossing** series, so a
+rule cannot build Fast/Normal spans from it. That is new Step-3 work of the same
+kind as the tithi, yoga and sunrise series.
 
 **Shar is settled, and it is the ecliptic latitude and not the declination.**
 B118 and B119 print North/South periods; the latitude sign reproduces B119's 27
@@ -406,9 +424,11 @@ printed 2026 ends **26 of 27** within 1.5 days, the declination sign reproduces
 has no ingress series and a boundary is known only to the gap between records —
 negligible for the Moon, months for Pluto.
 
-**Atichari and Fast are one class under two names**, verified by comparing the
-periods directly: every difference is a single day at a start boundary, where one
-table names the old state's last day and the other the new state's first.
+**Atichari is not a speed class name at all** — it is the nakshatra-residency
+frame's label for the same period the speed frame calls **Fast**. Every Atichari
+row in B132/B133/B134 begins and ends on a nakshatra ingress (Venus's eleven run
+to 12-Apr-26 14:22, exactly when she leaves Revati), so the two tables are one
+period described in two frames rather than two names for one threshold.
 
 **B81 is labelled for the wrong planet, and the tables cannot show it.** "Saturn
 and Mercury Both Retrograde" prints a 2026 window during which Saturn and Mercury
