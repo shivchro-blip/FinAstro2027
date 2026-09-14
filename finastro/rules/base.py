@@ -98,6 +98,12 @@ INPUT_CERTAINTY = {
     "horizon/sunrise": "B",
     "horizon/sunset": "B",
     "motion/station": "B",
+    # The calibrated Fast/Normal speed level. B for the same reason a station
+    # is B, but for a different reason underneath: the INSTANT is exact (a
+    # bisected crossing), while the LEVEL is a fitted quantity with an interval
+    # -- Mercury's is 0.0023 wide, Venus's and Mars's about the same. A rule
+    # conditioned on the class is no more certain than the calibration behind it.
+    "motion/speed_crossing": "B",
     "visibility/combust": "B",
     "apsis": "B",
     # Shar -- B118 and B119. The quantity is exact; the INSTANT is not. The

@@ -39,9 +39,10 @@ from . import shar                # noqa: F401  -- registers batch 4 (Shar)
 from . import apsides             # noqa: F401  -- registers the apsides batch
 from . import pairs               # noqa: F401  -- registers the pairs batch
 from . import volatile            # noqa: F401  -- registers B70's recorded absence
+from . import vedha               # noqa: F401  -- registers the Vedha families
 
 BATCHES = ("visibility", "colocation", "panchang_rules", "shar", "apsides",
-           "pairs", "volatile")
+           "pairs", "volatile", "vedha")
 
 
 def by_status(status: str) -> list[Rule]:

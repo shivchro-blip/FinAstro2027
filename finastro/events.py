@@ -199,6 +199,15 @@ class Astronomy:
     yoga_name_to: Any = UNSET
     motion: Any = UNSET                 # "direct" | "retrograde" | "stationary"
     speed_deg_day: Any = UNSET
+    #: Speed-class crossing records only. The calibrated Fast/Normal level this
+    #: crossing is of, and the interval of levels that also reproduce the
+    #: source's printed boundaries. Both are carried ON THE RECORD rather than
+    #: left to config, so the calibration is auditable from the output alone:
+    #: a reader can see which number was used AND how much freedom it had.
+    speed_threshold: Any = UNSET
+    speed_threshold_interval: Any = UNSET   # [lo, hi]
+    speed_crossing_kind: Any = UNSET       # "threshold" | "station"
+    speed_crossing_direction: Any = UNSET  # "into_fast" | "out_of_fast" | ...
     latitude: Any = UNSET
     declination: Any = UNSET
     elongation: Any = UNSET

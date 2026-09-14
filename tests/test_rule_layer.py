@@ -365,6 +365,20 @@ EXPECTED_FIRINGS_MUMBAI = {
     # silent, pinned by name in EXPECTED_ZERO_FIRING rather than left to read
     # as a quiet year.
     "b089_mars_in_rohini_or_chitra": 22,
+
+    # ------------------------------------------------------------- batch 5
+    # The Vedha families, for the three calibrated planets only. The two speed
+    # tables are ONE ROW PER CLASS CHANGE, which is what they tabulate; the
+    # three nakshatra tables are ONE ROW PER RESIDENCY, which is what they
+    # tabulate (B133 prints 45 rows for Mercury's 2026). A residency that
+    # straddles local midnight appears in both venue columns, which is this
+    # project's convention everywhere and not a double count.
+    "b120_mars_speed_and_vedh": 1,
+    "b122_mercury_speed_and_vedh": 4,
+    "b123_venus_speed_and_vedh": 1,
+    "b132_mars_nakshatra_vedh": 14,
+    "b133_mercury_nakshatra_vedh": 34,
+    "b134_venus_nakshatra_vedh": 33,
 }
 
 

@@ -209,7 +209,90 @@ def _wrap(x: float) -> float:
     return ((x + 180) % 360) - 180
 
 
+#: Dead zone, in deg/day, inside which a threshold crossing is not counted.
+#:
+#: This is what makes the station/threshold distinction STRUCTURAL rather than a
+#: convention someone has to remember. The speed of a body in a retrograde loop
+#: rises from negative through zero to a small positive maximum -- for Mercury
+#: that maximum is about 0.106 deg/day -- and then falls back through zero. A
+#: scan that looked for crossings of a calibrated threshold (Mercury's is 1.745)
+#: would interpolate across that shallow arc and emit a spurious "Fast begins"
+#: and "Fast ends" a few days apart, which is exactly the double-counting error
+#: this class exists to prevent. Requiring a crossing to pass from below -0.2 to
+#: above +0.2 rejects the whole loop by construction: no retrograde-loop maximum
+#: on any body this series covers comes near 0.2 deg/day.
+SPEED_DEADBAND = 0.2
+
 _SCAN_STEP = {"Moon": dt.timedelta(minutes=30)}
+
+
+def speed_crossings(body: str, start: dt.datetime, end: dt.datetime,
+                    threshold: float | None = None):
+    """Level crossings of a body's longitudinal speed.
+
+    Yields ``(instant, kind, family, level)``.
+
+    Two kinds, and the difference is the point of the function:
+
+    * ``kind="station"``, ``level=0.0`` -- the speed crosses zero. This IS the
+      Retrograde boundary, and it is why a ``Retrograde -> Normal`` transition
+      can never be mistaken for a Fast/Normal boundary: that transition is
+      emitted here as a station and carries no threshold at all.
+    * ``kind="threshold"``, ``level=threshold`` -- the speed crosses the
+      calibrated Fast/Normal level, entering the dead zone from outside it.
+      ``family`` is ``motion/fast_start`` on the way up and ``motion/fast_end``
+      on the way down.
+
+    ``threshold=None`` yields the stations alone, which is what the bodies with no
+    calibrated threshold get: Jupiter, Saturn and the outers emit no threshold
+    records at all, because B30 shows the slow planets answer to a longitude
+    doctrine rather than a speed level.
+    """
+    step = _SCAN_STEP.get(body, dt.timedelta(hours=6))
+
+    # The two series are scanned SEPARATELY, at their own levels. An earlier
+    # version scanned only the zero crossings and tried to derive the threshold
+    # crossings from them, which is a category error: the speed crosses 1.7449
+    # without ever crossing zero, and Mercury's whole 2026 does exactly that.
+    if threshold is not None:
+        band = threshold - SPEED_DEADBAND
+        # A threshold crossing whose speed has fallen inside the dead band is a
+        # retrograde-loop arc returning to a small positive maximum, not the
+        # arrival at or departure from the Fast regime. Filtering on the LEVEL
+        # reached is what makes that structural: no loop on a body this series
+        # covers reaches 0.2 deg/day.
+        for inst, rising in _level_crossings(body, start, end, threshold, step):
+            if abs(position(inst, body).speed) < band:
+                continue
+            yield (inst, "threshold",
+                   "motion/fast_start" if rising else "motion/fast_end",
+                   threshold)
+    for inst, rising in _zero_crossings(body, start, end, step):
+        yield (inst, "station",
+               "motion/station_D" if rising else "motion/station_R", 0.0)
+
+
+def _zero_crossings(body: str, start: dt.datetime, end: dt.datetime,
+                    step: dt.timedelta):
+    """[(instant, rising)] for every sign change of the body's speed."""
+    return _level_crossings(body, start, end, 0.0, step)
+
+
+def _level_crossings(body: str, start: dt.datetime, end: dt.datetime,
+                     level: float, step: dt.timedelta):
+    """[(instant, rising)] for every crossing of `level` by the body's speed."""
+    out = []
+    t = start
+    prev = position(t, body).speed - level
+    while t < end:
+        nxt = min(t + step, end)
+        cur = position(nxt, body).speed - level
+        if (prev < 0) != (cur < 0):
+            out.append((_bisect(lambda x: position(x, body).speed - level,
+                                t, nxt), cur > prev))
+        t, prev = nxt, cur
+    return out
+
 
 
 def scan_step(body: str, arc: float) -> dt.timedelta:

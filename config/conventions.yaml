@@ -526,7 +526,32 @@ open_questions:
 # and the Left offset over 1,3,5,7,9,11,13 within B132 alone, so the wheel is a
 # table to be transcribed and not an arithmetic expression to be evaluated.
 vedha_direction:
+  #: THE HONEST HEADLINE IS THE CORRELATION, not the domain-restricted figure.
+  #: Saturn is unresolved, so the rule cannot be stated as a derivation yet --
+  #: but "109/111" on its own understates what was established, and that is why
+  #: both numbers are carried here side by side.
   direction_follows_speed_class: correlation_109_of_111
+  #: Restricted to the domain where a speed class is DEFINED -- the four planets
+  #: with a calibrated threshold or, for Jupiter, a printed table that agrees
+  #: with itself. No exception anywhere in that domain.
+  direction_within_defined_domain: 103_of_103
+  domain_definition: >-
+    Planets whose speed class is computable. Mercury, Venus and Mars have
+    calibrated absolute thresholds; Jupiter's own table is 7/7 and self-
+    consistent even though its threshold is undetermined, so it is inside the
+    domain. Saturn is the only planet OUTSIDE it: no threshold, and a table
+    whose Atichari rows disagree with each other.
+  saturn_is_outside_the_domain_not_a_counterexample: >-
+    Saturn's two failures are applications of the rule outside its domain rather
+    than counterexamples within it. That is why the overall label stays
+    correlation -- they are not explained -- but it is also why the 103/103 is
+    worth carrying: the rule has no exception where it can be evaluated at all.
+  THE_TEST_THAT_DECIDES: >-
+    If the slow-planet doctrine is ever settled and Saturn's class becomes
+    computable, Saturn's two rows BECOME testable: the rule either predicts
+    their cell or it does not. That is the single test that moves the label from
+    correlation to derivation. Until then the label is correlation, and this
+    entry names the test rather than leaving it to be rediscovered.
   per_planet:
     Mars:    {section: B132, match: 21, mismatch: 0}
     Mercury: {section: B133, match: 45, mismatch: 0}
@@ -568,6 +593,54 @@ vedha_direction:
     inconsistent and Jupiter, though 7/7 on the direction rule, has no threshold,
     so neither can be given a class and the rule cannot be evaluated for them.
   blocked_on: speed_class_thresholds  # for Jupiter and Saturn only
+
+# ------------------------------------------------------------- frame findings
+# Findings about a NAME being a property of the FRAME a table is written in
+# rather than a property of the sky. Kept together and out of the speed section
+# on purpose: the same shape recurs wherever the source tabulates one period two
+# ways, and the second instance will not be about speed at all.
+frame_findings:
+  atichari_is_a_residency_frame_label:
+    claim: >-
+      "Atichari" is the NAKSHATRA-RESIDENCY frame's label for the period the
+      SPEED frame calls "Fast". One period, two framings -- not two names for one
+      class, and not two classes.
+    evidence:
+      - >-
+        Every Atichari row in B132, B133 and B134 opens and closes on a
+        NAKSHATRA INGRESS. Venus's eleven Atichari rows run 01-Jan, 10-Jan,
+        18-Jan, 21-Jan, 31-Jan, 11-Feb, 22-Feb, 04-Mar, 15-Mar, 26-Mar, 06-Apr,
+        and the last ends 12-Apr-26 14:22 -- exactly the instant Venus leaves
+        Revati. Thirty of thirty rows across the three tables are bounded this
+        way, and none is bounded by a speed value.
+      - >-
+        The speed frame's own table for the same period prints date RANGES whose
+        edges are the calibrated threshold crossings, and those edges land on the
+        same starts (Venus 13-Apr-26 00:07 for the printed 13-Apr; Mars
+        15-Aug-26 00:05 for the printed 15-Aug).
+      - >-
+        The speed table calls the class "Fast" and the nakshatra table calls the
+        same dates "Atichari", including for Mercury where the two tables' ranges
+        are identical (28-Jan to 07-Feb, 27-Apr to 31-May, 12-Aug to 08-Sep).
+      - >-
+        Counter-evidence, recorded because it is the reason this is a frame
+        finding and not a clean equation: Mars's table labels fifteen rows
+        Atichari for periods the calibrated threshold calls Normal, so the
+        residency frame's label and the speed frame's class do not always agree
+        for Mars. The two frames are the same CONSTRUCTION; the labels do not
+        reduce to one another.
+    same_shape_as: dignity.source_witness
+    why_it_is_here: >-
+      The rashi/navamsa dignity split is the same kind of finding one layer down
+      -- the same planet at the same instant carries different labels in D1 and
+      D9, and the project emits both under distinct names rather than collapsing
+      them. A future reader meeting the next two-frame question should find this
+      entry, which is why it is not a line inside the speed section.
+    how_carried: >-
+      The Vedha port keys its wheel on the residency frame's label because that
+      is the key its own table printed, and carries the computed class separately
+      on every row as `class`, with `target_unavailable_because` naming the
+      frame mismatch wherever the two disagree.
 
 # ---------------------------------------------------------------- speed classes
 # RESOLVED 14-Sep-2026 by crossing-instant calibration. See

@@ -45,9 +45,9 @@ $ python3 tests/test_rule_layer.py
 131/131 checks passed
 ```
 
-The rule layer now carries **112 rules over 82 of the 141 catalogue-B sections**:
-97 executable, 5 resolved on a supplied reading, 9 blocked with the missing input
-named, and 1 ambiguous. 3,204 dated rows in the generated year. See
+The rule layer now carries **120 rules over 90 of the 141 catalogue-B sections**:
+103 executable, 5 resolved on a supplied reading, 11 blocked with the missing
+input named, and 1 ambiguous. 3,379 dated rows in the generated year. See
 `build/STEP4_DECISIONS.md` §12 for the batch-by-batch record.
 
 The build is deterministic: regenerating the year produces a byte-identical
@@ -404,17 +404,51 @@ reproduced to the arcminute by the engine) and supplies no speed level. So those
 two stay blocked with a **slow-planet speed doctrine** named as the missing
 input.
 
-**Vedha direction: 109/111, and both exceptions are Saturn.** The rule —
-Fast/Atichari→Left, Normal→Front, Retrograde→Right — holds **without exception**
-on Mars (21/21), Mercury (45/45), Venus (30/30) and Jupiter (7/7); only Saturn
-(B136) has two rows against it, and those two rows use inconsistent offsets even
-with each other. It stays a correlation because two printed rows do contradict
-it. **Atichari** is the nakshatra-residency frame's name for the period the speed
-frame calls **Fast**: every Atichari row begins and ends on a nakshatra ingress.
-The Vedha families are unblocked for Mercury, Venus and Mars — but nothing has
-been ported, because the astronomy layer emits no **speed-crossing** series, so a
-rule cannot build Fast/Normal spans from it. That is new Step-3 work of the same
-kind as the tithi, yoga and sunrise series.
+**Vedha direction: 109/111 overall, and 103/103 within its domain.** The
+rule — Fast/Atichari→Left, Normal→Front, Retrograde→Right — holds **without
+exception** on Mars (21/21), Mercury (45/45), Venus (30/30) and Jupiter (7/7).
+Only Saturn (B136) fails, at 6/8, and Saturn is the one planet with no speed
+threshold, so those rows are applications *outside* the rule's domain rather than
+counterexamples within it — on a table whose own two Atichari rows disagree with
+each other. The headline stays **correlation** while Saturn is unresolved, but the
+domain-restricted 103/103 is carried beside it so the strength of what was
+established is visible. **The test that decides** is named in config: if the
+slow-planet doctrine is ever settled and Saturn's class becomes computable,
+Saturn's two rows become testable and the label moves from correlation to
+derivation.
+
+**The speed-class series exists, and the Vedha families for the three inner
+planets are ported.** The astronomy layer now emits `speed_crossing` records at
+each calibrated level (Mercury 1.7449, Venus 1.2240, Mars 0.6583 deg/day),
+bisected to the second, certainty B, carrying the level *and* its feasible
+interval on every record. Retrograde boundaries stay `station` records: the two
+kinds come from **separate scans at their own levels**, and a threshold crossing
+must clear a 0.2 deg/day dead band that no retrograde loop reaches — so the
+confusion of a `Retrograde → Normal` transition with a Fast/Normal boundary is now
+structurally impossible rather than merely avoided. Validated before any rule read
+it: Venus **+0.12 h**, Mars **+0.09 h**, Mercury 5 of 6 within 24 h, and its two
+February boundaries ~1 day adrift at *every* level in the interval, which is the
+source's own imprecision. Jupiter and Saturn emit no such records — their missing
+input is a slow-planet doctrine, and B30 supplies a longitude band rather than a
+speed level.
+
+The port covers B120/B122/B123 and B132/B133/B134 for Mercury, Venus and Mars.
+The targets are a **transcription** of each table (all 96 printed rows resolve to
+their own target through the wheels) and a wheel entry is **refused** when a 2027
+residency's computed class differs, with the reason on the row — Mars's table
+labels all fifteen of its Atichari rows for periods the calibrated threshold calls
+Normal, so its two tables do not agree about what Atichari means for Mars.
+Coverage after refusals: Mercury 66/68 rows carry a target, Mars 12/28, Venus
+14/66.
+
+**Atichari is a frame, not a synonym.** It is the **nakshatra-residency frame's**
+label for the period the speed frame calls Fast: every Atichari row in
+B132/B133/B134 opens and closes on a nakshatra ingress (Venus's eleven run to
+12-Apr-26 14:22, when she leaves Revati) and none is bounded by a speed value. It
+is recorded under `frame_findings` as **the same shape as the rashi/navamsa
+dignity split** — one object, two frames, carried under distinct names — with the
+counter-evidence (Mars) recorded alongside, because the two frames' labels do not
+reduce to one another.
 
 **Shar is settled, and it is the ecliptic latitude and not the declination.**
 B118 and B119 print North/South periods; the latitude sign reproduces B119's 27
@@ -426,9 +460,10 @@ negligible for the Moon, months for Pluto.
 
 **Atichari is not a speed class name at all** — it is the nakshatra-residency
 frame's label for the same period the speed frame calls **Fast**. Every Atichari
-row in B132/B133/B134 begins and ends on a nakshatra ingress (Venus's eleven run
+row in B132/B133/B134 opens and closes on a nakshatra ingress (Venus's eleven run
 to 12-Apr-26 14:22, exactly when she leaves Revati), so the two tables are one
-period described in two frames rather than two names for one threshold.
+period described in two frames. Recorded under `frame_findings` beside the
+rashi/navamsa dignity split, which is the same shape.
 
 **B81 is labelled for the wrong planet, and the tables cannot show it.** "Saturn
 and Mercury Both Retrograde" prints a 2026 window during which Saturn and Mercury

@@ -69,6 +69,31 @@ STATION_PRECISION = {"Mercury": "minutes", "Venus": "minutes", "Mars": "minutes"
 
 COMBUST_BODIES = [b.capitalize() for b in CONF["combustion"]["thresholds_deg"]]
 
+# ------------------------------------------------------- speed-class crossings
+#: The bodies whose Fast/Normal level is CALIBRATED, with the level and the
+#: interval of levels that also reproduce the source's printed boundaries. Read
+#: from config so there is one copy of the number.
+#:
+#: Jupiter, Saturn and the outers are deliberately absent. Their missing input is
+#: a slow-planet speed doctrine, not a threshold: B30 "Demoted and Shadow Speed
+#: of Saturn" p.26 defines its interval by LONGITUDE (Saturn at 20 deg 31' of
+#: Pisces, crossed retrograde 27-Jul-2026 and direct again 15-Mar-2027) and
+#: supplies no speed level. Emitting a threshold record for them would be
+#: inventing one.
+#: Bodies the series is generated for, named explicitly. `speed_classes` also
+#: carries `retrograde_rule` and `slow_planet_doctrine`, which are metadata and
+#: not planets -- iterating the block's keys would try to generate a series for
+#: the string "slow_planet_doctrine".
+SPEED_CLASS_PLANETS = ("Mercury", "Venus", "Mars")
+SPEED_CLASS_BODIES = {
+    body: (CONF["speed_classes"][body]["threshold"],
+           tuple(CONF["speed_classes"][body]["interval"]),
+           CONF["speed_classes"][body]["precision_days"],
+           CONF["speed_classes"][body]["section"])
+    for body in SPEED_CLASS_PLANETS
+    if CONF["speed_classes"][body].get("threshold") is not None
+}
+
 #: Config records why the Moon is absent: the 2026 source excludes it by name
 #: in its own section headings.
 CONJ_BODIES = CONF["conjunctions"]["bodies"]
@@ -211,6 +236,23 @@ PANCHANG_SERIES_FLAG =     "source_prints_these_instants_inside_rule_sections_no
 #: read as "new for 2027".
 HORIZON_SERIES_FLAG = (
     "source_prints_four_mumbai_times_in_the_bhadra_prose_not_as_a_series")
+
+#: The speed-class series is a fourth kind again. The source DOES print the
+#: Fast/Normal boundaries -- one table per planet, B120-B127 -- but it prints
+#: them as date ranges in a rule section, not as a series of crossings, and it
+#: prints them for 2026 only. So a speed_crossing record has a real source
+#: counterpart to cite and its instants are still ours, which is exactly what
+#: this flag says.
+SPEED_CLASS_SERIES_FLAG = (
+    "source_prints_these_boundaries_as_date_ranges_not_as_crossings")
+
+#: The section each calibrated body's level was fitted against. Only the three
+#: inner planets appear; see SPEED_CLASS_BODIES.
+SPEED_CLASS_SOURCE = {
+    "Mercury": "Mercury Speed and Vedh p.96",
+    "Venus": "Venus Speed and Vedh p.97",
+    "Mars": "Mars Speed and Vedh p.94",
+}
 
 #: Classes the source demonstrably contains, so a record of that class with no
 #: quotable section is a real gap in the source and not a gap in this repo.
@@ -526,6 +568,60 @@ def combustions():
     return out
 
 
+def speed_class_crossings():
+    """Where each calibrated planet enters and leaves Fast, and where it turns.
+
+    The speed-class series, and the fourth of the boundary series Step 3 grew
+    late (after the tithi/yoga pair, then the horizon pair). Two kinds of
+    crossing, emitted as TWO CLASSES so the distinction is structural:
+
+    * ``speed_crossing`` -- the speed crosses the planet's calibrated
+      Fast/Normal level. ``motion/fast_start`` rising, ``motion/fast_end``
+      falling. Only Mercury, Venus and Mars have a level.
+    * ``station`` -- the speed crosses zero. Already emitted by `stations()`;
+      listed here because it is the RETROGRADE boundary, and separating the two
+      kinds is what makes a ``Retrograde -> Normal`` transition impossible to
+      mistake for a Fast/Normal one. That confusion was a real bug in the
+      calibration this series comes from, and it is now prevented by the shape
+      of the output rather than by remembering not to make it.
+
+    Certainty B. Not because the instant is imprecise -- it is bisected to the
+    second like every other crossing -- but because the LEVEL is a calibrated
+    quantity with an interval, and `precision_days` on each record is that
+    interval's width divided by the acceleration at the crossing. Mercury's
+    0.08 d is small; Venus's and Mars's 2.00 d say the level is only good to
+    about two days of boundary.
+    """
+    out = []
+    for body, (level, interval, pdays, section) in SPEED_CLASS_BODIES.items():
+        title = SPEED_CLASS_SOURCE.get(body)
+        for inst, kind, family, lvl in ephem.speed_crossings(
+                body, SPAN_START, SPAN_END, level):
+            if kind == "station":
+                continue          # stations() already emits these
+            astro, pflags = ev.positional(inst, body)
+            astro = replace(
+                astro, speed_threshold=level,
+                speed_threshold_interval=[interval[0], interval[1]],
+                speed_crossing_kind="threshold",
+                speed_crossing_direction=("into_fast"
+                                          if family.endswith("start")
+                                          else "out_of_fast"))
+            out.append(ev.build(
+                "speed_crossing", family, [body], "instant", inst, astro,
+                ev.qa_for(inst, "B", precision_days=pdays,
+                          source_2026_equivalent=title,
+                          flags=pflags + [
+                              SPEED_CLASS_SERIES_FLAG,
+                              f"threshold={level}",
+                              f"threshold_interval={interval[0]}..{interval[1]}",
+                              f"precision_days={pdays}",
+                              f"calibrated_against={section}"]),
+                precision="exact",
+                id_suffix=family.split("/")[-1]))
+    return out
+
+
 def eclipses():
     """All solar and lunar eclipses in the span.
 
@@ -683,6 +779,7 @@ GENERATORS = [
     ("yoga ingresses", yoga_ingresses),
     ("sunrise / sunset", sunrises_and_sunsets),
     ("stations", stations),
+    ("speed-class crossings", speed_class_crossings),
     ("combust / rise", combustions),
     ("eclipses", eclipses),
     ("lunations", lunations),

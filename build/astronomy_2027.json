@@ -11,7 +11,7 @@
     "span_end_utc": "2028-01-31T18:30:00Z",
     "primary_tz": "Asia/Kolkata",
     "secondary_tz": "America/New_York",
-    "record_count": 4163
+    "record_count": 4170
   },
   "records": [
     {
@@ -89260,6 +89260,85 @@
       }
     },
     {
+      "id": "speed_crossing:mercury:20270411T152529Z:fast_start",
+      "event_class": "speed_crossing",
+      "rule_family": "motion/fast_start",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2027-04-11T15:25:29Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2027-04-11T15:25:29Z",
+          "ist_date": "11-Apr-2027",
+          "ist_time": "20:55",
+          "ist_weekday": "Sun",
+          "et_date": "11-Apr-2027",
+          "et_time": "11:25",
+          "et_weekday": "Sun",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Pisces",
+        "lon_sid": 340.329334,
+        "nakshatra": "Uttara Bhadrapada",
+        "pada": 3,
+        "navamsa": "Libra",
+        "motion": "direct",
+        "speed_deg_day": 1.744909,
+        "speed_threshold": 1.744909,
+        "speed_threshold_interval": [
+          1.74378,
+          1.746038
+        ],
+        "speed_crossing_kind": "threshold",
+        "speed_crossing_direction": "into_fast",
+        "latitude": -2.310841,
+        "declination": -0.305131,
+        "elongation": -16.951378,
+        "distance": 1.245268722,
+        "dignity": [
+          "debilitated"
+        ],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15
+      },
+      "panchang": {
+        "tithi": 5,
+        "tithi_name": "Panchami",
+        "paksha": "Shukla",
+        "moon_nakshatra": "Mrigashira",
+        "yoga": "Shobhana",
+        "karana": "Balava"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "moshier",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.238114,
+        "node": "mean",
+        "data_certainty": "B",
+        "precision_days": 0.08,
+        "source_2026_equivalent": "Mercury Speed and Vedh p.96",
+        "flags": [
+          "source_prints_these_boundaries_as_date_ranges_not_as_crossings",
+          "threshold=1.744909",
+          "threshold_interval=1.74378..1.746038",
+          "precision_days=0.08",
+          "calibrated_against=B122"
+        ]
+      }
+    },
+    {
       "id": "tithi_ingress:moon-sun:20270411T161003Z:t06",
       "event_class": "tithi_ingress",
       "rule_family": "ingress/tithi",
@@ -113449,6 +113528,83 @@
           "source_prints_these_instants_inside_rule_sections_not_as_a_series",
           "astronomy_block_body=Moon",
           "ayanamsha_dependent_sum_of_longitudes"
+        ]
+      }
+    },
+    {
+      "id": "speed_crossing:mercury:20270515T061725Z:fast_end",
+      "event_class": "speed_crossing",
+      "rule_family": "motion/fast_end",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2027-05-15T06:17:25Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2027-05-15T06:17:25Z",
+          "ist_date": "15-May-2027",
+          "ist_time": "11:47",
+          "ist_weekday": "Sat",
+          "et_date": "15-May-2027",
+          "et_time": "02:17",
+          "et_weekday": "Sat",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Taurus",
+        "lon_sid": 47.457129,
+        "nakshatra": "Rohini",
+        "pada": 3,
+        "navamsa": "Gemini",
+        "motion": "direct",
+        "speed_deg_day": 1.744909,
+        "speed_threshold": 1.744909,
+        "speed_threshold_interval": [
+          1.74378,
+          1.746038
+        ],
+        "speed_crossing_kind": "threshold",
+        "speed_crossing_direction": "out_of_fast",
+        "latitude": 2.128283,
+        "declination": 24.295607,
+        "elongation": 17.47878,
+        "distance": 1.102149815,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15
+      },
+      "panchang": {
+        "tithi": 10,
+        "tithi_name": "Dashami",
+        "paksha": "Shukla",
+        "moon_nakshatra": "Purva Phalguni",
+        "yoga": "Harshana",
+        "karana": "Gara"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "moshier",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.2394,
+        "node": "mean",
+        "data_certainty": "B",
+        "precision_days": 0.08,
+        "source_2026_equivalent": "Mercury Speed and Vedh p.96",
+        "flags": [
+          "source_prints_these_boundaries_as_date_ranges_not_as_crossings",
+          "threshold=1.744909",
+          "threshold_interval=1.74378..1.746038",
+          "precision_days=0.08",
+          "calibrated_against=B122"
         ]
       }
     },
@@ -144683,6 +144839,83 @@
       }
     },
     {
+      "id": "speed_crossing:venus:20270701T062238Z:fast_start",
+      "event_class": "speed_crossing",
+      "rule_family": "motion/fast_start",
+      "bodies": [
+        "Venus"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2027-07-01T06:22:38Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2027-07-01T06:22:38Z",
+          "ist_date": "01-Jul-2027",
+          "ist_time": "11:52",
+          "ist_weekday": "Thu",
+          "et_date": "01-Jul-2027",
+          "et_time": "02:22",
+          "et_weekday": "Thu",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Gemini",
+        "lon_sid": 63.52872,
+        "nakshatra": "Mrigashira",
+        "pada": 4,
+        "navamsa": "Scorpio",
+        "motion": "direct",
+        "speed_deg_day": 1.223981,
+        "speed_threshold": 1.223981,
+        "speed_threshold_interval": [
+          1.223368,
+          1.224595
+        ],
+        "speed_crossing_kind": "threshold",
+        "speed_crossing_direction": "into_fast",
+        "latitude": -0.136892,
+        "declination": 23.281662,
+        "elongation": -11.454356,
+        "distance": 1.688482187,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 27
+      },
+      "panchang": {
+        "tithi": 27,
+        "tithi_name": "Dwadashi",
+        "paksha": "Krishna",
+        "moon_nakshatra": "Krittika",
+        "yoga": "Shula",
+        "karana": "Taitila"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "moshier",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.241198,
+        "node": "mean",
+        "data_certainty": "B",
+        "precision_days": 2.0,
+        "source_2026_equivalent": "Venus Speed and Vedh p.97",
+        "flags": [
+          "source_prints_these_boundaries_as_date_ranges_not_as_crossings",
+          "threshold=1.223981",
+          "threshold_interval=1.223368..1.224595",
+          "precision_days=2.0",
+          "calibrated_against=B123"
+        ]
+      }
+    },
+    {
       "id": "conjunction:mercury-venus:20270701T092207Z",
       "event_class": "conjunction",
       "rule_family": "aspect/conjunction",
@@ -162287,6 +162520,85 @@
           "refraction=none",
           "horizon_geo_lat_lon_alt=40.7128,-74.0060,0",
           "civil_date_at_venue=2027-07-26"
+        ]
+      }
+    },
+    {
+      "id": "speed_crossing:mercury:20270727T002147Z:fast_start",
+      "event_class": "speed_crossing",
+      "rule_family": "motion/fast_start",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2027-07-27T00:21:47Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2027-07-27T00:21:47Z",
+          "ist_date": "27-Jul-2027",
+          "ist_time": "05:51",
+          "ist_weekday": "Tue",
+          "et_date": "26-Jul-2027",
+          "et_time": "20:21",
+          "et_weekday": "Mon",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": -1
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Gemini",
+        "lon_sid": 83.511366,
+        "nakshatra": "Punarvasu",
+        "pada": 2,
+        "navamsa": "Taurus",
+        "motion": "direct",
+        "speed_deg_day": 1.744909,
+        "speed_threshold": 1.744909,
+        "speed_threshold_interval": [
+          1.74378,
+          1.746038
+        ],
+        "speed_crossing_kind": "threshold",
+        "speed_crossing_direction": "into_fast",
+        "latitude": -0.120028,
+        "declination": 22.140145,
+        "elongation": -16.034159,
+        "distance": 1.121683541,
+        "dignity": [
+          "own"
+        ],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15
+      },
+      "panchang": {
+        "tithi": 23,
+        "tithi_name": "Ashtami",
+        "paksha": "Krishna",
+        "moon_nakshatra": "Ashwini",
+        "yoga": "Shula",
+        "karana": "Kaulava"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "moshier",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.242183,
+        "node": "mean",
+        "data_certainty": "B",
+        "precision_days": 0.08,
+        "source_2026_equivalent": "Mercury Speed and Vedh p.96",
+        "flags": [
+          "source_prints_these_boundaries_as_date_ranges_not_as_crossings",
+          "threshold=1.744909",
+          "threshold_interval=1.74378..1.746038",
+          "precision_days=0.08",
+          "calibrated_against=B122"
         ]
       }
     },
@@ -183986,6 +184298,83 @@
       }
     },
     {
+      "id": "speed_crossing:mercury:20270825T072123Z:fast_end",
+      "event_class": "speed_crossing",
+      "rule_family": "motion/fast_end",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2027-08-25T07:21:23Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2027-08-25T07:21:23Z",
+          "ist_date": "25-Aug-2027",
+          "ist_time": "12:51",
+          "ist_weekday": "Wed",
+          "et_date": "25-Aug-2027",
+          "et_time": "03:21",
+          "et_weekday": "Wed",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Leo",
+        "lon_sid": 140.65879,
+        "nakshatra": "Purva Phalguni",
+        "pada": 3,
+        "navamsa": "Libra",
+        "motion": "direct",
+        "speed_deg_day": 1.744909,
+        "speed_threshold": 1.744909,
+        "speed_threshold_interval": [
+          1.74378,
+          1.746038
+        ],
+        "speed_crossing_kind": "threshold",
+        "speed_crossing_direction": "out_of_fast",
+        "latitude": 1.102781,
+        "declination": 6.962194,
+        "elongation": 13.013443,
+        "distance": 1.329605604,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15
+      },
+      "panchang": {
+        "tithi": 23,
+        "tithi_name": "Ashtami",
+        "paksha": "Krishna",
+        "moon_nakshatra": "Rohini",
+        "yoga": "Vyaghata",
+        "karana": "Kaulava"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "moshier",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.243303,
+        "node": "mean",
+        "data_certainty": "B",
+        "precision_days": 0.08,
+        "source_2026_equivalent": "Mercury Speed and Vedh p.96",
+        "flags": [
+          "source_prints_these_boundaries_as_date_ranges_not_as_crossings",
+          "threshold=1.744909",
+          "threshold_interval=1.74378..1.746038",
+          "precision_days=0.08",
+          "calibrated_against=B122"
+        ]
+      }
+    },
+    {
       "id": "sunrise:sun:20270825T102034Z:new_york",
       "event_class": "sunrise",
       "rule_family": "horizon/sunrise",
@@ -192205,6 +192594,83 @@
         "source_2026_equivalent": null,
         "flags": [
           "source_section_not_printed_in_2026"
+        ]
+      }
+    },
+    {
+      "id": "speed_crossing:mars:20270905T102047Z:fast_start",
+      "event_class": "speed_crossing",
+      "rule_family": "motion/fast_start",
+      "bodies": [
+        "Mars"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2027-09-05T10:20:47Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2027-09-05T10:20:47Z",
+          "ist_date": "05-Sep-2027",
+          "ist_time": "15:50",
+          "ist_weekday": "Sun",
+          "et_date": "05-Sep-2027",
+          "et_time": "06:20",
+          "et_weekday": "Sun",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Libra",
+        "lon_sid": 187.95181,
+        "nakshatra": "Swati",
+        "pada": 1,
+        "navamsa": "Sagittarius",
+        "motion": "direct",
+        "speed_deg_day": 0.658287,
+        "speed_threshold": 0.658287,
+        "speed_threshold_interval": [
+          0.656927,
+          0.659648
+        ],
+        "speed_crossing_kind": "threshold",
+        "speed_crossing_direction": "into_fast",
+        "latitude": -0.315498,
+        "declination": -12.532591,
+        "elongation": 49.548615,
+        "distance": 1.96692561,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 28
+      },
+      "panchang": {
+        "tithi": 6,
+        "tithi_name": "Shashthi",
+        "paksha": "Shukla",
+        "moon_nakshatra": "Vishakha",
+        "yoga": "Indra",
+        "karana": "Kaulava"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "moshier",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.243729,
+        "node": "mean",
+        "data_certainty": "B",
+        "precision_days": 2.0,
+        "source_2026_equivalent": "Mars Speed and Vedh p.94",
+        "flags": [
+          "source_prints_these_boundaries_as_date_ranges_not_as_crossings",
+          "threshold=0.658287",
+          "threshold_interval=0.656927..0.659648",
+          "precision_days=2.0",
+          "calibrated_against=B120"
         ]
       }
     },
@@ -274385,6 +274851,83 @@
           "refraction=none",
           "horizon_geo_lat_lon_alt=40.7128,-74.0060,0",
           "civil_date_at_venue=2027-12-31"
+        ]
+      }
+    },
+    {
+      "id": "speed_crossing:venus:20271231T215349Z:fast_end",
+      "event_class": "speed_crossing",
+      "rule_family": "motion/fast_end",
+      "bodies": [
+        "Venus"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2027-12-31T21:53:49Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2027-12-31T21:53:49Z",
+          "ist_date": "01-Jan-2028",
+          "ist_time": "03:23",
+          "ist_weekday": "Sat",
+          "et_date": "31-Dec-2027",
+          "et_time": "16:53",
+          "et_weekday": "Fri",
+          "et_abbr": "EST",
+          "et_offset": "-05:00",
+          "day_shift": -1
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Capricorn",
+        "lon_sid": 290.646909,
+        "nakshatra": "Shravana",
+        "pada": 4,
+        "navamsa": "Cancer",
+        "motion": "direct",
+        "speed_deg_day": 1.223981,
+        "speed_threshold": 1.223981,
+        "speed_threshold_interval": [
+          1.223368,
+          1.224595
+        ],
+        "speed_crossing_kind": "threshold",
+        "speed_crossing_direction": "out_of_fast",
+        "latitude": -1.844825,
+        "declination": -18.127281,
+        "elongation": 34.911509,
+        "distance": 1.264174208,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 27
+      },
+      "panchang": {
+        "tithi": 4,
+        "tithi_name": "Chaturthi",
+        "paksha": "Shukla",
+        "moon_nakshatra": "Dhanishta",
+        "yoga": "Vajra",
+        "karana": "Vishti"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "moshier",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.248223,
+        "node": "mean",
+        "data_certainty": "B",
+        "precision_days": 2.0,
+        "source_2026_equivalent": "Venus Speed and Vedh p.97",
+        "flags": [
+          "source_prints_these_boundaries_as_date_ranges_not_as_crossings",
+          "threshold=1.223981",
+          "threshold_interval=1.223368..1.224595",
+          "precision_days=2.0",
+          "calibrated_against=B123"
         ]
       }
     },

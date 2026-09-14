@@ -37,3 +37,4 @@ desktop.ini
 # Their diffs are the most valuable thing this repo provides: "the build hash
 # moved, and here is exactly which records changed" is answerable by `git diff`.
 calib_commit_msg.txt
+b5msg.txt

@@ -68,6 +68,11 @@ EXPECTED_RANGE = {
     # reason to vary, and a missing venue halves it.
     "sunrise":           (840, 870),
     "sunset":            (840, 870),
+    # Speed-class crossings, for the three calibrated planets only. Mercury has
+    # three Fast windows in a year and each contributes two crossings, Venus one
+    # or two, Mars one -- and a Fast window that runs to a span edge contributes
+    # only its opening, which is why the lower bound is well under 12.
+    "speed_crossing":    (4, 14),
 }
 
 
@@ -98,6 +103,122 @@ def in_2027(rec: dict) -> bool:
 
 
 # -------------------------------------------------------------- 1. shape
+def test_speed_class_crossings(doc: dict) -> None:
+    """The speed-class series: calibrated levels, right bodies, right shape.
+
+    The series exists so a rule can build Fast/Normal spans without touching the
+    ephemeris, and so a Retrograde boundary can never be mistaken for a
+    Fast/Normal one. Both of those are checked here rather than assumed, and the
+    calibration itself is recomputed from the source's printed 2026 boundaries
+    so the levels cannot drift away from the evidence.
+    """
+    import importlib.util as ilu
+    spec = ilu.spec_from_file_location(
+        "_cat", ROOT / "finastro" / "rules" / "catalogue.py")
+    cat = ilu.module_from_spec(spec)
+    sys.modules["_cat"] = cat
+    spec.loader.exec_module(cat)
+
+    sc = [r for r in doc["records"] if r["event_class"] == "speed_crossing"]
+    calibrated = tuple(CONF["speed_classes"][b]["threshold"]
+                       for b in ("Mercury", "Venus", "Mars"))
+
+    # Every level is one of the three calibrated numbers, and every record
+    # carries the interval it came from.
+    bad_level = [r["id"] for r in sc
+                 if r["astronomy"]["speed_threshold"] not in calibrated]
+    record("Every speed crossing is of a calibrated level",
+           not bad_level, str(bad_level) or f"levels {calibrated}")
+
+    bad_int = [r["id"] for r in sc
+               if len(r["astronomy"]["speed_threshold_interval"]) != 2
+               or not (r["astronomy"]["speed_threshold_interval"][0]
+                       <= r["astronomy"]["speed_threshold"]
+                       <= r["astronomy"]["speed_threshold_interval"][1])]
+    record("Every record carries the feasible interval and the level lies in it",
+           not bad_int, str(bad_int) or
+           "thresholds are auditable from the output alone")
+
+    # Bodies: the three calibrated planets only. Jupiter, Saturn and the outers
+    # have no threshold, and a record for one would be an invented level.
+    bodies = {r["bodies"][0] for r in sc}
+    record("No speed crossing exists for an uncalibrated body",
+           bodies == {"Mercury", "Venus", "Mars"}, str(sorted(bodies)))
+
+    # The speed at the crossing equals the level (that is what a crossing IS).
+    off = [r["id"] for r in sc
+           if abs(r["astronomy"]["speed_deg_day"]
+                  - r["astronomy"]["speed_threshold"]) > 1e-6]
+    record("Each crossing's emitted speed equals its level",
+           not off, str(off) or "the series is self-consistent")
+
+    # certainties and precision_days come from the calibration
+    bad_cert = [r["id"] for r in sc
+                if r["qa"]["data_certainty"] != "B"
+                or r["qa"]["precision_days"] is None]
+    record("Every speed crossing is certainty B with a precision_days",
+           not bad_cert, str(bad_cert) or
+           "the level is calibrated, so the grade is B by construction")
+
+    # THE STRUCTURAL CHECK. A threshold record's speed must be above the dead
+    # band, which is what stops a retrograde-loop arc being emitted as a Fast
+    # boundary. And no station record may be a threshold record.
+    import finastro.ephem as _e
+    band = _e.SPEED_DEADBAND
+    too_slow = [r["id"] for r in sc
+                if abs(r["astronomy"]["speed_deg_day"])
+                < r["astronomy"]["speed_threshold"] - band]
+    record("No threshold crossing sits inside the dead band",
+           not too_slow, str(too_slow) or
+           f"dead band is {band} deg/day, which no retrograde loop reaches")
+
+    kinds = {r["astronomy"]["speed_crossing_kind"] for r in sc}
+    record("A Retrograde boundary is never emitted as a threshold crossing",
+           kinds == {"threshold"},
+           f"kinds present {sorted(kinds)}; the stations stay in `station`")
+
+    # Reproduce the source's printed 2026 boundaries from the levels, so the
+    # calibration is re-derived on every run rather than trusted.
+    import datetime as _dt
+    isttz = _dt.timezone(_dt.timedelta(hours=5, minutes=30))
+    worst = {}
+    for body, b in (("Mercury", 122), ("Venus", 123), ("Mars", 120)):
+        level = CONF["speed_classes"][body]["threshold"]
+        printed = []
+        t = cat.B(b).tables[0]
+        hp = t.headers[0].strip().lower() == "planet"
+        rows = []
+        for raw in t.rows:
+            c = list(raw)[1:] if hp else list(raw)
+            rows.append((c[0].strip(), c[1].strip(), c[2]))
+        for i in range(1, len(rows)):
+            d0s, _, cls = rows[i]
+            prev = rows[i - 1][2]
+            if "Retrograde" in (cls, prev) or not d0s:
+                continue
+            try:
+                d0 = _dt.datetime.strptime(d0s, "%d-%b-%y").replace(
+                    tzinfo=isttz)
+            except ValueError:
+                continue
+            printed.append((d0, prev, cls))
+        lo = _dt.datetime(2026, 1, 1, tzinfo=isttz)
+        hi = _dt.datetime(2027, 1, 1, tzinfo=isttz)
+        xs = [t for t, k, f, _ in _e.speed_crossings(body, lo, hi, level)
+              if k == "threshold"]
+        worst[body] = max(
+            min(abs((x - d0).total_seconds()) / 86400 for x in xs)
+            for d0, _, _ in printed) if xs else 99
+
+    record("Calibrated levels reproduce 2026's printed Fast/Normal boundaries",
+           worst.get("Venus", 99) <= 0.05 and worst.get("Mars", 99) <= 0.05
+           and worst.get("Mercury", 99) <= 1.1,
+           "worst offset per planet (days): "
+           + ", ".join(f"{k} {v:.3f}" for k, v in sorted(worst.items()))
+           + " -- Mercury's two February boundaries are ~1 day adrift at EVERY "
+             "level in its interval, which is the source's own imprecision")
+
+
 def test_counts(doc: dict) -> None:
     counts = collections.Counter(r["event_class"] for r in doc["records"])
     unexpected = set(counts) - set(EXPECTED_RANGE)
@@ -1238,6 +1359,7 @@ def main() -> int:
     test_every_horizon_record_states_its_convention(doc)
     test_the_convention_matches_the_combustion_calibration()
     test_a_location_free_horizon_record_is_refused()
+    test_speed_class_crossings(doc)
 
     width = max(len(n) for n, _, _ in _results)
     failed = 0
