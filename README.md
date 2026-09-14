@@ -55,6 +55,29 @@ for each blocked section the input it is waiting for. It is generated from the
 live registry, not written by hand. `build/STEP4_DECISIONS.md` §12 is the
 batch-by-batch record of the arguments behind it.
 
+## The calendar
+
+Three rendered artifacts, all deterministic — rendering twice is byte-identical
+for each:
+
+```
+build/calendar_2027.json   5,209 rows, the master
+build/calendar_2027.csv    the same rows, flat
+build/calendar_2027.html   self-contained, with search and filters
+```
+
+**5,209 rows over 365 distinct dates — 1,854 carrying a verdict and 3,355
+without.** The verdict layer applies `evidence_source` × `construction` per
+instrument on that instrument's **venue civil day**, and it *authors nothing*:
+verdict text is the source's own words or it is null, there is no derived verdict,
+and **confidence is `untested` on every row** — no code path can raise it.
+
+The HTML carries the epistemic apparatus visibly rather than as a footnote:
+certainty grades **and both C grounds**, claim tags, all 33 blocked sections with
+the input each waits for, the source defects found, the known coverage gap, and
+the standing statement that this is a speculative interpretive framework and not
+investment advice.
+
 The build is deterministic: regenerating the year produces a byte-identical
 file, so a real change shows up as a diff and nothing else does. Confirmed by
 running the build twice and comparing:

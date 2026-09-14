@@ -2027,11 +2027,23 @@ verdict_coverage:
       gold-bearish:   {pages: "pp.145-148", named_groups: "carried as <h3> headings"}
     affected_instruments: [GC, SI, MCXGOLD, MCXSILVER, SUGAR]
     sugar_specifically: >
-      Emits ZERO rows. Diagnosed rather than assumed: SUGAR IS in the venue map
-      (physical_IN -> mumbai) and IS in tier_1.instruments, so neither a
-      venue-resolution failure nor the body-scoping fix explains it. What
-      explains it is that its nine named rule groups are these blocks. Its rows
-      are absent for a BUILD reason, not a coverage decision.
+      SUGAR'S ZERO WAS THE BODY-SCOPING FIX, AND THE FIX IS THE SECTOR ALIAS.
+      Diagnosed rather than assumed, and the first diagnosis was WRONG: this note
+      originally blamed only the unported blocks below. The actual cause is that
+      the rulership lookup asked for a `sugar` sector, and the table spells it
+      `sugar_and_soft_goods` (from book_ch15's "sugar and soft/luxury goods"),
+      so Venus resolved to nothing for that sector and the body-scoping step
+      excluded SUGAR from every rule. Adding the alias restored it: SUGAR now
+      emits 396 rows, 134 carrying a verdict and 262 null. The rows come from
+      VENUS-ruled catalogue-B rules, which is the correct channel -- SUGAR's
+      rulership is Venus per ch15, and this block's own `resolution` field says
+      "SUGAR is tier 1 and takes its verdicts from the source's own
+      configuration sections, so no rulership is needed to reach it".
+      THE UNPORTED BLOCKS BELOW ARE STILL A REAL GAP and still mean SUGAR's own
+      nine named groups (pp.168-175) are not in the layer. They are the reason
+      SUGAR's coverage is thin rather than the reason it was empty. Both facts
+      are recorded; neither is allowed to hide the other.
+    sugar_diagnosis_corrected: 2026-09-14
     same_shape_as: [family_key_is_read_two_ways, blank_reference_view_for_a_slow_body, null_key_added_to_every_record]
 
   # ======================================================================= axes

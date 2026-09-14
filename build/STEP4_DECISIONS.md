@@ -2629,3 +2629,73 @@ before the rule layer was complete, it was never a constraint (nothing filters,
 weights or aggregates on the label), and the disputed families do emit the SET —
 `b016`, `b017` and `b078`'s peers carry two values each, flagged
 `source_probability_disputed`.
+
+### 12.14 The render · recorded 14-Sep-2026
+
+Three artifacts, all deterministic: `build/calendar_2027.json` (5.2 MB,
+the master), `build/calendar_2027.csv` (2.2 MB) and
+`build/calendar_2027.html` (4.6 MB, self-contained). **5,209 rows over 365
+distinct dates, 1,854 carrying a verdict and 3,355 without.** Rendering twice is
+byte-identical for all three.
+
+#### The display format
+
+`Date — Time IST | Time ET (EDT/EST) | Event | Vedic interpretation |
+Financial-market theme | Confidence/risk label`.
+
+**The dual date** is shown whenever the Eastern civil date differs, with the
+marker. It never inverts: the measured shift is 2,485 rows at 0 and **2,724 at
+−1, never +1**, because IST is UTC+5:30 and Eastern is UTC−5/−4. Window ends are
+converted independently, so a window crossing the March or November change shows
+two different Eastern offsets: **EST −05:00 on 1,711 rows and EDT −04:00 on
+3,498**, both resolved through the IANA database rather than hardcoded.
+
+Two rendering bugs were found by checking the output rather than the code:
+
+* **Flags were emitted twice.** `Firing.flags` is copied off the rule at fire
+  time, so for most rules the rule's list and the firing's list are identical and
+  the concatenation doubled every flag — 4,844 of 5,209 rows. A reader counting
+  flags would have concluded there were twice as many caveats as there are.
+* **The sector alias.** The rulership lookup asked for a `sugar` sector and the
+  table spells it `sugar_and_soft_goods`, so Venus resolved to nothing and the
+  body-scoping step excluded SUGAR from every rule. See §12.15.
+
+#### The apparatus is visible, not buried
+
+The HTML opens with the disclaimer and a collapsed panel carrying: the certainty
+grades **and both C grounds**, the claim tags, the five tier values with what
+`cross_market_localized` and `venue_shifted` mean, the seven source defects found
+in the 2026 document, all 33 blocked sections **with the input each waits for**,
+the known coverage gap, the five rules firing on a supplied reading with their
+flags, and the ambiguous section's competing readings.
+
+It is a collapsible panel rather than a footnote because a reader who has to hunt
+for the caveats will read the rows without them. The file is **self-contained**:
+one `<script>`, no CDN, no network. A calendar that needs a server to read stops
+being readable when the server does.
+
+#### Search and filters
+
+Full-text over event, section, verdict and flags; a date range; instrument and
+tier selects; and a "only rows with a verdict" toggle. All client-side, over the
+embedded rows, with a live count.
+
+### 12.15 SUGAR: the diagnosis was wrong first time · recorded 14-Sep-2026
+
+SUGAR emitted zero rows. The first diagnosis blamed only the unported
+configuration sections in §12.16. **That was wrong, and the corrected cause is
+the sector alias.**
+
+The rulership lookup asked for a `sugar` sector key. The table spells it
+**`sugar_and_soft_goods`**, from book_ch15's "sugar and soft/luxury goods". So
+Venus resolved to nothing for that sector and the body-scoping step — the fix that
+stopped every rule reaching every instrument — excluded SUGAR from every rule.
+Adding the alias restored it: **SUGAR emits 396 rows, 134 carrying a verdict and
+262 null**, through Venus-ruled catalogue-B rules. That is the correct channel:
+`rulership.disagreements.sugar.resolution` says "SUGAR is tier 1 and takes its
+verdicts from the source's own configuration sections, so no rulership is needed
+to reach it", and SUGAR's significator per ch15 is Venus.
+
+**Both facts are now recorded and neither hides the other.** The unported blocks
+in §12.16 remain a real gap and are the reason SUGAR's coverage is *thin*; the
+alias was the reason it was *empty*.

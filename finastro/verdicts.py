@@ -115,6 +115,13 @@ def body_primary(bodies) -> set[str]:
 SECTOR_INSTRUMENTS = {
     "gold": ["MCXGOLD", "GC"],
     "silver": ["MCXSILVER", "SI"],
+    # The rulership table spells it `sugar_and_soft_goods`, from book_ch15's
+    # "sugar and soft/luxury goods". The first version looked for a plain
+    # `sugar` key and so resolved Venus to nothing for this sector. It does not
+    # rescue SUGAR's row count -- SUGAR reaches nothing because no catalogue-B
+    # rule conditions on it, see config's unported_configuration_sections -- but
+    # the alias is correct and belongs here.
+    "sugar_and_soft_goods": ["SUGAR"],
     "sugar": ["SUGAR"],
     "indian_equities": ["NIFTY", "BANKNIFTY"],
 }
@@ -437,7 +444,7 @@ def build_verdicts(sky: Sky | None = None) -> list[Verdict]:
                 co = CRUDE_PATHS[path]["axes"]["construction"]
                 tier = tier_for(ev, co, LOCALIZED_KIND.get("CL", False))
                 tag = CRUDE_PATHS[path]["claim_tag"]
-            flags = list(rule.flags) + list(f.flags)
+            flags = list(dict.fromkeys(list(rule.flags) + list(f.flags)))
             if path is not None:
                 flags.append(CRUDE_FLAG)
                 flags.append(f"crude_path={path}")
