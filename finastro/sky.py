@@ -384,6 +384,21 @@ class Sky:
             out = [r for r in out if body in r["bodies"]]
         return sorted(out, key=lambda r: r["time"]["t_start_utc"])
 
+    @functools.lru_cache(maxsize=None)
+    def body_records(self, body: str) -> tuple[dict, ...]:
+        """Every record of `body`, in time order, whatever its event class.
+
+        No rule needs an ingress to satisfy a condition on a CONTINUOUS
+        quantity -- Shar is the sign of the ecliptic latitude, which the
+        astronomy layer samples on every record a body has rather than at a
+        boundary it emits. Walking those records is therefore still reading the
+        astronomy layer and nothing else: the samples are the emitted ones, and
+        no condition may ask for a longitude or a latitude of its own.
+        """
+        return tuple(sorted((r for r in self.records
+                             if r["bodies"] and r["bodies"][0] == body),
+                            key=lambda r: r["time"]["t_start_utc"]))
+
     # --------------------------------------------------------- combinators
     def value_at(self, body: str, frame: str, t: dt.datetime):
         spans = self.spans(body, frame)

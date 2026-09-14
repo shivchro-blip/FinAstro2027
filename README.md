@@ -42,8 +42,13 @@ $ python3 tests/test_node_anchor_unit.py
 12/12 checks passed
 
 $ python3 tests/test_rule_layer.py
-94/94 checks passed
+131/131 checks passed
 ```
+
+The rule layer now carries **112 rules over 82 of the 141 catalogue-B sections**:
+97 executable, 5 resolved on a supplied reading, 9 blocked with the missing input
+named, and 1 ambiguous. 3,204 dated rows in the generated year. See
+`build/STEP4_DECISIONS.md` §12 for the batch-by-batch record.
 
 The build is deterministic: regenerating the year produces a byte-identical
 file, so a real change shows up as a diff and nothing else does. Confirmed by
@@ -374,13 +379,51 @@ project generates is investment advice.
 
 ## Known gaps
 
-Carried in `open_questions` in the config: speed-class thresholds (which drive
-the Vedha direction), the 2–7 day lag on the source's Mercury latitude rows,
-aspect orb policy, confirmation of Purnimanta month reckoning, sector mapping,
-and sign-off on the label scheme.
+Carried in `open_questions` in the config: **speed-class thresholds** — now
+**blocked rather than open**, see below — the 2–7 day lag on the source's Mercury
+latitude rows, aspect orb policy, confirmation of Purnimanta month reckoning,
+sector mapping, and sign-off on the label scheme.
+
+**The speed-class thresholds are blocked, and the block is a measurement.** For
+every printed boundary of the nine Speed-and-Vedh tables and every Atichari row
+of the twenty-one Nakshtra Vedh tables, the emitted `speed_deg_day` was read and
+grouped by the class the boundary enters. The two sets **overlap on every planet
+with more than one boundary**: Mercury has 1.77558 entering Normal and 1.71453
+entering Fast, so the Normal range strictly contains the Fast range, and
+Jupiter's Fast boundaries fall inside the range its Normal ones span. A
+distribution that overlaps cannot be cut by any value, so this is not a
+precision problem and widening a tolerance would manufacture a class boundary the
+source does not have. Retrograde/Direct **is** recoverable — it is the sign of
+the same quantity, and it reproduces the source's stations to the day, with
+Mercury the documented 2–7 day exception. The Vedha family needs Fast/Normal at
+an arbitrary instant, so it stays blocked on that and is not approximated.
+
+**Shar is settled, and it is the ecliptic latitude and not the declination.**
+B118 and B119 print North/South periods; the latitude sign reproduces B119's 27
+printed 2026 ends **26 of 27** within 1.5 days, the declination sign reproduces
+**0 of 27**, and B118's Mars prints one change where the latitude crosses once
+(0.76 d) while the declination crosses 104 days away. Grade B, because latitude
+has no ingress series and a boundary is known only to the gap between records —
+negligible for the Moon, months for Pluto.
+
+**Atichari and Fast are one class under two names**, verified by comparing the
+periods directly: every difference is a single day at a start boundary, where one
+table names the old state's last day and the other the new state's first.
+
+**B81 is labelled for the wrong planet, and the tables cannot show it.** "Saturn
+and Mercury Both Retrograde" prints a 2026 window during which Saturn and Mercury
+are never both retrograde — the printed row is **Venus's** retrograde window to
+within four minutes, and the true Saturn∩Mercury window is the row B83 prints.
+Because in 2026 both Venus's and Saturn's retrograde stretches happen to contain
+Mercury's, the error is invisible without an independent computation. Ported as
+the exact condition with the row flagged; nothing widened. Three further source
+defects are recorded in §12.7 (B82's carry-in-only window, B114's unmatched
+printed end, B115's narrower printed table).
 
 Deliberately excluded: the rainfall formula (dropped), Sankranti muhurta
 (deferred until the 15/30/45 division rule is available). The "Big Volatile" list
 is flagged C — all 51 source dates carry a real configuration, but the list is
 over-determined and the source's weighting is not recoverable, so reconstructions
-are emitted as candidates and never as fact.
+are emitted as candidates and never as fact. It is ported as a **recorded
+absence** with its C flag and `source_selection_rule` named as the missing input,
+not reconstructed.

@@ -109,6 +109,55 @@ EXPECTED_ZERO_FIRING = {
     "b112_venus_mercury_together_in_shravana":
         "Venus and Mercury share a nakshatra twelve times in 2027 and none of "
         "them is Shravana",
+
+    # ---- batch 5, the pairs. Three zeros and three different kinds, which is
+    # why they are pinned together: one is the orbital period, one is the
+    # calendar boundary, and one is a fact about the sky that the section's own
+    # 2026 row happens to sit on the other side of.
+    "b083_mercury_venus_both_retrograde":
+        "Venus does not station anywhere in the generated span -- her previous "
+        "retrograde is 03-Oct-26 to 14-Nov-26 and the next is in 2028 -- so "
+        "Mercury and Venus cannot be retrograde together in it. An "
+        "orbital-period zero, the B041 shape",
+    "b107_venus_alone_in_shravana":
+        "Venus visits Shravana twice in 2027, 04-Mar to 16-Mar and 23-Dec to "
+        "03-Jan-2028, and is alone there on neither visit: Pluto occupies "
+        "Shravana from 28-Dec-2026 to the end of the generated span, and the "
+        "source counts Pluto as a planet -- B116's own Planet-2 column names "
+        "it. The section's 2026 row is that same fact read the other way round, "
+        "Pluto not having reached Shravana yet",
+    "b113_mars_in_dhanishta":
+        "Mars reaches Dhanishta again on 25-Jan-2028, inside the carry-out and "
+        "outside calendar 2027. A calendar-boundary zero, the B012 and B053 "
+        "shape, and the rule fires on all 17 days of its 2026 window",
+
+    # ---- batch 4c, B89's scoped verdict, the b087s shape exactly. The section
+    # states Bullish for the Mars-in-Rohini case only, and 2027 puts Mars in
+    # Chitra from 13-Aug to 03-Sep and never in Rohini, so the condition fires
+    # 22 times on the Chitra window with the verdict withheld while this rule
+    # stays silent. Its zero is a fact about the year, not a missing input.
+    "b089s_mars_in_rohini":
+        "the section states Bullish for the Mars-in-Rohini case only, and 2027 "
+        "puts Mars in Chitra from 13-Aug to 03-Sep and never in Rohini. The "
+        "bare condition fires 22 times with the verdict withheld (B087's "
+        "handling), so the zero here is a fact about the year and not a "
+        "blocked input",
+
+    # ---- batch 4b, the apsides. One zero, and it is a fact about the SKY that
+    # no reading of the section can get round: Kaal Sarp Yog needs every body
+    # between Rahu and Ketu, and Saturn holds Pisces, outside Rahu's six-sign
+    # arc, for the whole span.
+    "b077_kaal_sarp_yog":
+        "Rahu holds Capricorn and Ketu Cancer from 05-Dec-2026 to the end of "
+        "the generated span, so the six-sign arc is Capricorn..Gemini, and "
+        "Saturn is in Pisces throughout it -- outside the arc -- with the Moon "
+        "outside it for most of every month. The zero is structural: one body "
+        "holding one wrong sign, not a configuration that had a quiet year. It "
+        "was checked at BOTH readings of 'between Rahu and Ketu' and the "
+        "degree reading finds no enclosed instant either, so the zero is not an "
+        "artefact of reading the enclosure at sign resolution. The source's own "
+        "printed window is a 2026 one and is not checkable against the layer, "
+        "which opens 2026-11-30",
 }
 
 #: Days inside a pair's shared-sign windows that the navamsa ladder cannot
@@ -238,6 +287,84 @@ EXPECTED_FIRINGS_MUMBAI = {
     "b068_vriddhi_tithi_shukla_paksha": 12,
     "b069_vriddhi_tithi_krishna_paksha": 12,
     "b101_three_saturdays_in_shukla_paksha": 45,
+
+    # ------------------------------------------------------------- batch 4a
+    # Shar, B118 and B119. ONE ROW PER CHANGE, which is what the sections
+    # tabulate -- B118 prints 22 rows for seven bodies across a year and B119
+    # prints 27 for the Moon -- so these counts are changes, not days touched,
+    # and are the only counts in this table that are not. B118's twelve are the
+    # sign changes of seven bodies in 2027: Jupiter, Saturn and Neptune hold one
+    # sign all year; Uranus is absent from B118's list in 2026 and is listed as
+    # Herschel, whose records the layer carries as Uranus.
+    "b118_shar_direction": 12,
+    "b119_moon_shar_parivartan": 27,
+
+    # ------------------------------------------------------------- batch 4b
+    # The apsides. An apsis is an INSTANT and not a window, so each record
+    # resolves to one civil day per venue and these counts are occurrences,
+    # not days touched: 13 apogees and 13 perigees fall in calendar 2027.
+    # `b058` is 13 at both venues because a perigee near midnight may land on
+    # the same date either side; `b057` is 13 in Mumbai and 14 in New York for
+    # the same reason, which is why only the Mumbai column is pinned here.
+    "b057_moon_apogee": 13,
+    # The one apogee of 2027 at which Amavasya is the tithi in force, 07-Jan.
+    # Every one of the five ordinary readings of "together" selects it.
+    "b057a_apogee_with_amavasya": 1,
+    "b058_moon_perigee": 13,
+    # B59: 03-Jan-2027 perihelion and 05-Jul-2027 aphelion, one row each.
+    "b059_perihelion_and_aphelion": 2,
+    # Not here: `b077_kaal_sarp_yog` is executable and fires ZERO times, so its
+    # zero is pinned by name in EXPECTED_ZERO_FIRING. That zero was checked at
+    # BOTH readings of "between Rahu and Ketu" -- the ported six-sign reading
+    # and the degree reading -- which
+    # test_kaal_sarp_yog_is_empty_under_both_its_readings re-derives.
+
+    # ------------------------------------------------------------- batch 5
+    # The pairs. Two retrograde pairs and ten nakshatra-residency singles, in
+    # days touched like everything above.
+    #
+    # `b081` is 22 days and `b082` 23, both from a single window per pair in
+    # 2027 -- and neither is checked against its section's 2026 row here,
+    # because B81's row is a defect: it prints VENUS's retrograde window. That
+    # finding is recomputed from the ephemeris by
+    # test_the_retrograde_pairs_reproduce_what_reproduces below.
+    "b081_saturn_mercury_both_retrograde": 22,
+    "b082_jupiter_mercury_both_retrograde": 23,
+    # B88 is the Dhanishta half of B87's Moon-Rahu series: four windows in
+    # 2027, and the series' fifth falls in the carry-in.
+    "b088_moon_rahu_same_nakshatra_rahu_in_dhanishta": 8,
+    # B91 is three Sun windows -- Uttara Ashadha, Ashwini and Chitra -- and
+    # B92 one, so 43 against 14 is the shape of the two sections and not a
+    # rounding.
+    "b091_sun_in_uttara_ashadha_ashwini_or_chitra": 43,
+    "b092_sun_in_krittika": 14,
+    # Resolved, not executable: the yoga's definition is supplied, and its
+    # footprint in 2027 is the Aquarius windows to 02-Jun and from 20-Oct plus
+    # the Pisces ones in between, which is what the ruling buys.
+    "b094_shani_chandra_dwidwadash_yog": 43,
+    # B98 is Mercury's one 2027 visit to Mula, in December; B114's is its one
+    # visit to Purva Bhadrapada, in March and April.
+    "b098_mercury_in_mula": 9,
+    "b114_mercury_in_purva_bhadrapada": 9,
+    # B99 is the batch's long rule: Jupiter holds one of its four stars from
+    # the year's opening to 24-Jan, again from 25-Jun, and continuously after
+    # that -- 214 of 365 days, one row per day because the star-to-star
+    # boundary days are joined. Hasta is not reached in 2027 at all.
+    "b099_jupiter_in_magha_purva_phalguni_uttara_phalguni_or_hasta": 214,
+    # B115 is the union its title states: the Sun's Shatabhisha window and
+    # Venus's, which do not touch.
+    "b115_sun_or_venus_in_shatabhisha": 26,
+    # Not here: `b083`, `b107` and `b113` are executable and fire ZERO times,
+    # each for a different reason, and all three are pinned by name in
+    # EXPECTED_ZERO_FIRING above. `b117` is blocked.
+
+    # ------------------------------------------------------------- batch 4c
+    # B89, the colon-scoped pair owed from section 12.3 and delivered here. The
+    # bare rule fires on the Chitra window 13-Aug to 03-Sep-2027 -- 22 civil
+    # days across both venues -- and the Rohini-restricted verdict half is
+    # silent, pinned by name in EXPECTED_ZERO_FIRING rather than left to read
+    # as a quiet year.
+    "b089_mars_in_rohini_or_chitra": 22,
 }
 
 
@@ -605,6 +732,13 @@ def test_no_ported_verdict_swallows_a_scoping_colon():
             "sentences are separate rules about Vriddhi and Kshay Pradosh "
             "days, which B66-B69 now make portable, and splitting them in the "
             "same change that unblocked them would mix two decisions",
+        "b063_hemisphere_range":
+            "the same shape as b010: 'Rule:' is the document's own label for "
+            "the second half of the note, not a case the verdict is restricted "
+            "to. Dropping the label is the tempting port and it is wrong -- the "
+            "flattened document reads 'medium term trade. Rule: When range is "
+            "broken on both side', so a join that silently drops the two words "
+            "carries a string the source does not print",
     }
     bad = [r.id for r in R.REGISTRY
            if r.verdict_text and ":" in r.verdict_text
@@ -996,6 +1130,386 @@ def test_the_final_dash_titles_would_have_lost_their_condition() -> None:
 
 
 # ------------------------------------------------------------ 6. firings
+def test_shar_is_the_latitude_sign_and_not_the_declination():
+    """B118/B119's convention, re-derived from the engine every run.
+
+    Shar was settled as the ecliptic LATITUDE sign by reproducing the source's
+    own printed 2026 dates, and the competing reading -- declination sign -- was
+    rejected on those same dates. Both halves are re-run here rather than
+    asserted in prose, because the rejection is what licenses the rule and a
+    rejection nothing recomputes is a claim that decays into a fact.
+    """
+    from finastro.timezones import IST
+
+    def crossings(fn, lo, hi, step_h=3):
+        step = dt.timedelta(hours=step_h)
+        out, t = [], lo
+        prev = fn(t)
+        while t < hi:
+            nxt = t + step
+            cur = fn(nxt)
+            if (prev < 0) != (cur < 0):
+                a, b = t, nxt
+                for _ in range(40):
+                    m = a + (b - a) / 2
+                    if (fn(a) < 0) != (fn(m) < 0):
+                        b = m
+                    else:
+                        a = m
+                out.append(a + (b - a) / 2)
+            prev, t = cur, nxt
+        return out
+
+    lo = dt.datetime(2026, 1, 1, tzinfo=IST)
+    hi = dt.datetime(2027, 1, 1, tzinfo=IST)
+
+    # B119's 27 printed end dates, read out of the source.
+    ends = []
+    for r in catalogue.B(119).tables[0].rows:
+        for e in (r[2], r[5]):
+            if e and not e.lower().startswith("till"):
+                try:
+                    ends.append(dt.datetime.strptime(e, "%d-%b-%y")
+                                .replace(tzinfo=IST))
+                except ValueError:
+                    pass
+    ends = sorted(set(ends))
+    record("B119 prints 27 Shar periods for 2026", len(ends) == 27,
+           f"{len(ends)} ends")
+
+    def near(xs, tol=1.5):
+        return sum(1 for t in xs
+                   if min(abs((t - e).total_seconds()) for e in ends)
+                   <= tol * 86400)
+
+    lat = crossings(lambda t: ephem.position(t, "Moon").lat, lo, hi)
+    dec = crossings(lambda t: ephem.declination(t, "Moon"), lo, hi)
+    lat_ok, dec_ok = near(lat), near(dec)
+    record("The Moon's LATITUDE sign reproduces B119's printed ends",
+           len(lat) == 27 and lat_ok >= 26,
+           f"{lat_ok}/{len(lat)} within 1.5 d")
+    record("The Moon's DECLINATION sign does not reproduce B119",
+           dec_ok == 0,
+           f"{dec_ok}/{len(dec)} within 1.5 d -- the rejected reading, "
+           "systematically late, which is a different quantity's phase")
+
+    # B118: Mars prints one change and must have one crossing near it.
+    rows = catalogue.B(118).tables[0].rows
+    mars_ends = [r[2] for r in rows if r[0] == "Mars"]
+    mx = crossings(lambda t: ephem.position(t, "Mars").lat, lo, hi)
+    mx_dec = crossings(lambda t: ephem.declination(t, "Mars"), lo, hi)
+    printed = dt.datetime.strptime("26-Jul-26", "%d-%b-%y").replace(tzinfo=IST)
+    record("Mars prints one Shar change, and its latitude has one crossing",
+           len(mx) == 1 and abs((mx[0] - printed).total_seconds()) < 2 * 86400,
+           f"{len(mx)} crossing(s), nearest {mx[0]:%d-%b-%y %H:%M} vs printed "
+           f"{printed:%d-%b-%y}")
+    record("Mars's declination crossing is NOT the printed Shar change",
+           len(mx_dec) == 1
+           and abs((mx_dec[0] - printed).total_seconds()) > 30 * 86400,
+           f"{mx_dec[0]:%d-%b-%y} is "
+           f"{abs((mx_dec[0] - printed).days)} d from the printed date")
+    bodies, seen = [], set()
+    for r in rows:
+        if r[0] and r[0] not in seen:
+            seen.add(r[0])
+            bodies.append(r[0])
+    record("B118 lists seven bodies and B119 the Moon",
+           tuple(bodies) == ("Mars", "Mercury", "Jupiter", "Venus", "Saturn",
+                             "Herschel", "Neptune"),
+           f"{len(bodies)} distinct bodies in the source's own order: "
+           f"{', '.join(bodies)}")
+
+
+# ------------------------------------------------------- 6b. batch 4b apsides
+def test_the_apsis_rules_fire_on_emitted_apsides_and_not_on_a_threshold():
+    """B57/B58's reading, re-derived from the source's own table every run.
+
+    The section states a distance threshold and its table does not obey it, so
+    the rule conditions on the extremum instead. That is a reading of the page
+    and it is checked here rather than asserted in prose: the printed
+    distances are counted against the threshold the same page states, and the
+    firing spans are checked to be the emitted `apsis` records and nothing
+    else. A later change that quietly reinstated the threshold would fail the
+    first check; one that recomputed its own distance would fail the second.
+    """
+    sky = Sky.load()
+    AU_KM = 149597870.7
+
+    # --- the printed distances against the threshold the same note states ---
+    for b, threshold, clears in ((57, 406000.0, lambda km: km > 406000.0),
+                                 (58, 360000.0, lambda km: km < 360000.0)):
+        note = catalogue.B(b).notes[0]
+        rows = catalogue.B(b).tables[0].rows
+        printed = [float(r[2].replace(",", "")) for r in rows]
+        obeying = [km for km in printed if clears(km)]
+        record(f"B{b}: the printed table does not obey the threshold its own "
+               f"note states, so the threshold is not the condition",
+               len(printed) == len(rows) and len(obeying) < len(rows) / 2,
+               f"{len(obeying)}/{len(rows)} rows obey "
+               f"{threshold:.0f} km; printed range "
+               f"{min(printed):.0f}..{max(printed):.0f}")
+        record(f"B{b}: the threshold is stated verbatim in the section's note",
+               f"{threshold:.0f}" in note.replace(",", ""),
+               f"note: {note[:64]}...")
+
+    # --- every span is an instant at an apsis record the file emits ---
+    by_family = {}
+    for fam in ("orbit/apogee", "orbit/perigee", "orbit/perihelion",
+                "orbit/aphelion"):
+        by_family[fam] = {r["time"]["t_start_utc"]
+                          for r in sky.class_records("apsis", family=fam)}
+    want = {"b057_moon_apogee": ("orbit/apogee",),
+            "b058_moon_perigee": ("orbit/perigee",),
+            "b059_perihelion_and_aphelion": ("orbit/perihelion",
+                                             "orbit/aphelion")}
+    firings = R.fire(R.REGISTRY, sky)
+    bad, spans = [], 0
+    for rid, fams in want.items():
+        r = next(x for x in R.REGISTRY if x.id == rid)
+        emitted = set().union(*(by_family[f] for f in fams))
+        kinds = {f.split("/")[1] for f in fams}
+        for sp in r.fn(sky):
+            spans += 1
+            if sp.start != sp.end:
+                bad.append((rid, "not an instant", str(sp.start)))
+            if sp.start.strftime("%Y-%m-%dT%H:%M:%SZ") not in emitted:
+                bad.append((rid, "not an emitted apsis", str(sp.start)))
+            if sp.value["apsis"] not in kinds:
+                bad.append((rid, "wrong apsis kind", sp.value["apsis"]))
+    record("Every apogee, perigee, perihelion and aphelion span is an instant "
+           "at an apsis record the file emits", bool(spans) and not bad,
+           f"{spans} spans, {len(bad)} inconsistent"
+           + (f" e.g. {bad[:2]}" if bad else ""))
+
+    # --- the detail's own distance agrees with the record it came from ---
+    mismatched = []
+    for rid in want:
+        r = next(x for x in R.REGISTRY if x.id == rid)
+        for sp in r.fn(sky):
+            rec = next(x for x in sky.class_records("apsis")
+                       if x["time"]["t_start_utc"] == sp.value["utc"])
+            km = rec["astronomy"]["distance"] * AU_KM
+            if abs(sp.value["distance_km"] - round(km)) > 1:
+                mismatched.append((rid, sp.value["distance_km"], round(km)))
+    record("Every apsis row's own distance is the record's, in both units",
+           not mismatched, str(mismatched[:3]))
+
+    # --- the shared 2026 rows: the source's date, to the half hour ---
+    checks = (("orbit/apogee", "11-Dec-2026", "12:15", 406420),
+              ("orbit/perigee", "24-Dec-2026", "13:59", 356652))
+    for fam, date, hhmm, km in checks:
+        recs = [x for x in sky.class_records("apsis", family=fam)
+                if x["time"]["start_stamp"]["ist_date"] == date]
+        if len(recs) != 1:
+            record(f"B{fam.split('/')[1]}: the source's one 2026 row has a "
+                   f"single record", False, f"{len(recs)} records on {date}")
+            continue
+        st = recs[0]["time"]["start_stamp"]
+        got = recs[0]["astronomy"]["distance"] * AU_KM
+        mins = abs((dt.datetime.strptime(st["ist_time"], "%H:%M")
+                    - dt.datetime.strptime(hhmm, "%H:%M")).total_seconds()) / 60
+        record(f"B{fam.split('/')[1]}: the source's one 2026 row is "
+               f"reproduced on its date",
+               st["ist_date"] == date and mins <= 30 and abs(got - km) <= 30,
+               f"printed {date} {hhmm} {km} km, computed {st['ist_date']} "
+               f"{st['ist_time']} {got:.0f} km ({mins:.0f} min, "
+               f"{got - km:+.0f} km)")
+
+    # --- B57's Amavasya: "together" is the tithi in force at the instant ---
+    r57a = next(x for x in R.REGISTRY if x.id == "b057a_apogee_with_amavasya")
+    bad = []
+    for sp in r57a.fn(sky):
+        inside = [t for t in sky.tithi_spans()
+                  if t.start <= sp.start < t.end
+                  and t.value["tithi_name"] == "Amavasya"]
+        if not inside:
+            bad.append((str(sp.start), "not in an emitted Amavasya span"))
+        elif inside[0].value["tithi"] != sp.value["tithi"]:
+            bad.append((str(sp.start), "tithi number disagrees"))
+    record("Every 'Apogee and Amavasya together' row sits inside an Amavasya "
+           "span the layer emits, and names that tithi", not bad,
+           str(bad) or "1 row, 07-Jan-2027")
+
+    # --- B59's two rows, in the year the calendar is built for ---
+    b59 = {f.civil_date.strftime("%d-%b-%Y")
+           for f in firings if f.rule_id == "b059_perihelion_and_aphelion"
+           and f.location == "mumbai"}
+    record("B59 fires on both events of its table -- one perihelion and one "
+           "aphelion in the generated calendar year",
+           len(b59) == 2 and {"03-Jan-2027", "05-Jul-2027"} == b59,
+           f"{sorted(b59)}")
+
+
+def test_kaal_sarp_yog_is_empty_under_both_its_readings():
+    """B77's zero, measured hourly, and checked at the reading NOT ported.
+
+    Two things could make this zero a lie and both are checked. The first is
+    that the rule never fired because the layer's Rahu sign spans are
+    period-truncated at both ends -- so the test iterates the rule's OWN
+    windows and evaluates the condition at every instant across them, which
+    turns the empty result into a measurement of the sky. The second is that
+    "between Rahu and Ketu" was read at the coarser of two resolutions and the
+    finer one would have found dates -- so the degree reading is recomputed
+    here against the ephemeris. The rule layer must not ask it; this check may,
+    because what it establishes is that the ported reading is not a choice
+    between disagreeing answers.
+    """
+    sky = Sky.load()
+    from finastro.rules import apsides
+
+    # --- the windows the rule actually iterates ---
+    windows = apsides.rahu_sign_windows(sky)
+    record("B77's windows are Rahu's sign records and not the period-truncated "
+           "spans, so the rule's zero is not an artefact of the file's edges",
+           bool(windows)
+           and windows[0].start == dt.datetime(2026, 12, 5, 17, 2, 10,
+                                               tzinfo=dt.timezone.utc),
+           f"{len(windows)} window(s): "
+           + "; ".join(f"{w.value} {w.start:%d-%b-%Y} .. {w.end:%d-%b-%Y}"
+                       for w in windows))
+
+    # --- the condition, at every hour of every window ---
+    step = dt.timedelta(hours=1)
+    checked, held = 0, []
+    for w in windows:
+        t = w.start
+        while t <= w.end:
+            checked += 1
+            if apsides.kaal_sarp_condition_holds(sky, t):
+                held.append(t)
+            t += step
+    record("B77's condition holds at no instant of any window, so the zero is "
+           "a fact about the sky and not a skipped span",
+           checked > 8000 and not held,
+           f"{checked} instants tested at 1-hour steps across "
+           f"{len(windows)} window(s); {len(held)} held"
+           + (f", first {held[0]:%d-%b-%Y}" if held else ""))
+
+    # The exclusion named: which bodies are outside the arc, and why that is
+    # permanent for this window rather than a near miss.
+    w = windows[-1]
+    allowed = apsides._forward_semicircle(w.value)
+    placed = {b: sky.value_at(b, "sign", w.start) for b in apsides.KSY_BODIES}
+    outside = [b for b, x in placed.items() if x not in allowed]
+    record("The exclusion is named: the Sun and Moon are two of the nine bodies "
+           "the sentence names and they pass through the other six signs "
+           "continually, so no window bounded by one Rahu sign can ever hold",
+           {"Sun", "Moon"} <= set(outside),
+           f"at {w.start:%d-%b-%Y} Rahu in {w.value} -> arc {sorted(allowed)}; "
+           f"outside {outside}")
+
+    # --- reading 2, NOT ported: strictly between the node longitudes. ---
+    def strictly_between(when):
+        rahu = ephem.longitude(when, "Rahu")
+        return [b for b in apsides.KSY_BODIES
+                if not 0 < (ephem.longitude(when, b) - rahu) % 360 < 180]
+
+    UTC = dt.timezone.utc
+    t, end, open_at, deg_windows = sky.span_start, sky.span_end, None, []
+    while t < end:
+        if not strictly_between(t):
+            if open_at is None:
+                open_at = t
+        elif open_at is not None:
+            deg_windows.append((open_at, t))
+            open_at = None
+        t += dt.timedelta(minutes=30)
+    if open_at is not None:
+        deg_windows.append((open_at, end))
+    record("B77's DEGREE reading also finds no instant in the generated span "
+           "where every named body is enclosed, so the ported reading is not "
+           "one of two disagreeing answers", not deg_windows,
+           f"{len(deg_windows)} window(s) wholly enclosed; "
+           f"{len(apsides.KSY_BODIES)} bodies checked per instant")
+
+    # The closest the span comes, named: Rahu's widest semicircle in longitude.
+    probe = dt.datetime(2027, 12, 18, tzinfo=UTC)
+    out = strictly_between(probe)
+    record("B77: at Rahu's own 2027 sign boundary the degree reading still "
+           "names bodies in the far half, so its zero is arithmetic too",
+           bool(out),
+           f"2027-12-18 at Rahu {ephem.longitude(probe, 'Rahu'):.2f} deg -- "
+           "outside " + ", ".join(
+               f"{b} at "
+               f"{(ephem.longitude(probe, b) - ephem.longitude(probe, 'Rahu')) % 360:.1f} deg"
+               f" from Rahu" for b in out))
+
+    # --- rule status: executable, verdict-free, for a reason on the page ---
+    r77 = next(x for x in R.REGISTRY if x.id == "b077_kaal_sarp_yog")
+    record("B77 is executable and states no verdict, because its own note says "
+           "Kaal Sarp Yog is neither bullish nor bearish",
+           r77.status == R.STATUS_EXECUTABLE and r77.verdict_text is None
+           and "neither Bullish or Bearish" in catalogue.B(77).notes[0],
+           f"status={r77.status}, verdict={r77.verdict_text!r}")
+
+    # --- the source's printed 2026 row: outside the span, and not the
+    #     condition's window either ---
+    from finastro.timezones import IST
+    row = catalogue.B(77).tables[0].rows[0]
+    printed_start = dt.datetime.strptime(f"{row[0]} {row[1]}",
+                                         "%d-%b-%y %H:%M").replace(tzinfo=IST)
+    printed_end = dt.datetime.strptime(f"{row[2]} {row[3]}",
+                                       "%d-%b-%y %H:%M").replace(tzinfo=IST)
+    record("The source prints ONE Kaal Sarp window and it is 2026, outside the "
+           "generated span, so the layer cannot check it",
+           printed_start.year == 2026
+           and printed_start.astimezone(UTC) < sky.span_start,
+           f"printed {printed_start:%d-%b-%Y %H:%M} .. {printed_end:%d-%b-%Y} "
+           f"({(printed_end - printed_start).days} d) against a span opening "
+           f"{sky.span_start:%d-%b-%Y}")
+    for label, when in (("start", printed_start), ("end", printed_end)):
+        out = strictly_between(when)
+        record(f"B77: the source's printed window {label} does not satisfy the "
+               f"condition printed above it", bool(out),
+               f"{when:%d-%b-%Y %H:%M}: outside " + ", ".join(
+                   f"{b} at "
+                   f"{(ephem.longitude(when, b) - ephem.longitude(when, 'Rahu')) % 360:.1f} deg"
+                   f" from Rahu" for b in out))
+
+
+def test_hemisphere_is_blocked_on_the_equinox_and_says_so():
+    """B63's two independent blockers, both carried on the rule.
+
+    The section needs a tropical solar longitude the layer does not emit as a
+    series, AND its own words admit more than one reading of what its range is.
+    The first is a gap in this layer and the second is a property of the page,
+    and they are different findings: merging them into one `blocked` string is
+    how the second gets lost. This checks that both are on the record and that
+    no date is emitted.
+    """
+    r = next(x for x in R.REGISTRY if x.id == "b063_hemisphere_range")
+    record("B63 is registered blocked, not silently ported",
+           r.status == R.STATUS_BLOCKED, f"status={r.status}")
+    record("B63 names the missing tropical solar longitude and the undecided "
+           "reading as two separate missing inputs",
+           len(r.missing_inputs) == 2
+           and "tropical" in r.missing_inputs[0]
+           and "range" in r.missing_inputs[1],
+           f"{len(r.missing_inputs)} missing inputs")
+    record("B63 states the competing readings it is not choosing between",
+           all(k in r.ambiguity for k in
+               ("centre", "Prices", "broken on both side")),
+           f"{len(r.ambiguity)} chars of readings")
+    record("B63 emits no firing",
+           not any(f.rule_id == r.id for f in R.fire(R.REGISTRY, Sky.load())),
+           "a blocked rule that emitted would be a port by accident")
+
+    # The condition and the verdict are two slices off the same note. The
+    # condition is one of its sentences; the verdict is the other sentence
+    # joined to the line under it, and BOTH the source's own "Rule:" label and
+    # the single joining space are what the flattened document has -- dropping
+    # the label, which is tempting because it reads like a prefix and carries a
+    # colon, is what this check exists to catch.
+    lines = [ln.strip() for ln in catalogue.B(63).notes[0].split("\n")]
+    sents = [s.strip() for s in lines[1].split(". ")]
+    want_verdict = sents[1] + " " + lines[2]
+    record("B63's condition is the note's own sentence and its verdict the two "
+           "that follow it, neither retyped",
+           r.condition_text == sents[0]
+           and r.verdict_text == want_verdict,
+           f"cond={r.condition_text!r}; verdict={r.verdict_text!r}")
+
+
 def test_firings(firings: list) -> None:
     record(f"Every firing lands in calendar {Y}",
            all(f.civil_date.year == Y for f in firings),
@@ -1419,6 +1933,139 @@ def test_b101_counts_three_of_the_weekday_it_names(firings) -> None:
            f"weekdays fired on {sorted(days)}; Rule.weekdays={r.weekdays}")
 
 
+# --------------------------------------- 5c. batch 5, the retrograde pairs
+# These recompute 2026 directly, which no rule may do and the harness may: the
+# only way to ask whether a rule READ ITS PAGE RIGHT is to put the page against
+# an independent computation. B87's proviso and the navamsa ladder are checked
+# the same way.
+def _retrograde_windows(body: str, lo, hi) -> list:
+    """(start, end) UTC stretches where `body`'s longitude speed is negative.
+
+    The carry-in matters: Jupiter is already retrograde when this range opens,
+    so his first station inside it is a D and the window must be opened from the
+    range's own start. `Sky.motion_spans` reconstructs the same leading state
+    from the record's `_from` field; this is the ephemeris-side equivalent.
+    """
+    out = []
+    open_at = lo if ephem.position(lo, body).retrograde else None
+    for when, kind in ephem.stations(body, lo, hi):
+        if kind == "R":
+            open_at = when
+        elif open_at is not None:
+            out.append((open_at, when))
+            open_at = None
+    if open_at is not None:
+        out.append((open_at, hi))
+    return out
+
+
+def _pair_windows(a: str, b: str, lo, hi) -> list:
+    return [(max(a0, b0), min(a1, b1))
+            for a0, a1 in _retrograde_windows(a, lo, hi)
+            for b0, b1 in _retrograde_windows(b, lo, hi)
+            if max(a0, b0) < min(a1, b1)]
+
+
+def test_the_retrograde_pairs_reproduce_what_reproduces() -> None:
+    """B82 and B83 come back; B81's printed row is another planet's.
+
+    "Saturn and Mercury Both Retrograde" prints a 2026 row during which Saturn
+    and Mercury are never both retrograde. It is Venus's retrograde window to
+    within four minutes, and the Saturn-Mercury window is the row B83 prints.
+    All four stations are recomputed here rather than trusted, because the
+    claim is a defect in the source and a defect asserted without arithmetic is
+    an opinion.
+    """
+    ephem.init()
+    ist = dt.timedelta(hours=5, minutes=30)
+
+    def when(cell_date: str, cell_time: str):
+        h, m = cell_time.split(":")
+        return dt.datetime.strptime(cell_date, "%d-%b-%y").replace(
+            hour=int(h), minute=int(m), tzinfo=dt.timezone.utc) - ist
+
+    lo = dt.datetime(2025, 12, 1, tzinfo=dt.timezone.utc)
+    hi = dt.datetime(2026, 12, 31, tzinfo=dt.timezone.utc)
+
+    bad = []
+    for b, a, c in ((82, "Jupiter", "Mercury"), (83, "Mercury", "Venus")):
+        row = catalogue.B(b).tables[0].rows[0]
+        ps, pe = when(row[0], row[1]), when(row[2], row[3])
+        wins = _pair_windows(a, c, lo, hi)
+        near = [w for w in wins if abs((w[0] - ps).total_seconds()) < 1800]
+        if len(near) != 1 or abs((near[0][1] - pe).total_seconds()) > 1800:
+            bad.append(f"B{b}: printed {row[0]} {row[1]} -> {row[2]} {row[3]}, "
+                       f"computed {wins}")
+    record("B82 and B83 reproduce their printed 2026 rows to within half an "
+           "hour", not bad, str(bad) or "2 rows, both ends")
+
+    row = catalogue.B(81).tables[0].rows[0]
+    ps, pe = when(row[0], row[1]), when(row[2], row[3])
+    sm = _pair_windows("Saturn", "Mercury", lo, hi)
+    gap = min(abs((w[0] - ps).total_seconds()) / 3600.0 for w in sm)
+    record("B81's printed 2026 row is not the Saturn-Mercury window",
+           gap > 60, f"nearest computed start is {gap:.1f} h away; that "
+           f"window is {sm[0][0]:%d-%b %H:%M} to {sm[0][1]:%d-%b %H:%M}")
+
+    ven = _retrograde_windows("Venus", lo, hi)
+    record("B81's printed 2026 row is Venus's retrograde window, not the "
+           "pair's",
+           len(ven) == 1
+           and abs((ven[0][0] - ps).total_seconds()) <= 600
+           and abs((ven[0][1] - pe).total_seconds()) <= 600,
+           f"Venus retrograde {ven[0][0]:%d-%b %H:%M} to "
+           f"{ven[0][1]:%d-%b %H:%M} against printed {row[0]} {row[1]} to "
+           f"{row[2]} {row[3]}")
+
+    row83 = catalogue.B(83).tables[0].rows[0]
+    qs, qe = when(row83[0], row83[1]), when(row83[2], row83[3])
+    record("The Saturn-Mercury window is the row B83 prints",
+           any(abs((w[0] - qs).total_seconds()) <= 180
+               and abs((w[1] - qe).total_seconds()) <= 180 for w in sm),
+           f"Saturn+Mercury {sm[0][0]:%d-%b %H:%M} to {sm[0][1]:%d-%b %H:%M} "
+           f"against B83's {row83[0]} {row83[1]} to {row83[2]} {row83[3]}")
+
+
+def test_the_pairs_zeroes_are_each_the_kind_they_claim(firings: list) -> None:
+    """Three zeros, three reasons, each one checkable in the layer.
+
+    A zero that is pinned in a table and never re-derived decays into an
+    impression. B83's is the orbital period, B113's the calendar boundary and
+    B107's the sky -- and the third is the one worth checking, because that
+    rule looks idle and is in fact a statement about Pluto.
+    """
+    sky = Sky.load()
+    by_id = {r.id: r for r in R.REGISTRY}
+    fired = {f.rule_id for f in firings}
+
+    venus_retro = [s for s in sky.motion_spans("Venus")
+                   if s.value == "retrograde"]
+    record("B83 is silent because Venus does not station in the span at all",
+           not venus_retro
+           and "b083_mercury_venus_both_retrograde" not in fired,
+           f"{len(venus_retro)} Venus retrograde span(s) in the layer")
+
+    dhan = [s for s in sky.spans("Mars", "nakshatra") if s.value == "Dhanishta"]
+    record("B113 is silent because Mars's next Dhanishta window is in 2028",
+           len(dhan) == 1 and dhan[0].start.year == 2028
+           and "b113_mars_in_dhanishta" not in fired,
+           f"Mars in Dhanishta {dhan[0].start:%d-%b-%Y} to "
+           f"{dhan[0].end:%d-%b-%Y}")
+
+    shr = [s for s in sky.spans("Venus", "nakshatra") if s.value == "Shravana"]
+    pluto = [s for s in sky.spans("Pluto", "nakshatra")
+             if s.value == "Shravana"]
+    alone = by_id["b107_venus_alone_in_shravana"].fn(sky)
+    record("B107 is silent because Pluto holds Shravana across both of Venus's "
+           "2027 visits, though Venus does visit it twice",
+           len(shr) == 2 and not alone
+           and all(any(p.start <= s.start < p.end for p in pluto) for s in shr),
+           f"Venus in Shravana {len(shr)} time(s), {len(alone)} alone "
+           f"window(s); Pluto's Shravana span "
+           + (f"{pluto[0].start:%d-%b-%Y} to {pluto[0].end:%d-%b-%Y}"
+              if pluto else "absent"))
+
+
 def main() -> int:
     sky = Sky.load()
     firings = R.fire(R.REGISTRY, sky)
@@ -1450,6 +2097,12 @@ def main() -> int:
     test_the_final_dash_titles_would_have_lost_their_condition()
     test_b87s_proviso_is_a_condition_the_document_itself_obeys()
     test_no_ported_verdict_swallows_a_scoping_colon()
+    test_shar_is_the_latitude_sign_and_not_the_declination()
+    test_the_apsis_rules_fire_on_emitted_apsides_and_not_on_a_threshold()
+    test_kaal_sarp_yog_is_empty_under_both_its_readings()
+    test_hemisphere_is_blocked_on_the_equinox_and_says_so()
+    test_the_retrograde_pairs_reproduce_what_reproduces()
+    test_the_pairs_zeroes_are_each_the_kind_they_claim(firings)
     test_firings(firings)
     test_outer_pair_rules_come_from_the_documents_own_tables()
     test_the_navamsa_ladder_agrees_with_the_ephemeris()

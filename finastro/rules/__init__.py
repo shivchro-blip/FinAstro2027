@@ -7,6 +7,10 @@ convenience grouping:
     visibility      the five Combust Rise Cycles and the two Mercury sections
     colocation      conjunctions, oppositions, same-sign and same-nakshatra
     panchang_rules  weekday, tithi, yoga and the lunar-calendar families
+    shar            B118 and B119 -- Shar, the ecliptic latitude sign
+    apsides         the apsides, the hemispheres and Kaal Sarp Yog
+    pairs           the retrograde pairs and the nakshatra-residency singles
+    volatile        B70, recorded as an absence and deliberately not fitted
     vedha           Shar, Speed and Vedh, and the remaining reference tables
 
 A rule states a **condition** and, where the section prints one, a **verdict**
@@ -31,8 +35,13 @@ from .catalogue import B, CATALOGUE_B_SIZE, SECTIONS, Section
 from . import visibility          # noqa: F401  -- registers batch 1
 from . import colocation          # noqa: F401  -- registers batch 2
 from . import panchang_rules      # noqa: F401  -- registers batch 3
+from . import shar                # noqa: F401  -- registers batch 4 (Shar)
+from . import apsides             # noqa: F401  -- registers the apsides batch
+from . import pairs               # noqa: F401  -- registers the pairs batch
+from . import volatile            # noqa: F401  -- registers B70's recorded absence
 
-BATCHES = ("visibility", "colocation", "panchang_rules")
+BATCHES = ("visibility", "colocation", "panchang_rules", "shar", "apsides",
+           "pairs", "volatile")
 
 
 def by_status(status: str) -> list[Rule]:

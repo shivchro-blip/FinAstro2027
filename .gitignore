@@ -16,11 +16,13 @@ ephe/
 # --- scratchpad: throwaway patch scripts and local run logs ------------
 # A bad patch is recoverable from HEAD precisely while these stay out of it.
 patch_*.py
+scratch/
 tmp_*.py
 tmp_*.json
 scratch*.py
 *.log
 commit_message.txt
+batch*_commit_msg.txt
 
 # --- editor / OS noise --------------------------------------------------
 .vscode/

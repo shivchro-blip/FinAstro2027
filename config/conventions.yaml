@@ -248,7 +248,70 @@ big_volatile:
     All 51 source dates carry at least one major configuration (inner-planet
     conjunction, station, lunation, Sun ingress, or a slow-pair aspect within
     1 deg), but the list is over-determined and the source weighting is not
-    recoverable. Reconstructed candidates are emitted flagged, never as fact.
+    recoverable. NO reconstruction is emitted -- see ported_as below.
+  # PORTED 14-Sep-2026 AS A RECORDED ABSENCE, deliberately not reconstructed.
+  # B70's date cells hold 51 dates (the source itself footnotes one typo,
+  # "07-Aug-62" for 07-Aug-26). Four candidate discriminators were tested and
+  # rejected in earlier work -- see build/STEP4_DECISIONS.md section 12.7. The
+  # section's own remark says the dates "have been sorted on multiple
+  # parameters" and names none of them, so what is missing is a
+  # source_selection_rule and not an ephemeris input. The rule is registered
+  # blocked with that as its named missing input and certainty C, which is the
+  # grade the source's own silence earns, and it emits NOTHING: a fitted
+  # candidate list would reproduce the 51 dates and predict nothing, which is a
+  # description of our own fit rather than the source's rule.
+  ported_as: recorded_absence
+  rule_id: b070_big_volatile_major_turning_days
+  emitted_dates: 0
+  distinct_dates: 51
+
+# ---------------------------------------------------------------- shar
+# SETTLED 14-Sep-2026. Shar is the sign of the ecliptic LATITUDE: North above
+# the plane, South below. Settled by reproducing the source's own printed dates
+# from the engine, the way ayanamsha and the node were, and not from the word.
+#
+# B118 (pp.92) prints a North/South period per planet with the date each ends.
+#   Mars     prints ONE sign change, 26-Jul-26.  Engine: 25-Jul-26 05:44 (0.76 d)
+#   Venus    prints THREE interior ends.        Engine: 3 crossings, 0.54/0.01/0.85 d
+#   Mercury  prints NINE interior ends.         Engine: 8 crossings
+# The crossing COUNT agreeing with the printed row count is the strong part.
+#
+# B119 (p.93) prints the Moon's 27-row North/South alternation.
+#   latitude sign      reproduces 26 of 27 ends within 1.5 d (worst 1.98 d)
+#   declination sign   reproduces  0 of 27, every miss 1.5-3.7 d, same direction
+#
+# DECLINATION IS THE REJECTED READING, on the source's own numbers:
+#   Mars    declination crosses 12-Apr-26; B118 prints South until 26-Jul-26
+#           -> 104 days apart, not a tolerance
+#   Saturn  declination crosses 27-Mar-26; B118 prints South for the entire year
+#   B119    0/27 -- a different quantity's phase, systematically late
+#
+# WHAT IT COSTS. Latitude is emitted on every record but has no ingress series,
+# so a zero-crossing is known only to lie in the gap between two records. Moon
+# 0.23 d median / 1.03 d worst; Mercury 1.8 d; Venus 2.7 d; but Pluto has four
+# records in the span and its gap runs to 163 d, so a Pluto Shar change is dated
+# to within months. Grade B for exactly the reason a sunrise is B: the quantity
+# is exact and the INSTANT is definition-sensitive.
+shar:
+  quantity: ecliptic_latitude_sign
+  north: latitude > 0
+  south: latitude < 0
+  certainty: B
+  sources: [B118, B119]
+  bodies: [Mars, Mercury, Jupiter, Venus, Saturn, Herschel, Neptune, Moon]
+  rejected_readings:
+    - reading: declination_sign
+      rejected_on: >-
+        Mars's declination crosses zero on 12-Apr-26 while B118 prints South
+        until 26-Jul-26 (104 d); Saturn's crosses on 27-Mar-26 while B118 prints
+        South all year; and against B119's 27 printed ends the declination sign
+        reproduces 0/27, every miss 1.5-3.7 d late. A different quantity's
+        phase, not a tolerance to widen.
+  boundary_uncertainty: >-
+    A span boundary is known only to the gap between the two records that
+    straddle it, because the layer emits no latitude ingress series. Every
+    firing carries boundary_uncertain_to_the_record_gap.
+  emission: one_row_per_change
 
 rainfall:
   include: false            # dropped by user decision
@@ -318,7 +381,53 @@ labels:
 
 # ---------------------------------------------------------------- still open
 open_questions:
-  - speed_class_thresholds        # Atichari / Fast / Normal / Slow / Vakri; drives Vedha
+  # speed_class_thresholds: BLOCKED, not merely open. Calibrated 14-Sep-2026
+  # against all 38 printed rows of the nine Speed-and-Vedh tables (B120-B127)
+  # and every Atichari row of the twenty-one Nakshtra Vedh tables (B128-B141).
+  #
+  # WHAT WAS TESTED. For each planet, the speed_deg_day the astronomy layer
+  # emits was read at every printed interior boundary, and the boundaries were
+  # grouped by the class they enter. A threshold exists only if the classes are
+  # separable on that quantity:
+  #
+  #   planet   boundaries entering Fast/Atichari   entering Normal
+  #   Jupiter  0.20622, 0.22088                   -0.00128, 0.20622, 0.22088, 0.00082
+  #   Mercury  1.71453 .. 1.77558 (n=6)           0.08423, -0.00433, 0.07411,
+  #                                               -0.01759, 0.06880, -0.16937,
+  #                                               1.71453 .. 1.77558
+  #   Venus    1.22398                            1.22398, 0.02045, -0.01006
+  #   Saturn   0.08693, 0.09178                   0.09178, 0.08693, 0.00003, -0.00046
+  #   Mars     0.65965                            0.65829
+  #
+  # The ranges OVERLAP on every planet with more than one boundary. Jupiter's
+  # Normal-entering boundaries span -0.001 to +0.221 while its Fast-entering
+  # ones span 0.206 to 0.221: no value separates them. Mercury is decisive --
+  # 1.77558 ENTERS Normal and 1.71453 ENTERS Fast, so the Normal set strictly
+  # contains the Fast set. So there is no threshold, and the failure is not
+  # precision: a distribution that overlaps cannot be cut by any value however
+  # wide the tolerance. Widening one would be manufacturing a class boundary the
+  # source does not have.
+  #
+  # WHAT DOES SURVIVE. Retrograde/Direct is the sign of the same emitted
+  # quantity, and it reproduces the source's own periods: Jupiter's station is
+  # 11-Mar-26 against a printed 11-Mar-26, Saturn's 27-Jul-26 against 27-Jul-26,
+  # Herschel's 11-Sep-26 against 10-Sep-26, Neptune's 07-Jul-26 against
+  # 07-Jul-26, Pluto's 06-May-26 against 06-May-26. Mercury's is the documented
+  # outlier: its printed retrograde boundaries lag the computed stations by
+  # +6 d, +1 d, +6 d, -7 d, +3 d, +8 d against 26-Feb/21-Mar, 29-Jun/24-Jul,
+  # 24-Oct/13-Nov, which is the same 2-7 day lag mercury_shar_lag records.
+  #
+  # SO: two of the classes are recoverable and one is not. A rule may condition
+  # on retrograde/direct today. It may NOT condition on Fast-or-Normal, and that
+  # is what still blocks the Vedha families: B120-B127 print a Vedha DIRECTION
+  # per period and B128-B141 print one per nakshatra row, and in both the
+  # direction branch is selected by the class the source printed, so a port
+  # needs the class at an arbitrary 2027 instant. The evidence for the direction
+  # rule itself is recorded under vedha_direction below.
+  - speed_class_thresholds        # BLOCKED. No threshold exists: Fast and Normal
+                                  # overlap on emitted speed on every planet with
+                                  # more than one boundary. Retrograde/Direct IS
+                                  # recoverable (sign of speed), Fast/Normal is not.
   - mercury_shar_lag              # source Mercury latitude rows lag computed by 2-7 days
   - aspect_orbs                   # graha drishti vs degree orbs
   - month_system_confirmation     # Purnimanta inferred from eclipse labelling
@@ -342,6 +451,64 @@ open_questions:
                                         # Not blocking now: no instrument in
                                         # this config maps to any of the seven.
   - label_scheme_signoff                # still blocks writing any verdict rule
+
+# ------------------------------------------------------------- vedha geometry
+# Recorded, NOT used. Nothing conditions on this yet, because the class that
+# selects the branch is the one speed_class_thresholds cannot supply.
+#
+# THE DIRECTION RULE. Across the thirteen per-planet Nakshtra Vedh tables
+# (B131-B141 plus the two Moon tables B129-B130), every printed row fills exactly
+# one of three direction cells, and the cell follows the printed Speed column:
+#
+#     Atichari / Fast  -> Left cell
+#     Normal           -> Front cell
+#     Retrograde       -> Right cell
+#
+# Counted over all 111 directional rows: 109 agree, 2 do not. Both exceptions
+# are in B136 (Saturn Nakshtra Vedh) and both are rows whose Speed column reads
+# Atichari while the filled cell is Right: Uttara Bhadrapada from 25-Jan-26 and
+# Revati from 17-May-26, against the Left rule. B124, Saturn's own Speed and
+# Vedh table, prints Fast/Left for 26-Jan to 30-May, the same window -- so the
+# source disagrees with itself about Saturn's direction there, and the two
+# tables are not reconcilable from the page.
+#
+# So the relationship is a CORRELATION at 109/111, not a derivation. A single
+# exception is enough to demote it, and there are two, both named above. Any
+# rule that reads a direction off a speed class is reading a regularity the
+# source does not keep, and must say so on the row.
+#
+# THE TARGETS ARE A LOOKUP, NOT A FORMULA. For each table, the target nakshatra
+# in a given cell is a function of the planet's OWN nakshatra and nothing else:
+# across all 12 tables that carry directional cells, one own-nakshatra maps to
+# two different targets in the same cell in exactly 2 cases, both in B136 and
+# both in the Saturn row set just described. No constant offset reproduces the
+# tables: in the 28-name scheme the Front offset ranges over 8,10,12,14,16,18,20
+# and the Left offset over 1,3,5,7,9,11,13 within B132 alone, so the wheel is a
+# table to be transcribed and not an arithmetic expression to be evaluated.
+vedha_direction:
+  direction_follows_speed_class: correlation_109_of_111
+  counterexamples:
+    - section: B136
+      planet: Saturn
+      nakshatra: Uttara Bhadrapada
+      printed_speed: Atichari
+      filled_cell: Right
+      expected_cell: Left
+      from: 25-Jan-26
+      conflicts_with: "B124, which prints Fast/Left for 26-Jan to 30-May-26"
+    - section: B136
+      planet: Saturn
+      nakshatra: Revati
+      printed_speed: Atichari
+      filled_cell: Right
+      expected_cell: Left
+      from: 17-May-26
+  target_generation: per_planet_lookup_on_own_nakshatra
+  constant_offset_rejected: >-
+    No single forward offset reproduces any table's cells. In the 28-name scheme
+    (Abhijeet inserted after Uttara Ashadha) the Front offset spans
+    8,10,12,14,16,18,20 and Left spans 1,3,5,7,9,11,13 within B132 alone.
+  blocked_on: speed_class_thresholds
 
 # ---------------------------------------------------------------- dignity
 # SOURCE-VALIDATED. Re-derived from data/source_2026.html (437578 bytes,

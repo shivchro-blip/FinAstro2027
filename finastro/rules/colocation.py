@@ -205,6 +205,21 @@ def _alone(a: str, b: str):
     return fn
 
 
+def _in_nakshatra(body: str, *stars: str):
+    """Spans where `body` occupies any one of `stars`.
+
+    A one-name call is the restricted case (B89's Rohini half); a two-name call
+    is the bare condition it was split from. Reading `Sky.spans` keeps every
+    name a claim about the source's own vocabulary -- each is looked up through
+    `names.nakshatra`, which raises rather than silently missing.
+    """
+    wanted = {names.nakshatra(s) for s in stars}
+
+    def fn(sky):
+        return [s for s in sky.spans(body, "nakshatra") if s.value in wanted]
+    return fn
+
+
 def _ordered(a: str, b: str, which: str):
     """Shared-sign spans where `a` is `which` ("ahead"/"behind") of `b`."""
     def fn(sky):
@@ -425,6 +440,64 @@ rule(
           "is the B78/B79/B80 shape and not a double count: one is the window, "
           "the other the window with its outcome.",
 )(_together("Moon", "Rahu", "nakshatra", value=_SHATABHISHA))
+
+
+# ------------------------------------------ B089  Mars in Rohini or Chitra
+# OWED from section 12.3 and delivered here: the same colon-scoped shape as B87.
+# "Bullish: Mars in Rohini" is not a verdict with the 2026 instance appended.
+# The colon SCOPES the verdict: the condition is Mars in either nakshatra, and
+# Bullish is asserted for the Rohini case alone. So the condition and the
+# conditioned verdict are two rules, exactly as B87 splits.
+#
+# The evidence is the source's own partition, and it is the mirror image of
+# B87's. B89 prints ONE window, 04-Jul-26 to 24-Jul-26, and Mars is in Rohini
+# at it. Mars is also in Chitra in 2026 -- and the document prints no Bullish
+# window there. So the two halves of the condition are not interchangeable on
+# the page, which is what makes the colon a restriction rather than a label.
+_B89_COND, _B89_STATEMENT = split_statement(B(89).title)
+_B89_VERDICT, _B89_PROVISO = split_proviso(_B89_STATEMENT)
+assert _B89_PROVISO, "B89's colon is gone; re-read the split"
+
+_ROHINI = names.nakshatra("Rohini")
+_CHITRA = names.nakshatra("Chitra")
+
+rule(
+    id="b089_mars_in_rohini_or_chitra",
+    section=B(89),
+    rule_family="residency/nakshatra",
+    condition_text=_B89_COND,
+    condition_from="title",
+    inputs=("ingress/nakshatra",),
+    flags=("verdict_conditioned_on_mars_in_rohini_not_met_in_2027",),
+    notes="The condition fires; the verdict is withheld, because the section "
+          "states Bullish only for the Mars-in-Rohini case and 2027 puts Mars "
+          "in Chitra from 13-Aug to 03-Sep and never in Rohini. Emitting the "
+          "verdict on the Chitra window would assert an outcome the source "
+          "restricted. Same handling as B87: the bare window is a rule the "
+          "document itself prints, and the conditioned verdict is a second "
+          "rule that is correctly silent.",
+)(_in_nakshatra("Mars", _ROHINI, _CHITRA))
+
+
+# The verdict half, restricted to the case the section restricts it to. Zero
+# firings in 2027 by construction, pinned by name in the harness with that
+# reason, like b004, b015r and b087s.
+rule(
+    id="b089s_mars_in_rohini",
+    section=B(89),
+    rule_family="residency/nakshatra",
+    condition_text=_B89_COND,
+    condition_from="title",
+    condition_proviso=_B89_PROVISO,
+    verdict_text=_B89_VERDICT,
+    verdict_from="title",
+    inputs=("ingress/nakshatra",),
+    flags=("verdict_scoped_by_colon_in_title",),
+    notes="2027 puts Mars in Chitra 13-Aug to 03-Sep and never in Rohini, so "
+          "this rule is silent while the bare b089 fires on the Chitra window "
+          "-- the same shape as b087s, and the same reason to keep the count "
+          "pinned rather than let a zero read as an absence.",
+)(_in_nakshatra("Mars", _ROHINI))
 
 
 # ------------------------------------------ B090  Venus/Mars same nakshatra

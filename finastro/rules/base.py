@@ -100,6 +100,12 @@ INPUT_CERTAINTY = {
     "motion/station": "B",
     "visibility/combust": "B",
     "apsis": "B",
+    # Shar -- B118 and B119. The quantity is exact; the INSTANT is not. The
+    # astronomy layer emits latitude on every record but emits no ingress series
+    # for it, so a zero-crossing is only known to lie in the gap between two
+    # records. That is the same shape as a sunrise: computed exactly, and B
+    # because the definition of the boundary is what is uncertain.
+    "latitude": "B",
     # C -- depends on a source rule that was not recovered.
     "source_selection_rule": "C",
 }

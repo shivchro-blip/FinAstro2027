@@ -49,6 +49,7 @@ NAKSHATRA_SPELLINGS = {
     "Purva Falguni": "Purva Phalguni",
     "Uttra Falguni": "Uttara Phalguni",
     "Hast": "Hasta",
+    "Hasta": "Hasta",
     "Chitra": "Chitra",
     "Swati": "Swati",
     "Vishaka": "Vishakha",

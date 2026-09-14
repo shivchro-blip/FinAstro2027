@@ -21,7 +21,7 @@ the frozen one — it records a step that closed.
 | | |
 | --- | --- |
 | Opened | 13-Sep-2026 |
-| Last updated | 13-Sep-2026 — §12.4, batch 3 |
+| Last updated | 14-Sep-2026 — §12.7, batch 4 |
 | Companion | `build/STEP3_REPORT.md` — the astronomy layer, closed and frozen |
 | Config | `config/conventions.yaml`, sha256 `28b037710e9628f5e23354002ad0c84159ec50f43ae45e185fe7eeff19f1f1d2` |
 | Build | `build/astronomy_2027.json`, sha256 `c3a45926eb0a97e9e429e37487f10fa004818828bb3d00d123840ebefd16365d` — **unmoved** |
@@ -1804,3 +1804,229 @@ Plus B55's remark, now `ambiguous` rather than blocked, waiting on a ruling and
 not on an input. And still carried from §12.3: **B89** is unported and owed B87's
 treatment, and the Vedha family — batch 4's own subject — still depends on the
 speed-class thresholds `open_questions` records.
+
+### 12.7 Batch 4 — Shar, Speed and the Vedha family · recorded 14-Sep-2026
+
+Batch 4's subject was the Vedha family, and the batch's first result is that
+**the family is still blocked, for a reason established rather than assumed.**
+The speed-class calibration was the gate, so it was run first and reported
+before anything was ported on top of it.
+
+#### The calibration fails, and it fails in a way no tolerance can rescue
+
+For each of the nine Speed-and-Vedh tables (B120-B127) and every Atichari row of
+the twenty-one Nakshtra Vedh tables (B128-B141), the speed the astronomy layer
+emits — `astronomy.speed_deg_day`, which is on every record — was read at every
+printed interior boundary. A threshold separating Fast from Normal exists only if
+those two sets of values do not overlap.
+
+They overlap on every planet that has more than one boundary:
+
+| Planet | boundaries entering Fast/Atichari | entering Normal |
+| --- | --- | --- |
+| Jupiter | 0.20622, 0.22088 | −0.00128, **0.20622**, **0.22088**, 0.00082 |
+| Mercury | **1.71453** … **1.77558** (n=6) | 0.08423, −0.00433, 0.07411, −0.01759, 0.06880, −0.16937, **1.71453** … **1.77558** |
+| Venus | 1.22398 | **1.22398**, 0.02045, −0.01006 |
+| Saturn | 0.08693, 0.09178 | **0.09178**, **0.08693**, 0.00003, −0.00046 |
+| Mars | 0.65965 | 0.65829 |
+
+Jupiter's Fast boundaries fall *inside* the range its Normal boundaries span.
+Venus has a single Fast boundary and it is the highest Normal boundary as well.
+Mercury is decisive: **1.77558 enters Normal and 1.71453 enters Fast**, so the
+Normal set strictly contains the Fast set. There is no cut.
+
+**This is not a precision failure and must not be treated as one.** A scatters
+that overlap cannot be separated by any value however wide the tolerance; the
+`range / acceleration` figure the project uses for `precision_days` would print
+32.0 days for Jupiter and 25.1 for Mercury, but printing a number there would
+imply a threshold exists and is merely imprecise. It does not exist. Widening a
+tolerance to absorb this is exactly the move that would manufacture a class
+boundary the source does not have.
+
+**What does survive the same test.** Retrograde/Direct is the sign of the same
+emitted quantity and it reproduces the source's own periods, station for
+station: Jupiter prints 11-Mar-26 and the engine puts the station at 11-Mar-26;
+Saturn 27-Jul-26 against 27-Jul-26; Neptune 07-Jul-26 against 07-Jul-26; Pluto
+06-May-26 against 06-May-26; Herschel 10-Sep-26 against 11-Sep-26. Mercury is
+the documented outlier — its printed retrograde boundaries sit +6, +1, +6, −7,
++3 and +8 days from the computed stations, which is the 2–7 day lag
+`mercury_shar_lag` already records and not a new defect.
+
+So **two of the classes are recoverable and one is not.** A rule may condition
+on retrograde-or-direct today. It may not condition on Fast-or-Normal, and that
+is what blocks the Vedha family: both the Speed-and-Vedh tables and the Nakshtra
+Vedh tables select the direction branch from the class the source printed, so a
+port needs the class at an arbitrary 2027 instant. The family is registered
+blocked on `speed_class_thresholds`, not approximated around it.
+
+#### Atichari and Fast are one class under two names — verified, not inferred
+
+Settled by comparing the boundaries directly rather than by reading the words:
+
+| Planet | "Fast" in the Speed-and-Vedh table | "Atichari" in the Nakshtra Vedh table |
+| --- | --- | --- |
+| Mars | … → 14-Aug-26 | … → 15-Aug-26 |
+| Mercury | 28-Jan → 07-Feb | 28-Jan → 07-Feb |
+| Mercury | 27-Apr → 31-May | 27-Apr → 31-May |
+| Mercury | 12-Aug → 08-Sep | 12-Aug → 08-Sep |
+| Venus | … → 13-Apr-26 | … → 12-Apr-26 |
+| Jupiter | 19-Jun → 06-Aug | 18-Jun → 06-Aug |
+| Saturn | 26-Jan → 30-May | 25-Jan → 30-May |
+
+The periods are the same periods. Every difference is one day at a start
+boundary, where one table names the last day of the old state and the other the
+first day of the new — a convention, not a class. So this is a **vocabulary
+finding**: one class, two names, and no second threshold to derive. That matters
+because the alternative reading would have doubled the calibration problem.
+
+#### Vedha direction is a correlation at 109/111, not a derivation
+
+The proposed rule — Fast/Atichari → Left, Normal → Front, Retrograde → Right —
+was checked against every directional row of all thirteen per-planet Nakshtra
+Vedh tables. **109 of 111 agree. Two do not, and both are in B136**, Saturn's
+own table, on rows whose Speed column reads Atichari while the filled cell is
+Right: Uttara Bhadrapada from 25-Jan-26 and Revati from 17-May-26. B124,
+Saturn's Speed-and-Vedh table, prints **Fast/Left** for 26-Jan to 30-May — the
+same window. So the source contradicts itself about Saturn there, and the two
+tables cannot be reconciled from the page.
+
+**A single exception demotes a derivation to a correlation, and there are two.**
+Any rule that reads a direction off a speed class is reading a regularity the
+source does not keep, and must carry that on the row.
+
+The direction cells are not an arithmetic wheel either. No constant offset
+reproduces any table: within B132 alone the Front offset ranges over
+8, 10, 12, 14, 16, 18, 20 and Left over 1, 3, 5, 7, 9, 11, 13 in the 28-name
+scheme. What the tables *are* is a per-planet lookup — own-nakshatra → target —
+with exactly two exceptions (again B136's Saturn rows). A lookup cannot be
+evaluated on a nakshatra the source never printed, which is a second, independent
+reason the Vedha family is not a formula to be ported. Both facts are recorded in
+`config/conventions.yaml` under `vedha_direction`.
+
+#### Shar is settled, and it is the latitude and not the declination
+
+The remainder's first item turned out to be a convention that had never been
+pinned. B118 prints North/South periods per planet and B119 prints the Moon's
+27-row alternation. **Shar is the sign of the ecliptic latitude**, settled by
+reproducing the source's own dates the way the ayanamsha and the node were:
+
+* B118 Mars prints **one** change and the latitude has **one** crossing,
+  25-Jul-26 05:44 against the printed 26-Jul-26 — 0.76 d, inside the table's
+  date-only resolution;
+* B118 Venus prints three interior ends and the latitude has three crossings at
+  **0.54, 0.01 and 0.85 d**;
+* B119's 27 printed ends are reproduced **26/27** by the latitude sign, worst
+  1.98 d, at the 18-Jun-26 node crossing where the latitude is slowest.
+
+The competing reading — declination sign — is **rejected on the source's own
+numbers**: Mars's declination crosses on 12-Apr-26 while B118 prints South until
+26-Jul-26, a **104-day** disagreement, and Saturn's crosses on 27-Mar-26 while
+B118 prints South for the entire year. Against B119 it reproduces **0/27**, every
+miss 1.5–3.7 d and all in the same direction — a different quantity's phase, not
+a tolerance. The month's ~13.6-day alternation is the latitude period, not the
+declination period, which is what makes the reading checkable at all.
+
+**What it costs, on the record.** Latitude is emitted on every record but has no
+ingress series, so a zero-crossing is known only to the gap between the two
+records that straddle it. For the Moon that gap is 0.23 d median and 1.03 d
+worst; for Mercury 1.8 d, Venus 2.7 d; but **Pluto has four records in the span
+and its gap runs to 163 days**, so a Pluto Shar change is dated to within months.
+Grade **B**, for exactly the reason a sunrise is B: the quantity is exact and the
+instant is definition-sensitive. Every firing carries
+`boundary_uncertain_to_the_record_gap`, and both rules emit **one row per
+change**, which is what the sections tabulate — B118 prints 22 rows for seven
+bodies across a year, not 250 days of a North period.
+
+Ported: `b118_shar_direction` (12 changes in 2027) and
+`b119_moon_shar_parivartan` (27). Both fire with `verdict_text = None`, because
+neither section prints a market verdict and one is not invented for them.
+
+#### The reference tables map to classes the layer already emits
+
+Thirty-two catalogue-B sections are renderings of ingress series rather than
+rules in their own right: ten "Journey of <planet>" (sign ingresses), seven
+"<planet> Motion" (stations), seven "<planet> Constellation (Nakshtra)"
+(nakshatra ingresses) and eight "<planet> in Navmansh (D9)" (navamsa ingresses).
+Confirmed as a mapping — each carries a table whose columns are that class's own
+facts — so porting them is confirmation and not re-derivation. Two exceptions
+are recorded rather than smoothed: **B49 "Journey of Pluto" carries no table at
+all**, and the Constellation tables head their nakshatra column "Constellation",
+with B28 and B45 varying the remaining columns from their siblings.
+
+#### Four source defects this batch found, none of them tolerances
+
+Each was found by reproducing the section's own 2026 table from the engine and
+each is recorded rather than absorbed. Three are of a kind the project has met
+before; the first is not.
+
+**B81 is labelled for the wrong planet.** "Saturn and Mercury Both Retrograde —
+Bullish" prints one 2026 row, 03-Oct-26 12:47 to 14-Nov-26 05:59. Saturn and
+Mercury are **never** both retrograde in that window: Saturn's retrograde does
+not begin until 27-Jul-26 and Mercury's 03-Oct retrograde does not begin until
+24-Oct, so the true Saturn∩Mercury window in 2026 is 24-Oct-26 12:42 to
+13-Nov-26 21:24 — **503.9 hours** from the printed start. The printed row is
+**Venus's** retrograde window to within four minutes: her R station is 03-Oct-26
+12:43 and her D station 14-Nov-26 05:59. So B81's row is not a Saturn-Mercury
+window at all. The corrected window is the row B83 prints, because in 2026 both
+Venus's and Saturn's retrograde stretches happen to contain Mercury's — which is
+exactly why the error would never show up as an anomaly in the tables and took an
+independent computation to see. Ported as the exact condition with the row
+flagged; nothing widened.
+
+**B82 reproduces only from the carry-in.** Its 26-Feb-26 window sits at the end
+of a Jupiter retrograde that began 11-Nov-2025, before the generated span. A
+2026-only station scan cannot see it and reports no window at all. The batch
+recomputes from mid-2025, which is what makes B82 checkable — 12:17 → 09:23
+against a printed 12:19 → 09:01.
+
+**B114's printed end matches nothing in the sky.** Mercury's first 2026 visit to
+Purva Bhadrapada starts when the table says (−10 min), but the printed end
+14-Mar-26 14:20 has Mercury at 316.41°, four days after it left the nakshatra and
+with no ingress within five hours. Mercury's second 2026 visit, 01-Apr 20:12 to
+13-Apr 14:22, is printed nowhere at all.
+
+**B115's condition is narrower than its printed table.** The title states the
+union — "Either Sun or Venus in Shatbhisha" — and the rule fires the union, which
+in 2027 runs to 05-Mar 00:54. But both printed rows are **alone** sub-windows,
+verified to within two minutes: the Venus row ends at the Sun's Shatabhisha
+ingress and the Sun row begins at Venus's exit. The table's construction is
+recorded on the row rather than adopted as the condition, because "alone" is not
+a word the title uses.
+
+#### What the remainder added
+
+Ported in this batch, besides Shar: the apsides **B57/B58** (the condition is the
+apogee or perigee itself, *not* the 406,000/360,000 km in the notes — the
+section's own table is the evidence, printing 13 apogees of which only 3 clear
+the stated threshold), **B59** perihelion and aphelion, **B77** Kaal Sarp Yog,
+the retrograde pairs **B81/B82/B83**, and the residency singles **B88, B91, B92,
+B94, B98, B99, B107, B113, B114, B115** and **B117**. **B89** is delivered with
+B87's treatment, as owed from §12.3: the condition fires on Mars in Chitra
+13-Aug to 03-Sep-2027 while the Rohini-scoped verdict stays silent, and both
+counts are pinned by name so the silence cannot read as an absence.
+
+**B70 Big Volatile is ported as a recorded absence.** The section's date cells
+hold 51 dates and its entire statement of method is that they "have been sorted
+on multiple parameters", with none named and no weights given. Four candidate discriminators were tested and rejected, and
+all 51 dates carry at least one major configuration, which is what makes the list
+over-determined: a rule fitted to those 51 dates would reproduce them and predict
+nothing. So the rule is registered `blocked` with `source_selection_rule` as the
+named missing input and **certainty C**, emits nothing, and its zero is pinned by
+name. No candidate list is emitted — a reconstruction here would be this layer's
+inference wearing the page's authority.
+
+**B63 Hemisphere is blocked on two independent counts**, and the record keeps
+them apart: the equinox it names is a **tropical** solar longitude, and no
+ingress series gives one — the sidereal longitude plus the per-record
+`ayanamsha_deg` reconstructs it only at the instants the layer happens to sample
+the Sun, whose ingresses mark whole signs, nakshatras and navamsas. Measured
+anyway, daily-sample interpolation reproduces the equinox to about 5 minutes and
+a navamsa bracket to about 3.6 hours, both inside the source's own ±2/3 days, so
+this is a licence question and not a numerical one. The second count is the
+source's own words: "range of the Hemisphere" never names the range's centre and
+"broken on both side" never says whether the range is prices or the six-day
+window. Three competing readings are carried in `ambiguity` and none is chosen.
+**B117** joins B19 on the benefic/malefic valence, which is the same missing
+input and not a new one.
+
+
