@@ -144903,7 +144903,7 @@
         "ayanamsha": "LAHIRI",
         "ayanamsha_deg": 24.241198,
         "node": "mean",
-        "data_certainty": "B",
+        "data_certainty": "C",
         "precision_days": 2.0,
         "source_2026_equivalent": "Venus Speed and Vedh p.97",
         "flags": [
@@ -144911,7 +144911,9 @@
           "threshold=1.223981",
           "threshold_interval=1.223368..1.224595",
           "precision_days=2.0",
-          "calibrated_against=B123"
+          "calibrated_against=B123",
+          "single_point_fit_zero_degrees_of_freedom",
+          "level 1.223981 was fitted to one crossing; confidence_in_the_level_is_unestablished"
         ]
       }
     },
@@ -192662,7 +192664,7 @@
         "ayanamsha": "LAHIRI",
         "ayanamsha_deg": 24.243729,
         "node": "mean",
-        "data_certainty": "B",
+        "data_certainty": "C",
         "precision_days": 2.0,
         "source_2026_equivalent": "Mars Speed and Vedh p.94",
         "flags": [
@@ -192670,7 +192672,9 @@
           "threshold=0.658287",
           "threshold_interval=0.656927..0.659648",
           "precision_days=2.0",
-          "calibrated_against=B120"
+          "calibrated_against=B120",
+          "single_point_fit_zero_degrees_of_freedom",
+          "level 0.658287 was fitted to one crossing; confidence_in_the_level_is_unestablished"
         ]
       }
     },
@@ -274919,7 +274923,7 @@
         "ayanamsha": "LAHIRI",
         "ayanamsha_deg": 24.248223,
         "node": "mean",
-        "data_certainty": "B",
+        "data_certainty": "C",
         "precision_days": 2.0,
         "source_2026_equivalent": "Venus Speed and Vedh p.97",
         "flags": [
@@ -274927,7 +274931,9 @@
           "threshold=1.223981",
           "threshold_interval=1.223368..1.224595",
           "precision_days=2.0",
-          "calibrated_against=B123"
+          "calibrated_against=B123",
+          "single_point_fit_zero_degrees_of_freedom",
+          "level 1.223981 was fitted to one crossing; confidence_in_the_level_is_unestablished"
         ]
       }
     },

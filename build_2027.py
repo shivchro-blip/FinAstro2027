@@ -595,6 +595,16 @@ def speed_class_crossings():
     out = []
     for body, (level, interval, pdays, section) in SPEED_CLASS_BODIES.items():
         title = SPEED_CLASS_SOURCE.get(body)
+        # A level with zero degrees of freedom cannot support certainty B. Mars's
+        # and Venus's crossings are still emitted -- a crossing is a fact about
+        # the sky -- but graded C, with the reason on the record.
+        certainty = CONF["speed_classes"].get("series_certainty", {}).get(
+            body, "B")
+        fit_flags = [] if certainty == "B" else [
+            "single_point_fit_zero_degrees_of_freedom",
+            f"level {level} was fitted to one crossing; "
+            "confidence_in_the_level_is_unestablished",
+        ]
         for inst, kind, family, lvl in ephem.speed_crossings(
                 body, SPAN_START, SPAN_END, level):
             if kind == "station":
@@ -609,14 +619,14 @@ def speed_class_crossings():
                                           else "out_of_fast"))
             out.append(ev.build(
                 "speed_crossing", family, [body], "instant", inst, astro,
-                ev.qa_for(inst, "B", precision_days=pdays,
+                ev.qa_for(inst, certainty, precision_days=pdays,
                           source_2026_equivalent=title,
                           flags=pflags + [
                               SPEED_CLASS_SERIES_FLAG,
                               f"threshold={level}",
                               f"threshold_interval={interval[0]}..{interval[1]}",
                               f"precision_days={pdays}",
-                              f"calibrated_against={section}"]),
+                              f"calibrated_against={section}"] + fit_flags),
                 precision="exact",
                 id_suffix=family.split("/")[-1]))
     return out

@@ -153,13 +153,27 @@ def test_speed_class_crossings(doc: dict) -> None:
            not off, str(off) or "the series is self-consistent")
 
     # certainties and precision_days come from the calibration
+    # The GRADE is per body and is the withdrawal's footprint. Mercury's level
+    # is overdetermined -- six crossings constrain one number -- so it supports
+    # certainty B. Mars's and Venus's levels are single-point fits with zero
+    # degrees of freedom, so they cannot, and their crossings are graded C with
+    # the reason on the record. A datum is still emitted; what changed is how
+    # much it is claimed to be worth.
+    want = CONF["speed_classes"]["series_certainty"]
     bad_cert = [r["id"] for r in sc
-                if r["qa"]["data_certainty"] != "B"
+                if r["qa"]["data_certainty"] != want[r["bodies"][0]]
                 or r["qa"]["precision_days"] is None]
-    record("Every speed crossing is certainty B with a precision_days",
+    record("Each speed crossing carries the grade its level can support",
            not bad_cert, str(bad_cert) or
-           "the level is calibrated, so the grade is B by construction")
+           "; ".join(f"{b} {want[b]}" for b in sorted(want)))
 
+    no_flag = [r["id"] for r in sc
+               if r["qa"]["data_certainty"] == "C"
+               and "single_point_fit_zero_degrees_of_freedom"
+               not in r["qa"]["flags"]]
+    record("A single-point fit says so on its own record",
+           not no_flag, str(no_flag) or
+           "the reason travels with the datum rather than living in config")
     # THE STRUCTURAL CHECK. A threshold record's speed must be above the dead
     # band, which is what stops a retrograde-loop arc being emitted as a Fast
     # boundary. And no station record may be a threshold record.

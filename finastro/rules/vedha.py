@@ -1,34 +1,37 @@
-"""Batch 5 -- the Vedha families for Mercury, Venus and Mars.
+"""Batch 5 -- the Vedha family, ported for MERCURY ONLY.
 
-Six sections: the three Speed-and-Vedh tables (B120 Mars, B122 Mercury, B123
-Venus) and the three Nakshtra Vedh tables (B132, B133, B134). Jupiter and Saturn
-are absent by decision, not by omission -- see below.
+One section is ported: **B133 Mercury Nakshtra Vedh**, with B122 (Mercury Speed
+and Vedh) supplying the class it keys on. Everything else in this module is a
+record of why it is not ported.
 
-WHAT WAS NEEDED FIRST. These tables print a Vedha DIRECTION per period, and the
-direction is selected by the speed class the source printed. That class was the
-blocker `open_questions.speed_class_thresholds` recorded for two batches. It is
-now calibrated for the three inner planets by crossing instants (Mercury
-1.744909, Venus 1.223981, Mars 0.658287 deg/day), and the astronomy layer emits
-`speed_crossing` records at those levels, so a rule can read the class off the
-layer like any other span. Nothing here computes a speed or touches the
-ephemeris.
+WHY MERCURY ALONE, and it is a structural reason and not a tolerance question.
+Mercury's speed oscillates: over 2026 it crosses the calibrated level 1.744909
+deg/day **six** times, so six independent printed boundaries constrain one
+number. That is overdetermined, and it held. Mars and Venus each cross their
+level exactly **once** in the year, so their calibrations solved one equation in
+one unknown -- the feasible interval is just the speed's change across the +/-1
+day scoring window, no other row in the year can falsify it, and the fit carries
+no evidence. They are registered `blocked` with that as the named missing input.
+See `build/STEP4_DECISIONS.md` section 12.10 for the arithmetic.
 
-WHY JUPITER AND SATURN ARE NOT HERE. They have no calibrated threshold -- their
-two printed boundaries have no common level -- and the source carries a dedicated
-doctrine for them instead: B30 "Demoted and Shadow Speed of Saturn" p.26, which
-defines its interval by LONGITUDE (Saturn at 20 deg 31' of Pisces, crossed
-retrograde 27-Jul-2026 and direct again 15-Mar-2027) and supplies no speed level.
-So their missing input is a slow-planet speed doctrine, and a port would have to
-invent a class. B135 (Jupiter) and B136 (Saturn) are registered `blocked` with
-that named.
+WHY JUPITER AND SATURN ARE NOT HERE EITHER, but for a different reason. They have
+no level at all -- their two printed boundaries have no common threshold -- and
+the source carries a dedicated doctrine for them instead: B30 "Demoted and Shadow
+Speed of Saturn" p.26, which defines its interval by LONGITUDE (Saturn at
+20 deg 31' of Pisces, crossed retrograde 27-Jul-2026 and direct again
+15-Mar-2027) and supplies no speed level. So their missing input is a slow-planet
+speed doctrine. B121/B124 (their speed tables) and B135/B136 (their vedha tables)
+are registered `blocked` with that named.
 
 THE DIRECTION RULE, and how much of it is ours. Fast/Atichari -> Left, Normal ->
-Front, Retrograde -> Right. Across every per-planet table this holds on 103 of
-103 rows within the domain where a class is defined; the only two exceptions in
-the whole corpus are Saturn's (B136), which is outside that domain. It is
-nevertheless carried as a flag on every row rather than presented as law,
-because the rule is a regularity of the tables and not a sentence the source
-states.
+Front, Retrograde -> Right. The honest domain-restricted figure is now **52 of
+52** -- Mercury 45/45 and Jupiter 7/7, the two planets whose class does not rest
+on a single-point fit. Mars 21/21 and Venus 30/30 are excluded from that figure
+even though both score perfectly, because their classes were derived from
+thresholds that fit by construction and so are not independent confirmations.
+The overall label stays **correlation** while Saturn is unresolved. Carried as a
+flag on every row rather than presented as law, because the rule is a regularity
+of the tables and not a sentence the source states.
 
 THE TARGETS ARE A TRANSCRIPTION. Each table's target column is a per-planet
 lookup from the planet's OWN nakshatra to the vedha'd nakshatra, and no constant
@@ -36,7 +39,9 @@ offset reproduces any of them (within B132 the Left offset runs 1,3,5,7,9,11,13
 in the 28-name scheme). So the wheels below are the source's own tables, dict
 literals, with the section each came from. They are NOT derived, and a reader
 should treat a change to one as a transcription edit requiring the same evidence
-as any other verbatim string.
+as any other verbatim string. The Mars and Venus wheels are kept even though
+those ports are withdrawn, so that a later year supplying a second crossing can
+be tested against them rather than re-transcribing them.
 
 WHERE THE LOOKUP IS INCOMPLETE, THE RULE SAYS SO. A planet's table prints only
 the nakshatras that planet occupied in 2026 -- Mars's covers 21 of them, Venus's
@@ -49,6 +54,7 @@ from __future__ import annotations
 
 import datetime as dt
 
+from ..config import CONF
 from ..sky import Span, parse
 from .base import blocked, rule
 from .catalogue import B
@@ -67,19 +73,16 @@ FAST_NAMES = ("Fast", "Atichari")
 # Transcribed from the source's own tables. Key: (own nakshatra, printed class)
 # -> the nakshatra that planet vedhas, and which cell it came from.
 #
-# B132 Mars Nakshtra Vedh pp.107-108 -- 21 printed keys.
+# B132 Mars Nakshtra Vedh pp.107-108 -- 21 printed keys. NOT PORTED; kept as the
+# transcription of record. See WITHDRAWN below.
 #
-# READ THIS BEFORE USING THIS TABLE. Every one of Mars's 15 Atichari rows is
-# labelled Atichari for a period the CALIBRATED threshold calls Normal: Mars's
-# speed runs 0.62-0.72 deg/day through that stretch against a Fast level of
-# 0.6583, crossing it only for the two short windows B120 itself prints, and
-# B120 labels the first of those windows "Fast" and the second "Normal". So
-# Mars's two tables do not agree about what Atichari means for Mars, and the
-# class in this wheel's key is the NAKSHATRA TABLE's label, not a speed the
-# calibrated level computes. The port consequently refuses these entries for any
-# residency whose computed class differs -- see `_lookup`. Recorded rather than
-# reconciled: reconciling it would mean choosing which of Mars's own two tables
-# to believe.
+# The class column of this table AGREES with the calibrated threshold on 20 of
+# its 21 rows. The one disagreement is the row whose printed start is 15-Aug-26,
+# the civil day on which the single crossing falls (15-Aug-26 00:05 IST), so the
+# tables agree to a day and disagree only about which side of a boundary day a
+# class belongs on. An earlier report in this project claimed all fifteen
+# Atichari rows disagreed; that was wrong, and the per-row breakdown is in
+# build/STEP4_DECISIONS.md section 12.10.
 MARS_WHEEL = {
     ("Purva Ashadha", "Atichari"): "Uttara Bhadrapada",
     ("Uttara Ashadha", "Atichari"): "Purva Bhadrapada",
@@ -189,10 +192,19 @@ VENUS_WHEEL = {
 
 WHEELS = {"Mars": MARS_WHEEL, "Mercury": MERCURY_WHEEL, "Venus": VENUS_WHEEL}
 
-#: The three calibrated planets, and the two sections each contributes.
+#: The three calibrated planets, and the two sections each contributes. Only
+#: Mercury is PORTED; Mars and Venus have their wheels transcribed here and their
+#: ports withdrawn.
 VEDHA_BODIES = ("Mars", "Mercury", "Venus")
+PORTED_BODIES = ("Mercury",)
 SPEED_TABLE = {"Mars": 120, "Mercury": 122, "Venus": 123}
 NAK_TABLE = {"Mars": 132, "Mercury": 133, "Venus": 134}
+NAK_TABLE_FOR = dict(NAK_TABLE)
+
+#: The calibrated level for each body, read from config so the blocked reason can
+#: be specific without a second copy of the number in prose.
+CONF_THRESHOLD = {b: CONF["speed_classes"][b]["threshold"]
+                  for b in VEDHA_BODIES}
 
 #: Registered but deliberately unported. See the module docstring.
 SLOW_BODIES = {"Jupiter": (121, 135), "Saturn": (124, 136)}
@@ -283,28 +295,6 @@ def _speed_table(body: str):
     return fn
 
 
-for _body in VEDHA_BODIES:
-    rule(
-        id=f"b{SPEED_TABLE[_body]:03d}_{_body.lower()}_speed_and_vedh",
-        section=B(SPEED_TABLE[_body]),
-        rule_family="vedha/speed_class",
-        condition_text=B(SPEED_TABLE[_body]).title,
-        condition_from="title",
-        inputs=("motion/speed_crossing",),
-        flags=("vedha_direction_is_a_correlation_103_of_103_in_domain",),
-        notes=f"{_body}'s speed class over the span, with the Vedha direction "
-              "the class carries. The class is read off the emitted "
-              "speed_crossing and motion/station records, so this rule and the "
-              "calendar cannot disagree about it. One row per class change, "
-              "which is what the table tabulates: it prints date RANGES, and "
-              "the ranges' edges are exactly these crossings. Direction is "
-              "Fast/Atichari->Left, Normal->Front, Retrograde->Right; the "
-              "section prints that correspondence itself and it is carried as "
-              "a flag because it is a regularity of the tables rather than a "
-              "sentence the source states.",
-    )(_speed_table(_body))
-
-
 # ------------------------------------- B132/B133/B134  Nakshtra Vedh
 #: Plain dicts: (body, own nakshatra) -> the class the 2026 table printed for it.
 #: A residency whose 2027 class differs has NO usable target, and the row says
@@ -380,7 +370,32 @@ def _nakshatra_vedha(body: str):
     return fn
 
 
-for _body in VEDHA_BODIES:
+# ------------------------------------------------------- PORTED: Mercury only
+# The one planet whose threshold is overdetermined. Six crossings in 2026
+# constrain one number, and it held.
+for _body in PORTED_BODIES:
+    rule(
+        id=f"b{SPEED_TABLE[_body]:03d}_{_body.lower()}_speed_and_vedh",
+        section=B(SPEED_TABLE[_body]),
+        rule_family="vedha/speed_class",
+        condition_text=B(SPEED_TABLE[_body]).title,
+        condition_from="title",
+        inputs=("motion/speed_crossing",),
+        flags=("vedha_direction_is_a_correlation_52_of_52_in_honest_domain",
+               "threshold_is_overdetermined_six_crossings_constrain_one_number"),
+        notes=f"{_body}'s speed class over the span, with the Vedha direction "
+              "the class carries. The class is read off the emitted "
+              "speed_crossing and motion/station records, so this rule and the "
+              "calendar cannot disagree about it. One row per class change, "
+              "which is what the table tabulates: it prints date RANGES, and "
+              "the ranges' edges are exactly these crossings. THIS IS THE ONLY "
+              "PLANET THIS MODULE PORTS, because it is the only one whose "
+              "threshold is overdetermined: Mercury crosses its level six times "
+              "in 2026, so six independent printed boundaries constrain one "
+              "number. Mars and Venus cross once each, so their calibrations "
+              "solved one equation in one unknown and are not evidence.",
+    )(_speed_table(_body))
+
     _b = NAK_TABLE[_body]
     rule(
         id=f"b{_b:03d}_{_body.lower()}_nakshatra_vedh",
@@ -390,19 +405,76 @@ for _body in VEDHA_BODIES:
         condition_from="title",
         inputs=("ingress/nakshatra", "motion/speed_crossing"),
         flags=("vedha_target_is_transcribed_from_the_2026_table",
-               "vedha_direction_is_a_correlation_103_of_103_in_domain",
+               "vedha_direction_is_a_correlation_52_of_52_in_honest_domain",
+               "threshold_is_overdetermined_six_crossings_constrain_one_number",
                "target_missing_where_the_2026_table_never_printed_the_key"),
         notes=f"{_body}'s nakshatra residencies with the nakshatra each one "
               "vedhas. The target comes from the section's own table, keyed on "
               "the residency's nakshatra and the class in force during it -- a "
               "lookup, not a formula, because no constant offset reproduces any "
               "table's cells (within B132 the Left offset runs "
-              "1,3,5,7,9,11,13 in the 28-name scheme). Rows whose key the 2026 "
-              "table never printed carry vedha_target=None rather than being "
-              "filled in from another planet's wheel: Mars's table covers 21 "
-              "own-nakshatras, Venus's 28, Mercury's 38, so a 2027 residency "
-              "outside that set is a real gap in the source.",
+              "1,3,5,7,9,11,13 in the 28-name scheme). A residency whose key the "
+              "2026 table never printed carries vedha_target=None and names the "
+              "reason rather than being filled in from another planet's wheel: "
+              "the table covers 38 own-nakshatras, so a 2027 residency outside "
+              "that set is a real gap in the source.",
     )(_nakshatra_vedha(_body))
+
+
+# -------------------------------- Mars and Venus: WITHDRAWN, single-point fits
+for _body, _sb in (("Mars", 120), ("Venus", 123)):
+    _level = CONF_THRESHOLD[_body]
+    blocked(
+        id=f"b{_sb:03d}_{_body.lower()}_speed_and_vedh",
+        section=B(_sb),
+        rule_family="vedha/speed_class",
+        condition_text=B(_sb).title,
+        condition_from="title",
+        inputs=("source_selection_rule",),
+        missing_inputs=(
+            f"a threshold constrained by more than one crossing. {_body}'s "
+            f"speed crosses {_level} exactly ONCE in the whole of 2026, so the "
+            "calibration solved one equation in one unknown: the feasible "
+            "interval is just the speed's own change across the +/-1 day scoring "
+            "window, and no other printed row in the year can falsify it. Zero "
+            "degrees of freedom. The fit is therefore true by construction and "
+            "carries no evidence, so the Vedha direction cannot be anchored to "
+            "it. Mercury is the only inner planet whose level is overdetermined "
+            "(six crossings); a later year supplying a second crossing for "
+            f"{_body} would make this testable rather than re-derivable",
+        ),
+        flags=("withdrawn_single_point_fit_zero_degrees_of_freedom",
+               "port_withdrawn_2026_09_14_not_a_tolerance_question"),
+        notes=f"WITHDRAWN. {_body}'s threshold is recorded as a SINGLE-POINT FIT "
+              "rather than as a calibration. It is not wrong -- it does "
+              "reproduce the one printed boundary it was fitted to -- but it "
+              "cannot be wrong either, and a number that cannot fail is not "
+              "evidence. The wheel transcription is kept in this module so that "
+              "a year supplying a second crossing can be tested against it "
+              "rather than having to re-transcribe it.",
+    )
+    blocked(
+        id=f"b{NAK_TABLE_FOR[_body]:03d}_{_body.lower()}_nakshatra_vedh",
+        section=B(NAK_TABLE_FOR[_body]),
+        rule_family="vedha/nakshatra",
+        condition_text=B(NAK_TABLE_FOR[_body]).title,
+        condition_from="title",
+        inputs=("source_selection_rule",),
+        missing_inputs=(
+            f"a threshold constrained by more than one crossing. The class this "
+            f"table keys on is {_body}'s speed class, and {_body}'s level was "
+            "fitted to a single crossing, so the class it computes is not "
+            "evidence. Withdrawing the wheel lookup follows from withdrawing the "
+            "threshold: the target is transcribed correctly (96 of 96 printed "
+            "rows resolve through the wheels) but the KEY is unearned",
+        ),
+        flags=("withdrawn_single_point_fit_zero_degrees_of_freedom",
+               "port_withdrawn_2026_09_14_not_a_tolerance_question"),
+        notes="The transcription itself is sound -- all 30 of Venus's and all 21 "
+              "of Mars's printed rows resolve to their own target through the "
+              "wheels kept above. What is withdrawn is the RIGHT TO KEY ON a "
+              "class derived from a threshold that fit by construction.",
+    )
 
 
 # ------------------------------------------- Jupiter and Saturn: still blocked
@@ -431,4 +503,23 @@ for _body, (_sb, _nb) in SLOW_BODIES.items():
               "missing input is a doctrine, not a better number. 2027 also "
               "gives this body no calibrated threshold to read a class from, so "
               "a port would have to invent one.",
+    )
+    blocked(
+        id=f"b{_nb:03d}_{_body.lower()}_nakshatra_vedh",
+        section=B(_nb),
+        rule_family="vedha/nakshatra",
+        condition_text=B(_nb).title,
+        condition_from="title",
+        inputs=("source_selection_rule",),
+        missing_inputs=(
+            f"a slow-planet speed doctrine. This table keys its target on "
+            f"{_body}'s speed class, and {_body} has no speed level at all -- "
+            "its two printed boundaries share no threshold. B30 shows the slow "
+            "planets answer to a longitude doctrine instead and supplies no "
+            "speed level, so the class cannot be computed",
+        ),
+        flags=("blocked_on_slow_planet_speed_doctrine_not_on_a_failed_threshold",),
+        notes="A separate block from the speed table's for the same section "
+              "family, because a blocked threshold and a blocked key are two "
+              "different gaps and collapsing them would hide one.",
     )

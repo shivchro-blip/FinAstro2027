@@ -27,4 +27,5 @@ records per event_class:
 
 records per certainty grade:
   A   2383
-  B   1787
+  B   1784
+  C      3

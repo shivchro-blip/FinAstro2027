@@ -2198,6 +2198,14 @@ at other events' instants, or by approximating the boundaries, is exactly what
 
 ### 12.9 Batch 5 — the speed-crossing series and the Vedha port · recorded 14-Sep-2026
 
+> **PARTLY SUPERSEDED — see §12.10.** The speed-crossing series stands, and so
+> does Mercury's port. **Mars's and Venus's ports are withdrawn**: each planet
+> crosses its level exactly once in 2026, so those two calibrations solved one
+> equation in one unknown and are single-point fits rather than calibrations. The
+> 103/103 domain figure below is replaced by 52/52, and the claim here that all
+> fifteen of Mars's Atichari rows disagree with the computed class is corrected
+> there to 20 of 21 agreeing, the single disagreement being the boundary day.
+
 The Step-3 series that §12.8 said was owed, and the port it unblocks.
 
 #### The series, and the bug it makes structurally impossible
@@ -2305,4 +2313,111 @@ rather than collapsed — and filed where the next two-frame question will find 
 not buried under speed classes. The counter-evidence is recorded in the same
 entry: Mars's fifteen Atichari rows show the two frames' labels do **not** reduce
 to one another, which is precisely why it is a frame finding and not an equation.
+
+
+### 12.10 Mars and Venus withdrawn: single-point fits are not calibrations · recorded 14-Sep-2026
+
+§12.9 ported the Vedha family for Mercury, Venus and Mars and reported their
+thresholds as calibrated. **Two of those three thresholds are not calibrations**,
+and the ports that rested on them are withdrawn here. Mercury stands.
+
+#### The structural reason
+
+The calibration fits one number per planet to the printed Fast/Normal boundaries.
+Whether that number is *evidence* depends on how many independent boundaries
+constrain it:
+
+| Planet | Crossings of its level in 2026 | Printed boundaries constraining it | Degrees of freedom |
+| --- | --- | --- | --- |
+| **Mercury** | **6** | 6 | overdetermined — it held |
+| Venus | **1** | 1 | 0 |
+| Mars | **1** | 1 | 0 |
+
+Mars's speed runs monotonically from a single maximum (0.787915 on 01-Mar-26)
+down to 0.116865 by year end, crossing 0.658287 **once**; Venus's crosses
+1.223981 **once**, on its way down from 1.258240. So each calibration solved
+**one equation in one unknown**. The "feasible interval" reported in §12.8 for
+those two is not a measurement spread at all — it is just the speed's own change
+across the ±1 day scoring window. No other printed row in the year can falsify
+either number.
+
+**A number that cannot fail is not evidence.** Both thresholds are recorded as
+**single-point fits**, kept in config with `degrees_of_freedom: 0` and
+`status: withdrawn_single_point_fit`, so that a later year supplying a second
+crossing can *test* them rather than re-derive them. They are not "wrong"; they
+are unfalsifiable, which for this project is a different and disqualifying thing.
+
+Three independent measurements of the same structural fact agree, which is why
+this is a withdrawal and not a judgement call:
+
+| | Mercury | Mars | Venus |
+| --- | --- | --- | --- |
+| crossings in 2026 | **6** | 1 | 1 |
+| wheel coverage under the port | **97%** | 43% | 21% |
+| printed rows agreeing with the computed class | **45/45** | 20/21 | 30/30 |
+
+#### Correcting §12.9's Mars claim
+
+§12.9 stated that **all fifteen** of Mars's Atichari rows disagreed with the
+computed class. That was wrong, and the corrected per-row breakdown is:
+
+| Printed class | Rows | Agree with threshold | Disagree |
+| --- | --- | --- | --- |
+| Atichari | 15 | **15** | 0 |
+| Normal | 6 | 5 | **1** |
+
+Mars runs 0.766–0.788 deg/day through January (Purva Shada, Uttra Shada,
+Abhijeet, Shravana) — **above** 0.658287, so the threshold calls those rows Fast
+and the tables agree. It stays above the level until the August crossing, so every
+one of the fifteen Atichari rows agrees.
+
+**The single disagreement is the boundary row itself**: Ardra, printed `Normal`
+from 15-Aug-26, where the crossing falls at 15-Aug-26 00:05 IST — the same civil
+day. So the finding is **not** "Mars's tables contradict each other". It is the
+much narrower: *Mars's two tables agree on 20 of 21 rows, and disagree only about
+which side of a boundary day a class belongs on.*
+
+#### What is withdrawn, and what stays
+
+**Withdrawn** (now `blocked`, missing input *a threshold constrained by more than
+one crossing*): `b120_mars_speed_and_vedh`, `b132_mars_nakshatra_vedh`,
+`b123_venus_speed_and_vedh`, `b134_venus_nakshatra_vedh`. Four rules.
+
+**Kept**: `b122_mercury_speed_and_vedh` and `b133_mercury_nakshatra_vedh`. Mercury
+is the only planet whose threshold is overdetermined, and **that — not a larger
+row count — is what distinguishes it**. Mercury's table also happens to be the
+fullest (45 rows, 38 wheel keys), but Venus's 30 rows and Mars's 21 are ample;
+what they lack is a *second crossing*, and no amount of rows substitutes for one.
+The Mars and Venus **wheel transcriptions are kept in the module** even though
+their ports are withdrawn, so a future year can test them without re-transcribing
+them. All 96 printed rows still resolve to their own target through the wheels.
+
+**The astronomy series still emits Mars's and Venus's crossings**, because a
+crossing is a fact about the sky and deleting a measurement to punish a bad
+inference would lose data. What changed is the **grade**: Mercury's records stay
+certainty **B**, while Mars's and Venus's are now **C** — the grade this project
+reserves for depending on an undocumented source rule — each carrying
+`single_point_fit_zero_degrees_of_freedom`. The harness checks the grade per body
+and that the reason travels on the record.
+
+#### The honest domain-restricted Vedha figure is 52/52
+
+§12.9 reported **103/103** within "the domain where a class is defined". That
+counted Mars's 21/21 and Venus's 30/30, whose classes were derived from
+single-point fits — so they were **not independent confirmations** of the
+direction rule; they were guaranteed to fit. The honest figure counts only the
+planets whose class does not rest on an unfalsifiable threshold:
+
+| | Match | Mismatch |
+| --- | --- | --- |
+| Mercury | 45 | 0 |
+| Jupiter | 7 | 0 |
+| **Total** | **52** | **0** |
+
+The **overall label remains correlation** while Saturn is unresolved, and the
+superseded 103/103 is recorded in config rather than deleted, with the note that
+it counted planets outside the honest domain.
+
+One overdetermined calibration that survived six independent constraints is worth
+more than three thresholds where two were guaranteed to fit.
 

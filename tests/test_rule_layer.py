@@ -367,18 +367,19 @@ EXPECTED_FIRINGS_MUMBAI = {
     "b089_mars_in_rohini_or_chitra": 22,
 
     # ------------------------------------------------------------- batch 5
-    # The Vedha families, for the three calibrated planets only. The two speed
-    # tables are ONE ROW PER CLASS CHANGE, which is what they tabulate; the
-    # three nakshatra tables are ONE ROW PER RESIDENCY, which is what they
-    # tabulate (B133 prints 45 rows for Mercury's 2026). A residency that
-    # straddles local midnight appears in both venue columns, which is this
-    # project's convention everywhere and not a double count.
-    "b120_mars_speed_and_vedh": 1,
+    # The Vedha family, MERCURY ONLY. Mercury is the one inner planet whose
+    # threshold is overdetermined -- six crossings in 2026 constrain one number
+    # -- so it is the only one whose class is evidence. Mars and Venus each
+    # cross once, so their calibrations solved one equation in one unknown and
+    # their ports are withdrawn; they are pinned in EXPECTED_ZERO_FIRING as
+    # BLOCKED, not as zero-firing executables.
+    #
+    # The speed table is ONE ROW PER CLASS CHANGE and the nakshatra table ONE
+    # ROW PER RESIDENCY, which is what each tabulates. A residency straddling
+    # local midnight appears in both venue columns, which is this project's
+    # convention everywhere and not a double count.
     "b122_mercury_speed_and_vedh": 4,
-    "b123_venus_speed_and_vedh": 1,
-    "b132_mars_nakshatra_vedh": 14,
     "b133_mercury_nakshatra_vedh": 34,
-    "b134_venus_nakshatra_vedh": 33,
 }
 
 

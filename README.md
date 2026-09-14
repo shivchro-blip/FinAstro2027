@@ -45,9 +45,9 @@ $ python3 tests/test_rule_layer.py
 131/131 checks passed
 ```
 
-The rule layer now carries **120 rules over 90 of the 141 catalogue-B sections**:
-103 executable, 5 resolved on a supplied reading, 11 blocked with the missing
-input named, and 1 ambiguous. 3,379 dated rows in the generated year. See
+The rule layer now carries **122 rules over 92 of the 141 catalogue-B sections**:
+103 executable, 5 resolved on a supplied reading, 13 blocked with the missing
+input named, and 1 ambiguous. 3,280 dated rows in the generated year. See
 `build/STEP4_DECISIONS.md` §12 for the batch-by-batch record.
 
 The build is deterministic: regenerating the year produces a byte-identical
@@ -384,17 +384,24 @@ for the inner planets, still open for the slow ones, see below — the 2–7 day
 on the source's Mercury latitude rows, aspect orb policy, confirmation of
 Purnimanta month reckoning, sector mapping, and sign-off on the label scheme.
 
-**The speed-class thresholds calibrate for the inner planets and not the slow
-ones.** An earlier report that no threshold exists was a **method artefact** and
-is retracted in `build/STEP4_DECISIONS.md` §12.8: it read the speed *at* the
-printed boundary dates instead of computing crossing instants, and near a speed
-maximum the whole above-threshold window is only a few days wide, so the samples
-"overlapped" whether or not a threshold existed. Done the kalāṃśā way — propose a
-threshold, compute the crossings, score them against the printed dates — the
-thresholds are **Mercury 1.7449**, **Venus 1.2240** and **Mars 0.6583** deg/day.
-They are absolute and planet-specific, not fractions of each planet's maximum
-(that reading is rejected: it forces a Fast window's two crossings to be
-equidistant from the speed maximum, and Mars's are not).
+**The speed-class thresholds calibrate for Mercury and not the others.** An
+earlier report that no threshold exists was a **method artefact** and is retracted
+in `build/STEP4_DECISIONS.md` §12.8: it read the speed *at* the printed boundary
+dates instead of computing crossing instants, and near a speed maximum the whole
+above-threshold window is only a few days wide, so the samples "overlapped"
+whether or not a threshold existed. Done the kalāṃśā way — propose a threshold,
+compute the crossings, score them against the printed dates — **Mercury's level
+is 1.7449 deg/day**, cross-checked by six independent boundaries.
+
+**Mars's 0.6583 and Venus's 1.2240 are single-point fits, not calibrations**, and
+are recorded as such with `degrees_of_freedom: 0`. Each planet crosses its level
+exactly **once** in 2026, so the fit solved one equation in one unknown and no
+other printed row can falsify it — the "interval" is just the speed's change
+across the ±1 day scoring window. A number that cannot fail is not evidence, so
+their Vedha ports are withdrawn and the missing input is named as *a threshold
+constrained by more than one crossing*. A later year supplying a second crossing
+would make them testable. The series still emits their crossings, graded **C**,
+with the reason on the record.
 
 Jupiter and Saturn have **no** threshold, and the reason is a doctrine rather
 than a failure: the source carries **B30 "Demoted and Shadow Speed of Saturn"
@@ -404,51 +411,51 @@ reproduced to the arcminute by the engine) and supplies no speed level. So those
 two stay blocked with a **slow-planet speed doctrine** named as the missing
 input.
 
-**Vedha direction: 109/111 overall, and 103/103 within its domain.** The
-rule — Fast/Atichari→Left, Normal→Front, Retrograde→Right — holds **without
-exception** on Mars (21/21), Mercury (45/45), Venus (30/30) and Jupiter (7/7).
-Only Saturn (B136) fails, at 6/8, and Saturn is the one planet with no speed
-threshold, so those rows are applications *outside* the rule's domain rather than
-counterexamples within it — on a table whose own two Atichari rows disagree with
-each other. The headline stays **correlation** while Saturn is unresolved, but the
-domain-restricted 103/103 is carried beside it so the strength of what was
-established is visible. **The test that decides** is named in config: if the
-slow-planet doctrine is ever settled and Saturn's class becomes computable,
-Saturn's two rows become testable and the label moves from correlation to
-derivation.
+**Vedha direction: 109/111 overall, and 52/52 within its honest domain.** The
+rule — Fast/Atichari→Left, Normal→Front, Retrograde→Right — holds without
+exception on **Mercury 45/45 and Jupiter 7/7**. Mars (21/21) and Venus (30/30)
+also score perfectly but are **excluded from that figure**, because their classes
+came from thresholds that fit by construction and so are not independent
+confirmations. Only Saturn (B136) fails, at 6/8, and Saturn is unresolved. The
+headline stays **correlation**; **the test that decides** is named in config — if
+the slow-planet doctrine is ever settled and Saturn's class becomes computable,
+its two rows become testable and the label moves to derivation.
 
-**The speed-class series exists, and the Vedha families for the three inner
-planets are ported.** The astronomy layer now emits `speed_crossing` records at
-each calibrated level (Mercury 1.7449, Venus 1.2240, Mars 0.6583 deg/day),
-bisected to the second, certainty B, carrying the level *and* its feasible
-interval on every record. Retrograde boundaries stay `station` records: the two
-kinds come from **separate scans at their own levels**, and a threshold crossing
-must clear a 0.2 deg/day dead band that no retrograde loop reaches — so the
-confusion of a `Retrograde → Normal` transition with a Fast/Normal boundary is now
-structurally impossible rather than merely avoided. Validated before any rule read
-it: Venus **+0.12 h**, Mars **+0.09 h**, Mercury 5 of 6 within 24 h, and its two
-February boundaries ~1 day adrift at *every* level in the interval, which is the
-source's own imprecision. Jupiter and Saturn emit no such records — their missing
-input is a slow-planet doctrine, and B30 supplies a longitude band rather than a
-speed level.
+**The speed-class series exists; the Vedha port is MERCURY ONLY.** The astronomy
+layer emits `speed_crossing` records at each calibrated level, bisected to the
+second, carrying the level *and* its feasible interval. Retrograde boundaries
+stay `station` records: the two kinds come from **separate scans at their own
+levels**, and a threshold crossing must clear a 0.2 deg/day dead band that no
+retrograde loop reaches — so confusing a `Retrograde → Normal` transition with a
+Fast/Normal boundary is structurally impossible rather than merely avoided.
+Validated before any rule read it: Venus **+0.12 h**, Mars **+0.09 h**, Mercury 5
+of 6 within 24 h.
 
-The port covers B120/B122/B123 and B132/B133/B134 for Mercury, Venus and Mars.
-The targets are a **transcription** of each table (all 96 printed rows resolve to
-their own target through the wheels) and a wheel entry is **refused** when a 2027
-residency's computed class differs, with the reason on the row — Mars's table
-labels all fifteen of its Atichari rows for periods the calibrated threshold calls
-Normal, so its two tables do not agree about what Atichari means for Mars.
-Coverage after refusals: Mercury 66/68 rows carry a target, Mars 12/28, Venus
-14/66.
+**Mercury is ported because its threshold is overdetermined, and that — not its
+row count — is what distinguishes it.** Mercury crosses its level **six** times in
+2026, so six independent printed boundaries constrain one number, and it held.
+Mars and Venus each cross **once**, so each calibration solved one equation in one
+unknown: the feasible interval is just the speed's change across the ±1 day
+scoring window, and no other row in the year can falsify it. **Zero degrees of
+freedom.** Those thresholds are recorded as **single-point fits**, not
+calibrations, with the ports withdrawn and the missing input named as *a threshold
+constrained by more than one crossing*. They are kept so a later year supplying a
+second crossing can test them rather than re-derive them. Their crossings are
+still emitted, but graded **C** rather than B, with the reason on the record.
+
+The port covers B122 and B133. Targets are a **transcription** (all 96 printed
+rows resolve through the wheels) and an entry is refused when a 2027 residency's
+computed class differs, with the reason on the row — Mercury 66/68 rows carry a
+target.
 
 **Atichari is a frame, not a synonym.** It is the **nakshatra-residency frame's**
 label for the period the speed frame calls Fast: every Atichari row in
 B132/B133/B134 opens and closes on a nakshatra ingress (Venus's eleven run to
 12-Apr-26 14:22, when she leaves Revati) and none is bounded by a speed value. It
 is recorded under `frame_findings` as **the same shape as the rashi/navamsa
-dignity split** — one object, two frames, carried under distinct names — with the
-counter-evidence (Mars) recorded alongside, because the two frames' labels do not
-reduce to one another.
+dignity split**. Mars's two tables, once wrongly reported as contradicting each
+other there, in fact **agree on 20 of 21 rows** — the single disagreement is the
+boundary day itself.
 
 **Shar is settled, and it is the ecliptic latitude and not the declination.**
 B118 and B119 print North/South periods; the latitude sign reproduces B119's 27

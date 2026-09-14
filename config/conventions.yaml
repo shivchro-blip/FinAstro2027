@@ -527,25 +527,31 @@ open_questions:
 # table to be transcribed and not an arithmetic expression to be evaluated.
 vedha_direction:
   #: THE HONEST HEADLINE IS THE CORRELATION, not the domain-restricted figure.
-  #: Saturn is unresolved, so the rule cannot be stated as a derivation yet --
-  #: but "109/111" on its own understates what was established, and that is why
-  #: both numbers are carried here side by side.
+  #: Saturn is unresolved, so the rule cannot be stated as a derivation yet.
   direction_follows_speed_class: correlation_109_of_111
-  #: Restricted to the domain where a speed class is DEFINED -- the four planets
-  #: with a calibrated threshold or, for Jupiter, a printed table that agrees
-  #: with itself. No exception anywhere in that domain.
-  direction_within_defined_domain: 103_of_103
+  #: Restricted to planets whose class does NOT rest on a single-point fit.
+  #: Mercury 45/45 and Jupiter 7/7. Mars 21/21 and Venus 30/30 scored perfectly
+  #: too and are EXCLUDED, because their classes were derived from thresholds
+  #: that fit by construction and so are not independent confirmations.
+  direction_within_honest_domain: 52_of_52
   domain_definition: >-
-    Planets whose speed class is computable. Mercury, Venus and Mars have
-    calibrated absolute thresholds; Jupiter's own table is 7/7 and self-
-    consistent even though its threshold is undetermined, so it is inside the
-    domain. Saturn is the only planet OUTSIDE it: no threshold, and a table
-    whose Atichari rows disagree with each other.
+    Planets whose speed class rests on a threshold CONSTRAINED BY MORE THAN ONE
+    CROSSING -- which is Mercury alone among the calibrated three (six crossings)
+    -- plus Jupiter, whose own table is 7/7 and self-consistent even though its
+    threshold is undetermined. Mars and Venus are excluded: each crosses its
+    level exactly once in 2026, so one equation in one unknown. Saturn is
+    excluded as unresolved.
+  the_earlier_103_of_103: >-
+    SUPERSEDED. The previous figure counted Mars and Venus, whose classes came
+    from single-point fits. The three independent measurements of the same
+    structural fact now agree: crossing count (Mercury 6, Venus 1, Mars 1),
+    wheel coverage in the port (Mercury 97%, Mars 43%, Venus 21%), and printed
+    row agreement (Mars 20/21). Every one separates Mercury from the other two.
   saturn_is_outside_the_domain_not_a_counterexample: >-
     Saturn's two failures are applications of the rule outside its domain rather
     than counterexamples within it. That is why the overall label stays
-    correlation -- they are not explained -- but it is also why the 103/103 is
-    worth carrying: the rule has no exception where it can be evaluated at all.
+    correlation -- they are not explained -- while the 52/52 is worth carrying:
+    the rule has no exception where it can be evaluated on evidence at all.
   THE_TEST_THAT_DECIDES: >-
     If the slow-planet doctrine is ever settled and Saturn's class becomes
     computable, Saturn's two rows BECOME testable: the rule either predicts
@@ -657,11 +663,42 @@ frame_findings:
 # speed maximum, and Mars's are not (the rising crossing is 39 days before its
 # maximum and the falling one 98 days after).
 speed_classes:
-  Mars:    {threshold: 0.658287, interval: [0.656927, 0.659648], precision_days: 2.00, needs_tolerance_days: 1.0, section: B120}
-  Venus:   {threshold: 1.223981, interval: [1.223368, 1.224595], precision_days: 2.00, needs_tolerance_days: 1.0, section: B123}
-  Mercury: {threshold: 1.744909, interval: [1.743780, 1.746038], precision_days: 0.08, needs_tolerance_days: 1.1, section: B122}
-  Jupiter: {threshold: null, reason: "no intersection: the two printed boundaries are 0.013750 apart in threshold space, about 4.8 days of tolerance. An orbital-period result, not a tolerance", section: B121}
-  Saturn:  {threshold: null, reason: "no intersection at +/-1 d (0.002594 apart); the sliver that exists at +/-2.2 d is 0.000125 wide, which is not a threshold. Blocked on the slow-planet speed doctrine of B30", section: B124}
+  #: PORTED. Mercury's speed oscillates: it crosses its level SIX times in 2026,
+  #: so six independent printed boundaries constrain one number. That is
+  #: overdetermined, and it held. Mercury is the ONLY planet whose threshold is
+  #: overdetermined, and THAT -- not a larger row count -- is what distinguishes
+  #: it from Mars and Venus, whose tables have plenty of rows and no second
+  #: crossing.
+  Mercury: {threshold: 1.744909, interval: [1.743780, 1.746038], precision_days: 0.08, needs_tolerance_days: 1.1, section: B122, crossings_in_2026: 6, status: calibrated_overdetermined}
+  #: WITHDRAWN, recorded as SINGLE-POINT FITS and NOT as calibrations. Mars and
+  #: Venus each cross their level exactly ONCE in the whole of 2026, so each
+  #: solved one equation in one unknown: the interval below is just the speed's
+  #: own change across the +/-1 day scoring window, and no other printed row in
+  #: the year can falsify it. ZERO DEGREES OF FREEDOM. The thresholds are not
+  #: wrong -- each reproduces the one boundary it was fitted to -- but they
+  #: cannot be wrong either, and a number that cannot fail is not evidence.
+  #: Kept so a later year supplying a second crossing can TEST them rather than
+  #: re-derive them.
+  Mars:    {threshold: 0.658287, interval: [0.656927, 0.659648], precision_days: 2.00, needs_tolerance_days: 1.0, section: B120, crossings_in_2026: 1, status: withdrawn_single_point_fit, degrees_of_freedom: 0}
+  Venus:   {threshold: 1.223981, interval: [1.223368, 1.224595], precision_days: 2.00, needs_tolerance_days: 1.0, section: B123, crossings_in_2026: 1, status: withdrawn_single_point_fit, degrees_of_freedom: 0}
+  Jupiter: {threshold: null, reason: "no intersection: the two printed boundaries are 0.013750 apart in threshold space, about 4.8 days of tolerance. An orbital-period result, not a tolerance", section: B121, crossings_in_2026: 0, status: blocked}
+  Saturn:  {threshold: null, reason: "no intersection at +/-1 d (0.002594 apart); the sliver that exists at +/-2.2 d is 0.000125 wide, which is not a threshold. Blocked on the slow-planet speed doctrine of B30", section: B124, crossings_in_2026: 0, status: blocked}
+  #: THREE INDEPENDENT MEASUREMENTS OF THE SAME STRUCTURAL FACT AGREE, which is
+  #: why this withdrawal is structural and not a judgement call:
+  #:   crossing count        Mercury 6,  Mars 1,  Venus 1
+  #:   wheel coverage        Mercury 97%, Mars 43%, Venus 21%
+  #:   printed-row agreement Mercury 45/45, Mars 20/21, Venus 30/30
+  #: The third is the one that started as a false claim in this project ("all
+  #: fifteen Mars Atichari rows disagree"); the correct figure is 20 of 21, and
+  #: the single disagreement is the boundary day itself.
+  independent_measurements_agree: true
+  #: The astronomy series still emits crossings for Mars and Venus, because the
+  #: crossing is a fact about the sky and removing it would lose a measurement.
+  #: What changed is the GRADE each record carries. A level with zero degrees of
+  #: freedom cannot support certainty B, so Mars's and Venus's crossings are C --
+  #: the grade the project reserves for depending on an undocumented source rule
+  #: -- while Mercury's stay B. The `single_point_fit` flag travels with them.
+  series_certainty: {Mercury: B, Mars: C, Venus: C}
   #: The tolerance each planet NEEDS is part of the finding, not a knob. Mercury
   #: misses the 1.0-day scoring by 6e-5 deg/day, i.e. by 1.8 days -- so an
   #: earlier sweep at +/-1.0 d was correct to report "5/6" and wrong to conclude
