@@ -501,7 +501,21 @@ open_questions:
                                         # See rulership.sector_mapping_reopened.
                                         # Not blocking now: no instrument in
                                         # this config maps to any of the seven.
-  - label_scheme_signoff                # still blocks writing any verdict rule
+  # label_scheme_signoff was CLOSED 14-Sep-2026 and REMOVED FROM THIS LIST. It
+  # is kept as a comment rather than deleted, because it gated the verdict layer
+  # for six batches and a reader meeting a "why is there no verdict here"
+  # question in an old record needs to find out what it was.
+  #
+  # CLOSED BY, verbatim: "Verdict text ported verbatim or absent." That is the
+  # most conservative scheme available and it chose itself: a verdict is either
+  # the source's own words or it is null. Nothing infers Bullish or Bearish from
+  # a rulership, there is no `derived` verdict anywhere in the layer, and
+  # `confidence` is `untested` on every row -- no code path can raise it. See
+  # verdict_coverage.status and build/STEP4_DECISIONS.md section 12.13.
+  #
+  #   - label_scheme_signoff   # CLOSED 14-Sep-2026: verdict text is
+  #                            # verbatim-or-absent; no derived verdict exists
+  #                            # and confidence is untested everywhere.
 
 # ------------------------------------------------------------- vedha geometry
 # Recorded, NOT used. The class that selects the branch is now available for
@@ -1947,7 +1961,78 @@ rulership:
 # layer needs labels.claim_tag / confidence sign-off first
 # (open_questions.label_scheme_signoff).
 verdict_coverage:
-  status: axes_canonical_rules_pending_signoff
+  status: verdict_layer_built_and_running
+  status_history: >
+    Was `axes_canonical_rules_pending_signoff` until 14-Sep-2026. The gate was
+    open_questions.label_scheme_signoff, closed by "verdict text ported verbatim
+    or absent" -- the most conservative scheme available. The axes block below
+    was written BEFORE any rule read it, deliberately, so the layer was built
+    against the right shape rather than retrofitted; that is why it still reads
+    as a decision rather than a description.
+  emitted_since: 2026-09-14
+  emitted_by: finastro/verdicts.py
+  emitted_figures_2027:
+    total_rows: 4813
+    carrying_a_verdict: 1720
+    null_verdict: 3093
+    by_tier: {source_backed: 885, cross_market_localized: 648, venue_shifted: 210, book_derived: 47, no_rule: 3023}
+    confidence: "untested on every row, no exceptions"
+    null_verdict_breaks_down_into:
+      usdinr_no_defensible_rulership: 1940
+      condition_only_no_inference_printed: 1153
+    localized_split: >
+      cross_market_localized 648 (SPX and NDX: an Indian-equities claim applied
+      to a different market) against venue_shifted 210 (GC, SI, CL: the same
+      instrument on a different venue's civil day). They were one value,
+      `localized`, until 14-Sep-2026.
+
+  # ============================================ unported configuration sections
+  # RECORDED 14-Sep-2026, found by asking why SUGAR emitted zero rows.
+  #
+  # THE COMMODITY CONFIGURATION SECTIONS ARE NOT CATALOGUE B AND WERE NEVER
+  # PORTED. They are `<section id="...">` blocks with `<h2>` headings, while
+  # catalogue B is `<h3 class="section">` -- 141 of those. So the rule layer's
+  # "141/141 sections" is TRUE OF CATALOGUE B and says nothing about these.
+  #
+  # This is bigger than sugar. The counts, from the document:
+  #   silver-bullish  pp.149-161  20 named groups
+  #   silver-bearish  pp.162-167  10 named groups
+  #   sugar-bullish   pp.168-173   7 named groups
+  #   sugar-bearish   pp.174-175   2 named groups
+  #   gold-bullish    pp.136-144  groups carried as <h3> headings, not config-titles
+  #   gold-bearish    pp.145-148  as above
+  #
+  # CONSEQUENCE, stated rather than left to be noticed: GC, SI, MCXGOLD,
+  # MCXSILVER and SUGAR are all listed under tier_1 with a named evidence block
+  # -- 17 rule groups for gold, 29 for silver, 9 for sugar -- and the verdict
+  # layer reaches them only through catalogue-B rules whose bodies happen to
+  # resolve to gold or silver. SUGAR reaches nothing at all, because no
+  # catalogue-B rule conditions on it and its own nine groups are these blocks.
+  #
+  # Not ported, and not approximated. What porting needs is a reader for the
+  # `<section>` shape and a mapping from each group's condition to machinery the
+  # rule layer already has (many conditions are panchang or vedh families that
+  # already exist). That is a batch of its own, not a patch to the verdict layer,
+  # and inventing verdicts to fill the gap is what the label-scheme ruling
+  # forbids.
+  unported_configuration_sections:
+    status: unported_known_gap
+    shape: '<section id="..."> with <h2>, outside the <h3 class="section"> catalogue'
+    blocks:
+      silver-bullish: {pages: "pp.149-161", named_groups: 20}
+      silver-bearish: {pages: "pp.162-167", named_groups: 10}
+      sugar-bullish:  {pages: "pp.168-173", named_groups: 7}
+      sugar-bearish:  {pages: "pp.174-175", named_groups: 2}
+      gold-bullish:   {pages: "pp.136-144", named_groups: "carried as <h3> headings"}
+      gold-bearish:   {pages: "pp.145-148", named_groups: "carried as <h3> headings"}
+    affected_instruments: [GC, SI, MCXGOLD, MCXSILVER, SUGAR]
+    sugar_specifically: >
+      Emits ZERO rows. Diagnosed rather than assumed: SUGAR IS in the venue map
+      (physical_IN -> mumbai) and IS in tier_1.instruments, so neither a
+      venue-resolution failure nor the body-scoping fix explains it. What
+      explains it is that its nine named rule groups are these blocks. Its rows
+      are absent for a BUILD reason, not a coverage decision.
+    same_shape_as: [family_key_is_read_two_ways, blank_reference_view_for_a_slow_body, null_key_added_to_every_record]
 
   # ======================================================================= axes
   # CANONICAL 13-Sep-2026. The coverage model has TWO fields, not one. They are
@@ -2061,10 +2146,33 @@ verdict_coverage:
       - {evidence_source: source,          construction: null,    tier: null,
          note: "condition-only section; the source prints no verdict"}
       - {evidence_source: source,          construction: printed, localized: false, tier: source_backed}
-      - {evidence_source: source,          construction: printed, localized: true,  tier: localized}
+      # `localized` WAS ONE BOOLEAN AND IS NOW TWO SITUATIONS. 14-Sep-2026.
+      # Folding them into one value put two different facts under one word:
+      #
+      #   cross_market   a rule the source authored for INDIAN equities, applied
+      #                  to a DIFFERENT market -- SPX, NDX. The claim is carried
+      #                  across a market boundary, which is a real extension.
+      #                  Flag: source_authored_for_indian_equities.
+      #   venue_shifted  the SAME instrument, the same rule text, the same sky,
+      #                  differing only in which venue's midnight bounds the
+      #                  civil day -- GC and SI against MCXGOLD and MCXSILVER.
+      #                  Nothing is extended; only the day is localised.
+      #                  Flag: authored_ist_evaluated_venue_day.
+      #
+      # Both answer yes to `axes.localized`'s question ("evaluated on a civil day
+      # other than its authored one?"); the split says WHICH, so a reader never
+      # has to guess whether the instrument moved or the clock did.
+      - {evidence_source: source,          construction: printed, localized: cross_market,  tier: cross_market_localized}
+      - {evidence_source: source,          construction: printed, localized: venue_shifted, tier: venue_shifted}
       - {evidence_source: source,          construction: derived, tier: source_backed}
       - {evidence_source: book,            construction: derived, tier: book_derived}
       - {evidence_source: source_and_book, construction: derived, tier: book_derived}
+    localized_values: [cross_market, venue_shifted]
+    localized_note: >
+      The values `localized` may take. `false` means the rule is evaluated on the
+      civil day it was authored against, which is every instrument except the
+      five in civil_day_by_venue.changed_by_this_decision and the two SPX/NDX
+      rows.
     unmapped_is_an_error: >
       A pair with no rule above is a build error, not a default. In particular
       (book, printed) has no row: the book prints no dated verdict for any
@@ -2082,7 +2190,7 @@ verdict_coverage:
     evidence_source_values: [source, book, source_and_book, none]
     construction_values: [printed, derived, null]
     tier_field: tier                 # DERIVED from the pair; still emitted
-    tier_values: [source_backed, localized, book_derived, no_rule]
+    tier_values: [source_backed, cross_market_localized, venue_shifted, book_derived, no_rule]
     tier_is_derived: true
     tier_must_agree_with_axes: >
       The emitted tier must equal tier_derivation applied to the emitted pair.
@@ -2119,7 +2227,28 @@ verdict_coverage:
       claim_tag: Classical           # as printed by the source; per-rule tag may
                                      # be narrowed at rule-writing time
       flags_added: []
-      instruments: [MCXGOLD, GC, MCXSILVER, SI, SUGAR, NIFTY, BANKNIFTY]
+      instruments: [MCXGOLD, MCXSILVER, NIFTY, BANKNIFTY, SUGAR]
+      # GC AND SI MOVED OUT OF THIS LIST 14-Sep-2026, and the note is the reason.
+      # They were listed here because their rule text is source-backed, which is
+      # true. But `axes.localized` asks a different question -- whether the rule
+      # is evaluated on a civil day other than the authored one -- and
+      # civil_day_by_venue.changed_by_this_decision names GC and SI as exactly
+      # two of the instruments whose day boundary MOVED. So they emit
+      # `venue_shifted` now, while MCXGOLD and MCXSILVER -- the same metal, the
+      # same rule, the same sky, a different venue's midnight -- emit
+      # `source_backed`. The asymmetry is the civil-day decision showing through,
+      # and tier_derivation.authority says the pair wins where a name disagrees.
+      #
+      # SUGAR STAYS LISTED AND EMITS NOTHING. Its nine named rule groups are
+      # Chapter-2 `<section>` blocks (pp.168-175), not catalogue-B sections, so
+      # no rule was ever registered for them and there is nothing for the
+      # verdict layer to attach to. Recorded in
+      # verdict_coverage.unported_configuration_sections below rather than
+      # removed from this list, because the instrument IS tier 1 and the
+      # absence is a build gap, not a coverage decision.
+      instruments_note: >-
+        GC and SI are absent by the 14-Sep-2026 localized split; SUGAR is present
+        and empty by the configuration-section gap.
       evidence:
         gold: >
           "Gold -- Bullish Configuration" pp.136-144 and "Gold -- Bearish
@@ -2946,6 +3075,24 @@ source_probability:
   # THE EXACT COUNTS THE HARNESS ASSERTS. A field this sparse will otherwise
   # drift invisibly: if a later change populates 400 rows or zero, that must fail
   # loudly rather than pass quietly.
+  #
+  # RECORDED 14-Sep-2026: THIS PROJECTION IS STALE and the actual figures are
+  # recorded beside it rather than replacing it, so the size of the miss stays
+  # visible. The projection was made before the rule layer was complete and was
+  # never a constraint -- nothing filters, weights or aggregates on the label.
+  projection_status: stale_superseded_by_actual_figures
+  actual_figures_2026:
+    rule_layer_rules_carrying_a_label: 14
+    carried_families_that_attached: 11
+    rule_layer_firings_behind_them: 501
+    verdict_rows_carrying_a_label: 344
+    disputed_rows: 46
+    miss: >
+      The projection below says "about 11 rule-layer firings". The build has 14
+      rules from 11 families, 501 raw firings, and 344 verdict rows carrying a
+      label -- roughly an order of magnitude more. The projection counted
+      label-bearing FAMILIES where the build counts rows, and the families attach
+      to more rules than it assumed.
   projected_population:
     basis: "build/astronomy_2027.json, 1569 records, 01-Dec-2026 -> 01-Feb-2028 IST"
     astronomy_records_total: 15
@@ -3022,6 +3169,36 @@ source_probability:
         family (Mercury Venus Alone in Any Sign p.16), which is exactly why that
         family is disputed. The firing count of 11 was computed per family and is
         unaffected.
+
+    # FOUND 14-Sep-2026, by the verdict layer failing to attach the label.
+    - id: family_key_is_read_two_ways
+      claimed: "the rule layer attaches source_probability by matching `family` against the emitted rule_family"
+      attributed_to: this_project_verdict_layer_first_implementation
+      status: corrected
+      found_by: >
+        Comparing the attached count against this block's own declared list of
+        eleven carried families. A check phrased as "did anything attach" PASSED
+        on the broken version -- five families attached and the result looked
+        sparse rather than wrong.
+      corrected_to: >
+        `family` is READ TWO WAYS and both readings are live. For the aspect and
+        visibility families it is the emitted rule_family
+        ("aspect/conjunction Sun-Mercury", "visibility/combust"). For five others
+        it is the SOURCE SECTION AS PRINTED, page marker and all -- "Mercury
+        Venus Alone in Any Sign p.16", "Mars Ahead of Jupiter in Same Sign p.69",
+        "Venus Jupiter in the Same Sign p.67". Matching only the first silently
+        dropped 5 of the 11 families: b016, b078, b086 and the Rahu-Mars family
+        attached to nothing, and the emitted label set was plausible-looking and
+        wrong.
+      same_shape_as: >
+        blank reference views for a slow body (a body matching no record renders
+        as a quiet year) and the null-key regression (a new field added to all
+        4163 pre-existing records). All three are a wrong answer that renders as
+        a plausible empty one, and none of them raises an error.
+      fix: >
+        Match either the emitted rule_family OR the section title with its page
+        marker stripped. After the fix 11 of 11 families attach, 14 rules carry a
+        label, and 344 verdict rows are annotated.
 
   # ------------------------------------------------------------- asserted by
   asserted_by:

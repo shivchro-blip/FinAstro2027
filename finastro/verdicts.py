@@ -144,13 +144,30 @@ GENERAL_MARKET_INSTRUMENTS = ("NIFTY", "BANKNIFTY", "SPX", "NDX")
 
 #: The flag each instrument carries when the rule was authored against one civil
 #: day and is evaluated against another. Config gives two, about two different
-#: mismatches, and says both may appear together.
+#: mismatches, and they are now the two VALUES of `localized` rather than one
+#: boolean plus a flag.
+#:
+#:   cross_market   the claim crosses a MARKET boundary -- an Indian-equities
+#:                  rule applied to a US index. SPX, NDX.
+#:   venue_shifted  the same instrument, same rule, same sky; only the venue's
+#:                  midnight moved. GC, SI, CL.
 AUTHORSHIP_FLAGS = {
     "GC": "authored_ist_evaluated_venue_day",
     "SI": "authored_ist_evaluated_venue_day",
     "CL": "authored_ist_evaluated_venue_day",
     "SPX": "source_authored_for_indian_equities",
     "NDX": "source_authored_for_indian_equities",
+}
+
+#: Which `localized` value each authored-elsewhere instrument carries. Two
+#: situations, two values, one tier name each -- so a reader never sees the word
+#: `localized` and has to guess whether the instrument or the clock moved.
+LOCALIZED_KIND = {
+    "SPX": "cross_market",
+    "NDX": "cross_market",
+    "GC": "venue_shifted",
+    "SI": "venue_shifted",
+    "CL": "venue_shifted",
 }
 
 #: ONE CONFLICT IN THE CONFIG, resolved the way config says to resolve it.
@@ -368,10 +385,12 @@ def verdict_for(rule, instrument: str, loc: str, path: str | None = None):
     construction = "printed" if rule.verdict_text else None
     evidence = "source" if rule.verdict_text else "none"
     # `localized` is an EVALUATION property, not a third axis:
-    # verdict_coverage.axes.localized.is_an_axis is False. It is true when the
-    # rule was authored against one civil day and this row is being evaluated on
-    # another, which is what separates tier_1 from tier_2.
-    localized = instrument in AUTHORSHIP_FLAGS
+    # verdict_coverage.axes.localized.is_an_axis is False. It is no longer a
+    # boolean but one of two situations, because folding them together put two
+    # different facts under one word: a claim crossing a MARKET boundary
+    # (cross_market) and the same instrument on a different venue's civil day
+    # (venue_shifted).
+    localized = LOCALIZED_KIND.get(instrument, False)
     tier = tier_for(evidence, construction, localized)
     return (evidence, construction, tier, rule.claim_tag, rule.verdict_text)
 
@@ -416,7 +435,7 @@ def build_verdicts(sky: Sky | None = None) -> list[Verdict]:
             if path is not None:
                 ev = CRUDE_PATHS[path]["axes"]["evidence_source"]
                 co = CRUDE_PATHS[path]["axes"]["construction"]
-                tier = tier_for(ev, co, True)
+                tier = tier_for(ev, co, LOCALIZED_KIND.get("CL", False))
                 tag = CRUDE_PATHS[path]["claim_tag"]
             flags = list(rule.flags) + list(f.flags)
             if path is not None:
