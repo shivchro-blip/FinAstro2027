@@ -2535,3 +2535,97 @@ is generated from the live registry, so it cannot drift from what the layer does
 makes them mechanical: the **verdict layer** applies `evidence_source` ×
 `construction` per instrument on a venue's civil day, and then the render. Nothing
 in the condition layer is a forecast or investment advice.
+
+### 12.13 The verdict layer · recorded 14-Sep-2026
+
+The condition layer emits ~3,500 dated rows saying WHEN a rule's condition holds,
+per location. The verdict layer turns each into a row per INSTRUMENT on that
+instrument's venue civil day, carrying the two canonical axes, the derived tier,
+a claim tag and a confidence. `finastro/verdicts.py`.
+
+#### It authors no verdict
+
+The rule package's own docstring says a verdict record is blocked on
+`open_questions.label_scheme_signoff`, and that entry is **still open** in config.
+The instruction this layer was built against resolves that question for this layer
+alone, and in the most conservative direction available: **verdict text is ported
+verbatim from the source or absent.** Nothing here infers Bullish or Bearish from
+a rulership.
+
+So `construction` is `printed` for the rules that print a verdict and `None` for
+those that do not, and **there is no `derived` verdict anywhere** — the only
+`derived` rows are Crude's two configured paths. A rule that states a condition
+and no inference carries `verdict_text = None`, which per
+`axes.construction.null_is_a_value` is a real member of the value set.
+
+**Confidence is `untested` on all 4,813 rows.** It is not derived from claim tag,
+tier, source_probability or anything else, and no code path can raise it.
+
+#### Scoping is the part that had to be got right
+
+The first run emitted **17,880 `no_rule` rows** because it applied every rule to
+every instrument. A verdict row says "this condition is addressed to this
+instrument"; a rule conditioning on Saturn has nothing to say about Nasdaq, and a
+null row for it is true of nothing. Three rules now decide the addressable set:
+
+* a rule naming **bodies** reaches the instruments the reconciled rulership
+  resolves those bodies to, with Crude's contested paths handled by their own
+  entries;
+* a rule naming **no body** is a panchang or calendar rule, and reaches
+  `NIFTY`, `BANKNIFTY` (tier 1) and `SPX`, `NDX` (tier 2), whose config
+  definition is "the SAME rule families as Indian equities, evaluated on the New
+  York civil day — no additions, no substitutions". It is **not** extended to
+  COMEX gold, sugar or FX: those carry their own configuration sections, and a
+  general market verdict applied to a specific contract would be our inference;
+* a body whose rulership resolves to no instrument we carry (Mercury → IT and
+  telecom, Mars → base metals) leaves the set empty, and **empty is not
+  market-wide**. Emitting nothing is the correct outcome.
+
+`USDINR` is added to every rule whose venue day it shares, because tier_4 says
+its rows are emitted anyway "so the absence is VISIBLE in the output rather than
+looking like a gap in the build". Its 1,940 rows are all verdict-null.
+
+#### One conflict in the config, resolved the way config says to resolve it
+
+`tiers.tier_1.instruments` lists `MCXGOLD, GC, MCXSILVER, SI` together as
+source_backed. But `axes.localized` defines the property as "is the rule
+evaluated on a civil day other than its authored one?", and
+`civil_day_by_venue.changed_by_this_decision` names **GC, SI and CL** as exactly
+the instruments whose day boundary moved. So **GC and SI emit tier `localized`
+while MCXGOLD and MCXSILVER emit `source_backed`, for the same rule text on the
+same sky.** The tier list predates the civil-day decision; `axes.localized.set_by`
+points at it, and `tier_derivation.authority` says the pair wins where the name
+disagrees. The asymmetry is the decision showing through, and it is reported
+rather than smoothed.
+
+#### The divergence check passes
+
+The config measured 42.0% (gold) and 41.9% (silver) of in-scope events falling on
+a different calendar date at the two venues. Recomputed from the layer:
+
+| Family | In scope | Different date | Measured | Config |
+| --- | --- | --- | --- | --- |
+| gold | 1489 | 631 | **42.4%** | 42.0% |
+| silver | 1496 | 633 | **42.3%** | 41.9% |
+
+That number is the one thing that catches a verdict layer evaluating on the wrong
+civil day, which is why it is recomputed rather than quoted.
+
+#### source_probability, and a projection the build outgrew
+
+`source_probability` attaches through the eleven `carried_families`, and getting
+it to attach at all required handling the fact that **`family` is read two ways in
+the config and both are live**: for the aspect and visibility families it is the
+emitted `rule_family`, and for five others it is the SOURCE SECTION as printed
+("Mercury Venus Alone in Any Sign p.16"). Matching only the first silently
+dropped 5 of the 11 families.
+
+`config.source_probability.projected_population` says the label reaches "15
+astronomy records and about 11 rule-layer firings". The layer has **14 rules
+carrying labels, from 11 families, over 344 verdict rows**, and the raw rule
+firings behind them are **501**. So the projection under-counts by roughly an
+order of magnitude. Recorded rather than reconciled: the projection was made
+before the rule layer was complete, it was never a constraint (nothing filters,
+weights or aggregates on the label), and the disputed families do emit the SET —
+`b016`, `b017` and `b078`'s peers carry two values each, flagged
+`source_probability_disputed`.
