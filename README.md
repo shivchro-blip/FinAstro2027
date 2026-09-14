@@ -42,13 +42,18 @@ $ python3 tests/test_node_anchor_unit.py
 12/12 checks passed
 
 $ python3 tests/test_rule_layer.py
-131/131 checks passed
+133/133 checks passed
 ```
 
-The rule layer now carries **122 rules over 92 of the 141 catalogue-B sections**:
-103 executable, 5 resolved on a supplied reading, 13 blocked with the missing
-input named, and 1 ambiguous. 3,280 dated rows in the generated year. See
-`build/STEP4_DECISIONS.md` §12 for the batch-by-batch record.
+The rule layer now carries **171 rules over all 141 catalogue-B sections** — full
+coverage: 132 executable, 5 resolved on a supplied reading, 33 blocked with the
+missing input named, and 1 ambiguous. 3,557 dated rows in the generated year.
+
+**`build/RULE_LAYER_STATUS.md` is the one-page answer to "what does this calendar
+actually cover"** — every section with its status, rule count, 2027 row count, and
+for each blocked section the input it is waiting for. It is generated from the
+live registry, not written by hand. `build/STEP4_DECISIONS.md` §12 is the
+batch-by-batch record of the arguments behind it.
 
 The build is deterministic: regenerating the year produces a byte-identical
 file, so a real change shows up as a diff and nothing else does. Confirmed by

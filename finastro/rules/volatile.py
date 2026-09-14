@@ -37,6 +37,7 @@ from __future__ import annotations
 
 from .base import blocked
 from .catalogue import B
+from ..events import GROUND_UNDOCUMENTED
 
 #: The section's own statement of method, verbatim. This string is what makes
 #: the rule unrecoverable, and it is carried as the condition because it is the
@@ -63,6 +64,7 @@ blocked(
         "our fit rather than the source's rule",
     ),
     flags=("recorded_absence_not_reconstructed",),
+    certainty_ground=GROUND_UNDOCUMENTED,
     notes="Ported as a recorded absence with the section's existing certainty C, "
           "deliberately not reconstructed. The table's date cells hold 51 dates. "
           "The section's method remark is carried verbatim as the condition, and "

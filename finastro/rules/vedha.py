@@ -55,6 +55,7 @@ from __future__ import annotations
 import datetime as dt
 
 from ..config import CONF
+from ..events import GROUND_UNDOCUMENTED, GROUND_UNEVIDENCED
 from ..sky import Span, parse
 from .base import blocked, rule
 from .catalogue import B
@@ -431,6 +432,8 @@ for _body, _sb in (("Mars", 120), ("Venus", 123)):
         condition_text=B(_sb).title,
         condition_from="title",
         inputs=("source_selection_rule",),
+        data_certainty="C",
+        certainty_ground=GROUND_UNEVIDENCED,
         missing_inputs=(
             f"a threshold constrained by more than one crossing. {_body}'s "
             f"speed crosses {_level} exactly ONCE in the whole of 2026, so the "
@@ -444,6 +447,7 @@ for _body, _sb in (("Mars", 120), ("Venus", 123)):
             f"{_body} would make this testable rather than re-derivable",
         ),
         flags=("withdrawn_single_point_fit_zero_degrees_of_freedom",
+               "parameter_not_constrained_by_evidence_not_an_undocumented_rule",
                "port_withdrawn_2026_09_14_not_a_tolerance_question"),
         notes=f"WITHDRAWN. {_body}'s threshold is recorded as a SINGLE-POINT FIT "
               "rather than as a calibration. It is not wrong -- it does "
@@ -460,6 +464,8 @@ for _body, _sb in (("Mars", 120), ("Venus", 123)):
         condition_text=B(NAK_TABLE_FOR[_body]).title,
         condition_from="title",
         inputs=("source_selection_rule",),
+        data_certainty="C",
+        certainty_ground=GROUND_UNEVIDENCED,
         missing_inputs=(
             f"a threshold constrained by more than one crossing. The class this "
             f"table keys on is {_body}'s speed class, and {_body}'s level was "
@@ -469,6 +475,7 @@ for _body, _sb in (("Mars", 120), ("Venus", 123)):
             "rows resolve through the wheels) but the KEY is unearned",
         ),
         flags=("withdrawn_single_point_fit_zero_degrees_of_freedom",
+               "parameter_not_constrained_by_evidence_not_an_undocumented_rule",
                "port_withdrawn_2026_09_14_not_a_tolerance_question"),
         notes="The transcription itself is sound -- all 30 of Venus's and all 21 "
               "of Mars's printed rows resolve to their own target through the "
@@ -486,6 +493,8 @@ for _body, (_sb, _nb) in SLOW_BODIES.items():
         condition_text=B(_sb).title,
         condition_from="title",
         inputs=("source_selection_rule",),
+        data_certainty="C",
+        certainty_ground=GROUND_UNDOCUMENTED,
         missing_inputs=(
             f"a slow-planet speed doctrine. {_body}'s Fast and Normal "
             "boundaries have no common speed level -- the two printed "
@@ -511,6 +520,8 @@ for _body, (_sb, _nb) in SLOW_BODIES.items():
         condition_text=B(_nb).title,
         condition_from="title",
         inputs=("source_selection_rule",),
+        data_certainty="C",
+        certainty_ground=GROUND_UNDOCUMENTED,
         missing_inputs=(
             f"a slow-planet speed doctrine. This table keys its target on "
             f"{_body}'s speed class, and {_body} has no speed level at all -- "

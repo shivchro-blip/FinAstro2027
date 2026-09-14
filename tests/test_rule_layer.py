@@ -143,6 +143,26 @@ EXPECTED_ZERO_FIRING = {
         "handling), so the zero here is a fact about the year and not a "
         "blocked input",
 
+    # ---- batch 6, the reference views. Four sections whose body moves too
+    # slowly to cross the frame inside the span: each has exactly ONE crossing,
+    # in DECEMBER 2026, so their 2027 tables carry no crossing rows at all. An
+    # orbital-period zero, the b041/b083 shape -- and what separates it from a
+    # porting error is that each still emits its carried-in row, so the zeros
+    # are on CROSSINGS and the sections are not silent.
+    "b031_reference_view_rahu":
+        "Rahu's only sign ingress in the span is 05-Dec-2026 (into Capricorn), "
+        "before calendar 2027. The section's 2027 content is the carried-in "
+        "state alone",
+    "b034_reference_view_ketu":
+        "Ketu moves with Rahu; its only sign ingress in the span is also "
+        "05-Dec-2026. The same orbital-period zero as B031",
+    "b051_reference_view_pluto":
+        "Pluto's only nakshatra ingress in the span is 28-Dec-2026 -- four "
+        "records in the whole span, one crossing, none in 2027",
+    "b052_reference_view_pluto":
+        "Pluto's only navamsa ingress in the span is also 28-Dec-2026. The same "
+        "orbital-period zero as B051",
+
     # ---- batch 4b, the apsides. One zero, and it is a fact about the SKY that
     # no reading of the section can get round: Kaal Sarp Yog needs every body
     # between Rahu and Ketu, and Saturn holds Pisces, outside Rahu's six-sign
@@ -380,6 +400,46 @@ EXPECTED_FIRINGS_MUMBAI = {
     # convention everywhere and not a double count.
     "b122_mercury_speed_and_vedh": 4,
     "b133_mercury_nakshatra_vedh": 34,
+
+    # ------------------------------------------------------------- batch 6
+    # The 32 reference tables, each a view of an ingress series the astronomy
+    # layer already emits. Counts are ROWS EMITTED, and the leading 1 everywhere
+    # is the carried-in row the source's own tables open with ("Start of the
+    # year"); a body that never crosses the frame inside the span would
+    # otherwise render blank. The four at zero are pinned below.
+    "b001_reference_view_sun": 12,
+    "b003_reference_view_mars": 7,
+    "b007_reference_view_mercury": 16,
+    "b008_reference_view_mercury": 1,
+    "b013_reference_view_venus": 15,
+    "b014_reference_view_venus": 1,
+    "b020_reference_view_jupiter": 3,
+    "b021_reference_view_jupiter": 1,
+    "b023_reference_view_jupiter": 4,
+    "b024_reference_view_jupiter": 15,
+    "b025_reference_view_saturn": 2,
+    "b026_reference_view_saturn": 1,
+    "b028_reference_view_saturn": 3,
+    "b029_reference_view_saturn": 8,
+    "b032_reference_view_rahu": 2,
+    "b033_reference_view_rahu": 6,
+    "b035_reference_view_ketu": 1,
+    "b036_reference_view_ketu": 6,
+    "b037_reference_view_herschel": 1,
+    "b038_reference_view_herschel": 1,
+    "b039_reference_view_herschel": 1,
+    "b040_reference_view_herschel": 3,
+    "b043_reference_view_neptune": 1,
+    "b044_reference_view_neptune": 1,
+    "b045_reference_view_neptune": 1,
+    "b046_reference_view_neptune": 2,
+    "b049_reference_view_pluto": 1,
+    "b050_reference_view_pluto": 1,
+
+    # B2: the Sun's nakshatra residencies, one row each, with the lord sliced
+    # from this section's own table. 27 in Mumbai -- the Sun visits every
+    # nakshatra once a year, so the count equals the 27-nakshatra scheme.
+    "b002_sun_nakshatra_journey": 27,
 }
 
 
@@ -444,6 +504,21 @@ def test_every_rule_is_traceable() -> None:
     bad = [r.id for r in reg if r.condition_proviso and not r.verdict_text]
     record("A proviso exists only where there is a verdict for it to restrict",
            not bad, str(bad))
+
+    # C has two grounds with different remedies -- a missing rule and an
+    # unevidenced parameter -- so a bare C would hide which applies. An
+    # undocumented rule sends a reader to the page; an unevidenced parameter
+    # sends them to another year, and there is nothing on the page to find.
+    grounds = tuple(CONF["labels"]["data_certainty_grounds"])
+    bare = [r.id for r in reg
+            if r.data_certainty == "C" and r.certainty_ground not in grounds]
+    record("Every C rule names which ground it sits on", not bare,
+           str(bare) or f"{sum(1 for r in reg if r.data_certainty == 'C')} "
+           f"C rules, grounds {list(grounds)}")
+    stray = [r.id for r in reg
+             if r.data_certainty != "C" and r.certainty_ground is not None]
+    record("Only a C rule carries a ground", not stray,
+           str(stray) or "A and B have nothing missing to name")
 
 
 # ------------------------------------------------------------ 3. the axes

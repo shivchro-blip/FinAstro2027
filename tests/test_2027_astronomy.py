@@ -174,6 +174,22 @@ def test_speed_class_crossings(doc: dict) -> None:
     record("A single-point fit says so on its own record",
            not no_flag, str(no_flag) or
            "the reason travels with the datum rather than living in config")
+
+    # C has TWO grounds with different remedies -- a missing rule and an
+    # unevidenced parameter -- so a bare C would hide which applies. Checked
+    # across EVERY record, not just this series, because the invariant is
+    # strongest where it is least expected.
+    grounds = tuple(CONF["labels"]["data_certainty_grounds"])
+    bare = [r["id"] for r in doc["records"]
+            if r["qa"]["data_certainty"] == "C"
+            and r["qa"].get("certainty_ground") not in grounds]
+    record("Every C record names which ground it sits on", not bare,
+           str(bare) or f"the two grounds are {list(grounds)}")
+    stray = [r["id"] for r in doc["records"]
+             if r["qa"]["data_certainty"] != "C"
+             and r["qa"].get("certainty_ground") is not None]
+    record("Only a C record carries a ground", not stray,
+           str(stray) or "A and B have nothing missing to name")
     # THE STRUCTURAL CHECK. A threshold record's speed must be above the dead
     # band, which is what stops a retrograde-loop arc being emitted as a Fast
     # boundary. And no station record may be a threshold record.

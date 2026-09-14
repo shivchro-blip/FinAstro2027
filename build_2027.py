@@ -600,7 +600,15 @@ def speed_class_crossings():
         # the sky -- but graded C, with the reason on the record.
         certainty = CONF["speed_classes"].get("series_certainty", {}).get(
             body, "B")
+        # Which GROUND a C sits on. Mars's and Venus's levels are not an
+        # undocumented source rule -- the rule is documented and the method is
+        # sound. The defect is that the PARAMETER was fitted to one crossing, so
+        # it has fewer constraints than free parameters. Naming the right ground
+        # matters: "undocumented" sends a reader hunting for a page that does
+        # not exist.
+        ground = (ev.GROUND_UNEVIDENCED if certainty == "C" else None)
         fit_flags = [] if certainty == "B" else [
+            f"certainty_ground={ev.GROUND_UNEVIDENCED}",
             "single_point_fit_zero_degrees_of_freedom",
             f"level {level} was fitted to one crossing; "
             "confidence_in_the_level_is_unestablished",
@@ -621,6 +629,7 @@ def speed_class_crossings():
                 "speed_crossing", family, [body], "instant", inst, astro,
                 ev.qa_for(inst, certainty, precision_days=pdays,
                           source_2026_equivalent=title,
+                          certainty_ground=ground,
                           flags=pflags + [
                               SPEED_CLASS_SERIES_FLAG,
                               f"threshold={level}",

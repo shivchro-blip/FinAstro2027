@@ -176,6 +176,12 @@ class Rule:
     construction: str | None = None     #: set below, from the verdict
     claim_tag: str | None = None
     data_certainty: str | None = None
+    #: Which ground a C rule rests on -- the rule layer's half of the same
+    #: invariant `events.QA` enforces on the astronomy records. Required when
+    #: the grade is C and forbidden otherwise. "undocumented source rule" and
+    #: "parameter not constrained by evidence" have different remedies, and a
+    #: bare C would hide which one applies.
+    certainty_ground: str | None = None
     status: str = STATUS_EXECUTABLE
     missing_inputs: tuple[str, ...] = ()
     ambiguity: str = ""                 #: the competing readings, both stated
@@ -246,6 +252,17 @@ class Rule:
                                certainty_of(self.inputs))
         if self.status not in STATUSES:
             raise ValueError(f"{self.id}: bad status {self.status!r}")
+        if self.data_certainty == "C" and not self.certainty_ground:
+            raise ValueError(
+                f"{self.id}: carries certainty C without naming its ground. "
+                "The two grounds -- an undocumented source rule and a parameter "
+                "not constrained by evidence -- have different remedies, so a "
+                "bare C is not enough")
+        if self.data_certainty is not None and self.data_certainty != "C" \
+                and self.certainty_ground:
+            raise ValueError(
+                f"{self.id}: certainty {self.data_certainty} carries a ground; "
+                "only C has one")
         if self.status == STATUS_BLOCKED and not self.missing_inputs:
             raise ValueError(f"{self.id}: blocked without a named missing input")
         if self.status == STATUS_AMBIGUOUS and not self.ambiguity:
@@ -340,6 +357,7 @@ class Rule:
             "tier": self.tier,
             "claim_tag": self.claim_tag,
             "data_certainty": self.data_certainty,
+            "certainty_ground": self.certainty_ground,
             "status": self.status,
             "missing_inputs": list(self.missing_inputs),
             "ambiguity": self.ambiguity,

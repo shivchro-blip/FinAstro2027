@@ -2421,3 +2421,117 @@ it counted planets outside the honest domain.
 One overdetermined calibration that survived six independent constraints is worth
 more than three thresholds where two were guaranteed to fit.
 
+
+### 12.11 Two grounds for C · recorded 14-Sep-2026
+
+An earlier change graded Mars's and Venus's crossings **C** on the ground that C
+is "depends on an undocumented source rule". **That was the wrong ground.** The
+rule is documented and the method is sound; what is missing is evidence for a
+*parameter*. Calling a single-point fit "an undocumented source rule" sends a
+reader hunting for a page that does not exist.
+
+So C now has **two independent grounds**, and the invariant is enforced in both
+layers rather than left to convention:
+
+| Ground | What is missing | Remedy |
+| --- | --- | --- |
+| `undocumented_source_rule` | the rule itself — B70's "sorted on multiple parameters", the Paap Kartari valence, Saturn's demotion | recover the rule |
+| `parameter_not_constrained_by_evidence` | the method is sound; a fitted parameter has fewer constraints than free parameters — Mars's and Venus's Fast levels | a year supplying a second crossing |
+
+**`events.QA` refuses a C without a ground, and refuses a ground on anything that
+is not C.** `rules.base.Rule` carries the same pair of checks, so the rule layer
+cannot state a bare C either. Both harnesses assert it across every record and
+every rule. **Twenty-seven rules declare a ground: four on the parameter ground**
+— Mars's and Venus's speed and nakshatra tables, the four withdrawn in §12.10 —
+**and twenty-three on the undocumented one**, which is B70, B63, B111, B116, B30,
+B5, B6, the four slow-planet Vedha tables, and the twelve Vedha sections no
+calibration reaches.
+
+The distinction is the whole point of the example that prompted it: **a station is
+frame-free** — it is where the longitude is stationary, and no parameter stands
+between the sky and the instant — while **a crossing of 0.6583 deg/day is only as
+meaningful as 0.6583 is.** Same Grade letter, different defect, different remedy.
+
+### 12.12 Batch 6: full coverage, and the status page · recorded 14-Sep-2026
+
+The remaining 49 sections, and the one-page summary that answers coverage
+without reading the config.
+
+#### The reference tables: 32 sections, ported as views
+
+"Journey of <planet>" (10), "<planet> Motion" (7), "<planet> Constellation
+(Nakshtra)" (7) and "<planet> in Navmansh (D9)" (8) are **views of series the
+astronomy layer already emits**. Each now fires one row per record of its series,
+with `verdict_text = None`, which is correct for a reference table and not a gap:
+they state where a body was and when it moved, and nothing about the market.
+
+Three things had to be got right and each was found by the port failing:
+
+* **The carried-in row.** Every one of these tables opens with a "Start of the
+  year" row — the state before the first movement. Without it, a body that does
+  not cross the frame inside the span renders as a **blank table**. That is not
+  hypothetical: Uranus, Neptune and Pluto move too slowly, and the nodes barely
+  move. The row is read from the layer (the first crossing's own `_from` field,
+  or the nearest record's position where there is no crossing) and never from the
+  engine.
+* **The layer is right and the source is old about one name.** The document says
+  "Herschel" throughout; the layer emits `Uranus`. A bridge carries the source's
+  spelling, and its absence rendered four Herschel views blank — the same
+  silent-failure shape as a body matching no record.
+* **Four sections are genuinely quiet, not broken.** Rahu, Ketu, and Pluto's
+  nakshatra and navamsa tables each have exactly **one** crossing in the whole
+  span, in **December 2026**, before calendar 2027. Their 2027 content is the
+  carried-in state alone. Pinned by name as orbital-period zeros, and the check
+  that separates that from a porting error is that each still emits its row.
+
+#### B2, and a lord table the document witnesses itself
+
+B2 prints 28 rows — one per sidereal day of the Sun's circuit, closing on Purva
+Shada — each carrying its nakshatra **and that nakshatra's lord**. So the
+document is its own witness for the lord sequence, and the map is **sliced** from
+those rows rather than recalled: nine lords cycling 3,3,3,3,3,3,3,3,3 over the 27
+nakshatras. A recalled Vimshottari sequence would have been an unchecked
+transcription.
+
+The **Relationship** column is not rendered. It states an aspect between the Sun
+and the nakshatra's lord — Conjunction, Sextile, Trine, Semi-Sextile, Opposition,
+Own — and the source never says whether it measures the exact aspect or one under
+an orb. Each row carries `relationship = None` with that reason rather than a
+value computed from an unstated convention.
+
+#### B5, B6 and B30
+
+**B5 and B6 are blocked on the same absence**: the layer emits no Mars D9 ingress
+series because the source prints no Mars D9 table, so a residency over a D9
+position cannot be bounded. B5 was already recorded in config's
+`rule_layer_pending`; both are now registered so the section has a status rather
+than an omission — the more so because B5 and B6 sit between two Navmansh tables
+and look like their neighbours.
+
+**B30 "Demoted and Shadow Speed of Saturn" p.26 is blocked on a rule, not on its
+interval.** Its two printed values are **verified to the arcminute**: the engine
+puts Saturn at 20.508963° of Pisces on 27-Jul-2026 and 20.507990° on 15-Mar-2027,
+both 20°31′ as the table prints, and at 13.694991° on 11-Dec-2026, the Direct
+row's value. What the section never states is **what makes a planet Demoted or
+Shadow**: it names the band and the two dates and no condition. So the interval is
+reproducible for one year and the rule generating it in another cannot be stated.
+
+#### The remaining Vedha sections, and one honest scope gap
+
+B125–B127 and B131–B141 are the vedha tables for bodies with no calibrated level,
+and B128 keys on the Moon. All are registered `blocked` with the input named. One
+of them is a **scope** gap rather than an input gap and says so: **B130's key
+(Mercury's class) is calibrated and overdetermined**, so the section is portable
+in principle and was not ported in this batch. Registered blocked rather than
+omitted, so the gap reads as scope and not as a missing input.
+
+#### Full coverage
+
+**141 of 141 sections now carry a status**: 171 rules, 132 executable, 5 resolved,
+33 blocked, 1 ambiguous, 3,557 dated rows in 2027. `build/RULE_LAYER_STATUS.md`
+is generated from the live registry, so it cannot drift from what the layer does.
+
+**What remains to a calendar is two mechanical steps**, and this batch is what
+makes them mechanical: the **verdict layer** applies `evidence_source` ×
+`construction` per instrument on a venue's civil day, and then the render. Nothing
+in the condition layer is a forecast or investment advice.

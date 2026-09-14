@@ -144912,9 +144912,11 @@
           "threshold_interval=1.223368..1.224595",
           "precision_days=2.0",
           "calibrated_against=B123",
+          "certainty_ground=parameter_not_constrained_by_evidence",
           "single_point_fit_zero_degrees_of_freedom",
           "level 1.223981 was fitted to one crossing; confidence_in_the_level_is_unestablished"
-        ]
+        ],
+        "certainty_ground": "parameter_not_constrained_by_evidence"
       }
     },
     {
@@ -192673,9 +192675,11 @@
           "threshold_interval=0.656927..0.659648",
           "precision_days=2.0",
           "calibrated_against=B120",
+          "certainty_ground=parameter_not_constrained_by_evidence",
           "single_point_fit_zero_degrees_of_freedom",
           "level 0.658287 was fitted to one crossing; confidence_in_the_level_is_unestablished"
-        ]
+        ],
+        "certainty_ground": "parameter_not_constrained_by_evidence"
       }
     },
     {
@@ -274932,9 +274936,11 @@
           "threshold_interval=1.223368..1.224595",
           "precision_days=2.0",
           "calibrated_against=B123",
+          "certainty_ground=parameter_not_constrained_by_evidence",
           "single_point_fit_zero_degrees_of_freedom",
           "level 1.223981 was fitted to one crossing; confidence_in_the_level_is_unestablished"
-        ]
+        ],
+        "certainty_ground": "parameter_not_constrained_by_evidence"
       }
     },
     {

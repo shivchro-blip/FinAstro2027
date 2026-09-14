@@ -79,6 +79,7 @@ investment advice.
 """
 from __future__ import annotations
 
+from ..events import GROUND_UNDOCUMENTED
 from ..sky import (Span, civil_day_span, intersect, parse, where,
                    weekdays_in_span)
 from . import names
@@ -1222,6 +1223,7 @@ blocked(
     verdict_text=_B111_VERDICT,
     verdict_from="title",
     inputs=("eclipse", "source_selection_rule"),
+    certainty_ground=GROUND_UNDOCUMENTED,
     missing_inputs=(
         "the lunar month system. Naming a month Vaishakha, Shravana or Ashwin "
         "requires knowing whether the source counts months amanta or "

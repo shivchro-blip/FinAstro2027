@@ -126,6 +126,7 @@ investment advice.
 from __future__ import annotations
 
 from ..ephem import SIGNS
+from ..events import GROUND_UNDOCUMENTED
 from ..sky import Span, parse
 from .base import blocked, rule
 from .catalogue import B
@@ -417,6 +418,7 @@ blocked(
     verdict_text=_B63_VERDICT,
     verdict_from="note[0], the two lines under the condition",
     inputs=("source_selection_rule",),
+    certainty_ground=GROUND_UNDOCUMENTED,
     missing_inputs=(
         "a tropical solar longitude, or the equinox instant the layer would "
         "have to emit for one to be read. The equinox is a TROPICAL solar "

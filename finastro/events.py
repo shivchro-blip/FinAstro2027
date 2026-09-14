@@ -259,8 +259,18 @@ class PanchangLayer:
 
 ENGINE = "finastro/step3-astronomy"
 
-#: A computed exact, B definition-sensitive, C undocumented source rule.
+#: A computed exact, B definition-sensitive, C depends on something unevidenced.
 CERTAINTIES = tuple(CONF["labels"]["data_certainty"])
+
+#: The two independent grounds a C record can be on. Required on every C record
+#: and forbidden on any other, which is the invariant `QA` enforces: a bare C
+#: would tell a reader that something is wrong without telling them WHICH thing,
+#: and the remedies differ -- an undocumented rule is looked for on the page, an
+#: unevidenced parameter is waited for in another year.
+CERTAINTY_GROUNDS = tuple(CONF["labels"]["data_certainty_grounds"])
+
+GROUND_UNDOCUMENTED = "undocumented_source_rule"
+GROUND_UNEVIDENCED = "parameter_not_constrained_by_evidence"
 
 
 @dataclass(frozen=True)
@@ -273,14 +283,29 @@ class QA:
     precision_days: int | None = None
     source_2026_equivalent: str | None = None
     flags: list[str] = field(default_factory=list)
+    #: Which ground the C grade rests on. None for A and B, where there is no
+    #: ground to name because nothing is missing.
+    certainty_ground: str | None = None
     engine: str = ENGINE
 
     def __post_init__(self) -> None:
         if self.data_certainty not in CERTAINTIES:
             raise ValueError(f"bad certainty {self.data_certainty!r}")
+        if self.data_certainty == "C":
+            if self.certainty_ground not in CERTAINTY_GROUNDS:
+                raise ValueError(
+                    f"a C record must name its ground, one of "
+                    f"{list(CERTAINTY_GROUNDS)}; got "
+                    f"{self.certainty_ground!r}. The two grounds have "
+                    "different remedies and a bare C hides which applies.")
+        elif self.certainty_ground is not None:
+            raise ValueError(
+                f"certainty {self.data_certainty} carries a ground "
+                f"({self.certainty_ground!r}); only C has one, because only C "
+                "has something missing")
 
     def as_dict(self) -> dict:
-        return {
+        out = {
             "engine": self.engine,
             "ephemeris": self.ephemeris,
             "ayanamsha": self.ayanamsha,
@@ -291,11 +316,19 @@ class QA:
             "source_2026_equivalent": self.source_2026_equivalent,
             "flags": list(self.flags),
         }
+        # Dropped when absent, which is the same rule the astronomy layer's own
+        # fields follow: a null key would be a field on every record saying
+        # "this does not apply", and it would also have rewritten all 4163
+        # pre-existing records to add a key none of them can have a value for.
+        if self.certainty_ground is not None:
+            out["certainty_ground"] = self.certainty_ground
+        return out
 
 
 def qa_for(when: dt.datetime, certainty: str, *,
            precision_days: int | None = None,
            source_2026_equivalent: str | None = None,
+           certainty_ground: str | None = None,
            flags: list[str] | None = None) -> QA:
     """QA block with the backend, ayanamsha and node type actually in force.
 
@@ -309,6 +342,7 @@ def qa_for(when: dt.datetime, certainty: str, *,
         ayanamsha_deg=round(ephem.ayanamsha(when), 6),
         node=CONF["node"],
         data_certainty=certainty,
+        certainty_ground=certainty_ground,
         precision_days=precision_days,
         source_2026_equivalent=source_2026_equivalent,
         flags=list(flags or []),

@@ -363,7 +363,32 @@ labels:
   data_certainty:
     A: "computed exact, under 1 minute"
     B: "computed but definition-sensitive (stations, combust/rise, Abhijit boundaries)"
-    C: "depends on an undocumented source rule"
+    C: "depends on something that is not evidenced"
+  #: C has TWO INDEPENDENT GROUNDS, and every C record must say which one it is
+  #: on. They are not the same defect and they do not have the same remedy:
+  #:
+  #:   undocumented_source_rule            the RULE is missing. The source
+  #:       applies a selection we cannot state -- B70's "sorted on multiple
+  #:       parameters", the benefic/malefic valence behind Paap Kartari. Remedy:
+  #:       recover the rule.
+  #:   parameter_not_constrained_by_evidence   the rule is stated and the METHOD
+  #:       is sound, but a NUMBER in it was fitted to fewer constraints than it
+  #:       has free parameters. Mars's and Venus's Fast levels: each crosses
+  #:       exactly once in 2026, so one equation in one unknown. Remedy: a year
+  #:       supplying a second crossing.
+  #:
+  #: The distinction matters because "undocumented" invites the reader to go and
+  #: look for the rule, and in the second case there is nothing to find: the rule
+  #: is documented and the parameter is simply unevidenced. Calling a
+  #: single-point fit "an undocumented source rule" would send a reader hunting
+  #: for a page that does not exist.
+  #:
+  #: A station is frame-free -- it is where the longitude is stationary, and no
+  #: parameter stands between the sky and the instant. A crossing of 0.6583
+  #: deg/day is only as meaningful as 0.6583 is.
+  data_certainty_grounds:
+    undocumented_source_rule: "the rule itself is not recoverable from the source"
+    parameter_not_constrained_by_evidence: "the method is sound; a fitted parameter has fewer constraints than free parameters"
   claim_tag: [Classical, Framework, Observed, Historical, Verify]
   confidence_default: untested
   # The six buckets the source prints. ONLY THREE SURVIVE TRANSFER TO 2027 --
