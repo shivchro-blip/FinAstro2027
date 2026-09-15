@@ -42,8 +42,20 @@ from . import volatile            # noqa: F401  -- registers B70's recorded abse
 from . import vedha               # noqa: F401  -- registers the Vedha family
 from . import ref_tables          # noqa: F401  -- reference views + unreached sections
 
+# The instrument configuration blocks (gold, silver, sugar). Imported so the
+# port is live everywhere the rule layer is, and registered into its OWN
+# registry: these are not catalogue-B sections and `sections_ported()` must
+# not be able to see them.
+from . import config_rules        # noqa: F401  -- registers the 58 config groups
+from .config_rules import CONFIG_REGISTRY   # noqa: F401
+
 BATCHES = ("visibility", "colocation", "panchang_rules", "shar", "apsides",
            "pairs", "volatile", "vedha", "ref_tables")
+
+#: The configuration port, counted and reported separately from BATCHES
+#: throughout. Catalogue B's denominator is 141 sections; this one's is 58
+#: groups, and the two have never been the same number.
+CONFIG_BATCH = "config_rules"
 
 
 def by_status(status: str) -> list[Rule]:

@@ -33,6 +33,7 @@ from finastro.ephem import NAKSHATRAS, SIGNS           # noqa: E402
 from finastro.rules import (catalogue, colocation, names,  # noqa: E402
                             panchang_rules)
 from finastro.rules import base as rules_base  # noqa: E402
+from finastro.rules import config_catalogue, config_rules  # noqa: E402
 from finastro.sky import Sky, civil_day_span, civil_days               # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -1845,6 +1846,127 @@ def test_astronomy_layer_untouched() -> None:
            str(sorted(found)))
 
 
+def test_configuration_coverage_is_stated_and_counted_from_the_document():
+    """The 141/141 claim cannot be published alone again.
+
+    Three things have to hold together, and each has failed at least once:
+
+    * the count of the instrument configuration groups must come from the
+      DOCUMENT, not from our own config -- a count taken from the thing being
+      audited cannot fail, which is how "141 of 141" read as a coverage claim
+      about the source for a day;
+    * the document's count and config's count must agree, because config's
+      read 17 and 29 for gold and silver against the document's 19 and 30 for
+      as long as nobody re-derived them;
+    * neither of those numbers may be reported on the status page or in the
+      apparatus panel without the other, so this checks that both pages state
+      BOTH denominators rather than trusting a hand edit to have kept them.
+
+    A change to the source document that adds or removes a configuration group
+    fails here, which is the point: the number is pinned to the document rather
+    than to a memory of it.
+    """
+    from finastro import cfgsections as CFG
+
+    cfg = CONF["verdict_coverage"]["unported_configuration_sections"]
+    doc_counts = CFG.counts()
+    doc_total = CFG.total()
+
+    # 1. config and the document agree, group for group.
+    mismatches = {b: (doc_counts[b], cfg["blocks"].get(b, {}).get("named_groups"))
+                  for b in doc_counts
+                  if doc_counts[b] != cfg["blocks"].get(b, {}).get("named_groups")}
+    record("Config's configuration-group counts match the document's",
+           not mismatches, str(mismatches))
+    record("Config states the number the document counts, 58",
+           cfg.get("total_named_groups") == doc_total
+           and cfg.get("ported") + cfg.get("blocked") == doc_total,
+           f"config says {cfg.get('total_named_groups')} groups, "
+           f"{cfg.get('ported')} ported + {cfg.get('blocked')} blocked; "
+           f"document says {doc_total}")
+    per_inst = CFG.by_instrument()
+    record("Config's per-instrument split matches the document's",
+           cfg.get("per_instrument") == per_inst,
+           f"config {cfg.get('per_instrument')} vs document {per_inst}")
+
+    # 2. The two catalogues stay apart. This read "nothing is ported" until the
+    #    configuration port landed; what it checks now is the invariant that
+    #    made the port safe -- a configuration group is NOT a catalogue-B
+    #    section, and the count that says "141 of 141" must stay unreachable
+    #    from one.
+    cfg_ids = set(CFG.BLOCKS)
+    named = sorted(r.id for r in R.REGISTRY
+                   if any(b in (r.section_title or "") for b in cfg_ids)
+                   or any(b in str(r.section_title) for b in ("Configuration",)))
+    record("No catalogue-B rule names a configuration section", not named,
+           str(named[:5]))
+    record("The configuration rules are in their own registry, not REGISTRY",
+           not ({id(r) for r in config_rules.CONFIG_REGISTRY}
+                & {id(r) for r in R.REGISTRY}),
+           "a configuration rule reached the catalogue-B registry")
+    record("A configuration group carries no catalogue-B number",
+           all(r.catalogue_b is None for r in config_rules.CONFIG_REGISTRY),
+           "a group was given a `b`, which would inflate sections_ported()")
+    record("Catalogue B's denominator is unchanged by the port",
+           len(R.sections_ported()) == len(catalogue.SECTIONS) == 141,
+           f"{len(R.sections_ported())} of {len(catalogue.SECTIONS)}")
+    record("Config states the ported and blocked counts the registry holds",
+           cfg.get("ported") == len(config_rules.ported())
+           and cfg.get("blocked") == len(config_rules.blocked_rules()),
+           f"config {cfg.get('ported')}/{cfg.get('blocked')} vs registry "
+           f"{len(config_rules.ported())}/{len(config_rules.blocked_rules())}")
+    record("Config's per-input blocked counts match the registry's",
+           dict(cfg.get("blocked_by_input") or {})
+           == {k: v for k, v in config_rules.missing_input_counts().items()
+               if v},
+           f"config {cfg.get('blocked_by_input')} vs registry "
+           f"{config_rules.missing_input_counts()}")
+
+    # 3. Both denominators are on the face of both pages.
+    status = (ROOT / "build" / "RULE_LAYER_STATUS.md")
+    if status.exists():
+        text = status.read_text(encoding="utf-8")
+        head = text[:6000]
+        n_cfg = len(config_rules.ported())
+        record("The status page states the configuration denominator",
+               f"{n_cfg} of {doc_total}" in head
+               or f"{n_cfg}/{doc_total}" in head,
+               f"no '{n_cfg} of {doc_total}' in the first 6000 chars")
+        record("The status page states the catalogue-B denominator",
+               "141 of 141" in head,
+               "no '141 of 141' in the first 6000 chars")
+        record("The status page says 141/141 is not a source-coverage claim",
+               "TRUE OF CATALOGUE B" in text,
+               "the caveat is not on the page")
+        record("The status page names gold, silver and sugar as the affected "
+               "instruments",
+               all(i in text[:6000] for i in CFG.INSTRUMENTS),
+               "an instrument is unnamed where the gap is stated")
+    html_path = ROOT / "build" / "calendar_2027.html"
+    if html_path.exists():
+        h = html_path.read_text(encoding="utf-8")
+        n_cfg = len(config_rules.ported())
+        record("The HTML apparatus states the configuration denominator",
+               f"{n_cfg}/{doc_total}" in h,
+               f"no '{n_cfg}/{doc_total}' in the artifact")
+        record("The HTML apparatus places it beside the blocked list",
+               h.find(f"{n_cfg}/{doc_total}") > h.find("Blocked sections"),
+               "the coverage statement precedes the blocked list")
+
+    # 4. The panel quotes the scope report's READY count. Quoting a number that
+    #    lives in two places is how a number drifts, so the panel's copy is read
+    #    back against the report's own line rather than trusted.
+    scope = ROOT / "build" / "CONFIG_SECTIONS_SCOPE.md"
+    if scope.exists():
+        from finastro.html_calendar import CFG_READY
+        m = re.search(r"\*\*(\d+) of \d+\*\* need no new astronomy", 
+                      scope.read_text(encoding="utf-8"))
+        record("The apparatus panel's READY count matches the scope report",
+               m is not None and int(m.group(1)) == CFG_READY,
+               f"report says {m.group(1) if m else 'nothing'}, panel says "
+               f"{CFG_READY}")
+
+
 def test_a_horizon_rule_is_never_evaluated_once_for_both_venues() -> None:
     """The invariant that makes a per-location condition worth having.
 
@@ -2156,6 +2278,228 @@ def test_the_pairs_zeroes_are_each_the_kind_they_claim(firings: list) -> None:
               if pluto else "absent"))
 
 
+def test_both_halves_of_a_configuration_verdict_are_carried() -> None:
+    """THE CHECK THE PORT WAS REQUIRED TO HAVE BEFORE IT STARTED.
+
+    A configuration verdict is stated in two elements -- the block's `<h2>`
+    carries the direction, the group heading carries the condition -- and a
+    port that sliced only the group heading would have produced a null verdict
+    for every group whose heading states no direction. That failure renders as
+    a blank cell, not as an error, which is what makes it the same shape as
+    `family` matching one of its two readings and attaching five of eleven.
+
+    Four things are asserted, and the third is the counterfactual: it runs the
+    naive slice and shows how many verdicts it would have lost, so the number
+    the check is protecting is on the record rather than implied.
+    """
+    reg = config_rules.CONFIG_REGISTRY
+    nulls = [r.id for r in reg if r.verdict_text is None]
+    record("Every configuration rule carries a verdict", not nulls,
+           f"{len(nulls)} null: {nulls[:4]}")
+
+    unattributed = [r.id for r in reg if r.verdict_text and not r.verdict_from]
+    record("Every configuration verdict names where it was sliced from",
+           not unattributed, str(unattributed[:4]))
+
+    # The counterfactual. `split_statement` on the group title alone is exactly
+    # what a catalogue-B-shaped port would have done.
+    naive_null = [g.key for g in config_catalogue.GROUPS
+                  if catalogue.split_statement(g.title)[1] is None]
+    held = {r.section.key: r for r in reg}
+    recovered = [k for k in naive_null if held[k].verdict_text is not None]
+    record("Every verdict the naive slice would have lost is recovered",
+           len(naive_null) > 0 and len(recovered) == len(naive_null),
+           f"{len(naive_null)} group headings yield nothing after their own "
+           f"dash; {len(recovered)} of them still carry a verdict")
+    #  Where the recovered verdicts came from. Most are the block's `<h2>`; a
+    #  few are a slice of the group heading at a marker that is not a dash
+    #  ("... Is Bullish (short-term bounce)", "... Increases Volatility ..."),
+    #  which the naive split would have missed just as completely.
+    where = collections.Counter(held[k].verdict_from for k in naive_null)
+    record("No recovered verdict is unattributed", None not in where,
+           f"recovered from {dict(where)}")
+    from_block = [r.section.key for r in reg if r.verdict_from == "block_h2"]
+    record("The block heading is what most of them were recovered from",
+           where.get("block_h2", 0) >= 0.8 * len(naive_null)
+           and len(from_block) >= where.get("block_h2", 0),
+           f"{where.get('block_h2', 0)} of {len(naive_null)} from the block "
+           f"heading; {len(from_block)} rules take the block's word overall")
+
+    # And the split is not a fudge: a verdict taken from the block heading must
+    # be a substring of that heading, one taken from the title a substring of
+    # the title.
+    misattributed = [
+        r.id for r in reg
+        if (r.verdict_from == "block_h2"
+            and r.verdict_text not in r.section.block.h2)
+        or (r.verdict_from == "title" and r.verdict_text not in r.section.title)]
+    record("Each configuration verdict is in the element it claims",
+           not misattributed, str(misattributed[:4]))
+
+
+def test_the_silent_verdict_check_actually_bites() -> None:
+    """A guard nobody has seen fail is a guard nobody has tested.
+
+    Three refusals, each a way the same elision could reach the registry: a
+    null verdict under a directional block, a verdict that is not in the
+    document, and a verdict with no attribution. All three must raise
+    `SilentVerdict` rather than pass, or the check above is decoration.
+    """
+    g = config_catalogue.G("silver-bullish", 5)          # "Venus Mars Together"
+
+    def refuses(verdict, src) -> bool:
+        try:
+            config_catalogue.check_verdict("probe", g, verdict, src)
+        except config_catalogue.SilentVerdict:
+            return True
+        return False
+
+    record("The probe group's block does state a direction",
+           g.block.is_directional, f"{g.block.h2!r} is not directional")
+    record("A null verdict under a directional block is refused",
+           refuses(None, "block_h2"), "it was accepted")
+    record("A verdict that is not in the document is refused",
+           refuses("Strongly Bullish For Silver", "block_h2"),
+           "a typed verdict was accepted")
+    record("A verdict with no attribution is refused",
+           refuses("Bullish", None), "an unattributed verdict was accepted")
+    record("A verdict that IS in the block heading is accepted",
+           not refuses(g.block.verdict, "block_h2"),
+           "the check rejects a correct verdict")
+
+
+def test_configuration_text_is_a_substring_of_the_document() -> None:
+    """Verbatim or absent, the rule catalogue B is held to.
+
+    Every condition and every verdict on a configuration rule is checked as a
+    literal substring of `data/source_2026.html`, flattened the way the
+    catalogue-B check flattens it. A string that is not in the document is a
+    string somebody typed.
+    """
+    doc = _flat(SOURCE_TEXT)
+    bad_cond = [r.id for r in config_rules.CONFIG_REGISTRY
+                if _flat(r.condition_text) not in doc]
+    bad_verd = [r.id for r in config_rules.CONFIG_REGISTRY
+                if r.verdict_text and _flat(r.verdict_text) not in doc]
+    record("Every configuration condition is in the document", not bad_cond,
+           str(bad_cond[:4]))
+    record("Every configuration verdict is in the document", not bad_verd,
+           str(bad_verd[:4]))
+
+
+def test_every_configuration_group_is_registered_once() -> None:
+    """58 groups, 58 rules, and the document decides the 58.
+
+    The count comes from `cfgsections` reading the source, not from a list
+    here, so a group added to or removed from the document fails this rather
+    than silently changing the coverage claim.
+    """
+    from finastro import cfgsections as CFG
+
+    reg = config_rules.CONFIG_REGISTRY
+    keys = [r.section.key for r in reg]
+    record("Every configuration group is registered exactly once",
+           len(keys) == len(set(keys)) == CFG.total() == 58,
+           f"{len(keys)} rules, {len(set(keys))} distinct, "
+           f"{CFG.total()} groups in the document")
+    record("Every blocked configuration rule names an input from the closed set",
+           all(r.missing_inputs
+               and all(k in config_rules.MISSING_INPUTS
+                       for k in r.missing_inputs)
+               for r in config_rules.blocked_rules()),
+           "a blocked rule names no input, or one outside MISSING_INPUTS")
+    survey = set(config_rules.SURVEY_INPUTS)
+    beyond = sorted({k for r in config_rules.blocked_rules()
+                     for k in r.missing_inputs if k not in survey})
+    record("Inputs beyond the scope survey's five are named as such",
+           beyond == ["vedha_wheel"],
+           f"blocked on {beyond} outside the survey's five")
+
+
+def test_configuration_zero_firings_are_each_the_kind_they_claim(
+        cfg_firings) -> None:
+    """A ported rule that never fires is either a quiet year or a broken port.
+
+    Twelve of the 38 produce no 2027 row. Each is pinned by name with the
+    reason, so a thirteenth appearing -- or one of these starting to fire --
+    fails here instead of being read as normal.
+    """
+    expected = {
+        "cfg_gold_bullish_01_mars_through_taurus":
+            "Mars is never in Taurus in 2027",
+        "cfg_gold_bullish_04_jupiter_in_gemini":
+            "Jupiter is never in Gemini in 2027",
+        "cfg_gold_bullish_12_mars_in_pushya":
+            "Mars never occupies Pushya in 2027",
+        "cfg_silver_bullish_09_sun_moon_together_on_sankranti":
+            "no 2027 Sankranti finds the Moon already in the sign entered",
+        "cfg_silver_bullish_11_mercury_combust_retrograde_vedh_moon":
+            "five residencies have no printed Retrograde key, one targets "
+            "Abhijeet which the 27-division does not emit, and the one fully "
+            "computable residency did not coincide with the Moon in Rohini",
+        "cfg_silver_bullish_12_venus_combust_in_west":
+            "Venus has one combustion in the span and it is East",
+        "cfg_silver_bullish_19_mars_rising":
+            "Mars has no visibility/rise record in the span",
+        "cfg_silver_bullish_20_saturn_neptune_conjunction":
+            "the pair is scanned and has no exact conjunction in the span",
+        "cfg_silver_bearish_04_mars_vargottam_in_cancer":
+            "Mars holds Cancer with the navamsa in Pisces throughout",
+        "cfg_sugar_bullish_04_moon_joins_combust_mercury_in_west":
+            "three West combustions, and the Moon's Mercury-sharing window "
+            "falls just outside each",
+        "cfg_sugar_bullish_05_retrograde_mercury_combust_in_cancer":
+            "Mercury holds Cancer 30-Jul to 14-Aug and is direct throughout",
+        "cfg_sugar_bearish_01_jupiter_or_mars_in_three_stars":
+            "Jupiter reaches neither Hasta nor Shravana; Mars enters Dhanishta "
+            "on 25-Jan-2028, in the carry-out",
+    }
+    zero = {r.id for r in config_rules.zero_firing(cfg_firings)}
+    record("The configuration zero-firing set is exactly the pinned one",
+           zero == set(expected),
+           f"unexpected {sorted(zero - set(expected))[:3]} / "
+           f"now firing {sorted(set(expected) - zero)[:3]}")
+
+
+def test_configuration_rules_obey_the_frame_rules_catalogue_b_obeys(
+        cfg_firings) -> None:
+    """The invariants that make a row readable, applied to the second registry.
+
+    Nothing here is new doctrine. It is the catalogue-B harness's own checks
+    run against the configuration rules, because an invariant enforced on one
+    registry and not the other is an invariant with a hole in it.
+    """
+    reg = config_rules.CONFIG_REGISTRY
+    horizon = [r.id for r in reg
+               if any(i.startswith("horizon/") for i in r.inputs)
+               and not r.per_location]
+    record("No configuration rule takes a horizon without being per-location",
+           not horizon, str(horizon[:3]))
+
+    bad_days = [f.rule_id for f in cfg_firings if f.civil_date.year != Y]
+    record("Every configuration firing lands in the generated year",
+           not bad_days, str(sorted(set(bad_days))[:3]))
+
+    allowed = {r.id: r.locations for r in reg}
+    wrong_venue = [f.rule_id for f in cfg_firings
+                   if f.location not in allowed[f.rule_id]]
+    record("No configuration firing carries a venue its rule excludes",
+           not wrong_venue, str(sorted(set(wrong_venue))[:3]))
+
+    weekday_rules = {r.id: r.weekdays for r in reg if r.weekdays}
+    off = [f.rule_id for f in cfg_firings
+           if f.rule_id in weekday_rules
+           and f.civil_date.weekday() not in weekday_rules[f.rule_id]]
+    record("Every weekday-conditioned configuration firing is on that weekday",
+           not off, str(sorted(set(off))[:3]))
+
+    resolved = [r for r in reg if r.status == "resolved_ambiguity"]
+    record("Every resolved configuration rule carries its rejected readings",
+           all(r.ambiguity and r.resolution and r.rejected_readings and r.flags
+               for r in resolved),
+           f"{len(resolved)} resolved rules")
+
+
 def main() -> int:
     sky = Sky.load()
     firings = R.fire(R.REGISTRY, sky)
@@ -2202,6 +2546,20 @@ def main() -> int:
     test_combust_windows_match_the_source_duration_convention()
     test_names_map_is_grounded_in_the_document()
     test_astronomy_layer_untouched()
+    test_configuration_coverage_is_stated_and_counted_from_the_document()
+
+    # The configuration port. Fired into its own list: the two
+    # registries are separate everywhere else and mixing them here
+    # would be the one place the separation could quietly fail.
+    cfg_firings = R.fire(config_rules.CONFIG_REGISTRY, sky)
+    test_both_halves_of_a_configuration_verdict_are_carried()
+    test_the_silent_verdict_check_actually_bites()
+    test_configuration_text_is_a_substring_of_the_document()
+    test_every_configuration_group_is_registered_once()
+    test_configuration_zero_firings_are_each_the_kind_they_claim(
+        cfg_firings)
+    test_configuration_rules_obey_the_frame_rules_catalogue_b_obeys(
+        cfg_firings)
 
     width = max(len(n) for n, _, _ in _results)
     failed = 0

@@ -2016,20 +2016,103 @@ verdict_coverage:
   # and inventing verdicts to fill the gap is what the label-scheme ruling
   # forbids.
   unported_configuration_sections:
-    status: unported_known_gap
+    # 14-Sep-2026, SECOND ENTRY: this block is no longer wholly unported. The
+    # key keeps its name because renaming it would break every citation of it
+    # in the reports and in STEP4_DECISIONS, and because 20 of the 58 ARE still
+    # unported and this is still where that is recorded.
+    status: partially_ported
+    ported_by: finastro/rules/config_rules.py
     shape: '<section id="..."> with <h2>, outside the <h3 class="section"> catalogue'
+    # ------------------------------------------------ counted from the document
+    # 14-Sep-2026: the per-block counts below were re-derived from
+    # data/source_2026.html by finastro/cfgsections.py rather than from this
+    # file, because `named_groups` here was partly a phrase ("carried as <h3>
+    # headings") for the two gold blocks and the totals in tier_1.evidence were
+    # stated without saying how they had been reached. Two of them were wrong.
+    # The document wins, and the corrections are recorded in
+    # corrections_on_record below rather than quietly rewritten, because a
+    # coverage number nobody can re-derive is the defect this whole block exists
+    # to name.
+    counted_from_document_by: finastro/cfgsections.py
     blocks:
       silver-bullish: {pages: "pp.149-161", named_groups: 20}
       silver-bearish: {pages: "pp.162-167", named_groups: 10}
       sugar-bullish:  {pages: "pp.168-173", named_groups: 7}
       sugar-bearish:  {pages: "pp.174-175", named_groups: 2}
-      gold-bullish:   {pages: "pp.136-144", named_groups: "carried as <h3> headings"}
-      gold-bearish:   {pages: "pp.145-148", named_groups: "carried as <h3> headings"}
+      gold-bullish:   {pages: "pp.136-144", named_groups: 13}
+      gold-bearish:   {pages: "pp.145-148", named_groups: 6}
+    total_named_groups: 58
+    per_instrument: {gold: 19, silver: 30, sugar: 9}
+    ported: 38
+    blocked: 20
+    # Counted off finastro/rules/config_rules.CONFIG_REGISTRY, not typed here:
+    # config_rules.missing_input_counts() is the source of these numbers and the
+    # harness re-derives them. silver-bearish#9 is blocked on TWO inputs and so
+    # appears in two rows; the group total is 20, not 21.
+    blocked_by_input:
+      valence: 9
+      darshan: 4
+      month_system: 3
+      aspect_orb: 2
+      vedha_wheel: 2
+      no_dated_window: 1
+    port_report: build/CONFIG_PORT_REPORT.md
+    scope_said_41_port_delivered_38: >
+      The scope survey classed 41 groups READY. Three of them were blocked
+      during the port, on evidence found while writing them, and one group the
+      survey did not count as READY was ported. Net 38.
+        gold-bullish#6  "If Mars is Aspected by Saturn and Jupiter is
+          Retrograde" -- the survey called the aspect already-used; the layer
+          emits conjunction and opposition only and the group's printed row is
+          a 10th-house graha drishti. Blocked on aspect_orbs, which is still
+          one of the five.
+        silver-bullish#10 "Mercury or Jupiter Do Vedh of Venus" and
+        silver-bearish#6  "Mercury Venus or Moon Venus Mutual Vedh" -- both
+          need a per-planet Vedha wheel that is not ported (Jupiter B135 has no
+          speed doctrine, Venus B134 was withdrawn on a single-point fit).
+          This is a SIXTH missing input, not one of the five, and is recorded
+          as such rather than folded into the nearest existing one.
+        silver-bullish#11 "Mercury Combust and Retrograde Does Mutual Vedh with
+          Moon" -- ported as a resolved ambiguity. Both printed rows resolve out
+          of Mercury's own wheel, so no Moon wheel is needed.
+    verdict_composition: >
+      THE STRUCTURAL DIFFERENCE FROM CATALOGUE B, and the defect it was going to
+      cause. A configuration verdict is stated in TWO elements: the block's <h2>
+      carries the direction ("Silver -- Bullish Configuration") and the group
+      heading carries the condition and sometimes sharpens the direction. A port
+      that sliced only the group heading would have produced null verdicts for
+      every group whose heading states no direction -- 36 of the 58 -- and each
+      would have rendered as a blank rather than as an error. That is the same
+      shape as the `family` half-match. finastro/rules/config_catalogue.py
+      refuses the registration instead: check_verdict raises SilentVerdict at
+      import for any rule under a directional block that carries no verdict, for
+      a verdict that is not a substring of the document, or for one with no
+      attribution. 36 verdicts come from block_h2 and 22 from the group title;
+      none is null.
+    # --------------------------------------------- the FULL scope, not an estimate
+    scope_report: build/CONFIG_SECTIONS_SCOPE.md
+    scope_report_note: >
+      Every one of the 58 groups with the class of its condition and the grounds
+      for that class. Generated by scratch/gen_cfg_scope.py; the counts come from
+      finastro/cfgsections.py reading the document. Result: 41 of 58 need no
+      astronomy the layer lacks, and the remaining 17 sit behind five distinct
+      missing inputs -- benefic/malefic valence (8), first-sighting darshan (4),
+      the lunar month system (3), the aspect orb (1), and one group with no dated
+      table to port (1). Two of those five (aspect_orbs,
+      month_system_confirmation) are already open questions here and are owed an
+      answer for catalogue-B sections regardless.
+    gold_and_silver_groups_are_h3_not_config_title: >
+      The only structural difference between the blocks. Gold carries its groups
+      as <h3> headings (13 bullish + 6 bearish); silver and sugar carry theirs as
+      <div class="config-title"> (20/10 and 7/2). They play the same role and are
+      counted the same way. A reader who greps for `config-title` will find 39
+      groups and conclude gold has none.
     affected_instruments: [GC, SI, MCXGOLD, MCXSILVER, SUGAR]
+
     sugar_specifically: >
       SUGAR'S ZERO WAS THE BODY-SCOPING FIX, AND THE FIX IS THE SECTOR ALIAS.
       Diagnosed rather than assumed, and the first diagnosis was WRONG: this note
-      originally blamed only the unported blocks below. The actual cause is that
+      originally blamed only the unported blocks. The actual cause is that
       the rulership lookup asked for a `sugar` sector, and the table spells it
       `sugar_and_soft_goods` (from book_ch15's "sugar and soft/luxury goods"),
       so Venus resolved to nothing for that sector and the body-scoping step
@@ -2039,7 +2122,7 @@ verdict_coverage:
       rulership is Venus per ch15, and this block's own `resolution` field says
       "SUGAR is tier 1 and takes its verdicts from the source's own
       configuration sections, so no rulership is needed to reach it".
-      THE UNPORTED BLOCKS BELOW ARE STILL A REAL GAP and still mean SUGAR's own
+      THE UNPORTED BLOCKS ABOVE ARE STILL A REAL GAP and still mean SUGAR's own
       nine named groups (pp.168-175) are not in the layer. They are the reason
       SUGAR's coverage is thin rather than the reason it was empty. Both facts
       are recorded; neither is allowed to hide the other.
@@ -2264,11 +2347,14 @@ verdict_coverage:
       evidence:
         gold: >
           "Gold -- Bullish Configuration" pp.136-144 and "Gold -- Bearish
-          Configuration" pp.145-148. 17 named rule groups across the two.
+          Configuration" pp.145-148. 19 named rule groups across the two (13 + 6,
+          counted from the document -- this read 17 until 14-Sep-2026; see
+          source_probability.corrections_on_record.gold_and_silver_config_group_counts).
         silver: >
           "Silver -- Bullish Configuration" pp.149-161 and "Silver -- Bearish
-          Configuration" pp.162-167. 29 named rule groups across the two -- the
-          largest configuration set in the document.
+          Configuration" pp.162-167. 30 named rule groups across the two (20 + 10)
+          -- the largest configuration set in the document. This read 29 until
+          14-Sep-2026, same correction.
         sugar: >
           "Sugar and Jaggery -- Bullish Configuration" pp.168-173 and "Sugar and
           Jaggery -- Bearish Configuration" pp.174-175. 9 named rule groups.
@@ -3181,6 +3267,32 @@ source_probability:
         family (Mercury Venus Alone in Any Sign p.16), which is exactly why that
         family is disputed. The firing count of 11 was computed per family and is
         unaffected.
+
+    - id: gold_and_silver_config_group_counts
+      claimed: "17 named rule groups for gold and 29 for silver -- \"the largest configuration set in the document\"."
+      attributed_to: this_project_config_tier_1_evidence
+      status: corrected
+      found_by: >
+        Re-deriving every count from data/source_2026.html with
+        finastro/cfgsections.py while writing the two-denominator coverage
+        statement. The numbers in tier_1.evidence had never been checked against
+        the document they describe.
+      corrected_to: >
+        GOLD carries 19 groups (13 bullish + 6 bearish) and SILVER carries 30
+        (20 + 10). The gold blocks are the reason the original count was low:
+        their groups are <h3> headings, not <div class="config-title">, so a
+        reader reaching for the same element as silver and sugar finds 39 groups
+        in the chapter and none of gold's. Sugar's 9 was right. Section totals:
+        58 groups, 0 ported.
+      consequence: >
+        The claim being corrected was about coverage, which makes this the same
+        defect as the 141/141 claim one level down: a number that reads as a
+        coverage statement and had never been derived from the thing it claimed
+        about. Both are now generated from the document rather than asserted.
+      same_shape_as: >
+        the 141-of-141 claim itself. A count taken from our own config describes
+        our config; the document is what the claim is about, and a count that is
+        never re-derived cannot fail.
 
     # FOUND 14-Sep-2026, by the verdict layer failing to attach the label.
     - id: family_key_is_read_two_ways

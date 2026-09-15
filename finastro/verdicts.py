@@ -41,7 +41,7 @@ import datetime as dt
 from dataclasses import dataclass, field
 
 from .config import CONF
-from .rules import REGISTRY, firing_rules, fire
+from .rules import CONFIG_REGISTRY, REGISTRY, firing_rules, fire
 from .sky import Sky
 from .timezones import civil_day_bounds
 
@@ -301,6 +301,13 @@ def significance_of(rule) -> str:
     """
     if rule.verdict_text is None:
         return "condition_only"
+    if is_config_rule(rule):
+        # The source printed this verdict under a named instrument's block, so
+        # it is instrument-specific by the document's own arrangement rather
+        # than by anything read here. Every configuration rule carries a
+        # verdict -- `check_verdict` refuses a null one at registration -- so
+        # this branch never reaches `condition_only`.
+        return "instrument_specific"
     low = rule.verdict_text.lower()
     if any(w in low for w in ("sectors ruled by", "sector ruled by")):
         return "sector_scoped"
@@ -331,6 +338,8 @@ def instruments_for(rule) -> list[str]:
     inference still has an addressable set, and the row is how the calendar
     shows the condition.
     """
+    if is_config_rule(rule):
+        return config_instruments_for(rule)
     bodies = _bodies_of(rule)
     if not bodies:
         # A general market verdict: the two Indian indices. See
@@ -353,6 +362,34 @@ def instruments_for(rule) -> list[str]:
     # responds to that body. Emitting nothing is the correct outcome, and the
     # caller records the absence rather than widening it to all eleven.
     return sorted(out)
+
+
+def is_config_rule(rule) -> bool:
+    """True for one of the 58 instrument configuration groups.
+
+    Read off `catalogue_b`, which a configuration group carries as None and a
+    catalogue-B rule always carries as an int. Not a name test: an id prefix is
+    a convention and this is an invariant the harness already asserts.
+    """
+    return rule.catalogue_b is None
+
+
+def config_instruments_for(rule) -> list[str]:
+    """The instruments a configuration group is addressed to.
+
+    NOT through the rulership table, and that is the whole point of wiring these
+    separately. A catalogue-B rule reaches an instrument because its BODIES
+    resolve there -- a Venus rule reaches SUGAR because SUGAR's rulership is
+    Venus, which is an inference this layer makes. A configuration group reaches
+    gold because **the source printed it under "Gold - Bullish Configuration"**.
+    The block says so; nothing is derived.
+
+    So `cfg_gold_bullish_11_venus_in_rohini` reaches gold and not sugar, even
+    though its body is Venus. Routing it through the rulership table would send
+    the source's own gold statement to the wrong instrument and would be exactly
+    the kind of inference `label_scheme_signoff` forbids.
+    """
+    return list(SECTOR_INSTRUMENTS.get(rule.section.block.instrument, []))
 
 
 def _bodies_of(rule) -> list[str]:
@@ -404,8 +441,19 @@ def verdict_for(rule, instrument: str, loc: str, path: str | None = None):
 
 def build_verdicts(sky: Sky | None = None) -> list[Verdict]:
     sky = sky or Sky.load()
-    firings = fire(REGISTRY, sky)
-    by_rule = {r.id: r for r in firing_rules()}
+    # BOTH catalogues. Catalogue B's 141 sections and the 58 instrument
+    # configuration groups are separate registries on purpose -- a group must
+    # never reach `sections_ported()` and inflate "141 of 141" -- but they are
+    # both the source's own conditions, and a calendar that fired one and not
+    # the other was a calendar whose gold, silver and sugar rows came entirely
+    # from generic rules whose bodies happened to resolve there.
+    #
+    # `fire()` serves both unchanged: a ConfigGroup carries `title`, `page`,
+    # `heading` and `b = None`, which is every field `Rule` reads off a section.
+    # Only the INSTRUMENT routing differs, and that is `config_instruments_for`.
+    firings = fire(REGISTRY, sky) + fire(CONFIG_REGISTRY, sky)
+    by_rule = {r.id: r for r in
+               list(firing_rules()) + list(CONFIG_REGISTRY)}
 
     # The source's own printed labels, where a rule carries them. Read from the
     # rule, not re-derived: source_probability is an annotation, never a weight.

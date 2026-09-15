@@ -45,15 +45,49 @@ $ python3 tests/test_rule_layer.py
 133/133 checks passed
 ```
 
-The rule layer now carries **171 rules over all 141 catalogue-B sections** — full
-coverage: 132 executable, 5 resolved on a supplied reading, 33 blocked with the
-missing input named, and 1 ambiguous. 3,557 dated rows in the generated year.
+The rule layer carries **171 rules over all 141 catalogue-B sections** — full
+coverage of catalogue B: 132 executable, 5 resolved on a supplied reading, 33
+blocked with the missing input named, and 1 ambiguous. 3,557 dated rows in the
+generated year.
+
+**Catalogue B is not the whole source, and the two numbers are now stated
+together.** The instrument configuration sections — gold, silver and sugar, the
+three instruments the source prints verdicts for — are a different shape of
+markup (`<section id="...">` with an `<h2>`, not `<h3 class="section">`), so
+they were never in the 141 and never in its denominator:
+
+> **STALE — the "NOT wired" line below is out of date.** `verdicts.py` now
+> fires both registries, so the 38 ported groups DO produce calendar rows
+> (2,275 of 7,484 in a rebuild). The paragraph under the block still describes
+> the pre-wiring state. Correcting this page is a task in
+> `build/NEXT_SESSION.md`; `build/calendar_2027.*` on disk predates the wiring
+> and holds catalogue-B rows only.
+
+```
+catalogue B                        141 / 141 sections
+instrument configuration sections   38 /  58 named groups   (ported, NOT wired)
+```
+
+**38 of the 58 are ported and 20 are blocked, each on a named input**
+(`build/CONFIG_PORT_REPORT.md`). **Ported is not wired.** They are registered in
+their own registry, `verdicts.py` fires catalogue B alone, and **no row in the
+calendar originates in any configuration section** — so gold, silver and sugar
+still reach the calendar only through generic catalogue-B rules whose bodies
+happen to resolve to those instruments: a Venus rule reaches SUGAR because
+SUGAR's rulership is Venus, not because the source says anything about sugar. A
+reader must not see 141/141 and conclude the source is covered.
+`build/CONFIG_SECTIONS_SCOPE.md` reports what porting the 58 would take, per
+group, and `build/MONTHLY_2026_FIXTURE.md` measures what the layer reproduces of
+the source's own finished output.
 
 **`build/RULE_LAYER_STATUS.md` is the one-page answer to "what does this calendar
-actually cover"** — every section with its status, rule count, 2027 row count, and
-for each blocked section the input it is waiting for. It is generated from the
-live registry, not written by hand. `build/STEP4_DECISIONS.md` §12 is the
-batch-by-batch record of the arguments behind it.
+actually cover"** — both denominators at the top, then every catalogue-B section
+with its status, rule count, 2027 row count, and for each blocked section the
+input it is waiting for. It is generated from the live registry and the document
+itself, not written by hand. `build/STEP4_DECISIONS.md` §12 is the batch-by-batch
+record of the arguments behind it, and §12.16 is the recurring failure mode the
+build keeps producing.
+
 
 ## The calendar
 
@@ -74,9 +108,10 @@ and **confidence is `untested` on every row** — no code path can raise it.
 
 The HTML carries the epistemic apparatus visibly rather than as a footnote:
 certainty grades **and both C grounds**, claim tags, all 33 blocked sections with
-the input each waits for, the source defects found, the known coverage gap, and
-the standing statement that this is a speculative interpretive framework and not
-investment advice.
+the input each waits for, **the two-denominator coverage statement — catalogue B
+141/141 and configuration sections 0/58 — beside the blocked list**, the source
+defects found, the known coverage gap, and the standing statement that this is a
+speculative interpretive framework and not investment advice.
 
 The build is deterministic: regenerating the year produces a byte-identical
 file, so a real change shows up as a diff and nothing else does. Confirmed by

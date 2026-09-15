@@ -19,12 +19,31 @@ import html
 import json
 import pathlib
 
+from . import cfgsections as CFG
+from .rules import config_rules as CFGR
 from .config import CONF
 from .render import DISCLAIMER, OUT_HTML
 from .rules import REGISTRY, by_status
 from .rules.catalogue import SECTIONS
 
 YEAR = CONF["year"]
+
+#: How many of the configuration groups the SCOPE SURVEY classed as needing no
+#: astronomy the layer lacks. Kept as a number here rather than re-derived: the
+#: per-group class is a judgement recorded in
+#: `build/CONFIG_SECTIONS_SCOPE.md`, and the panel quotes the report rather
+#: than re-deciding it. Drift between the two is caught by
+#: `tests/test_rule_layer.py::
+#: test_configuration_coverage_is_stated_and_counted_from_the_document`, which
+#: reads this number back out of the generated report.
+#:
+#: It is NOT the number ported. The port delivered 38: three of the 41 turned
+#: out to need an input the survey had not seen, and one group the survey did
+#: not count as READY was ported as a resolved ambiguity. The two numbers are
+#: kept apart deliberately -- overwriting the estimate with the outcome would
+#: erase the one fact worth keeping, which is that the estimate was wrong and
+#: by how much.
+CFG_READY = 41
 
 
 def _e(x) -> str:
@@ -150,6 +169,8 @@ def write_html(rows: list[dict], verdicts) -> pathlib.Path:
     ambiguous = sorted(by_status("ambiguous"), key=lambda r: r.catalogue_b)
     grounds = CONF["labels"]["data_certainty_grounds"]
     uncov = CONF["verdict_coverage"]["unported_configuration_sections"]
+    cfg_counts = CFG.counts()
+    cfg_total = CFG.total()
 
     js_rows = []
     for r in rows:
@@ -241,12 +262,102 @@ def write_html(rows: list[dict], verdicts) -> pathlib.Path:
           f"<span class=mut>{_e(why)}</span></li>")
     A("</ul>")
 
-    A(f"<h2>Known coverage gap</h2><p>{_e(uncov['sugar_specifically'])}</p>"
-      f"<ul>")
-    for k, v in uncov["blocks"].items():
-        A(f"<li><code>{_e(k)}</code> {_e(v.get('pages'))} &mdash; "
-          f"{_e(v.get('named_groups'))} named groups</li>")
+    # ------------------------------------------------- coverage, two denominators
+    # Placed immediately after the blocked list and before anything else, because
+    # the whole point of this block is that a reader must not be able to see the
+    # catalogue-B number and conclude the source is covered. It is not a
+    # footnote: it sits inside the same panel as the blockers, where a reader
+    # asking "what is missing" is already looking.
+    n_ported = len(SECTIONS)
+    A(f"<h2>Coverage &mdash; two denominators, and one of them is not 141</h2>")
+    A(f"<table><thead><tr><th>catalogue</th><th>shape in the source</th>"
+      f"<th>sections</th><th>ported</th></tr></thead><tbody>"
+      f"<tr><td><b>Catalogue B</b> &mdash; the Chapter-1 rule sections</td>"
+      f"<td><code>&lt;h3 class=\"section\"&gt;</code></td>"
+      f"<td>{n_ported} sections</td>"
+      f"<td><b>{n_ported}/{n_ported}</b></td></tr>"
+      f"<tr><td><b>Instrument configuration sections</b> &mdash; Chapter 2</td>"
+      f"<td><code>&lt;section id=\"...\"&gt;</code> with <code>&lt;h2&gt;</code>"
+      f"</td>"
+      f"<td><b>{cfg_total} named groups</b></td>"
+      f"<td><b>{len(CFGR.ported())}/{cfg_total}</b></td></tr>"
+      f"</tbody></table>")
+    cfg_ported = len(CFGR.ported())
+    cfg_blocked = len(CFGR.blocked_rules())
+    per_block = {}
+    for r in CFGR.CONFIG_REGISTRY:
+        k = r.section.block.id
+        per_block.setdefault(k, [0, 0])[0 if r.status != "blocked" else 1] += 1
+    A(f"<p><b>Catalogue B is {n_ported}/{n_ported}. The configuration sections "
+      f"are {cfg_ported}/{cfg_total} ported, {cfg_blocked} blocked.</b> The "
+      f"second set was never in the first's denominator &mdash; a different "
+      f"shape of markup, counted separately &mdash; so <b>nothing on this page "
+      f"should be read as \"the source is covered\"</b>. The counts come from "
+      f"the document itself, not from this build's own config. The "
+      f"configuration rules live in their own registry and, as of this build, "
+      f"<b>do not feed the rows below</b>: porting a group is not publishing "
+      f"it, and the two are kept separate on purpose.</p>")
+    # STALE MARKER -- see build/NEXT_SESSION.md. The sentence above is no
+    # longer true of the CODE: `verdicts.py` fires both registries since the
+    # 14-Sep-2026 wiring. It remains true of any calendar rendered BEFORE that
+    # wiring, which is why the marker states both.
+    A("<p class=disc><b>STALE.</b> The sentence above describes the state "
+      "before the configuration wiring. <code>verdicts.py</code> now fires "
+      "both registries and configuration groups DO produce rows "
+      "(2,275 of 7,484 in a rebuild). A calendar rendered before that wiring "
+      "contains catalogue-B rows only and is internally consistent; this page "
+      "says which it is by its own row count. Corrected text is a task in "
+      "<code>build/NEXT_SESSION.md</code>.</p>")
+    A("<ul>")
+    for b, (inst, direction, pages) in CFG.BLOCKS.items():
+        ported_n, blocked_n = per_block.get(b, [0, 0])
+        A(f"<li><code>{_e(b)}</code> {_e(pages)} &mdash; "
+          f"{_e(inst)}, {_e(direction)}: <b>{cfg_counts[b]}</b> named groups, "
+          f"<b>{ported_n}</b> ported, <b>{blocked_n}</b> blocked</li>")
     A("</ul>")
+    A("<p>The 20 blocked groups, by the input each is missing: "
+      + " &middot; ".join(f"<b>{_e(k)}</b> {v}"
+                          for k, v in sorted(CFGR.missing_input_counts().items(),
+                                             key=lambda kv: -kv[1]) if v)
+      + ". <code>vedha_wheel</code> is a sixth input the scope survey did not "
+      "name and the port found; the other five are the survey's own.</p>")
+    A(f"<p><b>Gold, silver and sugar are the three instruments the source "
+      f"prints verdicts for</b> &mdash; that is what their tiers rest on &mdash; "
+      f"and their own configuration groups are unported: "
+      + " &middot; ".join(f"<b>{i} {CFG.by_instrument()[i]}</b>"
+                          for i in CFG.INSTRUMENTS)
+      + f". What they reach this calendar through today is generic catalogue-B "
+      f"rules whose bodies happen to resolve to them &mdash; a Venus rule "
+      f"reaches SUGAR because SUGAR's rulership is Venus, not because the "
+      f"source says anything about sugar. <b>No row in this calendar "
+      f"originates in any configuration section</b>: not one of the "
+      f"{len(rows):,} rows carries a configuration section as its source, and "
+      f"that is still true after the port &mdash; the {cfg_ported} ported "
+      f"groups are registered and fire against the 2027 sky, but nothing "
+      f"downstream reads them into this artifact yet.</p>")
+    A(f"<p>There is a third unported body of material. The same chapter carries "
+      f"nine further <code>&lt;h2&gt;</code> sub-tables that are neither "
+      f"catalogue B nor any of the six blocks above ("
+      + ", ".join(_e(t) for t in CFG.other_h2_tables())
+      + f"), and the source's own monthly prophecy tables print named verdicts "
+      f"for gold and silver that are also outside catalogue B and also "
+      f"unported. Recorded because fixing one denominator and leaving the next "
+      f"one implicit only moves the misleading claim.</p>")
+    A(f"<p><span class=mut>What porting the {cfg_total} groups would take is "
+      f"scoped per group in <code>build/CONFIG_SECTIONS_SCOPE.md</code> "
+      f"&mdash; not estimated. Of the {cfg_total}, the survey classed "
+      f"{CFG_READY} as needing no astronomy this layer lacks; the port "
+      f"delivered {cfg_ported}, because three of the {CFG_READY} turned out to "
+      f"need an input the survey had not seen and one group it had not counted "
+      f"was ported as a resolved ambiguity. The estimate is kept beside the "
+      f"outcome rather than overwritten by it.</span></p>")
+
+    # The sugar diagnosis is a DIAGNOSTIC, not a second coverage statement --
+    # the counts and the per-block lists are in the coverage block above, which
+    # sits beside the blockers. Kept here because "why was SUGAR empty" and "why
+    # is SUGAR thin" have two different answers and the first one was wrong.
+    A(f"<h2>Why SUGAR's rows exist at all &mdash; a diagnosis that was wrong "
+      f"first</h2><p>{_e(uncov['sugar_specifically'])}</p>")
 
     A(f"<h2>Rules firing on a reading we supplied &mdash; {len(resolved)}</h2>"
       f"<p>The words these fire on are partly ours. Never counted with the "

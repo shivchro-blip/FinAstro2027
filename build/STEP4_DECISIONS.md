@@ -2698,4 +2698,214 @@ to reach it", and SUGAR's significator per ch15 is Venus.
 
 **Both facts are now recorded and neither hides the other.** The unported blocks
 in §12.16 remain a real gap and are the reason SUGAR's coverage is *thin*; the
-alias was the reason it was *empty*.
+alias was the reason it was *empty*. §12.16 scopes what porting them would take.
+
+### 12.16 The recurring failure mode — recorded 14-Sep-2026
+
+This is the most transferable thing the build has produced, and it does not belong
+scattered across four `corrections_on_record` entries where a reader meets it once
+and files it as a detail of the layer it happened in. **A wrong answer that renders
+as a plausible correct one** is the shape the build keeps producing, four times so
+far, in four different subsystems. Every instance was silent: no exception, no
+failing assertion, no log line. Each was found by a check aimed at the OUTPUT
+rather than at the code that produced it, and in three of the four the code was
+read, understood and believed before the output was looked at.
+
+#### The four instances
+
+**1. Blank reference views — two separate causes, one shape.** §12.12. The
+reference tables ("Journey of &lt;planet&gt;", "&lt;planet&gt; Motion",
+"&lt;planet&gt; Constellation", "&lt;planet&gt; in Navmansh") are ported as views
+over series the astronomy layer already emits. Two things each independently made a
+view render **empty**:
+
+* **the carried-in row was missing.** Every one of those tables opens with a "Start
+  of the year" row — the state before the first movement. Without it, a body that
+  never crosses the frame inside the span has nothing to print, which is exactly
+  Uranus, Neptune, Pluto and the nodes. A body with no crossings renders as **a
+  quiet year**.
+* **the Herschel bridge was missing.** The document says "Herschel" throughout; the
+  layer emits `Uranus`. With no bridge carrying the source's spelling, four
+  Herschel views rendered blank.
+
+An empty table and a table for a body that genuinely did not move are the same
+bytes. Nothing anywhere could tell them apart; only reading the artifact could.
+
+**2. The null-key regression on 4,163 records.** `finastro/events.py`. The
+`certainty_ground` field belongs to certainty C alone — only C has something
+missing. Populating it unconditionally would have written a null key into **all
+4,163 pre-existing records**: a field on every record saying "this does not apply",
+which is not a value for any of them. The build would have been "correct" (every
+record carries the key, the schema is uniform) and the artifact would have been
+rewritten wholesale by a change that added 7 records.
+
+**3. `family` is read two ways, dropping 5 of 11 families silently.**
+§12.14, `source_probability.corrections_on_record.family_key_is_read_two_ways`. The
+label attaches by matching `family` against the emitted `rule_family`. That is one
+of the two live readings. For five of the eleven carried families, `family` is the
+**source section as printed, page marker and all** — "Mercury Venus Alone in Any
+Sign p.16". Matching only the first reading left `b016`, `b078`, `b086` and the
+Rahu-Mars family attaching to nothing. The emitted label set was plausible-looking
+and wrong.
+
+**4. Flags emitted twice on 4,844 rows.** §12.14. `Firing.flags` is copied off the
+rule at fire time, so for most rules the rule's list and the firing's list are
+identical — and the render concatenated them. Every flag was doubled on **4,844 of
+5,209 rows**. A reader counting caveats would have concluded there were twice as
+many as there are. This one was found by **reading a rendered row**, not by reading
+the render.
+
+#### What caught each — and the check that did not
+
+| instance | what caught it | the check that passed anyway |
+| --- | --- | --- |
+| blank reference views | **inspecting the artifact**: rendering the table and looking at it, for each of 32 sections | "did the rule fire" passed — the rule fired and emitted nothing |
+| null-key regression | **byte-level comparison against a known-good tree**: the 2,455 prior records extracted, written back through the build's own serialiser, and hashed against §12.5's hash | "did the new field populate" passed — it populated on the 7 new records |
+| `family` read two ways | **counting against an independent expected list**: this block's own declared eleven carried families, 11 vs the 5 that attached | **"did anything attach" PASSED on the broken version** |
+| doubled flags | **inspecting the artifact**: reading what a row actually carried downstream | reading the code — which concatenates two lists and is correct on its face |
+
+The third row is the one to keep. The check that was written —
+*"did anything attach"* — **passed on the broken version.** Five families attached,
+the result looked sparse rather than wrong, and a sparse result is what a
+twelve-entry block with a few quiet families *should* look like. It took a count
+against a list held somewhere else to make "five" fail, and the list had to already
+exist.
+
+#### The fifth instance, and the first one whose averted cost was MEASURED
+
+**34 of 58.** Recorded here and not only in `build/CONFIG_PORT_REPORT.md`, because
+it is the first time in this build that the size of an averted failure is a number
+rather than a description. Every one of the four instances above was caught *after*
+the fact — three before they reached an artifact, but all four after the wrong
+thing had been built.
+
+The configuration port's verdict is stated in **two** elements: the block's `<h2>`
+carries the direction and the group heading carries the condition. *Silver —
+Bullish Configuration* + *Venus Mars Together* is one statement in two halves.
+Catalogue B's port sliced a verdict out of the section's own heading, and applying
+that operation unchanged here slices only the group heading.
+
+**34 of the 58 group headings state no direction after a dash of their own.** So
+the catalogue-B slice, applied unchanged, would have produced **34 rules with
+`verdict_text = None`**, and every one of them would have rendered as a **blank
+cell** rather than as an error — a table with the right columns and nothing in the
+verdict column, which is indistinguishable from a port whose sections genuinely
+print no verdict. That is the `family` half-match in a new costume, and the fifth
+instance of the shape.
+
+The number is measurable because the counterfactual is runnable: the naive slice is
+executed as a counterfactual in `tests/test_rule_layer.py`, against the same 58
+headings, and its 34 nulls are counted. The actual port produced **36 verdicts from
+the block `<h2>`, 22 from the group heading, and none null.**
+
+**The guard was built before the port, not after, and is proven to refuse all three
+of its cases.** `finastro/rules/config_catalogue.check_verdict` runs at
+REGISTRATION — before any rule can fire — and raises `SilentVerdict` on a null
+verdict under a directional block, on a verdict that is not a substring of the
+document, and on a verdict with no attribution; the import dies rather than
+reporting. The harness feeds it each of the three separately and asserts it refuses
+each one, because **the standing problem in this section is guards nobody has seen
+fail**: a guard that has never rejected anything is indistinguishable from a guard
+that cannot.
+
+Which is the generalisation of point 1 below, stated forward instead of backward.
+The check that would have caught the `family` bug was "count against a list held
+somewhere else". Here that list — the 58 headings, and which of them carry a
+direction — was built first, and the failure it averted has a size.
+
+#### The shape, named
+
+> **A wrong answer that renders as a plausible correct one.** Silence is not a
+> signal. The failure mode is not "the code crashes" or "the number is obviously
+> mad" — it is a result that is the right *shape*: a table with the right columns
+> and no rows, a field present on every record, a label set that attaches to some
+> families, a flag list that is longer than it should be. Each is indistinguishable
+> from the truth **from inside the code that produced it, and from any check
+> phrased as "did the thing happen at all".**
+
+The generalisation that follows, and the reason this section exists:
+
+1. **A check phrased as "did it happen" cannot catch this class.** "Did the rule
+   fire", "did the field populate", "did anything attach" all pass on the broken
+   version, because the broken version *does* the thing. The check has to assert an
+   EXPECTED COUNT OR CONTENT that came from somewhere other than the code under
+   test.
+2. **A count taken from our own artefacts describes our artefacts.** This is the
+   141/141 claim one level up: the coverage number was derived from our own config,
+   so it could not fail, and it read as a coverage statement about the source for
+   long enough to be published on two pages. The document is what the claim is
+   about. `finastro/cfgsections.py` reads the count out of the source instead, and
+   `CONFIG_SECTIONS_SCOPE.md` reports what is in it.
+3. **The cheapest detector is the artifact, not the code.** Three of the four were
+   found by looking at the OUTPUT: a rendered table, a rendered row, a hash over
+   bytes. The code was read first in every case and was believed. Reading code
+   tests the author's model; reading output tests the artifact, and the model is
+   the thing that is wrong.
+4. **Byte-level comparison against a known-good tree is the strongest of the
+   three** because it cannot be satisfied by a plausible shape: either the bytes
+   moved or they did not. §12.6 and §12.9 both used it, and it is why "changes none
+   of them" is provable rather than asserted for the 4,163 records.
+
+#### The discipline this argues for
+
+Before believing any new emit: **name the count you expect, say where that number
+came from, and check it.** If the only source for the expected number is the code
+that produced the actual one, the check cannot fail and is not a check. Which is
+also why the pinned zero-firings, the 11 carried families, the 96 printed Vedha
+rows, and the 58 configuration groups are all carried as **independent lists with
+numbers attached** rather than as taste.
+
+**It would be a mistake to read this section as a list of four mistakes.** Three of
+the four were caught before they reached an artifact, by checks that exist because
+the shape was already known. The transferable result is the shape, and the fact
+that the check which passes on the broken version is always the one phrased as a
+question about occurrence rather than about count.
+
+#### The same shape, applied to the coverage claim itself · same date
+
+The claim on `README.md` and `build/RULE_LAYER_STATUS.md` that the rule layer covers
+"141 of 141 sections" was **true and misleading in exactly this way**. It was true
+of catalogue B. The instrument configuration sections — `<section id="...">` with
+an `<h2>`, not `<h3 class="section">` — were never in the 141 sections or the
+141-section denominator, so the number could not fail, and it read as a statement
+about coverage of the source. A reader seeing 141/141 and a calendar with gold,
+silver and sugar rows on it had every reason to conclude the source's own gold,
+silver and sugar material was in the build. **It is not: 0 of 58 named groups are
+ported, and no row in the calendar originates in any configuration section.**
+
+Two pages now carry both denominators, and the count is read from the document
+rather than from config:
+
+```
+catalogue B                        141 / 141 sections
+instrument configuration sections    0 /  58 named groups
+```
+
+> **Superseded by part 1, and left standing as written.** The configuration port
+> took that second line to **38 / 58**, with 20 blocked on a named input. What is
+> **not** superseded is the sentence that matters here: *no row in the calendar
+> originates in any configuration section.* The 38 are registered in their own
+> registry and `verdicts.py` still fires catalogue B alone, so a reader who reads
+> "38 ported" as "38 in the calendar" makes the same mistake this section is
+> about, one step further along. `build/RULE_LAYER_STATUS.md` and `README.md`
+> carry the current pair; this block is the count as it stood when the audit was
+> made.
+
+The same audit found **two of the counts inside config had never been derived
+either** — gold's groups read 17 and silver's 29 against the document's 19 and 30,
+because gold carries its groups as `<h3>` headings and a reader reaching for
+`config-title` finds none of them
+(`source_probability.corrections_on_record.gold_and_silver_config_group_counts`).
+Corrected, and the correction recorded rather than the number quietly replaced.
+
+The scoping of the 58 is in `build/CONFIG_SECTIONS_SCOPE.md`: **41 of them need no
+astronomy the layer lacks**, and the other 17 sit behind **five** distinct missing
+inputs, two of which (`aspect_orbs`, `month_system_confirmation`) are already open
+questions here and are owed an answer for catalogue-B sections regardless of
+whether gold, silver and sugar are ever ported. That is the difference between a
+gap that can be scoped and a gap that has to be guessed at, and it is the only kind
+of coverage statement worth publishing.
+
+**The calendar exists and renders. The coverage claim is now stated honestly, and
+that mattered more than adding to it.**
+
