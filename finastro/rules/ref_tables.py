@@ -189,6 +189,11 @@ def _view(event_class: str, body: str):
                 from ..timezones import IST as _IST
                 import datetime as _dt
                 anchor = _dt.datetime(_C["year"], 1, 1, tzinfo=_IST)
+            # `anchored`. The paragraph above describes a CHOICE, and until
+            # 15-Sep-2026 the row had no way to say so: these twelve rows
+            # rendered a clock time at the anchor, stating a crossing that by
+            # definition did not occur -- a carried-in row exists precisely
+            # BECAUSE the body did not cross. See Span.precision.
             out.append(Span(anchor, anchor, {
                 "at": anchor.strftime("%d-%b-%Y"),
                 "carried_in": True,
@@ -199,7 +204,7 @@ def _view(event_class: str, body: str):
                 "how_read": how,
                 "anchor": ("span_end_because_the_state_holds_throughout"
                            if not mine else "span_start_before_the_first_crossing"),
-            }))
+            }, precision="anchored"))
         elif not mine:
             return out          # nothing known about this body at all
 

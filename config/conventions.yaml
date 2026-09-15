@@ -2735,6 +2735,217 @@ verdict_coverage:
       further condition on planet, sign, vedha or weekday. The realised verdict
       count will be far smaller. These are ceilings, not forecasts.
 
+# =========================================================== calendar rows
+# WHAT THIS BLOCK IS: the shape of a row in build/calendar_2027.json, .csv and
+# .html, and specifically the DISCRIMINATOR that says what kind of thing a row
+# is.
+#
+# ADDED 15-Sep-2026, BEFORE the astronomy base track was added and not after.
+# The ordering is the point. Until this block existed every row in the calendar
+# was a verdict row, so `records: 6677` and `by_tier.no_rule: 3285` were counts
+# of one population and could be read as such. Adding 405 astronomy rows to that
+# file without a discriminator would have made both numbers mean something else
+# while looking unchanged -- `no_rule` would have absorbed the base track, and
+# every meta figure would have silently changed its denominator.
+#
+# That is the stale-denominator failure this build has now recorded three times
+# (see source_probability.corrections_on_record and STEP4_DECISIONS section 12).
+# The rule learned from the first two is that the discriminator is a
+# PRECONDITION for the population it discriminates, never a follow-up.
+row_kinds:
+  status: defined
+  defined: 2026-09-15
+  field: row_kind
+  required: true
+  null_is_not_a_value: >
+    Unlike `construction` and `tier`, where null is a member of the value set,
+    row_kind has no null. A row whose kind is unknown is a build error. The
+    renderer sets it at construction and the harness refuses a row without it.
+  values:
+    - id: verdict
+      what: >
+        One rule, one instrument, one venue civil day. The population that was
+        the whole calendar until 15-Sep-2026. Carries the two canonical axes,
+        the derived tier, a claim tag, a confidence, and a verdict or a null
+        verdict.
+      carries_instrument: true
+      carries_tier: "the derived tier, which may be null for a condition-only rule"
+      carries_verdict: "printed verbatim, or null"
+    - id: event
+      what: >
+        One astronomy record from build/astronomy_2027.json, rendered as itself.
+        The BASE TRACK. It is not a claim about any instrument and it is not the
+        absence of one: it is the sky, which is the layer every rule row is
+        computed from and which the calendar could not previously show.
+      carries_instrument: false
+      carries_tier: false
+      carries_verdict: false
+      evidence_source: none
+      forbidden_fields_are_structural: >
+        An event row is built from a different dataclass, BaseEvent, which has
+        no instrument, tier, claim_tag, construction, verdict_text or
+        source_probability field to set. It cannot acquire a verdict because
+        there is nowhere on it to put one -- not because a check forbids it. The
+        harness asserts the outcome anyway, since a later renderer could add the
+        key by hand.
+  every_meta_count_is_split_by_row_kind: >
+    RULED 15-Sep-2026. `meta.records` is a total over both kinds and every count
+    beneath it is keyed by row_kind first. A consumer reading `by_tier.no_rule`
+    gets a figure whose denominator is stated. The one number that is NOT split
+    is the grand total, and it is named `records` with `records_by_row_kind`
+    immediately beside it so it cannot be read alone.
+
+  # ------------------------------------------------- the base track's scope
+  base_track:
+    what: "the CORE EVENTS of build/astronomy_2027.json, on IST civil dates in the named year"
+    event_classes: [sign_ingress, lunation, conjunction, opposition, apsis,
+                    combustion, station, speed_crossing, eclipse, total_day]
+    excluded:
+      panchang_ingresses:
+        classes: [tithi_ingress, nakshatra_ingress, yoga_ingress, navamsa_ingress]
+        reason: >
+          These are the Moon's own subdivisions of the day and they recur four
+          to six times a day between them. Rendering them as calendar rows would
+          put about 2000 rows of lunar bookkeeping in front of 405 events, and
+          the panchang for any day is already carried ON every row that falls in
+          it.
+      horizon:
+        classes: [sunrise, sunset]
+        reason: >
+          A sunrise is a location property, two per venue per civil day, every
+          day of the year. It is an INPUT to the rules that use it, not an event
+          the calendar reports.
+    count: 405
+    count_basis: >
+      Counted off build/astronomy_2027.json by IST civil date of the start
+      stamp. The file spans 01-Dec-2026 to 01-Feb-2028, so 67 core records fall
+      outside IST civil 2027 and are not rendered: 472 core records in the file,
+      405 in the year.
+    empty_days_are_output_not_gaps:
+      the_argument: >
+        THE REASON THIS TRACK EXISTS, and the strongest of the three. A day
+        carrying no row is a MEASUREMENT -- nothing the layer tracks happened --
+        and a calendar that cannot be empty cannot report absence at all. A
+        reader then has no way to tell "nothing happened" from "nothing was
+        computed".
+      measured: >
+        MEASURED 15-Sep-2026, AND THE NUMBER IS NOT WHAT THE ARGUMENT ASSUMED.
+        105 of the 365 days of 2027 carry no EVENT row, and those 105 are the
+        absence the base track can now report. But ZERO days carry no row of any
+        kind, and that is not because every day has an event -- it is because
+        tier_4 emits a verdict-null USDINR row for every catalogue-B firing, and
+        those blanket all 365 days. The combined calendar is never empty.
+      days_with_no_event_row: 105
+      days_with_no_row_of_any_kind: 0
+      days_with_no_row_carrying_a_verdict_text: 2
+      consequence: >
+        Absence is reportable on the BASE TRACK, which means it is reportable
+        only through `row_kind`. Filter to row_kind=event and the empty days
+        appear; read the calendar whole and they do not. That is a second use
+        for the discriminator that the argument for it did not anticipate, and
+        it is recorded here rather than smoothed into the original claim --
+        which said 32 days and was not measured against this build.
+    rejoinable_to_the_ephemeris: >
+      The second reason. Every base-track row carries the astronomy record's own
+      id and its t_utc, so a reader can match a calendar row to the record it
+      came from by key rather than by guessing at event name and date.
+    the_sky_is_not_a_verdict: >
+      The third reason, and the one the discriminator protects. An ingress is
+      not a claim and carries no confidence, no tier and no claim tag. It is
+      shown because it happened.
+
+  # --------------------------------------------------------- eclipse contacts
+  eclipse_contacts:
+    ruled: 2026-09-15
+    rule: >
+      An eclipse row names its CONTACT. The astronomy record carries
+      `time.contacts_global` fully stamped -- begin, max, end, and for a total
+      or annular eclipse totality_begin and totality_end -- so a row that emits
+      one unlabelled time is choosing one of five and not saying which.
+    emit: [first_contact, maximum]
+    emit_reason: >
+      First contact is when the event begins and maximum is the instant the
+      source's own eclipse material is stated about. The remaining contacts stay
+      on the record and are reachable by id; they are not dropped, they are not
+      rendered.
+    never_emit_an_unlabelled_eclipse_time: true
+
+  # -------------------------------------------- the time fields on every row
+  # See finastro/render.py. The contract is short and all of it is load-bearing.
+  time_fields:
+    ruled: 2026-09-15
+    t_utc: >
+      The instant, for a row that has one. Added so the calendar is
+      INDEPENDENTLY REJOINABLE to its astronomy: before it, matching a calendar
+      row to an ephemeris record meant matching on event name and date and
+      hoping.
+    span_rows: >
+      A row whose condition holds over an interval emits `t_start_utc` and
+      `t_end_utc` and leaves `t_utc` null. One time cannot stand for two.
+    instant_precision:
+      field: instant_precision
+      values:
+        exact: >
+          Both endpoints are computed instants. The astronomy layer's own
+          `time.precision` (exact / minutes / hours) rides on the record and is
+          a statement about ACCURACY; this field is a statement about EXISTENCE.
+        date_only: >
+          The endpoints are civil-day boundaries. There is no instant, because
+          the thing that produced the row was date-granular: a combust or rise
+          record the ephemeris emits as a date, a window built by
+          sky.civil_day_span, or a total day.
+        anchored: >
+          The endpoint is a DATE THIS BUILD CHOSE, not one the sky or the
+          calendar supplied. The reference-table carried-in rows are the only
+          case: a body that did not cross its frame inside the span has no
+          crossing to be dated at, so the row is anchored at the named year's
+          first instant. That anchor is a rendering decision and must never read
+          as a measurement.
+      no_instant_reason:
+        what: >
+          A row without an instant carries WHY, and the why is not one answer
+          but three. `instant_precision` is a property of the span; this is the
+          property of the ROW, and it adds the fourth case, which is not a
+          precision at all.
+        values:
+          date_only: "the ephemeris never resolved this to a moment"
+          period_cut: >
+            the boundary is where the GENERATED PERIOD was cut, not where the
+            sky changed -- Span.open_start / open_end. The span's own precision
+            is `exact` and its other end may well be an instant; this end is
+            not. 147 firings, on b084, b086 and b099, whose shared-sign windows
+            were already running at the carry-in.
+          anchored: "the date was chosen by this build"
+          named_contacts: >
+            the row has SEVERAL instants and names them, so one unlabelled time
+            would be choosing among them without saying which. Eclipses: the
+            record carries begin, maximum, end and, for a central eclipse, both
+            totality contacts, every one fully stamped. This is the same rule as
+            the other three pointing the other way -- a row may not print a time
+            it cannot identify -- and it is the only reason here that is not a
+            shortage of information.
+        the_remedies_differ: >
+          Kept as three values rather than one boolean because they are not
+          interchangeable. A date_only endpoint would need a new ephemeris
+          scan; a period_cut endpoint would need a wider generated span; an
+          anchored one cannot be remedied at all, because the thing it reports
+          is that nothing happened.
+      a_row_without_an_instant_cannot_emit_a_clock_time: >
+        STRUCTURAL, NOT DISCOURAGED. `date_only` and `anchored` rows are stamped
+        by timezones.date_stamp, which returns a DateStamp carrying dates and
+        weekdays and NO time attribute at all. Code in that branch that tries to
+        read a clock time raises AttributeError at build time. The previous
+        arrangement -- one stamp type with times always present -- emitted
+        "00:00 IST" on 662 rows and there was no way to write the renderer that
+        did not.
+      why_the_display_string_was_not_the_test: >
+        Measured by display string the population is 663 rows across 28 events.
+        Measured structurally it is 662 across 27. The difference is one row:
+        b102_anuradha_on_sunday on 03-Oct-2027, a nakshatra ingress at
+        00:00:21 IST. It is a genuine instant that happens to render as 00:00,
+        and no rule phrased over the printed time could keep it while dropping
+        the other 662.
+
 # ====================================================== source probability
 # WHAT THIS BLOCK IS: the 2026 source's own probability labels, carried forward
 # as PROVENANCE and as nothing else. It records which labels transfer, to what,

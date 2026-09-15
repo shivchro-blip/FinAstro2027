@@ -34,7 +34,7 @@ never counted in with the executable rules.
 """
 from __future__ import annotations
 
-from ..sky import Span, flag, parse
+from ..sky import Span, flag, parse, record_precision
 from . import names
 from .base import blocked, resolved, rule
 from .catalogue import B, lettered, split_statement
@@ -73,9 +73,15 @@ def _rise(body: str, direction: str | None = None,
                 continue
             if nakshatras is not None and nak not in nakshatras:
                 continue
+            # `record_precision` and not the default "exact": a rise record is
+            # emitted at date_only, so its two endpoints are the IST midnights
+            # bounding the udaya day. The module docstring above has said "there
+            # is no instant to convert" since batch 1; this is that sentence
+            # made structural rather than documentary. See Span.precision.
             out.append(Span(parse(r["time"]["t_start_utc"]),
                             parse(r["time"]["t_end_utc"]),
-                            {"direction": d, "nakshatra": nak}))
+                            {"direction": d, "nakshatra": nak},
+                            precision=record_precision(r)))
         return out
     return fn
 

@@ -64,7 +64,7 @@ investment advice.
 """
 from __future__ import annotations
 
-from ..sky import Span, intersect, parse, same, weekdays_in_span
+from ..sky import Span, _weaker, intersect, parse, same, weekdays_in_span
 from . import names
 from .base import (FIRING_STATUSES, Firing, Rule, STATUS_BLOCKED,
                    STATUS_RESOLVED)
@@ -395,16 +395,26 @@ def _goes_combust_while_retrograde(body: str, instant: bool = True,
             for r in retro:
                 if not (r.start <= c.start < r.end):
                     continue
+                # The combust window's own precision travels onto every span
+                # built from it. `combust_spans` is date_only -- kalamsha is a
+                # horizon measurement and the record carries a date, not a
+                # moment -- while the retrograde stretch it is intersected with
+                # is exact, so `_weaker` picks the one that governs. Without
+                # this the three rows of cfg_silver_bullish_17 printed
+                # `00:00 IST` for a combustion the ephemeris never timed.
                 if instant:
                     if wanted is not None and \
                             sky.value_at(body, "sign", c.start) not in wanted:
                         continue
-                    out.append(Span(c.start, c.start, {"direction": c.value}))
+                    out.append(Span(c.start, c.start, {"direction": c.value},
+                                    precision=c.precision))
                     continue
                 lo, hi = max(c.start, r.start), min(c.end, r.end)
+                prec = _weaker(c.precision, r.precision)
                 if wanted is None:
                     if lo < hi:
-                        out.append(Span(lo, hi, {"direction": c.value}))
+                        out.append(Span(lo, hi, {"direction": c.value},
+                                        precision=prec))
                     continue
                 for sg in sky.spans(body, "sign"):
                     if sg.value not in wanted:
@@ -412,7 +422,8 @@ def _goes_combust_while_retrograde(body: str, instant: bool = True,
                     a, b = max(lo, sg.start), min(hi, sg.end)
                     if a < b:
                         out.append(Span(a, b, {"direction": c.value,
-                                               "sign": sg.value}))
+                                               "sign": sg.value},
+                                       precision=_weaker(prec, sg.precision)))
         return sorted(out, key=lambda s: s.start)
     return fn
 

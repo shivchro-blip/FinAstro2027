@@ -95,8 +95,12 @@ const rows = CAL_ROWS;
 function esc(s){return s==null?'':String(s).replace(/[&<>"]/g,
   c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
 function fill(){
-  const insts=[...new Set(rows.map(r=>r.instrument))].sort();
-  const tiers=[...new Set(rows.map(r=>r.tier).filter(Boolean))].sort();
+  // Both lists are built from VERDICT rows. An event row has neither field,
+  // and `undefined` sorting into a dropdown as a blank option is exactly how
+  // one population starts looking like a member of the other.
+  const vr=rows.filter(r=>r.row_kind==='verdict');
+  const insts=[...new Set(vr.map(r=>r.instrument))].sort();
+  const tiers=[...new Set(vr.map(r=>r.tier).filter(Boolean))].sort();
   const si=document.getElementById('inst'), st=document.getElementById('tier');
   insts.forEach(v=>si.add(new Option(v,v)));
   tiers.forEach(v=>st.add(new Option(v,v)));
@@ -105,39 +109,76 @@ function render(){
   const q=document.getElementById('q').value.toLowerCase();
   const from=document.getElementById('from').value;
   const to=document.getElementById('to').value;
+  const kind=document.getElementById('kind').value;
   const inst=document.getElementById('inst').value;
   const tier=document.getElementById('tier').value;
   const onlyV=document.getElementById('onlyv').checked;
   const body=document.getElementById('rows');
   let n=0, html='';
   for(const r of rows){
-    if(inst && r.instrument!==inst) continue;
-    if(tier && r.tier!==tier) continue;
+    if(kind && r.row_kind!==kind) continue;
+    // An instrument or tier filter is a question only a verdict row can answer,
+    // so it hides every event row rather than matching `undefined` against ''.
+    if(inst && (r.row_kind!=='verdict' || r.instrument!==inst)) continue;
+    if(tier && (r.row_kind!=='verdict' || r.tier!==tier)) continue;
     if(onlyV && !r.vedic_interpretation) continue;
     const iso=r.iso_date;
     if(from && iso<from) continue;
     if(to && iso>to) continue;
     if(q){
-      const hay=(r.event+' '+r.instrument+' '+r.event_section+' '+
-        (r.vedic_interpretation||'')+' '+(r.flags||[]).join(' ')).toLowerCase();
+      // `||''` on every optional field: an event row has no instrument and no
+      // interpretation, and 'undefined' in the haystack makes that word a
+      // search term that matches 405 rows.
+      const hay=(r.event+' '+r.row_kind+' '+(r.instrument||'')+' '
+        +(r.event_section||'')+' '+(r.record_id||'')+' '
+        +(r.bodies||[]).join(' ')+' '
+        +(r.vedic_interpretation||'')+' '+(r.flags||[]).join(' ')).toLowerCase();
       if(!hay.includes(q)) continue;
     }
     n++;
-    const shift=r.day_shift? '<span class="shift">'+esc(r.day_shift_marker)+
-      ' '+esc(r.date_et)+'</span>' : esc(r.date_et);
+    const ev = r.row_kind==='event';
+    const shift=(!ev && r.day_shift)
+      ? '<span class="shift">'+esc(r.day_shift_marker)+' '+esc(r.date_et)+'</span>'
+      : esc(r.date_et);
+    // A row with no instant prints WHY, in place of the time it does not have.
+    // `no instant` alone would read as a gap in the build; `date_only` says the
+    // ephemeris never resolved it to a moment, `period_cut` that the boundary
+    // is the generated span's, `anchored` that the date was chosen here, and
+    // `named_contacts` that there are several times and the row names them.
+    const noTime = r.time_ist? null
+      : '<span class="null">'+esc(r.no_instant_reason||'no instant')+'</span>';
+    const tIST = r.time_ist? esc(r.time_ist) : noTime;
+    const tET  = r.time_et? esc(r.time_et)+' <span class="mut">'
+                            +esc(r.et_offset)+'</span>' : noTime;
+    // An eclipse names its contacts. The record carries begin, maximum, end and
+    // both totality contacts; one unlabelled time would be choosing among them.
+    const contacts=(r.contacts||[]).map(c=>
+      '<div class="mut flag">'+esc(c.contact.replace('_',' '))+': '
+      +esc(c.date_ist)+' '+esc(c.time_ist)+'</div>').join('');
     html+='<tr>'
+      +'<td class="mut flag">'+esc(r.row_kind)+'</td>'
       +'<td>'+esc(r.date_ist)+'</td>'
-      +'<td>'+esc(r.time_ist)+'</td>'
-      +'<td>'+esc(r.time_et)+' <span class="mut">'+esc(r.et_offset)+'</span></td>'
+      +'<td>'+tIST+'</td>'
+      +'<td>'+tET+'</td>'
       +'<td>'+shift+'</td>'
-      +'<td><b>'+esc(r.instrument)+'</b><div class="mut flag">'+esc(r.venue)+'</div></td>'
-      +'<td>'+esc(r.event)+'<div class="mut flag">'+esc(r.event_section)+'</div></td>'
-      +'<td>'+(r.vedic_interpretation? esc(r.vedic_interpretation)
-              : '<span class="null">no inference printed</span>')+'</td>'
-      +'<td class="mut">'+esc(r.financial_theme)+'</td>'
-      +'<td><span class="tier t-'+esc(r.tier)+'">'+esc(r.tier||'none')+'</span>'
-      +'<div class="mut flag">'+esc(r.confidence)+' &middot; '
-      +esc(r.claim_tag||'no claim')+'</div></td>'
+      // An event row has no instrument, no theme, no tier and no verdict, and
+      // the cells say so rather than sitting empty. An empty cell reads as a
+      // missing value; "the sky" reads as the answer it is.
+      +'<td>'+(ev? '<span class="null">the sky</span>'
+               : '<b>'+esc(r.instrument)+'</b><div class="mut flag">'
+                 +esc(r.venue)+'</div>')+'</td>'
+      +'<td>'+esc(r.event)+'<div class="mut flag">'+esc(r.event_section)+'</div>'
+      +contacts+'</td>'
+      +'<td>'+(ev? '<span class="null">not a claim</span>'
+               : (r.vedic_interpretation? esc(r.vedic_interpretation)
+                  : '<span class="null">no inference printed</span>'))+'</td>'
+      +'<td class="mut">'+(ev? esc(r.bodies? r.bodies.join(' ') : '')
+                            : esc(r.financial_theme))+'</td>'
+      +'<td>'+(ev? '<span class="mut flag">certainty '+esc(r.data_certainty)
+                   +'</span>'
+               : '<span class="tier t-'+esc(r.tier)+'">'+esc(r.tier||'none')
+                 +'</span><div class="mut flag">'+esc(r.confidence)+' &middot; '
+                 +esc(r.claim_tag||'no claim')+'</div>')+'</td>'
       +'</tr>';
   }
   body.innerHTML=html;
@@ -149,12 +190,12 @@ function sortBy(i,dir){
 }
 document.addEventListener('DOMContentLoaded',()=>{
   fill();
-  ['q','from','to','inst','tier'].forEach(id=>
+  ['q','from','to','kind','inst','tier'].forEach(id=>
     document.getElementById(id).addEventListener('input',render));
   document.getElementById('onlyv').addEventListener('change',render);
   document.getElementById('reset').addEventListener('click',()=>{
     ['q','from','to'].forEach(id=>document.getElementById(id).value='');
-    ['inst','tier'].forEach(id=>document.getElementById(id).value='');
+    ['kind','inst','tier'].forEach(id=>document.getElementById(id).value='');
     document.getElementById('onlyv').checked=false; render();});
   render();
 });
@@ -162,8 +203,16 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 
 def write_html(rows: list[dict], verdicts) -> pathlib.Path:
-    tiers = collections.Counter(str(r["tier"]) for r in rows)
-    insts = collections.Counter(r["instrument"] for r in rows)
+    # COUNTED OVER VERDICT ROWS ONLY, and `.get` is deliberately not used: an
+    # event row has no `tier` key at all, so counting over every row raises a
+    # KeyError here rather than quietly tallying 405 `None`s into a tier
+    # histogram. That exception is the discriminator working -- it is what
+    # stopped the base track being absorbed the first time this file met it.
+    vrows = [r for r in rows if r["row_kind"] == "verdict"]
+    erows = [r for r in rows if r["row_kind"] == "event"]
+    tiers = collections.Counter(str(r["tier"]) for r in vrows)
+    insts = collections.Counter(r["instrument"] for r in vrows)
+    classes = collections.Counter(r["event_class"] for r in erows)
     blocked = sorted(by_status("blocked"), key=lambda r: r.catalogue_b)
     resolved = sorted(by_status("resolved_ambiguity"), key=lambda r: r.catalogue_b)
     ambiguous = sorted(by_status("ambiguous"), key=lambda r: r.catalogue_b)
@@ -188,11 +237,17 @@ def write_html(rows: list[dict], verdicts) -> pathlib.Path:
     A(f"<style>{CSS}</style></head><body>")
     A("<header>")
     A(f"<h1>FinAstro {YEAR} - calendar</h1>")
-    A(f'<div class="sub">{len(rows):,} rows over '
-      f'{len(insts)} instruments &middot; '
-      f'{sum(1 for r in rows if r["vedic_interpretation"]):,} carrying a '
-      f'verdict, {sum(1 for r in rows if not r["vedic_interpretation"]):,} with '
-      f'none &middot; confidence <code>untested</code> on every row</div>')
+    # TWO POPULATIONS, NAMED. `len(rows)` alone would read as a verdict count,
+    # which is what it was until the base track arrived and is what it stopped
+    # being on the same day.
+    A(f'<div class="sub">{len(rows):,} rows &mdash; '
+      f'<b>{len(vrows):,} verdict rows</b> over {len(insts)} instruments and '
+      f'<b>{len(erows):,} astronomy event rows</b>, which carry no instrument, '
+      f'no tier and no verdict &middot; '
+      f'{sum(1 for r in vrows if r["vedic_interpretation"]):,} verdict rows '
+      f'carry an interpretation, '
+      f'{sum(1 for r in vrows if not r["vedic_interpretation"]):,} carry none '
+      f'&middot; confidence <code>untested</code> on every verdict row</div>')
     A("</header><div class=wrap>")
     A(f'<div class="disc"><b>Read this first.</b> {_e(DISCLAIMER)}</div>')
 
@@ -223,6 +278,47 @@ def write_html(rows: list[dict], verdicts) -> pathlib.Path:
       "<code>Framework</code> where it is a modern practitioner extension. A "
       "rule that prints no inference carries no tag, because an unstated claim "
       "has nothing to tag.</p>")
+
+    A("<h2>Two kinds of row, and why the counts are split</h2>"
+      "<p>Every row carries <code>row_kind</code>. A <b>verdict</b> row is one "
+      "rule, one instrument, one venue civil day; an <b>event</b> row is one "
+      "astronomy record rendered as itself &mdash; the <b>base track</b>. An "
+      "event row has no instrument, no tier, no claim tag and no verdict, and "
+      "not because they were left empty: the object it is built from has "
+      "nowhere to put them.</p>"
+      f"<p>{len(vrows):,} verdict rows, {len(erows):,} event rows, "
+      f"{len(rows):,} together &mdash; and that last number is the one to be "
+      "careful with. Until the base track arrived every count in this file "
+      "was a verdict count, so <code>no_rule</code> would have absorbed 405 "
+      "rows and gone on looking like the figure it used to be. Every count in "
+      "the JSON <code>meta</code> is therefore keyed by row kind first.</p>"
+      "<p>The base track is the ten core event classes &mdash; sign ingress, "
+      "lunation, conjunction, opposition, apsis, combustion, station, speed "
+      "crossing, eclipse, total day. Not the panchang ingresses (tithi, "
+      "nakshatra, yoga, navamsa: four to six a day, and already carried on "
+      "every row that falls in them) and not sunrise or sunset (a location "
+      "property, an input to the rules that use it).</p><ul>")
+    for c, n in sorted(classes.items(), key=lambda x: -x[1]):
+        A(f"<li><code>{_e(c)}</code> &mdash; {n:,}</li>")
+    A("</ul>")
+    A("<h2>When a row prints a date and no time</h2>"
+      "<p>A row carries a clock time only when its start is a moment something "
+      "crossed. When it is not, the row prints <b>why</b> instead:</p><ul>"
+      "<li><code>date_only</code> &mdash; the ephemeris never resolved it to a "
+      "moment. Combust and rise windows are horizon measurements emitted as "
+      "dates; so is a total day.</li>"
+      "<li><code>period_cut</code> &mdash; the boundary is where the generated "
+      "span was cut, not where the sky changed. The state was already running "
+      "at the carry-in.</li>"
+      "<li><code>anchored</code> &mdash; the date was chosen here, because the "
+      "thing the row reports is that a body did <i>not</i> cross.</li>"
+      "<li><code>named_contacts</code> &mdash; there are several times and the "
+      "row names them. Eclipses carry first contact and maximum.</li></ul>"
+      f"<p><span class=mut>{sum(1 for r in rows if not r['time_ist']):,} of "
+      f"{len(rows):,} rows. Until 15-Sep-2026 all of them printed "
+      "<code>00:00 IST</code> with a previous-Eastern-day afternoon beside it, "
+      "because the renderer was handed one stamp type and that type always had "
+      "a time on it.</span></p>")
 
     A("<h2>Tiers, and the five values they take</h2><ul>")
     for t, n in sorted(tiers.items(), key=lambda x: str(x[0])):
@@ -380,6 +476,14 @@ def write_html(rows: list[dict], verdicts) -> pathlib.Path:
     A('<input type=text id=q placeholder="search event, section, verdict, flag">')
     A('<label class=sub>from <input type=date id=from></label>')
     A('<label class=sub>to <input type=date id=to></label>')
+    # The row-kind filter comes FIRST in the control strip, because every other
+    # control below it means something different to the two populations: an
+    # instrument filter hides every event row, a tier filter hides every event
+    # row, and a reader who did not know there were two kinds would read that
+    # as the calendar being empty.
+    A('<select id=kind><option value="">both row kinds</option>'
+      '<option value="verdict">verdict rows only</option>'
+      '<option value="event">astronomy events only</option></select>')
     A('<select id=inst><option value="">all instruments</option></select>')
     A('<select id=tier><option value="">all tiers</option></select>')
     A('<label class=sub><input type=checkbox id=onlyv> only rows with a verdict'
@@ -389,6 +493,7 @@ def write_html(rows: list[dict], verdicts) -> pathlib.Path:
     A("</div>")
 
     A("<table><thead><tr>"
+      "<th>Kind</th>"
       "<th>Date (IST)</th><th>Time IST</th><th>Time ET</th><th>Date (ET)</th>"
       "<th>Instrument</th><th>Event</th><th>Vedic interpretation</th>"
       "<th>Financial-market theme</th><th>Tier / confidence</th>"

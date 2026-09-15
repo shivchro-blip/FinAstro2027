@@ -396,6 +396,12 @@ def _n_weekdays_in_shukla_paksha(weekday: int, n: int):
             if len(days) < n:
                 continue
             window = civil_day_span(days[0], days[-1], loc)
+            # `window.precision`, not the default. The window IS a run of civil
+            # days -- first Saturday to last Saturday at this venue -- so its
+            # endpoints are midnights, not moments. Rebuilding the span here
+            # instead of returning `window` is what dropped the precision on the
+            # first pass and left 135 rows printing `00:00 IST`, so the endpoint
+            # property is copied explicitly rather than left to a default.
             out.append(Span(window.start, window.end, {
                 "paksha": "Shukla",
                 "counted_weekday": day_name,
@@ -405,7 +411,7 @@ def _n_weekdays_in_shukla_paksha(weekday: int, n: int):
                     fortnight.start.strftime("%Y-%m-%dT%H:%M:%SZ"),
                 "fortnight_end_utc":
                     fortnight.end.strftime("%Y-%m-%dT%H:%M:%SZ"),
-            }))
+            }, precision=window.precision))
         return out
     return fn
 

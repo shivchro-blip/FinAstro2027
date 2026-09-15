@@ -2970,3 +2970,113 @@ of coverage statement worth publishing.
 **The calendar exists and renders. The coverage claim is now stated honestly, and
 that mattered more than adding to it.**
 
+
+---
+
+### 12.17 The base track, and the discriminator that had to come first · recorded 15-Sep-2026
+
+The calendar held **verdict rows only**: one rule, one instrument, one venue civil
+day, 6,677 of them. It now also holds the **base track** — 405 rows, one per core
+astronomy record, the sky rendered as itself. Three arguments were made for it and
+the third is the strongest.
+
+1. *The sky is not a verdict, and the calendar showed only verdicts.* An ingress is
+   not a claim about gold.
+2. *Rejoinability.* Every base-track row carries the astronomy record's own `id`
+   and its `t_utc`, so a reader checking the calendar against the ephemeris matches
+   on a key rather than on an event name and a date.
+3. **A calendar that cannot be empty cannot report absence.** A day with no row is
+   a measurement — nothing the layer tracks happened — and without a base track
+   there was no way to tell that from *nothing was computed*.
+
+#### The discriminator is a precondition, and that is the whole shape of it
+
+`row_kind` was specified and put on every one of the 6,677 existing rows **before a
+single base-track row existed**. Not as tidiness. Without it the 405 rows land in a
+file where `records` goes 6,677 → 7,082, `rows_without_verdict` absorbs 405 rows
+that were never candidates for a verdict, and — worst — `by_tier.no_rule` acquires
+them, because `tier_derivation` maps `(evidence_source: none, construction: null)`
+to `no_rule` and an event row has exactly that pair. **3,285 would become 3,690 and
+still be called `no_rule`.** Every meta figure in the file would have changed what
+it meant while looking unchanged.
+
+That is the stale-denominator failure for the **third** time in this build, after
+the `family`-read-two-ways fix and the label-attached-per-section fix (§12.16, and
+`source_probability.corrections_on_record`). The rule taken from those two is
+written into `row_kinds` in the config: *a discriminator is a precondition for the
+population it discriminates, never a follow-up.*
+
+`BaseEvent` **has nowhere to put a verdict.** It is not a `Verdict` with the
+interpretive fields nulled: it has no `instrument`, `tier`, `claim_tag`,
+`construction`, `verdict_text`, `source_probability` or `confidence` attribute. The
+harness checks the rendered dict anyway — a dataclass cannot stop a renderer adding
+a key by hand — and `basetrack.FORBIDDEN_FIELDS` is that list. The first run of
+`html_calendar.py` against the mixed rows raised `KeyError: 'tier'`, which is the
+guarantee working: the file counted tiers over every row and there was no longer a
+tier on every row.
+
+#### What the empty-day argument turned out to measure
+
+The argument was made with a figure of 32 empty days. **Measured against this build
+it is not 32 and not one number but three:**
+
+| measure | days of 2027 |
+| --- | --- |
+| carry no **event** row | **105** |
+| carry no row **of any kind** | **0** |
+| carry no row carrying a **verdict text** | 2 |
+
+Zero, because `tier_4` emits a verdict-null `USDINR` row for every catalogue-B
+firing and those blanket all 365 days. **The combined calendar is never empty.**
+Absence is reportable on the base track and only through `row_kind` — filter to
+`row_kind=event` and the 105 days appear; read the calendar whole and they do not.
+That is a second use for the discriminator which the argument for it did not
+anticipate, and it is recorded rather than folded into the original claim.
+
+#### Eclipse rows name their contact
+
+An eclipse record carries `contacts_global` fully stamped: begin, maximum, end, and
+for a central eclipse both totality contacts — three for a penumbral lunar eclipse,
+five for a solar one. A row emitting **one unlabelled time** was choosing one of
+those and not saying which. Each of the five 2027 eclipse rows now names **first
+contact and maximum**; the rest stay on the record, which the row names by id.
+First contact is keyed per family and not taken as the earliest entry in the dict —
+a solar eclipse's is `begin`, a lunar eclipse's is `penumbral_begin` — because
+picking by time would silently rename the contact the day a record carries a new one.
+
+#### 662 rows printed a time that did not exist
+
+Every row now carries `t_utc`, or `t_start_utc` and `t_end_utc` where the condition
+holds over an interval. That is the rejoinability half. The other half is harder,
+and it is the one the finding was actually about: **662 rows across 27 rules
+printed `00:00 IST` beside a previous-Eastern-day afternoon, and not one of them was
+an event at midnight.** Four causes, three of which were already marked in data
+nobody was reading:
+
+| cause | firings | what the start actually is | was it marked? |
+| --- | --- | --- | --- |
+| `date_only` astronomy records | 249 | the ephemeris emits a **date** — kalamsha is a horizon measurement | yes, `time.precision` |
+| `civil_day_span()` | 45 | a venue's midnight. Calendar arithmetic | no |
+| carry-in cut | 147 | `sky.span_start` — the **generated period's** edge | yes, `open_start` |
+| synthetic anchor | 12 rows | `datetime(2027,1,1, tzinfo=IST)` — a date **this build chose** | only in `detail.anchor` |
+
+**The fix is structural rather than disciplinary, and it had to be.** There was no
+way to write the renderer that did not print a clock time, because the object it
+was handed had one: `stamp()` returns a `DualStamp` and a `DualStamp` always has
+`ist_time`. So `timezones.DateStamp` was added — dates and weekdays, **no time
+attribute at all** — and `_time_fields` hands a row one object or the other. Code in
+the no-instant branch that reaches for a clock time raises `AttributeError` at build
+time. A row without an instant is not discouraged from printing one; it cannot.
+
+Each such row prints **why** instead, and the why is four values rather than a
+boolean, because the remedies differ: `date_only` would need a new ephemeris scan,
+`period_cut` a wider generated span, `anchored` cannot be remedied at all, and
+`named_contacts` is not a shortage — the row has more times than one field can hold.
+
+**And the display string was not the test.** Measured by the printed time the
+population is 663 rows across 28 events; measured structurally it is 662 across 27.
+The difference is one row: `b102_anuradha_on_sunday` on 03-Oct-2027, a nakshatra
+ingress at **00:00:21 IST**. A genuine instant that happens to render as `00:00`.
+No rule phrased over the printed string could have kept it while dropping the other
+662 — which is the same lesson as the per-rule label census, in a different layer:
+*the artifact's surface is not the thing to test; the property behind it is.*

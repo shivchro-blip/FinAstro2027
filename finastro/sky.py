@@ -77,6 +77,23 @@ class Span:
     the sky: the state was already running when the carry-in began, or is still
     running when the carry-out ends. A rule must not read such a boundary as an
     event -- that is exactly the year-boundary truncation the 2026 source made.
+
+    `precision` says whether the ENDPOINTS ARE INSTANTS AT ALL, which is a
+    different question from how accurate they are. The astronomy layer's own
+    `time.precision` (exact / minutes / hours / date_only) is about ACCURACY and
+    stays on the record; this field is about EXISTENCE, and the renderer reads
+    it to decide whether a row may carry a clock time:
+
+    * `exact` -- both endpoints are computed instants;
+    * `date_only` -- the endpoints are civil-day boundaries, because what
+      produced the span was date-granular: a combust or rise record the
+      ephemeris emits as a date, or a window built by `civil_day_span`;
+    * `anchored` -- the endpoint is a date THIS BUILD CHOSE. The reference-table
+      carried-in rows are the only case.
+
+    Together with `open_start` this separates the four ways a span can begin at
+    a midnight. Three of them are not events, and before 15-Sep-2026 all four
+    rendered as `00:00 IST` beside a previous-Eastern-day afternoon.
     """
 
     start: dt.datetime
@@ -84,6 +101,7 @@ class Span:
     value: object
     open_start: bool = False
     open_end: bool = False
+    precision: str = "exact"
 
     def overlaps(self, lo: dt.datetime, hi: dt.datetime) -> bool:
         if self.start == self.end:      # an instant: the day that contains it
@@ -95,7 +113,8 @@ class Span:
             return None
         return Span(max(self.start, lo), min(self.end, hi), self.value,
                     self.open_start or self.start < lo,
-                    self.open_end or self.end > hi)
+                    self.open_end or self.end > hi,
+                    self.precision)
 
 
 def _merge_adjacent(spans: list[Span]) -> list[Span]:
@@ -111,10 +130,43 @@ def _merge_adjacent(spans: list[Span]) -> list[Span]:
         if out and out[-1].value == s.value and out[-1].end == s.start:
             prev = out.pop()
             out.append(Span(prev.start, s.end, s.value,
-                            prev.open_start, s.open_end))
+                            prev.open_start, s.open_end,
+                            _weaker(prev.precision, s.precision)))
         else:
             out.append(s)
     return out
+
+
+#: Least-instant-bearing first. Combining two spans can only lose the property
+#: of having an instant, never gain it, so the weaker of the two wins.
+_PRECISION_ORDER = ("anchored", "date_only", "exact")
+
+
+def _weaker(*precisions: str) -> str:
+    """The least instant-bearing of the precisions given.
+
+    An unknown value raises rather than defaulting: a precision nobody chose is
+    exactly the shape of the tier bug -- `tier_derivation.unmapped_is_an_error`
+    exists for the same reason -- and defaulting it to `exact` would hand a row
+    a clock time on the strength of a typo.
+    """
+    for p in precisions:
+        if p not in _PRECISION_ORDER:
+            raise ValueError(f"unknown span precision {p!r}; "
+                             f"expected one of {_PRECISION_ORDER}")
+    return min(precisions, key=_PRECISION_ORDER.index)
+
+
+def record_precision(rec: dict) -> str:
+    """A record's `Span.precision`, from its own `time.precision`.
+
+    The astronomy layer grades accuracy in four steps -- exact, minutes, hours,
+    date_only -- and only the last of them means NO INSTANT EXISTS. `minutes`
+    and `hours` are instants with an error bar, and an error bar is not a reason
+    to withhold the time; `date_only` is a date the ephemeris never resolved to
+    a moment, and rendering one as a clock time invents the moment.
+    """
+    return "date_only" if rec["time"]["precision"] == "date_only" else "exact"
 
 
 def flag(rec: dict, key: str) -> str | None:
@@ -278,6 +330,13 @@ class Sky:
 
         The value is the direction the source prints -- East or West -- read off
         the combust record's own `direction=` flag.
+
+        THE WINDOW HAS NO INSTANT. Kalamsha is a horizon measurement and the
+        records are emitted at `precision: date_only`, so both endpoints are IST
+        midnights -- 18:30Z -- and not moments anything crossed. That precision
+        is carried onto the span rather than left on the record, because by the
+        time the renderer sees a row the record is three layers behind it, and
+        for a year these windows rendered as `00:00 IST`.
         """
         evs = sorted((r for r in self.by_class["combustion"]
                       if r["bodies"][0] == body),
@@ -285,18 +344,23 @@ class Sky:
         out: list[Span] = []
         open_at: dt.datetime | None = None
         direction: str | None = None
+        prec: str = "exact"
         if evs and evs[0]["rule_family"] == "visibility/rise":
             open_at = self.span_start          # already combust at carry-in
+            prec = record_precision(evs[0])
         for r in evs:
             t = parse(r["time"]["t_start_utc"])
             if r["rule_family"] == "visibility/combust":
                 open_at, direction = t, _flag(r, "direction")
+                prec = record_precision(r)
             elif open_at is not None:
                 out.append(Span(open_at, t, direction,
-                                open_start=(open_at == self.span_start)))
-                open_at, direction = None, None
+                                open_start=(open_at == self.span_start),
+                                precision=_weaker(prec, record_precision(r))))
+                open_at, direction, prec = None, None, "exact"
         if open_at is not None:
-            out.append(Span(open_at, self.span_end, direction, open_end=True))
+            out.append(Span(open_at, self.span_end, direction, open_end=True,
+                            precision=prec))
         return tuple(out)
 
     # ------------------------------------------------------------- horizon
@@ -434,7 +498,8 @@ def intersect(a, b, value=None) -> list[Span]:
                             (x.open_start and x.start >= y.start)
                             or (y.open_start and y.start >= x.start),
                             (x.open_end and x.end <= y.end)
-                            or (y.open_end and y.end <= x.end)))
+                            or (y.open_end and y.end <= x.end),
+                            _weaker(x.precision, y.precision)))
     return _merge_adjacent(sorted(out, key=lambda s: s.start))
 
 
@@ -517,4 +582,8 @@ def civil_day_span(first: dt.date, last: dt.date, loc_key: str) -> Span:
     tz = ZoneInfo(CONF["locations"][loc_key]["tz"])
     lo, _ = civil_day_bounds(first, tz)
     _, hi = civil_day_bounds(last, tz)
-    return Span(lo, hi, None)
+    # `date_only` because the endpoints ARE the venue's midnights. Nothing
+    # crossed at either of them; they are where the calendar turns over. A row
+    # built from this span has a date and no instant, and the renderer is what
+    # has to know that.
+    return Span(lo, hi, None, precision="date_only")

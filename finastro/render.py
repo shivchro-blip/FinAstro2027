@@ -31,8 +31,9 @@ import html
 import json
 import pathlib
 
+from .basetrack import EVIDENCE_SOURCE, build_base_events
 from .config import CONF
-from .timezones import ET, IST, SHIFT_MARK, stamp
+from .timezones import ET, IST, SHIFT_MARK, date_stamp, stamp
 from .verdicts import INSTRUMENTS, build_verdicts
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -59,20 +60,105 @@ def _sector_of(instrument: str) -> str:
     return INSTRUMENTS[instrument]["label"]
 
 
+#: The two values `row_kind` takes, read from config rather than restated. The
+#: whole point of the field is that a consumer can key on it, so the set it may
+#: take is a ruling on record.
+ROW_KINDS = tuple(v["id"] for v in CONF["row_kinds"]["values"])
+ROW_KIND_VERDICT, ROW_KIND_EVENT = "verdict", "event"
+
+
+def _time_fields(row) -> dict:
+    """The time block of a row, and the ONE PLACE that decides about clock times.
+
+    Two branches, and they are handed two DIFFERENT OBJECTS. A row whose start
+    is a measured instant gets a `DualStamp`, which has `ist_time`, `et_time`,
+    `et_abbr` and `et_offset`. A row whose start is not gets a `DateStamp`,
+    which HAS NONE OF THOSE ATTRIBUTES -- reading one raises AttributeError
+    here, at build time.
+
+    That is the difference between this and the arrangement it replaced. Before
+    15-Sep-2026 there was one stamp type, it always carried a time, and 662 rows
+    across 27 rules rendered `00:00 IST` beside a previous-Eastern-day
+    afternoon: 249 date-granular combust and rise windows, 147 shared-sign
+    windows already running at the carry-in, 45 civil-day windows, 12
+    reference-table rows anchored at a date this build chose. None of them was
+    an event at midnight. No amount of care in this function could have stopped
+    it, because the object it was handed had a time on it.
+
+    `t_utc` / `t_start_utc` / `t_end_utc` are the other half, and they are what
+    makes the calendar REJOINABLE: before them, checking a row against the
+    ephemeris meant matching on event name and date.
+    """
+    out: dict = {
+        "instant_precision": row.precision,
+        "open_start": row.open_start,
+        "open_end": row.open_end,
+        "t_utc": None,
+        "t_start_utc": None,
+        "t_end_utc": None,
+        "no_instant_reason": None,
+    }
+    # An INSTANT row carries one time and says so; a SPAN row carries two. One
+    # time cannot stand for two, and `t_utc` on a 220-day window would be a
+    # date pretending to be a moment.
+    if row.is_instant:
+        out["t_utc"] = _iso(row.start_utc)
+    else:
+        out["t_start_utc"] = _iso(row.start_utc)
+        out["t_end_utc"] = _iso(row.end_utc)
+
+    if row.has_instant_start:
+        st = stamp(row.start_utc)
+        out.update({
+            "date_ist": st.ist_date,
+            "date_et": st.et_date,
+            "day_shift": st.day_shift,
+            "time_ist": f"{st.ist_time} IST",
+            "time_et": f"{st.et_time} {st.et_abbr}",
+            "et_offset": st.et_offset,
+            "dual_date": bool(st.day_shift),
+        })
+        return out
+
+    # No single printable time. `date_stamp` returns an object with no time
+    # attribute at all, so nothing below can reach for one.
+    #
+    # A verdict row's reason is its span precision, or `period_cut` where the
+    # span is exact but the boundary is the generated period's. A base-track
+    # row states its own, because it has a fourth case: an eclipse has SEVERAL
+    # instants, not none.
+    reason = getattr(row, "no_instant_reason", None) or (
+        row.precision if row.precision != "exact" else "period_cut")
+    ds = date_stamp(row.civil_date, reason)
+    out.update({
+        "date_ist": ds.ist_date,
+        # A day shift is a statement about where an INSTANT falls in two
+        # calendars. A civil day at a venue does not shift; it is that venue's
+        # day. So there is no Eastern date to print and no marker to print it
+        # with, and printing one would be the same invention in a second field.
+        "date_et": None,
+        "day_shift": 0,
+        "time_ist": None,
+        "time_et": None,
+        "et_offset": None,
+        "dual_date": False,
+        "no_instant_reason": ds.no_instant_reason,
+    })
+    return out
+
+
+def _iso(when) -> str | None:
+    return when.strftime("%Y-%m-%dT%H:%M:%SZ") if when else None
+
+
 def render_rows(verdicts) -> list[dict]:
     """One display row per verdict, in the specified column order."""
     rows = []
     for v in verdicts:
-        st = stamp(v.start_utc) if v.start_utc else None
         rows.append({
+            "row_kind": ROW_KIND_VERDICT,
             "date": v.civil_date.strftime("%d-%b-%Y"),
-            "date_ist": st.ist_date if st else None,
-            "date_et": st.et_date if st else None,
-            "day_shift": st.day_shift if st else 0,
-            "time_ist": f"{st.ist_time} IST" if st else None,
-            "time_et": f"{st.et_time} {st.et_abbr}" if st else None,
-            "et_offset": st.et_offset if st else None,
-            "dual_date": bool(st and st.day_shift),
+            **_time_fields(v),
             "instrument": v.instrument,
             "instrument_label": _sector_of(v.instrument),
             "venue": v.venue,
@@ -94,25 +180,174 @@ def render_rows(verdicts) -> list[dict]:
     return rows
 
 
+def render_base_rows(events) -> list[dict]:
+    """One display row per astronomy record. THE BASE TRACK.
+
+    The forbidden keys are forbidden by ABSENCE, not by a null. `BaseEvent` has
+    no instrument, tier, claim_tag, construction, verdict_text,
+    source_probability or confidence attribute, so there is nothing here to
+    read one from -- the row is not a verdict row with the interpretation left
+    empty, it is a different row. `basetrack.FORBIDDEN_FIELDS` lists them and
+    the harness asserts none appears, because a dict is still a dict and a
+    later hand could add the key even though the dataclass could not.
+
+    `evidence_source` IS emitted, as `none`, and `tier` is not emitted at all.
+    That pairing is deliberate: `tier_derivation` maps (none, null) to
+    `no_rule`, so an event row that carried a derived tier would arrive as 405
+    more `no_rule` rows and disappear into the 3,285 that were already there.
+    The tier of an ingress is not `no_rule`; an ingress has no tier.
+    """
+    rows = []
+    for e in events:
+        row = {
+            "row_kind": ROW_KIND_EVENT,
+            "date": e.civil_date.strftime("%d-%b-%Y"),
+            **_time_fields(e),
+            "event": e.label,
+            "event_section": e.rule_family,
+            "record_id": e.record_id,
+            "event_class": e.event_class,
+            "rule_family": e.rule_family,
+            "bodies": list(e.bodies),
+            "kind": e.kind,
+            "evidence_source": EVIDENCE_SOURCE,
+            "data_certainty": e.data_certainty,
+            "record_precision": e.record_precision,
+            "sign": e.astronomy.get("sign"),
+            "nakshatra": e.astronomy.get("nakshatra"),
+            "motion": e.astronomy.get("motion"),
+            "location": e.location,
+            "flags": list(e.qa_flags),
+        }
+        if e.contacts:
+            row["contacts"] = _contact_rows(e)
+        rows.append(row)
+    return rows
+
+
+def _contact_rows(event) -> list[dict]:
+    """An eclipse row's named contacts. See row_kinds.eclipse_contacts.
+
+    Each contact carries its NAME and the record key it was read from, so the
+    row states which of the five moments it is showing. An eclipse row that
+    emitted one unlabelled time was choosing among begin, totality_begin, max,
+    totality_end and end and not saying which -- and the record has carried all
+    of them, fully stamped, the whole time.
+    """
+    out = []
+    for name, key, st in event.contacts:
+        out.append({
+            "contact": name,
+            "record_key": key,
+            "t_utc": st["utc"],
+            "date_ist": st["ist_date"],
+            "time_ist": f"{st['ist_time']} IST",
+            "date_et": st["et_date"],
+            "time_et": f"{st['et_time']} {st['et_abbr']}",
+            "et_offset": st["et_offset"],
+            "day_shift": st["day_shift"],
+        })
+    return out
+
+
 # --------------------------------------------------------------------- JSON
 
+def _tally(rows: list[dict], key: str) -> dict:
+    """Counter over one key, as a dict with string keys and a stable order."""
+    c = collections.Counter(str(r.get(key)) for r in rows)
+    return dict(sorted(c.items()))
+
+
+def _meta_counts(rows: list[dict]) -> dict:
+    """Every count in `meta`, KEYED BY row_kind FIRST.
+
+    RULED 15-Sep-2026, and the ruling is about denominators rather than tidiness.
+    `records` was 6,677 and every figure under it counted verdict rows, because
+    verdict rows were all there were. With the base track in the same file
+    `records` is 7,082, and a count that did not name its population would say
+    7,082 while meaning one of two numbers -- which is the stale-denominator
+    failure this build has recorded three times already, each time as a figure
+    that stayed true-looking while its basis moved underneath it.
+
+    So the only unsplit number here is the grand total, and
+    `records_by_row_kind` sits immediately beside it. Nothing else in `meta` is
+    a bare count.
+    """
+    by_kind = collections.Counter(r["row_kind"] for r in rows)
+    verdict = [r for r in rows if r["row_kind"] == ROW_KIND_VERDICT]
+    event = [r for r in rows if r["row_kind"] == ROW_KIND_EVENT]
+    return {
+        # The one total over both populations. Named `records` because that is
+        # what it has always been named, and never usable alone: the split is
+        # the next key.
+        "records": len(rows),
+        "records_by_row_kind": dict(sorted(by_kind.items())),
+        "verdict_rows": {
+            "total": len(verdict),
+            "rows_with_verdict": sum(1 for r in verdict
+                                     if r["vedic_interpretation"]),
+            "rows_without_verdict": sum(1 for r in verdict
+                                        if not r["vedic_interpretation"]),
+            "by_instrument": _tally(verdict, "instrument"),
+            "by_tier": _tally(verdict, "tier"),
+            "by_confidence": _tally(verdict, "confidence"),
+            "by_evidence_source": _tally(verdict, "evidence_source"),
+        },
+        "event_rows": {
+            "total": len(event),
+            "by_event_class": _tally(event, "event_class"),
+            "by_rule_family": _tally(event, "rule_family"),
+            "by_data_certainty": _tally(event, "data_certainty"),
+            # An event row has no tier and no verdict, so there is nothing to
+            # split by. Stated rather than omitted: an absent key reads as an
+            # oversight, and this one is the whole point of `row_kind`.
+            "by_tier": None,
+            "by_tier_note": (
+                "an event row carries no tier. tier_derivation maps "
+                "(none, null) to no_rule, so a tier derived here would arrive "
+                "as 405 more no_rule rows and vanish into the 3,285 verdict "
+                "rows that already carry it. The sky has no tier."),
+        },
+        # Across both kinds, because it is a property of the ROW and not of the
+        # population: how many rows print a clock time, and why the rest do not.
+        "time": {
+            "rows_with_a_clock_time": sum(1 for r in rows if r["time_ist"]),
+            "rows_without": sum(1 for r in rows if not r["time_ist"]),
+            "by_no_instant_reason": _tally(
+                [r for r in rows if not r["time_ist"]], "no_instant_reason"),
+            "by_instant_precision": _tally(rows, "instant_precision"),
+        },
+        "days": {
+            "days_in_year": len({r["date"] for r in rows}),
+            "days_with_no_row_of_any_kind": _empty_days(rows),
+            "empty_days_are_output": (
+                "a day carrying no row is a day on which nothing the astronomy "
+                "layer tracks happened. Before the base track the calendar "
+                "could not be empty on any day a rule fired, so it could not "
+                "report absence at all."),
+        },
+    }
+
+
+def _empty_days(rows: list[dict]) -> int:
+    """Days of the year carrying no row of either kind."""
+    import datetime as _dt
+    have = {r["date"] for r in rows}
+    day, last, n = _dt.date(YEAR, 1, 1), _dt.date(YEAR, 12, 31), 0
+    while day <= last:
+        if day.strftime("%d-%b-%Y") not in have:
+            n += 1
+        day += _dt.timedelta(days=1)
+    return n
+
+
 def write_json(rows: list[dict], verdicts) -> pathlib.Path:
-    counts = collections.Counter(r["instrument"] for r in rows)
-    tiers = collections.Counter(r["tier"] for r in rows)
     doc = {
         "meta": {
             "year": YEAR,
             "generated_by": "finastro/render.py",
-            "records": len(rows),
-            "rows_with_verdict": sum(1 for r in rows
-                                     if r["vedic_interpretation"]),
-            "rows_without_verdict": sum(1 for r in rows
-                                        if not r["vedic_interpretation"]),
-            "by_instrument": dict(sorted(counts.items())),
-            "by_tier": {str(k): v for k, v in sorted(tiers.items(),
-                                                     key=lambda x: str(x[0]))},
-            "confidence": dict(collections.Counter(r["confidence"]
-                                                   for r in rows)),
+            "row_kinds": list(ROW_KINDS),
+            **_meta_counts(rows),
             "timezones": {"primary": CONF["display"]["primary_tz"],
                           "secondary": CONF["display"]["secondary_tz"]},
             "source_astronomy": {
@@ -132,40 +367,80 @@ def write_json(rows: list[dict], verdicts) -> pathlib.Path:
 
 # ---------------------------------------------------------------------- CSV
 
-CSV_COLS = ["date", "date_ist", "date_et", "day_shift", "time_ist", "time_et",
-            "et_offset", "instrument", "instrument_label", "venue", "event",
+#: `row_kind` FIRST, because a reader who sorts the CSV by date is otherwise
+#: looking at two populations in one column and cannot see it.
+CSV_COLS = ["row_kind", "date", "date_ist", "date_et", "day_shift",
+            "time_ist", "time_et", "et_offset",
+            "t_utc", "t_start_utc", "t_end_utc",
+            "instant_precision", "no_instant_reason", "open_start", "open_end",
+            "instrument", "instrument_label", "venue", "event",
             "event_section", "vedic_interpretation", "interpretation_basis",
             "financial_theme", "confidence", "claim_tag", "evidence_source",
             "construction", "tier", "source_probability",
-            "source_probability_disputed", "crude_path", "flags"]
+            "source_probability_disputed", "crude_path", "flags",
+            # base-track columns; empty on a verdict row
+            "record_id", "event_class", "rule_family", "bodies", "kind",
+            "data_certainty", "record_precision", "sign", "nakshatra",
+            "motion", "location", "contacts"]
 
 
 def write_csv(rows: list[dict]) -> pathlib.Path:
+    """The same rows, rectangular.
+
+    A CSV has one header, so the two row kinds share one column list and each
+    leaves the other's columns EMPTY. The JSON does not: there an event row
+    simply has no `tier` key. The difference is deliberate and is the reason
+    `r.get(col, "")` is used below rather than filling every row with nulls
+    upstream -- filling them would put a `tier` key on an event row, which is
+    exactly what `row_kind` exists to prevent, for the sake of a format that
+    cannot tell an empty cell from an absent one anyway.
+    """
     with OUT_CSV.open("w", encoding="utf-8", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=CSV_COLS, extrasaction="ignore")
         w.writeheader()
         for r in rows:
-            out = dict(r)
+            out = {c: r.get(c, "") for c in CSV_COLS}
             out["source_probability"] = (
                 "|".join(r["source_probability"])
-                if r["source_probability"] else "")
-            out["flags"] = "|".join(r["flags"])
+                if r.get("source_probability") else "")
+            out["flags"] = "|".join(r.get("flags") or ())
+            out["bodies"] = "|".join(r.get("bodies") or ())
+            out["contacts"] = " | ".join(
+                f"{c['contact']} {c['date_ist']} {c['time_ist']}"
+                for c in (r.get("contacts") or ()))
             w.writerow(out)
     return OUT_CSV
 
 
 def main() -> int:
-    """Render all three artifacts and print the counts."""
+    """Render all three artifacts and print the counts, BY ROW KIND.
+
+    Printing one total was fine while there was one population. It is not now,
+    and the build log is the first place a changed denominator would have gone
+    unnoticed.
+    """
     verdicts = build_verdicts()
-    rows = render_rows(verdicts)
+    events = build_base_events()
+    rows = render_rows(verdicts) + render_base_rows(events)
+    rows.sort(key=lambda r: (_sortable(r["date"]), r["row_kind"],
+                             r.get("instrument") or "", r["event"]))
     j = write_json(rows, verdicts)
     c = write_csv(rows)
     from .html_calendar import write_html
     h = write_html(rows, verdicts)
-    print(f"{len(rows)} rows -> {j.relative_to(ROOT)}")
-    print(f"{len(rows)} rows -> {c.relative_to(ROOT)}")
-    print(f"{len(rows)} rows -> {h.relative_to(ROOT)}")
+    n_v, n_e = len(verdicts), len(events)
+    for path in (j, c, h):
+        print(f"{len(rows)} rows ({n_v} verdict + {n_e} event) "
+              f"-> {path.relative_to(ROOT)}")
+    print(f"{sum(1 for r in rows if r['time_ist'])} rows print a clock time; "
+          f"{sum(1 for r in rows if not r['time_ist'])} print a date only")
+    print(f"{_empty_days(rows)} days of {YEAR} carry no row of either kind")
     return 0
+
+
+def _sortable(date_str: str):
+    import datetime as _dt
+    return _dt.datetime.strptime(date_str, "%d-%b-%Y").date()
 
 
 if __name__ == "__main__":

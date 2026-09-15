@@ -219,6 +219,33 @@ class Verdict:
     flags: list = field(default_factory=list)
     detail: object = None
     start_utc: dt.datetime | None = None
+    #: The condition's other end. A verdict row has always been one rule on one
+    #: civil day, so only `start_utc` was carried, and a row standing for a
+    #: 220-day window looked exactly like a row standing for a 30-second ingress.
+    end_utc: dt.datetime | None = None
+    #: The generated period's cut, not the sky's. Carried onto the row because
+    #: an open boundary is not an event and must not render as one.
+    open_start: bool = False
+    open_end: bool = False
+    #: Whether the endpoints are instants at all. See `sky.Span.precision`.
+    precision: str = "exact"
+
+    @property
+    def is_instant(self) -> bool:
+        """True when start and end are the same computed moment."""
+        return (self.precision == "exact" and not self.open_start
+                and not self.open_end and self.start_utc == self.end_utc)
+
+    @property
+    def has_instant_start(self) -> bool:
+        """Whether this row's start is a moment at which something crossed.
+
+        The one question the renderer asks. False for a date-granular window,
+        for a boundary the generated period cut, and for an anchor this build
+        chose -- three different ways of not being an event, all three of which
+        rendered as `00:00 IST` until 15-Sep-2026.
+        """
+        return self.precision == "exact" and not self.open_start
 
     def as_dict(self) -> dict:
         return {
@@ -241,6 +268,11 @@ class Verdict:
             "detail": self.detail,
             "start_utc": (self.start_utc.strftime("%Y-%m-%dT%H:%M:%SZ")
                           if self.start_utc else None),
+            "end_utc": (self.end_utc.strftime("%Y-%m-%dT%H:%M:%SZ")
+                        if self.end_utc else None),
+            "open_start": self.open_start,
+            "open_end": self.open_end,
+            "precision": self.precision,
         }
 
 
@@ -541,7 +573,10 @@ def build_verdicts(sky: Sky | None = None) -> list[Verdict]:
                 source_probability=labels,
                 source_probability_disputed=disputed,
                 crude_path=path,
-                flags=flags, detail=f.detail, start_utc=f.start_utc))
+                flags=flags, detail=f.detail,
+                start_utc=f.start_utc, end_utc=f.end_utc,
+                open_start=f.open_start, open_end=f.open_end,
+                precision=f.precision))
     out.sort(key=lambda v: (v.civil_date, v.instrument, v.rule_id))
     return out
 

@@ -391,6 +391,11 @@ class Firing:
     #: nakshatra name was supplied editorially is worth nothing if reading it
     #: requires already knowing to go and ask.
     flags: tuple[str, ...] = ()
+    #: The span's own `Span.precision`, copied here for the reason `flags` is:
+    #: by the time a row is rendered the span is three layers behind it, and
+    #: whether the endpoints are instants AT ALL is a fact the renderer must
+    #: have in hand. `exact`, `date_only` or `anchored` -- see `sky.Span`.
+    precision: str = "exact"
 
     def as_dict(self) -> dict:
         return {
@@ -398,6 +403,7 @@ class Firing:
             "location": self.location,
             "civil_date": self.civil_date.strftime("%d-%b-%Y"),
             "flags": list(self.flags),
+            "precision": self.precision,
             "start_utc": self.start_utc.strftime("%Y-%m-%dT%H:%M:%SZ"),
             "end_utc": self.end_utc.strftime("%Y-%m-%dT%H:%M:%SZ"),
             "detail": self.detail,
@@ -479,7 +485,7 @@ def fire(rules: list[Rule], sky: Sky, year: int = YEAR) -> list[Firing]:
                         continue
                     out.append(Firing(r.id, loc, day, span.start, span.end,
                                       span.value, span.open_start,
-                                      span.open_end, r.flags))
+                                      span.open_end, r.flags, span.precision))
     out.sort(key=lambda f: (f.civil_date, f.rule_id, f.location))
     return out
 

@@ -20,6 +20,7 @@ import ast
 import collections
 import datetime as dt
 import html
+import json
 import pathlib
 import re
 import sys
@@ -2626,6 +2627,234 @@ def test_configuration_rules_obey_the_frame_rules_catalogue_b_obeys(
            f"{len(resolved)} resolved rules")
 
 
+# ------------------------------------------- 20. row kinds and the base track
+#: The rendered calendar, read back from disk. These checks are aimed at the
+#: ARTIFACT and not at the code that produced it, which is the one shape of
+#: check that has caught every silent defect this build has recorded: a
+#: per-family count, a per-total count and a spot check all passed on the
+#: section-level label bug, and only a per-rule census of the emitted file saw
+#: it. The same reasoning applies here with more force, because a base-track row
+#: absorbed into `no_rule` would leave every count in the file looking normal.
+CALENDAR_JSON = ROOT / "build" / "calendar_2027.json"
+
+
+def _calendar() -> dict:
+    return json.loads(CALENDAR_JSON.read_text(encoding="utf-8"))
+
+
+def test_row_kind_is_on_every_row_and_the_base_track_carries_no_verdict():
+    """`row_kind` is required, and an event row cannot acquire a verdict.
+
+    THE DISCRIMINATOR IS A PRECONDITION, NOT A FOLLOW-UP. It was added to all
+    6,677 verdict rows before the first base-track row existed, because a
+    calendar that gained 405 rows without one would have had `records`,
+    `by_tier.no_rule` and `rows_without_verdict` all change denominator while
+    still looking like the figures they had been.
+    """
+    from finastro import basetrack
+
+    doc = _calendar()
+    rows = doc["rows"]
+    kinds = {v["id"] for v in CONF["row_kinds"]["values"]}
+
+    missing = [i for i, r in enumerate(rows) if not r.get("row_kind")]
+    record("Every calendar row carries a non-null row_kind",
+           not missing, f"{len(rows)} rows, {len(missing)} without")
+
+    outside = sorted({r["row_kind"] for r in rows} - kinds)
+    record("Every row_kind is one the config names",
+           not outside,
+           f"config {sorted(kinds)}, rows "
+           f"{sorted({r['row_kind'] for r in rows})}")
+
+    ev = [r for r in rows if r["row_kind"] == "event"]
+    vr = [r for r in rows if r["row_kind"] == "verdict"]
+    record("The two populations are the sizes the config states",
+           len(ev) == CONF["row_kinds"]["base_track"]["count"]
+           and len(ev) + len(vr) == len(rows),
+           f"{len(vr)} verdict + {len(ev)} event = {len(rows)}")
+
+    # THE NEGATIVE HALF, and the half that bites. `BaseEvent` has no attribute
+    # to hold any of these, so the only way one could appear is a dict written
+    # by hand downstream -- which is exactly what a renderer is.
+    leaked = sorted({k for r in ev for k in r
+                     if k in basetrack.FORBIDDEN_FIELDS})
+    record("No event row carries an instrument, a tier or a verdict -- "
+           "not null, ABSENT",
+           not leaked,
+           f"forbidden keys present: {leaked}" if leaked
+           else f"{len(basetrack.FORBIDDEN_FIELDS)} keys checked on "
+                f"{len(ev)} rows")
+
+    record("Every event row's evidence_source is `none`",
+           all(r.get("evidence_source") == "none" for r in ev),
+           str(sorted({r.get("evidence_source") for r in ev})))
+
+    # The absorption this was built to prevent, stated as a number. An event
+    # row that gained a derived tier would get `no_rule` -- tier_derivation
+    # maps (none, null) there -- and 405 rows would vanish into 3,285.
+    no_rule = sum(1 for r in vr if r["tier"] == "no_rule")
+    record("`no_rule` counts verdict rows only, and did not grow by 405",
+           no_rule == doc["meta"]["verdict_rows"]["by_tier"].get("no_rule"),
+           f"no_rule {no_rule} over {len(vr)} verdict rows; the base track's "
+           f"{len(ev)} are not in it")
+
+    # Every event row names the record it came from, which is the whole of the
+    # rejoinability claim: a reader matches on a key, not on name and date.
+    astro = {r["id"] for r in json.loads(
+        (ROOT / "build" / "astronomy_2027.json").read_text(
+            encoding="utf-8"))["records"]}
+    orphan = [r["record_id"] for r in ev if r["record_id"] not in astro]
+    record("Every event row names a record that exists in the astronomy layer",
+           not orphan, f"{len(ev)} rows, {len(orphan)} unmatched")
+
+    classes = set(CONF["row_kinds"]["base_track"]["event_classes"])
+    record("The base track carries the ten core classes and no others",
+           {r["event_class"] for r in ev} <= classes,
+           str(sorted({r["event_class"] for r in ev})))
+
+    excluded = set()
+    for group in CONF["row_kinds"]["base_track"]["excluded"].values():
+        excluded |= set(group["classes"])
+    record("No panchang ingress and no sunrise or sunset reached a row",
+           not ({r["event_class"] for r in ev} & excluded),
+           f"excluded: {sorted(excluded)}")
+
+
+def test_a_row_without_an_instant_carries_no_clock_time():
+    """STRUCTURAL, and checked against the artifact anyway.
+
+    `timezones.DateStamp` has no time attribute, so the renderer cannot print
+    one on a row without an instant -- it raises AttributeError instead. This
+    check exists because the guarantee lives in one function and the file
+    outlives it.
+
+    The negative half is the one that matters: not only "no row without an
+    instant has a time" but "every row WITH a time has an instant", so a later
+    renderer cannot restore the old behaviour by stamping everything again.
+    """
+    doc = _calendar()
+    rows = doc["rows"]
+    reasons = set(CONF["row_kinds"]["time_fields"]["instant_precision"]
+                  ["no_instant_reason"]["values"])
+
+    timed = [r for r in rows if r["time_ist"]]
+    untimed = [r for r in rows if not r["time_ist"]]
+
+    bad = [r for r in untimed if r["time_et"] or r["et_offset"]
+           or r["date_et"] or r["day_shift"]]
+    record("A row with no IST time has no ET time, offset, ET date or day shift",
+           not bad,
+           f"{len(untimed)} untimed rows, {len(bad)} with a stray Eastern field")
+
+    unexplained = [r["event"] for r in untimed if not r["no_instant_reason"]]
+    record("Every row without a clock time says WHY",
+           not unexplained,
+           f"reasons present: "
+           f"{sorted({r['no_instant_reason'] for r in untimed})}")
+
+    outside = sorted({r["no_instant_reason"] for r in untimed} - reasons)
+    record("Every no_instant_reason is one the config names",
+           not outside, f"config: {sorted(reasons)}")
+
+    stray = [r["event"] for r in timed if r["no_instant_reason"]]
+    record("No row carries BOTH a clock time and a reason for having none",
+           not stray, f"{len(timed)} timed rows, {len(stray)} contradictory")
+
+    # The population this was built for, pinned by MEASUREMENT rather than by a
+    # rule about the printed string. 662 verdict rows had no instant; one row --
+    # b102 on 03-Oct-2027, a nakshatra ingress at 00:00:21 IST -- prints
+    # `00:00 IST` and IS an instant, and no rule phrased over the display string
+    # could have separated them.
+    midnight = [r for r in timed if r["time_ist"] == "00:00 IST"]
+    # Its instant is on `t_start_utc`, not `t_utc`: b102 conditions on a
+    # nakshatra SPAN, and the span's start is the ingress. The twenty-one
+    # seconds are what make it an event and not a midnight.
+    record("Exactly one row still prints 00:00 IST, and it is a real instant",
+           len(midnight) == 1
+           and (midnight[0]["t_utc"] or midnight[0]["t_start_utc"])
+           == "2027-10-03T18:30:21Z",
+           f"{len(midnight)} rows: "
+           f"{[(r['event'], r['t_utc'] or r['t_start_utc']) for r in midnight]}")
+
+    both = [r["event"] for r in rows if r["t_utc"] and r["t_start_utc"]]
+    neither = [r["event"] for r in rows
+               if not r["t_utc"] and not r["t_start_utc"]]
+    record("Every row carries either t_utc or t_start_utc, never both and "
+           "never neither",
+           not both and not neither,
+           f"{sum(1 for r in rows if r['t_utc'])} instant rows, "
+           f"{sum(1 for r in rows if r['t_start_utc'])} span rows")
+
+    eclipses = [r for r in rows if r.get("event_class") == "eclipse"]
+    record("Every eclipse row names its contacts and prints no bare time",
+           bool(eclipses) and all(
+               not r["time_ist"]
+               and r["no_instant_reason"] == "named_contacts"
+               and [c["contact"] for c in r["contacts"]]
+               == ["first_contact", "maximum"]
+               for r in eclipses),
+           f"{len(eclipses)} eclipse rows, each naming first contact and "
+           f"maximum")
+
+
+def test_every_meta_count_is_split_by_row_kind():
+    """No bare count in `meta` except the grand total, which names its split.
+
+    `records` was 6,677 and meant verdict rows because there were no others. It
+    is 7,082 now. A consumer reading it as a verdict count would be wrong by 405
+    and would have no way to find out.
+    """
+    doc = _calendar()
+    meta, rows = doc["meta"], doc["rows"]
+
+    record("meta.records is the total over BOTH kinds, with the split beside it",
+           meta["records"] == len(rows)
+           and sum(meta["records_by_row_kind"].values()) == meta["records"],
+           f"{meta['records']} = {meta['records_by_row_kind']}")
+
+    vr = [r for r in rows if r["row_kind"] == "verdict"]
+    ev = [r for r in rows if r["row_kind"] == "event"]
+    record("meta.verdict_rows counts verdict rows and nothing else",
+           meta["verdict_rows"]["total"] == len(vr)
+           and sum(meta["verdict_rows"]["by_instrument"].values()) == len(vr)
+           and sum(meta["verdict_rows"]["by_tier"].values()) == len(vr),
+           f"{meta['verdict_rows']['total']} rows, by_instrument and by_tier "
+           f"both summing to it")
+
+    record("meta.event_rows counts event rows and states that it has no tier",
+           meta["event_rows"]["total"] == len(ev)
+           and meta["event_rows"]["by_tier"] is None
+           and sum(meta["event_rows"]["by_event_class"].values()) == len(ev),
+           f"{meta['event_rows']['total']} rows over "
+           f"{len(meta['event_rows']['by_event_class'])} event classes")
+
+    t = meta["time"]
+    record("meta.time accounts for every row, timed and untimed",
+           t["rows_with_a_clock_time"] + t["rows_without"] == len(rows)
+           and sum(t["by_no_instant_reason"].values()) == t["rows_without"],
+           f"{t['rows_with_a_clock_time']} timed + {t['rows_without']} untimed "
+           f"= {len(rows)}; reasons {t['by_no_instant_reason']}")
+
+    # The empty-day figure, MEASURED rather than asserted, and not the number
+    # the base-track argument assumed: 105 days carry no event row and zero
+    # carry no row at all, because tier_4's verdict-null USDINR rows blanket
+    # every day of the year. Absence is reportable through `row_kind` and only
+    # through it.
+    cfgd = CONF["row_kinds"]["base_track"]["empty_days_are_output_not_gaps"]
+    have_ev = {r["date"] for r in ev}
+    day, last, n = dt.date(Y, 1, 1), dt.date(Y, 12, 31), 0
+    while day <= last:
+        n += day.strftime("%d-%b-%Y") not in have_ev
+        day += dt.timedelta(days=1)
+    record("The empty-day figures in config are the ones the build produces",
+           n == cfgd["days_with_no_event_row"]
+           and meta["days"]["days_with_no_row_of_any_kind"]
+           == cfgd["days_with_no_row_of_any_kind"],
+           f"{n} days carry no event row; "
+           f"{meta['days']['days_with_no_row_of_any_kind']} carry no row at all")
+
+
 def main() -> int:
     sky = Sky.load()
     firings = R.fire(R.REGISTRY, sky)
@@ -2687,6 +2916,18 @@ def main() -> int:
         cfg_firings)
     test_configuration_rules_obey_the_frame_rules_catalogue_b_obeys(
         cfg_firings)
+
+    # The rendered calendar, checked as an ARTIFACT. Last because it needs
+    # build/calendar_2027.json on disk: run `python build_2027.py` first, or
+    # these read whatever the previous render left behind, which is its own
+    # kind of stale denominator.
+    if CALENDAR_JSON.exists():
+        test_row_kind_is_on_every_row_and_the_base_track_carries_no_verdict()
+        test_a_row_without_an_instant_carries_no_clock_time()
+        test_every_meta_count_is_split_by_row_kind()
+    else:
+        record("The rendered calendar is on disk to be checked", False,
+               f"{CALENDAR_JSON} missing; run python build_2027.py")
 
     width = max(len(n) for n, _, _ in _results)
     failed = 0

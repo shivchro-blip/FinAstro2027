@@ -69,6 +69,72 @@ def stamp(when: dt.datetime) -> DualStamp:
     )
 
 
+@dataclass(frozen=True)
+class DateStamp:
+    """A stamp for something that has a DATE and no instant.
+
+    IT HAS NO TIME ATTRIBUTE, and that absence is the whole point. A row whose
+    condition is date-granular -- a combust window the ephemeris emits as a
+    date, a span built from civil-day boundaries, a reference-table row anchored
+    at a date this build chose -- used to be stamped by `stamp()` like everything
+    else, and `stamp()` always has a time. So 662 rows rendered `00:00 IST` with
+    a previous-Eastern-day afternoon beside it, and every one of them read as a
+    measured moment.
+
+    Nothing about that was fixable by discipline: there was no way to write the
+    renderer that did not produce a clock time, because the object it was handed
+    had one. Here there is no `ist_time`, no `et_time`, no `et_abbr` and no
+    `et_offset`, so the branch that handles a row without an instant cannot emit
+    one -- it raises AttributeError at build time instead.
+
+    `day_shift` is absent for the same reason. A day shift is a statement about
+    where an INSTANT falls in two calendars; a civil day at a venue does not
+    shift, it simply is that venue's day.
+    """
+
+    ist_date: str
+    ist_weekday: str
+    #: WHY there is no instant, which is not one answer but three:
+    #:
+    #: * `date_only` -- the ephemeris never resolved this to a moment. A
+    #:   combust or rise window, a total day;
+    #: * `period_cut` -- the boundary is where the GENERATED PERIOD was cut,
+    #:   not where the sky changed. `Span.open_start` / `open_end`;
+    #: * `anchored` -- the date was chosen by this build because the thing the
+    #:   row reports never happened inside the span at all;
+    #: * `named_contacts` -- the row has SEVERAL instants and names them, so a
+    #:   single unlabelled time would be choosing one of five without saying
+    #:   which. Eclipses.
+    #:
+    #: Kept as four values rather than one flag because the remedies differ: a
+    #: date_only endpoint would need a new ephemeris scan, a period_cut one a
+    #: wider span, an anchored one cannot be remedied at all, and a
+    #: named_contacts row is not missing anything -- it has more times than one
+    #: field can hold.
+    no_instant_reason: str
+
+    def as_dict(self) -> dict:
+        return asdict(self)
+
+    def line(self) -> str:
+        return f"{self.ist_date} ({self.ist_weekday})"
+
+
+NO_INSTANT_REASONS = ("date_only", "period_cut", "anchored", "named_contacts")
+
+
+def date_stamp(day: dt.date, reason: str) -> DateStamp:
+    """Stamp a civil date with no instant. See `DateStamp`."""
+    if reason not in NO_INSTANT_REASONS:
+        raise ValueError(
+            f"date_stamp reason {reason!r}: expected one of "
+            f"{NO_INSTANT_REASONS}. A row that HAS an instant is stamped by "
+            "stamp(), and a reason nobody chose is not a default")
+    return DateStamp(ist_date=day.strftime(DATE_FMT),
+                     ist_weekday=day.strftime("%a"),
+                     no_instant_reason=reason)
+
+
 def window_line(start: dt.datetime, end: dt.datetime) -> str:
     """Render a two-ended window. Each end is converted independently, so a
     window spanning a DST change correctly shows different Eastern offsets."""
