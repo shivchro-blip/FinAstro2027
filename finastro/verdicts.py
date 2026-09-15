@@ -468,9 +468,27 @@ def build_verdicts(sky: Sky | None = None) -> list[Verdict]:
         targets = instruments_for(rule)
         # tier_4 emits anyway, in its own words: "USDINR rows are still emitted
         # with verdict null, so the absence is VISIBLE in the output rather than
-        # looking like a gap in the build." So USDINR joins every rule whose
-        # venue day it shares, and its rows can only ever be verdict-null.
-        if VENUE_OF["USDINR"] == f.location:
+        # looking like a gap in the build." So USDINR joins every CATALOGUE-B
+        # rule whose venue day it shares, and its rows can only ever be
+        # verdict-null.
+        #
+        # CATALOGUE B ONLY, and the asymmetry is the point. A catalogue-B rule
+        # is a general statement -- it names bodies, and `instruments_for` asks
+        # the rulership table where those bodies land. USDINR is in the room for
+        # that question and the answer is "no defensible rulership", so the null
+        # row records a real absence: the rule was addressable to the whole
+        # instrument set and did not reach this one.
+        #
+        # A configuration group was never addressable to USDINR. The source
+        # printed it under "Gold -- Bullish Configuration"; the block names its
+        # instrument and `config_instruments_for` reads that name rather than
+        # resolving bodies. There is no question to which "USDINR: none" is the
+        # answer, so the row records nothing -- it is noise wearing the shape of
+        # visible absence, which is worse than silence because it reads as a
+        # measured negative. The count this removes, and what the port is
+        # worth once it is gone, are in build/CONFIG_PORT_REPORT.md under
+        # "What the port is actually worth".
+        if not is_config_rule(rule) and VENUE_OF["USDINR"] == f.location:
             targets = list(targets) + ["USDINR"]
         for inst in targets:
             # Crude's two paths emit as `CL` with a `path` naming which

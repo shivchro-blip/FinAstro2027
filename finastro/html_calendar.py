@@ -304,7 +304,7 @@ def write_html(rows: list[dict], verdicts) -> pathlib.Path:
     A("<p class=disc><b>STALE.</b> The sentence above describes the state "
       "before the configuration wiring. <code>verdicts.py</code> now fires "
       "both registries and configuration groups DO produce rows "
-      "(2,275 of 7,484 in a rebuild). A calendar rendered before that wiring "
+      "(1,468 of 6,677 in a rebuild). A calendar rendered before that wiring "
       "contains catalogue-B rows only and is internally consistent; this page "
       "says which it is by its own row count. Corrected text is a task in "
       "<code>build/NEXT_SESSION.md</code>.</p>")

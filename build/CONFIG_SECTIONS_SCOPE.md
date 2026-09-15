@@ -1,6 +1,6 @@
 # What porting the instrument configuration sections would take
 
-**Status: not ported. This is the scope, reported before the work.** Generated from `data/source_2026.html` by `finastro/cfgsections.py`; the per-group classes are assigned in `scratch/gen_cfg_scope.py` with the evidence for each call in the same row, so a disagreement is checkable against the source rather than against this summary.
+**Status: not ported. This is the scope, reported before the work.** Generated from `data/source_2026.html` by `finastro/cfgsections.py`; the per-group classes are assigned in `tools/gen_cfg_scope.py` with the evidence for each call in the same row, so a disagreement is checkable against the source rather than against this summary.
 
 ## The counts, from the document
 
@@ -175,4 +175,4 @@ Reported so the count is not read as the whole of the unported configuration mat
 
 ## Provenance
 
-Group titles and counts: `finastro/cfgsections.py`, read from `data/source_2026.html` at generation time. Classes and their grounds: `scratch/gen_cfg_scope.py`. Neither infers a verdict and neither ports a rule. Nothing on this page is a forecast or investment advice.
+Group titles and counts: `finastro/cfgsections.py`, read from `data/source_2026.html` at generation time. Classes and their grounds: `tools/gen_cfg_scope.py`. Neither infers a verdict and neither ports a rule. Nothing on this page is a forecast or investment advice.

@@ -15,6 +15,12 @@ ephe/
 
 # --- scratchpad: throwaway patch scripts and local run logs ------------
 # A bad patch is recoverable from HEAD precisely while these stay out of it.
+#
+# NOTHING WHOSE OUTPUT IS TRACKED MAY LIVE HERE. A generator in scratch/ is
+# a tracked page a fresh clone cannot rebuild -- the calendar was
+# reproducible and the documents about it were not. Those five moved to
+# tools/ (see README's layout block); what remains here is probes, one-off
+# source patchers and debug dumps, none of which writes a tracked file.
 patch_*.py
 scratch/
 tmp_*.py

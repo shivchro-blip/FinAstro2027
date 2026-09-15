@@ -31,7 +31,7 @@ The counts, from the document (read out of `data/source_2026.html` at generation
 
 **Gold, silver and sugar are the three instruments the source prints verdicts for** — that is why they carry evidence blocks naming their own configuration sections, and it is what their tiers rest on. Their own configuration groups are **gold 19** · **silver 30** · **sugar 9** named groups, of which **38** now carry a rule and **20** are blocked on a named input.
 
-> **STALE — this section describes the state before the configuration wiring.** `verdicts.py` now fires both registries: the 38 ported groups DO reach calendar rows (2,275 of 7,484 in a rebuild). The paragraphs below still say they do not. Corrected text is a task in `build/NEXT_SESSION.md`; the counts in the table above are current.
+> **STALE — this section describes the state before the configuration wiring.** `verdicts.py` now fires both registries: the 38 ported groups DO reach calendar rows (1,468 of 6,677 in a rebuild). The paragraphs below still say they do not. Corrected text is a task in `build/NEXT_SESSION.md`; the counts in the table above are current.
 
 **Ported is not wired, and the difference is the whole of what this section says.** The ported groups are registered in their own registry and `verdicts.py` fires catalogue B alone, so none of them reaches a row in `build/calendar_2027.*` today.
 

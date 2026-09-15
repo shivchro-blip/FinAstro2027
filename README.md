@@ -58,7 +58,7 @@ they were never in the 141 and never in its denominator:
 
 > **STALE — the "NOT wired" line below is out of date.** `verdicts.py` now
 > fires both registries, so the 38 ported groups DO produce calendar rows
-> (2,275 of 7,484 in a rebuild). The paragraph under the block still describes
+> (1,468 of 6,677 in a rebuild). The paragraph under the block still describes
 > the pre-wiring state. Correcting this page is a task in
 > `build/NEXT_SESSION.md`; `build/calendar_2027.*` on disk predates the wiring
 > and holds catalogue-B rows only.
@@ -371,6 +371,12 @@ finastro/panchang.py           tithi/nakshatra/yoga/karana, sunrise/sunset,
 finastro/combustion.py         kalāṃśa asta/udaya
 finastro/events.py             the canonical record; layers kept separate
 build_2027.py                  generates the 2027 astronomy layer
+tools/build_2026.py            the same build, year set to 2026 -- the
+                               fixture year
+tools/gen_status.py            -> build/RULE_LAYER_STATUS.md
+tools/cfg_port_report.py       -> build/CONFIG_PORT_REPORT.md
+tools/gen_cfg_scope.py         -> build/CONFIG_SECTIONS_SCOPE.md
+tools/monthly_match.py         the 2026 monthly-calendar fixture
 tests/test_2026_regression.py  locks the conventions against the source
 tests/test_2027_astronomy.py   sanity-checks the generated 2027 output
 tests/test_node_anchor_unit.py the node-anchor branch the real span can't reach
