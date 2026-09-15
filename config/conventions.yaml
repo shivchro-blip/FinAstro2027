@@ -3042,8 +3042,109 @@ source_probability:
           heading. This is the catalogue Step 4's rule layer is being built FROM.
         count: 141
         carries_labels: 0
-      union_rule: "a label passes test 3 if it maps into A or into B"
-      # RULED 2026-09-13. Catalogue B counts.
+      C:
+        what: >
+          the 58 named instrument configuration groups of the Chapter-2 blocks --
+          13 + 6 gold, 20 + 10 silver, 7 + 2 sugar. Counted from the document by
+          finastro/cfgsections.py, never from this file.
+        count: 58
+        carries_labels: 0
+        added: 2026-09-15
+        added_by: test_3_recount_against_all_three_catalogues
+      union_rule: "a label passes test 3 if it maps into A, into B, or into C"
+
+      # ---------------------------------------------------------- THE RECOUNT
+      # RULED 15-Sep-2026. `b_counts_ruling` below is kept as written and is
+      # SUPERSEDED, not replaced: it decided that catalogue B counts, and the
+      # reasoning it gave applies with equal force to the configuration
+      # catalogue, which did not exist when it was written.
+      test_3_recount_against_all_three_catalogues:
+        ruled: 2026-09-15
+        supersedes: b_counts_ruling
+        the_same_reasoning: >
+          b_counts_ruling excluded nothing on evidence; it included catalogue B
+          because "excluding them because the astronomy layer has not reached them
+          yet would make the answer depend on BUILD ORDER rather than on
+          evidence." The 58 configuration groups were ported after that ruling was
+          written. Leaving them out for that reason is the same dependence on the
+          order we happened to do the work.
+        arithmetic_before: "19 pass / 12 fail test 1 / 12 fail test 2 / 1 orphan = 44"
+        arithmetic_after: "19 pass / 12 fail test 1 / 12 fail test 2 / 1 orphan = 44"
+        # The same two lines as numbers. The prose above names the tests, and a
+        # harness reading digits out of it picks up the 1 in "test 1" and the 2
+        # in "test 2" -- which it did, and still summed to 44, by coincidence. A
+        # check that passes for the wrong reason is the thing this whole block
+        # is about, so the figures are stated as figures.
+        counts_before: {pass: 19, fail_test_1: 12, fail_test_2: 12, orphan: 1}
+        counts_after:  {pass: 19, fail_test_1: 12, fail_test_2: 12, orphan: 1}
+        labelled_blocks: 44
+        the_totals_do_not_move: >
+          AND THAT IS NOT THE INTERESTING PART. Adding a catalogue can only turn a
+          test-3 failure into a pass, and the tests are ordered: a block failing
+          test 1 or test 2 never reaches test 3, so the 24 blocks in those two
+          columns cannot move. Only the single orphan and the 19 passes were
+          re-evaluated.
+        what_actually_changed: >
+          ONE PASS CHANGED ITS ROUTE, AND IT WAS THE ONE THAT DID NOT HAVE ONE.
+          Block 13, rahu_mars_together, is recorded as catalogue B. It is not in
+          catalogue B: zero of the 141 h3.section titles name Rahu and Mars
+          together, which corrections_on_record.rahu_mars_is_not_a_catalogue_b_section
+          already found. It is not in catalogue A either -- the astronomy layer
+          emits no conjunction or opposition record for a node, so no Rahu pair
+          exists in any of the 26 families. Under catalogues A and B alone, as this
+          file's own `catalogue` fields are written, block 13 is an ORPHAN and the
+          arithmetic is 18 / 12 / 12 / 2.
+        so_the_recorded_19_was_right_by_accident: >
+          The figure 19 was correct and the reason given for it was not. Catalogue
+          C is what makes it true: "Rahu Mars Together in Any Sign" is gold-bullish
+          group 3 and silver-bullish group 26, and the family's own `rules` list
+          has named cfg_gold_bullish_03 and cfg_silver_bullish_07 since the
+          per-rule attachment. The recount does not change the count; it supplies
+          the count's missing ground.
+        checked_per_family: >
+          All 11 carried families were re-tested against all three catalogues, not
+          only the disputed one. Ten pass through A or B exactly as recorded --
+          conj_sun_mercury, conj_mercury_venus, conj_venus_uranus, combust_venus,
+          combust_saturn, combust_jupiter and rise_venus through A;
+          mercury_venus_alone, venus_jupiter_same_sign and mars_ahead_of_jupiter
+          through B. Block 13 is the only one whose recorded catalogue does not
+          hold.
+        the_orphan_stays_an_orphan:
+          block: 4
+          title: "Mars (Sagittarius) Tenth to Saturn"
+          result: "still fails test 3 under all three catalogues"
+          catalogue_a: "no relative-house family among the 26 emitted rule_family values"
+          catalogue_b: >
+            no relative-house section among the 141. Zero titles match tenth,
+            twelfth, 10th, 12th, house or aspect.
+          catalogue_c: >
+            ONE CANDIDATE, AND IT IS DECLINED. Gold-bullish group 6, "If Mars is
+            Aspected by Saturn and Jupiter is Retrograde". Mapping block 4 onto it
+            takes three re-derivations: asserting the Parashari special aspect
+            (Saturn aspects its 3rd, 7th and 10th) that the source states in
+            neither place; dropping the group's Jupiter-retrograde conjunct; and
+            reading a ONE-position condition as a THREE-position one. A narrower
+            condition mapped onto a broader group and called the same family is
+            the group-key-for-a-member-key error running backwards, which is the
+            error this file exists to keep recording.
+          and_its_twin_settles_it: >
+            Block 12, "Mars Twelfth to Saturn", is the same shape and carries VERY
+            HIGH. The twelfth is not a Saturn aspect position at all, so the aspect
+            identity that would rescue block 4 leaves block 12 exactly where it is.
+            A family that receives one relative-house label and not its twin is not
+            a family. orphans.mars_tenth_to_saturn.do_not_create_a_family stands.
+        catalogue_a_count_is_stale:
+          recorded_here: 20
+          measured_2026_09_15: 26
+          effect_on_the_recount: >
+            None. None of the six families the astronomy layer has added since is
+            a relative-house family or a node colocation family, so neither block 4
+            nor block 13 reaches catalogue A under either count. RECORDED ANYWAY:
+            catalogues.A.count is a figure about the current build that was written
+            once and never re-derived, which is the same shape as every other stale
+            denominator in this file, and a reader re-running this test needs to
+            know the number is measured rather than quoted.
+        # RULED 2026-09-13. Catalogue B counts.
       b_counts_ruling: >
         DECIDED: catalogue B counts for test 3. The 141 Chapter-1 sections are
         the rule catalogue Step 4 is being built from; excluding them because the
@@ -3260,14 +3361,19 @@ source_probability:
 
     - id: rahu_mars_together
       family: "Rahu Mars Together in Any Sign"
-      catalogue: [B]
+      catalogue: [C]
+      catalogue_was: [B]
       catalogue_claim_disputed: >
-        SEE corrections_on_record.rahu_mars_is_not_a_catalogue_b_section. The
-        title is an h3 gold configuration heading (source line 3402) and a
-        silver div.config-title (line 3685). It is NOT one of the 141
-        h3.section elements, so this family passes test 3 through the
-        configuration-group catalogue and not through B. The `catalogue` field
-        is left as written until the test-3 arithmetic is re-ruled.
+        RESOLVED 15-Sep-2026 by
+        transfer_test.test_3_recount_against_all_three_catalogues. SEE ALSO
+        corrections_on_record.rahu_mars_is_not_a_catalogue_b_section. The title
+        is an h3 gold configuration heading (source line 3402) and a silver
+        div.config-title (line 3685). It is NOT one of the 141 h3.section
+        elements, so this family passes test 3 through catalogue C and not
+        through B -- and not through A either, since the astronomy layer emits no
+        conjunction record for a node. Under A and B alone this family is an
+        ORPHAN. `catalogue` below is corrected to [C]; the claim it used to make
+        is kept beside it as `catalogue_was` rather than erased.
       blocks: [13]
       value: Reasonable
       rules: [cfg_gold_bullish_03_rahu_mars_same_sign,

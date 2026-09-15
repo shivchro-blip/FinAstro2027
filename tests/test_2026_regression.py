@@ -920,6 +920,98 @@ def test_source_probability_labels():
            and conf["disputed_families"]["count"] == 3,
            str(disputed))
 
+    # ------------------------------- test 3 against all THREE catalogues
+    # RECOUNTED 15-Sep-2026. Catalogue C is the 58 configuration groups, and it
+    # is counted FROM THE DOCUMENT here for the same reason B is: a catalogue
+    # size quoted out of config is a claim checked against itself.
+    import json as _json
+
+    from finastro import cfgsections as CFGSEC
+
+    cats = conf["transfer_test"]["catalogues"]
+    record("Catalogue C is the 58 configuration groups, counted from the document",
+           CFGSEC.total() == cats["C"]["count"] == 58,
+           f"{CFGSEC.total()} groups in {len(CFGSEC.BLOCKS)} blocks")
+
+    recount = cats["test_3_recount_against_all_three_catalogues"]
+    record("The test-3 recount SUPERSEDES b_counts_ruling, which is still on "
+           "record",
+           recount["supersedes"] == "b_counts_ruling" and "b_counts_ruling" in cats,
+           "both present")
+
+    # Read as NUMBERS, not scraped out of the prose line beside them. The first
+    # version of this check pulled every digit from "19 pass / 12 fail test 1 /
+    # 12 fail test 2 / 1 orphan", collected [19, 12, 1, 12] -- the 1 and the 2
+    # are the test NAMES -- and summed to 44 anyway, so it passed while reading
+    # the wrong four figures. That is this file's own subject matter happening
+    # inside this file.
+    before, after = recount["counts_before"], recount["counts_after"]
+    keys = ("pass", "fail_test_1", "fail_test_2", "orphan")
+    record("The recount's arithmetic accounts for all 44 labelled blocks, "
+           "before and after",
+           sum(before[k] for k in keys) == sum(after[k] for k in keys)
+           == recount["labelled_blocks"] == 44,
+           f"{[before[k] for k in keys]} -> {[after[k] for k in keys]}")
+
+    record("The recount's `before` is the classification the config still carries",
+           before["pass"] == cls["passes"]
+           and before["fail_test_1"] == cls["fail_by_test"]["test_1_instance_bound"]
+           and before["fail_test_2"] == cls["fail_by_test"]["test_2_does_not_recur"]
+           and before["orphan"] == cls["fail_by_test"]["test_3_orphan"],
+           f"classification {cls['passes']}/{cls['fail_by_test']}")
+
+    # Adding a catalogue can only turn a test-3 failure into a pass, and the
+    # tests are ORDERED -- a block failing test 1 or 2 never reaches test 3 --
+    # so those two columns cannot move and the pass count cannot fall.
+    record("The recount moved neither test-1 nor test-2, and lost no pass",
+           before["fail_test_1"] == after["fail_test_1"]
+           and before["fail_test_2"] == after["fail_test_2"]
+           and after["pass"] >= before["pass"]
+           and after["orphan"] <= before["orphan"],
+           f"pass {before['pass']} -> {after['pass']}, "
+           f"orphan {before['orphan']} -> {after['orphan']}")
+
+    # The one family whose route changed. Zero of the 141 sections name Rahu and
+    # Mars together, so the old `catalogue: [B]` was false and the recorded 19
+    # was right for the wrong reason.
+    rahu = next(f for f in conf["carried_families"]
+                if f["id"] == "rahu_mars_together")
+    titles_b = [re.sub(r"<[^>]+>", " ", m) for m in re.findall(
+        r'<h3 class="section"[^>]*>(.*?)</h3>', SOURCE_HTML.read_text(
+            encoding="utf-8"), re.S)]
+    in_b = [s for s in titles_b if re.search(r"rahu.*mars|mars.*rahu", s, re.I)]
+    in_c = [t for b in CFGSEC.BLOCKS for t, _ in CFGSEC.groups(b)
+            if re.search(r"rahu.*mars|mars.*rahu", t, re.I)]
+    record("rahu_mars_together is in catalogue C and in NO catalogue-B section",
+           rahu["catalogue"] == ["C"] and rahu["catalogue_was"] == ["B"]
+           and not in_b and len(in_c) == 2,
+           f"{len(in_b)} of 141 sections, {len(in_c)} of 58 groups")
+
+    # And the orphan is still an orphan. Catalogue C's only candidate is an
+    # ASPECT group, not a relative-house one -- and block 12, "Mars Twelfth to
+    # Saturn", is the same shape but not a Saturn aspect position, so the
+    # identity that would rescue block 4 leaves its twin where it is.
+    orphan = recount["the_orphan_stays_an_orphan"]
+    house = [t for b in CFGSEC.BLOCKS for t, _ in CFGSEC.groups(b)
+             if re.search(r"\btenth\b|\btwelfth\b|10th|12th", t, re.I)]
+    record("No catalogue names a relative-house family, so block 4 stays an orphan",
+           orphan["block"] == 4 and not house and conf["orphans"]["count"] == 1,
+           f"{len(house)} relative-house groups in catalogue C")
+
+    # Catalogue A's recorded size is a figure about the CURRENT build that was
+    # written once and never re-derived. Pinned as stale-on-record rather than
+    # silently corrected: what is worth keeping is that it drifted, and by how
+    # much.
+    live_a = len({r["rule_family"] for r in _json.loads(
+        (pathlib.Path(__file__).resolve().parent.parent / "build"
+         / "astronomy_2027.json").read_text(encoding="utf-8"))["records"]})
+    stale = recount["catalogue_a_count_is_stale"]
+    record("Catalogue A's recorded count is stale, and the config says so and "
+           "by how much",
+           cats["A"]["count"] == stale["recorded_here"]
+           and live_a == stale["measured_2026_09_15"],
+           f"recorded {cats['A']['count']}, emitted {live_a}")
+
 
 # ------------------------------------ 11. the tithi and yoga boundary series
 #: Added with the two panchang ingress classes. These checks recompute the 2026

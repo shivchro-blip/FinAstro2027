@@ -3080,3 +3080,86 @@ ingress at **00:00:21 IST**. A genuine instant that happens to render as `00:00`
 No rule phrased over the printed string could have kept it while dropping the other
 662 — which is the same lesson as the per-rule label census, in a different layer:
 *the artifact's surface is not the thing to test; the property behind it is.*
+
+---
+
+### 12.18 Test 3 recounted against all three catalogues · recorded 15-Sep-2026
+
+`b_counts_ruling` decided that catalogue B counts for transfer test 3, and gave
+this reason: *excluding them because the astronomy layer has not reached them yet
+would make the answer depend on BUILD ORDER rather than on evidence.* The 58
+instrument configuration groups were ported after that ruling was written. Leaving
+them out is the same dependence on the order we happened to do the work, so test 3
+is now evaluated against **A, B and C**.
+
+**The arithmetic does not move: 19 / 12 / 12 / 1 stays 19 / 12 / 12 / 1.** And that
+is not the interesting part. Adding a catalogue can only turn a test-3 *failure*
+into a pass, and the tests are **ordered** — a block failing test 1 or test 2 never
+reaches test 3 — so 24 of the 25 failures cannot move under any catalogue. Only the
+single orphan and the 19 passes were re-evaluated.
+
+#### What actually changed: one pass acquired the ground it never had
+
+All eleven carried families were re-tested against all three catalogues, not just
+the disputed one. Ten pass exactly as recorded — seven through catalogue A
+(`conj_sun_mercury`, `conj_mercury_venus`, `conj_venus_uranus`, `combust_venus`,
+`combust_saturn`, `combust_jupiter`, `rise_venus`) and three through B
+(`mercury_venus_alone`, `venus_jupiter_same_sign`, `mars_ahead_of_jupiter`).
+
+**Block 13, `rahu_mars_together`, is the exception, and it was recorded as
+catalogue B.** It is not in catalogue B: **zero of the 141 `h3.section` titles name
+Rahu and Mars together.** It is not in catalogue A either — the astronomy layer
+emits no conjunction or opposition record for a node, so no Rahu pair exists among
+the 26 emitted families. **Under catalogues A and B alone, as this project's own
+`catalogue` fields are written, the arithmetic is 18 / 12 / 12 / 2.**
+
+So the recorded 19 was correct and the reason given for it was not. Catalogue C is
+what makes it true: *Rahu Mars Together in Any Sign* is gold-bullish group 3 and
+silver-bullish group 26, and the family's `rules` list has named
+`cfg_gold_bullish_03` and `cfg_silver_bullish_07` since the per-rule attachment
+landed. **The recount does not change the count; it supplies the count's missing
+ground.** `catalogue` is corrected to `[C]` with `catalogue_was: [B]` beside it.
+
+#### The orphan stays an orphan
+
+Block 4, *Mars (Sagittarius) Tenth to Saturn*, fails test 3 under all three.
+
+* **A** — no relative-house family among the 26 emitted `rule_family` values.
+* **B** — no relative-house section among the 141. Zero titles match *tenth*,
+  *twelfth*, *10th*, *12th*, *house* or *aspect*.
+* **C** — exactly one candidate, and it is **declined**: gold-bullish group 6, *If
+  Mars is Aspected by Saturn and Jupiter is Retrograde*. Mapping block 4 onto it
+  takes three re-derivations — asserting the Parashari special aspect (Saturn
+  aspects its 3rd, 7th and 10th) that the source states in neither place, dropping
+  the group's Jupiter-retrograde conjunct, and reading a **one**-position condition
+  as a **three**-position one. A narrower condition mapped onto a broader group and
+  called the same family is the group-key-for-a-member-key error running backwards.
+
+**And its twin settles it.** Block 12, *Mars Twelfth to Saturn*, carries VERY HIGH
+and is the same shape. The twelfth is not a Saturn aspect position at all, so the
+identity that would rescue block 4 leaves block 12 exactly where it is. A family
+that receives one relative-house label and not its twin is not a family.
+`do_not_create_a_family` stands.
+
+#### Two things found while recounting
+
+**Catalogue A's recorded size is stale: 20, measured 26.** It has no effect on the
+recount — none of the six families added since is a relative-house or node
+colocation family — and it is recorded anyway, because `catalogues.A.count` is a
+figure about the *current build* that was written once and never re-derived. That
+is the same shape as every other stale denominator in this file.
+
+**And the first version of the harness check for this recount passed for the wrong
+reason.** It pulled every digit out of `"19 pass / 12 fail test 1 / 12 fail test 2 /
+1 orphan"`, collected `[19, 12, 1, 12]` — the `1` and `2` are the *test names* —
+and summed to 44 anyway. Caught by printing what it had read rather than whether it
+had passed. The figures are now stated as figures (`counts_before`,
+`counts_after`), and the prose line is prose. **A check that passes for the wrong
+reason is the subject of §12.16 happening inside the file that documents it.**
+
+#### `actual_figures_2026`'s 344 stays labelled stale
+
+Re-measuring it means flipping `CONF["year"]` and rebuilding the whole layer against
+2026. A stale number honestly labelled costs less than a year-flip at this point in
+the work, and the label already says what it is: measured under the section-level
+attachment, which is the defect §12.16's sixth instance records.
