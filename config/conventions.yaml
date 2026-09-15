@@ -2893,6 +2893,23 @@ source_probability:
   # ------------------------------------------------ carried families and values
   # 11 distinct families receive a carried label. `keyed` states the key the
   # label attaches to -- load-bearing for the combust family, below.
+  #
+  # `rules` IS THE ATTACHMENT. RULED 2026-09-15, after a verification pass found
+  # the label attaching at SECTION level: every rule in "Venus Combust Rise
+  # Cycle p.14" carried combust_venus's Reasonable, so b015b_venus_rise_west was
+  # labelled Reasonable and rise_venus's High reached no row at all; all three
+  # live b041 Herschel partners carried conj_venus_uranus's High although the
+  # source labelled only the Venus one. A section is not a rule. The label is a
+  # per-occurrence editorial judgement (headline_finding) and it attaches to the
+  # CONDITION a block names, so the rule ids are enumerated here and matched by
+  # id -- never by title, never by rule_family, never by body. A rule absent
+  # from every `rules` list carries no label, and that is a correct outcome.
+  #
+  # `rules_declined` records the rules a reader would expect to see in the list
+  # and the reason they are not, so the absence is a ruling on record rather
+  # than an oversight. `family`, `source_section`, `keyed` and `body` are kept
+  # as the PROVENANCE of the attachment -- how the block was traced to the rule
+  # -- and are no longer read by any matcher.
   carried_families:
 
     - id: conj_sun_mercury
@@ -2901,6 +2918,15 @@ source_probability:
       blocks: [8, 17, 24, 31, 38, 48]
       value: [Reasonable, Good]
       disputed: true
+      rules: []
+      rules_empty_is_correct: >
+        The largest label family in the document reaches no verdict row, and
+        that is the right outcome rather than a gap. This family passes test 3
+        through catalogue A -- the emitted astronomy class `aspect/conjunction`
+        with bodies {Sun, Mercury} -- and catalogue A carries no verdicts. There
+        is no Chapter-1 section and no configuration group for a Sun-Mercury
+        conjunction, so no rule states this condition and none can carry the
+        label. Six blocks, seven astronomy records, zero rows.
       note: >
         Six blocks, two values: Reasonable x5, Good on the 04-Nov-2026 instance.
         The source prints no Sun-Mercury pair table, so this family passes test 3
@@ -2913,6 +2939,7 @@ source_probability:
       blocks: [9, 14]
       value: [Reasonable, High]
       disputed: true
+      rules: [b017_venus_mercury_conjunction]
       note: "29-Jan-2026 Reasonable, 28-Feb-2026 High. Five weeks apart, same configuration."
 
     - id: conj_venus_uranus
@@ -2921,6 +2948,15 @@ source_probability:
       source_section: "Herschel Conjunction p.34"
       blocks: [23]
       value: High
+      rules: [b041_herschel_conjunction_venus]
+      rules_declined:
+        b041_herschel_conjunction_sun: >
+          Block 23 is titled "Venus Herschel Conjunction". The source labelled
+          the Venus partner and no other. B41 states the condition for four
+          partners in one section; giving all four the Venus label would hand
+          three of them a judgement the document never made.
+        b041_herschel_conjunction_mercury: "Same ruling as the Sun partner."
+        b041_herschel_conjunction_mars: "Same ruling as the Sun partner."
 
     # ---- visibility/combust is KEYED PER BODY, not at family level ----------
     # RULED 2026-09-13, and the ruling is what keeps this out of the disputed
@@ -2937,7 +2973,17 @@ source_probability:
       source_section: "Venus Combust Rise Cycle p.14"
       blocks: [2, 44]
       value: Reasonable
-      note: "Two blocks, SAME value. Agreement, not dispute."
+      rules: [b015_venus_combust_cycle, b015a_venus_combust_east]
+      rules_note: >
+        Block 44 "Venus Combust" is the unqualified condition and is b015's
+        cycle; block 2 "Venus Combust in the East" is b015a by name. Both
+        Reasonable, so the pair agrees and the split between them costs nothing.
+      rules_declined:
+        cfg_silver_bullish_12_venus_combust_in_west: >
+          A configuration group, not B15, and the source labels no west
+          combustion. The east has its own block and the west has none; reading
+          block 44's generic title as covering the west would re-derive a label
+          the document withheld.
 
     - id: combust_saturn
       family: "visibility/combust"
@@ -2947,6 +2993,7 @@ source_probability:
       source_section: "Saturn Combust Rise Cycle p.24"
       blocks: [18]
       value: High
+      rules: [b027_saturn_combust_cycle]
 
     - id: combust_jupiter
       family: "visibility/combust"
@@ -2956,6 +3003,12 @@ source_probability:
       source_section: "Jupiter Combust Rise Cycle p.20"
       blocks: [32]
       value: Good
+      rules: [b022_jupiter_combust_cycle, b022w_jupiter_combust_west]
+      rules_note: >
+        Block 32 "Jupiter Combust" is unqualified and B22 states the cycle and
+        its western half in one section, so both rules state the condition the
+        block names. Contrast combust_venus, where the source itself qualified
+        one hemisphere and left the other unlabelled.
 
     - id: rise_venus
       family: "visibility/rise"
@@ -2965,7 +3018,19 @@ source_probability:
       source_section: "Venus Combust Rise Cycle p.14"
       blocks: [46]
       value: High
-      note: "See no_split_ruling.consequence_left_latent."
+      rules: [b015b_venus_rise_west, b015r_venus_rise_uttara_bhadrapada,
+              b015c_venus_rise_star_list]
+      rules_note: >
+        Block 46 "Venus Rise" is unqualified, and B15's three rise rules are the
+        section's statement of it. Before the per-rule attachment this High
+        appeared in no row of the calendar: the rise rules sat in the same
+        section as combust_venus and took its Reasonable instead.
+      rules_declined:
+        cfg_silver_bearish_10_venus_rise_in_west: >
+          A silver configuration group, not B15. It held this High by accident
+          -- it is the one rule the old family/body matcher reached correctly
+          while the rules the label belongs to were shadowed by the section
+          match -- and it is declined for the same reason the west combustion is.
 
     # ---- catalogue-B-only families: no emitted astronomy class matches them --
     - id: mercury_venus_alone
@@ -2974,25 +3039,66 @@ source_probability:
       blocks: [26, 42]
       value: [Reasonable, High]
       disputed: true
+      rules: [b016_mercury_venus_alone_in_a_sign]
+      rules_declined:
+        cfg_silver_bullish_15_sun_or_moon_with_mercury_alone: >
+          "Only Sun Mercury or Moon Mercury Alone in Any Sign" is a different
+          pair in a different catalogue. It shares the alone-in-sign family and
+          nothing else.
       note: "THE HEADLINE PAIR. See headline_finding."
 
     - id: rahu_mars_together
       family: "Rahu Mars Together in Any Sign"
       catalogue: [B]
+      catalogue_claim_disputed: >
+        SEE corrections_on_record.rahu_mars_is_not_a_catalogue_b_section. The
+        title is an h3 gold configuration heading (source line 3402) and a
+        silver div.config-title (line 3685). It is NOT one of the 141
+        h3.section elements, so this family passes test 3 through the
+        configuration-group catalogue and not through B. The `catalogue` field
+        is left as written until the test-3 arithmetic is re-ruled.
       blocks: [13]
       value: Reasonable
+      rules: [cfg_gold_bullish_03_rahu_mars_same_sign,
+              cfg_silver_bullish_07_rahu_mars_same_sign]
+      rules_note: >
+        Block 13 names both windows -- same sign 23-Feb to 02-Apr-2026 and same
+        nakshatra 03-Mar to 20-Mar-2026 -- under one label, so the silver group
+        that reads "more bullish when in the same Nakshatra" is inside the
+        block's own scope rather than a second judgement.
 
     - id: venus_jupiter_same_sign
       family: "Venus Jupiter in the Same Sign p.67"
       catalogue: [B]
       blocks: [29]
       value: High
+      rules: [b078_venus_jupiter_same_sign]
+      rules_declined:
+        b079_venus_behind_jupiter_same_sign: >
+          OPEN, not settled. Block 29's title names the same-sign window AND its
+          behind and ahead halves under one label, so an argument from
+          no_split_ruling reaches all three rules. Attaching them would change
+          what this family IS, which is a ruling and not a bug fix, so the
+          per-rule attachment keeps the family as it was written and records the
+          question. Same for block 50 and mars_ahead_of_jupiter.
+        b080_venus_ahead_of_jupiter_same_sign: "Same open question."
 
     - id: mars_ahead_of_jupiter
       family: "Mars Ahead of Jupiter in Same Sign p.69"
       catalogue: [B]
       blocks: [50]
       value: High
+      rules: [b086_mars_ahead_of_jupiter_same_sign]
+      rules_declined:
+        b084_mars_jupiter_same_sign: "See venus_jupiter_same_sign.rules_declined -- the same open question."
+        b085_mars_behind_jupiter_same_sign: >
+          Block 41 "Mars Behind Jupiter in the Same Sign" is its own block and
+          its own label, excluded by test 2. Block 50's behind half is not a
+          route around that exclusion.
+        b086x_mars_crosses_jupiter_eleven_days: >
+          The crossing is a different condition from the ordering, stated in the
+          same section. Section adjacency is exactly what this attachment stopped
+          treating as evidence.
 
   # ------------------------------------------------------- disputed families
   # RULED 2026-09-13. Where a family's blocks disagree, EMIT THE SET.
@@ -3323,6 +3429,80 @@ source_probability:
         Match either the emitted rule_family OR the section title with its page
         marker stripped. After the fix 11 of 11 families attach, 14 rules carry a
         label, and 344 verdict rows are annotated.
+      superseded_by: label_attached_at_section_level
+      superseded_note: >
+        THAT FIX WAS ITSELF THE NEXT DEFECT. Matching the section title made the
+        SECTION the unit of attachment, which is the correction below. The 344
+        figure was measured under it and is not a figure about the source.
+
+    # FOUND 15-Sep-2026, by an independent verification pass over
+    # build/calendar_2027.json.
+    - id: label_attached_at_section_level
+      claimed: "source_probability attaches to the rule the source labelled."
+      attributed_to: this_project_family_key_is_read_two_ways_fix
+      status: corrected
+      found_by: >
+        Reading the emitted labels per RULE rather than per family or per total.
+        b015, b015a, b015b and b015c all sit in "Venus Combust Rise Cycle p.14"
+        and all four carried Reasonable, although b015b and b015c are RISE rules
+        and the source's only rise label is block 46's High. A per-family or
+        per-total count passes on that build; only a per-rule census sees it.
+      corrected_to: >
+        The section title was matched as a substring of rule.section.title, so
+        every rule of a labelled section took that section's label and the first
+        matching family won. Three consequences, all silent: rise_venus's High
+        reached no row of the calendar at all, because combust_venus is listed
+        first and its title match is the same string; all three firing b041
+        Herschel partners carried conj_venus_uranus's High, although block 23 is
+        titled "Venus Herschel Conjunction" and labels one partner; and
+        cfg_silver_bearish_10_venus_rise_in_west held a High from a section it is
+        not in. THIS IS THE FAMILY-READ-TWO-WAYS BUG IN A THIRD COSTUME and it
+        belongs in verdict_coverage 12.16 as the sixth instance: a key that
+        identifies a GROUP used to identify a MEMBER.
+      same_shape_as: >
+        family_key_is_read_two_ways, one level down. That correction widened the
+        match to make five missing families attach; widening a match is how a
+        member key becomes a group key, and nothing then distinguished "this rule
+        is the one the source labelled" from "this rule is filed next to it".
+      fix: >
+        carried_families[].rules enumerates the rule ids, probability_for is a
+        dict lookup on rule.id, and a rule id claimed by two families raises on
+        import instead of taking whichever family is listed first. After the fix
+        14 rules carry a label across 533 verdict rows of 6,677, down from 536
+        rows -- three rows, which is exactly why the pinned table in
+        tests/test_rule_layer.py is per rule and not per total.
+      not_fixed_here: >
+        The 344 in actual_figures_2026 was measured under the section-level
+        attachment and has not been re-measured: the 2026 fixture runs the rule
+        layer against a config whose `year` is 2027, so the figure cannot be
+        reproduced without flipping the year. It is stale in the same direction
+        as projected_population, and is left labelled rather than rewritten.
+
+    # FOUND 15-Sep-2026, while enumerating the rule ids for rahu_mars_together.
+    - id: rahu_mars_is_not_a_catalogue_b_section
+      claimed: >
+        Block 13 (Rahu Mars) passes transfer test 3 through catalogue B, and is
+        one of "the five co-location labels (blocks 13, 26, 29, 42, 50)" the
+        b_counts_ruling counts as catalogue-B passes.
+      attributed_to: this_project_transfer_test_b_counts_ruling
+      status: open
+      found_by: >
+        Looking for the catalogue-B section a rule id could be taken from. There
+        is none: "Rahu Mars Together in Any Sign" appears twice in
+        data/source_2026.html, at line 3402 as a bare h3 gold configuration
+        heading and at line 3685 as a silver div.config-title. Neither is an
+        h3.section, so neither is in the 141.
+      consequence: >
+        The family attaches to two CONFIGURATION rules and to no catalogue-B
+        rule. Test 3's pass count of 19 counts it as a B pass, and the honest
+        reading is that it passes through the 58-group configuration catalogue --
+        a third catalogue that did not exist when the ruling was written and now
+        renders into the calendar.
+      left_open_because: >
+        Re-ruling test 3 changes the 19/12/12/1 arithmetic and the classification
+        block that tests/test_2026_regression.py asserts against the document.
+        That is a ruling, not a repair, and the label attachment does not depend
+        on it: the two configuration rules carry block 13's Reasonable either way.
 
   # ------------------------------------------------------------- asserted by
   asserted_by:

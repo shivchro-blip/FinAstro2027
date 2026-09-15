@@ -586,6 +586,132 @@ def test_labels_are_from_the_config_vocabulary() -> None:
            "confidence stays untested and is raised only by a backtest")
 
 
+# ------------------------------------------ 4b. the label attaches per RULE
+#: Every rule that carries a source label, the labels it carries, and the number
+#: of verdict rows behind it. PINNED PER RULE, and that is the whole point of
+#: the check: the label used to attach by SECTION TITLE, and a per-family or
+#: per-total count passes either way. The broken build carried 536 rows to this
+#: one's 533 -- three rows apart on a 6,677-row calendar -- so only this table
+#: separates a correct attachment from one that labelled a rule's neighbours.
+#:
+#: Read against build_verdicts(), not against the registry: the defect was in
+#: what reached a ROW, and b015r_venus_rise_uttara_bhadrapada carries the label
+#: while firing zero times, so a registry-level check would not see the rows at
+#: all.
+SOURCE_PROBABILITY_ROWS = {
+    "b015_venus_combust_cycle":                 (("Reasonable",), 98),
+    "b015a_venus_combust_east":                 (("Reasonable",), 98),
+    # The two that name the defect. Both are rise rules sitting in
+    # combust_venus's section, and both used to read Reasonable.
+    "b015b_venus_rise_west":                    (("High",), 2),
+    "b015c_venus_rise_star_list":               (("High",), 2),
+    "b016_mercury_venus_alone_in_a_sign":       (("Reasonable", "High"), 86),
+    "b017_venus_mercury_conjunction":           (("Reasonable", "High"), 6),
+    "b022_jupiter_combust_cycle":               (("Good",), 26),
+    "b022w_jupiter_combust_west":               (("Good",), 26),
+    "b027_saturn_combust_cycle":                (("High",), 35),
+    # One Herschel partner, not three. Block 23 labels the Venus one.
+    "b041_herschel_conjunction_venus":          (("High",), 1),
+    "b078_venus_jupiter_same_sign":             (("High",), 50),
+    "b086_mars_ahead_of_jupiter_same_sign":     (("High",), 83),
+    "cfg_gold_bullish_03_rahu_mars_same_sign":  (("Reasonable",), 10),
+    "cfg_silver_bullish_07_rahu_mars_same_sign": (("Reasonable",), 10),
+}
+
+#: Rules that share a section with a labelled rule and carry NO label. This is
+#: the negative half and it is the half that bites: on the broken build every
+#: one of these was labelled, because its section-mate was.
+SECTION_MATES_WITHOUT_A_LABEL = [
+    "b041_herschel_conjunction_sun",
+    "b041_herschel_conjunction_mercury",
+    "b041_herschel_conjunction_mars",
+    "b086x_mars_crosses_jupiter_eleven_days",
+]
+
+
+def test_source_probability_attaches_per_rule_and_not_per_section() -> None:
+    from finastro.verdicts import build_verdicts, probability_for
+
+    conf = CONF["source_probability"]
+    known = {r.id for r in R.REGISTRY} | {r.id for r in config_rules.CONFIG_REGISTRY}
+
+    claimed: dict[str, str] = {}
+    duplicated, unknown = [], []
+    for fam in conf["carried_families"]:
+        for rid in fam.get("rules") or ():
+            if rid in claimed:
+                duplicated.append(f"{rid} in {claimed[rid]} and {fam['id']}")
+            claimed[rid] = fam["id"]
+            if rid not in known:
+                unknown.append(rid)
+        for rid in (fam.get("rules_declined") or {}):
+            if rid not in known:
+                unknown.append(rid)
+
+    record("Every rule id the label config names is a registered rule",
+           not unknown, str(unknown))
+    record("No rule id is claimed by two carried families",
+           not duplicated, str(duplicated))
+
+    # A family may legitimately reach no rule -- conj_sun_mercury is catalogue A
+    # only -- but it has to SAY so rather than simply carry an empty list.
+    silent = [fam["id"] for fam in conf["carried_families"]
+              if not fam.get("rules") and not fam.get("rules_empty_is_correct")]
+    record("A family that attaches to no rule records why", not silent, str(silent))
+
+    verdicts = build_verdicts()
+    got: dict[str, tuple] = {}
+    for v in verdicts:
+        if not v.source_probability:
+            continue
+        prev = got.get(v.rule_id)
+        got[v.rule_id] = (tuple(v.source_probability),
+                          (prev[1] if prev else 0) + 1)
+
+    drift = ["; ".join(f"{k} {got.get(k)} != {want}"
+                       for k, want in SOURCE_PROBABILITY_ROWS.items()
+                       if got.get(k) != want)]
+    drift += [f"unexpected {k} {v}" for k, v in got.items()
+              if k not in SOURCE_PROBABILITY_ROWS]
+    record("Each labelled rule carries exactly the labels and the row count "
+           "pinned above -- per RULE, which a per-section attachment fails",
+           got == SOURCE_PROBABILITY_ROWS,
+           f"{len(got)} rules, {sum(n for _, n in got.values())} rows. "
+           + " ".join(x for x in drift if x))
+
+    by_id = {r.id: r for r in R.REGISTRY}
+    by_id.update({r.id: r for r in config_rules.CONFIG_REGISTRY})
+    leaked = [rid for rid in SECTION_MATES_WITHOUT_A_LABEL
+              if probability_for(by_id[rid])[0] is not None]
+    record("A rule sharing a section with a labelled rule carries no label",
+           not leaked, str(leaked))
+
+    # The section-mates are only evidence if they really do share the section.
+    labelled_titles = {by_id[o].section.title for o in SOURCE_PROBABILITY_ROWS}
+    stray = [rid for rid in SECTION_MATES_WITHOUT_A_LABEL
+             if by_id[rid].section.title not in labelled_titles]
+    record("...and each of those rules really is in a labelled rule's section",
+           not stray, str(stray))
+
+    # Carried but silent: b015r is one of rise_venus's three rules and fires
+    # zero times in 2027, so it reaches no row. The attachment is a property of
+    # the RULE and has to hold whether or not the sky obliges -- which is also
+    # why the pinned table above cannot be the only check.
+    labels, _ = probability_for(by_id["b015r_venus_rise_uttara_bhadrapada"])
+    record("A labelled rule that fires zero times still carries its label",
+           labels == ["High"]
+           and not any(v.rule_id == "b015r_venus_rise_uttara_bhadrapada"
+                       for v in verdicts),
+           f"b015r carries {labels} behind 0 rows")
+
+    disputed = {rid for rid, (labs, _) in SOURCE_PROBABILITY_ROWS.items()
+                if len(labs) > 1}
+    record("A disputed family emits the SET and flags it, and no other row is "
+           "flagged disputed",
+           {v.rule_id for v in verdicts if v.source_probability_disputed} == disputed,
+           str(sorted(disputed)))
+
+
 # ---------------------------------------------------- 5. blocked / ambiguous
 def test_blocked_and_ambiguous(firings: list) -> None:
     fired = {f.rule_id for f in firings}
@@ -2513,6 +2639,7 @@ def main() -> int:
     test_every_rule_is_traceable()
     test_axes_and_tier_derivation()
     test_labels_are_from_the_config_vocabulary()
+    test_source_probability_attaches_per_rule_and_not_per_section()
     test_blocked_and_ambiguous(firings)
     test_resolved_ambiguities_are_marked_as_reconstructions(firings)
     test_the_elision_occurs_exactly_once_in_the_document()

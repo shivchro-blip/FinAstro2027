@@ -2705,8 +2705,9 @@ alias was the reason it was *empty*. §12.16 scopes what porting them would take
 This is the most transferable thing the build has produced, and it does not belong
 scattered across four `corrections_on_record` entries where a reader meets it once
 and files it as a detail of the layer it happened in. **A wrong answer that renders
-as a plausible correct one** is the shape the build keeps producing, four times so
-far, in four different subsystems. Every instance was silent: no exception, no
+as a plausible correct one** is the shape the build keeps producing, six times so
+far -- the four below, the measured fifth, and a sixth that is the FIX for the
+third having the same shape as the third. Every instance was silent: no exception, no
 failing assertion, no log line. Each was found by a check aimed at the OUTPUT
 rather than at the code that produced it, and in three of the four the code was
 read, understood and believed before the output was looked at.
@@ -2812,6 +2813,66 @@ Which is the generalisation of point 1 below, stated forward instead of backward
 The check that would have caught the `family` bug was "count against a list held
 somewhere else". Here that list — the 58 headings, and which of them carry a
 direction — was built first, and the failure it averted has a size.
+
+#### The sixth instance — the same key, one level down — recorded 15-Sep-2026
+
+**`source_probability` attached at SECTION level, not rule level.** Found by an
+independent verification pass over `build/calendar_2027.json`, and it is instance
+3 above wearing a third costume. The fix for instance 3 widened the match: where
+`family` was not an emitted `rule_family`, it was matched as a **substring of the
+rule's section title**. That made five missing families attach, which is what it
+was for. It also made the SECTION the unit of attachment, and a section holds
+several rules.
+
+Three consequences, every one silent:
+
+* `b015`, `b015a`, `b015b` and `b015c` all sit in *Venus Combust Rise Cycle p.14*,
+  and all four carried `combust_venus`'s **Reasonable** — including the two that
+  are *rise* rules. `combust_venus` is listed before `rise_venus` and both match
+  the same title, so the first won. **Block 46's High, `rise_venus`'s only value,
+  reached no row of the calendar at all.**
+* All three firing `b041` Herschel partners carried `conj_venus_uranus`'s **High**.
+  Block 23 is titled *Venus Herschel Conjunction*; the source labelled one partner
+  and two rules got a judgement the document never made.
+* `cfg_silver_bearish_10_venus_rise_in_west` — the one rule the old matcher reached
+  by family+body rather than by title — held a High from a section it is not in.
+
+**A key that identifies a GROUP used to identify a MEMBER.** That is the sentence
+that covers instance 3 and this one together: `family` names a family, a section
+title names a section, and neither names a rule. Widening a match is how a member
+key becomes a group key, and once it has, nothing distinguishes *this is the rule
+the source labelled* from *this is filed next to it*.
+
+**What caught it, and what passed anyway.** The check that existed —
+`test_source_probability_population` — asserts the projected 26 records and
+firings **exactly**, in the spirit of point 1 above, and it passes on the broken
+build: it counts the astronomy layer and the rule-layer firings, not what reached
+a row. The populated row count also barely moves: **536 rows before, 533 after**,
+three rows on a 6,677-row calendar, because the three misattributions very nearly
+cancel the one label that reached nothing. A per-family count, a per-total count,
+and a spot check of a Venus row all survive this bug.
+
+Only a **per-rule census** separates them, which is why the pin added in
+`tests/test_rule_layer.py::test_source_probability_attaches_per_rule_and_not_per_section`
+is a table of *rule id → (labels, row count)* and not a total, and why it carries a
+negative half: the section-mates that must carry **no** label. On the broken build
+every one of those was labelled, because its neighbour was.
+
+| instance | what caught it | the check that passed anyway |
+| --- | --- | --- |
+| label attached per section | **a per-rule census of the emitted artifact** | `test_source_probability_population` — exact counts, of the wrong unit; and the total, which moved by 3 |
+
+**And the fix for instance 3 became instance 6, which is the part worth keeping.**
+Both corrections are recorded, the second pointing at the first
+(`source_probability.corrections_on_record.label_attached_at_section_level`). A
+repair that widens a match to make missing things appear should be read as a
+candidate for this section, not as the end of one.
+
+The attachment is now an enumeration: `carried_families[].rules` lists rule ids,
+`probability_for` is a dict lookup on `rule.id`, and a rule id claimed by two
+families **raises on import** rather than taking whichever family is listed first.
+That last clause is the guard built to be seen failing, per the standing rule
+above — the silent first-match win is precisely how `rise_venus` lost its High.
 
 #### The shape, named
 

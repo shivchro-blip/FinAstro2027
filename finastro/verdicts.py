@@ -254,40 +254,53 @@ class Verdict:
 _CARRIED = CONF["source_probability"]["carried_families"]
 
 
+#: rule id -> (labels, disputed), built once off the config's `rules` lists.
+#:
+#: THE ATTACHMENT IS BY RULE ID, AND ONLY BY RULE ID. It used to be by section
+#: title -- `family` and `source_section` were matched as substrings of
+#: `rule.section.title` -- and a section is not a rule. Three defects followed,
+#: all of them silent:
+#:
+#: * every rule in "Venus Combust Rise Cycle p.14" took combust_venus's
+#:   Reasonable, because combust_venus is listed before rise_venus and the title
+#:   matched both. b015b_venus_rise_west was labelled Reasonable, and block 46's
+#:   High -- rise_venus's only value -- reached NO row of the calendar;
+#: * all three firing b041 Herschel partners took conj_venus_uranus's High,
+#:   although block 23 is titled "Venus Herschel Conjunction" and labels the
+#:   Venus partner alone. Two rules carried a judgement the source never made;
+#: * cfg_silver_bearish_10_venus_rise_in_west, the one rule the old matcher
+#:   reached by family+body rather than by title, held a label from a section it
+#:   is not in.
+#:
+#: This is the family-read-two-ways bug in its third costume -- a key that
+#: identifies a GROUP used to identify a MEMBER. Building the map eagerly is
+#: part of the fix: a rule id claimed by two families fails on import rather
+#: than silently taking whichever family the config happens to list first, which
+#: is exactly how rise_venus lost its High to combust_venus.
+def _label_index() -> dict[str, tuple[list | None, bool]]:
+    index: dict[str, tuple[list | None, bool]] = {}
+    for fam in _CARRIED:
+        val = fam.get("value")
+        labels = list(val) if isinstance(val, list) else ([val] if val else None)
+        for rid in fam.get("rules") or ():
+            if rid in index:
+                raise ValueError(
+                    f"source_probability: {rid} is claimed by two carried "
+                    f"families; a rule carries at most one label")
+            index[rid] = (labels, bool(fam.get("disputed")))
+    return index
+
+
+_LABEL_BY_RULE = _label_index()
+
+
 def probability_for(rule) -> tuple[list | None, bool]:
     """(labels, disputed) for a rule, or (None, False) if it carries none.
 
-    A family attaches either by `rule_family` (optionally further keyed on the
-    body) or by the source section it was read from. Both are read off the rule;
-    nothing is re-derived from the label text.
+    Read off `carried_families[].rules` by id. A rule with no label of its own
+    gets none -- not its neighbour's, not its section's, not its family's.
     """
-    for fam in _CARRIED:
-        hit = False
-        key = fam.get("family")
-        if key:
-            # `family` is READ TWO WAYS in the config and both are live: for the
-            # aspect and visibility families it is the emitted `rule_family`
-            # ("aspect/conjunction Sun-Mercury"), and for five others it is the
-            # SOURCE SECTION as printed ("Mercury Venus Alone in Any Sign p.16",
-            # "Mars Ahead of Jupiter in Same Sign p.69"). Matching only the
-            # first silently dropped 5 of the 11 carried families, which is the
-            # kind of miss the label census exists to prevent.
-            if rule.rule_family == key:
-                hit = True
-            else:
-                want = str(key).split(" p.")[0].strip().lower()
-                hit = bool(want) and want in rule.section.title.lower()
-            if hit and fam.get("body") is not None:
-                hit = fam["body"] in (rule.condition_text or "") or \
-                    fam["body"] in rule.section.heading
-        if not hit and fam.get("source_section"):
-            want = str(fam["source_section"]).split(" p.")[0].strip()
-            hit = bool(want) and want.lower() in rule.section.title.lower()
-        if hit:
-            val = fam.get("value")
-            labels = list(val) if isinstance(val, list) else ([val] if val else None)
-            return labels, bool(fam.get("disputed"))
-    return None, False
+    return _LABEL_BY_RULE.get(rule.id, (None, False))
 
 
 def significance_of(rule) -> str:
@@ -454,11 +467,6 @@ def build_verdicts(sky: Sky | None = None) -> list[Verdict]:
     firings = fire(REGISTRY, sky) + fire(CONFIG_REGISTRY, sky)
     by_rule = {r.id: r for r in
                list(firing_rules()) + list(CONFIG_REGISTRY)}
-
-    # The source's own printed labels, where a rule carries them. Read from the
-    # rule, not re-derived: source_probability is an annotation, never a weight.
-    labels = CONF.get("source_probability", {})
-    fam_map = labels.get("families", {}) if isinstance(labels, dict) else {}
 
     out: list[Verdict] = []
     for f in firings:
