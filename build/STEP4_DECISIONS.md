@@ -3084,6 +3084,105 @@ of coverage statement worth publishing.
 **The calendar exists and renders. The coverage claim is now stated honestly, and
 that mattered more than adding to it.**
 
+#### A SECOND SHAPE: a correct count of the wrong set · recorded 16-Sep-2026
+
+**This is not the quiet-blank family and must not be filed under it.** Everything
+above is one shape — *a wrong answer that renders as a plausible correct one*. The
+operation misfired and the result merely looked survivable. Here the operation
+does not misfire. **The arithmetic is right every time.** The number is a true
+statement about a set, and the set is not the one the sentence around it names.
+
+> **A correct count of the wrong set.** A figure that is arithmetically sound,
+> reproducible, and attached to the wrong population, unit or filter. It cannot
+> be caught by recomputing it, because recomputing it gives the same answer —
+> the defect is in the **domain**, not in the operation over the domain, and an
+> integer carries no trace of its domain.
+
+**Three instances in two turns**, all in the span-vs-daily work:
+
+| | the figure | what it actually counted | what the sentence claimed |
+| --- | --- | --- | --- |
+| 1 | **`282`** | distinct `(venue, date)` pairs among the **471 `date_only` ephemeris** rows, in the 7,082-row population | the **carry-in** cause's firings. Carry-in is **142** |
+| 2 | **`45` / `12`** | `45` = `b101` firings in a population holding its Mumbai rows only; `12` = anchored **rows** | both read as firings, in the same table as their neighbours. `b101` is **105** firings; anchored is 12 rows and **11** firings |
+| 3 | **`22`** | `clipped_end` groups **alone**, with the `open_*` filter its own sentence states never applied | spans with a real endpoint outside 2027 and `open_*` false. That is **24** — it omits the 10 `clipped_start` groups, and 5 of its own 22 are already `open_end` |
+
+Instance 1 is wrong in the **cause**, 2 in the **unit**, 3 in the **filter**.
+Those are the three axes, one each, which is why the shape took three tries to
+see: no two of them look alike at the point of failure.
+
+**Two more, found while attributing the first three** — the shape does not stop
+appearing once it is named:
+
+* **`105` is a location count**, and the venue count exists and is **150**.
+  `b101` fires on 45 Mumbai and 60 New York civil days, but Mumbai carries three
+  venues, so `(rule, venue, day)` gives 150 where `rules.base.fire` emits 105.
+  Nothing downstream used 150. It is recorded because the near-miss is the point.
+* **`331 / 282 / 11` and `858 rows` were quoted as one line and are two
+  populations.** `331` is catalogue-B only (5,209 rows); `858` is every verdict
+  row (6,677). The no-instant rows of the population `331` was drawn from total
+  **849**. Both figures are correct; the line is not.
+
+#### Why every detector this section already had misses it
+
+Each remedy above asks a question about **occurrence or content**: did the rule
+fire, did the field populate, did the label attach, do the bytes match. §12.18
+added *print what the check read*. **All of them pass here**, because the thing
+that ran ran correctly and the value it printed is the value it computed.
+
+The nearest neighbour is the **stale-denominator** failure that `row_kind` landed
+first to prevent (§12.17), and this is its **mirror** — worth stating because the
+remedy does not carry over. There, a figure is held fixed and the population moves
+under it. Here the population was never fixed at all, so there is nothing for a
+figure to go stale against. A discriminator landed before the change cannot help;
+the figure has to carry its population **at the point it is written**.
+
+And the sharpest form: **`662` was a correct count too.** It reproduces exactly
+against the pre-`DateStamp` render at `dfb485b` — 663 rows less `b102` — and its
+population was *rows whose rendered string began `00:00 IST`*. That population
+misses 196 structurally instant-less rows, and misses them **non-randomly**: a row
+printed midnight only where the stand-in instant it was handed happened to be a
+Mumbai midnight, so the rows it could not see are precisely the ones whose
+fabricated time looked *plausible* — `09:34 IST` for all 18 of `b079`, `10:30 IST`
+for `b101`'s New York half. **A population defined on appearance is blind to
+exactly the cases the appearance was hiding.**
+
+#### The detector, named
+
+> **State the unit and the filter beside the count, so a figure cannot be read
+> without its population.**
+
+Not a check that recomputes — that passes. Not "print what you read" — the figure
+*is* what was read. The count must be **unpublishable in isolation**, the way the
+two coverage denominators must travel together and for the same reason:
+`166 of 354` and `166 of 173` are both correct and mean different things, and the
+rule there is already *state the relationship, not just the pair*.
+
+**Landed, not merely resolved:**
+
+* **`tools/cause_census.py`** is the generator the proposal's §1 demanded and did
+  not itself have. It prints every count in **three populations** side by side
+  (catalogue-B 5,209 / all verdict 6,677 / all rows 7,082) and **six units**
+  (rows, firings, `(rule, venue, day)`, `(venue, date)`, spans, rules), with a
+  unit key spelled out beneath the tables and the filter stated in the header.
+  A reader who has only the output cannot mistake 105 for 150, or 849 for 858.
+* **`conventions.yaml → row_kinds.time_fields.year_clip.measured_2027`** carries
+  instance 3's census as eight named keys rather than one number, and
+  `test_the_civil_year_clip_is_a_field_and_not_the_period_cut` recomputes each
+  and prints what it read.
+* **The proposal's §1 is rewritten as an attribution table** — figure,
+  population, unit, filter, reproduces — in place of an argument about which set
+  is right. Under it, `249` and `147` are the only two members of either set that
+  reproduce against nothing at all, and they stay withdrawn.
+
+**What this cost, measured.** Nothing shipped wrong: all five figures were caught
+inside the batch that produced them, and `−795` — the one number a reader would
+have acted on — turns out to be **invariant across all three populations**, so the
+collapse arithmetic never rested on the set under dispute. The cost was two full
+turns of argument over which set was right, conducted by both sides without either
+stating what it had counted. **That is the tell: a dispute about whether a figure
+is correct, in which neither party has named the population, is not yet a dispute
+about anything.**
+
 
 ---
 

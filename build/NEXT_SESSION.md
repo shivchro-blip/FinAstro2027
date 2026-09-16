@@ -148,6 +148,7 @@ are committed alongside the pages they write:
 | `tools/gen_cfg_scope.py` | `build/CONFIG_SECTIONS_SCOPE.md` |
 | `tools/build_2026.py` | `build/astronomy_2026.json` + `_summary.txt` |
 | `tools/monthly_match.py` | the fixture run behind `build/MONTHLY_2026_FIXTURE.md` |
+| `tools/cause_census.py` | the no-instant cause census behind `build/SPAN_VS_DAILY_PROPOSAL.md` §1 and §3 — added 16-Sep-2026. Writes no file; it is the **generator of record** for the figures that proposal argues over, and prints population, unit and filter beside every count |
 
 **Why this was wrong and not merely untidy.** This build applies one standard
 everywhere: the astronomy layer is byte-reproducible, `.gitattributes` pins every
@@ -185,6 +186,7 @@ python tools/gen_status.py      # build/RULE_LAYER_STATUS.md
 python tools/cfg_port_report.py # build/CONFIG_PORT_REPORT.md
 python tools/gen_cfg_scope.py   # build/CONFIG_SECTIONS_SCOPE.md
 python tools/monthly_match.py   # the fixture numbers
+python tools/cause_census.py    # the no-instant cause census (prints; writes nothing)
 ```
 
 `build/STEP3_REPORT.md`, `build/STEP4_DECISIONS.md` and this handoff are the
@@ -289,10 +291,11 @@ is the thing three of the stale pages print. Sweep to **6,677**.
 
 ## TASK 3 — the §12.16 entry that is owed: verified work that never got connected
 
-Not written yet. §12.16 currently names one shape — **a wrong answer that renders
-as a plausible correct one** — and its fifth instance (the 34-of-58 counterfactual)
-was added this session. A **second, distinct shape** has now appeared four times
-and deserves its own entry:
+**STILL OWED. Do not read the 16-Sep entry as this one.** §12.16 now names *two*
+shapes: the original **wrong answer that renders as a plausible correct one**, and
+**a correct count of the wrong set** (added 16-Sep-2026, from `282`, the `45`/`12`
+unit mix and the `22`). Neither is the shape below. This one is a **third**, and it
+has now appeared four times:
 
 > **Code that exists, was verified, and was never connected.** Invisible because
 > every component test passes — the component is correct, and the correctness of a
@@ -325,22 +328,38 @@ and what found instances 2 and 4.
 written: **894 rows without a clock time over 99 distinct spans**, three of the
 five causes to collapse and two explicitly not, **7,082 → 6,287 rows**.
 
-**§3's arithmetic was re-derived independently and stands: −795.** 471→58,
-255→17, 151→7; verdict 6,677→5,882 and event 405→405. It never rested on the
-cause figures §1 disputed — only on rows and span-group counts, all of which
-reproduce.
+**§3's arithmetic is re-derived and stands: −795, and it is INVARIANT across all
+three populations** — P1 5,209→4,414, P2 6,677→5,882, P3 7,082→**6,287**, the same
+−413 / −238 / −144 in each. It could not have rested on the population §1 disputed:
+every row the wider populations add to a collapsed cause is its own span and
+collapses to itself. The **6,287 is a P3 figure**; the catalogue-B answer to the
+same question is 4,414. All 82 collapsed groups are contiguous.
 
-**§1's cause figures did not, and both recorded sets were withdrawn.** See the
-proposal's re-derivation section. The short form: nothing moved because the
-population moved — the same rule families give the same counts against the
-pre-wiring 5,209-row build — so every difference was a unit or a derivation
-defect. `45` was one venue of `105`; `12` counted rows where its neighbours
-counted firings; `282` was the **first** cause measured on a second key and filed
-under the **second**; `249`, `147` and `662` reproduce against nothing and have
-no generator. The figures now live as **keys** in
-`conventions.yaml → row_kinds.time_fields.the_four_causes_were_re_derived`
-(catalogue-B firings **331 / 142 / 105 / 11**) and are recomputed off the
-artifact by the harness.
+**§1's cause figures are now ATTRIBUTED rather than argued over, and the answer is
+that neither recorded set is correct as recorded.** Read the proposal's §1; the
+short form:
+
+* The decisive test is that `git show 846c780:build/calendar_2027.json` — the
+  commit whose message records the old set — gives **today's census exactly**, in
+  all three populations and six units. Nothing structural moved. The earlier claim
+  that the old set came from "a transient render never committed" is withdrawn.
+* **The old set was measured over a population that is not a population of the
+  artifact**: rows whose rendered `time_ist` string began `00:00`, at `dfb485b`.
+  `662` reproduces there **exactly** (663 less `b102`), and so do `45` and `12`.
+  That population misses 196 rows, non-randomly — a row printed midnight only
+  where its stand-in instant was a *Mumbai* midnight, so it is blind to the rows
+  whose fake time looked plausible (`09:34 IST` for all 18 of `b079`).
+* `249` and `147` reproduce against **nothing**, in any build, population or unit.
+  Withdrawn and staying withdrawn.
+* `282` is the **first** cause, on `(venue, date)`, in P3, filed under the
+  **second**. Carry-in is **142**.
+* **The answer**: population **P1** (catalogue-B, 5,209 rows), unit **firings** =
+  distinct `(rule, firing location, civil day)`, filter `no_instant_reason` not
+  null — **331 / 142 / 105 / 11**. Of those only `331` is population-sensitive
+  (340 in P2, **371** in P3).
+
+**`tools/cause_census.py` is the generator all of this lacked**, and
+`conventions.yaml → row_kinds.time_fields` carries the keys the harness recomputes.
 
 **§5.1 and §5.2 are settled and in the build**, both before any collapse, since
 both would have survived into it:

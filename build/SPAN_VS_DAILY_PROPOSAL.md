@@ -49,59 +49,166 @@ filter punching holes in a run. Checked, because had any group been
 non-contiguous, a collapsed row asserting a start and an end would have claimed
 days the daily rows did not.
 
-### The four cause figures, re-derived — **and one of this report's own was wrong**
+### The two recorded sets, each attributed to the population it was measured over
 
-*Rewritten 15-Sep-2026 after the measurement was disputed. What this section
-said first — that the recorded `249 / 147 / 45 / 12 firings, 662 rows` do not
-reproduce, and that the build measures `331 / 282 / 105 / 11` — was half right.
-The finding stood; one of the four replacement figures did not.*
+*Rewritten 15-Sep-2026, third time. The first version said the recorded
+`249 / 147 / 45 / 12 firings, 662 rows` "reproduce against no slicing of this
+build" and replaced them with `331 / 282 / 105 / 11`. The second withdrew `282`.
+Both versions argued about which set was right without stating what either had
+counted, which is the same mistake one level up. Every figure below now carries
+its **population**, its **unit** and its **filter**, and `tools/cause_census.py`
+is the generator they previously lacked — recompute it, do not re-read this.*
 
-**`282` is not a carry-in figure at all.** Brute-forcing every (population ×
-grouping key) pair over this build, 282 has exactly one source: distinct
-`(venue, date)` pairs among the **471 `date_only` ephemeris rows**. It is a
-second measurement of the **first** cause written into the **second** cause's
-slot — the same class of defect as the recorded table it was correcting.
+**The decisive test first, because it removes the "the build moved" explanation
+entirely.** The census at `846c780` — the commit whose own message records
+`249 / 147 / 45 / 12` and `662` — can be run against that commit's **committed**
+artifact rather than a reconstruction:
 
-Re-derived, as **catalogue-B firings** = distinct `(rule, location, civil day)`,
-which is what `rules.base.fire` emits:
+```
+git show 846c780:build/calendar_2027.json
+```
+
+It is **identical to today's, in all three populations and all six units**:
+`date_only` ephemeris 431 rows / 331 firings, `b101` 255 / 105, carry-in 151 /
+142, anchored 12 / 11. Nothing in the structural population has moved since the
+field was born. So no difference between the two recorded sets is a build effect
+— and the earlier claim that the old set was "measured against a transient
+pre-`DateStamp` render that was never committed" is **withdrawn too**. The render
+it was measured against is in git, and the figures still do not come from it.
+
+#### The three populations, all derivable from the one artifact
+
+| | rows | what it is |
+| --- | ---: | --- |
+| **P1** | 5,209 | catalogue-B verdict rows — the build before the configuration wiring and before the base track (`e00024a`). Reconstructed by **filter**, not by rebuild: configuration rows are exactly the `cfg_` rules, base-track rows are exactly `row_kind == "event"` |
+| **P2** | 6,677 | all verdict rows — post-wiring, pre-base-track |
+| **P3** | 7,082 | every row as rendered — the artifact |
+
+And a fourth that is **not a population of the artifact at all**, which is where
+the old set comes from:
+
+> **D — the display population.** Rows whose rendered `time_ist` string began
+> `00:00`, measured at `dfb485b`, the last render before `DateStamp`. It is a
+> property of the **output string**, not of any field.
+
+#### The old set: measured over D, and D is biased to one location
+
+| figure | population | unit | filter | reproduces |
+| ---: | --- | --- | --- | --- |
+| **662** | **D** at `dfb485b` (6,677 verdict rows) | rows | `time_ist` starts `00:00`, less `b102` | **yes, exactly** |
+| **45** | **D** | firings — (rule, location, day) | `b101` only | **yes** |
+| **12** | **D**, and every other population | **rows** | `anchored` only | **yes** |
+| **249** | — | — | — | **no** |
+| **147** | — | — | — | **no** |
+
+`662` is real. D holds **663 rows across 28 events** at `dfb485b`; drop
+`b102_anuradha_on_sunday`, whose 00:00:21 IST nakshatra ingress is a genuine
+instant that renders as `00:00`, and it is **662 across 27** — which is what the
+commit message says, word for word. It is a correct count of D.
+
+**Why D is 196 rows smaller than the structural population, and why that matters
+more than the number.** A row without an instant printed midnight **only when the
+stand-in instant it was handed happened to be a Mumbai midnight.** Where it was
+not, the row printed a plausible wrong time and D never saw it:
+
+| | in D | structural (P2) | invisible to D | what the invisible rows printed |
+| --- | ---: | ---: | ---: | --- |
+| `date_only` ephemeris | 440 | 440 | 0 | — |
+| `anchored` | 12 | 12 | 0 | — the anchor *is* IST midnight by construction |
+| `b101` `civil_day_span` | 135 | 255 | **120** | `10:30 IST` / `09:30 IST` — `US_cash`'s New York midnights, two values because that window spans the US DST change |
+| carry-in `period_cut` | 75 | 151 | **76** | `09:34 IST` (all 18 of `b079`), `00:13 IST`, `05:18 IST` |
+| **total** | **662** | **858** | **196** | |
+
+**D could not see its own worst cases.** The rows it missed are precisely the
+ones whose fabricated time looked *real*: `09:34 IST` on a boundary the sky never
+supplied is a worse artefact than `00:00 IST`, and a population defined as
+"prints midnight" is structurally blind to it. All 18 of `b079`'s rows were
+invisible for that reason.
+
+So `45` is not "the Mumbai half of `105`" by an accident of counting. D contains
+`b101`'s Mumbai rows **and no others**, because the New York half never printed
+midnight. `45` is a complete and correct firing count **of D**.
+
+`249` and `147` reproduce against nothing — not P1, P2, P3 or D; not at
+`dfb485b`, `846c780`, `90b54e3` or today; not under rows, firings,
+`(rule, venue, day)`, `(venue, date)`, spans or rules; and not under a
+Mumbai-only or New York-only filter of any of those. The nearest real figures are
+`date_only` ephemeris **440 rows / 340 firings** in D, and carry-in **75 rows /
+75 firings** in D. Subset-sums over per-rule counts do hit 249 and 147, but only
+as arithmetic coincidence across rule groupings no argument selects. **They stay
+withdrawn.**
+
+#### The new set: correct figures, two populations, quoted as one line
+
+| figure | population | unit | filter | reproduces |
+| ---: | --- | --- | --- | --- |
+| **331** | **P1** | firings | `date_only` ephemeris | **yes** |
+| **105** | P1, P2, P3 — invariant | firings | `b101` | **yes** |
+| **11** | P1, P2, P3 — invariant | firings | `anchored` | **yes** |
+| **858** | **P2** | **rows** | all no-instant | **yes** |
+| **282** | **P3** | **(venue, date)** | **`date_only` ephemeris** | yes — **of the first cause, filed under the second** |
+
+Every member is a correct count. The set is still not correct, because **`331` is
+a P1 figure and `858` is a P2 figure** and they were written on one line as
+though they described one thing. `858` is not the population `331` was drawn
+from: the no-instant rows of P1 total **849**.
+
+`282` is confirmed exactly as the second version diagnosed it — distinct
+`(venue, date)` pairs among P3's 471 `date_only` ephemeris rows. It is the
+**first** cause, on a **third** unit, in the **third** population, written into
+the **second** cause's slot. Three axes wrong and the arithmetic right.
+
+#### Which set is correct: **neither, as recorded.** This one is
+
+Not an average, and not the newer because it is newer — the old set has three
+members that reproduce and the new set has one filed under the wrong cause.
+Stated with the three things a figure needs:
+
+> **Population P1** — catalogue-B verdict rows, 5,209.
+> **Unit: firings** — distinct `(rule, firing location, civil day)`, which is
+> what `rules.base.fire` emits.
+> **Filter: `no_instant_reason` is not null**, with `date_only` split by rule id.
 
 | cause | firings | rows | spans | rules |
 | --- | ---: | ---: | ---: | ---: |
 | `date_only` — ephemeris | **331** | 431 | 18 | 8 |
 | carry-in cut | **142** | 151 | 7 | 4 |
-| `civil_day_span` (b101) | **105** | 255 | 17 | 1 |
+| `civil_day_span` (`b101`) | **105** | 255 | 17 | 1 |
 | anchored | **11** | 12 | 12 | 11 |
 
-**Nothing moved because the population moved.** The same rule families counted
-against the pre-wiring, pre-base-track **5,209-row** build (`e00024a`) give the
-same figures — 431 rows / 331 firings for the ephemeris windows, 255 / 105 for
-`b101`, 398 rows for the four carry-in rules. The base track added 31 event rows
-and 5 eclipse rows to the no-instant population and the configuration wiring
-added 9: **45 rows of 894, none of them catalogue B.** Every difference between
-the two recorded sets is a unit or a derivation defect, not a population effect.
+**`142`, `105` and `11` are identical in P1, P2 and P3** — those causes are
+catalogue-B only, so widening the population adds nothing to them. **Only `331`
+is population-sensitive:** 331 in P1, 340 in P2, **371 in P3**, because the
+configuration wiring and the base track both contribute `date_only` ephemeris
+rows. A reader who wants the artifact's figure wants 371, and the two are not
+interchangeable.
 
-The four, diagnosed:
+#### How each disputed figure moved — the classification
 
-* **`45` is the Mumbai half of `105`.** `b101` is `per_location`: 45 firings at
-  Mumbai, 60 at New York, over 7 windows. The recorded figure counted one venue.
-* **`12` counted ROWS where its three neighbours counted FIRINGS** — the
-  recorded table's own column header says so. 12 rows, 11 firings, 11 rules:
-  `b014` emits a SUGAR row and tier_4's USDINR row from one firing. **Both
-  numbers are right about different things and neither moved.** That is the one
-  that appeared to go down while the total went up.
-* **`282`** — above. Replaced by **142**.
-* **`249`, `147` and `662`** are diagnosed as nothing. They reproduce against no
-  slicing of this build or of the one before it. They and the
-  `no_instant_reason` field were **born in the same commit** (`846c780`),
-  measured against a transient pre-`DateStamp` render that was never committed,
-  and **no generator for them exists**. They are WITHDRAWN, not corrected:
-  `render._time_fields`, `timezones.DateStamp` and `conventions.yaml` now carry
-  the re-derived figures, and `tests/test_rule_layer.py` recomputes the census
-  off the artifact.
+| pair | moved because | verdict |
+| --- | --- | --- |
+| 662 → 858 | the **population** changed, D → structural, and the 196-row difference decomposes exactly | **fine, and now said** |
+| 45 → 105 | the **population** changed; D held Mumbai only | **fine, and now said** |
+| 12 → 11 | the population is **fixed** — 12 rows and 11 firings in every population and every build. The **unit** changed mid-row | **defect** |
+| 249 → 331 | `249` reproduces nowhere | **defect** |
+| 147 → 282 | `147` reproduces nowhere, and `282` is a different cause on a different unit in a different population. Carry-in is **142** | **defect, twice** |
 
-**The rule this leaves: a figure without a generator is not a measurement.** Both
-withdrawn sets were written by hand into prose, and both passed every check this
-build had, because no check read them.
+#### And a fifth instance, found while doing this
+
+`105` is a **location** count. The natural misreading is the **venue** count, and
+it exists and is **150**: `b101` fires on 45 Mumbai and 60 New York civil days,
+but Mumbai carries three venues — `NSE` (90 rows), `NSE_FX` (45) and, at New
+York, `US_cash` (120) — so `(rule, venue, day)` gives 150 where `rules.base.fire`
+emits 105. The earlier note that `b101` runs "over two venues" was wrong about
+the word: two **locations**, three venues. Nothing downstream used 150, so
+nothing is corrected — but it is the same shape one more time, and
+`cause_census.py` now prints both columns with the unit key spelled out beneath
+them, so the two cannot be confused by a reader who has only the output.
+
+**The rule this leaves: a figure without a generator is not a measurement, and a
+figure without a population is not a claim.** Both recorded sets were written by
+hand into prose, and both passed every check this build had, because no check
+read them.
 
 ---
 
@@ -239,6 +346,45 @@ is how it says so. Listed only so the population adds up.
 | **today** — one row per civil day | **7,082** | — | 6,677 | 405 |
 | **A** — collapse the four no-instant causes | **6,287** | **−795 (−11.2%)** | 5,882 | 405 |
 | **B** — A, plus collapse every *timed* span | **2,790** | **−4,292 (−60.6%)** | 2,421 | 369 |
+
+### −795 does not rest on the disputed population, and that is measurable rather than asserted
+
+*Re-derived 15-Sep-2026 by `tools/cause_census.py`, after §1's cause figures were
+attributed. The objection was fair as stated — if §1's population was in dispute,
+a saving computed over it was not actionable — and the answer is stronger than
+"§3 never used those figures".*
+
+**Model A's saving is identical in all three populations:**
+
+| | rows | → | Δ |
+| --- | ---: | ---: | ---: |
+| **P1** catalogue-B verdict only | 5,209 | 4,414 | **−795** |
+| **P2** all verdict rows | 6,677 | 5,882 | **−795** |
+| **P3** every row — the artifact | 7,082 | **6,287** | **−795** |
+
+Cause by cause it is the same three numbers in each: `date_only` ephemeris
+**−413**, `b101` **−238**, carry-in **−144**. The totals differ by population;
+the saving does not.
+
+**Why, and it is not a coincidence.** Every row the wider populations add to a
+collapsed cause is **its own span** and therefore collapses to itself. P3's
+`date_only` ephemeris cause holds 471 rows over 58 spans where P1's holds 431
+over 18 — 40 more rows and 40 more spans, saving nothing. Those 40 are the 9
+configuration rows and the 31 base-track event rows, each a single-day
+date-granular record. The saving comes only from rows that share a span with
+another row, and every one of those is catalogue B.
+
+So `−795` is safe against the one question §1 was disputing — it is invariant
+under exactly the axis that moved. **The `6,287` is not**: it is `7,082 − 795`
+and therefore a P3 figure, which is correct here because P3 is the artifact and
+the headline is a property of the artifact. A reader wanting the same collapse
+against catalogue B alone wants **4,414**, not 6,287.
+
+**Also re-derived, and needed before any collapse row is written:** all **82**
+groups the three collapsed causes form are **contiguous** in civil dates — 58 +
+17 + 7, and the 99 in §1 is 82 plus the 17 point rows the model does not touch.
+Had any group had a hole, a collapsed row asserting a start and an end would have
+claimed days no daily row was ever built for.
 
 **Model B is stated because the four causes are not the whole of the span problem,
 and a proposal that did not say so would be reporting the smaller half as the
@@ -442,13 +588,21 @@ two populations: a reader who does not know reads it as the calendar being empty
 | | |
 | --- | --- |
 | **Recommended** | Model A — collapse `date_only` (ephemeris), `civil_day_span` and `period_cut`; leave `anchored` and `named_contacts` as point rows |
-| **Rows** | 7,082 → **6,287** (−795, −11.2%) |
+| **Rows** | 7,082 → **6,287** (−795, −11.2%). The **−795 is invariant** across all three populations (P1 5,209 → 4,414, P2 6,677 → 5,882, P3 7,082 → 6,287); the **6,287 is a P3 figure** and the catalogue-B answer is 4,414 |
 | **Empty-day figures** | unchanged — 0 of any kind, 105 with no event |
 | **Cost** | a rendering change. No new ephemeris work and no new computation: every collapsed row's endpoints are already on every daily row it replaces |
 | **§5 blockers** | **5.1 and 5.2 are settled and landed** — `timezones.SpanDates` / `span_dates()` and `sky.year_clip` → `clipped_start` / `clipped_end` on all 7,082 rows, both pinned by checks. **5.3 (the HTML date filter) is still open** and belongs to whoever implements the collapse |
-| **Re-derived** | §1's cause figures, after `282` was found to be the first cause measured on a second key. Catalogue-B firings: **331 / 142 / 105 / 11** |
+| **Re-derived** | §1's cause figures, now **attributed to a population** rather than argued over. Neither recorded set is correct as recorded. The answer is **P1, firings, no-instant filter: 331 / 142 / 105 / 11**. `662`, `45` and `12` are correct counts of the pre-`DateStamp` **display** population D; `249` and `147` reproduce nowhere; `282` is the first cause on a third unit in the third population |
+| **Generator** | `tools/cause_census.py` — the thing §1 said every figure needs and did not itself have. Prints population, unit and filter beside every count |
 | **Explicitly deferred** | Model B, the 5,024 timed span rows over 1,527 spans. A −61% change to the headline, and it falsifies the empty-day statement published today |
 | **Explicitly refused** | emitting both shapes under `row_kind`. If both are wanted, a second discriminator, landed on all 7,082 existing rows **first** |
 
 **Written by hand. Not a `tools/` page** — this is a written record like
-`STEP4_DECISIONS.md` and `NEXT_SESSION.md`, and has no generator.
+`STEP4_DECISIONS.md` and `NEXT_SESSION.md`, and the prose has no generator.
+
+**Its figures now do.** `tools/cause_census.py` recomputes every count in §1 and
+§3 off `build/calendar_2027.json`, in all three populations, with the unit and
+filter printed beside each. That split is the point: the argument is hand-written
+and stays hand-written, the numbers it argues over are regenerated. Two of this
+report's own figures — `282` and the `22` of §5.2 — were right about a set nobody
+had stated, and neither would have survived a page that printed its population.
