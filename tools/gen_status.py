@@ -25,6 +25,7 @@ from finastro.config import CONF                             # noqa: E402
 from finastro.rules.catalogue import SECTIONS                # noqa: E402
 from finastro.rules import config_rules as CFGR              # noqa: E402
 from finastro.sky import Sky                                 # noqa: E402
+from finastro.verdicts import build_verdicts                 # noqa: E402
 
 YEAR = CONF["year"]
 OUT = ROOT / "build" / "RULE_LAYER_STATUS.md"
@@ -35,6 +36,20 @@ mumbai = collections.Counter(f.rule_id for f in firings if f.location == "mumbai
 ny = collections.Counter(f.rule_id for f in firings if f.location == "new_york")
 by_section = R.rules_by_section()
 zero = {r.id for r in R.zero_firing(firings)}
+
+# THE ROWS, not the firings, and from the renderer's own function rather than
+# from build/calendar_YYYY.json. `firings` above is catalogue B alone -- it is
+# what the section table is built from and it stays that way -- so every
+# statement on this page about what reaches the CALENDAR is measured here
+# instead. A page that described the wiring from a catalogue-B firing count
+# could only ever describe the state before it.
+_verdicts = build_verdicts(sky)
+cfg_rows = [v for v in _verdicts if v.rule_id.startswith("cfg_")]
+cat_b_rows = [v for v in _verdicts if not v.rule_id.startswith("cfg_")]
+cfg_rules_firing = len({v.rule_id for v in cfg_rows})
+cfg_rows_by_instrument = collections.Counter(v.instrument for v in cfg_rows)
+cfg_rows_by_block = collections.Counter(
+    "-".join(v.rule_id.split("_")[1:3]) for v in cfg_rows)
 
 
 STATUS_MARK = {
@@ -92,9 +107,11 @@ A(f"| **Instrument configuration sections** — `<section id=\"...\">` with an "
 A("")
 A(f"**So: catalogue B {len(R.sections_ported())}/{len(SECTIONS)} · configuration "
   f"sections {len(CFGR.ported())}/{cfg_total}.** The configuration rules are "
-  f"registered in their own registry and are NOT in catalogue B's denominator; "
-  f"they also do not yet feed the calendar's rows, which still come from "
-  f"catalogue B alone.")
+  f"registered in their own registry and are NOT in catalogue B's denominator — "
+  f"that separation is what keeps \"141 of 141\" honest. They DO feed the "
+  f"calendar: `verdicts.py` fires both registries, and "
+  f"**{len(cfg_rows):,} of the {len(_verdicts):,} verdict rows** come from the "
+  f"configuration groups, {len(cat_b_rows):,} from catalogue B.")
 A("")
 A(f"**141 of 141 is TRUE OF CATALOGUE B and is not a coverage claim about the "
   f"source.** The instrument configuration sections are a different shape of "
@@ -119,8 +136,8 @@ for b, (inst, direction, pages) in CFG.BLOCKS.items():
       f"**{_ported_by_block[b]}** |")
 A(f"| | | | | **{cfg_total}** | **{len(CFGR.ported())} of {cfg_total}** |")
 A("")
-A("### Gold, silver and sugar reach the calendar only through generic "
-  "catalogue-B rules")
+A("### Gold, silver and sugar now reach the calendar through their own "
+  "configuration groups as well as through generic catalogue-B rules")
 A("")
 A(f"**Gold, silver and sugar are the three instruments the source prints "
   f"verdicts for** — that is why they carry evidence blocks naming their own "
@@ -128,36 +145,52 @@ A(f"**Gold, silver and sugar are the three instruments the source prints "
   f"configuration groups are "
   + " · ".join(f"**{i} {cfg_inst[i]}**" for i in CFG.INSTRUMENTS)
   + f" named groups, of which **{len(CFGR.ported())}** now carry a rule and "
-  f"**{len(CFGR.blocked_rules())}** are blocked on a named input.")
+  f"**{len(CFGR.blocked_rules())}** are blocked on a named input. "
+  f"**{cfg_rules_firing} of those {len(CFGR.ported())} fire in {YEAR}**, for "
+  f"{len(cfg_rows):,} rows.")
 A("")
-# STALE MARKER -- emitted onto the page deliberately. `verdicts.py` now fires
-# BOTH registries (14-Sep-2026 wiring); the paragraphs below still describe the
-# pre-wiring state and the full prose sweep is a task in build/NEXT_SESSION.md.
-A("> **STALE — this section describes the state before the configuration "
-  "wiring.** `verdicts.py` now fires both registries: the 38 ported groups DO "
-  "reach calendar rows (1,468 of 6,677 in a rebuild). The paragraphs below "
-  "still say they do not. Corrected text is a task in "
-  "`build/NEXT_SESSION.md`; the counts in the table above are current.")
+A("**Ported IS wired, since the 14-Sep-2026 change to `verdicts.py`, and the "
+  "distinction this section used to draw is the one thing about it that is now "
+  f"out of date.** `build_verdicts()` fires both registries; "
+  f"`config_instruments_for` routes a group to the instrument its BLOCK names "
+  f"rather than through the rulership table, so a *Gold — Bullish* group "
+  f"reaches gold because the source filed it under gold.")
 A("")
-A("**Ported is not wired, and the difference is the whole of what this section "
-  "says.** The ported groups are registered in their own registry and "
-  f"`verdicts.py` fires catalogue B alone, so none of them reaches a row in "
-  f"`build/calendar_{YEAR}.*` today.")
+A(f"**{len(cfg_rows):,} of {len(_verdicts):,} verdict rows in "
+  f"`build/calendar_{YEAR}.*` originate in a configuration section**, from "
+  f"{cfg_rules_firing} groups, split "
+  + " · ".join(f"**{b} {c:,}**"
+               for b, c in sorted(cfg_rows_by_block.items()))
+  + ".")
 A("")
-A("What they *do* get today is real but is not the source's verdicts for them. "
-  "Every row carrying gold, silver or sugar comes from a generic catalogue-B "
-  "rule whose bodies happen to resolve to that instrument — a Venus rule reaches "
-  "SUGAR because SUGAR's rulership is Venus, not because the source said "
-  "anything about sugar. **No row in the calendar originates in any of the "
-  "configuration sections**: the `event_section` field of all "
-  f"{tot_fire:,} dated rows in {YEAR} names a catalogue-B section or the "
-  "panchang families, and never `gold-bullish`, `silver-bearish`, "
-  "`sugar-bullish` or any other block.")
+# THE OLD TEST STILL PASSES AND ITS OLD CONCLUSION IS NOW FALSE, which is worth
+# the sentence: this page used to say "the event_section field never reads
+# `gold-bullish`", and it still never does -- event_section carries the group's
+# own printed title. A reader re-running that test today gets the same answer
+# and the opposite truth.
+A("**How to tell one apart, because the old test no longer works.** This page "
+  "used to say that no row originates in a configuration section and offered a "
+  "check: the `event_section` field never reads `gold-bullish`. It still never "
+  "does — `event_section` carries the group's own printed title, such as "
+  "`Venus Alone in Leo or Libra — Bearish`, and never the block id. The test "
+  "passes and its conclusion is now wrong. **The field that separates them is "
+  "`event`**, whose rule id begins `cfg_<block>_` for a configuration row and "
+  "`b<nn>` or a panchang family name for a catalogue-B one.")
 A("")
-A("Sugar is the clearest case and the reason the gap was found at all: it emits "
-  "rows from 12 different Venus-ruled catalogue-B sections, and **0** from its "
-  "own nine groups — four of which are now ported and none of which is wired. "
-  "A reader seeing SUGAR's rows would see a covered instrument.")
+A("What gold, silver and sugar got BEFORE the wiring is still in the file and "
+  "is still not the source's verdicts for them: every generic catalogue-B rule "
+  "whose bodies resolve to an instrument still emits there — a Venus rule "
+  "reaches SUGAR because SUGAR's rulership is Venus, not because the source "
+  "said anything about sugar. The wiring added the source's own conditions "
+  "beside those rows; it removed none of them.")
+A("")
+A(f"Sugar is the clearest case and is the reason the gap was found at all: it "
+  f"emits rows from 12 different Venus-ruled catalogue-B sections, and "
+  f"**{cfg_rows_by_instrument['SUGAR']:,}** from its own nine groups — "
+  f"{cfg_rows_by_instrument['SUGAR']:,} of its "
+  f"{sum(1 for v in _verdicts if v.instrument == 'SUGAR'):,} rows. That figure "
+  f"was **0** until the wiring, and a reader seeing SUGAR's rows then would "
+  f"have seen a covered instrument.")
 A("")
 A("Gold and silver reach tier 1 through their MCX legs (`MCXGOLD`, "
   "`MCXSILVER`); their COMEX legs (`GC`, `SI`) emit `venue_shifted` instead, by "

@@ -56,29 +56,38 @@ three instruments the source prints verdicts for — are a different shape of
 markup (`<section id="...">` with an `<h2>`, not `<h3 class="section">`), so
 they were never in the 141 and never in its denominator:
 
-> **STALE — the "NOT wired" line below is out of date.** `verdicts.py` now
-> fires both registries, so the 38 ported groups DO produce calendar rows
-> (1,468 of 6,677 in a rebuild). The paragraph under the block still describes
-> the pre-wiring state. Correcting this page is a task in
-> `build/NEXT_SESSION.md`; `build/calendar_2027.*` on disk predates the wiring
-> and holds catalogue-B rows only.
-
 ```
 catalogue B                        141 / 141 sections
-instrument configuration sections   38 /  58 named groups   (ported, NOT wired)
+instrument configuration sections   38 /  58 named groups   (ported AND wired)
 ```
 
 **38 of the 58 are ported and 20 are blocked, each on a named input**
-(`build/CONFIG_PORT_REPORT.md`). **Ported is not wired.** They are registered in
-their own registry, `verdicts.py` fires catalogue B alone, and **no row in the
-calendar originates in any configuration section** — so gold, silver and sugar
-still reach the calendar only through generic catalogue-B rules whose bodies
-happen to resolve to those instruments: a Venus rule reaches SUGAR because
-SUGAR's rulership is Venus, not because the source says anything about sugar. A
+(`build/CONFIG_PORT_REPORT.md`). **Ported is now wired**, since the 14-Sep-2026
+change to `verdicts.py`: `build_verdicts()` fires both registries, and **1,468
+of the calendar's 6,677 verdict rows originate in a configuration section**,
+from 26 of the 38 ported groups. `config_instruments_for` routes a group to the
+instrument its BLOCK heading names rather than through the rulership table, so a
+*Gold — Bullish* group reaches gold because the source filed it under gold.
+
+The two registries stay separate anyway, and that separation is the point: a
+configuration group must never reach `sections_ported()` and inflate 141/141. A
 reader must not see 141/141 and conclude the source is covered.
-`build/CONFIG_SECTIONS_SCOPE.md` reports what porting the 58 would take, per
-group, and `build/MONTHLY_2026_FIXTURE.md` measures what the layer reproduces of
-the source's own finished output.
+
+**What the port did not change.** Gold, silver and sugar still also reach the
+calendar through generic catalogue-B rules whose bodies happen to resolve to
+those instruments — a Venus rule reaches SUGAR because SUGAR's rulership is
+Venus, not because the source says anything about sugar. The wiring added the
+source's own conditions beside those rows and removed none of them. **To tell
+the two apart, read `event`, not `event_section`**: a configuration row's rule
+id begins `cfg_<block>_`, while `event_section` carries the group's own printed
+title and so never reads `gold-bullish` — which is why the check this page used
+to offer still passes and its old conclusion is now wrong.
+
+`build/CONFIG_SECTIONS_SCOPE.md` reports what porting the remaining groups would
+take, per group, and `build/MONTHLY_2026_FIXTURE.md` measures what the layer
+reproduces of the source's own finished output: **168 of 354 printed windows
+(COVERAGE) and 168 of 175 claimed rows (PRECISION, conditional on a rule
+existing and firing)**. Neither of those travels alone either.
 
 **`build/RULE_LAYER_STATUS.md` is the one-page answer to "what does this calendar
 actually cover"** — both denominators at the top, then every catalogue-B section
@@ -95,21 +104,35 @@ Three rendered artifacts, all deterministic — rendering twice is byte-identica
 for each:
 
 ```
-build/calendar_2027.json   5,209 rows, the master
+build/calendar_2027.json   7,082 rows, the master
 build/calendar_2027.csv    the same rows, flat
 build/calendar_2027.html   self-contained, with search and filters
 ```
 
-**5,209 rows over 365 distinct dates — 1,854 carrying a verdict and 3,355
-without.** The verdict layer applies `evidence_source` × `construction` per
-instrument on that instrument's **venue civil day**, and it *authors nothing*:
-verdict text is the source's own words or it is null, there is no derived verdict,
-and **confidence is `untested` on every row** — no code path can raise it.
+**7,082 rows over 365 distinct dates, and the split is load-bearing: 6,677
+verdict rows and 405 base-track event rows**, told apart by `row_kind`. Of the
+6,677, **5,209 come from catalogue B and 1,468 from the configuration groups**;
+3,322 carry a verdict text and 3,355 do not.
+
+**Quote the split, not the total.** `records` meant "verdict rows" while there
+were no others, and a consumer still reading it that way is now wrong by 405.
+The verdict count itself moved twice: 7,484 before the tier_4 scoping removed
+807 USDINR configuration rows that recorded no measurement, and 5,209 before the
+configuration wiring added 1,468.
+
+The verdict layer applies `evidence_source` × `construction` per instrument on
+that instrument's **venue civil day**, and it *authors nothing*: verdict text is
+the source's own words or it is null, there is no derived verdict, and
+**confidence is `untested` on every row** — no code path can raise it. A
+base-track row carries no instrument, no tier and no verdict at all — those keys
+are absent rather than null.
 
 The HTML carries the epistemic apparatus visibly rather than as a footnote:
 certainty grades **and both C grounds**, claim tags, all 33 blocked sections with
-the input each waits for, **the two-denominator coverage statement — catalogue B
-141/141 and configuration sections 0/58 — beside the blocked list**, the source
+the input each waits for, **both pairs of denominators beside the blocked list —
+sections ported (catalogue B 141/141, configuration sections 38/58) and rows
+reproduced against the source's own 2026 calendar (COVERAGE 168/354, PRECISION
+168/175)**, the source
 defects found, the known coverage gap, and the standing statement that this is a
 speculative interpretive framework and not investment advice.
 
@@ -118,7 +141,7 @@ file, so a real change shows up as a diff and nothing else does. Confirmed by
 running the build twice and comparing:
 
 ```
-sha256  f0ac8a2c01dd4dccbd714ba836c20e18a4667ea3665a499ce8325caff7ce69b6  build/astronomy_2027.json
+sha256  757c53126bae410d5d594ee97a8694185b31d7b2a7eef72d6524b75bb22bdf2f  build/astronomy_2027.json
 ```
 
 That hash is over the Moshier ephemeris. It will change when the Swiss Ephemeris

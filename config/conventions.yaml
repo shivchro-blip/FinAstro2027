@@ -2015,6 +2015,53 @@ verdict_coverage:
   # already exist). That is a batch of its own, not a patch to the verdict layer,
   # and inventing verdicts to fill the gap is what the label-scheme ruling
   # forbids.
+  # ------------------------------------------------ the two denominators
+  # WHAT THIS BLOCK IS: the pair of rates the 2026 monthly-calendar fixture
+  # produces, and the rule that neither may be quoted without the other. It is
+  # a key rather than prose in three documents because the pair had already
+  # been split once -- 141/141 and 0/58 both travelled alone and both were read
+  # as claims they did not make.
+  two_denominators:
+    recorded: 2026-09-16
+    fixture: build/MONTHLY_2026_FIXTURE.md
+    generator: tools/monthly_match.py
+    fixture_year: 2026
+    coverage:
+      rate: [168, 354]
+      means: >
+        OF EVERYTHING THE SOURCE PRINTED, how much the layer reproduces. 354 is
+        the distinct dated windows of the source's own monthly calendar, after
+        the 53 carry-over copies are folded. 47%.
+    precision:
+      rate: [168, 175]
+      means: >
+        OF THE ROWS SOME RULE CLAIMS, how many land -- conditional on a rule
+        existing and firing at all. 96%.
+    why_neither_travels_alone: >
+      96% WOULD READ AS 100% FOR A LAYER WITH ONE PERFECT RULE AND NOTHING
+      ELSE, so it is not a quality score; it answers "when we do claim a row,
+      do we get it right". And 47% is not a failure score: 131 of the 188
+      misses at the baseline were rows no rule was ever written for. STATE THE
+      RELATIONSHIP, NOT JUST THE PAIR.
+    baseline_before_the_configuration_wiring: [166, 354, 166, 173]
+    what_moved: >
+      The port moved coverage 166 -> 168 of 354 and event names 88 -> 90 of
+      147. The two windows are `Rahu Mars in the same sign` (23-Feb-26) and
+      `Rahu Mars in the same Nakshatra` (03-Mar-26) -- the only two of the
+      source's 147 event names that no catalogue-B section states at all.
+    these_figures_are_a_dated_record_and_not_a_live_count: >
+      DELIBERATELY NOT PINNED BY THE HARNESS. tests/test_monthly_fixture.py
+      pins the fixture and the map -- both read off the document -- and
+      explicitly refuses to pin the match result, because the match result is
+      what the fixture MEASURES and is expected to move whenever the layer
+      improves. A check that froze it would be a record of edits rather than a
+      check. So the pair above is re-read from tools/monthly_match.py after any
+      change that could move it, and carries the date it was read.
+    quoted_on: >
+      build/calendar_2027.html, in the apparatus panel -- the one place both
+      numbers meet a reader who has read none of the reports. Also
+      build/NEXT_SESSION.md and build/MONTHLY_2026_FIXTURE.md.
+
   unported_configuration_sections:
     # 14-Sep-2026, SECOND ENTRY: this block is no longer wholly unported. The
     # key keeps its name because renaming it would break every citation of it

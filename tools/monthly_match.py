@@ -1,11 +1,20 @@
 """Run the rule layer over 2026 and compare it with the source's own Chapter 4.
 
-THE BASELINE RUN. `verdicts.py` fires catalogue B alone -- the 38 configuration
-groups ported in part 1 are registered in their own registry and are not wired
-into the calendar -- so this measures the calendar AS IT STANDS. A row the
-source prints that only a configuration group states is reported as a miss
-attributed to `CFG`, which is a wiring gap and is counted as one, separately
-from a rule gap.
+THIS MEASURES THE CALENDAR AS IT STANDS, and what it stands on has changed.
+`verdicts.py` fires BOTH registries since the 14-Sep-2026 wiring, so `run_rules`
+below fires both too: firing a registry here that the calendar does not read
+would measure something nobody ships. A row the source prints that only a
+configuration group states is now reproducible, and two of them are -- `Rahu
+Mars in the same sign` and `Rahu Mars in the same Nakshatra`, the 166 -> 168
+that the port moved.
+
+(This docstring read "THE BASELINE RUN ... verdicts.py fires catalogue B alone
+-- the 38 configuration groups are not wired into the calendar" for two days
+after the code below stopped doing that. The `config_not_wired` outcome in
+`classify` is what remains of it: it now fires only when a configuration target
+exists and is BLOCKED, and it produces zero windows in this build. Kept under
+its old name rather than renamed silently, because the name is in the recorded
+fixture output.)
 
     python tools/monthly_match.py            # summary to stdout
     python tools/monthly_match.py --json OUT # plus the full per-row result

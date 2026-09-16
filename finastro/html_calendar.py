@@ -421,6 +421,14 @@ def write_html(rows: list[dict], verdicts) -> pathlib.Path:
       f"</tbody></table>")
     cfg_ported = len(CFGR.ported())
     cfg_blocked = len(CFGR.blocked_rules())
+    # OFF THE ROWS THIS PAGE IS RENDERING, not off a registry count. A panel
+    # that described the wiring from the registry would say the same thing
+    # whether or not anything downstream read it -- which is exactly how the
+    # sentence this replaces stayed wrong after the wiring landed.
+    verdict_rows = [r for r in rows if r.get("row_kind") == "verdict"]
+    cfg_row_list = [r for r in verdict_rows if r["event"].startswith("cfg_")]
+    cfg_calendar_rows = len(cfg_row_list)
+    cfg_rules_in_calendar = len({r["event"] for r in cfg_row_list})
     per_block = {}
     for r in CFGR.CONFIG_REGISTRY:
         k = r.section.block.id
@@ -430,21 +438,52 @@ def write_html(rows: list[dict], verdicts) -> pathlib.Path:
       f"second set was never in the first's denominator &mdash; a different "
       f"shape of markup, counted separately &mdash; so <b>nothing on this page "
       f"should be read as \"the source is covered\"</b>. The counts come from "
-      f"the document itself, not from this build's own config. The "
-      f"configuration rules live in their own registry and, as of this build, "
-      f"<b>do not feed the rows below</b>: porting a group is not publishing "
-      f"it, and the two are kept separate on purpose.</p>")
-    # STALE MARKER -- see build/NEXT_SESSION.md. The sentence above is no
-    # longer true of the CODE: `verdicts.py` fires both registries since the
-    # 14-Sep-2026 wiring. It remains true of any calendar rendered BEFORE that
-    # wiring, which is why the marker states both.
-    A("<p class=disc><b>STALE.</b> The sentence above describes the state "
-      "before the configuration wiring. <code>verdicts.py</code> now fires "
-      "both registries and configuration groups DO produce rows "
-      "(1,468 of 6,677 in a rebuild). A calendar rendered before that wiring "
-      "contains catalogue-B rows only and is internally consistent; this page "
-      "says which it is by its own row count. Corrected text is a task in "
-      "<code>build/NEXT_SESSION.md</code>.</p>")
+      f"the document itself, not from this build's own config. The two "
+      f"registries stay separate on purpose &mdash; a configuration group must "
+      f"never reach catalogue B's denominator and inflate "
+      f"{n_ported}/{n_ported} &mdash; but <b>both are fired</b>, and "
+      f"<b>{cfg_calendar_rows:,} of the {len(verdict_rows):,} verdict rows "
+      f"below come from the configuration groups</b>.</p>")
+    # A SECOND PAIR OF DENOMINATORS, AND IT IS NOT THE ONE ABOVE. The table
+    # above counts SECTIONS PORTED. This counts ROWS REPRODUCED against the
+    # source's own finished 2026 calendar, and the two are routinely confused
+    # because both are called coverage. The figures come from conventions.yaml
+    # rather than from this file, and carry the date they were read: the
+    # fixture harness deliberately does not freeze them.
+    td = CONF["verdict_coverage"]["two_denominators"]
+    cov_n, cov_d = td["coverage"]["rate"]
+    pre_n, pre_d = td["precision"]["rate"]
+    A(f"<h2>A different pair of denominators &mdash; how much of the source's "
+      f"own calendar this layer reproduces</h2>")
+    A(f"<p>The table above counts <b>sections ported</b>. This counts <b>rows "
+      f"reproduced</b>, against the source's own finished "
+      f"{td['fixture_year']} monthly calendar "
+      f"(<code>{_e(td['fixture'])}</code>). <b>Neither number below may be "
+      f"quoted without the other.</b></p>")
+    A(f"<table><thead><tr><th></th><th>rate</th><th>what it answers</th>"
+      f"</tr></thead><tbody>"
+      f"<tr><td><b>COVERAGE</b></td>"
+      f"<td><b>{cov_n} of {cov_d}</b> ({round(cov_n * 100 / cov_d)}%)</td>"
+      f"<td>of everything the source printed, how much the layer "
+      f"reproduces</td></tr>"
+      f"<tr><td><b>PRECISION</b>, conditional on a rule existing and firing"
+      f"</td>"
+      f"<td><b>{pre_n} of {pre_d}</b> ({round(pre_n * 100 / pre_d)}%)</td>"
+      f"<td>of the rows some rule claims, how many land</td></tr>"
+      f"</tbody></table>")
+    A(f"<p><b>State the relationship, not just the pair.</b> "
+      f"{round(pre_n * 100 / pre_d)}% would read as 100% for a layer with one "
+      f"perfect rule and nothing else, so it is not a quality score; it "
+      f"answers \"when we do claim a row, do we get it right\". And "
+      f"{round(cov_n * 100 / cov_d)}% is not a failure score either &mdash; "
+      f"131 of the 188 misses at the baseline were rows no rule was ever "
+      f"written for.</p>")
+    A(f"<p class=mut>Measured by <code>{_e(td['generator'])}</code> and read "
+      f"here on {td['recorded']:%d-%b-%Y}. <b>A dated record, not a live "
+      f"count:</b> this page renders {YEAR} and the fixture measures "
+      f"{td['fixture_year']}, and the fixture harness pins the fixture and the "
+      f"map but deliberately not the match result, which is the thing it "
+      f"exists to measure.</p>")
     A("<ul>")
     for b, (inst, direction, pages) in CFG.BLOCKS.items():
         ported_n, blocked_n = per_block.get(b, [0, 0])
@@ -460,18 +499,33 @@ def write_html(rows: list[dict], verdicts) -> pathlib.Path:
       "name and the port found; the other five are the survey's own.</p>")
     A(f"<p><b>Gold, silver and sugar are the three instruments the source "
       f"prints verdicts for</b> &mdash; that is what their tiers rest on &mdash; "
-      f"and their own configuration groups are unported: "
+      f"and their own configuration groups number "
       + " &middot; ".join(f"<b>{i} {CFG.by_instrument()[i]}</b>"
                           for i in CFG.INSTRUMENTS)
-      + f". What they reach this calendar through today is generic catalogue-B "
-      f"rules whose bodies happen to resolve to them &mdash; a Venus rule "
-      f"reaches SUGAR because SUGAR's rulership is Venus, not because the "
-      f"source says anything about sugar. <b>No row in this calendar "
-      f"originates in any configuration section</b>: not one of the "
-      f"{len(rows):,} rows carries a configuration section as its source, and "
-      f"that is still true after the port &mdash; the {cfg_ported} ported "
-      f"groups are registered and fire against the 2027 sky, but nothing "
-      f"downstream reads them into this artifact yet.</p>")
+      + f", of which {cfg_ported} are ported and "
+      f"<b>{cfg_rules_in_calendar} fire in {YEAR}</b>. <b>Those groups reach "
+      f"this calendar directly</b>: {cfg_calendar_rows:,} of its "
+      f"{len(rows):,} rows carry a configuration group as their rule, routed "
+      f"to the instrument the source's own BLOCK heading names rather than "
+      f"through the rulership table.</p>")
+    # THE OLD TEST STILL PASSES AND ITS CONCLUSION IS NOW FALSE. This panel
+    # used to offer `event_section` as the way to see that no row came from a
+    # configuration group. It still never reads `gold-bullish` -- the field
+    # carries the group's printed TITLE -- so a reader re-running the old test
+    # gets the same answer and the opposite truth. Naming the field that does
+    # work is the correction; deleting the old sentence silently is not.
+    A(f"<p>What gold, silver and sugar got <i>before</i> that wiring is still "
+      f"here and is still not the source's verdicts for them: a generic "
+      f"catalogue-B rule reaches SUGAR because SUGAR's rulership is Venus, not "
+      f"because the source says anything about sugar. The wiring added the "
+      f"source's own conditions beside those rows and removed none of them. "
+      f"<b>To tell the two apart, read <code>event</code>, not "
+      f"<code>event_section</code></b>: a configuration row's rule id begins "
+      f"<code>cfg_&lt;block&gt;_</code>. This panel used to say that "
+      f"<code>event_section</code> never reads <code>gold-bullish</code>, and "
+      f"it still never does &mdash; that field carries the group's own printed "
+      f"title &mdash; so the old check passes and its old conclusion is "
+      f"wrong.</p>")
     A(f"<p>There is a third unported body of material. The same chapter carries "
       f"nine further <code>&lt;h2&gt;</code> sub-tables that are neither "
       f"catalogue B nor any of the six blocks above ("

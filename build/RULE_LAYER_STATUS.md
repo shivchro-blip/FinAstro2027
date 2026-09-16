@@ -1,6 +1,6 @@
 # Rule layer status — catalogue B, and what catalogue B is not
 
-Generated 15-Sep-2026 from the live registry, not by hand. Year 2027.
+Generated 16-Sep-2026 from the live registry, not by hand. Year 2027.
 
 ## Coverage, in two denominators
 
@@ -11,7 +11,7 @@ Two counts, because there are two catalogues and only one of them was ever in sc
 | **Catalogue B** — `<h3 class="section">`, the rule sections of Chapter 1 | 141 sections | **141 of 141** | every section carries a status |
 | **Instrument configuration sections** — `<section id="...">` with an `<h2>`, Chapter 2 | **58 named groups** | **38 of 58** | **20 blocked, each on a named input** |
 
-**So: catalogue B 141/141 · configuration sections 38/58.** The configuration rules are registered in their own registry and are NOT in catalogue B's denominator; they also do not yet feed the calendar's rows, which still come from catalogue B alone.
+**So: catalogue B 141/141 · configuration sections 38/58.** The configuration rules are registered in their own registry and are NOT in catalogue B's denominator — that separation is what keeps "141 of 141" honest. They DO feed the calendar: `verdicts.py` fires both registries, and **1,468 of the 6,677 verdict rows** come from the configuration groups, 5,209 from catalogue B.
 
 **141 of 141 is TRUE OF CATALOGUE B and is not a coverage claim about the source.** The instrument configuration sections are a different shape of markup and were never in the 141, so they were never in the denominator and a reader seeing "141/141" could conclude the source is fully covered when 58 named groups have never had a rule written for them.
 
@@ -27,17 +27,19 @@ The counts, from the document (read out of `data/source_2026.html` at generation
 | `sugar-bearish` | sugar | bearish | pp.174-175 | 2 | **1** |
 | | | | | **58** | **38 of 58** |
 
-### Gold, silver and sugar reach the calendar only through generic catalogue-B rules
+### Gold, silver and sugar now reach the calendar through their own configuration groups as well as through generic catalogue-B rules
 
-**Gold, silver and sugar are the three instruments the source prints verdicts for** — that is why they carry evidence blocks naming their own configuration sections, and it is what their tiers rest on. Their own configuration groups are **gold 19** · **silver 30** · **sugar 9** named groups, of which **38** now carry a rule and **20** are blocked on a named input.
+**Gold, silver and sugar are the three instruments the source prints verdicts for** — that is why they carry evidence blocks naming their own configuration sections, and it is what their tiers rest on. Their own configuration groups are **gold 19** · **silver 30** · **sugar 9** named groups, of which **38** now carry a rule and **20** are blocked on a named input. **26 of those 38 fire in 2027**, for 1,468 rows.
 
-> **STALE — this section describes the state before the configuration wiring.** `verdicts.py` now fires both registries: the 38 ported groups DO reach calendar rows (1,468 of 6,677 in a rebuild). The paragraphs below still say they do not. Corrected text is a task in `build/NEXT_SESSION.md`; the counts in the table above are current.
+**Ported IS wired, since the 14-Sep-2026 change to `verdicts.py`, and the distinction this section used to draw is the one thing about it that is now out of date.** `build_verdicts()` fires both registries; `config_instruments_for` routes a group to the instrument its BLOCK names rather than through the rulership table, so a *Gold — Bullish* group reaches gold because the source filed it under gold.
 
-**Ported is not wired, and the difference is the whole of what this section says.** The ported groups are registered in their own registry and `verdicts.py` fires catalogue B alone, so none of them reaches a row in `build/calendar_2027.*` today.
+**1,468 of 6,677 verdict rows in `build/calendar_2027.*` originate in a configuration section**, from 26 groups, split **gold-bearish 167** · **gold-bullish 61** · **silver-bearish 164** · **silver-bullish 923** · **sugar-bullish 153**.
 
-What they *do* get today is real but is not the source's verdicts for them. Every row carrying gold, silver or sugar comes from a generic catalogue-B rule whose bodies happen to resolve to that instrument — a Venus rule reaches SUGAR because SUGAR's rulership is Venus, not because the source said anything about sugar. **No row in the calendar originates in any of the configuration sections**: the `event_section` field of all 3,557 dated rows in 2027 names a catalogue-B section or the panchang families, and never `gold-bullish`, `silver-bearish`, `sugar-bullish` or any other block.
+**How to tell one apart, because the old test no longer works.** This page used to say that no row originates in a configuration section and offered a check: the `event_section` field never reads `gold-bullish`. It still never does — `event_section` carries the group's own printed title, such as `Venus Alone in Leo or Libra — Bearish`, and never the block id. The test passes and its conclusion is now wrong. **The field that separates them is `event`**, whose rule id begins `cfg_<block>_` for a configuration row and `b<nn>` or a panchang family name for a catalogue-B one.
 
-Sugar is the clearest case and the reason the gap was found at all: it emits rows from 12 different Venus-ruled catalogue-B sections, and **0** from its own nine groups — four of which are now ported and none of which is wired. A reader seeing SUGAR's rows would see a covered instrument.
+What gold, silver and sugar got BEFORE the wiring is still in the file and is still not the source's verdicts for them: every generic catalogue-B rule whose bodies resolve to an instrument still emits there — a Venus rule reaches SUGAR because SUGAR's rulership is Venus, not because the source said anything about sugar. The wiring added the source's own conditions beside those rows; it removed none of them.
+
+Sugar is the clearest case and is the reason the gap was found at all: it emits rows from 12 different Venus-ruled catalogue-B sections, and **153** from its own nine groups — 153 of its 549 rows. That figure was **0** until the wiring, and a reader seeing SUGAR's rows then would have seen a covered instrument.
 
 Gold and silver reach tier 1 through their MCX legs (`MCXGOLD`, `MCXSILVER`); their COMEX legs (`GC`, `SI`) emit `venue_shifted` instead, by the 14-Sep-2026 localised split. Both legs are the same generic rules on the same sky. The tier says where a claim was authored and how the civil day is bounded; it does not say the source's own gold and silver conditions were ported.
 

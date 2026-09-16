@@ -12,6 +12,12 @@ is counted as a **wiring** gap and named as one. The same fixture is re-run afte
 the wiring and the two results diffed; that diff, not this page, is what the port
 is worth.
 
+**The post-wire numbers are 168 of 354 and 168 of 175**, and they are recorded in
+`build/NEXT_SESSION.md` and in `conventions.yaml -> verdict_coverage.two_denominators`,
+which is what `build/calendar_2027.html`'s apparatus panel reads. This page stays at
+166 on purpose: it is the baseline the diff is measured from, and a baseline that
+gets updated is not one.
+
 Nothing was tuned. No tolerance was widened to improve a number. The run found **no
 new defect in a rule**: it measured one declared limitation against the document
 for the first time, identified two further source defects, and left exactly one

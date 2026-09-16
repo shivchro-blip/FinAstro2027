@@ -19,10 +19,15 @@ the fixture can produce and it must not look like a lookup failure.
 THE FIVE KINDS OF ASSIGNMENT
 
     B              one or more catalogue-B rule ids claim this event
-    CFG            one or more configuration-group ids claim it, and those
-                   groups are NOT wired into the calendar (part 1 ported them
-                   into their own registry; `verdicts.py` still fires
-                   catalogue B alone)
+    CFG            one or more configuration-group ids claim it, and NO
+                   catalogue-B section does. The two registries stay separate
+                   -- a group must never inflate 141/141 -- but `verdicts.py`
+                   has fired BOTH since 14-Sep-2026, so a CFG row is now
+                   reproducible rather than a wiring gap, and two of them are.
+                   (This entry read "those groups are NOT wired into the
+                   calendar" until 16-Sep-2026. The kind itself still means
+                   what it always meant: only a configuration group states
+                   this event.)
     SERIES_NO_RULE the astronomy layer emits the series, and no rule anywhere
                    states a condition on it
     SUBTABLE       the event is one of the nine Chapter-2 `<h2>` sub-tables
@@ -225,8 +230,8 @@ MAP: dict = {
     "Rahu Mars in the same sign": (
         CFG, ["cfg_gold_bullish_03_rahu_mars_same_sign",
               "cfg_silver_bullish_07_rahu_mars_same_sign"],
-        "ported in part 1, not wired into the calendar. Catalogue B has no "
-        "Rahu-Mars section"),
+        "Catalogue B has no Rahu-Mars section. Wired 14-Sep-2026; this is "
+        "one of the two windows the port moved"),
     "Rahu Mars in the same Nakshatra": (
         CFG, ["cfg_gold_bullish_03_rahu_mars_same_sign",
               "cfg_silver_bullish_07_rahu_mars_same_sign"],
@@ -262,7 +267,7 @@ MAP: dict = {
     "Saturn Combust": (B, ["b027_saturn_combust_cycle"], ""),
     "Mercury Rise in West": (
         B, ["b009_mercury_combust_cycle"],
-        "cfg_gold_bearish_04 states the same rise for gold and is not wired"),
+        "cfg_gold_bearish_04 states the same rise for gold, and is wired"),
     "Mercury goes Combust in the East in Vimishra speed": (
         B, ["b009_mercury_combust_cycle", "b122_mercury_speed_and_vedh"],
         "the Vimishra (mixed) speed class is b122's calibration"),
@@ -298,8 +303,8 @@ MAP: dict = {
     "Neptune Conjuncts Mercury": (B, ["b047_neptune_conjunction_mercury"], ""),
     "Neptune Conjuncts Saturn": (
         B, ["b047_neptune_conjunction_saturn"],
-        "cfg_silver_bullish_20 states the same conjunction for silver and is "
-        "not wired"),
+        "cfg_silver_bullish_20 states the same conjunction for silver, and "
+        "is wired"),
     "Neptune Conjuncts Venus": (B, ["b047_neptune_conjunction_venus"], ""),
     "Neptune Opposite Venus": (B, ["b048_neptune_opposition_venus"], ""),
     "Netpune Opposite Mercury": (B, ["b048_neptune_opposition_mercury"], ""),
@@ -317,7 +322,8 @@ MAP: dict = {
     "Jupiter in Cancer making Trine with Neptune in Pisces": (
         NO_SECTION, [],
         "a trine. cfg_sugar_bullish_01 states the Jupiter-in-Cancer residency "
-        "alone and is not wired; the trine half has no series"),
+        "alone -- wired, but only half the condition; the trine half has no "
+        "series"),
 
     # -------------------------------------------------------- paap kartari
     "Mercury in Paap Kartari between Mars Sun": (
