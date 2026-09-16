@@ -229,6 +229,12 @@ class Verdict:
     open_end: bool = False
     #: Whether the endpoints are instants at all. See `sky.Span.precision`.
     precision: str = "exact"
+    #: The CIVIL-YEAR clip, which is not the period cut `open_start` /
+    #: `open_end` carry. A real, measured boundary outside 2027 leaves
+    #: `open_*` false and `clipped_*` true -- 24 spans in this build. See
+    #: `sky.year_clip`.
+    clipped_start: bool = False
+    clipped_end: bool = False
 
     @property
     def is_instant(self) -> bool:
@@ -272,6 +278,8 @@ class Verdict:
                         if self.end_utc else None),
             "open_start": self.open_start,
             "open_end": self.open_end,
+            "clipped_start": self.clipped_start,
+            "clipped_end": self.clipped_end,
             "precision": self.precision,
         }
 
@@ -576,6 +584,7 @@ def build_verdicts(sky: Sky | None = None) -> list[Verdict]:
                 flags=flags, detail=f.detail,
                 start_utc=f.start_utc, end_utc=f.end_utc,
                 open_start=f.open_start, open_end=f.open_end,
+                clipped_start=f.clipped_start, clipped_end=f.clipped_end,
                 precision=f.precision))
     out.sort(key=lambda v: (v.civil_date, v.instrument, v.rule_id))
     return out

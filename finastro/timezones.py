@@ -77,9 +77,11 @@ class DateStamp:
     condition is date-granular -- a combust window the ephemeris emits as a
     date, a span built from civil-day boundaries, a reference-table row anchored
     at a date this build chose -- used to be stamped by `stamp()` like everything
-    else, and `stamp()` always has a time. So 662 rows rendered `00:00 IST` with
-    a previous-Eastern-day afternoon beside it, and every one of them read as a
-    measured moment.
+    else, and `stamp()` always has a time. So every such row rendered `00:00 IST`
+    with a previous-Eastern-day afternoon beside it -- 894 of them in this build
+    -- and every one read as a measured moment. (This docstring carried `662`
+    until 15-Sep-2026; that figure was measured against a build that was never
+    committed and reproduces against nothing. See `render._time_fields`.)
 
     Nothing about that was fixable by discipline: there was no way to write the
     renderer that did not produce a clock time, because the object it was handed
@@ -133,6 +135,95 @@ def date_stamp(day: dt.date, reason: str) -> DateStamp:
     return DateStamp(ist_date=day.strftime(DATE_FMT),
                      ist_weekday=day.strftime("%a"),
                      no_instant_reason=reason)
+
+
+@dataclass(frozen=True)
+class SpanDates:
+    """The two DISPLAYED ends of a window, and the only place they may come from.
+
+    A span is half-open, `[start, end)`. `end` is the instant the condition
+    CEASES; the civil day that instant lands in is a day the condition does NOT
+    hold. So a window's displayed end is `last_held` -- the last civil day a row
+    existed for -- and never the calendar date of `t_end_utc`.
+
+    THE TWO ARE NOT THE SAME NUMBER AND THE DIFFERENCE IS A PLAUSIBLE DATE.
+    `b101`'s February Mumbai window ends at `2027-02-20T18:30:00Z`, which is
+    21-Feb-2027 00:00 IST; the last day the condition holds is 20-Feb. Stamping
+    the instant would add a day to every closed window whose end falls on a
+    venue midnight -- 251 of the 1,626 span groups in the 2027 build -- in the
+    direction that makes each window one day longer than the daily rows it
+    replaces. That is the sunrise-anchor class exactly: a wrong answer that
+    renders as a correct-looking one and passes every component test.
+
+    THIS OBJECT CANNOT BE BUILT FROM AN INSTANT. `span_dates()` takes the civil
+    DAYS -- the list `sky.civil_days` produced and the daily rows were built
+    from -- and rejects a `datetime` outright, so handing it `t_end_utc` raises
+    at build time rather than printing 21-Feb. The same move `DateStamp` makes
+    for clock times, one field along: the renderer cannot print what it has no
+    way to obtain.
+
+    `days_in_view` is `len(days)`, NOT `last - first + 1`. A weekday-filtered
+    rule's days are not contiguous, and `contiguous` says so rather than letting
+    a window silently claim days no row was ever built for. A collapsed row over
+    a non-contiguous group must carry its `dates` list or must not be collapsed.
+
+    Duration is deliberately absent. A duration asserts two REAL boundaries, and
+    these two are what is in VIEW -- a span the generated period cut or the
+    civil year clipped has at least one end that is neither.
+    """
+
+    first_held: str
+    last_held: str
+    first_weekday: str
+    last_weekday: str
+    days_in_view: int
+    contiguous: bool
+
+    def as_dict(self) -> dict:
+        return asdict(self)
+
+    def line(self) -> str:
+        if self.first_held == self.last_held:
+            return f"{self.first_held} ({self.first_weekday})"
+        return (f"{self.first_held} ({self.first_weekday})  ->  "
+                f"{self.last_held} ({self.last_weekday})")
+
+
+def span_dates(days) -> SpanDates:
+    """The displayed ends of a window, from the civil DAYS it covers in view.
+
+    `days` is what `sky.civil_days(span, loc, year)` returned, or the
+    `civil_date` set of the daily rows being collapsed -- the two are the same
+    list by construction. See `SpanDates` for why there is no overload taking
+    the span's instants.
+    """
+    days = sorted(days)
+    if not days:
+        raise ValueError(
+            "span_dates() needs at least one civil day. A window with no day "
+            "in view is not a window with a zero-length one, and emitting a "
+            "row for it would assert an extent nothing measured")
+    for d in days:
+        # `datetime` IS a `date` subclass, so an unguarded list would accept
+        # `[t_end_utc]` and quietly render the off-by-one this type exists to
+        # stop. Checked per element rather than on the first: a mixed list is
+        # the likelier mistake.
+        if isinstance(d, dt.datetime):
+            raise TypeError(
+                f"span_dates() got a datetime ({d!r}). A span's end INSTANT is "
+                "not its end DATE -- the instant is exclusive and lands in a "
+                "day the condition no longer holds. Pass the civil days from "
+                "sky.civil_days(), not t_end_utc")
+        if not isinstance(d, dt.date):
+            raise TypeError(f"span_dates() got {type(d).__name__}, not a date")
+    return SpanDates(
+        first_held=days[0].strftime(DATE_FMT),
+        last_held=days[-1].strftime(DATE_FMT),
+        first_weekday=days[0].strftime("%a"),
+        last_weekday=days[-1].strftime("%a"),
+        days_in_view=len(days),
+        contiguous=(days[-1] - days[0]).days + 1 == len(days),
+    )
 
 
 def window_line(start: dt.datetime, end: dt.datetime) -> str:

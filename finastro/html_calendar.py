@@ -216,6 +216,14 @@ def write_html(rows: list[dict], verdicts) -> pathlib.Path:
     blocked = sorted(by_status("blocked"), key=lambda r: r.catalogue_b)
     resolved = sorted(by_status("resolved_ambiguity"), key=lambda r: r.catalogue_b)
     ambiguous = sorted(by_status("ambiguous"), key=lambda r: r.catalogue_b)
+    # The three empty-day figures, computed here from the SAME rows the table
+    # below renders rather than quoted from the JSON. They differ only in which
+    # rows they count, and the gap between the first two is the whole point.
+    from .render import _days_without
+    empty_event_days = _days_without(rows, "event")
+    empty_any_days = _days_without(rows)
+    empty_verdict_days = _days_without(
+        rows, predicate=lambda r: bool(r.get("vedic_interpretation")))
     grounds = CONF["labels"]["data_certainty_grounds"]
     uncov = CONF["verdict_coverage"]["unported_configuration_sections"]
     cfg_counts = CFG.counts()
@@ -301,6 +309,39 @@ def write_html(rows: list[dict], verdicts) -> pathlib.Path:
     for c, n in sorted(classes.items(), key=lambda x: -x[1]):
         A(f"<li><code>{_e(c)}</code> &mdash; {n:,}</li>")
     A("</ul>")
+    # ------------------------------------------------ absence, stated on the page
+    # 105 is a FACT ABOUT THE YEAR and it is invisible in the default view, so
+    # it goes on the panel rather than waiting to be discovered by a reader who
+    # already knows to filter. The second paragraph is the one that earns the
+    # section: the calendar read whole is never empty, and that is `tier_4`
+    # talking, not the sky.
+    A(f"<h2>The {empty_event_days} days of {YEAR} on which nothing happened"
+      f"</h2>"
+      f"<p><b>{empty_event_days} of {YEAR}'s 365 days carry no astronomical "
+      f"event.</b> Not a gap in the build &mdash; a measurement. Nothing in the "
+      f"ten core classes the base track covers falls on any of them, and the "
+      f"{len(erows):,} event rows land on the other "
+      f"{365 - empty_event_days}.</p>"
+      f"<p><b>You will not see those days by scrolling.</b> "
+      f"{empty_any_days} days carry no row <i>of any kind</i>, and that zero is "
+      f"not a second measurement agreeing with the first &mdash; it is "
+      f"<code>tier_4</code>. A catalogue-B firing emits a verdict-null "
+      f"<code>USDINR</code> row whether or not the rulership table has anything "
+      f"to say about USDINR, and those blanket all 365 days. So the unfiltered "
+      f"calendar <b>cannot be empty on any day</b>, and it cannot report "
+      f"absence at all.</p>"
+      f"<p>Set the row-kind control to <b>astronomy events only</b> and the "
+      f"{empty_event_days} days appear as the gaps they are. That is the second "
+      f"use of <code>row_kind</code>, and the argument for adding it did not "
+      f"anticipate this one: <b>absence is reportable on the base track and "
+      f"only through the discriminator.</b></p>"
+      f"<p><span class=mut>A third figure, for completeness and because it is "
+      f"the one that sounds worst and means least: {empty_verdict_days} days "
+      f"carry no row with a verdict text on it. The argument that produced the "
+      f"base track was made with a figure of 32 empty days, which was never "
+      f"measured against this build. It is not one number and it is not "
+      f"32.</span></p>")
+
     A("<h2>When a row prints a date and no time</h2>"
       "<p>A row carries a clock time only when its start is a moment something "
       "crossed. When it is not, the row prints <b>why</b> instead:</p><ul>"

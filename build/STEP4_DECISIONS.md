@@ -2705,12 +2705,19 @@ alias was the reason it was *empty*. §12.16 scopes what porting them would take
 This is the most transferable thing the build has produced, and it does not belong
 scattered across four `corrections_on_record` entries where a reader meets it once
 and files it as a detail of the layer it happened in. **A wrong answer that renders
-as a plausible correct one** is the shape the build keeps producing, six times so
-far -- the four below, the measured fifth, and a sixth that is the FIX for the
-third having the same shape as the third. Every instance was silent: no exception, no
+as a plausible correct one** is the shape the build keeps producing, seven times so
+far -- the four below, the measured fifth, a sixth that is the FIX for the
+third having the same shape as the third, and a seventh in which **the CHECK was the
+wrong thing, not the code it checked**. Every instance was silent: no exception, no
 failing assertion, no log line. Each was found by a check aimed at the OUTPUT
 rather than at the code that produced it, and in three of the four the code was
 read, understood and believed before the output was looked at.
+
+**Two of the seven were produced by work done to fix earlier ones** -- the sixth by
+the fix for the third, the seventh by a check written to satisfy this section's own
+discipline. Remediation is not a safe region of this build. It is where two of the
+seven instances came from, and the sub-section below the seventh says why that
+follows rather than surprises.
 
 #### The four instances
 
@@ -2874,6 +2881,107 @@ families **raises on import** rather than taking whichever family is listed firs
 That last clause is the guard built to be seen failing, per the standing rule
 above — the silent first-match win is precisely how `rise_venus` lost its High.
 
+#### The seventh instance -- the CHECK was what was wrong -- recorded 15-Sep-2026
+
+**A harness check read test NAMES as figures and summed to the right total by
+coincidence.** Recorded as its own instance because it is the first in which **the
+code under test was correct and the CHECK was the defect**. Every instance above is
+a wrong artifact that a check failed to catch; this one is a wrong check standing
+over a right artifact, reporting a pass it had not established.
+
+**What happened.** The test-3 recount against all three catalogues
+(`catalogues.test_3_recount_against_all_three_catalogues`) states its arithmetic in
+a prose line:
+
+```
+19 pass / 12 fail test 1 / 12 fail test 2 / 1 orphan = 44
+```
+
+The first version of the harness check pulled every digit out of that string to
+verify the arithmetic closed over the 44 labelled prophecy blocks. It collected
+
+```
+[19, 12, 1, 12]
+```
+
+because **the `1` and the `2` in "fail test 1" and "fail test 2" are the test NAMES,
+not counts**, and a regex cannot tell a name from a figure. It took the first `1` as
+the third count, never reached the orphan count at all, and read `12` once instead
+of twice. `19 + 12 + 1 + 12 = 44`, so the arithmetic closed and the check
+**passed** -- on four numbers, three of them the wrong number and one of them a
+label.
+
+**Why it is its own instance.** The recount itself is sound: 19/12/12/1 before,
+19/12/12/1 after, and the figures are the ones the classification carries. Nothing
+downstream was wrong. Had the check been deleted, the build would have been in
+exactly the state it was in with the check passing -- which is the definition of a
+check that is not one.
+
+| | the first six | the seventh |
+| --- | --- | --- |
+| what is wrong | the artifact | the check |
+| what a passing check tells you | nothing -- it asks about occurrence | nothing -- it is reading the wrong input |
+| the detector | assert an expected count or content from OUTSIDE the code under test | **print what the check actually read**, not whether it passed |
+
+**What caught it.** Printing the list the scraper had built, beside the four numbers
+it was supposed to have read. The pass/fail line said nothing: it read `[PASS]` both
+before and after the fix, and the four figures are identical before and after, so no
+re-run and no before/after comparison could have separated them. Only the
+intermediate value could, and only because it was printed.
+
+**The remedy is a schema change, not a stronger regex.** The prose line stays prose
+and nothing parses it. The same two lines are now stated as **numbers**:
+
+```yaml
+arithmetic_before: "19 pass / 12 fail test 1 / 12 fail test 2 / 1 orphan = 44"
+counts_before: {pass: 19, fail_test_1: 12, fail_test_2: 12, orphan: 1}
+counts_after:  {pass: 19, fail_test_1: 12, fail_test_2: 12, orphan: 1}
+labelled_blocks: 44
+```
+
+and the harness sums `before[k] for k in ("pass", "fail_test_1", "fail_test_2",
+"orphan")` -- **four named keys, read by name, with a KeyError if one is missing.**
+Point 2 of the generalisation below says a count taken from our own artefacts
+describes our artefacts. This is one level under that: a count *parsed out of a
+sentence about our artefacts* describes the sentence's punctuation.
+
+| instance | what caught it | the check that passed anyway |
+| --- | --- | --- |
+| the check scraped test names as figures | **printing the intermediate value the check had read** | the check itself -- `[PASS]`, on `[19, 12, 1, 12]`, summing to the right total by coincidence |
+
+**And it happened inside the file that documents the shape**, in the same session
+that added the sixth instance to it. That is the part worth keeping, not the regex.
+It is on record in the config as
+`catalogues.test_3_recount_against_all_three_catalogues.the_first_check_read_test_names_as_figures`.
+
+#### The two instances that remediation produced
+
+**The sixth and the seventh both came out of work done to fix earlier ones,** and
+they are the only two of the seven that did.
+
+* **The sixth is the fix for the third.** `family` was matched too narrowly and five
+  families attached to nothing; the repair widened the match to the rule's section
+  title, which made them attach -- and made the SECTION the unit of attachment, so a
+  label the source put on one rule spread to its section-mates.
+* **The seventh is a check written to satisfy this section.** The discipline below
+  says: *name the count you expect, say where that number came from, and check it.*
+  The recount did name it, and the check written to enforce it read the count out of
+  a prose sentence and passed on the wrong four numbers.
+
+**Why that is structural rather than bad luck.** Remediation work carries two
+properties the original work does not. It is done under the belief that the failure
+mode is now understood, which is exactly the state in which the output goes unread.
+And it is measured against the *symptom* of the thing it fixed -- "the five families
+attach now", "the arithmetic closes now" -- so the fix is accepted the moment the
+symptom clears, whether or not anything else moved with it.
+
+The rule taken from both is already written into
+`source_probability.corrections_on_record.label_attached_at_section_level`: **a
+repair is a candidate for this section, not the end of one.** A fix that widens a
+match, and a check written to pin a number this section asked for, get the same
+treatment as a new emit -- name the count, say where it came from, and **print what
+was read, not whether it passed.**
+
 #### The shape, named
 
 > **A wrong answer that renders as a plausible correct one.** Silence is not a
@@ -2911,7 +3019,13 @@ The generalisation that follows, and the reason this section exists:
 
 Before believing any new emit: **name the count you expect, say where that number
 came from, and check it.** If the only source for the expected number is the code
-that produced the actual one, the check cannot fail and is not a check. Which is
+that produced the actual one, the check cannot fail and is not a check.
+
+And -- added 15-Sep-2026, from the seventh instance -- before believing any new
+**check**: **print what it actually read.** A check reports a boolean, and a boolean
+is the one output of this build that carries no evidence of what produced it. The
+scraper that read `[19, 12, 1, 12]` printed `[PASS]`, and so did the fix; only the
+intermediate value told them apart. Which is
 also why the pinned zero-firings, the 11 carried families, the 96 printed Vedha
 rows, and the 58 configuration groups are all carried as **independent lists with
 numbers attached** rather than as taste.
@@ -3044,21 +3158,55 @@ First contact is keyed per family and not taken as the earliest entry in the dic
 a solar eclipse's is `begin`, a lunar eclipse's is `penumbral_begin` — because
 picking by time would silently rename the contact the day a record carries a new one.
 
-#### 662 rows printed a time that did not exist
+#### The rows that printed a time that did not exist
 
 Every row now carries `t_utc`, or `t_start_utc` and `t_end_utc` where the condition
 holds over an interval. That is the rejoinability half. The other half is harder,
-and it is the one the finding was actually about: **662 rows across 27 rules
-printed `00:00 IST` beside a previous-Eastern-day afternoon, and not one of them was
-an event at midnight.** Four causes, three of which were already marked in data
+and it is the one the finding was actually about: **every row without an instant
+printed `00:00 IST` beside a previous-Eastern-day afternoon, and not one of them
+was an event at midnight.** Four causes, three of which were already marked in data
 nobody was reading:
 
-| cause | firings | what the start actually is | was it marked? |
-| --- | --- | --- | --- |
-| `date_only` astronomy records | 249 | the ephemeris emits a **date** — kalamsha is a horizon measurement | yes, `time.precision` |
-| `civil_day_span()` | 45 | a venue's midnight. Calendar arithmetic | no |
-| carry-in cut | 147 | `sky.span_start` — the **generated period's** edge | yes, `open_start` |
-| synthetic anchor | 12 rows | `datetime(2027,1,1, tzinfo=IST)` — a date **this build chose** | only in `detail.anchor` |
+| cause | catalogue-B firings | rows | what the start actually is | was it marked? |
+| --- | ---: | ---: | --- | --- |
+| `date_only` astronomy records | **331** | 431 | the ephemeris emits a **date** — kalamsha is a horizon measurement | yes, `time.precision` |
+| `civil_day_span()` | **105** | 255 | a venue's midnight. Calendar arithmetic | no |
+| carry-in cut | **142** | 151 | `sky.span_start` — the **generated period's** edge | yes, `open_start` |
+| synthetic anchor | **11** | 12 | `datetime(2027,1,1, tzinfo=IST)` — a date **this build chose** | only in `detail.anchor` |
+
+Whole population on the rendered artifact, which is where it is checkable:
+**894 rows over 99 spans** — 858 verdict and 36 event, 9 of them
+configuration-sourced. `meta.time` publishes it.
+
+**THE FIGURES IN THIS TABLE ARE NOT THE ONES IT WAS WRITTEN WITH, and the
+correction is its own instance of the shape this section is about.** It read
+*`249 / 45 / 147 / 12 firings`* over *662 rows across 27 rules*, and a later
+report replaced three of those with *`331 / 282 / 105 / 11`*. Both sets were
+withdrawn and the four above were re-derived. What the re-derivation found:
+
+* **Nothing moved because the population moved.** The same rule families counted
+  against the pre-wiring, pre-base-track 5,209-row build give the same figures.
+  The base track and the configuration wiring together added 45 rows to the
+  no-instant population, none of them catalogue B.
+* **A unit travelled without its figure, twice.** `45` was the Mumbai half of
+  `105` — `b101` is `per_location` and fires 45 times at Mumbai and 60 at New
+  York. `12` counted **rows** where its three neighbours counted **firings**; 12
+  rows and 11 firings are both correct and neither changed. The original table's
+  own column header said "firings" for three columns and "12 rows" for the
+  fourth, which is how far a mixed unit travels unnoticed.
+* **`282` was the FIRST cause measured on a second key, filed under the SECOND.**
+  It is the count of distinct `(venue, date)` pairs among the 471 `date_only`
+  ephemeris rows. The correct carry-in figure is 142.
+* **`249`, `147` and `662` are diagnosed as nothing.** They reproduce against no
+  slicing of this build or of the one before it. They and `no_instant_reason`
+  were born in the same commit, measured against a transient render that was
+  never committed.
+
+**And that is the lesson, which is not the one this section already carries: a
+figure without a generator is not a measurement.** Both withdrawn sets were
+written by hand into prose and neither was ever read by a check. The four above
+are **keys** in `conventions.yaml` (`row_kinds.time_fields.the_four_causes_were_re_derived`)
+and `tests/test_rule_layer.py` recomputes them off the artifact.
 
 **The fix is structural rather than disciplinary, and it had to be.** There was no
 way to write the renderer that did not print a clock time, because the object it
@@ -3073,13 +3221,14 @@ boolean, because the remedies differ: `date_only` would need a new ephemeris sca
 `period_cut` a wider generated span, `anchored` cannot be remedied at all, and
 `named_contacts` is not a shortage — the row has more times than one field can hold.
 
-**And the display string was not the test.** Measured by the printed time the
-population is 663 rows across 28 events; measured structurally it is 662 across 27.
-The difference is one row: `b102_anuradha_on_sunday` on 03-Oct-2027, a nakshatra
-ingress at **00:00:21 IST**. A genuine instant that happens to render as `00:00`.
-No rule phrased over the printed string could have kept it while dropping the other
-662 — which is the same lesson as the per-rule label census, in a different layer:
-*the artifact's surface is not the thing to test; the property behind it is.*
+**And the display string was not the test.** `b102_anuradha_on_sunday` on
+03-Oct-2027 is a nakshatra ingress at **00:00:21 IST** — a genuine instant that
+happens to render as `00:00`. No rule phrased over the printed string could have
+kept it while dropping the rows that have no instant at all, which is the same
+lesson as the per-rule label census, in a different layer: *the artifact's surface
+is not the thing to test; the property behind it is.* (The counts this paragraph
+carried — 663 across 28 by display string, 662 across 27 structurally — are
+withdrawn with the rest; the principle does not depend on them.)
 
 ---
 
@@ -3155,7 +3304,9 @@ reason.** It pulled every digit out of `"19 pass / 12 fail test 1 / 12 fail test
 and summed to 44 anyway. Caught by printing what it had read rather than whether it
 had passed. The figures are now stated as figures (`counts_before`,
 `counts_after`), and the prose line is prose. **A check that passes for the wrong
-reason is the subject of §12.16 happening inside the file that documents it.**
+reason is the subject of §12.16 happening inside the file that documents it**, and
+it is recorded there as that section's **seventh instance** -- the first in which
+the check, and not the code it checked, was the thing that was wrong.
 
 #### `actual_figures_2026`'s 344 stays labelled stale
 
@@ -3163,3 +3314,92 @@ Re-measuring it means flipping `CONF["year"]` and rebuilding the whole layer aga
 2026. A stale number honestly labelled costs less than a year-flip at this point in
 the work, and the label already says what it is: measured under the section-level
 attachment, which is the defect §12.16's sixth instance records.
+
+
+---
+
+### 12.19 The two span blockers, settled before the collapse · recorded 15-Sep-2026
+
+`build/SPAN_VS_DAILY_PROPOSAL.md` §5 named three things that had to be decided
+before any collapse. Two of them are decided here and **landed on the daily rows**,
+for the reason `row_kind` landed first: a discriminator added after a collapse
+changes the population every earlier figure was measured over. The third — the
+HTML date filter becoming an overlap test — belongs to whoever implements the
+collapse, because it is a property of the collapsed view and of nothing that
+exists yet.
+
+#### A span's displayed end is the last day it holds
+
+Spans are half-open, `[start, end)`. `b101`'s February Mumbai window ends at
+`2027-02-20T18:30:00Z`, which **is 21-Feb-2027 00:00 IST**, and the last civil day
+the condition holds is **20-Feb**. `sky.civil_days` already gets this right —
+`Span.overlaps` tests `lo < end`, and `lo == end` on 21-Feb — so the daily render
+has never been wrong about it. **A collapsed row that stamped `t_end_utc` would
+be, on 251 of the 1,626 span groups in this build**, in the direction that makes
+every window one day longer than the daily rows it replaces.
+
+**Ruled: both representations are emitted, under names that cannot be confused.**
+`t_end_utc` is the instant the condition ceases and is EXCLUSIVE; `last_held` is
+the last civil day it holds and comes from `sky.civil_days(...)[-1]`.
+
+**And the ruling is a type rather than a convention, which is the only reason to
+trust it.** `timezones.SpanDates` is built only by `span_dates(days)`, which takes
+the civil days the rows were built from and **raises `TypeError` on a
+`datetime`**. `datetime` is a `date` subclass, so an unguarded list would have
+accepted `[t_end_utc]`, rendered 21-Feb, and raised nothing. This is precisely
+what `DateStamp` did for clock times one batch earlier, and the reason is the same:
+a rule the renderer merely *follows* is a rule the next renderer can drop.
+
+`SpanDates` also carries `days_in_view = len(days)` and a `contiguous` flag,
+because **179 of the timed span groups are not contiguous** — a weekday-filtered
+rule's days have holes — and a window over one of those would claim days no row
+was ever built for. All 99 no-instant groups are contiguous, so Model A is
+unaffected; the flag exists before Model B does, deliberately.
+
+**The check was falsified both ways before it was believed**, per §12.18's lesson.
+`test_a_spans_displayed_end_is_the_last_day_it_holds` fails if a displayed end is
+taken from `t_end_utc` (the type raises), and fails equally if `span_dates` is
+"corrected" to agree with `t_end_utc`, because it also asserts the two **disagree**
+on a counted set of 251 windows. A check that asserted only the convention would
+have passed on a build that had no convention at all.
+
+#### `open_*` was standing in for a second cut it does not describe
+
+`open_start` / `open_end` mark **`Sky.span_start`'s** edge: the condition was
+already running when the generated period began, so there is no boundary. They do
+**not** mark `fire()`'s second cut, `civil_days`' drop of days outside the calendar
+year. A daily render needs no field for that — the out-of-year days simply have no
+rows and nothing is claimed about them. **A collapsed row asserts an extent**, and
+then one printing the true boundary starts before the file does while one printing
+the first day in view asserts a boundary the sky did not supply.
+
+**Ruled: `clipped_start` / `clipped_end`, on all 7,082 rows now.** Computed once
+per (span, location) by `sky.year_clip`, carried on `Firing` and `Verdict`, emitted
+by `render._time_fields`. The condition's true boundary stays on `t_start_utc` /
+`t_end_utc`, the in-year extent is `SpanDates.first_held` / `last_held`, and the
+flag says which a reader is looking at. Neither is dropped and neither is chosen
+silently.
+
+**The two cuts are independent, which is what a single flag could not express.**
+`b009_mercury_combust_cycle`'s carried-in window is `clipped_start` and **not**
+`open_start` — Mercury genuinely went combust on 13-Dec-2026, so the boundary is
+real and measured, and the calendar's first row for it is 01-Jan-2027. The three
+carry-in windows are **both**: the period cut them and the year clips them.
+
+#### And the figure this was raised against was also wrong
+
+The proposal reported **22** spans with a real endpoint outside 2027 and `open_*`
+false, 1 no-instant and 21 timed. **22 is the count of `clipped_end` groups alone**
+— it omits the 10 `clipped_start` groups and does not apply the `open_*` filter its
+own sentence states, so 5 of its 22 are already marked `open_end`. Measured off the
+field, over 1,626 span groups: `clipped_start` 10 (7 with `open_start` false),
+`clipped_end` 22 (17 with `open_end` false), **24 spans with a real endpoint outside
+the year — 1 no-instant and 23 timed**. 18 under the rule-span unit, which does not
+repeat a window per instrument.
+
+**That is the third figure in this batch to be a real count of the wrong set**,
+after `282` and the `45`/`12` unit mix in §12.16. All three were arithmetic nobody
+disputed over populations nobody stated. The census now lives in
+`conventions.yaml → row_kinds.time_fields.year_clip.measured_2027` as eight named
+keys, and `test_the_civil_year_clip_is_a_field_and_not_the_period_cut` recomputes
+each one off the artifact and **prints what it read**.

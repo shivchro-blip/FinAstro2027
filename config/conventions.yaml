@@ -2882,6 +2882,99 @@ row_kinds:
     span_rows: >
       A row whose condition holds over an interval emits `t_start_utc` and
       `t_end_utc` and leaves `t_utc` null. One time cannot stand for two.
+    span_endpoints:
+      ruled: 2026-09-15
+      the_question: >
+        A span is half-open, [start, end). What does a row DISPLAY at its end
+        -- the last day the condition holds, or the instant it ceases?
+      the_ruling: >
+        BOTH, UNDER NAMES THAT CANNOT BE CONFUSED, AND THEY ARE NOT THE SAME
+        DAY. `t_end_utc` is the INSTANT the condition ceases and it is
+        EXCLUSIVE: the civil day it lands in is a day the condition does not
+        hold. A window's displayed end is `last_held`, the last civil day a
+        row existed for, which is sky.civil_days(span, loc, year)[-1].
+      why_it_is_a_blocker_and_not_a_detail: >
+        b101's February Mumbai window ends at 2027-02-20T18:30:00Z, which is
+        21-Feb-2027 00:00 IST; the last day it holds is 20-Feb. A collapsed
+        row that stamps t_end_utc prints 21-Feb and is off by one on every
+        closed window whose end falls on a venue midnight, in the direction
+        that makes each window one day longer than the daily rows said it
+        was. 251 of the 1,626 span groups in the 2027 build would move. It is
+        the sunrise-anchor class exactly: a systematic off-by-one that renders
+        as a plausible date and passes every component test, because every
+        component is correct.
+      made_unconfusable_structurally: >
+        timezones.SpanDates carries first_held / last_held and is built ONLY
+        by timezones.span_dates(days), which takes the civil DAYS the rows
+        were built from and raises TypeError on a datetime. Handing it
+        t_end_utc fails at build time rather than printing 21-Feb. The same
+        move DateStamp makes for clock times, one field along: the renderer
+        cannot print what it has no way to obtain.
+      days_in_view_is_not_last_minus_first: >
+        A weekday-filtered rule's days are not contiguous, so SpanDates
+        carries days_in_view = len(days) and a `contiguous` flag rather than
+        letting a window claim days no row was built for. All 99 no-instant
+        groups are contiguous -- checked -- but 179 of the timed span groups
+        are not, which is why the flag exists before Model B does.
+      duration_is_absent_by_design: >
+        A duration asserts two REAL boundaries. An open span has at most one,
+        and a year-clipped span's other end is outside the file. Emitting
+        "364 days" for a state whose ends are both outside the year is the
+        same wrong-answer-that-renders-plausibly shape in a new field.
+      pinned_by: >
+        tests/test_rule_layer.py::test_a_spans_displayed_end_is_the_last_day_
+        it_holds -- which fails if a collapsed end is ever taken from
+        t_end_utc, and fails equally if span_dates is "corrected" to agree
+        with it.
+
+    year_clip:
+      ruled: 2026-09-15
+      fields: [clipped_start, clipped_end]
+      the_distinction: >
+        THERE ARE TWO CUTS AND open_start / open_end ONLY MARK ONE. open_* is
+        Sky.span_start's edge -- the condition was already running when the
+        generated period began, so there is no boundary at all. clipped_* is
+        sky.civil_days' second cut, which drops the days falling outside the
+        calendar year. A span can have a REAL, MEASURED boundary and still be
+        clipped: b009_mercury_combust_cycle starts 2026-12-13T18:30:00Z with
+        open_start false, because Mercury genuinely went combust that day, and
+        the calendar's first row for it is 01-Jan-2027.
+      why_it_lands_before_any_collapse: >
+        A daily render needs no such field: the out-of-year days simply have
+        no rows and nothing is claimed about them. A COLLAPSED ROW ASSERTS AN
+        EXTENT. One printing the true boundary starts before the file does;
+        one printing the first day in view asserts a boundary the sky did not
+        supply. Emitting one of the two and choosing silently is the shape
+        12.16 is about, with every clipped span already waiting for it -- so
+        the discriminator lands on the daily rows first, exactly as row_kind
+        did.
+      measured_2027:
+        span_unit: (row_kind, event, instrument, venue, t_start_utc, t_end_utc)
+        span_groups: 1626
+        clipped_start: 10
+        clipped_end: 22
+        clipped_start_with_open_start_false: 7
+        clipped_end_with_open_end_false: 17
+        real_endpoint_outside_the_year: 24
+        of_which_no_instant: 1
+        of_which_timed: 23
+        under_the_rule_span_unit: >
+          18 spans, 1 no-instant and 17 timed, grouping by (row_kind, event,
+          location, t_start_utc, t_end_utc) instead -- the unit fire() emits,
+          which does not repeat a window per instrument.
+        the_22_that_was_recorded_is_a_different_set: >
+          SPAN_VS_DAILY_PROPOSAL.md 5.2 reported "22 spans have a real
+          endpoint outside the year and are not marked open -- 1 no-instant
+          and 21 timed". 22 is the count of clipped_end groups ALONE: it
+          leaves out the 10 clipped_start groups and does not apply its own
+          open_* filter, so 5 of its 22 are already marked open_end. The
+          re-derived figure is 24 under the same unit.
+      both_ends_are_emitted: >
+        The condition's true boundary stays on t_start_utc / t_end_utc and the
+        in-year extent is SpanDates.first_held / last_held. clipped_* says
+        which of the two a reader is looking at. Neither is dropped and
+        neither is chosen silently.
+
     instant_precision:
       field: instant_precision
       values:
@@ -2913,8 +3006,12 @@ row_kinds:
             the boundary is where the GENERATED PERIOD was cut, not where the
             sky changed -- Span.open_start / open_end. The span's own precision
             is `exact` and its other end may well be an instant; this end is
-            not. 147 firings, on b084, b086 and b099, whose shared-sign windows
-            were already running at the carry-in.
+            not. 142 catalogue-B firings over 7 spans, on b079, b084, b086 and
+            b099, whose shared-sign windows were already running at the carry-in.
+            (RE-MEASURED 15-Sep-2026. This key read `147 firings, on b084, b086
+            and b099`. Both halves were wrong: 147 reproduces against nothing,
+            and b079 is a fourth rule in the population -- the three named total
+            133. See time_fields.the_four_causes_were_re_derived below.)
           anchored: "the date was chosen by this build"
           named_contacts: >
             the row has SEVERAL instants and names them, so one unlabelled time
@@ -2936,15 +3033,70 @@ row_kinds:
         weekdays and NO time attribute at all. Code in that branch that tries to
         read a clock time raises AttributeError at build time. The previous
         arrangement -- one stamp type with times always present -- emitted
-        "00:00 IST" on 662 rows and there was no way to write the renderer that
-        did not.
+        "00:00 IST" on every one of them, and there was no way to write the
+        renderer that did not.
       why_the_display_string_was_not_the_test: >
-        Measured by display string the population is 663 rows across 28 events.
-        Measured structurally it is 662 across 27. The difference is one row:
-        b102_anuradha_on_sunday on 03-Oct-2027, a nakshatra ingress at
-        00:00:21 IST. It is a genuine instant that happens to render as 00:00,
-        and no rule phrased over the printed time could keep it while dropping
-        the other 662.
+        THE PRINCIPLE, which does not depend on the count: b102_anuradha_on_sunday
+        on 03-Oct-2027 is a nakshatra ingress at 00:00:21 IST -- a genuine
+        instant that renders as 00:00 -- so no rule phrased over the printed
+        time could keep it while dropping the rows that have no instant at all.
+        The artifact's surface is not the thing to test; the property behind it
+        is. (The figures this key carried, 663 rows across 28 events by display
+        string and 662 across 27 structurally, are WITHDRAWN -- see
+        the_four_causes_were_re_derived.)
+      the_four_causes_were_re_derived:
+        re_derived: 2026-09-15
+        why: >
+          The four cause figures were recorded as 249 / 147 / 45 / 12 firings
+          over 662 rows and 27 rules. Measured against the rendered artifact
+          three of the four reproduce against nothing, and a proposal measured
+          later reported 331 / 282 / 105 / 11 -- of which one figure was a
+          second measurement of the FIRST cause written into the SECOND cause's
+          slot. Neither set was adopted; both were re-derived.
+        the_population_is_now_stated_not_described: >
+          894 rows over 99 spans carry no clock time -- 858 verdict and 36
+          event, 9 of them configuration-sourced. Every one of those numbers is
+          on the rendered artifact under meta.time and is recomputable by
+          grouping the rows, which is the property the withdrawn figures lacked.
+        the_unit_must_travel_with_the_figure: >
+          A FIRING is one (rule, location, civil day) -- what rules.base.fire
+          emits. A ROW is one firing resolved to one instrument, so tier_4's
+          USDINR row and a SUGAR row from the same firing are two rows and one
+          firing. The recorded table mixed them in a single row of four: three
+          columns were firings and the fourth was headed "12 rows". 12 rows and
+          11 firings are both correct and neither moved.
+        catalogue_b_firings:
+          date_only_ephemeris: 331
+          period_cut: 142
+          civil_day_span: 105
+          anchored: 11
+        catalogue_b_rows:
+          date_only_ephemeris: 431
+          period_cut: 151
+          civil_day_span: 255
+          anchored: 12
+        what_moved_and_what_did_not: >
+          NOTHING MOVED BECAUSE THE POPULATION MOVED. The same rule families
+          counted against the pre-wiring, pre-base-track 5,209-row build give
+          the same figures: 431 rows / 331 firings for the ephemeris windows,
+          255 / 105 for b101, 398 rows for the four carry-in rules. The base
+          track added 31 event rows and 5 eclipse rows to the no-instant
+          population and the configuration wiring added 9 -- 45 rows of 894,
+          none of them catalogue B. Every difference between the two recorded
+          sets is a unit or a derivation defect.
+        the_diagnosable_ones: >
+          45 was the Mumbai half of 105: b101 is per_location and fires 45 times
+          at Mumbai and 60 at New York. 12 counted rows where its neighbours
+          counted firings. 282 is the count of distinct (venue, date) pairs
+          among the 471 date_only ephemeris rows -- the first cause measured on
+          a different key and filed under the second. 249, 147 and 662 are
+          diagnosed as nothing; they reproduce against no slicing of this build
+          or of the one before it.
+        the_rule_this_leaves: >
+          A FIGURE WITHOUT A GENERATOR IS NOT A MEASUREMENT. Both withdrawn sets
+          were written by hand into prose. The four above are keys, and
+          tests/test_rule_layer.py recomputes them off the artifact, so a figure
+          and the build can no longer disagree quietly.
 
 # ====================================================== source probability
 # WHAT THIS BLOCK IS: the 2026 source's own probability labels, carried forward
@@ -3078,6 +3230,38 @@ source_probability:
         counts_before: {pass: 19, fail_test_1: 12, fail_test_2: 12, orphan: 1}
         counts_after:  {pass: 19, fail_test_1: 12, fail_test_2: 12, orphan: 1}
         labelled_blocks: 44
+        # ON RECORD as STEP4_DECISIONS.md 12.16's SEVENTH INSTANCE, and the
+        # first one in which the CHECK was the defect and the code it checked
+        # was correct. Recorded as a key rather than only in the comment above,
+        # because every other instance of the shape is addressable by one and
+        # this was the hardest of the seven to see.
+        the_first_check_read_test_names_as_figures:
+          found: 2026-09-15
+          recorded_as: "STEP4_DECISIONS.md 12.16, seventh instance"
+          what_it_read: [19, 12, 1, 12]
+          what_it_should_have_read: [19, 12, 12, 1]
+          why_it_passed: >
+            The 1 and the 2 in "fail test 1" and "fail test 2" are the test
+            NAMES. A regex over the prose line cannot tell a name from a figure,
+            so it took the first 1 as the third count, never reached the orphan
+            count at all, and read 12 once instead of twice. 19 + 12 + 1 + 12 =
+            44 by coincidence, so the arithmetic closed and the check passed on
+            four numbers, three of them wrong and one of them a label.
+          what_caught_it: >
+            PRINTING THE INTERMEDIATE VALUE -- the list the scraper had built --
+            rather than the pass/fail line, which read [PASS] both before and
+            after the fix. No re-run and no before/after comparison could have
+            separated them; only the value the check had actually read.
+          the_lesson: >
+            Before believing any new CHECK, print what it read. A boolean is the
+            one output of this build that carries no evidence of what produced
+            it. This and the sixth instance both came out of work done to FIX
+            earlier instances, which is why remediation gets the same treatment
+            as a new emit rather than more trust.
+          fix: >
+            counts_before and counts_after above. The harness reads four NAMED
+            keys and raises KeyError on a missing one; the prose line stays
+            prose and nothing parses it.
         the_totals_do_not_move: >
           AND THAT IS NOT THE INTERESTING PART. Adding a catalogue can only turn a
           test-3 failure into a pass, and the tests are ordered: a block failing

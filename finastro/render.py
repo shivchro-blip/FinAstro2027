@@ -77,13 +77,24 @@ def _time_fields(row) -> dict:
     here, at build time.
 
     That is the difference between this and the arrangement it replaced. Before
-    15-Sep-2026 there was one stamp type, it always carried a time, and 662 rows
-    across 27 rules rendered `00:00 IST` beside a previous-Eastern-day
-    afternoon: 249 date-granular combust and rise windows, 147 shared-sign
-    windows already running at the carry-in, 45 civil-day windows, 12
-    reference-table rows anchored at a date this build chose. None of them was
-    an event at midnight. No amount of care in this function could have stopped
-    it, because the object it was handed had a time on it.
+    15-Sep-2026 there was one stamp type, it always carried a time, and every
+    row without an instant rendered `00:00 IST` beside a previous-Eastern-day
+    afternoon. None of them was an event at midnight, and no amount of care in
+    this function could have stopped it, because the object it was handed had a
+    time on it.
+
+    RE-DERIVED 15-Sep-2026, and the figures this docstring used to carry --
+    `662 rows across 27 rules`, `249 / 147 / 45 / 12` -- are WITHDRAWN rather
+    than corrected in place. They were measured against a transient build that
+    was never committed, no generator for them exists, and no slicing of this
+    build or of the 5,209-row build before it reproduces three of the four. The
+    population is measurable and is stated where it can be checked --
+    `meta.time.rows_without` on the rendered artifact: 894 rows over 99 spans.
+    Per cause, as catalogue-B firings, distinct (rule, location, civil day):
+    331 date-granular combust and rise windows, 142 shared-sign windows already
+    running at the carry-in, 105 civil-day windows across two venues, and 11
+    reference-table anchors carrying 12 rows. `45` was the Mumbai half of `105`,
+    and `12` counted ROWS where its three neighbours counted FIRINGS.
 
     `t_utc` / `t_start_utc` / `t_end_utc` are the other half, and they are what
     makes the calendar REJOINABLE: before them, checking a row against the
@@ -93,6 +104,16 @@ def _time_fields(row) -> dict:
         "instant_precision": row.precision,
         "open_start": row.open_start,
         "open_end": row.open_end,
+        # THE SECOND CUT, and the one `open_*` was silently standing in for.
+        # `open_*` marks `Sky.span_start`'s edge; these mark `civil_days`'
+        # civil-year clip, which a daily render never had to name because the
+        # out-of-year days simply had no rows. A base-track row is one record
+        # rendered as itself and is never expanded across days, so nothing is
+        # ever clipped off one -- `getattr` returns False for it, which is the
+        # measured answer and not a default standing in for an unasked
+        # question. See `sky.year_clip`.
+        "clipped_start": getattr(row, "clipped_start", False),
+        "clipped_end": getattr(row, "clipped_end", False),
         "t_utc": None,
         "t_start_utc": None,
         "t_end_utc": None,
@@ -317,22 +338,52 @@ def _meta_counts(rows: list[dict]) -> dict:
                 [r for r in rows if not r["time_ist"]], "no_instant_reason"),
             "by_instant_precision": _tally(rows, "instant_precision"),
         },
+        # THREE empty-day figures, not one, and the order matters: the first is
+        # the fact about the year, the second is the one a reader meets, and
+        # the third is why they differ. See `_days_without`.
         "days": {
             "days_in_year": len({r["date"] for r in rows}),
-            "days_with_no_row_of_any_kind": _empty_days(rows),
+            "days_with_no_event_row": _days_without(rows, ROW_KIND_EVENT),
+            "days_with_no_row_of_any_kind": _days_without(rows),
+            "days_with_no_row_carrying_a_verdict_text": _days_without(
+                rows, predicate=lambda r: bool(r.get("vedic_interpretation"))),
             "empty_days_are_output": (
                 "a day carrying no row is a day on which nothing the astronomy "
                 "layer tracks happened. Before the base track the calendar "
                 "could not be empty on any day a rule fired, so it could not "
                 "report absence at all."),
+            # The second figure is zero and the first is not, and a reader who
+            # met only the second would conclude the year has no quiet days.
+            "why_no_day_is_empty_in_the_unfiltered_view": (
+                "days_with_no_row_of_any_kind is 0 and that is NOT because "
+                "every day carries an event. tier_4 emits a verdict-null "
+                "USDINR row for every catalogue-B firing, and those blanket "
+                "all 365 days. So the calendar read whole can never be empty, "
+                "and the "
+                f"{_days_without(rows, ROW_KIND_EVENT)} days that carry no "
+                "astronomical event are visible only through row_kind: filter "
+                "to row_kind=event and they appear. Absence is reportable on "
+                "the base track and only through the discriminator."),
         },
     }
 
 
-def _empty_days(rows: list[dict]) -> int:
-    """Days of the year carrying no row of either kind."""
+def _days_without(rows: list[dict], row_kind: str | None = None,
+                  predicate=None) -> int:
+    """Days of the year carrying no row that satisfies the filter.
+
+    One function and not three, because the three empty-day figures differ only
+    in which rows they count and stating them side by side is the whole point:
+    **105 days carry no event row, 0 carry no row at all, and 2 carry no row
+    with a verdict text.** The argument that produced the base track assumed a
+    single number (and assumed 32); it is three, and the gap between the first
+    two is `tier_4`, not the sky.
+    """
     import datetime as _dt
-    have = {r["date"] for r in rows}
+    keep = [r for r in rows
+            if (row_kind is None or r["row_kind"] == row_kind)
+            and (predicate is None or predicate(r))]
+    have = {r["date"] for r in keep}
     day, last, n = _dt.date(YEAR, 1, 1), _dt.date(YEAR, 12, 31), 0
     while day <= last:
         if day.strftime("%d-%b-%Y") not in have:
@@ -434,7 +485,9 @@ def main() -> int:
               f"-> {path.relative_to(ROOT)}")
     print(f"{sum(1 for r in rows if r['time_ist'])} rows print a clock time; "
           f"{sum(1 for r in rows if not r['time_ist'])} print a date only")
-    print(f"{_empty_days(rows)} days of {YEAR} carry no row of either kind")
+    print(f"{_days_without(rows, ROW_KIND_EVENT)} days of {YEAR} carry no "
+          f"astronomical event; {_days_without(rows)} carry no row of either "
+          f"kind (tier_4's USDINR rows blanket the year)")
     return 0
 
 

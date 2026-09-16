@@ -36,6 +36,8 @@ from finastro.rules import (catalogue, colocation, names,  # noqa: E402
 from finastro.rules import base as rules_base  # noqa: E402
 from finastro.rules import config_catalogue, config_rules  # noqa: E402
 from finastro.sky import Sky, civil_day_span, civil_days               # noqa: E402
+from finastro.verdicts import VENUE_OF                     # noqa: E402
+from zoneinfo import ZoneInfo                              # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SOURCE_TEXT = (ROOT / "data" / "source_2026.html").read_text(encoding="utf-8")
@@ -2079,6 +2081,19 @@ def test_configuration_coverage_is_stated_and_counted_from_the_document():
         record("The HTML apparatus places it beside the blocked list",
                h.find(f"{n_cfg}/{doc_total}") > h.find("Blocked sections"),
                "the coverage statement precedes the blocked list")
+        # The empty-day fact, ON THE PAGE. A reader who never opens the JSON and
+        # never touches the row-kind control must still be told that 105 days of
+        # the year are empty, and why the view in front of them cannot show it.
+        empty_n = CONF["row_kinds"]["base_track"][
+            "empty_days_are_output_not_gaps"]["days_with_no_event_row"]
+        record("The HTML apparatus states the empty-day count",
+               f"{empty_n} of {Y}'s 365 days" in h,
+               f"no '{empty_n}' empty-day statement in the artifact")
+        record("The HTML apparatus says WHY the empty days are invisible by "
+               "default",
+               "tier_4" in h and "blanket all 365 days" in h,
+               "the page states the count without stating that tier_4's "
+               "USDINR rows are what hide it")
 
     # 4. The panel quotes the scope report's READY count. Quoting a number that
     #    lives in two places is how a number drifts, so the panel's copy is read
@@ -2762,7 +2777,7 @@ def test_a_row_without_an_instant_carries_no_clock_time():
            not stray, f"{len(timed)} timed rows, {len(stray)} contradictory")
 
     # The population this was built for, pinned by MEASUREMENT rather than by a
-    # rule about the printed string. 662 verdict rows had no instant; one row --
+    # rule about the printed string. 858 verdict rows have no instant; one row --
     # b102 on 03-Oct-2027, a nakshatra ingress at 00:00:21 IST -- prints
     # `00:00 IST` and IS an instant, and no rule phrased over the display string
     # could have separated them.
@@ -2796,6 +2811,169 @@ def test_a_row_without_an_instant_carries_no_clock_time():
                for r in eclipses),
            f"{len(eclipses)} eclipse rows, each naming first contact and "
            f"maximum")
+
+
+def test_a_spans_displayed_end_is_the_last_day_it_holds():
+    """The half-open interval, pinned so a collapse cannot get it wrong.
+
+    A span is `[start, end)`. `t_end_utc` is the instant the condition CEASES,
+    and the civil day it lands in is a day the condition does NOT hold. A
+    collapsed row that stamps it is off by one on every closed window whose end
+    falls on a venue midnight -- in the direction that makes each window one day
+    longer than the daily rows it replaces.
+
+    THIS CHECK FAILS BOTH WAYS ON PURPOSE. It fails if a displayed end is ever
+    taken from `t_end_utc`, and it fails equally if `span_dates` is "corrected"
+    to agree with `t_end_utc` -- because it also asserts that the two DISAGREE
+    on a real, counted set of windows. A check that only asserted the convention
+    would pass just as happily on a build that had no convention at all.
+    """
+    from finastro.sky import civil_day_span, civil_days, last_day_held
+    from finastro.timezones import IST, span_dates
+
+    # 1. THE NAMED CASE, built from the same call the rule makes. b101's
+    #    February Mumbai window: the last counted Saturday is 20-Feb, and the
+    #    span's end instant is 21-Feb 00:00 IST.
+    win = civil_day_span(dt.date(2027, 2, 6), dt.date(2027, 2, 20), "mumbai")
+    end_ist = win.end.astimezone(IST).date()
+    held = last_day_held(win, "mumbai", Y)
+    record("b101's February window ends at an instant dated the NEXT day",
+           win.end.strftime("%Y-%m-%dT%H:%M:%SZ") == "2027-02-20T18:30:00Z"
+           and end_ist == dt.date(2027, 2, 21),
+           f"end {win.end}, IST date {end_ist}")
+    record("...and the last day it HOLDS is the day before that",
+           held == dt.date(2027, 2, 20)
+           and end_ist == held + dt.timedelta(days=1),
+           f"last_day_held {held}, t_end_utc's IST date {end_ist}")
+    sd = span_dates(civil_days(win, "mumbai", Y))
+    record("span_dates prints the day it holds, not the instant's date",
+           sd.last_held == "20-Feb-2027" and sd.days_in_view == 15
+           and sd.contiguous,
+           f"{sd.line()} / {sd.days_in_view} days")
+
+    # 2. THE TYPE REFUSES THE INSTANT. `datetime` is a `date` subclass, so
+    #    without the guard `span_dates([t_end_utc])` would render 21-Feb and
+    #    nothing would raise.
+    try:
+        span_dates([win.end])
+        refused = False
+    except TypeError:
+        refused = True
+    record("span_dates refuses a datetime outright",
+           refused, "a datetime was accepted as a civil day")
+    try:
+        span_dates([])
+        empty_refused = False
+    except ValueError:
+        empty_refused = True
+    record("span_dates refuses an empty day list",
+           empty_refused, "a window with no day in view was accepted")
+
+    # 3. THE WHOLE ARTIFACT. Every span group's displayed end must equal the
+    #    last civil date a row was actually built for.
+    doc = _calendar()
+    tz_of = {loc: ZoneInfo(c["tz"]) for loc, c in CONF["locations"].items()}
+    groups = collections.defaultdict(list)
+    for r in doc["rows"]:
+        if not r["t_start_utc"]:
+            continue
+        loc = (r["location"] if r["row_kind"] == "event"
+               else VENUE_OF[r["instrument"]])
+        groups[(r["row_kind"], r["event"], r.get("instrument"),
+                r.get("venue") or r.get("location"),
+                r["t_start_utc"], r["t_end_utc"], loc)].append(r)
+
+    def _parse(t):
+        return dt.datetime.strptime(t, "%Y-%m-%dT%H:%M:%SZ").replace(
+            tzinfo=dt.timezone.utc)
+
+    wrong, plus_one = [], 0
+    for key, rs in groups.items():
+        days = sorted(dt.datetime.strptime(r["date"], "%d-%b-%Y").date()
+                      for r in rs)
+        if span_dates(days).last_held != days[-1].strftime("%d-%b-%Y"):
+            wrong.append(key[1])
+        if (_parse(key[5]).astimezone(tz_of[key[6]]).date()
+                == days[-1] + dt.timedelta(days=1)):
+            plus_one += 1
+    record("Every span group's displayed end is its last row's date",
+           not wrong, f"{len(wrong)} groups disagree: {sorted(set(wrong))[:3]}")
+    record("...and the instant's own date would have been wrong on a real set",
+           plus_one >= 200,
+           f"only {plus_one} of {len(groups)} groups would move under the +1; "
+           "at zero the two readings have been conflated")
+
+
+def test_the_civil_year_clip_is_a_field_and_not_the_period_cut():
+    """`clipped_*` marks `civil_days`' year cut; `open_*` marks the period's.
+
+    They are different cuts, and a collapsed row has to tell them apart. A span
+    whose real, measured boundary falls outside the year has `open_*` FALSE --
+    correctly, because the sky supplied that boundary -- and only `clipped_*`
+    says the calendar cannot show it.
+
+    Landed on the daily rows BEFORE any collapse, for the reason `row_kind`
+    was: a discriminator added afterwards changes the population every earlier
+    figure was measured over.
+    """
+    doc = _calendar()
+    rows = doc["rows"]
+    record("Every row carries both clip flags",
+           all("clipped_start" in r and "clipped_end" in r for r in rows),
+           f"{sum(1 for r in rows if 'clipped_end' not in r)} rows without")
+
+    groups = collections.defaultdict(list)
+    for r in rows:
+        if r["t_start_utc"]:
+            groups[(r["row_kind"], r["event"], r.get("instrument"),
+                    r.get("venue") or r.get("location"),
+                    r["t_start_utc"], r["t_end_utc"])].append(r)
+    first = {k: v[0] for k, v in groups.items()}
+    cfg = CONF["row_kinds"]["time_fields"]["year_clip"]["measured_2027"]
+    got = {
+        "span_groups": len(groups),
+        "clipped_start": sum(1 for v in first.values() if v["clipped_start"]),
+        "clipped_end": sum(1 for v in first.values() if v["clipped_end"]),
+        "clipped_start_with_open_start_false": sum(
+            1 for v in first.values()
+            if v["clipped_start"] and not v["open_start"]),
+        "clipped_end_with_open_end_false": sum(
+            1 for v in first.values()
+            if v["clipped_end"] and not v["open_end"]),
+    }
+    real = [k for k, v in first.items()
+            if (v["clipped_start"] and not v["open_start"])
+            or (v["clipped_end"] and not v["open_end"])]
+    got["real_endpoint_outside_the_year"] = len(real)
+    got["of_which_no_instant"] = sum(
+        1 for k in real if first[k]["no_instant_reason"])
+    got["of_which_timed"] = len(real) - got["of_which_no_instant"]
+    off = {k: (v, cfg[k]) for k, v in got.items() if cfg[k] != v}
+    # THE VALUE IS PRINTED, NOT THE VERDICT. Every figure this build has had to
+    # withdraw was one a boolean had already reported as fine.
+    record("The clip census matches the ruling, figure by figure",
+           not off, f"measured {got}; config disagrees on {off}")
+
+    # THE DISTINCTION ITSELF, on the case it was written for. b009's first
+    # window starts 13-Dec-2026: Mercury genuinely went combust that day, so
+    # the boundary is real and `open_start` is correctly false -- and the
+    # calendar's first row for it is 01-Jan-2027.
+    b009 = [v for k, v in first.items()
+            if k[1] == "b009_mercury_combust_cycle"
+            and k[4] == "2026-12-13T18:30:00Z"]
+    record("b009's carried-in window is clipped and NOT open",
+           len(b009) == 1 and b009[0]["clipped_start"]
+           and not b009[0]["open_start"],
+           f"{len(b009)} groups: "
+           f"{[(v['clipped_start'], v['open_start']) for v in b009]}")
+
+    # AND THE OTHER SIDE OF IT: the carry-in windows are open AND clipped at
+    # once, which is exactly the pair `open_*` alone could not express.
+    both = [k for k, v in first.items()
+            if v["open_start"] and v["clipped_start"]]
+    record("A period-cut span can be open and clipped at once",
+           len(both) == 3,
+           f"{len(both)} spans are both; expected the three carry-in windows")
 
 
 def test_every_meta_count_is_split_by_row_kind():
@@ -2853,6 +3031,28 @@ def test_every_meta_count_is_split_by_row_kind():
            == cfgd["days_with_no_row_of_any_kind"],
            f"{n} days carry no event row; "
            f"{meta['days']['days_with_no_row_of_any_kind']} carry no row at all")
+
+    # AND THE FIGURE IS IN THE ARTIFACT, not only in the config that records it.
+    # The count above was recomputed here from the rows; this one asserts that
+    # `meta` PUBLISHES it. 105 is a fact about the year, and until 15-Sep-2026
+    # the only number `meta.days` carried was the zero -- which is the one a
+    # reader would have taken for the answer.
+    record("meta.days publishes all three empty-day figures, not just the zero",
+           meta["days"]["days_with_no_event_row"] == n
+           and meta["days"]["days_with_no_row_of_any_kind"] == 0
+           and meta["days"]["days_with_no_row_carrying_a_verdict_text"]
+           == cfgd["days_with_no_row_carrying_a_verdict_text"],
+           f"meta.days = {{event: "
+           f"{meta['days'].get('days_with_no_event_row')}, any: "
+           f"{meta['days'].get('days_with_no_row_of_any_kind')}, verdict_text: "
+           f"{meta['days'].get('days_with_no_row_carrying_a_verdict_text')}}}")
+    record("meta.days names tier_4 as the reason the zero is a zero",
+           "tier_4" in meta["days"].get(
+               "why_no_day_is_empty_in_the_unfiltered_view", "")
+           and "USDINR" in meta["days"][
+               "why_no_day_is_empty_in_the_unfiltered_view"],
+           "the zero is published without the reason it is a zero, which is "
+           "the reading this whole block exists to stop")
 
 
 def main() -> int:
@@ -2924,6 +3124,8 @@ def main() -> int:
     if CALENDAR_JSON.exists():
         test_row_kind_is_on_every_row_and_the_base_track_carries_no_verdict()
         test_a_row_without_an_instant_carries_no_clock_time()
+        test_a_spans_displayed_end_is_the_last_day_it_holds()
+        test_the_civil_year_clip_is_a_field_and_not_the_period_cut()
         test_every_meta_count_is_split_by_row_kind()
     else:
         record("The rendered calendar is on disk to be checked", False,

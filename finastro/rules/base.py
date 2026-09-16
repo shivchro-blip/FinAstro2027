@@ -29,7 +29,7 @@ from dataclasses import dataclass
 from typing import Callable, Iterable
 
 from ..config import CONF
-from ..sky import Sky, Span, civil_days
+from ..sky import Sky, Span, civil_days, year_clip
 from .catalogue import Section
 
 YEAR = CONF["year"]
@@ -396,6 +396,14 @@ class Firing:
     #: whether the endpoints are instants AT ALL is a fact the renderer must
     #: have in hand. `exact`, `date_only` or `anchored` -- see `sky.Span`.
     precision: str = "exact"
+    #: THE OTHER CUT. `open_start` / `open_end` above mark where
+    #: `Sky.span_start` ended the generated period; these mark where
+    #: `civil_days` dropped days for falling outside the calendar year. A span
+    #: can have a real, measured boundary and still be clipped -- 24 spans in
+    #: the 2027 build do -- and a row that collapses to a window has to be able
+    #: to say which of the two ends it is printing. See `sky.year_clip`.
+    clipped_start: bool = False
+    clipped_end: bool = False
 
     def as_dict(self) -> dict:
         return {
@@ -409,6 +417,8 @@ class Firing:
             "detail": self.detail,
             "open_start": self.open_start,
             "open_end": self.open_end,
+            "clipped_start": self.clipped_start,
+            "clipped_end": self.clipped_end,
         }
 
 
@@ -477,6 +487,10 @@ def fire(rules: list[Rule], sky: Sky, year: int = YEAR) -> list[Firing]:
         for loc in r.locations:
             spans = r.fn(sky, loc) if r.per_location else shared
             for span in spans:
+                # Computed once per (span, location), not per day: it is a
+                # property of the span's relationship to the year, and the
+                # days are what it is computed FROM.
+                clip_start, clip_end = year_clip(span, loc, year)
                 for day in civil_days(span, loc, year):
                     # The weekday half of a condition is applied HERE, after
                     # the span has been resolved to a day at this location,
@@ -485,7 +499,8 @@ def fire(rules: list[Rule], sky: Sky, year: int = YEAR) -> list[Firing]:
                         continue
                     out.append(Firing(r.id, loc, day, span.start, span.end,
                                       span.value, span.open_start,
-                                      span.open_end, r.flags, span.precision))
+                                      span.open_end, r.flags, span.precision,
+                                      clip_start, clip_end))
     out.sort(key=lambda f: (f.civil_date, f.rule_id, f.location))
     return out
 

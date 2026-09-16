@@ -515,6 +515,30 @@ def same(v1, v2):
 
 # ------------------------------------------------------------- civil days
 
+def days_touched(span: Span, loc_key: str) -> list[dt.date]:
+    """Every civil day at `loc_key` the span touches, WITH NO YEAR CLIP.
+
+    `civil_days` below is this list filtered to one year, and the two are kept
+    as one definition because the DIFFERENCE between them is a fact the calendar
+    has to report: see `year_clip`.
+
+    The half-open interval is what makes the last entry right. A span ending at
+    `2027-02-20T18:30:00Z` -- 21-Feb 00:00 IST -- does not overlap 21-Feb at
+    Mumbai, because `Span.overlaps` tests `lo < end` and `lo == end` there. The
+    last day is 20-Feb, which is also the last day a row exists for.
+    """
+    tz = ZoneInfo(CONF["locations"][loc_key]["tz"])
+    out = []
+    day = span.start.astimezone(tz).date()
+    last = span.end.astimezone(tz).date()
+    while day <= last:
+        lo, hi = civil_day_bounds(day, tz)
+        if span.overlaps(lo, hi):
+            out.append(day)
+        day += dt.timedelta(days=1)
+    return out
+
+
 def civil_days(span: Span, loc_key: str, year: int) -> list[dt.date]:
     """Every civil day of `year` at `loc_key` that the span touches.
 
@@ -523,17 +547,55 @@ def civil_days(span: Span, loc_key: str, year: int) -> list[dt.date]:
     readings, where overlap scored 74/75 against 51 for prevailing-at-sunrise.
     It is applied here unchanged, per location, because the same evidence
     governs both layers.
+
+    The `year` filter is a SECOND cut, and not the one `Span.open_start` /
+    `open_end` describe. Those mark where `Sky.span_start` ended the generated
+    period; this one drops days that fall outside the calendar year. A span can
+    have a real, measured boundary and still be clipped here -- `year_clip`
+    is the field that says so.
     """
-    tz = ZoneInfo(CONF["locations"][loc_key]["tz"])
-    out = []
-    day = span.start.astimezone(tz).date()
-    last = span.end.astimezone(tz).date()
-    while day <= last:
-        lo, hi = civil_day_bounds(day, tz)
-        if span.overlaps(lo, hi) and day.year == year:
-            out.append(day)
-        day += dt.timedelta(days=1)
-    return out
+    return [d for d in days_touched(span, loc_key) if d.year == year]
+
+
+def year_clip(span: Span, loc_key: str, year: int) -> tuple[bool, bool]:
+    """Whether `civil_days` dropped days off the start / end of this span.
+
+    THE DISTINCTION `open_start` / `open_end` DO NOT MAKE, and one a daily
+    render never needed. Under a daily render the out-of-year days simply have
+    no rows and nothing is claimed about them. A collapsed row asserts an
+    extent, and then the two cuts have to be told apart:
+
+    * `open_start` true -- the condition was ALREADY RUNNING when the generated
+      period began. There is no boundary; `Sky.span_start` is where we started
+      looking.
+    * `clipped_start` true with `open_start` false -- the boundary is REAL and
+      MEASURED, and it falls outside the year. `b009_mercury_combust_cycle`
+      starts `2026-12-13T18:30:00Z`: Mercury genuinely went combust that day,
+      and the calendar's first row for it is 01-Jan-2027.
+
+    A collapsed row that prints the true boundary starts before the file does;
+    one that prints the first day in view asserts a boundary the sky did not
+    supply. Emitting one of the two and choosing silently is the wrong-answer-
+    that-renders-plausibly shape, so both are emitted and this flag says which
+    is which.
+    """
+    touched = days_touched(span, loc_key)
+    in_view = [d for d in touched if d.year == year]
+    if not in_view:
+        return False, False
+    return touched[0] < in_view[0], touched[-1] > in_view[-1]
+
+
+def last_day_held(span: Span, loc_key: str, year: int) -> dt.date | None:
+    """The last civil day of `year` at `loc_key` the condition holds. Inclusive.
+
+    THE DISPLAYED END OF A WINDOW, and the counterpart of `Span.end`, which is
+    the exclusive instant the condition ceases. `timezones.span_dates` is what a
+    renderer calls; this is where the date comes from. See `SpanDates` for why
+    the two representations are given different types rather than a convention.
+    """
+    days = civil_days(span, loc_key, year)
+    return days[-1] if days else None
 
 
 def weekdays_in_span(span: Span, weekday: int, loc_key: str) -> list[dt.date]:
