@@ -20,6 +20,7 @@ import ast
 import collections
 import datetime as dt
 import html
+import importlib.util
 import json
 import pathlib
 import re
@@ -3055,6 +3056,191 @@ def test_every_meta_count_is_split_by_row_kind():
            "the reading this whole block exists to stop")
 
 
+# -------------------------------------------------------------------------
+# The no-instant cause census. `tools/cause_census.py` is the generator of
+# record for the four figures build/SPAN_VS_DAILY_PROPOSAL.md argues over, and
+# until 16-Sep-2026 it was the one number-producing tool in this build with
+# nothing behind it: its figures were regenerated and nothing failed when they
+# drifted. conventions.yaml said the harness recomputed them; nothing did.
+CENSUS_BLOCK = CONF["row_kinds"]["time_fields"]["instant_precision"][
+    "the_four_causes_were_re_derived"]
+
+
+def _cause_census():
+    """Import the generator of record by path -- `tools/` is not a package.
+
+    IMPORTED, NOT REIMPLEMENTED. A second copy of the counting code in this
+    file would agree with itself no matter what the generator did, which is
+    precisely the failure a harness over a generator exists to prevent.
+    """
+    spec = importlib.util.spec_from_file_location(
+        "cause_census", ROOT / "tools" / "cause_census.py")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def test_the_cause_census_figures_carry_the_population_that_produced_them():
+    """The four no-instant figures, pinned WITH the three axes that made them.
+
+    A check that pinned 331 / 142 / 105 / 11 as bare values would pass on the
+    exact defect this census exists to catch. Every figure this build has had
+    to withdraw was arithmetically correct over a set nobody had named: 282 was
+    the first cause counted on a second key and filed under the second cause,
+    45 was the Mumbai half of 105, 12 counted rows where its neighbours counted
+    firings. Not one would have been caught by a check that asserted a number
+    and not the population, unit and filter behind it.
+
+    So each axis is pinned by pinning what the figure is NOT:
+
+    * the POPULATION, by pinning the same four in all three populations --
+      three of them are invariant and would survive a wrong one, and 331,
+      which would not, is checked to occupy exactly ONE cell of the grid;
+    * the UNIT, by pinning the same four under the rows unit and by pinning
+      105 against the 150 that counting by venue produces;
+    * the FILTER, by pinning that removing it changes the answer, and that the
+      generator's own cause() agrees with `no_instant_reason` row for row.
+
+    The withdrawn figures are pinned as ABSENCES -- they must appear in no cell
+    of the grid -- rather than left withdrawn only in prose.
+    """
+    cc = _cause_census()
+    rows = _calendar()["rows"]
+    pops = cc.populations(rows)
+    names = [n.split()[0] for n in pops]                     # P1, P2, P3
+    prows = dict(zip(names, pops.values()))
+    size = {n: len(r) for n, r in prows.items()}
+    grid = {n: cc.census(r) for n, r in prows.items()}
+    cell = {(pop, c, u): v
+            for pop, g in grid.items() for c, counts in g.items()
+            for u, v in counts.items()}
+
+    axes = CENSUS_BLOCK["the_three_axes_travel_with_the_four_figures"]
+    of = axes["census_cause_of_each_key"]
+    firings = CENSUS_BLOCK["catalogue_b_firings"]
+    rowcounts = CENSUS_BLOCK["catalogue_b_rows"]
+    sens = CENSUS_BLOCK["population_sensitivity"]
+    got = {k: cell[("P1", of[k], "firings")] for k in firings}
+
+    # ---- AXIS 1, THE POPULATION. P1 is reconstructed by filter off today's
+    # artifact rather than by rebuild, which is the only reason a pre-wiring
+    # figure is checkable at all against a post-wiring file.
+    record("The census's P1 is the 5,209-row catalogue-B population the "
+           "figures name",
+           size["P1"] == 5209 and size["P3"] == len(rows),
+           f"P1 {size['P1']}  P2 {size['P2']}  P3 {size['P3']} of "
+           f"{len(rows)} rendered")
+
+    # The four themselves: config states, generator recomputes, and neither
+    # side is a literal in this file.
+    drift = {k: (v, got[k]) for k, v in firings.items() if got[k] != v}
+    record("The four catalogue-B figures are what the generator counts at "
+           "P1 / firings / no-instant",
+           not drift,
+           str(got) if not drift else f"config vs census {drift}")
+
+    # ---- AXIS 1 FROM THE OTHER SIDE, and this is the half that bites. Three
+    # of the four are invariant, so a check naming the wrong population still
+    # passes on them. Pinning all three is what makes "P1" load-bearing rather
+    # than decorative.
+    moved = {k: {pop: cell[(pop, of[k], "firings")] for pop in names}
+             for k in firings}
+    record("Each figure is pinned in all three populations, so naming the "
+           "wrong one fails",
+           all(moved[k] == {pop: sens[k][pop] for pop in names}
+               for k in firings),
+           "; ".join(f"{k} {moved[k]}" for k in firings))
+
+    record("Only the ephemeris cause is population-sensitive; the other three "
+           "are catalogue B's alone",
+           len(set(moved["date_only_ephemeris"].values())) == 3
+           and all(len(set(moved[k].values())) == 1
+                   for k in ("period_cut", "civil_day_span", "anchored")),
+           f"ephemeris {moved['date_only_ephemeris']}, the other three flat")
+
+    # 331 IS UNIQUE IN THE WHOLE GRID -- three populations x six causes x six
+    # units. No other combination of axes in this build produces it, so the
+    # figure and its provenance cannot come apart.
+    at = sorted(k for k, v in cell.items()
+                if v == firings["date_only_ephemeris"])
+    record("331 occupies exactly one cell of the census grid, and it is "
+           "P1 / date_only_ephem / firings",
+           at == [("P1", "date_only_ephem", "firings")],
+           f"{len(cell)} cells; 331 at {at}")
+
+    # ---- AXIS 2, THE UNIT. Same population, same filter, a different unit.
+    as_rows = {k: cell[("P1", of[k], "rows")] for k in firings}
+    record("The same four under the ROWS unit are the other recorded set, not "
+           "this one",
+           as_rows == rowcounts and as_rows != got,
+           f"rows {as_rows} vs firings {got}")
+
+    # 105 -> 150 is the confusion cause_census.firing_location exists to stop:
+    # Mumbai keeps three venues, so a venue key counts one firing three times.
+    # And 45 is not a third figure -- it is b101's Mumbai half, the withdrawn
+    # number, reproduced here so it stays diagnosed rather than merely denied.
+    b101 = [r for r in prows["P1"] if cc.cause(r) == "date_only_b101"]
+    by_loc = {loc: len({cc.UNITS["firings"](r) for r in b101
+                        if cc.firing_location(r) == loc})
+              for loc in sorted({cc.firing_location(r) for r in b101})}
+    record("b101 is 105 firings, 150 (rule, venue, day) triples, and 45 + 60 "
+           "by location",
+           cell[("P1", "date_only_b101", "rule-venue-day")] == 150
+           and got["civil_day_span"] == 105
+           and sorted(by_loc.values()) == [45, 60],
+           f"firings 105 = {by_loc}; by venue 150")
+
+    # STATED, NOT HIDDEN: anchored's 11 is 11 under two units, because each
+    # carry-in row belongs to a different rule. It is the one of the four whose
+    # value does not by itself identify its unit, so the population and filter
+    # checks are all that separate it from a wrong reading.
+    record("anchored is 11 firings AND 11 rules AND 12 rows, and the check "
+           "says so rather than resting on 11",
+           cell[("P1", "anchored", "firings")]
+           == cell[("P1", "anchored", "rules")] == 11
+           and cell[("P1", "anchored", "rows")] == 12,
+           "the 12-vs-11 pair is the recorded unit mix, both correct")
+
+    # ---- AXIS 3, THE FILTER. Not a display-string test, and not a no-op.
+    unfiltered = len({cc.UNITS["firings"](r) for r in prows["P1"]})
+    filtered = cell[("P1", "TOTAL no-instant", "firings")]
+    record("Dropping the no-instant filter changes the answer by a factor, "
+           "not a rounding",
+           unfiltered == 2748 and filtered == 589,
+           f"{filtered} of {unfiltered} P1 firings carry a no-instant reason")
+
+    off = [r for r in rows
+           if (cc.cause(r) is None) != (r["no_instant_reason"] is None)]
+    record("The generator's cause() is null on exactly the rows whose "
+           "no_instant_reason is null",
+           not off, f"{len(rows)} rows, {len(off)} disagreements")
+
+    # The `date_only` split is made BY RULE ID, because no_instant_reason does
+    # not make it -- b101's civil_day_span and an ephemeris date read the same
+    # in the artifact. A split that drifted would move 331 and 105 together.
+    b101_all = [r for r in prows["P1"]
+                if r["row_kind"] == "verdict" and r["event"] == cc.B101]
+    record("The date_only split by rule id picks out b101 and nothing else",
+           len(b101) == len(b101_all) == cell[("P1", "date_only_b101", "rows")]
+           and cell[("P1", "date_only_b101", "rules")] == 1,
+           f"{len(b101_all)} b101 rows over 1 rule")
+
+    # ---- THE NEAR MISSES, PINNED AS ABSENCES rather than denied in prose.
+    values = set(cell.values())
+    present = [n for n in (249, 147, 662, 45) if n in values]
+    record("The withdrawn 249, 147, 662 and 45 reproduce against no cell of "
+           "the grid",
+           not present, f"{len(cell)} cells searched; found {present}")
+
+    at282 = sorted(k for k, v in cell.items() if v == 282)
+    record("282 is the FIRST cause's (venue, date) count in P3, and appears "
+           "under no unit of the cause it was filed as",
+           at282 == [("P3", "date_only_ephem", "venue-date")]
+           and 282 not in {cell[(pop, "period_cut", u)]
+                           for pop in names for u in cc.UNITS},
+           f"282 at {at282}")
+
+
 def main() -> int:
     sky = Sky.load()
     firings = R.fire(R.REGISTRY, sky)
@@ -3127,6 +3313,7 @@ def main() -> int:
         test_a_spans_displayed_end_is_the_last_day_it_holds()
         test_the_civil_year_clip_is_a_field_and_not_the_period_cut()
         test_every_meta_count_is_split_by_row_kind()
+        test_the_cause_census_figures_carry_the_population_that_produced_them()
     else:
         record("The rendered calendar is on disk to be checked", False,
                f"{CALENDAR_JSON} missing; run python build_2027.py")

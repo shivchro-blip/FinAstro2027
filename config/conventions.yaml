@@ -3065,6 +3065,41 @@ row_kinds:
           firing. The recorded table mixed them in a single row of four: three
           columns were firings and the fourth was headed "12 rows". 12 rows and
           11 firings are both correct and neither moved.
+        the_three_axes_travel_with_the_four_figures:
+          ruled: 2026-09-16
+          why: >
+            A COUNT IS NOT A MEASUREMENT WITHOUT ITS POPULATION, ITS UNIT AND
+            ITS FILTER. Every figure this build withdrew was arithmetically
+            correct over a set nobody had named: 282 was the first cause on a
+            second key, 45 was the Mumbai half of 105, 12 counted rows where
+            its neighbours counted firings. Recording `331` alone would leave
+            the four indistinguishable from exactly those near-misses, so the
+            axes are keys here and are pinned by the harness beside the values.
+          population: >
+            P1 -- catalogue-B verdict rows only: row_kind == "verdict" and the
+            rule id does not start with `cfg_`. 5,209 of the 7,082 rendered
+            rows. Reconstructed by filter rather than by rebuild, which is what
+            makes the pre-wiring figure checkable against today's artifact.
+          unit: >
+            firings -- distinct (rule, FIRING LOCATION, civil day), the unit
+            rules.base.fire emits. Firing location is verdicts.VENUE_OF applied
+            to the instrument, NOT the venue field: Mumbai carries three
+            venues, so counting by venue turns b101's 105 into 150.
+          filter: >
+            no_instant_reason is not null. Not a display-string test -- b102
+            renders 00:00 IST from a real instant at 00:00:21 and is outside
+            this population, which is how the withdrawn 662 was built.
+          generator: tools/cause_census.py
+          asserted_by: >
+            tests/test_rule_layer.py::test_the_cause_census_figures_carry_the_
+            population_that_produced_them -- which IMPORTS the generator rather
+            than recounting, so a drift in either fails rather than agreeing
+            with itself.
+          census_cause_of_each_key:
+            date_only_ephemeris: date_only_ephem
+            period_cut: period_cut
+            civil_day_span: date_only_b101
+            anchored: anchored
         catalogue_b_firings:
           date_only_ephemeris: 331
           period_cut: 142
@@ -3075,6 +3110,31 @@ row_kinds:
           period_cut: 151
           civil_day_span: 255
           anchored: 12
+        population_sensitivity:
+          what: >
+            ONLY ONE OF THE FOUR MOVES WITH THE POPULATION, and knowing which
+            is the difference between a figure that needs its population
+            stated and three that would survive a wrong one. The ephemeris
+            windows gain rows from the configuration port (P2) and from the
+            base track (P3); b101, the carry-in cuts and the anchored rows are
+            catalogue B's alone and are identical in all three.
+          the_trap_this_closes: >
+            An invariant figure passes a check that names the wrong population.
+            331 does not, and it is the one the harness therefore pins in all
+            three -- 331 occupies exactly ONE cell of the census grid's 108.
+          date_only_ephemeris: {P1: 331, P2: 340, P3: 371}
+          period_cut:          {P1: 142, P2: 142, P3: 142}
+          civil_day_span:      {P1: 105, P2: 105, P3: 105}
+          anchored:            {P1:  11, P2:  11, P3:  11}
+        the_near_misses_are_pinned_as_absences: >
+          249, 147, 662 and 45 appear in NO cell of the grid -- three
+          populations x six causes x six units -- and the harness asserts that
+          rather than leaving them withdrawn only in prose. 282 appears in
+          exactly one cell and it is the FIRST cause's (venue, date) count in
+          P3, not anything of the second cause it was filed under. 11 is also
+          the anchored RULE count, stated here because it is the one place two
+          units agree and a check that did not say so would look stronger than
+          it is.
         what_moved_and_what_did_not: >
           NOTHING MOVED BECAUSE THE POPULATION MOVED. The same rule families
           counted against the pre-wiring, pre-base-track 5,209-row build give
@@ -3093,10 +3153,21 @@ row_kinds:
           diagnosed as nothing; they reproduce against no slicing of this build
           or of the one before it.
         the_rule_this_leaves: >
-          A FIGURE WITHOUT A GENERATOR IS NOT A MEASUREMENT. Both withdrawn sets
-          were written by hand into prose. The four above are keys, and
-          tests/test_rule_layer.py recomputes them off the artifact, so a figure
-          and the build can no longer disagree quietly.
+          A FIGURE WITHOUT A GENERATOR IS NOT A MEASUREMENT, AND A GENERATOR
+          WITHOUT A CHECK IS NOT ONE EITHER. Both withdrawn sets were written by
+          hand into prose. The four above are keys, and tests/test_rule_layer.py
+          recomputes them off the artifact, so a figure and the build can no
+          longer disagree quietly.
+          (THIS SENTENCE WAS WRITTEN BEFORE IT WAS TRUE. From 15-Sep-2026 the
+          four were keys and cause_census.py regenerated them, but no check
+          failed when they drifted -- the census was the one number-producing
+          tool in the build with nothing behind it. The check named in
+          the_three_axes_travel_with_the_four_figures.asserted_by landed
+          16-Sep-2026 and was falsified three ways before it was believed: the
+          recorded sensitivity flattened to 331/331/331, the axis map re-pointed
+          so civil_day_span claimed the ephemeris cause, and the generator's own
+          P1 widened to include cfg_ rules. Each fails; the third fails seven
+          checks.)
 
 # ====================================================== source probability
 # WHAT THIS BLOCK IS: the 2026 source's own probability labels, carried forward
