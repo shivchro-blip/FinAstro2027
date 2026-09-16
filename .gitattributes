@@ -19,3 +19,18 @@
 *.yaml -text diff
 *.html -text diff
 *.txt -text diff
+
+# THE ONE EXCEPTION, and it is an exception to `-text`, not to the policy above.
+#
+# build/STEP4_DECISIONS.md is hand-edited -- it has no generator, so its bytes
+# are whatever the last editor left. Under `-text` those bytes are committed
+# as-is, and on 16-Sep-2026 the file was found MIXED: 3,186 CRLF lines and 318
+# bare LF. Any tool that rewrites the whole file then flips all 3,504 lines, and
+# the real change -- a paragraph, a number -- is invisible inside the flip. That
+# has already happened once and nearly buried a content diff in 12,153 lines.
+#
+# `text eol=lf` pins both ends: the index blob is normalised to LF whatever the
+# working tree holds, so no later editor can reproduce that diff, and checkout
+# writes LF so tree and blob agree. No recorded sha256 depends on this file,
+# which is why the byte-exactness rule above does not reach it.
+build/STEP4_DECISIONS.md text eol=lf
