@@ -2382,7 +2382,8 @@ verdict_coverage:
       # and tier_derivation.authority says the pair wins where a name disagrees.
       #
       # SUGAR STAYS LISTED AND EMITS NOTHING. Its nine named rule groups are
-      # Chapter-2 `<section>` blocks (pp.168-175), not catalogue-B sections, so
+      # Chapter 1's `<section>` blocks at Sr.No 153-154 (pp.168-175), not
+      # catalogue-B sections, so
       # no rule was ever registered for them and there is nothing for the
       # verdict layer to attach to. Recorded in
       # verdict_coverage.unported_configuration_sections below rather than
@@ -3380,7 +3381,8 @@ source_probability:
         carries_labels: 0
       C:
         what: >
-          the 58 named instrument configuration groups of the Chapter-2 blocks --
+          the 58 named instrument configuration groups of Chapter 1's
+          configuration blocks, Sr.No 149-154 --
           13 + 6 gold, 20 + 10 silver, 7 + 2 sugar. Counted from the document by
           finastro/cfgsections.py, never from this file.
         count: 58

@@ -20,7 +20,7 @@ this page said it was. Everything below is stated completely enough to start col
 | TASK 0, TASK 0b, TASK 2 | **CLOSED.** Do not re-verify; see their sections. |
 
 **THERE IS A THIRD REGISTRY AS OF 20-Sep-2026, and every count on every page moved
-with it.** `finastro/rules/subtables.py` holds the nine Chapter-2 `<h2>`
+with it.** `finastro/rules/subtables.py` holds the nine `<h2>`
 sub-tables — 2 ported, 7 registered and blocked on a named input — and
 `verdicts.py` fires all three registries. The three denominators are
 **141/141 · 38/58 · 2/9**, they travel together, and a row's registry is readable
@@ -418,6 +418,18 @@ as-is deliberately** — "Chapter 2" is used as a name for the configuration
 chapter across a dozen pages, and renaming it is an editorial sweep of its own
 rather than something to fold into a port. Recorded here so the next reader knows
 the label is ours and not the document's.
+
+> **SWEPT 20-Sep-2026, in its own commit and as its own decision.** The name is
+> now the document's own coordinate rather than a chapter we invented: the six
+> instrument configuration blocks are **Chapter 1, Sr.No 149-154** and the ten
+> sub-tables are **Chapter 1, Sr.No 139-148**, which is where the TOC puts them
+> — the same TOC that witnesses the membership rule at Sr.No 139/140. Where the
+> `<h2>` shape already identifies the set, the chapter is simply dropped: "the
+> `<h2>` sub-tables" needs no locator to be unambiguous. Eight live places
+> changed across six files; the two generated pages were regenerated rather than
+> edited. **Historical quotations of the old wording are left standing**,
+> including the one inside TASK 2's record below, because they are quotations of
+> what a page said on a date and not statements of where the sections are.
 
 #### What landed
 

@@ -47,8 +47,8 @@ CFG = "CFG"
 SERIES_NO_RULE = "SERIES_NO_RULE"
 SUBTABLE = "SUBTABLE"
 #: A sub-table rule claims this event -- the third registry, wired
-#: 20-Sep-2026. Parallel to CFG and for the same reason: only a Chapter-2
-#: `<h2>` sub-table states this event, and no catalogue-B section does.
+#: 20-Sep-2026. Parallel to CFG and for the same reason: only an `<h2>`
+#: sub-table states this event, and no catalogue-B section does.
 #: SUBTABLE still means what it always meant -- a sub-table states it and
 #: NOBODY has written the rule -- so the two kinds must not be merged: the
 #: whole value of this file is that "no rule claims this" is a result.

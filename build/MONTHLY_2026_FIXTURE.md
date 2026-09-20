@@ -82,7 +82,7 @@ carry is a hard failure of the matcher, not a silent zero.
 | `NO_SECTION` | **9** | no section anywhere, and no series either |
 | `SERIES_NO_RULE` | **4** | the astronomy layer emits the series; no rule states a condition on it |
 | `CFG` | **2** | a configuration group claims it, and that group is not wired |
-| `SUBTABLE` | **2** | one of the nine Chapter-2 `<h2>` sub-tables outside the 58 |
+| `SUBTABLE` | **2** | one of the nine `<h2>` sub-tables outside the 58 |
 
 ## The run
 
@@ -102,7 +102,7 @@ rise, set and civil day for Mumbai and says so.
 | --- | --- | --- |
 | **reproduced** | **166** | a rule that claims the row fired inside the printed window |
 | `no_section` | 62 | nothing in the source's own rule chapters covers the event |
-| `subtable_unported` | 49 | one of the nine Chapter-2 sub-tables |
+| `subtable_unported` | 49 | one of the nine `<h2>` sub-tables |
 | `rule_blocked` | 48 | a rule claims it and is registered `blocked` on a named input |
 | `series_no_rule` | 20 | the series is emitted; no rule reads it |
 | `fires_elsewhere` | 7 | the rule runs in 2026, but not on this window |
@@ -170,7 +170,7 @@ coverage, not correctness.
 | event name | windows | why nothing fires |
 | --- | --- | --- |
 | **Bhadra** | **54** | the karana series. Bhadra (pp.120-124) VALIDATED the tithi and yoga boundaries — eight coincident edges within 25 s — and was never ported as a condition. Catalogue B has no Bhadra section and the astronomy layer emits no karana ingress series. The single largest event name in the chapter |
-| Moon Mercury in the same D9 | 36 | one of the nine Chapter-2 sub-tables. The navamsa series IS emitted, so the condition is computable today |
+| Moon Mercury in the same D9 | 36 | one of the nine `<h2>` sub-tables. The navamsa series IS emitted, so the condition is computable today |
 | Rahu/Ketu Nakshtra on Thursday | 13 | another of the nine. Both halves are emitted |
 | Total Day | 11 | `panchang.total_days` reproduces the source's own dd+mm rule **12/12** for 2026 and the layer emits 12 records. No section states a condition on them |
 | Mars in Pisces D9 | 7 | b005, blocked: a view over a field rather than over an ingress series |

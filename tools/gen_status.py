@@ -113,7 +113,7 @@ A(f"| **Catalogue B** — `<h3 class=\"section\">`, the rule sections of Chapter
   f"{len(SECTIONS)} sections | **{len(R.sections_ported())} of {len(SECTIONS)}** | "
   f"every section carries a status |")
 A(f"| **Instrument configuration sections** — `<section id=\"...\">` with an "
-  f"`<h2>`, Chapter 2 | **{cfg_total} named groups** | "
+  f"`<h2>`, Chapter 1 Sr.No 149-154 | **{cfg_total} named groups** | "
   f"**{len(CFGR.ported())} of {cfg_total}** | "
   f"**{len(CFGR.blocked_rules())} blocked, each on a named input** |")
 A(f"| **`<h2>` sub-tables** — `<section id=\"...\">` with an `<h2>` that "
@@ -402,7 +402,8 @@ A("This is the **condition** layer: dated, per location, traceable to a page. "
 A("")
 A(f"**And \"this page\" is not the whole source.** It covers catalogue B. Of "
   f"the {cfg_total} named groups of the instrument configuration sections "
-  f"(Chapter 2), **{len(CFGR.ported())} are ported and reach the rows above** "
+  f"(Chapter 1, Sr.No 149-154), **{len(CFGR.ported())} are ported and reach "
+  f"the rows above** "
   f"and {cfg_total - len(CFGR.ported())} are blocked on a named input, per "
   f"group in `build/CONFIG_PORT_REPORT.md`; "
   f"`build/CONFIG_SECTIONS_SCOPE.md` is the scope survey as it stood BEFORE "
