@@ -2729,8 +2729,8 @@ that had encoded "there are two of these" without recording that they had. That 
 the through-line of all three, and it is why they are filed as consecutive
 instances rather than in three different sections.
 
-**This section now holds THREE shapes, and they are not variants of one another.**
-The ten instances above and their detectors are the FIRST. Two more were found
+**This section now holds FOUR shapes, and they are not variants of one another.**
+The ten instances above and their detectors are the FIRST. Three more were found
 later, each because the first shape's remedies passed over it, and each carries its
 own detector because none of the first shape's detectors reaches it:
 
@@ -2739,12 +2739,13 @@ own detector because none of the first shape's detectors reaches it:
 | **1st** | **a wrong answer that renders as a plausible correct one** | the operation misfired; the result merely looked survivable | assert an expected count or content sourced from OUTSIDE the code under test |
 | **2nd** | **a correct count of the wrong set** (16-Sep-2026) | the operation is right; the population, unit or filter under it is not | state the unit and the filter beside the count, so a figure cannot be read without its population |
 | **3rd** | **code that exists, was verified, and was never connected** (20-Sep-2026) | nothing ran; there is no output at all | an end-to-end fixture against the source's own finished output |
+| **4th** | **a check that passes by reimplementing the logic it verifies** (20-Sep-2026) | the code under test never ran; a second copy of it ran instead, and agreed with the document | a check must exercise the PRODUCTION PATH, not a parallel one |
 
-Read in that order they are the three ways a build can be wrong while every check
+Read in that order they are the four ways a build can be wrong while every check
 it has is green: **the answer is wrong**, **the question is wrong**, **the answer
-was never asked for**. Each shape's own sub-section states why the preceding
-shapes' detectors miss it, which is the part that makes them separate entries
-rather than three examples of one.
+was never asked for**, and **the answer that was checked came from somewhere else**.
+Each shape's own sub-section states why the preceding shapes' detectors miss it,
+which is the part that makes them separate entries rather than four examples of one.
 
 #### The four instances
 
@@ -3548,6 +3549,201 @@ verdict rule read one property and cannot disagree about a section. `BLOCKS` kee
 the instrument, direction and printed pages it alone carries, and is checked
 against the six the predicate discovers rather than trusted as the list of them.
 Denominator **9 → 10**.
+
+#### A FOURTH SHAPE: a check that passes by reimplementing the logic it verifies · recorded 20-Sep-2026
+
+**`panchang.karana_name` named karana 57 *Shakuni* for as long as the function
+existed, and the suite that verifies Bhadra to 25 seconds could not have failed on
+it.** Not "did not" — could not. `test_bhadra_two_printings` computes its own karana
+index from the elongation, carries its own literal list of the eight Vishti numbers,
+and never calls `karana_name`, `karana_boundaries` or anything else in the karana
+half of `panchang.py`. It would have passed on *any* numbering error in the shared
+function, including one that named every karana wrongly, because the shared function
+is not on its path. **The defect was invisible for the same reason the test was
+green**, and that identity is the whole entry.
+
+> **A check that passes by reimplementing the logic it verifies.** The check is
+> correct, its expected values come from the document, and it agrees with them — and
+> the code the build actually ships never runs. What was verified is a second
+> implementation that happens to live in the test file. The pass is real; it is a
+> pass for the wrong program.
+
+**It is none of the three shapes above, and the difference is what ran.** The first
+shape is an operation that misfired into a plausible result. The second is an
+operation that ran correctly over the wrong population. The third is an operation
+that never ran at all and left silence. Here **an operation ran, produced the right
+answer, agreed with the document — and was not the operation under test.** The
+artifact was wrong throughout and the check standing over it was green, rigorous,
+and pointed somewhere else.
+
+**And it is NOT the eighth instance in a new coat**, which is the misfiling to guard
+against. Both are about a check that quietly stopped covering what it was believed
+to cover:
+
+| | the eighth instance | this one |
+| --- | --- | --- |
+| what was a literal | the check's **enumeration** — `REGISTRY + CONFIG_REGISTRY`, a list of the populations to walk | the check's **logic** — a second karana engine, index, boundaries and names, all of it |
+| when it became wrong | when the world grew a third registry, five days after it was typed | **never.** It was always a parallel path; it was never covering the shared one |
+| the remedy | *discover, do not list* | *call the thing you are checking* |
+| what a reader of the check sees | a correct census, internally consistent | a correct reproduction of the document, internally consistent |
+
+The eighth was right when written and decayed. This one was never wrong and never
+covered anything — which is worse in the one way that matters: **no change to the
+build could have exposed it.** A registry count moves when a registry lands. A
+parallel implementation stays in perfect agreement with the document forever, no
+matter what the shared function does, because the two never meet.
+
+##### The contributing cause, recorded separately: first-match-wins, one layer down
+
+The defect itself was not the test. It was this, in `karana_name`:
+
+```python
+FIXED_KARANA.get(knum - 1) or FIXED_KARANA.get(knum) or <movable>
+```
+
+against a `FIXED_KARANA` whose keys were 0-based. The first lookup is the correct
+one under those keys. The second is **the same question asked in the other
+convention**, and `or` takes whichever answers. For `num = 57` — a movable karana,
+where the 0-based lookup correctly misses — the fallback hit the 0-based key `57`
+and returned **Shakuni**, which is karana 58's name.
+
+> **A lookup that tries two conventions and takes whichever answers has decided
+> nothing. It has guaranteed that nobody will ever find out which one is right.**
+
+This is **the first-match-wins matcher again, one layer down.** §12.16's sixth
+instance is the same move at the rule level — `family` matched against two readings
+with the first hit winning, which is how `rise_venus` lost its High — and the remedy
+recorded there was an enumeration that **raises on a rule claimed twice** rather
+than taking the first. A key table is a smaller version of the same object, and this
+one was left accepting both readings of its own keys. The fix is the same in kind:
+the keys are the karana NUMBERS the document uses, and the lookup asks **once**.
+
+```python
+return FIXED_KARANA.get(num) or KARANA_NAMES[(num - 2) % 7]
+```
+
+`VISHTI_KARANAS` is now **derived** from the seven movable names rather than typed,
+so the layer holds an answer the document's own prose — *"the eight windows of each
+lunar month fall on karana numbers 8, 15, 22, 29, 36, 43, 50, 57"* — is able to
+contradict. It did. That sentence is what found this; no check did.
+
+##### The blast radius, measured rather than estimated
+
+Every figure below was measured against the build of 20-Sep-2026, the counterfactual
+column by re-introducing the defect in memory and re-running.
+
+| what consumed the numbering | with the defect | as shipped |
+| --- | --- | --- |
+| `panchang.karana_name(57)` | `Shakuni` — printed twice a lunation, seven Vishtis where the source names eight | `Vishti` |
+| `VISHTI_KARANAS`, derived from it | **7** numbers | **8** |
+| `sub_bhadra`, whose selection is that set | **86 of the section's 99** printed windows; 13 never reproduced | **99 of 99** |
+| its verdict rows, 2027 | **639** | **743** |
+| total verdict rows | 7,397 | **7,501** |
+| rows in the artifact | 7,802 | **7,906** |
+| the 2026 monthly fixture | **239 of 354** windows, 3,334 Mumbai firings | **246 of 354**, 3,352 |
+| `panchang.karana` on the astronomy records | **101 blocks in 2027 and 85 in 2026** read `Shakuni` over a Vishti karana | correct in both |
+
+Two things are worth reading off that table rather than through it.
+
+**The artifact carried it and the calendar did not.** `karana` is on every panchang
+block of `build/astronomy_2027.json` and `build/astronomy_2026.json`, and 186 blocks
+across the two years named a Vishti `Shakuni` — but no rendered calendar column
+reads the panchang block, so `calendar_2027.{json,html,csv}` never printed the wrong
+name at all. The visible cost was entirely in the SELECTION the name fed, not in the
+name: **13 windows the source prints that the calendar would have omitted, with
+nothing anywhere saying so.** A defect in a field nobody renders is not a harmless
+defect; it is a defect that can only be found downstream of itself.
+
+**Nothing published was measured over the wrong set.** Every Bhadra figure this
+build carries — 99 of 99, 743 rows, 7,501, 246 of 354, the five clip-census figures
+that moved by exactly 5, the 62 extra days on `panchang/karana` — was taken after
+the fix, and both astronomy artifacts on disk carry the post-fix sha256 and name
+karana 57 `Vishti`. The counterfactual column above exists only in memory. **No
+published number is retracted by this entry**, which is the first question a reader
+of §12.16 should ask and the one it does not usually get a clean answer to.
+
+##### What the harness would have done, and what it now does
+
+While the defect was live the five suites were green and would have stayed green.
+`test_bhadra_two_printings` runs on its own numbering, and the Bhadra port's **99 of
+99 was established before the wiring and pinned by nothing** — while the two ports
+either side of it were pinned in
+`test_the_subtable_ports_reproduce_their_own_printed_tables`. A verification that
+lives only in a rule's `notes` is a verification that cannot fail.
+
+**Four detectors are landed, not proposed, and every one was run against the defect
+before it was believed.**
+
+| the check | where | on the defect |
+| --- | --- | --- |
+| Bhadra's 99 printed windows reproduce on both boundaries within 30 s, **by firing the registered rule** | `test_the_subtable_ports_reproduce_their_own_printed_tables` | **FAIL** — 87 matched, 12 printed rows missed |
+| karana 57 is derived as a Vishti, and its 12 windows in 2026 are printed windows | same | **FAIL** — `VISHTI_KARANAS` has 7 members and 0 windows on 57 |
+| the test's own literal eight must equal `panchang.VISHTI_KARANAS`, every window it finds must be one `karana_name` also calls Vishti, and the four fixed karanas must sit on their own numbers | `test_bhadra_two_printings` | **FAIL**, all three clauses — while the seven original clauses of that same test still PASS |
+| every **executable** sub-table rule is pinned against its own printed table, the set read off the registry | `test_every_ported_subtable_rule_is_pinned_against_its_printed_table` | **FAIL** on the build as it stood this morning, naming `sub_bhadra` as the unpinned one |
+
+Suites: `test_rule_layer` **256 → 260**, `test_2026_regression` **120 → 123**.
+
+The third row states the shape's remedy exactly. **The parallel implementation
+stays** — it is a genuinely independent witness, and answering "which of the
+source's two printings is right" with the layer's own code would answer it with the
+layer. What changed is that it is **reconciled**: the local literal and the shared
+function must agree, and every window the local walk finds must be one the shared
+function also names Vishti. A parallel path is an asset; a parallel path that never
+meets the production one is this section's fourth shape.
+
+The fourth row generalises it past Bhadra, and it is the eighth instance's
+discipline applied here: the executable set is **discovered** from
+`SUBTABLE_REGISTRY` rather than listed, so the next port that lands with its
+verification in prose fails a check instead of joining Bhadra in being verified once
+and watched never.
+
+**And one direction of the 99-of-99 check is no help at all, which is the detail to
+keep.** The bidirectional form — no fired window left unmatched to a printed row —
+**passed on the defect**: 87 fired, 87 matched, nothing over-firing. Under-firing is
+invisible from our side of the comparison and visible only against the document's
+denominator. That is the third shape's lesson arriving inside the fourth shape's
+territory, and it is why `BHADRA_PRINTED` is sliced out of the section at import
+rather than counted off the series.
+
+##### The discipline this argues for
+
+> **Name the function the check is supposed to cover, and make the check call it.**
+> A test that recomputes is testing a reading of the document. A test that calls is
+> testing the build. Both are worth having; only the second fails when the build
+> breaks, and a suite of the first kind is a suite that would be green over any code
+> at all.
+
+**And the obvious question is the wrong one, which is worth stating because it was
+asked first and measured.** "Did the suite execute this function" does not separate
+the two cases. Every module-level function of the package was wrapped with a counter
+and the five suites re-run: `panchang.karana_name` was executed **1,013,396 times**
+by `test_2026_regression` alone, through `panchang.at` inside the weekday-condition
+walk. **Execution coverage was total and assertion coverage was zero.** The function
+ran a million times under a green suite and not one check ever looked at what it
+returned. A coverage tool would have reported this file as covered on the day the
+defect shipped.
+
+So the questions are about the ASSERTION, not the execution:
+
+1. **Where did the value this check compares against come from — the build, or a
+   second implementation living in the test file?** That is the whole distinction.
+   A check whose expected side is the document and whose actual side is also the
+   test file has closed a loop that the build is outside of.
+2. **Would it fail if the function it is named after were wrong?** For
+   `test_bhadra_two_printings` on 19-Sep-2026 the answer was no — demonstrably, since
+   the function *was* wrong and it did pass. `panchang.py`'s karana naming could have
+   been deleted outright and the suite would have stayed at full marks.
+3. **If a parallel implementation is wanted as an independent witness, what ties it
+   to the shared one?** Not "does it agree with the document" — both do. The tie has
+   to be an assertion that names both paths.
+
+**The through-line with the seventh and eighth instances is that all three are
+defects in CHECKS, and together they are a progression**: the seventh read the wrong
+input, the eighth walked the wrong population, and this one ran the wrong program.
+Each is invisible in the same way — the check reports `[PASS]`, and a boolean is the
+one output of this build that carries no evidence of what produced it. §12.16 has
+now spent three of its entries on the instruments rather than on the build, which is
+its least comfortable result and the one most likely to transfer.
 
 
 

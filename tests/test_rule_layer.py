@@ -3622,6 +3622,96 @@ def test_the_subtable_ports_reproduce_their_own_printed_tables() -> None:
            f"{len(th_printed)} printed, {len(th_got)} fired on Mumbai civil "
            f"days, {len(th_printed) + len(ST.THURSDAY_UNPRINTED)} of those "
            f"overlapping the session")
+    _PINNED_SUBTABLE_PORTS.update(
+        ("sub_total_days_in_year", "sub_rahu_or_ketu_nakshatra_on_a_thursday"))
+
+    # ---- Bhadra: 99 windows, both boundaries, and the point of pinning it
+    # here is WHICH CODE THE COMPARISON RUNS THROUGH. The 99-of-99 figure was
+    # established before the wiring and was not pinned afterwards, so the only
+    # checks standing over the Bhadra numbering were parallel ones --
+    # `test_bhadra_two_printings` computes its own karana index and never
+    # calls `panchang.karana_name`, which is why that function named karana 57
+    # *Shakuni* through a green suite (section 12.16, the fourth shape).
+    # Firing the registered rule runs the production path end to end:
+    # karana_name -> VISHTI_KARANAS -> the rule's selection -> these windows.
+    ist = _dt.timezone(_dt.timedelta(hours=5, minutes=30))
+
+    def at(cell_date: str, cell_time: str):
+        h, m = cell_time.split(":")
+        return _dt.datetime.strptime(cell_date, "%d-%b-%y").replace(
+            hour=int(h), minute=int(m), tzinfo=ist)
+
+    printed_windows = [(at(a, b), at(c, e)) for a, b, c, e in ST.BHADRA_PRINTED]
+    fired_windows = sorted({(f.start_utc, f.end_utc) for f in fired
+                            if f.rule_id == "sub_bhadra"
+                            and f.location == "mumbai"})
+    worst, missed, matched = 0.0, [], set()
+    for start, end in printed_windows:
+        near = min(fired_windows,
+                   key=lambda w: abs((w[0] - start).total_seconds()))
+        off = max(abs((near[0] - start).total_seconds()),
+                  abs((near[1] - end).total_seconds()))
+        if off > 30:
+            missed.append(f"{start:%d-%b-%y %H:%M} off by {off:.0f}s")
+        else:
+            matched.add(near)
+            worst = max(worst, off)
+    record("Bhadra: all 99 of the section's printed windows reproduce on "
+           "BOTH boundaries within 30 s, through the registered rule",
+           not missed and len(printed_windows) == 99,
+           f"{len(printed_windows)} printed, {len(matched)} matched, worst "
+           f"{worst:.0f}s; missed {missed}")
+    record("...and the check runs in both directions -- no fired window is "
+           "left unmatched to a printed row",
+           not (set(fired_windows) - matched),
+           f"{len(fired_windows)} fired windows, "
+           f"{len(set(fired_windows) - matched)} unmatched")
+
+    # The eighth Vishti is the whole of what the defect cost, so it is named
+    # rather than left inside the 99. 12 of 2026's 99 windows are karana 57,
+    # and under the defect the rule would have fired 87 and left those 12
+    # printed rows unreproduced.
+    from finastro.panchang import VISHTI_KARANAS as _VK
+    fired_57 = {(f.start_utc, f.end_utc) for f in fired
+                if f.rule_id == "sub_bhadra" and f.location == "mumbai"
+                and f.detail and f.detail.get("karana") == 57}
+    record("The eighth Vishti is IN the reproduced set: karana 57 is derived "
+           "as a Vishti and its windows are printed windows",
+           57 in _VK and len(fired_57) == 12
+           and fired_57 <= matched,
+           f"VISHTI_KARANAS = {_VK}; {len(fired_57)} windows on karana 57, "
+           f"all of them matched to a printed row")
+    _PINNED_SUBTABLE_PORTS.add("sub_bhadra")
+
+
+#: Which sub-table ports the check above actually pinned, recorded by the
+#: check itself rather than typed beside it. Read by the next check.
+_PINNED_SUBTABLE_PORTS: set[str] = set()
+
+
+def test_every_ported_subtable_rule_is_pinned_against_its_printed_table() -> None:
+    """No port may be verified once and then left standing on that memory.
+
+    Bhadra was: 99 of 99 was established before the wiring, recorded in the
+    rule's own notes, and pinned by nothing -- while the two ports either side
+    of it were pinned in the check above. A verification that lives only in
+    prose is a verification that cannot fail, and the karana numbering defect
+    (section 12.16, the fourth shape) survived underneath exactly that gap.
+
+    The ported set is DISCOVERED from the registry, per the eighth instance:
+    a fourth port that lands without a clause above fails here rather than
+    joining Bhadra in being verified once and watched never.
+    """
+    from finastro.rules import subtables as ST
+    ported = {r.id for r in ST.SUBTABLE_REGISTRY
+              if r.status == "executable"}
+    record("Every ported sub-table rule is pinned against its own printed "
+           "table, and the set is read off the registry",
+           ported == _PINNED_SUBTABLE_PORTS and ported,
+           f"{len(ported)} ported: {sorted(ported)}; pinned "
+           f"{sorted(_PINNED_SUBTABLE_PORTS)}; unpinned "
+           f"{sorted(ported - _PINNED_SUBTABLE_PORTS)}")
+
 
 def main() -> int:
     sky = Sky.load()
@@ -3639,6 +3729,7 @@ def main() -> int:
     test_the_three_registries_stay_three()
     test_the_supplied_verdict_check_actually_bites()
     test_the_subtable_ports_reproduce_their_own_printed_tables()
+    test_every_ported_subtable_rule_is_pinned_against_its_printed_table()
     test_axes_and_tier_derivation()
     test_labels_are_from_the_config_vocabulary()
     test_source_probability_attaches_per_rule_and_not_per_section()

@@ -783,6 +783,40 @@ def test_bhadra_two_printings():
            len(SOURCE_BHADRA_MONTHLY) == 4,
            "absent: 02-Jan, 05-Jan, 16-Jan, 25-Jan")
 
+    # ---- The parallel path, reconciled with the shared one.
+    #
+    # Everything above is computed HERE: `_karana_index` walks the elongation
+    # and `VISHTI_KARANAS` above is a literal read off the section's prose.
+    # That is the right shape for the claim this test makes -- which of the
+    # source's two printings is right is a question about the document, and
+    # answering it with the layer's own code would answer it with the layer.
+    #
+    # It is the wrong shape for a claim about the LAYER, and for five days it
+    # was the only Bhadra check in the build. `panchang.karana_name` named
+    # karana 57 *Shakuni* -- seven Vishtis per lunation where the source names
+    # eight -- and this suite stayed green throughout, because it never calls
+    # that function. Section 12.16, the fourth shape: a check must exercise
+    # the production path, not a parallel one.
+    #
+    # The two paths are now tied together. The local numbering stays -- it is
+    # the independent witness -- and it must agree with the shared function
+    # rather than merely coexist with it.
+    record("The eight Vishti numbers this test reads off the section's prose "
+           "are the eight `panchang.karana_name` derives",
+           tuple(sorted(VISHTI_KARANAS)) == pn.VISHTI_KARANAS,
+           f"local literal {tuple(sorted(VISHTI_KARANAS))} against derived "
+           f"{pn.VISHTI_KARANAS}")
+    named = {k: pn.karana_name(k) for k, _o, _z in found}
+    record("...and every window this test found is one the shared function "
+           "also calls Vishti, karana 57 included",
+           set(named.values()) == {"Vishti"} and 57 in named,
+           f"{named}")
+    record("The shared function names the four fixed karanas at their own "
+           "numbers, which is where the 0-based keys put them one early",
+           [pn.karana_name(n) for n in (1, 57, 58, 59, 60)]
+           == ["Kimstughna", "Vishti", "Shakuni", "Chatushpada", "Naga"],
+           f"{[pn.karana_name(n) for n in (1, 57, 58, 59, 60)]}")
+
 
 # ------------------------------------------------- 15. probability labels
 #: The source's probability labels sit on the prophecy blocks of the
