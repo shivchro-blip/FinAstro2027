@@ -428,7 +428,7 @@ def is_config_rule(rule) -> bool:
     correct identification for exactly as long as there were two registries
     and "not B" therefore meant "configuration".
 
-    The nine `<h2>` sub-tables are a third catalogue and they carry `b = None`
+    The `<h2>` sub-tables are a third catalogue and they carry `b = None`
     too, so the old test called every one of them a configuration group and
     routed it into `config_instruments_for`, which reads
     `rule.section.block.instrument` -- a field a `SubTable` does not have.
@@ -445,7 +445,7 @@ def is_config_rule(rule) -> bool:
 
 
 def is_subtable_rule(rule) -> bool:
-    """True for one of the nine `<h2>` sub-tables.
+    """True for one of the `<h2>` sub-tables.
 
     Sub-table rules route like catalogue-B rules and NOT like configuration
     rules: their sections name no instrument, so the instruments a row is

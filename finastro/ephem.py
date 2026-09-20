@@ -410,10 +410,26 @@ def separation(when: dt.datetime, a: str, b: str, sidereal: bool = True) -> floa
 ARC_TITHI = 12.0
 ARC_YOGA = 360.0 / 27.0
 
-#: Step for the two panchang angle scans. The shortest tithi is about 19h50m
+#: The karana's arc, and the SOURCE'S OWN number. The 2026 Bhadra section
+#: states it in its own prose -- "A Bhadra (Vishti karana) is a 6 degree step
+#: of Moon-Sun elongation" -- so this is read off the document rather than
+#: supplied, exactly as ARC_TITHI's 12 is twice it.
+ARC_KARANA = 6.0
+
+#: Step for the tithi and yoga angle scans. The shortest tithi is about 19h50m
 #: (elongation rate peaks near 14.4 deg/day) and the shortest yoga about 19h30m,
 #: so a 2-hour step cannot skip a division.
 PANCHANG_STEP = dt.timedelta(hours=2)
+
+#: The karana scan gets its own, and this is the one place the third series is
+#: not simply the tithi's at half the arc. A karana is HALF a tithi, so the
+#: shortest is about 9h55m: a 2-hour step would sample it five times where it
+#: samples the shortest tithi ten. One hour restores the tithi scan's margin.
+#: Sized off this division's own minimum duration rather than inherited,
+#: because a step that is merely small enough today is a silent skip the moment
+#: the arc halves again -- and a skipped karana is a Bhadra window that never
+#: opens, which renders as a quiet month.
+KARANA_STEP = dt.timedelta(hours=1)
 
 
 def elongation_angle(when: dt.datetime) -> float:
@@ -460,6 +476,19 @@ def angle_ingresses(angle_fn, start: dt.datetime, end: dt.datetime, arc: float,
 def tithi_ingresses(start: dt.datetime, end: dt.datetime):
     """Every tithi boundary in [start, end). 30 per lunation."""
     return angle_ingresses(elongation_angle, start, end, ARC_TITHI)
+
+
+def karana_ingresses(start: dt.datetime, end: dt.datetime):
+    """Every karana boundary in [start, end). 60 per lunation.
+
+    The same scan as `tithi_ingresses` on half its arc, which is not an
+    analogy: the source defines a Bhadra as a 6-degree step of exactly the
+    angle the tithi steps by 12, so every second one of these instants IS a
+    tithi ingress, to the second and by construction. That is the property the
+    Bhadra port is checked on.
+    """
+    return angle_ingresses(elongation_angle, start, end, ARC_KARANA,
+                           step=KARANA_STEP)
 
 
 def yoga_ingresses(start: dt.datetime, end: dt.datetime):

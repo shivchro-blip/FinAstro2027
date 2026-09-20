@@ -1006,11 +1006,20 @@ def test_source_probability_labels():
         (pathlib.Path(__file__).resolve().parent.parent / "build"
          / "astronomy_2027.json").read_text(encoding="utf-8"))["records"]})
     stale = recount["catalogue_a_count_is_stale"]
+    # The NEWEST measurement, discovered rather than named. This read
+    # `stale["measured_2026_09_15"]` and so pinned the test to one dated
+    # re-measurement; the karana series made it 27, and the only honest way to
+    # move the check was to add a line rather than edit a number. Reading the
+    # latest key keeps every earlier measurement on the record, which is the
+    # whole point of the entry -- the drift is the finding.
+    measured_keys = sorted(k for k in stale if k.startswith("measured_"))
+    latest = stale[measured_keys[-1]]
     record("Catalogue A's recorded count is stale, and the config says so and "
            "by how much",
-           cats["A"]["count"] == stale["recorded_here"]
-           and live_a == stale["measured_2026_09_15"],
-           f"recorded {cats['A']['count']}, emitted {live_a}")
+           cats["A"]["count"] == stale["recorded_here"] and live_a == latest,
+           f"recorded {cats['A']['count']}, emitted {live_a} "
+           f"(latest on record: {measured_keys[-1]} = {latest}; "
+           f"{len(measured_keys)} measurements kept)")
 
 
 # ------------------------------------ 11. the tithi and yoga boundary series

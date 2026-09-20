@@ -197,6 +197,14 @@ class Astronomy:
     yoga_to: Any = UNSET
     yoga_name_from: Any = UNSET
     yoga_name_to: Any = UNSET
+    #: The karana, added 20-Sep-2026 with the Bhadra port. Same angle as the
+    #: tithi at half the arc, so it earns its own from/to pair for the reason
+    #: the tithi does -- writing a karana into `tithi_from` would make a record
+    #: of one division claim to be a record of another.
+    karana_from: Any = UNSET            # 1..60
+    karana_to: Any = UNSET
+    karana_name_from: Any = UNSET
+    karana_name_to: Any = UNSET
     motion: Any = UNSET                 # "direct" | "retrograde" | "stationary"
     speed_deg_day: Any = UNSET
     #: Speed-class crossing records only. The calibrated Fast/Normal level this

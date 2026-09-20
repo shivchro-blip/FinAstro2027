@@ -55,6 +55,22 @@ RULES = {r.id: r for r in REGISTRY}
 CONFIG = {g.id: g for g in CONFIG_REGISTRY}
 SUBS = {r.id: r for r in SUBTABLE_REGISTRY}
 
+#: Every rule this build has, by id, whichever registry it lives in. ONE index
+#: rather than three names chained with `or` at each use site.
+#:
+#: The three names above stay, because "which registry is this in" is a real
+#: question this file asks -- line 137's `cfg_targets` needs it. What they are
+#: not is the way to ask "is this a rule at all". `mapped_rules` asked it as
+#: `t in RULES or t in CONFIG`, written when there were two registries, and
+#: after the third arrived it silently dropped every `sub_` rule out of the
+#: mapped set: all three sub-table ports were reported under "rules no source
+#: row maps to" while the map named them. STEP4_DECISIONS section 12.16's
+#: eighth instance, on a line that section's own ninth instance did not reach.
+ALL_RULES = {**RULES, **CONFIG, **SUBS}
+assert len(ALL_RULES) == len(RULES) + len(CONFIG) + len(SUBS), (
+    "a rule id is in two registries at once; the three denominators only stay "
+    "three if the ids do")
+
 
 # ------------------------------------------------------------------ direction
 #: Words by which either side states a direction. Applied to the source's
@@ -205,7 +221,7 @@ def verdict_compare(results) -> dict:
             # Three registries. A KeyError here used to mean a typo in
             # the map; since 20-Sep-2026 it would mean a registry this
             # function does not know about, which is worth the crash.
-            rr = RULES.get(t) or CONFIG.get(t) or SUBS[t]
+            rr = ALL_RULES[t]
             if rr.verdict_text:
                 ours = rr.verdict_text
                 break
@@ -257,9 +273,9 @@ def source_self_consistency() -> dict:
         kind, targets, _note = MM.MAP[row.event]
         if kind != MM.B:
             continue
-        ours = next(((RULES.get(t) or CONFIG.get(t)).verdict_text
-                     for t in targets if (t in RULES or t in CONFIG)
-                     and (RULES.get(t) or CONFIG.get(t)).verdict_text), None)
+        ours = next((ALL_RULES[t].verdict_text
+                     for t in targets if t in ALL_RULES
+                     and ALL_RULES[t].verdict_text), None)
         d_ours, d_theirs = direction(ours), direction(row.inference)
         if d_ours is None or d_theirs is None or "both" in (d_ours, d_theirs):
             continue
@@ -297,7 +313,7 @@ def extras(results, by_rule) -> dict:
                 d += dt.timedelta(days=1)
 
     mapped_rules = {t for _k, ts, _n in MM.MAP.values() for t in ts
-                    if t in RULES or t in CONFIG}
+                    if t in ALL_RULES}
     per_rule = collections.Counter()
     per_rule_runs = collections.Counter()
     per_family = collections.Counter()
@@ -320,7 +336,7 @@ def extras(results, by_rule) -> dict:
                        if (b - a).days > 1)
         per_rule[rid] = len(extra)
         per_rule_runs[rid] = runs
-        fam = (RULES.get(rid) or CONFIG.get(rid) or SUBS[rid]).rule_family
+        fam = ALL_RULES[rid].rule_family
         per_family[fam] += len(extra)
         per_family_runs[fam] += runs
         total += len(extra)
@@ -333,7 +349,7 @@ def extras(results, by_rule) -> dict:
         rid for rid in by_rule
         if rid not in mapped_rules and by_rule[rid].get(VENUE))
     views = [r for r in unmapped_rules
-             if (RULES.get(r) or CONFIG.get(r) or SUBS[r]).rule_family.startswith("reference/")]
+             if ALL_RULES[r].rule_family.startswith("reference/")]
     conditions = [r for r in unmapped_rules if r not in set(views)]
     return {
         "total_extra_days_on_mapped_rules": total,
@@ -351,7 +367,7 @@ def extras(results, by_rule) -> dict:
         "of_those_conditions": len(conditions),
         "condition_rules_no_source_row_maps_to": conditions,
         "condition_rule_families": dict(collections.Counter(
-            (RULES.get(r) or CONFIG.get(r) or SUBS[r]).rule_family for r in conditions)
+            ALL_RULES[r].rule_family for r in conditions)
             .most_common()),
     }
 

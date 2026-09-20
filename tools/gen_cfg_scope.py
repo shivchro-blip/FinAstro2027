@@ -421,11 +421,13 @@ def main() -> None:
     A("")
     A("## What is NOT in the 58")
     A("")
+    _cfgsec = __import__("finastro.cfgsections", fromlist=["x"])
     A("Reported so the count is not read as the whole of the unported "
-      "configuration material. The same chapter carries **nine further `<h2>` "
-      "sub-tables** that are neither catalogue B nor one of these six blocks:")
+      "configuration material. The same chapter carries "
+      f"**{len(_cfgsec.other_h2_tables())} further `<h2>` sub-tables** that "
+      "are neither catalogue B nor one of these six blocks:")
     A("")
-    for t in __import__("finastro.cfgsections", fromlist=["x"]).other_h2_tables():
+    for t in _cfgsec.other_h2_tables():
         A(f"* {t}")
     A("")
     A("*Kshin (Malefic) Moon* is load-bearing rather than incidental: "

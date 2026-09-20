@@ -2705,22 +2705,32 @@ alias was the reason it was *empty*. §12.16 scopes what porting them would take
 This is the most transferable thing the build has produced, and it does not belong
 scattered across four `corrections_on_record` entries where a reader meets it once
 and files it as a detail of the layer it happened in. **A wrong answer that renders
-as a plausible correct one** is the shape the build keeps producing, seven times so
+as a plausible correct one** is the shape the build keeps producing, ten times so
 far -- the four below, the measured fifth, a sixth that is the FIX for the
-third having the same shape as the third, and a seventh in which **the CHECK was the
-wrong thing, not the code it checked**. Every instance was silent: no exception, no
-failing assertion, no log line. Each was found by a check aimed at the OUTPUT
-rather than at the code that produced it, and in three of the four the code was
-read, understood and believed before the output was looked at.
+third having the same shape as the third, a seventh in which **the CHECK was the
+wrong thing, not the code it checked**, and -- added 20-Sep-2026, all three out of
+the third registry -- an eighth in which **an enumeration written as a literal
+stopped being one**, a ninth in which **the fixture built to detect the third shape
+had the third shape**, and a tenth in which **a negative predicate used as a
+positive identity went wrong in four places at once**. Every instance was silent:
+no exception, no failing assertion, no log line. Each was found by a check aimed at
+the OUTPUT rather than at the code that produced it, and in three of the four the
+code was read, understood and believed before the output was looked at.
 
-**Two of the seven were produced by work done to fix earlier ones** -- the sixth by
+**Three of the ten were produced by work done to fix earlier ones** -- the sixth by
 the fix for the third, the seventh by a check written to satisfy this section's own
-discipline. Remediation is not a safe region of this build. It is where two of the
-seven instances came from, and the sub-section below the seventh says why that
-follows rather than surprises.
+discipline, and the eighth by that same check a second time. Remediation is not a
+safe region of this build. It is where three of the ten instances came from, and
+the sub-section below the seventh says why that follows rather than surprises.
+
+**And the eighth, ninth and tenth arrived together, out of one change.** Adding a
+third registry did not introduce three unrelated defects; it revealed three places
+that had encoded "there are two of these" without recording that they had. That is
+the through-line of all three, and it is why they are filed as consecutive
+instances rather than in three different sections.
 
 **This section now holds THREE shapes, and they are not variants of one another.**
-The seven instances above and their detectors are the FIRST. Two more were found
+The ten instances above and their detectors are the FIRST. Two more were found
 later, each because the first shape's remedies passed over it, and each carries its
 own detector because none of the first shape's detectors reaches it:
 
@@ -3361,6 +3371,183 @@ half-finished feature, it is a zero-finished feature with a passing test.** Its
 cost is not proportional to how much of it is built. Instance 2 was 38 fully
 verified group ports at **0** rows, and the last step — one condition in
 `build_verdicts` — was worth all 1,468.
+
+#### The eighth instance — an enumeration written as a literal · recorded 20-Sep-2026
+
+**The check written to satisfy this section's own third-shape discipline was itself
+an instance of its second shape, and it kept passing while wrong.** This is the
+third instance produced by remediation and the second in which the CHECK was the
+defect rather than the code under it, so the pattern the seventh instance named
+holds rather than repeats by accident.
+
+`test_a_graded_input_class_that_no_rule_claims_is_named` cross-references
+`rules.base.INPUT_CERTAINTY` against the `inputs=` of every registered rule and
+names any graded class no rule claims. Written on **15-Sep-2026**, on a build with
+**two** registries, it summed them **by name**:
+
+```python
+for rule in list(R.REGISTRY) + list(R.CONFIG_REGISTRY):     # the defect
+```
+
+On 20-Sep-2026 `sub_total_days_in_year` claimed `calendar/total_day` — which is
+exactly what wiring TASK 1a looks like from this check's side, and the one
+transition the check was explicitly falsified against before it was believed. **It
+went on passing.** The rule that claimed the key sat in `SUBTABLE_REGISTRY`, a
+registry the check could not see, so the census was a correct count over a
+population two registries wide against a build three registries wide, and
+`calendar/total_day` was still reported unclaimed after a rule claimed it.
+
+| | what the check asserted | what was true |
+| --- | --- | --- |
+| registries walked | 2, by name | 3 |
+| rules in the census | 229 | 231 |
+| `calendar/total_day` | unclaimed, TASK 1a still owed | claimed by `sub_total_days_in_year`, ported and verified 12/12 |
+| the check's own result | PASS | PASS |
+
+**The lesson is narrower than "print what the check read", and that is why this is
+its own entry.** The check *did* print what it read — the full census, every graded
+class beside the number of rules declaring it — and the printed census was
+internally consistent, because a rule the check cannot see also cannot appear in
+its output. The discipline that would have caught this is about how the population
+was *obtained*, not about how the result was reported:
+
+> **An enumeration written as a literal stops being an enumeration the moment the
+> thing it enumerates can grow. Discover, do not list.**
+
+A literal list is a correct statement of a population *at the moment it is typed*,
+and it carries no mechanism to notice it has stopped being one. It does not decay
+into an error; it decays into a **smaller correct answer to a question nobody
+re-asked**. `REGISTRY` and `CONFIG_REGISTRY` were the complete set when that line
+was written, and the line was right for five days.
+
+It now discovers:
+
+```python
+registries = [v for k, v in vars(R).items()
+              if k.endswith("REGISTRY") and isinstance(v, list)]
+```
+
+with `len(registries) == 3` recorded **beside** the census rather than in place of
+it. The distinction is the whole point: the count is a tripwire that must be
+updated deliberately when a fourth registry lands, and the census is derived from
+whatever is actually there. A literal used as a tripwire fails loudly when the
+world moves; a literal used as an enumeration fails silently. **Same constant,
+opposite properties, and which one it is depends entirely on whether anything
+reads it.**
+
+**Found only by running it against a build where the answer was known to have
+changed.** No suite went red. The widening of 20-Sep-2026 shows the discipline
+working the other way: `subtables.SUBTABLE_REGISTRY` is checked against
+`subtable_catalogue.SUBTABLES`, a count the *document* produces, so a section
+gaining a registry entry — or the document gaining a section — cannot pass quietly
+in either direction. It duly failed the moment Bhadra joined: *9 sub-table rules
+against 10 sections in the document.*
+
+#### The ninth instance, and the sharpest this section holds — the fixture built to detect the third shape had the third shape · recorded 20-Sep-2026
+
+**`build/MONTHLY_2026_FIXTURE.md` is named above as *the* detector for the third
+shape.** It found instances 2 and 4 precisely because its denominator is the
+document's, so a window the layer never attempts is a *miss* rather than an
+absence. On 20-Sep-2026, with TASK 1a and 1b ported, verified against their own
+sections' printed rows, registered, and wired into `verdicts.py`, the fixture was
+re-run and reported:
+
+```
+168 of 354 windows      <-- the post-wire number, unchanged
+```
+
+The correct figure was **192**. The two ports contribute exactly **11 + 13 = 24**,
+which is the whole of what the two sections print, and none of it was visible,
+because **the instrument that measures coverage could not see the third registry**
+— in two independent places:
+
+| where | what it did | consequence |
+| --- | --- | --- |
+| `finastro/monthlymap.py` | classified *Total Days in Year* and *Rahu or Ketu Nakshtra on a Thursday* as `subtable_unported` | both events reported as gaps after they had been closed |
+| `tools/monthly_match.py` | fired `REGISTRY` and `CONFIG_REGISTRY` | no `sub_` rule could fire, so no window could be claimed |
+
+**This is the third shape occurring inside the fixture built to detect the third
+shape, and it is the sharpest instance this section holds.** Every other instance
+is a defect in the thing being measured. This one is a defect in the *measure* —
+and it fails in the single direction that is indistinguishable from the defect the
+measure exists to find. A port that was never wired and a port that was wired but
+invisible to the fixture produce **the same number on the same page**: 168, with
+the same 49 `subtable_unported` windows listed beneath it. Had the ports genuinely
+not been connected, the fixture would have printed exactly this.
+
+**The inversion, plainly.** The third shape's detector is "an end-to-end fixture
+against the source's own finished output", and its power comes from the
+denominator being the document's rather than ours. The *numerator* is still ours. A
+fixture with the document's denominator and a stale numerator does not under-report
+by a little — it reports the pre-port state as though it were the post-port state,
+with full confidence and no gap anywhere in its own output.
+
+Fixed in both places: `monthly_match` fires all three registries, and
+`monthlymap`'s `SUBTABLE` outcome means what it always meant — a sub-table states
+the event — with `subtable_unported` reserved for the ones still blocked. The
+progression **166 → 168 → 192** is the record, and the middle number is the one
+that stood while the ports were already live.
+
+> **A detector's denominator being independent of the build does not make its
+> numerator independent of the build.** Check the measure against a transition
+> whose size is known in advance: the two ports were worth 11 and 13 printed
+> windows before either was written, so a re-run that moved by anything other than
+> 24 was answerable on the spot. **A coverage number that does not move when
+> coverage moves is a failing check reporting PASS.**
+
+#### The tenth instance — a negative predicate used as a positive identity · recorded 20-Sep-2026
+
+**"Not a configuration rule" had been standing in for "a catalogue-B rule" in four
+places, and the third registry made all four wrong at the same instant.** Not four
+symptoms of one bug — four independent pieces of code, written at different times
+by the same reasoning, each correct for exactly as long as the world held two
+categories.
+
+| | the predicate | what broke when a third registry existed |
+| --- | --- | --- |
+| `verdicts.is_config_rule` | `rule.section.catalogue_b is None` | a `SubTable` also carries `b = None`, so every sub-table rule was classified as a configuration rule |
+| `tools/cause_census.py` | P1 as "all verdict rows that are not `cfg_`" | P1 went **5,209 → 5,314** with no catalogue-B rule changing — a population growing by rows belonging to neither of its two categories |
+| `tools/gen_status.py` | the status page's row split, same predicate | 81 sub-table rows reported under catalogue B, inflating the one denominator this build maintains three registries to protect |
+| `tools/monthly_match.py` | three rule lookups, same predicate | sub-table rules resolved as configuration rules inside the fixture's own attribution |
+
+All four are now **positive** tests — `isinstance(rule.section, SubTable)`, or an
+explicit `sub_` prefix — and P1 is back to **5,209** with its four census figures
+back at **331 / 142 / 105 / 11**.
+
+> **A negative predicate used as a positive identity survives exactly as long as
+> there are two categories.** `not A` and `B` are the same set under a closed world
+> of two, and nothing in the code records that the equivalence depends on the
+> count. When a third category arrives, `not A` silently acquires it — and it
+> acquires it in **every** place the shortcut was taken, simultaneously, with no
+> single change to point at.
+
+**Why this is worse than an ordinary wrong predicate.** A wrong predicate is wrong
+from the day it is written and has a chance of being caught by the first test over
+it. This one is *right* from the day it is written, is exercised correctly
+thousands of times, and becomes wrong on a day nobody edited it. The defect's
+commit is the commit that added the third registry — which changed none of the four
+files.
+
+**And the same reasoning was live in this build's membership rules until today,
+which is how Bhadra stayed outside every registry.**
+`cfgsections.other_h2_tables()` defined the sub-tables as "the `<h2>` sections that
+are not the six instrument blocks", implemented as a byte range from
+`<section id="kshin-moon">` to `<section id="gold-bullish">` — a negative identity
+with a *document range* standing in for it. The range excluded `sec-142` for no
+reason the document supports: Bhadra carries the identical markup, and the
+document's own table of contents lists it one row above Kshin Moon, in the same
+chapter, at Sr.No 139.
+
+It is now the positive one: a configuration block's `<h2>` **states a direction**
+(*Gold — Bullish Configuration*), a sub-table's does not, and
+`cfgsections.is_config_heading()` is the single place that decides. That predicate
+is the same fact `config_catalogue.check_verdict` and
+`subtable_catalogue.check_no_verdict` already turn on — a block's heading carries
+half of its section's verdict, a sub-table's carries none — so membership and the
+verdict rule read one property and cannot disagree about a section. `BLOCKS` keeps
+the instrument, direction and printed pages it alone carries, and is checked
+against the six the predicate discovers rather than trusted as the list of them.
+Denominator **9 → 10**.
 
 
 

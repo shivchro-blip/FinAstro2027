@@ -10,9 +10,9 @@ Three counts, because there are three catalogues in this document and only one o
 | --- | --- | --- | --- |
 | **Catalogue B** — `<h3 class="section">`, the rule sections of Chapter 1 | 141 sections | **141 of 141** | every section carries a status |
 | **Instrument configuration sections** — `<section id="...">` with an `<h2>`, Chapter 2 | **58 named groups** | **38 of 58** | **20 blocked, each on a named input** |
-| **Chapter-2 `<h2>` sub-tables** — `<section id="...">` with an `<h2>` and no named groups | **9 sub-tables** | **2 of 9** | **7 blocked or out of scope, each on a named input** |
+| **`<h2>` sub-tables** — `<section id="...">` with an `<h2>` that states no direction | **10 sub-tables** | **3 of 10** | **7 blocked or out of scope, each on a named input** |
 
-**So: catalogue B 141/141 · configuration sections 38/58 · sub-tables 2/9.** THREE DENOMINATORS OVER THREE SHAPES OF MARKUP, and none of them is in either of the others. That separation is what keeps "141 of 141" honest: it is a statement about `<h3 class="section">` and about nothing else. All three DO feed the calendar — `verdicts.py` fires all three registries — and the 6,758 verdict rows split **5,209 catalogue B · 1,468 configuration · 81 sub-table**.
+**So: catalogue B 141/141 · configuration sections 38/58 · sub-tables 3/10.** THREE DENOMINATORS OVER THREE SHAPES OF MARKUP, and none of them is in either of the others. That separation is what keeps "141 of 141" honest: it is a statement about `<h3 class="section">` and about nothing else. All three DO feed the calendar — `verdicts.py` fires all three registries — and the 7,501 verdict rows split **5,209 catalogue B · 1,468 configuration · 824 sub-table**.
 
 **A row's registry is readable off its `event` field with no lookup**: `cfg_<block>_` for a configuration group, `sub_` for a sub-table, and `b<nn>` or a panchang family name for catalogue B. That convention is asserted at registration rather than left to discipline, because the one thing that would make all three of these numbers wrong at once is a rule in the wrong registry.
 
@@ -36,7 +36,7 @@ The counts, from the document (read out of `data/source_2026.html` at generation
 
 **Ported IS wired, since the 14-Sep-2026 change to `verdicts.py`, and the distinction this section used to draw is the one thing about it that is now out of date.** `build_verdicts()` fires both registries; `config_instruments_for` routes a group to the instrument its BLOCK names rather than through the rulership table, so a *Gold — Bullish* group reaches gold because the source filed it under gold.
 
-**1,468 of 6,758 verdict rows in `build/calendar_2027.*` originate in a configuration section**, from 26 groups, split **gold-bearish 167** · **gold-bullish 61** · **silver-bearish 164** · **silver-bullish 923** · **sugar-bullish 153**.
+**1,468 of 7,501 verdict rows in `build/calendar_2027.*` originate in a configuration section**, from 26 groups, split **gold-bearish 167** · **gold-bullish 61** · **silver-bearish 164** · **silver-bullish 923** · **sugar-bullish 153**.
 
 **How to tell one apart, because the old test no longer works.** This page used to say that no row originates in a configuration section and offered a check: the `event_section` field never reads `gold-bullish`. It still never does — `event_section` carries the group's own printed title, such as `Venus Alone in Leo or Libra — Bearish`, and never the block id. The test passes and its conclusion is now wrong. **The field that separates them is `event`**, whose rule id begins `cfg_<block>_` for a configuration row and `b<nn>` or a panchang family name for a catalogue-B one.
 
@@ -50,12 +50,13 @@ Gold and silver reach tier 1 through their MCX legs (`MCXGOLD`, `MCXSILVER`); th
 
 ### The third body of material — registered since 20-Sep-2026, and two of it ported
 
-The same chapter carries nine further `<h2>` sub-tables that are neither catalogue B nor any of the six blocks above: *Kshin (Malefic) Moon*, *Total Days in Year*, *Rahu or Ketu Nakshtra on a Thursday*, *Moon Mercury in the Same Navamsh (D9)*, *Rainfall Calculation*, *Mars With or Aspecting Mercury*, *Eclipse*, *Planet Vargottam in Their Own Nakshatra*, *Moon Rashi Parivartan Yog with Other Planets in D1*.
+The same chapter carries 10 further `<h2>` sub-tables that are neither catalogue B nor any of the six blocks above: *Bhadra -- verified against Swiss Ephemeris*, *Kshin (Malefic) Moon*, *Total Days in Year*, *Rahu or Ketu Nakshtra on a Thursday*, *Moon Mercury in the Same Navamsh (D9)*, *Rainfall Calculation*, *Mars With or Aspecting Mercury*, *Eclipse*, *Planet Vargottam in Their Own Nakshatra*, *Moon Rashi Parivartan Yog with Other Planets in D1*.
 
-**This heading read "There is a third UNPORTED body of material" until 20-Sep-2026.** These nine now have a registry of their own and a denominator of their own, at the top of this page: 2 of 9 ported, 7 registered and blocked with the input each waits on NAMED. Registering the blocked seven rather than describing them in prose is what makes "blocked on what" countable off the registry instead of parsed out of a sentence.
+**This heading read "There is a third UNPORTED body of material" until 20-Sep-2026.** These nine now have a registry of their own and a denominator of their own, at the top of this page: 3 of 10 ported, 7 registered and blocked with the input each waits on NAMED. Registering the blocked seven rather than describing them in prose is what makes "blocked on what" countable off the registry instead of parsed out of a sentence.
 
 | sub-table | status | rule | blocked on |
 | --- | --- | --- | --- |
+| Bhadra — verified against Swiss Ephemeris (pp. 120–124) | **ported** | `sub_bhadra` | — |
 | Total Days in Year (p. 126) | **ported** | `sub_total_days_in_year` | — |
 | Rahu or Ketu Nakshtra on a Thursday (p. 127) | **ported** | `sub_rahu_or_ketu_nakshatra_on_a_thursday` | — |
 | Kshin (Malefic) Moon (p. 125) | blocked | `sub_kshin_malefic_moon` | `scope` |

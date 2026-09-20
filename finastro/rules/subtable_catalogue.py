@@ -52,7 +52,7 @@ import html as _html
 import re
 from dataclasses import dataclass
 
-from ..cfgsections import SOURCE
+from ..cfgsections import SOURCE, h2_sections
 from .catalogue import Table
 
 _TAG = re.compile(r"<[^>]+>")
@@ -60,12 +60,10 @@ _H2 = re.compile(r"<h2[^>]*>(.*?)</h2>", re.S)
 _PAGE = re.compile(r'<span class="page-tag">(.*?)</span>', re.S)
 _SECTION_OPEN = re.compile(r'<section id="([^"]+)"')
 
-#: The stretch of the document these live in: from the first sub-table to
-#: the first instrument block. Both markers are the ones
-#: `cfgsections.other_h2_tables` already uses, so the two cannot drift apart
-#: and disagree about which sections are in the nine.
-_FIRST = '<section id="kshin-moon"'
-_AFTER = '<section id="gold-bullish"'
+#: Membership comes from `cfgsections.h2_sections()` -- the SHAPE, read over
+#: the whole document -- and not from a byte range. The two cannot drift apart
+#: because there is now only one of them: `other_h2_tables()` is the same call
+#: with the headings taken where this takes the ids.
 
 
 def _text(fragment: str) -> str:
@@ -133,17 +131,25 @@ class SubTable:
 
 
 def _parse() -> tuple[SubTable, ...]:
+    """The sub-tables, discovered by shape and sliced one section at a time.
+
+    `h2_sections()` decides membership; this only finds each member's bounds.
+    A section ends at its own `</section>`, not at the next section's opening
+    tag: Bhadra's close is followed by the chapter's `<nav>` Contents, and
+    swallowing that would put nine headings into one section's body text and
+    make `carries()` accept a condition sliced from a neighbour.
+    """
     src = SOURCE.read_text(encoding="utf-8", errors="replace")
-    seg = src[src.index(_FIRST): src.index(_AFTER)]
-    starts = [m.start() for m in _SECTION_OPEN.finditer(seg)]
     out = []
-    for i, a in enumerate(starts):
-        frag = seg[a: starts[i + 1] if i + 1 < len(starts) else len(seg)]
-        sid = _SECTION_OPEN.match(seg, a).group(1)
+    for n, sid in enumerate(
+            (s for s, _, cfg in h2_sections() if not cfg), start=1):
+        a = src.index(f'<section id="{sid}"')
+        close = src.find("</section>", a)
+        frag = src[a: close if close != -1 else len(src)]
         h2 = _H2.search(frag)
         page = _PAGE.search(frag)
         out.append(SubTable(
-            sid=sid, n=i + 1,
+            sid=sid, n=n,
             title=_text(h2.group(1)) if h2 else "",
             page=_text(page.group(1)) if page else "",
             body_text=_text(frag),

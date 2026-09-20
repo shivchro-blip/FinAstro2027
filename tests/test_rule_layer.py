@@ -3284,18 +3284,24 @@ def test_the_cause_census_figures_carry_the_population_that_produced_them():
 # would agree with the registry by construction and could not fail. Wiring
 # either port empties its entry and fails this check, which is the coupling:
 # the port cannot land without this record moving with it.
-EXPECTED_UNCLAIMED_INPUT_GRADES = {
-    # `calendar/total_day` sat here until 20-Sep-2026 and does not any more:
-    # `sub_total_days_in_year` claims it, which is what wiring TASK 1a looks
-    # like from this check's side. The entry having to move is the coupling
-    # working as designed.
-    "panchang/karana":
-        "the karana number and name are computed on every panchang record and "
-        "verified to 25 s against the Bhadra section's 16 January boundaries "
-        "(STEP3_REPORT section 6.8), and there is no karana event class at "
-        "all, so 0 of the source's 54 printed Bhadra windows are reproduced. "
-        "TASK 1d",
-}
+#: EMPTY, and that is a result rather than an absence.
+#:
+#: Both entries this held were cleared on 20-Sep-2026 by the ports that owed
+#: them, which is the coupling working exactly as designed -- neither port
+#: could land without this record moving:
+#:
+#:   * `calendar/total_day` -- claimed by `sub_total_days_in_year`;
+#:   * `panchang/karana` -- claimed by `sub_bhadra`. It had read "there is no
+#:     karana event class at all, so 0 of the source's 54 printed Bhadra
+#:     windows are reproduced". Both halves are now false: `karana_ingress`
+#:     emits 866 records a year, and the count was never 54 -- the SECTION
+#:     prints 99 and 54 is the monthly calendar's.
+#:
+#: An empty expected set still falsifies. The check below asserts equality
+#: with what the registries produce, so a NEW graded class that no rule claims
+#: fails it, and so does a rule declaring an ungraded input. What it cannot do
+#: any more is pass while an owed port sits unwritten, because there are none.
+EXPECTED_UNCLAIMED_INPUT_GRADES: dict[str, str] = {}
 
 
 def test_a_graded_input_class_that_no_rule_claims_is_named() -> None:
@@ -3358,10 +3364,95 @@ def test_a_graded_input_class_that_no_rule_claims_is_named() -> None:
            f"each with its reason and its TASK 1 entry")
 
 
+def test_the_subtable_membership_rule_is_readable_from_the_document() -> None:
+    """Which sections ARE the sub-tables, checked against the source itself.
+
+    The other three denominators are pinned this way already -- catalogue B
+    counts `<h3 class="section">` in the document, the 58 counts named groups
+    in the document -- and until 20-Sep-2026 this one was not. It was a byte
+    range from `<section id="kshin-moon">` to `<section id="gold-bullish">`:
+    a membership rule that states where the reading happened to start and
+    nothing about the page. It excluded Bhadra, which carries the identical
+    markup, for no reason the document supports.
+
+    So this reads `data/source_2026.html` directly, with no help from
+    `cfgsections`, and checks the rule that file implements:
+
+      * the universe is `<section id>` carrying an `<h2>`. Nothing else in the
+        document has that shape;
+      * a CONFIGURATION BLOCK is one whose `<h2>` states a direction;
+      * a SUB-TABLE is one whose `<h2>` does not.
+
+    The predicate is the same fact `config_catalogue.check_verdict` and
+    `subtable_catalogue.check_no_verdict` already turn on -- a block's heading
+    carries half of its section's verdict, a sub-table's carries none -- so
+    membership and the verdict rule cannot disagree about a section.
+
+    THE DOCUMENT'S OWN TABLE OF CONTENTS IS THE INDEPENDENT WITNESS, and it is
+    checked here rather than cited: the TOC lists Bhadra at Sr.No 139 and Kshin
+    Moon at 140, consecutive rows of one chapter listing. A range starting at
+    Kshin Moon was cutting a document-ordered run one row in.
+    """
+    import re as _re
+    raw = SOURCE_TEXT
+    flat = lambda x: _re.sub(r"\s+", " ", html.unescape(
+        _re.sub(r"<[^>]+>", " ", x))).strip()
+
+    found = [(m.start(), m.group(1))
+             for m in _re.finditer(r'<section id="([^"]+)"', raw)]
+    universe = []
+    for i, (pos, sid) in enumerate(found):
+        end = found[i + 1][0] if i + 1 < len(found) else len(raw)
+        h2 = _re.search(r"<h2[^>]*>(.*?)</h2>", raw[pos:end], _re.S)
+        if h2 and flat(h2.group(1)):
+            universe.append((sid, flat(h2.group(1))))
+
+    directional = _re.compile(
+        r"(?:Bullish|Bearish)\s+Configuration", _re.I)
+    blocks = [sid for sid, h in universe if directional.search(h)]
+    subs = [sid for sid, h in universe if not directional.search(h)]
+
+    record("Every `<section id>` in the document carries an `<h2>`",
+           len(universe) == len(found),
+           f"{len(universe)} of {len(found)} sections have one")
+    record("The document splits into configuration blocks and sub-tables by "
+           "whether the heading states a direction",
+           len(blocks) == 6 and len(subs) == 10,
+           f"{len(blocks)} directional + {len(subs)} not, of {len(universe)}")
+    from finastro.rules.subtable_catalogue import SUBTABLES as _SUBS
+    record("The sub-tables the source gives are the ones the registry holds",
+           subs == [x.sid for x in _SUBS],
+           f"document {subs}")
+    record("Bhadra is one of them, and it is FIRST in document order",
+           subs[0] == "sec-142",
+           f"first sub-table in the document: {subs[0]}")
+
+    # No `<h3 class="section">` is in this set, and no sub-table is in
+    # catalogue B's. The two shapes partition; that is why two denominators
+    # can both be right.
+    b_ids = {f"sec-{x.b}" for x in catalogue.SECTIONS}
+    record("No sub-table is also a catalogue-B section",
+           not (set(subs) & b_ids),
+           f"overlap: {sorted(set(subs) & b_ids)}")
+
+    # The document's own table of contents, as the independent witness.
+    toc = _re.findall(r'data-target="([^"]+)"[^>]*>\s*<td>(\d+)</td>', raw)
+    order = {sid: int(n) for sid, n in toc}
+    record("The TOC lists Bhadra one row above Kshin Moon, in one run",
+           order.get("sec-142") == order.get("kshin-moon", 0) - 1,
+           f"Bhadra Sr.No {order.get('sec-142')}, "
+           f"Kshin Moon {order.get('kshin-moon')}")
+    listed = [sid for sid, _ in universe if sid in order]
+    record("Every `<h2>` section is in the TOC, and in document order",
+           listed == sorted(listed, key=lambda s: order[s]),
+           f"{len(listed)} of {len(universe)} listed, "
+           f"Sr.No {order[listed[0]]}-{order[listed[-1]]}")
+
+
 def test_the_three_registries_stay_three() -> None:
     """No rule reaches a registry that is not its own.
 
-    The 141, the 58 and the 9 are three denominators over three shapes of
+    The 141, the 58 and the 10 are three denominators over three shapes of
     markup, and the ONLY thing keeping them from contaminating each other is
     that each rule is registered once, in one place. This build has twice
     shipped a figure that was right and a page that was not, both times
@@ -3406,9 +3497,9 @@ def test_the_three_registries_stay_three() -> None:
            "both predicates are positive type tests and disagree on every "
            "rule of the other registry")
 
-    record("The nine sub-tables are 2 ported and 7 blocked, each naming its "
+    record("The ten sub-tables are 3 ported and 7 blocked, each naming its "
            "input",
-           len(ST.ported()) == 2 and len(ST.blocked()) == 7
+           len(ST.ported()) == 3 and len(ST.blocked()) == 7
            and all(r.missing_inputs for r in ST.blocked()),
            f"{len(ST.ported())} ported + {len(ST.blocked())} blocked of "
            f"{len(ST.SUBTABLE_REGISTRY)}; blocked on "
@@ -3544,6 +3635,7 @@ def main() -> int:
     test_catalogue()
     test_every_rule_is_traceable()
     test_a_graded_input_class_that_no_rule_claims_is_named()
+    test_the_subtable_membership_rule_is_readable_from_the_document()
     test_the_three_registries_stay_three()
     test_the_supplied_verdict_check_actually_bites()
     test_the_subtable_ports_reproduce_their_own_printed_tables()

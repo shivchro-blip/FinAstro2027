@@ -10,6 +10,7 @@ records per event_class:
   combustion            22
   conjunction           33
   eclipse                7
+  karana_ingress       866
   lunation              58
   nakshatra_ingress    562
   navamsa_ingress      542
@@ -23,9 +24,9 @@ records per event_class:
   total_day             12
   yoga_ingress         453
 
-  TOTAL               4170
+  TOTAL               5036
 
 records per certainty grade:
-  A   2383
+  A   3249
   B   1784
   C      3

@@ -30,7 +30,7 @@ THE FIVE KINDS OF ASSIGNMENT
                    this event.)
     SERIES_NO_RULE the astronomy layer emits the series, and no rule anywhere
                    states a condition on it
-    SUBTABLE       the event is one of the nine Chapter-2 `<h2>` sub-tables
+    SUBTABLE       the event is one of the ten `<h2>` sub-tables
                    that `CONFIG_SECTIONS_SCOPE.md` reports as outside the 58
     NO_SECTION     neither catalogue B nor the configuration blocks contain a
                    section for it, and the layer emits no series for it either
@@ -133,12 +133,21 @@ MAP: dict = {
 
     # -------------------------------------------------- karana and the day
     "Bhadra": (
-        NO_SECTION, [],
-        "Bhadra is the karana series (pp.120-124). It was used to VALIDATE the "
-        "tithi and yoga boundaries -- eight coincident edges within 25 s -- and "
-        "was never ported as a condition: catalogue B has no Bhadra section, "
-        "and the astronomy layer emits no karana ingress series. 54 windows, "
-        "the largest single event name in the chapter"),
+        SUB, ["sub_bhadra"],
+        "PORTED 20-Sep-2026, and it needed a REGISTRY before it needed code. "
+        "Bhadra is `<section id=\"sec-142\">` carrying an `<h2>` -- the "
+        "sub-table shape, not catalogue B's `<h3 class=\"section\">` -- so it "
+        "belonged to the third registry and was excluded from it only because "
+        "membership was a byte range beginning at `kshin-moon`. Counting the "
+        "shape over the whole document found exactly one section outside that "
+        "range, this one, so the range was widened to the shape: 9 -> 10. The "
+        "karana ingress series is new with the port (866 records a year, the "
+        "tithi scan at half its arc) and the rule selects the eight Vishti "
+        "karanas the section's own prose names. Verified against the "
+        "section's first table before wiring: 99 of 99 windows on both "
+        "boundaries within 30 s, nothing unmatched in either direction. This "
+        "note read NO_SECTION and '54 windows' until today -- 54 is the "
+        "MONTHLY calendar's count and the section prints 99"),
     "Total Day": (
         SUB, ["sub_total_days_in_year"],
         "PORTED 20-Sep-2026. `panchang.total_days` reproduces the source's "
@@ -400,10 +409,10 @@ MAP: dict = {
         B, ["b135_jupiter_nakshatra_vedh"],
         "blocked, as above -- the document spells the same event two ways"),
 
-    # -------------------------------------------- the Chapter-2 sub-tables
+    # ------------------------------------------------- the ten sub-tables
     "Moon Mercury in the same D9": (
         SUBTABLE, ["sub_moon_mercury_in_the_same_navamsh"],
-        "one of the nine `<h2>` sub-tables. Registered and BLOCKED on "
+        "one of the ten `<h2>` sub-tables. Registered and BLOCKED on "
         "`moon_navamsa_series`. This note read 'the navamsa series is "
         "emitted, so the condition is computable; nobody has written the "
         "rule' until 20-Sep-2026, and the first half of that was FALSE: "

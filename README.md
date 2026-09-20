@@ -59,26 +59,35 @@ they were never in the 141 and never in its denominator:
 ```
 catalogue B                        141 / 141 sections
 instrument configuration sections   38 /  58 named groups   (ported AND wired)
-Chapter-2 <h2> sub-tables            2 /   9 sub-tables     (ported AND wired)
+<h2> sub-tables                      3 /  10 sub-tables     (ported AND wired)
 ```
 
 **38 of the 58 are ported and 20 are blocked, each on a named input**
 (`build/CONFIG_PORT_REPORT.md`). **Ported is now wired**, since the 14-Sep-2026
 change to `verdicts.py`: `build_verdicts()` fires all three registries, and
-**1,468 of the calendar's 6,758 verdict rows originate in a configuration
+**1,468 of the calendar's 7,501 verdict rows originate in a configuration
 section**, from 26 of the 38 ported groups. `config_instruments_for` routes a
 group to the instrument its BLOCK heading names rather than through the
 rulership table, so a *Gold — Bullish* group reaches gold because the source
 filed it under gold.
 
-**The third line landed 20-Sep-2026** and is the nine `<h2>` sub-tables of the
-same chapter that belong to no instrument block — *Total Days in Year*,
-*Rahu or Ketu Nakshtra on a Thursday* and seven more. Two are ported and
-**81 rows** come from them; seven are registered and blocked with the input
-each waits on named, two of those on the Moon's navamsa ingress series, which
-the astronomy layer does not emit for the Moon at all. These sections print no
-verdict anywhere, so every sub-table row is `condition_only` by construction
-and a guard refuses any rule that arrives carrying one.
+**The third line landed 20-Sep-2026** and is the ten `<h2>` sub-tables of the
+same chapter that belong to no instrument block — *Bhadra*, *Total Days in
+Year*, *Rahu or Ketu Nakshtra on a Thursday* and seven more. Three are ported
+and **824 rows** come from them; seven are registered and blocked with the
+input each waits on named, two of those on the Moon's navamsa ingress series,
+which the astronomy layer does not emit for the Moon at all. These sections
+state no verdict about their own condition, so every sub-table row is
+`condition_only` by construction and a guard refuses any rule that arrives
+carrying one.
+
+**Ten, and it was nine for five days.** Membership was a byte range from
+`<section id="kshin-moon">` to `<section id="gold-bullish">` — where the
+reading happened to start — and counting the *shape* over the whole document
+found exactly one section outside it: Bhadra, `sec-142`, which the document's
+own table of contents lists in the same run one row above Kshin Moon. The rule
+is now positive and readable off the page: a configuration block's `<h2>`
+states a direction (*Gold — Bullish Configuration*), a sub-table's does not.
 
 The three registries stay separate anyway, and that separation is the point: a
 configuration group must never reach `sections_ported()` and inflate 141/141. A
@@ -120,17 +129,18 @@ build/calendar_2027.csv    the same rows, flat
 build/calendar_2027.html   self-contained, with search and filters
 ```
 
-**7,163 rows over 365 distinct dates, and the split is load-bearing: 6,758
+**7,906 rows over 365 distinct dates, and the split is load-bearing: 7,501
 verdict rows and 405 base-track event rows**, told apart by `row_kind`. Of the
-6,758, **5,209 come from catalogue B, 1,468 from the configuration groups and
-81 from the sub-tables**; 3,322 carry a verdict text and 3,436 do not.
+7,501, **5,209 come from catalogue B, 1,468 from the configuration groups and
+824 from the sub-tables**; 3,414 carry a verdict text and 4,087 do not.
 
 **Quote the split, not the total.** `records` meant "verdict rows" while there
 were no others, and a consumer still reading it that way is now wrong by 405.
-The verdict count itself has moved three times: 7,484 before the tier_4 scoping
+The verdict count itself has moved four times: 7,484 before the tier_4 scoping
 removed 807 USDINR configuration rows that recorded no measurement; 5,209 before
-the configuration wiring added 1,468; and 6,677 before the sub-table port added
-81 on 20-Sep-2026.
+the configuration wiring added 1,468; 6,677 before the first sub-table ports
+added 81 on 20-Sep-2026; and 6,758 before Bhadra added **743** the same day,
+which is the largest single rule in the build.
 
 **Catalogue B has stayed at 5,209 across both of those ports, and that is the
 check rather than a coincidence.** A port that moved it would be a port that had

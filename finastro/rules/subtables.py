@@ -1,4 +1,4 @@
-"""The nine `<h2>` sub-tables, ported. Two of nine; seven blocked or out of scope.
+"""The ten `<h2>` sub-tables, ported. Three of ten; seven blocked or out of scope.
 
 The third registry. `SUBTABLE_REGISTRY` is neither `base.REGISTRY` (catalogue
 B, 141 sections) nor `config_rules.CONFIG_REGISTRY` (the 58 configuration
@@ -6,9 +6,18 @@ groups), for the reason `subtable_catalogue`'s docstring gives: a denominator
 that quietly changes meaning is the failure this build has shipped twice.
 
 WHAT WAS VERIFIED BEFORE ANYTHING WAS WIRED
-    Both ported rules were reported against their own section's printed rows
-    FIRST, which is the Step-3 discipline and is what makes a firing count
-    evidence rather than an assertion.
+    All three ported rules were reported against their own section's printed
+    rows FIRST, which is the Step-3 discipline and is what makes a firing
+    count evidence rather than an assertion.
+
+    * **Bhadra, pp.120-124** -- the section prints **99** windows and the
+      karana series reproduces **99 of 99** on BOTH boundaries within **30
+      seconds**, with **zero** series spans left unmatched to a printed row.
+      The only one of the three with no residual in either direction. Its
+      count is also the one this port corrected: every page naming "Bhadra's
+      54 windows" was quoting the MONTHLY calendar, which prints 45 fewer than
+      the section does -- the same relationship as Total Day's 12 against 11,
+      one order of magnitude larger.
 
     * **Total Days in Year, p.126** -- the section prints **12** dates in a
       six-row, two-column table. `panchang.total_days(2026)` reproduces all
@@ -40,18 +49,28 @@ WHAT WAS VERIFIED BEFORE ANYTHING WAS WIRED
     `THURSDAY_ROW_OFFSET` below, each with its own count.
 
 WHY THESE RULES CARRY NO VERDICT
-    None of the nine sections prints one, so `verdict_text` is None on every
-    rule here and `subtable_catalogue.check_no_verdict` refuses a rule that
-    arrives with one. The monthly calendar prints a tone against these rows
-    -- 'Positive' against all 13 Thursday windows, 'Turning Date' against
-    Total Day -- and that belongs to a different table in a different
-    chapter. Importing it would be the B87 colon failure in a third costume.
+    None of the ten sections states one about its own condition, so
+    `verdict_text` is None on every rule here and
+    `subtable_catalogue.check_no_verdict` refuses a rule that arrives with
+    one. The monthly calendar prints a tone against these rows -- 'Positive'
+    against all 13 Thursday windows, 'Turning Date' against Total Day -- and
+    that belongs to a different table in a different chapter. Importing it
+    would be the B87 colon failure in a third costume.
+
+    Bhadra is the case that shows this is a reading and not a formality. Its
+    section DOES print Result 1, Result 2 and Overall -- Positive, Negative,
+    Neutral -- but per WINDOW, derived by a procedure the section states, from
+    Mumbai sunrise and sunset (graded B) and the Moon's sign. What it never
+    states is a verdict about the condition *a Bhadra*, which is what
+    `verdict_text` holds. Three verdict-looking columns, and none of them is
+    this rule's verdict.
 
 Financial astrology is a speculative interpretive framework. Nothing here is
 investment advice.
 """
 from __future__ import annotations
 
+from ..panchang import VISHTI_KARANAS
 from ..sky import Span, parse, record_precision
 from . import names
 from .base import FIRING_STATUSES, Rule, STATUS_BLOCKED
@@ -147,6 +166,111 @@ def _rule(sub, **kw):
 
 def _blocked(sub, **kw) -> Rule:
     return _register(Rule(section=sub, status=STATUS_BLOCKED, **kw), sub)
+
+
+# ================================================================= 1. BHADRA
+_s = S("sec-142")
+
+#: The section's own printed windows, sliced from its first table. 99 rows,
+#: each a start date, a start time, an end date and an end time. This is the
+#: list the verification counted against, and it is held here so the count
+#: comes from the DOCUMENT and not from the karana series, which is the code
+#: under test -- section 12.16's point 1.
+#:
+#: NOT 54. That number is the MONTHLY calendar's, and it is what every page
+#: naming "Bhadra's 54 windows" has been quoting. The section prints 99, and
+#: the relationship is the one section 6.8 established and the Total Day port
+#: found again: the section is the complete printing and the monthly calendar
+#: is the incomplete secondary one. The gap here is 45 windows, the largest of
+#: the three.
+BHADRA_PRINTED = tuple((r[0], r[1], r[2], r[3]) for r in _s.tables[0].rows)
+
+#: The section's SECOND table is its errata -- printed-vs-computed rows, ours,
+#: and not part of the printing being reproduced. Counted apart so
+#: `printed_rows` is never read as the number of windows.
+BHADRA_ERRATA_ROWS = len(_s.tables[1].rows)
+
+
+def _bhadra_windows():
+    """The Vishti karana spans, read off the emitted karana series.
+
+    A BHADRA IS A VISHTI KARANA -- the section's own first sentence says so --
+    so the window is one karana's span, and the layer's `karana_spans()` gives
+    it: two consecutive `karana_ingress` records, exactly as a tithi's span is
+    two consecutive `tithi_ingress` records. Nothing here recomputes the sky,
+    per the standing constraint that a rule reads the generated calendar.
+
+    THE SELECTION IS THE DOCUMENT'S OWN, AND IT IS DERIVED RATHER THAN TYPED.
+    The section states which karanas are Bhadras -- "the eight windows of each
+    lunar month fall on karana numbers 8, 15, 22, 29, 36, 43, 50 and 57" --
+    and `panchang.VISHTI_KARANAS` derives exactly those eight from the seven
+    movable karana names. The derivation and the printed sentence are
+    independent of one another, and they agree, which is what makes this a
+    reading of the document rather than a fit to its rows.
+
+    THE DERIVATION CORRECTED THE LAYER RATHER THAN THE OTHER WAY ROUND.
+    `panchang.karana_name` named karana 57 *Shakuni*, because FIXED_KARANA's
+    keys were 0-based while the lookup tried both conventions and took
+    whichever answered. 57 is the EIGHTH Vishti of the lunation, so the layer
+    named seven Vishtis per lunation where the source names eight, and printed
+    Shakuni twice. It reached the artifact -- `karana` is on every panchang
+    block -- and no check could see it: `test_bhadra_two_printings` carries
+    its own local numbering and never calls the shared function. The source's
+    own sentence is what contradicted it.
+    """
+    want = set(VISHTI_KARANAS)
+
+    def fn(sky):
+        return [s for s in sky.karana_spans() if s.value["karana"] in want]
+    return fn
+
+
+_rule(
+    _s,
+    id="sub_bhadra",
+    rule_family="panchang/karana",
+    condition_text="the eight windows of each lunar month fall on karana "
+                   "numbers 8, 15, 22, 29, 36, 43, 50 and 57",
+    condition_from="para",
+    inputs=("panchang/karana",),
+    notes="VERIFIED BEFORE WIRING, against this section's own first table, and "
+          "the agreement is the strongest of the three sub-table ports: "
+          f"**{len(BHADRA_PRINTED)} of {len(BHADRA_PRINTED)}** printed windows "
+          "reproduce on BOTH boundaries within 30 seconds, and the check runs "
+          "in both directions -- zero series spans are left unmatched to a "
+          "printed row, so there is no over-firing to carry as a residual and "
+          "none to tune away. The section prints to the minute, so a "
+          "sub-30-second residual is its own rounding and not a disagreement "
+          "about the sky. On the sixteen January boundaries specifically the "
+          "worst is 25 s, which is the figure STEP3_REPORT section 6.8 "
+          "recorded for the karana COMPUTATION and is now the figure for the "
+          "emitted SERIES -- a different claim, and the one that was missing. "
+          "THE COUNT THIS PORT CORRECTS: every page carrying 'Bhadra, 54 "
+          "windows' was quoting the MONTHLY calendar. The section prints "
+          f"{len(BHADRA_PRINTED)}, and the monthly calendar is the incomplete "
+          "secondary printing -- the same relationship as Total Day's 12 "
+          "against 11 and the one section 6.8 established. Frame-free: "
+          "elongation is a difference of two longitudes, so the ayanamsha "
+          "cancels and no ayanamsha choice can move one of these instants; "
+          "graded A for that reason. NOT SCOPED TO ONE VENUE, unlike Total "
+          "Day: a karana boundary is an instant of the Moon-Sun angle and "
+          "belongs to no calendar, and the section says its own Day/Night "
+          "parity 'never changes with timezone'. THE SECTION'S THREE VERDICT "
+          "COLUMNS ARE NOT THIS RULE'S VERDICT, and that is a reading rather "
+          "than an oversight: Result 1, Result 2 and Overall are per-WINDOW "
+          "values the section DERIVES by a stated procedure -- Nature 1 needs "
+          "Mumbai sunrise and sunset, which are graded B, and Nature 2 needs "
+          "the Moon's sign at the opening instant. The section states no "
+          "verdict about the condition 'a Bhadra', which is what `verdict_text` "
+          "holds, so the rule carries none and `check_no_verdict` is satisfied "
+          "by the document rather than by us. Porting the two axes is separate "
+          "work and is named in the handoff. SOURCE DEFECT CARRIED, not fixed: "
+          "the monthly calendar's 13-Jan cell reads 3:59 where the window "
+          "opens at 02:00:06 and the section itself prints 02:00, so the "
+          "SECTION is right and the January calendar is about 1h59m late -- "
+          "the reverse of the Thursday table's row offset, and the reason "
+          "neither printing may be trusted as ground truth without the other.",
+)(_bhadra_windows())
 
 
 # ============================================================ 2. TOTAL DAYS
@@ -458,7 +582,7 @@ _blocked(
 if len(SUBTABLE_REGISTRY) != len(SUBTABLES):          # pragma: no cover
     raise SystemExit(
         f"{len(SUBTABLE_REGISTRY)} sub-table rules against "
-        f"{len(SUBTABLES)} sections in the document. Every one of the nine "
+        f"{len(SUBTABLES)} sections in the document. Every one of them "
         "carries a rule -- ported or blocked with its input named -- so the "
         "denominator is the document's and a section cannot go missing "
         "quietly, which is the whole reason this registry exists")

@@ -56,6 +56,10 @@ FRAMES = {
 _PANCHANG_DIVISIONS = {
     "tithi": ("tithi_ingress", ("tithi", "tithi_name", "paksha")),
     "yoga": ("yoga_ingress", ("yoga", "yoga_name")),
+    # The karana, added 20-Sep-2026 with the Bhadra port. It is the same angle
+    # as the tithi at half the arc, so it needs no new span machinery at all --
+    # one entry here, and `karana_spans()` is `panchang_spans("karana")`.
+    "karana": ("karana_ingress", ("karana", "karana_name")),
 }
 
 #: Bodies whose motion never changes in the span, and so produce no station
@@ -285,6 +289,19 @@ class Sky:
         """Every yoga in the span, bounded. The value carries `yoga` (1-27) and
         `yoga_name`."""
         return self.panchang_spans("yoga")
+
+    def karana_spans(self) -> tuple[Span, ...]:
+        """Every karana in the span, bounded. The value carries `karana`
+        (1-60) and `karana_name`.
+
+        A BHADRA IS ONE OF THESE, and nothing here knows that. The window the
+        source prints is a Vishti karana's span, start to end, and it is two
+        consecutive `karana_ingress` records exactly as a tithi's is two
+        consecutive `tithi_ingress` records. The selection of WHICH karanas
+        are Bhadras belongs to the rule, which reads the source's own eight
+        numbers -- not to this layer, which takes no interpretation.
+        """
+        return self.panchang_spans("karana")
 
     @functools.lru_cache(maxsize=None)
     def motion_spans(self, body: str) -> tuple[Span, ...]:

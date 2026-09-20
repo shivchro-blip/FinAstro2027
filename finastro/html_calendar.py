@@ -546,8 +546,9 @@ def write_html(rows: list[dict], verdicts) -> pathlib.Path:
       f"title &mdash; so the old check passes and its old conclusion is "
       f"wrong.</p>")
     A(f"<p>There is a third unported body of material. The same chapter carries "
-      f"nine further <code>&lt;h2&gt;</code> sub-tables that are neither "
-      f"catalogue B nor any of the six blocks above ("
+      f"{len(CFG.other_h2_tables())} further <code>&lt;h2&gt;</code> "
+      f"sub-tables that are neither catalogue B nor any of the six blocks "
+      f"above ("
       + ", ".join(_e(t) for t in CFG.other_h2_tables())
       + f"), and the source's own monthly prophecy tables print named verdicts "
       f"for gold and silver that are also outside catalogue B and also "

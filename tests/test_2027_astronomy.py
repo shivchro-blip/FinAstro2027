@@ -62,6 +62,11 @@ EXPECTED_RANGE = {
     "opposition":        (14, 48),
     "apsis":             (26, 42),
     "tithi_ingress":     (400, 470),
+    # Exactly twice the tithi's, because a karana is a 6-degree step of the
+    # same angle the tithi steps by 12. The range is the tithi's doubled, and
+    # the EQUALITY is checked separately below -- a range this wide would admit
+    # a scan that had skipped a division, and the equality will not.
+    "karana_ingress":    (800, 940),
     "yoga_ingress":      (420, 490),
     # One per venue per civil day across a 427-day span, so this range is
     # narrow on purpose: unlike an ingress series it has no astronomical
@@ -257,6 +262,59 @@ def test_counts(doc: dict) -> None:
     for cls, (lo, hi) in EXPECTED_RANGE.items():
         n = counts.get(cls, 0)
         record(f"Count in range: {cls} ({lo}-{hi})", lo <= n <= hi, str(n))
+
+
+def test_the_karana_series_is_the_tithi_series_at_half_the_arc(doc: dict) -> None:
+    """The karana scan, checked against a series it cannot be fitted to.
+
+    A karana is a 6-degree step of exactly the angle a tithi steps by 12, so
+    two facts follow BY CONSTRUCTION and neither is a tolerance:
+
+      * there are exactly twice as many karana ingresses as tithi ingresses;
+      * every tithi ingress instant IS a karana ingress instant, to the
+        second, because a 12-degree multiple is also a 6-degree multiple.
+
+    That second one is the check worth having. A count in a range would pass
+    for a scan that skipped a division and found a spurious one elsewhere;
+    this will not, because a skipped karana at an even multiple deletes a
+    tithi edge from the karana series and the set difference names it.
+
+    It also pins the STEP. `ephem.KARANA_STEP` is an hour against a shortest
+    karana of about 9h55m, and the failure mode of too coarse a step is a
+    silently missing division -- which renders as a quiet month, not an error.
+    """
+    kar = [r for r in doc["records"] if r["event_class"] == "karana_ingress"]
+    tit = [r for r in doc["records"] if r["event_class"] == "tithi_ingress"]
+    record("The karana series is exactly twice the tithi series",
+           len(kar) == 2 * len(tit),
+           f"{len(kar)} karana against {len(tit)} tithi ingresses")
+
+    k_at = {r["time"]["t_start_utc"] for r in kar}
+    t_at = {r["time"]["t_start_utc"] for r in tit}
+    missing = sorted(t_at - k_at)
+    record("Every tithi boundary is also a karana boundary, to the second",
+           not missing,
+           f"{len(t_at)} tithi instants, all present in the karana series"
+           if not missing else f"{len(missing)} absent, first {missing[:3]}")
+
+    nums = {r["astronomy"]["karana_to"] for r in kar}
+    record("Karana numbers span 1..60 and nothing else",
+           nums <= set(range(1, 61)) and len(nums) == 60,
+           f"{len(nums)} distinct karana numbers")
+
+    # The eight the source names, against the eight the layer derives. The
+    # document prints them in its own prose ("karana numbers 8, 15, 22, 29,
+    # 36, 43, 50 and 57"), so this compares two independent answers.
+    from finastro.panchang import VISHTI_KARANAS
+    record("The derived Vishti karanas are the eight the source prints",
+           VISHTI_KARANAS == (8, 15, 22, 29, 36, 43, 50, 57),
+           str(VISHTI_KARANAS))
+    named = {r["astronomy"]["karana_name_to"] for r in kar
+             if r["astronomy"]["karana_to"] in VISHTI_KARANAS}
+    record("Every one of them is NAMED Vishti, including 57",
+           named == {"Vishti"},
+           f"names on the eight: {sorted(named)} -- 57 read 'Shakuni' until "
+           "20-Sep-2026, so seven were named where the source names eight")
 
 
 def test_unique_ids(doc: dict) -> None:
@@ -1351,6 +1409,7 @@ def main() -> int:
     print(f"ephemeris backend: {ephem.init()}")
     print(f"records: {doc['meta']['record_count']}\n")
     test_counts(doc)
+    test_the_karana_series_is_the_tithi_series_at_half_the_arc(doc)
     test_unique_ids(doc)
     test_span(doc)
     test_ordering(doc)

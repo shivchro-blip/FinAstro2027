@@ -69,8 +69,9 @@ Three further properties are worth knowing before the work is scoped:
 
 ## What is NOT in the 58
 
-Reported so the count is not read as the whole of the unported configuration material. The same chapter carries **nine further `<h2>` sub-tables** that are neither catalogue B nor one of these six blocks:
+Reported so the count is not read as the whole of the unported configuration material. The same chapter carries **10 further `<h2>` sub-tables** that are neither catalogue B nor one of these six blocks:
 
+* Bhadra -- verified against Swiss Ephemeris
 * Kshin (Malefic) Moon
 * Total Days in Year
 * Rahu or Ketu Nakshtra on a Thursday

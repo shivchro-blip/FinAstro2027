@@ -2997,22 +2997,41 @@ row_kinds:
         did.
       measured_2027:
         span_unit: (row_kind, event, instrument, venue, t_start_utc, t_end_utc)
-        span_groups: 1707
+        span_groups: 2202
         span_groups_note: >
-          1,626 until the sub-table port of 20-Sep-2026, which added 81 span
-          groups and moved NOTHING ELSE in this block. That is the figure to
-          read: a port adding spans is expected and uninteresting, and a port
-          moving `clipped_start`, `clipped_end` or `real_endpoint_outside_the
-          _year` would have meant a new rule reaching across the year
-          boundary. All seven of those held at 10 / 22 / 7 / 17 / 24 / 1 / 23
-          across the change, so the +81 is the whole of it.
+          1,626 until the first sub-table ports of 20-Sep-2026, which added 81
+          span groups and moved NOTHING ELSE in this block; 1,707 until Bhadra
+          landed the same day and added 495. The reading the earlier note set
+          up is what makes Bhadra interesting: a port adding spans is expected
+          and uninteresting, and a port moving `clipped_start`, `clipped_end`
+          or `real_endpoint_outside_the_year` means a new rule reaching across
+          the year boundary. Bhadra DOES, and it is the first port that has.
+        what_bhadra_moved_and_why: >
+          Five of the seven figures moved, all by exactly 5, and the cause is
+          ONE window: a Vishti karana opening 2027-12-31T16:03:14Z and closing
+          2028-01-01T05:25:53Z -- 31-Dec 21:33 IST to 01-Jan 10:55 IST. It
+          appears as 5 span groups because the span unit repeats a window per
+          (instrument, venue), so one astronomical event moves every one of
+          clipped_end, clipped_end_with_open_end_false,
+          real_endpoint_outside_the_year and of_which_timed by 5.
+          `open_end` is FALSE on all five, which is the point of the field:
+          the sky supplied a real measured end and the CALENDAR is what cuts
+          it, so a collapsed row printing 31-Dec would assert an extent the
+          sky did not give. clipped_start held at 10 and
+          clipped_start_with_open_start_false at 7, because no Bhadra window
+          was already running when 2027 opened; of_which_no_instant held at 1,
+          because a karana boundary is an instant and always has a clock time.
+          A karana is about ten hours long, so roughly a one-in-two chance
+          that the last window of the year straddles the boundary -- this is
+          the expected behaviour of a short-span rule at a year edge and not a
+          defect.
         clipped_start: 10
-        clipped_end: 22
+        clipped_end: 27
         clipped_start_with_open_start_false: 7
-        clipped_end_with_open_end_false: 17
-        real_endpoint_outside_the_year: 24
+        clipped_end_with_open_end_false: 22
+        real_endpoint_outside_the_year: 29
         of_which_no_instant: 1
-        of_which_timed: 23
+        of_which_timed: 28
         under_the_rule_span_unit: >
           18 spans, 1 no-instant and 17 timed, grouping by (row_kind, event,
           location, t_start_utc, t_end_utc) instead -- the unit fire() emits,
@@ -3484,7 +3503,20 @@ source_probability:
             a family. orphans.mars_tenth_to_saturn.do_not_create_a_family stands.
         catalogue_a_count_is_stale:
           recorded_here: 20
+          # Every re-measurement, dated, rather than one field overwritten.
+          # The test reads the NEWEST `measured_*` key it finds instead of
+          # naming one, so a new series moves this record by adding a line and
+          # cannot move it by quietly editing the old number. The drift is the
+          # thing worth keeping; a single mutable field would erase it.
           measured_2026_09_15: 26
+          measured_2026_09_20: 27
+          what_moved_it_2026_09_20: >
+            One family: ingress/karana, the karana boundary series added with
+            the Bhadra port. 866 records a year, the tithi scan at half its
+            arc. It changes nothing about the recount for the same reason the
+            previous six did not -- a karana is not a relative-house family and
+            not a node colocation family -- so neither block 4 nor block 13
+            reaches catalogue A under 27 any more than under 26.
           effect_on_the_recount: >
             None. None of the six families the astronomy layer has added since is
             a relative-house family or a node colocation family, so neither block 4

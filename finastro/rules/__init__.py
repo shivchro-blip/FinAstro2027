@@ -49,12 +49,20 @@ from . import ref_tables          # noqa: F401  -- reference views + unreached s
 from . import config_rules        # noqa: F401  -- registers the 58 config groups
 from .config_rules import CONFIG_REGISTRY   # noqa: F401
 
-# The nine `<h2>` sub-tables of the same chapter -- neither catalogue B nor a
+# The `<h2>` sub-tables of the same chapter -- neither catalogue B nor a
 # configuration block. A THIRD registry, for the same reason the second one
 # exists: 141 counts sections, 58 counts groups, and neither of them counts
 # these. `cfgsections.other_h2_tables()` has named them on three pages since
 # the scope survey; this is the first time they have somewhere to be ported to.
-from . import subtables           # noqa: F401  -- registers the 9 sub-tables
+#
+# TEN, not nine. Membership was a byte range from `kshin-moon` to
+# `gold-bullish` until 20-Sep-2026 -- where we happened to be reading -- and
+# counting the SHAPE over the whole document found exactly one section outside
+# it: Bhadra, `sec-142`, which the document's own table of contents lists in
+# the same run one row above Kshin Moon. The rule is now positive and readable
+# off the page: a configuration block's `<h2>` states a direction, a
+# sub-table's does not.
+from . import subtables           # noqa: F401  -- registers the sub-tables
 from .subtables import SUBTABLE_REGISTRY    # noqa: F401
 
 BATCHES = ("visibility", "colocation", "panchang_rules", "shar", "apsides",
@@ -66,7 +74,7 @@ BATCHES = ("visibility", "colocation", "panchang_rules", "shar", "apsides",
 CONFIG_BATCH = "config_rules"
 
 #: The sub-table port, counted and reported separately again. Three registries,
-#: three denominators: 141 sections, 58 groups, 9 sub-tables. A row's registry
+#: three denominators: 141 sections, 58 groups, 10 sub-tables. A row's registry
 #: is readable off its rule id -- `b<nn>` or a panchang family for catalogue B,
 #: `cfg_<block>_` for a configuration group, `sub_` for a sub-table.
 SUBTABLE_BATCH = "subtables"

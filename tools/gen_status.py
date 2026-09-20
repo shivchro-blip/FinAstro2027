@@ -116,8 +116,8 @@ A(f"| **Instrument configuration sections** — `<section id=\"...\">` with an "
   f"`<h2>`, Chapter 2 | **{cfg_total} named groups** | "
   f"**{len(CFGR.ported())} of {cfg_total}** | "
   f"**{len(CFGR.blocked_rules())} blocked, each on a named input** |")
-A(f"| **Chapter-2 `<h2>` sub-tables** — `<section id=\"...\">` with an `<h2>` "
-  f"and no named groups | **{len(SUBR.SUBTABLE_REGISTRY)} sub-tables** | "
+A(f"| **`<h2>` sub-tables** — `<section id=\"...\">` with an `<h2>` that "
+  f"states no direction | **{len(SUBR.SUBTABLE_REGISTRY)} sub-tables** | "
   f"**{len(SUBR.ported())} of {len(SUBR.SUBTABLE_REGISTRY)}** | "
   f"**{len(SUBR.blocked())} blocked or out of scope, each on a named "
   f"input** |")
@@ -235,8 +235,8 @@ A("")
 A("### The third body of material — registered since 20-Sep-2026, and two of "
   "it ported")
 A("")
-A("The same chapter carries nine further `<h2>` sub-tables that are neither "
-  "catalogue B nor any of the six blocks above: "
+A(f"The same chapter carries {len(CFG.other_h2_tables())} further `<h2>` "
+  "sub-tables that are neither catalogue B nor any of the six blocks above: "
   + ", ".join(f"*{t}*" for t in CFG.other_h2_tables()) + ".")
 A("")
 A(f"**This heading read \"There is a third UNPORTED body of material\" until "

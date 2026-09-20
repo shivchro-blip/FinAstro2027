@@ -37,11 +37,19 @@ YOGA_NAMES = [
     "Siddha", "Sadhya", "Shubha", "Shukla", "Brahma", "Indra", "Vaidhriti",
 ]
 
+#: The seven MOVABLE karanas, in order. They repeat eight times over karana
+#: numbers 2..57 -- 56 of the lunation's 60.
 KARANA_NAMES = [
     "Bava", "Balava", "Kaulava", "Taitila", "Gara", "Vanija", "Vishti",
 ]
-FIXED_KARANA = {0: "Kimstughna", 57: "Shakuni", 58: "Chatushpada",
-                59: "Naga"}
+
+#: The four FIXED karanas, keyed by KARANA NUMBER 1..60 and not by index.
+#: Kimstughna opens the lunation; Shakuni, Chatushpada and Naga close it.
+#:
+#: THE KEYS WERE 0-BASED AND THE LOOKUP TRIED BOTH CONVENTIONS, which named
+#: karana 57 wrongly -- see `karana_name`.
+FIXED_KARANA = {1: "Kimstughna", 58: "Shakuni", 59: "Chatushpada",
+                60: "Naga"}
 
 
 @dataclass(frozen=True)
@@ -79,6 +87,44 @@ def paksha_of(num: int) -> str:
     return "Shukla" if num <= 15 else "Krishna"
 
 
+def karana_name(num: int) -> str:
+    """Name of karana `num`, 1..60. One function, so a boundary record and a
+    sampled panchang block cannot name the same karana differently.
+
+    A CORRECTION, and it is the one that matters to Bhadra. This read:
+
+        FIXED_KARANA.get(knum - 1) or FIXED_KARANA.get(knum) or <movable>
+
+    against keys that were 0-based. The first lookup is the correct one and
+    the second was a fallback in the other convention, so for `num = 57` --
+    where the 0-based lookup correctly misses, because 57 is movable -- the
+    fallback hit the 0-based key 57 and returned **Shakuni**. Karana 57 is the
+    EIGHTH VISHTI of the lunation. The layer therefore named seven Vishtis per
+    lunation instead of eight, and printed Shakuni twice.
+
+    It reached the artifact: `karana` is on every panchang block. No check
+    could see it -- `test_bhadra_two_printings` carries its own local
+    numbering and never calls this, which is why a defect in the shared
+    function survived a suite that verifies Bhadra to 25 seconds.
+
+    The document states the eight explicitly ("the eight windows of each lunar
+    month fall on karana numbers 8, 15, 22, 29, 36, 43, 50, 57"), so the
+    source's own sentence contradicted the layer on the last of them.
+    """
+    if not 1 <= num <= 60:
+        raise ValueError(f"karana number {num} is outside 1..60")
+    return FIXED_KARANA.get(num) or KARANA_NAMES[(num - 2) % 7]
+
+
+#: The karana numbers that are Vishti, DERIVED from the seven movable names
+#: rather than typed. The source prints the same eight in its own prose -- "the
+#: eight windows of each lunar month fall on karana numbers 8, 15, 22, 29, 36,
+#: 43, 50, 57" -- so the derivation has an independent printed answer to agree
+#: with, which a typed tuple copied off that sentence would not.
+#: A Bhadra IS a Vishti karana; the two words name one thing.
+VISHTI_KARANAS = tuple(n for n in range(1, 61) if karana_name(n) == "Vishti")
+
+
 def at(when: dt.datetime) -> Panchang:
     moon = ephem.longitude(when, "Moon")
     sun = ephem.longitude(when, "Sun")
@@ -91,13 +137,10 @@ def at(when: dt.datetime) -> Panchang:
     nnum = int(moon // (360 / 27)) + 1
     ynum = int(((moon + sun) % 360) // (360 / 27)) + 1
     knum = int(elong // 6) + 1
-    kname = FIXED_KARANA.get(knum - 1) or FIXED_KARANA.get(knum) \
-        or KARANA_NAMES[(knum - 2) % 7]
-    if knum == 1:
-        kname = "Kimstughna"
 
     return Panchang(tnum, tname, paksha, nnum, ephem.NAKSHATRAS[nnum - 1],
-                    ynum, YOGA_NAMES[ynum - 1], knum, kname, moon, sun)
+                    ynum, YOGA_NAMES[ynum - 1], knum, karana_name(knum),
+                    moon, sun)
 
 
 # ------------------------------------------------------- sunrise and sunset
@@ -312,6 +355,27 @@ def tithi_boundaries(start: dt.datetime, end: dt.datetime) -> list[Boundary]:
         a, b = frm + 1, to + 1
         out.append(Boundary(inst, a, b, tithi_name(a), tithi_name(b),
                             paksha_of(a), paksha_of(b)))
+    return out
+
+
+def karana_boundaries(start: dt.datetime, end: dt.datetime) -> list[Boundary]:
+    """Every karana boundary in [start, end), all 60 of them per lunation.
+
+    THE SOURCE'S OWN METHOD, AT THE SOURCE'S OWN ARC. The Bhadra section says
+    it outright -- "A Bhadra (Vishti karana) is a 6 degree step of Moon-Sun
+    elongation" -- and this is the same bisection `tithi_boundaries` runs on
+    12 degrees, which is why every second one of these instants IS a tithi
+    boundary and why the tithi series already reproduced eight of the
+    section's sixteen January boundaries to 25 seconds.
+
+    Frame-free, for the tithi's reason: elongation is a DIFFERENCE of two
+    longitudes, so the ayanamsha subtracts from both and cancels, and no
+    ayanamsha choice can move one of these instants.
+    """
+    out = []
+    for inst, frm, to in ephem.karana_ingresses(start, end):
+        a, b = frm + 1, to + 1
+        out.append(Boundary(inst, a, b, karana_name(a), karana_name(b)))
     return out
 
 

@@ -237,6 +237,21 @@ PANCHANG_SERIES_FLAG =     "source_prints_these_instants_inside_rule_sections_no
 HORIZON_SERIES_FLAG = (
     "source_prints_four_mumbai_times_in_the_bhadra_prose_not_as_a_series")
 
+#: The karana is a FIFTH kind of correspondence, and the only panchang division
+#: the 2026 document prints as a named section of dated windows: "Bhadra --
+#: verified against Swiss Ephemeris", pp.120-124, 54 windows with both
+#: boundaries. So it is not PANCHANG_SERIES_FLAG's case -- that flag says "only
+#: inside rule sections, never as a series", and this one IS a series.
+#:
+#: What the section does not print is the other 52 karanas of each lunation. It
+#: prints the eight Vishtis and nothing else, because a Bhadra is what it is
+#: about. This series emits all 60, exactly as the tithi series emits all 30 and
+#: leaves the selection to a rule, so the flag states the PARTIAL
+#: correspondence rather than letting a reader infer the whole series is
+#: printed.
+KARANA_SERIES_FLAG = (
+    "source_prints_the_vishti_karanas_as_the_bhadra_section_not_all_sixty")
+
 #: The speed-class series is a fourth kind again. The source DOES print the
 #: Fast/Normal boundaries -- one table per planet, B120-B127 -- but it prints
 #: them as date ranges in a rule section, not as a series of crossings, and it
@@ -414,6 +429,58 @@ def tithi_ingresses():
             panchang_override={"tithi": b.num_to, "tithi_name": b.name_to,
                                "paksha": b.paksha_to},
             id_suffix=f"t{b.num_to:02d}"))
+    return out
+
+
+def karana_ingresses():
+    """All 60 karana boundaries of every lunation in the span.
+
+    The source's own method at the source's own arc: "A Bhadra (Vishti karana)
+    is a 6 degree step of Moon-Sun elongation". This is `tithi_ingresses` on
+    half the arc, so every second instant here IS a tithi ingress, to the
+    second and by construction rather than by agreement.
+
+    Certainty A, and frame-free with it, for the tithi's reason: elongation is
+    a DIFFERENCE of two longitudes, so the ayanamsha subtracts from both and
+    cancels, and no ayanamsha choice can move one of these instants.
+
+    VERIFIED BEFORE WIRING, against the Bhadra section's own printed table:
+    the eight January windows this series bounds reproduce all **16** of its
+    printed boundaries within **25 seconds**, which is the agreement
+    STEP3_REPORT section 6.8 recorded for the karana computation and is now
+    the agreement of the EMITTED SERIES -- a different claim, and the one that
+    was missing. The section prints to the minute, so a sub-30-second residual
+    is its own rounding.
+    """
+    out = []
+    for b in pn.karana_boundaries(SPAN_START, SPAN_END):
+        title, flags = source_ref("karana_ingress", None)
+        # The astronomy block is the Moon's, per the tithi series' reasoning:
+        # the Sun is the other half of the angle and is named in `bodies`, and
+        # a block carrying two bodies' positions in one set of fields is the
+        # merge this schema exists to prevent.
+        astro, pflags = ev.positional(b.instant, "Moon")
+        astro = replace(astro,
+                        karana_from=b.num_from, karana_to=b.num_to,
+                        karana_name_from=b.name_from,
+                        karana_name_to=b.name_to)
+        out.append(ev.build(
+            "karana_ingress", "ingress/karana", ["Moon", "Sun"], "instant",
+            b.instant, astro,
+            ev.qa_for(b.instant, "A", source_2026_equivalent=title,
+                      flags=flags + pflags + [
+                          KARANA_SERIES_FLAG,
+                          "astronomy_block_body=Moon",
+                          "frame_free_elongation_ayanamsha_cancels"]),
+            precision="exact",
+            # The instant IS the cusp, so a sampled panchang lands on the far
+            # side of it about half the time -- the tithi series' reason,
+            # doubled in force here because a karana is half as long. The
+            # panchang block carries the karana as a NAME and the number lives
+            # on the astronomy block, so only the name is overridden here;
+            # `karana_to` above is where the rule reads the number.
+            panchang_override={"karana": b.name_to},
+            id_suffix=f"k{b.num_to:02d}"))
     return out
 
 
@@ -795,6 +862,7 @@ GENERATORS = [
     ("nakshatra ingresses", nakshatra_ingresses),
     ("navamsa ingresses", navamsa_ingresses),
     ("tithi ingresses", tithi_ingresses),
+    ("karana ingresses", karana_ingresses),
     ("yoga ingresses", yoga_ingresses),
     ("sunrise / sunset", sunrises_and_sunsets),
     ("stations", stations),
