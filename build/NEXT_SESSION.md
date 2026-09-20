@@ -2,25 +2,36 @@
 
 Written 15-Sep-2026, at the end of the session that ran the 2026 monthly-calendar
 fixture and wired the configuration port. **Continued 16-Sep-2026**, which closed
-TASK 2 and pinned the cause census. Everything below is stated completely enough
-to start cold.
+TASK 2 and pinned the cause census. **Continued 20-Sep-2026**, which closed
+TASK 3, ported two of TASK 1's four, and found the third is not the kind of port
+this page said it was. Everything below is stated completely enough to start cold.
 
 ## What is left, in one place
 
 | | |
 | --- | --- |
-| **TASK 1 — the four ports** | **OPEN. The only code work left in the rule layer.** Each still needs its verification pass against its printed rows BEFORE it is wired — 11, 13, 36 and 54 windows respectively, and **none of the four has had one**. That order is the Step-3 discipline and it is what makes a firing count evidence rather than an assertion. |
-| **TASK 3 — the §12.16 third-shape entry** | **STILL OWED.** Checked 16-Sep-2026 against `build/STEP4_DECISIONS.md`: §12.16 exists and names two shapes; the third — *code that exists, was verified, and was never connected* — is not in it. A documentation entry, not code, and not blocked by the ports. |
-| **TASK 4 — the span collapse itself** | **OPEN.** Its two blockers landed (§5.1, §5.2) and its §1 figures are now attributed and harness-pinned. §5.3 — the HTML date filter as an overlap test — belongs with whoever implements the collapse. |
+| **TASK 1a — Total Day** | **DONE 20-Sep-2026.** Verified against the SECTION's own table first — **12 of 12** printed dates, no extra — then wired as `sub_total_days_in_year`. Mumbai only, and the reason is on the rule. |
+| **TASK 1b — Rahu/Ketu Thursday** | **DONE 20-Sep-2026.** Verified first on three independent columns — **13 of 13** dates, **13 of 13** nakshatra cells, and all five stated clock boundaries within 50 s — then wired as `sub_rahu_or_ketu_nakshatra_on_a_thursday`. Two residuals carried, not tuned away. |
+| **TASK 1c — Moon Mercury same D9** | **OPEN, AND RECLASSIFIED. It is not a cheap port, and this page was wrong about why.** The artifact carries **0 Moon `navamsa_ingress` records** in both years, so it needs a NEW SERIES, like Bhadra — not merely a rule. See its section. |
+| **TASK 1d — Bhadra** | **OPEN, and it needs a decision before it needs code.** Still the largest single event name (54 windows) and still needs the `karana_ingress` class. What is new: Bhadra is `<section id="sec-142">` with an `<h2>` — the SAME markup shape as the nine sub-tables — but it sits in Chapter 4, outside their parse range, so **there is no registry it currently belongs to.** See its section. |
+| **TASK 3 — the §12.16 third-shape entry** | **DONE 20-Sep-2026.** §12.16 now names three shapes, with a navigation table at its head, and the third carries a detector that is landed, pinned and falsified three ways rather than proposed. |
+| **TASK 4 — the span collapse itself** | **OPEN, unchanged.** Its two blockers landed (§5.1, §5.2) and its §1 figures are attributed and harness-pinned. §5.3 — the HTML date filter as an overlap test — belongs with whoever implements the collapse. |
 | TASK 0, TASK 0b, TASK 2 | **CLOSED.** Do not re-verify; see their sections. |
 
-**So the ports are the only remaining work in the calendar, and they are not the
-only remaining work.** The two documentation items above are open and neither is
-blocked by them.
+**THERE IS A THIRD REGISTRY AS OF 20-Sep-2026, and every count on every page moved
+with it.** `finastro/rules/subtables.py` holds the nine Chapter-2 `<h2>`
+sub-tables — 2 ported, 7 registered and blocked on a named input — and
+`verdicts.py` fires all three registries. The three denominators are
+**141/141 · 38/58 · 2/9**, they travel together, and a row's registry is readable
+off its `event` field: `b<nn>` or a panchang family for catalogue B, `cfg_<block>_`
+for a configuration group, `sub_` for a sub-table.
+
+**Catalogue B stayed at 5,209 rows across the port, and that is the check.** A port
+that moved it would have been a port that reached into catalogue B's registry.
 
 ## Read these first, in this order
 
-1. **`build/RULE_LAYER_STATUS.md`** — what the calendar covers, in two
+1. **`build/RULE_LAYER_STATUS.md`** — what the calendar covers, in **three**
    denominators. Generated; do not hand-edit.
 2. **`build/STEP4_DECISIONS.md`** — §12 is the batch-by-batch record of the
    arguments. §12.10 (the single-point-fit withdrawal) and §12.16 (the recurring
@@ -38,10 +49,11 @@ Then `build/MONTHLY_2026_FIXTURE.md` for the fixture this handoff continues.
 | | *(this file's own id-correction commit is its child; the hash above is the one to check out)* |
 | `build/astronomy_2027.json` | **4,170 records**, sha256 `757c53126bae410d5d594ee97a8694185b31d7b2a7eef72d6524b75bb22bdf2f` |
 | `build/astronomy_2026.json` | **4,167 records**, sha256 `5c912eb4cd340cec4ed2d7661b1c41ff9a74e7920ac810e880566f8c368ef259` — the fixture year, generated by `tools/build_2026.py` |
-| suites | `test_rule_layer` **228/228** · `test_2026_regression` **120/120** · `test_2027_astronomy` **135/135** · `test_node_anchor_unit` **12/12** · `test_monthly_fixture` **17/17** *(171 and 112 at the handoff commit; the rule layer gained the row-kind, span-endpoint and year-clip checks, then 13 more on 16-Sep-2026 for the cause census — see TASK 4)* |
-| report generators | **tracked**, in `tools/` — `gen_status.py`, `cfg_port_report.py`, `gen_cfg_scope.py`, `build_2026.py`, `monthly_match.py`. A cold clone can now rebuild every generated page. **Regenerate; never hand-edit one** — see TASK 0b. |
-| verdict rows on a rebuild | **6,677** — 5,209 catalogue B + **1,468 configuration**. *(At the handoff commit above it was 7,484 / 2,275; TASK 0 below removed the 807 configuration USDINR rows. Check out that commit and you will see the old pair.)* |
-| **rows in the artifact** | **7,082** — the 6,677 above **plus 405 base-track event rows**, told apart by `row_kind`. **6,677 is the verdict count and not the file's row count**, and the two were the same number only while the base track did not exist. Quote the split. |
+| suites | `test_rule_layer` **249/249** · `test_2026_regression` **120/120** · `test_2027_astronomy` **135/135** · `test_node_anchor_unit` **12/12** · `test_monthly_fixture` **17/17** *(171 and 112 at the handoff commit; the rule layer gained the row-kind, span-endpoint and year-clip checks, then 13 more on 16-Sep-2026 for the cause census, then 21 more on 20-Sep-2026 — the unclaimed-grade census, the three-registry separation, the supplied-verdict guard, and the two ports against their own printed tables)* |
+| report generators | **tracked**, in `tools/` — `gen_status.py`, `cfg_port_report.py`, `gen_cfg_scope.py`, `build_2026.py`, `monthly_match.py`, `cause_census.py`. A cold clone can rebuild every generated page. **Regenerate; never hand-edit one** — see TASK 0b. |
+| verdict rows on a rebuild | **6,758** — 5,209 catalogue B + **1,468 configuration** + **81 sub-table**. *(6,677 / 5,209 / 1,468 before the 20-Sep-2026 sub-table port; 7,484 / 2,275 at the handoff commit, before TASK 0 removed the 807 configuration USDINR rows. **Catalogue B's 5,209 has not moved across either port**, which is the check that neither reached into it.)* |
+| **rows in the artifact** | **7,163** — the 6,758 above **plus 405 base-track event rows**, told apart by `row_kind`. **6,758 is the verdict count and not the file's row count**, and the two were the same number only while the base track did not exist. Quote the split. |
+| registries | **three**: `REGISTRY` 171 catalogue-B rules over 141 sections · `CONFIG_REGISTRY` 58 configuration groups · `SUBTABLE_REGISTRY` 9 sub-tables. `verdicts.py` fires all three. **`is_config_rule` is now a positive type test**; it read `catalogue_b is None` until 20-Sep-2026, which a `SubTable` also satisfies. |
 
 `build/calendar_2027.{json,html,csv}` on disk are **current**: 7,082 rows,
 6,677 verdict + 405 event. *(This paragraph said they predated the wiring and
@@ -241,26 +253,95 @@ reported against its printed rows BEFORE it is wired**, as every prior series wa
 — that is the Step-3 discipline and it is what makes a firing count evidence
 rather than an assertion.
 
-### 1a. Total Day — 11 windows — no astronomy-layer change
+### 1a. Total Day — DONE 20-Sep-2026 — `sub_total_days_in_year`
 
-`panchang.total_days`: `dd + mm == yy`, the source's own arithmetic rule,
-**validated 12/12 for 2026 since Step 2**. Certainty **A**; no ephemeris is
-consulted. The astronomy layer already emits 12 `total_day` records for 2026 and
-12 for 2027. No catalogue-B section states a condition on them, which is the only
-reason nothing fires. Port as a rule; verify the 11 printed windows first.
+`panchang.total_days`: `dd + mm == yy`, the source's own arithmetic rule.
+Certainty **A**; no ephemeris is consulted.
 
-### 1b. Rahu/Ketu Nakshtra on Thursday — 13 windows — no astronomy-layer change
+**The verification is against the SECTION, not against the monthly calendar, and
+the two disagree.** *Total Days in Year* (p.126) prints **12** dates in a six-row,
+two-column table and `panchang.total_days(2026)` reproduces **12 of 12** with
+nothing extra. The monthly calendar prints **11** of them and omits 22-Apr-26 —
+so the "11 windows" this page carried was the incomplete printing's count, and the
+section is the complete one. That is the same relationship §6.8 established for
+Bhadra, in the same direction.
 
-A node's nakshatra residency plus a weekday. Both halves are emitted
-(`nakshatra_ingress` for Rahu and Ketu; the weekday is applied in `fire()` via
-`Rule.weekdays`). One of the nine Chapter-2 `<h2>` sub-tables that
-`CONFIG_SECTIONS_SCOPE.md` reports as outside the 58.
+**Mumbai only, and the reason is the condition rather than a horizon.** The record
+is `kind: civil_day` at IST midnight, so under `civil_day_overlap` it straddles
+the previous Eastern day: 26-Jan-2027 IST is 25-Jan-2027 in New York, where
+`25 + 1 = 26` and the source's own arithmetic does not hold. Emitting that row
+would assert, in the venue's own calendar, something false. Measured before the
+scoping: both venues gave 84 rows over 24 dates, 12 of which fail the arithmetic.
 
-### 1c. Moon Mercury in the same D9 — 36 windows — no astronomy-layer change
+**One defect was introduced here and caught by the artifact, not by review.** The
+first version built `Span(t, t, ...)` off the start stamp and left `precision` at
+its "exact" default, and 60 rows printed `00:00 IST` — the identical defect §12.17
+records for the combust windows, reproduced about eighteen hours after that
+section was read. `test_a_row_without_an_instant_carries_no_clock_time` caught it.
 
-Both frames are already emitted: `navamsa_ingress` carries every Moon and Mercury
-navamsa crossing. Intersect the two navamsa span series. Also one of the nine
-sub-tables. **The largest of the three cheap ports.**
+### 1b. Rahu/Ketu Nakshtra on Thursday — DONE 20-Sep-2026 — `sub_rahu_or_ketu_nakshatra_on_a_thursday`
+
+**The reading is the document's own, and the section's Nakshatra column is what
+proves it.** "Rahu or Ketu Nakshtra" means a nakshatra whose LORD is a node, not
+one a node occupies — the occupancy reading reproduces 4 of 13. The six names the
+section's own column uses (Shatbhisha, Ardra, Swati, Ashwini, Magha, Mool) resolve
+through **B2's own printed lord table** to exactly Rahu and Ketu and to nothing
+else, so the condition is read off the source rather than fitted to its dates.
+
+**Verified on three independent columns before wiring:** 13 of 13 dates, all
+Thursdays; 13 of 13 nakshatra cells; and all five boundaries the table states as
+clock times within **50 seconds** of the computed crossing.
+
+Two residuals are carried on the rule and not tuned away:
+
+* **`THURSDAY_OUTSIDE_SESSION` — 5.** The section tabulates market SESSIONS
+  ("Prior to Market hours", "Till Market closes") and this layer dates by civil
+  day, so the rule fires on **21** Mumbai civil days where the section prints 13,
+  and **16** of the 21 overlap the session. Five of the extras are Thursdays on
+  which the Moon holds a node nakshatra outside market hours entirely. The layer
+  does not narrow them away, because 9:15 and 15:30 are **not printed in this
+  section** — it names the session in words and never its hours — so supplying
+  them would be a reading we supplied, adopted to make a residual disappear.
+* **`THURSDAY_UNPRINTED` — 3.** Thursdays that DO overlap the session and that the
+  section still omits. All three are Mula; Mula is printed on 10-Dec-26, and
+  12-Mar-26 runs the full session, so neither an exclusion nor a duration filter
+  explains them. Narrowing to exclude exactly these three would be a fit to three
+  rows with nothing left to falsify it — §12.10's ruling.
+
+**And a source defect, carried:** the section's End Time column has rows 6 and 7
+interchanged — 14:57 against 25-Jun-26 and "Till Market closes" against 09-Jul-26,
+where the sky has it the other way round. The section's own note flags an
+"apparent one-row date/nakshatra offset", and the monthly calendar is the third
+witness: it agrees with the sky. **Here the SECTION is the defective printing and
+the monthly calendar is right** — the exact reverse of the Bhadra defect, and the
+reason neither printing may be used as ground truth without the other.
+
+### 1c. Moon Mercury in the same D9 — 36 windows — **NEEDS A NEW SERIES, not a rule**
+
+**This entry used to read "no astronomy-layer change" and give the reason as
+"`navamsa_ingress` carries every Moon and Mercury navamsa crossing". That sentence
+is false, and one query against the artifact is what showed it:**
+
+```
+build/astronomy_2026.json   navamsa_ingress: Mercury 162 · Moon 0
+build/astronomy_2027.json   navamsa_ingress: Mercury 162 · Moon 0
+```
+
+Eleven bodies carry a navamsa ingress series and the Moon is not one of them.
+Mercury's half of this condition is ready; the Moon's half has no series at all.
+**This is the same absence the status page already names as B71d's blocker** — "the
+Moon crosses a navamsa every two hours and the astronomy layer emits no navamsa
+ingress for it" — which had been sitting on a generated page, correct, for as long
+as this entry has been wrong.
+
+So 1c is a port of **1d's kind**, not 1a's. It is registered and blocked as
+`sub_moon_mercury_in_the_same_navamsh`, missing input `moon_navamsa_series`.
+
+**What building it would take and what it would unblock:** roughly **1,450 records
+a year** in each of two years — about a third again on top of 4,167 — and it
+clears 1c (36 windows), most of *Planet Vargottam in Their Own Nakshatra*, B71d,
+and the navamsa ladder's Moon rank from batch 2. Both years regenerate, so every
+recorded sha256 moves with it.
 
 ### 1d. Bhadra — 54 windows — NEEDS A NEW EVENT CLASS
 
@@ -291,10 +372,72 @@ event name in the source's Chapter 4.
   `python tools/build_2026.py`. The 2026 file is what the fixture reads, so the
   fixture cannot see Bhadra until 2026 is regenerated.
 
+#### AND THE QUESTION TO SETTLE FIRST — added 20-Sep-2026: which registry
+
+**Bhadra has no registry to be ported into, and that was not visible until the
+third registry existed.** It is `<section id="sec-142">` carrying an `<h2>` —
+**the same shape of markup as the nine sub-tables**, and not `<h3 class="section">`
+— so it is not catalogue B, it is not one of the six instrument blocks, and
+`monthlymap` is right to classify it `NO_SECTION` today.
+
+What it is *not* is one of the nine. `cfgsections.other_h2_tables()` defines those
+by a document RANGE — from `kshin-moon` to `gold-bullish` — and Bhadra sits in
+Chapter 4, outside it. So `SUBTABLE_REGISTRY` does not contain it and would not
+pick it up.
+
+Three readings, and they are materially different work:
+
+1. **Widen the sub-table registry from a RANGE to a SHAPE** — every
+   `<section id>` + `<h2>` that is neither catalogue B nor an instrument block.
+   Bhadra joins, the denominator goes **2/9 → 2/10** and then 3/10 when it lands,
+   and every page carrying "nine sub-tables" moves with it. Cheapest, and it is
+   the reading the markup supports: the registry's own docstring already defines
+   itself by shape.
+2. **A fourth registry** for Chapter 4's standalone sections. Honest if Chapter 4
+   turns out to hold more of them — **nobody has counted**, and that count should
+   be taken before this option is chosen or rejected.
+3. **Leave Bhadra outside any registry** and emit the karana series to the base
+   track only. Reproduces none of the 54 windows, and is the state that produced
+   §12.16's third shape.
+
+**Take the count first.** How many `<section id>` + `<h2>` sections exist outside
+Chapter 2 is one query, and it decides between 1 and 2 on evidence rather than on
+taste. Do not widen the denominator without it: the nine is a number three pages
+now print.
+
 ### Then: the three-way progression
 
 Re-run `tools/monthly_match.py` and report **baseline → post-wire → post-port**
-side by side. Two of the three numbers exist already (166 and 168 of 354).
+side by side.
+
+**Run 20-Sep-2026, with two of the four ports landed:**
+
+| | windows of 354 | event names of 147 | Mumbai firings 2026 |
+| --- | --- | --- | --- |
+| baseline, pre-config-wiring | 166 (47%) | 88 | 2,012 |
+| post-wire, the configuration port | 168 (47%) | 90 | 3,168 |
+| **post-port, 1a + 1b** | **192 (54%)** | **92** | **3,201** |
+
+**The +24 is exactly 11 + 13**, which is the whole of what the two sections print,
+and the arithmetic closes on the other outcomes too: `subtable_unported` 49 → 0,
+of which 36 became `rule_blocked` (1c, now registered and blocked) and 13
+`reproduced`; `series_no_rule` 20 → 9, the 11 being Total Day.
+
+**PRECISION HELD AT 96%**: 192 of 199 windows some rule claims and fires on,
+against 168 of 175 post-wire. The pair still travels together — **192 of 354 is
+COVERAGE, 192 of 199 is PRECISION conditional on a rule existing and firing** —
+and coverage is the number that moved.
+
+**One thing this run found that the ports themselves did not.** The first run after
+wiring still reported **168**, because `monthlymap` still classified both events
+as unported and `monthly_match` fired only two registries. The rules existed, were
+verified, were wired into `verdicts.py`, and **the instrument that measures
+coverage could not see them** — §12.16's third shape, inside the fixture built to
+detect it. Fixed in both places; the fixture now fires all three registries.
+
+The original prediction, left as written so it can be scored: the four ports were
+expected to move 168 toward ~270–282. Two of them have moved it to 192, and the
+remaining 90 windows are 1c's 36 and Bhadra's 54 — both of which need a series.
 
 **The third number was deliberately deferred, not rushed.** Expected direction and
 rough size, stated so it can be checked rather than discovered: the four ports
@@ -305,6 +448,29 @@ may land on the near-miss side of a civil-day boundary, and **the source defect
 above guarantees at least one 13-Jan mismatch that is correct to fail.**
 
 ## TASK 2 — DONE 16-Sep-2026. The markers are gone AND the prose they named is corrected.
+
+> **AND TWO SENTENCES SURVIVED IT, found 20-Sep-2026 on the first read of the
+> generated page.** Both were in `tools/gen_status.py`, which this task's own
+> table names as swept — the sweep corrected the sentences the STALE markers
+> pointed at, and these two carried no marker:
+>
+> * *"…a reader seeing 141/141 could conclude the source is fully covered when
+>   **58 named groups have never had a rule written for them**"* — 38 of them had.
+> * *"…**the 58 named groups of the instrument configuration sections (Chapter 2)
+>   are unported** and are scoped in CONFIG_SECTIONS_SCOPE.md"* — the closing
+>   section of a page whose own opening table read **38 of 58**.
+>
+> **The page contradicted itself, top to bottom, for four days**, and both
+> sentences are now computed from `CFGR.ported()` rather than stating a total.
+> `build/CONFIG_SECTIONS_SCOPE.md` also still printed `0 of 58` with the status
+> line *"not ported"*; it is a pre-port record and now says so, dated, pointing
+> at `CONFIG_PORT_REPORT.md` as the live page.
+>
+> **The lesson is about the sweep's own scope, not about these two sentences.**
+> A marker-driven sweep corrects what the markers name. Nothing was looking for
+> stale prose that nobody had marked — and the page that states the count
+> correctly at the top is exactly where a false total at the bottom survives
+> longest, because the correct figure nearby reads as confirmation.
 
 **Each marker was removed in the same edit that corrected the prose it pointed
 at.** A marker outliving its defect is its own small lie; so is a marker removed
@@ -359,13 +525,51 @@ group should emit a USDINR null row — **is settled, in TASK 0 above, before th
 sweep rather than inside it.** It had to be: it moves the row count, and the count
 is the thing three of the stale pages print. Sweep to **6,677**.
 
-## TASK 3 — the §12.16 entry that is owed: verified work that never got connected
+## TASK 3 — DONE 20-Sep-2026. §12.16 now names three shapes.
 
-**STILL OWED. Do not read the 16-Sep entry as this one.** §12.16 now names *two*
+**Landed** as *"A THIRD SHAPE: code that exists, was verified, and was never
+connected"*, with a three-shape navigation table at the head of §12.16 — the
+section had held two shapes and an introduction describing one, and a reader met
+the third 480 lines down. The three read as: **the answer is wrong**, **the
+question is wrong**, **the answer was never asked for**.
+
+**Its detector is landed and falsified, not proposed.** Every existing remedy in
+§12.16 presupposes an output, and a component nobody calls produces none, so the
+general answer is the end-to-end fixture. The narrow one that runs inside the
+build was measured rather than described: cross-referencing the 20 grades in
+`rules.base.INPUT_CERTAINTY` against the `inputs=` of every registered rule left
+**exactly two keys no rule claimed — `calendar/total_day` and `panchang/karana`,
+which were precisely the two ports still owed.**
+`test_a_graded_input_class_that_no_rule_claims_is_named` runs it, prints the whole
+census, and pins the unclaimed set. Falsified three ways before it was believed: a
+third unclaimed grade fails it, an ungraded declared input fails it, and a rule
+claiming `calendar/total_day` fails it — which is what wiring 1a looks like, so
+the port could not land without the record moving with it. It duly did.
+
+> **And the check was wrong the first time, in the way the section is about.** It
+> summed two registries **by name** and was written on the day there were two.
+> When the sub-table registry claimed `calendar/total_day`, the check went on
+> **passing**, because the rule that claimed it sat in a registry the check could
+> not see — a correct count of the wrong population, standing inside the check
+> written for the third shape. It now discovers registries instead of listing
+> them. Caught only by running it against a build where the answer was known to
+> have changed.
+
+**"Not config" had been standing in for "catalogue B" in four places**, and the
+third registry made all four wrong at once: `verdicts.is_config_rule`
+(`catalogue_b is None`, which a `SubTable` also satisfies),
+`cause_census.populations` (P1 went 5,209 → 5,314 with no catalogue-B rule
+changing), `gen_status`'s row split, and `monthly_match`'s three rule lookups.
+All four are now positive tests or explicit prefix lists, and P1 is back to 5,209
+with its four census figures back at **331 / 142 / 105 / 11**.
+
+### The record, as written 16-Sep-2026
+
+**Do not read the 16-Sep entry as this one.** §12.16 then named *two*
 shapes: the original **wrong answer that renders as a plausible correct one**, and
 **a correct count of the wrong set** (added 16-Sep-2026, from `282`, the `45`/`12`
 unit mix and the `22`). Neither is the shape below. This one is a **third**, and it
-has now appeared four times:
+had then appeared four times:
 
 > **Code that exists, was verified, and was never connected.** Invisible because
 > every component test passes — the component is correct, and the correctness of a
@@ -455,6 +659,15 @@ both would have survived into it:
 Both are pinned by checks in `tests/test_rule_layer.py` that **print what they
 read**, and §5.1's was falsified both ways before it was believed. Suites now
 **215 · 120 · 135 · 12 · 17**; the row count is unchanged at 7,082.
+
+**No row carries `last_held`** — verified 16-Sep-2026 against the artifact at
+`966e492`: the key appears nowhere in `build/calendar_2027.json`. The TYPE exists
+and `tests/test_rule_layer.py` pins it, but nothing in the artifact emits it, so
+the §5.1 guard against stamping the EXCLUSIVE instant as a date is **not exercised
+by any reader**. Correct while the daily render stands — a one-day row's own date
+is its `last_held`. It becomes live at the collapse: the type is already there,
+so build the displayed end from `span_dates(days)` rather than rediscovering the
+off-by-one.
 
 **§5.3 — the HTML date filter must become an overlap test — is still open**, and
 belongs to whoever implements the collapse.

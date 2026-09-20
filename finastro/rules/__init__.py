@@ -49,6 +49,14 @@ from . import ref_tables          # noqa: F401  -- reference views + unreached s
 from . import config_rules        # noqa: F401  -- registers the 58 config groups
 from .config_rules import CONFIG_REGISTRY   # noqa: F401
 
+# The nine `<h2>` sub-tables of the same chapter -- neither catalogue B nor a
+# configuration block. A THIRD registry, for the same reason the second one
+# exists: 141 counts sections, 58 counts groups, and neither of them counts
+# these. `cfgsections.other_h2_tables()` has named them on three pages since
+# the scope survey; this is the first time they have somewhere to be ported to.
+from . import subtables           # noqa: F401  -- registers the 9 sub-tables
+from .subtables import SUBTABLE_REGISTRY    # noqa: F401
+
 BATCHES = ("visibility", "colocation", "panchang_rules", "shar", "apsides",
            "pairs", "volatile", "vedha", "ref_tables")
 
@@ -56,6 +64,12 @@ BATCHES = ("visibility", "colocation", "panchang_rules", "shar", "apsides",
 #: throughout. Catalogue B's denominator is 141 sections; this one's is 58
 #: groups, and the two have never been the same number.
 CONFIG_BATCH = "config_rules"
+
+#: The sub-table port, counted and reported separately again. Three registries,
+#: three denominators: 141 sections, 58 groups, 9 sub-tables. A row's registry
+#: is readable off its rule id -- `b<nn>` or a panchang family for catalogue B,
+#: `cfg_<block>_` for a configuration group, `sub_` for a sub-table.
+SUBTABLE_BATCH = "subtables"
 
 
 def by_status(status: str) -> list[Rule]:

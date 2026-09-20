@@ -101,19 +101,45 @@ UNIT_KEY = {
 }
 
 
+#: The rule-id prefix of each registry that is NOT catalogue B. Catalogue B
+#: is identified by EXCLUDING these, and the list is what makes that a
+#: statement rather than an assumption.
+#:
+#: This read `not r["event"].startswith("cfg_")` until 20-Sep-2026, when the
+#: sub-table registry landed and its `sub_` rows walked straight into P1:
+#: "not a configuration row" had meant "catalogue B" for exactly as long as
+#: there were two registries, and P1 went 5,209 -> 5,314 without a single
+#: catalogue-B rule changing. The figure was still a correct count -- of the
+#: wrong set, which is section 12.16's SECOND shape, and the third time in
+#: one session that catalogue B was identified by what it is not.
+#:
+#: A fourth registry adds its prefix here or fails the harness, because the
+#: sum of the named populations is checked against the whole.
+NON_CATALOGUE_B_PREFIXES = ("cfg_", "sub_")
+
+
 def populations(rows):
-    """The three nested populations, all derivable from the one artifact.
+    """The four populations, all derivable from the one artifact.
 
     P1 is what the build was before the configuration groups were wired and
-    before the base track existed -- `e00024a`'s 5,209 rows -- reconstructed by
-    filter rather than by rebuild, because configuration rows are exactly the
-    `cfg_` rules and base-track rows are exactly `row_kind == "event"`.
+    before the base track existed -- `e00024a`'s 5,209 rows -- reconstructed
+    by filter rather than by rebuild, because configuration rows are exactly
+    the `cfg_` rules, sub-table rows exactly the `sub_` rules, and base-track
+    rows exactly `row_kind == "event"`.
+
+    P1x is new and is printed BESIDE P1 rather than folded into it: the
+    sub-table port is the first thing since the base track to add rows to the
+    verdict side, and a population that silently absorbed them would be the
+    stale denominator this generator exists to prevent.
     """
     verdict = [r for r in rows if r["row_kind"] == "verdict"]
-    cat_b = [r for r in verdict if not r["event"].startswith("cfg_")]
+    cat_b = [r for r in verdict
+             if not r["event"].startswith(NON_CATALOGUE_B_PREFIXES)]
+    subs = [r for r in verdict if r["event"].startswith("sub_")]
     return {
         "P1 catalogue-B verdict rows only (pre-wiring, pre-base-track)": cat_b,
-        "P2 all verdict rows (post-wiring, pre-base-track)": verdict,
+        "P1x sub-table verdict rows alone (the third registry)": subs,
+        "P2 all verdict rows (post-wiring, post-sub-tables)": verdict,
         "P3 every row as rendered (post-base-track)": rows,
     }
 

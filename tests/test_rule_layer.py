@@ -3107,7 +3107,13 @@ def test_the_cause_census_figures_carry_the_population_that_produced_them():
     cc = _cause_census()
     rows = _calendar()["rows"]
     pops = cc.populations(rows)
-    names = [n.split()[0] for n in pops]                     # P1, P2, P3
+    names = [n.split()[0] for n in pops]              # P1, P1x, P2, P3
+    # P1, P2 and P3 NEST; P1x does not -- it is the sub-table rows alone,
+    # disjoint from P1 and contained in P2. The nesting checks below are
+    # about the nested three, and P1x gets its own check rather than being
+    # folded in, because a slice smuggled into a nesting argument is how the
+    # populations stopped meaning anything the first time.
+    nested = [n for n in names if n != "P1x"]
     prows = dict(zip(names, pops.values()))
     size = {n: len(r) for n, r in prows.items()}
     grid = {n: cc.census(r) for n, r in prows.items()}
@@ -3145,18 +3151,36 @@ def test_the_cause_census_figures_carry_the_population_that_produced_them():
     # than decorative.
     moved = {k: {pop: cell[(pop, of[k], "firings")] for pop in names}
              for k in firings}
-    record("Each figure is pinned in all three populations, so naming the "
-           "wrong one fails",
+    record("Each figure is pinned in every population, so naming the wrong "
+           "one fails",
            all(moved[k] == {pop: sens[k][pop] for pop in names}
                for k in firings),
            "; ".join(f"{k} {moved[k]}" for k in firings))
 
     record("Only the ephemeris cause is population-sensitive; the other three "
            "are catalogue B's alone",
-           len(set(moved["date_only_ephemeris"].values())) == 3
-           and all(len(set(moved[k].values())) == 1
+           len({moved["date_only_ephemeris"][p] for p in nested}) == 3
+           and all(len({moved[k][p] for p in nested}) == 1
                    for k in ("period_cut", "civil_day_span", "anchored")),
-           f"ephemeris {moved['date_only_ephemeris']}, the other three flat")
+           f"ephemeris {{{', '.join(f'{p}: {moved[chr(100)+chr(97)+chr(116)+chr(101)+chr(95)+chr(111)+chr(110)+chr(108)+chr(121)+chr(95)+chr(101)+chr(112)+chr(104)+chr(101)+chr(109)+chr(101)+chr(114)+chr(105)+chr(115)][p]}' for p in nested)}}}, "
+           "the other three flat across the nested three")
+
+    # THE SLICE, CHECKED AS A SLICE. The sub-table port's whole contribution
+    # to the no-instant side, and the arithmetic that says P1 did not absorb
+    # any of it.
+    record("P1x is disjoint from P1 and P1 + cfg + P1x accounts for P2",
+           size["P1"] + size["P1x"]
+           + len([r for r in prows["P2"] if r["event"].startswith("cfg_")])
+           == size["P2"],
+           f"P1 {size['P1']} + cfg "
+           f"{len([r for r in prows['P2'] if r['event'].startswith('cfg_')])}"
+           f" + P1x {size['P1x']} = {size['P2']}")
+
+    record("The sub-table port contributes ephemeris firings and nothing else",
+           moved["date_only_ephemeris"]["P1x"] == 12
+           and all(moved[k]["P1x"] == 0
+                   for k in ("period_cut", "civil_day_span", "anchored")),
+           f"P1x {{{', '.join(f'{k}: {moved[k][chr(80)+chr(49)+chr(120)]}' for k in firings)}}}")
 
     # 331 IS UNIQUE IN THE WHOLE GRID -- three populations x six causes x six
     # units. No other combination of axes in this build produces it, so the
@@ -3232,14 +3256,281 @@ def test_the_cause_census_figures_carry_the_population_that_produced_them():
            "the grid",
            not present, f"{len(cell)} cells searched; found {present}")
 
+    # 282's ATTRIBUTION IS PINNED BY ITS CELL, NOT BY ITS VALUE. The point of
+    # attributing it was never that the number is 282 -- it was that the
+    # number is the FIRST cause's (venue, date) count in P3 and was filed
+    # under the SECOND cause's firings. A figure pinned by value goes stale
+    # the moment the artifact grows, which is what happened when the
+    # sub-table port took that cell from 282 to 300; pinning the cell says
+    # the same thing and survives it.
     at282 = sorted(k for k, v in cell.items() if v == 282)
-    record("282 is the FIRST cause's (venue, date) count in P3, and appears "
-           "under no unit of the cause it was filed as",
-           at282 == [("P3", "date_only_ephem", "venue-date")]
+    home = cell[("P3", "date_only_ephem", "venue-date")]
+    record("282's cell is the FIRST cause's (venue, date) count in P3, and it "
+           "reads what the sub-table port left it reading",
+           home == CENSUS_BLOCK["the_diagnosable_ones_measured"]["at_282s_cell"]
            and 282 not in {cell[(pop, "period_cut", u)]
                            for pop in names for u in cc.UNITS},
-           f"282 at {at282}")
+           f"that cell now reads {home}; 282 itself now at {at282}")
 
+
+
+# -------------------------------------------------------------------------
+# Input classes that carry a certainty grade and are claimed by NO rule. The
+# grade is a statement that the class was assessed and is fit to condition a
+# rule on, so an unclaimed grade is a component that exists, was graded, and
+# was never connected -- STEP4_DECISIONS section 12.16, the THIRD shape.
+#
+# Held here rather than derived, because a set computed from the registry
+# would agree with the registry by construction and could not fail. Wiring
+# either port empties its entry and fails this check, which is the coupling:
+# the port cannot land without this record moving with it.
+EXPECTED_UNCLAIMED_INPUT_GRADES = {
+    # `calendar/total_day` sat here until 20-Sep-2026 and does not any more:
+    # `sub_total_days_in_year` claims it, which is what wiring TASK 1a looks
+    # like from this check's side. The entry having to move is the coupling
+    # working as designed.
+    "panchang/karana":
+        "the karana number and name are computed on every panchang record and "
+        "verified to 25 s against the Bhadra section's 16 January boundaries "
+        "(STEP3_REPORT section 6.8), and there is no karana event class at "
+        "all, so 0 of the source's 54 printed Bhadra windows are reproduced. "
+        "TASK 1d",
+}
+
+
+def test_a_graded_input_class_that_no_rule_claims_is_named() -> None:
+    """A certainty grade with no consumer is the third shape, and it is cheap.
+
+    STEP4_DECISIONS section 12.16's third shape -- code that exists, was
+    verified, and was never connected -- defeats every other detector this
+    build has, because all of them ask a question about an OUTPUT and a
+    component nobody calls produces none. The end-to-end fixture is the
+    general answer. This is the narrow one that runs inside the build: every
+    registered key that no registered consumer claims is a candidate.
+
+    It catches only disconnections that REGISTERED something. It does not
+    catch a misspelled key (SUGAR's sector alias registered nothing), and it
+    does not catch a whole registry nobody calls (the 38 configuration rules
+    declared their inputs the entire time they reached zero rows). It is a
+    second net under the fixture, not a substitute for it.
+
+    Prints the full census rather than the verdict, per the same section's
+    second discipline: a boolean carries no evidence of what produced it.
+    """
+    # EVERY registry, discovered rather than listed. The first version of
+    # this check summed two registries by name and was written on the day
+    # there were two. Wiring the sub-table registry claimed
+    # `calendar/total_day` and this check went on PASSING, because the rule
+    # that claimed it sat in a registry the check could not see -- a census
+    # over the wrong population, which is section 12.16's SECOND shape
+    # standing inside the check written for its THIRD. Caught by running it
+    # against a build where the answer was known to have changed.
+    registries = [v for k, v in vars(R).items()
+                  if k.endswith("REGISTRY") and isinstance(v, list)]
+    record("The input census walks every registry the rule layer exports",
+           len(registries) == 3,
+           f"{len(registries)} registries, "
+           f"{sum(len(x) for x in registries)} rules")
+    claimed: dict[str, int] = {}
+    for rule in [r for reg in registries for r in reg]:
+        for key in (getattr(rule, "inputs", None) or ()):
+            claimed[key] = claimed.get(key, 0) + 1
+
+    graded = R.base.INPUT_CERTAINTY
+    unclaimed = {k: graded[k] for k in graded if not claimed.get(k)}
+    ungraded = sorted(k for k in claimed if k not in graded)
+
+    print("    input-class census -- grade, and the rules declaring it:")
+    for key in sorted(graded):
+        print(f"      {key:28s} {graded[key]}  claimed by {claimed.get(key, 0)}")
+
+    record("Every declared rule input carries a certainty grade",
+           not ungraded, f"ungraded: {ungraded}" if ungraded else
+           f"{len(claimed)} declared classes, all graded")
+    record("The graded input classes no rule claims are the recorded two",
+           set(unclaimed) == set(EXPECTED_UNCLAIMED_INPUT_GRADES),
+           f"unclaimed {sorted(unclaimed)} vs recorded "
+           f"{sorted(EXPECTED_UNCLAIMED_INPUT_GRADES)}")
+    record("An unclaimed grade is the third shape, and each names its port",
+           all(EXPECTED_UNCLAIMED_INPUT_GRADES.get(k, "").strip()
+               for k in unclaimed),
+           f"{len(unclaimed)} of {len(graded)} graded classes unclaimed, "
+           f"each with its reason and its TASK 1 entry")
+
+
+def test_the_three_registries_stay_three() -> None:
+    """No rule reaches a registry that is not its own.
+
+    The 141, the 58 and the 9 are three denominators over three shapes of
+    markup, and the ONLY thing keeping them from contaminating each other is
+    that each rule is registered once, in one place. This build has twice
+    shipped a figure that was right and a page that was not, both times
+    because a count meant something other than what its reader thought; a
+    rule in the wrong registry would make the count itself wrong.
+
+    Checked both ways -- by id prefix and by section type -- because either
+    alone would pass on a rule that carried the right name and the wrong
+    section, and the section is what `sections_ported()` reads.
+    """
+    from finastro.rules import subtables as ST
+    from finastro.rules.subtable_catalogue import SubTable
+    from finastro.verdicts import is_config_rule, is_subtable_rule
+
+    stray_b = [r.id for r in R.REGISTRY if r.id.startswith("sub_")]
+    stray_cfg = [r.id for r in config_rules.CONFIG_REGISTRY
+                 if r.id.startswith("sub_")]
+    record("No sub-table rule reached catalogue B's registry",
+           not stray_b and not stray_cfg,
+           f"REGISTRY {stray_b}, CONFIG_REGISTRY {stray_cfg}")
+
+    record("Every sub-table rule carries a SubTable section and a sub_ id",
+           all(isinstance(r.section, SubTable) and r.id.startswith("sub_")
+               for r in ST.SUBTABLE_REGISTRY),
+           f"{len(ST.SUBTABLE_REGISTRY)} rules")
+
+    record("A SubTable can never be counted as a catalogue-B section",
+           all(r.section.b is None for r in ST.SUBTABLE_REGISTRY)
+           and len(R.sections_ported()) == 141,
+           f"sections_ported() = {len(R.sections_ported())}/141 with the "
+           f"third registry live")
+
+    # `is_config_rule` used to be `catalogue_b is None`, which a SubTable
+    # satisfies. That is the one way these two registries could still be
+    # confused downstream, so it is asserted rather than assumed.
+    record("is_config_rule tells a sub-table from a configuration group",
+           not any(is_config_rule(r) for r in ST.SUBTABLE_REGISTRY)
+           and all(is_config_rule(r) for r in config_rules.CONFIG_REGISTRY)
+           and all(is_subtable_rule(r) for r in ST.SUBTABLE_REGISTRY)
+           and not any(is_subtable_rule(r)
+                       for r in config_rules.CONFIG_REGISTRY),
+           "both predicates are positive type tests and disagree on every "
+           "rule of the other registry")
+
+    record("The nine sub-tables are 2 ported and 7 blocked, each naming its "
+           "input",
+           len(ST.ported()) == 2 and len(ST.blocked()) == 7
+           and all(r.missing_inputs for r in ST.blocked()),
+           f"{len(ST.ported())} ported + {len(ST.blocked())} blocked of "
+           f"{len(ST.SUBTABLE_REGISTRY)}; blocked on "
+           f"{sorted({k for r in ST.blocked() for k in r.missing_inputs})}")
+
+
+def test_the_supplied_verdict_check_actually_bites() -> None:
+    """The sub-table guard, fed the thing it exists to refuse.
+
+    The standing problem in section 12.16 is guards nobody has seen fail: a
+    guard that has never rejected anything is indistinguishable from one that
+    cannot. `check_no_verdict` is the mirror of the configuration port's
+    `check_verdict` -- there, a rule that LOST half its verdict is refused;
+    here, a rule that GAINED one is, because none of the nine sections prints
+    a verdict and so the only place one could come from is us.
+    """
+    from finastro.rules.subtable_catalogue import (S, SuppliedVerdict,
+                                                   check_no_verdict)
+    from finastro.rules import subtables as ST
+
+    sub = S("total-days")
+    try:
+        check_no_verdict("sub_test", sub, "Bullish", "title")
+        bit = False
+    except SuppliedVerdict:
+        bit = True
+    record("check_no_verdict refuses a verdict the section never printed",
+           bit, "raised SuppliedVerdict on ('Bullish', 'title')")
+
+    try:
+        check_no_verdict("sub_test", sub, None, None)
+        ok = True
+    except SuppliedVerdict:
+        ok = False
+    record("check_no_verdict passes the null verdict every sub-table carries",
+           ok, "None/None accepted, which is what all 9 rules carry")
+
+    record("No sub-table rule carries a verdict, so every row is "
+           "condition_only",
+           all(r.verdict_text is None and r.verdict_from is None
+               for r in ST.SUBTABLE_REGISTRY),
+           f"{len(ST.SUBTABLE_REGISTRY)} rules, 0 verdicts")
+
+
+def test_the_subtable_ports_reproduce_their_own_printed_tables() -> None:
+    """The verification that was run BEFORE the wiring, pinned after it.
+
+    Reported against each section's OWN table and not against the monthly
+    calendar, because the two printings disagree and this port found which
+    way round: for Total Day the section prints 12 and the calendar 11, and
+    for the Thursday table the section's end-time column has two rows
+    interchanged that the calendar gets right.
+
+    The expected values come from the DOCUMENT -- sliced out of the section's
+    own `<table>` at import -- and not from `panchang.total_days` or from the
+    Moon's nakshatra series, which are the code under test. Section 12.16's
+    point 1: a check whose expected value comes from the code under test
+    cannot fail.
+    """
+    import datetime as _dt
+    from finastro.rules import subtables as ST
+    from finastro.sky import Sky as _Sky
+
+    sky26 = _Sky.load(ROOT / "build" / "astronomy_2026.json")
+    fired = R.base.fire(ST.SUBTABLE_REGISTRY, sky26, year=2026)
+    days = {}
+    for f in fired:
+        if f.location == "mumbai":
+            days.setdefault(f.rule_id, set()).add(f.civil_date)
+
+    def d(x):
+        return _dt.datetime.strptime(x, "%d-%b-%y").date()
+
+    # ---- Total Day: the section's 12, not the monthly calendar's 11.
+    printed = {d(x) for x in ST.TOTAL_DAY_PRINTED}
+    got = days.get("sub_total_days_in_year", set())
+    record("Total Day reproduces the section's own 12 printed dates exactly",
+           got == printed,
+           f"{len(printed)} printed, {len(got)} fired, "
+           f"missing {sorted(str(x) for x in printed - got)}, "
+           f"extra {sorted(str(x) for x in got - printed)}")
+    record("The monthly calendar prints 11 of those 12, and the section is "
+           "the complete printing",
+           len(printed) == 12 and d("22-Apr-26") in printed,
+           "22-Apr-26 is in the section and absent from the monthly calendar, "
+           "the same relationship section 6.8 found for Bhadra")
+
+    # ---- Rahu/Ketu Thursday: dates AND the nakshatra column.
+    th_printed = {d(x) for x, _nak in ST.THURSDAY_PRINTED}
+    th_got = days.get("sub_rahu_or_ketu_nakshatra_on_a_thursday", set())
+    record("Every one of the section's 13 Thursday dates is reproduced",
+           th_printed <= th_got,
+           f"{len(th_printed)} printed, {len(th_printed & th_got)} matched, "
+           f"missing {sorted(str(x) for x in th_printed - th_got)}")
+    record("Every printed date is a Thursday, checked rather than assumed",
+           all(x.weekday() == 3 for x in th_printed),
+           f"{len(th_printed)} dates")
+
+    # THE NAKSHATRA COLUMN IS THE INDEPENDENT ONE. It is what makes the
+    # reading the document's rather than a fit to its dates: the six names
+    # the column uses resolve through B2's own printed lord table to exactly
+    # Rahu and Ketu, and to nothing else.
+    printed_naks = {nak for _d, nak in ST.THURSDAY_PRINTED}
+    record("The section's own Nakshatra column resolves to exactly the "
+           "node-ruled set, through B2's printed lord table",
+           printed_naks <= set(ST.NODE_NAKSHATRAS)
+           and len(ST.NODE_NAKSHATRAS) == 6,
+           f"column uses {sorted(printed_naks)}; B2's table gives "
+           f"{sorted(ST.NODE_NAKSHATRAS)}")
+
+    # The residuals, pinned as counts so neither can be tuned away quietly.
+    extra = sorted(str(x) for x in th_got - th_printed)
+    record("The 8 further Thursdays split into the recorded 3 in-session and "
+           "5 outside it",
+           extra == sorted(ST.THURSDAY_UNPRINTED + ST.THURSDAY_OUTSIDE_SESSION),
+           f"{len(extra)} extras: {extra}")
+    record("The section tabulates sessions and this layer dates civil days, "
+           "and the count says which",
+           len(th_got) == 21 and len(th_printed) == 13,
+           f"{len(th_printed)} printed, {len(th_got)} fired on Mumbai civil "
+           f"days, {len(th_printed) + len(ST.THURSDAY_UNPRINTED)} of those "
+           f"overlapping the session")
 
 def main() -> int:
     sky = Sky.load()
@@ -3252,6 +3543,10 @@ def main() -> int:
 
     test_catalogue()
     test_every_rule_is_traceable()
+    test_a_graded_input_class_that_no_rule_claims_is_named()
+    test_the_three_registries_stay_three()
+    test_the_supplied_verdict_check_actually_bites()
+    test_the_subtable_ports_reproduce_their_own_printed_tables()
     test_axes_and_tier_derivation()
     test_labels_are_from_the_config_vocabulary()
     test_source_probability_attaches_per_rule_and_not_per_section()

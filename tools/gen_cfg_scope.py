@@ -296,7 +296,14 @@ def main() -> None:
     A = L.append
     A("# What porting the instrument configuration sections would take")
     A("")
-    A("**Status: not ported. This is the scope, reported before the work.** "
+    A("**Status: this is the scope, reported BEFORE the work, and the port has "
+      "since happened.** The `ported` column below reads 0 throughout because "
+      "that is what it was when the survey was taken; **38 of the 58 groups are "
+      "ported today and reach the calendar's rows**, per group in "
+      "`build/CONFIG_PORT_REPORT.md`, which is the live page. This one is kept "
+      "as the record of what the work was estimated to take, so the estimate can "
+      "be read against what it cost -- see 'Where the port disagreed with the "
+      "scope survey' there. "
       "Generated from `data/source_2026.html` by `finastro/cfgsections.py`; the "
       "per-group classes are assigned in `tools/gen_cfg_scope.py` with the "
       "evidence for each call in the same row, so a disagreement is checkable "

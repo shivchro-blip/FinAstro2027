@@ -2719,6 +2719,23 @@ discipline. Remediation is not a safe region of this build. It is where two of t
 seven instances came from, and the sub-section below the seventh says why that
 follows rather than surprises.
 
+**This section now holds THREE shapes, and they are not variants of one another.**
+The seven instances above and their detectors are the FIRST. Two more were found
+later, each because the first shape's remedies passed over it, and each carries its
+own detector because none of the first shape's detectors reaches it:
+
+| | the shape | where the defect sits | its detector |
+| --- | --- | --- | --- |
+| **1st** | **a wrong answer that renders as a plausible correct one** | the operation misfired; the result merely looked survivable | assert an expected count or content sourced from OUTSIDE the code under test |
+| **2nd** | **a correct count of the wrong set** (16-Sep-2026) | the operation is right; the population, unit or filter under it is not | state the unit and the filter beside the count, so a figure cannot be read without its population |
+| **3rd** | **code that exists, was verified, and was never connected** (20-Sep-2026) | nothing ran; there is no output at all | an end-to-end fixture against the source's own finished output |
+
+Read in that order they are the three ways a build can be wrong while every check
+it has is green: **the answer is wrong**, **the question is wrong**, **the answer
+was never asked for**. Each shape's own sub-section states why the preceding
+shapes' detectors miss it, which is the part that makes them separate entries
+rather than three examples of one.
+
 #### The four instances
 
 **1. Blank reference views — two separate causes, one shape.** §12.12. The
@@ -3182,6 +3199,169 @@ turns of argument over which set was right, conducted by both sides without eith
 stating what it had counted. **That is the tell: a dispute about whether a figure
 is correct, in which neither party has named the population, is not yet a dispute
 about anything.**
+
+#### A THIRD SHAPE: code that exists, was verified, and was never connected · recorded 20-Sep-2026
+
+**This entry was owed from 15-Sep-2026 and deferred twice before it was written,
+which is the shape it is about.** A documentation item that is understood, agreed
+and never connected to the page it belongs on is the same failure as a module that
+is written, tested and never called; the only difference is that nothing imports
+prose. It is recorded here rather than noted as an aside because both prior
+deferrals were invisible for exactly the reason below — nothing failed while it was
+missing.
+
+> **Code that exists, was verified, and was never connected.** A component that is
+> present, correct, and covered by a passing check, which **nothing calls**.
+> Invisible because every check on the component passes — the component *is*
+> correct, and the correctness of a component says nothing whatever about whether
+> anything reaches it.
+
+**It is neither of the two shapes above, and the difference is where the defect
+sits.** The first shape is an operation that misfired into a plausible-looking
+result. The second is an operation that ran correctly over the wrong population,
+unit or filter. This one is **an operation that never ran at all**. There is no
+wrong output to read, no figure to attribute to a domain, and no byte that differs
+from the byte that ought to have been there. The artifact is not misleading; it is
+**silent** — and a silence is indistinguishable from the feature never having been
+built.
+
+#### The four instances
+
+| | what exists, and what verified it | what it never reached | measured cost |
+| --- | --- | --- | --- |
+| **1. SUGAR's sector key** | the reconciled rulership table, which spells the sector `sugar_and_soft_goods` off book_ch15. The table was **right** | the lookup asked for `sugar`, so Venus resolved to nothing and the body-scoping step excluded SUGAR from every rule | SUGAR emitted **0** rows. With the alias: **396**, 134 carrying a verdict (§12.15) |
+| **2. The configuration rules, ported and not wired** | 38 of 58 groups, verified against the document group by group, with `check_verdict` guarding registration and that guard proven to refuse all three of its cases | `verdicts.py` fired catalogue B alone, so no configuration rule reached a calendar row | **0** rows for the whole port until 14-Sep-2026. Now **1,468 of 6,677** |
+| **3. The stale `0 of 58`** | the count in the registry, which was correct throughout | four pages that printed it, none of which read the registry | four published pages asserting the opposite of the build's own state |
+| **4. Bhadra and Total Day** | `panchang.total_days` reproduces the source's `dd + mm == yy` **12/12** for 2026; the karana computation reproduces the Bhadra section's **16** January boundaries to within **25 seconds** (§6.8) | neither was ever given a rule | **65** of the source's own printed windows — Total Day **11**, Bhadra **54** — that the calendar does not reproduce |
+
+Instance 3 shows that the shape is not about code. What was disconnected there was
+a *number* from its *source*; the mechanism is identical and so is the silence.
+
+#### Why every detector this section already had misses it
+
+| the detector | why it passes |
+| --- | --- |
+| assert an expected count or content from outside the code under test | it asserts over an output. There is no output |
+| read the artifact, not the code | the artifact is correct — it is a correct rendering of a build in which the thing was never called |
+| byte-level comparison against a known-good tree | **the bytes are identical, and that identity IS the defect.** The strongest of the four detectors above is the most precisely inverted here |
+| print what the check read | the check read what it was pointed at, and it was pointed at the component |
+| state the unit and the filter beside the count | the second shape's remedy needs a count to attach them to |
+
+Every remedy in this section presupposes that **something ran**. Four of the five
+are questions about an output and the fifth is a question about a figure's domain.
+A component nobody calls produces neither.
+
+**And the component's own tests are the trap, not merely useless.** All four
+instances carried passing checks *on the disconnected thing* the whole time:
+`test_total_days` asserted 12/12 while zero rules read a `total_day` record,
+`test_bhadra_two_printings` ran seven checks on a karana computation that no event
+class emits, and the 38 configuration groups were verified group by group against
+the source while reaching nothing. **A passing component test is positive evidence
+that the component works and no evidence at all that it is reachable** — and it
+reads, to anyone scanning a green suite, like coverage.
+
+#### The detector, named
+
+> **An end-to-end fixture against the source's own finished output.** Not against
+> our records of it, and not against the component. The only check that can see an
+> absence is one whose expected set was written down by somebody other than this
+> build.
+
+`build/MONTHLY_2026_FIXTURE.md` is that fixture — the source's own 2026 monthly
+calendar, 354 printed windows over 147 event names — and it found instances **2 and
+4**. It could find them because its denominator is the document's, so a window the
+layer never attempts is a **miss** rather than an absence, and a miss is visible
+where a silence is not. That is the same property that makes the two coverage
+denominators travel together: **47% coverage is the number that can fall when
+nothing is wired, and 96% precision is the number that cannot.**
+
+#### A cheap structural detector, measured
+
+The fixture is the general answer and it is not free — it needs the source's
+finished output, transcribed and mapped. There is a narrower one available inside
+the build, and it was **run rather than proposed**:
+
+> **Every registered key that no registered consumer claims is a candidate
+> instance.**
+
+`finastro/rules/base.INPUT_CERTAINTY` grades 20 input classes. Cross-referenced
+against the `inputs=` of all **171 catalogue-B rules and 58 configuration rules**,
+exactly **two keys are declared by no rule**:
+
+```
+'calendar/total_day'  graded A
+'panchang/karana'     graded A
+```
+
+**They are precisely the two cheap ports still owed.** A certainty grade is a
+statement that a class has been assessed and is fit to condition a rule on; two of
+them have sat in that table since Step 4 opened, graded **A**, claimed by nothing.
+The grade is the registration this shape leaves behind, and it is checkable in a
+dozen lines.
+
+**Landed and falsified, not proposed.**
+`tests/test_rule_layer.py::test_a_graded_input_class_that_no_rule_claims_is_named`
+runs the cross-reference, **prints the whole census** — every graded class beside
+the number of rules declaring it — and pins the unclaimed set against
+`EXPECTED_UNCLAIMED_INPUT_GRADES`, which holds each key's reason and the port it
+belongs to. The expected set is held in the harness and not derived from the
+registry, because a set computed from the registry agrees with the registry by
+construction and cannot fail. It was falsified three ways before it was believed:
+a third unclaimed grade fails it, an *ungraded* declared input fails it, and a rule
+that claims `calendar/total_day` — which is what wiring TASK 1a looks like — fails
+it too. **That last one is the coupling worth having: the port cannot land without
+this record moving with it,** which is the failure mode this whole sub-section is
+about, turned into a check. +3, 228 → **231**.
+
+**Its limit, stated because a detector nobody has seen fail is not a detector.** It
+catches only disconnections that *registered* something. It does **not** catch
+instance 1 — a misspelled key registers nothing — and it does **not** catch
+instance 2, because the 38 configuration rules were fully registered in a registry
+that `build_verdicts` did not call, so every key they declare is claimed. It is a
+cheap second net under the fixture, not a substitute for it.
+
+#### Two depths of disconnection, and only the artifact separates them
+
+Instance 4 is one line in the table above and **two different failures**, which the
+artifact distinguishes and the prose describing it does not:
+
+| | Total Day | Bhadra |
+| --- | --- | --- |
+| computation | `panchang.total_days`, validated **12/12** | karana number and name, on every panchang record, verified to **25 s** |
+| records in `build/astronomy_2027.json` | **12** `total_day` | **0** — the file carries 16 event classes and karana is not among them |
+| rows in `build/calendar_2027.json` | **12**, as base-track event rows | **0** |
+| verdict rows | **0** — no rule reads the class | **0** |
+| of the source's printed windows | 0 of **11** | 0 of **54** |
+
+**Total Day is connected to the artifact and not to the rule layer**: its records
+reach a reader, and no rule conditions on them. **Bhadra is not connected to
+anything** — the computation is verified and graded A, and there is no event class
+for it, so nothing downstream could read it if it tried. Calling both "never
+connected" is true and loses the fact that one is a rule away and the other is a
+rule *and a series* away — which is exactly the difference the handoff's port list
+draws between its 1b/1c and its 1d (`build/NEXT_SESSION.md`, TASK 1).
+
+This distinction cost one query against each of the two generated files. **It was
+not derivable from any page that describes them**, including the page that lists
+the ports.
+
+#### The discipline this argues for
+
+Added to the two already standing — *name the count you expect and say where it
+came from*, and *print what the check actually read*:
+
+> **Before believing any verified component: name the thing that calls it, and
+> check the call from the far end.** Not from the component — from the artifact the
+> caller writes. If nothing can be named, the component is not done, however green
+> its tests are.
+
+And the corollary, because this is the fourth appearance and the second entry
+deferred while it was true: **a verified-but-unconnected component is not a
+half-finished feature, it is a zero-finished feature with a passing test.** Its
+cost is not proportional to how much of it is built. Instance 2 was 38 fully
+verified group ports at **0** rows, and the last step — one condition in
+`build_verdicts` — was worth all 1,468.
+
 
 
 ---

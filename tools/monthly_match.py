@@ -39,6 +39,7 @@ sys.path.insert(0, str(ROOT))
 from finastro import monthly2026 as MO           # noqa: E402
 from finastro import monthlymap as MM            # noqa: E402
 from finastro.rules import (REGISTRY, CONFIG_REGISTRY,   # noqa: E402
+                            SUBTABLE_REGISTRY,
                             FIRING_STATUSES, fire, firing_rules)
 from finastro.sky import Sky                     # noqa: E402
 
@@ -52,6 +53,7 @@ VENUE = "mumbai"
 
 RULES = {r.id: r for r in REGISTRY}
 CONFIG = {g.id: g for g in CONFIG_REGISTRY}
+SUBS = {r.id: r for r in SUBTABLE_REGISTRY}
 
 
 # ------------------------------------------------------------------ direction
@@ -104,11 +106,15 @@ def run_rules():
         raise SystemExit(
             f"{ASTRONOMY_2026.name} carries year {sky.meta['year']}, not "
             f"{FIXTURE_YEAR} -- run tools/build_2026.py")
-    # Both registries, because `verdicts.py` now fires both. The fixture
-    # measures what the CALENDAR contains; firing a registry here that the
-    # calendar does not read would measure something nobody ships.
-    firings = fire(list(firing_rules()) + list(CONFIG_REGISTRY), sky,
-                   year=FIXTURE_YEAR)
+    # ALL THREE registries, because `verdicts.py` fires all three. The
+    # fixture measures what the CALENDAR contains; firing a registry here
+    # that the calendar does not read would measure something nobody ships,
+    # and NOT firing one the calendar does read measures a coverage gap that
+    # has already been closed -- which is what this call did for the first
+    # hour of the sub-table port, reporting 168 of 354 against a build that
+    # reproduces 170.
+    firings = fire(list(firing_rules()) + list(CONFIG_REGISTRY)
+                   + list(SUBTABLE_REGISTRY), sky, year=FIXTURE_YEAR)
     by_rule = collections.defaultdict(lambda: collections.defaultdict(set))
     for f in firings:
         by_rule[f.rule_id][f.location].add(f.civil_date)
@@ -123,7 +129,7 @@ def classify(row, by_rule) -> dict:
     # Before the wiring it was counted apart, as `config_not_wired`, because a
     # ported group that reached no row was a wiring gap and not a rule gap --
     # and keeping the two separate is what makes this diff mean anything.
-    _all = {**RULES, **CONFIG}
+    _all = {**RULES, **CONFIG, **SUBS}
     firing_targets = [t for t in targets
                       if t in _all and _all[t].status in FIRING_STATUSES]
     silent_targets = [t for t in targets
@@ -156,6 +162,10 @@ def classify(row, by_rule) -> dict:
     elif kind == MM.SERIES_NO_RULE:
         outcome = "series_no_rule"
     elif kind == MM.SUBTABLE:
+        # Registered and blocked on a named input, which is a different fact
+        # from nobody having looked at it -- the same distinction `rule_blocked`
+        # draws for catalogue B. Kept under its old name because the name is in
+        # the recorded fixture output.
         outcome = "subtable_unported"
     else:
         outcome = "no_section"
@@ -192,7 +202,10 @@ def verdict_compare(results) -> dict:
             continue
         ours = None
         for t in r["firing_targets"]:
-            rr = RULES.get(t) or CONFIG[t]
+            # Three registries. A KeyError here used to mean a typo in
+            # the map; since 20-Sep-2026 it would mean a registry this
+            # function does not know about, which is worth the crash.
+            rr = RULES.get(t) or CONFIG.get(t) or SUBS[t]
             if rr.verdict_text:
                 ours = rr.verdict_text
                 break
@@ -307,7 +320,7 @@ def extras(results, by_rule) -> dict:
                        if (b - a).days > 1)
         per_rule[rid] = len(extra)
         per_rule_runs[rid] = runs
-        fam = (RULES.get(rid) or CONFIG[rid]).rule_family
+        fam = (RULES.get(rid) or CONFIG.get(rid) or SUBS[rid]).rule_family
         per_family[fam] += len(extra)
         per_family_runs[fam] += runs
         total += len(extra)
@@ -320,7 +333,7 @@ def extras(results, by_rule) -> dict:
         rid for rid in by_rule
         if rid not in mapped_rules and by_rule[rid].get(VENUE))
     views = [r for r in unmapped_rules
-             if (RULES.get(r) or CONFIG[r]).rule_family.startswith("reference/")]
+             if (RULES.get(r) or CONFIG.get(r) or SUBS[r]).rule_family.startswith("reference/")]
     conditions = [r for r in unmapped_rules if r not in set(views)]
     return {
         "total_extra_days_on_mapped_rules": total,
@@ -338,7 +351,7 @@ def extras(results, by_rule) -> dict:
         "of_those_conditions": len(conditions),
         "condition_rules_no_source_row_maps_to": conditions,
         "condition_rule_families": dict(collections.Counter(
-            (RULES.get(r) or CONFIG[r]).rule_family for r in conditions)
+            (RULES.get(r) or CONFIG.get(r) or SUBS[r]).rule_family for r in conditions)
             .most_common()),
     }
 
@@ -376,12 +389,19 @@ def main() -> int:
                       "records": sky.meta["record_count"],
                       "year": sky.meta["year"]},
         "rule_layer": {
-            "rules_in_registry": len(REGISTRY),
+            # All three registries, each named for what it is. The last key
+            # read `config_groups_registered_not_wired` until 20-Sep-2026 --
+            # six days after `verdicts.py` started firing that registry. The
+            # VALUE was right throughout and the NAME asserted the opposite
+            # of what the build did, which is the shape STEP4_DECISIONS
+            # section 12.16 is about, in a JSON key.
+            "catalogue_b_rules": len(REGISTRY),
+            "config_groups": len(CONFIG_REGISTRY),
+            "subtable_rules": len(SUBTABLE_REGISTRY),
             "firing_rules": len(firing_rules()),
             "firings_2026_both_venues": len(firings),
             "firings_2026_mumbai": sum(
                 1 for f in firings if f.location == VENUE),
-            "config_groups_registered_not_wired": len(CONFIG_REGISTRY),
         },
         "assignment_kinds": MM.kinds(),
         "windows_by_kind": dict(by_kind.most_common()),

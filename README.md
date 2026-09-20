@@ -59,17 +59,28 @@ they were never in the 141 and never in its denominator:
 ```
 catalogue B                        141 / 141 sections
 instrument configuration sections   38 /  58 named groups   (ported AND wired)
+Chapter-2 <h2> sub-tables            2 /   9 sub-tables     (ported AND wired)
 ```
 
 **38 of the 58 are ported and 20 are blocked, each on a named input**
 (`build/CONFIG_PORT_REPORT.md`). **Ported is now wired**, since the 14-Sep-2026
-change to `verdicts.py`: `build_verdicts()` fires both registries, and **1,468
-of the calendar's 6,677 verdict rows originate in a configuration section**,
-from 26 of the 38 ported groups. `config_instruments_for` routes a group to the
-instrument its BLOCK heading names rather than through the rulership table, so a
-*Gold — Bullish* group reaches gold because the source filed it under gold.
+change to `verdicts.py`: `build_verdicts()` fires all three registries, and
+**1,468 of the calendar's 6,758 verdict rows originate in a configuration
+section**, from 26 of the 38 ported groups. `config_instruments_for` routes a
+group to the instrument its BLOCK heading names rather than through the
+rulership table, so a *Gold — Bullish* group reaches gold because the source
+filed it under gold.
 
-The two registries stay separate anyway, and that separation is the point: a
+**The third line landed 20-Sep-2026** and is the nine `<h2>` sub-tables of the
+same chapter that belong to no instrument block — *Total Days in Year*,
+*Rahu or Ketu Nakshtra on a Thursday* and seven more. Two are ported and
+**81 rows** come from them; seven are registered and blocked with the input
+each waits on named, two of those on the Moon's navamsa ingress series, which
+the astronomy layer does not emit for the Moon at all. These sections print no
+verdict anywhere, so every sub-table row is `condition_only` by construction
+and a guard refuses any rule that arrives carrying one.
+
+The three registries stay separate anyway, and that separation is the point: a
 configuration group must never reach `sections_ported()` and inflate 141/141. A
 reader must not see 141/141 and conclude the source is covered.
 
@@ -104,21 +115,27 @@ Three rendered artifacts, all deterministic — rendering twice is byte-identica
 for each:
 
 ```
-build/calendar_2027.json   7,082 rows, the master
+build/calendar_2027.json   7,163 rows, the master
 build/calendar_2027.csv    the same rows, flat
 build/calendar_2027.html   self-contained, with search and filters
 ```
 
-**7,082 rows over 365 distinct dates, and the split is load-bearing: 6,677
+**7,163 rows over 365 distinct dates, and the split is load-bearing: 6,758
 verdict rows and 405 base-track event rows**, told apart by `row_kind`. Of the
-6,677, **5,209 come from catalogue B and 1,468 from the configuration groups**;
-3,322 carry a verdict text and 3,355 do not.
+6,758, **5,209 come from catalogue B, 1,468 from the configuration groups and
+81 from the sub-tables**; 3,322 carry a verdict text and 3,436 do not.
 
 **Quote the split, not the total.** `records` meant "verdict rows" while there
 were no others, and a consumer still reading it that way is now wrong by 405.
-The verdict count itself moved twice: 7,484 before the tier_4 scoping removed
-807 USDINR configuration rows that recorded no measurement, and 5,209 before the
-configuration wiring added 1,468.
+The verdict count itself has moved three times: 7,484 before the tier_4 scoping
+removed 807 USDINR configuration rows that recorded no measurement; 5,209 before
+the configuration wiring added 1,468; and 6,677 before the sub-table port added
+81 on 20-Sep-2026.
+
+**Catalogue B has stayed at 5,209 across both of those ports, and that is the
+check rather than a coincidence.** A port that moved it would be a port that had
+reached into catalogue B's registry, which is the one thing three separate
+denominators exist to prevent.
 
 The verdict layer applies `evidence_source` × `construction` per instrument on
 that instrument's **venue civil day**, and it *authors nothing*: verdict text is

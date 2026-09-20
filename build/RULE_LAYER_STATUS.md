@@ -1,19 +1,22 @@
 # Rule layer status — catalogue B, and what catalogue B is not
 
-Generated 16-Sep-2026 from the live registry, not by hand. Year 2027.
+Generated 20-Sep-2026 from the live registry, not by hand. Year 2027.
 
-## Coverage, in two denominators
+## Coverage, in three denominators
 
-Two counts, because there are two catalogues and only one of them was ever in scope:
+Three counts, because there are three catalogues in this document and only one of them was ever in scope:
 
 | | sections | ported | reading |
 | --- | --- | --- | --- |
 | **Catalogue B** — `<h3 class="section">`, the rule sections of Chapter 1 | 141 sections | **141 of 141** | every section carries a status |
 | **Instrument configuration sections** — `<section id="...">` with an `<h2>`, Chapter 2 | **58 named groups** | **38 of 58** | **20 blocked, each on a named input** |
+| **Chapter-2 `<h2>` sub-tables** — `<section id="...">` with an `<h2>` and no named groups | **9 sub-tables** | **2 of 9** | **7 blocked or out of scope, each on a named input** |
 
-**So: catalogue B 141/141 · configuration sections 38/58.** The configuration rules are registered in their own registry and are NOT in catalogue B's denominator — that separation is what keeps "141 of 141" honest. They DO feed the calendar: `verdicts.py` fires both registries, and **1,468 of the 6,677 verdict rows** come from the configuration groups, 5,209 from catalogue B.
+**So: catalogue B 141/141 · configuration sections 38/58 · sub-tables 2/9.** THREE DENOMINATORS OVER THREE SHAPES OF MARKUP, and none of them is in either of the others. That separation is what keeps "141 of 141" honest: it is a statement about `<h3 class="section">` and about nothing else. All three DO feed the calendar — `verdicts.py` fires all three registries — and the 6,758 verdict rows split **5,209 catalogue B · 1,468 configuration · 81 sub-table**.
 
-**141 of 141 is TRUE OF CATALOGUE B and is not a coverage claim about the source.** The instrument configuration sections are a different shape of markup and were never in the 141, so they were never in the denominator and a reader seeing "141/141" could conclude the source is fully covered when 58 named groups have never had a rule written for them.
+**A row's registry is readable off its `event` field with no lookup**: `cfg_<block>_` for a configuration group, `sub_` for a sub-table, and `b<nn>` or a panchang family name for catalogue B. That convention is asserted at registration rather than left to discipline, because the one thing that would make all three of these numbers wrong at once is a rule in the wrong registry.
+
+**141 of 141 is TRUE OF CATALOGUE B and is not a coverage claim about the source.** The instrument configuration sections are a different shape of markup and were never in the 141, so they were never in the denominator and a reader seeing "141/141" could conclude the source is fully covered when 20 of those 58 named groups have still never had a rule written for them.
 
 The counts, from the document (read out of `data/source_2026.html` at generation time by `finastro/cfgsections.py`, not out of config — a count taken from the thing being audited is not an audit):
 
@@ -33,7 +36,7 @@ The counts, from the document (read out of `data/source_2026.html` at generation
 
 **Ported IS wired, since the 14-Sep-2026 change to `verdicts.py`, and the distinction this section used to draw is the one thing about it that is now out of date.** `build_verdicts()` fires both registries; `config_instruments_for` routes a group to the instrument its BLOCK names rather than through the rulership table, so a *Gold — Bullish* group reaches gold because the source filed it under gold.
 
-**1,468 of 6,677 verdict rows in `build/calendar_2027.*` originate in a configuration section**, from 26 groups, split **gold-bearish 167** · **gold-bullish 61** · **silver-bearish 164** · **silver-bullish 923** · **sugar-bullish 153**.
+**1,468 of 6,758 verdict rows in `build/calendar_2027.*` originate in a configuration section**, from 26 groups, split **gold-bearish 167** · **gold-bullish 61** · **silver-bearish 164** · **silver-bullish 923** · **sugar-bullish 153**.
 
 **How to tell one apart, because the old test no longer works.** This page used to say that no row originates in a configuration section and offered a check: the `event_section` field never reads `gold-bullish`. It still never does — `event_section` carries the group's own printed title, such as `Venus Alone in Leo or Libra — Bearish`, and never the block id. The test passes and its conclusion is now wrong. **The field that separates them is `event`**, whose rule id begins `cfg_<block>_` for a configuration row and `b<nn>` or a panchang family name for a catalogue-B one.
 
@@ -45,9 +48,27 @@ Gold and silver reach tier 1 through their MCX legs (`MCXGOLD`, `MCXSILVER`); th
 
 **What porting them would take is scoped, not estimated, in `build/CONFIG_SECTIONS_SCOPE.md`** — all 58 groups, their conditions, and which of them the existing astronomy layer can already compute.
 
-### There is a third unported body of material, recorded here so it is not mistaken for covered either
+### The third body of material — registered since 20-Sep-2026, and two of it ported
 
 The same chapter carries nine further `<h2>` sub-tables that are neither catalogue B nor any of the six blocks above: *Kshin (Malefic) Moon*, *Total Days in Year*, *Rahu or Ketu Nakshtra on a Thursday*, *Moon Mercury in the Same Navamsh (D9)*, *Rainfall Calculation*, *Mars With or Aspecting Mercury*, *Eclipse*, *Planet Vargottam in Their Own Nakshatra*, *Moon Rashi Parivartan Yog with Other Planets in D1*.
+
+**This heading read "There is a third UNPORTED body of material" until 20-Sep-2026.** These nine now have a registry of their own and a denominator of their own, at the top of this page: 2 of 9 ported, 7 registered and blocked with the input each waits on NAMED. Registering the blocked seven rather than describing them in prose is what makes "blocked on what" countable off the registry instead of parsed out of a sentence.
+
+| sub-table | status | rule | blocked on |
+| --- | --- | --- | --- |
+| Total Days in Year (p. 126) | **ported** | `sub_total_days_in_year` | — |
+| Rahu or Ketu Nakshtra on a Thursday (p. 127) | **ported** | `sub_rahu_or_ketu_nakshatra_on_a_thursday` | — |
+| Kshin (Malefic) Moon (p. 125) | blocked | `sub_kshin_malefic_moon` | `scope` |
+| Moon Mercury in the Same Navamsh (D9) (pp. 128–129) | blocked | `sub_moon_mercury_in_the_same_navamsh` | `moon_navamsa_series` |
+| Rainfall Calculation (p. 130) | blocked | `sub_rainfall_calculation` | `no_dated_window` |
+| Mars With or Aspecting Mercury (p. 131) | blocked | `sub_mars_with_or_aspecting_mercury` | `aspect_orb` |
+| Eclipse (p. 132) | blocked | `sub_eclipse` | `month_system` |
+| Planet Vargottam in Their Own Nakshatra (p. 133) | blocked | `sub_planet_vargottam_in_their_own_nakshatra` | `moon_navamsa_series` |
+| Moon Rashi Parivartan Yog with Other Planets in D1 (pp. 134–135) | blocked | `sub_moon_rashi_parivartan_yog` | `sign_lordship` |
+
+The two ported are the ones the layer could already compute AND whose printed tables they were reported against first: Total Day reproduces the section's own **12 of 12** dates with no extra, and the Thursday table **13 of 13** rows on three independent columns — date, nakshatra, and the five boundaries it states as clock times, all landing within 50 seconds. Both carry a NULL verdict, because none of the nine sections prints one and `subtable_catalogue.check_no_verdict` refuses a rule that arrives carrying one.
+
+**`moon_navamsa_series` blocks two of the seven and is the largest single gap named on this page.** The Moon crosses a navamsa every two hours and the astronomy layer emits no navamsa ingress for it — 0 records in both years, against 162 for Mercury — so *Moon Mercury in the Same Navamsh (D9)* (36 printed windows) and most of *Planet Vargottam in Their Own Nakshatra* sit behind a series that does not exist, and so does B71d. It is a new SERIES of roughly 1,450 records a year, not a rule, which is why it is filed with Bhadra rather than with the two above.
 
 And the source's own monthly prophecy tables (Chapter 3) print named verdicts for gold and silver — "Bullish for Gold and Silver", "High Bearish for Gold" — which are also outside catalogue B and also unported. Recorded because a coverage page that fixes one denominator and leaves the next one implicit has only moved the misleading claim.
 
@@ -294,4 +315,4 @@ Never counted in with the executable rules. The words these fire on are partly o
 
 This is the **condition** layer: dated, per location, traceable to a page. It states when a rule's condition holds. It does **not** yet state what the market does — that is the verdict layer, which applies `evidence_source` x `construction` per instrument and per venue day, and then renders. Nothing here is a forecast or investment advice.
 
-**And "this page" is not the whole source.** It covers catalogue B. The 58 named groups of the instrument configuration sections (Chapter 2) are unported and are scoped in `build/CONFIG_SECTIONS_SCOPE.md`; the source's monthly prophecy tables (Chapter 3) are unported and are not scoped anywhere yet. See **Coverage, in two denominators** at the top of this page before reading any number on it as a statement about coverage of the document.
+**And "this page" is not the whole source.** It covers catalogue B. Of the 58 named groups of the instrument configuration sections (Chapter 2), **38 are ported and reach the rows above** and 20 are blocked on a named input, per group in `build/CONFIG_PORT_REPORT.md`; `build/CONFIG_SECTIONS_SCOPE.md` is the scope survey as it stood BEFORE that port and its ported column is a record of that date, not a live count. The source's monthly prophecy tables (Chapter 3) are unported and are not scoped anywhere yet. See **Coverage, in two denominators** at the top of this page before reading any number on it as a statement about coverage of the document.

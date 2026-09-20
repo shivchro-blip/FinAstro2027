@@ -21,6 +21,7 @@ import pathlib
 
 from . import cfgsections as CFG
 from .rules import config_rules as CFGR
+from .rules import subtables as SUBR
 from .config import CONF
 from .render import DISCLAIMER, OUT_HTML
 from .rules import REGISTRY, by_status
@@ -399,14 +400,20 @@ def write_html(rows: list[dict], verdicts) -> pathlib.Path:
           f"<span class=mut>{_e(why)}</span></li>")
     A("</ul>")
 
-    # ------------------------------------------------- coverage, two denominators
+    # ----------------------------------------------- coverage, three denominators
     # Placed immediately after the blocked list and before anything else, because
     # the whole point of this block is that a reader must not be able to see the
     # catalogue-B number and conclude the source is covered. It is not a
     # footnote: it sits inside the same panel as the blockers, where a reader
     # asking "what is missing" is already looking.
+    #
+    # The third row landed 20-Sep-2026 with the sub-table registry. Two rows
+    # here while the build fires three registries would understate the source
+    # by a whole catalogue -- and the table would have gone on being CORRECT
+    # about the two it did list, which is the failure this panel exists to stop.
     n_ported = len(SECTIONS)
-    A(f"<h2>Coverage &mdash; two denominators, and one of them is not 141</h2>")
+    A(f"<h2>Coverage &mdash; three denominators, and only one of them "
+      f"is 141</h2>")
     A(f"<table><thead><tr><th>catalogue</th><th>shape in the source</th>"
       f"<th>sections</th><th>ported</th></tr></thead><tbody>"
       f"<tr><td><b>Catalogue B</b> &mdash; the Chapter-1 rule sections</td>"
@@ -415,9 +422,16 @@ def write_html(rows: list[dict], verdicts) -> pathlib.Path:
       f"<td><b>{n_ported}/{n_ported}</b></td></tr>"
       f"<tr><td><b>Instrument configuration sections</b> &mdash; Chapter 2</td>"
       f"<td><code>&lt;section id=\"...\"&gt;</code> with <code>&lt;h2&gt;</code>"
-      f"</td>"
+      f" and named groups</td>"
       f"<td><b>{cfg_total} named groups</b></td>"
       f"<td><b>{len(CFGR.ported())}/{cfg_total}</b></td></tr>"
+      f"<tr><td><b>Chapter-2 <code>&lt;h2&gt;</code> sub-tables</b> &mdash; "
+      f"belonging to no instrument block</td>"
+      f"<td><code>&lt;section id=\"...\"&gt;</code> with <code>&lt;h2&gt;</code>"
+      f" and none</td>"
+      f"<td><b>{len(SUBR.SUBTABLE_REGISTRY)} sub-tables</b></td>"
+      f"<td><b>{len(SUBR.ported())}/{len(SUBR.SUBTABLE_REGISTRY)}</b></td>"
+      f"</tr>"
       f"</tbody></table>")
     cfg_ported = len(CFGR.ported())
     cfg_blocked = len(CFGR.blocked_rules())
@@ -433,17 +447,22 @@ def write_html(rows: list[dict], verdicts) -> pathlib.Path:
     for r in CFGR.CONFIG_REGISTRY:
         k = r.section.block.id
         per_block.setdefault(k, [0, 0])[0 if r.status != "blocked" else 1] += 1
+    sub_calendar_rows = sum(1 for r in verdict_rows
+                            if str(r.get("event", "")).startswith("sub_"))
     A(f"<p><b>Catalogue B is {n_ported}/{n_ported}. The configuration sections "
-      f"are {cfg_ported}/{cfg_total} ported, {cfg_blocked} blocked.</b> The "
-      f"second set was never in the first's denominator &mdash; a different "
-      f"shape of markup, counted separately &mdash; so <b>nothing on this page "
+      f"are {cfg_ported}/{cfg_total} ported, {cfg_blocked} blocked. The "
+      f"sub-tables are {len(SUBR.ported())}/{len(SUBR.SUBTABLE_REGISTRY)} "
+      f"ported, {len(SUBR.blocked())} blocked.</b> Neither of the last two "
+      f"sets was ever in the first's denominator &mdash; different shapes of "
+      f"markup, counted separately &mdash; so <b>nothing on this page "
       f"should be read as \"the source is covered\"</b>. The counts come from "
-      f"the document itself, not from this build's own config. The two "
-      f"registries stay separate on purpose &mdash; a configuration group must "
-      f"never reach catalogue B's denominator and inflate "
-      f"{n_ported}/{n_ported} &mdash; but <b>both are fired</b>, and "
-      f"<b>{cfg_calendar_rows:,} of the {len(verdict_rows):,} verdict rows "
-      f"below come from the configuration groups</b>.</p>")
+      f"the document itself, not from this build's own config. The three "
+      f"registries stay separate on purpose &mdash; neither a configuration "
+      f"group nor a sub-table may reach catalogue B's denominator and inflate "
+      f"{n_ported}/{n_ported} &mdash; but <b>all three are fired</b>, and of "
+      f"the {len(verdict_rows):,} verdict rows below "
+      f"<b>{cfg_calendar_rows:,} come from the configuration groups and "
+      f"{sub_calendar_rows:,} from the sub-tables</b>.</p>")
     # A SECOND PAIR OF DENOMINATORS, AND IT IS NOT THE ONE ABOVE. The table
     # above counts SECTIONS PORTED. This counts ROWS REPRODUCED against the
     # source's own finished 2026 calendar, and the two are routinely confused

@@ -24,6 +24,7 @@ from finastro import cfgsections as CFG                      # noqa: E402
 from finastro.config import CONF                             # noqa: E402
 from finastro.rules.catalogue import SECTIONS                # noqa: E402
 from finastro.rules import config_rules as CFGR              # noqa: E402
+from finastro.rules import subtables as SUBR                 # noqa: E402
 from finastro.sky import Sky                                 # noqa: E402
 from finastro.verdicts import build_verdicts                 # noqa: E402
 
@@ -45,7 +46,18 @@ zero = {r.id for r in R.zero_firing(firings)}
 # could only ever describe the state before it.
 _verdicts = build_verdicts(sky)
 cfg_rows = [v for v in _verdicts if v.rule_id.startswith("cfg_")]
-cat_b_rows = [v for v in _verdicts if not v.rule_id.startswith("cfg_")]
+sub_rows = [v for v in _verdicts if v.rule_id.startswith("sub_")]
+# CATALOGUE B BY EXCLUDING EVERY OTHER REGISTRY BY NAME, not by excluding the
+# one that happened to exist. This read `not startswith("cfg_")` until
+# 20-Sep-2026, when the sub-table registry landed and its rows were counted as
+# catalogue B on this page -- a correct count of the wrong set, and the
+# fourth place in the build where "not configuration" was standing in for
+# "catalogue B". The prefixes are listed so a fourth registry has to be added
+# here rather than being silently absorbed.
+_OTHER_REGISTRY_PREFIXES = ("cfg_", "sub_")
+cat_b_rows = [v for v in _verdicts
+              if not v.rule_id.startswith(_OTHER_REGISTRY_PREFIXES)]
+assert len(cat_b_rows) + len(cfg_rows) + len(sub_rows) == len(_verdicts)
 cfg_rules_firing = len({v.rule_id for v in cfg_rows})
 cfg_rows_by_instrument = collections.Counter(v.instrument for v in cfg_rows)
 cfg_rows_by_block = collections.Counter(
@@ -90,10 +102,10 @@ cfg_counts = CFG.counts()
 cfg_total = CFG.total()
 cfg_inst = CFG.by_instrument()
 
-A("## Coverage, in two denominators")
+A("## Coverage, in three denominators")
 A("")
-A("Two counts, because there are two catalogues and only one of them was ever "
-  "in scope:")
+A("Three counts, because there are three catalogues in this document and "
+  "only one of them was ever in scope:")
 A("")
 A("| | sections | ported | reading |")
 A("| --- | --- | --- | --- |")
@@ -104,20 +116,36 @@ A(f"| **Instrument configuration sections** — `<section id=\"...\">` with an "
   f"`<h2>`, Chapter 2 | **{cfg_total} named groups** | "
   f"**{len(CFGR.ported())} of {cfg_total}** | "
   f"**{len(CFGR.blocked_rules())} blocked, each on a named input** |")
+A(f"| **Chapter-2 `<h2>` sub-tables** — `<section id=\"...\">` with an `<h2>` "
+  f"and no named groups | **{len(SUBR.SUBTABLE_REGISTRY)} sub-tables** | "
+  f"**{len(SUBR.ported())} of {len(SUBR.SUBTABLE_REGISTRY)}** | "
+  f"**{len(SUBR.blocked())} blocked or out of scope, each on a named "
+  f"input** |")
 A("")
-A(f"**So: catalogue B {len(R.sections_ported())}/{len(SECTIONS)} · configuration "
-  f"sections {len(CFGR.ported())}/{cfg_total}.** The configuration rules are "
-  f"registered in their own registry and are NOT in catalogue B's denominator — "
-  f"that separation is what keeps \"141 of 141\" honest. They DO feed the "
-  f"calendar: `verdicts.py` fires both registries, and "
-  f"**{len(cfg_rows):,} of the {len(_verdicts):,} verdict rows** come from the "
-  f"configuration groups, {len(cat_b_rows):,} from catalogue B.")
+A(f"**So: catalogue B {len(R.sections_ported())}/{len(SECTIONS)} · "
+  f"configuration sections {len(CFGR.ported())}/{cfg_total} · sub-tables "
+  f"{len(SUBR.ported())}/{len(SUBR.SUBTABLE_REGISTRY)}.** THREE DENOMINATORS "
+  f"OVER THREE SHAPES OF MARKUP, and none of them is in either of the "
+  f"others. That separation is what keeps \"141 of 141\" honest: it is a "
+  f"statement about `<h3 class=\"section\">` and about nothing else. All "
+  f"three DO feed the calendar — `verdicts.py` fires all three registries — "
+  f"and the {len(_verdicts):,} verdict rows split "
+  f"**{len(cat_b_rows):,} catalogue B · {len(cfg_rows):,} configuration · "
+  f"{len(sub_rows):,} sub-table**.")
+A("")
+A(f"**A row's registry is readable off its `event` field with no lookup**: "
+  f"`cfg_<block>_` for a configuration group, `sub_` for a sub-table, and "
+  f"`b<nn>` or a panchang family name for catalogue B. That convention is "
+  f"asserted at registration rather than left to discipline, because the one "
+  f"thing that would make all three of these numbers wrong at once is a rule "
+  f"in the wrong registry.")
 A("")
 A(f"**141 of 141 is TRUE OF CATALOGUE B and is not a coverage claim about the "
   f"source.** The instrument configuration sections are a different shape of "
   f"markup and were never in the 141, so they were never in the denominator and "
   f"a reader seeing \"141/141\" could conclude the source is fully covered when "
-  f"{cfg_total} named groups have never had a rule written for them.")
+  f"{cfg_total - len(CFGR.ported())} of those {cfg_total} named groups have "
+  f"still never had a rule written for them.")
 A("")
 A("The counts, from the document (read out of `data/source_2026.html` at "
   "generation time by `finastro/cfgsections.py`, not out of config — a count "
@@ -204,12 +232,48 @@ A("**What porting them would take is scoped, not estimated, in "
   f"{cfg_total} groups, their conditions, and which of them the existing "
   "astronomy layer can already compute.")
 A("")
-A("### There is a third unported body of material, recorded here so it is not "
-  "mistaken for covered either")
+A("### The third body of material — registered since 20-Sep-2026, and two of "
+  "it ported")
 A("")
 A("The same chapter carries nine further `<h2>` sub-tables that are neither "
   "catalogue B nor any of the six blocks above: "
   + ", ".join(f"*{t}*" for t in CFG.other_h2_tables()) + ".")
+A("")
+A(f"**This heading read \"There is a third UNPORTED body of material\" until "
+  f"20-Sep-2026.** These nine now have a registry of their own and a "
+  f"denominator of their own, at the top of this page: "
+  f"{len(SUBR.ported())} of {len(SUBR.SUBTABLE_REGISTRY)} ported, "
+  f"{len(SUBR.blocked())} registered and blocked with the input each waits "
+  f"on NAMED. Registering the blocked seven rather than describing them in "
+  f"prose is what makes \"blocked on what\" countable off the registry "
+  f"instead of parsed out of a sentence.")
+A("")
+A("| sub-table | status | rule | blocked on |")
+A("| --- | --- | --- | --- |")
+_sub_ported = set(id(x) for x in SUBR.ported())
+for _r in SUBR.SUBTABLE_REGISTRY:
+    _st = "**ported**" if id(_r) in _sub_ported else "blocked"
+    _mi = ", ".join(f"`{k}`" for k in _r.missing_inputs) or "—"
+    A(f"| {_r.section.title} ({_r.section.page}) | {_st} | `{_r.id}` | "
+      f"{_mi} |")
+A("")
+A("The two ported are the ones the layer could already compute AND whose "
+  "printed tables they were reported against first: Total Day reproduces the "
+  "section's own **12 of 12** dates with no extra, and the Thursday table "
+  "**13 of 13** rows on three independent columns — date, nakshatra, and the "
+  "five boundaries it states as clock times, all landing within 50 seconds. "
+  "Both carry a NULL verdict, because none of the nine sections prints one "
+  "and `subtable_catalogue.check_no_verdict` refuses a rule that arrives "
+  "carrying one.")
+A("")
+A("**`moon_navamsa_series` blocks two of the seven and is the largest single "
+  "gap named on this page.** The Moon crosses a navamsa every two hours and "
+  "the astronomy layer emits no navamsa ingress for it — 0 records in both "
+  "years, against 162 for Mercury — so *Moon Mercury in the Same Navamsh "
+  "(D9)* (36 printed windows) and most of *Planet Vargottam in Their Own "
+  "Nakshatra* sit behind a series that does not exist, and so does B71d. It "
+  "is a new SERIES of roughly 1,450 records a year, not a rule, which is why "
+  "it is filed with Bhadra rather than with the two above.")
 A("")
 A("And the source's own monthly prophecy tables (Chapter 3) print named "
   "verdicts for gold and silver — \"Bullish for Gold and Silver\", \"High "
@@ -336,10 +400,14 @@ A("This is the **condition** layer: dated, per location, traceable to a page. "
   "`evidence_source` x `construction` per instrument and per venue day, and "
   "then renders. Nothing here is a forecast or investment advice.")
 A("")
-A(f"**And \"this page\" is not the whole source.** It covers catalogue B. The "
-  f"{cfg_total} named groups of the instrument configuration sections "
-  f"(Chapter 2) are unported and are scoped in "
-  f"`build/CONFIG_SECTIONS_SCOPE.md`; the source's monthly prophecy tables "
+A(f"**And \"this page\" is not the whole source.** It covers catalogue B. Of "
+  f"the {cfg_total} named groups of the instrument configuration sections "
+  f"(Chapter 2), **{len(CFGR.ported())} are ported and reach the rows above** "
+  f"and {cfg_total - len(CFGR.ported())} are blocked on a named input, per "
+  f"group in `build/CONFIG_PORT_REPORT.md`; "
+  f"`build/CONFIG_SECTIONS_SCOPE.md` is the scope survey as it stood BEFORE "
+  f"that port and its ported column is a record of that date, not a live "
+  f"count. The source's monthly prophecy tables "
   f"(Chapter 3) are unported and are not scoped anywhere yet. See **Coverage, "
   f"in two denominators** at the top of this page before reading any number on "
   f"it as a statement about coverage of the document.")

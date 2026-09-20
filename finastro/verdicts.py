@@ -41,7 +41,10 @@ import datetime as dt
 from dataclasses import dataclass, field
 
 from .config import CONF
-from .rules import CONFIG_REGISTRY, REGISTRY, firing_rules, fire
+from .rules import (CONFIG_REGISTRY, REGISTRY, SUBTABLE_REGISTRY,
+                    firing_rules, fire)
+from .rules.config_catalogue import ConfigGroup
+from .rules.subtable_catalogue import SubTable
 from .sky import Sky
 from .timezones import civil_day_bounds
 
@@ -420,11 +423,42 @@ def instruments_for(rule) -> list[str]:
 def is_config_rule(rule) -> bool:
     """True for one of the 58 instrument configuration groups.
 
-    Read off `catalogue_b`, which a configuration group carries as None and a
-    catalogue-B rule always carries as an int. Not a name test: an id prefix is
-    a convention and this is an invariant the harness already asserts.
+    A POSITIVE test, on the section's own type. It used to read
+    `rule.catalogue_b is None` -- "not a catalogue-B section" -- which was a
+    correct identification for exactly as long as there were two registries
+    and "not B" therefore meant "configuration".
+
+    The nine `<h2>` sub-tables are a third catalogue and they carry `b = None`
+    too, so the old test called every one of them a configuration group and
+    routed it into `config_instruments_for`, which reads
+    `rule.section.block.instrument` -- a field a `SubTable` does not have.
+    That is section 12.16's sixth instance in a new place: a key that
+    identifies a GROUP ("has no catalogue-B number") used to identify a MEMBER
+    ("is a configuration group"). Widening the catalogue set is what turned
+    the one into the other, and nothing about the old expression said which it
+    meant.
+
+    Testing the type says which it means, and a fourth catalogue cannot make
+    this quietly true again.
     """
-    return rule.catalogue_b is None
+    return isinstance(rule.section, ConfigGroup)
+
+
+def is_subtable_rule(rule) -> bool:
+    """True for one of the nine `<h2>` sub-tables.
+
+    Sub-table rules route like catalogue-B rules and NOT like configuration
+    rules: their sections name no instrument, so the instruments a row is
+    addressable to come from the bodies the condition names, through the
+    reconciled rulership -- an inference this layer makes and says so. A
+    configuration group is the opposite case and is the only one where the
+    document itself names the instrument.
+
+    Every one of them is `condition_only` by construction: none of the nine
+    sections prints a verdict, and `subtable_catalogue.check_no_verdict`
+    refuses a rule that arrives carrying one.
+    """
+    return isinstance(rule.section, SubTable)
 
 
 def config_instruments_for(rule) -> list[str]:
@@ -504,9 +538,15 @@ def build_verdicts(sky: Sky | None = None) -> list[Verdict]:
     # `fire()` serves both unchanged: a ConfigGroup carries `title`, `page`,
     # `heading` and `b = None`, which is every field `Rule` reads off a section.
     # Only the INSTRUMENT routing differs, and that is `config_instruments_for`.
-    firings = fire(REGISTRY, sky) + fire(CONFIG_REGISTRY, sky)
+    # The THIRD registry joins here on the same terms as the second, and
+    # for the same reason: a rule that is verified and registered and that
+    # nothing fires reaches no row, which is section 12.16's third shape
+    # and is how the 38 configuration groups spent a week at zero.
+    firings = (fire(REGISTRY, sky) + fire(CONFIG_REGISTRY, sky)
+               + fire(SUBTABLE_REGISTRY, sky))
     by_rule = {r.id: r for r in
-               list(firing_rules()) + list(CONFIG_REGISTRY)}
+               list(firing_rules()) + list(CONFIG_REGISTRY)
+               + list(SUBTABLE_REGISTRY)}
 
     out: list[Verdict] = []
     for f in firings:

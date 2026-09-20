@@ -2997,7 +2997,15 @@ row_kinds:
         did.
       measured_2027:
         span_unit: (row_kind, event, instrument, venue, t_start_utc, t_end_utc)
-        span_groups: 1626
+        span_groups: 1707
+        span_groups_note: >
+          1,626 until the sub-table port of 20-Sep-2026, which added 81 span
+          groups and moved NOTHING ELSE in this block. That is the figure to
+          read: a port adding spans is expected and uninteresting, and a port
+          moving `clipped_start`, `clipped_end` or `real_endpoint_outside_the
+          _year` would have meant a new rule reaching across the year
+          boundary. All seven of those held at 10 / 22 / 7 / 17 / 24 / 1 / 23
+          across the change, so the +81 is the whole of it.
         clipped_start: 10
         clipped_end: 22
         clipped_start_with_open_start_false: 7
@@ -3162,17 +3170,41 @@ row_kinds:
             ONLY ONE OF THE FOUR MOVES WITH THE POPULATION, and knowing which
             is the difference between a figure that needs its population
             stated and three that would survive a wrong one. The ephemeris
-            windows gain rows from the configuration port (P2) and from the
-            base track (P3); b101, the carry-in cuts and the anchored rows are
-            catalogue B's alone and are identical in all three.
+            windows gain rows from the configuration port (P2), from the
+            sub-table port (P2 again, 20-Sep-2026) and from the base track
+            (P3); b101, the carry-in cuts and the anchored rows are catalogue
+            B's alone and are identical in all three.
+
+            P1x IS A SLICE AND NOT A NESTED POPULATION, and it is listed with
+            the other three because leaving it out is how a population goes
+            unnoticed. P1, P2 and P3 nest; P1x is the sub-table rows ALONE,
+            disjoint from P1, and P1 + the configuration rows + P1x is P2. It
+            is what the third registry contributes, stated on its own so the
+            P2 figures cannot absorb it silently -- which is exactly what
+            happened to P1 itself on 20-Sep-2026, when `sub_` rows walked into
+            a catalogue-B population defined as "not cfg_" and took it from
+            5,209 to 5,314 with no catalogue-B rule changing.
+
+            P1x's three zeros are a RESULT and not an omission: they say the
+            sub-table port contributes no carry-in cut, no b101 window and no
+            anchored row, which is the same sentence "catalogue B's alone"
+            makes about the other populations.
           the_trap_this_closes: >
             An invariant figure passes a check that names the wrong population.
             331 does not, and it is the one the harness therefore pins in all
             three -- 331 occupies exactly ONE cell of the census grid's 108.
-          date_only_ephemeris: {P1: 331, P2: 340, P3: 371}
-          period_cut:          {P1: 142, P2: 142, P3: 142}
-          civil_day_span:      {P1: 105, P2: 105, P3: 105}
-          anchored:            {P1:  11, P2:  11, P3:  11}
+          date_only_ephemeris: {P1: 331, P1x: 12, P2: 352, P3: 383}
+          period_cut:          {P1: 142, P1x:  0, P2: 142, P3: 142}
+          civil_day_span:      {P1: 105, P1x:  0, P2: 105, P3: 105}
+          anchored:            {P1:  11, P1x:  0, P2:  11, P3:  11}
+          superseded_before_the_sub_table_port: >
+            P2 read 340 and P3 read 371 for the ephemeris cause until
+            20-Sep-2026, over a build with two registries. The sub-table port
+            added 12 date-only firings -- the 12 Total Days, Mumbai only --
+            and both figures moved by exactly that: 340 + 12 = 352,
+            371 + 12 = 383. P1 did not move, and that is the check: a port
+            that changed a catalogue-B figure would have been a port that
+            reached into catalogue B.
         the_near_misses_are_pinned_as_absences: >
           249, 147, 662 and 45 appear in NO cell of the grid -- three
           populations x six causes x six units -- and the harness asserts that
@@ -3191,6 +3223,21 @@ row_kinds:
           population and the configuration wiring added 9 -- 45 rows of 894,
           none of them catalogue B. Every difference between the two recorded
           sets is a unit or a derivation defect.
+        the_diagnosable_ones_measured:
+          at_282s_cell: 300
+          what: >
+            THE CELL, NOT THE VALUE. 282 was diagnosed by finding WHERE it
+            came from: the first cause's distinct (venue, date) count in P3,
+            filed under the second cause's firings. That diagnosis is a
+            statement about a CELL of the grid, and the cell goes on existing
+            after the number in it changes. The sub-table port took it from
+            282 to 300 on 20-Sep-2026 by adding 18 (venue, date) pairs, and
+            nothing about the diagnosis moved.
+
+            Pinning 282 itself would have gone stale there, and would have
+            gone stale as a PASS turning into a FAIL for a reason that is not
+            a defect -- which is the stale-denominator failure row_kind
+            landed to prevent, arriving from the other direction.
         the_diagnosable_ones: >
           45 was the Mumbai half of 105: b101 is per_location and fires 45 times
           at Mumbai and 60 at New York. 12 counted rows where its neighbours

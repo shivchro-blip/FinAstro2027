@@ -46,6 +46,13 @@ B = "B"
 CFG = "CFG"
 SERIES_NO_RULE = "SERIES_NO_RULE"
 SUBTABLE = "SUBTABLE"
+#: A sub-table rule claims this event -- the third registry, wired
+#: 20-Sep-2026. Parallel to CFG and for the same reason: only a Chapter-2
+#: `<h2>` sub-table states this event, and no catalogue-B section does.
+#: SUBTABLE still means what it always meant -- a sub-table states it and
+#: NOBODY has written the rule -- so the two kinds must not be merged: the
+#: whole value of this file is that "no rule claims this" is a result.
+SUB = "SUB"
 NO_SECTION = "NO_SECTION"
 
 #: event name as the document prints it -> (kind, targets, note)
@@ -133,10 +140,12 @@ MAP: dict = {
         "and the astronomy layer emits no karana ingress series. 54 windows, "
         "the largest single event name in the chapter"),
     "Total Day": (
-        SERIES_NO_RULE, ["calendar/total_day"],
-        "`panchang.total_days` reproduces the source's own dd+mm rule 12/12 for "
-        "2026 and the astronomy layer emits 12 `total_day` records. No "
-        "catalogue-B section states a condition on them, so no rule fires"),
+        SUB, ["sub_total_days_in_year"],
+        "PORTED 20-Sep-2026. `panchang.total_days` reproduces the source's "
+        "own dd+mm rule 12/12 for 2026 and the astronomy layer emits 12 "
+        "`total_day` records, which reached the base track for days while no "
+        "rule read them. This entry read SERIES_NO_RULE until the rule was "
+        "written, and that kind was the correct answer at the time"),
 
     # ------------------------------------------------------------ lunation
     "Solar Eclipse": (
@@ -393,14 +402,21 @@ MAP: dict = {
 
     # -------------------------------------------- the Chapter-2 sub-tables
     "Moon Mercury in the same D9": (
-        SUBTABLE, ["Moon Mercury in the Same Navamsh (D9)"],
-        "one of the nine `<h2>` sub-tables CONFIG_SECTIONS_SCOPE.md reports as "
-        "outside the 58 named groups. The navamsa series is emitted, so the "
-        "condition is computable; nobody has written the rule"),
+        SUBTABLE, ["sub_moon_mercury_in_the_same_navamsh"],
+        "one of the nine `<h2>` sub-tables. Registered and BLOCKED on "
+        "`moon_navamsa_series`. This note read 'the navamsa series is "
+        "emitted, so the condition is computable; nobody has written the "
+        "rule' until 20-Sep-2026, and the first half of that was FALSE: "
+        "navamsa_ingress carries 162 Mercury records and 0 Moon ones in both "
+        "years, so the Moon's half of this condition has no series at all. "
+        "The correction came from querying the artifact; the sentence had "
+        "been read past for days"),
     "Rahu/Ketu Nakshtra on Thursday": (
-        SUBTABLE, ["Rahu or Ketu Nakshtra on a Thursday"],
-        "another of the nine. Both halves -- the node's nakshatra and the "
-        "weekday -- are emitted"),
+        SUB, ["sub_rahu_or_ketu_nakshatra_on_a_thursday"],
+        "PORTED 20-Sep-2026, verified against the section's own table first: "
+        "13 of 13 dates, 13 of 13 nakshatra cells, and all five of its "
+        "clock-time boundaries within 50 s. Both halves -- the node's "
+        "nakshatra and the weekday -- are emitted"),
 }
 
 
