@@ -1,6 +1,6 @@
 # Rule layer status — catalogue B, and what catalogue B is not
 
-Generated 20-Sep-2026 from the live registry, not by hand. Year 2027.
+Generated 21-Sep-2026 from the live registry, not by hand. Year 2027.
 
 ## Coverage, in three denominators
 

@@ -25,6 +25,7 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
+from finastro.render import covered_days                # noqa: E402
 from finastro.verdicts import VENUE_OF                  # noqa: E402
 
 CALENDAR_JSON = ROOT / "build" / "calendar_2027.json"
@@ -81,17 +82,34 @@ def _venue(row):
 
 #: Every unit this census reports in, named. A count is not a measurement
 #: without one -- that is the whole lesson of the withdrawn figures.
+#:
+#: EACH RETURNS A SET, AND THE DAY-KEYED THREE RETURN ONE ENTRY PER CIVIL DAY
+#: THE ROW COVERS. That is what survived the collapse of 21-Sep-2026 unchanged.
+#: A FIRING is what `rules.base.fire` emits -- one per (rule, firing location,
+#: civil day) -- and the collapse is a RENDERING operation strictly downstream
+#: of it, so a window row standing for 15 days is 15 firings and not one. Had
+#: these read `r["date"]` after the collapse, `105` would have become `17` and
+#: the figure would have gone on being called a firing count: the same figure
+#: measured over a set nobody restated, which is every withdrawn number on this
+#: page. `rows` is deliberately NOT expanded -- it means rendered rows and it
+#: genuinely moved -- and `daily_rows` is the old unit kept under its own name.
 UNITS = {
-    "rows": lambda r: id(r),
-    "firings": lambda r: (r["event"], firing_location(r), r["date"]),
-    "rule-venue-day": lambda r: (r["event"], _venue(r), r["date"]),
-    "venue-date": lambda r: (_venue(r), r["date"]),
-    "spans": span_key,
-    "rules": lambda r: r["event"],
+    "rows": lambda r: {id(r)},
+    "daily_rows": lambda r: {(id(r), d) for d in covered_days(r)},
+    "firings": lambda r: {(r["event"], firing_location(r), d)
+                          for d in covered_days(r)},
+    "rule-venue-day": lambda r: {(r["event"], _venue(r), d)
+                                 for d in covered_days(r)},
+    "venue-date": lambda r: {(_venue(r), d) for d in covered_days(r)},
+    "spans": lambda r: {span_key(r)},
+    "rules": lambda r: {r["event"]},
 }
 
 UNIT_KEY = {
-    "rows": "one per rendered row",
+    "rows": "one per RENDERED row -- a window row counts once, however many "
+            "days it stands for. This is the unit the collapse moved",
+    "daily_rows": "one per (row, civil day it covers) -- what `rows` counted "
+                  "before the collapse, kept under a name that says so",
     "firings": "distinct (rule, firing location, civil day) -- what rules.base.fire emits",
     "rule-venue-day": "distinct (rule, venue, civil day) -- over-counts firings wherever "
                       "one location carries several venues",
@@ -145,42 +163,68 @@ def populations(rows):
 
 
 def census(pop_rows):
+    def count(rs, f):
+        out = set()
+        for r in rs:
+            out |= f(r)
+        return len(out)
     by_cause = {c: [r for r in pop_rows if cause(r) == c] for c in CAUSES}
     by_cause["TOTAL no-instant"] = [r for r in pop_rows if cause(r)]
-    return {c: {u: len({f(r) for r in rs}) for u, f in UNITS.items()}
+    return {c: {u: count(rs, f) for u, f in UNITS.items()}
             for c, rs in by_cause.items()}
 
 
 def collapse(pop_rows):
-    """Model A's row delta over this population, cause by cause."""
+    """Model A's row delta over this population, cause by cause.
+
+    MEASURED ON THE ARTIFACT, NOT PROJECTED ONTO IT. Until 21-Sep-2026 this
+    function answered "what WOULD the collapse save" by counting spans among
+    daily rows. The collapse has landed, so it now reports what the file
+    actually holds -- rendered rows against their daily-row equivalent -- and
+    the two readings give the same three numbers per cause, which is the check
+    that the thing implemented is the thing proposed.
+    """
     lines = []
     delta = 0
     for c in COLLAPSED:
         rs = [r for r in pop_rows if cause(r) == c]
-        spans = len({span_key(r) for r in rs})
-        delta += len(rs) - spans
-        lines.append("    {:18s} {:5d} rows -> {:4d} spans   delta {:+5d}".format(
-            c, len(rs), spans, spans - len(rs)))
+        daily = sum(len(covered_days(r)) for r in rs)
+        delta += daily - len(rs)
+        lines.append("    {:18s} {:5d} daily rows -> {:4d} rendered   "
+                     "delta {:+5d}".format(c, daily, len(rs), len(rs) - daily))
     for c in POINT_ROWS:
         rs = [r for r in pop_rows if cause(r) == c]
-        lines.append("    {:18s} {:5d} rows -> {:4d} rows    delta     0   "
-                     "NOT collapsed, by decision".format(c, len(rs), len(rs)))
+        lines.append("    {:18s} {:5d} daily rows -> {:4d} rendered   "
+                     "delta     0   NOT collapsed, by decision".format(
+                         c, len(rs), len(rs)))
     return delta, lines
 
 
 def non_contiguous(rows):
-    """Collapsed groups whose civil days have a hole. A collapsed row over one
-    of those would assert days no daily row was ever built for."""
-    groups = collections.defaultdict(set)
-    for r in rows:
-        if cause(r) in COLLAPSED:
-            groups[span_key(r)].add(r["date"])
-    bad = 0
-    for days in groups.values():
-        parsed = sorted(dt.datetime.strptime(d, "%d-%b-%Y").date() for d in days)
-        if (parsed[-1] - parsed[0]).days + 1 != len(parsed):
-            bad += 1
-    return bad
+    """Window rows that claim a run with a hole in it. Must be zero.
+
+    A collapsed row asserts an EXTENT, so a group whose civil days are not
+    contiguous would claim days no daily row was ever built for.
+    `render.collapse_windows` refuses to fold such a group -- it leaves the
+    rows daily and the row count moves -- so this reads the `contiguous` flag
+    off what was emitted rather than re-deriving it from the dates, which is
+    the only reading that could catch the renderer lying about it.
+    """
+    return sum(1 for r in rows
+               if r["row_span"] == "window" and not r["contiguous"])
+
+
+def left_daily_for_a_hole(rows):
+    """Collapsible rows that are STILL day rows -- the refusal above, counted.
+
+    Zero in the 2027 build. It is printed anyway: a non-zero here is not a
+    defect but a rule whose no-instant span skips days, and the row count moves
+    with it. Silence would make that look like the collapse simply missing some.
+    """
+    held = collections.Counter(span_key(r) for r in rows
+                               if cause(r) in COLLAPSED
+                               and r["row_span"] == "day")
+    return sum(1 for n in held.values() if n > 1)
 
 
 def main():
@@ -210,19 +254,28 @@ def main():
         print("    {:16s} {}".format(u, desc))
     print()
 
-    print("MODEL A -- collapse the three, leave the two as point rows")
+    print("MODEL A -- LANDED 21-Sep-2026. Measured on the artifact, not "
+          "projected onto it")
     for pname, prows in pops.items():
         delta, lines = collapse(prows)
         print("  {}".format(pname))
         print("\n".join(lines))
-        print("    {:18s} {:5d} rows -> {:4d} rows    delta {:+5d}".format(
-            "TOTAL", len(prows), len(prows) - delta, -delta))
+        print("    {:18s} {:5d} daily rows -> {:4d} rendered   "
+              "delta {:+5d}".format(
+                  "TOTAL", len(prows) + delta, len(prows), -delta))
     print()
-    print("  non-contiguous collapsed groups in P3: {}".format(non_contiguous(rows)))
+    print("  window rows claiming a non-contiguous run: {}  (must be 0)".format(
+        non_contiguous(rows)))
+    print("  collapsible spans left daily because their days have a hole: "
+          "{}".format(left_daily_for_a_hole(rows)))
     print("  The delta is the SAME in all three populations. Every row the wider")
     print("  populations add to a collapsed cause is its own span, so it collapses")
     print("  to itself and saves nothing. The TOTAL differs by population; the")
     print("  SAVING does not, so it does not rest on which population is right.")
+    print("  And NO DAY-KEYED FIGURE ABOVE MOVED: a firing is still one")
+    print("  (rule, firing location, civil day), because every day-keyed unit")
+    print("  expands a window row over the days it covers. Only `rows` moved,")
+    print("  and `daily_rows` beside it is what `rows` used to mean.")
     return 0
 
 

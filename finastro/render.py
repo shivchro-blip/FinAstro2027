@@ -33,7 +33,7 @@ import pathlib
 
 from .basetrack import EVIDENCE_SOURCE, build_base_events
 from .config import CONF
-from .timezones import ET, IST, SHIFT_MARK, date_stamp, stamp
+from .timezones import ET, IST, SHIFT_MARK, date_stamp, span_dates, stamp
 from .verdicts import INSTRUMENTS, build_verdicts
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
@@ -66,6 +66,35 @@ def _sector_of(instrument: str) -> str:
 ROW_KINDS = tuple(v["id"] for v in CONF["row_kinds"]["values"])
 ROW_KIND_VERDICT, ROW_KIND_EVENT = "verdict", "event"
 
+#: THE SECOND DISCRIMINATOR, and it is a second FIELD rather than two more
+#: values of the first. `row_kind` means verdict vs sky; this means window vs
+#: day. Giving `row_kind` the second axis would have made `records_by_row_kind`
+#: a count over a cross product no denominator in `meta` is keyed to, which is
+#: the stale-denominator failure this build has recorded four times --
+#: SPAN_VS_DAILY_PROPOSAL.md section 3 named the remedy before the collapse
+#: existed. See `conventions.yaml -> row_kinds.row_span`.
+#:
+#: It is set on EVERY row by `render_rows` and `render_base_rows`, before
+#: `collapse_windows` runs and whether or not that row is ever collapsed. A row
+#: that still stands for one civil day says so positively; there is no row in
+#: the file whose shape has to be inferred from the presence of another field.
+ROW_SPANS = tuple(v["id"] for v in CONF["row_kinds"]["row_span"]["values"])
+ROW_SPAN_DAY, ROW_SPAN_WINDOW = "day", "window"
+
+#: The `no_instant_reason` values Model A folds, and the two it does not.
+#:
+#: `date_only` covers BOTH halves the census splits by rule id -- the ephemeris
+#: date-granular windows and b101's `sky.civil_day_span`. The split matters to
+#: the FIGURES, because one half is population-sensitive and the other is not;
+#: it does not matter here, because neither half has an instant at either end
+#: and both reprint one pair of endpoints on every day they cover.
+#:
+#: `anchored` and `named_contacts` are absent by DECISION and not by oversight.
+#: An anchored row's date was chosen by this build because the body never
+#: crossed its frame, so widening it to a year would read as a state somebody
+#: observed. An eclipse has several instants, not none.
+COLLAPSED_REASONS = ("date_only", "period_cut")
+
 
 def _time_fields(row) -> dict:
     """The time block of a row, and the ONE PLACE that decides about clock times.
@@ -89,7 +118,13 @@ def _time_fields(row) -> dict:
     was never committed, no generator for them exists, and no slicing of this
     build or of the 5,209-row build before it reproduces three of the four. The
     population is measurable and is stated where it can be checked --
-    `meta.time.rows_without` on the rendered artifact: 894 rows over 99 spans.
+    `meta.time.rows_without` on the rendered artifact. THAT KEY CHANGED UNIT ON
+    21-Sep-2026 and the figure here is restated rather than left standing: 894
+    was a count of DAILY rows, over 99 spans, in the 15-Sep build. Since the
+    collapse `rows_without` counts RENDERED rows -- 135 -- and the daily figure
+    lives beside it as `by_no_instant_reason_daily_row_equivalent`, summing to
+    930 over the grown build. Neither number is wrong and they are not the same
+    measurement.
     Per cause, as catalogue-B firings, distinct (rule, location, civil day):
     331 date-granular combust and rise windows, 142 shared-sign windows already
     running at the carry-in, 105 civil-day windows across two venues, and 11
@@ -178,6 +213,10 @@ def render_rows(verdicts) -> list[dict]:
     for v in verdicts:
         rows.append({
             "row_kind": ROW_KIND_VERDICT,
+            # Every row is born a day row. `collapse_windows` is the only thing
+            # that turns one into a window, and it does so by rewriting this
+            # field rather than by adding one.
+            "row_span": ROW_SPAN_DAY,
             "date": v.civil_date.strftime("%d-%b-%Y"),
             **_time_fields(v),
             "instrument": v.instrument,
@@ -222,6 +261,7 @@ def render_base_rows(events) -> list[dict]:
     for e in events:
         row = {
             "row_kind": ROW_KIND_EVENT,
+            "row_span": ROW_SPAN_DAY,
             "date": e.civil_date.strftime("%d-%b-%Y"),
             **_time_fields(e),
             "event": e.label,
@@ -271,6 +311,130 @@ def _contact_rows(event) -> list[dict]:
     return out
 
 
+# ------------------------------------------------------------- the collapse
+
+def _span_key(row: dict) -> tuple:
+    """The `(row_kind, rule, instrument, venue, window)` group one row stands for.
+
+    THE SAME KEY `tools/cause_census.py` COUNTS SPANS WITH, deliberately, so the
+    number of window rows this produces and the number of spans the census
+    reports are the same measurement rather than two that happen to agree.
+
+    It carries no location: a verdict row's venue determines its firing location
+    and an event row's `venue` is absent, and adding one was measured to split
+    no group of the 118.
+    """
+    return (row["row_kind"], row["event"], row.get("instrument"),
+            row.get("venue"), row["t_start_utc"], row["t_end_utc"])
+
+
+def _date(row: dict) -> dt.date:
+    return dt.datetime.strptime(row["date"], "%d-%b-%Y").date()
+
+
+def covered_days(row: dict) -> list[dt.date]:
+    """Every civil day in view this row stands for. ONE for a day row.
+
+    THE ONE PLACE THE TWO SHAPES ARE RECONCILED, and the reason no count in
+    this build changed meaning at the collapse. A figure keyed on days -- the
+    three empty-day figures here, the census's firing, rule-venue-day and
+    venue-date units, the HTML date filter -- is asking which days a row exists
+    for, and that question had one answer under a daily render because the row
+    WAS the day. It still has one answer; it is just no longer free.
+
+    A window row is contiguous by construction: `collapse_windows` refuses to
+    fold a group with a hole, so the range below cannot claim a day no daily
+    row was built for.
+    """
+    if row["row_span"] == ROW_SPAN_DAY:
+        return [_date(row)]
+    first = dt.datetime.strptime(row["first_held"], "%d-%b-%Y").date()
+    last = dt.datetime.strptime(row["last_held"], "%d-%b-%Y").date()
+    return [first + dt.timedelta(days=i)
+            for i in range((last - first).days + 1)]
+
+
+def collapse_windows(rows: list[dict]) -> list[dict]:
+    """Model A: one row per span wherever the row has no instant to lose.
+
+    A PURE RENDERING OPERATION OVER ROWS THAT ALREADY EXIST -- group and drop.
+    Every daily row already carries its parent span's endpoints unchanged,
+    because `rules.base.fire` copies the span whole onto every day it covers and
+    only `civil_date` differs. Nothing is recomputed here and no ephemeris is
+    consulted; what is dropped is duplication, and the measurement that says so
+    is the `varying` check below rather than the argument.
+
+    **THE DISPLAYED END COMES FROM `span_dates`, NOT FROM `t_end_utc`.** A span
+    is half-open: `t_end_utc` is the instant the condition CEASES and the civil
+    day it lands in is a day the condition does not hold. `b101`'s February
+    Mumbai window ends at `2027-02-20T18:30:00Z`, which is 21-Feb 00:00 IST, and
+    the last day it holds is 20-Feb. `timezones.span_dates` takes the civil DAYS
+    and raises `TypeError` on a `datetime`, so the off-by-one is refused by the
+    type rather than avoided by care -- and until this function existed that
+    guard had no reader. It does now.
+
+    **A NON-CONTIGUOUS GROUP IS NOT COLLAPSED.** `SpanDates` says a window over
+    one must carry its `dates` list or must not be collapsed, and this takes the
+    second. All 118 groups in the 2027 build are contiguous, so the branch costs
+    nothing today; what it buys is that a weekday-filtered rule arriving later in
+    a no-instant family leaves its days visible and moves the row count, instead
+    of asserting a run through days it never fired on.
+
+    **AND IT REFUSES TO FOLD A DISAGREEMENT.** Section 3's case for Model A is
+    that a daily row in this population carries nothing its window does not --
+    "there is no field in which day 7 differs from day 8". That is measurable and
+    is measured: over the 118 groups, `date` and `date_ist` are the only fields
+    that ever differ. A later rule that makes a genuine per-day statement inside
+    a no-instant span would break the premise, so it raises here rather than
+    collapsing the statement away.
+    """
+    groups: dict[tuple, list[dict]] = collections.defaultdict(list)
+    out: list[dict] = []
+    for r in rows:
+        if r["no_instant_reason"] in COLLAPSED_REASONS:
+            groups[_span_key(r)].append(r)
+        else:
+            out.append(r)
+
+    for key, rs in groups.items():
+        rs = sorted(rs, key=_date)
+        days = [_date(r) for r in rs]
+        sd = span_dates(days)
+        if not sd.contiguous:
+            # Left daily, and visibly: the rows go back into the file as they
+            # were and the row count says so. See the docstring.
+            out.extend(rs)
+            continue
+        varying = sorted(
+            f for f in set().union(*(set(r) for r in rs))
+            if len({json.dumps(r.get(f), sort_keys=True) for r in rs}) > 1)
+        if varying != ["date", "date_ist"] and len(rs) > 1:
+            raise ValueError(
+                f"{key[1]} over {sd.line()}: the daily rows of one no-instant "
+                f"span disagree on {varying}. Model A rests on a daily row in "
+                "this population carrying nothing its window does not; a field "
+                "that differs between day 7 and day 8 is a per-day statement, "
+                "and collapsing it would delete a measurement rather than a "
+                "repetition")
+        row = dict(rs[0])
+        row["row_span"] = ROW_SPAN_WINDOW
+        # `date` stays the SORT KEY and is the window's first day in view. Every
+        # day-keyed figure in the build reads `covered_days` instead, so the key
+        # does not have to double as the answer to "which days is this row on".
+        row["date"] = sd.first_held
+        row["date_ist"] = sd.first_held
+        # `first_held` / `last_held` are VIEW properties by construction --
+        # `civil_days` has already applied both the period cut and the year clip
+        # before `span_dates` ever sees a day -- so neither asserts a boundary.
+        # Which of the two ends is real is what `open_*` and `clipped_*` say,
+        # and both pairs ride on the row unchanged. Duration stays absent:
+        # `days_in_view` is days IN VIEW, and on an open or clipped span a
+        # duration would assert two boundaries the file does not have.
+        row.update(sd.as_dict())
+        out.append(row)
+    return out
+
+
 # --------------------------------------------------------------------- JSON
 
 def _tally(rows: list[dict], key: str) -> dict:
@@ -285,26 +449,60 @@ def _meta_counts(rows: list[dict]) -> dict:
     RULED 15-Sep-2026, and the ruling is about denominators rather than tidiness.
     `records` was 6,677 and every figure under it counted verdict rows, because
     verdict rows were all there were. With the base track in the same file
-    `records` is 7,082, and a count that did not name its population would say
-    7,082 while meaning one of two numbers -- which is the stale-denominator
-    failure this build has recorded three times already, each time as a figure
-    that stayed true-looking while its basis moved underneath it.
+    `records` became a total over both, and a count that did not name its
+    population would say one number while meaning one of two -- which is the
+    stale-denominator failure this build has recorded three times already, each
+    time as a figure that stayed true-looking while its basis moved underneath
+    it.
 
-    So the only unsplit number here is the grand total, and
-    `records_by_row_kind` sits immediately beside it. Nothing else in `meta` is
-    a bare count.
+    IT HAPPENED A FOURTH TIME ON 21-Sep-2026, ON THE OTHER AXIS, and the remedy
+    is the same shape. `records` was 8,916 and every row was one civil day; the
+    collapse made it 8,121 with 118 of those standing for 913 days. So
+    `records_by_row_span`, `daily_row_equivalent` and the signed delta sit
+    beside `records_by_row_kind`, and no reader has to know a collapse happened
+    in order to avoid comparing this file's total with last week's.
+
+    So the only unsplit number here is the grand total, and its two splits sit
+    immediately beside it. Nothing else in `meta` is a bare count.
     """
     by_kind = collections.Counter(r["row_kind"] for r in rows)
+    by_span = collections.Counter(r["row_span"] for r in rows)
     verdict = [r for r in rows if r["row_kind"] == ROW_KIND_VERDICT]
     event = [r for r in rows if r["row_kind"] == ROW_KIND_EVENT]
+    daily = sum(len(covered_days(r)) for r in rows)
     return {
         # The one total over both populations. Named `records` because that is
         # what it has always been named, and never usable alone: the split is
         # the next key.
         "records": len(rows),
         "records_by_row_kind": dict(sorted(by_kind.items())),
+        # THE SECOND SPLIT, and it is the one that moved on 21-Sep-2026.
+        # `records` was 8,916 and every row was one civil day. It is 8,121 now
+        # and 118 of those rows are windows, so a consumer reading `records` as
+        # a day count would be wrong by 795 and would have no way to find out --
+        # unless the two numbers sit beside each other, which is what these are.
+        "records_by_row_span": dict(sorted(by_span.items())),
+        "daily_row_equivalent": daily,
+        # SIGNED, and named for what it is measured against, because the same
+        # number said two ways is how a figure comes apart. `conventions.yaml`
+        # -> row_kinds.row_span.measured_2027.delta is this key and carries this
+        # sign.
+        "delta_vs_daily_row_equivalent": len(rows) - daily,
+        "what_the_collapse_did": (
+            "Model A of build/SPAN_VS_DAILY_PROPOSAL.md. A row whose condition "
+            "has no instant at either end -- date_only, whether the ephemeris "
+            "emitted it as a date or sky.civil_day_span built it, and "
+            "period_cut -- reprinted one pair of endpoints on every civil day "
+            "it covered, and the days differed in nothing else. Those are now "
+            "one row per span carrying first_held and last_held. anchored and "
+            "named_contacts rows are NOT collapsed, by decision, and neither "
+            "is any span with a clock time: see row_kinds.row_span in "
+            "config/conventions.yaml. daily_row_equivalent is what this file "
+            "would hold under the old shape, so no figure here has to be "
+            "compared against a number that no longer means what it did."),
         "verdict_rows": {
             "total": len(verdict),
+            "daily_row_equivalent": sum(len(covered_days(r)) for r in verdict),
             "rows_with_verdict": sum(1 for r in verdict
                                      if r["vedic_interpretation"]),
             "rows_without_verdict": sum(1 for r in verdict
@@ -316,6 +514,11 @@ def _meta_counts(rows: list[dict]) -> dict:
         },
         "event_rows": {
             "total": len(event),
+            # Stated although it equals `total`: no event row was collapsible
+            # with another, because each of the 31 date-granular records is its
+            # own span. An absent key would read as an oversight where this
+            # reads as the result it is.
+            "daily_row_equivalent": sum(len(covered_days(r)) for r in event),
             "by_event_class": _tally(event, "event_class"),
             "by_rule_family": _tally(event, "rule_family"),
             "by_data_certainty": _tally(event, "data_certainty"),
@@ -337,12 +540,28 @@ def _meta_counts(rows: list[dict]) -> dict:
             "by_no_instant_reason": _tally(
                 [r for r in rows if not r["time_ist"]], "no_instant_reason"),
             "by_instant_precision": _tally(rows, "instant_precision"),
+            # The same split in the unit the proposal argued in, so the two
+            # are readable against each other without arithmetic. Three of
+            # these five moved and two did not, and which is which IS the
+            # ruling: anchored and named_contacts are point rows by decision.
+            "by_no_instant_reason_daily_row_equivalent": {
+                k: sum(len(covered_days(r)) for r in rows
+                       if not r["time_ist"] and r["no_instant_reason"] == k)
+                for k in sorted({r["no_instant_reason"] for r in rows
+                                 if not r["time_ist"]})},
         },
         # THREE empty-day figures, not one, and the order matters: the first is
         # the fact about the year, the second is the one a reader meets, and
         # the third is why they differ. See `_days_without`.
         "days": {
-            "days_in_year": len({r["date"] for r in rows}),
+            "days_in_year": len({d for r in rows for d in covered_days(r)}),
+            "a_day_figure_is_an_overlap_test_since_the_collapse": (
+                "every figure under `days` counts a window row on every civil "
+                "day it covers, not on its sort date. That is what keeps these "
+                "three the same numbers they were under the daily render -- "
+                "365, 105, 0 and 2 are identical before and after the collapse "
+                "-- and it is the same overlap rule the HTML date filter "
+                "applies. See render.covered_days."),
             "days_with_no_event_row": _days_without(rows, ROW_KIND_EVENT),
             "days_with_no_row_of_any_kind": _days_without(rows),
             "days_with_no_row_carrying_a_verdict_text": _days_without(
@@ -378,17 +597,22 @@ def _days_without(rows: list[dict], row_kind: str | None = None,
     with a verdict text.** The argument that produced the base track assumed a
     single number (and assumed 32); it is three, and the gap between the first
     two is `tier_4`, not the sky.
+
+    OVER `covered_days`, NOT OVER `date`, since the collapse. A window row's
+    `date` is its first day in view; the days it stands for are all of them, and
+    a figure that read the sort key would have reported a day as empty on the
+    strength of a row being rendered one line higher. All three figures are
+    identical before and after the collapse, and this is why.
     """
-    import datetime as _dt
     keep = [r for r in rows
             if (row_kind is None or r["row_kind"] == row_kind)
             and (predicate is None or predicate(r))]
-    have = {r["date"] for r in keep}
-    day, last, n = _dt.date(YEAR, 1, 1), _dt.date(YEAR, 12, 31), 0
+    have = {d for r in keep for d in covered_days(r)}
+    day, last, n = dt.date(YEAR, 1, 1), dt.date(YEAR, 12, 31), 0
     while day <= last:
-        if day.strftime("%d-%b-%Y") not in have:
+        if day not in have:
             n += 1
-        day += _dt.timedelta(days=1)
+        day += dt.timedelta(days=1)
     return n
 
 
@@ -419,8 +643,13 @@ def write_json(rows: list[dict], verdicts) -> pathlib.Path:
 # ---------------------------------------------------------------------- CSV
 
 #: `row_kind` FIRST, because a reader who sorts the CSV by date is otherwise
-#: looking at two populations in one column and cannot see it.
-CSV_COLS = ["row_kind", "date", "date_ist", "date_et", "day_shift",
+#: looking at two populations in one column and cannot see it. `row_span`
+#: SECOND, for the same reason one field along: a reader summing a CSV of
+#: 8,121 rows is looking at two SHAPES in one column, and the three span
+#: columns beside it are what a window row means by its date.
+CSV_COLS = ["row_kind", "row_span", "date", "first_held", "last_held",
+            "days_in_view", "contiguous",
+            "date_ist", "date_et", "day_shift",
             "time_ist", "time_et", "et_offset",
             "t_utc", "t_start_utc", "t_end_utc",
             "instant_precision", "no_instant_reason", "open_start", "open_end",
@@ -472,17 +701,32 @@ def main() -> int:
     """
     verdicts = build_verdicts()
     events = build_base_events()
-    rows = render_rows(verdicts) + render_base_rows(events)
+    daily = render_rows(verdicts) + render_base_rows(events)
+    rows = collapse_windows(daily)
     rows.sort(key=lambda r: (_sortable(r["date"]), r["row_kind"],
                              r.get("instrument") or "", r["event"]))
     j = write_json(rows, verdicts)
     c = write_csv(rows)
     from .html_calendar import write_html
     h = write_html(rows, verdicts)
-    n_v, n_e = len(verdicts), len(events)
+    # COUNTED OFF THE RENDERED ROWS, not off `verdicts` and `events`. Those two
+    # are what the layers produced -- 8,511 verdicts and 405 events -- and the
+    # collapse is downstream of both, so printing them beside a rendered total
+    # would put three numbers on one line of which only the first was about the
+    # file being written.
+    n_v = sum(1 for r in rows if r["row_kind"] == ROW_KIND_VERDICT)
+    n_e = sum(1 for r in rows if r["row_kind"] == ROW_KIND_EVENT)
     for path in (j, c, h):
         print(f"{len(rows)} rows ({n_v} verdict + {n_e} event) "
               f"-> {path.relative_to(ROOT)}")
+    # THE COLLAPSE, IN THE BUILD LOG. `len(rows)` alone would report 8,121 as
+    # though it were the 8,916 it replaced, and the build log is the first
+    # place a changed denominator goes unnoticed -- which is the argument that
+    # split this print by row kind in the first place.
+    n_win = sum(1 for r in rows if r["row_span"] == ROW_SPAN_WINDOW)
+    print(f"{n_win} window rows stand for {sum(len(covered_days(r)) for r in rows if r['row_span'] == ROW_SPAN_WINDOW)} "
+          f"civil days; {len(daily)} daily rows -> {len(rows)} rendered "
+          f"({len(rows) - len(daily):+d})")
     print(f"{sum(1 for r in rows if r['time_ist'])} rows print a clock time; "
           f"{sum(1 for r in rows if not r['time_ist'])} print a date only")
     print(f"{_days_without(rows, ROW_KIND_EVENT)} days of {YEAR} carry no "

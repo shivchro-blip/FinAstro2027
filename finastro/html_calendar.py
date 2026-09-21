@@ -81,6 +81,7 @@ white-space:nowrap}
 .t-cross_market_localized{color:var(--loc);border-color:#c2d4e8}
 .t-venue_shifted{color:var(--ven);border-color:#d6cce8}
 .null{color:var(--mut);font-style:italic}
+.win{font-size:11px;color:var(--ven);font-weight:600}
 .shift{color:var(--amb);font-weight:600}
 .controls{display:flex;flex-wrap:wrap;gap:9px;margin:14px 0;align-items:center}
 input,select{padding:6px 9px;border:1px solid var(--line);border-radius:5px;
@@ -123,9 +124,14 @@ function render(){
     if(inst && (r.row_kind!=='verdict' || r.instrument!==inst)) continue;
     if(tier && (r.row_kind!=='verdict' || r.tier!==tier)) continue;
     if(onlyV && !r.vedic_interpretation) continue;
-    const iso=r.iso_date;
-    if(from && iso<from) continue;
-    if(to && iso>to) continue;
+    // AN OVERLAP TEST, NOT A COMPARISON AGAINST THE SORT KEY. A window row
+    // carries one sort date -- the first day it holds -- so `iso<from` would
+    // drop a window running 06-Feb -> 20-Feb from a "from 10-Feb" view although
+    // it is live on every day the reader asked about. `iso_date_end` equals
+    // `iso_date` on a day row, so the two shapes take the same branch rather
+    // than the filter growing a case. SPAN_VS_DAILY_PROPOSAL.md section 5.3.
+    if(from && r.iso_date_end<from) continue;
+    if(to && r.iso_date>to) continue;
     if(q){
       // `||''` on every optional field: an event row has no instrument and no
       // interpretation, and 'undefined' in the haystack makes that word a
@@ -156,9 +162,24 @@ function render(){
     const contacts=(r.contacts||[]).map(c=>
       '<div class="mut flag">'+esc(c.contact.replace('_',' '))+': '
       +esc(c.date_ist)+' '+esc(c.time_ist)+'</div>').join('');
+    // A WINDOW ROW SAYS SO IN THE DATE CELL, not only in a field. It stands
+    // for `days_in_view` civil days, and `last_held` is the last day the
+    // condition HOLDS -- never the calendar date of `t_end_utc`, which is the
+    // exclusive instant it ceases and lands one day later on every window whose
+    // end falls on a venue midnight.
+    const win = r.row_span==='window';
+    const dateCell = win
+      ? esc(r.first_held)+' <span class="mut">&rarr;</span> '+esc(r.last_held)
+        +'<div class="mut flag">'+r.days_in_view+' days in view'
+        +(r.open_start?' &middot; running at the carry-in':'')
+        +(r.open_end?' &middot; still running at the period end':'')
+        +(r.clipped_start?' &middot; starts before '+CAL_YEAR:'')
+        +(r.clipped_end?' &middot; ends after '+CAL_YEAR:'')+'</div>'
+      : esc(r.date_ist);
     html+='<tr>'
-      +'<td class="mut flag">'+esc(r.row_kind)+'</td>'
-      +'<td>'+esc(r.date_ist)+'</td>'
+      +'<td class="mut flag">'+esc(r.row_kind)
+        +(win? '<div class="win">window</div>':'')+'</td>'
+      +'<td>'+dateCell+'</td>'
       +'<td>'+tIST+'</td>'
       +'<td>'+tET+'</td>'
       +'<td>'+shift+'</td>'
@@ -220,7 +241,15 @@ def write_html(rows: list[dict], verdicts) -> pathlib.Path:
     # The three empty-day figures, computed here from the SAME rows the table
     # below renders rather than quoted from the JSON. They differ only in which
     # rows they count, and the gap between the first two is the whole point.
-    from .render import _days_without
+    from .render import _days_without, covered_days
+    # THE TWO SHAPES, counted here off the rows this page renders rather than
+    # read from meta -- the same argument the cfg panel's row counts make, and
+    # for the same reason: a figure quoted from a file the page did not read
+    # goes on looking right after the page stops agreeing with it.
+    wrows = [r for r in rows if r["row_span"] == "window"]
+    n_windows = len(wrows)
+    window_days = sum(len(covered_days(r)) for r in wrows)
+    daily_equiv = sum(len(covered_days(r)) for r in rows)
     empty_event_days = _days_without(rows, "event")
     empty_any_days = _days_without(rows)
     empty_verdict_days = _days_without(
@@ -230,11 +259,16 @@ def write_html(rows: list[dict], verdicts) -> pathlib.Path:
     cfg_counts = CFG.counts()
     cfg_total = CFG.total()
 
+    # THE FILTER'S TWO KEYS, built here so the browser never parses a date.
+    # `iso_date_end` is the LAST day the row holds, which on a day row is the
+    # same day -- so the overlap test in `render()` has one branch and not two,
+    # and a day row cannot take a window's path by accident.
     js_rows = []
     for r in rows:
         d = dict(r)
-        dd = __import__("datetime").datetime.strptime(r["date"], "%d-%b-%Y")
-        d["iso_date"] = dd.strftime("%Y-%m-%d")
+        days = covered_days(r)
+        d["iso_date"] = days[0].strftime("%Y-%m-%d")
+        d["iso_date_end"] = days[-1].strftime("%Y-%m-%d")
         d["day_shift_marker"] = __import__(
             "finastro.timezones", fromlist=["x"]).SHIFT_MARK
         js_rows.append(d)
@@ -253,6 +287,13 @@ def write_html(rows: list[dict], verdicts) -> pathlib.Path:
       f'<b>{len(vrows):,} verdict rows</b> over {len(insts)} instruments and '
       f'<b>{len(erows):,} astronomy event rows</b>, which carry no instrument, '
       f'no tier and no verdict &middot; '
+      # THE SECOND SPLIT, on the same line as the first and for the same
+      # reason. This number was 8,916 until 21-Sep-2026 and every row was one
+      # civil day; a reader meeting 8,121 with no second split would read it as
+      # the same kind of number one row smaller.
+      f'{n_windows:,} of them are <b>windows</b> standing for '
+      f'{window_days:,} civil days, so the daily-row equivalent is '
+      f'{daily_equiv:,} &middot; '
       f'{sum(1 for r in vrows if r["vedic_interpretation"]):,} verdict rows '
       f'carry an interpretation, '
       f'{sum(1 for r in vrows if not r["vedic_interpretation"]):,} carry none '
@@ -310,6 +351,53 @@ def write_html(rows: list[dict], verdicts) -> pathlib.Path:
     for c, n in sorted(classes.items(), key=lambda x: -x[1]):
         A(f"<li><code>{_e(c)}</code> &mdash; {n:,}</li>")
     A("</ul>")
+
+    # ------------------------------------------- the second discriminator
+    # A SEPARATE FIELD AND A SEPARATE SECTION. `row_kind` answers verdict vs
+    # sky; this answers window vs day, and the two axes are independent -- an
+    # event row can be a window and most verdict rows are not.
+    rs = CONF["row_kinds"]["row_span"]
+    A(f"<h2>Two SHAPES of row, and why {daily_equiv - len(rows):,} rows are "
+      f"not here</h2>"
+      f"<p>Every row also carries <code>row_span</code>. A <b>day</b> row "
+      f"stands for one civil day at one venue. A <b>window</b> row stands for "
+      f"an interval, and prints the first and last civil day the condition "
+      f"holds instead of a single date. There are <b>{n_windows:,} window "
+      f"rows</b> and they cover <b>{window_days:,} civil days</b>, which is "
+      f"why {len(rows):,} rows here are {daily_equiv:,} rows under the shape "
+      f"this calendar had until 21-Sep-2026.</p>"
+      f"<p><b>Only rows with no instant at either end were collapsed.</b> A "
+      f"combust window the ephemeris emits as two dates, a window built from "
+      f"civil-day boundaries, and a state already running when the generated "
+      f"period began &mdash; those printed the same pair of endpoints on every "
+      f"day they covered, and the days differed in nothing else. That is "
+      f"measured rather than assumed: the renderer refuses to fold a group "
+      f"whose rows disagree on any field but the date.</p>"
+      f"<p><b>What was deliberately not collapsed.</b> An "
+      f"<code>anchored</code> row's date was chosen <i>here</i>, because the "
+      f"body never crossed its frame &mdash; giving it the year would read as "
+      f"a state somebody observed, and nothing observed it. An eclipse has "
+      f"<i>several</i> instants, not none. And every span carrying a clock "
+      f"time is still one row per day: its start is a real moment, and "
+      f"collapsing it would discard a per-day statement a reader may be "
+      f"using.</p>"
+      f"<p><b>A window's end is the last day it <i>holds</i>.</b> A span is "
+      f"half-open, so the instant it ceases lands in a day the condition no "
+      f"longer holds &mdash; one day later, on every window whose end falls on "
+      f"a venue midnight. Both are in the file, under names that cannot be "
+      f"confused: <code>last_held</code> is the day, <code>t_end_utc</code> is "
+      f"the instant. Neither a duration nor an end date is asserted where the "
+      f"period cut the span or the year clipped it; <code>open_start</code>, "
+      f"<code>open_end</code>, <code>clipped_start</code> and "
+      f"<code>clipped_end</code> say which ends are real, and the date cell "
+      f"repeats it in words.</p>"
+      f"<p><span class=mut>The date filter above is an <b>overlap</b> test for "
+      f"this reason: a window running 06-Feb to 20-Feb appears for any day in "
+      f"that range, not only for its first. The three empty-day figures below "
+      f"are unmoved by the collapse for the same reason &mdash; a window "
+      f"counts on every day it covers.</span></p>")
+    A(f"<p><span class=mut>{_e(rs['no_count_changed_meaning'].strip())}"
+      f"</span></p>")
     # ------------------------------------------------ absence, stated on the page
     # 105 is a FACT ABOUT THE YEAR and it is invisible in the default view, so
     # it goes on the panel rather than waiting to be discovered by a reader who
@@ -616,7 +704,8 @@ def write_html(rows: list[dict], verdicts) -> pathlib.Path:
       "<th>Financial-market theme</th><th>Tier / confidence</th>"
       "</tr></thead><tbody id=rows></tbody></table>")
     A("</div>")
-    A(f"<script>const CAL_ROWS={json.dumps(js_rows, ensure_ascii=False)};"
+    A(f"<script>const CAL_YEAR={YEAR};"
+      f"const CAL_ROWS={json.dumps(js_rows, ensure_ascii=False)};"
       f"{JS}</script>")
     A("</body></html>")
     OUT_HTML.write_text("\n".join(P), encoding="utf-8", newline="\n")

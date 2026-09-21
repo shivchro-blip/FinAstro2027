@@ -2937,6 +2937,164 @@ row_kinds:
       rendered.
     never_emit_an_unlabelled_eclipse_time: true
 
+  # ------------------------------------- the SECOND discriminator: row_span
+  # Landed 21-Sep-2026 with the collapse, and defined for every row in the
+  # file rather than only for the rows the collapse produced. See
+  # finastro/render.py `collapse_windows`.
+  row_span:
+    status: defined
+    defined: 2026-09-21
+    field: row_span
+    required: true
+    why_it_is_a_second_field_and_not_a_third_row_kind: >
+      `row_kind` means VERDICT vs SKY. Giving it a second axis -- window vs day
+      -- would make `records_by_row_kind` a count over a cross product no
+      denominator in `meta` is keyed to, which is the stale-denominator failure
+      this file has recorded four times. SPAN_VS_DAILY_PROPOSAL.md section 3
+      named the remedy before the collapse existed: a SECOND, SEPARATE
+      discriminator, and it lands on every row, not only on the collapsed ones.
+      A row that is still one civil day says so positively.
+    values:
+    - id: day
+      what: >
+        The row stands for ONE civil day at one venue. Every timed span row
+        (the condition holds over an interval but its start is a measured
+        instant, so those are left daily by decision -- Model B, deferred),
+        every `anchored` point row, and every eclipse row.
+    - id: window
+      what: >
+        The row stands for an INTERVAL of civil days in view, and carries
+        `first_held` / `last_held` / `days_in_view` / `contiguous` from
+        timezones.SpanDates. Produced only by `render.collapse_windows`.
+    the_model_is_A_and_only_A: >
+      Model A of SPAN_VS_DAILY_PROPOSAL.md: collapse the three no-instant
+      causes whose daily rows carry nothing their window does not, and leave
+      the two point-row causes and every timed span alone. Model B -- collapsing
+      the timed spans too -- is REFUSED here and not merely deferred: it takes
+      days_with_no_row_of_any_kind from 0 to 19 and falsifies a sentence the
+      apparatus panel already publishes, so it is a different change with a
+      different review.
+    what_collapses:
+      date_only: >
+        Both halves of it -- the ephemeris date-granular windows AND b101's
+        sky.civil_day_span. The census splits those two by rule id because the
+        FIGURES need the split; the collapse does not, because neither half has
+        an instant at either end and both repeat one pair of endpoints on every
+        day they cover.
+      period_cut: >
+        Collapsed, and the open end is not a date the row asserts.
+        `first_held` / `last_held` are VIEW properties by construction --
+        SpanDates is built from the days civil_days returned, which are already
+        cut by the period and clipped by the year -- so a row printing them
+        asserts no boundary. `open_start` / `open_end` and `clipped_start` /
+        `clipped_end` say which of the two ends is real. This supersedes
+        section 2.3's `date_start: null`, which predates the year_clip ruling
+        below; emitting a view property under a name that says it is one is
+        what that section was asking for.
+    what_does_not_collapse:
+      anchored: >
+        12 rows, 11 rules, all on 01-Jan-2027. A DECISION, not an oversight.
+        The obvious span-model move is to give them the year -- "this body did
+        not cross its frame all year" -- and that would be a measurement where
+        there is none. The anchored date is one this build chose because
+        nothing crossed; a year-long window reads as a state that was observed.
+      named_contacts: >
+        5 eclipse rows. Not a span question: an eclipse has SEVERAL instants,
+        not none, and the contacts block is how it says so.
+      timed_spans: >
+        Model B. The rows carrying a clock time. A timed row's start is a real
+        instant and collapsing it discards a per-day statement a reader may be
+        using; whether that is worth the rows is a genuine question and a
+        different one.
+    duration_days_is_still_absent: >
+      SpanDates carries `days_in_view` and no duration, and the collapse adds
+      none. A duration asserts two REAL boundaries; an open span has at most
+      one and a year-clipped span's other end is outside the file. Section 2.1
+      asked for `duration_days` on the ephemeris windows because the source
+      prints a Duration column; section 5.1 ruled it out generally and is the
+      later ruling. Where all four of open_start / open_end / clipped_start /
+      clipped_end are false, `days_in_view` IS that duration in days, and where
+      they are not, no field here will say so.
+    the_date_filter_is_an_overlap_test: >
+      Section 5.3, landed with the collapse. A window row carries one sort date,
+      so an HTML filter comparing it against from/to would drop a window running
+      06-Feb -> 20-Feb from a reader's "from 10-Feb" view although it is live on
+      every day they asked about. Every date-keyed consumer in the build now
+      tests the row's COVERED DAYS: the HTML filter (iso_date_end beside
+      iso_date), render._days_without, and tools/cause_census.py's firing,
+      rule-venue-day and venue-date units.
+    no_count_changed_meaning: >
+      A FIRING IS STILL A FIRING. rules.base.fire emits one per (rule, firing
+      location, civil day) and the collapse is a RENDERING operation downstream
+      of it, so every count in the unit `firings` is identical before and
+      after -- 331 / 142 / 105 / 11 -- and cause_census.py gets there by
+      expanding a window row back over its covered days. What genuinely changed
+      is the count of RENDERED ROWS, and that is published under its own name
+      beside the daily-row equivalent rather than left to move underneath
+      `records`.
+    measured_2027:
+      rendered_rows: 8121
+      daily_row_equivalent: 8916
+      delta: -795
+      window_rows: 118
+      day_rows: 8003
+      daily_rows_collapsed: 913
+      non_contiguous_groups_left_daily: 0
+      per_cause_P3:
+        date_only_ephemeris:
+          daily_rows: 507
+          window_rows: 94
+          delta: -413
+        civil_day_span_b101:
+          daily_rows: 255
+          window_rows: 17
+          delta: -238
+        period_cut:
+          daily_rows: 151
+          window_rows: 7
+          delta: -144
+        anchored:
+          daily_rows: 12
+          window_rows: 0
+          delta: 0
+        named_contacts:
+          daily_rows: 5
+          window_rows: 0
+          delta: 0
+      the_delta_is_invariant_across_the_populations: >
+        -795 in P1, P2 and P3 alike, and the same -413 / -238 / -144 in each.
+        Every row the wider populations add to a collapsed cause is its own
+        span and collapses to itself: P3's ephemeris cause holds 507 rows over
+        94 spans where P1's holds 431 over 18. So the saving never rested on
+        which population the cause figures were measured over, which was the one
+        thing section 1 was disputing when section 3 was written. The TOTALS do
+        move -- P1 5,539 -> 4,744, P2 8,511 -> 7,716, P3 8,916 -> 8,121 -- and
+        each is stated with its population.
+      the_proposal_measured_this_at_7082_rows: >
+        SPAN_VS_DAILY_PROPOSAL.md reports 7,082 -> 6,287. That was 15-Sep-2026,
+        before the configuration wiring's later rows, the base track's growth,
+        three sub-table ports, Bhadra and the Moon's navamsa series. The
+        POPULATION grew by 1,834 rows and the SAVING did not move at all, which
+        is the invariance that section predicted, measured against a build it
+        could not have seen. 6,287 is withdrawn as a forecast of today's file
+        and stands as a correct P3 figure of the 15-Sep build; the P3 figure
+        today is 8,121.
+      empty_day_figures_are_unmoved: >
+        0 days carry no row of any kind, 105 carry no event row, 2 carry no row
+        with a verdict text -- all three identical before and after, because
+        `_days_without` counts a window row on every day it covers and because
+        tier_4's verdict-null USDINR rows are timed and were never collapsible.
+        This is the half of the proposal's section 4 that made Model A
+        preferable to Model B, and it is now measured rather than predicted.
+    every_field_but_the_date_was_identical_across_the_collapsed_group: >
+      MEASURED BEFORE THE COLLAPSE WAS WRITTEN, and asserted at build time
+      rather than assumed. Over the 118 groups, the only fields that differ
+      between the daily rows of one group are `date` and `date_ist`; 38 groups
+      differ in those two and in nothing else, and the other 80 are single-day
+      groups. `collapse_windows` raises on any other disagreement, so a later
+      rule that makes a per-day statement inside a no-instant span cannot be
+      collapsed away silently -- it fails the build instead.
+
   # -------------------------------------------- the time fields on every row
   # See finastro/render.py. The contract is short and all of it is load-bearing.
   time_fields:
@@ -2966,10 +3124,22 @@ row_kinds:
         row that stamps t_end_utc prints 21-Feb and is off by one on every
         closed window whose end falls on a venue midnight, in the direction
         that makes each window one day longer than the daily rows said it
-        was. 251 of the 1,626 span groups in the 2027 build would move. It is
-        the sunrise-anchor class exactly: a systematic off-by-one that renders
-        as a plausible date and passes every component test, because every
-        component is correct.
+        was. 251 of the 1,626 span groups in the 2027 build would move --
+        RE-MEASURED 21-Sep-2026 at 316 of 2,938, the build having grown; 251
+        stays attached to the build it was measured over rather than being
+        refreshed in place. It is the sunrise-anchor class exactly: a
+        systematic off-by-one that renders as a plausible date and passes every
+        component test, because every component is correct.
+      it_has_a_reader_since_21_sep_2026: >
+        NO ROW CARRIED last_held UNTIL THE COLLAPSE. The type existed, the
+        harness pinned it, and the ruling was correct -- and every row was one
+        civil day whose own date was trivially its own last held, so the guard
+        against stamping the exclusive instant had nothing to guard. It does
+        now: render.collapse_windows emits 118 window rows, of which 108 are in
+        the +1 set above, so a build that took a displayed end from t_end_utc
+        would print 108 wrong dates. That is why 5.1 had to be settled BEFORE
+        the collapse rather than during it -- the defect it prevents is one the
+        collapse would have introduced whole, at a scale no spot check reaches.
       made_unconfusable_structurally: >
         timezones.SpanDates carries first_held / last_held and is built ONLY
         by timezones.span_dates(days), which takes the civil DAYS the rows
@@ -2980,9 +3150,29 @@ row_kinds:
       days_in_view_is_not_last_minus_first: >
         A weekday-filtered rule's days are not contiguous, so SpanDates
         carries days_in_view = len(days) and a `contiguous` flag rather than
-        letting a window claim days no row was built for. All 99 no-instant
-        groups are contiguous -- checked -- but 179 of the timed span groups
-        are not, which is why the flag exists before Model B does.
+        letting a window claim days no row was built for. All the no-instant
+        groups are contiguous -- 135 of them at 21-Sep-2026, 99 when this was
+        written -- and the collapse now EMITS that flag on all 118 window rows
+        and refuses to fold a group that lacks it.
+      the_179_does_not_reproduce_and_is_withdrawn: >
+        THIS KEY READ "179 of the timed span groups are not [contiguous],
+        which is why the flag exists before Model B does". RE-DERIVED
+        21-Sep-2026 against the rendered artifact under four span units --
+        (row_kind, event, instrument, venue, t_start, t_end) at 2,938 groups,
+        the rule-span unit at 1,434, rule+instrument at 2,938 and rule+venue at
+        2,111 -- and every one gives ZERO non-contiguous groups, no-instant and
+        timed alike. It does not reproduce against the pre-collapse artifact
+        either, so this is not a collapse effect and the collapse is not what
+        found it; re-measuring the claim the collapse depends on is. 179 was
+        recorded against the 1,626-group build of 15-Sep-2026, no generator for
+        it exists, and it is WITHDRAWN rather than corrected in place --
+        section 12.16's shape, and the fourth figure on this page to go that
+        way. NOTHING RESTED ON IT: no check asserted 179, and the `contiguous`
+        flag is justified by what it PREVENTS and not by a count of live cases.
+        A collapsed row over a group with a hole would claim days no daily row
+        was built for, and render.collapse_windows refuses to fold one whether
+        or not any exists today -- which is the only reading under which the
+        flag's value does not depend on this number.
       duration_is_absent_by_design: >
         A duration asserts two REAL boundaries. An open span has at most one,
         and a year-clipped span's other end is outside the file. Emitting
@@ -3161,6 +3351,16 @@ row_kinds:
           event, 9 of them configuration-sourced. Every one of those numbers is
           on the rendered artifact under meta.time and is recomputable by
           grouping the rows, which is the property the withdrawn figures lacked.
+
+          THE UNIT UNDER meta.time MOVED ON 21-SEP-2026 AND THIS FIGURE IS
+          RESTATED RATHER THAN LEFT STANDING. The collapse made
+          `rows_without` a count of RENDERED rows -- 135 -- and the daily count
+          it used to be lives beside it as
+          `by_no_instant_reason_daily_row_equivalent`, summing to 930 over the
+          grown build. 894 remains a correct count of the 15-Sep-2026 file in
+          the unit that file had. The recomputability claim is unchanged: both
+          numbers are still obtained by grouping the rows, one of them through
+          render.covered_days.
         the_unit_must_travel_with_the_figure: >
           A FIRING is one (rule, location, civil day) -- what rules.base.fire
           emits. A ROW is one firing resolved to one instrument, so tier_4's
@@ -3180,9 +3380,17 @@ row_kinds:
             axes are keys here and are pinned by the harness beside the values.
           population: >
             P1 -- catalogue-B verdict rows only: row_kind == "verdict" and the
-            rule id does not start with `cfg_`. 5,539 of the 8,916 rendered
-            rows. Reconstructed by filter rather than by rebuild, which is what
-            makes the pre-wiring figure checkable against today's artifact.
+            rule id does not start with `cfg_` or `sub_`. 5,539 DAILY rows,
+            rendered as 4,744 after the collapse of 21-Sep-2026, out of 8,916
+            daily and 8,121 rendered. The figures below are firings and are
+            unmoved by that, because a firing is one (rule, firing location,
+            civil day) and the collapse is a rendering operation downstream of
+            it -- see row_kinds.row_span.no_count_changed_meaning. The two
+            population sizes are stated together for the same reason the
+            figures carry their unit: 5,539 and 4,744 are the same population
+            counted in the two units this file now has. Reconstructed by filter
+            rather than by rebuild, which is what makes the pre-wiring figure
+            checkable against today's artifact.
 
             IT WAS 5,209 UNTIL 21-SEP-2026 AND THE MOVE IS THE LEGITIMATE CASE
             the sub-table leak below was contrasted against. Two catalogue-B

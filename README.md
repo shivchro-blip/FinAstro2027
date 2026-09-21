@@ -30,19 +30,22 @@ occupy.
 
 ```
 $ python3 tests/test_2026_regression.py
-112/112 checks passed
+123/123 checks passed
 
 $ python3 build_2027.py
 4163 records -> build/astronomy_2027.json
 
 $ python3 tests/test_2027_astronomy.py
-123/123 checks passed
+149/149 checks passed
 
 $ python3 tests/test_node_anchor_unit.py
 12/12 checks passed
 
+$ python3 tests/test_monthly_fixture.py
+17/17 passed
+
 $ python3 tests/test_rule_layer.py
-133/133 checks passed
+282/282 checks passed
 ```
 
 The rule layer carries **171 rules over all 141 catalogue-B sections** — full
@@ -65,11 +68,13 @@ instrument configuration sections   38 /  58 named groups   (ported AND wired)
 **38 of the 58 are ported and 20 are blocked, each on a named input**
 (`build/CONFIG_PORT_REPORT.md`). **Ported is now wired**, since the 14-Sep-2026
 change to `verdicts.py`: `build_verdicts()` fires all three registries, and
-**1,468 of the calendar's 8,511 verdict rows originate in a configuration
-section**, from 26 of the 38 ported groups. `config_instruments_for` routes a
-group to the instrument its BLOCK heading names rather than through the
-rulership table, so a *Gold — Bullish* group reaches gold because the source
-filed it under gold.
+**1,468 of the calendar's 7,716 verdict rows originate in a configuration
+section**, from 26 of the 38 ported groups. (1,468 did not move under the span
+collapse: the nine configuration rows without an instant are each their own
+span, so each collapses to itself.) `config_instruments_for` routes a group to
+the instrument its BLOCK heading names rather than through the rulership table,
+so a *Gold — Bullish* group reaches gold because the source filed it under
+gold.
 
 **The third line landed 20-Sep-2026** and is the ten `<h2>` sub-tables of the
 same chapter that belong to no instrument block — *Bhadra*, *Total Days in
@@ -125,18 +130,45 @@ Three rendered artifacts, all deterministic — rendering twice is byte-identica
 for each:
 
 ```
-build/calendar_2027.json   7,163 rows, the master
+build/calendar_2027.json   8,121 rows, the master
 build/calendar_2027.csv    the same rows, flat
 build/calendar_2027.html   self-contained, with search and filters
 ```
 
-**8,916 rows over 365 distinct dates, and the split is load-bearing: 8,511
+**8,121 rows over 365 distinct dates, and the split is load-bearing: 7,716
 verdict rows and 405 base-track event rows**, told apart by `row_kind`. Of the
-8,511, **5,539 come from catalogue B, 1,468 from the configuration groups and
-1,504 from the sub-tables**; 3,574 carry a verdict text and 4,937 do not.
+7,716, **4,744 come from catalogue B, 1,468 from the configuration groups and
+1,504 from the sub-tables**; 3,322 carry a verdict text and 4,394 do not.
+
+**There is a second split, and it moved the total on 21-Sep-2026.** Every row
+also carries `row_span`. A **day** row stands for one civil day; a **window**
+row stands for an interval and prints the first and last civil day the
+condition holds. **118 window rows stand for 913 civil days**, so the file's
+**daily-row equivalent is 8,916** — what it held before the collapse, published
+beside the total as `meta.daily_row_equivalent` so no figure has to be compared
+against a number that stopped meaning what it did.
+
+Only rows with **no instant at either end** were collapsed: a combust window the
+ephemeris emits as two dates, a window built from civil-day boundaries, a state
+already running at the carry-in. Those printed the same pair of endpoints on
+every day they covered and differed in nothing else — measured, not assumed; the
+renderer refuses to fold a group whose rows disagree on any field but the date.
+Rows anchored at a date *this build chose*, eclipse rows naming several
+contacts, and **every span carrying a clock time** are still one row per day.
+See `build/SPAN_VS_DAILY_PROPOSAL.md` (Model A) and
+`config/conventions.yaml → row_kinds.row_span`.
+
+**No day-keyed figure moved.** A firing is still one (rule, firing location,
+civil day), because every day-keyed count expands a window over the days it
+covers: the census still reads 331 / 142 / 105 / 11, and **365 / 105 / 0 / 2**
+are the same four empty-day figures as before. The date filter in the HTML is an
+**overlap** test for the same reason — a window running 06-Feb to 20-Feb appears
+for any day in that range, not only for its first.
 
 **Quote the split, not the total.** `records` meant "verdict rows" while there
 were no others, and a consumer still reading it that way is now wrong by 405.
+It also meant "civil days" while every row was one, and a consumer reading it
+that way is now wrong by 795.
 The verdict count itself has moved four times: 7,484 before the tier_4 scoping
 removed 807 USDINR configuration rows that recorded no measurement; 5,209 before
 the configuration wiring added 1,468; 6,677 before the first sub-table ports
@@ -151,6 +183,11 @@ reached into catalogue B's registry, which is the one thing three separate
 denominators exist to prevent. **It is 5,539 from 21-Sep-2026, and the difference
 is the figure working**: `b071d` unblocked and `b105` split into a window and a
 verdict, so catalogue-B rows moved because catalogue-B rules did.
+
+The span collapse later the same day took catalogue B to **4,744 rendered rows**
+and left it at **5,539 daily** — the same population in the file's two units,
+and the one move on this list that is a change of shape rather than of
+membership. The two are stated together wherever either appears.
 
 The verdict layer applies `evidence_source` × `construction` per instrument on
 that instrument's **venue civil day**, and it *authors nothing*: verdict text is

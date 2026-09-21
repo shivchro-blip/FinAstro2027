@@ -2966,6 +2966,14 @@ def test_a_spans_displayed_end_is_the_last_day_it_holds():
 
     # 3. THE WHOLE ARTIFACT. Every span group's displayed end must equal the
     #    last civil date a row was actually built for.
+    #
+    #    OVER `covered_days`, NOT OVER `date`. Since the collapse a window row's
+    #    `date` is its FIRST day in view, so a group's days come from what the
+    #    row says it covers. Reading the sort key here would have made this
+    #    check trivially true on every collapsed group -- one row, one day, its
+    #    own last -- which is the check quietly stopping at the exact rows it
+    #    was written for.
+    from finastro.render import covered_days
     doc = _calendar()
     tz_of = {loc: ZoneInfo(c["tz"]) for loc, c in CONF["locations"].items()}
     groups = collections.defaultdict(list)
@@ -2982,21 +2990,155 @@ def test_a_spans_displayed_end_is_the_last_day_it_holds():
         return dt.datetime.strptime(t, "%Y-%m-%dT%H:%M:%SZ").replace(
             tzinfo=dt.timezone.utc)
 
-    wrong, plus_one = [], 0
+    wrong, plus_one, win_groups, win_plus_one, win_wrong = [], 0, 0, 0, []
     for key, rs in groups.items():
-        days = sorted(dt.datetime.strptime(r["date"], "%d-%b-%Y").date()
-                      for r in rs)
-        if span_dates(days).last_held != days[-1].strftime("%d-%b-%Y"):
+        days = sorted({d for r in rs for d in covered_days(r)})
+        sd = span_dates(days)
+        if sd.last_held != days[-1].strftime("%d-%b-%Y"):
             wrong.append(key[1])
-        if (_parse(key[5]).astimezone(tz_of[key[6]]).date()
-                == days[-1] + dt.timedelta(days=1)):
-            plus_one += 1
+        moved = (_parse(key[5]).astimezone(tz_of[key[6]]).date()
+                 == days[-1] + dt.timedelta(days=1))
+        plus_one += moved
+        # THE HALF THAT IS NEW, and the reason this check stopped being
+        # theoretical on 21-Sep-2026. A window row EMITS `last_held`; until the
+        # collapse nothing in the artifact did, so the guard that refuses
+        # `t_end_utc` had a type, a test and no reader.
+        for r in rs:
+            if r["row_span"] == "window":
+                win_groups += 1
+                win_plus_one += moved
+                if (r["last_held"] != sd.last_held
+                        or r["first_held"] != sd.first_held
+                        or r["days_in_view"] != sd.days_in_view):
+                    win_wrong.append(key[1])
     record("Every span group's displayed end is its last row's date",
            not wrong, f"{len(wrong)} groups disagree: {sorted(set(wrong))[:3]}")
     record("...and the instant's own date would have been wrong on a real set",
            plus_one >= 200,
-           f"only {plus_one} of {len(groups)} groups would move under the +1; "
+           f"{plus_one} of {len(groups)} groups would move under the +1; "
            "at zero the two readings have been conflated")
+    # THE 251 THE RULING WAS ARGUED OVER, RE-MEASURED. It was 251 of 1,626
+    # groups when section 5.1 was written; the build has since grown to
+    # {len(groups)} and the set has grown with it. The figure that matters is
+    # not its size but that a real, counted majority of the rows now EMITTING
+    # last_held sit inside it.
+    record("Every window row's emitted SpanDates is the one span_dates() "
+           "builds from the days it covers",
+           not win_wrong and win_groups > 0,
+           f"{win_groups} window rows, {len(win_wrong)} disagreeing: "
+           f"{sorted(set(win_wrong))[:3]}")
+    record("...and most of them are in the set that would have printed the "
+           "NEXT day had the end been stamped from t_end_utc",
+           win_plus_one >= win_groups // 2,
+           f"{win_plus_one} of {win_groups} window rows would have moved by "
+           f"+1 day; the whole artifact's set is {plus_one} of {len(groups)} "
+           "span groups (251 of 1,626 when the ruling was written)")
+
+
+def test_the_span_collapse_is_model_A_and_no_day_keyed_figure_moved():
+    """Model A, landed -- and the half that matters is what did NOT change.
+
+    The collapse folds a row whose condition has no instant at either end into
+    one row per span. That is a RENDERING operation strictly downstream of
+    `rules.base.fire`, so the only thing it may move is the count of rendered
+    rows. Every day-keyed figure in the build -- the three empty-day figures,
+    the census's firing counts -- must read exactly what it read before, and
+    they do so by counting a window row on every civil day it covers.
+
+    THE CHECK IS TWO-SIDED ON PURPOSE. Asserting only that the row count fell
+    would pass on a collapse that folded the wrong rows; asserting only that
+    the figures held would pass on a build that collapsed nothing. So it pins
+    the delta cause by cause AND pins that `anchored`, `named_contacts` and
+    every timed span are still day rows.
+    """
+    cfg = CONF["row_kinds"]["row_span"]
+    m = cfg["measured_2027"]
+    rows = _calendar()["rows"]
+    from finastro.render import COLLAPSED_REASONS, covered_days
+
+    spans = {v["id"] for v in cfg["values"]}
+    missing = [i for i, r in enumerate(rows) if r.get("row_span") not in spans]
+    record("Every row carries a row_span the config names",
+           not missing,
+           f"{len(rows)} rows, {len(missing)} without; config {sorted(spans)}")
+
+    win = [r for r in rows if r["row_span"] == "window"]
+    day = [r for r in rows if r["row_span"] == "day"]
+    daily = sum(len(covered_days(r)) for r in rows)
+    got = {"rendered_rows": len(rows), "daily_row_equivalent": daily,
+           "delta": len(rows) - daily, "window_rows": len(win),
+           "day_rows": len(day),
+           "daily_rows_collapsed": sum(len(covered_days(r)) for r in win)}
+    off = {k: (v, m[k]) for k, v in got.items() if m[k] != v}
+    record("The collapse census matches the ruling, figure by figure",
+           not off, f"measured {got}; config disagrees on {off}")
+
+    # THE TWO DISCRIMINATORS ARE INDEPENDENT, which is the whole reason this is
+    # a second field. An event row can be a window and most verdict rows are
+    # not, so a consumer keying on row_kind alone cannot infer either.
+    pairs = collections.Counter((r["row_kind"], r["row_span"]) for r in rows)
+    record("row_kind and row_span are independent -- all four combinations "
+           "occur",
+           len(pairs) == 4,
+           f"{dict(sorted(pairs.items()))}")
+
+    # WHAT WAS COLLAPSED, AND ONLY THAT. A window row must have no instant and
+    # must carry one of the two folded reasons; a row with either point-row
+    # reason, or with a clock time, must still be a day row.
+    stray = [r["event"] for r in win
+             if r["time_ist"] or r["no_instant_reason"] not in COLLAPSED_REASONS]
+    record("Every window row is a no-instant row of a collapsed cause",
+           not stray, f"{len(win)} window rows, {len(stray)} outside the two "
+           f"reasons {list(COLLAPSED_REASONS)}")
+    unfolded = collections.Counter(
+        r["no_instant_reason"] for r in day
+        if r["no_instant_reason"] in COLLAPSED_REASONS)
+    record("No collapsible row was left daily -- every hole-free group folded",
+           not unfolded and m["non_contiguous_groups_left_daily"] == 0,
+           f"{dict(unfolded)} collapsible rows still daily")
+    point = collections.Counter(r["no_instant_reason"] for r in day
+                                if r["no_instant_reason"])
+    record("anchored and named_contacts are STILL point rows, by decision",
+           point == {"anchored": 12, "named_contacts": 5},
+           f"{dict(point)} -- 12 anchored rows on 11 rules, 5 eclipse rows, "
+           "none of them collapsed")
+    record("Every span carrying a clock time is still one row per civil day",
+           all(r["row_span"] == "day" for r in rows if r["time_ist"]),
+           f"{sum(1 for r in rows if r['time_ist'])} timed rows, "
+           f"{sum(1 for r in rows if r['time_ist'] and r['row_span'] != 'day')}"
+           " of them collapsed -- Model B is refused, not deferred here")
+
+    # A WINDOW ROW MAY NOT CLAIM A DAY NO DAILY ROW WAS BUILT FOR.
+    holes = [r["event"] for r in win
+             if not r["contiguous"] or r["days_in_view"] != len(covered_days(r))]
+    record("No window row claims a run with a hole in it",
+           not holes, f"{len(win)} window rows, {len(holes)} non-contiguous or "
+           "disagreeing with their own days_in_view")
+
+    # AND THE DURATION STAYS ABSENT. `days_in_view` is days in view; on an open
+    # or clipped span a duration would assert two boundaries the file lacks.
+    dur = sorted({k for r in rows for k in r
+                  if "duration" in k or k in ("date_start", "date_end")})
+    record("No row grew a duration or a date_start/date_end field",
+           not dur, f"found {dur}")
+
+    # THE FIGURES THAT MUST NOT HAVE MOVED, read off meta rather than recounted:
+    # the collapse is only correct if these are the numbers they always were.
+    meta = _calendar()["meta"]
+    record("The three empty-day figures are unmoved by the collapse",
+           meta["days"]["days_in_year"] == 365
+           and meta["days"]["days_with_no_event_row"] == 105
+           and meta["days"]["days_with_no_row_of_any_kind"] == 0
+           and meta["days"]["days_with_no_row_carrying_a_verdict_text"] == 2,
+           f"{ {k: v for k, v in meta['days'].items() if isinstance(v, int)} }")
+    record("meta publishes the rendered count, the daily equivalent and the "
+           "signed delta between them",
+           meta["daily_row_equivalent"] == daily
+           and meta["delta_vs_daily_row_equivalent"] == len(rows) - daily
+           and sum(meta["records_by_row_span"].values()) == meta["records"],
+           f"{meta['records']} rendered = {meta['records_by_row_span']}, "
+           f"{meta['daily_row_equivalent']} daily, "
+           f"{meta['delta_vs_daily_row_equivalent']:+d}")
 
 
 def test_the_civil_year_clip_is_a_field_and_not_the_period_cut():
@@ -3074,9 +3216,17 @@ def test_the_civil_year_clip_is_a_field_and_not_the_period_cut():
 def test_every_meta_count_is_split_by_row_kind():
     """No bare count in `meta` except the grand total, which names its split.
 
-    `records` was 6,677 and meant verdict rows because there were no others. It
-    is 7,082 now. A consumer reading it as a verdict count would be wrong by 405
+    `records` was 6,677 and meant verdict rows because there were no others.
+    A consumer reading it as a verdict count would be wrong by the base track
     and would have no way to find out.
+
+    THE SAME FAILURE HAS A SECOND AXIS SINCE 21-Sep-2026: `records` also meant
+    CIVIL DAYS, because every row was one. The collapse made 118 of them
+    windows, so the total is split twice -- by row kind and by row span -- and
+    `daily_row_equivalent` says what the file would hold under the old shape.
+    That half is checked in
+    `test_the_span_collapse_is_model_A_and_no_day_keyed_figure_moved`; this one
+    stays about the kinds.
     """
     doc = _calendar()
     meta, rows = doc["meta"], doc["rows"]
@@ -3225,11 +3375,20 @@ def test_the_cause_census_figures_carry_the_population_that_produced_them():
     # ---- AXIS 1, THE POPULATION. P1 is reconstructed by filter off today's
     # artifact rather than by rebuild, which is the only reason a pre-wiring
     # figure is checkable at all against a post-wiring file.
-    record("The census's P1 is the 5,539-row catalogue-B population the "
-           "figures name",
-           size["P1"] == 5539 and size["P3"] == len(rows),
-           f"P1 {size['P1']}  P2 {size['P2']}  P3 {size['P3']} of "
-           f"{len(rows)} rendered")
+    # TWO SIZES PER POPULATION SINCE THE COLLAPSE, and the pair is the point.
+    # P1 is 4,744 RENDERED rows and 5,539 DAILY rows, and 5,539 is the figure
+    # the cause block names -- so a check pinning only the rendered count would
+    # have quietly renamed the population, and one pinning only the daily count
+    # would pass on a build that never collapsed anything.
+    daily = {n: sum(len(cc.covered_days(r)) for r in rs)
+             for n, rs in prows.items()}
+    record("The census's P1 is the 5,539-daily-row catalogue-B population the "
+           "figures name, rendered as 4,744 rows",
+           daily["P1"] == 5539 and size["P1"] == 4744
+           and size["P3"] == len(rows) and daily["P3"] == 8916,
+           f"P1 {size['P1']} rendered / {daily['P1']} daily  "
+           f"P2 {size['P2']} / {daily['P2']}  "
+           f"P3 {size['P3']} / {daily['P3']}")
 
     # The four themselves: config states, generator recomputes, and neither
     # side is a literal in this file.
@@ -3287,19 +3446,43 @@ def test_the_cause_census_figures_carry_the_population_that_produced_them():
            f"{len(cell)} cells; 331 at {at}")
 
     # ---- AXIS 2, THE UNIT. Same population, same filter, a different unit.
-    as_rows = {k: cell[("P1", of[k], "rows")] for k in firings}
-    record("The same four under the ROWS unit are the other recorded set, not "
-           "this one",
-           as_rows == rowcounts and as_rows != got,
-           f"rows {as_rows} vs firings {got}")
+    # THE UNIT IS `daily_rows` AND NOT `rows`, since 21-Sep-2026. 431 / 151 /
+    # 255 / 12 is a count of the rows the DAILY render emitted, and the
+    # collapse did not change what it counted -- it changed what `rows` means.
+    # Renaming the unit rather than restating the figures is the whole of the
+    # correction: the four are the same measurement, and `rows` now answers a
+    # different question (18 / 7 / 17 / 12), which is pinned beside them so
+    # the two cannot be read as a drift in one.
+    as_daily = {k: cell[("P1", of[k], "daily_rows")] for k in firings}
+    as_rendered = {k: cell[("P1", of[k], "rows")] for k in firings}
+    record("The same four under the DAILY-ROWS unit are the other recorded "
+           "set, not this one",
+           as_daily == rowcounts and as_daily != got,
+           f"daily rows {as_daily} vs firings {got}")
+    record("...and under the RENDERED-ROWS unit they are the collapse itself, "
+           "which is a third answer and says so",
+           as_rendered == {k: cell[("P1", of[k], "spans")] for k in firings}
+           and as_rendered != as_daily,
+           f"rendered {as_rendered} == spans, against {as_daily} daily")
 
     # 105 -> 150 is the confusion cause_census.firing_location exists to stop:
     # Mumbai keeps three venues, so a venue key counts one firing three times.
     # And 45 is not a third figure -- it is b101's Mumbai half, the withdrawn
     # number, reproduced here so it stays diagnosed rather than merely denied.
     b101 = [r for r in prows["P1"] if cc.cause(r) == "date_only_b101"]
-    by_loc = {loc: len({cc.UNITS["firings"](r) for r in b101
-                        if cc.firing_location(r) == loc})
+    # A UNIT RETURNS A SET OF KEYS, one per civil day the row covers, since the
+    # collapse. b101's 17 window rows stand for 255 civil days and 105 firings,
+    # and a unit that returned one key per ROW would report 17 -- which is the
+    # rendered-row count wearing the firing count's name, and the whole shape
+    # this census exists to refuse.
+    def _keys(unit, rs):
+        out = set()
+        for r in rs:
+            out |= cc.UNITS[unit](r)
+        return out
+
+    by_loc = {loc: len(_keys("firings", [r for r in b101
+                                         if cc.firing_location(r) == loc]))
               for loc in sorted({cc.firing_location(r) for r in b101})}
     record("b101 is 105 firings, 150 (rule, venue, day) triples, and 45 + 60 "
            "by location",
@@ -3316,11 +3499,13 @@ def test_the_cause_census_figures_carry_the_population_that_produced_them():
            "says so rather than resting on 11",
            cell[("P1", "anchored", "firings")]
            == cell[("P1", "anchored", "rules")] == 11
-           and cell[("P1", "anchored", "rows")] == 12,
-           "the 12-vs-11 pair is the recorded unit mix, both correct")
+           and cell[("P1", "anchored", "rows")]
+           == cell[("P1", "anchored", "daily_rows")] == 12,
+           "the 12-vs-11 pair is the recorded unit mix, both correct; and "
+           "rows == daily_rows because anchored rows are NOT collapsed")
 
     # ---- AXIS 3, THE FILTER. Not a display-string test, and not a no-op.
-    unfiltered = len({cc.UNITS["firings"](r) for r in prows["P1"]})
+    unfiltered = len(_keys("firings", prows["P1"]))
     filtered = cell[("P1", "TOTAL no-instant", "firings")]
     record("Dropping the no-instant filter changes the answer by a factor, "
            "not a rounding",
@@ -3340,8 +3525,9 @@ def test_the_cause_census_figures_carry_the_population_that_produced_them():
                 if r["row_kind"] == "verdict" and r["event"] == cc.B101]
     record("The date_only split by rule id picks out b101 and nothing else",
            len(b101) == len(b101_all) == cell[("P1", "date_only_b101", "rows")]
+           and cell[("P1", "date_only_b101", "daily_rows")] == 255
            and cell[("P1", "date_only_b101", "rules")] == 1,
-           f"{len(b101_all)} b101 rows over 1 rule")
+           f"{len(b101_all)} b101 rows over 1 rule, standing for 255 days")
 
     # ---- THE NEAR MISSES, PINNED AS ABSENCES rather than denied in prose.
     values = set(cell.values())
@@ -3977,6 +4163,7 @@ def main() -> int:
         test_row_kind_is_on_every_row_and_the_base_track_carries_no_verdict()
         test_a_row_without_an_instant_carries_no_clock_time()
         test_a_spans_displayed_end_is_the_last_day_it_holds()
+        test_the_span_collapse_is_model_A_and_no_day_keyed_figure_moved()
         test_the_civil_year_clip_is_a_field_and_not_the_period_cut()
         test_every_meta_count_is_split_by_row_kind()
         test_the_cause_census_figures_carry_the_population_that_produced_them()

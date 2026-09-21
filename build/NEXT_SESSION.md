@@ -4,7 +4,9 @@ Written 15-Sep-2026, at the end of the session that ran the 2026 monthly-calenda
 fixture and wired the configuration port. **Continued 16-Sep-2026**, which closed
 TASK 2 and pinned the cause census. **Continued 20-Sep-2026**, which closed
 TASK 3, ported two of TASK 1's four, and found the third is not the kind of port
-this page said it was. Everything below is stated completely enough to start cold.
+this page said it was. **Continued 21-Sep-2026**, which reversed the Step-3
+Moon/D9 exclusion and closed TASK 4 — the span collapse, Model A, 8,916 → 8,121
+rendered rows. Everything below is stated completely enough to start cold.
 
 ## What is left, in one place
 
@@ -16,7 +18,7 @@ this page said it was. Everything below is stated completely enough to start col
 | **TASK 1d — Bhadra** | **DONE 20-Sep-2026, and the decision it needed was settled on a count rather than a preference.** The count: exactly **one** `<section id>` + `<h2>` exists outside the sub-table parse range, and it is Bhadra — so the range was incidental and the membership rule is the SHAPE. Widened, **9 → 10**. `karana_ingress` is new (866 records a year), and the rule reproduces **99 of 99** printed windows on both boundaries within 30 s with nothing unmatched either way. **Two premises on this page were wrong** and are corrected below: Bhadra is not in Chapter 4, and it is not 54 windows. |
 | **TASK 3 — the §12.16 third-shape entry** | **DONE 20-Sep-2026.** §12.16 now names three shapes, with a navigation table at its head, and the third carries a detector that is landed, pinned and falsified three ways rather than proposed. *(Three when this row was written. A FOURTH landed the same day — see the row below — and the navigation table carries all four.)* |
 | **TASK 5 — the `karana_name` defect, recorded and audited** | **DONE 20-Sep-2026.** §12.16 holds a **fourth shape**: *a check that passes by reimplementing the logic it verifies*. Four detectors landed and each falsified against the re-introduced defect; suites **256 → 260** and **120 → 123**. The blast radius is measured, not estimated, and **no published figure is retracted** — every Bhadra number was taken after the fix. See its section. |
-| **TASK 4 — the span collapse itself** | **OPEN, unchanged.** Its two blockers landed (§5.1, §5.2) and its §1 figures are attributed and harness-pinned. §5.3 — the HTML date filter as an overlap test — belongs with whoever implements the collapse. |
+| **TASK 4 — the span collapse itself** | **DONE 21-Sep-2026, Model A, and the saving reproduced on a build 1,834 rows larger than the one it was computed on.** **8,916 → 8,121 rendered rows, −795**, invariant across P1 (5,539 → 4,744), P2 (8,511 → 7,716) and P3, with the same −413 / −238 / −144 per cause in each. 118 window rows stand for 913 civil days. §5.3 landed with it — the HTML date filter is an overlap test, verified by driving the artifact's own JS. `row_span` is the second discriminator §3 demanded, on all 8,121 rows. **No day-keyed figure moved**: 331 / 142 / 105 / 11 and 365 / 105 / 0 / 2 are unchanged. **`build/SPAN_VS_DAILY_PROPOSAL.md` §7 is the record**, including three things the report asked for that the implementation did not do and two of its figures re-derived. Suites 268 → **282**. |
 | TASK 0, TASK 0b, TASK 2 | **CLOSED.** Do not re-verify; see their sections. |
 
 **THERE IS A THIRD REGISTRY AS OF 20-Sep-2026, and every count on every page moved
@@ -818,7 +820,45 @@ An unexecuted-function census is a THIRD-shape detector and a good one; it needs
 be taken across the import as well, and it is not taken here rather than taken
 wrongly.
 
-## TASK 4 — the span-vs-daily render proposal — **DELIVERED; two of its three blockers now LANDED; the collapse itself still not implemented**
+## TASK 4 — **DONE 21-Sep-2026. Model A is implemented; all three blockers are closed.**
+
+**`build/SPAN_VS_DAILY_PROPOSAL.md` §7 is the record of what it produced** and is
+the page to read, not this section. The short form:
+
+* **−795, reproduced exactly** — and on a build the arithmetic could not have
+  seen. The proposal computed it at 7,082 rows; the artifact was 8,916 by the
+  time anyone implemented it, and the saving did not move in any of the three
+  populations, per cause. **8,916 → 8,121 rendered.** `6,287` is withdrawn as a
+  forecast of today's file and stands as a correct P3 figure of the 15-Sep build.
+* **118 window rows over 913 civil days.** `anchored` (12), `named_contacts` (5)
+  and every timed span are **still day rows**, and the harness pins that
+  negative half — a check that only asserted the row count fell would pass on a
+  collapse that folded the wrong rows.
+* **§5.3 closed.** The HTML date filter is an overlap test, verified by driving
+  the artifact's own `render()` under Node: filtering to 10-Feb-2027 returns
+  b101's 5 February windows where the sort-key comparison returned 0.
+* **`row_span` is the second discriminator** §3 of the proposal demanded, and it
+  is on all 8,121 rows rather than only on the collapsed ones.
+* **`last_held` has a reader at last.** 108 of the 118 window rows are in the set
+  that would have printed the NEXT day had the end been stamped from
+  `t_end_utc`. §5.1 was not precautionary.
+* **No day-keyed figure moved.** 331 / 142 / 105 / 11 firings, 2,802 unfiltered,
+  45 + 60, 150, 300, and 365 / 105 / 0 / 2 — all unchanged, because every
+  day-keyed count expands a window over its covered days. `cause_census.py`'s
+  `rows` unit is the one that moved, and the old unit is beside it as
+  `daily_rows`.
+* **Two figures re-derived and one withdrawn.** §5.1's `251 of 1,626` is
+  **316 of 2,938** today; `conventions.yaml`'s `179 of the timed span groups are
+  not contiguous` is **withdrawn** — zero under four span units, on the
+  pre-collapse artifact too, so not a collapse effect and no check rested on it.
+* **§4's fixture prediction was wrong.** `monthly_match.py` is byte-identical
+  after the collapse, because it measures the 2026 rule layer and the collapse
+  renders the 2027 artifact. The window answer was already in its `runs` column.
+
+Suites **282 · 149 · 123 · 12 · 17**. The section below is the record as it stood
+before implementation and is left as written.
+
+### The record as it stood before implementation
 
 **`build/SPAN_VS_DAILY_PROPOSAL.md`** is the report. It answers the question per
 `no_instant_reason` cause — the split that did not exist when this task was
@@ -884,17 +924,25 @@ Both are pinned by checks in `tests/test_rule_layer.py` that **print what they
 read**, and §5.1's was falsified both ways before it was believed. Suites now
 **215 · 120 · 135 · 12 · 17**; the row count is unchanged at 7,082.
 
-**No row carries `last_held`** — verified 16-Sep-2026 against the artifact at
-`966e492`: the key appears nowhere in `build/calendar_2027.json`. The TYPE exists
-and `tests/test_rule_layer.py` pins it, but nothing in the artifact emits it, so
-the §5.1 guard against stamping the EXCLUSIVE instant as a date is **not exercised
-by any reader**. Correct while the daily render stands — a one-day row's own date
-is its `last_held`. It becomes live at the collapse: the type is already there,
-so build the displayed end from `span_dates(days)` rather than rediscovering the
-off-by-one.
+**No row carried `last_held` until 21-Sep-2026** — verified 16-Sep-2026 against
+the artifact at `966e492`: the key appeared nowhere in
+`build/calendar_2027.json`. The TYPE existed and `tests/test_rule_layer.py`
+pinned it, but nothing in the artifact emitted it, so the §5.1 guard against
+stamping the EXCLUSIVE instant as a date was **not exercised by any reader**.
+Correct while the daily render stood — a one-day row's own date is its
+`last_held`.
 
-**§5.3 — the HTML date filter must become an overlap test — is still open**, and
-belongs to whoever implements the collapse.
+**CLOSED at the collapse, and the guard turned out to be load-bearing.** 118
+window rows emit `last_held`, built from `span_dates(days)` as this paragraph
+instructed, and **108 of them are in the set that would have printed the NEXT
+day** had the end been taken from `t_end_utc`. The whole-artifact figure was
+re-measured at the same time: 316 of 2,938 span groups, where §5.1 recorded 251
+of 1,626.
+
+**§5.3 — the HTML date filter as an overlap test — is CLOSED**, landed with the
+collapse and verified by driving the artifact's own `render()` under Node:
+filtering to the single day 10-Feb-2027 returns b101's 5 February windows, where
+the old comparison against the sort key returned 0.
 
 The original framing stands as written, so the two can be read against each other:
 

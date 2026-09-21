@@ -78,10 +78,13 @@ class DateStamp:
     date, a span built from civil-day boundaries, a reference-table row anchored
     at a date this build chose -- used to be stamped by `stamp()` like everything
     else, and `stamp()` always has a time. So every such row rendered `00:00 IST`
-    with a previous-Eastern-day afternoon beside it -- 894 of them in this build
-    -- and every one read as a measured moment. (This docstring carried `662`
-    until 15-Sep-2026; that figure was measured against a build that was never
-    committed and reproduces against nothing. See `render._time_fields`.)
+    with a previous-Eastern-day afternoon beside it -- 894 of them in the
+    15-Sep-2026 build -- and every one read as a measured moment. (This
+    docstring carried `662` until 15-Sep-2026; that figure was measured against
+    a build that was never committed and reproduces against nothing. And `894`
+    is kept ATTACHED TO ITS BUILD rather than refreshed: it counted daily rows,
+    and since the collapse of 21-Sep-2026 the comparable figure is 930 daily
+    rows rendered as 135. See `render._time_fields`.)
 
     Nothing about that was fixable by discipline: there was no way to write the
     renderer that did not produce a clock time, because the object it was handed
@@ -150,10 +153,19 @@ class SpanDates:
     `b101`'s February Mumbai window ends at `2027-02-20T18:30:00Z`, which is
     21-Feb-2027 00:00 IST; the last day the condition holds is 20-Feb. Stamping
     the instant would add a day to every closed window whose end falls on a
-    venue midnight -- 251 of the 1,626 span groups in the 2027 build -- in the
-    direction that makes each window one day longer than the daily rows it
-    replaces. That is the sunrise-anchor class exactly: a wrong answer that
-    renders as a correct-looking one and passes every component test.
+    venue midnight -- 251 of the 1,626 span groups when this was ruled on
+    15-Sep-2026, re-measured at **316 of 2,938** on 21-Sep-2026 as the build
+    grew -- in the direction that makes each window one day longer than the
+    daily rows it replaces. That is the sunrise-anchor class exactly: a wrong
+    answer that renders as a correct-looking one and passes every component
+    test.
+
+    AND IT HAS A READER NOW. Until 21-Sep-2026 nothing in the artifact emitted
+    `last_held`: the type existed, the harness pinned it, and every row was one
+    civil day whose own date was trivially its last. `render.collapse_windows`
+    emits 118 window rows, and **108 of them sit inside that +1 set** -- so the
+    guard is load-bearing rather than precautionary, and a build that stamped
+    `t_end_utc` would now print 108 wrong dates.
 
     THIS OBJECT CANNOT BE BUILT FROM AN INSTANT. `span_dates()` takes the civil
     DAYS -- the list `sky.civil_days` produced and the daily rows were built
