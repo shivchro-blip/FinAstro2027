@@ -2747,6 +2747,13 @@ was never asked for**, and **the answer that was checked came from somewhere els
 Each shape's own sub-section states why the preceding shapes' detectors miss it,
 which is the part that makes them separate entries rather than four examples of one.
 
+**The detector column, read downward, is one question asked four ways** — *where
+did the value this check compares against come from.* That is the section's result
+in a line, and the measurement that forced it is
+**"Execution coverage was total; assertion coverage was zero"** at the end of this
+section: a function executed 1,013,396 times under a green suite with zero
+assertions on its return.
+
 #### The four instances
 
 **1. Blank reference views — two separate causes, one shape.** §12.12. The
@@ -3715,15 +3722,47 @@ rather than counted off the series.
 
 **And the obvious question is the wrong one, which is worth stating because it was
 asked first and measured.** "Did the suite execute this function" does not separate
-the two cases. Every module-level function of the package was wrapped with a counter
-and the five suites re-run: `panchang.karana_name` was executed **1,013,396 times**
-by `test_2026_regression` alone, through `panchang.at` inside the weekday-condition
-walk. **Execution coverage was total and assertion coverage was zero.** The function
-ran a million times under a green suite and not one check ever looked at what it
-returned. A coverage tool would have reported this file as covered on the day the
-defect shipped.
+the two cases, and the measurement that shows it — 1,013,396 executions of
+`panchang.karana_name` under a green suite with zero assertion coverage — is no
+longer recorded here. It is not a fact about karana naming and it was outgrowing the
+defect report it was measured inside. It now has its own sub-section at the end of
+§12.16: **"Execution coverage was total; assertion coverage was zero"**, with the
+three questions about the ASSERTION that follow from it.
 
-So the questions are about the ASSERTION, not the execution:
+**The through-line with the seventh and eighth instances is that all three are
+defects in CHECKS, and together they are a progression**: the seventh read the wrong
+input, the eighth walked the wrong population, and this one ran the wrong program.
+Each is invisible in the same way — the check reports `[PASS]`, and a boolean is the
+one output of this build that carries no evidence of what produced it. §12.16 has
+now spent three of its entries on the instruments rather than on the build, which is
+its least comfortable result and the one most likely to transfer.
+
+#### Execution coverage was total; assertion coverage was zero · recorded 20-Sep-2026
+
+*Measured while auditing the fourth shape, and promoted out of it on 20-Sep-2026.
+It was recorded there because that is where it was taken; it is not a fact about
+karana naming, and it is the strongest single result this section holds.*
+
+Every module-level function of the package was wrapped with a counter and the five
+suites re-run. The question being asked was the obvious one — *did the suite run the
+code that was wrong?*
+
+| the function | executions under a green suite | checks that looked at what it returned |
+| --- | --- | --- |
+| `panchang.karana_name` | **1,013,396**, by `test_2026_regression` **alone**, through `panchang.at` inside the weekday-condition walk | **0** |
+
+The function ran over a million times, on the days the defect was live, under a
+suite that was fully green, and **not one check ever looked at its return value**.
+A coverage tool pointed at `panchang.py` would have reported the file **covered on
+the day the defect shipped** — not covered-with-a-caveat, not partially covered:
+covered.
+
+> **"Did the suite run this code" is the wrong question. "Where did the value this
+> check compares against come from" is the right one.** Execution is a fact about
+> the interpreter. Correctness is a fact about the ASSERTION, and the two are
+> independent — this build holds a million-execution demonstration that they are.
+
+So the questions to ask of a check are about its compared value, not its reach:
 
 1. **Where did the value this check compares against come from — the build, or a
    second implementation living in the test file?** That is the whole distinction.
@@ -3737,13 +3776,35 @@ So the questions are about the ASSERTION, not the execution:
    to the shared one?** Not "does it agree with the document" — both do. The tie has
    to be an assertion that names both paths.
 
-**The through-line with the seventh and eighth instances is that all three are
-defects in CHECKS, and together they are a progression**: the seventh read the wrong
-input, the eighth walked the wrong population, and this one ran the wrong program.
-Each is invisible in the same way — the check reports `[PASS]`, and a boolean is the
-one output of this build that carries no evidence of what produced it. §12.16 has
-now spent three of its entries on the instruments rather than on the build, which is
-its least comfortable result and the one most likely to transfer.
+**All four shapes are variants of that one question, which is why the navigation
+table at the head of this section reads the way it does.** The four shapes are not
+variants of one another — each defeats the previous shapes' detectors, which is why
+they are separate entries. But every detector in that table's last column is an
+answer to *where did the compared value come from*: **outside the code under test**
+(1st), **with its population, unit and filter attached** (2nd), **from the source's
+own finished output, end to end** (3rd), **through the production path rather than a
+copy of it** (4th). Read down that column and it is one question asked four ways,
+which is the section's result in one line and the reason the table has a detector
+column at all.
+
+**The companion figure from the same sweep is not trustworthy, and is named rather
+than claimed.** The sweep also reports **57 public functions with zero executions**
+— but the counters are installed AFTER the package imports, so everything that runs
+at import time (`rules.base.rule` and `register` building the registries,
+`cfgsections` slicing the document) is counted at zero while in fact running on
+every single run. An unexecuted-function census is a THIRD-shape detector and a good
+one; it needs to be taken across the import as well, and it is **owed a proper run**.
+It is not taken here rather than taken wrongly. A measurement reported alongside its
+own blind spot is worth more than one reported without, and the 1,013,396 above has
+no such caveat: it is a count of calls that did happen, taken after import, against
+functions the counters were installed on.
+
+**And the same sweep names what is still only weakly tied.** `tithi_name` and
+`paksha_of` are exercised the same way — roughly a million executions apiece — and
+are asserted on only through `tithi_boundaries`' `name_to` / `paksha_to`, which IS
+the production path and is compared against printed tables in four places. That is a
+real tie, and a thinner one than Bhadra now has. It is named here so the next reader
+does not have to rediscover it.
 
 
 
