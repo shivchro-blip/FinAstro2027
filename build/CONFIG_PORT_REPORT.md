@@ -166,7 +166,7 @@ The survey classed 41 groups READY. Three of them are blocked here on evidence f
 
 Neither the 2026 fixture nor any other page reported this, so it is computed here. **The fixture's two-window diff is not this number**, and the last subsection exists so nobody later reads it as one.
 
-A rebuild emits **7,501 verdict rows**: **6,033 catalogue B** and **1,468 configuration**, all from the same `build_verdicts()` the calendar renders from.
+A rebuild emits **8,511 verdict rows**: **7,043 catalogue B** and **1,468 configuration**, all from the same `build_verdicts()` the calendar renders from.
 
 ### The configuration rows, by instrument
 
@@ -174,10 +174,10 @@ A rebuild emits **7,501 verdict rows**: **6,033 catalogue B** and **1,468 config
 | --- | ---: | ---: | ---: | ---: |
 | `MCXGOLD` | 263 | 107 | **116** | **52%** |
 | `GC` | 265 | 109 | **112** | **51%** |
-| `MCXSILVER` | 282 | 97 | **538** | **85%** |
-| `SI` | 287 | 101 | **549** | **84%** |
+| `MCXSILVER` | 441 | 97 | **538** | **85%** |
+| `SI` | 444 | 101 | **549** | **84%** |
 | `SUGAR` | 396 | 134 | **153** | **53%** |
-| **all five** | **1,493** | **548** | **1,468** | **73%** |
+| **all five** | **1,809** | **548** | **1,468** | **73%** |
 
 No other instrument carries a configuration row: the eleven-instrument set also holds NIFTY, BANKNIFTY, SPX, NDX, CL and USDINR, and every one of them is at zero, because the source prints configuration blocks for these three commodities and no others.
 
@@ -196,7 +196,7 @@ Across gold, silver and sugar:
 | --- | ---: | --- |
 | `instrument_specific` | **1,468** | the source's, about this instrument |
 | `market_wide` | 548 | the source's, about the market — routed here by us |
-| `condition_only` | 945 | nobody's: a condition with no printed direction |
+| `condition_only` | 1261 | nobody's: a condition with no printed direction |
 
 **Before the wiring that first row read 0.** Not low — zero, and still zero from catalogue B today, because `significance_of` reaches `instrument_specific` only on its `is_config_rule` branch. Every directional row gold, silver and sugar carried was one of the 548 `market_wide` rows: a verdict the source wrote about the market, delivered to a named contract by our rulership table.
 

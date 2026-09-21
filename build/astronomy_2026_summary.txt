@@ -13,7 +13,7 @@ records per event_class:
   karana_ingress       869
   lunation              58
   nakshatra_ingress    560
-  navamsa_ingress      541
+  navamsa_ingress     2233
   opposition            20
   sign_ingress         250
   speed_crossing         8
@@ -24,9 +24,9 @@ records per event_class:
   total_day             12
   yoga_ingress         455
 
-  TOTAL               5036
+  TOTAL               6728
 
 records per certainty grade:
-  A   3251
+  A   4943
   B   1783
   C      2

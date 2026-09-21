@@ -12,7 +12,7 @@ this page said it was. Everything below is stated completely enough to start col
 | --- | --- |
 | **TASK 1a — Total Day** | **DONE 20-Sep-2026.** Verified against the SECTION's own table first — **12 of 12** printed dates, no extra — then wired as `sub_total_days_in_year`. Mumbai only, and the reason is on the rule. |
 | **TASK 1b — Rahu/Ketu Thursday** | **DONE 20-Sep-2026.** Verified first on three independent columns — **13 of 13** dates, **13 of 13** nakshatra cells, and all five stated clock boundaries within 50 s — then wired as `sub_rahu_or_ketu_nakshatra_on_a_thursday`. Two residuals carried, not tuned away. |
-| **TASK 1c — Moon Mercury same D9** | **OPEN, AND RECLASSIFIED. It is not a cheap port, and this page was wrong about why.** The artifact carries **0 Moon `navamsa_ingress` records** in both years, so it needs a NEW SERIES, like Bhadra — not merely a rule. See its section. |
+| **TASK 1c — Moon Mercury same D9** | **DONE 21-Sep-2026, and it took the new series it was reclassified as needing.** The Moon's D9 exclusion is reversed: **+1,692 records in 2026 and +1,684 in 2027**, about a third again on each year. 36 of 36 printed windows reproduce. It also cleared *Planet Vargottam in Their Own Nakshatra* (19 of 19 rows), B71d, and B105's vargottama defeater. **§12.20 of `STEP4_DECISIONS.md` is the record**, including the four live Bearish verdicts the defeater withdraws. |
 | **TASK 1d — Bhadra** | **DONE 20-Sep-2026, and the decision it needed was settled on a count rather than a preference.** The count: exactly **one** `<section id>` + `<h2>` exists outside the sub-table parse range, and it is Bhadra — so the range was incidental and the membership rule is the SHAPE. Widened, **9 → 10**. `karana_ingress` is new (866 records a year), and the rule reproduces **99 of 99** printed windows on both boundaries within 30 s with nothing unmatched either way. **Two premises on this page were wrong** and are corrected below: Bhadra is not in Chapter 4, and it is not 54 windows. |
 | **TASK 3 — the §12.16 third-shape entry** | **DONE 20-Sep-2026.** §12.16 now names three shapes, with a navigation table at its head, and the third carries a detector that is landed, pinned and falsified three ways rather than proposed. *(Three when this row was written. A FOURTH landed the same day — see the row below — and the navigation table carries all four.)* |
 | **TASK 5 — the `karana_name` defect, recorded and audited** | **DONE 20-Sep-2026.** §12.16 holds a **fourth shape**: *a check that passes by reimplementing the logic it verifies*. Four detectors landed and each falsified against the re-introduced defect; suites **256 → 260** and **120 → 123**. The blast radius is measured, not estimated, and **no published figure is retracted** — every Bhadra number was taken after the fix. See its section. |
@@ -20,15 +20,19 @@ this page said it was. Everything below is stated completely enough to start col
 | TASK 0, TASK 0b, TASK 2 | **CLOSED.** Do not re-verify; see their sections. |
 
 **THERE IS A THIRD REGISTRY AS OF 20-Sep-2026, and every count on every page moved
-with it.** `finastro/rules/subtables.py` holds the nine `<h2>`
-sub-tables — 2 ported, 7 registered and blocked on a named input — and
+with it.** `finastro/rules/subtables.py` holds the ten `<h2>`
+sub-tables — **5 ported, 5 registered and blocked** on a named input — and
 `verdicts.py` fires all three registries. The three denominators are
-**141/141 · 38/58 · 2/9**, they travel together, and a row's registry is readable
+**141/141 · 38/58 · 5/10**, they travel together, and a row's registry is readable
 off its `event` field: `b<nn>` or a panchang family for catalogue B, `cfg_<block>_`
 for a configuration group, `sub_` for a sub-table.
 
-**Catalogue B stayed at 5,209 rows across the port, and that is the check.** A port
-that moved it would have been a port that reached into catalogue B's registry.
+**Catalogue B stayed at 5,209 rows across the 20-Sep ports, and that was the
+check.** It is **5,539** from 21-Sep-2026, and the difference is the point: two
+catalogue-B rules changed. `b071d` unblocked and `b105` split into a window and a
+verdict. A catalogue-B population moving because catalogue-B rules moved is the
+figure working; the 20-Sep move it was checked against was sub-table rows walking
+into a population defined as "not `cfg_`".
 
 ## Read these first, in this order
 
@@ -48,16 +52,16 @@ Then `build/MONTHLY_2026_FIXTURE.md` for the fixture this handoff continues.
 | parent commit | `e00024a8b50791854ec68fed11efb862afb1057a` |
 | the commit carrying this work | `5e8355a8c61bdb3ab5bbe0bc1f5629b198159644` |
 | | *(this file's own id-correction commit is its child; the hash above is the one to check out)* |
-| `build/astronomy_2027.json` | **5,036 records**, sha256 `e37265c3cd6913e958076ab9f517553b95c72d0bad12a2c15144fc2fd0f662e4` *(4,170 before the karana series added 866)* |
-| `build/astronomy_2026.json` | **5,036 records**, sha256 `f847febb178e74f0507d150f866ef9d0525c82229db5de1e26187fe82ecdd10c` — the fixture year, generated by `tools/build_2026.py` *(4,167 before the karana series added 869)* |
-| suites | `test_rule_layer` **260/260** · `test_2026_regression` **123/123** · `test_2027_astronomy` **141/141** · `test_node_anchor_unit` **12/12** · `test_monthly_fixture` **17/17** *(171 and 112 at the handoff commit; the rule layer gained the row-kind, span-endpoint and year-clip checks, then 13 more on 16-Sep-2026 for the cause census, then 21 more on 20-Sep-2026 — the unclaimed-grade census, the three-registry separation, the supplied-verdict guard, and the first two ports against their own printed tables — then 7 more with Bhadra: the membership rule read off the source with the document's own TOC as witness, and the karana series checked against the tithi series it halves; then 4 more in the rule layer and 3 in the 2026 suite for the `karana_name` defect — Bhadra's 99 printed windows fired through the REGISTERED rule, the eighth Vishti named, every executable sub-table port checked to be pinned at all, and the Bhadra test's parallel numbering tied to the shared function)* |
+| `build/astronomy_2027.json` | **6,720 records**, sha256 `f7bf50a39fdbf9256d42d5e11d4f0620d6db2b7bd8be8806b3fe841fc0d137fc` *(5,036 before the Moon's navamsa series added 1,684 on 21-Sep-2026; 4,170 before the karana series added 866)* |
+| `build/astronomy_2026.json` | **6,728 records**, sha256 `785ece7743f0988e61f6d0c2dc8eeb30c1608055aa22a4c1b3bbe5bf929cf975` — the fixture year, generated by `tools/build_2026.py` *(5,036 before the Moon's navamsa series added 1,692; 4,167 before the karana series added 869)* |
+| suites | `test_rule_layer` **268/268** · `test_2026_regression` **123/123** · `test_2027_astronomy` **149/149** · `test_node_anchor_unit` **12/12** · `test_monthly_fixture` **17/17** *(171 and 112 at the handoff commit; the rule layer gained the row-kind, span-endpoint and year-clip checks, then 13 more on 16-Sep-2026 for the cause census, then 21 more on 20-Sep-2026 — the unclaimed-grade census, the three-registry separation, the supplied-verdict guard, and the first two ports against their own printed tables — then 7 more with Bhadra: the membership rule read off the source with the document's own TOC as witness, and the karana series checked against the tithi series it halves; then 4 more in the rule layer and 3 in the 2026 suite for the `karana_name` defect — Bhadra's 99 printed windows fired through the REGISTERED rule, the eighth Vishti named, every executable sub-table port checked to be pinned at all, and the Bhadra test's parallel numbering tied to the shared function)* |
 | report generators | **tracked**, in `tools/` — `gen_status.py`, `cfg_port_report.py`, `gen_cfg_scope.py`, `build_2026.py`, `monthly_match.py`, `cause_census.py`. A cold clone can rebuild every generated page. **Regenerate; never hand-edit one** — see TASK 0b. |
-| verdict rows on a rebuild | **7,501** — 5,209 catalogue B + **1,468 configuration** + **824 sub-table**. *(6,758 / 5,209 / 1,468 / 81 before Bhadra added 743 the same day; 6,677 before the first sub-table ports; 7,484 / 2,275 at the handoff commit, before TASK 0 removed the 807 configuration USDINR rows. **Catalogue B's 5,209 has not moved across any of the three ports**, which is the check that none reached into it.)* |
-| **rows in the artifact** | **7,906** — the 7,501 above **plus 405 base-track event rows**, told apart by `row_kind`. **7,501 is the verdict count and not the file's row count**, and the two were the same number only while the base track did not exist. Quote the split. |
-| registries | **three**: `REGISTRY` 171 catalogue-B rules over 141 sections · `CONFIG_REGISTRY` 58 configuration groups · `SUBTABLE_REGISTRY` **10** sub-tables. `verdicts.py` fires all three. **`is_config_rule` is now a positive type test**; it read `catalogue_b is None` until 20-Sep-2026, which a `SubTable` also satisfies. **Membership of the third registry is now a SHAPE read off the document**, not a byte range — see TASK 1d. |
+| verdict rows on a rebuild | **8,511** — **5,539 catalogue B** + **1,468 configuration** + **1,504 sub-table**. *(7,501 = 5,209 + 1,468 + 824 until 21-Sep-2026: the Moon's navamsa series added 680 sub-table rows across two new ports and 330 catalogue-B rows across b071d and the b105 split.)* *(6,758 / 5,209 / 1,468 / 81 before Bhadra added 743 on 20-Sep-2026; 6,677 before the first sub-table ports; 7,484 / 2,275 at the handoff commit, before TASK 0 removed the 807 configuration USDINR rows. **Catalogue B's 5,209 did not move across any of those four ports**, which was the check that none reached into it; it moved on 21-Sep-2026 because two catalogue-B rules did.)* |
+| **rows in the artifact** | **8,916** — the 8,511 above **plus 405 base-track event rows**, told apart by `row_kind`. **8,511 is the verdict count and not the file's row count**, and the two were the same number only while the base track did not exist. Quote the split. |
+| registries | **three**: `REGISTRY` **172** catalogue-B rules over 141 sections (171 until b105 split) · `CONFIG_REGISTRY` 58 configuration groups · `SUBTABLE_REGISTRY` **10** sub-tables, **5 ported**. `verdicts.py` fires all three. **`is_config_rule` is now a positive type test**; it read `catalogue_b is None` until 20-Sep-2026, which a `SubTable` also satisfies. **Membership of the third registry is now a SHAPE read off the document**, not a byte range — see TASK 1d. |
 
-`build/calendar_2027.{json,html,csv}` on disk are **current**: 7,082 rows,
-6,677 verdict + 405 event. *(This paragraph said they predated the wiring and
+`build/calendar_2027.{json,html,csv}` on disk are **current**: 8,916 rows,
+8,511 verdict + 405 event. *(This paragraph said they predated the wiring and
 held 5,209 catalogue-B rows only. That was true when it was written and stopped
 being true at `846c780`, which re-rendered for the base track; TASK 2's sweep on
 16-Sep-2026 re-rendered again for the panel prose. The `.json` and `.csv` came
@@ -317,32 +321,40 @@ witness: it agrees with the sky. **Here the SECTION is the defective printing an
 the monthly calendar is right** — the exact reverse of the Bhadra defect, and the
 reason neither printing may be used as ground truth without the other.
 
-### 1c. Moon Mercury in the same D9 — 36 windows — **NEEDS A NEW SERIES, not a rule**
+### 1c. Moon Mercury in the same D9 — 36 windows — **DONE 21-Sep-2026**
 
-**This entry used to read "no astronomy-layer change" and give the reason as
-"`navamsa_ingress` carries every Moon and Mercury navamsa crossing". That sentence
-is false, and one query against the artifact is what showed it:**
+**This entry was wrong twice and both readings are kept.** It first read "no
+astronomy-layer change", on the ground that "`navamsa_ingress` carries every Moon
+and Mercury navamsa crossing". One query against the artifact refuted it:
 
 ```
 build/astronomy_2026.json   navamsa_ingress: Mercury 162 · Moon 0
 build/astronomy_2027.json   navamsa_ingress: Mercury 162 · Moon 0
 ```
 
-Eleven bodies carry a navamsa ingress series and the Moon is not one of them.
-Mercury's half of this condition is ready; the Moon's half has no series at all.
-**This is the same absence the status page already names as B71d's blocker** — "the
-Moon crosses a navamsa every two hours and the astronomy layer emits no navamsa
-ingress for it" — which had been sitting on a generated page, correct, for as long
-as this entry has been wrong.
+It was then re-filed as blocked on a new series — correct — with the reason given
+as "the Moon changes navamsa roughly every 105 minutes", which is **out by more
+than a factor of three** and in the direction that makes a series sound like
+noise. The measured mean is **6.06 hours** on the 2026 span and 6.08 on the 2027
+one. The exclusion itself was the Step-3 spec's, and the ground it stated —
+"a D9 series for the Moon would be noise rather than signal" — was never measured
+by anyone.
 
-So 1c is a port of **1d's kind**, not 1a's. It is registered and blocked as
-`sub_moon_mercury_in_the_same_navamsh`, missing input `moon_navamsa_series`.
+**Reversed 21-Sep-2026. §12.20 of `STEP4_DECISIONS.md` is the record.** The build
+emits **1,692 Moon navamsa records over the 2026 span and 1,684 over the 2027
+one** — about a third again on top of 5,036 in each year — and the structural
+check is exact in both: every one of the Moon's 188 and 187 sign ingresses
+coincides **to the second** with a navamsa ingress, because a sign is nine whole
+navamsas. A ninth of the series was already in the build under another name.
 
-**What building it would take and what it would unblock:** roughly **1,450 records
-a year** in each of two years — about a third again on top of 4,167 — and it
-clears 1c (36 windows), most of *Planet Vargottam in Their Own Nakshatra*, B71d,
-and the navamsa ladder's Moon rank from batch 2. Both years regenerate, so every
-recorded sha256 moves with it.
+All three consumers are ported, each verified against its own printed rows first:
+`sub_moon_mercury_in_the_same_navamsh` (36 of 36 windows),
+`sub_planet_vargottam_in_their_own_nakshatra` (19 of 19 rows, and it convicts the
+same four end-date typos config convicts by an independent route), and
+`b071d_uttara_phalguni_by_navamsa` (both Navmansh changeovers inside 2.2 min).
+B105 split into a window and a verdict: its vargottama defeater is now
+computable, and it withdraws four live Bearish verdicts. Both years regenerated,
+so every recorded sha256 moved.
 
 ### 1d. Bhadra — 99 printed windows — DONE 20-Sep-2026
 
@@ -838,7 +850,8 @@ short form:
   Withdrawn and staying withdrawn.
 * `282` is the **first** cause, on `(venue, date)`, in P3, filed under the
   **second**. Carry-in is **142**.
-* **The answer**: population **P1** (catalogue-B, 5,209 rows), unit **firings** =
+* **The answer**: population **P1** (catalogue-B, 5,539 rows from 21-Sep-2026;
+  5,209 when the census was taken), unit **firings** =
   distinct `(rule, firing location, civil day)`, filter `no_instant_reason` not
   null — **331 / 142 / 105 / 11**. Of those only `331` is population-sensitive
   (340 in P2, **371** in P3).

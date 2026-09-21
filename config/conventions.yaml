@@ -843,6 +843,19 @@ dignity:
     derived_from: "data/source_2026.html md5 5e098446d6dd13d3df8443528db5dd95"
     witnessed: [Mars, Mercury, Venus, Jupiter, Saturn]
     not_witnessed: [Sun, Moon]
+    # What the engine does with the row above, stated here so the list is not
+    # merely descriptive. A navamsa_ingress record for a body in
+    # `not_witnessed` that carries a non-empty navamsa_dignity is flagged
+    # `navamsa_dignity_not_witnessed_in_source`. The value is emitted normally
+    # -- it is the same Parashari rule every other body gets -- and the flag
+    # carries the provenance with the row, so an audit downstream cannot count
+    # it as source-witnessed without contradicting the record in its hand.
+    #
+    # It became load-bearing on 21-Sep-2026, when the Moon acquired a navamsa
+    # ingress series. The engine now prints a D9 dignity for the one body the
+    # detail below says has no journey and no navamsa table in the source, and
+    # the sentence stays true only because the record says so itself.
+    not_witnessed_engine_flag: navamsa_dignity_not_witnessed_in_source
     # ------------------------------------------- which CHART witnessed each row
     # The block above is a single Parashari sign-dignity table, but the labels
     # that confirm it were not all read off the same chart. Three planets were
@@ -1080,11 +1093,17 @@ source_findings:
       about the source's reliability; a structural absence is evidence about
       the sky and says nothing about the source.
     engine_consequence: >
-      None. The engine computes the Sun's dignity and vargottama by the same
-      Parashari rule it applies to every other body and emits them normally.
-      What this finding changes is the PROVENANCE claim: the Sun's rows are
-      carried from the scheme and are untested by the source, so they must not
-      be counted as source-witnessed in any later audit. It is not an omission
+      No change to any VALUE. The engine computes the Sun's dignity and
+      vargottama by the same Parashari rule it applies to every other body and
+      emits them normally. What this finding changes is the PROVENANCE claim:
+      the Sun's rows are carried from the scheme and are untested by the
+      source, so they must not be counted as source-witnessed in any later
+      audit -- and from 21-Sep-2026 that claim is carried ON the record, as
+      `navamsa_dignity_not_witnessed_in_source`, rather than left in this file
+      for an auditor to remember to come and read. The flag arrived with the
+      Moon's navamsa series and covers the Sun for the same reason it covers
+      the Moon; it is derived from `dignity.source_witness.not_witnessed` and
+      is not a second list. It is not an omission
       to correct, because the source never opened a slot to leave blank -- and
       so it is deliberately NOT listed under dignity.source_omissions, which is
       reserved for a row the source printed and left unlabelled (Saturn/Libra
@@ -2998,8 +3017,17 @@ row_kinds:
         did.
       measured_2027:
         span_unit: (row_kind, event, instrument, venue, t_start_utc, t_end_utc)
-        span_groups: 2202
+        span_groups: 2938
         span_groups_note: >
+          2,202 until 21-Sep-2026, when the Moon's navamsa series unblocked
+          b071d and split b105, adding 736 span groups and -- this is the
+          reading the note below set up -- MOVING NOTHING ELSE IN THIS BLOCK.
+          clipped_start, clipped_end, both open_* pairs,
+          real_endpoint_outside_the_year, of_which_no_instant and
+          of_which_timed all held at 10, 27, 7, 22, 29, 1 and 28. So the two
+          new families are bounded inside 2027 and neither reaches across a
+          year edge, which is what Bhadra did and is the only thing this
+          census is watching for.
           1,626 until the first sub-table ports of 20-Sep-2026, which added 81
           span groups and moved NOTHING ELSE in this block; 1,707 until Bhadra
           landed the same day and added 495. The reading the earlier note set
@@ -3152,9 +3180,20 @@ row_kinds:
             axes are keys here and are pinned by the harness beside the values.
           population: >
             P1 -- catalogue-B verdict rows only: row_kind == "verdict" and the
-            rule id does not start with `cfg_`. 5,209 of the 7,082 rendered
+            rule id does not start with `cfg_`. 5,539 of the 8,916 rendered
             rows. Reconstructed by filter rather than by rebuild, which is what
             makes the pre-wiring figure checkable against today's artifact.
+
+            IT WAS 5,209 UNTIL 21-SEP-2026 AND THE MOVE IS THE LEGITIMATE CASE
+            the sub-table leak below was contrasted against. Two catalogue-B
+            rules changed: b071d unblocked when the Moon's navamsa series
+            arrived, and b105 split into a window and a verdict when its
+            vargottama defeater became computable. A catalogue-B population
+            moving because catalogue-B rules moved is the figure working. The
+            20-Sep-2026 move from 5,209 to 5,314 was the opposite -- sub-table
+            rows walking into a population defined as "not cfg_" with no
+            catalogue-B rule changing at all -- and that is why the two are
+            recorded side by side rather than as one number with a history.
           unit: >
             firings -- distinct (rule, FIRING LOCATION, civil day), the unit
             rules.base.fire emits. Firing location is verdicts.VENUE_OF applied

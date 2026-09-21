@@ -463,6 +463,20 @@ def build(event_class: str, rule_family: str, bodies: list[str], kind: str,
 #: Bodies with no Parashari rulership, so no dignity of any kind.
 NO_DIGNITY = ("Uranus", "Neptune", "Pluto")
 
+#: Carried by a D9 dignity the 2026 source witnesses nowhere. The membership is
+#: config's -- `dignity.source_witness.not_witnessed`, [Sun, Moon] -- and not a
+#: list here, so the flag and the sentence it makes true have one definition
+#: between them.
+#:
+#: It says nothing is wrong with the value. It says the value is OURS: computed
+#: by the Parashari scheme and never checked against a label the document
+#: printed, because the document prints none for these two bodies in any frame.
+#: The Moon is why it exists. From 21-Sep-2026 the build emits a Moon navamsa
+#: series, so it now prints a D9 dignity table for the one body config says has
+#: "no journey or navamsa table" in the source at all -- and a row that travels
+#: has to carry that fact rather than leave it to be looked up.
+DIGNITY_NOT_WITNESSED_FLAG = "navamsa_dignity_not_witnessed_in_source"
+
 
 def positional(when: dt.datetime, body: str, *,
                sign_from: str | None = None,
@@ -579,5 +593,11 @@ def positional(when: dt.datetime, body: str, *,
             # reaches Libra in either year.
             if nav_states and ephem.corrects_source_omission(body, navamsa):
                 flags.append("navamsa_dignity_corrects_source_omission")
+            # Provenance, not correctness. Emitted on the bodies config says
+            # the document never labels -- and only where a state actually
+            # applies, because an empty list asserts nothing about the source
+            # and a flag on it would claim a divergence that is not there.
+            if nav_states and ephem.dignity_not_witnessed_in_source(body):
+                flags.append(DIGNITY_NOT_WITNESSED_FLAG)
 
     return Astronomy(**astro), flags

@@ -80,25 +80,28 @@ investment advice.
 from __future__ import annotations
 
 from ..events import GROUND_UNDOCUMENTED
-from ..sky import (Span, civil_day_span, intersect, parse, where,
+from ..sky import (Span, civil_day_span, intersect, parse, same, where,
                    weekdays_in_span)
 from . import names
 from .base import ambiguous, blocked, resolved, rule
 from .catalogue import B, split_final, split_sentences, split_statement
 
 # ------------------------------------------------------------ missing inputs
-# One string is left of the five this module once carried. The other four named
-# the tithi series, the yoga series, sunrise, sunset and a per-location weekday
-# count, and every one of those is now supplied -- so they are deleted rather
-# than kept with a qualifier. A missing-input string that no longer describes a
+# NONE ARE LEFT. This module carried five strings before batch 3 and one after
+# it -- MOON_NAVAMSA, which named the Moon's D9 residency as a series the
+# astronomy layer did not carry -- and on 21-Sep-2026 the build began emitting
+# it, so the last string is deleted rather than
+# kept with a qualifier. A missing-input string that no longer describes a
 # missing input is worse than no string: it goes on reporting an absence that
-# has been filled, and the harness checks for exactly that decay.
-MOON_NAVAMSA = (
-    "the Moon's navamsa ingress series. The Moon crosses a navamsa every two "
-    "hours and the astronomy layer emits no navamsa ingress for it, which is "
-    "the same absence that stops the navamsa ladder ranking the Moon in batch 2"
-)
-
+# has been filled, and the harness checks for exactly that decay --
+# `test_rule_layer.py`'s stale-prose sweep now covers the navamsa phrasings
+# too, so this cannot rot silently a second time.
+#
+# The deleted string was also WRONG about the quantity it named. It put the
+# Moon's navamsa at two hours and the reclassification that blocked this rule
+# put it at under two; the measured mean is 6.06 hours on the 2026 span, so the
+# smaller figure was out by a factor of 3.5 -- in the direction that makes a
+# series sound like noise.
 #: Panchak's two signs, and the whole of the resolved reading. A constant, so
 #: the rule's condition and the harness's reproduction of the source's thirteen
 #: windows are demonstrably the same statement.
@@ -456,9 +459,11 @@ PANCHAK_REJECTED = (
     "it, and the section prints dated windows.",
     "The five-nakshatra reading stated in nakshatra terms -- not rejected "
     "as wrong, since it denotes the same arc, but not used: it needs "
-    "Dhanishta's third pada, which is a navamsa boundary, and the Moon has "
-    "no navamsa series in the layer. The sign series gives the identical "
-    "arc from a series that is emitted.",
+    "Dhanishta's third pada, which is a navamsa boundary. That WAS an "
+    "unavailable series and stopped being one on 21-Sep-2026; the reading is "
+    "still not used, now for the reason that survives -- the sign series "
+    "gives the identical arc, and re-deriving a settled reading off a second "
+    "series would move thirteen verified windows for no gain.",
     "Any reading beginning at Dhanishta's start rather than its third pada "
     "-- it would run about 6.7 days and miss every printed end time.",
 )
@@ -822,7 +827,41 @@ rule(
 
 _B71_COND, _B71_VERDICT = split_statement(B(71).notes[0])
 
-blocked(
+#: The note's four outcomes are keyed to the Moon's navamsa, so a firing has
+#: to carry WHICH navamsa or the verdict text cannot be resolved against the
+#: row. Uttara Phalguni is four navamsas wide and they are these four, in
+#: order, which is why the note lists exactly four.
+_B71D_NAVAMSAS = ("Sagittarius", "Capricorn", "Aquarius", "Pisces")
+
+
+def _moon_in_by_navamsa(*stars: str):
+    """Moon windows in `stars`, cut at the Moon's own navamsa boundaries.
+
+    Deliberately NOT joined. `_join` exists to make one window of a two-sign
+    Panchak; here the cut IS the content, because the section's Navmansh
+    column prints a different outcome either side of it.
+    """
+    wanted = set(stars)
+
+    def fn(sky):
+        nak = [s for s in sky.spans("Moon", "nakshatra") if s.value in wanted]
+        out = intersect(nak, list(sky.spans("Moon", "navamsa")),
+                        lambda n, nav: {"nakshatra": n, "navamsa": nav})
+        # A nakshatra is four whole navamsas, so the note's four names are the
+        # complete set and a fifth would mean the two series disagree about
+        # where the Moon is. Raised rather than dropped: that is a corrupt
+        # artifact, not an unusual sky.
+        seen = {s.value["navamsa"] for s in out} - set(_B71D_NAVAMSAS)
+        if seen:
+            raise ValueError(
+                f"b071d: the Moon reached {sorted(seen)} inside "
+                f"{sorted(wanted)}, which is not one of the four navamsas the "
+                "section's own Navmansh column names")
+        return out
+    return fn
+
+
+rule(
     id="b071d_uttara_phalguni_by_navamsa",
     section=B(71),
     rule_family="residency/moon_nakshatra",
@@ -831,16 +870,27 @@ blocked(
     verdict_text=_B71_VERDICT,
     verdict_from="note[0]",
     inputs=("ingress/nakshatra", "ingress/navamsa"),
-    missing_inputs=(MOON_NAVAMSA,),
-    notes="The note gives four outcomes by which navamsa the Moon occupies "
-          "inside the window -- Sagittarius and Capricorn bullish, Aquarius "
-          "bearish, Pisces volatile -- and the section's Navmansh column dates "
-          "the changeovers to the minute. Each window crosses three or four "
-          "navamsas in a day, which is exactly the resolution the layer does "
-          "not carry for the Moon. The condition reads 'Observation' because "
-          "that is the word before the note's first dash; the substance is in "
-          "the verdict.",
-)
+    flags=("verdict_resolves_by_the_navamsa_carried_on_the_row",),
+    notes="UNBLOCKED 21-Sep-2026 by the Moon's navamsa series, and verified "
+          "against the section's own Navmansh column before wiring. That "
+          "column dates two changeovers to the minute -- 05-Feb-26 10:32 and "
+          "28-Apr-26 09:56, both Capricorn to Aquarius -- and the series "
+          "reaches them at 10:29:50 and 09:54:36, inside 2.2 minutes. Two "
+          "further windows open on a navamsa cusp the column names, 08-Jan-26 "
+          "12:25 and 11-Sep-26 13:17 into Sagittarius, reproduced inside 40 "
+          "seconds. The verdict text names four outcomes and not one -- "
+          "Sagittarius and Capricorn bullish, Aquarius bearish, Pisces "
+          "volatile -- so it is carried verbatim and the ROW carries the "
+          "navamsa that selects among them, under "
+          "`verdict_resolves_by_the_navamsa_carried_on_the_row`. Choosing one "
+          "of the four to print as the rule's verdict would be authorship. "
+          "The condition reads 'Observation' because that is the word before "
+          "the note's first dash; the substance is in the verdict. "
+          "THE BLOCKER WAS SELF-INFLICTED: Uttara Phalguni is exactly four "
+          "navamsas wide and they are exactly the four the note names, so the "
+          "section had been telling the layer the resolution it needed since "
+          "the day it was read.",
+)(_moon_in_by_navamsa(names.nakshatra("Uttra Falguni")))
 
 
 # ===================================================== B072 Mangal Ashwini Yog
@@ -1093,10 +1143,13 @@ _MOON_WEEKDAY_NOTES = {
          "hold for 2.7 and 1.5 hours -- but B104 prints a 1.2-hour window, so "
          "brevity is not the source's criterion either.",
     104: "Reproduces its 2026 table exactly: all six dates, no extras.",
-    105: "Reproduces its 2026 table exactly: all four dates. The remark adds "
-         "that a vargottama Moon neutralises the result; vargottama needs the "
-         "Moon's navamsa, which the layer does not carry, so the modifier is "
-         "not ported and the rule fires unmodified.",
+    105: "Reproduces its 2026 table exactly: all four dates, and this rule "
+         "is the WINDOW only. Its section adds a remark that neutralises the "
+         "verdict on a vargottama Moon, which needed the Moon's navamsa; it "
+         "arrived on 21-Sep-2026 and the verdict moved to b105n. Until then "
+         "this rule carried 'Bearish' on every row -- the one place in the "
+         "layer where the missing series rendered as OUTPUT rather than as "
+         "an absence, because the defeater it disarmed was the source's own.",
 }
 MOON_WEEKDAY_RULES: list[str] = []
 
@@ -1111,21 +1164,97 @@ for _b in (102, 103, 104, 105):
     _day = next(w for w, i in names.WEEKDAYS.items() if i == _days[0])
     _rid = f"b{_b:03d}_{_stars[0].lower().replace(' ', '_')}_on_{_day.lower()}"
     MOON_WEEKDAY_RULES.append(_rid)
+    # B105 alone prints a defeater, so B105 alone is split: the bare window
+    # here, the verdict in b105n below. The other three carry their verdict,
+    # because their sections restrict it with nothing.
     rule(
         id=_rid,
         section=_sec,
         rule_family="residency/moon_nakshatra",
         condition_text=_cond,
         condition_from="title",
-        verdict_text=_verdict,
-        verdict_from="title",
+        verdict_text=None if _b == 105 else _verdict,
+        verdict_from=None if _b == 105 else "title",
         inputs=("ingress/nakshatra", "weekday"),
         weekdays=_days,
         flags=(("source_table_omits_2026_occurrences",)
-               if _b in (102, 103) else ()),
+               if _b in (102, 103) else
+               ("verdict_neutralised_where_the_moon_is_vargottama",)
+               if _b == 105 else ()),
         notes=f"{_stars[0]} on {_day}, both read out of the title. "
               + _MOON_WEEKDAY_NOTES[_b],
     )(_moon_in(_stars[0]))
+
+
+# ==================== B105's defeater, ported once the Moon's navamsa arrived
+# The section prints a verdict and then withdraws it in a case it names:
+# "If Moon is Vargottam the impact of this Bearish Yog will be neutralized".
+# That is the B87/B89 shape with the sign reversed -- there a colon SCOPED the
+# verdict to a case, here a remark REMOVES it in one -- so it is ported the
+# same way, as two rules over one condition: b105 is the window the section
+# tabulates, and this is the window with its outcome.
+#
+# Clipping b105's spans instead would have been wrong twice over. The section
+# PRINTS all four of its 2026 rows without regard to vargottama, so a clipped
+# window would stop reproducing the table it is verified against; and a
+# neutralised Yog is still a Yog, which is the whole content of the word.
+_B105 = B(105)
+_B105_COND, _B105_VERDICT = split_statement(_B105.title)
+_B105_PROVISO = _B105.remarks[0]
+assert "Vargottam" in _B105_PROVISO, "B105's remark is gone; re-read the split"
+
+#: How much of this section's own condition the defeater takes, and why it is
+#: not a rounding error. Uttara Ashadha opens at 26 deg 40' Sagittarius, which
+#: is the Sagittarius navamsa of Sagittarius, and runs through 3 deg 20'
+#: Capricorn, which is the Capricorn navamsa of Capricorn. Both are vargottama,
+#: they are contiguous across the cusp, and together they are the nakshatra's
+#: first HALF. So the remark does not trim an edge case off this section: it
+#: withdraws the verdict from half of every window the section has.
+B105_VARGOTTAMA_HALF = ("Uttara Ashadha padas 1-2 are Sagittarius and "
+                        "Capricorn navamsas inside Sagittarius and Capricorn")
+
+
+def _moon_in_not_vargottama(*stars: str):
+    """`_moon_in`, less the stretches where the Moon's D1 and D9 agree.
+
+    The subtraction is expressed as an intersection with the spans where the
+    two frames DIFFER, because that is a value function away and the layer has
+    no span-subtract. Both frames come off emitted ingress series.
+    """
+    wanted = set(stars)
+
+    def fn(sky):
+        nak = [s for s in sky.spans("Moon", "nakshatra") if s.value in wanted]
+        not_varg = intersect(
+            list(sky.spans("Moon", "sign")), list(sky.spans("Moon", "navamsa")),
+            lambda sign, nav: None if sign == nav else sign)
+        return _join(intersect(nak, not_varg, lambda n, _s: n))
+    return fn
+
+
+rule(
+    id="b105n_uttara_ashadha_on_monday_moon_not_vargottama",
+    section=_B105,
+    rule_family="residency/moon_nakshatra",
+    condition_text=_B105_COND,
+    condition_from="title",
+    condition_proviso=_B105_PROVISO,
+    verdict_text=_B105_VERDICT,
+    verdict_from="title",
+    inputs=("ingress/nakshatra", "ingress/navamsa", "ingress/sign", "weekday"),
+    weekdays=names.weekdays_in(_B105_COND),
+    flags=("verdict_neutralised_where_the_moon_is_vargottama",),
+    notes="The proviso is carried verbatim and reads the opposite way round "
+          "from B87's and B89's: those name the case the verdict HOLDS in, "
+          "this names the case it is withdrawn in, and the rule fires on the "
+          "complement. Kept in `condition_proviso` regardless, because the "
+          "field's contract is the source's own scoping string and the "
+          "harness checks it is a substring of the page. "
+          "WHAT IT COSTS THE SECTION: half. See B105_VARGOTTAMA_HALF -- "
+          "Uttara Ashadha's first two padas are vargottama end to end, so "
+          "every window this section prints opens inside the defeater and "
+          "leaves it about thirteen hours later.",
+)(_moon_in_not_vargottama(names.nakshatra("Uttra Shada")))
 
 
 # =========================================== B106 Amavasya Ghadi vs Chaturdashi

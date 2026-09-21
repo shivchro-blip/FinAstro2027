@@ -266,14 +266,25 @@ A("The two ported are the ones the layer could already compute AND whose "
   "and `subtable_catalogue.check_no_verdict` refuses a rule that arrives "
   "carrying one.")
 A("")
-A("**`moon_navamsa_series` blocks two of the seven and is the largest single "
-  "gap named on this page.** The Moon crosses a navamsa every two hours and "
-  "the astronomy layer emits no navamsa ingress for it — 0 records in both "
-  "years, against 162 for Mercury — so *Moon Mercury in the Same Navamsh "
-  "(D9)* (36 printed windows) and most of *Planet Vargottam in Their Own "
-  "Nakshatra* sit behind a series that does not exist, and so does B71d. It "
-  "is a new SERIES of roughly 1,450 records a year, not a rule, which is why "
-  "it is filed with Bhadra rather than with the two above.")
+A("**`moon_navamsa_series` was the largest single gap named on this page and "
+  "it is closed.** It blocked two of the ten sub-tables — *Moon Mercury in "
+  "the Same Navamsh (D9)*, 36 printed windows, and most of *Planet Vargottam "
+  "in Their Own Nakshatra* — plus B71d, and it was a SERIES rather than a "
+  "rule, which is why it was filed with Bhadra. The build emits it from "
+  "21-Sep-2026: **1,692 Moon records over the 2026 span and 1,684 over the "
+  "2027 one**, about a third again on top of 5,036 in each year. All three "
+  "consumers are ported, each verified against its own printed rows first.")
+A("")
+A("**The exclusion was ours and its stated ground was measurably wrong.** "
+  "`build_2027.py` excluded the Moon from D9 because a Moon D9 series \"would "
+  "be noise rather than signal\", on an interval this page carried as two "
+  "hours and the reclassification that produced the exclusion put at under "
+  "two. The measured mean is **6.06 hours** on the 2026 span and 6.08 on the "
+  "2027 one. And the noise reading is refuted by the series' own structure: "
+  "**every ninth record IS a Moon sign ingress**, to the second — 188 of "
+  "1,692 in 2026, 187 of 1,684 in 2027, nothing missed in either — so a "
+  "ninth of the \"noise\" was already being emitted under another name and "
+  "graded A.")
 A("")
 A("And the source's own monthly prophecy tables (Chapter 3) print named "
   "verdicts for gold and silver — \"Bullish for Gold and Silver\", \"High "

@@ -51,9 +51,30 @@ YEAR = CONF["year"]
 ALL_BODIES = ["Sun", "Moon", "Mercury", "Venus", "Mars", "Jupiter", "Saturn",
               "Uranus", "Neptune", "Pluto", "Rahu", "Ketu"]
 
-#: Task excludes the Moon from D9: its navamsa changes every four hours or so,
-#: and a D9 series for the Moon would be noise rather than signal.
-NAVAMSA_BODIES = [b for b in ALL_BODIES if b != "Moon"]
+#: Every body, the Moon included. The Moon was excluded from D9 until
+#: 21-Sep-2026 on a ground this file stated and nobody measured: that its
+#: navamsa turned over every four hours or so, and that a D9 series for the
+#: Moon would therefore be noise rather than signal. Both halves were wrong,
+#: and the retired wordings are quoted in STEP4_DECISIONS.md 12.20 rather than
+#: here -- the harness sweeps this file for them.
+#:
+#: The INTERVAL is 6.06 hours on the 2026 span's mean and 6.08 on the 2027
+#: one -- 30/9 degrees at about 13.2 degrees a day. Three figures were carried
+#: in the tree, four hours here and two smaller ones elsewhere, and no two of
+#: them agreed with each other or with the measurement.
+#:
+#: The NOISE claim is refuted by the series' own structure: 1,692 records over
+#: the 2026 span and 1,684 over the 2027 one, of which exactly 188 and 187 ARE
+#: the Moon's sign ingresses, to the second. Every ninth navamsa cusp IS a sign
+#: cusp, because 30 is nine whole navamsas -- so a ninth of this series was
+#: already being emitted, under another name, and graded A. A series whose
+#: every ninth member the build already trusted was never noise.
+#:
+#: Three printed tables bound on it: Moon Mercury in the Same Navamsh (D9)
+#: pp.128-129 (36 windows), Planet Vargottam in Their Own Nakshatra p.133 (13
+#: of 19 rows are Moon rows), and B71's own Navmansh column. Excluding the
+#: Moon did not filter the source's evidence, it suppressed it.
+NAVAMSA_BODIES = ALL_BODIES
 
 #: The luminaries never station. The mean node is retrograde by construction,
 #: so under config's `node: mean` the nodes never station either -- scanning
@@ -355,7 +376,16 @@ def nakshatra_ingresses():
 
 
 def navamsa_ingresses():
-    """D9 changes for every body except the Moon."""
+    """D9 changes for every body, the Moon included.
+
+    The Moon's half of this series is the largest single block of records in
+    the build and the newest: see NAVAMSA_BODIES for why it was absent and what
+    measurement reversed. It is graded A on the same ground as every other
+    body's -- a bisected crossing of a computed longitude -- and its every
+    ninth member coincides to the second with a `sign_ingress` record the build
+    has emitted all along, which is the check `test_2027_astronomy.py` makes of
+    it rather than a claim made here.
+    """
     out = []
     for body in NAVAMSA_BODIES:
         for inst, frm, to in ephem.ingresses(body, SPAN_START, SPAN_END,

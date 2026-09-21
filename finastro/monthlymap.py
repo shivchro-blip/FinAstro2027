@@ -412,14 +412,15 @@ MAP: dict = {
     # ------------------------------------------------- the ten sub-tables
     "Moon Mercury in the same D9": (
         SUBTABLE, ["sub_moon_mercury_in_the_same_navamsh"],
-        "one of the ten `<h2>` sub-tables. Registered and BLOCKED on "
-        "`moon_navamsa_series`. This note read 'the navamsa series is "
-        "emitted, so the condition is computable; nobody has written the "
-        "rule' until 20-Sep-2026, and the first half of that was FALSE: "
-        "navamsa_ingress carries 162 Mercury records and 0 Moon ones in both "
-        "years, so the Moon's half of this condition has no series at all. "
-        "The correction came from querying the artifact; the sentence had "
-        "been read past for days"),
+        "one of the ten `<h2>` sub-tables. PORTED 21-Sep-2026, verified "
+        "against the section's own table first: 36 of 36 printed windows, "
+        "each on the navamsa its Navmansh (D9) cell names, with 37 of the 40 "
+        "stated clock boundaries inside five minutes. This note was wrong "
+        "twice before that and both readings are on record in "
+        "`subtables.sub_moon_mercury_in_the_same_navamsh`: first that the "
+        "condition was already computable, which the artifact refuted, then "
+        "that the Moon's D9 residency was a series the build could not "
+        "supply, which was true until the build supplied it"),
     "Rahu/Ketu Nakshtra on Thursday": (
         SUB, ["sub_rahu_or_ketu_nakshatra_on_a_thursday"],
         "PORTED 20-Sep-2026, verified against the section's own table first: "

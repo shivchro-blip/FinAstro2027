@@ -52,7 +52,12 @@ ARCMIN = 1.0 / 60.0
 EXPECTED_RANGE = {
     "sign_ingress":      (200, 320),
     "nakshatra_ingress": (480, 700),
-    "navamsa_ingress":   (440, 700),
+    # The Moon is nine-tenths of this class on its own. It joined on
+    # 21-Sep-2026 and took the count from 542 to 2226, which is why this range
+    # is not the nakshatra's: 1,684 Moon records over the 427-day span against
+    # 542 for the other eleven bodies together. See test_the_moons_navamsa
+    # _series_is_bounded_by_its_own_sign_ingresses for what pins the shape.
+    "navamsa_ingress":   (2100, 2400),
     "station":           (14, 32),
     "combustion":        (14, 36),
     "eclipse":           (5, 9),
@@ -790,6 +795,107 @@ def test_navamsa_source_omission_is_checked_in_the_D9_frame() -> None:
            f"rashi sign at that instant: {astro.sign}, flags: {flags}")
 
 
+def test_the_moons_navamsa_series_is_bounded_by_its_own_sign_ingresses(
+        doc: dict) -> None:
+    """THE STRUCTURAL CHECK. Every Moon sign ingress is a Moon navamsa ingress.
+
+    Thirty degrees is nine whole navamsas, so a sign cusp is always also a
+    navamsa cusp. That makes the two series checkable against each other with
+    no ephemeris call and no tolerance: each `sign_ingress` instant for the
+    Moon must appear, TO THE SECOND, among its `navamsa_ingress` instants. The
+    two are produced by separate scans at separate step sizes -- 30 minutes and
+    13 -- and bisected independently, so agreement is evidence about the
+    generator and not a tautology.
+
+    It is also the answer to the claim that excluded the Moon from D9 until
+    21-Sep-2026, that "a D9 series for the Moon would be noise rather than
+    signal". A ninth of this series was already in the build, graded A, under
+    the name `sign_ingress`.
+    """
+    moon_nav = sorted(r["time"]["t_start_utc"] for r in doc["records"]
+                      if r["event_class"] == "navamsa_ingress"
+                      and r["bodies"][0] == "Moon")
+    moon_sign = sorted(r["time"]["t_start_utc"] for r in doc["records"]
+                       if r["event_class"] == "sign_ingress"
+                       and r["bodies"][0] == "Moon")
+    record("The Moon has a navamsa ingress series at all",
+           len(moon_nav) > 1000,
+           f"{len(moon_nav)} Moon navamsa_ingress records over the span")
+
+    missing = [t for t in moon_sign if t not in set(moon_nav)]
+    record("Every Moon sign-ingress instant coincides TO THE SECOND with a "
+           "Moon navamsa-ingress instant", not missing,
+           f"{len(moon_sign)} sign ingresses, {len(moon_sign) - len(missing)} "
+           f"coincident; missing {missing[:4]}")
+
+    # And the ratio, which is the other half of the same fact: nine navamsas
+    # to a sign. It is not exactly 9 because the span opens and closes
+    # mid-sign, so the tolerance is one sign's worth at each end.
+    ratio = len(moon_nav) / len(moon_sign)
+    record("...and the series is nine times the sign series, to within the "
+           "two partial signs the span's ends cut",
+           8.9 <= ratio <= 9.1, f"{len(moon_nav)}/{len(moon_sign)} = "
+           f"{ratio:.4f}")
+
+    # The interval the exclusion was argued on. Three figures were carried in
+    # the tree -- four hours, two hours, 105 minutes -- and none of them was
+    # this one. Pinned as a range so it is a measurement and not a slogan.
+    span = (parse(doc["meta"]["span_end_utc"])
+            - parse(doc["meta"]["span_start_utc"])).total_seconds() / 3600
+    mean_h = span / len(moon_nav)
+    record("The Moon crosses a navamsa every 6.0 to 6.1 hours, which is none "
+           "of the three intervals the exclusion was argued on",
+           6.0 <= mean_h <= 6.1,
+           f"mean {mean_h:.4f} h over {span / 24:.0f} days; the tree carried "
+           "four hours, two hours and 105 minutes")
+
+
+def test_a_dignity_the_source_never_labels_says_so_on_the_record(
+        doc: dict) -> None:
+    """Provenance for the two bodies config puts in `not_witnessed`.
+
+    The Moon is why this exists. The 2026 document gives it no journey table
+    and no navamsa table, so it labels the Moon's dignity nowhere -- and from
+    21-Sep-2026 the engine emits a D9 dignity for it on 421 records. The value
+    is the same Parashari rule every other body gets; what the flag carries is
+    that no printed label has ever tested it.
+    """
+    not_witnessed = set(CONF["dignity"]["source_witness"]["not_witnessed"])
+    record("Config still names the two bodies this flag is derived from",
+           not_witnessed == {"Sun", "Moon"}, f"{sorted(not_witnessed)}")
+
+    nav = [r for r in doc["records"] if r["event_class"] == "navamsa_ingress"]
+    want = {r["id"] for r in nav
+            if r["bodies"][0] in not_witnessed
+            and r["astronomy"].get("navamsa_dignity")}
+    got = {r["id"] for r in doc["records"]
+           if ev.DIGNITY_NOT_WITNESSED_FLAG in r["qa"]["flags"]}
+    record("Every navamsa_dignity on an unwitnessed body is flagged, and "
+           "nothing else is", want == got,
+           f"{len(got)} flagged; {len(want - got)} unflagged, "
+           f"{len(got - want)} spurious")
+
+    by_body = collections.Counter(
+        r["bodies"][0] for r in doc["records"]
+        if ev.DIGNITY_NOT_WITNESSED_FLAG in r["qa"]["flags"])
+    record("...and both bodies are represented, so the flag is not the Moon's "
+           "alone by accident",
+           set(by_body) == not_witnessed and min(by_body.values()) > 0,
+           f"{dict(by_body)}")
+
+    # Non-vacuity the other way: a witnessed body with a D9 dignity must NOT
+    # carry it, or the flag would mean nothing.
+    leaked = [r["id"] for r in nav
+              if r["bodies"][0] not in not_witnessed
+              and ev.DIGNITY_NOT_WITNESSED_FLAG in r["qa"]["flags"]]
+    witnessed_with_dignity = [r["id"] for r in nav
+                              if r["bodies"][0] == "Saturn"
+                              and r["astronomy"].get("navamsa_dignity")]
+    record("A witnessed body's D9 dignity carries no such flag",
+           not leaked and witnessed_with_dignity,
+           f"{len(witnessed_with_dignity)} Saturn D9 dignities, none flagged")
+
+
 def test_vargottama_on_records(doc: dict) -> None:
     """vargottama is a property of a position, so every positional record carries
     it -- and it is the equality of the record's own two frames, not a third
@@ -1426,6 +1532,8 @@ def main() -> int:
     test_dignity_known_cases(doc)
     test_navamsa_dignity_frame(doc)
     test_navamsa_source_omission_is_checked_in_the_D9_frame()
+    test_the_moons_navamsa_series_is_bounded_by_its_own_sign_ingresses(doc)
+    test_a_dignity_the_source_never_labels_says_so_on_the_record(doc)
     test_vargottama_on_records(doc)
     test_vargottama_is_not_folded_into_dignity(doc)
     test_ingress_frames_are_cusp_consistent(doc)

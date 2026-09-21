@@ -267,6 +267,13 @@ EXPECTED_FIRINGS_MUMBAI = {
     "b103_shatabhisha_on_tuesday": 5,
     "b104_mrigashira_on_thursday": 2,
     "b105_uttara_ashadha_on_monday": 3,
+    # The window and the verdict, split by the section's own defeater. b105n
+    # is 2 and not 3 because 24-May-2027's whole Monday overlap sits inside
+    # the vargottama stretch -- see b105n's notes and B105_VARGOTTAMA_HALF.
+    "b105n_uttara_ashadha_on_monday_moon_not_vargottama": 2,
+    # Uttara Phalguni cut at the Moon's navamsa boundaries: three visits, four
+    # navamsas each, spread over two civil days apiece. Unblocked 21-Sep-2026.
+    "b071d_uttara_phalguni_by_navamsa": 64,
 
     # ------------------------- the tithi and yoga series, added after batch 3
     # Days touched, on the same convention as everything above. A tithi runs
@@ -1263,7 +1270,94 @@ def test_the_tithi_and_yoga_series_cleared_what_batch_three_said_they_would(
            f"{len(sky.by_class['sunrise'])} sunrise and "
            f"{len(sky.by_class['sunset'])} sunset records"
            + (f"; stale: {claiming}" if claiming else ""))
+    _no_stale_moon_navamsa_prose(sky)
+    _b55_and_blocked_rules_emit_nothing(firings)
 
+
+#: Every phrasing the layer used for the Moon's absent navamsa series, and the
+#: wrong interval each of them carried. Six strings said it: b071d's
+#: missing-input MOON_NAVAMSA, the sub-table registry's `moon_navamsa_series`,
+#: the two sub-table notes that named the 0-record count, B55's rejected
+#: five-nakshatra reading, and `colocation._rank_spans`'s docstring. The series
+#: arrived on 21-Sep-2026 and all six had to go with it.
+#:
+#: Four of those six also carried "every two hours", `build_2027.py` carried
+#: "every four hours or so", and the reclassification that produced the
+#: exclusion said "roughly every 105 minutes". The measured mean is 6.06 hours
+#: over the 2026 span and 6.08 over the 2027 one, so every one of the three was
+#: wrong and the smallest was wrong by a factor of 3.5 -- in the direction that
+#: makes a series sound like noise. The interval phrasings are in this pattern
+#: for that reason: the absence claim and the number that justified it decayed
+#: together and have to fail together.
+STALE_MOON_NAVAMSA = re.compile(
+    r"emits no navamsa ingress|emits NONE for it"
+    r"|no navamsa ingress(es)? for (it|the Moon)"
+    r"|no navamsa (ingress )?series( at all| in the layer)?"
+    r"|no ingress series is emitted for it"
+    r"|0 (records )?(for the Moon|Moon ones)"
+    r"|(Moon )?crosses a navamsa every two hours"
+    r"|navamsa changes every four hours"
+    r"|every 105 minutes")
+
+#: The files the sweep reads. The registry cannot reach a module docstring or a
+#: generator's comment, and two of the six strings lived in exactly those --
+#: which is how the claim survived being correct for as long as it did.
+STALE_PROSE_FILES = ("build_2027.py", "finastro/rules/colocation.py",
+                     "finastro/rules/subtables.py",
+                     "finastro/rules/panchang_rules.py",
+                     "finastro/monthlymap.py", "tools/gen_status.py")
+
+
+def _no_stale_moon_navamsa_prose(sky) -> None:
+    """The same decay check, for the series that arrived on 21-Sep-2026.
+
+    Widened past `missing_inputs` on purpose. The tithi and yoga strings all
+    lived in that one field; the Moon's lived in six places across four
+    surfaces -- a missing input, two rule notes, a rejected reading, a module
+    docstring and a generator comment -- and a sweep that reads only the field
+    would have passed while five of the six went on describing an absence the
+    build had filled.
+    """
+    from finastro.rules import subtables as ST
+
+    moon = [r for r in sky.by_class["navamsa_ingress"]
+            if r["bodies"][0] == "Moon"]
+    where = f"{len(moon)} Moon navamsa_ingress records in the file"
+
+    claiming = sorted(
+        r.id for r in R.REGISTRY + ST.SUBTABLE_REGISTRY
+        for text in (r.missing_inputs + r.rejected_readings
+                     + (r.notes, r.ambiguity))
+        if text and STALE_MOON_NAVAMSA.search(text))
+    record("No rule still describes the Moon as having no navamsa series, in "
+           "any of its four text fields", not claiming,
+           where + (f"; stale: {claiming}" if claiming else ""))
+
+    hits = []
+    for name in STALE_PROSE_FILES:
+        text = (ROOT / name).read_text(encoding="utf-8")
+        for n, line in enumerate(text.splitlines(), 1):
+            if STALE_MOON_NAVAMSA.search(line):
+                hits.append(f"{name}:{n}")
+    record("No module docstring, comment or generated page still carries one "
+           "of the six absent-series strings or a wrong navamsa interval",
+           not hits, where + (f"; stale: {hits}" if hits else ""))
+
+    record("And the sweep is not vacuous: the pattern still matches the "
+           "strings it was written against",
+           all(STALE_MOON_NAVAMSA.search(t) for t in (
+               "the astronomy layer emits no navamsa ingress for it",
+               "the Moon has no navamsa series in the layer",
+               "no ingress series is emitted for it",
+               "162 Mercury navamsa records and 0 Moon ones",
+               "The Moon crosses a navamsa every two hours",
+               "its navamsa changes every four hours or so",
+               "the Moon changes navamsa roughly every 105 minutes")),
+           "7 retired phrasings, all matched")
+
+
+def _b55_and_blocked_rules_emit_nothing(firings) -> None:
+    """The tail of the batch-3 check, kept apart from the prose sweep."""
     # B55's remark moved from `blocked` to `ambiguous` rather than clearing,
     # and that distinction is the one this check exists to keep: the sunrise it
     # was blocked on now exists, and what is left is which of two ghati
@@ -3131,9 +3225,9 @@ def test_the_cause_census_figures_carry_the_population_that_produced_them():
     # ---- AXIS 1, THE POPULATION. P1 is reconstructed by filter off today's
     # artifact rather than by rebuild, which is the only reason a pre-wiring
     # figure is checkable at all against a post-wiring file.
-    record("The census's P1 is the 5,209-row catalogue-B population the "
+    record("The census's P1 is the 5,539-row catalogue-B population the "
            "figures name",
-           size["P1"] == 5209 and size["P3"] == len(rows),
+           size["P1"] == 5539 and size["P3"] == len(rows),
            f"P1 {size['P1']}  P2 {size['P2']}  P3 {size['P3']} of "
            f"{len(rows)} rendered")
 
@@ -3230,7 +3324,7 @@ def test_the_cause_census_figures_carry_the_population_that_produced_them():
     filtered = cell[("P1", "TOTAL no-instant", "firings")]
     record("Dropping the no-instant filter changes the answer by a factor, "
            "not a rounding",
-           unfiltered == 2748 and filtered == 589,
+           unfiltered == 2802 and filtered == 589,
            f"{filtered} of {unfiltered} P1 firings carry a no-instant reason")
 
     off = [r for r in rows
@@ -3497,9 +3591,9 @@ def test_the_three_registries_stay_three() -> None:
            "both predicates are positive type tests and disagree on every "
            "rule of the other registry")
 
-    record("The ten sub-tables are 3 ported and 7 blocked, each naming its "
+    record("The ten sub-tables are 5 ported and 5 blocked, each naming its "
            "input",
-           len(ST.ported()) == 3 and len(ST.blocked()) == 7
+           len(ST.ported()) == 5 and len(ST.blocked()) == 5
            and all(r.missing_inputs for r in ST.blocked()),
            f"{len(ST.ported())} ported + {len(ST.blocked())} blocked of "
            f"{len(ST.SUBTABLE_REGISTRY)}; blocked on "
@@ -3682,6 +3776,100 @@ def test_the_subtable_ports_reproduce_their_own_printed_tables() -> None:
            f"VISHTI_KARANAS = {_VK}; {len(fired_57)} windows on karana 57, "
            f"all of them matched to a printed row")
     _PINNED_SUBTABLE_PORTS.add("sub_bhadra")
+
+    # ---- Moon/Mercury in the same D9: the 36 the section prints, and the
+    # 139 it does not. This is a SESSION table, so the reproduction is
+    # date + navamsa + which side of 09:15 / 15:30 each stated edge falls on,
+    # and the clock offsets are pinned as a distribution rather than a max --
+    # three rows are looser than five minutes and they are named.
+    spell = {"Mesh": "Aries", "Vrisabh": "Taurus", "Mithun": "Gemini",
+             "Kark": "Cancer", "Sinh": "Leo", "Kanya": "Virgo",
+             "Tula": "Libra", "Vrischik": "Scorpio", "Dhanu": "Sagittarius",
+             "Makar": "Capricorn", "Kumbh": "Aquarius", "Meen": "Pisces"}
+    mm = sorted({(f.start_utc, f.end_utc, f.detail) for f in fired
+                 if f.rule_id == "sub_moon_mercury_in_the_same_navamsh"})
+    unmatched, offsets = [], []
+    for cell_date, st_cell, en_cell, nav_cell in ST.MOON_MERCURY_PRINTED:
+        day = d(cell_date)
+        want = spell[nav_cell]
+        hit = [w for w in mm if w[2] == want
+               and w[0].astimezone(ist).date() <= day <= w[1].astimezone(ist).date()]
+        if len(hit) != 1:
+            unmatched.append(f"{cell_date} {nav_cell}: {len(hit)} windows")
+            continue
+        a, b = hit[0][0].astimezone(ist), hit[0][1].astimezone(ist)
+        for cell, got, edge in ((st_cell, a, "start"), (en_cell, b, "end")):
+            if cell == "Prior to Market":
+                if not (a.date() < day or a.time() <= _dt.time(9, 15)):
+                    unmatched.append(f"{cell_date}: start is not prior to market")
+            elif cell == "Till Market Closes":
+                if not (b.date() > day or b.time() >= _dt.time(15, 30)):
+                    unmatched.append(f"{cell_date}: end is not past the close")
+            else:
+                h, m = cell.split(":")
+                want_t = _dt.datetime.combine(
+                    day, _dt.time(int(h), int(m)), tzinfo=ist)
+                offsets.append((round(abs((got - want_t).total_seconds()) / 60, 1),
+                                cell_date, cell))
+    record("Moon/Mercury D9: all 36 printed windows reproduce on the navamsa "
+           "their own Navmansh cell names, on the printed date, with every "
+           "session edge on the correct side of 09:15/15:30",
+           not unmatched and len(ST.MOON_MERCURY_PRINTED) == 36,
+           f"{len(ST.MOON_MERCURY_PRINTED)} printed, {len(mm)} windows in the "
+           f"2026 series; failures {unmatched}")
+    loose = sorted((o for o in offsets if o[0] > 5.0), reverse=True)
+    record("...and of the 40 boundaries it states as clock times, 37 land "
+           "within five minutes; the three that do not are the pinned ones",
+           len(offsets) == 40
+           and [(x[1], x[2], x[0]) for x in loose]
+           == [tuple(r) for r in ST.MOON_MERCURY_LOOSE_BOUNDARIES],
+           f"{len(offsets)} boundaries, {len(offsets) - len(loose)} within "
+           f"5 min, loose {loose}")
+
+    # ---- Planet Vargottam in Their Own Nakshatra: the appendix that the four
+    # convicted end-date typos live in. This check is the SECOND ROUTE to that
+    # conviction -- `vargottama.source_defects` reached it by independent
+    # Swiss Ephemeris recomputation of six rows, and this reaches it from the
+    # Moon's navamsa series and the nakshatra lord table, with no shared step.
+    vg = sorted({(f.start_utc, f.end_utc,
+                  f.detail["body"], f.detail["nakshatra"]) for f in fired
+                 if f.rule_id == "sub_planet_vargottam_in_their_own_nakshatra"})
+    missing, typos, clean = [], [], 0
+    for planet, nak, _pad, sd, st_c, ed, en_c in ST.VARGOTTAM_PRINTED:
+        want = names.nakshatra(nak)
+        h, m = st_c.split(":")
+        p0 = _dt.datetime.combine(d(sd), _dt.time(int(h), int(m)), tzinfo=ist)
+        h, m = en_c.split(":")
+        p1 = _dt.datetime.combine(d(ed), _dt.time(int(h), int(m)), tzinfo=ist)
+        cand = [w for w in vg if w[2] == planet and w[3] == want]
+        if not cand:
+            missing.append(f"{planet}/{nak} {sd}")
+            continue
+        w = min(cand, key=lambda x: abs((x[0] - p0).total_seconds()))
+        off = (w[1].astimezone(ist) - p1).total_seconds() / 60
+        if -1500 < off < -1380:
+            typos.append(sd)
+        elif abs(off) < 3 and abs((w[0].astimezone(ist) - p0).total_seconds()) < 180:
+            clean += 1
+    record("Vargottam appendix: all 19 printed rows reproduce on the right "
+           "body and the right nakshatra",
+           not missing and len(ST.VARGOTTAM_PRINTED) == 19,
+           f"{len(ST.VARGOTTAM_PRINTED)} printed, {len(vg)} windows in the "
+           f"2026 series, {clean} clean on both ends; missing {missing}")
+    record("...and the four end-date typos come back from a SECOND, "
+           "independent route -- and only those four, with both control rows "
+           "clean",
+           sorted(typos) == sorted(
+               ["28-Jan-26", "20-Apr-26", "11-Jul-26", "01-Oct-26"]),
+           f"reached {sorted(typos)}; config convicts the same four on a "
+           f"Swiss Ephemeris recomputation that shares no step with this one")
+    record("The appendix has FOURTEEN Moon rows, not the thirteen config "
+           "records",
+           len([r for r in ST.VARGOTTAM_PRINTED if r[0] == "Moon"]) == 14,
+           "19 rows less Rahu, Mercury, Venus and Jupiter's two")
+    _PINNED_SUBTABLE_PORTS.update(
+        ("sub_moon_mercury_in_the_same_navamsh",
+         "sub_planet_vargottam_in_their_own_nakshatra"))
 
 
 #: Which sub-table ports the check above actually pinned, recorded by the

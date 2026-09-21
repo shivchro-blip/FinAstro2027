@@ -10,9 +10,9 @@ Three counts, because there are three catalogues in this document and only one o
 | --- | --- | --- | --- |
 | **Catalogue B** — `<h3 class="section">`, the rule sections of Chapter 1 | 141 sections | **141 of 141** | every section carries a status |
 | **Instrument configuration sections** — `<section id="...">` with an `<h2>`, Chapter 1 Sr.No 149-154 | **58 named groups** | **38 of 58** | **20 blocked, each on a named input** |
-| **`<h2>` sub-tables** — `<section id="...">` with an `<h2>` that states no direction | **10 sub-tables** | **3 of 10** | **7 blocked or out of scope, each on a named input** |
+| **`<h2>` sub-tables** — `<section id="...">` with an `<h2>` that states no direction | **10 sub-tables** | **5 of 10** | **5 blocked or out of scope, each on a named input** |
 
-**So: catalogue B 141/141 · configuration sections 38/58 · sub-tables 3/10.** THREE DENOMINATORS OVER THREE SHAPES OF MARKUP, and none of them is in either of the others. That separation is what keeps "141 of 141" honest: it is a statement about `<h3 class="section">` and about nothing else. All three DO feed the calendar — `verdicts.py` fires all three registries — and the 7,501 verdict rows split **5,209 catalogue B · 1,468 configuration · 824 sub-table**.
+**So: catalogue B 141/141 · configuration sections 38/58 · sub-tables 5/10.** THREE DENOMINATORS OVER THREE SHAPES OF MARKUP, and none of them is in either of the others. That separation is what keeps "141 of 141" honest: it is a statement about `<h3 class="section">` and about nothing else. All three DO feed the calendar — `verdicts.py` fires all three registries — and the 8,511 verdict rows split **5,539 catalogue B · 1,468 configuration · 1,504 sub-table**.
 
 **A row's registry is readable off its `event` field with no lookup**: `cfg_<block>_` for a configuration group, `sub_` for a sub-table, and `b<nn>` or a panchang family name for catalogue B. That convention is asserted at registration rather than left to discipline, because the one thing that would make all three of these numbers wrong at once is a rule in the wrong registry.
 
@@ -36,7 +36,7 @@ The counts, from the document (read out of `data/source_2026.html` at generation
 
 **Ported IS wired, since the 14-Sep-2026 change to `verdicts.py`, and the distinction this section used to draw is the one thing about it that is now out of date.** `build_verdicts()` fires both registries; `config_instruments_for` routes a group to the instrument its BLOCK names rather than through the rulership table, so a *Gold — Bullish* group reaches gold because the source filed it under gold.
 
-**1,468 of 7,501 verdict rows in `build/calendar_2027.*` originate in a configuration section**, from 26 groups, split **gold-bearish 167** · **gold-bullish 61** · **silver-bearish 164** · **silver-bullish 923** · **sugar-bullish 153**.
+**1,468 of 8,511 verdict rows in `build/calendar_2027.*` originate in a configuration section**, from 26 groups, split **gold-bearish 167** · **gold-bullish 61** · **silver-bearish 164** · **silver-bullish 923** · **sugar-bullish 153**.
 
 **How to tell one apart, because the old test no longer works.** This page used to say that no row originates in a configuration section and offered a check: the `event_section` field never reads `gold-bullish`. It still never does — `event_section` carries the group's own printed title, such as `Venus Alone in Leo or Libra — Bearish`, and never the block id. The test passes and its conclusion is now wrong. **The field that separates them is `event`**, whose rule id begins `cfg_<block>_` for a configuration row and `b<nn>` or a panchang family name for a catalogue-B one.
 
@@ -52,7 +52,7 @@ Gold and silver reach tier 1 through their MCX legs (`MCXGOLD`, `MCXSILVER`); th
 
 The same chapter carries 10 further `<h2>` sub-tables that are neither catalogue B nor any of the six blocks above: *Bhadra -- verified against Swiss Ephemeris*, *Kshin (Malefic) Moon*, *Total Days in Year*, *Rahu or Ketu Nakshtra on a Thursday*, *Moon Mercury in the Same Navamsh (D9)*, *Rainfall Calculation*, *Mars With or Aspecting Mercury*, *Eclipse*, *Planet Vargottam in Their Own Nakshatra*, *Moon Rashi Parivartan Yog with Other Planets in D1*.
 
-**This heading read "There is a third UNPORTED body of material" until 20-Sep-2026.** These nine now have a registry of their own and a denominator of their own, at the top of this page: 3 of 10 ported, 7 registered and blocked with the input each waits on NAMED. Registering the blocked seven rather than describing them in prose is what makes "blocked on what" countable off the registry instead of parsed out of a sentence.
+**This heading read "There is a third UNPORTED body of material" until 20-Sep-2026.** These nine now have a registry of their own and a denominator of their own, at the top of this page: 5 of 10 ported, 5 registered and blocked with the input each waits on NAMED. Registering the blocked seven rather than describing them in prose is what makes "blocked on what" countable off the registry instead of parsed out of a sentence.
 
 | sub-table | status | rule | blocked on |
 | --- | --- | --- | --- |
@@ -60,22 +60,24 @@ The same chapter carries 10 further `<h2>` sub-tables that are neither catalogue
 | Total Days in Year (p. 126) | **ported** | `sub_total_days_in_year` | — |
 | Rahu or Ketu Nakshtra on a Thursday (p. 127) | **ported** | `sub_rahu_or_ketu_nakshatra_on_a_thursday` | — |
 | Kshin (Malefic) Moon (p. 125) | blocked | `sub_kshin_malefic_moon` | `scope` |
-| Moon Mercury in the Same Navamsh (D9) (pp. 128–129) | blocked | `sub_moon_mercury_in_the_same_navamsh` | `moon_navamsa_series` |
+| Moon Mercury in the Same Navamsh (D9) (pp. 128–129) | **ported** | `sub_moon_mercury_in_the_same_navamsh` | — |
 | Rainfall Calculation (p. 130) | blocked | `sub_rainfall_calculation` | `no_dated_window` |
 | Mars With or Aspecting Mercury (p. 131) | blocked | `sub_mars_with_or_aspecting_mercury` | `aspect_orb` |
 | Eclipse (p. 132) | blocked | `sub_eclipse` | `month_system` |
-| Planet Vargottam in Their Own Nakshatra (p. 133) | blocked | `sub_planet_vargottam_in_their_own_nakshatra` | `moon_navamsa_series` |
+| Planet Vargottam in Their Own Nakshatra (p. 133) | **ported** | `sub_planet_vargottam_in_their_own_nakshatra` | — |
 | Moon Rashi Parivartan Yog with Other Planets in D1 (pp. 134–135) | blocked | `sub_moon_rashi_parivartan_yog` | `sign_lordship` |
 
 The two ported are the ones the layer could already compute AND whose printed tables they were reported against first: Total Day reproduces the section's own **12 of 12** dates with no extra, and the Thursday table **13 of 13** rows on three independent columns — date, nakshatra, and the five boundaries it states as clock times, all landing within 50 seconds. Both carry a NULL verdict, because none of the nine sections prints one and `subtable_catalogue.check_no_verdict` refuses a rule that arrives carrying one.
 
-**`moon_navamsa_series` blocks two of the seven and is the largest single gap named on this page.** The Moon crosses a navamsa every two hours and the astronomy layer emits no navamsa ingress for it — 0 records in both years, against 162 for Mercury — so *Moon Mercury in the Same Navamsh (D9)* (36 printed windows) and most of *Planet Vargottam in Their Own Nakshatra* sit behind a series that does not exist, and so does B71d. It is a new SERIES of roughly 1,450 records a year, not a rule, which is why it is filed with Bhadra rather than with the two above.
+**`moon_navamsa_series` was the largest single gap named on this page and it is closed.** It blocked two of the ten sub-tables — *Moon Mercury in the Same Navamsh (D9)*, 36 printed windows, and most of *Planet Vargottam in Their Own Nakshatra* — plus B71d, and it was a SERIES rather than a rule, which is why it was filed with Bhadra. The build emits it from 21-Sep-2026: **1,692 Moon records over the 2026 span and 1,684 over the 2027 one**, about a third again on top of 5,036 in each year. All three consumers are ported, each verified against its own printed rows first.
+
+**The exclusion was ours and its stated ground was measurably wrong.** `build_2027.py` excluded the Moon from D9 because a Moon D9 series "would be noise rather than signal", on an interval this page carried as two hours and the reclassification that produced the exclusion put at under two. The measured mean is **6.06 hours** on the 2026 span and 6.08 on the 2027 one. And the noise reading is refuted by the series' own structure: **every ninth record IS a Moon sign ingress**, to the second — 188 of 1,692 in 2026, 187 of 1,684 in 2027, nothing missed in either — so a ninth of the "noise" was already being emitted under another name and graded A.
 
 And the source's own monthly prophecy tables (Chapter 3) print named verdicts for gold and silver — "Bullish for Gold and Silver", "High Bearish for Gold" — which are also outside catalogue B and also unported. Recorded because a coverage page that fixes one denominator and leaves the next one implicit has only moved the misleading claim.
 
 ---
 
-**171 rules over 141 of 141 catalogue-B sections — full coverage of catalogue B — 3557 dated rows in 2027.** 132 executable, 5 resolved, 33 blocked, 1 ambiguous.
+**172 rules over 141 of 141 catalogue-B sections — full coverage of catalogue B — 3689 dated rows in 2027.** 134 executable, 5 resolved, 32 blocked, 1 ambiguous.
 
 `zero` in the firing column means the rule runs and produces no row this year. That is either the configuration genuinely not occurring or a porting error, and the two look identical from outside — so every zero is pinned by name with its kind in `tests/test_rule_layer.py`. `BLOCKED` means the rule is registered, counted, emits nothing, and **names the input it is waiting for**.
 
@@ -155,7 +157,7 @@ Status keys: `ok` executable · `ok*` fires on a reading we supplied, flagged on
 | 68 | p.57 | Vriddhi Tithi — Shukla Paksh (Bright Fortnight) — Bullish | ok | 1 | 12 / 8 |  |
 | 69 | p.58 | Vriddhi Tithi — Krishna Paksh (Dark Fortnight) — Bearish | ok | 1 | 12 / 12 |  |
 | 70 | p.59 | Big Volatile — Major Turning Days | BLOCKED | 1 | 0 / 0 | see blockers |
-| 71 | p.60 | Uttra Falguni Nakshtra During the Year | BLOCKED + ok | 2 | 25 / 25 |  |
+| 71 | p.60 | Uttra Falguni Nakshtra During the Year | ok | 2 | 89 / 89 |  |
 | 72 | p.61 | Mangal Ashwini Yog — Bullish (Ashwini Nakshtra on Tuesday) | ok | 1 | 3 / 3 |  |
 | 73 | p.62 | Ashtami on Tuesday / Saturday — Bullish | ok | 1 | 18 / 13 |  |
 | 74 | p.63 | Ashtami on Monday, Thursday and Friday — Bearish | ok | 1 | 18 / 19 |  |
@@ -189,7 +191,7 @@ Status keys: `ok` executable · `ok*` fires on a reading we supplied, flagged on
 | 102 | p.80 | Anuradha on Sunday — Bearish | ok | 1 | 6 / 6 |  |
 | 103 | p.80 | Shatbhisha on Tuesday — Bearish | ok | 1 | 5 / 4 |  |
 | 104 | p.82 | Mrigsira on Thursday — Bearish | ok | 1 | 2 / 3 |  |
-| 105 | p.83 | Uttra Shada on Monday — Bearish | ok | 1 | 3 / 3 |  |
+| 105 | p.83 | Uttra Shada on Monday — Bearish | ok | 2 | 5 / 5 |  |
 | 106 | p.84 | Amavasya Ghadi Lesser than Chaturdashi — Bearish | ok | 1 | 14 / 13 |  |
 | 107 | p.85 | Venus Alone in Shravan Nakshtra — High Bullish | ok | 1 | 0 / 0 | zero this year (pinned) |
 | 108 | p.85 | Shukla Ekadashi Vyatipath or Vaidhrati Yog — Bearish | ok | 1 | 2 / 3 |  |
@@ -240,7 +242,6 @@ Status keys: `ok` executable · `ok*` fires on a reading we supplied, flagged on
 | 62 | Chandra Darshan (New Moon) | `b062_chandra_darshan` | a first-crescent visibility computation. The section's Tithi column reads Pratipada or Dwitiya, so the event is the sighting and not the conjunction; Step 3 measured swe.heliacal_ut against the source's own Venus rise dates and found it 9-10 days out, so the one routine available was rejected on evidence rather than on principle |
 | 63 | Hemisphere | `b063_hemisphere_range` | a tropical solar longitude, or the equinox instant the layer would have to emit for one to be read. The equinox is a TROPICAL solar longitude of 0 or 180 degrees and every longitude the astronomy layer carries is sidereal ('lon_sid'), which is a frame the equinox slides through by about 50 arc seconds a year. The same record carries qa.ayanamsha_deg, so `lon_sid + ayanamsha_deg` reconstructs the tropical longitude at the instants the layer happens to sample the Sun -- but the Sun's own ingress series only marks whole signs, nakshatras and navamsas, which bracket an equinox date to 3 degrees 20 minutes, and the only dense solar series in the file is the per-venue horizon records, whose existence depends on a location rising. Pinning the date from those means interpolating a longitude between two of one venue's sunsets, and the rule layer is not licensed to reconstruct a longitude: measured, the interpolation reproduces the true equinox to about 5 minutes and the navamsa bracket to about 3.6 hours, so this is a licence question and not a numerical one **AND** a decision on what the range is and what breaks it. The note says 'Calculate range of the Hemisphere +/- 2/3 days any side' and never says the centre; and it says 'Breakout/breakdown is medium term trade' and 'When range is broken on both side, 2nd break is very powerful' without saying whether the range is a range of PRICES or the six-day window in TIME that the sentence before it just built. The word 'range' appears in both senses in the same line |
 | 70 | Big Volatile — Major Turning Days | `b070_big_volatile_major_turning_days` | the selection rule itself. The section states only that its dates "have been sorted on multiple parameters" and names none of them and no weighting; four candidate discriminators (lunation, station, sign ingress, inner-planet conjunction or slow-pair aspect) were tested and rejected, and all 51 dates carry at least one major configuration, so the list is over-determined and a fitted reconstruction would describe our fit rather than the source's rule |
-| 71 | Uttra Falguni Nakshtra During the Year | `b071d_uttara_phalguni_by_navamsa` | the Moon's navamsa ingress series. The Moon crosses a navamsa every two hours and the astronomy layer emits no navamsa ingress for it, which is the same absence that stops the navamsa ladder ranking the Moon in batch 2 |
 | 111 | Moon Eclipse in Vaishak, Shravan or Ashwin Month — Bullish | `b111_lunar_eclipse_in_vaishakha_shravana_or_ashwin` | the lunar month system. Naming a month Vaishakha, Shravana or Ashwin requires knowing whether the source counts months amanta or purnimanta -- the two disagree by a fortnight and therefore about which month an eclipse falls in. `month_system_confirmation` is open in config/conventions.yaml and this is a section it bounds |
 | 116 | Mercury in Paap Kartari | `b116_mercury_in_paap_kartari` | a benefic/malefic classification of the bodies. Paap Kartari is a hemming by malefics, and the section's own Planet-1/Planet-2 columns name the bodies that happen to hem Mercury in 2026 without ever stating what makes a body malefic. The same missing input blocks B19 and B117, and it is the third time it has been the binding constraint |
 | 117 | Jupiter in Paap Kartari | `b117_jupiter_in_paap_kartari` | a benefic/malefic classification of the bodies. Paap Kartari is Jupiter hemmed between two malefics; the section's own Planet-1 and Planet-2 columns name the two for each printed row and never say what makes them malefic, and the astronomy layer carries each body's sign and nakshatra ingress but no valence for any of them. The identical absence blocks B19 in batch 2, whose verdict holds only 'provided there is a malefic aspect on Mercury' |

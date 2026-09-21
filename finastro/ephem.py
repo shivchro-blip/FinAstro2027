@@ -628,6 +628,26 @@ def corrects_source_omission(body: str, sign: str) -> bool:
                for note in _DIG.get("source_omissions", []))
 
 
+def dignity_not_witnessed_in_source(body: str) -> bool:
+    """True where the 2026 document labels this body's dignity nowhere.
+
+    Read off `dignity.source_witness.not_witnessed` rather than typed, so the
+    flag on a record and the sentence in config cannot drift apart. The list is
+    [Sun, Moon], and config states the reason for each: the Sun occupies all
+    twelve signs in a table that carries no dignity column, and the Moon gets
+    no journey and no navamsa table at all, so neither planet's dignity is ever
+    printed in any frame.
+
+    What this changes is the PROVENANCE of an emitted dignity, never whether it
+    is emitted: both bodies' dignities are computed by the same Parashari rule
+    as every other body's. It became worth carrying on the record when the Moon
+    acquired a navamsa series of its own -- the engine now prints a D9 dignity
+    table for a body the source never gave one, and a later audit must be able
+    to see that from the row instead of from this file.
+    """
+    return body in _DIG["source_witness"]["not_witnessed"]
+
+
 def sign_distance_aspect(sign_a: str, sign_b: str) -> str:
     """Angular relation between two signs, in the source's vocabulary."""
     d = abs(SIGNS.index(sign_a) - SIGNS.index(sign_b)) % 12

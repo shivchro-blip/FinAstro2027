@@ -113,16 +113,19 @@ def _rank_spans(sky, body: str) -> list[Span]:
     """`body`'s position as a monotone rank, at navamsa resolution.
 
     Refuses a body whose navamsa series the astronomy layer does not carry.
-    The Moon is the one such body -- it crosses a navamsa every two hours and
-    no ingress series is emitted for it -- and the fallback single span in
-    `Sky.spans` would read as "one navamsa all year", which would silently
-    order every Moon comparison wrongly instead of failing.
+    NO BODY IS IN THAT STATE ANY MORE. The Moon was, until 21-Sep-2026 -- it
+    crosses a navamsa every 6.06 hours and no ingress series was emitted for
+    it -- and the guard is kept because what it refuses is the fallback single
+    span in `Sky.spans`, which would read as "one navamsa all year" and
+    silently order every comparison wrongly instead of failing. A guard that
+    has stopped firing is not a guard that has stopped being needed; it is the
+    only thing standing between a dropped series and a plausible answer.
     """
     nav = sky.spans(body, "navamsa")
     if len(nav) < 2:
         raise ValueError(
-            f"{body} has no navamsa ingress series in the astronomy layer "
-            f"({len(nav)} span); its position cannot be ranked, and a rule "
+            f"{body} has fewer than two navamsa spans in the astronomy "
+            f"layer ({len(nav)}); its position cannot be ranked, and a rule "
             "needing its order is blocked rather than ranked on the fallback")
     return intersect(list(sky.spans(body, "nakshatra")), list(nav), _rank)
 

@@ -21,11 +21,13 @@ the frozen one — it records a step that closed.
 | | |
 | --- | --- |
 | Opened | 13-Sep-2026 |
-| Last updated | 14-Sep-2026 — §12.9, batch 5 (speed-crossing series, Vedha port) |
+| Last updated | 21-Sep-2026 — §12.20, the Moon's navamsa series and the Step-3 exclusion reversed |
 | Companion | `build/STEP3_REPORT.md` — the astronomy layer, closed and frozen |
-| Config | `config/conventions.yaml`, sha256 `28b037710e9628f5e23354002ad0c84159ec50f43ae45e185fe7eeff19f1f1d2` |
-| Build | `build/astronomy_2027.json`, sha256 `c3a45926eb0a97e9e429e37487f10fa004818828bb3d00d123840ebefd16365d` — **unmoved** |
-| Harness | `test_2026_regression.py` 68/68 · `test_2027_astronomy.py` 87/87 · `test_node_anchor_unit.py` 12/12 · `test_rule_layer.py` 74/74 |
+| Config | `config/conventions.yaml`, sha256 `7d1373b21abac47162c46b61134ce447c2bed0981c9870a200747a56c114eccb` |
+| Build | `build/astronomy_2027.json`, sha256 `f7bf50a39fdbf9256d42d5e11d4f0620d6db2b7bd8be8806b3fe841fc0d137fc` — **MOVED 21-Sep-2026**, 5,036 records to 6,720 |
+| Build (2026) | `build/astronomy_2026.json`, sha256 `785ece7743f0988e61f6d0c2dc8eeb30c1608055aa22a4c1b3bbe5bf929cf975` — 5,036 to 6,728 |
+| Calendar | `build/calendar_2027.json`, sha256 `2af7154528abfe5adb4d1f1431d34799b74f5f12e6f760551e1ebd3e5b33ffbf`, 8,916 rows |
+| Harness | `test_2026_regression.py` 123/123 · `test_2027_astronomy.py` 149/149 · `test_node_anchor_unit.py` 12/12 · `test_rule_layer.py` 268/268 · `test_monthly_fixture.py` 17/17 — **569 checks** |
 | Source | `data/source_2026.html`, 437578 bytes, md5 `5e098446d6dd13d3df8443528db5dd95` |
 | Book | *The Celestial Ledger* Ch15, Ch16, Appendix B.5 — **not in the project tree**, read from `C:/Shiva/Horoscopes/FinAstro/FinAstro_Guide/raw/` |
 
@@ -2729,7 +2731,7 @@ that had encoded "there are two of these" without recording that they had. That 
 the through-line of all three, and it is why they are filed as consecutive
 instances rather than in three different sections.
 
-**This section now holds FOUR shapes, and they are not variants of one another.**
+**This section now holds FIVE shapes, and they are not variants of one another.**
 The ten instances above and their detectors are the FIRST. Three more were found
 later, each because the first shape's remedies passed over it, and each carries its
 own detector because none of the first shape's detectors reaches it:
@@ -2740,15 +2742,27 @@ own detector because none of the first shape's detectors reaches it:
 | **2nd** | **a correct count of the wrong set** (16-Sep-2026) | the operation is right; the population, unit or filter under it is not | state the unit and the filter beside the count, so a figure cannot be read without its population |
 | **3rd** | **code that exists, was verified, and was never connected** (20-Sep-2026) | nothing ran; there is no output at all | an end-to-end fixture against the source's own finished output |
 | **4th** | **a check that passes by reimplementing the logic it verifies** (20-Sep-2026) | the code under test never ran; a second copy of it ran instead, and agreed with the document | a check must exercise the PRODUCTION PATH, not a parallel one |
+| **5th** | **a scope decision justified by a quantity nobody measured** (21-Sep-2026) | there is no operation and no output; the data was never generated, on a stated ground that was false | every exclusion states its ground as a NUMBER, and the number is measured and pinned in the harness — see §12.20 |
 
-Read in that order they are the four ways a build can be wrong while every check
+Read in that order they are the five ways a build can be wrong while every check
 it has is green: **the answer is wrong**, **the question is wrong**, **the answer
-was never asked for**, and **the answer that was checked came from somewhere else**.
+was never asked for**, **the answer that was checked came from somewhere else**,
+and **the question was ruled out on a fact that was not one**.
+
+**The fifth is the only one of the five that no check could have caught**, and
+that is what makes it a separate shape rather than a variant of the third. The
+third shape's detector -- an end-to-end fixture against the source's own finished
+output -- assumes there is an output to compare. Here there was no code, no
+records and no rule: `NAVAMSA_BODIES` excluded the Moon and everything downstream
+described the absence correctly. Four pages, two of them generated, reported it
+accurately for weeks. The defect was in a sentence, and the only thing that could
+reach it was measuring the quantity the sentence asserted.
 Each shape's own sub-section states why the preceding shapes' detectors miss it,
 which is the part that makes them separate entries rather than four examples of one.
 
-**The detector column, read downward, is one question asked four ways** — *where
-did the value this check compares against come from.* That is the section's result
+**The detector column, read downward, is one question asked five ways** — *where
+did the value this check compares against come from*, and for the fifth, *was
+there a value at all.* That is the section's result
 in a line, and the measurement that forced it is
 **"Execution coverage was total; assertion coverage was zero"** at the end of this
 section: a function executed 1,013,396 times under a green suite with zero
@@ -4126,3 +4140,251 @@ disputed over populations nobody stated. The census now lives in
 `conventions.yaml → row_kinds.time_fields.year_clip.measured_2027` as eight named
 keys, and `test_the_civil_year_clip_is_a_field_and_not_the_period_cut` recomputes
 each one off the artifact and **prints what it read**.
+
+---
+
+### 12.20 The Moon's navamsa series — the Step-3 exclusion reversed · recorded 21-Sep-2026
+
+**The decision.** `build_2027.py` excluded the Moon from the D9 ingress series.
+That exclusion is reversed. Both years regenerate, both hashes move, and the
+build grows by about a third: **5,036 → 6,728 records in 2026** and **5,036 →
+6,720 in 2027**, all of the growth being 1,692 and 1,684 Moon `navamsa_ingress`
+records over each 427-day span.
+
+**Whose decision it was.** Mine, in Step 3. The exclusion was written into
+`build_2027.py` as `#: Task excludes the Moon from D9` and then given a reason
+of my own — *"its navamsa changes every four hours or so, and a D9 series for
+the Moon would be noise rather than signal"*. The Step-3 spec I wrote said
+*navamsa ingresses, all bodies except Moon*. **And I compounded it in the TASK
+1c reclassification**, where I re-filed *Moon Mercury in the Same Navamsh (D9)*
+as blocked and stated that the Moon changes navamsa **"roughly every 105
+minutes"** — out by more than a factor of three, in the direction that makes the
+series sound like noise. The correction to 1c was right; the number I corrected
+it with was worse than the one it replaced.
+
+#### The ground was measurably wrong, and the measurement is cheap
+
+| claim | where it was carried | measured |
+| --- | --- | --- |
+| "every four hours or so" | `build_2027.py:55` | — |
+| "every two hours" | `subtables.py`, `panchang_rules.py`, `colocation.py`, `tools/gen_status.py` — 4 places, 2 of them generating pages | — |
+| "roughly every 105 minutes" | the TASK 1c reclassification | — |
+| **the Moon's mean navamsa interval** | | **6.06 h** over the 2026 span, **6.08 h** over the 2027 one |
+
+30/9 degrees at about 13.2 degrees a day is a quarter of a day. Three figures
+were carried, no two of them agreed with each other, and none was within a
+factor of 1.5 of the truth. **Nothing in the tree computed it**, which is why
+they could disagree for as long as they did.
+
+#### And "noise" was refuted by the series' own structure
+
+Thirty degrees is **nine whole navamsas**, so every ninth navamsa cusp *is* a
+sign cusp. Measured against the emitted artifact, in both years, with no
+tolerance at all:
+
+| | 2026 | 2027 |
+| --- | --- | --- |
+| Moon `navamsa_ingress` over the span | 1,692 | 1,684 |
+| Moon `sign_ingress` over the span | 188 | 187 |
+| sign instants with **no** coincident navamsa instant, to the second | **0** | **0** |
+| ratio | 9.0000 | 9.0053 |
+
+**A ninth of the series the build called noise was already in the build, under
+another name, graded A.** The 2027 ratio is not exactly 9 because that span
+opens and closes mid-sign; the coincidence count is exact in both years and is
+what the check asserts.
+`test_the_moons_navamsa_series_is_bounded_by_its_own_sign_ingresses` runs it on
+every build and pins the interval with it.
+
+#### Three printed tables bound on exactly this quantity
+
+Each was verified against its own printed rows **before** any rule was wired.
+
+| table | printed | reproduced |
+| --- | --- | --- |
+| *Moon Mercury in the Same Navamsh (D9)* pp.128–129 | 36 windows | **36 of 36** on the navamsa their own Navmansh cell names and on the printed date; 37 of the 40 stated clock boundaries within 5 min, median 1.2 min |
+| *Planet Vargottam in Their Own Nakshatra* p.133 | 19 rows | **19 of 19** on the right body and nakshatra; 12 clean on both ends within 3 min |
+| B71's own Navmansh column | 2 changeovers dated to the minute | 05-Feb-26 10:32 → computed 10:29:50; 28-Apr-26 09:56 → computed 09:54:36 |
+
+`sub_moon_mercury_in_the_same_navamsh`,
+`sub_planet_vargottam_in_their_own_nakshatra` and
+`b071d_uttara_phalguni_by_navamsa` are ported. The sub-table registry is now
+**5 ported and 5 blocked**, and `moon_navamsa_series` is gone from
+`MISSING_INPUTS` entirely.
+
+**The price is recorded as a price: +33% records, both years.** It buys 36
+printed windows, 19 appendix rows, and a section whose four outcomes the layer
+could not previously separate.
+
+#### B105 — the one consumer where the absence rendered as OUTPUT
+
+Every other consumer of the missing series was *blocked*: registered, counted,
+emitting nothing. B105 was not. Its section prints a verdict and then withdraws
+it in a case it names — *"If Moon is Vargottam the impact of this Bearish Yog
+will be neutralized"* — and that defeater needs the Moon's navamsa. With no
+navamsa series the defeater could not be evaluated, so **the rule fired
+unmodified and put live Bearish verdicts on days the source's own rule
+suppresses.** An absence that renders as an absence is a gap; this one rendered
+as an assertion.
+
+**How much of the section the defeater takes: half.** Uttara Ashadha opens at
+26°40′ Sagittarius — the Sagittarius navamsa of Sagittarius — and runs through
+3°20′ Capricorn — the Capricorn navamsa of Capricorn. Both are vargottama, they
+are contiguous across the cusp, and together they are the nakshatra's first two
+padas. Every window the section prints opens *inside* the defeater and leaves it
+about thirteen hours later. This is not an edge case trimmed off a rule.
+
+**Ported as the B87/B89 shape with the sign reversed.** `b105` is the window the
+section tabulates, now carrying **no verdict** and the flag
+`verdict_neutralised_where_the_moon_is_vargottama`;
+`b105n_uttara_ashadha_on_monday_moon_not_vargottama` carries "Bearish", scoped by
+the remark held verbatim in `condition_proviso`. Clipping `b105`'s spans instead
+would have been wrong twice: the section prints all four of its 2026 rows without
+regard to vargottama, so a clipped window would stop reproducing the table the
+rule is verified against — and a neutralised Yog is still a Yog.
+
+**The verdicts, row by row.** 2027 has three Uttara-Ashadha-on-Monday days.
+
+| civil day | window (UTC) | before | after |
+| --- | --- | --- | --- |
+| **24-May-2027** | 24-May 16:38 → 25-May 19:42 | `b105` Bearish on NIFTY, BANKNIFTY, SPX, NDX; USDINR `no_rule` | verdict **withdrawn on all four**; `b105n` does not fire — the Monday's whole overlap with the window sits inside the vargottama stretch |
+| **21-Jun-2027** | 20-Jun 23:34 → 22-Jun 02:38 | same four Bearish | `b105n` Bearish on the same four, on the **cut** window 21-Jun 13:05 → 22-Jun 02:38 |
+| **19-Jul-2027** | 18-Jul 05:48 → 19-Jul 08:53 | same four Bearish | `b105n` Bearish on the same four, on the **cut** window 18-Jul 19:20 → 19-Jul 08:53 |
+
+**Four live Bearish verdicts withdrawn** (24-May, four instruments), and **eight
+retained with the neutralised stretch cut off the window**. Before: 15 rows, 12
+carrying a verdict. After: 25 rows, 8 carrying one. The verdict change on
+existing rows is stated here and not left to a fixture delta.
+
+#### The Rohini rows — a second, independent route to a conviction already made
+
+`vargottama.source_defects` convicts four appendix rows of an end-date typo —
+28-Jan, 20-Apr, 11-Jul and 01-Oct-2026 — each printed end being 24 hours plus
+one or two minutes past the true end, with two control rows that genuinely cross
+midnight printed correctly. That conviction rests on an independent Swiss
+Ephemeris recomputation by the project owner.
+
+**The Moon's navamsa series reaches the same four by a route that shares no step
+with it**, and the agreement is now a harness check rather than a claim:
+
+| row | printed end | computed end | verdict |
+| --- | --- | --- | --- |
+| Moon Rohini 2nd 28-Jan-26 | 29-Jan 20:33 | 28-Jan 20:30 | **typo, −24h −2m** |
+| Moon Rohini 2nd 20-Apr-26 | 21-Apr 15:20 | 20-Apr 15:20 | **typo, −24h −0m** |
+| Moon Rohini 2nd 11-Jul-26 | 12-Jul 21:50 | 11-Jul 21:48 | **typo, −24h −1m** |
+| Moon Rohini 2nd 01-Oct-26 | 02-Oct 17:15 | 01-Oct 17:15 | **typo, −24h −0m** |
+| Moon Rohini 2nd 24-Feb-26 *(control)* | 25-Feb 2:24 | 25-Feb 02:23 | correct as printed |
+| Moon Rohini 2nd 28-Oct-26 *(control)* | 29-Oct 0:20 | 29-Oct 00:18 | correct as printed |
+
+**The two routes agree, so nothing is stopped.** Every Moon row in the appendix
+is Rohini pada 2, and that is not a coincidence: Rohini's second quarter is the
+Taurus navamsa of Taurus, which is the Moon's only vargottama-in-own-nakshatra
+arc in the whole zodiac.
+
+#### Three things the second route found that the first did not
+
+* **The appendix has FOURTEEN Moon rows, not thirteen.**
+  `vargottama.source_witness.detail.Moon` says 13 and `source_defects.note` says
+  "nine of the thirteen Moon rows are clean". Sliced off the section's own table:
+  19 rows, less Rahu, Mercury, Venus and Jupiter's two, is **14** — and **ten of
+  the fourteen** are clean. Pinned in the harness off the document.
+* **The Venus row's `Pad` cell reads "2nd" and the window it prints is pada 1.**
+  Purva Phalguni pada 1 is the Leo navamsa of Leo and is vargottama; pada 2 is
+  the Virgo navamsa and can never be. Config had recorded pada 1 from the other
+  direction, so the cell and the config had disagreed with nothing able to see it.
+* **`source_defects.note` overstates its own control.** It says the fifteen
+  non-defect rows all have end times "inside the window". Mercury's does (printed
+  30-Apr 1:46, computed 6:52); **Venus's does not** (printed 19-Jul 22:28,
+  computed 20:27 — two hours *outside*). Rahu's two boundaries are 35 and 42
+  minutes out, which is not a defect but the mean node's resolution: Rahu crosses
+  one navamsa in 63 days.
+
+All three are carried in `subtables.VARGOTTAM_SOURCE_DEFECTS` and in the port's
+notes rather than silently corrected.
+
+**And one omission, on a surface the finding had not been tested on.** The
+condition produces a window the appendix never prints: **the Sun, vargottama in
+Uttara Ashadha — which the Sun lords — from 11-Jan-26 08:36 to 17-Jan-26 21:39.**
+That is this appendix's exact condition, and the Sun is simply left out. A fresh
+instance of `source_findings.sun_never_labelled`, on a third surface after the
+missing dignity column and the missing D9 table.
+
+#### `navamsa_dignity` on the Moon — emitted, and flagged
+
+The engine computes a real fact and it is emitted, not suppressed. But config
+says of the Moon: *"NO dignity label, and no opportunity for one: the document
+gives the Moon no journey or navamsa table"* — and the build now prints a D9
+dignity table for exactly that body. **The sentence stays true only if the
+artifact says so.**
+
+`navamsa_dignity_not_witnessed_in_source` is carried on every `navamsa_ingress`
+record of a body in `dignity.source_witness.not_witnessed` that has a non-empty
+`navamsa_dignity`. The membership is **derived from config, not typed** —
+`ephem.dignity_not_witnessed_in_source` reads the list — and the list is
+`[Sun, Moon]`:
+
+| | 2026 | 2027 |
+| --- | --- | --- |
+| **Moon** records carrying a flagged `navamsa_dignity` | **423** | **421** |
+| Sun records carrying one | 31 | 31 |
+| total | 454 | 452 |
+
+**The Sun's 31 are a consequence of deriving rather than typing, and they are
+right.** `sun_never_labelled` already required that the Sun's rows "must not be
+counted as source-witnessed in any later audit"; that requirement now travels on
+the record instead of waiting in this file for an auditor to remember it. Its
+`engine_consequence` is amended to say so. A Moon-only special case would have
+been a typed exception in a build whose whole discipline is to derive.
+
+An empty `navamsa_dignity` is **not** flagged: a body in a sign with no dignity
+state asserts nothing about the source, and a flag on it would claim a divergence
+that is not there.
+
+#### The harness
+
+`test_rule_layer.py`'s stale-prose sweep is extended to the navamsa phrasings and
+**widened past `missing_inputs`**. Batch 3's tithi and yoga strings all lived in
+that one field. The Moon's lived in **six** places across four surfaces — a
+missing input, two rule notes, a rejected reading, a module docstring and a
+generator's comment — so a sweep reading only the field would have passed while
+five of the six went on describing an absence the build had filled. It now sweeps
+every text field of every rule in both registries **and six source files**, and
+carries the retired phrasings as a non-vacuity check so the pattern cannot quietly
+stop matching. The wrong intervals sit in the same pattern as the absence claims,
+deliberately: the claim and the number that justified it decayed together and have
+to fail together.
+
+**Suite: 569 checks, all green** — 123 / 149 / 12 / 268 / 17, up from 553.
+
+#### The census moved in one figure and only one
+
+`year_clip.measured_2027.span_groups` goes 2,202 → 2,938 and **nothing else in
+that block moves**: `clipped_start` 10, `clipped_end` 27, the two `open_*` pairs
+7 and 22, `real_endpoint_outside_the_year` 29, `of_which_no_instant` 1,
+`of_which_timed` 28, all held. That is the reading §12.19 set up — a port adding
+spans is expected and uninteresting, and a port moving the clip figures means a
+new rule reaching across the year boundary. Neither new family does.
+
+P1 goes 5,209 → 5,539, and **this is the legitimate version of the move that
+§12.16's second shape was written about**: a catalogue-B population moving
+because catalogue-B rules moved. The 20-Sep-2026 move from 5,209 to 5,314 was the
+opposite — sub-table rows walking into a population defined as "not `cfg_`" with
+no catalogue-B rule changing at all. The two are recorded side by side.
+
+#### The general result — §12.16's fifth shape
+
+This is not the first shape (a wrong answer rendering as a plausible one), nor
+the third (code that exists and was never connected). **There was no code, no
+records and no rule.** An exclusion was written with a reason attached, and every
+page downstream described the absence *correctly* — four of them, two generated,
+all accurate about a thing that should not have been absent.
+
+> **A scope decision justified by a quantity nobody measured.**
+> Detector: an exclusion states its ground as a NUMBER, the number is measured,
+> and the measurement is pinned in the harness beside the exclusion.
+
+The generated pages are the part worth keeping. `RULE_LAYER_STATUS.md` reported
+"the Moon crosses a navamsa every two hours" on every regeneration for as long as
+this ran, because it was generating from a string rather than from a series.
+**A generated page is only as honest as the value it generates from**, and a page
+that generates from prose launders an assertion into a measurement.

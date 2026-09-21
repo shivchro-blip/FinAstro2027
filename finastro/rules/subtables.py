@@ -71,7 +71,7 @@ investment advice.
 from __future__ import annotations
 
 from ..panchang import VISHTI_KARANAS
-from ..sky import Span, parse, record_precision
+from ..sky import Span, intersect, parse, record_precision, same
 from . import names
 from .base import FIRING_STATUSES, Rule, STATUS_BLOCKED
 from .visibility import MUMBAI_ONLY
@@ -89,14 +89,6 @@ _SEEN: set[str] = set()
 #: registry rather than parsed out of prose -- the same rule
 #: `config_rules.MISSING_INPUTS` is held to.
 MISSING_INPUTS = {
-    "moon_navamsa_series":
-        "the Moon's navamsa ingress series. The Moon crosses a navamsa every "
-        "two hours and the astronomy layer emits NONE for it: "
-        "build/astronomy_2026.json and build/astronomy_2027.json carry "
-        "navamsa_ingress for eleven bodies and 0 records for the Moon. This "
-        "is the same absence that blocks B71d and that stops the navamsa "
-        "ladder ranking the Moon in batch 2, and it is a new SERIES rather "
-        "than a rule -- about 1,450 records a year, in both years",
     "sign_lordship":
         "a sign lordship table. A Rashi Parivartan is a mutual exchange -- "
         "the Moon in a planet's own sign while that planet is in the Moon's "
@@ -485,23 +477,65 @@ _blocked(
           "mistaken for a missing input.",
 )
 
-_blocked(
+#: The printed table's own rows, sliced from the section, so the verification
+#: count comes from the DOCUMENT and not from the series under test.
+MOON_MERCURY_PRINTED = tuple(S("moon-mercury-d9").tables[0].rows)
+
+#: The three printed boundaries this port does NOT reach inside five minutes,
+#: carried rather than tuned away. All three sit on a date the table splits
+#: into two rows at a navamsa changeover -- 09-Oct and 16-Oct -- or beside one,
+#: which is where a rounded printing shows most. The other 37 land inside five
+#: minutes and the median is 1.2.
+MOON_MERCURY_LOOSE_BOUNDARIES = (
+    ("16-Oct-26", "14:06", 14.8),
+    ("11-Jun-26", "11:33", 7.0),
+    ("09-Oct-26", "14:04", 5.9),
+)
+
+
+def _same_navamsa(a: str, b: str):
+    """Spans where two bodies occupy one navamsa, off the ingress series.
+
+    Nothing here computes a longitude: `Sky.spans` builds each body's D9
+    residency out of its own `navamsa_ingress` records, and `intersect` is the
+    same helper the sign-level colocation rules use one chart up. The Moon's
+    half of this became available on 21-Sep-2026 and is why the section is
+    ported at all -- see build_2027.NAVAMSA_BODIES.
+    """
+    def fn(sky):
+        return intersect(list(sky.spans(a, "navamsa")),
+                         list(sky.spans(b, "navamsa")), same)
+    return fn
+
+
+_rule(
     S("moon-mercury-d9"),
     id="sub_moon_mercury_in_the_same_navamsh",
     rule_family="ingress/navamsa",
     condition_text=S("moon-mercury-d9").title,
     condition_from="h2",
-    missing_inputs=("moon_navamsa_series",),
-    notes="36 printed windows, and the largest of the sub-tables. It was "
-          "carried on the handoff as a CHEAP port needing no astronomy-layer "
-          "change, on the ground that 'navamsa_ingress carries every Moon and "
-          "Mercury navamsa crossing'. It does not: the artifact holds 162 "
-          "Mercury navamsa records and 0 Moon ones, in both years. Mercury's "
-          "half is ready and the Moon's half is a new series -- the same one "
-          "B71d is blocked on -- so this is a port of Bhadra's kind and not "
-          "of Total Day's. Found by reading the artifact before the code, "
-          "which is what the standing instruction is for.",
-)
+    inputs=("ingress/navamsa",),
+    notes="VERIFIED BEFORE WIRING, against this section's own table: "
+          f"**{len(MOON_MERCURY_PRINTED)} of {len(MOON_MERCURY_PRINTED)}** "
+          "printed windows come back, each on the navamsa its Navmansh (D9) "
+          "cell names and each on the printed date, and every 'Prior to "
+          "Market' and 'Till Market Closes' cell is on the correct side of "
+          "the 09:15/15:30 session it refers to. Of the 40 boundaries the "
+          "table states as clock times, 37 land within five minutes and the "
+          "median offset is 1.2 minutes; the three that do not are carried in "
+          "MOON_MERCURY_LOOSE_BOUNDARIES rather than fitted. "
+          "THIS SECTION WAS BLOCKED FOR ITS WHOLE LIFE ON A FALSE PREMISE AND "
+          "THEN ON A TRUE ONE. It was first carried as a cheap port needing "
+          "no astronomy-layer change, on the ground that 'navamsa_ingress "
+          "carries every Moon and Mercury navamsa crossing' -- it did not, "
+          "0 Moon records against 162 Mercury -- and was then blocked on the "
+          "Moon's absent D9 series, correctly, until 21-Sep-2026 supplied it. "
+          "The count is the thing to hold on to: the 36 rows are the windows "
+          "that reach the MARKET SESSION, and the series carries 139 shared "
+          "navamsas over 2026. The section is a session table, not a "
+          "complete one, which is the same relationship Bhadra's 99 rows have "
+          "to the monthly calendar's 54.",
+)(_same_navamsa("Moon", "Mercury"))
 
 _blocked(
     S("rainfall"),
@@ -546,20 +580,109 @@ _blocked(
           "that blocks B111 and cfg_silver_bullish_18.",
 )
 
-_blocked(
+#: This section's own rows. 19, of which FOURTEEN are Moon rows -- not the
+#: thirteen `vargottama.source_witness.detail.Moon` records. The count is
+#: sliced here so it cannot be mistyped again: 19 rows less Rahu, Mercury,
+#: Venus and Jupiter's two leaves fourteen.
+VARGOTTAM_PRINTED = tuple(S("vargottam").tables[0].rows)
+
+#: Defects this port found in the section, carried and not silently corrected.
+#:
+#: * The Pad cell of the Venus row reads "2nd". The window it prints --
+#:   16-Jul-26 19:08, reproduced to 36 seconds -- is Purva Phalguni pada 1,
+#:   whose navamsa is Leo and therefore vargottama; pada 2's navamsa is Virgo
+#:   and can never be. Config had pada 1 recorded already, from the other
+#:   direction, so the cell and the config disagreed and nothing could see it.
+#: * Mercury's and Venus's printed END times are 5h07m late and 2h01m early
+#:   against the computed pada boundary. Mercury's lands inside the window and
+#:   Venus's outside it, which is worth separating: `source_defects.note` says
+#:   the fifteen non-defect rows all have end times "inside the window", and
+#:   Venus's does not.
+#: * Rahu's two boundaries are 35 and 42 minutes out, which is not a defect at
+#:   all but the mean node's resolution: Rahu crosses one navamsa in 63 days,
+#:   so a boundary to the minute is a precision the quantity does not have.
+VARGOTTAM_SOURCE_DEFECTS = (
+    "Venus / Purva Falguni: Pad cell reads 2nd; the printed window is pada 1",
+    "Mercury / Revati 4th: printed end 30-Apr-26 1:46, computed 6:52 "
+    "(inside the window)",
+    "Venus / Purva Falguni: printed end 19-Jul-26 22:28, computed 20:27 "
+    "(OUTSIDE the window)",
+)
+
+#: Windows the condition produces and the appendix does not print. The Sun's
+#: is the one that matters: it is vargottama in Uttara Ashadha, WHICH THE SUN
+#: LORDS, for six days in January 2026, which is this appendix's exact
+#: condition -- and the appendix omits it. That is a fresh instance of
+#: `source_findings.sun_never_labelled`, found on a new surface: the finding
+#: was recorded off the Sun's dignity column and its D9 absence, and here the
+#: Sun qualifies for a table it is simply left out of. Jupiter's is a carry-in
+#: that opened on 05-Dec-25, which the appendix has a plain reason to omit.
+VARGOTTAM_UNPRINTED = (
+    "Sun / Uttara Ashadha padas 1-2, 11-Jan-26 08:36 to 17-Jan-26 21:39",
+    "Jupiter / Punarvasu pada 3, opening 05-Dec-25 17:25 and running to "
+    "04-Jan-26 18:45",
+)
+
+
+def _vargottama_in_own_nakshatra():
+    """Vargottama windows in a nakshatra the body itself lords.
+
+    Both halves are read off emitted series and neither is typed. Vargottama
+    is `sign == navamsa` -- the config's own definition -- taken as the
+    intersection of the body's rashi and D9 residencies, so the equality is
+    evaluated on spans bounded by ingress records rather than on a sample.
+    The lordship is B2's own printed nakshatra-lord table, through
+    `names.nakshatra` so the document's spellings ("Shatbhisha", "Purva
+    Falguni") reach the series' canonical ones and a missing bridge raises
+    instead of quietly dropping a body.
+
+    The appendix is a filter over the same boolean and not a separate state,
+    exactly as config records: nothing here emits an "own-nakshatra
+    vargottama" value.
+    """
+    own: dict[str, set[str]] = {}
+    for nak, lord in _NAK_LORDS.items():
+        own.setdefault(lord, set()).add(names.nakshatra(nak))
+
+    def fn(sky):
+        out = []
+        for body, stars in own.items():
+            varg = intersect(list(sky.spans(body, "sign")),
+                             list(sky.spans(body, "navamsa")), same)
+            mine = [s for s in sky.spans(body, "nakshatra")
+                    if s.value in stars]
+            out += [Span(s.start, s.end, {"body": body, "nakshatra": s.value},
+                         s.open_start, s.open_end, s.precision)
+                    for s in intersect(varg, mine, lambda _v, n: n)]
+        return sorted(out, key=lambda s: s.start)
+    return fn
+
+
+_rule(
     S("vargottam"),
     id="sub_planet_vargottam_in_their_own_nakshatra",
     rule_family="ingress/navamsa",
     condition_text=S("vargottam").title,
     condition_from="h2",
-    missing_inputs=("moon_navamsa_series",),
-    notes="Vargottam is the D1 and D9 signs agreeing at an instant, which "
-          "needs both frames for the body named. Thirteen of the nineteen "
-          "printed rows are MOON rows, and the Moon has no navamsa ingress "
-          "series at all, so the majority of this table sits behind the same "
-          "absence that blocks the D9 section above. The non-Moon rows sit "
-          "behind B6's blocker, which is the same shape one body along.",
-)
+    inputs=("ingress/navamsa", "ingress/nakshatra", "ingress/sign"),
+    notes="VERIFIED BEFORE WIRING, against this section's own table: "
+          f"**{len(VARGOTTAM_PRINTED)} of {len(VARGOTTAM_PRINTED)}** printed "
+          "rows come back on the right body and the right nakshatra, and 12 "
+          "of them on both boundaries within three minutes. FOURTEEN of the "
+          "19 are Moon rows and every one of them is Rohini pada 2, which is "
+          "the Moon's only vargottama-in-own-nakshatra arc -- Rohini's second "
+          "quarter is the Taurus navamsa of Taurus. "
+          "THE FOUR END-DATE TYPOS CAME BACK, AND ONLY THEY. "
+          "`vargottama.source_defects` convicts four rows -- 28-Jan, 20-Apr, "
+          "11-Jul and 01-Oct-2026 -- on an independent Swiss Ephemeris "
+          "recomputation, and this series reaches the same four by a "
+          "different route: each printed end is 24 hours plus one or two "
+          "minutes past the computed one, while the two control rows that "
+          "genuinely cross midnight (24-Feb, 28-Oct) come back clean. Two "
+          "routes, one verdict. What the routes did NOT agree on is recorded "
+          "in VARGOTTAM_SOURCE_DEFECTS and VARGOTTAM_UNPRINTED rather than "
+          "reconciled away.",
+)(_vargottama_in_own_nakshatra())
 
 _blocked(
     S("rashi-parivartan"),

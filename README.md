@@ -59,13 +59,13 @@ they were never in the 141 and never in its denominator:
 ```
 catalogue B                        141 / 141 sections
 instrument configuration sections   38 /  58 named groups   (ported AND wired)
-<h2> sub-tables                      3 /  10 sub-tables     (ported AND wired)
+<h2> sub-tables                      5 /  10 sub-tables     (ported AND wired)
 ```
 
 **38 of the 58 are ported and 20 are blocked, each on a named input**
 (`build/CONFIG_PORT_REPORT.md`). **Ported is now wired**, since the 14-Sep-2026
 change to `verdicts.py`: `build_verdicts()` fires all three registries, and
-**1,468 of the calendar's 7,501 verdict rows originate in a configuration
+**1,468 of the calendar's 8,511 verdict rows originate in a configuration
 section**, from 26 of the 38 ported groups. `config_instruments_for` routes a
 group to the instrument its BLOCK heading names rather than through the
 rulership table, so a *Gold — Bullish* group reaches gold because the source
@@ -73,10 +73,11 @@ filed it under gold.
 
 **The third line landed 20-Sep-2026** and is the ten `<h2>` sub-tables of the
 same chapter that belong to no instrument block — *Bhadra*, *Total Days in
-Year*, *Rahu or Ketu Nakshtra on a Thursday* and seven more. Three are ported
-and **824 rows** come from them; seven are registered and blocked with the
-input each waits on named, two of those on the Moon's navamsa ingress series,
-which the astronomy layer does not emit for the Moon at all. These sections
+Year*, *Rahu or Ketu Nakshtra on a Thursday* and seven more. **Five are ported
+and 1,504 rows come from them**; five are registered and blocked with the input
+each waits on named. Two of the five ports landed 21-Sep-2026 on the Moon's
+navamsa ingress series, which the astronomy layer excluded until then — see
+`STEP4_DECISIONS.md` §12.20. These sections
 state no verdict about their own condition, so every sub-table row is
 `condition_only` by construction and a guard refuses any rule that arrives
 carrying one.
@@ -129,23 +130,27 @@ build/calendar_2027.csv    the same rows, flat
 build/calendar_2027.html   self-contained, with search and filters
 ```
 
-**7,906 rows over 365 distinct dates, and the split is load-bearing: 7,501
+**8,916 rows over 365 distinct dates, and the split is load-bearing: 8,511
 verdict rows and 405 base-track event rows**, told apart by `row_kind`. Of the
-7,501, **5,209 come from catalogue B, 1,468 from the configuration groups and
-824 from the sub-tables**; 3,414 carry a verdict text and 4,087 do not.
+8,511, **5,539 come from catalogue B, 1,468 from the configuration groups and
+1,504 from the sub-tables**; 3,574 carry a verdict text and 4,937 do not.
 
 **Quote the split, not the total.** `records` meant "verdict rows" while there
 were no others, and a consumer still reading it that way is now wrong by 405.
 The verdict count itself has moved four times: 7,484 before the tier_4 scoping
 removed 807 USDINR configuration rows that recorded no measurement; 5,209 before
 the configuration wiring added 1,468; 6,677 before the first sub-table ports
-added 81 on 20-Sep-2026; and 6,758 before Bhadra added **743** the same day,
-which is the largest single rule in the build.
+added 81 on 20-Sep-2026; 6,758 before Bhadra added **743** the same day, which is
+the largest single rule in the build; and 7,501 before the Moon's navamsa series
+added **1,010** on 21-Sep-2026 across two sub-table ports and two catalogue-B
+rules.
 
-**Catalogue B has stayed at 5,209 across both of those ports, and that is the
-check rather than a coincidence.** A port that moved it would be a port that had
+**Catalogue B stayed at 5,209 across the first four ports, and that was the check
+rather than a coincidence.** A port that moved it would have been a port that had
 reached into catalogue B's registry, which is the one thing three separate
-denominators exist to prevent.
+denominators exist to prevent. **It is 5,539 from 21-Sep-2026, and the difference
+is the figure working**: `b071d` unblocked and `b105` split into a window and a
+verdict, so catalogue-B rows moved because catalogue-B rules did.
 
 The verdict layer applies `evidence_source` × `construction` per instrument on
 that instrument's **venue civil day**, and it *authors nothing*: verdict text is
@@ -392,6 +397,14 @@ them — and carries **no dignity label anywhere in the document**; that table h
 dignity column at all. The Moon gets no journey or navamsa table, so it never had
 the chance. Both are carried from Parashari and are untested by the source, which
 `dignity.source_witness` now says in the config instead of leaving it to be assumed.
+
+**And from 21-Sep-2026 the record says it too.** The build emits a Moon navamsa
+series, so it prints a D9 dignity for the one body the source gives no D9 table —
+421 records in 2027, 423 in 2026. Each carries
+`navamsa_dignity_not_witnessed_in_source`, derived from
+`dignity.source_witness.not_witnessed` rather than typed, so the same flag covers
+the Sun's 31. The value is emitted normally; the flag is the provenance, and it
+travels with the row instead of waiting in the config for an auditor to look it up.
 
 Saturn's D9 pass through Libra (*Saturn in Navmansh (D9) p.25*, 21-Mar-26 15:00 to
 17-Apr-26 14:57) is printed bare while the same table labels `Capricorn (Own)`
