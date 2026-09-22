@@ -21,37 +21,58 @@ are all rendered from that record. Drift becomes structurally impossible.
 
 ## Status
 
-Step 3 of the build, plus two late Step-3 extensions delivered during Step 4:
-the **tithi and yoga boundary series** (`tithi_ingress`, `yoga_ingress`) and the
-**sunrise and sunset series** (`sunrise`, `sunset`). The engine, its regression
-harness, and the 2027 astronomy layer are in place. Interpretation is Step 4 and
-has not started; the record schema in `finastro/events.py` has no field it could
-occupy.
+**COMPLETE, 22-Sep-2026.** Steps 1-4 are built: the astronomy layer, the rule
+layer over all three of the source's catalogues, the verdict layer, and the
+three rendered artifacts. No build work is outstanding. Two things remain and
+neither is a code task — both are stated as out of scope in
+`build/NEXT_SESSION.md`: the blocked list is a map for a second edition, each
+item a doctrinal decision the source never makes; and `confidence` is
+`untested` on every row, which only a pre-registered backtest can change.
 
 ```
-$ python3 tests/test_2026_regression.py
-123/123 checks passed
-
 $ python3 build_2027.py
-4163 records -> build/astronomy_2027.json
+6720 records -> build/astronomy_2027.json
+
+$ python3 tools/build_2026.py
+6728 records -> build/astronomy_2026.json      # the fixture year
+
+$ python3 tests/test_rule_layer.py
+282/282 checks passed
 
 $ python3 tests/test_2027_astronomy.py
 149/149 checks passed
+
+$ python3 tests/test_2026_regression.py
+123/123 checks passed
 
 $ python3 tests/test_node_anchor_unit.py
 12/12 checks passed
 
 $ python3 tests/test_monthly_fixture.py
 17/17 passed
-
-$ python3 tests/test_rule_layer.py
-282/282 checks passed
 ```
 
-The rule layer carries **171 rules over all 141 catalogue-B sections** — full
-coverage of catalogue B: 132 executable, 5 resolved on a supplied reading, 33
-blocked with the missing input named, and 1 ambiguous. 3,557 dated rows in the
-generated year.
+**583 checks across five suites**, all green on the artifacts below.
+
+Every artifact this build ships, with the hash a cold clone must reproduce:
+
+```
+sha256  f7bf50a39fdbf9256d42d5e11d4f0620d6db2b7bd8be8806b3fe841fc0d137fc  build/astronomy_2027.json
+sha256  785ece7743f0988e61f6d0c2dc8eeb30c1608055aa22a4c1b3bbe5bf929cf975  build/astronomy_2026.json
+sha256  a50dd82a8ae998f79bbe4b0861fef712eb3cf13fda5b19a0fe8fe64b196b31bd  build/calendar_2027.json
+sha256  96ec1a22da1795cedea1be5259cd48771108a6032a9d964d519eb601f9caf006  build/calendar_2027.csv
+sha256  5b4c062128263fee18d2a984c9526e1422dd3ed02a0ba74703e948d7f9020c8d  build/calendar_2027.html
+sha256  e31f4e84729307690a40f5e1409968033b3120d4c9f36765540f61f5f16f233a  config/conventions.yaml
+```
+
+Those are over the Moshier ephemeris. They will change when the Swiss Ephemeris
+data files are used, which is the point of that cross-check and not a
+regression.
+
+The rule layer carries **172 rules over all 141 catalogue-B sections** — full
+coverage of catalogue B: 134 executable, 5 resolved on a supplied reading, 32
+blocked with the missing input named, and 1 ambiguous. Catalogue B renders
+**4,744 rows** in the generated year, **5,539** in the file's daily unit.
 
 **Catalogue B is not the whole source, and the two numbers are now stated
 together.** The instrument configuration sections — gold, silver and sugar, the
@@ -64,6 +85,12 @@ catalogue B                        141 / 141 sections
 instrument configuration sections   38 /  58 named groups   (ported AND wired)
 <h2> sub-tables                      5 /  10 sub-tables     (ported AND wired)
 ```
+
+**That line is the coverage claim, and all three numbers travel together.** Each
+counts a different shape of markup, none is inside either of the others, and
+`verdicts.py` fires all three registries. **57 rules are blocked**, each on an
+input the document withholds and each named on the rule — 32 in catalogue B, 20
+configuration groups, 5 sub-tables.
 
 **38 of the 58 are ported and 20 are blocked, each on a named input**
 (`build/CONFIG_PORT_REPORT.md`). **Ported is now wired**, since the 14-Sep-2026
@@ -111,9 +138,19 @@ to offer still passes and its old conclusion is now wrong.
 
 `build/CONFIG_SECTIONS_SCOPE.md` reports what porting the remaining groups would
 take, per group, and `build/MONTHLY_2026_FIXTURE.md` measures what the layer
-reproduces of the source's own finished output: **168 of 354 printed windows
-(COVERAGE) and 168 of 175 claimed rows (PRECISION, conditional on a rule
-existing and firing)**. Neither of those travels alone either.
+reproduces of the source's own finished output. Neither of its two figures
+travels alone either: at the close the fixture reports **285 of 354 printed
+windows (COVERAGE, 81%) and 285 of 292 claimed rows (PRECISION, 98% — and
+conditional on a rule existing and firing at all)**, from 97 of 147 event names
+and 3,734 Mumbai firings.
+
+**The pair printed in the HTML panel is 168 of 354 / 168 of 175, and that is
+deliberate**: it is a DATED RECORD of 16-Sep-2026, read from
+`conventions.yaml → verdict_coverage.two_denominators`, and not a live count.
+The four ports that landed after it moved coverage 168 → 192 → 246 → 285.
+`tests/test_monthly_fixture.py` pins the fixture and the map and deliberately
+does not pin the match result, which is the thing the fixture exists to
+measure.
 
 **`build/RULE_LAYER_STATUS.md` is the one-page answer to "what does this calendar
 actually cover"** — both denominators at the top, then every catalogue-B section
@@ -197,24 +234,18 @@ base-track row carries no instrument, no tier and no verdict at all — those ke
 are absent rather than null.
 
 The HTML carries the epistemic apparatus visibly rather than as a footnote:
-certainty grades **and both C grounds**, claim tags, all 33 blocked sections with
+certainty grades **and both C grounds**, claim tags, all 32 blocked sections with
 the input each waits for, **both pairs of denominators beside the blocked list —
 sections ported (catalogue B 141/141, configuration sections 38/58) and rows
 reproduced against the source's own 2026 calendar (COVERAGE 168/354, PRECISION
-168/175)**, the source
+168/175 — the dated 16-Sep-2026 record)**, the source
 defects found, the known coverage gap, and the standing statement that this is a
 speculative interpretive framework and not investment advice.
 
 The build is deterministic: regenerating the year produces a byte-identical
 file, so a real change shows up as a diff and nothing else does. Confirmed by
-running the build twice and comparing:
-
-```
-sha256  757c53126bae410d5d594ee97a8694185b31d7b2a7eef72d6524b75bb22bdf2f  build/astronomy_2027.json
-```
-
-That hash is over the Moshier ephemeris. It will change when the Swiss Ephemeris
-data files are used, which is the point of that cross-check and not a regression.
+running the build twice and comparing. The final hashes of all six tracked
+artifacts are in **Status** above.
 
 A Step 3 closing report — record counts, every derived convention with its pass
 rate, every convention carried without source evidence, every source defect, and
@@ -480,7 +511,7 @@ tools/monthly_match.py         the 2026 monthly-calendar fixture
 tests/test_2026_regression.py  locks the conventions against the source
 tests/test_2027_astronomy.py   sanity-checks the generated 2027 output
 tests/test_node_anchor_unit.py the node-anchor branch the real span can't reach
-build/astronomy_2027.json      4163 records, astronomy only
+build/astronomy_2027.json      6,720 records, astronomy only
 build/astronomy_2027_summary.txt  counts per class and the backend used
 ```
 

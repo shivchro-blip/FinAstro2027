@@ -21,13 +21,13 @@ the frozen one — it records a step that closed.
 | | |
 | --- | --- |
 | Opened | 13-Sep-2026 |
-| Last updated | 21-Sep-2026 — §12.20, the Moon's navamsa series and the Step-3 exclusion reversed |
+| Last updated | 22-Sep-2026 — §12.21, the build closed and −795 re-derived under a changed population |
 | Companion | `build/STEP3_REPORT.md` — the astronomy layer, closed and frozen |
-| Config | `config/conventions.yaml`, sha256 `7d1373b21abac47162c46b61134ce447c2bed0981c9870a200747a56c114eccb` |
+| Config | `config/conventions.yaml`, sha256 `e31f4e84729307690a40f5e1409968033b3120d4c9f36765540f61f5f16f233a` |
 | Build | `build/astronomy_2027.json`, sha256 `f7bf50a39fdbf9256d42d5e11d4f0620d6db2b7bd8be8806b3fe841fc0d137fc` — **MOVED 21-Sep-2026**, 5,036 records to 6,720 |
 | Build (2026) | `build/astronomy_2026.json`, sha256 `785ece7743f0988e61f6d0c2dc8eeb30c1608055aa22a4c1b3bbe5bf929cf975` — 5,036 to 6,728 |
-| Calendar | `build/calendar_2027.json`, sha256 `2af7154528abfe5adb4d1f1431d34799b74f5f12e6f760551e1ebd3e5b33ffbf`, 8,916 rows |
-| Harness | `test_2026_regression.py` 123/123 · `test_2027_astronomy.py` 149/149 · `test_node_anchor_unit.py` 12/12 · `test_rule_layer.py` 268/268 · `test_monthly_fixture.py` 17/17 — **569 checks** |
+| Calendar | `build/calendar_2027.json`, sha256 `a50dd82a8ae998f79bbe4b0861fef712eb3cf13fda5b19a0fe8fe64b196b31bd` — **8,121 rendered rows**, daily-row equivalent **8,916**. Quote the pair; the collapse landed 21-Sep-2026 and changed the unit, not the population |
+| Harness | `test_2026_regression.py` 123/123 · `test_2027_astronomy.py` 149/149 · `test_node_anchor_unit.py` 12/12 · `test_rule_layer.py` **282/282** · `test_monthly_fixture.py` 17/17 — **583 checks** |
 | Source | `data/source_2026.html`, 437578 bytes, md5 `5e098446d6dd13d3df8443528db5dd95` |
 | Book | *The Celestial Ledger* Ch15, Ch16, Appendix B.5 — **not in the project tree**, read from `C:/Shiva/Horoscopes/FinAstro/FinAstro_Guide/raw/` |
 
@@ -4388,3 +4388,76 @@ The generated pages are the part worth keeping. `RULE_LAYER_STATUS.md` reported
 this ran, because it was generating from a string rather than from a series.
 **A generated page is only as honest as the value it generates from**, and a page
 that generates from prose launders an assertion into a measurement.
+
+---
+
+### 12.21 The build is closed, and −795 re-derived under a changed population · recorded 22-Sep-2026
+
+**The decision.** Step 4's build work is closed. All four TASK 1 ports are wired,
+TASK 4 landed Model A, §5.3 is closed, and nothing on `NEXT_SESSION.md`'s task
+list is open. What remains is recorded there as **two things that are out of
+scope for this build**, neither of them a code task: the blocked list read as a
+second-edition map, and the fact that `confidence` is `untested` on every row.
+
+#### The result worth keeping is not the collapse — it is what its headline figure survived
+
+§3 of `build/SPAN_VS_DAILY_PROPOSAL.md` established that Model A's **−795** is
+invariant across three populations — P1 catalogue-B, P2 all verdict rows, P3 the
+artifact — with the same three components in each: `date_only` ephemeris
+**−413**, `b101` **−238**, carry-in **−144**.
+
+**That was a real result and a weaker one than it reads as.** All three
+populations were three views of **one build**, the 7,082-row artifact of
+15-Sep-2026. Invariance across views of a fixed file says the saving does not
+depend on where the population boundary is drawn. It says nothing about whether
+the saving depends on the file.
+
+**It was implemented six days later against a build 1,834 rows larger** — 7,082
+→ 8,916, the growth being Bhadra, the two sub-table ports on the Moon's navamsa
+series, and the `b071d` / `b105` catalogue-B moves. Neither the figure nor any
+of its three components moved:
+
+| | §3, at 7,082 rows | measured, at 8,916 rows |
+| --- | ---: | ---: |
+| `date_only` ephemeris | −413 | **−413** |
+| `civil_day_span` (`b101`) | −238 | **−238** |
+| carry-in `period_cut` | −144 | **−144** |
+| **total** | **−795** | **−795** |
+| invariant across | P1 5,209→4,414 · P2 6,677→5,882 · P3 7,082→6,287 | P1 5,539→4,744 · P2 8,511→7,716 · P3 8,916→**8,121** |
+
+**This is the stronger claim and §3 did not make it.** §3's *reason* covers it —
+every row a wider population adds to a collapsed cause is its own span and
+collapses to itself — but that reason was offered against a **boundary being
+moved**, not against **rows being added**. Adding rows is the case that could
+have broken it: one new rule emitting daily rows inside an already-collapsed
+span would move a component. None did, and the margin is measured rather than
+argued — P3's ephemeris cause held **471 rows over 58 spans** on 15-Sep and
+holds **507 over 94** today. Thirty-six more rows, thirty-six more spans,
+nothing saved.
+
+**Why this is worth a section and not a line.** This build has twice shipped a
+correct count of a population that had changed underneath it — §12.16's second
+shape, and its eighth instance. A figure that holds across a population change
+**with its components unchanged** is the exact opposite of that failure, and it
+is the only form of the claim worth quoting: **−795 is a property of what the
+five no-instant causes are, not of which rows the build happens to contain.**
+
+`6,287` never had that property and is withdrawn as a prediction of any later
+file. It was always `7,082 − 795` and stands as a correct **P3** figure of the
+build it was computed on; today's P3 answer is **8,121** and the catalogue-B
+answer is **4,744**.
+
+`build/SPAN_VS_DAILY_PROPOSAL.md` §7.1 is the measurement; this is the decision
+it supports.
+
+#### State at closure
+
+| | |
+| --- | --- |
+| `build/astronomy_2027.json` | 6,720 records, sha256 `f7bf50a39fdbf9256d42d5e11d4f0620d6db2b7bd8be8806b3fe841fc0d137fc` |
+| `build/astronomy_2026.json` | 6,728 records, sha256 `785ece7743f0988e61f6d0c2dc8eeb30c1608055aa22a4c1b3bbe5bf929cf975` |
+| `build/calendar_2027.json` | 8,121 rows (8,916 daily-row equivalent), sha256 `a50dd82a8ae998f79bbe4b0861fef712eb3cf13fda5b19a0fe8fe64b196b31bd` |
+| `build/calendar_2027.csv` | sha256 `96ec1a22da1795cedea1be5259cd48771108a6032a9d964d519eb601f9caf006` |
+| `build/calendar_2027.html` | sha256 `5b4c062128263fee18d2a984c9526e1422dd3ed02a0ba74703e948d7f9020c8d` |
+| suites | 282 · 149 · 123 · 12 · 17 — **583 checks** |
+| coverage | catalogue B **141/141** · configuration groups **38/58** · `<h2>` sub-tables **5/10** |

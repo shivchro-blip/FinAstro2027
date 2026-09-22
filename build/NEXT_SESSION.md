@@ -1,4 +1,4 @@
-# Handoff — start here
+# Handoff — the build is closed
 
 Written 15-Sep-2026, at the end of the session that ran the 2026 monthly-calendar
 fixture and wired the configuration port. **Continued 16-Sep-2026**, which closed
@@ -8,7 +8,83 @@ this page said it was. **Continued 21-Sep-2026**, which reversed the Step-3
 Moon/D9 exclusion and closed TASK 4 — the span collapse, Model A, 8,916 → 8,121
 rendered rows. Everything below is stated completely enough to start cold.
 
-## What is left, in one place
+**CLOSED 22-Sep-2026. THERE IS NO BUILD WORK OUTSTANDING.** All four TASK 1
+ports are verified against their own printed tables and wired; TASK 4 implemented
+Model A and closed §5.3 with it; TASK 0, TASK 0b, TASK 2, TASK 3 and TASK 5 were
+closed earlier. **Each task's record is the section of its own name below and
+every one is left as written** — they are why the figures on this page can be
+read cold, and not one of them is a thing to re-verify. §12.21 of
+`STEP4_DECISIONS.md` is the closing decision.
+
+## What remains — two things, and neither is a code task
+
+**Both are out of scope for this build.** Neither is blocked on effort, and
+writing code for either would be the mistake rather than the work.
+
+### 1. The blocked list is a map for a second edition, not a backlog
+
+**57 rules are blocked** — 32 in catalogue B, 20 configuration groups, 5
+sub-tables — and each names the input it waits on, countable off the registry
+rather than parsed out of prose. **Five doctrinal decisions account for 33 of
+them, and the source never makes any of the five.** Each is a ruling about the
+framework, not a computation the layer declined to run:
+
+| the decision the source never makes | blocked on it | where |
+| --- | ---: | --- |
+| **benefic/malefic valence** — the source selects rows on *malefic* or *benefic* and never defines either | **12** | 9 configuration groups · B19, B116, B117 |
+| **the lunar month system** — amanta or purnimanta, which disagree by a fortnight and therefore about which month an eclipse falls in | **5** | 3 configuration groups · `sub_eclipse` · B111 |
+| **first-crescent darshan** — the sighting and not the conjunction; `swe.heliacal_ut` measured **9-10 days out** against the source's own Venus rise dates and was rejected on evidence, not on principle | **5** | 4 configuration groups · B62 |
+| **greatest elongation** — the layer emits elongation on every record and never its extrema; recovering a maximum from instants sampled at other events is a scan, not a read | **1** | B11 |
+| **the slow-planet speed doctrine** — Jupiter's and Saturn's printed Fast/Normal boundaries share no speed level, and B30 defines its own interval by LONGITUDE instead, supplying none | **4**, and binding behind **6** more | B121, B124, B135, B136 · and B125-127, B139-141, which have no speed level at all |
+
+**Why none of these is a task.** Settling any one means choosing a reading the
+document does not state, against this build's standing rule that **a missing
+input is named on the rule and never approximated.** A valence table would make
+twelve rules compute — and would make them compute *our* doctrine while printing
+it in the source's voice, which is the one failure the whole epistemic apparatus
+exists to prevent. The owner of these five is a second edition with the author's
+rulings in hand. The list is the question set to take to them, and that is what
+it is for.
+
+**The other 24 are the same shape at smaller scale**: the speed-threshold family
+(**11** — single-point fits with zero degrees of freedom, bodies with no
+Fast/Normal table at all, and B30's interval that is reproducible while the rule
+generating it is not), `aspect_orb` (2), `vedha_wheel` (2), `no_dated_window`
+(2), `scope` (2), `sign_lordship` (1), and four one-offs each stated on its own
+rule — an unrecoverable selection rule, a "range" the source uses in two senses
+in one line, and two Mars D9 residency rules the source prints no ingress table
+to bound.
+
+### 2. `confidence` is `untested` on every row, and only a backtest may move it
+
+All **7,716** verdict rows carry `confidence: untested`, and **no code path can
+raise it.** That is structural rather than a default waiting to be filled in:
+verdict text is the source's own words or it is null, and nothing derives a
+confidence from anything. Raising it takes one thing and nothing else will do —
+**a pre-registered backtest against price data.**
+
+**And a trap is already laid for that backtest, measured rather than
+anticipated.** The verdict layer applies `evidence_source` × `construction` on
+**each instrument's own venue civil day**. Roughly **42% of addressable gold and
+silver events land on a different calendar date under the venue day than under
+the Mumbai day** — **536 of 1,277** for gold and **537 of 1,282** for silver,
+always one day earlier and never later, because a 9.5-to-10.5 hour offset moves
+any event stamped before about 10:30 IST back a day. CL is higher still, **19 of
+34 (55.9%)**, because Saturn's 2027 events cluster in the Indian morning.
+
+**The population barely changes size** — gold 1,276 under either day, silver
+1,281, one event in and one out at a New Year boundary — **so a join keyed on a
+single global date column would not fail loudly.** It would return about the
+expected number of rows, roughly two in five of them matched to the wrong
+session, and produce a **plausible backtest built on misaligned rows**. That is
+worse than no backtest, because nothing about the result would look wrong.
+
+So: any backtest of this calendar keys on the instrument's venue day, or it is
+not a backtest of this calendar. The measurement is the venue-day divergence
+block under `verdict_coverage` in `config/conventions.yaml`, and **§7.1 of
+`STEP4_DECISIONS.md` is its record.**
+
+## The task list, all of it closed
 
 | | |
 | --- | --- |
@@ -56,14 +132,17 @@ Then `build/MONTHLY_2026_FIXTURE.md` for the fixture this handoff continues.
 | | *(this file's own id-correction commit is its child; the hash above is the one to check out)* |
 | `build/astronomy_2027.json` | **6,720 records**, sha256 `f7bf50a39fdbf9256d42d5e11d4f0620d6db2b7bd8be8806b3fe841fc0d137fc` *(5,036 before the Moon's navamsa series added 1,684 on 21-Sep-2026; 4,170 before the karana series added 866)* |
 | `build/astronomy_2026.json` | **6,728 records**, sha256 `785ece7743f0988e61f6d0c2dc8eeb30c1608055aa22a4c1b3bbe5bf929cf975` — the fixture year, generated by `tools/build_2026.py` *(5,036 before the Moon's navamsa series added 1,692; 4,167 before the karana series added 869)* |
-| suites | `test_rule_layer` **268/268** · `test_2026_regression` **123/123** · `test_2027_astronomy` **149/149** · `test_node_anchor_unit` **12/12** · `test_monthly_fixture` **17/17** *(171 and 112 at the handoff commit; the rule layer gained the row-kind, span-endpoint and year-clip checks, then 13 more on 16-Sep-2026 for the cause census, then 21 more on 20-Sep-2026 — the unclaimed-grade census, the three-registry separation, the supplied-verdict guard, and the first two ports against their own printed tables — then 7 more with Bhadra: the membership rule read off the source with the document's own TOC as witness, and the karana series checked against the tithi series it halves; then 4 more in the rule layer and 3 in the 2026 suite for the `karana_name` defect — Bhadra's 99 printed windows fired through the REGISTERED rule, the eighth Vishti named, every executable sub-table port checked to be pinned at all, and the Bhadra test's parallel numbering tied to the shared function)* |
+| suites | `test_rule_layer` **282/282** · `test_2026_regression` **123/123** · `test_2027_astronomy` **149/149** · `test_node_anchor_unit` **12/12** · `test_monthly_fixture` **17/17** *(171 and 112 at the handoff commit; the rule layer gained the row-kind, span-endpoint and year-clip checks, then 13 more on 16-Sep-2026 for the cause census, then 21 more on 20-Sep-2026 — the unclaimed-grade census, the three-registry separation, the supplied-verdict guard, and the first two ports against their own printed tables — then 7 more with Bhadra: the membership rule read off the source with the document's own TOC as witness, and the karana series checked against the tithi series it halves; then 4 more in the rule layer and 3 in the 2026 suite for the `karana_name` defect — Bhadra's 99 printed windows fired through the REGISTERED rule, the eighth Vishti named, every executable sub-table port checked to be pinned at all, and the Bhadra test's parallel numbering tied to the shared function)* |
 | report generators | **tracked**, in `tools/` — `gen_status.py`, `cfg_port_report.py`, `gen_cfg_scope.py`, `build_2026.py`, `monthly_match.py`, `cause_census.py`. A cold clone can rebuild every generated page. **Regenerate; never hand-edit one** — see TASK 0b. |
-| verdict rows on a rebuild | **8,511** — **5,539 catalogue B** + **1,468 configuration** + **1,504 sub-table**. *(7,501 = 5,209 + 1,468 + 824 until 21-Sep-2026: the Moon's navamsa series added 680 sub-table rows across two new ports and 330 catalogue-B rows across b071d and the b105 split.)* *(6,758 / 5,209 / 1,468 / 81 before Bhadra added 743 on 20-Sep-2026; 6,677 before the first sub-table ports; 7,484 / 2,275 at the handoff commit, before TASK 0 removed the 807 configuration USDINR rows. **Catalogue B's 5,209 did not move across any of those four ports**, which was the check that none reached into it; it moved on 21-Sep-2026 because two catalogue-B rules did.)* |
-| **rows in the artifact** | **8,916** — the 8,511 above **plus 405 base-track event rows**, told apart by `row_kind`. **8,511 is the verdict count and not the file's row count**, and the two were the same number only while the base track did not exist. Quote the split. |
+| verdict rows on a rebuild | **7,716 rendered** — **4,744 catalogue B** + **1,468 configuration** + **1,504 sub-table**; **8,511** in the file's daily unit, split **5,539** + 1,468 + 1,504. Only catalogue B collapsed. Quote the unit with the number. *(7,501 = 5,209 + 1,468 + 824 until 21-Sep-2026: the Moon's navamsa series added 680 sub-table rows across two new ports and 330 catalogue-B rows across b071d and the b105 split.)* *(6,758 / 5,209 / 1,468 / 81 before Bhadra added 743 on 20-Sep-2026; 6,677 before the first sub-table ports; 7,484 / 2,275 at the handoff commit, before TASK 0 removed the 807 configuration USDINR rows. **Catalogue B's 5,209 did not move across any of those four ports**, which was the check that none reached into it; it moved on 21-Sep-2026 because two catalogue-B rules did.)* |
+| **rows in the artifact** | **8,121 rendered** — the 7,716 above **plus 405 base-track event rows**, told apart by `row_kind`; **8,916** daily-row equivalent, published as `meta.daily_row_equivalent`. **The verdict count is not the file's row count**, and the two were the same number only while the base track did not exist. Quote the split, and quote the unit. |
 | registries | **three**: `REGISTRY` **172** catalogue-B rules over 141 sections (171 until b105 split) · `CONFIG_REGISTRY` 58 configuration groups · `SUBTABLE_REGISTRY` **10** sub-tables, **5 ported**. `verdicts.py` fires all three. **`is_config_rule` is now a positive type test**; it read `catalogue_b is None` until 20-Sep-2026, which a `SubTable` also satisfies. **Membership of the third registry is now a SHAPE read off the document**, not a byte range — see TASK 1d. |
 
-`build/calendar_2027.{json,html,csv}` on disk are **current**: 8,916 rows,
-8,511 verdict + 405 event. *(This paragraph said they predated the wiring and
+`build/calendar_2027.{json,html,csv}` on disk are **current**: 8,121 rendered
+rows, 7,716 verdict + 405 event, daily-row equivalent 8,916. sha256
+`a50dd82a8ae998f79bbe4b0861fef712eb3cf13fda5b19a0fe8fe64b196b31bd` (`.json`),
+`96ec1a22da1795cedea1be5259cd48771108a6032a9d964d519eb601f9caf006` (`.csv`),
+`5b4c062128263fee18d2a984c9526e1422dd3ed02a0ba74703e948d7f9020c8d` (`.html`). *(This paragraph said they predated the wiring and
 held 5,209 catalogue-B rows only. That was true when it was written and stopped
 being true at `846c780`, which re-rendered for the base track; TASK 2's sweep on
 16-Sep-2026 re-rendered again for the panel prose. The `.json` and `.csv` came
