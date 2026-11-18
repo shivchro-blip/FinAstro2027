@@ -428,13 +428,18 @@ def test_saturn_round_trip(doc: dict) -> None:
 
 # ------------------------------------------------------------- 3. stations
 def test_stations(doc: dict) -> None:
-    """Speed must actually be zero at the reported instant, recomputed."""
+    """Speed must actually be zero at the reported instant, recomputed.
+
+    The speed OF DATE, which is what a station is a zero of -- see
+    `ephem.Position.speed_of_date`. The record's own `speed_deg_day` is the
+    sidereal speed and sits ~6e-5 deg/day off zero at a true station.
+    """
     worst, worst_id = 0.0, ""
     for r in doc["records"]:
         if r["event_class"] != "station":
             continue
         t = parse(r["time"]["t_start_utc"])
-        speed = abs(ephem.position(t, r["bodies"][0]).speed)
+        speed = abs(ephem.position(t, r["bodies"][0]).speed_of_date)
         if speed > worst:
             worst, worst_id = speed, r["id"]
     record("Stations: |speed| within 1e-4 deg/day of zero",

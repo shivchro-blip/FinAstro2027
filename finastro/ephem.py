@@ -53,6 +53,7 @@ _NAK_ARC = 360.0 / 27.0
 _PADA_ARC = _NAK_ARC / 4.0
 
 _INITIALISED = False
+_REPO_EPHE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "ephe")
 
 
 def init() -> str:
@@ -61,15 +62,26 @@ def init() -> str:
     if _INITIALISED:
         return _BACKEND
     swe.set_sid_mode(SIDM[CONF["ayanamsha"]])
-    path = os.environ.get(CONF["ephemeris"]["se_ephe_path_env"])
+    # SE_EPHE_PATH wins; otherwise the repo's own ephe/ (filled by
+    # tools/fetch_ephe.py, gitignored as third-party data).
+    path = os.environ.get(CONF["ephemeris"]["se_ephe_path_env"]) or _REPO_EPHE
     _BACKEND = "moshier"
     if path and os.path.isdir(path):
         swe.set_ephe_path(path)
+        # Swiss Ephemeris does NOT raise when the files are missing: it falls
+        # back to Moshier and says so only in the returned flag. The old check
+        # caught an exception that never comes, so any existing directory --
+        # empty or not -- was reported as "swisseph_files" while Moshier ran.
+        # Probe the planetary file (Sun) and the lunar file (Moon) by flag.
         try:
-            swe.calc_ut(swe.julday(2027, 1, 1), swe.SUN, swe.FLG_SWIEPH)
-            _BACKEND = "swisseph_files"
+            ok = all(swe.calc_ut(swe.julday(2027, 1, 1), b, swe.FLG_SWIEPH)[1]
+                     & swe.FLG_SWIEPH for b in (swe.SUN, swe.MOON))
         except swe.Error:
-            pass
+            ok = False
+        if ok:
+            _BACKEND = "swisseph_files"
+        else:
+            swe.set_ephe_path(None)
     _INITIALISED = True
     return _BACKEND
 
@@ -120,8 +132,18 @@ class Position:
     lon: float           # sidereal ecliptic longitude, degrees
     lat: float           # ecliptic latitude, degrees
     dist: float          # AU
-    speed: float         # degrees per day in longitude
+    speed: float         # degrees per day in longitude (in the frame asked for)
     body: str
+    #: Longitudinal speed against the equinox OF DATE (the tropical speed),
+    #: whichever frame `lon` is in. A sidereal speed is the tropical speed
+    #: minus the ayanamsha's rate (~0.0000383 deg/day), and near a station
+    #: that offset moves the zero by up to hours: measured on 2026, sidereal
+    #: zeros miss the printed stations by up to 3h20m (Pluto), 2h27m
+    #: (Neptune), 1h (Saturn), while of-date zeros reproduce all 18 printed
+    #: station times within 1.7 min. A station is where the planet is
+    #: stationary in ecliptic longitude of date, as every almanac defines it,
+    #: so `retrograde` and `stations()` read this and not `speed`.
+    speed_of_date: float | None = None
 
     @property
     def sign_index(self) -> int:
@@ -157,7 +179,8 @@ class Position:
 
     @property
     def retrograde(self) -> bool:
-        return self.speed < 0
+        s = self.speed if self.speed_of_date is None else self.speed_of_date
+        return s < 0
 
 
 def position(when: dt.datetime, body: str, sidereal: bool = True) -> Position:
@@ -165,9 +188,26 @@ def position(when: dt.datetime, body: str, sidereal: bool = True) -> Position:
     flags = backend_flag() | swe.FLG_SPEED | (swe.FLG_SIDEREAL if sidereal else 0)
     if body == "Ketu":
         vals = swe.calc_ut(jd, node_body(), flags)[0]
-        return Position((vals[0] + 180) % 360, -vals[1], vals[2], vals[3], "Ketu")
+        of_date = vals[3] if "Ketu" in _NEVER_STATION or not sidereal else \
+            swe.calc_ut(jd, node_body(), backend_flag() | swe.FLG_SPEED)[0][3]
+        return Position((vals[0] + 180) % 360, -vals[1], vals[2], vals[3], "Ketu",
+                        of_date)
     vals = swe.calc_ut(jd, body_id(body), flags)[0]
-    return Position(vals[0] % 360, vals[1], vals[2], vals[3], body)
+    # The of-date speed is read off a tropical call, not derived: sidereal and
+    # tropical speeds differ by the ayanamsha rate PLUS the nutation rate
+    # (~6.0e-5 deg/day in Dec-2026, of which precession is only 3.8e-5), and
+    # the true-equinox figure is what reproduces the printed stations. The
+    # luminaries never station and the mean node never does, so their sign
+    # cannot differ and the second call is skipped.
+    if sidereal and body not in _NEVER_STATION:
+        of_date = swe.calc_ut(jd, body_id(body),
+                              backend_flag() | swe.FLG_SPEED)[0][3]
+    else:
+        of_date = vals[3]
+    return Position(vals[0] % 360, vals[1], vals[2], vals[3], body, of_date)
+
+
+_NEVER_STATION = ("Sun", "Moon") + (("Rahu", "Ketu") if CONF["node"] == "mean" else ())
 
 
 def longitude(when: dt.datetime, body: str, sidereal: bool = True) -> float:
@@ -274,8 +314,19 @@ def speed_crossings(body: str, start: dt.datetime, end: dt.datetime,
 
 def _zero_crossings(body: str, start: dt.datetime, end: dt.datetime,
                     step: dt.timedelta):
-    """[(instant, rising)] for every sign change of the body's speed."""
-    return _level_crossings(body, start, end, 0.0, step)
+    """[(instant, rising)] for every sign change of the body's of-date speed
+    -- the stations, on the same definition `stations()` uses."""
+    out = []
+    t = start
+    prev = position(t, body).speed_of_date
+    while t < end:
+        nxt = min(t + step, end)
+        cur = position(nxt, body).speed_of_date
+        if (prev < 0) != (cur < 0):
+            out.append((_bisect(lambda x: position(x, body).speed_of_date,
+                                t, nxt), cur > prev))
+        t, prev = nxt, cur
+    return out
 
 
 def _level_crossings(body: str, start: dt.datetime, end: dt.datetime,
@@ -363,16 +414,21 @@ def navamsa_at_sign_cusp(idx: int, forward: bool) -> str:
 
 
 def stations(body: str, start: dt.datetime, end: dt.datetime):
-    """Yield (instant, 'R'|'D') where longitudinal speed changes sign."""
+    """Yield (instant, 'R'|'D') where longitudinal speed changes sign.
+
+    The speed is the OF-DATE speed (see `Position.speed_of_date`): a station is
+    where ecliptic longitude of date is stationary. The sidereal zero sits up
+    to hours away for the slow planets and is not what any almanac prints.
+    """
     step = dt.timedelta(hours=6)
     out = []
     t = start
-    prev = position(t, body).speed
+    prev = position(t, body).speed_of_date
     while t < end:
         nxt = min(t + step, end)
-        cur = position(nxt, body).speed
+        cur = position(nxt, body).speed_of_date
         if (prev < 0) != (cur < 0):
-            inst = _bisect(lambda x: position(x, body).speed, t, nxt)
+            inst = _bisect(lambda x: position(x, body).speed_of_date, t, nxt)
             out.append((inst, "R" if prev > 0 else "D"))
         t, prev = nxt, cur
     return out
@@ -745,6 +801,13 @@ def lunations(start: dt.datetime, end: dt.datetime):
 
 # ----------------------------------------------------------------- apsides
 
+def geometric_distance(when: dt.datetime, body: str) -> float:
+    """True geometric distance in AU: no light-time, no aberration."""
+    init()
+    return swe.calc_ut(to_jd(when), body_id(body),
+                       backend_flag() | swe.FLG_TRUEPOS)[0][2]
+
+
 def distance_extrema(body: str, start: dt.datetime, end: dt.datetime,
                      step: dt.timedelta, delta: dt.timedelta):
     """Yield (instant, 'min'|'max') where the body's distance turns over.
@@ -753,9 +816,16 @@ def distance_extrema(body: str, start: dt.datetime, end: dt.datetime,
     then bisected on that derivative. Like a station this is a stationary
     point, so the distance is flat near the root and the instant is the loosely
     determined quantity. Callers set precision accordingly.
+
+    The GEOMETRIC distance (`geometric_distance`), not the apparent one. An
+    apsis is the turning point of the true Earth-centre to body-centre
+    distance -- Meeus's and every almanac's definition -- and it is the one the
+    2026 source prints: its 02-Jan-26 perigee (03:14, 360,349 km) is the
+    geometric minimum to the minute and the kilometre, where the apparent
+    (light-time-corrected) minimum falls 7 min later and 13 km further out.
     """
     def deriv(t: dt.datetime) -> float:
-        return position(t + delta, body).dist - position(t - delta, body).dist
+        return geometric_distance(t + delta, body) - geometric_distance(t - delta, body)
 
     out = []
     t = start

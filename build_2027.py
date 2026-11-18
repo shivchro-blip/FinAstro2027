@@ -341,6 +341,9 @@ def sign_ingresses():
                 sign_from=ephem.SIGNS[frm], sign_to=ephem.SIGNS[to],
                 sign_override=ephem.SIGNS[to],
                 navamsa_override=ephem.navamsa_at_sign_cusp(to, not retro),
+                # ...and the 27-star frame likewise: a sign is nine whole padas,
+                # so the entered pada is the sign's first (forward) or last.
+                pada_override=to * 9 + (8 if retro else 0),
                 extra_flags=["retrograde_re_entry"] if retro else [])
             out.append(ev.build(
                 "sign_ingress", "ingress/sign", [body], "instant", inst,
@@ -359,7 +362,16 @@ def nakshatra_ingresses():
         for inst, frm, to in ephem.ingresses(body, SPAN_START, SPAN_END,
                                              ARC_NAKSHATRA):
             title, flags = source_ref("nakshatra_ingress", body)
-            astro, pflags = ev.positional(inst, body)
+            # A nakshatra cusp is a pada cusp: pada 1 entering forward, pada 4
+            # arriving backwards. Without the override the sampled pada is the
+            # far side's about half the time. A gandanta nakshatra cusp is a
+            # sign and navamsa cusp as well, so those frames are pinned too.
+            fwd = (to - frm) % len(ephem.NAKSHATRAS) == 1
+            pada_idx = to * 4 + (0 if fwd else 3)
+            astro, pflags = ev.positional(
+                inst, body, pada_override=pada_idx,
+                sign_override=ephem.sign_of_navamsa_index(pada_idx),
+                navamsa_override=ephem.SIGNS[pada_idx % 12])
             # A nakshatra boundary is not a sign boundary, so it gets its own
             # from/to fields rather than being stuffed into sign_from/sign_to.
             astro = replace(astro,
@@ -407,7 +419,8 @@ def navamsa_ingresses():
                 navamsa_from=ephem.SIGNS[frm % 12],
                 navamsa_to=ephem.SIGNS[to % 12],
                 navamsa_override=ephem.SIGNS[to % 12],
-                sign_override=ephem.sign_of_navamsa_index(to))
+                sign_override=ephem.sign_of_navamsa_index(to),
+                pada_override=to)
             out.append(ev.build(
                 "navamsa_ingress", "ingress/navamsa", [body], "instant", inst,
                 astro,
@@ -424,7 +437,7 @@ def tithi_ingresses():
     second -- the method the 2026 source states for its own Bhadra windows,
     applied to twice the karana's arc. Eight of the Bhadra section's sixteen
     January boundaries are also tithi boundaries (the even multiples of 6
-    degrees), and this series reproduces all eight within 25 seconds, which is
+    degrees), and this series reproduces all eight within 30 seconds (25 on Moshier), which is
     the same agreement the Bhadra check itself records.
 
     Certainty A, and frame-free with it: elongation is a DIFFERENCE of two
@@ -879,6 +892,11 @@ def apsides():
         for inst, kind in found:
             title, flags = source_ref("apsis", kind)
             astro, pflags = ev.positional(inst, body)
+            # The apsis's own distance is the geometric one it is an extremum
+            # of (see ephem.distance_extrema), not the apparent distance every
+            # other record carries.
+            astro = replace(astro, distance=round(
+                ephem.geometric_distance(inst, body), 9))
             out.append(ev.build(
                 "apsis", f"orbit/{kind}", [body], "instant", inst, astro,
                 ev.qa_for(inst, "B", source_2026_equivalent=title,

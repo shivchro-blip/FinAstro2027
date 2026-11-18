@@ -1,0 +1,293 @@
+{
+ "1": {
+  "matched": 12,
+  "printed": 12,
+  "unmatched": []
+ },
+ "2": {
+  "matched": 27,
+  "printed": 28,
+  "unmatched": [
+   "Mool | 16-Dec-26 | 10:25 | Ketu | Trine"
+  ]
+ },
+ "3": {
+  "matched": 7,
+  "printed": 8,
+  "unmatched": [
+   "Cancer (Debilitated) | 18-Sep-26 | 16:36 | 12-Nov-26 | 20:22 | Moon | Quincunx"
+  ]
+ },
+ "4": {
+  "matched": 1,
+  "printed": 1,
+  "unmatched": []
+ },
+ "5": {
+  "matched": 6,
+  "printed": 6,
+  "unmatched": []
+ },
+ "6": {
+  "matched": 9,
+  "printed": 9,
+  "unmatched": []
+ },
+ "7": {
+  "matched": 8,
+  "printed": 14,
+  "unmatched": [
+   "Gemini (Own) | 29-May-26 | 11:16 | 22-Jun-26 | 15:53 | Mercury | Own",
+   "Cancer | 22-Jun-26 | 15:53 | 07-Jul-26 | 10:37 | Moon | Sextile",
+   "Gemini (Own) | 07-Jul-26 | 10:37 | 05-Aug-26 | 19:42 | Mercury | Own",
+   "Cancer | 05-Aug-26 | 19:42 | 22-Aug-26 | 19:33 | Moon | Square",
+   "Virgo (Own, Trine, Exalted) | 07-Sep-26 | 13:35 | 26-Sep-26 | 12:41 | Mercury | Own",
+   "Libra | 26-Sep-26 | 12:41 | 02-Dec-26 | 17:27 | Venus | Conjunction"
+  ]
+ },
+ "8": {
+  "matched": 6,
+  "printed": 7,
+  "unmatched": [
+   "Retrograde | Gemini (Own) | 07-Jul-26 | 10:37 | 24-Jul-26 | 4:29 | Mercury"
+  ]
+ },
+ "9": {
+  "matched": 6,
+  "printed": 7,
+  "unmatched": [
+   "14-Dec-26 | East | 28-Jan-27 | West | 46 | Prakrita | 01-Jan-27 | 16:30"
+  ]
+ },
+ "11": {
+  "matched": 5,
+  "printed": 6,
+  "unmatched": [
+   "15-Jun-26 | Ahead"
+  ]
+ },
+ "12": {
+  "matched": 3,
+  "printed": 3,
+  "unmatched": []
+ },
+ "13": {
+  "matched": 10,
+  "printed": 12,
+  "unmatched": [
+   "Virgo (Debilitated) | 06-Nov-26 | 1:17 | 22-Nov-26 | 17:02 | Mercury | Semi-sextile",
+   "Libra (Own, Trine) | 22-Nov-26 | 17:02 | Till year end |  | Venus | Own"
+  ]
+ },
+ "14": {
+  "matched": 2,
+  "printed": 3,
+  "unmatched": [
+   "Retrograde | Virgo (Debilitated) | 06-Nov-26 | 1:17 | 14-Nov-26 | 5:59 | Mercury"
+  ]
+ },
+ "15": {
+  "matched": 2,
+  "printed": 2,
+  "unmatched": []
+ },
+ "17": {
+  "matched": 3,
+  "printed": 3,
+  "unmatched": []
+ },
+ "20": {
+  "matched": 3,
+  "printed": 3,
+  "unmatched": []
+ },
+ "21": {
+  "matched": 4,
+  "printed": 4,
+  "unmatched": []
+ },
+ "22": {
+  "matched": 1,
+  "printed": 1,
+  "unmatched": []
+ },
+ "23": {
+  "matched": 4,
+  "printed": 4,
+  "unmatched": []
+ },
+ "24": {
+  "matched": 16,
+  "printed": 16,
+  "unmatched": []
+ },
+ "25": {
+  "matched": 0,
+  "printed": 0,
+  "unmatched": []
+ },
+ "26": {
+  "matched": 2,
+  "printed": 2,
+  "unmatched": []
+ },
+ "27": {
+  "matched": 1,
+  "printed": 1,
+  "unmatched": []
+ },
+ "28": {
+  "matched": 5,
+  "printed": 5,
+  "unmatched": []
+ },
+ "29": {
+  "matched": 10,
+  "printed": 10,
+  "unmatched": []
+ },
+ "30": {
+  "matched": 2,
+  "printed": 2,
+  "unmatched": []
+ },
+ "31": {
+  "matched": 1,
+  "printed": 1,
+  "unmatched": []
+ },
+ "32": {
+  "matched": 2,
+  "printed": 2,
+  "unmatched": []
+ },
+ "33": {
+  "matched": 5,
+  "printed": 6,
+  "unmatched": [
+   "Virgo | 05-Dec-26 | 21:52 | Till year end |  | Saturn"
+  ]
+ },
+ "34": {
+  "matched": 1,
+  "printed": 1,
+  "unmatched": []
+ },
+ "35": {
+  "matched": 2,
+  "printed": 2,
+  "unmatched": []
+ },
+ "36": {
+  "matched": 6,
+  "printed": 6,
+  "unmatched": []
+ },
+ "37": {
+  "matched": 0,
+  "printed": 0,
+  "unmatched": []
+ },
+ "38": {
+  "matched": 2,
+  "printed": 2,
+  "unmatched": []
+ },
+ "39": {
+  "matched": 4,
+  "printed": 4,
+  "unmatched": []
+ },
+ "40": {
+  "matched": 7,
+  "printed": 7,
+  "unmatched": []
+ },
+ "41": {
+  "matched": 4,
+  "printed": 4,
+  "unmatched": []
+ },
+ "42": {
+  "matched": 2,
+  "printed": 2,
+  "unmatched": []
+ },
+ "43": {
+  "matched": 0,
+  "printed": 0,
+  "unmatched": []
+ },
+ "44": {
+  "matched": 2,
+  "printed": 2,
+  "unmatched": []
+ },
+ "45": {
+  "matched": 0,
+  "printed": 0,
+  "unmatched": []
+ },
+ "46": {
+  "matched": 5,
+  "printed": 5,
+  "unmatched": []
+ },
+ "47": {
+  "matched": 4,
+  "printed": 5,
+  "unmatched": [
+   "Saturn | 20-Feb-26 | 9:40 | "
+  ]
+ },
+ "48": {
+  "matched": 3,
+  "printed": 3,
+  "unmatched": []
+ },
+ "50": {
+  "matched": 2,
+  "printed": 2,
+  "unmatched": []
+ },
+ "51": {
+  "matched": 5,
+  "printed": 5,
+  "unmatched": []
+ },
+ "52": {
+  "matched": 4,
+  "printed": 5,
+  "unmatched": [
+   "Aries | 16-Feb-26 | 7:03 | 06-May-26 | 21:06 | Mars"
+  ]
+ },
+ "53": {
+  "matched": 4,
+  "printed": 4,
+  "unmatched": []
+ },
+ "54": {
+  "matched": 5,
+  "printed": 5,
+  "unmatched": []
+ },
+ "57": {
+  "matched": 13,
+  "printed": 13,
+  "unmatched": []
+ },
+ "58": {
+  "matched": 12,
+  "printed": 14,
+  "unmatched": [
+   "30-Jan-26 | 2:15 | 356871",
+   "19-Apr-26 | 22:24 | 361633"
+  ]
+ },
+ "59": {
+  "matched": 2,
+  "printed": 2,
+  "unmatched": []
+ }
+}

@@ -485,6 +485,7 @@ def positional(when: dt.datetime, body: str, *,
                navamsa_from: str | None = None,
                navamsa_to: str | None = None,
                navamsa_override: str | None = None,
+               pada_override: int | None = None,
                extra_flags: list[str] | None = None):
     """Full positional astronomy for one body at one instant.
 
@@ -513,6 +514,14 @@ def positional(when: dt.datetime, body: str, *,
     otherwise `vargottama` -- the equality of the two -- is decided by which side
     of a milliarcsecond the sample fell on.
 
+    `pada_override` is the same contract for the 27-star frame, and it is owed
+    for the same reason: every sign cusp and every navamsa cusp is also a pada
+    cusp (a pada IS a navamsa arc, 3deg20'), and at the gandanta cusps -- Pisces/
+    Aries, Cancer/Leo, Scorpio/Sagittarius -- a nakshatra cusp too. Sampled at
+    the instant, "Saturn enters Aries" was printing Revati and "Sun enters
+    Sagittarius" Jyeshtha. It takes the ABSOLUTE pada index (0-107) of the
+    entered side, which sets `nakshatra` and `pada` together.
+
     `navamsa_dignity` is emitted only where `navamsa_to` says the record is a
     record of a D9 crossing. Overriding the navamsa sign on a rashi ingress fixes
     the frame; it does not make that record a D9 record.
@@ -525,8 +534,10 @@ def positional(when: dt.datetime, body: str, *,
     astro: dict[str, Any] = {
         "sign": sign,
         "lon_sid": round(p.lon, 6),
-        "nakshatra": p.nakshatra,
-        "pada": p.pada,
+        "nakshatra": (ephem.NAKSHATRAS[pada_override // 4]
+                      if pada_override is not None else p.nakshatra),
+        "pada": (pada_override % 4 + 1
+                 if pada_override is not None else p.pada),
         "navamsa": navamsa,
         # Not a dignity, and deliberately not inside the dignity list: the
         # source prints "Cancer (Exalted, Vargottam)" -- both states at once.

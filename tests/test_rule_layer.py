@@ -2873,7 +2873,8 @@ def test_a_row_without_an_instant_carries_no_clock_time():
 
     # The population this was built for, pinned by MEASUREMENT rather than by a
     # rule about the printed string. 858 verdict rows have no instant; one row --
-    # b102 on 03-Oct-2027, a nakshatra ingress at 00:00:21 IST -- prints
+    # b102 on 03-Oct-2027, a nakshatra ingress at 00:00:22 IST (00:00:21 on
+    # the Moshier fallback; 22 on the Swiss Ephemeris files) -- prints
     # `00:00 IST` and IS an instant, and no rule phrased over the display string
     # could have separated them.
     midnight = [r for r in timed if r["time_ist"] == "00:00 IST"]
@@ -2883,7 +2884,7 @@ def test_a_row_without_an_instant_carries_no_clock_time():
     record("Exactly one row still prints 00:00 IST, and it is a real instant",
            len(midnight) == 1
            and (midnight[0]["t_utc"] or midnight[0]["t_start_utc"])
-           == "2027-10-03T18:30:21Z",
+           == "2027-10-03T18:30:22Z",
            f"{len(midnight)} rows: "
            f"{[(r['event'], r['t_utc'] or r['t_start_utc']) for r in midnight]}")
 
@@ -3931,13 +3932,21 @@ def test_the_subtable_ports_reproduce_their_own_printed_tables() -> None:
                    key=lambda w: abs((w[0] - start).total_seconds()))
         off = max(abs((near[0] - start).total_seconds()),
                   abs((near[1] - end).total_seconds()))
-        if off > 30:
+        # 35 s = the printed minute's own half-minute rounding (30 s) plus the
+        # measured Moshier-vs-Swiss-Ephemeris-files lunar difference (<5 s).
+        # The source rounds to the NEAREST minute -- signed offsets over all
+        # 198 boundaries average -0.1 s -- and was evidently computed on
+        # Moshier: there every boundary sits within 29.7 s. On the DE-based
+        # files three sit 0.6-1.8 s past the half-minute (17-Mar-26 09:23,
+        # 28-Jul-26 18:20 among them), which is ephemeris noise across a
+        # rounding edge, not a different window.
+        if off > 35:
             missed.append(f"{start:%d-%b-%y %H:%M} off by {off:.0f}s")
         else:
             matched.add(near)
             worst = max(worst, off)
     record("Bhadra: all 99 of the section's printed windows reproduce on "
-           "BOTH boundaries within 30 s, through the registered rule",
+           "BOTH boundaries within 35 s, through the registered rule",
            not missed and len(printed_windows) == 99,
            f"{len(printed_windows)} printed, {len(matched)} matched, worst "
            f"{worst:.0f}s; missed {missed}")

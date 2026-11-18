@@ -13,8 +13,17 @@ node: mean                 # validated: Rahu->Capricorn 05-Dec-26 21:52 source
 nakshatra_scheme: 27       # 27 for transits; 28 (with Abhijit) only for Vedha tables
 abhijit_span_deg: [276.6667, 280.8889]   # 276d40' - 280d53'20"
 ephemeris:
-  preferred: swisseph_files      # uses sepl_*.se1 / semo_*.se1 if SE_EPHE_PATH set
+  preferred: swisseph_files      # sepl_18/semo_18 from SE_EPHE_PATH, else ./ephe (tools/fetch_ephe.py)
   fallback: moshier              # sub-arcsecond 1900-2100; adequate but diff before publishing
+  # PUBLISHED ON swisseph_files since 18-Nov-2026. The diff against the Moshier
+  # run, all 6,720 records of 2027: every record matched, no date moved; 111
+  # displayed IST minutes moved, by 1 min except slow-planet D9/nakshatra
+  # ingresses and speed crossings (Neptune D9 8 min, Pluto 6, Venus fast-start
+  # 12). Sun/Moon/lunation/tithi/karana within 4 s, sign ingresses 15 s.
+  # Two latent bugs surfaced only on the files and are fixed: the ephemeris flag
+  # was OR'd into rise_trans's rsmi (FLG_SWIEPH == CALC_SET, so every sunrise
+  # became a sunset), and the backend probe reported swisseph_files for any
+  # existing directory because Swiss Ephemeris falls back without raising.
   se_ephe_path_env: SE_EPHE_PATH
 
 # ---------------------------------------------------------------- locations
@@ -383,8 +392,14 @@ labels:
   #: single-point fit "an undocumented source rule" would send a reader hunting
   #: for a page that does not exist.
   #:
-  #: A station is frame-free -- it is where the longitude is stationary, and no
-  #: parameter stands between the sky and the instant. A crossing of 0.6583
+  #: A station has no fitted parameter -- it is where the longitude is
+  #: stationary, and no level stands between the sky and the instant. It is
+  #: NOT frame-free, which this comment claimed until 18-Nov-2026: the sidereal
+  #: speed is the tropical speed minus the ayanamsha and nutation rates (~6e-5
+  #: deg/day), and that moves a slow planet's zero by hours. Stations are
+  #: computed on the speed of date (ephem.Position.speed_of_date): all 18
+  #: printed 2026 station times reproduce within 1.7 min that way, against
+  #: misses of up to 3h20m (Pluto) on the sidereal speed. A crossing of 0.6583
   #: deg/day is only as meaningful as 0.6583 is.
   data_certainty_grounds:
     undocumented_source_rule: "the rule itself is not recoverable from the source"
@@ -469,7 +484,9 @@ open_questions:
   # threshold. The missing input is therefore named as the slow-planet doctrine.
   #
   # Retrograde/Direct is unaffected and remains the sign of the emitted speed,
-  # reproducing the source's stations to the day (Jupiter 11-Mar-26, Saturn
+  # reproducing the source's stations to the MINUTE on the speed of date --
+  # all 18 printed station times within 1.7 min; see data_certainty_grounds --
+  # and to the day before 18-Nov-2026 (Jupiter 11-Mar-26, Saturn
   # 27-Jul-26, Neptune 07-Jul-26, Pluto 06-May-26, Herschel 11-Sep vs 10-Sep),
   # with Mercury the documented 2-7 day lag that mercury_shar_lag records.
   - speed_class_thresholds        # RESOLVED for Mercury (1.745), Venus (1.224),
@@ -1195,7 +1212,7 @@ source_defects:
       - "25-Jan-26 23:10 -> 26-Jan-26 10:17  (karana 15, Day)   section only; ABSENT from the monthly table"
       - "29-Jan-26 03:17 -> 29-Jan-26 13:55  (karana 22, Night) section and monthly both agree"
     agreement_measured:
-      bhadra_section: "all 16 January boundaries within 25 seconds of the computed value -- the section's 'verified against Swiss Ephemeris' claim holds"
+      bhadra_section: "all 16 January boundaries within 30 seconds of the computed value (25 on Moshier, 26 worst on the Swiss Ephemeris files) -- the section's 'verified against Swiss Ephemeris' claim holds"
       monthly_calendar: "7 of its 8 boundaries within 79 seconds; the eighth is the 13-Jan start, off by 7134 seconds"
     scope: >
       A single bad row, not a systematic offset. The monthly calendar also omits
@@ -3330,7 +3347,7 @@ row_kinds:
         renderer that did not.
       why_the_display_string_was_not_the_test: >
         THE PRINCIPLE, which does not depend on the count: b102_anuradha_on_sunday
-        on 03-Oct-2027 is a nakshatra ingress at 00:00:21 IST -- a genuine
+        on 03-Oct-2027 is a nakshatra ingress at 00:00:22 IST -- a genuine
         instant that renders as 00:00 -- so no rule phrased over the printed
         time could keep it while dropping the rows that have no instant at all.
         The artifact's surface is not the thing to test; the property behind it
@@ -3409,7 +3426,7 @@ row_kinds:
             venues, so counting by venue turns b101's 105 into 150.
           filter: >
             no_instant_reason is not null. Not a display-string test -- b102
-            renders 00:00 IST from a real instant at 00:00:21 and is outside
+            renders 00:00 IST from a real instant at 00:00:22 and is outside
             this population, which is how the withdrawn 662 was built.
           generator: tools/cause_census.py
           asserted_by: >
