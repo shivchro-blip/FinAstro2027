@@ -738,8 +738,23 @@ def rule_table(r, caption=None):
     return T(hdr, rows, caption)
 
 
+#: The configuration registry names its missing inputs by short key.
+MISSING_PLAIN = {
+    "valence": "which planets count as benefic or malefic",
+    "darshan": "the first-crescent (Moon sighting) rule",
+    "aspect_orb": "the aspect orb",
+    "month_system": "the lunar month system (amanta or purnimanta)",
+    "vedha_wheel": "the Vedh wheel for this table",
+    "no_dated_window": "a dated window; the 2026 page prints none",
+    "sign_lordship": "the sign-lordship rule for the outer planets",
+    "scope": "the scope of the rule",
+    "speed_threshold": "a speed level for the planet",
+}
+
+
 def blocked_note(r) -> tuple:
-    why = "; ".join(r.missing_inputs) or r.ambiguity or "no executable reading"
+    why = "; ".join(MISSING_PLAIN.get(m, m) for m in r.missing_inputs) \
+        or r.ambiguity or "no executable reading"
     kind = "Not computed &mdash; ambiguous source wording" if r.status == "ambiguous" \
         else "Not computed &mdash; blocked on an input the 2026 edition never supplies"
     return N(f"<b>{kind}.</b> {esc(why)}", "note")
@@ -757,8 +772,6 @@ def b_rules(n):
         if r.status in FIRING_STATUSES:
             cap = esc(r.condition_text[:160]) if multi else None
             out.append(rule_table(r, cap))
-            if r.status == "resolved_ambiguity" and r.resolution:
-                out.append(N("Reading applied: " + esc(r.resolution[0][:400]), "flag"))
         else:
             out.append(blocked_note(r))
     return out or [N("No rule registered for this section.")]
@@ -1068,6 +1081,54 @@ def render_blocks(blocks) -> str:
     return "\n".join(out)
 
 
+_SRC_HTML = SOURCE.read_text(encoding="utf-8")
+
+#: Registry id -> the 2026 document's own section id for that sub-table.
+SUB_IDS = {"sub_bhadra": "sec-142", "sub_kshin_malefic_moon": "kshin-moon",
+           "sub_total_days_in_year": "total-days",
+           "sub_rahu_or_ketu_nakshatra_on_a_thursday": "rahu-ketu-thu",
+           "sub_moon_mercury_in_the_same_navamsh": "moon-mercury-d9",
+           "sub_rainfall_calculation": "rainfall",
+           "sub_mars_with_or_aspecting_mercury": "mars-mercury",
+           "sub_eclipse": "eclipse",
+           "sub_planet_vargottam_in_their_own_nakshatra": "vargottam",
+           "sub_moon_rashi_parivartan_yog": "rashi-parivartan"}
+
+
+def _year(text: str) -> str:
+    return text.replace("2026", str(YEAR))
+
+
+def source_front() -> str:
+    """Book title, quote, chapter heading and the full Table of Contents,
+    exactly as the 2026 document prints them (titles re-yeared)."""
+    a = _SRC_HTML.find('<h1 class="booktitle">')
+    toc = _SRC_HTML.find('<h3 class="section" id="toc-top">')
+    end = _SRC_HTML.find("<hr>", toc)
+    front = _year(_SRC_HTML[a:end])
+    # The 2026 TOC's last row has no link target; this edition has the section.
+    return front.replace(
+        "<tr><td>208</td><td>Yearly Calendar Events</td>",
+        '<tr class="toc-row" tabindex="0" role="button" data-target="yearly-events">'
+        "<td>208</td><td>Yearly Calendar Events</td>")
+
+
+def source_script() -> str:
+    m = re.search(r"<script>.*?</script>", _SRC_HTML, re.S)
+    return m.group(0) if m else ""
+
+
+def source_section_head(sid: str):
+    """(page-tag text, h2 inner html) of a 2026 <section id=...>."""
+    m = re.search(r'<section id="%s">(.*?)</h2>' % re.escape(sid), _SRC_HTML, re.S)
+    if not m:
+        return "", ""
+    seg = m.group(1)
+    tag = re.search(r'<span class="page-tag">(.*?)</span>', seg, re.S)
+    h2 = seg.split("<h2>", 1)[1] if "<h2>" in seg else ""
+    return (tag.group(1).strip() if tag else ""), _year(h2.strip())
+
+
 def source_css() -> str:
     s = SOURCE.read_text(encoding="utf-8")
     m = re.search(r"<style>(.*?)</style>", s, re.S)
@@ -1075,8 +1136,7 @@ def source_css() -> str:
 
 
 EXTRA_CSS = """
-  .prov { font-size: 0.78em; color: #6b6b6b; margin: -10px 0 14px; }
-  .flag { text-align: left; margin: -8px 0 14px; }
+  .validation td:nth-child(2), .validation td:nth-child(4) { text-align: left; }
   .validation td:nth-child(n+3) { text-align: center; }
   .ok { color: var(--pos); font-weight: 600; }
   .warn { color: var(--neg); font-weight: 600; }
@@ -1123,11 +1183,11 @@ def main() -> int:
         body = render_blocks(sections[n])
         rem = doctrine_remarks(sec.remarks + sec.notes)
         rem_html = "".join(f'<div class="remark">{esc(r)}</div>' for r in rem)
+        marker = f' <span class="page-marker">{esc(sec.page)}</span>' if sec.page else ""
         parts.append(
-            f'<h3 class="section" id="sec-{n}">{esc(section_title(sec))} '
-            f'<span class="page-marker">2026: {esc(sec.page) or "&mdash;"}</span></h3>\n'
+            f'<h3 class="section" id="sec-{n}">{esc(section_title(sec))}{marker}</h3>\n'
             f'<a class="back-to-toc" href="#toc-top">&uarr; Back to Table of Contents</a>\n'
-            f'{body}\n{rem_html}\n<div class="prov">{how}.</div>')
+            f'{body}\n{rem_html}')
 
     # ----------------------------------------------------- chapter 2: tables
     ch2 = []
@@ -1143,7 +1203,13 @@ def main() -> int:
             blk = [rule_table(r)]
         else:
             blk = [blocked_note(r)]
-        ch2.append(f'<section id="{sid}"><h2>{esc(title.replace("2026", str(YEAR)))}</h2>'
+        src_id = SUB_IDS.get(r.id, sid)
+        tag, h2 = source_section_head(src_id)
+        anchor = '<span id="bhadra"></span>' if src_id == "sec-142" else ""
+        ch2.append(f'<section id="{src_id}">{anchor}'
+                   + (f'<span class="page-tag">{tag}</span>' if tag else "")
+                   + f'<h2>{h2 or esc(_year(title))}</h2>'
+                   f'<a class="back-to-toc" href="#toc-top">&uarr; Back to Table of Contents</a>'
                    f'{render_blocks(blk)}</section>')
 
     # ------------------------------------------- chapter 3: configurations
@@ -1159,7 +1225,12 @@ def main() -> int:
             inner.append(f"<h3>{esc(r.section.title)}</h3>")
             inner.append(render_blocks([rule_table(r)] if r.status in FIRING_STATUSES
                                        else [blocked_note(r)]))
-        ch3.append(f'<section id="{bid}"><h2>{esc(blk.h2)}</h2>{"".join(inner)}</section>')
+        tag, h2 = source_section_head(bid)
+        ch3.append(f'<section id="{bid}">'
+                   + (f'<span class="page-tag">{tag}</span>' if tag else "")
+                   + f'<h2>{h2 or esc(blk.h2)}</h2>'
+                   f'<a class="back-to-toc" href="#toc-top">&uarr; Back to Table of Contents</a>'
+                   f'{"".join(inner)}</section>')
 
     # ------------------------------------------------ chapter 4: yearly list
     ye = render_blocks(yearly_events())
@@ -1204,54 +1275,39 @@ def main() -> int:
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FinAstro {YEAR} Reference</title>
+<title>Parth Prophecies {YEAR} — Complete Reference</title>
 <style>{css}</style>
 </head>
 <body>
-<h1 class="booktitle">FINASTRO {YEAR}</h1>
-<p class="subtitle">Complete Reference &mdash; computed edition, structured section-for-section
-after <i>Parth Prophecies 2026</i>. Every table is computed from the ephemeris; nothing is transcribed.</p>
-<div class="note"><b>Conventions.</b> Sidereal zodiac, Lahiri ayanamsha; mean lunar node; 27-nakshatra
-scheme; Swiss Ephemeris (<code>{backend}</code>). Times are IST (Mumbai), 24-hour, seconds dropped.
-Windows open before 1-Jan or still running on 31-Dec are printed whole. Section numbers and ids match
-the 2026 edition (<code>sec-1</code> &hellip; <code>sec-141</code>); the page tag names the 2026 page.
-Remarks in amber are the 2026 edition's own rule text, carried over only where they state doctrine
-rather than a dated observation about 2026. Generated {gen} by <code>tools/build_reference.py</code>.
-Financial astrology is a speculative framework; nothing here is investment advice.</div>
-<h2 class="chapter">Chapter 1<br>Astro Positioning for the Year</h2>
-<h3 class="section" id="toc-top">Table of Contents</h3>
-<div class="toc-wrap toc"><div class="table-scroll"><table>
-<caption>Chapter 1 &mdash; Astro Positioning for the Year</caption>
-<tr><th scope="col">Sr.No</th><th scope="col">Subject</th><th scope="col">Rows</th></tr>
-{"".join(toc_rows)}
-</table></div>
-<div class="table-scroll"><table>
-<caption>Chapters 2&ndash;4 &mdash; Sub-tables, Configurations, Yearly Calendar</caption>
-<tr><th scope="col"></th><th scope="col">Subject</th><th scope="col">Rows</th></tr>
-{"".join(toc2)}
-<tr><td>&bull;</td><td><a href="#yearly-events">Yearly Calendar Events</a></td><td>12 months</td></tr>
-{'<tr><td>&bull;</td><td><a href="#validation">Validation against the 2026 edition</a></td><td></td></tr>' if score else ''}
-</table></div></div>
+
+{source_front()}
 <hr>
+
 {chr(10).join(parts)}
-<h2 class="chapter">Chapter 2<br>Sub-tables</h2>
+
 {"".join(ch2)}
-<h2 class="chapter">Chapter 3<br>Instrument Configurations</h2>
-<div class="note">Each group is the 2026 edition's own condition for the instrument, fired by the
-registered rule. Groups whose condition needs a doctrine the edition never states (benefic/malefic
-valence, the lunar month system, first-crescent sighting) print the missing input instead of a table.</div>
+
 {"".join(ch3)}
-<h2 class="chapter" id="yearly-events">Chapter 4<br>Yearly Calendar Events</h2>
-<div class="note">Slow-body events of {YEAR}: sign ingresses (Moon excluded), stations, combustion and
-rising, conjunctions and oppositions, eclipses, perihelion/aphelion. Combust/rise are civil-day dates.</div>
+
+<section id="yearly-events">
+<h2>Yearly Calendar Events</h2>
+<a class="back-to-toc" href="#toc-top">&uarr; Back to Table of Contents</a>
 {ye}
+</section>
+
 {val_html}
-<div class="note"><b>Not reproduced from the 2026 edition</b>, because they are prose rather than
-computation: Past Events (pp.178&ndash;199), the New Year natal-chart commentary, Horoscope Analysis,
-Yearly Cabinet, the numerology chapter, the per-event commentaries (pp.211&ndash;268) and the Rainfall
-formula. The <code>build/calendar_{YEAR}.html</code> calendar carries every dated row in this document
-per instrument and venue.</div>
-<div class="disclaimer">FinAstro {YEAR} &middot; computed reference &middot; not investment advice</div>
+
+<div class="note"><b>About this edition.</b> Every table is computed, not transcribed: sidereal
+zodiac, Lahiri ayanamsha, mean lunar node, 27 nakshatras, Swiss Ephemeris ({backend}). Times are IST
+(Mumbai), 24-hour, seconds dropped; windows open before 1-Jan or still running on 31-Dec are printed whole.
+Section numbers, ids and page references follow the 2026 edition. Remarks are the 2026 edition's own rule
+text, kept only where they state a rule rather than describe 2026. A section whose rule needs a doctrine
+the 2026 edition never states prints that missing input instead of a table. Not reproduced (prose, not
+computation): Past Events, the natal-chart commentary, Horoscope Analysis, Yearly Cabinet, the numerology
+chapter, the per-event commentaries and the Rainfall formula. Generated {gen} by
+<code>tools/build_reference.py</code>. Not investment advice.</div>
+<div class="disclaimer">Parth Prophecies {YEAR} &middot; computed reference &middot; not investment advice</div>
+{source_script()}
 </body>
 </html>
 """
