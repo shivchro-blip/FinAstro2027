@@ -88,9 +88,12 @@ instrument configuration sections   38 /  58 named groups   (ported AND wired)
 
 **That line is the coverage claim, and all three numbers travel together.** Each
 counts a different shape of markup, none is inside either of the others, and
-`verdicts.py` fires all three registries. **57 rules are blocked**, each on an
-input the document withholds and each named on the rule — 32 in catalogue B, 20
-configuration groups, 5 sub-tables.
+`verdicts.py` fires all three registries. **56 rules are blocked**, each on an
+input the document withholds and each named on the rule — 31 in catalogue B, 20
+configuration groups, 5 sub-tables. (57 / 32 until 18-Nov-2026, when B10 Mercury
+Manifestation was ported on a new Mercury-vs-Venus `speed_overtake` series: it
+reproduces all three printed 2026 dates, and its 2027 dates are 22-Mar, 20-Jul
+and 07-Nov.)
 
 **38 of the 58 are ported and 20 are blocked, each on a named input**
 (`build/CONFIG_PORT_REPORT.md`). **Ported is now wired**, since the 14-Sep-2026

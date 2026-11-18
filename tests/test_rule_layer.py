@@ -198,6 +198,9 @@ EXPECTED_TIED_DAYS = {
 #: astronomy suite pins its populated counts: a family that quietly doubled or
 #: halved would look plausible in a spot check.
 EXPECTED_FIRINGS_MUMBAI = {
+    # Ported 18-Nov-2026: Mercury overtakes Venus as a morning star three
+    # times in 2027 -- 22-Mar, 20-Jul, 07-Nov on the noon-GMT reading.
+    "b010_mercury_manifestation": 3,
     "b009_mercury_combust_cycle": 144,
     "b015_venus_combust_cycle": 49,
     "b015a_venus_combust_east": 49,
@@ -3385,8 +3388,10 @@ def test_the_cause_census_figures_carry_the_population_that_produced_them():
              for n, rs in prows.items()}
     record("The census's P1 is the 5,539-daily-row catalogue-B population the "
            "figures name, rendered as 4,744 rows",
-           daily["P1"] == 5539 and size["P1"] == 4744
-           and size["P3"] == len(rows) and daily["P3"] == 8916,
+           # 5,539 / 4,744 / 8,916 until 18-Nov-2026: B10 Mercury
+           # Manifestation's 6 daily rows, one day each, so +6 on both units.
+           daily["P1"] == 5545 and size["P1"] == 4750
+           and size["P3"] == len(rows) and daily["P3"] == 8922,
            f"P1 {size['P1']} rendered / {daily['P1']} daily  "
            f"P2 {size['P2']} / {daily['P2']}  "
            f"P3 {size['P3']} / {daily['P3']}")
@@ -3510,7 +3515,8 @@ def test_the_cause_census_figures_carry_the_population_that_produced_them():
     filtered = cell[("P1", "TOTAL no-instant", "firings")]
     record("Dropping the no-instant filter changes the answer by a factor, "
            "not a rounding",
-           unfiltered == 2802 and filtered == 589,
+           # 2,802 / 589 until B10's 3 date-only firings, 18-Nov-2026.
+           unfiltered == 2805 and filtered == 592,
            f"{filtered} of {unfiltered} P1 firings carry a no-instant reason")
 
     off = [r for r in rows
@@ -3531,7 +3537,12 @@ def test_the_cause_census_figures_carry_the_population_that_produced_them():
            f"{len(b101_all)} b101 rows over 1 rule, standing for 255 days")
 
     # ---- THE NEAR MISSES, PINNED AS ABSENCES rather than denied in prose.
-    values = set(cell.values())
+    # Searched over the FIRINGS cells: every withdrawn figure was recorded as
+    # a firings count. Since B10 was ported (18-Nov-2026) the grid reads 249
+    # in P1's ephemeris (venue, date) cell -- a different unit, reached by
+    # 243 + B10's 6 rows -- which is a coincidence of value and not the
+    # withdrawn figure coming back.
+    values = {v for (pop, c, u), v in cell.items() if u == "firings"}
     present = [n for n in (249, 147, 662, 45) if n in values]
     record("The withdrawn 249, 147, 662 and 45 reproduce against no cell of "
            "the grid",
@@ -4096,6 +4107,37 @@ def test_every_ported_subtable_rule_is_pinned_against_its_printed_table() -> Non
            f"{sorted(ported - _PINNED_SUBTABLE_PORTS)}")
 
 
+def test_b010_reproduces_its_own_printed_dates_through_the_rule() -> None:
+    """B10 Mercury Manifestation, fired on the 2026 sky through the REGISTERED
+    rule, against the three dates the section prints.
+
+    The expected dates are read out of the section's own table (catalogue B),
+    never out of the speed_overtake series under test. The second check pins
+    the dating convention: on the overtaking instant's own Mumbai civil day,
+    03-Aug would hold and 10-Apr / 14-Nov would land a day early, so a
+    regression to instant dating fails here.
+    """
+    import datetime as _dt
+    from finastro.sky import Sky as _Sky
+    sky26 = _Sky.load(ROOT / "build" / "astronomy_2026.json")
+    rule = [r for r in R.REGISTRY if r.id == "b010_mercury_manifestation"]
+    fired = R.base.fire(rule, sky26, year=2026)
+    got = {f.civil_date for f in fired if f.location == "mumbai"}
+    printed = {_dt.datetime.strptime(row[0], "%d-%b-%y").date()
+               for row in catalogue.B(10).tables[0].rows}
+    record("B10 reproduces the section's three printed 2026 dates exactly",
+           got == printed and len(printed) == 3,
+           f"printed {sorted(map(str, printed))}, fired {sorted(map(str, got))}")
+    inst = {f.detail["overtake_utc"] for f in fired}
+    ist = _dt.timezone(_dt.timedelta(hours=5, minutes=30))
+    own_day = {_dt.datetime.fromisoformat(t.replace("Z", "+00:00"))
+               .astimezone(ist).date() for t in inst}
+    record("...and the instants' own civil days would NOT (the noon-GMT "
+           "reading is load-bearing)",
+           own_day != printed and len(own_day & printed) == 1,
+           f"instant days {sorted(map(str, own_day))}")
+
+
 def main() -> int:
     sky = Sky.load()
     firings = R.fire(R.REGISTRY, sky)
@@ -4176,6 +4218,7 @@ def main() -> int:
         test_the_civil_year_clip_is_a_field_and_not_the_period_cut()
         test_every_meta_count_is_split_by_row_kind()
         test_the_cause_census_figures_carry_the_population_that_produced_them()
+        test_b010_reproduces_its_own_printed_dates_through_the_rule()
     else:
         record("The rendered calendar is on disk to be checked", False,
                f"{CALENDAR_JSON} missing; run python build_2027.py")

@@ -751,6 +751,41 @@ def speed_class_crossings():
     return out
 
 
+def speed_overtakes():
+    """Where Mercury's speed overtakes Venus's, and where Venus's retakes it.
+
+    B10 "Mercury Manifestation" p.11 defines its dates by one sentence: "When
+    Mercury rises in the East, its speed is stationery, real strength comes
+    after it attains higher speed than Venus." Its three 2026 dates (10-Apr,
+    03-Aug, 14-Nov) are the three instants Mercury's speed overtakes Venus's
+    as a morning star (09-Apr 21:43, 03-Aug 13:01, 13-Nov 19:02 IST), read
+    the way a noon-GMT daily ephemeris reads them -- see b010 in
+    rules/visibility.py. Both directions are emitted: the crossing is a fact
+    about the sky, and which one a rule selects is the rule's business.
+
+    Certainty A: a bisected zero of a speed difference, no fitted parameter.
+    """
+    out = []
+    for inst, merc_faster in ephem.relative_speed_crossings(
+            "Mercury", "Venus", SPAN_START, SPAN_END):
+        astro, pflags = ev.positional(inst, "Mercury")
+        venus = ephem.position(inst, "Venus").speed
+        family = ("motion/mercury_overtakes_venus" if merc_faster
+                  else "motion/venus_overtakes_mercury")
+        out.append(ev.build(
+            "speed_overtake", family, ["Mercury", "Venus"], "instant", inst,
+            astro,
+            ev.qa_for(inst, "A",
+                      source_2026_equivalent=("Mercury Manifestation p.11"
+                                              if merc_faster else None),
+                      flags=pflags + [f"venus_speed={venus:.6f}",
+                                      "east" if astro.elongation < 0
+                                      else "west"]),
+            precision="exact",
+            id_suffix=family.split("/")[-1]))
+    return out
+
+
 def eclipses():
     """All solar and lunar eclipses in the span.
 
@@ -915,6 +950,7 @@ GENERATORS = [
     ("sunrise / sunset", sunrises_and_sunsets),
     ("stations", stations),
     ("speed-class crossings", speed_class_crossings),
+    ("Mercury/Venus speed overtakes", speed_overtakes),
     ("combust / rise", combustions),
     ("eclipses", eclipses),
     ("lunations", lunations),

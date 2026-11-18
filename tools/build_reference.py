@@ -476,6 +476,25 @@ def b_combust(body, conj=False, sign_cols=True):
     return blocks
 
 
+def b_mercury_manifestation():
+    """B10, from the registered rule's own firings (so it is the calendar's
+    population), with the exact overtaking instant beside the printed date."""
+    rows = []
+    for f in sorted(FIRED.get("b010_mercury_manifestation", []),
+                    key=lambda f: f.civil_date):
+        t = dt.datetime.fromisoformat(f.detail["overtake_utc"].replace("Z", "+00:00"))
+        m = ephem.position(t, "Mercury")
+        rows.append([f.civil_date.strftime("%d-%b-%y"), f.civil_date.strftime("%A"),
+                     f"{fd(t)} {ft(t)}", f"{m.speed:.3f}&deg;/day",
+                     f"{abs(ephem.separation(t, 'Mercury', 'Sun')):.1f}&deg; East"])
+    return [T(["Date", "Day", "Mercury overtakes Venus (IST)", "Speed (both)",
+               "Mercury from Sun"], rows),
+            N("The date is the first day a 12:00 UT daily ephemeris shows Mercury "
+              "faster than Venus while rising in the East; the same reading "
+              "reproduces all three printed 2026 dates (10-Apr, 03-Aug, 14-Nov).",
+              "flag")]
+
+
 def _max_elongations(body="Mercury"):
     lo, hi = Y0 - D(days=10), Y1 + D(days=10)
     f = lambda t: abs(ephem.separation(t, body, "Sun"))
@@ -785,6 +804,7 @@ DIRECT = {
     5: b_mars_pisces_d9, 6: b_vargottam_mars,
     7: lambda: b_journey("Mercury"), 8: lambda: b_motion("Mercury"),
     9: lambda: b_combust("Mercury", conj=True, sign_cols=False),
+    10: b_mercury_manifestation,
     11: b_mercury_furthest, 12: lambda: b_pair_conj("Mars", "Mercury"),
     13: lambda: b_journey("Venus"), 14: lambda: b_motion("Venus"),
     15: lambda: b_combust("Venus"), 17: b_venus_mercury_conj,

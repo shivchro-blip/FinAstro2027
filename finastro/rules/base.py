@@ -104,6 +104,8 @@ INPUT_CERTAINTY = {
     # -- Mercury's is 0.0023 wide, Venus's and Mars's about the same. A rule
     # conditioned on the class is no more certain than the calibration behind it.
     "motion/speed_crossing": "B",
+    # A — a bisected zero of a speed DIFFERENCE, no fitted level.
+    "motion/speed_overtake": "A",
     "visibility/combust": "B",
     "apsis": "B",
     # Shar -- B118 and B119. The quantity is exact; the INSTANT is not. The

@@ -346,6 +346,27 @@ def _level_crossings(body: str, start: dt.datetime, end: dt.datetime,
 
 
 
+def relative_speed_crossings(a: str, b: str, start: dt.datetime,
+                             end: dt.datetime):
+    """[(instant, a_now_faster)] where body `a`'s longitudinal speed crosses
+    body `b`'s. Frame-free: a sidereal and a tropical speed differ by the same
+    rate for every body, so the difference -- and its zeros -- are identical in
+    both frames. Mercury against Venus is B10's "attains higher speed than
+    Venus"."""
+    step = dt.timedelta(hours=6)
+    fn = lambda x: position(x, a).speed - position(x, b).speed
+    out = []
+    t = start
+    prev = fn(t)
+    while t < end:
+        nxt = min(t + step, end)
+        cur = fn(nxt)
+        if (prev < 0) != (cur < 0):
+            out.append((_bisect(fn, t, nxt), cur > prev))
+        t, prev = nxt, cur
+    return out
+
+
 def scan_step(body: str, arc: float) -> dt.timedelta:
     """Step small enough that no arc can be skipped between samples."""
     if body in _SCAN_STEP:

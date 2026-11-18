@@ -166,7 +166,7 @@ The survey classed 41 groups READY. Three of them are blocked here on evidence f
 
 Neither the 2026 fixture nor any other page reported this, so it is computed here. **The fixture's two-window diff is not this number**, and the last subsection exists so nobody later reads it as one.
 
-A rebuild emits **8,511 verdict rows**: **7,043 catalogue B** and **1,468 configuration**, all from the same `build_verdicts()` the calendar renders from.
+A rebuild emits **8,517 verdict rows**: **7,049 catalogue B** and **1,468 configuration**, all from the same `build_verdicts()` the calendar renders from.
 
 ### The configuration rows, by instrument
 
@@ -176,8 +176,8 @@ A rebuild emits **8,511 verdict rows**: **7,043 catalogue B** and **1,468 config
 | `GC` | 265 | 109 | **112** | **51%** |
 | `MCXSILVER` | 441 | 97 | **538** | **85%** |
 | `SI` | 444 | 101 | **549** | **84%** |
-| `SUGAR` | 396 | 134 | **153** | **53%** |
-| **all five** | **1,809** | **548** | **1,468** | **73%** |
+| `SUGAR` | 399 | 137 | **153** | **53%** |
+| **all five** | **1,812** | **551** | **1,468** | **73%** |
 
 No other instrument carries a configuration row: the eleven-instrument set also holds NIFTY, BANKNIFTY, SPX, NDX, CL and USDINR, and every one of them is at zero, because the source prints configuration blocks for these three commodities and no others.
 
@@ -195,16 +195,16 @@ Across gold, silver and sugar:
 | significance | rows | whose statement it is |
 | --- | ---: | --- |
 | `instrument_specific` | **1,468** | the source's, about this instrument |
-| `market_wide` | 548 | the source's, about the market — routed here by us |
+| `market_wide` | 551 | the source's, about the market — routed here by us |
 | `condition_only` | 1261 | nobody's: a condition with no printed direction |
 
-**Before the wiring that first row read 0.** Not low — zero, and still zero from catalogue B today, because `significance_of` reaches `instrument_specific` only on its `is_config_rule` branch. Every directional row gold, silver and sugar carried was one of the 548 `market_wide` rows: a verdict the source wrote about the market, delivered to a named contract by our rulership table.
+**Before the wiring that first row read 0.** Not low — zero, and still zero from catalogue B today, because `significance_of` reaches `instrument_specific` only on its `is_config_rule` branch. Every directional row gold, silver and sugar carried was one of the 551 `market_wide` rows: a verdict the source wrote about the market, delivered to a named contract by our rulership table.
 
-**1,468 of the 2,016 verdict-bearing rows on these three instruments — 73% — are now statements the document makes about the instrument itself.** That is the port's value, in the one unit that distinguishes the two cases.
+**1,468 of the 2,019 verdict-bearing rows on these three instruments — 73% — are now statements the document makes about the instrument itself.** That is the port's value, in the one unit that distinguishes the two cases.
 
 It is **not** a claim that those verdicts are right. `confidence` is `untested` on every row, no code path raises it, and `label_scheme_signoff` is still open. It is a claim about PROVENANCE, which is the axis this layer exists to keep honest.
 
-**SUGAR is the sharpest single case.** 15 catalogue-B rules reach it, every one through Venus and the `sugar_and_soft_goods` rulership. Of its own nine configuration groups, 1 fires in 2027 — and that one group produces 153 rows. The document devotes pp.168-175 to sugar and the calendar quoted none of it; it now quotes one group of it. A small number, and a different kind of number.
+**SUGAR is the sharpest single case.** 16 catalogue-B rules reach it, every one through Venus and the `sugar_and_soft_goods` rulership. Of its own nine configuration groups, 1 fires in 2027 — and that one group produces 153 rows. The document devotes pp.168-175 to sugar and the calendar quoted none of it; it now quotes one group of it. A small number, and a different kind of number.
 
 ### Why the two-window fixture diff is not this number
 

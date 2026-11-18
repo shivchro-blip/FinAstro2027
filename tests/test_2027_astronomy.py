@@ -83,6 +83,9 @@ EXPECTED_RANGE = {
     # or two, Mars one -- and a Fast window that runs to a span edge contributes
     # only its opening, which is why the lower bound is well under 12.
     "speed_crossing":    (4, 14),
+    # Mercury overtakes Venus about three times a year and Venus retakes it
+    # as often; the span is 14 months.
+    "speed_overtake":    (5, 10),
 }
 
 

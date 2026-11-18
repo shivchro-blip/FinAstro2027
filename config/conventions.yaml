@@ -3049,18 +3049,22 @@ row_kinds:
       is the count of RENDERED ROWS, and that is published under its own name
       beside the daily-row equivalent rather than left to move underneath
       `records`.
+    # RE-MEASURED 18-Nov-2026 when B10 Mercury Manifestation was ported: its
+    # 3 Mumbai firings render 6 one-day window rows (instrument + USDINR), all
+    # under the ephemeris-dated cause. Was 8121 / 8916 / 118 / 913; the delta
+    # (-795) and every other cause are unchanged, which is the check.
     measured_2027:
-      rendered_rows: 8121
-      daily_row_equivalent: 8916
+      rendered_rows: 8127
+      daily_row_equivalent: 8922
       delta: -795
-      window_rows: 118
+      window_rows: 124
       day_rows: 8003
-      daily_rows_collapsed: 913
+      daily_rows_collapsed: 919
       non_contiguous_groups_left_daily: 0
       per_cause_P3:
         date_only_ephemeris:
-          daily_rows: 507
-          window_rows: 94
+          daily_rows: 513
+          window_rows: 100
           delta: -413
         civil_day_span_b101:
           daily_rows: 255
@@ -3224,7 +3228,7 @@ row_kinds:
         did.
       measured_2027:
         span_unit: (row_kind, event, instrument, venue, t_start_utc, t_end_utc)
-        span_groups: 2938
+        span_groups: 2944   # 2938 until B10's 6 rows, 18-Nov-2026
         span_groups_note: >
           2,202 until 21-Sep-2026, when the Moon's navamsa series unblocked
           b071d and split b105, adding 736 span groups and -- this is the
@@ -3439,13 +3443,14 @@ row_kinds:
             period_cut: period_cut
             civil_day_span: date_only_b101
             anchored: anchored
+        # 331 / 431 until 18-Nov-2026; B10 adds 3 firings, 6 daily rows.
         catalogue_b_firings:
-          date_only_ephemeris: 331
+          date_only_ephemeris: 334
           period_cut: 142
           civil_day_span: 105
           anchored: 11
         catalogue_b_rows:
-          date_only_ephemeris: 431
+          date_only_ephemeris: 437
           period_cut: 151
           civil_day_span: 255
           anchored: 12
@@ -3477,7 +3482,11 @@ row_kinds:
             An invariant figure passes a check that names the wrong population.
             331 does not, and it is the one the harness therefore pins in all
             three -- 331 occupies exactly ONE cell of the census grid's 108.
-          date_only_ephemeris: {P1: 331, P1x: 12, P2: 352, P3: 383}
+          date_only_ephemeris: {P1: 334, P1x: 12, P2: 355, P3: 386}
+          b010_port_2026_11_18: >
+            331 / 352 / 383 before B10 was ported; its 3 firings move all three
+            nested populations by exactly 3 and leave P1x and the other three
+            causes where they were.
           period_cut:          {P1: 142, P1x:  0, P2: 142, P3: 142}
           civil_day_span:      {P1: 105, P1x:  0, P2: 105, P3: 105}
           anchored:            {P1:  11, P1x:  0, P2:  11, P3:  11}
@@ -3508,7 +3517,7 @@ row_kinds:
           none of them catalogue B. Every difference between the two recorded
           sets is a unit or a derivation defect.
         the_diagnosable_ones_measured:
-          at_282s_cell: 300
+          at_282s_cell: 305   # 300 until B10 added its 3 Mumbai dates
           what: >
             THE CELL, NOT THE VALUE. 282 was diagnosed by finding WHERE it
             came from: the first cause's distinct (venue, date) count in P3,
@@ -3776,6 +3785,12 @@ source_probability:
           # thing worth keeping; a single mutable field would erase it.
           measured_2026_09_15: 26
           measured_2026_09_20: 27
+          measured_2026_11_18: 29
+          what_moved_it_2026_11_18: >
+            Two families: motion/mercury_overtakes_venus and
+            motion/venus_overtakes_mercury, the speed_overtake series added to
+            port B10 Mercury Manifestation. Neither is a relative-house or node
+            colocation family, so the recount is unaffected.
           what_moved_it_2026_09_20: >
             One family: ingress/karana, the karana boundary series added with
             the Bhadra port. 866 records a year, the tithi scan at half its

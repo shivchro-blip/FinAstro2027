@@ -11,7 +11,7 @@
     "span_end_utc": "2027-01-31T18:30:00Z",
     "primary_tz": "Asia/Kolkata",
     "secondary_tz": "America/New_York",
-    "record_count": 6728
+    "record_count": 6735
   },
   "records": [
     {
@@ -14288,6 +14288,74 @@
         "source_2026_equivalent": null,
         "flags": [
           "source_section_not_printed_in_2026"
+        ]
+      }
+    },
+    {
+      "id": "speed_overtake:mercury-venus:20251212T160632Z:mercury_overtakes_venus",
+      "event_class": "speed_overtake",
+      "rule_family": "motion/mercury_overtakes_venus",
+      "bodies": [
+        "Mercury",
+        "Venus"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2025-12-12T16:06:32Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2025-12-12T16:06:32Z",
+          "ist_date": "12-Dec-2025",
+          "ist_time": "21:36",
+          "ist_weekday": "Fri",
+          "et_date": "12-Dec-2025",
+          "et_time": "11:06",
+          "et_weekday": "Fri",
+          "et_abbr": "EST",
+          "et_offset": "-05:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Scorpio",
+        "lon_sid": 216.683924,
+        "nakshatra": "Anuradha",
+        "pada": 2,
+        "navamsa": "Virgo",
+        "motion": "direct",
+        "speed_deg_day": 1.258388,
+        "latitude": 1.822412,
+        "declination": -18.554948,
+        "elongation": -19.97965,
+        "distance": 1.114930987,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15
+      },
+      "panchang": {
+        "tithi": 24,
+        "tithi_name": "Navami",
+        "paksha": "Krishna",
+        "moon_nakshatra": "Uttara Phalguni",
+        "yoga": "Ayushman",
+        "karana": "Taitila"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.219565,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": "Mercury Manifestation p.11",
+        "flags": [
+          "venus_speed=1.258388",
+          "east"
         ]
       }
     },
@@ -89670,6 +89738,74 @@
       }
     },
     {
+      "id": "speed_overtake:mercury-venus:20260217T102632Z:venus_overtakes_mercury",
+      "event_class": "speed_overtake",
+      "rule_family": "motion/venus_overtakes_mercury",
+      "bodies": [
+        "Mercury",
+        "Venus"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-02-17T10:26:32Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-02-17T10:26:32Z",
+          "ist_date": "17-Feb-2026",
+          "ist_time": "15:56",
+          "ist_weekday": "Tue",
+          "et_date": "17-Feb-2026",
+          "et_time": "05:26",
+          "et_weekday": "Tue",
+          "et_abbr": "EST",
+          "et_offset": "-05:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Aquarius",
+        "lon_sid": 322.352936,
+        "nakshatra": "Purva Bhadrapada",
+        "pada": 1,
+        "navamsa": "Aries",
+        "motion": "direct",
+        "speed_deg_day": 1.25098,
+        "latitude": 0.609762,
+        "declination": -4.736074,
+        "elongation": 17.81454,
+        "distance": 1.002886388,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15
+      },
+      "panchang": {
+        "tithi": 30,
+        "tithi_name": "Amavasya",
+        "paksha": "Krishna",
+        "moon_nakshatra": "Dhanishta",
+        "yoga": "Parigha",
+        "karana": "Naga"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.222118,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": [
+          "venus_speed=1.250981",
+          "west"
+        ]
+      }
+    },
+    {
       "id": "sunrise:sun:20260217T115143Z:new_york",
       "event_class": "sunrise",
       "rule_family": "horizon/sunrise",
@@ -147221,6 +147357,74 @@
           "source_prints_these_instants_inside_rule_sections_not_as_a_series",
           "astronomy_block_body=Moon",
           "frame_free_elongation_ayanamsha_cancels"
+        ]
+      }
+    },
+    {
+      "id": "speed_overtake:mercury-venus:20260409T161359Z:mercury_overtakes_venus",
+      "event_class": "speed_overtake",
+      "rule_family": "motion/mercury_overtakes_venus",
+      "bodies": [
+        "Mercury",
+        "Venus"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-04-09T16:13:59Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-04-09T16:13:59Z",
+          "ist_date": "09-Apr-2026",
+          "ist_time": "21:43",
+          "ist_weekday": "Thu",
+          "et_date": "09-Apr-2026",
+          "et_time": "12:13",
+          "et_weekday": "Thu",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Aquarius",
+        "lon_sid": 328.570193,
+        "nakshatra": "Purva Bhadrapada",
+        "pada": 3,
+        "navamsa": "Gemini",
+        "motion": "direct",
+        "speed_deg_day": 1.225867,
+        "latitude": -2.310705,
+        "declination": -4.981374,
+        "elongation": -27.022099,
+        "distance": 0.968137207,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15
+      },
+      "panchang": {
+        "tithi": 23,
+        "tithi_name": "Ashtami",
+        "paksha": "Krishna",
+        "moon_nakshatra": "Purva Ashadha",
+        "yoga": "Shiva",
+        "karana": "Balava"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.224078,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": "Mercury Manifestation p.11",
+        "flags": [
+          "venus_speed=1.225868",
+          "east"
         ]
       }
     },
@@ -220400,6 +220604,76 @@
       }
     },
     {
+      "id": "speed_overtake:mercury-venus:20260612T032837Z:venus_overtakes_mercury",
+      "event_class": "speed_overtake",
+      "rule_family": "motion/venus_overtakes_mercury",
+      "bodies": [
+        "Mercury",
+        "Venus"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-06-12T03:28:37Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-06-12T03:28:37Z",
+          "ist_date": "12-Jun-2026",
+          "ist_time": "08:58",
+          "ist_weekday": "Fri",
+          "et_date": "11-Jun-2026",
+          "et_time": "23:28",
+          "et_weekday": "Thu",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": -1
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Gemini",
+        "lon_sid": 81.068709,
+        "nakshatra": "Punarvasu",
+        "pada": 1,
+        "navamsa": "Aries",
+        "motion": "direct",
+        "speed_deg_day": 1.166753,
+        "latitude": 1.545875,
+        "declination": 24.096558,
+        "elongation": 24.092017,
+        "distance": 0.887856793,
+        "dignity": [
+          "own"
+        ],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15
+      },
+      "panchang": {
+        "tithi": 27,
+        "tithi_name": "Dwadashi",
+        "paksha": "Krishna",
+        "moon_nakshatra": "Bharani",
+        "yoga": "Atiganda",
+        "karana": "Kaulava"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.226506,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": [
+          "venus_speed=1.166753",
+          "west"
+        ]
+      }
+    },
+    {
       "id": "karana_ingress:moon-sun:20260612T034112Z:k54",
       "event_class": "karana_ingress",
       "rule_family": "ingress/karana",
@@ -278299,6 +278573,76 @@
           "source_prints_the_vishti_karanas_as_the_bhadra_section_not_all_sixty",
           "astronomy_block_body=Moon",
           "frame_free_elongation_ayanamsha_cancels"
+        ]
+      }
+    },
+    {
+      "id": "speed_overtake:mercury-venus:20260803T073137Z:mercury_overtakes_venus",
+      "event_class": "speed_overtake",
+      "rule_family": "motion/mercury_overtakes_venus",
+      "bodies": [
+        "Mercury",
+        "Venus"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-08-03T07:31:37Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-08-03T07:31:37Z",
+          "ist_date": "03-Aug-2026",
+          "ist_time": "13:01",
+          "ist_weekday": "Mon",
+          "et_date": "03-Aug-2026",
+          "et_time": "03:31",
+          "et_weekday": "Mon",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Gemini",
+        "lon_sid": 87.406958,
+        "nakshatra": "Punarvasu",
+        "pada": 3,
+        "navamsa": "Gemini",
+        "motion": "direct",
+        "speed_deg_day": 1.027159,
+        "latitude": -1.552934,
+        "declination": 20.165182,
+        "elongation": -19.364215,
+        "distance": 0.905023157,
+        "dignity": [
+          "own"
+        ],
+        "trine": false,
+        "vargottama": true,
+        "deep_exaltation_deg": 15
+      },
+      "panchang": {
+        "tithi": 20,
+        "tithi_name": "Panchami",
+        "paksha": "Krishna",
+        "moon_nakshatra": "Uttara Bhadrapada",
+        "yoga": "Sukarma",
+        "karana": "Taitila"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.228501,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": "Mercury Manifestation p.11",
+        "flags": [
+          "venus_speed=1.027159",
+          "east"
         ]
       }
     },
@@ -375111,6 +375455,74 @@
       }
     },
     {
+      "id": "speed_overtake:mercury-venus:20261028T062818Z:venus_overtakes_mercury",
+      "event_class": "speed_overtake",
+      "rule_family": "motion/venus_overtakes_mercury",
+      "bodies": [
+        "Mercury",
+        "Venus"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-10-28T06:28:18Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-10-28T06:28:18Z",
+          "ist_date": "28-Oct-2026",
+          "ist_time": "11:58",
+          "ist_weekday": "Wed",
+          "et_date": "28-Oct-2026",
+          "et_time": "02:28",
+          "et_weekday": "Wed",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Libra",
+        "lon_sid": 205.622145,
+        "nakshatra": "Vishakha",
+        "pada": 2,
+        "navamsa": "Taurus",
+        "motion": "retrograde",
+        "speed_deg_day": -0.581086,
+        "latitude": -2.460889,
+        "declination": -20.070099,
+        "elongation": 15.005388,
+        "distance": 0.721587977,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15
+      },
+      "panchang": {
+        "tithi": 18,
+        "tithi_name": "Tritiya",
+        "paksha": "Krishna",
+        "moon_nakshatra": "Krittika",
+        "yoga": "Variyana",
+        "karana": "Vanija"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.231789,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": [
+          "venus_speed=-0.581086",
+          "west"
+        ]
+      }
+    },
+    {
       "id": "nakshatra_ingress:moon:20261028T075617Z",
       "event_class": "nakshatra_ingress",
       "rule_family": "ingress/nakshatra",
@@ -393099,6 +393511,74 @@
           "refraction=none",
           "horizon_geo_lat_lon_alt=18.9667,72.8333,0",
           "civil_date_at_venue=2026-11-13"
+        ]
+      }
+    },
+    {
+      "id": "speed_overtake:mercury-venus:20261113T133229Z:mercury_overtakes_venus",
+      "event_class": "speed_overtake",
+      "rule_family": "motion/mercury_overtakes_venus",
+      "bodies": [
+        "Mercury",
+        "Venus"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-11-13T13:32:29Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-11-13T13:32:29Z",
+          "ist_date": "13-Nov-2026",
+          "ist_time": "19:02",
+          "ist_weekday": "Fri",
+          "et_date": "13-Nov-2026",
+          "et_time": "08:32",
+          "et_weekday": "Fri",
+          "et_abbr": "EST",
+          "et_offset": "-05:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Libra",
+        "lon_sid": 190.79969,
+        "nakshatra": "Swati",
+        "pada": 2,
+        "navamsa": "Capricorn",
+        "motion": "retrograde",
+        "speed_deg_day": -0.018401,
+        "latitude": 2.037335,
+        "declination": -11.278361,
+        "elongation": -16.150553,
+        "distance": 0.809815583,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15
+      },
+      "panchang": {
+        "tithi": 4,
+        "tithi_name": "Chaturthi",
+        "paksha": "Shukla",
+        "moon_nakshatra": "Purva Ashadha",
+        "yoga": "Dhriti",
+        "karana": "Vishti"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.232412,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": "Mercury Manifestation p.11",
+        "flags": [
+          "venus_speed=-0.018402",
+          "east"
         ]
       }
     },
