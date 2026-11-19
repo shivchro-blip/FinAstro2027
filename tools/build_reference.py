@@ -555,6 +555,56 @@ def _horizon(loc):
     return sorted(ev)
 
 
+#: The market session each edition's "Prior to Market hours" / "Till Market
+#: closes" refers to: NSE/BSE in Mumbai, NYSE in New York.
+SESSION = {"mumbai": ((9, 15), (15, 30), "NSE/BSE 09:15&ndash;15:30 IST"),
+           "new_york": ((9, 30), (16, 0), "NYSE 09:30&ndash;16:00 ET")}
+
+#: The nakshatra lord's mood-theme, quoted from Reference_materials Ch 6
+#: (The Moon -- The Trader's Clock), Rule 2. A mood, not a direction.
+NODE_MOOD = {"Rahu": "volatile", "Ketu": "cautious / heavy"}
+
+
+def b_rahu_ketu_thu():
+    """The 2026 table (Start Date / Start Time / End Time / Nakshatra): every
+    Thursday the Moon is in a Rahu- or Ketu-ruled nakshatra during the
+    session, with the session-relative wording the 2026 page uses."""
+    (oh, om), (ch, cm), label = SESSION[LOC]
+    rows = []
+    for f in sorted(FIRED.get("sub_rahu_or_ketu_nakshatra_on_a_thursday", []),
+                    key=lambda f: f.civil_date):
+        day = f.civil_date
+        open_ = dt.datetime(day.year, day.month, day.day, oh, om, tzinfo=TZ)
+        close = dt.datetime(day.year, day.month, day.day, ch, cm, tzinfo=TZ)
+        a, b = f.start_utc, f.end_utc
+        if not (a < close and b > open_):
+            continue                      # the nakshatra misses the session
+        nak = f.detail
+        lord_ = nak_lord(nak)
+        rows.append([day.strftime("%d-%b-%y"),
+                     "Prior to Market hours" if a <= open_ else ft(a),
+                     "Till Market closes" if b >= close else ft(b),
+                     nak, lord_, NODE_MOOD[lord_]])
+    return [T(["Start Date", "Start Time", "End Time", "Nakshatra", "Nakshatra Lord",
+               "Mood (Ch 6)"], rows),
+            N(f"Thursdays on which the Moon is in a Rahu-ruled (Ardra, Swati, Shatabhisha) "
+              f"or Ketu-ruled (Ashwini, Magha, Mula) nakshatra during the market session "
+              f"({label}). Times are {ZLONG}; &ldquo;Prior to Market hours&rdquo; and "
+              f"&ldquo;Till Market closes&rdquo; mean the nakshatra already holds at the open "
+              f"or still holds at the close. The weekday is the {CITY} calendar day."),
+            N("<b>Reading (Reference_materials, Ch 6 Rule 2 and Ch 0).</b> Thursday (Guruvar) is "
+              "Jupiter's day, the greatest benefic. The Moon's nakshatra lord sets the day's "
+              "mood-theme: &ldquo;a Saturn/Ketu day leans cautious/heavy; a Jupiter/Venus day "
+              "leans easy/optimistic; a Mars/Rahu day leans volatile (Mood-theme, not "
+              "direction).&rdquo; So these are Jupiter days coloured by a node: Rahu rows lean "
+              "volatile, Ketu rows cautious. The 2026 page itself prints no verdict.", "note"),
+            N("Checked against 2026: the same table reproduces 11 of the 13 printed rows "
+              "exactly. The other two are the printed table's swapped End Time cells "
+              "(14:57 belongs to 09-Jul-26, and 25-Jun-26 runs to the close), and the "
+              "computation adds three Mula Thursdays inside the session that the 2026 page "
+              "omits (12-Feb, 12-Mar, 12-Nov).", "flag")]
+
+
 def b_total_days():
     """The 2026 layout: twelve dates, January-June left, July-December right,
     no header row. Read from the registered rule's own firings."""
@@ -1406,6 +1456,8 @@ def main() -> int:
                     f'<td>{len({(f.start_utc, f.end_utc) for f in FIRED.get(r.id, [])}) or "&mdash;"}</td></tr>')
         if r.id == "sub_eclipse":
             blk = b_eclipse()
+        elif r.id == "sub_rahu_or_ketu_nakshatra_on_a_thursday":
+            blk = b_rahu_ketu_thu()
         elif r.id == "sub_total_days_in_year":
             blk = b_total_days()
         elif r.id == "sub_kshin_malefic_moon":
