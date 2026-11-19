@@ -166,7 +166,7 @@ The survey classed 41 groups READY. Three of them are blocked here on evidence f
 
 Neither the 2026 fixture nor any other page reported this, so it is computed here. **The fixture's two-window diff is not this number**, and the last subsection exists so nobody later reads it as one.
 
-A rebuild emits **9,042 verdict rows**: **7,574 catalogue B** and **1,468 configuration**, all from the same `build_verdicts()` the calendar renders from.
+A rebuild emits **9,129 verdict rows**: **7,661 catalogue B** and **1,468 configuration**, all from the same `build_verdicts()` the calendar renders from.
 
 ### The configuration rows, by instrument
 

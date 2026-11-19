@@ -3057,11 +3057,13 @@ row_kinds:
       # 8127 / 8922 / 8003 until 18-Nov-2026, when Kshin (Malefic) Moon was
       # ported: 525 timed day rows (13 windows x Mumbai days x instruments).
       # Timed rows are not collapsed, so window_rows and the delta hold.
-      rendered_rows: 8652
-      daily_row_equivalent: 9447
+      # 8652 / 9447 / 8528 until 19-Nov-2026, when Mars With or Aspecting
+      # Mercury was ported: +87 timed day rows, sub-table population only.
+      rendered_rows: 8739
+      daily_row_equivalent: 9534
       delta: -795
       window_rows: 124
-      day_rows: 8528
+      day_rows: 8615
       daily_rows_collapsed: 919
       non_contiguous_groups_left_daily: 0
       per_cause_P3:
@@ -3231,7 +3233,7 @@ row_kinds:
         did.
       measured_2027:
         span_unit: (row_kind, event, instrument, venue, t_start_utc, t_end_utc)
-        span_groups: 2983   # 2938 -> 2944 (B10) -> 2983 (Kshin Moon), 18-Nov-2026
+        span_groups: 2988   # 2938 -> 2944 (B10) -> 2983 (Kshin Moon) -> 2988 (Mars/Mercury)
         span_groups_note: >
           2,202 until 21-Sep-2026, when the Moon's navamsa series unblocked
           b071d and split b105, adding 736 span groups and -- this is the

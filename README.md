@@ -88,10 +88,12 @@ instrument configuration sections   38 /  58 named groups   (ported AND wired)
 
 **That line is the coverage claim, and all three numbers travel together.** Each
 counts a different shape of markup, none is inside either of the others, and
-`verdicts.py` fires all three registries. **55 rules are blocked**, each on an
+`verdicts.py` fires all three registries. **54 rules are blocked**, each on an
 input the document withholds and each named on the rule — 31 in catalogue B, 20
-configuration groups, 4 sub-tables. (Kshin (Malefic) Moon was ported 18-Nov-2026:
-all 13 printed 2026 windows reproduce within 2 minutes.) (57 / 32 until 18-Nov-2026, when B10 Mercury
+configuration groups, 3 sub-tables. (Kshin (Malefic) Moon was ported 18-Nov-2026:
+all 13 printed 2026 windows reproduce within 2 minutes. Mars With or Aspecting
+Mercury was ported 19-Nov-2026 on whole-sign drishti, no orb, per
+`Reference_materials` Ch 0 / App. B.2: all 3 printed rows reproduce.) (57 / 32 until 18-Nov-2026, when B10 Mercury
 Manifestation was ported on a new Mercury-vs-Venus `speed_overtake` series: it
 reproduces all three printed 2026 dates, and its 2027 dates are 22-Mar, 20-Jul
 and 07-Nov.)

@@ -571,6 +571,36 @@ HINDI_SIGN = dict(zip(ephem.SIGNS, ["Mesh", "Vrisabh", "Mithun", "Kark", "Sinh",
                                     "Kumbh", "Meen"]))
 
 
+def _sign_cell(body, sign):
+    """The 2026 style: dignities in brackets, or the sign's lord if none."""
+    st = [x.capitalize() for x in (ephem.dignity_states(body, sign) or [])]
+    order = [x for x in ("Own", "Exalted", "Debilitated", "Trine") if x in st]
+    return f"{sign} ({', '.join(order)})" if order else f"{sign} ({lord(sign)})"
+
+
+def b_mars_mercury():
+    rows = []
+    for f in sorted({(f.start_utc, f.end_utc): f for f in FIRED.get(
+            "sub_mars_with_or_aspecting_mercury", [])}.values(), key=lambda f: f.start_utc):
+        d = f.detail
+        rows.append([f"{fd(f.start_utc)} {ft(f.start_utc)}",
+                     f"{fd(f.end_utc)} {ft(f.end_utc)}",
+                     d["aspect"], _sign_cell("Mars", d["mars_sign"]),
+                     _sign_cell("Mercury", d["mercury_sign"])])
+    return [T(["Start", "End", "Aspect", "Mars Sign", "Mercury Sign"], rows),
+            N("Mercury in the same sign as Mars (&ldquo;with&rdquo;), or in the 4th, 7th or "
+              "8th sign counted forward from Mars, which Mars aspects. Vedic aspects (drishti) "
+              "are counted in whole signs with no orb: every planet aspects the 7th, and Mars "
+              "also the 4th and 8th (Reference_materials Ch 0, Appendix B.2). "
+              f"Times are {ZLONG}.", "note"),
+            N("Checked against 2026: all three printed rows (each &lsquo;4th&rsquo;) come back. "
+              "The page prints 01-Dec-26 for the 02-Dec 17:27 Mercury ingress and &lsquo;Till "
+              "year end&rsquo; for a window that ends when Mercury leaves Scorpio on 22-Dec. It "
+              "also prints none of 2026&rsquo;s six same-sign (&lsquo;with&rsquo;) windows, "
+              "though its title names them; this table includes them, marked "
+              "&lsquo;With (same sign)&rsquo;.", "flag")]
+
+
 def b_moon_mercury_d9():
     """The 2026 table: one row per weekday session (and per shared navamsa
     within it) in which the Moon and Mercury occupy the same D9 sign."""
@@ -1497,6 +1527,8 @@ def main() -> int:
                     f'<td>{len({(f.start_utc, f.end_utc) for f in FIRED.get(r.id, [])}) or "&mdash;"}</td></tr>')
         if r.id == "sub_eclipse":
             blk = b_eclipse()
+        elif r.id == "sub_mars_with_or_aspecting_mercury":
+            blk = b_mars_mercury()
         elif r.id == "sub_moon_mercury_in_the_same_navamsh":
             blk = b_moon_mercury_d9()
         elif r.id == "sub_rahu_or_ketu_nakshatra_on_a_thursday":

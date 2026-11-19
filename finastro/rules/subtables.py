@@ -576,19 +576,49 @@ _blocked(
           "silver-bullish#4 is blocked under.",
 )
 
-_blocked(
+#: The printed table's own rows, sliced from the section.
+MARS_MERCURY_PRINTED = tuple(S("mars-mercury").tables[0].rows)
+
+#: Mars's whole-sign drishti: every planet aspects the 7th sign from itself,
+#: and Mars also the 4th and 8th (Reference_materials Ch 0, "The Vedic way --
+#: counted in whole signs", and Appendix B.2). House 1 is "with".
+MARS_DRISHTI = {1: "With (same sign)", 4: "4th", 7: "7th", 8: "8th"}
+
+
+def _mars_with_or_aspecting_mercury(sky):
+    """Mercury in Mars's sign, or in the 4th, 7th or 8th sign counted forward
+    from Mars. Whole signs, so no orb: the spans are the intersection of the
+    two bodies' sign residencies off the sign_ingress series."""
+    from ..ephem import SIGNS
+
+    def house(mars, merc):
+        h = (SIGNS.index(merc) - SIGNS.index(mars)) % 12 + 1
+        if h not in MARS_DRISHTI:
+            return None
+        return {"aspect": MARS_DRISHTI[h], "mars_sign": mars, "mercury_sign": merc}
+    return intersect(list(sky.spans("Mars", "sign")),
+                     list(sky.spans("Mercury", "sign")), house)
+
+
+_rule(
     S("mars-mercury"),
     id="sub_mars_with_or_aspecting_mercury",
     rule_family="aspect/drishti",
     condition_text=S("mars-mercury").title,
     condition_from="h2",
-    missing_inputs=("aspect_orb",),
-    notes="All three printed rows carry '4th' in their own Aspect column, "
-          "which is a house aspect. The layer emits conjunction and "
-          "opposition and no other angle, so the WITH half is computable and "
-          "the ASPECTING half is not, and half a disjunction is not this "
-          "section -- the ruling silver-bullish#10 is blocked under.",
-)
+    inputs=("ingress/sign",),
+    notes="PORTED 19-Nov-2026 (blocked on aspect_orb until then). The "
+          "section's Aspect column prints '4th', a HOUSE aspect, and Vedic "
+          "drishti is counted in whole signs with no orb -- Reference_materials "
+          "Ch 0 and Appendix B.2 state it outright (Mars: 4th, 7th, 8th). "
+          "VERIFIED against the section's own table: all 3 printed rows are "
+          "Mercury 4th from Mars, starts within 11 minutes; its 01-Dec-26 is "
+          "the 02-Dec 17:27 Mercury ingress (time exact, date mistyped) and "
+          "its 'Till year end' is Mercury leaving Scorpio on 22-Dec. CARRIED, "
+          "NOT TUNED AWAY: 2026 also has six 'with' (same-sign) windows the "
+          "page does not print although its title names them; no 7th or 8th "
+          "window occurred in 2026.",
+)(_mars_with_or_aspecting_mercury)
 
 _blocked(
     S("eclipse"),
