@@ -3054,11 +3054,14 @@ row_kinds:
     # under the ephemeris-dated cause. Was 8121 / 8916 / 118 / 913; the delta
     # (-795) and every other cause are unchanged, which is the check.
     measured_2027:
-      rendered_rows: 8127
-      daily_row_equivalent: 8922
+      # 8127 / 8922 / 8003 until 18-Nov-2026, when Kshin (Malefic) Moon was
+      # ported: 525 timed day rows (13 windows x Mumbai days x instruments).
+      # Timed rows are not collapsed, so window_rows and the delta hold.
+      rendered_rows: 8652
+      daily_row_equivalent: 9447
       delta: -795
       window_rows: 124
-      day_rows: 8003
+      day_rows: 8528
       daily_rows_collapsed: 919
       non_contiguous_groups_left_daily: 0
       per_cause_P3:
@@ -3228,7 +3231,7 @@ row_kinds:
         did.
       measured_2027:
         span_unit: (row_kind, event, instrument, venue, t_start_utc, t_end_utc)
-        span_groups: 2944   # 2938 until B10's 6 rows, 18-Nov-2026
+        span_groups: 2983   # 2938 -> 2944 (B10) -> 2983 (Kshin Moon), 18-Nov-2026
         span_groups_note: >
           2,202 until 21-Sep-2026, when the Moon's navamsa series unblocked
           b071d and split b105, adding 736 span groups and -- this is the
@@ -3265,13 +3268,16 @@ row_kinds:
           that the last window of the year straddles the boundary -- this is
           the expected behaviour of a short-span rule at a year edge and not a
           defect.
-        clipped_start: 10
-        clipped_end: 27
-        clipped_start_with_open_start_false: 7
-        clipped_end_with_open_end_false: 22
-        real_endpoint_outside_the_year: 29
+        # 10 / 27 / 7 / 22 / 29 / 28 until Kshin Moon (18-Nov-2026): its
+        # windows that open in Dec-2026 and run past 31-Dec-2027 are clipped
+        # at both year edges, three instrument rows each, all timed.
+        clipped_start: 13
+        clipped_end: 30
+        clipped_start_with_open_start_false: 10
+        clipped_end_with_open_end_false: 25
+        real_endpoint_outside_the_year: 35
         of_which_no_instant: 1
-        of_which_timed: 28
+        of_which_timed: 34
         under_the_rule_span_unit: >
           18 spans, 1 no-instant and 17 timed, grouping by (row_kind, event,
           location, t_start_utc, t_end_utc) instead -- the unit fire() emits,

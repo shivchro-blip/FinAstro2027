@@ -3391,7 +3391,8 @@ def test_the_cause_census_figures_carry_the_population_that_produced_them():
            # 5,539 / 4,744 / 8,916 until 18-Nov-2026: B10 Mercury
            # Manifestation's 6 daily rows, one day each, so +6 on both units.
            daily["P1"] == 5545 and size["P1"] == 4750
-           and size["P3"] == len(rows) and daily["P3"] == 8922,
+           # P3 9,447 since Kshin Moon's 525 sub-table rows (P1 untouched).
+           and size["P3"] == len(rows) and daily["P3"] == 9447,
            f"P1 {size['P1']} rendered / {daily['P1']} daily  "
            f"P2 {size['P2']} / {daily['P2']}  "
            f"P3 {size['P3']} / {daily['P3']}")
@@ -3789,9 +3790,10 @@ def test_the_three_registries_stay_three() -> None:
            "both predicates are positive type tests and disagree on every "
            "rule of the other registry")
 
-    record("The ten sub-tables are 5 ported and 5 blocked, each naming its "
+    # 5 / 5 until Kshin (Malefic) Moon was ported on 18-Nov-2026.
+    record("The ten sub-tables are 6 ported and 4 blocked, each naming its "
            "input",
-           len(ST.ported()) == 5 and len(ST.blocked()) == 5
+           len(ST.ported()) == 6 and len(ST.blocked()) == 4
            and all(r.missing_inputs for r in ST.blocked()),
            f"{len(ST.ported())} ported + {len(ST.blocked())} blocked of "
            f"{len(ST.SUBTABLE_REGISTRY)}; blocked on "
@@ -4138,6 +4140,41 @@ def test_b010_reproduces_its_own_printed_dates_through_the_rule() -> None:
            f"instant days {sorted(map(str, own_day))}")
 
 
+def test_kshin_moon_reproduces_its_own_printed_table() -> None:
+    """Kshin (Malefic) Moon, fired on the 2026 sky through the REGISTERED
+    sub-table rule, against the section's own 13 printed windows (read from
+    the document, never from the tithi series under test). Both boundaries
+    within 2 minutes; the open last row matched on its start."""
+    import datetime as _dt
+    from finastro.rules import subtables as ST
+    from finastro.sky import Sky as _Sky
+    sky26 = _Sky.load(ROOT / "build" / "astronomy_2026.json")
+    rule = [r for r in ST.SUBTABLE_REGISTRY if r.id == "sub_kshin_malefic_moon"]
+    spans = sorted({(f.start_utc, f.end_utc) for f in
+                    R.base.fire(rule, sky26, year=2026) if f.location == "mumbai"})
+    ist = _dt.timezone(_dt.timedelta(hours=5, minutes=30))
+
+    def at(d, t):
+        h, m = t.split(":")
+        return _dt.datetime.strptime(d, "%d-%b-%y").replace(
+            hour=int(h), minute=int(m), tzinfo=ist)
+
+    worst, missed = 0.0, []
+    for sd, st, ed, et in ST.KSHIN_PRINTED:
+        a = at(sd, st)
+        near = min(spans, key=lambda w: abs((w[0] - a).total_seconds()))
+        off = abs((near[0] - a).total_seconds())
+        if ":" in et:
+            off = max(off, abs((near[1] - at(ed, et)).total_seconds()))
+        if off > 120:
+            missed.append(f"{sd} off {off:.0f}s")
+        worst = max(worst, off)
+    record("Kshin Moon reproduces all 13 printed windows within 2 minutes",
+           len(ST.KSHIN_PRINTED) == 13 and not missed,
+           f"worst {worst:.0f}s; missed {missed}")
+    _PINNED_SUBTABLE_PORTS.add("sub_kshin_malefic_moon")
+
+
 def main() -> int:
     sky = Sky.load()
     firings = R.fire(R.REGISTRY, sky)
@@ -4154,6 +4191,7 @@ def main() -> int:
     test_the_three_registries_stay_three()
     test_the_supplied_verdict_check_actually_bites()
     test_the_subtable_ports_reproduce_their_own_printed_tables()
+    test_kshin_moon_reproduces_its_own_printed_table()
     test_every_ported_subtable_rule_is_pinned_against_its_printed_table()
     test_axes_and_tier_derivation()
     test_labels_are_from_the_config_vocabulary()

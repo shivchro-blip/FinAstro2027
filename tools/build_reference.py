@@ -555,6 +555,21 @@ def _horizon(loc):
     return sorted(ev)
 
 
+def b_kshin():
+    """The 2026 Kshin Moon table: Start Date / Start Time / End Date / End Time."""
+    rows = []
+    for f in sorted({(f.start_utc, f.end_utc): f for f in FIRED.get(
+            "sub_kshin_malefic_moon", [])}.values(), key=lambda f: f.start_utc):
+        rows.append([fd(f.start_utc), ft(f.start_utc), fd(f.end_utc), ft(f.end_utc)])
+    return [N("Moon is malefic from Krishna Ashtami till Shukla Panchmi (both days "
+              "included)."),
+            T(["Start Date", "Start Time", "End Date", "End Time"], rows),
+            N(f"Start: the moment Krishna Ashtami (tithi 23) begins. End: the moment "
+              f"Shukla Panchami (tithi 5) ends. Times {ZLONG}. Windows open on 1-Jan or "
+              f"running on 31-Dec are printed whole. The same rule reproduces all 13 "
+              f"printed 2026 windows within 2 minutes.", "flag")]
+
+
 BHADRA_SCORE: list = []
 
 
@@ -1378,6 +1393,8 @@ def main() -> int:
                     f'<td>{len({(f.start_utc, f.end_utc) for f in FIRED.get(r.id, [])}) or "&mdash;"}</td></tr>')
         if r.id == "sub_eclipse":
             blk = b_eclipse()
+        elif r.id == "sub_kshin_malefic_moon":
+            blk = b_kshin()
         elif r.id == "sub_bhadra":
             blk = b_bhadra()
             if YEAR == 2026 and ZONE == "IST":

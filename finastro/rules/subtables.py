@@ -458,24 +458,49 @@ _rule(
 
 
 # ================================================== THE SEVEN NOT PORTED HERE
-_blocked(
+#: The printed table's own rows, sliced from the section, so the verification
+#: count comes from the DOCUMENT and not from the tithi series under test.
+KSHIN_PRINTED = tuple(S("kshin-moon").tables[0].rows)
+
+#: Krishna Ashtami is tithi 23 and Shukla Panchami tithi 5; "both days
+#: included" makes the window every tithi from the START of 23 to the END of 5.
+KSHIN_TITHIS = frozenset(range(23, 31)) | frozenset(range(1, 6))
+
+
+def _kshin_moon(sky):
+    """One span per run of consecutive tithis 23..30, 1..5, off the tithi
+    boundary series alone (Sky.tithi_spans): no longitude is sampled."""
+    out = []
+    for sp in sky.tithi_spans():
+        if sp.value["tithi"] not in KSHIN_TITHIS:
+            continue
+        if out and out[-1].end == sp.start:
+            prev = out[-1]
+            out[-1] = Span(prev.start, sp.end, prev.value,
+                           prev.open_start, sp.open_end)
+        else:
+            out.append(Span(sp.start, sp.end,
+                            {"from": "Krishna Ashtami", "till": "Shukla Panchami"},
+                            sp.open_start, sp.open_end))
+    return out
+
+
+_rule(
     S("kshin-moon"),
     id="sub_kshin_malefic_moon",
     rule_family="panchang/tithi",
     condition_text="Moon is malefic from Krishna Ashtami till Shukla Panchmi",
     condition_from="para",
     inputs=("panchang/tithi",),
-    missing_inputs=("scope",),
-    notes="NOT blocked on anything the document withholds, and recorded that "
-          "way deliberately. This section STATES its own condition completely "
-          "-- 'Moon is malefic from Krishna Ashtami till Shukla Panchmi (both "
-          "days included)' -- and the tithi series that bounds both ends is "
-          "emitted and graded A. It is 13 printed windows and is portable "
-          "today. It was not in the three ports this batch was asked for, and "
-          "registering it blocked-on-scope rather than leaving it out is the "
-          "B130 ruling: a gap that is OURS is visible as ours, and is not "
-          "mistaken for a missing input.",
-)
+    notes="PORTED 18-Nov-2026 (registered blocked-on-scope until then: the "
+          "section states its condition completely and the tithi series was "
+          "always there). VERIFIED BEFORE WIRING against the section's own "
+          f"table: {len(KSHIN_PRINTED)} of {len(KSHIN_PRINTED)} printed windows "
+          "come back, both boundaries within 2 minutes -- start at the "
+          "ingress of Krishna Ashtami (tithi 23), end at the end of Shukla "
+          "Panchami (tithi 5). The last printed row is open ('Till year end'); "
+          "this build prints that window whole.",
+)(_kshin_moon)
 
 #: The printed table's own rows, sliced from the section, so the verification
 #: count comes from the DOCUMENT and not from the series under test.
