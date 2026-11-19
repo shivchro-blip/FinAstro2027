@@ -693,7 +693,7 @@ def b_kshin():
     rows = []
     for f in sorted({(f.start_utc, f.end_utc): f for f in FIRED.get(
             "sub_kshin_malefic_moon", [])}.values(), key=lambda f: f.start_utc):
-        rows.append([fd(f.start_utc), ft(f.start_utc), fd(f.end_utc), ft(f.end_utc)])
+        rows.append(_firing_cells(f))
     return [N("Moon is malefic from Krishna Ashtami till Shukla Panchmi (both days "
               "included)."),
             T(["Start Date", "Start Time", "End Date", "End Time"], rows),
@@ -923,32 +923,97 @@ def b_saturn_shadow():
 
 
 def b_eclipse():
+    """The 2026 table (Date / Eclipse / Month / Start / End / Day / Start and
+    End Nakshatra) from the registered rule, plus type and magnitude."""
+    mag = {r["time"]["contacts_global"]["max"]["utc"]: r["astronomy"].get("magnitude")
+           for r in ASTRO_DOC["records"] if r["event_class"] == "eclipse"}
     rows = []
-    for r in ASTRO_DOC["records"]:
-        if r["event_class"] != "eclipse":
-            continue
-        tm = r["time"]
-        a = dt.datetime.fromisoformat(tm["t_start_utc"].replace("Z", "+00:00"))
-        b = dt.datetime.fromisoformat(tm["t_end_utc"].replace("Z", "+00:00"))
-        if not in_year(a, b):
-            continue
-        mx = tm.get("contacts_global", {}).get("max", {})
-        mxt = dt.datetime.fromisoformat(mx["utc"].replace("Z", "+00:00")) if mx else None
-        moon_a = ephem.position(a, "Moon").nakshatra
-        moon_b = ephem.position(b, "Moon").nakshatra
-        vis = [f for f in r["qa"].get("flags", []) if "visible" in f]
-        rows.append([fd(a), r["astronomy"].get("eclipse_type", ""),
-                     r["astronomy"].get("magnitude", ""), ft(a), ft(mxt), ft(b),
-                     fw(mxt or a), moon_a, moon_b,
-                     ", ".join(v.replace("_", " ") for v in vis)])
-    return [T(["Date", "Eclipse", "Magnitude", "Start Time", "Maximum",
-               "End Time", "Day", "Start Nakshatra", "End Nakshatra",
-               "India"], rows),
-            N("Global contact times (first to last contact of the eclipse anywhere "
-              f"on Earth), {ZLABEL}. The source's lunar-month column is not printed: "
-              "the month system (amanta / purnimanta) is one of the five doctrinal "
-              "decisions the 2026 edition never states.", "flag")]
+    for f in sorted({(f.start_utc, f.end_utc): f for f in FIRED.get("sub_eclipse", [])}
+                    .values(), key=lambda f: f.start_utc):
+        d = f.detail
+        a, b = f.start_utc, f.end_utc
+        end = ft(b) if fd(b) == fd(a) else f"{ft(b)} ({fd(b)})"
+        rows.append([fd(a), d["eclipse"], d["month"], ft(a), end, fw(a),
+                     ephem.position(a, "Moon").nakshatra,
+                     ephem.position(b, "Moon").nakshatra,
+                     d["type"], mag.get(d["max_utc"], "")])
+    return [T(["Date", "Eclipse", "Month", "Start Time", "End Time", "Day",
+               "Start Nakshatra", "End Nakshatra", "Type", "Magnitude"], rows),
+            N(f"Start and end are the global first and last contacts, {ZLABEL}. Month is "
+              f"the purnimanta lunar month: a solar eclipse is named for its Amavasya and a "
+              f"lunar one for its Purnima. The 2026 table settles the system (its 17-Feb and "
+              f"12-Aug solar eclipses are Falgun and Shravan, the purnimanta names); run on "
+              f"2026 this table reproduces all four printed rows on date, kind, month and "
+              f"times; the nakshatras are the Moon&rsquo;s, and the 2026 page&rsquo;s "
+              f"Pushya/Ashlesha for its 28-Aug lunar eclipse is an error (the Moon was in "
+              f"Shatabhisha, opposite the Sun).", "flag")]
 
+
+def _firing_cells(f):
+    """(start date, start time, end date, end time), with the 2026 wording for
+    a window that was already running when the generated data begins or is
+    still running when it ends."""
+    sd, st = ("Start of the year", "") if f.open_start else (fd(f.start_utc), ft(f.start_utc))
+    ed, et = ("Till year end", "") if f.open_end else (fd(f.end_utc), ft(f.end_utc))
+    return [sd, st, ed, et]
+
+
+def b_parivartan():
+    rows = []
+    for f in sorted({(f.start_utc, f.end_utc): f for f in FIRED.get(
+            "sub_moon_rashi_parivartan_yog", [])}.values(), key=lambda f: f.start_utc):
+        d = f.detail
+        rows.append(_firing_cells(f) + [d["planet"], d["sign"]])
+    return [T(["Start Date", "Start Time", "End Date", "End Time", "Planet", "Sign"], rows),
+            N("The Moon in a sign owned by the planet while that planet is in Cancer, the "
+              "Moon&rsquo;s own sign: a mutual exchange (parivartana, &ldquo;two planets "
+              "occupying each other&rsquo;s signs&rdquo;, Reference_materials Ch 5), with the "
+              "classical sign lords of Ch 0 and Appendix B. Sign is the Moon&rsquo;s. "
+              f"Times are {ZLONG}.", "note"),
+            N("Checked against 2026: all 19 printed rows come back on planet and sign, 17 "
+              "within 5 minutes. The other two disagree with the 2026 document itself "
+              "(02-Jun-26 starts at Jupiter&rsquo;s Cancer ingress, printed 01:49 in its own "
+              "Journey of Jupiter; 18-Sep-26 ends 21-Sep 11:15 when the Moon leaves "
+              "Sagittarius). The page also omits five 2026 exchanges with the Sun, Venus and "
+              "Mercury; they are included here.", "flag")]
+
+
+def b_vargottam_own():
+    rows = []
+    for f in sorted({(f.start_utc, f.end_utc): f for f in FIRED.get(
+            "sub_planet_vargottam_in_their_own_nakshatra", [])}.values(),
+            key=lambda f: f.start_utc):
+        d = f.detail
+        mid = f.start_utc + (f.end_utc - f.start_utc) / 2
+        pada = ephem.position(mid, d["body"]).pada
+        rows.append([SOURCE_NAME.get(d["body"], d["body"]), d["nakshatra"],
+                     {1: "1st", 2: "2nd", 3: "3rd", 4: "4th"}[pada]] + _firing_cells(f))
+    return [T(["Planet", "Nakshatra", "Pad", "Start Date", "Start Time", "End Date",
+               "End Time"], rows),
+            N(f"A planet in a nakshatra it rules (Vimshottari lordship) while its rashi and "
+              f"navamsa signs agree (vargottama). Times are {ZLONG}.", "flag")]
+
+
+def b_rainfall():
+    """The 2026 page's arithmetic, on this year's Samvat. A forecast for the
+    year, not a dated window, so it is shown here and not fired as a rule."""
+    samvat = YEAR + 57
+    x3 = samvat * 3
+    plus = x3 + 5
+    q, r = divmod(plus, 7)
+    verdict = {0: "Extreme shortfall", 3: "Unequal rain", 5: "Unequal rain"}.get(
+        r, "Sufficient rain")
+    return [N(f"<b>Based on Samvat Year ({samvat})</b>"),
+            T([], [["Residual Number", f"= {r}"],
+                   [f"{samvat} &times; 3", f"= {x3}"],
+                   [f"{x3} + 5", f"= {plus}"],
+                   [f"{plus} / 7", f"= {q}, remainder {r}"]]),
+            N(f"<strong>Result key:</strong> 0 = extreme shortfall &middot; 1, 2, 4 or 6 = "
+              f"sufficient rain &middot; <strong>3 or 5 = unequal rain</strong>. Samvat year "
+              f"taken from Chaitra Pratipada as new year.<br><strong>Forecast for Samvat "
+              f"{samvat}: {verdict}.</strong> (The 2026 edition&rsquo;s own formula, applied "
+              f"as printed; it is a whole-year forecast, not a dated window, so it is not "
+              f"in the calendar.)", "note")]
 
 # ------------------------------------------------- rule-firing renderer
 
@@ -1527,6 +1592,12 @@ def main() -> int:
                     f'<td>{len({(f.start_utc, f.end_utc) for f in FIRED.get(r.id, [])}) or "&mdash;"}</td></tr>')
         if r.id == "sub_eclipse":
             blk = b_eclipse()
+        elif r.id == "sub_moon_rashi_parivartan_yog":
+            blk = b_parivartan()
+        elif r.id == "sub_planet_vargottam_in_their_own_nakshatra":
+            blk = b_vargottam_own()
+        elif r.id == "sub_rainfall_calculation":
+            blk = b_rainfall()
         elif r.id == "sub_mars_with_or_aspecting_mercury":
             blk = b_mars_mercury()
         elif r.id == "sub_moon_mercury_in_the_same_navamsh":

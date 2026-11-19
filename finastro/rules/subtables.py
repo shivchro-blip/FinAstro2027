@@ -620,20 +620,79 @@ _rule(
           "window occurred in 2026.",
 )(_mars_with_or_aspecting_mercury)
 
-_blocked(
+#: The printed table's own rows, sliced from the section.
+ECLIPSE_PRINTED = tuple(S("eclipse").tables[0].rows)
+
+#: Lunar month named by the Sun's sidereal sign at the new moon that begins
+#: it (amanta reckoning), in the section's own spelling ("Falgun", "Shravan").
+MONTH_BY_SUN_SIGN = {"Pisces": "Chaitra", "Aries": "Vaishakh", "Taurus": "Jyeshtha",
+                     "Gemini": "Ashadh", "Cancer": "Shravan", "Leo": "Bhadrapad",
+                     "Virgo": "Ashwin", "Libra": "Kartik", "Scorpio": "Margashirsh",
+                     "Sagittarius": "Paush", "Capricorn": "Magh", "Aquarius": "Falgun"}
+
+
+def lunar_months(sky):
+    """[(new_moon_start, next_new_moon, name)] -- amanta months off the
+    lunation series, named by the Sun's sign at the opening new moon; a month
+    whose next new moon finds the Sun in the same sign is Adhik."""
+    nms = [parse(r["time"]["t_start_utc"])
+           for r in sky.class_records("lunation", family="lunation/new_moon")]
+    sun = list(sky.spans("Sun", "sign"))
+
+    def sun_sign(t):
+        return next(sp.value for sp in sun if sp.start <= t < sp.end)
+    out = []
+    for a, b in zip(nms, nms[1:]):
+        name = MONTH_BY_SUN_SIGN[sun_sign(a)]
+        if sun_sign(a) == sun_sign(b):
+            name = "Adhik " + name
+        out.append((a, b, name))
+    return out
+
+
+def _eclipses(sky):
+    """Each eclipse's global first-to-last contact, with its lunar month.
+
+    A SOLAR eclipse is named for the Amavasya it falls on and a LUNAR one for
+    its Purnima -- under PURNIMANTA reckoning, which the section's own table
+    settles: of its four eclipses the two lunar ones name the same month under
+    either system, and the two solar ones (17-Feb-26 Falgun, 12-Aug-26
+    Shravan) are purnimanta names; amanta would read Magh and Ashadh. So a
+    solar eclipse takes the month the new moon OPENS (amanta), which is the
+    purnimanta month that Amavasya closes, and a lunar eclipse the month
+    containing its full moon, the same in both systems."""
+    months = lunar_months(sky)
+    out = []
+    for r in sky.class_records("eclipse"):
+        c = r["time"]["contacts_global"]
+        mx = parse(c["max"]["utc"])
+        solar = r["rule_family"] == "eclipse/solar"
+        if solar:
+            m = min(months, key=lambda m: abs((m[0] - mx).total_seconds()))
+        else:
+            m = next((m for m in months if m[0] <= mx < m[1]), None)
+        out.append(Span(parse(r["time"]["t_start_utc"]), parse(r["time"]["t_end_utc"]),
+                        {"eclipse": "Solar" if solar else "Lunar",
+                         "type": r["astronomy"].get("eclipse_type"),
+                         "month": m[2] if m else None,
+                         "max_utc": c["max"]["utc"]}))
+    return out
+
+
+_rule(
     S("eclipse"),
     id="sub_eclipse",
     rule_family="eclipse",
     condition_text=S("eclipse").title,
     condition_from="h2",
-    missing_inputs=("month_system",),
-    notes="Every column of this table is reproducible except one. The four "
-          "eclipses are emitted, and the records carry the weekday and both "
-          "nakshatras the table prints. Its Month column reads Falgun and "
-          "Shravan, and naming a lunar month needs the amanta/purnimanta "
-          "question settled -- `month_system_confirmation`, the same input "
-          "that blocks B111 and cfg_silver_bullish_18.",
-)
+    inputs=("eclipse", "lunation", "ingress/sign"),
+    notes="PORTED 19-Nov-2026 (blocked on month_system until then). The "
+          "section's own Month column settles the system: its two solar "
+          "eclipses are named Falgun and Shravan, the PURNIMANTA months of "
+          "those Amavasyas (amanta would read Magh and Ashadh); its two lunar "
+          "eclipses name the same month either way. VERIFIED: 4 of 4 dates, "
+          "kinds and months, and the start/end times are the global contacts.",
+)(_eclipses)
 
 #: This section's own rows. 19, of which FOURTEEN are Moon rows -- not the
 #: thirteen `vargottama.source_witness.detail.Moon` records. The count is
@@ -739,21 +798,48 @@ _rule(
           "reconciled away.",
 )(_vargottama_in_own_nakshatra())
 
-_blocked(
+#: The printed table's own rows, sliced from the section.
+PARIVARTAN_PRINTED = tuple(S("rashi-parivartan").tables[0].rows)
+
+
+def _moon_parivartan(sky):
+    """Moon in a sign owned by planet X while X is in Cancer, the Moon's own
+    sign: a mutual exchange (parivartana -- "two planets occupying each other's
+    signs", Reference_materials Ch 5). Lordship is the classical Vedic table
+    (Ch 0's sign table, Appendix B), which is ephem.SIGN_LORDS; the nodes and
+    the outer planets own no sign and cannot exchange."""
+    from ..config import CONF
+    # Sign -> lord off the config's own-sign lists, the same table ephem
+    # derives SIGN_LORDS from; a rule module may not import the ephemeris.
+    SIGN_LORDS = {sign: body for body, spec in CONF["dignity"]["signs"].items()
+                  for sign in spec["own"]}
+    moon = list(sky.spans("Moon", "sign"))
+    out = []
+    for x in ("Sun", "Mercury", "Venus", "Mars", "Jupiter", "Saturn"):
+        out += intersect(moon, list(sky.spans(x, "sign")),
+                         lambda m, s, x=x: {"planet": x, "sign": m}
+                         if s == "Cancer" and SIGN_LORDS[m] == x else None)
+    return sorted(out, key=lambda sp: sp.start)
+
+
+_rule(
     S("rashi-parivartan"),
     id="sub_moon_rashi_parivartan_yog",
     rule_family="residency/exchange",
     condition_text=S("rashi-parivartan").title,
     condition_from="h2",
-    missing_inputs=("sign_lordship",),
-    notes="A parivartan is a mutual exchange of signs, so it cannot be "
-          "evaluated without knowing which planet owns which sign. The layer "
-          "carries a nakshatra lord table sliced from B2's own printed table "
-          "and no sign lord table; the source prints none either. The Moon's "
-          "and both partners' sign ingresses ARE emitted, so this is one "
-          "table away rather than one series away -- and the table would be "
-          "ours, which is the distinction that keeps it blocked.",
-)
+    inputs=("ingress/sign",),
+    notes="PORTED 19-Nov-2026 (blocked on sign_lordship until then: the "
+          "lordship is now read from Reference_materials, Ch 0's sign table "
+          "and Appendix B, which agree with the config's own-sign lists). "
+          "VERIFIED against the section's own table: all 19 printed rows come "
+          "back on planet and sign, 17 with both boundaries within 5 minutes. "
+          "The other two disagree with the document itself: 02-Jun-26 starts "
+          "when Jupiter enters Cancer, which B20 prints at 01:49 (this row "
+          "01:33), and 18-Sep-26 ends when the Moon leaves Sagittarius at "
+          "11:15 on 21-Sep (printed 21:44). CARRIED: five 2026 exchanges the "
+          "page omits -- Sun twice, Venus twice, Mercury once.",
+)(_moon_parivartan)
 
 
 # ------------------------------------------------------------------ checks
