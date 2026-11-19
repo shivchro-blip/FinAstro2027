@@ -112,7 +112,7 @@ the old set comes from:
 | **147** | — | — | — | **no** |
 
 `662` is real. D holds **663 rows across 28 events** at `dfb485b`; drop
-`b102_anuradha_on_sunday`, whose 00:00:21 IST nakshatra ingress is a genuine
+`b102_anuradha_on_sunday`, whose 00:00:22 IST nakshatra ingress is a genuine
 instant that renders as `00:00`, and it is **662 across 27** — which is what the
 commit message says, word for word. It is a correct count of D.
 

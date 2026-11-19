@@ -86,13 +86,100 @@ def test_stations():
 
     # A station is where speed passes through zero, so longitude is stationary
     # to second order and a sub-arcsecond ephemeris difference moves the clock
-    # time by minutes. Five minutes is the honest agreement bar here, not a
-    # concession -- the source's own slow-planet stations drift by up to an hour.
+    # time by minutes. Five minutes is the honest agreement bar here. (This
+    # comment used to say the source's slow-planet stations "drift by up to an
+    # hour". They do not: that hour was OUR frame -- zeros of the sidereal
+    # speed. On the speed of date every printed station lands within 1.7 min;
+    # see test_every_printed_station_on_the_speed_of_date below.)
     deltas = [abs((dt.datetime.strptime(g, "%d-%b-%y %H:%M")
                    - dt.datetime.strptime(w, "%d-%b-%y %H:%M")).total_seconds()) / 60
               for (g, _), (w, _) in zip(got, SOURCE_MERCURY_STATIONS)]
     record("Mercury: station times within 5 minutes of source",
            max(deltas) <= 5, f"max delta {max(deltas):.0f} min")
+
+
+#: Every station the 2026 Motion tables print (B8, B14, B21, B26, B38, B44,
+#: B50), as printed: the boundary between two Motion rows. Mercury's six are
+#: also SOURCE_MERCURY_STATIONS above.
+SOURCE_ALL_STATIONS = {
+    "Mercury": ["26-Feb-26 12:19", "21-Mar-26 01:04", "29-Jun-26 23:07",
+                "24-Jul-26 04:29", "24-Oct-26 12:44", "13-Nov-26 21:25"],
+    "Venus": ["03-Oct-26 12:47", "14-Nov-26 05:59"],
+    "Jupiter": ["11-Mar-26 09:01", "13-Dec-26 06:28"],
+    "Saturn": ["27-Jul-26 01:27", "11-Dec-26 05:02"],
+    "Uranus": ["04-Feb-26 08:04", "10-Sep-26 23:58"],
+    "Neptune": ["07-Jul-26 16:26", "13-Dec-26 03:49"],
+    "Pluto": ["06-May-26 21:06", "16-Oct-26 08:12"],
+}
+
+
+def test_every_printed_station_on_the_speed_of_date():
+    """All 18 printed stations, every body, to the minute -- and the frame.
+
+    A station is where ecliptic longitude OF DATE is stationary. The sidereal
+    speed differs from it by the ayanamsha and nutation rates (~6e-5 deg/day),
+    which is nothing for Mercury and hours for Pluto: on the sidereal speed
+    the same 18 stations miss by up to 3h20m. The second check keeps that
+    measured, so a refactor that drops back to the sidereal zero fails here
+    instead of quietly moving every slow-planet station.
+    """
+    a = dt.datetime(Y, 1, 1, tzinfo=UTC)
+    b = dt.datetime(Y + 1, 1, 1, tzinfo=UTC)
+    worst, n, sid_worst = 0.0, 0, 0.0
+    for body, printed in SOURCE_ALL_STATIONS.items():
+        got = [t for t, _k in ephem.stations(body, a, b)]
+        for w in printed:
+            want = dt.datetime.strptime(w, "%d-%b-%y %H:%M").replace(
+                tzinfo=dt.timezone(dt.timedelta(hours=5, minutes=30)))
+            near = min(got, key=lambda t: abs((t - want).total_seconds()))
+            worst = max(worst, abs((near - want).total_seconds()) / 60)
+            n += 1
+            # the same zero on the SIDEREAL speed, for the record
+            lo, hi = near - dt.timedelta(days=2), near + dt.timedelta(days=2)
+            fn = lambda x, bb=body: ephem.position(x, bb).speed
+            if (fn(lo) < 0) != (fn(hi) < 0):
+                sid = ephem._bisect(fn, lo, hi)
+                sid_worst = max(sid_worst, abs((sid - want).total_seconds()) / 60)
+    record("Stations: all 18 printed 2026 stations within 3 minutes",
+           n == 18 and worst <= 3, f"{n} stations, worst {worst:.1f} min")
+    record("...and the sidereal-speed zero would miss them by over an hour",
+           sid_worst > 60, f"sidereal worst {sid_worst:.0f} min")
+
+
+def test_lunar_apsides_are_geometric_extrema():
+    """B57/B58's 27 printed apsides, scored on time AND distance.
+
+    An apsis is a turning point of the GEOMETRIC Earth-Moon distance. On that
+    definition 25 of the 27 printed rows land within 12 min and 3 km (most
+    within 3 min and 1 km); on the apparent, light-time-corrected distance the
+    layer used before 18-Nov-2026 they sat 7-8 min and 13-23 km off. The two
+    rows that miss are the document's own typos, named so they cannot hide a
+    regression: 30-Jan-26 prints 356871 km for a geometric 365,871 (digits
+    transposed; its 02:15 is an hour off too), and 19-Apr-26 prints 22:24 for
+    a geometric minimum at 12:26 with the distance right to 3 km.
+    """
+    from finastro.rules import catalogue as CAT
+    ist_tz = dt.timezone(dt.timedelta(hours=5, minutes=30))
+    found = ephem.moon_apsides(dt.datetime(Y - 1, 12, 1, tzinfo=UTC),
+                               dt.datetime(Y + 1, 1, 10, tzinfo=UTC))
+    good, typos, n = 0, [], 0
+    for sec, kind in ((57, "apogee"), (58, "perigee")):
+        for date_s, time_s, km_s in (r[:3] for r in CAT.B(sec).tables[0].rows):
+            n += 1
+            h, m = time_s.split(":")
+            want = dt.datetime.strptime(date_s, "%d-%b-%y").replace(
+                hour=int(h), minute=int(m), tzinfo=ist_tz)
+            near = min((t for t, k in found if k == kind),
+                       key=lambda t: abs((t - want).total_seconds()))
+            km = ephem.geometric_distance(near, "Moon") * 149_597_870.7
+            if abs((near - want).total_seconds()) <= 12 * 60 and abs(km - int(km_s)) <= 3:
+                good += 1
+            else:
+                typos.append(date_s)
+    record("Apsides: 25 of 27 printed rows within 12 min and 3 km, geometric",
+           n == 27 and good == 25, f"{good}/{n}")
+    record("...and the two misses are exactly the document's two typos",
+           sorted(typos) == ["19-Apr-26", "30-Jan-26"], str(sorted(typos)))
 
 
 # ---------------------------------------------------------------- 3. total days
@@ -1125,8 +1212,11 @@ def test_tithi_boundaries_against_the_bhadra_section():
            "mid-tithi", coincident == 8,
            f"{coincident} of 16 sit on an even multiple of 6 degrees, which is "
            f"what a 12-degree step is")
-    record("Bhadra: all 8 reproduce from the tithi series within 25 seconds",
-           worst <= 25, f"worst delta {worst:.0f}s -- the same agreement the "
+    # 30 s is the printed minute's half-minute rounding. It read 25 when the
+    # build ran on Moshier (worst 24 s); on the Swiss Ephemeris files the worst
+    # is 26 s -- a lunar ephemeris difference of a second or two, not a miss.
+    record("Bhadra: all 8 reproduce from the tithi series within 30 seconds",
+           worst <= 30, f"worst delta {worst:.0f}s -- the same agreement the "
            f"Bhadra check itself records for the karana series")
 
 
@@ -1552,9 +1642,9 @@ def _crossing(day: dt.date, loc: dict, rising: bool, bits: int) -> dt.datetime:
     ephem.init()
     lo, _ = civil_day_bounds(day, ZoneInfo(loc["tz"]))
     calc = swe.CALC_RISE if rising else swe.CALC_SET
-    res = swe.rise_trans(ephem.to_jd(lo), swe.SUN,
-                         ephem.backend_flag() | calc | bits,
-                         (loc["lon"], loc["lat"], loc["alt"]), 0, 0)
+    res = swe.rise_trans(ephem.to_jd(lo), swe.SUN, calc | bits,
+                         (loc["lon"], loc["lat"], loc["alt"]), 0, 0,
+                         ephem.backend_flag())
     return ephem.from_jd(res[1][0])
 
 
@@ -1954,7 +2044,9 @@ def test_three_saturdays_in_a_bright_fortnight_at_each_venue():
 
 def main() -> int:
     print(f"ephemeris backend: {ephem.init()}\n")
-    for fn in (test_ayanamsha_and_node, test_stations, test_total_days,
+    for fn in (test_ayanamsha_and_node, test_stations,
+               test_every_printed_station_on_the_speed_of_date,
+               test_lunar_apsides_are_geometric_extrema, test_total_days,
                test_combustion, test_weekday_convention, test_source_span_times,
                test_new_york_divergence, test_dignity_frame_is_navamsa,
                test_vargottama_is_d1_equals_d9,

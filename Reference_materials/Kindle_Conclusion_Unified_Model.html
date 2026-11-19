@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Celestial Ledger — Conclusion: A Unified, Honest Model</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --paper:#fbf9f4; --paper2:#f4efe4; --card:#ffffff; --ink:#26211c; --ink-soft:#4f463c; --ink-faint:#857a6c;
+  --line:#e6dfce; --line-soft:#efe9dc;
+  --gold:#9a7113; --gold-soft:#fbf2da; --gold-line:#e7cf94;
+  --teal:#0c7d68; --teal-soft:#e3f3ef;
+  --coral:#b23a2e; --coral-soft:#f8e9e6;
+  --violet:#6244a8; --violet-soft:#efeafa;
+  --green:#2f7d4f; --green-soft:#e6f3ea;
+  --blue:#1f6aa6; --blue-soft:#e7f0f8;
+  --slate:#4a5b6b; --slate-soft:#eef1f4;
+  --serif:'Playfair Display',Georgia,'Times New Roman',serif;
+  --body:Georgia,'Iowan Old Style','Palatino Linotype',serif;
+  --sans:'Inter',system-ui,-apple-system,sans-serif;
+  --r:10px; --r-sm:7px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{ -webkit-text-size-adjust:100%; }
+body{ background:var(--paper); color:var(--ink); font-family:var(--body); font-size:18px; line-height:1.72; max-width:780px; margin:0 auto; padding:30px 26px 90px; }
+p{ margin:0 0 14px; } strong{ color:var(--ink); font-weight:600; } em{ font-style:italic; }
+
+.hero{ text-align:center; padding:22px 0 30px; border-bottom:2px solid var(--gold-line); margin-bottom:34px; }
+.hero .kicker{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:var(--gold); }
+.hero h1{ font-family:var(--serif); font-weight:900; font-size:40px; line-height:1.12; margin:14px 0 0; }
+.hero h1 em{ color:var(--gold); font-style:italic; }
+.hero .sub{ font-style:italic; color:var(--ink-soft); font-size:17px; max-width:600px; margin:16px auto 0; }
+.hero .ornament{ color:var(--gold); letter-spacing:.5em; margin-top:18px; font-size:14px; }
+
+.lesson{ margin:0 0 50px; }
+.lesson-head{ display:flex; align-items:baseline; gap:12px; border-bottom:1px solid var(--line); padding-bottom:8px; margin-bottom:18px; }
+.lesson-no{ font-family:var(--sans); font-size:12px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); white-space:nowrap; }
+.lesson-title{ font-family:var(--serif); font-weight:700; font-size:25px; line-height:1.2; }
+.lesson-title em{ color:var(--gold); font-style:italic; }
+h3.sec{ font-family:var(--serif); font-style:italic; font-weight:600; font-size:21px; color:var(--gold); margin:28px 0 10px; }
+h4.lab{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-faint); margin:22px 0 9px; }
+
+.callout{ border-left:4px solid var(--gold); background:var(--gold-soft); border-radius:0 var(--r-sm) var(--r-sm) 0; padding:14px 18px; margin:18px 0; font-size:16.5px; line-height:1.62; }
+.callout .ct{ display:block; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:5px; color:var(--gold); }
+.callout.teal{ border-color:var(--teal); background:var(--teal-soft);} .callout.teal .ct{ color:var(--teal);}
+.callout.coral{ border-color:var(--coral); background:var(--coral-soft);} .callout.coral .ct{ color:var(--coral);}
+.callout.violet{ border-color:var(--violet); background:var(--violet-soft);} .callout.violet .ct{ color:var(--violet);}
+.callout.green{ border-color:var(--green); background:var(--green-soft);} .callout.green .ct{ color:var(--green);}
+.callout.slate{ border-color:var(--slate); background:var(--slate-soft);} .callout.slate .ct{ color:var(--slate);}
+.honest{ border-left:4px solid var(--violet); background:var(--violet-soft); border-radius:0 var(--r-sm) var(--r-sm) 0; padding:14px 18px; margin:18px 0; font-size:16px; }
+.honest .ct{ display:block; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:5px; color:var(--violet); }
+
+.keyrule{ text-align:center; font-family:var(--serif); font-style:italic; font-size:20px; line-height:1.5; color:var(--gold); border-top:1px solid var(--gold-line); border-bottom:1px solid var(--gold-line); padding:18px 14px; margin:22px 0; }
+.keyrule .small{ display:block; font-family:var(--sans); font-style:normal; font-size:10px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:8px; }
+.keyrule b{ font-style:normal; color:var(--ink); }
+
+.tag{ display:inline-block; font-family:var(--sans); font-size:10px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:1px 7px; border-radius:4px; vertical-align:middle; }
+.tag.cl{ background:var(--blue-soft); color:var(--blue); } .tag.fw{ background:var(--gold-soft); color:var(--gold); } .tag.vf{ background:var(--violet-soft); color:var(--violet); }
+.tag.ob{ background:var(--teal-soft); color:var(--teal); } .tag.as{ background:var(--slate-soft); color:var(--slate); } .tag.hi{ background:var(--coral-soft); color:var(--coral); } .tag.rg{ background:var(--green-soft); color:var(--green); }
+
+.cards{ display:flex; flex-wrap:wrap; gap:12px; margin:16px 0; }
+.card{ flex:1 1 220px; background:var(--card); border:1px solid var(--line); border-top:3px solid var(--gold); border-radius:var(--r-sm); padding:14px 16px; }
+.card.up{ border-top-color:var(--green);} .card.down{ border-top-color:var(--coral);} .card.teal{ border-top-color:var(--teal);} .card.violet{ border-top-color:var(--violet);} .card.slate{ border-top-color:var(--slate);} .card.blue{ border-top-color:var(--blue);}
+.card .ic{ font-size:24px; line-height:1; } .card .ti{ font-family:var(--serif); font-weight:700; font-size:18px; margin:6px 0 2px; } .card .ti em{ color:var(--gold); font-style:italic; font-weight:400; font-size:14px; }
+.card .mt{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px; } .card p{ font-size:15px; line-height:1.55; margin:0; color:var(--ink-soft); }
+
+.tw{ overflow-x:auto; border:1px solid var(--line); border-radius:var(--r-sm); margin:16px 0; }
+table{ width:100%; border-collapse:collapse; font-family:var(--sans); }
+thead tr{ background:var(--gold-soft); }
+th{ font-size:10.5px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:var(--gold); text-align:left; padding:9px 11px; white-space:nowrap; }
+td{ font-size:13px; padding:8px 11px; border-top:1px solid var(--line-soft); vertical-align:top; color:var(--ink-soft); }
+td.g{ color:var(--gold); font-weight:600; white-space:nowrap; }
+td.up{ color:var(--green); font-weight:600;} td.dn{ color:var(--coral); font-weight:600;} td.s{ color:var(--slate); font-weight:600;}
+tbody tr:nth-child(even){ background:#fcfaf5; }
+tr.total td{ background:var(--gold-soft); color:var(--gold); font-weight:700; border-top:2px solid var(--gold-line); }
+
+.qa{ border:1px solid var(--line); border-radius:var(--r-sm); overflow:hidden; margin:20px 0; }
+.qa-h{ background:var(--paper2); padding:9px 15px; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); border-bottom:1px solid var(--line); }
+.qa-i{ padding:12px 15px; border-bottom:1px solid var(--line-soft); } .qa-i:last-child{ border-bottom:none; }
+.qa-q{ font-size:16px; } .qa-q b{ color:var(--gold); font-family:var(--sans); font-size:12px; font-weight:700; margin-right:8px; }
+.qa-a{ font-size:16px; color:var(--ink-soft); margin-top:5px; } .qa-a b{ color:var(--teal); font-family:var(--sans); font-size:12px; font-weight:700; margin-right:8px; }
+
+.recap{ display:flex; align-items:center; gap:18px; background:var(--gold-soft); border:1px solid var(--gold-line); border-radius:var(--r-sm); padding:16px 20px; margin:20px 0; }
+.recap .n{ font-family:var(--serif); font-weight:900; font-size:38px; color:var(--gold); line-height:1; flex-shrink:0; }
+.recap .l{ font-family:var(--sans); font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); }
+.recap .t{ font-family:var(--serif); font-weight:700; font-size:18px; margin:2px 0; } .recap .d{ font-size:14px; color:var(--ink-soft); }
+
+.ladder{ counter-reset:rk; list-style:none; padding:0; margin:14px 0; }
+.ladder li{ counter-increment:rk; display:flex; gap:14px; align-items:flex-start; padding:9px 0; border-bottom:1px solid var(--line-soft); font-size:15.5px; }
+.ladder li:last-child{ border-bottom:none; }
+.ladder li::before{ content:counter(rk); flex-shrink:0; width:26px; height:26px; background:var(--gold); color:#fff; border-radius:50%; font-family:var(--sans); font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center; }
+.ladder b{ color:var(--ink); }
+
+.takeaways{ counter-reset:tk; list-style:none; padding:0; margin:14px 0; }
+.takeaways li{ counter-increment:tk; position:relative; padding:10px 0 10px 46px; border-bottom:1px solid var(--line-soft); font-size:16.5px; }
+.takeaways li:last-child{ border-bottom:none; }
+.takeaways li::before{ content:counter(tk); position:absolute; left:0; top:9px; width:30px; height:30px; border:1.5px solid var(--gold); color:var(--gold); border-radius:50%; font-family:var(--serif); font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center; }
+
+.checklist{ list-style:none; padding:0; margin:14px 0; }
+.checklist li{ position:relative; padding:8px 0 8px 34px; border-bottom:1px solid var(--line-soft); font-size:16px; }
+.checklist li:last-child{ border-bottom:none; }
+.checklist li::before{ content:"\2610"; position:absolute; left:0; top:6px; font-size:20px; color:var(--gold); line-height:1; }
+
+.gloss{ background:var(--card); border:1px solid var(--line); border-radius:var(--r-sm); padding:6px 18px; margin:16px 0; }
+.gloss dt{ font-family:var(--serif); font-weight:700; font-size:16px; color:var(--gold); margin:12px 0 1px; }
+.gloss dd{ margin:0 0 4px; font-size:15.5px; color:var(--ink-soft); }
+
+.creed{ list-style:none; padding:0; margin:14px 0; }
+.creed li{ position:relative; padding:10px 0 10px 26px; border-bottom:1px solid rgba(98,68,168,.18); font-size:16.5px; line-height:1.55; }
+.creed li:last-child{ border-bottom:none; }
+.creed li::before{ content:"\2014"; position:absolute; left:0; top:10px; color:var(--violet); font-weight:700; }
+.creed b{ color:var(--ink); }
+
+.bridge{ text-align:center; font-style:italic; color:var(--ink-faint); font-size:15px; border-top:1px solid var(--line); padding-top:22px; margin-top:34px; }
+hr.soft{ border:none; border-top:1px solid var(--line); margin:30px 0; }
+@media (max-width:600px){ body{font-size:17px;padding:20px 16px 70px;} .hero h1{font-size:31px;} .lesson-title{font-size:21px;} }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="kicker">The Celestial Ledger · Conclusion</div>
+  <h1>A Unified, <em>Honest</em> Model</h1>
+  <div class="sub">Twenty-one chapters, one argument — what the method is, how its parts fit, what the evidence permits, and what it is finally for.</div>
+  <div class="ornament">✦ ✦ ✦</div>
+</div>
+
+<p><em>This conclusion draws the whole book into a single coherent picture. It adds no new technique; it assembles everything already built into one honest model a reader can carry forward.</em></p>
+
+<div class="callout violet">
+  <span class="ct">Claim-type key</span>
+  <span class="tag fw">Framework</span> this book&rsquo;s synthesis &middot; <span class="tag ob">Observed</span> an established empirical finding. No new computation here &mdash; only the picture the prior chapters earned.
+</div>
+
+<hr class="soft"/>
+
+<!-- ===== MOVEMENT 1 ===== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">I</span>
+    <span class="lesson-title">The question we began with</span>
+  </div>
+
+  <p>We set out to build something unusual: a serious, graded masterclass in financial astrology that <strong>refuses to lie to you.</strong> Most of the literature sells certainty &mdash; secret cycles, crash predictions, planetary &ldquo;causes&rdquo; of prices. This book promised the opposite: to teach the craft in full while holding it to the standards of evidence and risk that any honest approach to markets demands. The wager was that a financial astrology told truthfully would be <em>more</em> valuable than one told credulously &mdash; not as a crystal ball, but as a disciplined lens.</p>
+
+  <div class="keyrule">
+    <span class="small">The answer, in one sentence</span>
+    Financial astrology is a <b>clock, not a compass.</b>
+  </div>
+
+  <p>The answer, after twenty-one chapters, fits in that one sentence. It can offer a symbolic vocabulary for the <em>rhythms</em> of mass sentiment and a scaffold for <em>disciplined behaviour</em> &mdash; but it cannot tell you the <em>direction</em> the market will take, and the evidence does not grant it a predictive edge. Everything below is the unpacking of that sentence.</p>
+</div>
+
+<!-- ===== MOVEMENT 2 ===== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">II</span>
+    <span class="lesson-title">The journey, in five movements</span>
+  </div>
+
+  <p><span class="tag fw">Framework</span> The book moved deliberately from foundations to conscience &mdash; each movement feeding the next, none standing alone.</p>
+
+  <div class="cards">
+    <div class="card blue">
+      <div class="mt">Chapters 0&ndash;3</div>
+      <div class="ti">Foundations</div>
+      <p>Built the alphabet &mdash; grahas, rashis, aspects, nakshatras &mdash; then set the honest frame: markets are mass psychology (Ch 1), the two zodiacs are one sky measured two ways (Ch 2), and the astrologer must learn the market&rsquo;s own language before fusing the two (Ch 3).</p>
+    </div>
+    <div class="card">
+      <div class="mt">Chapters 4&ndash;7</div>
+      <div class="ti">The toolkit</div>
+      <p>How to read a planet completely: <em>who</em> it is (significator), <em>how</em> it is dressed (sign), <em>where</em> it acts (house), and <em>in what condition</em> (dignity, station, speed) &mdash; always with the discipline that <strong>strength is not direction.</strong></p>
+    </div>
+    <div class="card teal">
+      <div class="mt">Chapters 8&ndash;12</div>
+      <div class="ti">Timing</div>
+      <p>Gave the static chart a calendar: the great Jupiter&ndash;Saturn cycle, the nodal/McWhirter business rhythm, eclipses and stations, the Bradley siderograph, and the Indian dasha systems &mdash; each weighed honestly, each capped by small samples and the always-on sky.</p>
+    </div>
+    <div class="card violet">
+      <div class="mt">Chapters 13&ndash;17</div>
+      <div class="ti">Applied practice</div>
+      <p>Turned tools into work: the contested charts of the market itself, KP&rsquo;s precise-but-fragile sub-lords, the one genuine commodity rulership (Sun&ndash;gold, Moon&ndash;silver), sector and stock selection, and finally the assembled three-layer system.</p>
+    </div>
+    <div class="card slate">
+      <div class="mt">Chapters 18&ndash;20</div>
+      <div class="ti">Rigor &amp; conscience</div>
+      <p>Closed the circle: how to test a claim honestly (backtesting and journaling), what the evidence actually shows (no validated edge), and how to engage ethically and survive financially (risk, regulation, the conviction trap).</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MOVEMENT 3 ===== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">III</span>
+    <span class="lesson-title">The unified, honest model</span>
+  </div>
+
+  <p><span class="tag fw">Framework</span> Here is the whole method as one integrated picture &mdash; the synthesis the book was built to deliver.</p>
+
+  <div class="cards">
+    <div class="card">
+      <div class="mt">Component 1</div>
+      <div class="ti">One sky, two sensitivities</div>
+      <p>Everything starts with the Chapter 2 insight: the <em>angles</em> between planets (aspects, cycles, the siderograph) are <strong>zodiac-independent</strong> &mdash; identical in tropical or sidereal &mdash; while the <em>placements</em> (sign, house, nakshatra, sub-lord, dasha) are <strong>zodiac-critical.</strong> This single distinction tells you when the choice of system matters and when it is irrelevant, and it is what lets the Western cycle tradition and the Indian placement tradition be fused without confusion.</p>
+    </div>
+    <div class="card">
+      <div class="mt">Component 2</div>
+      <div class="ti">The reading stack</div>
+      <p><em>How to read any chart.</em> A planet is read in layers: <strong>significator</strong> (which market force) &rarr; <strong>sign</strong> (its character) &rarr; <strong>house</strong> (its arena) &rarr; <strong>state</strong> (dignity, motion, combustion, station, speed). This converts &ldquo;Jupiter&rdquo; into &ldquo;exalted Jupiter, direct, in the wealth house&rdquo; &mdash; a <em>qualified</em> reading, never a verdict, because strength is intensity, not direction.</p>
+    </div>
+    <div class="card">
+      <div class="mt">Component 3</div>
+      <div class="ti">The three-layer system</div>
+      <p><em>How to read the moment.</em> Charts become decisions through three nested time-scales: the <strong>macro</strong> backdrop (the great cycles &mdash; the market&rsquo;s season), the <strong>medium</strong> windows (eclipses, stations, ingresses, siderograph turns, dashas &mdash; windows to <em>watch</em>), and the <strong>micro</strong> trigger (the Moon&rsquo;s clock and sector tilt &mdash; short-term timing). A fourth layer, the <strong>trader&rsquo;s own chart,</strong> governs not the market but the self &mdash; how aggressive to be with one&rsquo;s own capital.</p>
+    </div>
+    <div class="card">
+      <div class="mt">Component 4</div>
+      <div class="ti">The order of operations</div>
+      <p><em>Astrology&rsquo;s proper place.</em> Any actual trade runs through a fixed sequence: <strong>market structure &rarr; fundamentals &rarr; sentiment &rarr; technical setup &rarr; risk parameters set &rarr;</strong> <em>then</em> <strong>astrology as a confluence and timing overlay.</strong> Astrology is the sixth question, never the first. It never originates a trade and never overrides price or risk.</p>
+    </div>
+    <div class="card">
+      <div class="mt">Component 5</div>
+      <div class="ti">True confluence</div>
+      <p><em>The discipline that holds it together.</em> The system acts only when astrology agrees with <strong>independent</strong> evidence &mdash; price, sentiment, fundamentals &mdash; and never mistakes <em>coincident astrological tools</em> (a station, an eclipse, and a siderograph turn on the same date &mdash; one sky counted thrice) for independent confirmation.</p>
+    </div>
+    <div class="card">
+      <div class="mt">Component 6</div>
+      <div class="ti">The epistemology</div>
+      <p><em>How you know.</em> Every claim is <strong>pre-registered, tested out-of-sample, scored on misses as well as hits, corrected for the many rules tried, and netted of costs.</strong> The honest journal is the living out-of-sample test. This is what separates a real signal from the data-mining artefacts that the field mistakes for discovery.</p>
+    </div>
+    <div class="card down">
+      <div class="mt">Component 7</div>
+      <div class="ti">The verdict</div>
+      <p><em>What the evidence permits.</em> Held to that standard, <strong>no astrological rule shows a validated edge.</strong> The two real effects in the neighbourhood &mdash; the lunar-phase return pattern and the seasonal &ldquo;Sell in May&rdquo; effect &mdash; are <strong>behavioral and seasonal, not astrological,</strong> are small and contested, and decay as public anomalies do.</p>
+    </div>
+    <div class="card up">
+      <div class="mt">Component 8</div>
+      <div class="ti">The safety net</div>
+      <p><em>What actually protects you.</em> Because the signal is unproven, <strong>risk management is the entire safety net.</strong> Fixed-fractional sizing, no leverage on the astrology, predefined stops, and &mdash; above all &mdash; sizing <strong>by rules and not by conviction,</strong> because the conviction a rich reading manufactures is precisely its most dangerous, unproven part.</p>
+    </div>
+  </div>
+
+  <div class="keyrule">
+    <span class="small">The model, in a breath</span>
+    One sky read in layers, assembled across three time-scales, kept subordinate to a market-first and risk-always order of operations, tested honestly, judged soberly, and governed by ethics. <b>It predicts nothing. It disciplines everything.</b>
+  </div>
+</div>
+
+<!-- ===== MOVEMENT 4 ===== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">IV</span>
+    <span class="lesson-title">The honest verdict, restated</span>
+  </div>
+
+  <p><span class="tag ob">Observed</span> Let there be no ambiguity in the final pages. The book has found <strong>no evidence that the planets move markets,</strong> and no astrological rule that survives an honest, out-of-sample, cost-adjusted test. The single defensible empirical sentence is the one Chapter 19 located: <strong>mood moves markets, and mood has rhythms.</strong> Astrology is, at most, an ancient and elaborate symbolic <em>notation</em> for those rhythms &mdash; not a mechanism, not a forecast.</p>
+
+  <p><span class="tag fw">Framework</span> And yet the enterprise is not empty, because its genuine product was never prediction. Its product is <strong>process</strong>: a structured way to be patient, to wait for confluence, to size for survival, to manage one&rsquo;s own psychology, and to confront one&rsquo;s results honestly. <strong>The discipline is the edge</strong> &mdash; the only edge the evidence allows, and a real one. A practitioner who internalises the system&rsquo;s <em>behaviour</em> while holding its <em>forecasts</em> at zero confidence has gained something valuable: not a way to beat the market, but a way to engage with it that is patient, humble, structured, and solvent.</p>
+</div>
+
+<!-- ===== MOVEMENT 5 — THE CREED ===== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">V</span>
+    <span class="lesson-title">The creed, woven together</span>
+  </div>
+
+  <p><span class="tag fw">Framework</span> The book&rsquo;s recurring lines were never decoration; together they <em>are</em> the model. Read in sequence, these nine lines reconstruct the entire book.</p>
+
+  <div class="honest">
+    <span class="ct">The Celestial Ledger &mdash; the creed</span>
+    <ul class="creed">
+      <li><b>Clock, not compass</b> &mdash; astrology times rhythms, it does not point to direction.</li>
+      <li><b>Strength is not direction</b> &mdash; an exalted planet is intense, not bullish.</li>
+      <li><b>Trust the planets, doubt the ascendant</b> &mdash; planet-in-sign is robust; the chart&rsquo;s exact time and houses are fragile.</li>
+      <li><b>Credit the jeweller, not the Sun</b> &mdash; real demand (a wedding season, a festival) explains the gold move, not the metal&rsquo;s &ldquo;ruler.&rdquo;</li>
+      <li><b>Aim the dasha at the mirror</b> &mdash; turn the predictive lens on your own discipline, not on the market.</li>
+      <li><b>Sound inputs, unproven output</b> &mdash; good charts and clean computation still do not make a validated forecast.</li>
+      <li><b>An aspect at the crash proves nothing</b> &mdash; dozens are always active; only a pre-registered, scored test counts.</li>
+      <li><b>Size by rules, not feelings</b> &mdash; conviction is the unproven, dangerous part; let fixed risk rules, not certainty, set your size.</li>
+      <li><b>Process, not prophecy</b> &mdash; and <b>the discipline is the edge.</b></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ===== MOVEMENT 6 ===== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">VI</span>
+    <span class="lesson-title">What this book is &mdash; and is not</span>
+  </div>
+
+  <p><span class="tag fw">Framework</span> This is <strong>not</strong> a system for predicting prices, a guarantee of profit, or a licence to advise others or to trade on conviction. The evidence forbids the first two; ethics and regulation forbid the rest.</p>
+
+  <p>It <strong>is</strong> a complete, honest, graded education in a fascinating symbolic tradition: a way to read the sky&rsquo;s rhythms as a lens on mass sentiment, a disciplined scaffold that keeps a trader patient and solvent, and &mdash; perhaps most valuable &mdash; a worked example of how to hold a beautiful idea <em>and</em> the truth about it at the same time. You can love the symbolism, find the cycles elegant, enjoy the craft for a lifetime, and still trade as though the astrology has no edge &mdash; because, on the evidence, it does not. Holding both without flinching is the whole achievement, and it is the posture this book has tried, chapter by chapter, to model.</p>
+
+  <div class="callout violet">
+    <span class="ct">The last word</span>
+    The sky is a clock of human moods, not a ledger of fixed fates. Read it as such &mdash; with curiosity, with discipline, and without illusion &mdash; and you will have understood <em>The Celestial Ledger</em> exactly as it was meant.
+  </div>
+</div>
+
+<p class="bridge">End of the main text. The reference Appendices follow &mdash; <strong>A</strong> the ephemeris how-to (computing positions, ayanamsa, and dashas with Swiss Ephemeris) &middot; <strong>B</strong> reference tables (dignities, aspects, nakshatras, dasha lengths, sector map, combustion orbs) &middot; <strong>C</strong> key charts (the NYSE/BSE/NSE foundation data and the touchstone-crash skies) &middot; <strong>D</strong> a consolidated glossary &middot; <strong>E</strong> the bibliography of cited authors and works &middot; <strong>F</strong> a NotebookLM query pack for interrogating the wider library.</p>
+
+</body>
+</html>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Celestial Ledger — Chapter 2: Two Skies, Two Grammars</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --paper:#fbf9f4; --paper2:#f4efe4; --card:#ffffff; --ink:#26211c; --ink-soft:#4f463c; --ink-faint:#857a6c;
+  --line:#e6dfce; --line-soft:#efe9dc;
+  --gold:#9a7113; --gold-soft:#fbf2da; --gold-line:#e7cf94;
+  --teal:#0c7d68; --teal-soft:#e3f3ef;
+  --coral:#b23a2e; --coral-soft:#f8e9e6;
+  --violet:#6244a8; --violet-soft:#efeafa;
+  --green:#2f7d4f; --green-soft:#e6f3ea;
+  --blue:#1f6aa6; --blue-soft:#e7f0f8;
+  --slate:#445a6e; --slate-soft:#e8edf2;
+  --serif:'Playfair Display',Georgia,'Times New Roman',serif;
+  --body:Georgia,'Iowan Old Style','Palatino Linotype',serif;
+  --sans:'Inter',system-ui,-apple-system,sans-serif;
+  --r:10px; --r-sm:7px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{ -webkit-text-size-adjust:100%; }
+body{ background:var(--paper); color:var(--ink); font-family:var(--body); font-size:18px; line-height:1.72; max-width:780px; margin:0 auto; padding:30px 26px 90px; }
+p{ margin:0 0 14px; } strong{ color:var(--ink); font-weight:600; } em{ font-style:italic; }
+
+.hero{ text-align:center; padding:22px 0 30px; border-bottom:2px solid var(--gold-line); margin-bottom:34px; }
+.hero .kicker{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:var(--gold); }
+.hero h1{ font-family:var(--serif); font-weight:900; font-size:40px; line-height:1.12; margin:14px 0 0; }
+.hero h1 em{ color:var(--gold); font-style:italic; }
+.hero .sub{ font-style:italic; color:var(--ink-soft); font-size:17px; max-width:580px; margin:16px auto 0; }
+.hero .ornament{ color:var(--gold); letter-spacing:.5em; margin-top:18px; font-size:14px; }
+
+.lesson{ margin:0 0 50px; }
+.lesson-head{ display:flex; align-items:baseline; gap:12px; border-bottom:1px solid var(--line); padding-bottom:8px; margin-bottom:18px; }
+.lesson-no{ font-family:var(--sans); font-size:12px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); white-space:nowrap; }
+.lesson-title{ font-family:var(--serif); font-weight:700; font-size:25px; line-height:1.2; }
+.lesson-title em{ color:var(--gold); font-style:italic; }
+h3.sec{ font-family:var(--serif); font-style:italic; font-weight:600; font-size:21px; color:var(--gold); margin:28px 0 10px; }
+h4.lab{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-faint); margin:22px 0 9px; }
+
+.callout{ border-left:4px solid var(--gold); background:var(--gold-soft); border-radius:0 var(--r-sm) var(--r-sm) 0; padding:14px 18px; margin:18px 0; font-size:16.5px; line-height:1.62; }
+.callout .ct{ display:block; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:5px; color:var(--gold); }
+.callout.teal{ border-color:var(--teal); background:var(--teal-soft);} .callout.teal .ct{ color:var(--teal);}
+.callout.coral{ border-color:var(--coral); background:var(--coral-soft);} .callout.coral .ct{ color:var(--coral);}
+.callout.violet{ border-color:var(--violet); background:var(--violet-soft);} .callout.violet .ct{ color:var(--violet);}
+.callout.green{ border-color:var(--green); background:var(--green-soft);} .callout.green .ct{ color:var(--green);}
+.callout.slate{ border-color:var(--slate); background:var(--slate-soft);} .callout.slate .ct{ color:var(--slate);}
+.honest{ border-left:4px solid var(--violet); background:var(--violet-soft); border-radius:0 var(--r-sm) var(--r-sm) 0; padding:14px 18px; margin:18px 0; font-size:16px; }
+.honest .ct{ display:block; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:5px; color:var(--violet); }
+
+.keyrule{ text-align:center; font-family:var(--serif); font-style:italic; font-size:20px; line-height:1.5; color:var(--gold); border-top:1px solid var(--gold-line); border-bottom:1px solid var(--gold-line); padding:18px 14px; margin:22px 0; }
+.keyrule .small{ display:block; font-family:var(--sans); font-style:normal; font-size:10px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:8px; }
+.keyrule b{ font-style:normal; color:var(--ink); }
+
+.tag{ display:inline-block; font-family:var(--sans); font-size:10px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:1px 7px; border-radius:4px; vertical-align:middle; }
+.tag.cl{ background:var(--blue-soft); color:var(--blue); } .tag.fw{ background:var(--gold-soft); color:var(--gold); } .tag.vf{ background:var(--violet-soft); color:var(--violet); }
+.tag.as{ background:var(--slate-soft); color:var(--slate); }
+
+.cards{ display:flex; flex-wrap:wrap; gap:12px; margin:16px 0; }
+.card{ flex:1 1 220px; background:var(--card); border:1px solid var(--line); border-top:3px solid var(--gold); border-radius:var(--r-sm); padding:14px 16px; }
+.card.up{ border-top-color:var(--green);} .card.down{ border-top-color:var(--coral);} .card.teal{ border-top-color:var(--teal);} .card.violet{ border-top-color:var(--violet);} .card.blue{ border-top-color:var(--blue);} .card.slate{ border-top-color:var(--slate);}
+.card .ic{ font-size:24px; line-height:1; } .card .ti{ font-family:var(--serif); font-weight:700; font-size:18px; margin:6px 0 2px; } .card .ti em{ color:var(--gold); font-style:italic; font-weight:400; font-size:14px; }
+.card .mt{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px; } .card p{ font-size:15px; line-height:1.55; margin:0; color:var(--ink-soft); }
+
+.tw{ overflow-x:auto; border:1px solid var(--line); border-radius:var(--r-sm); margin:16px 0; }
+table{ width:100%; border-collapse:collapse; font-family:var(--sans); }
+thead tr{ background:var(--gold-soft); }
+th{ font-size:10.5px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:var(--gold); text-align:left; padding:9px 11px; white-space:nowrap; }
+td{ font-size:13px; padding:8px 11px; border-top:1px solid var(--line-soft); vertical-align:top; color:var(--ink-soft); }
+td.g{ color:var(--gold); font-weight:600; white-space:nowrap; }
+td.up{ color:var(--green); font-weight:600;} td.dn{ color:var(--coral); font-weight:600;} td.s{ color:var(--slate); font-weight:600; white-space:nowrap; }
+tbody tr:nth-child(even){ background:#fcfaf5; }
+
+.checklist{ list-style:none; padding:0; margin:16px 0; }
+.checklist li{ display:flex; gap:13px; align-items:flex-start; background:var(--card); border:1px solid var(--line); border-left:3px solid var(--teal); border-radius:var(--r-sm); padding:12px 16px; margin-bottom:9px; font-size:15.5px; line-height:1.55; }
+.checklist li .bx{ flex-shrink:0; width:20px; height:20px; border:2px solid var(--teal); border-radius:4px; color:var(--teal); font-family:var(--sans); font-weight:700; font-size:12px; display:flex; align-items:center; justify-content:center; margin-top:2px; }
+.checklist li b{ color:var(--ink); }
+
+.qa{ border:1px solid var(--line); border-radius:var(--r-sm); overflow:hidden; margin:20px 0; }
+.qa-h{ background:var(--paper2); padding:9px 15px; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); border-bottom:1px solid var(--line); }
+.qa-i{ padding:12px 15px; border-bottom:1px solid var(--line-soft); } .qa-i:last-child{ border-bottom:none; }
+.qa-q{ font-size:16px; } .qa-q b{ color:var(--gold); font-family:var(--sans); font-size:12px; font-weight:700; margin-right:8px; }
+.qa-a{ font-size:16px; color:var(--ink-soft); margin-top:5px; } .qa-a b{ color:var(--teal); font-family:var(--sans); font-size:12px; font-weight:700; margin-right:8px; }
+
+.recap{ display:flex; align-items:center; gap:18px; background:var(--gold-soft); border:1px solid var(--gold-line); border-radius:var(--r-sm); padding:16px 20px; margin:20px 0; }
+.recap .n{ font-family:var(--serif); font-weight:900; font-size:38px; color:var(--gold); line-height:1; flex-shrink:0; }
+.recap .l{ font-family:var(--sans); font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); }
+.recap .t{ font-family:var(--serif); font-weight:700; font-size:18px; margin:2px 0; } .recap .d{ font-size:14px; color:var(--ink-soft); }
+
+.ladder{ counter-reset:rk; list-style:none; padding:0; margin:14px 0; }
+.ladder li{ counter-increment:rk; display:flex; gap:14px; align-items:flex-start; padding:9px 0; border-bottom:1px solid var(--line-soft); font-size:15.5px; }
+.ladder li:last-child{ border-bottom:none; }
+.ladder li::before{ content:counter(rk); flex-shrink:0; width:26px; height:26px; background:var(--gold); color:#fff; border-radius:50%; font-family:var(--sans); font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center; }
+.ladder b{ color:var(--ink); }
+
+.takeaways{ counter-reset:tk; list-style:none; padding:0; margin:14px 0; }
+.takeaways li{ counter-increment:tk; position:relative; padding:10px 0 10px 46px; border-bottom:1px solid var(--line-soft); font-size:16.5px; }
+.takeaways li:last-child{ border-bottom:none; }
+.takeaways li::before{ content:counter(tk); position:absolute; left:0; top:9px; width:30px; height:30px; border:1.5px solid var(--gold); color:var(--gold); border-radius:50%; font-family:var(--serif); font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center; }
+
+.gloss{ background:var(--card); border:1px solid var(--line); border-radius:var(--r-sm); padding:6px 18px; margin:16px 0; }
+.gloss dt{ font-family:var(--serif); font-weight:700; font-size:16px; color:var(--gold); margin:12px 0 1px; }
+.gloss dd{ margin:0 0 4px; font-size:15.5px; color:var(--ink-soft); }
+
+.bridge{ text-align:center; font-style:italic; color:var(--ink-faint); font-size:15px; border-top:1px solid var(--line); padding-top:22px; margin-top:34px; }
+hr.soft{ border:none; border-top:1px solid var(--line); margin:30px 0; }
+@media (max-width:600px){ body{font-size:17px;padding:20px 16px 70px;} .hero h1{font-size:31px;} .lesson-title{font-size:21px;} }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="kicker">The Celestial Ledger · Volume I</div>
+  <h1>Two Skies, <em>Two Grammars</em></h1>
+  <div class="sub">Chapter Two — reconciling the tropical (Western) and sidereal (Vedic) zodiacs into one working toolkit. The chapter that prevents the single most common error in cross-tradition work — and the one technical confusion that can quietly wreck a market analysis.</div>
+  <div class="ornament">✦ ✦ ✦</div>
+</div>
+
+<p>In Chapter 0 we promised that the two skies — the Western and the Indian — share the same <em>structure</em> even where they differ on where to start counting. We even named the gap between them and set it aside for later. <strong>Later is now.</strong> This is the chapter that pays that promise back in full, because the gap between the two zodiacs is not a curiosity for the curious; it is an operational hazard that sits underneath every chart you will ever read in this book.</p>
+
+<div class="callout teal">
+  <span class="ct">A promise renewed</span>
+  The honest labels return, with one addition for this chapter. <span class="tag cl">Classical</span> means the old texts and conventions teach this — settled ground. <span class="tag fw">Framework</span> means it is this book's method, a way of working you should test. <span class="tag as">Astronomical</span> means it is a verifiable fact of astronomy, true regardless of any tradition. And <span class="tag vf">Verify</span> means the exact figure is convention-dependent, so tread with care. Every live position in this chapter was computed with the Swiss Ephemeris for <strong>22 June 2026</strong> — not recalled, but calculated.
+</div>
+
+<!-- ═══════════ 2.1 ═══════════ -->
+<div class="lesson">
+  <div class="lesson-head"><div class="lesson-no">Lesson 2.1</div><div class="lesson-title">Why Two Skies Exist, <em>and Why You Must Care</em></div></div>
+
+  <p>Open a Western astrology app and an Indian (Vedic) one side by side, feed them the same birth moment, and you will get <strong>different sign positions for every planet</strong>. A planet the Western chart calls "late Cancer" the Vedic chart may call "early Cancer" — or even the previous sign entirely. To a beginner this looks as though one of the two systems must simply be <em>wrong</em>. Neither is. They are measuring the very same sky from two different starting lines.</p>
+
+  <p>For a financial-astrology practitioner this is not a philosophical curiosity — it is an operational hazard. This book deliberately fuses two lineages: the <strong>Western</strong> financial astrology of Bradley, McWhirter, Gann and David Williams, and the <strong>Indian</strong> market astrology of KP and Vedic practice. The Western lineage works almost entirely in the <strong>tropical</strong> zodiac; the Indian lineage works in the <strong>sidereal</strong> zodiac.</p>
+
+  <div class="callout">
+    <span class="ct">Callout · the hazard, stated plainly</span>
+    <span class="tag fw">Framework</span> Blend the techniques of the two traditions without understanding the offset between them and you will mis-assign planets to signs, sectors, nakshatras, and sub-lords — and build conclusions on sand. This chapter gives you the one conversion, and the one liberating insight, that together make the fusion safe.
+  </div>
+
+  <div class="keyrule"><span class="small">The rule to lock in</span>The two zodiacs are not rivals to be judged true or false. They are <b>two starting lines on one circle</b> — and a serious practitioner learns the bridge between them rather than picking a side.</div>
+
+  <div class="qa">
+    <div class="qa-h">💬 Check yourself · Lesson 2.1</div>
+    <div class="qa-i"><div class="qa-q"><b>Q1</b>The same birth moment gives different sign positions in a Western and a Vedic app. Is one of them broken?</div><div class="qa-a"><b>A</b>No. Both measure the <strong>same sky</strong> from <strong>two different starting lines</strong>. The disagreement is expected, not an error.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q2</b>Why does this book, in particular, have to confront the two zodiacs head-on?</div><div class="qa-a"><b>A</b>Because it fuses a <strong>Western (tropical)</strong> cycle tradition with an <strong>Indian (sidereal)</strong> placement tradition. Mixing them blindly mis-assigns signs, sectors, nakshatras and sub-lords.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q3</b>Is the offset a spiritual debate or a practical problem?</div><div class="qa-a"><b>A</b>Practical. It is an <strong>operational hazard</strong> — get it wrong and the analysis is built on sand, however elegant it looks.</div></div>
+  </div>
+  <div class="recap"><div class="n">✦</div><div><div class="l">Lesson 2.1 — Locked In</div><div class="t">The problem, named</div><div class="d">Two traditions, two zodiacs, one fused toolkit. Now we learn exactly why the gap exists — and how to measure it.</div></div></div>
+</div>
+
+<!-- ═══════════ 2.2 ═══════════ -->
+<div class="lesson">
+  <div class="lesson-head"><div class="lesson-no">Lesson 2.2</div><div class="lesson-title">The Two Zodiacs <em>and the Wobble Between Them</em></div></div>
+
+  <p>Everything in this chapter follows from <strong>one astronomical fact and two definitions</strong>. Learn these three things and the rest is bookkeeping.</p>
+
+  <h3 class="sec">The Two Definitions</h3>
+
+  <div class="cards">
+    <div class="card up"><div class="ic">🌱</div><div class="ti">The Tropical Zodiac</div><div class="mt">Anchored to the Seasons</div><p>Its 0° Aries <em>is</em> the <strong>vernal (spring) equinox</strong> — where the Sun sits when spring begins in the Northern Hemisphere. Tied to the Earth–Sun seasonal relationship, not to any star. The zodiac of mainstream Western astrology.</p></div>
+    <div class="card blue"><div class="ic">⭐</div><div class="ti">The Sidereal Zodiac</div><div class="mt">Anchored to the Stars</div><p>Its 0° point is fixed against the <strong>stellar background</strong> — in the standard Indian (Lahiri) convention, set so the bright star <em>Spica</em> (Sanskrit <em>Chitra</em>) falls near 0° Libra. The zodiac of Indian / Vedic astrology.</p></div>
+  </div>
+  <p style="font-size:15px;color:var(--ink-faint);"><span class="tag cl">Classical</span> Both definitions are classical and deliberate. One pins the circle to the rhythm of the year; the other pins it to the rhythm of the heavens. Neither is an accident of history — each is a choice.</p>
+
+  <h3 class="sec">The Wobble: Precession of the Equinoxes</h3>
+
+  <p><span class="tag as">Astronomical</span> The Earth's axis does not point at a fixed spot forever; it slowly traces a circle, like a spinning top winding down — a wobble called <strong>precession</strong>. One full wobble takes roughly <strong>25,800 years</strong> (the "Great Year"), which works out to about <strong>1° every ~72 years</strong>, or ~50 arc-seconds per year. Because the equinox point is <em>defined</em> by the axis, the equinox drifts slowly backward against the fixed stars.</p>
+
+  <div class="callout slate">
+    <span class="ct">Callout · why precession makes two zodiacs</span>
+    <span class="tag as">Astronomical</span> The tropical 0° Aries (the equinox) and the sidereal 0° Aries (a fixed stellar point) were aligned roughly <strong>1,700–1,800 years ago</strong> — by the Lahiri convention, around <strong>285 CE</strong> <span class="tag vf">Verify</span> (the exact epoch is convention-dependent). Since then the equinox has crept backward, and the gap has widened to the figure you can measure in today's sky.
+  </div>
+
+  <h3 class="sec">The Ayanamsa: The Gap, as a Number</h3>
+
+  <p><span class="tag cl">Classical</span> That accumulated gap has a name — the <strong>ayanamsa</strong> (Sanskrit <em>ayana</em> + <em>aṁśa</em>, "the portion of precession"). It is simply the angular distance, today, between the tropical and the sidereal zero points. Computed live for the reference date of this chapter:</p>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>Convention</th><th>Ayanamsa (22 Jun 2026)</th><th>Decimal</th></tr></thead>
+      <tbody>
+        <tr><td class="g">Lahiri</td><td>24°13.6′</td><td>24.2269°</td></tr>
+        <tr><td class="g">KP (Krishnamurti)</td><td>24°07.8′</td><td>24.1300°</td></tr>
+        <tr><td class="s">Difference</td><td colspan="2">only <strong>~5.8 arc-minutes</strong> between the two conventions today</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <span class="ct">Callout · the one equation</span>
+    <strong>Sidereal longitude = Tropical longitude − Ayanamsa.</strong> That is the whole bridge between the skies. To turn any Western (tropical) position into a Vedic (sidereal) one, <strong>subtract</strong> today's ayanamsa (~24.23° by Lahiri). To go the other way, <strong>add</strong> it. There is nothing more to the conversion than this single subtraction.
+  </div>
+
+  <div class="keyrule"><span class="small">The rule to lock in</span>One fact — <b>precession</b>, ~1° every 72 years — opens one gap — the <b>ayanamsa</b>, ~24° today — bridged by one equation: <b>sidereal = tropical − ayanamsa.</b></div>
+
+  <div class="qa">
+    <div class="qa-h">💬 Check yourself · Lesson 2.2</div>
+    <div class="qa-i"><div class="qa-q"><b>Q1</b>What is the tropical 0° Aries actually pinned to — and what is the sidereal 0° pinned to?</div><div class="qa-a"><b>A</b>Tropical 0° Aries = the <strong>spring equinox</strong> (a seasonal point). Sidereal 0° = a <strong>fixed point against the stars</strong> (Lahiri sets Spica near 0° Libra).</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q2</b>Roughly how fast does the equinox drift, and over what cycle?</div><div class="qa-a"><b>A</b>About <strong>1° every 72 years</strong> (~50″/year), completing one <strong>~25,800-year</strong> "Great Year."</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q3</b>You have a tropical position and want the sidereal one. What do you do?</div><div class="qa-a"><b>A</b><strong>Subtract the ayanamsa</strong> (~24.23° Lahiri, for today). Sidereal = tropical − ayanamsa. To reverse it, add.</div></div>
+  </div>
+  <div class="recap"><div class="n">2</div><div><div class="l">Lesson 2.2 — Locked In</div><div class="t">The mechanism mastered</div><div class="d">Seasons vs. stars, the precession wobble, the ayanamsa as a live number, and the single subtraction that bridges the two skies.</div></div></div>
+</div>
+
+<!-- ═══════════ 2.3 ═══════════ -->
+<div class="lesson">
+  <div class="lesson-head"><div class="lesson-no">Lesson 2.3</div><div class="lesson-title">How the Traditions <em>Parted Ways</em></div></div>
+
+  <p><span class="tag cl">Classical</span> Both zodiacs descend from the same Babylonian–Hellenistic root, and in antiquity they coincided. The divergence is a story of <strong>two choices</strong> made in two different worlds.</p>
+
+  <div class="cards">
+    <div class="card"><div class="ic">🏛️</div><div class="ti">The Western Choice</div><div class="mt">Keep the Season</div><p>Codified in the Hellenistic world and carried through Ptolemy, the West came to treat the zodiac as <strong>seasonal</strong> — pinned to the equinox. As precession moved the equinox against the stars, Western astrology <em>did not re-synchronize</em>. So today its "0° Aries" no longer points at the constellation Aries at all, but at the spring-equinox point now backed up into the stars of Pisces.</p></div>
+    <div class="card blue"><div class="ic">🕉️</div><div class="ti">The Indian Choice</div><div class="mt">Keep the Star</div><p>India made the opposite choice: it kept the zodiac pinned to the <strong>stars</strong> (sidereal), preserving the alignment with the actual constellations and the nakshatras. This is precisely why Vedic positions "lag" Western ones by the ayanamsa.</p></div>
+  </div>
+
+  <h3 class="sec">One Star, One Standard — and Its Rivals</h3>
+
+  <p><span class="tag cl">Classical</span> Crucially, the sidereal zodiac is <em>itself</em> a convention, and India standardized one. The <strong>Lahiri (Chitrapaksha) ayanamsa</strong>, adopted by the Indian government's Calendar Reform Committee in the mid-1950s and named for the astronomer N. C. Lahiri, is the official reference. But it is not the only one.</p>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>Ayanamsa</th><th>Used by</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td class="g">Lahiri (Chitrapaksha)</td><td>Indian government standard · most Vedic work</td><td>Spica pinned near 0° Libra; the official reference</td></tr>
+        <tr><td class="g">KP (Krishnamurti)</td><td>KP Paddhati (sub-lords, ruling planets)</td><td>Slightly different; KP tables are built on it</td></tr>
+        <tr><td class="g">B. V. Raman</td><td>The Raman school of Vedic astrology</td><td>Another defined value, differing by arc-minutes</td></tr>
+        <tr><td class="g">Fagan–Bradley</td><td>Western <em>sidereal</em> astrologers</td><td>The Western sidereal standard</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>These differ from one another by arc-minutes to upwards of a degree. <span class="tag fw">Framework</span> There is <strong>no cosmically "true" ayanamsa</strong> — only conventions defined by which star is pinned where. An honest practitioner states which one they use, and never silently mixes them.</p>
+
+  <div class="callout violet">
+    <span class="ct">The honest-skeptic note</span>
+    Notice what the tradition is <em>not</em> claiming here. It is not claiming a hidden cosmic truth that the West lost. It is making a defensible bookkeeping choice — pin the circle to a star and stay faithful to it — and admitting openly that the choice of <em>which</em> star, and at what degree, is a convention with credible rivals. That candour is the model for how this whole book treats its own claims.
+  </div>
+
+  <div class="keyrule"><span class="small">The rule to lock in</span>Tropical kept the <b>season</b>; sidereal kept the <b>star</b>. Both are conventions — and the honest move is to <b>name yours and never mix it</b> with another.</div>
+
+  <div class="qa">
+    <div class="qa-h">💬 Check yourself · Lesson 2.3</div>
+    <div class="qa-i"><div class="qa-q"><b>Q1</b>Why does the West's "0° Aries" now sit in the stars of Pisces?</div><div class="qa-a"><b>A</b>Because it is pinned to the <strong>moving equinox</strong>, and precession has dragged that point backward against the constellations while Western astrology declined to re-synchronize.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q2</b>Is the Lahiri ayanamsa the one "correct" value?</div><div class="qa-a"><b>A</b>No. It is <strong>India's official standard</strong>, but KP, Raman and Fagan–Bradley are credible rivals. There is <strong>no single true ayanamsa</strong> — only named conventions.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q3</b>What is the one professional habit this lesson demands?</div><div class="qa-a"><b>A</b><strong>State which ayanamsa you use, and never silently mix conventions.</strong> The candour is itself a safeguard.</div></div>
+  </div>
+  <div class="recap"><div class="n">2</div><div><div class="l">Lesson 2.3 — Locked In</div><div class="t">The history mastered</div><div class="d">One Babylonian root, two later choices, India's Lahiri standard, its credible rivals, and the rule never to mix them.</div></div></div>
+</div>
+
+<!-- ═══════════ 2.4 ═══════════ -->
+<div class="lesson">
+  <div class="lesson-head"><div class="lesson-no">Lesson 2.4</div><div class="lesson-title">Where This Bites — <em>and the Insight That Saves You</em></div></div>
+
+  <p>Now the practical payoff. This lesson contains a genuinely <strong>liberating</strong> technical point that resolves most of the two-skies confusion at a single stroke. But first we have to feel how much damage the offset can do.</p>
+
+  <h3 class="sec">First, See How Much the Offset Moves Things</h3>
+
+  <p>A ~24° shift is nearly a whole sign. Worked live from today's sky (tropical → sidereal-Lahiri), computed for this book with the Swiss Ephemeris:</p>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>Body</th><th>Tropical (Western)</th><th>Sidereal (Lahiri)</th><th>Effect</th></tr></thead>
+      <tbody>
+        <tr><td class="g">Sun</td><td>1.10° Cancer</td><td>6.87° <strong>Gemini</strong></td><td>drops into the <em>previous sign</em></td></tr>
+        <tr><td class="g">Jupiter</td><td>28.36° Cancer</td><td>4.14° Cancer</td><td>same sign, very different degree</td></tr>
+        <tr><td class="g">Saturn</td><td>13.77° Aries</td><td>19.54° <strong>Pisces</strong></td><td>drops into the <em>previous sign</em></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p><span class="tag fw">Framework</span> Look at the Sun and Saturn: the <em>same instant</em> places them in <strong>different signs</strong> depending on the zodiac. Every sign-based judgment — rulership, sector mapping, the house a planet falls in, the nakshatra and therefore the KP sub-lord and the dasha — <em>changes</em> with that shift. Mix the two zodiacs carelessly and your "Saturn in Aries" analysis is really about a Saturn that Vedic practice puts in <strong>Pisces</strong>.</p>
+
+  <h3 class="sec">Now the Insight That Makes Fusion Safe</h3>
+
+  <p>Here is the point that even many practitioners miss. <strong>The angle between two planets is identical in both zodiacs.</strong> Subtracting the <em>same</em> ayanamsa from <em>every</em> longitude shifts all the markers together and leaves the <em>differences</em> between them untouched. Demonstrated live from today's sky:</p>
+
+  <div class="callout teal">
+    <span class="ct">Callout · the invariance, measured</span>
+    <strong>Jupiter–Saturn angular separation:</strong> <strong>104.60°</strong> in the tropical frame, <strong>104.60°</strong> in the sidereal frame — exactly the same. The two skies disagree about which <em>signs</em> Jupiter and Saturn occupy, yet agree to the decimal about the <em>angle</em> between them.
+  </div>
+
+  <p><span class="tag fw">Framework</span> This single fact cleaves the entire field into <strong>two layers with opposite sensitivities</strong>:</p>
+
+  <div class="cards">
+    <div class="card teal"><div class="ic">📐</div><div class="ti">The Aspect / Cycle Layer</div><div class="mt">Zodiac-Independent</div><p>Anything built on the <em>angles between planets</em> — conjunctions, squares, oppositions, the Jupiter–Saturn cycle, the nodal cycle, the <strong>Bradley siderograph</strong>, McWhirter's transits — gives the <strong>same answer</strong> in tropical or sidereal. The great Western cycle work of Parts II–III transfers into an Indian practice <strong>with no conversion at all.</strong></p></div>
+    <div class="card down"><div class="ic">🎯</div><div class="ti">The Placement Layer</div><div class="mt">Zodiac-Critical</div><p>Anything built on <em>which sign / house / nakshatra</em> a planet occupies — sector mapping, the wealth houses, KP sub-lords, Vimshottari dashas, gold's "Sun rulership" by sign — is <strong>completely dependent</strong> on the zodiac and ayanamsa you choose.</p></div>
+  </div>
+
+  <p>That single distinction is the <strong>master key</strong> to blending the two traditions. It tells you exactly when the choice of sky matters (placement) and when it is irrelevant (aspects and cycles).</p>
+
+  <div class="keyrule"><span class="small">The rule to lock in</span><b>Angles are invariant; placements are not.</b> The same ayanamsa shifts every marker together, so the <em>gaps</em> between planets survive untouched — which is why Western cycle work transfers to Vedic practice for free.</div>
+
+  <div class="qa">
+    <div class="qa-h">💬 Check yourself · Lesson 2.4</div>
+    <div class="qa-i"><div class="qa-q"><b>Q1</b>The Sun is 1.10° Cancer tropical. What sign is it in sidereal-Lahiri, and why does that matter?</div><div class="qa-a"><b>A</b><strong>Gemini</strong> (6.87°). It drops a whole sign — so every rulership, sector, house, nakshatra and dasha judgment built on it changes with the zodiac.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q2</b>Jupiter–Saturn is 104.60° tropical. What is it sidereal?</div><div class="qa-a"><b>A</b><strong>104.60°</strong> — exactly the same. Subtracting one ayanamsa from both longitudes leaves the <strong>difference</strong> between them unchanged.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q3</b>Which whole layer of Western financial astrology transfers to a Vedic desk without any conversion?</div><div class="qa-a"><b>A</b>The <strong>aspect / cycle layer</strong> — great conjunctions, the nodal/McWhirter model, the Bradley siderograph. Angles are zodiac-independent.</div></div>
+  </div>
+  <div class="recap"><div class="n">2</div><div><div class="l">Lesson 2.4 — Locked In</div><div class="t">The master key mastered</div><div class="d">Placements move signs (Sun: Cancer → Gemini); angles do not (Jupiter–Saturn: 104.60° in both). The field splits into a zodiac-free layer and a zodiac-critical one.</div></div></div>
+</div>
+
+<!-- ═══════════ 2.5 ═══════════ -->
+<div class="lesson">
+  <div class="lesson-head"><div class="lesson-no">Lesson 2.5</div><div class="lesson-title">This Book's <em>Working Convention</em></div></div>
+
+  <p>To keep every later chapter unambiguous, the book adopts <strong>five rules</strong>. They are the practical embodiment of the two-layer insight you just learned.</p>
+
+  <ol class="ladder">
+    <li><span><b>Label every chart.</b> No position is ever stated without its frame: <em>"tropical"</em> or <em>"sidereal (Lahiri)"</em> or <em>"sidereal (KP)."</em> An unlabeled degree is a future error waiting to happen.</span></li>
+    <li><span><b>Aspect and cycle work: use either, and say which.</b> Because angles are invariant, the cycle chapters — the great conjunctions, the nodal/McWhirter model, the Bradley siderograph — may be computed in the <strong>tropical</strong> frame, exactly as their Western originators did, and the result is valid for an Indian practitioner unchanged. We state "tropical, geocentric" on those by default.</span></li>
+    <li><span><b>Placement work: sidereal, with a named ayanamsa, never mixed.</b> For sign / house / sector mapping and all Vedic technique we use <strong>sidereal–Lahiri</strong>; for KP-specific work (sub-lords, ruling planets) we use the <strong>KP ayanamsa</strong>, because KP's tables were built on it. We never read a Lahiri chart with KP sub-lord tables, or the reverse.</span></li>
+    <li><span><b>Convert with the one equation.</b> Sidereal = Tropical − Ayanamsa. Today's Lahiri value ≈ 24.23°. The ayanamsa grows by ~50″ a year, so it must be <strong>recomputed for the date in question</strong>, not memorized as a constant.</span></li>
+    <li><span><b>When in doubt, default to the source tradition's own zodiac.</b> Reading a Bradley / McWhirter / Gann method → think tropical. Reading a KP or Vedic method → think sidereal. Translate only the placement layer, and only when you need to.</span></li>
+  </ol>
+
+  <div class="callout">
+    <span class="ct">Callout · the two-layer habit</span>
+    Before computing anything, ask: <em>is this an <strong>angle</strong> question or a <strong>placement</strong> question?</em> Angle (aspect, cycle, siderograph) → the zodiac doesn't matter. Placement (sign, house, nakshatra, sub-lord, dasha) → the zodiac and ayanamsa decide the answer. Build that one reflex and the "two skies" problem dissolves.
+  </div>
+
+  <div class="keyrule"><span class="small">The rule to lock in</span>Five rules, one spirit: <b>label the frame, leave angles alone, convert only placements — to a named ayanamsa, recomputed for the date, never mixed.</b></div>
+
+  <div class="qa">
+    <div class="qa-h">💬 Check yourself · Lesson 2.5</div>
+    <div class="qa-i"><div class="qa-q"><b>Q1</b>You are computing a Bradley siderograph. Which frame does the book use, and is that valid for a Vedic reader?</div><div class="qa-a"><b>A</b><strong>Tropical, geocentric</strong> — and yes, valid unchanged, because the siderograph is an <strong>angle/cycle</strong> tool and angles are zodiac-independent.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q2</b>Why must you never read a Lahiri chart with KP sub-lord tables?</div><div class="qa-a"><b>A</b>Because the <strong>KP tables were built on the KP ayanamsa</strong>. Feeding them a Lahiri chart silently mixes conventions and corrupts the sub-lord.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q3</b>Why can't you memorize the ayanamsa as a single fixed number?</div><div class="qa-a"><b>A</b>It <strong>grows ~50″ per year</strong>. A value good for this year is wrong for another — always recompute it for the date in question.</div></div>
+  </div>
+  <div class="recap"><div class="n">2</div><div><div class="l">Lesson 2.5 — Locked In</div><div class="t">The method mastered</div><div class="d">Label the frame; leave angles in their source zodiac; convert placements to a named, date-correct ayanamsa; never mix; default to the source tradition when unsure.</div></div></div>
+</div>
+
+<!-- ═══════════ 2.6 ═══════════ -->
+<div class="lesson">
+  <div class="lesson-head"><div class="lesson-no">Lesson 2.6</div><div class="lesson-title">Edge Cases <em>and Cautions</em></div></div>
+
+  <p>The method is simple, but five traps catch even careful practitioners. Each is worth committing to memory before you ever run a live analysis.</p>
+
+  <div class="callout coral">
+    <span class="ct">Caution 1 · the ayanamsa boundary-flip</span>
+    <span class="tag fw">Framework</span> The Lahiri–KP difference is only ~6 arc-minutes today — trivial <em>unless</em> a planet sits within a few arc-minutes of a boundary. Nakshatras are 13°20′ wide and their sub-divisions far narrower; a 6′ shift can push a planet <strong>across a nakshatra line, changing its lord, its KP sub-lord, and the conclusion drawn from it.</strong> Near any cusp, the choice of ayanamsa is not academic — recompute under both and treat a borderline placement as genuinely uncertain.
+  </div>
+
+  <div class="callout coral">
+    <span class="ct">Caution 2 · software defaults differ silently</span>
+    Most Western platforms default to tropical; most Indian platforms to Lahiri sidereal; some KP modules to the KP ayanamsa. A chart copied between tools <em>without checking the setting</em> is a classic source of error. Verify the zodiac and ayanamsa setting <strong>every single time.</strong>
+  </div>
+
+  <div class="callout coral">
+    <span class="ct">Caution 3 · sidereal signs are not the constellations</span>
+    <span class="tag as">Astronomical</span> The sidereal zodiac still uses <strong>twelve equal 30° signs.</strong> It is <em>not</em> the same as the actual, unequal star-constellations along the ecliptic, and it is <em>not</em> the popular "13th sign / Ophiuchus" reshuffle that surfaces in the press. Equal-sign sidereal and the literal constellations are different things — do not conflate them.
+  </div>
+
+  <div class="callout coral">
+    <span class="ct">Caution 4 · there is no "true" ayanamsa</span>
+    Stated plainly so no one oversells it: the ayanamsa is a <strong>defined convention</strong>, anchored by choosing which star sits at which degree. Lahiri is the Indian standard, but the existence of several credible alternatives means the sidereal framework carries an <strong>irreducible few-arc-minute ambiguity.</strong> This is a limit to honor, not hide — especially in cusp-sensitive KP work.
+  </div>
+
+  <div class="callout coral">
+    <span class="ct">Caution 5 · don't "convert" an aspect</span>
+    A beginner who has just learned the subtraction sometimes over-applies it, "converting" a Jupiter–Saturn square into the other zodiac and expecting it to change. <strong>It will not</strong> (Lesson 2.4). Converting longitudes is for <em>placements</em>; aspects need no conversion at all.
+  </div>
+
+  <div class="keyrule"><span class="small">The rule to lock in</span>The dangerous places are the <b>cusps</b>, the <b>silent software default</b>, and the <b>over-eager convert</b>. Treat borderline placements as uncertain, check every setting, and never convert an angle.</div>
+
+  <div class="qa">
+    <div class="qa-h">💬 Check yourself · Lesson 2.6</div>
+    <div class="qa-i"><div class="qa-q"><b>Q1</b>The Lahiri–KP gap is only ~6′. When does that tiny gap suddenly matter enormously?</div><div class="qa-a"><b>A</b>Near a <strong>cusp</strong>. A 6′ shift can carry a planet across a <strong>nakshatra boundary</strong>, flipping its lord, its sub-lord, and the whole conclusion. Treat such placements as uncertain.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q2</b>Is sidereal Aries the same as the constellation Aries, or the "13-sign Ophiuchus" idea?</div><div class="qa-a"><b>A</b>Neither. Sidereal still uses <strong>twelve equal 30° signs</strong> — not the unequal literal constellations, and not the press's Ophiuchus reshuffle.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q3</b>A student "converts" a Jupiter–Saturn square to sidereal and waits for it to change. What happens?</div><div class="qa-a"><b>A</b>Nothing — and that is correct. <strong>Aspects need no conversion.</strong> The subtraction is only ever for placements.</div></div>
+  </div>
+  <div class="recap"><div class="n">2</div><div><div class="l">Lesson 2.6 — Locked In</div><div class="t">The traps mastered</div><div class="d">Cusp flips, silent software defaults, equal-sign ≠ constellation, the irreducible ayanamsa ambiguity, and the rule never to convert an angle.</div></div></div>
+</div>
+
+<hr class="soft"/>
+
+<!-- ═══════════ 2.7 SUMMARY ═══════════ -->
+<h3 class="sec" style="font-size:24px;text-align:center;">Chapter 2 — Locked In</h3>
+<p style="text-align:center;color:var(--ink-soft);">You can now move safely between the two skies. Here are the five things to carry forward.</p>
+<ol class="takeaways">
+  <li><strong>Two zodiacs, one sky.</strong> Tropical is anchored to the <strong>seasons</strong> (the equinox); sidereal to the <strong>stars</strong>. Precession (~1° per 72 years) has opened a gap of <strong>~24°</strong> between them today.</li>
+  <li><strong>The ayanamsa is that gap as a number</strong> — ~24°14′ (Lahiri) today — and the whole bridge is one equation: <strong>sidereal = tropical − ayanamsa.</strong></li>
+  <li><strong>The master distinction:</strong> <strong>aspects and cycles are zodiac-independent</strong> (Jupiter–Saturn is 104.6° in both frames), while <strong>sign / house / nakshatra placements are zodiac-critical</strong> (today's Sun is Cancer tropical, Gemini sidereal).</li>
+  <li><strong>So the Western cycle toolkit transfers to Indian practice unchanged</strong> — only the placement layer needs converting, and only to a <em>named</em> ayanamsa.</li>
+  <li><strong>There is no single "correct" ayanamsa.</strong> Lahiri is India's standard; KP and others differ by arc-minutes — enough to flip a borderline nakshatra or sub-lord. Label every chart and never mix conventions.</li>
+</ol>
+
+<!-- ═══════════ 2.8 CHECKLIST ═══════════ -->
+<h4 class="lab" style="margin-top:30px;">The Practitioner's Checklist — before you read any chart or signal</h4>
+<ul class="checklist">
+  <li><span class="bx">1</span><span><b>Angle or placement?</b> Is this an aspect / cycle question (zodiac-free) or a sign / house / nakshatra question (zodiac-critical)? If angle-only, stop worrying about the zodiac.</span></li>
+  <li><span class="bx">2</span><span><b>Which zodiac?</b> Is the chart tropical or sidereal? Is it labeled? If not, label it before proceeding.</span></li>
+  <li><span class="bx">3</span><span><b>Which ayanamsa?</b> If sidereal: Lahiri, KP, or other? Does it match the technique's tables — KP tables need the KP ayanamsa?</span></li>
+  <li><span class="bx">4</span><span><b>Recomputed for the date?</b> Did you use the ayanamsa <em>for that date</em> (it grows ~50″/year), not a stale constant?</span></li>
+  <li><span class="bx">5</span><span><b>Near a cusp?</b> Is any key planet within a few arc-minutes of a sign or nakshatra boundary? If so, recompute under both conventions and treat it as uncertain.</span></li>
+  <li><span class="bx">6</span><span><b>Consistent throughout?</b> Is the <em>entire</em> analysis in one frame — no Western tropical sign-reading accidentally mixed with a Vedic dasha?</span></li>
+</ul>
+
+<h4 class="lab" style="margin-top:30px;">A small glossary — the words you met</h4>
+<div class="gloss"><dl>
+  <dt>Tropical zodiac</dt><dd>The seasonal zodiac whose 0° Aries is the spring equinox; the basis of mainstream Western astrology.</dd>
+  <dt>Sidereal zodiac</dt><dd>The star-anchored zodiac, fixed against the stellar background (Lahiri pins Spica near 0° Libra); the basis of Indian / Vedic astrology.</dd>
+  <dt>Precession</dt><dd>The slow ~25,800-year wobble of the Earth's axis, drifting the equinox backward against the stars at ~1° per 72 years.</dd>
+  <dt>Ayanamsa</dt><dd>The angular gap between the tropical and sidereal zero points today (~24°14′ by Lahiri); the number that bridges the two skies.</dd>
+  <dt>Lahiri (Chitrapaksha)</dt><dd>India's official ayanamsa, adopted by the Calendar Reform Committee in the mid-1950s; the default for Vedic work in this book.</dd>
+  <dt>KP ayanamsa</dt><dd>The slightly different ayanamsa used in Krishnamurti Paddhati; required for KP sub-lord and ruling-planet tables.</dd>
+  <dt>Fagan–Bradley</dt><dd>The ayanamsa used by Western sidereal astrologers; one of several credible alternatives to Lahiri.</dd>
+  <dt>Vernal equinox</dt><dd>The moment spring begins in the Northern Hemisphere; the defining anchor of tropical 0° Aries.</dd>
+  <dt>Spica (Chitra)</dt><dd>The bright star near which the Lahiri convention fixes 0° Libra, anchoring the sidereal zodiac.</dd>
+  <dt>Geocentric</dt><dd>Measured as seen from Earth; the default vantage for the cycle work in this book ("tropical, geocentric").</dd>
+</dl></div>
+
+<p class="bridge">End of Chapter 2. The two skies now hold no terror — you can read either, and bridge between them at will.<br/>Next we turn from the heavens to the market itself: a plain-language primer in market structure for the astrologer new to trading, so the two halves of this book can finally meet.<br/>Chapter 3 — The Market's Own Vocabulary.</p>
+
+</body>
+</html>

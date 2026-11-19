@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Celestial Ledger — Chapter 9: The 18.6-Year Nodal Cycle &amp; the McWhirter Theory</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --paper:#fbf9f4; --paper2:#f4efe4; --card:#ffffff; --ink:#26211c; --ink-soft:#4f463c; --ink-faint:#857a6c;
+  --line:#e6dfce; --line-soft:#efe9dc;
+  --gold:#9a7113; --gold-soft:#fbf2da; --gold-line:#e7cf94;
+  --teal:#0c7d68; --teal-soft:#e3f3ef;
+  --coral:#b23a2e; --coral-soft:#f8e9e6;
+  --violet:#6244a8; --violet-soft:#efeafa;
+  --green:#2f7d4f; --green-soft:#e6f3ea;
+  --blue:#1f6aa6; --blue-soft:#e7f0f8;
+  --slate:#566273; --slate-soft:#eceef2;
+  --serif:'Playfair Display',Georgia,'Times New Roman',serif;
+  --body:Georgia,'Iowan Old Style','Palatino Linotype',serif;
+  --sans:'Inter',system-ui,-apple-system,sans-serif;
+  --r:10px; --r-sm:7px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{ -webkit-text-size-adjust:100%; }
+body{ background:var(--paper); color:var(--ink); font-family:var(--body); font-size:18px; line-height:1.72; max-width:780px; margin:0 auto; padding:30px 26px 90px; }
+p{ margin:0 0 14px; } strong{ color:var(--ink); font-weight:600; } em{ font-style:italic; }
+
+.hero{ text-align:center; padding:22px 0 30px; border-bottom:2px solid var(--gold-line); margin-bottom:34px; }
+.hero .kicker{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:var(--gold); }
+.hero h1{ font-family:var(--serif); font-weight:900; font-size:40px; line-height:1.12; margin:14px 0 0; }
+.hero h1 em{ color:var(--gold); font-style:italic; }
+.hero .sub{ font-style:italic; color:var(--ink-soft); font-size:17px; max-width:580px; margin:16px auto 0; }
+.hero .ornament{ color:var(--gold); letter-spacing:.5em; margin-top:18px; font-size:14px; }
+
+.partnote{ font-family:var(--sans); font-size:13px; color:var(--ink-soft); background:var(--paper2); border:1px solid var(--line); border-radius:var(--r-sm); padding:13px 17px; margin:0 0 26px; line-height:1.6; }
+.partnote b{ color:var(--gold); }
+.keyk{ background:var(--card); border:1px solid var(--line); border-radius:var(--r-sm); padding:12px 17px; margin:0 0 30px; font-family:var(--sans); font-size:12.5px; line-height:1.85; color:var(--ink-soft); }
+.keyk .ck{ display:block; font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px; }
+
+.lesson{ margin:0 0 50px; }
+.lesson-head{ display:flex; align-items:baseline; gap:12px; border-bottom:1px solid var(--line); padding-bottom:8px; margin-bottom:18px; }
+.lesson-no{ font-family:var(--sans); font-size:12px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); white-space:nowrap; }
+.lesson-title{ font-family:var(--serif); font-weight:700; font-size:25px; line-height:1.2; }
+.lesson-title em{ color:var(--gold); font-style:italic; }
+h3.sec{ font-family:var(--serif); font-style:italic; font-weight:600; font-size:21px; color:var(--gold); margin:28px 0 10px; }
+h4.lab{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-faint); margin:22px 0 9px; }
+
+.callout{ border-left:4px solid var(--gold); background:var(--gold-soft); border-radius:0 var(--r-sm) var(--r-sm) 0; padding:14px 18px; margin:18px 0; font-size:16.5px; line-height:1.62; }
+.callout .ct{ display:block; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:5px; color:var(--gold); }
+.callout.teal{ border-color:var(--teal); background:var(--teal-soft);} .callout.teal .ct{ color:var(--teal);}
+.callout.coral{ border-color:var(--coral); background:var(--coral-soft);} .callout.coral .ct{ color:var(--coral);}
+.callout.violet{ border-color:var(--violet); background:var(--violet-soft);} .callout.violet .ct{ color:var(--violet);}
+.callout.green{ border-color:var(--green); background:var(--green-soft);} .callout.green .ct{ color:var(--green);}
+.callout.slate{ border-color:var(--slate); background:var(--slate-soft);} .callout.slate .ct{ color:var(--slate);}
+.honest{ border-left:4px solid var(--violet); background:var(--violet-soft); border-radius:0 var(--r-sm) var(--r-sm) 0; padding:14px 18px; margin:18px 0; font-size:16px; }
+.honest .ct{ display:block; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:5px; color:var(--violet); }
+
+.keyrule{ text-align:center; font-family:var(--serif); font-style:italic; font-size:20px; line-height:1.5; color:var(--gold); border-top:1px solid var(--gold-line); border-bottom:1px solid var(--gold-line); padding:18px 14px; margin:22px 0; }
+.keyrule .small{ display:block; font-family:var(--sans); font-style:normal; font-size:10px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:8px; }
+.keyrule b{ font-style:normal; color:var(--ink); }
+
+.tag{ display:inline-block; font-family:var(--sans); font-size:10px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:1px 7px; border-radius:4px; vertical-align:middle; }
+.tag.cl{ background:var(--blue-soft); color:var(--blue); } .tag.fw{ background:var(--gold-soft); color:var(--gold); } .tag.vf{ background:var(--violet-soft); color:var(--violet); }
+.tag.ob{ background:var(--teal-soft); color:var(--teal); } .tag.as{ background:var(--slate-soft); color:var(--slate); }
+.tag.hi{ background:var(--blue-soft); color:var(--blue); }
+
+.cards{ display:flex; flex-wrap:wrap; gap:12px; margin:16px 0; }
+.card{ flex:1 1 220px; background:var(--card); border:1px solid var(--line); border-top:3px solid var(--gold); border-radius:var(--r-sm); padding:14px 16px; }
+.card.up{ border-top-color:var(--green);} .card.down{ border-top-color:var(--coral);} .card.teal{ border-top-color:var(--teal);} .card.violet{ border-top-color:var(--violet);} .card.slate{ border-top-color:var(--slate);}
+.card .ic{ font-size:24px; line-height:1; } .card .ti{ font-family:var(--serif); font-weight:700; font-size:18px; margin:6px 0 2px; } .card .ti em{ color:var(--gold); font-style:italic; font-weight:400; font-size:14px; }
+.card .mt{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px; } .card p{ font-size:15px; line-height:1.55; margin:0; color:var(--ink-soft); }
+
+.tw{ overflow-x:auto; border:1px solid var(--line); border-radius:var(--r-sm); margin:16px 0; }
+table{ width:100%; border-collapse:collapse; font-family:var(--sans); }
+thead tr{ background:var(--gold-soft); }
+th{ font-size:10.5px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:var(--gold); text-align:left; padding:9px 11px; white-space:nowrap; }
+td{ font-size:13px; padding:8px 11px; border-top:1px solid var(--line-soft); vertical-align:top; color:var(--ink-soft); }
+td.g{ color:var(--gold); font-weight:600; white-space:nowrap; }
+td.up{ color:var(--green); font-weight:600;} td.dn{ color:var(--coral); font-weight:600;}
+tbody tr:nth-child(even){ background:#fcfaf5; }
+
+.qa{ border:1px solid var(--line); border-radius:var(--r-sm); overflow:hidden; margin:20px 0; }
+.qa-h{ background:var(--paper2); padding:9px 15px; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); border-bottom:1px solid var(--line); }
+.qa-i{ padding:12px 15px; border-bottom:1px solid var(--line-soft); } .qa-i:last-child{ border-bottom:none; }
+.qa-q{ font-size:16px; } .qa-q b{ color:var(--gold); font-family:var(--sans); font-size:12px; font-weight:700; margin-right:8px; }
+.qa-a{ font-size:16px; color:var(--ink-soft); margin-top:5px; } .qa-a b{ color:var(--teal); font-family:var(--sans); font-size:12px; font-weight:700; margin-right:8px; }
+
+.recap{ display:flex; align-items:center; gap:18px; background:var(--gold-soft); border:1px solid var(--gold-line); border-radius:var(--r-sm); padding:16px 20px; margin:20px 0; }
+.recap .n{ font-family:var(--serif); font-weight:900; font-size:38px; color:var(--gold); line-height:1; flex-shrink:0; }
+.recap .l{ font-family:var(--sans); font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); }
+.recap .t{ font-family:var(--serif); font-weight:700; font-size:18px; margin:2px 0; } .recap .d{ font-size:14px; color:var(--ink-soft); }
+
+.ladder{ counter-reset:rk; list-style:none; padding:0; margin:14px 0; }
+.ladder li{ counter-increment:rk; display:flex; gap:14px; align-items:flex-start; padding:9px 0; border-bottom:1px solid var(--line-soft); font-size:15.5px; }
+.ladder li:last-child{ border-bottom:none; }
+.ladder li::before{ content:counter(rk); flex-shrink:0; width:26px; height:26px; background:var(--gold); color:#fff; border-radius:50%; font-family:var(--sans); font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center; }
+.ladder b{ color:var(--ink); }
+
+.takeaways{ counter-reset:tk; list-style:none; padding:0; margin:14px 0; }
+.takeaways li{ counter-increment:tk; position:relative; padding:10px 0 10px 46px; border-bottom:1px solid var(--line-soft); font-size:16.5px; }
+.takeaways li:last-child{ border-bottom:none; }
+.takeaways li::before{ content:counter(tk); position:absolute; left:0; top:9px; width:30px; height:30px; border:1.5px solid var(--gold); color:var(--gold); border-radius:50%; font-family:var(--serif); font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center; }
+
+.checklist{ list-style:none; padding:0; margin:14px 0; }
+.checklist li{ position:relative; padding:11px 0 11px 38px; border-bottom:1px solid var(--line-soft); font-size:16px; line-height:1.6; }
+.checklist li:last-child{ border-bottom:none; }
+.checklist li::before{ content:"\2610"; position:absolute; left:0; top:9px; font-size:22px; line-height:1; color:var(--gold); }
+.checklist b{ color:var(--ink); }
+
+.gloss{ background:var(--card); border:1px solid var(--line); border-radius:var(--r-sm); padding:6px 18px; margin:16px 0; }
+.gloss dt{ font-family:var(--serif); font-weight:700; font-size:16px; color:var(--gold); margin:12px 0 1px; }
+.gloss dd{ margin:0 0 4px; font-size:15.5px; color:var(--ink-soft); }
+
+.bridge{ text-align:center; font-style:italic; color:var(--ink-faint); font-size:15px; border-top:1px solid var(--line); padding-top:22px; margin-top:34px; }
+hr.soft{ border:none; border-top:1px solid var(--line); margin:30px 0; }
+@media (max-width:600px){ body{font-size:17px;padding:20px 16px 70px;} .hero h1{font-size:31px;} .lesson-title{font-size:21px;} }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="kicker">The Celestial Ledger · Part II — Time</div>
+  <h1>The 18.6-Year Nodal Cycle <em>&amp; the McWhirter Theory</em></h1>
+  <div class="sub">Chapter Nine — the single most famous cycle in financial astrology, and its most concrete, most datable, most falsifiable claim. The perfect place to apply the book's honesty in full.</div>
+  <div class="ornament">✦ ✦ ✦</div>
+</div>
+
+<p class="partnote">From the broad family of great cycles (Chapter 8) we now zoom in on the single most famous cycle in all of financial astrology: the <b>18.6-year cycle of the Moon's North Node</b>, and the <b>McWhirter Theory</b> built on it. It is the field's most concrete, most dated, most <em>falsifiable</em> long-cycle claim — which makes it the perfect place to apply the book's honesty in full. It also bridges to the next chapter, because eclipses happen only at the nodes.</p>
+
+<div class="keyk">
+  <span class="ck">Claim-type key</span>
+  <span class="tag as">Astronomical</span> a verifiable astronomical fact &nbsp;·&nbsp;
+  <span class="tag hi">Historical</span> a documented claim from the source literature (attributed) &nbsp;·&nbsp;
+  <span class="tag fw">Framework</span> this book's market interpretation &nbsp;·&nbsp;
+  <span class="tag ob">Observed</span> an empirical caveat &nbsp;·&nbsp;
+  <span class="tag vf">Verify</span> to confirm. Nodal figures computed with Swiss Ephemeris for 22 June 2026; McWhirter's specifics verified against multiple sources.
+</div>
+
+<!-- ===================== LESSON 9.1 ===================== -->
+<section class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Lesson 9.1</span>
+    <span class="lesson-title">Chapter Introduction — <em>One Cycle, Tested in Full</em></span>
+  </div>
+
+  <p>Chapter 8 surveyed many great cycles at once. This chapter does the opposite: it takes <strong>one</strong> cycle — the regression of the Moon's North Node through the zodiac, completing every <strong>~18.6 years</strong> — and examines it down to the detail, because a single named practitioner turned it into the field's most testable system. In 1937, <strong>Louise McWhirter</strong> published <em>Astrology and Stock Market Forecasting</em>, proposing that the <strong>primary trend of business activity and the stock market follows the North Node's 18.6-year journey through the twelve signs</strong>, with a specific low, a specific high, and a defined curve in between.</p>
+
+  <p>That specificity is exactly why this cycle deserves a chapter of its own — and why it is the ideal stress-test of the book's method. A vague claim cannot be wrong; McWhirter's can. We will learn her curve precisely, look at the historical anchors she and her followers cite, and then weigh it with full honesty — including the inconvenient fact, conceded by the theory's <em>own proponents</em>, that the market has frequently failed to follow it.</p>
+
+  <div class="keyrule">
+    <span class="small">Keyrule · Lesson 9.1</span>
+    A <b>vague claim cannot be wrong</b>; McWhirter's can. One cycle, one dated curve — the field's most <b>falsifiable</b> long-cycle claim, and so the ideal place to test the book's honesty in full.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself</div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q1</b> How does this chapter's approach differ from Chapter 8's?</div>
+      <div class="qa-a"><b>A</b> Chapter 8 surveyed many great cycles at once; this chapter takes <em>one</em> — the North Node's ~18.6-year regression — and examines it in full detail, because a named practitioner turned it into the field's most testable system.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q2</b> Who was Louise McWhirter, and what did she propose in 1937?</div>
+      <div class="qa-a"><b>A</b> In <em>Astrology and Stock Market Forecasting</em> (1937) she proposed that the primary trend of business activity and the stock market follows the North Node's 18.6-year journey through the twelve signs — with a specific low, a specific high, and a defined curve between.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q3</b> Why is the theory's <em>specificity</em> an advantage for honest analysis?</div>
+      <div class="qa-a"><b>A</b> Because a vague claim cannot be wrong, but a dated, specific curve <em>can</em> be tested — and even falsified. That testability makes McWhirter the ideal stress-test of the book's method.</div>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">9.1</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">One Cycle, Tested in Full</div>
+      <div class="d">McWhirter's 1937 theory ties the primary trend to the North Node's ~18.6-year path through the signs. Its rare specificity makes it falsifiable — the perfect subject for the book's full honesty, including its conceded failures.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LESSON 9.2 ===================== -->
+<section class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Lesson 9.2</span>
+    <span class="lesson-title">Core Concepts — <em>The Lunar Nodes and Their Cycle</em></span>
+  </div>
+
+  <p><span class="tag as">Astronomical</span> The <strong>lunar nodes</strong> are the two points where the Moon's orbit crosses the ecliptic (the Sun's apparent path): the <strong>North (ascending) Node — Rahu</strong>, and the <strong>South (descending) Node — Ketu</strong>, always exactly opposite. They are not physical bodies but moving intersection points, and they <strong>regress</strong> — move <em>backward</em> through the zodiac — always retrograde.</p>
+
+  <p><span class="tag as">Astronomical</span> The line of nodes completes one full backward revolution — the <strong>draconic or nodal period</strong> — in <strong>18.61 years</strong> (about 6,798 days), which works out to roughly <strong>1.55 years (566 days) per sign.</strong> <em>(Confirmed by computation: 18.613 yr, ~1.551 yr / 567 days per sign.)</em> Two refinements:</p>
+
+  <ul class="ladder">
+    <li><span><b>True vs. mean node.</b> The <strong>mean node</strong> is a smoothed average; the <strong>true (osculating) node</strong> wobbles slightly around it. They differ by up to ~1.5°, which matters at sign boundaries (§9.6). McWhirter-lineage work generally uses the true node.</span></li>
+    <li><span><b>Why the nodes matter beyond McWhirter.</b> <strong>Eclipses occur only near the nodes</strong> — the hinge to Chapter 10 — and the same nodal regression drives the <strong>~18.6-year lunar standstill / declination cycle</strong>, a genuine geophysical rhythm that modulates tides (and, some argue, climate). The 18.6-year beat is therefore a <em>real</em> astronomical cycle, independent of any market claim.</span></li>
+  </ul>
+
+  <div class="callout">
+    <span class="ct">Callout — Regression, Not Progression</span>
+    Unlike the planets, the nodes move <em>backward</em> through the signs. So McWhirter's curve runs Aquarius → Capricorn → Sagittarius → … → Leo → … → Aquarius — the node entering each <em>earlier</em> sign in turn. Keep the direction straight or the whole curve inverts.
+  </div>
+
+  <div class="keyrule">
+    <span class="small">Keyrule · Lesson 9.2</span>
+    The nodes are the Moon-orbit crossing points — <b>Rahu</b> and <b>Ketu</b>, always opposite — that <b>regress</b> one full circle in <b>18.61 years</b> (~1.55 yr/sign). A <em>real</em> astronomical cycle that also governs eclipses, independent of any market claim.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself</div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q1</b> What are the lunar nodes, physically?</div>
+      <div class="qa-a"><b>A</b> <span class="tag as">Astronomical</span> The two points where the Moon's orbit crosses the ecliptic — the North Node (Rahu) and South Node (Ketu), always exactly opposite. They are not bodies but moving intersection points that regress backward through the zodiac.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q2</b> How long is the nodal period, and how long per sign?</div>
+      <div class="qa-a"><b>A</b> The draconic/nodal period is <strong>18.61 years</strong> (~6,798 days), about <strong>1.55 years (566 days) per sign</strong> — confirmed by computation at 18.613 yr.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q3</b> Why does the 18.6-year beat matter even apart from McWhirter?</div>
+      <div class="qa-a"><b>A</b> Because eclipses occur only near the nodes (the bridge to Chapter 10), and the same regression drives the ~18.6-year lunar declination/standstill cycle — a genuine geophysical rhythm modulating tides. It is a real astronomical cycle, independent of any market claim.</div>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">9.2</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">The Nodes and the 18.6-Year Beat</div>
+      <div class="d">Rahu and Ketu are the opposite Moon-orbit crossing points, regressing one full circle every 18.61 years (~1.55 yr/sign). True vs. mean node differ by up to ~1.5° at boundaries. The cycle is astronomically real — it also rules eclipses and tides.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LESSON 9.3 ===================== -->
+<section class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Lesson 9.3</span>
+    <span class="lesson-title">Historical Framework — <em>The McWhirter Theory</em></span>
+  </div>
+
+  <p><span class="tag hi">Historical</span> Louise McWhirter's 1937 <em>Astrology and Stock Market Forecasting</em> was the first coherent, <em>testable</em> system correlating a planetary cycle with business activity. Her central claim: the <strong>primary trend of business volume, finance, and stock prices is delineated by the North Node's 18.6-year transit through the signs</strong>, tracing a repeating "normal curve of business activity." Paraphrasing her scheme (her own text is copyrighted; the structure is the point):</p>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>North Node in…</th><th>McWhirter's business-activity reading</th></tr></thead>
+      <tbody>
+        <tr><td class="g"><strong>Aquarius</strong></td><td><strong>LOW — the cyclical bottom</strong></td></tr>
+        <tr><td class="g">Capricorn</td><td>rising off the low</td></tr>
+        <tr><td class="g">Sagittarius</td><td>continuing up toward normal</td></tr>
+        <tr><td class="g">Scorpio</td><td>transition: normal, heading higher</td></tr>
+        <tr><td class="g">Libra</td><td>transition: normal → high</td></tr>
+        <tr><td class="g">Virgo</td><td>approaching the high</td></tr>
+        <tr><td class="g"><strong>Leo</strong></td><td><strong>HIGH — the peak of business volume</strong> (the half-cycle point, opposite Aquarius)</td></tr>
+        <tr><td class="g">Cancer</td><td>above normal, beginning to decline</td></tr>
+        <tr><td class="g">Gemini</td><td>above normal, sliding toward normal</td></tr>
+        <tr><td class="g">Taurus</td><td>around normal, trend down</td></tr>
+        <tr><td class="g">Aries</td><td>below normal, approaching the bottom</td></tr>
+        <tr><td class="g">Pisces</td><td>heading into the low</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p><span class="tag hi">Historical</span> Note the geometry: <strong>Aquarius (low) and Leo (high) are opposite signs</strong>, half the 18.6-year cycle (~9.3 years) apart — a clean, symmetric model. McWhirter's headline historical anchors:</p>
+
+  <ul class="ladder">
+    <li><span>She identified the <strong>summer-1933 Depression low</strong> with the <strong>North Node in Aquarius.</strong> <em>(Verified: true node ~29.9° Aquarius, summer 1933.)</em></span></li>
+    <li><span>She <strong>predicted the next peak for November 1942</strong> with the <strong>North Node in Leo</strong> — a call that coincided with the massive WWII-buildup stimulus. <em>(Verified: the node was at the Leo/Virgo cusp by Nov 1942, having transited Leo just prior.)</em></span></li>
+  </ul>
+
+  <p><span class="tag hi">Historical</span> Two side-notes. First, McWhirter also offered a <em>short-term</em> timing method based on the Moon transiting sensitive points of the NYSE chart and the planets she took to "rule" it — material we defer to Chapters 13–14. Second, a persistent curiosity: because no other works or biographical traces of "Louise McWhirter" are known, some analysts (e.g., Bucholtz) <strong>speculate the name was a pseudonym for W. D. Gann.</strong> This is unverified lore, flagged as such — interesting, not established.</p>
+
+  <div class="keyrule">
+    <span class="small">Keyrule · Lesson 9.3</span>
+    McWhirter's curve: business activity <b>low at Aquarius</b>, <b>high at Leo</b> — opposite signs, half a cycle (~9.3 yr) apart. A clean, symmetric, <em>dated</em> model, anchored on the 1933 low and the predicted 1942 peak.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself</div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q1</b> In McWhirter's curve, which node-sign marks the low and which the high?</div>
+      <div class="qa-a"><b>A</b> <span class="tag hi">Historical</span> The North Node in <strong>Aquarius</strong> marks the cyclical <em>low</em>; the node in <strong>Leo</strong> marks the <em>high</em> (peak business volume). They are opposite signs, ~9.3 years (half the cycle) apart.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q2</b> What two historical anchors did McWhirter and her followers cite?</div>
+      <div class="qa-a"><b>A</b> The summer-1933 Depression low (node in Aquarius) and a peak predicted for November 1942 (node in Leo), coinciding with the WWII-buildup stimulus.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q3</b> What is the "Louise McWhirter = W. D. Gann" claim, and how should it be treated?</div>
+      <div class="qa-a"><b>A</b> Because no other works or biographical traces of McWhirter are known, some analysts (e.g., Bucholtz) speculate the name was a Gann pseudonym. It is <em>unverified lore</em> — flagged as interesting, not established.</div>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">9.3</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">McWhirter's Curve</div>
+      <div class="d">The first coherent, testable planet-to-business system: the node's transit maps a "normal curve of business activity," low at Aquarius and high at Leo, anchored on 1933 and 1942. The Gann-pseudonym story is unverified lore.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LESSON 9.4 ===================== -->
+<section class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Lesson 9.4</span>
+    <span class="lesson-title">Market Correlation Analysis — <em>The Honest Test, and Today's Position</em></span>
+  </div>
+
+  <h3 class="sec">Why the theory is attractive</h3>
+
+  <p><span class="tag fw">Framework</span> McWhirter's model has real virtues: it is <strong>a single, dated, falsifiable curve</strong> (not a vague "the planets influence markets"); its <strong>~18.6-year length closely matches the independently-documented ~18-year real-estate/land cycle</strong> (Chapter 8), a convergence proponents find compelling; and it gives a clear <em>primary-trend context</em> — are we near the Aquarius low or the Leo high?</p>
+
+  <h3 class="sec">The honest evidence — including the proponents' own admission</h3>
+
+  <p><span class="tag ob">Observed</span> The candor this book demands is unusually easy to source here, because <strong>the theory's own supporters concede it often fails.</strong> Analysts who chart the S&amp;P 500 against the node state plainly that the basic theory <strong>was not consistently reflected in actual market movements</strong>, and they reach for "secondary factors" — other cycles and central-bank intervention — said to modify outcomes by a fifth or more. When a model needs that many escape hatches to explain its misses, the core signal is weak. Four hard cautions:</p>
+
+  <ul class="ladder">
+    <li><span><b>The ~18–19-year cycle zoo.</b> Several different cycles cluster near this length — the <strong>Saros (18.03-yr eclipse cycle)</strong>, the <strong>Metonic (19-yr)</strong>, the <strong>lunar declination (18.6-yr)</strong>, the nodal regression (18.6-yr), plus the variable solar cycle. They overlap, and it is dangerously easy to <strong>conflate or cherry-pick</strong> among them to fit any past turn.</span></li>
+    <li><span><b>The independent real-estate cycle confound.</b> The ~18-year property cycle has <strong>non-astrological drivers</strong> (credit, land, demographics). A turn near a nodal phase may be obeying the <em>economic</em> cycle, not the node.</span></li>
+    <li><span><b>Small N (the Chapter 8 ceiling, again).</b> Reliable market history holds only <strong>about five or six</strong> complete 18.6-year nodal cycles — far too few to validate a twelve-phase curve. The theory is <strong>structurally unprovable</strong> from the data.</span></li>
+    <li><span><b>Loose "fits" and outright errors in the literature.</b> Proponents' fit-claims are often slack — and at least one widely-circulated write-up <strong>mis-dates the February-2020 (COVID) top as the "dot-com bubble" top</strong> (which was 2000). If the supporting material confuses two famous tops twenty years apart, treat its "the node predicted this" claims with great caution.</span></li>
+  </ul>
+
+  <h3 class="sec">Worked example — where the node is now</h3>
+
+  <p>Computed for <strong>22 June 2026</strong> (tropical, McWhirter's frame):</p>
+
+  <div class="cards">
+    <div class="card slate">
+      <div class="mt">True North Node</div>
+      <div class="ti">1.92° Pisces</div>
+      <p>At the <strong>very end of its Pisces transit</strong>, regressing. <em>(Mean node 3.06° Pisces — source cites 3.04°.)</em></p>
+    </div>
+    <div class="card slate">
+      <div class="mt">Aquarius ingress</div>
+      <div class="ti">Late Jul 2026</div>
+      <p>By the true node (computed <strong>28 Jul 2026</strong>); some proponents cite <strong>~Oct 2026</strong> using the mean node / boundary smoothing — i.e., mid-to-late 2026.</p>
+    </div>
+    <div class="card slate">
+      <div class="mt">Phase</div>
+      <div class="ti">Aquarius = LOW</div>
+      <p>Aquarius is McWhirter's <strong>cyclical low</strong>. The node enters and crosses it ~2026–2028.</p>
+    </div>
+    <div class="card slate">
+      <div class="mt">One cycle ago</div>
+      <div class="ti">2008 / 2017–18</div>
+      <p>Prior nodal low (node in Aquarius): <strong>2008</strong>. Prior high (node in Leo): <strong>2017–2018</strong> — one full 18.6-year cycle ago. <em>(Verified: ~19° Aquarius in 2008; ~17–18° Leo in 2017–18.)</em></p>
+    </div>
+  </div>
+
+  <p><span class="tag fw">Framework</span> So <strong>McWhirter's framework asserts</strong> that business activity approaches a cyclical <em>low</em> as the node enters and crosses Aquarius (~2026–2028), echoing the 2008 nodal low. <strong>Now the discipline — and it is the whole point of this chapter:</strong></p>
+
+  <ul class="ladder">
+    <li><span>This is <strong>what the theory claims, not a forecast of mine.</strong> It is a <em>primary-trend context</em> hypothesis, nothing more.</span></li>
+    <li><span>The theory's <strong>own proponents admit inconsistent fit</strong>; the 2008 "hit" sits beside many misses, and the surrounding ~18–19-year cycles plus central-bank action muddy any attribution.</span></li>
+    <li><span>It would be <strong>reckless to position for a "2026–2027 crash" on this basis.</strong> The honest use is to <em>note the low-phase context</em>, watch the eclipses on the Aquarius/Leo nodal axis (Chapter 10) as sharper timing, and <strong>require independent price confirmation</strong> before acting — with small-N humility throughout.</span></li>
+  </ul>
+
+  <div class="callout">
+    <span class="ct">Callout — A Falsifiable Cycle, Honestly Scored</span>
+    McWhirter's theory earns respect for being <em>testable</em> — and the test result is sobering: a few striking hits (1933, 1942, arguably 2008), many misses its own advocates concede, and a sample too small to prove. Use it exactly as Chapter 8 used Jupiter–Saturn: a <strong>context for the primary trend</strong>, a window to watch — never a stand-alone trade.
+  </div>
+
+  <div class="keyrule">
+    <span class="small">Keyrule · Lesson 9.4</span>
+    The node is entering <b>Aquarius — McWhirter's low</b> (~mid-late 2026), one cycle after 2008. But this is <b>what the theory claims, not a forecast</b>; with conceded misses and small N, it is <b>context only</b> — confirmed by price, never a basis to position for a crash.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself</div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q1</b> What makes the theory attractive, and what is its single most damning piece of honest evidence?</div>
+      <div class="qa-a"><b>A</b> <span class="tag fw">Framework</span> It is attractive as a single, dated, falsifiable curve whose ~18.6-yr length matches the ~18-yr real-estate cycle. The most damning evidence is that <span class="tag ob">Observed</span> <em>its own proponents</em> concede the theory was not consistently reflected in markets — needing "secondary factors" to explain ~20%+ of misses.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q2</b> Where is the North Node on 22 June 2026, and what does McWhirter's curve say about it?</div>
+      <div class="qa-a"><b>A</b> The true node is at <strong>1.92° Pisces</strong>, ending its Pisces transit and entering <strong>Aquarius around late July 2026</strong> (~Oct by the mean node). Aquarius is McWhirter's <em>cyclical low</em> — so the theory asserts business activity approaches a low ~2026–2028, echoing the 2008 nodal low.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q3</b> Given the Aquarius-low context, what is the honest, disciplined use — and the reckless misuse?</div>
+      <div class="qa-a"><b>A</b> Honest use: note the low-phase <em>context</em>, watch the nodal-axis eclipses for sharper timing, and require price confirmation with small-N humility. Reckless misuse: positioning for a "2026–2027 crash" on the cycle alone — the theory claims a context, not a forecast.</div>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">9.4</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">Honestly Scored, Today's Low Phase</div>
+      <div class="d">Attractive as a falsifiable curve matching the real-estate cycle — but its own proponents concede inconsistent fit, amid a cycle-zoo, an economic confound, and small N. Today the node enters Aquarius (McWhirter's low, ~mid-late 2026), one cycle after 2008. Context, never a crash trade.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LESSON 9.5 ===================== -->
+<section class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Lesson 9.5</span>
+    <span class="lesson-title">The Practitioner's Method — <em>Using the Nodal Cycle</em></span>
+  </div>
+
+  <ol class="ladder">
+    <li><span><b>Locate the node's sign and McWhirter phase.</b> Is the North Node near the Aquarius <strong>low</strong>, the Leo <strong>high</strong>, or in transition? Today: entering Aquarius (~mid-late 2026) — the <em>low-phase context</em>. This frames the primary trend, like the J–S phase of Chapter 8.</span></li>
+    <li><span><b>Combine with the great cycles, don't isolate.</b> Read the nodal phase <em>alongside</em> Jupiter–Saturn (Chapter 8) for a fuller long-cycle backdrop. (Note the present convergence: a J–S cycle climbing to its 2029 opposition while the node sits at its Aquarius low — two independent long cycles to weigh, not one to trust.)</span></li>
+    <li><span><b>Treat sign-ingresses as slow context shifts.</b> The node changes sign roughly every 1.55 years; each ingress nudges the primary-trend context. These are <em>backdrop</em> shifts, not trade triggers.</span></li>
+    <li><span><b>Use eclipses on the nodal axis for sharper timing.</b> Because eclipses fall at the nodes, the <strong>eclipse dates (Chapter 10)</strong> are the crisper, datable events within the slow nodal context — the place to look for actual turning-point confluence.</span></li>
+    <li><span><b>Context, confirmed by price; small-N humility; risk fixed.</b> The nodal phase sets bias and attention only. Act on confluence with price structure, size for the fact that the cycle is unproven, and fix risk independently.</span></li>
+  </ol>
+
+  <div class="keyrule">
+    <span class="small">Keyrule · Lesson 9.5</span>
+    Locate the node's <b>McWhirter phase</b>, read it <b>alongside Jupiter–Saturn</b> (never alone), treat ingresses as slow <b>backdrop shifts</b>, use the <b>nodal-axis eclipses</b> for sharp timing — and act only on <b>price confluence</b>, with fixed risk.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself</div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q1</b> Why read the nodal phase <em>alongside</em> Jupiter–Saturn rather than in isolation?</div>
+      <div class="qa-a"><b>A</b> Because they are two independent long cycles, and weighing them together gives a fuller backdrop. Note the present convergence: J–S climbing to its 2029 opposition while the node sits at its Aquarius low — two cycles to weigh, not one to trust.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q2</b> Are the node's sign-ingresses trade triggers? What are they?</div>
+      <div class="qa-a"><b>A</b> No — with the node changing sign only every ~1.55 years, each ingress is a slow <em>backdrop</em> shift in the primary-trend context, not a trade trigger.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q3</b> Within the slow nodal context, where does the practitioner look for crisper timing?</div>
+      <div class="qa-a"><b>A</b> At the <strong>eclipses on the nodal axis</strong> (Chapter 10) — because eclipses fall at the nodes, they are the datable events within the slow context, the place to look for turning-point confluence, always confirmed by price.</div>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">9.5</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">The Five-Rule Method</div>
+      <div class="d">Locate the McWhirter phase, combine with Jupiter–Saturn, treat ingresses as slow context shifts, sharpen timing with the nodal-axis eclipses, and act only on price confluence with small-N humility and fixed risk. The cycle sets bias and attention — nothing more.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LESSON 9.6 ===================== -->
+<section class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Lesson 9.6</span>
+    <span class="lesson-title">Edge Cases <em>and Cautions</em></span>
+  </div>
+
+  <ol class="ladder">
+    <li><span><b>Don't conflate the ~18–19-year cycles.</b> <span class="tag as">Astronomical</span> <span class="honest" style="display:inline;border:none;background:none;padding:0;margin:0;color:var(--violet);font-style:italic;">(caution)</span> Nodal regression (18.61 yr), the Saros (18.03 yr), the Metonic (19 yr), and lunar declination (18.6 yr) are <em>distinct</em> cycles of similar length. Mixing them — or switching among them to fit a chart — is a primary route to self-deception here.</span></li>
+    <li><span><b>True vs. mean node shifts the timing.</b> The Aquarius ingress is <strong>late July 2026 (true node)</strong> but is often cited <strong>~October 2026 (mean/smoothed).</strong> Near a sign boundary the node's wobble matters; state which node you use and treat the ingress as a window, not a day.</span></li>
+    <li><span><b>The literature's fits are loose — and sometimes wrong.</b> <span class="tag ob">Observed</span> Proponents' "the node called this turn" claims are frequently post-hoc, and at least one popular source mis-labels the 2020 COVID top as the dot-com top. Audit any fit-claim against actual dated history before believing it.</span></li>
+    <li><span><b>Small N and the independent real-estate cycle.</b> <span class="tag ob">Observed</span> ~5–6 cycles cannot validate the curve, and the genuine ~18-year property cycle (credit/land-driven) may be the real signal masquerading as the node. Don't grant the planets credit the economy may be owed.</span></li>
+    <li><span><b>The "secondary factors" escape hatch cuts both ways.</b> Proponents excuse misses via "other cycles + central banks, up to ~20%." Fair as far as it goes — but a model that needs large discretionary adjustments to fit is, by that admission, <strong>not a precise forecasting tool.</strong> Treat its outputs as soft context.</span></li>
+    <li><span><b>The standing evidence caveat.</b> <span class="tag ob">Observed</span> The nodal/McWhirter cycle has <strong>no validated predictive power</strong> over markets. Its honest role is a falsifiable <em>context</em> for the primary trend and a pointer to the eclipse windows — confirmed only by price, governed by risk.</span></li>
+  </ol>
+
+  <div class="honest">
+    <span class="ct">The Self-Deception Trap</span>
+    Because four genuine ~18–19-year cycles overlap and McWhirter's own supporters allow a ~20% discretionary adjustment, this is fertile ground for fooling yourself. State which cycle and which node you mean, audit every "hit" against dated history, and never let a flexible model masquerade as a precise one.
+  </div>
+
+  <div class="keyrule">
+    <span class="small">Keyrule · Lesson 9.6</span>
+    Guard against the four traps: <b>conflating</b> the ~18–19-yr cycles, <b>true-vs-mean</b> boundary slippage, <b>loose or wrong</b> fit-claims, and the <b>real-estate confound</b>. The cycle confers <b>no validated predictive power</b> — context only.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself</div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q1</b> Name the four distinct cycles of similar length that must not be conflated.</div>
+      <div class="qa-a"><b>A</b> <span class="tag as">Astronomical</span> Nodal regression (18.61 yr), the Saros eclipse cycle (18.03 yr), the Metonic cycle (19 yr), and the lunar declination cycle (18.6 yr) — distinct rhythms whose mixing (or cherry-picking) is a primary route to self-deception.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q2</b> How does the true-vs-mean node choice change the Aquarius-ingress timing?</div>
+      <div class="qa-a"><b>A</b> The true node enters Aquarius in <strong>late July 2026</strong>; the mean/smoothed node is often cited at <strong>~October 2026</strong>. Near a sign boundary the wobble matters — state which node you use, and treat the ingress as a window, not a day.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q3</b> Why does the "secondary factors" defense cut both ways?</div>
+      <div class="qa-a"><b>A</b> Excusing misses via "other cycles + central banks, up to ~20%" is fair as far as it goes — but a model needing large discretionary adjustments to fit is, by that very admission, <em>not a precise forecasting tool</em>. Its outputs are soft context.</div>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">9.6</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">The Six Cautions</div>
+      <div class="d">Don't conflate the cycle-zoo; mind true-vs-mean at boundaries; audit loose or wrong fit-claims; respect the real-estate confound and small N; distrust the "secondary factors" escape hatch; and remember the standing caveat — no validated predictive power, context only.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CHAPTER-LEVEL: TAKEAWAYS ===================== -->
+<section class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Chapter 9</span>
+    <span class="lesson-title">Chapter Summary — <em>Five Takeaways</em></span>
+  </div>
+
+  <ol class="takeaways">
+    <li><strong>The North Node regresses through the zodiac every ~18.6 years</strong> (~1.55 yr/sign) — a <em>real</em> astronomical cycle that also governs eclipses and lunar standstills.</li>
+    <li><strong>McWhirter's Theory (1937)</strong> maps that cycle to a business-activity curve: <strong>low at Aquarius, high at Leo</strong> (opposite signs, half a cycle apart), with a defined rise and fall between — the field's most concrete, falsifiable long-cycle claim.</li>
+    <li><strong>The honest score is sobering:</strong> a few striking hits (1933, 1942), many misses <em>its own proponents concede</em>, confounding ~18–19-year cycles, an independent real-estate cycle, and a sample too small (~5–6 cycles) to prove anything.</li>
+    <li><strong>Today the node is entering Aquarius (~mid-late 2026) — McWhirter's low</strong>, one full cycle after the 2008 nodal low. This is <em>what the theory claims</em>, a primary-trend context — <strong>not a forecast, and not a basis to position for a crash.</strong></li>
+    <li><strong>Use it like the great cycles:</strong> context for the primary trend, combined with Jupiter–Saturn, sharpened by the eclipse dates on the nodal axis — and always confirmed by price, with small-N humility and fixed risk.</li>
+  </ol>
+</section>
+
+<!-- ===================== CHAPTER-LEVEL: CHECKLIST ===================== -->
+<section class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Chapter 9</span>
+    <span class="lesson-title">Practitioner's Checklist — <em>Reading the Nodal Cycle</em></span>
+  </div>
+
+  <ul class="checklist">
+    <li><strong>1. Node's sign &amp; McWhirter phase located?</strong> Near the Aquarius low, Leo high, or transition? (Today: entering Aquarius — low-phase context.)</li>
+    <li><strong>2. True or mean node stated?</strong> And the sign-ingress treated as a window (late-Jul vs ~Oct 2026), not a fixed day?</li>
+    <li><strong>3. Combined with Jupiter–Saturn?</strong> Is the nodal phase read alongside the great-cycle phase, not in isolation?</li>
+    <li><strong>4. Eclipse dates noted?</strong> Have you flagged the eclipses on the current nodal axis (Chapter 10) as the sharper timing windows?</li>
+    <li><strong>5. Cycle-zoo avoided?</strong> Are you sure you're using the nodal cycle and not conflating Saros / Metonic / declination to fit?</li>
+    <li><strong>6. Fit-claims audited, small-N applied?</strong> Have you checked historical "hits" against real dates, discounted the unprovable curve, and sized it as soft context?</li>
+    <li><strong>7. Confirmed by price, risk fixed?</strong> Context only — acted on with structural confirmation and independent risk, never as a stand-alone signal?</li>
+  </ul>
+</section>
+
+<!-- ===================== CHAPTER-LEVEL: GLOSSARY ===================== -->
+<section class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Chapter 9</span>
+    <span class="lesson-title">Glossary — <em>Terms of the Nodal Cycle</em></span>
+  </div>
+
+  <dl class="gloss">
+    <dt>Lunar nodes (Rahu / Ketu) <span class="tag as">Astronomical</span></dt>
+    <dd>The two opposite points where the Moon's orbit crosses the ecliptic — the North (ascending) Node, Rahu, and the South (descending) Node, Ketu. Not bodies but moving intersection points.</dd>
+
+    <dt>Nodal regression</dt>
+    <dd>The nodes' continuous <em>backward</em> (retrograde) motion through the zodiac — the reason McWhirter's curve runs Aquarius → Capricorn → … → Leo, entering each earlier sign in turn.</dd>
+
+    <dt>Draconic (nodal) period <span class="tag as">Astronomical</span></dt>
+    <dd>One full backward revolution of the line of nodes: ~18.61 years (≈6,798 days), about 1.55 years (566 days) per sign.</dd>
+
+    <dt>True vs. mean node</dt>
+    <dd>The mean node is a smoothed average; the true (osculating) node wobbles around it by up to ~1.5° — a difference that matters at sign boundaries. McWhirter-lineage work generally uses the true node.</dd>
+
+    <dt>McWhirter Theory <span class="tag hi">Historical</span></dt>
+    <dd>Louise McWhirter's 1937 system tying the primary trend of business activity to the North Node's transit — low at Aquarius, high at Leo — the field's most concrete, falsifiable long-cycle claim.</dd>
+
+    <dt>Normal curve of business activity</dt>
+    <dd>McWhirter's repeating profile of business volume across the nodal cycle, rising from the Aquarius low to the Leo high and falling back — a clean, symmetric model.</dd>
+
+    <dt>Saros cycle</dt>
+    <dd>The ~18.03-year eclipse cycle — one of several similar-length rhythms that must not be conflated with the 18.6-year nodal regression.</dd>
+
+    <dt>Metonic cycle</dt>
+    <dd>The ~19-year cycle reconciling lunar and solar calendars — another near-18.6-year rhythm in the "cycle zoo."</dd>
+
+    <dt>Lunar declination / standstill cycle</dt>
+    <dd>A genuine ~18.6-year geophysical rhythm driven by the same nodal regression, modulating tides (and, some argue, climate) — independent of any market claim.</dd>
+
+    <dt>Small N <span class="tag ob">Observed</span></dt>
+    <dd>The structural limit: only ~5–6 complete 18.6-year nodal cycles sit in reliable market history — far too few to validate a twelve-phase curve, making the theory unprovable.</dd>
+
+    <dt>Secondary factors</dt>
+    <dd>The "other cycles + central-bank intervention" (~20%+) proponents invoke to excuse the theory's misses — an escape hatch that, by its own logic, marks the model as imprecise.</dd>
+  </dl>
+</section>
+
+<!-- ===================== CHAPTER-LEVEL: LOCKED IN ===================== -->
+<div class="recap">
+  <div class="n">9</div>
+  <div>
+    <div class="l">Chapter 9 — Locked In</div>
+    <div class="t">The Nodal Cycle: A Falsifiable Context, Honestly Scored</div>
+    <div class="d">The North Node regresses one full circle every ~18.61 years — a real astronomical cycle that also rules eclipses. McWhirter's 1937 curve maps it to business activity: low at Aquarius, high at Leo. Honest scoring is sobering — a few hits, many conceded misses, a cycle-zoo, a real-estate confound, and only ~5–6 cycles on record. Today the true node ends Pisces at 1.92° and enters Aquarius (McWhirter's low) in late July 2026, one cycle after 2008. What the theory <em>claims</em>, never a forecast: context for the primary trend, sharpened by the nodal-axis eclipses, confirmed only by price.</div>
+  </div>
+</div>
+
+<p class="bridge">End of Chapter 9. Next: Chapter 10 — "Eclipses, Ingresses &amp; Retrogrades as Timing Triggers," which turns from the slow primary-trend cycles to the sharper, datable events that punctuate them — the eclipses on the nodal axis, the sign-ingresses of the planets, and the retrograde stations — and tests their reputation as market turning points.</p>
+
+</body>
+</html>

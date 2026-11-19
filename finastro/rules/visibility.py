@@ -23,8 +23,8 @@ localisation, so `locations` is narrowed and the reason travels on every rule as
 not being waived -- it is a rule about weekday, tithi and nakshatra conditions,
 and this family has none.
 
-**Two sections are blocked, and the blocking was checked rather than assumed.**
-See each rule for the arithmetic.
+**One section is blocked (B11 was, and B10 was until 18-Nov-2026), and the
+blocking was checked rather than assumed.** See each rule for the arithmetic.
 
 **One rule fires on a reading that is partly ours.** B15 item c) elides a
 nakshatra's second word; the elision was reported as `ambiguous`, ruled on as
@@ -125,38 +125,68 @@ rule(
 
 
 # ----------------------------------------------------- B010  Mercury p.11
-# BLOCKED. The section prints three bare dates and one sentence that is the
-# only thing resembling a definition. That sentence makes the date depend on a
-# SPEED COMPARISON, which the astronomy layer cannot supply: `speed_deg_day` is
-# emitted on every record, but only at the instants of other events, so the
-# crossing where Mercury overtakes Venus is not recoverable from it.
+# PORTED 18-Nov-2026 (blocked until then). The section prints three bare
+# dates and one sentence: "When Mercury rises in the East, its speed is
+# stationery, real strength comes after it attains higher speed than Venus."
+# It was blocked because the astronomy layer carried no Mercury-vs-Venus speed
+# comparison; `speed_overtake` now emits it.
 #
-# Checked before blocking, so this is a measurement and not a shrug. The 2026
-# dates are 10-Apr, 03-Aug and 14-Nov.
-#   - not the East rise dates (14-Mar, 21-Jul, 10-Nov): offsets 27, 13, 4 days
-#   - not the greatest-elongation Behind dates (04-Apr, 02-Aug, 21-Nov):
-#     offsets +6, +1, -7 days
-# Neither offset is constant, so Manifestation is not either event under a lag,
-# and the speed crossing the sentence describes is what is left.
-blocked(
+# Verified against the section's own three dates before porting. Mercury's
+# speed overtakes Venus's as a morning star at 09-Apr-26 21:43, 03-Aug-26
+# 13:01 and 13-Nov-26 19:02 IST; the printed dates are 10-Apr, 03-Aug and
+# 14-Nov. The date each instant is printed under is the first day a NOON-GMT
+# daily reading shows Mercury the faster -- 12:00 UT is 17:30 IST, so 21:43
+# and 19:02 read the next day and 13:01 the same day. 3 of 3. A sunrise or
+# civil-midnight reading puts 03-Aug on 04-Aug and fails. The other crossings
+# of the year (Venus retaking Mercury, all with Mercury an evening star) are
+# not Manifestation, and none of them is printed.
+#
+# Earlier candidates, ruled out by arithmetic and kept for the record: the
+# East rise dates (offsets 27/13/4 days) and the greatest-elongation dates
+# (+6/+1/-7) carry no constant lag.
+
+def _noon_gmt_reading_date(t):
+    """The UTC date a 12:00 UT daily ephemeris first shows the new state."""
+    import datetime as _dt
+    d = t.date()
+    return d if t.time() <= _dt.time(12, 0) else d + _dt.timedelta(days=1)
+
+
+def _manifestation(sky):
+    from ..sky import civil_day_span
+    out = []
+    for r in sky.class_records("speed_overtake",
+                               family="motion/mercury_overtakes_venus"):
+        if r["astronomy"]["elongation"] >= 0:      # "rises in the East" only
+            continue
+        t = parse(r["time"]["t_start_utc"])
+        day = _noon_gmt_reading_date(t)
+        span = civil_day_span(day, day, "mumbai")
+        out.append(Span(span.start, span.end,
+                        {"overtake_utc": r["time"]["t_start_utc"],
+                         "reading": "noon_gmt_daily_ephemeris"},
+                        precision="date_only"))
+    return out
+
+
+rule(
     id="b010_mercury_manifestation",
     section=B(10),
-    rule_family="visibility/manifestation",
+    # `motion/`, not `visibility/`: the date is a speed crossing, not a
+    # kalamsha horizon measurement, so it does not owe the combust family's
+    # horizon declaration and must not carry its flag.
+    rule_family="motion/manifestation",
     condition_text=B(10).paras[0],
     condition_from="para[0]",
     verdict_text=B(10).notes[0],
     verdict_from="note[0]",
-    inputs=("visibility/combust",),
-    missing_inputs=(
-        "a continuous Mercury-vs-Venus speed comparison. speed_deg_day is "
-        "emitted only at event instants, so the date Mercury attains higher "
-        "speed than Venus is not derivable from the astronomy layer",
-    ),
+    inputs=("motion/speed_overtake",),
     locations=MUMBAI_ONLY,
-    notes="Ruled out by arithmetic before blocking: the 2026 dates are neither "
-          "the East rise dates nor the greatest-elongation dates under any "
-          "constant lag (offsets 27/13/4 and +6/+1/-7 respectively).",
-)
+    flags=("dated_by_noon_gmt_daily_reading",),
+    notes="Reproduces 3 of 3 printed 2026 dates. The date is the first day a "
+          "12:00 UT daily ephemeris shows Mercury faster than Venus; the exact "
+          "overtaking instant travels in the row's detail.",
+)(_manifestation)
 
 
 # ----------------------------------------------------- B011  Mercury p.12

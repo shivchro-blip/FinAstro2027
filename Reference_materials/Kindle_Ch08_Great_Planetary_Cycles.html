@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Celestial Ledger — Chapter 8: The Great Planetary Cycles</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --paper:#fbf9f4; --paper2:#f4efe4; --card:#ffffff; --ink:#26211c; --ink-soft:#4f463c; --ink-faint:#857a6c;
+  --line:#e6dfce; --line-soft:#efe9dc;
+  --gold:#9a7113; --gold-soft:#fbf2da; --gold-line:#e7cf94;
+  --teal:#0c7d68; --teal-soft:#e3f3ef;
+  --coral:#b23a2e; --coral-soft:#f8e9e6;
+  --violet:#6244a8; --violet-soft:#efeafa;
+  --green:#2f7d4f; --green-soft:#e6f3ea;
+  --blue:#1f6aa6; --blue-soft:#e7f0f8;
+  --slate:#566273; --slate-soft:#eceef2;
+  --serif:'Playfair Display',Georgia,'Times New Roman',serif;
+  --body:Georgia,'Iowan Old Style','Palatino Linotype',serif;
+  --sans:'Inter',system-ui,-apple-system,sans-serif;
+  --r:10px; --r-sm:7px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{ -webkit-text-size-adjust:100%; }
+body{ background:var(--paper); color:var(--ink); font-family:var(--body); font-size:18px; line-height:1.72; max-width:780px; margin:0 auto; padding:30px 26px 90px; }
+p{ margin:0 0 14px; } strong{ color:var(--ink); font-weight:600; } em{ font-style:italic; }
+
+.hero{ text-align:center; padding:22px 0 30px; border-bottom:2px solid var(--gold-line); margin-bottom:34px; }
+.hero .kicker{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:var(--gold); }
+.hero h1{ font-family:var(--serif); font-weight:900; font-size:40px; line-height:1.12; margin:14px 0 0; }
+.hero h1 em{ color:var(--gold); font-style:italic; }
+.hero .sub{ font-style:italic; color:var(--ink-soft); font-size:17px; max-width:580px; margin:16px auto 0; }
+.hero .ornament{ color:var(--gold); letter-spacing:.5em; margin-top:18px; font-size:14px; }
+
+.partnote{ font-family:var(--sans); font-size:13px; color:var(--ink-soft); background:var(--paper2); border:1px solid var(--line); border-radius:var(--r-sm); padding:13px 17px; margin:0 0 26px; line-height:1.6; }
+.partnote b{ color:var(--gold); }
+.keyk{ background:var(--card); border:1px solid var(--line); border-radius:var(--r-sm); padding:12px 17px; margin:0 0 30px; font-family:var(--sans); font-size:12.5px; line-height:1.85; color:var(--ink-soft); }
+.keyk .ck{ display:block; font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px; }
+
+.lesson{ margin:0 0 50px; }
+.lesson-head{ display:flex; align-items:baseline; gap:12px; border-bottom:1px solid var(--line); padding-bottom:8px; margin-bottom:18px; }
+.lesson-no{ font-family:var(--sans); font-size:12px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); white-space:nowrap; }
+.lesson-title{ font-family:var(--serif); font-weight:700; font-size:25px; line-height:1.2; }
+.lesson-title em{ color:var(--gold); font-style:italic; }
+h3.sec{ font-family:var(--serif); font-style:italic; font-weight:600; font-size:21px; color:var(--gold); margin:28px 0 10px; }
+h4.lab{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-faint); margin:22px 0 9px; }
+
+.callout{ border-left:4px solid var(--gold); background:var(--gold-soft); border-radius:0 var(--r-sm) var(--r-sm) 0; padding:14px 18px; margin:18px 0; font-size:16.5px; line-height:1.62; }
+.callout .ct{ display:block; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:5px; color:var(--gold); }
+.callout.teal{ border-color:var(--teal); background:var(--teal-soft);} .callout.teal .ct{ color:var(--teal);}
+.callout.coral{ border-color:var(--coral); background:var(--coral-soft);} .callout.coral .ct{ color:var(--coral);}
+.callout.violet{ border-color:var(--violet); background:var(--violet-soft);} .callout.violet .ct{ color:var(--violet);}
+.callout.green{ border-color:var(--green); background:var(--green-soft);} .callout.green .ct{ color:var(--green);}
+.callout.slate{ border-color:var(--slate); background:var(--slate-soft);} .callout.slate .ct{ color:var(--slate);}
+.honest{ border-left:4px solid var(--violet); background:var(--violet-soft); border-radius:0 var(--r-sm) var(--r-sm) 0; padding:14px 18px; margin:18px 0; font-size:16px; }
+.honest .ct{ display:block; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:5px; color:var(--violet); }
+
+.keyrule{ text-align:center; font-family:var(--serif); font-style:italic; font-size:20px; line-height:1.5; color:var(--gold); border-top:1px solid var(--gold-line); border-bottom:1px solid var(--gold-line); padding:18px 14px; margin:22px 0; }
+.keyrule .small{ display:block; font-family:var(--sans); font-style:normal; font-size:10px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:8px; }
+.keyrule b{ font-style:normal; color:var(--ink); }
+
+.tag{ display:inline-block; font-family:var(--sans); font-size:10px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:1px 7px; border-radius:4px; vertical-align:middle; }
+.tag.cl{ background:var(--blue-soft); color:var(--blue); } .tag.fw{ background:var(--gold-soft); color:var(--gold); } .tag.vf{ background:var(--violet-soft); color:var(--violet); }
+.tag.ob{ background:var(--teal-soft); color:var(--teal); } .tag.as{ background:var(--slate-soft); color:var(--slate); }
+
+.cards{ display:flex; flex-wrap:wrap; gap:12px; margin:16px 0; }
+.card{ flex:1 1 220px; background:var(--card); border:1px solid var(--line); border-top:3px solid var(--gold); border-radius:var(--r-sm); padding:14px 16px; }
+.card.up{ border-top-color:var(--green);} .card.down{ border-top-color:var(--coral);} .card.teal{ border-top-color:var(--teal);} .card.violet{ border-top-color:var(--violet);} .card.slate{ border-top-color:var(--slate);}
+.card .ic{ font-size:24px; line-height:1; } .card .ti{ font-family:var(--serif); font-weight:700; font-size:18px; margin:6px 0 2px; } .card .ti em{ color:var(--gold); font-style:italic; font-weight:400; font-size:14px; }
+.card .mt{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px; } .card p{ font-size:15px; line-height:1.55; margin:0; color:var(--ink-soft); }
+
+.tw{ overflow-x:auto; border:1px solid var(--line); border-radius:var(--r-sm); margin:16px 0; }
+table{ width:100%; border-collapse:collapse; font-family:var(--sans); }
+thead tr{ background:var(--gold-soft); }
+th{ font-size:10.5px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:var(--gold); text-align:left; padding:9px 11px; white-space:nowrap; }
+td{ font-size:13px; padding:8px 11px; border-top:1px solid var(--line-soft); vertical-align:top; color:var(--ink-soft); }
+td.g{ color:var(--gold); font-weight:600; white-space:nowrap; }
+td.up{ color:var(--green); font-weight:600;} td.dn{ color:var(--coral); font-weight:600;}
+tbody tr:nth-child(even){ background:#fcfaf5; }
+
+.qa{ border:1px solid var(--line); border-radius:var(--r-sm); overflow:hidden; margin:20px 0; }
+.qa-h{ background:var(--paper2); padding:9px 15px; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); border-bottom:1px solid var(--line); }
+.qa-i{ padding:12px 15px; border-bottom:1px solid var(--line-soft); } .qa-i:last-child{ border-bottom:none; }
+.qa-q{ font-size:16px; } .qa-q b{ color:var(--gold); font-family:var(--sans); font-size:12px; font-weight:700; margin-right:8px; }
+.qa-a{ font-size:16px; color:var(--ink-soft); margin-top:5px; } .qa-a b{ color:var(--teal); font-family:var(--sans); font-size:12px; font-weight:700; margin-right:8px; }
+
+.recap{ display:flex; align-items:center; gap:18px; background:var(--gold-soft); border:1px solid var(--gold-line); border-radius:var(--r-sm); padding:16px 20px; margin:20px 0; }
+.recap .n{ font-family:var(--serif); font-weight:900; font-size:38px; color:var(--gold); line-height:1; flex-shrink:0; }
+.recap .l{ font-family:var(--sans); font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); }
+.recap .t{ font-family:var(--serif); font-weight:700; font-size:18px; margin:2px 0; } .recap .d{ font-size:14px; color:var(--ink-soft); }
+
+.ladder{ counter-reset:rk; list-style:none; padding:0; margin:14px 0; }
+.ladder li{ counter-increment:rk; display:flex; gap:14px; align-items:flex-start; padding:9px 0; border-bottom:1px solid var(--line-soft); font-size:15.5px; }
+.ladder li:last-child{ border-bottom:none; }
+.ladder li::before{ content:counter(rk); flex-shrink:0; width:26px; height:26px; background:var(--gold); color:#fff; border-radius:50%; font-family:var(--sans); font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center; }
+.ladder b{ color:var(--ink); }
+
+.takeaways{ counter-reset:tk; list-style:none; padding:0; margin:14px 0; }
+.takeaways li{ counter-increment:tk; position:relative; padding:10px 0 10px 46px; border-bottom:1px solid var(--line-soft); font-size:16.5px; }
+.takeaways li:last-child{ border-bottom:none; }
+.takeaways li::before{ content:counter(tk); position:absolute; left:0; top:9px; width:30px; height:30px; border:1.5px solid var(--gold); color:var(--gold); border-radius:50%; font-family:var(--serif); font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center; }
+
+.checklist{ list-style:none; padding:0; margin:14px 0; }
+.checklist li{ position:relative; padding:11px 0 11px 38px; border-bottom:1px solid var(--line-soft); font-size:16px; line-height:1.6; }
+.checklist li:last-child{ border-bottom:none; }
+.checklist li::before{ content:"\2610"; position:absolute; left:0; top:9px; font-size:22px; line-height:1; color:var(--gold); }
+.checklist b{ color:var(--ink); }
+
+.gloss{ background:var(--card); border:1px solid var(--line); border-radius:var(--r-sm); padding:6px 18px; margin:16px 0; }
+.gloss dt{ font-family:var(--serif); font-weight:700; font-size:16px; color:var(--gold); margin:12px 0 1px; }
+.gloss dd{ margin:0 0 4px; font-size:15.5px; color:var(--ink-soft); }
+
+.bridge{ text-align:center; font-style:italic; color:var(--ink-faint); font-size:15px; border-top:1px solid var(--line); padding-top:22px; margin-top:34px; }
+hr.soft{ border:none; border-top:1px solid var(--line); margin:30px 0; }
+@media (max-width:600px){ body{font-size:17px;padding:20px 16px 70px;} .hero h1{font-size:31px;} .lesson-title{font-size:21px;} }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="kicker">The Celestial Ledger · Part II — Time</div>
+  <h1>The Great <em>Planetary Cycles</em></h1>
+  <div class="sub">Chapter Eight — the slow pairs trace the longest rhythms in the sky. Financial astrology proposes them as the skeleton of the primary trend — and this chapter is unsparing about the one fact that limits them.</div>
+  <div class="ornament">✦ ✦ ✦</div>
+</div>
+
+<p class="partnote"><b>Part II begins</b>, and with it the book's true subject: <b>time</b>. Until now the planets were read as a still photograph. Here they start to move on a calendar. The slowest pairs — above all <b>Jupiter and Saturn</b> — trace the longest rhythms in the sky, and financial astrology proposes them as the <b>skeleton of the primary trend</b> and the great economic turning points. This chapter teaches that skeleton — and is unsparing about the one fact that limits it: in reliable market history, these grand cycles have happened only a handful of times.</p>
+
+<div class="keyk">
+  <span class="ck">Claim-type key</span>
+  <span class="tag as">Astronomical</span> a verifiable astronomical fact &nbsp;·&nbsp;
+  <span class="tag cl">Classical</span> an established cyclic doctrine &nbsp;·&nbsp;
+  <span class="tag fw">Framework</span> this book's market interpretation &nbsp;·&nbsp;
+  <span class="tag ob">Observed</span> an empirical caveat &nbsp;·&nbsp;
+  <span class="tag vf">Verify</span> to confirm. Cycle figures computed with Swiss Ephemeris.
+</div>
+
+<!-- ===================== LESSON 8.1 ===================== -->
+<section class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Lesson 8.1</span>
+    <span class="lesson-title">Chapter Introduction — <em>From Photograph to Film</em></span>
+  </div>
+
+  <p>A natal or foundation chart is a photograph: the sky frozen at one instant. But markets unfold in <em>time</em>, and to time them with the sky you need the sky in <em>motion</em> — the film, not the still. The engine of that film is the set of <strong>planetary cycles</strong>: the rhythmic dance of each pair of planets as the faster laps the slower, again and again, across decades and centuries.</p>
+
+  <p>The slowest of these are the <strong>great cycles</strong>, and the greatest is <strong>Jupiter–Saturn</strong> — so important to the older astrologers that they called it the <em>Chronocrator</em>, the "marker of time." Its ~20-year beat has been mapped onto the long swings of economies and markets for centuries. This chapter builds the cyclic vocabulary (the phases of a cycle), lays out the great cycles and their periods, connects them to the independent long cycles economists already study, and then — in the honest tradition of this book — confronts the <strong>small-sample problem</strong> that makes the grandest cycles impossible to <em>prove</em>: there are only about four or five complete Jupiter–Saturn cycles in trustworthy market data. The verdict will be that these cycles are a <strong>skeleton and a context for the primary trend</strong>, never a stand-alone trade signal.</p>
+
+  <div class="keyrule">
+    <span class="small">Keyrule · Lesson 8.1</span>
+    The chart is a <b>photograph</b>; the cycles are the <b>film</b>. To time a market with the sky, watch the planets <b>move</b> — and watch the slowest pairs most of all.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself</div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q1</b> Why is a single chart not enough to time a market?</div>
+      <div class="qa-a"><b>A</b> A chart freezes the sky at one instant — a photograph. Markets unfold over time, so timing them requires the sky <em>in motion</em>: the rhythmic cycling of the planets, not a single frozen frame.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q2</b> Which pair is the "greatest" of the great cycles, and what did the old astrologers call it?</div>
+      <div class="qa-a"><b>A</b> Jupiter–Saturn — the <em>Chronocrator</em>, the "marker of time" — whose roughly 20-year beat has been mapped onto long economic swings for centuries.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q3</b> What will the chapter's verdict on the great cycles be?</div>
+      <div class="qa-a"><b>A</b> That they are a <em>skeleton and context</em> for the primary trend — useful for locating the market on the long wave — but never a stand-alone trade signal, because the record holds too few cycles to prove anything.</div>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">8.1</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">Photograph → Film</div>
+      <div class="d">A chart is one frozen instant; cycles are the moving picture. Timing comes from the planets in motion — and the slowest pairs, led by Jupiter–Saturn, trace the longest rhythms of all.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LESSON 8.2 ===================== -->
+<section class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Lesson 8.2</span>
+    <span class="lesson-title">Core Concepts — <em>What a Planetary Cycle Is</em></span>
+  </div>
+
+  <p><span class="tag as">Astronomical</span> A <strong>planetary cycle</strong> is the repeating relationship between two planets as seen from Earth. Because each orbits at a different rate, the angle between them continuously changes; the time for the faster planet to "lap" the slower and return to the same angle is the <strong>synodic period</strong>. It follows a simple law:</p>
+
+  <div class="callout slate">
+    <span class="ct">The Synodic Law</span>
+    <strong>1 / P(synodic) = | 1 / P(faster) − 1 / P(slower) |</strong><br>
+    For Jupiter (~11.86-yr orbit) and Saturn (~29.46-yr orbit), this gives a synodic period of about <strong>19.86 years</strong> — confirmed by direct computation of the conjunction dates below.
+  </div>
+
+  <h3 class="sec">The phases of a cycle — the "wave"</h3>
+
+  <p><span class="tag cl">Classical</span> <span class="tag fw">Framework</span> A cycle is not a single event but a wave with recognizable phases, a framework developed in modern mundane astrology (notably by Dane Rudhyar). Reading the two planets' separation from 0° to 360°:</p>
+
+  <ol class="ladder">
+    <li><span><b>Conjunction (0°) — the seed.</b> A new cycle begins; the theme of the two planets is "planted." The sign it falls in flavors the whole cycle.</span></li>
+    <li><span><b>Waxing square (90°) — crisis of action.</b> The seed meets its first structural test; building under tension.</span></li>
+    <li><span><b>Opposition (180°) — culmination / full manifestation.</b> The cycle's themes come to fullest, most visible expression — and often to a turning point of awareness.</span></li>
+    <li><span><b>Waning square (270°) — crisis of consciousness.</b> Reorientation; the cycle's structures begin to break down.</span></li>
+    <li><span><b>Return to conjunction (360°/0°) — completion and new seed.</b> Death and rebirth; the next cycle begins.</span></li>
+  </ol>
+
+  <p><span class="tag fw">Framework</span> Financial astrology reads these phase-junctures — especially the <strong>conjunction, the two squares, and the opposition</strong> — as candidate <strong>turning-point windows</strong> for the long trend, with the conjunction's sign setting the "tone" of the ~20-year era.</p>
+
+  <div class="callout">
+    <span class="ct">Callout — Conjunction = New Cycle, Opposition = Culmination</span>
+    The two anchors to internalize: a <strong>conjunction seeds</strong> a fresh cycle (watch the sign), and the <strong>opposition culminates</strong> it (watch for a turn). The squares between are the stress points. This wave-logic applies to <em>every</em> planetary pair — only the period changes.
+  </div>
+
+  <div class="keyrule">
+    <span class="small">Keyrule · Lesson 8.2</span>
+    A cycle is a <b>wave</b>, not an event. <b>Conjunction</b> seeds it, the <b>squares</b> stress it, the <b>opposition</b> culminates it — and the same shape governs every pair, only the period changing.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself</div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q1</b> What is the synodic period, and what does Jupiter–Saturn's work out to?</div>
+      <div class="qa-a"><b>A</b> It is the time for the faster planet to lap the slower and return to the same angle. By the law <em>1/P(syn) = |1/P(fast) − 1/P(slow)|</em>, Jupiter–Saturn comes to about <strong>19.86 years</strong>.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q2</b> Name the four key phase-junctures of a cycle in order, and what each signifies.</div>
+      <div class="qa-a"><b>A</b> <span class="tag fw">Framework</span> Conjunction (0°, the seed) → waxing square (90°, crisis of action) → opposition (180°, culmination) → waning square (270°, crisis of consciousness) — then return to conjunction, a new seed.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q3</b> What sets the "tone" of a ~20-year era under this framework?</div>
+      <div class="qa-a"><b>A</b> The sign in which the cycle's seeding conjunction falls — it flavors the whole era until the next conjunction plants a new theme.</div>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">8.2</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">The Wave and Its Phases</div>
+      <div class="d">Two planets at different speeds make a changing angle; one full lap is the synodic period. The cycle is a wave — conjunction (seed), waxing square, opposition (culmination), waning square — and the conjunction's sign tones the era.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LESSON 8.3 ===================== -->
+<section class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Lesson 8.3</span>
+    <span class="lesson-title">Classical &amp; Historical Framework — <em>The Great Cycles</em></span>
+  </div>
+
+  <h3 class="sec">Jupiter–Saturn: the master cycle (the <em>Chronocrator</em>)</h3>
+
+  <p><span class="tag as">Astronomical</span> The ~19.86-year Jupiter–Saturn conjunction is the master beat of mundane astrology. Computed conjunction dates across the modern era:</p>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>Great conjunction</th><th>Tropical sign</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td class="g">Aug 1940 / <strong>Feb 1941</strong></td><td>Taurus (earth)</td><td><em>triple</em> (retrograde) — WWII era</td></tr>
+        <tr><td class="g">Feb 1961</td><td>Capricorn (earth)</td><td>preceded the 1962 slide</td></tr>
+        <tr><td class="g">Dec 1980 / <strong>Jul 1981</strong></td><td>Libra (air)</td><td><em>triple</em>; inflation-peak / secular era for stocks</td></tr>
+        <tr><td class="g">May 2000</td><td>Taurus (earth)</td><td>near the dot-com peak era</td></tr>
+        <tr><td class="g"><strong>Dec 2020</strong></td><td><strong>Aquarius (air)</strong></td><td>the "Grand Mutation" into air; pandemic-recovery surge</td></tr>
+        <tr><td class="g">Oct 2040</td><td>Libra (air)</td><td>next conjunction</td></tr>
+        <tr><td class="g">Apr 2060</td><td>Gemini (air)</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p><span class="tag cl">Classical</span> <span class="tag fw">Framework</span> Two longer rhythms ride on top of the 20-year beat:</p>
+
+  <ul class="ladder">
+    <li><span><b>The trigon (~60-year) return.</b> Successive conjunctions step ~243° each time, so they recur in the <em>same element</em> ("trigon") roughly every <strong>~60 years</strong> (three conjunctions) before eventually shifting element. Remarkably, this ~60-year astrological rhythm <strong>mirrors the Indian 60-year <em>Samvatsara</em> (Jovian) cycle</strong> — a striking cross-cultural convergence, flagged as framework.</span></li>
+    <li><span><b>The element mutation (~200-year).</b> The conjunction's element shifts roughly every two centuries. The <strong>Dec 2020 conjunction at ~0° Aquarius marked the "Grand Mutation"</strong> from a ~200-year run of <em>earth</em>-sign conjunctions into a new <em>air</em>-sign era (2020 → ~2200).</span></li>
+  </ul>
+
+  <div class="honest">
+    <span class="ct">Important caveat — Chapter 2 applies</span>
+    This "earth → air" narrative is a <strong>tropical-zodiac</strong> statement. In the sidereal/Lahiri frame the 2020 conjunction falls at ~6° Capricorn — <em>earth</em>. The conjunction <em>event</em> is frame-independent; its <em>element label</em> is not. State your zodiac before invoking the mutation. <em>(Computed: 21 Dec 2020 great conjunction = ~0.5° Aquarius tropical / ~6.3° Capricorn sidereal-Lahiri.)</em>
+  </div>
+
+  <h3 class="sec">The other great cycles (synodic periods)</h3>
+
+  <p><span class="tag as">Astronomical</span> The slow-pair cycles financial astrology watches, by approximate synodic period:</p>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>Pair</th><th>Synodic period</th><th>Mapped theme (framework)</th></tr></thead>
+      <tbody>
+        <tr><td class="g">Jupiter–Saturn</td><td>~19.86 yr</td><td>the master economic / expansion–contraction cycle</td></tr>
+        <tr><td class="g">Jupiter–Uranus</td><td>~13.8 yr</td><td>innovation booms, speculative surges</td></tr>
+        <tr><td class="g">Jupiter–Neptune</td><td>~12.8 yr</td><td>liquidity tides, bubbles, manias</td></tr>
+        <tr><td class="g">Saturn–Uranus</td><td>~45.4 yr</td><td>structure vs. disruption; regime breaks</td></tr>
+        <tr><td class="g">Saturn–Neptune</td><td>~35.9 yr</td><td>deflation / illusion, credit cycles</td></tr>
+        <tr><td class="g">Saturn–Pluto</td><td>~33–38 yr (eccentric)</td><td>crises, debt purges, power resets</td></tr>
+        <tr><td class="g">Uranus–Neptune</td><td>~171 yr</td><td>long techno-social waves</td></tr>
+        <tr><td class="g">Uranus–Pluto</td><td>~113–141 yr (variable)</td><td>revolutionary upheavals</td></tr>
+        <tr><td class="g">Neptune–Pluto</td><td>~492 yr</td><td>the civilizational "grandfather" cycle</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="sec">The practitioner's historical mapping — crises against the slow pairs</h3>
+
+  <p><span class="tag fw">Framework</span> <span class="tag vf">Verify</span> The tradition's fullest chronology maps nearly four centuries of financial crises onto the hard aspects of the Saturn–outer pairs. It is reproduced here as the tradition states it — and then held to this book's standard. <strong>Every alignment below was checked against the Swiss Ephemeris for this edition</strong>; rows whose named aspect was not exact in the named year are flagged inline rather than silently repaired or removed. The reader deserves to see the lore and the ledger side by side.</p>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>Year</th><th>Alignment (as the tradition states it)</th><th>Crisis / event</th><th>Aftermath the tradition records</th><th>Ephemeris check</th></tr></thead>
+      <tbody>
+        <tr><td class="g">1637</td><td>Saturn square Uranus</td><td>Tulip-bulb bubble collapse</td><td>Collapse of the Dutch speculative economy, spilling across Europe</td><td>✓ exact 13 Oct 1637</td></tr>
+        <tr><td class="g">1711</td><td>Saturn square Neptune</td><td>Formation of the South Sea Bubble</td><td>Speculative frenzy fuelled by war-debt refinancing schemes</td><td>✓ exact 15 Jul 1711</td></tr>
+        <tr><td class="g">1720</td><td>Saturn opposition Neptune</td><td>South Sea Bubble pops</td><td>Company fraud exposed; passage of the British "Bubble Act"</td><td>✓ exact 28 May 1720</td></tr>
+        <tr><td class="g">1819</td><td>Saturn conjunct Pluto, both square Uranus &amp; Neptune</td><td>Panic of 1819; severe metal shortage</td><td>Devaluation of paper currency; "39-year suspension of gold standard" <em>[Verify — historical claim as stated in the source]</em></td><td>✓ all five aspects exact in 1819 (Sat–Plu 5 Oct; Sat–Nep 6 Oct; Sat–Ura 6 Dec; Plu–Nep 10 Jun; Plu–Ura late Dec)</td></tr>
+        <tr><td class="g">1861</td><td>Neptune in Aries &amp; Uranus in Gemini</td><td>U.S. Civil War; hyperinflation</td><td>Oil from $0.45 to $6.37 per gallon <em>[Verify — unit as given in the source; historical series are usually quoted per barrel]</em>; greenback fiat paper created</td><td>✓ computed Apr 1861: Neptune 0.1° Aries, Uranus 9.5° Gemini (tropical)</td></tr>
+        <tr><td class="g">1873</td><td>Saturn square Pluto (with Saturn–Uranus tension)</td><td>Panic of 1873 / Europe's "Great Depression"</td><td>Speculative railroad overbuilding; widespread bankruptcies</td><td><strong>[aspect unverified</strong> — computed: Saturn–Pluto ~107° at closest in 1873, no exact square; Saturn–Uranus ~166°<strong>]</strong></td></tr>
+        <tr><td class="g">1914</td><td>Saturn square Pluto (Pluto in Cancer)</td><td>Outbreak of World War I</td><td>Suspension of the gold standard; severe sovereign-debt expansion</td><td><strong>[aspect unverified</strong> — computed: the pair stood within ~18° of <em>conjunction</em> through 1914 and was never square; Pluto in Cancer ✓<strong>]</strong></td></tr>
+        <tr><td class="g">1917</td><td>Saturn–Neptune conjunction</td><td>Bolshevik Russian Revolution</td><td>Capitalism structurally replaced by state planning</td><td>✓ exact 1 Aug 1917</td></tr>
+        <tr><td class="g">1929</td><td>Saturn–Pluto square</td><td>Wall Street crash</td><td>Systemic debt crisis leading to the Great Depression</td><td><strong>[aspect unverified</strong> — computed: separation ~148–157° through late 1929, no square; cf. Chapter 1's crash table<strong>]</strong></td></tr>
+        <tr><td class="g">1931</td><td>Saturn–Pluto square (Pluto in Cancer)</td><td>Credit-Anstalt banking collapse</td><td>Deepest phase of the Depression; global trade collapse</td><td><strong>[aspect unverified</strong> — computed: separation ~174° and beyond in 1931, no square; Pluto in Cancer ✓<strong>]</strong></td></tr>
+        <tr><td class="g">1937</td><td>Saturn square Neptune</td><td>The "Roosevelt recession"</td><td>Severe contraction; the Dow fell 49%</td><td><strong>[aspect unverified</strong> — computed: separation ~162° and widening toward opposition, no square in 1937<strong>]</strong></td></tr>
+        <tr><td class="g">1953</td><td>Saturn–Neptune conjunction</td><td>Post-Stalin Soviet economic restructuring</td><td>Industrial-plan reorganisation across the Eastern Bloc</td><td>✓ exact 17 May 1953</td></tr>
+        <tr><td class="g">1971</td><td>Saturn–Neptune opposition</td><td>Unilateral ending of the Bretton Woods gold window</td><td>Dollar to pure fiat; global currency floating</td><td>✓ exact 27 Nov 1971</td></tr>
+        <tr><td class="g">1973</td><td>Saturn–Pluto opposition</td><td>OPEC oil crisis; stagflation</td><td>Sovereign-debt restructuring via petrodollar recycling</td><td><strong>[aspect unverified</strong> — computed: separation ~110° at closest in 1973, no opposition<strong>]</strong></td></tr>
+        <tr><td class="g">1989</td><td>Saturn–Neptune conjunction</td><td>Fall of the Berlin Wall; Soviet collapse begins</td><td>Global integration of capitalism and fiat networks</td><td>✓ exact 13 Nov 1989</td></tr>
+        <tr><td class="g">1998</td><td>Saturn square Neptune</td><td>Long-Term Capital Management (LTCM) collapse</td><td>Federal-Reserve-orchestrated private bailout</td><td>✓ exact 1 Nov 1998</td></tr>
+        <tr><td class="g">2008</td><td>Saturn opposition Uranus (Pluto enters Capricorn)</td><td>Subprime mortgage collapse / GFC</td><td>Launch of quantitative easing and zero-rate policies</td><td>✓ opposition exact 4 Nov 2008; Pluto's Capricorn ingress in 2008 ✓</td></tr>
+        <tr><td class="g">2015</td><td>Saturn square Neptune</td><td>Chinese stock-market crash</td><td>Yuan devaluations; central-bank interventions</td><td>✓ exact 26 Nov 2015</td></tr>
+        <tr><td class="g">2020</td><td>Saturn conjunct Pluto (Saturn in Aquarius)</td><td>Global COVID-19 stock-market crash</td><td>Multi-trillion central-bank asset expansions</td><td>✓ conjunction exact 12 Jan 2020 <strong>[sign note unverified</strong> — computed: both bodies at ~22.8° <em>Capricorn</em> at exactitude; Saturn entered Aquarius only later in 2020<strong>]</strong></td></tr>
+        <tr><td class="g">2021</td><td>Saturn square Uranus</td><td>Cryptocurrency peak; meme-stock speculative bubble</td><td>Transition into quantitative tightening</td><td>✓ exact 24 Dec 2021</td></tr>
+        <tr><td class="g">2026</td><td>Saturn conjunct Neptune (Aries stellium)</td><td>—</td><td>—</td><td>✓ exact 20 Feb 2026 at ~0.7° Aries tropical (~6.5° Pisces sidereal-Lahiri)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p><em>Note on the 2026 row: the source chronology's event and aftermath entries for 2026 were forward-looking projections and are omitted from this edition; only the computed astronomical alignment is retained.</em></p>
+
+  <p><span class="tag fw">Framework</span> Read whole, the tradition assigns each Saturn–outer pair a recurring signature — elaborations of the theme labels in the synodic table above:</p>
+
+  <ul class="ladder">
+    <li><span><b>Saturn–Uranus — systemic shocks and bubble pops.</b> The tension between conservative structure (Saturn) and radical disruption (Uranus); the tradition maps its hard aspects to the abrupt popping of speculative bubbles. Of its chronology entries, 1637, 2008 (as opposition) and 2021 verify exactly; 1873's "tension" does not.</span></li>
+    <li><span><b>Saturn–Neptune — structural monetary replacement.</b> On its ~36-year beat, the tradition reads conjunctions and oppositions as the dissolution of an existing monetary order and its rebuilding — the 1971 end of gold convertibility and the 1989 collapse of communist planning being its showcase cases. This is the chronology's best-verified family: 1711, 1720, 1917, 1953, 1971, 1989, 1998 and 2015 all compute exactly as claimed; only 1937 fails.</span></li>
+    <li><span><b>Saturn–Pluto — debt crises and contraction.</b> The tradition's list of severe contractions and institutional purges runs 1914, 1929, 1973, 2008 and 2020 <strong>[list only partly verified</strong> — computed: 1914 verifies as an applying <em>conjunction</em> (not the claimed square) and 2020's conjunction is exact; but 1929 (~155°), 1973 (~110°) and 2008 (~105°, per Chapter 1's table — that year's signature was Saturn–Uranus) show no exact Saturn–Pluto hard aspect<strong>]</strong>.</span></li>
+  </ul>
+
+  <div class="honest">
+    <span class="ct">Read the ledger the way Chapter 1 taught</span>
+    <span class="tag ob">Observed</span> The scorecard: <strong>15 of the 21 rows verify exactly</strong> — including, remarkably, all five claimed aspects of 1819 — and <strong>6 fail outright</strong>, several by 60° or more. Two lessons follow. First, a chronology circulating in the literature can be <em>astronomically wrong</em> in a quarter of its rows and still get retold — check the ephemeris, always. Second, and more important: <strong>even the verified rows are post-hoc mapping, not evidence.</strong> The slow pairs form <em>some</em> hard aspect somewhere in most years (the always-on sky, Chapter 1); the crises were selected after the fact; no rule was pre-registered; and the misses — hard aspects with no crisis, crises with no aspect — are uncounted. Appendix C shows the five great crashes share no single signature, and §8.4's small-N ceiling applies to every pair here. This mapping is <strong>context and lore</strong>, a record of how the tradition tells its own story — never a forecasting instrument.
+  </div>
+
+  <div class="callout slate">
+    <span class="ct">The chronology's current entry — computed</span>
+    <span class="tag as">Astronomical</span> The Saturn–Neptune conjunction is exact on <strong>20 Feb 2026 at ~0.7° Aries tropical</strong> — which is ~6.5° <em>Pisces</em> in the sidereal/Lahiri frame, so state your zodiac before invoking the "Aries" symbolism (Chapter 2). Uranus makes its tropical ingress into Gemini on <strong>~26 Apr 2026</strong>. By this book's reference date of 22 June 2026 the conjunction has already separated to ~9.4°. <span class="tag fw">Framework</span> The tradition notes the echo of <strong>1861</strong> — Neptune at 0° Aries and Uranus at 9° Gemini that April (computed ✓), an era of commodity-price spikes and the birth of greenback fiat paper. Whether the parallel means anything is exactly what §8.4 says a sample this small cannot establish: diarize the juncture, and let price do the talking.
+  </div>
+
+  <h3 class="sec">The independent long cycles economists already study</h3>
+
+  <p><span class="tag ob">Observed</span> Crucially, economics has its <em>own</em> long cycles, discovered without any astrology:</p>
+
+  <ul class="ladder">
+    <li><span><b>The ~18-year real-estate / land cycle</b> (Hoyt, Harrison, and others) — the best-documented long cycle, close in length to Jupiter–Saturn.</span></li>
+    <li><span><b>The Kondratiev wave (~45–60 years)</b> — a debated long economic wave, near 3× Jupiter–Saturn.</span></li>
+    <li><span><b>The sunspot cycle (~11 years, Schwabe)</b> — a real solar rhythm that <strong>David Williams</strong>, in his mid-20th-century <em>astro-economics</em>, linked (along with Jupiter–Saturn) to the business cycle.</span></li>
+    <li><span><b>Benner's cycle chart (1872)</b> <span class="tag hi">Historical</span> <span class="tag vf">Verify</span> — Samuel Benner, an Ohio farmer ruined in the post-Civil-War panic, published a three-phase chart of American prices: <em>panic years</em> recurring on a structured 18 → 20 → 16-year sequence; <em>good times</em> peaking roughly 7 years after a panic before an ~11-year descent; and <em>hard times</em> — depressed troughs he marked as ~9-year accumulation zones for equities, land and commodities. It is periodicity folklore rather than measured economics, with no astrological content and no out-of-sample validation — but it is the era's most famous non-astrological cycle artifact, and its ~18–20-year panic spacing rhymes with the land cycle and Jupiter–Saturn.</span></li>
+  </ul>
+
+  <p><span class="tag fw">Framework</span> Financial astrology <em>maps</em> the planetary cycles onto these economic ones — J–S onto the ~18–20-year cycle, 3×J–S onto the ~60-year wave, planetary cycles onto the sunspot rhythm. That the lengths <em>rhyme</em> is what makes the planets a plausible "clock." Whether the rhyme is more than coincidence is the question of §8.4.</p>
+
+  <div class="keyrule">
+    <span class="small">Keyrule · Lesson 8.3</span>
+    Jupiter–Saturn is the <b>master beat</b> (~19.86 yr), with a <b>~60-year trigon</b> return and a <b>~200-year element mutation</b> riding atop it — and these <b>rhyme</b> with real economic cycles, which is exactly what makes the clock plausible.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself</div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q1</b> What two longer rhythms ride on top of the ~20-year Jupiter–Saturn beat?</div>
+      <div class="qa-a"><b>A</b> The <strong>~60-year trigon return</strong> (conjunctions recurring in the same element, mirroring the Indian <em>Samvatsara</em> cycle) and the <strong>~200-year element mutation</strong> (the element shifting roughly every two centuries — the 2020 shift into air, <em>tropically</em>).</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q2</b> Why is the "2020 into air" Grand Mutation a frame-dependent claim?</div>
+      <div class="qa-a"><b>A</b> <span class="tag ob">Observed</span> Because the element label depends on the zodiac. The conjunction sits at ~0° Aquarius (air) <em>tropically</em> but ~6° Capricorn (earth) <em>sidereally</em>. The event is frame-independent; only its element story changes — so you must state your zodiac.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q3</b> Name an economic long cycle discovered without astrology, and why it matters here.</div>
+      <div class="qa-a"><b>A</b> The ~18-year real-estate / land cycle (Hoyt, Harrison), the ~45–60-year Kondratiev wave, or the ~11-year Schwabe sunspot cycle. They matter because their lengths <em>rhyme</em> with the planetary cycles — making the planets a plausible clock — but they have their own non-astrological drivers.</div>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">8.3</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">The Master Cycle &amp; Its Rhymes</div>
+      <div class="d">Jupiter–Saturn beats every ~19.86 yr, with ~60-yr trigon returns and ~200-yr element mutations atop it. These rhyme with the real ~18-yr real-estate, ~60-yr Kondratiev, and ~11-yr sunspot cycles — making the planetary clock plausible, pending §8.4's test.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LESSON 8.4 ===================== -->
+<section class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Lesson 8.4</span>
+    <span class="lesson-title">Market Correlation Analysis — <em>The Skeleton, and Its Hard Limit</em></span>
+  </div>
+
+  <h3 class="sec">The claim</h3>
+
+  <p><span class="tag fw">Framework</span> The proposition is that the great cycles — led by Jupiter–Saturn — provide the <strong>skeleton of the primary trend</strong>: the conjunction seeds a ~20-year economic era (toned by its sign), the squares and opposition mark its stress points and culmination, and the larger ~60-year and element-shift rhythms frame the secular backdrop. A practitioner uses this to know <em>where in the long wave</em> the market sits.</p>
+
+  <h3 class="sec">The hard limit — small N</h3>
+
+  <p><span class="tag ob">Observed</span> Here is the fact that disciplines everything: <strong>reliable, liquid market history covers only about a century</strong>, which contains roughly <strong>four to five complete Jupiter–Saturn cycles</strong>. No honest statistician validates a 20-year cycle on four or five instances. The grandest cycles are therefore <strong>structurally impossible to prove</strong> from market data — there simply are not enough repetitions. This is not a knock on the idea; it is a permanent ceiling on the <em>confidence</em> the idea can earn.</p>
+
+  <p>And the historical record is <strong>mixed</strong>, exactly as Chapter 1 found for crashes. The computed conjunctions fell near <em>varied</em> macro conditions — a wartime economy (1940/41), a pre-slide peak (1961), an inflation-ravaged secular low for real stock values (1980/81), a bubble top (2000), a pandemic crash-then-surge (2020). <strong>They do not map consistently to tops, or to bottoms, or to any single market outcome.</strong> Anyone claiming "the great conjunction always marks a top" is curve-fitting after the fact.</p>
+
+  <h3 class="sec">Worked example — where we are now</h3>
+
+  <p>Computed for <strong>22 June 2026</strong>:</p>
+
+  <div class="cards">
+    <div class="card slate">
+      <div class="mt">Separation</div>
+      <div class="ti">104.6°</div>
+      <p>Jupiter–Saturn angular separation — about <strong>5.5 years</strong> into the current ~19.86-year cycle. <em>(Live Swiss Ephemeris, sidereal/Lahiri: 104.5°; the separation is frame-independent.)</em></p>
+    </div>
+    <div class="card slate">
+      <div class="mt">Seed</div>
+      <div class="ti">Dec 2020</div>
+      <p>The cycle seeded at the <strong>21 Dec 2020 conjunction</strong> (~0° Aquarius tropical / ~6° Capricorn sidereal).</p>
+    </div>
+    <div class="card slate">
+      <div class="mt">Phase now</div>
+      <div class="ti">Past 90°</div>
+      <p>Just past the <strong>waxing square</strong> (90°, reached ~2025), climbing toward the opposition.</p>
+    </div>
+    <div class="card slate">
+      <div class="mt">Culmination</div>
+      <div class="ti">22 Dec 2029</div>
+      <p>The <strong>opposition</strong> — the cycle's culmination window. Next conjunction (new cycle): <strong>31 Oct 2040</strong> (~18° Libra, air).</p>
+    </div>
+  </div>
+
+  <p><span class="tag fw">Framework</span> The cyclic reading of the <em>primary-trend backdrop</em>: we sit in the <strong>early-to-middle "building" phase</strong> of a fresh, air-toned Jupiter–Saturn cycle, advancing toward its 2029–2030 culmination. <strong>As context, not prophecy:</strong> this framework would have a practitioner treat <strong>late 2029–2030 (the opposition) as a long-cycle culmination window to watch</strong> — a <em>candidate</em> turning zone for the primary trend, to be confirmed (years hence) by price structure, never traded on the cycle alone. Nothing here forecasts a level or a date's direction; it locates the market on the long wave and flags a window.</p>
+
+  <div class="callout slate">
+    <span class="ct">Callout — Skeleton, Not Signal</span>
+    The great cycles give the <strong>skeleton</strong> — where the market sits in the long economic rhythm and which years to watch. They do <strong>not</strong> issue trades. With only four-or-five cycles in the record, they cannot be more than a <em>context</em> for the primary trend. The turn itself must be confirmed by price; the cycle only says <em>when to start looking.</em>
+  </div>
+
+  <div class="keyrule">
+    <span class="small">Keyrule · Lesson 8.4</span>
+    The cycles are a <b>skeleton, not a signal</b>. With only ~4–5 J–S cycles in trustworthy data they are <b>unprovable</b> — context for the primary trend, never a trade. The cycle dates the <b>window</b>; <b>price</b> confirms the turn.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself</div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q1</b> Why are the grandest cycles "structurally impossible to prove" from market data?</div>
+      <div class="qa-a"><b>A</b> <span class="tag ob">Observed</span> Reliable market history spans only ~a century — about four to five complete Jupiter–Saturn cycles. No honest statistician validates a 20-year pattern on four or five instances; the sample is a permanent ceiling on the confidence the idea can earn.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q2</b> As of 22 June 2026, where is the Jupiter–Saturn cycle, and toward what?</div>
+      <div class="qa-a"><b>A</b> At a separation of <strong>~104.6°</strong> — about 5.5 years into the cycle seeded Dec 2020, just past the waxing square (~2025) and climbing toward the <strong>opposition on 22 Dec 2029</strong>, its culmination window. The next conjunction is 31 Oct 2040.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q3</b> What does the "skeleton, not signal" reading permit a practitioner to conclude — and not conclude?</div>
+      <div class="qa-a"><b>A</b> It permits flagging late 2029–2030 as a <em>candidate</em> culmination window to watch. It does <em>not</em> permit forecasting a level or a direction; the turn must be confirmed by price, with the cycle only saying when to start looking.</div>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">8.4</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">Skeleton, Not Signal</div>
+      <div class="d">The claim: J–S frames the long wave. The hard limit: only ~4–5 cycles exist, with mixed outcomes — unprovable. The worked example: ~104.6° today, post-waxing-square, culminating Dec 2029. The cycle dates the window; price confirms the turn.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LESSON 8.5 ===================== -->
+<section class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Lesson 8.5</span>
+    <span class="lesson-title">The Practitioner's Method — <em>Using the Long Cycles</em></span>
+  </div>
+
+  <ol class="ladder">
+    <li><span><b>Locate the market on the master cycle.</b> Establish the current Jupiter–Saturn phase (conjunction → waxing square → opposition → waning square). Today: ~104.6°, early-mid, pre-opposition. This sets the <em>primary-trend context</em>, nothing more.</span></li>
+    <li><span><b>Note the conjunction's sign-tone and the larger rhythms.</b> What element/sign seeded the current cycle (air, 2020)? Where are we in the ~60-year and element-mutation frames? These color the secular backdrop.</span></li>
+    <li><span><b>Diarize the phase-junctures and stations.</b> Mark the dates of the cycle's squares, opposition (22 Dec 2029), and next conjunction (31 Oct 2040), plus the <strong>stations</strong> of the slow planets (Chapter 7) — these are the <em>candidate turning-point windows.</em></span></li>
+    <li><span><b>Demand confluence; the cycle dates the window, price confirms the turn.</b> A phase-juncture coinciding with a major structural level and a sentiment extreme is the only actionable form. The cycle never trades alone.</span></li>
+    <li><span><b>Hold it with small-N humility.</b> With four-or-five cycles in the record, never bet heavily on a long-cycle call. Use it to <em>frame risk and bias</em>, not to concentrate it.</span></li>
+  </ol>
+
+  <div class="callout">
+    <span class="ct">Callout — The Triple-Pass Subtlety</span>
+    Because slow planets retrograde, a conjunction or hard aspect can be exact <strong>two or three times</strong> over many months (note the <em>triple</em> conjunctions of 1940/41 and 1980/81). A cycle juncture is therefore a <strong>window of months</strong>, sometimes revisited — not a single day. Compute the exact passes (Appendix A) and treat the whole span as the watch-zone.
+  </div>
+
+  <div class="keyrule">
+    <span class="small">Keyrule · Lesson 8.5</span>
+    Five moves: <b>locate</b> the phase, <b>note</b> the sign-tone and rhythms, <b>diarize</b> the junctures, <b>demand confluence</b> (the cycle dates, price confirms), and <b>hold with small-N humility</b> — framing bias, never concentrating it.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself</div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q1</b> What is the "only actionable form" of a long-cycle juncture?</div>
+      <div class="qa-a"><b>A</b> A phase-juncture that coincides with a major structural price level <em>and</em> a sentiment extreme — confluence. The cycle dates the window, but price (and sentiment) must confirm the turn; the cycle never trades alone.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q2</b> What does "small-N humility" require of position sizing?</div>
+      <div class="qa-a"><b>A</b> That a long-cycle call be used only to <em>frame</em> risk and directional bias — never to concentrate a bet. With just four-or-five cycles on record, heavy conviction is unearned.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q3</b> Why is a cycle juncture a "window of months" rather than a single day?</div>
+      <div class="qa-a"><b>A</b> Because slow planets retrograde, an aspect can be exact two or three times across many months (the triple conjunctions of 1940/41 and 1980/81). The whole revisited span is the watch-zone — compute the exact passes.</div>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">8.5</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">The Five-Rule Method</div>
+      <div class="d">Locate the phase, note the sign-tone and larger rhythms, diarize junctures and stations, demand confluence before acting, and size every call with small-N humility. Triple passes make each juncture a window of months, not a day.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LESSON 8.6 ===================== -->
+<section class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Lesson 8.6</span>
+    <span class="lesson-title">Edge Cases <em>and Cautions</em></span>
+  </div>
+
+  <ol class="ladder">
+    <li><span><b>The small-N ceiling (the central caution).</b> <span class="tag ob">Observed</span> Four-or-five Jupiter–Saturn cycles cannot validate a 20-year pattern. The grand cycles are <strong>unprovable from market data</strong> and must be held as <em>context</em>, not evidence. Treat any confident long-cycle "prediction" as overreach.</span></li>
+    <li><span><b>Post-hoc mapping.</b> Because some economic event is always happening, every past conjunction can be "explained" after the fact. That is hindsight (Chapter 1), not forecasting. A cyclic call counts only when <em>pre-stated and dated.</em></span></li>
+    <li><span><b>The independent-cycle confound.</b> <span class="tag ob">Observed</span> The ~18-year real-estate cycle and ~60-year long wave have <strong>non-astrological drivers</strong> (credit, land, demographics). A market turning near a planetary juncture may be obeying the <em>economic</em> cycle, not the planets. Do not mistake correlation-with-an-economic-cycle for astrological causation.</span></li>
+    <li><span><b>The element-mutation is tropical-only.</b> The "2020 into air" narrative is a <em>tropical</em>-zodiac statement; sidereal puts it in earth (Capricorn). The conjunction event is frame-independent; its element story is not (Chapter 2). State your zodiac.</span></li>
+    <li><span><b>Cycles overlap and conflict.</b> Many pairs cycle at once (J–S, S–U, S–P, …), often pointing different ways. There is <strong>no clean algorithm</strong> to weight them; pretending otherwise manufactures false precision. Lean on the master cycle for context and let price arbitrate.</span></li>
+    <li><span><b>Junctures are windows, not instants.</b> Orbs and triple passes spread a "conjunction" or "opposition" across months. Precise dates require computation, and the watch-zone is the whole span.</span></li>
+    <li><span><b>The standing evidence caveat.</b> <span class="tag ob">Observed</span> The great cycles confer <strong>no validated predictive power</strong> over markets. Their honest use is to locate the primary trend on a long rhythm and flag windows for attention — a skeleton for thought, confirmed only by price and governed by risk.</span></li>
+  </ol>
+
+  <div class="keyrule">
+    <span class="small">Keyrule · Lesson 8.6</span>
+    The cautions converge on one rule: the great cycles carry <b>no validated predictive power</b>. Guard against <b>post-hoc</b> fits, the <b>economic-cycle confound</b>, <b>frame-dependent</b> element labels, and <b>conflicting</b> overlapping cycles — and let price arbitrate.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself</div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q1</b> What is the "independent-cycle confound," and why does it matter?</div>
+      <div class="qa-a"><b>A</b> <span class="tag ob">Observed</span> The ~18-year real-estate and ~60-year long-wave cycles have non-astrological drivers (credit, land, demographics). A turn near a planetary juncture may be obeying the <em>economic</em> cycle, not the planets — so correlation with an economic cycle must not be read as astrological causation.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q2</b> When does a cyclic call actually "count"?</div>
+      <div class="qa-a"><b>A</b> Only when it is <em>pre-stated and dated</em>. Because some economic event is always occurring, any past conjunction can be explained after the fact — but that is hindsight, not forecasting.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q3</b> Is there a clean algorithm to weight the many overlapping cycles? What should the practitioner do instead?</div>
+      <div class="qa-a"><b>A</b> No — there is no clean weighting scheme, and pretending otherwise manufactures false precision. Lean on the master Jupiter–Saturn cycle for context and let price arbitrate the conflicts.</div>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">8.6</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">The Seven Cautions</div>
+      <div class="d">Small-N ceiling, post-hoc mapping, the economic-cycle confound, the tropical-only element label, conflicting overlapping cycles, window-not-instant junctures, and no validated predictive power. The cycles frame thought; price and risk govern action.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CHAPTER-LEVEL: TAKEAWAYS ===================== -->
+<section class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Chapter 8</span>
+    <span class="lesson-title">Chapter Summary — <em>Five Takeaways</em></span>
+  </div>
+
+  <ol class="takeaways">
+    <li><strong>Cycles turn the chart into a film.</strong> A planetary cycle is the synodic dance of two planets; its phases — conjunction (seed), waxing square (crisis of action), opposition (culmination), waning square (reorientation) — are the candidate turning-point windows.</li>
+    <li><strong>Jupiter–Saturn (~19.86 yr) is the master cycle</strong> — the <em>Chronocrator</em> — with ~60-year trigon returns (mirroring the Indian Samvatsara cycle) and ~200-year element mutations (the 2020 shift into air, <em>tropically</em>).</li>
+    <li><strong>Planetary cycles rhyme with real economic cycles</strong> — the ~18-year real-estate cycle, the ~60-year long wave, the ~11-year sunspot rhythm — which is what makes them a plausible clock.</li>
+    <li><strong>The hard limit is small N:</strong> only ~4–5 Jupiter–Saturn cycles exist in reliable market history, the outcomes are inconsistent, and the grand cycles are therefore <strong>unprovable</strong> — context, not proof.</li>
+    <li><strong>Today's backdrop:</strong> ~5.5 years into the air-toned cycle seeded Dec 2020, past the waxing square, culminating at the <strong>Dec 2029 opposition</strong> (next conjunction Oct 2040). A <em>skeleton, not a signal</em> — the turn is confirmed by price, the cycle only says when to look.</li>
+  </ol>
+</section>
+
+<!-- ===================== CHAPTER-LEVEL: CHECKLIST ===================== -->
+<section class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Chapter 8</span>
+    <span class="lesson-title">Practitioner's Checklist — <em>Reading the Great Cycles</em></span>
+  </div>
+
+  <ul class="checklist">
+    <li><strong>1. Master-cycle phase located?</strong> Where is Jupiter–Saturn (0°→360°)? Today ~104.6°, early-mid, pre-opposition.</li>
+    <li><strong>2. Sign-tone &amp; larger rhythms noted?</strong> The current cycle's seeding sign (air, 2020), plus the ~60-yr and element-mutation context — with the zodiac stated?</li>
+    <li><strong>3. Phase-junctures &amp; stations diarized?</strong> Squares, opposition (Dec 2029), next conjunction (Oct 2040), and slow-planet stations marked as <em>watch windows</em>?</li>
+    <li><strong>4. Confluence required?</strong> Will you act only where a juncture meets a structural level and sentiment extreme — never on the cycle alone?</li>
+    <li><strong>5. Triple passes computed?</strong> Have you checked whether a juncture is exact more than once, and treated the whole span as the watch-zone?</li>
+    <li><strong>6. Small-N humility applied?</strong> Is the long-cycle call sized as <em>context/bias</em>, not a concentrated bet — and stated <em>before</em> the event?</li>
+    <li><strong>7. Independent-cycle confound considered?</strong> Could an economic cycle (real estate, credit) explain the turn instead of the planets?</li>
+  </ul>
+</section>
+
+<!-- ===================== CHAPTER-LEVEL: GLOSSARY ===================== -->
+<section class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Chapter 8</span>
+    <span class="lesson-title">Glossary — <em>Terms of the Great Cycles</em></span>
+  </div>
+
+  <dl class="gloss">
+    <dt>Planetary cycle <span class="tag as">Astronomical</span></dt>
+    <dd>The repeating angular relationship between two planets as seen from Earth; because they orbit at different rates, the angle between them continuously changes and recurs.</dd>
+
+    <dt>Synodic period <span class="tag as">Astronomical</span></dt>
+    <dd>The time for the faster planet to lap the slower and return to the same angle. Given by <em>1/P(syn) = |1/P(fast) − 1/P(slow)|</em>; for Jupiter–Saturn, ~19.86 years.</dd>
+
+    <dt>Chronocrator</dt>
+    <dd>"Marker of time" — the older astrologers' name for the Jupiter–Saturn conjunction, the master beat of mundane astrology.</dd>
+
+    <dt>Conjunction (0°)</dt>
+    <dd>The seed of a cycle: a new cycle begins, the two planets' theme is "planted," and the sign it falls in flavors the whole era.</dd>
+
+    <dt>Waxing / waning square (90° / 270°)</dt>
+    <dd>The cycle's stress points — crisis of action (building under tension) and crisis of consciousness (reorientation, structures breaking down).</dd>
+
+    <dt>Opposition (180°)</dt>
+    <dd>The culmination of a cycle: themes reach fullest, most visible expression — often a turning point of awareness.</dd>
+
+    <dt>Trigon (~60-year) return <span class="tag cl">Classical</span></dt>
+    <dd>Successive conjunctions step ~243°, recurring in the same element roughly every ~60 years (three conjunctions) before shifting element — mirroring the Indian <em>Samvatsara</em> cycle.</dd>
+
+    <dt>Element mutation (~200-year)</dt>
+    <dd>The conjunction's element shifts roughly every two centuries; the Dec 2020 "Grand Mutation" moved from a ~200-year earth run into a new air era — a <em>tropical</em>-zodiac statement.</dd>
+
+    <dt>Grand Mutation</dt>
+    <dd>The ~200-year change of conjunction element; the 2020 conjunction at ~0° Aquarius tropical (but ~6° Capricorn sidereal — earth) is the contested case.</dd>
+
+    <dt>Small N <span class="tag ob">Observed</span></dt>
+    <dd>The structural limit: reliable market history holds only ~4–5 complete Jupiter–Saturn cycles — too few to validate a 20-year pattern, making the grand cycles unprovable.</dd>
+
+    <dt>Kondratiev wave</dt>
+    <dd>A debated long economic wave of ~45–60 years, near 3× the Jupiter–Saturn period — one of the economists' own long cycles.</dd>
+
+    <dt>Triple pass</dt>
+    <dd>Because slow planets retrograde, a conjunction or hard aspect can be exact two or three times over many months — making a juncture a window, not a day (e.g., 1940/41, 1980/81).</dd>
+  </dl>
+</section>
+
+<!-- ===================== CHAPTER-LEVEL: LOCKED IN ===================== -->
+<div class="recap">
+  <div class="n">8</div>
+  <div>
+    <div class="l">Chapter 8 — Locked In</div>
+    <div class="t">The Great Cycles: A Skeleton for the Primary Trend</div>
+    <div class="d">The slow pairs turn the chart into a film. Jupiter–Saturn — the <em>Chronocrator</em>, ~19.86 yr — is the master beat, with ~60-yr trigon and ~200-yr element rhythms that rhyme with real economic cycles. But only ~4–5 cycles exist in trustworthy data, so the grand cycles are unprovable: a skeleton and context, never a signal. Today we sit ~104.6° in, past the 2025 waxing square, climbing toward the Dec 2029 opposition (next seed Oct 2040). The cycle dates the window; price confirms the turn.</div>
+  </div>
+</div>
+
+<p class="bridge">End of Chapter 8. Next: Chapter 9 — "The 18.6-Year Nodal Cycle &amp; the McWhirter Theory," which narrows from the great cycles to one specific, historically influential market cycle built on the Moon's nodes — and tests it with the same honesty.</p>
+
+</body>
+</html>

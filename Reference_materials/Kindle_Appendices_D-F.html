@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Celestial Ledger — Appendices D–F: Glossary, Bibliography & Query Pack</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --paper:#fbf9f4; --paper2:#f4efe4; --card:#ffffff; --ink:#26211c; --ink-soft:#4f463c; --ink-faint:#857a6c;
+  --line:#e6dfce; --line-soft:#efe9dc;
+  --gold:#9a7113; --gold-soft:#fbf2da; --gold-line:#e7cf94;
+  --teal:#0c7d68; --teal-soft:#e3f3ef;
+  --coral:#b23a2e; --coral-soft:#f8e9e6;
+  --violet:#6244a8; --violet-soft:#efeafa;
+  --green:#2f7d4f; --green-soft:#e6f3ea;
+  --blue:#1f6aa6; --blue-soft:#e7f0f8;
+  --slate:#46586b; --slate-soft:#e9eef3;
+  --serif:'Playfair Display',Georgia,'Times New Roman',serif;
+  --body:Georgia,'Iowan Old Style','Palatino Linotype',serif;
+  --sans:'Inter',system-ui,-apple-system,sans-serif;
+  --mono:'JetBrains Mono','SF Mono',Menlo,Consolas,monospace;
+  --r:10px; --r-sm:7px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{ -webkit-text-size-adjust:100%; }
+body{ background:var(--paper); color:var(--ink); font-family:var(--body); font-size:18px; line-height:1.72; max-width:780px; margin:0 auto; padding:30px 26px 90px; }
+p{ margin:0 0 14px; } strong{ color:var(--ink); font-weight:600; } em{ font-style:italic; }
+
+.hero{ text-align:center; padding:22px 0 30px; border-bottom:2px solid var(--gold-line); margin-bottom:34px; }
+.hero .kicker{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:var(--gold); }
+.hero h1{ font-family:var(--serif); font-weight:900; font-size:40px; line-height:1.12; margin:14px 0 0; }
+.hero h1 em{ color:var(--gold); font-style:italic; }
+.hero .sub{ font-style:italic; color:var(--ink-soft); font-size:17px; max-width:580px; margin:16px auto 0; }
+.hero .ornament{ color:var(--gold); letter-spacing:.5em; margin-top:18px; font-size:14px; }
+
+.lesson{ margin:0 0 50px; }
+.lesson-head{ display:flex; align-items:baseline; gap:12px; border-bottom:1px solid var(--line); padding-bottom:8px; margin-bottom:18px; }
+.lesson-no{ font-family:var(--sans); font-size:12px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); white-space:nowrap; }
+.lesson-title{ font-family:var(--serif); font-weight:700; font-size:25px; line-height:1.2; }
+.lesson-title em{ color:var(--gold); font-style:italic; }
+h3.sec{ font-family:var(--serif); font-style:italic; font-weight:600; font-size:21px; color:var(--gold); margin:28px 0 10px; }
+h4.lab{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-faint); margin:22px 0 9px; }
+
+.callout{ border-left:4px solid var(--gold); background:var(--gold-soft); border-radius:0 var(--r-sm) var(--r-sm) 0; padding:14px 18px; margin:18px 0; font-size:16.5px; line-height:1.62; }
+.callout .ct{ display:block; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:5px; color:var(--gold); }
+.callout.teal{ border-color:var(--teal); background:var(--teal-soft);} .callout.teal .ct{ color:var(--teal);}
+.callout.coral{ border-color:var(--coral); background:var(--coral-soft);} .callout.coral .ct{ color:var(--coral);}
+.callout.violet{ border-color:var(--violet); background:var(--violet-soft);} .callout.violet .ct{ color:var(--violet);}
+.callout.green{ border-color:var(--green); background:var(--green-soft);} .callout.green .ct{ color:var(--green);}
+.callout.slate{ border-color:var(--slate); background:var(--slate-soft);} .callout.slate .ct{ color:var(--slate);}
+.honest{ border-left:4px solid var(--violet); background:var(--violet-soft); border-radius:0 var(--r-sm) var(--r-sm) 0; padding:14px 18px; margin:18px 0; font-size:16px; }
+.honest .ct{ display:block; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:5px; color:var(--violet); }
+
+.keyrule{ text-align:center; font-family:var(--serif); font-style:italic; font-size:20px; line-height:1.5; color:var(--gold); border-top:1px solid var(--gold-line); border-bottom:1px solid var(--gold-line); padding:18px 14px; margin:22px 0; }
+.keyrule .small{ display:block; font-family:var(--sans); font-style:normal; font-size:10px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:8px; }
+.keyrule b{ font-style:normal; color:var(--ink); }
+
+.tag{ display:inline-block; font-family:var(--sans); font-size:10px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:1px 7px; border-radius:4px; vertical-align:middle; }
+.tag.cl{ background:var(--blue-soft); color:var(--blue); } .tag.fw{ background:var(--gold-soft); color:var(--gold); } .tag.vf{ background:var(--violet-soft); color:var(--violet); }
+.tag.ob{ background:var(--teal-soft); color:var(--teal); } .tag.as{ background:var(--slate-soft); color:var(--slate); } .tag.hi{ background:var(--coral-soft); color:var(--coral); } .tag.rg{ background:var(--green-soft); color:var(--green); }
+
+.cards{ display:flex; flex-wrap:wrap; gap:12px; margin:16px 0; }
+.card{ flex:1 1 220px; background:var(--card); border:1px solid var(--line); border-top:3px solid var(--gold); border-radius:var(--r-sm); padding:14px 16px; }
+.card.up{ border-top-color:var(--green);} .card.down{ border-top-color:var(--coral);} .card.teal{ border-top-color:var(--teal);} .card.violet{ border-top-color:var(--violet);} .card.slate{ border-top-color:var(--slate);} .card.blue{ border-top-color:var(--blue);}
+.card .ic{ font-size:24px; line-height:1; } .card .ti{ font-family:var(--serif); font-weight:700; font-size:18px; margin:6px 0 2px; } .card .ti em{ color:var(--gold); font-style:italic; font-weight:400; font-size:14px; }
+.card .mt{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px; } .card p{ font-size:15px; line-height:1.55; margin:0; color:var(--ink-soft); }
+
+.tw{ overflow-x:auto; border:1px solid var(--line); border-radius:var(--r-sm); margin:16px 0; }
+table{ width:100%; border-collapse:collapse; font-family:var(--sans); }
+thead tr{ background:var(--gold-soft); }
+th{ font-size:10.5px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:var(--gold); text-align:left; padding:9px 11px; white-space:nowrap; }
+td{ font-size:13px; padding:8px 11px; border-top:1px solid var(--line-soft); vertical-align:top; color:var(--ink-soft); }
+td.g{ color:var(--gold); font-weight:600; white-space:nowrap; }
+td.up{ color:var(--green); font-weight:600;} td.dn{ color:var(--coral); font-weight:600;}
+td.s{ color:var(--slate); font-weight:600; white-space:nowrap; }
+tbody tr:nth-child(even){ background:#fcfaf5; }
+tr.total td{ background:var(--gold-soft); color:var(--gold); font-weight:700; border-top:2px solid var(--gold-line); }
+
+pre{ background:var(--paper2); border:1px solid var(--line); border-left:3px solid var(--slate); border-radius:var(--r-sm); padding:14px 16px; margin:14px 0; overflow-x:auto; }
+pre code{ font-family:var(--mono); font-size:13.5px; line-height:1.62; color:var(--ink); white-space:pre; display:block; }
+code{ font-family:var(--mono); font-size:.9em; background:var(--paper2); padding:1px 5px; border-radius:4px; color:var(--slate); }
+
+.qa{ border:1px solid var(--line); border-radius:var(--r-sm); overflow:hidden; margin:20px 0; }
+.qa-h{ background:var(--paper2); padding:9px 15px; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); border-bottom:1px solid var(--line); }
+.qa-i{ padding:12px 15px; border-bottom:1px solid var(--line-soft); } .qa-i:last-child{ border-bottom:none; }
+.qa-q{ font-size:16px; } .qa-q b{ color:var(--gold); font-family:var(--sans); font-size:12px; font-weight:700; margin-right:8px; }
+.qa-a{ font-size:16px; color:var(--ink-soft); margin-top:5px; } .qa-a b{ color:var(--teal); font-family:var(--sans); font-size:12px; font-weight:700; margin-right:8px; }
+
+.gloss{ background:var(--card); border:1px solid var(--line); border-radius:var(--r-sm); padding:6px 18px; margin:16px 0; }
+.gloss dt{ font-family:var(--serif); font-weight:700; font-size:16px; color:var(--gold); margin:12px 0 1px; }
+.gloss dd{ margin:0 0 4px; font-size:15.5px; color:var(--ink-soft); }
+
+.checklist{ list-style:none; padding:0; margin:14px 0; }
+.checklist li{ position:relative; padding:8px 0 8px 32px; border-bottom:1px solid var(--line-soft); font-size:15.5px; }
+.checklist li:last-child{ border-bottom:none; }
+.checklist li::before{ content:"\2610"; position:absolute; left:0; top:6px; font-size:19px; color:var(--gold); }
+
+.biblist{ list-style:none; padding:0; margin:14px 0; }
+.biblist li{ position:relative; padding:9px 0 9px 22px; border-bottom:1px solid var(--line-soft); font-size:15.5px; line-height:1.55; color:var(--ink-soft); }
+.biblist li:last-child{ border-bottom:none; }
+.biblist li::before{ content:"\203A"; position:absolute; left:2px; top:8px; color:var(--gold); font-weight:700; font-size:17px; }
+.biblist em{ color:var(--ink); }
+
+.legend{ list-style:none; padding:0; margin:14px 0; }
+.legend li{ padding:9px 0; border-bottom:1px solid var(--line-soft); font-size:15.5px; line-height:1.55; color:var(--ink-soft); }
+.legend li:last-child{ border-bottom:none; }
+.legend .tag{ margin-right:8px; }
+
+.prompt{ background:var(--card); border:1px solid var(--line); border-left:3px solid var(--violet); border-radius:0 var(--r-sm) var(--r-sm) 0; padding:12px 16px; margin:12px 0; font-size:15.5px; line-height:1.6; color:var(--ink-soft); }
+.prompt::before{ content:"\275D"; color:var(--violet); font-weight:700; font-size:16px; margin-right:6px; }
+
+.bridge{ text-align:center; font-style:italic; color:var(--ink-faint); font-size:15px; border-top:1px solid var(--line); padding-top:22px; margin-top:34px; }
+hr.soft{ border:none; border-top:1px solid var(--line); margin:30px 0; }
+@media (max-width:600px){ body{font-size:17px;padding:20px 16px 70px;} .hero h1{font-size:31px;} .lesson-title{font-size:21px;} }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="kicker">The Celestial Ledger · Reference Material</div>
+  <h1>Appendices <em>D–F</em></h1>
+  <div class="sub">The closing appendices to <em>The Celestial Ledger</em>. Appendix D defines the book's terms; Appendix E lists the cited works; Appendix F is a practical prompt pack for interrogating the wider 78-book library with an AI research tool (e.g., NotebookLM). Bibliographic entries for classical texts follow the user's own library inventory; translations and editions vary. Where a precise year or edition is uncertain it is omitted rather than guessed.</div>
+  <div class="ornament">✦ ✦ ✦</div>
+</div>
+
+<!-- ===================== APPENDIX D ===================== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Appendix D</span>
+    <span class="lesson-title">Consolidated <em>Glossary</em></span>
+  </div>
+
+  <h3 class="sec">D.1 Astrological &amp; Jyotish terms</h3>
+  <dl class="gloss">
+    <dt>Antardasha</dt><dd>a sub-period within a mahadasha; the second level of the Vimshottari timeline (Ch 12).</dd>
+    <dt>Arudha pada</dt><dd>in Jaimini, a sign's "image" or perceived manifestation, derived by a counting rule (Ch 0, library Cluster D).</dd>
+    <dt>Ascendant (Lagna)</dt><dd>the zodiac degree rising on the eastern horizon at a given moment; anchors the house framework. Time-sensitive and therefore <em>fragile</em> for market charts (Ch 13).</dd>
+    <dt>Aspect (drishti)</dt><dd>an angular relationship between bodies. Western aspects are symmetrical (conjunction, sextile, square, trine, opposition); Vedic <em>drishti</em> are directional and special by planet (Ch 0, App B.2). Aspect <em>angles</em> are zodiac-independent (Ch 2).</dd>
+    <dt>Ayanamsa</dt><dd>the angular gap between the tropical and sidereal zodiacs (~24.23° Lahiri today), growing ~1°/72 yr by precession. Lahiri and KP ayanamsas differ by ~6′ (Ch 2).</dd>
+    <dt>Bhadra</dt><dd>the interval during which Vishti karana runs, interchangeable with it in almanac usage; a prohibition on beginnings. Unrelated to the nakshatras Purva and Uttara Bhadrapada despite the shared syllable (Ch 6A).</dd>
+    <dt>Bhadra-vaas</dt><dd>Bhadra's residence — which of the three worlds it occupies during a window, read from the Moon's sidereal rashi (Ch 6A).</dd>
+    <dt>Bhava</dt><dd>a house; one of twelve life-arenas measured from the ascendant. The "wealth houses" (2, 11; also 5, 9) and "loss houses" (8, 12) recur in market work (Ch 5).</dd>
+    <dt>Combustion (asta)</dt><dd>a planet too close to the Sun to act freely; orbs in App B.6 (Ch 7).</dd>
+    <dt>Dasha</dt><dd>a planetary period system timing when influences activate. <em>Vimshottari</em> (120-yr, Moon-nakshatra-based) is the default (Ch 12).</dd>
+    <dt>Day Bhadra / Night Bhadra</dt><dd>classification of a Bhadra window by karana parity — odd gives Day, even gives Night; equivalently the first versus the second half of a tithi. A property of the lunar month, not of daylight, and invariant with timezone (Ch 6A).</dd>
+    <dt>Debilitation (neecha)</dt><dd>a planet in its sign of greatest weakness (App B.1).</dd>
+    <dt>Dignity</dt><dd>a planet's strength-by-placement: exaltation, own sign, moolatrikona, debilitation (Ch 7, App B.1).</dd>
+    <dt>Divisional chart (varga)</dt><dd>a harmonic subdivision of the zodiac for fine analysis (e.g., D-9 Navamsa, D-12 Dwadasamsa) (Ch 0, library).</dd>
+    <dt>Exaltation (uccha)</dt><dd>a planet's sign of greatest strength (App B.1).</dd>
+    <dt>Gochar (transit)</dt><dd>the current sky read against a natal chart, classically from the natal Moon (Ch 12).</dd>
+    <dt>Graha</dt><dd>a "planet" of Jyotish: Sun, Moon, Mars, Mercury, Jupiter, Venus, Saturn, plus the lunar nodes Rahu and Ketu (Ch 0).</dd>
+    <dt>Karana</dt><dd>a half-tithi: 6° of Moon–Sun elongation, sixty to a lunar month; the fifth limb of the Panchanga (Ch 6, 6A).</dd>
+    <dt>KP (Krishnamurti Paddhati)</dt><dd>a stellar system refining placement to <em>sign → star (nakshatra) → sub-lord</em>, using the KP ayanamsa and Placidus houses; the most precise and falsifiable school (Ch 14).</dd>
+    <dt>Lal Kitab</dt><dd>a distinct North-Indian remedial system with its own rules (library Cluster G).</dd>
+    <dt>Mahadasha</dt><dd>a major planetary period (the top level of Vimshottari) (Ch 12).</dd>
+    <dt>Moolatrikona</dt><dd>a planet's "root-trine" zone of strong functional dignity (App B.1).</dd>
+    <dt>Mrityu-loka</dt><dd>the earthly residence of Bhadra; Moon in Cancer, Leo, Aquarius or Pisces. The only case the tradition treats as genuinely malefic (Ch 6A).</dd>
+    <dt>Muhurta</dt><dd>electional timing — the choosing of an auspicious moment, assembled from the Panchanga (Ch 6, 6A).</dd>
+    <dt>Nadi astrology</dt><dd>predictive lineages (Bhrigu, Suka, Chandra Kala/Deva Keralam) (library Cluster C).</dd>
+    <dt>Nakshatra</dt><dd>one of 27 lunar mansions of 13°20′ each, each with a ruling planet; the Moon's nakshatra seeds the Vimshottari dasha (Ch 0, App B.3).</dd>
+    <dt>Pada</dt><dd>a quarter (3°20′) of a nakshatra (App A.4).</dd>
+    <dt>Paksha</dt><dd>a fortnight of fifteen tithis: Shukla (bright, waxing) or Krishna (dark, waning) (Ch 6).</dd>
+    <dt>Panchanga</dt><dd>the Hindu almanac's five limbs: tithi, vara (weekday), nakshatra, yoga and karana (Ch 6, 6A).</dd>
+    <dt>Patala-loka</dt><dd>the nether residence of Bhadra; Moon in Virgo, Libra, Sagittarius or Capricorn. Held harmless to earthly affairs (Ch 6A).</dd>
+    <dt>Prashna (horary)</dt><dd>answering a question from the chart of the moment it is asked (Ch 14, library Cluster H).</dd>
+    <dt>Retrograde (vakri)</dt><dd>apparent backward motion (negative longitude-speed) (Ch 7).</dd>
+    <dt>Sade Sati</dt><dd>the ~7.5-yr period of Saturn transiting the 12th, 1st, and 2nd from the natal Moon (Ch 12).</dd>
+    <dt>Shadbala</dt><dd>the classical six-source composite of planetary strength (Ch 7).</dd>
+    <dt>Significator</dt><dd>the body standing for a given matter or market force; resolved via a chain of rulerships (Ch 4).</dd>
+    <dt>Station</dt><dd>the moment a planet's speed crosses zero as it turns retrograde or direct; a tradeable <em>state</em> in the book's framing (Ch 7, 10).</dd>
+    <dt>Sub-lord</dt><dd>in KP, the planet ruling the sub-division of a star that contains a point; "the sub decides" (Ch 14).</dd>
+    <dt>Swarga-loka</dt><dd>the heavenly residence of Bhadra; Moon in Aries, Taurus, Gemini or Scorpio. Held harmless to earthly affairs (Ch 6A).</dd>
+    <dt>Tithi</dt><dd>a lunar "day," one of 30 Sun–Moon angular steps of 12°; zodiac-independent (Ch 6, App A.6).</dd>
+    <dt>Vishti</dt><dd>the seventh and last of the seven movable karanas; the only one carrying a prohibition rather than a flavour. Falls on karanas 8, 15, 22, 29, 36, 43, 50 and 57 of every lunar month (Ch 6A).</dd>
+    <dt>Void-of-course Moon</dt><dd>the Moon making no further major aspect before changing sign; a "low-conviction" window (Ch 6).</dd>
+    <dt>Yoga</dt><dd>a defined planetary combination (e.g., <em>Dhana yoga</em> for wealth) (Ch 5).</dd>
+  </dl>
+
+  <h3 class="sec">D.2 Western-cycle, market, statistical &amp; risk terms</h3>
+  <dl class="gloss">
+    <dt>Anomaly decay</dt><dd>the tendency of a documented market edge to weaken after publication (McLean &amp; Pontiff, 2016) (Ch 19).</dd>
+    <dt>Base rate</dt><dd>how often an event occurs anyway; the benchmark any "predictor" must beat (Ch 18).</dd>
+    <dt>Bradley siderograph</dt><dd>Donald Bradley's weighted aspect-sum curve projecting <em>turn dates</em> (not levels); zodiac-independent (Ch 11).</dd>
+    <dt>Confusion matrix</dt><dd>the 2×2 of hits, misses, false alarms, and correct passes used to score a rule honestly (Ch 18).</dd>
+    <dt>Data-mining / multiple comparisons / look-elsewhere</dt><dd>finding a "signal" by testing many rules; guarantees an impressive in-sample winner by chance (Ch 18).</dd>
+    <dt>Drawdown</dt><dd>a peak-to-trough capital loss; recovery is asymmetric (−50% needs +100%) (Ch 20).</dd>
+    <dt>Efficient markets</dt><dd>the null hypothesis that prices already reflect available information, so simple public edges get arbitraged away (Ch 19).</dd>
+    <dt>FII / DII</dt><dd>Foreign / Domestic Institutional Investors; major flow drivers in Indian markets (Ch 3).</dd>
+    <dt>Fixed-fractional sizing</dt><dd>risking a small constant fraction of capital per trade (e.g., 1–2%) (Ch 20).</dd>
+    <dt>Grand Mutation / trigon</dt><dd>the shift of Jupiter–Saturn conjunctions into a new element (~200-yr); the 2020 conjunction began an Air series (a <em>tropical</em> statement) (Ch 8).</dd>
+    <dt>Halloween effect ("Sell in May")</dt><dd>the seasonal pattern of higher Nov–Apr returns (Bouman &amp; Jacobsen, 2002); robust-ish but contested (Ch 19).</dd>
+    <dt>In-sample / out-of-sample</dt><dd>data used to <em>develop</em> a rule vs. <em>untouched</em> data used to <em>test</em> it; only the latter is evidence (Ch 18).</dd>
+    <dt>Ingress</dt><dd>a planet's entry into a new sign; a datable trigger (Ch 10).</dd>
+    <dt>Kelly criterion</dt><dd>the bet fraction maximizing long-run log-growth given a real edge; over-betting past it destroys capital (Ch 20).</dd>
+    <dt>Lunar effect</dt><dd>slightly higher returns around the new vs. full moon (Dichev &amp; Janes 2003; Yuan et al. 2006); small, behavioral, partly-unreplicated (Ch 19).</dd>
+    <dt>McWhirter Theory</dt><dd>Louise McWhirter's 1937 nodal business-cycle model (low at Aquarius node, high at Leo); uses the <em>tropical</em> node (Ch 9).</dd>
+    <dt>Pre-registration</dt><dd>committing a rule and its hit criterion <em>before</em> looking at outcomes (Ch 18).</dd>
+    <dt>Risk of ruin</dt><dd>the probability of catastrophic capital loss; driven more by <em>bet size</em> than by signal (Ch 20).</dd>
+    <dt>STT</dt><dd>Securities Transaction Tax; an India-specific trading cost that erodes marginal edges (Ch 18, 20).</dd>
+    <dt>Survivorship bias</dt><dd>remembering "hits" (and surviving stocks/funds) while ignoring the rest (Ch 18).</dd>
+    <dt>Volatility drag</dt><dd>the compounding penalty by which large swings lower median wealth even on a fair game (Ch 20).</dd>
+  </dl>
+
+  <h3 class="sec">D.3 The book's claim-type tags</h3>
+  <p>The five-and-more colour-coded labels used throughout the book, each in its rendered form:</p>
+  <ul class="legend">
+    <li><span class="tag cl">Classical</span> traditional doctrine from the source texts</li>
+    <li><span class="tag ob">Observed</span> an empirical finding or caveat</li>
+    <li><span class="tag fw">Framework</span> this book's own hypothesis or construct, <em>not</em> proven</li>
+    <li><span class="tag as">Astronomical</span> verifiable astronomy</li>
+    <li><span class="tag hi">Historical</span> a historical fact</li>
+    <li><span class="tag rg">Regulatory</span> a rule as of early 2026, to re-verify</li>
+    <li><span class="tag vf">Verify</span> to confirm independently</li>
+  </ul>
+</div>
+
+<hr class="soft"/>
+
+<!-- ===================== APPENDIX E ===================== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Appendix E</span>
+    <span class="lesson-title">Bibliography of <em>Cited Works</em></span>
+  </div>
+
+  <p>Organized by category. Academic entries were verified during writing; classical-text entries follow the library inventory (translations vary). This is an attribution list, not an endorsement of any predictive claim.</p>
+
+  <h3 class="sec">E.1 Empirical &amp; academic literature</h3>
+  <ul class="biblist">
+    <li>Bouman, S. &amp; Jacobsen, B. (2002). "The Halloween Indicator, 'Sell in May and Go Away.'" <em>American Economic Review</em>, 92(5), 1618–1635.</li>
+    <li>Zhang, C. Y. &amp; Jacobsen, B. (2021). "The Halloween indicator, 'Sell in May and Go Away': Everywhere and all the time." <em>Journal of International Money and Finance</em>.</li>
+    <li>Maberly, E. D. &amp; Pierce, R. M. (2004). "Stock Market Efficiency Withstands Another Challenge: Solving the 'Sell in May/Buy after Halloween' Puzzle." <em>Econ Journal Watch</em>, 1(1), 29–46.</li>
+    <li>Dichev, I. D. &amp; Janes, T. D. (2003). "Lunar Cycle Effects in Stock Returns." <em>Journal of Private Equity</em>, 6(4), 8–29.</li>
+    <li>Yuan, K., Zheng, L. &amp; Zhu, Q. (2006). "Are investors moonstruck? Lunar phases and stock returns." <em>Journal of Empirical Finance</em>, 13(1), 1–23.</li>
+    <li>Keef, S. P. &amp; Khaled, M. S. (2011). Work confirming international lunar-phase return effects.</li>
+    <li>Brusa, J. and colleagues. International lunar-effect studies using lunar control days (finding the depressed-full-moon effect does not hold vs. control).</li>
+    <li>McLean, R. D. &amp; Pontiff, J. (2016). "Does Academic Research Destroy Stock Return Predictability?" <em>Journal of Finance</em>, 71(1), 5–32.</li>
+    <li>Hirshleifer, D. &amp; Shumway, T. (2003). "Good Day Sunshine: Stock Returns and the Weather." <em>Journal of Finance</em>, 58(3), 1009–1032.</li>
+    <li>Wang et al. (2021). Cross-country study of stock returns during Mercury-retrograde periods, 48 markets, 1973–2019 — the investor-belief channel (cited Ch 19).</li>
+    <li>Krivelyova, A. &amp; Robotti, C. (2003). Study relating geomagnetic-storm activity to U.S. and international stock returns, 1970–2002 — the misattribution-of-mood channel (cited Ch 19).</li>
+    <li>Floros, C. &amp; Tan, Y. (2013). International lunar-phase study, 59 markets, 2004–2010 — crisis-period inversion of the new-moon effect (cited Chs 1, 19).</li>
+  </ul>
+
+  <h3 class="sec">E.2 Financial astrology — practitioner works</h3>
+  <ul class="biblist">
+    <li>McWhirter, L. (1937). <em>McWhirter Theory of Stock Market Forecasting.</em></li>
+    <li>Bradley, D. A. <em>Stock Market Prediction</em> (the siderograph method).</li>
+    <li>Williams, D. <em>Financial Astrology</em> / astro-economic writings.</li>
+    <li>Meridian, B. <em>Planetary Stock Trading</em> (incorporation/first-trade chart method).</li>
+    <li>Weingarten, H. <em>Investing by the Stars.</em></li>
+    <li>Lee, R. &amp; Tryde, P. (2012). <em>Timing Solutions for Swing Traders.</em></li>
+    <li>Gann, W. D. — referenced critically (the "Gann Time Table" cautionary note, Ch 1).</li>
+    <li>(Library Cluster I also includes McWhirter-method and stock-market-forecasting compilations as catalogued in the inventory.)</li>
+  </ul>
+
+  <h3 class="sec">E.3 Classical &amp; traditional Jyotish texts (per library inventory)</h3>
+  <ul class="biblist">
+    <li>Parashara. <em>Brihat Parashara Hora Shastra</em> (trs. R. Santhanam; G. C. Sharma).</li>
+    <li>Varahamihira. <em>Brihat Jataka</em>; <em>Brihat Samhita.</em></li>
+    <li>Mantreswara. <em>Phaladeepika.</em></li>
+    <li>Kalyana Varma. <em>Saravali.</em></li>
+    <li>Vaidyanatha Dikshita. <em>Jataka Parijata.</em></li>
+    <li>Daivajna Venkatesa. <em>Sarvartha Chintamani.</em></li>
+    <li>Kalidasa. <em>Uttara Kalamrita.</em></li>
+    <li>Maharshi Jaimini. <em>Jaimini Sutras</em> (and <em>Upadesa Sutras</em>, tr. attributed to Sanjay Rath).</li>
+    <li>Rangacharya, I. <em>A Manual of Jaimini Astrology.</em></li>
+    <li>Krishnamurti, K. S. <em>KP Readers</em> (I–VI).</li>
+    <li>Khullar, S. P. — KP cuspal-system works.</li>
+    <li>Raman, B. V. <em>A Manual of Hindu Astrology</em>; <em>How to Judge a Horoscope</em> (I–II); <em>300 Important Combinations</em>; <em>Astrology for Beginners</em>; others.</li>
+    <li>Rao, K. N. — predictive-technique and dasha works (e.g., <em>Astrology and Timing of Marriage</em>; <em>Jaimini Chara Dasa</em>).</li>
+    <li>Rao, R. G. — Nadi works (<em>Essence of Nadi Astrology</em>; <em>Bhrigu Prashna Nadi</em>).</li>
+    <li>Santhanam, R. (tr.). <em>Deva Keralam (Chandra Kala Nadi).</em></li>
+    <li><em>Lal Kitab</em> (Vols. 1–3, 1952; attr. Pt. Roop Chand Joshi).</li>
+    <li>Suryanarain Rao, B. — <em>Prashna</em> classics.</li>
+    <li>Dreyer, R. G. <em>Vedic Astrology.</em></li>
+  </ul>
+
+  <h3 class="sec">E.4 Regulatory &amp; reference sources (India)</h3>
+  <ul class="biblist">
+    <li>SEBI (Investment Advisers) Regulations, 2013.</li>
+    <li>SEBI (Research Analysts) Regulations, 2014.</li>
+    <li>SEBI Circular dated 29 January 2025 on financial influencers (under the SEBI (Intermediaries) Amendment Regulations, 2024) — restrictions on associating with unregistered finfluencers and on real-time market-data use; reported 2025–26 enforcement actions.</li>
+  </ul>
+
+  <h3 class="sec">E.5 Computational tools</h3>
+  <ul class="biblist">
+    <li>Swiss Ephemeris (Astrodienst) / pyswisseph — all astronomical computations in this book.</li>
+  </ul>
+</div>
+
+<hr class="soft"/>
+
+<!-- ===================== APPENDIX F ===================== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Appendix F</span>
+    <span class="lesson-title">NotebookLM <em>Query Pack</em> — for the 78-Book Library</span>
+  </div>
+
+  <p>Paste these into NotebookLM (or a similar AI tool with your library loaded) to mine the wider collection. They are written to extract <em>verifiable rules</em>, surface <em>disagreements</em>, and keep the honest, testable stance of this book. Replace bracketed terms as needed.</p>
+
+  <h3 class="sec">F.1 Universal extraction prompts (any text)</h3>
+  <div class="prompt">"List every concrete, testable rule in [BOOK] for timing market or event turns. For each, quote the rule in under 15 words, give the page, and label it <em>deterministic</em>, <em>conditional</em>, or <em>vague</em>."</div>
+  <div class="prompt">"Summarize [BOOK]'s core method in 200 words, then list its key assumptions and any claims it presents without evidence."</div>
+  <div class="prompt">"Extract every numeric parameter in [BOOK] (orbs, degrees, periods, thresholds) into a table with page references."</div>
+  <div class="prompt">"What does [BOOK] claim about [topic, e.g., the 8th house / Saturn transits / eclipses]? Quote sparingly and cite pages."</div>
+
+  <h3 class="sec">F.2 Cross-source synthesis (multiple texts)</h3>
+  <div class="prompt">"Compare how [BOOK A], [BOOK B], and [BOOK C] define and use <em>[significator / sub-lord / arudha]</em>. Build a table of agreements and disagreements with citations."</div>
+  <div class="prompt">"Across all KP sources in the library, list every rule for identifying a market <em>turn</em> via the cuspal sub-lord. Flag where sources conflict."</div>
+  <div class="prompt">"Find every claim across the library that the <em>Moon</em> (or <em>Mercury retrograde</em>) affects short-term price/sentiment. Note which give a falsifiable rule vs. a general statement."</div>
+  <div class="prompt">"Where do the Parashari and Jaimini sources in the library give <em>contradictory</em> instructions for the same judgement? List with citations."</div>
+
+  <h3 class="sec">F.3 Honest-stance / critical prompts</h3>
+  <div class="prompt">"For [BOOK]'s central predictive claim, design a pre-registered, out-of-sample test: state the signal, the prediction, the dated window, the hit criterion, and the base rate to beat."</div>
+  <div class="prompt">"Identify any 'crash signature' or 'sure-fire' claim in the library and list the <em>misses</em> or counter-examples a skeptic would raise."</div>
+  <div class="prompt">"Which claims in [BOOK] are <em>unfalsifiable</em> (always 'in some period', or tunable after the fact)? Explain why for each."</div>
+  <div class="prompt">"Separate [BOOK]'s claims into <em>zodiac-independent</em> (aspects, cycles, tithi) and <em>zodiac-dependent</em> (sign, house, nakshatra, sub-lord). Which would change under a different ayanamsa?"</div>
+
+  <h3 class="sec">F.4 Financial-astrology cluster prompts</h3>
+  <div class="prompt">"From the financial-astrology sources (Williams, Meridian, Weingarten, McWhirter, Bradley, Lee &amp; Tryde), extract every distinct market-timing technique into one master table: name, inputs, output (date/level/direction), and source."</div>
+  <div class="prompt">"Reconcile the <em>tropical</em> basis of the Western financial-astrology sources with the <em>sidereal</em> basis of the Indian sources for the same date. Where would their readings of [a chosen date] diverge, and where would they agree?"</div>
+  <div class="prompt">"List every commodity or sector rulership asserted anywhere in the library. Mark which are widely shared vs. idiosyncratic to one author."</div>
+
+  <h3 class="sec">F.5 Study-and-build prompts</h3>
+  <div class="prompt">"Generate 20 exam-style questions (with answers and citations) that test mastery of [cluster, e.g., Nadi / KP / dasha systems] from the library."</div>
+  <div class="prompt">"Draft a one-page 'rules cheat-sheet' for [topic] citing only the library, marking each rule <em>[Classical]</em>, <em>[disputed]</em>, or <em>[single-source]</em>."</div>
+  <div class="prompt">"Build a timeline of the historical development of [KP / Nadi / Jaimini] using only datable facts from the library; flag undated claims."</div>
+</div>
+
+<div class="bridge">
+  End of the Appendices — and of <em>The Celestial Ledger: A Master Synthesis of Financial Astrology</em>. Chapter Zero through Chapter Twenty, a unified conclusion, and six reference appendices: the craft taught in full, held throughout to evidence and risk, and assembled into one honest model — a clock, not a compass.
+</div>
+
+</body>
+</html>

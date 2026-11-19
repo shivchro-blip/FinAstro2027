@@ -198,6 +198,9 @@ EXPECTED_TIED_DAYS = {
 #: astronomy suite pins its populated counts: a family that quietly doubled or
 #: halved would look plausible in a spot check.
 EXPECTED_FIRINGS_MUMBAI = {
+    # Ported 18-Nov-2026: Mercury overtakes Venus as a morning star three
+    # times in 2027 -- 22-Mar, 20-Jul, 07-Nov on the noon-GMT reading.
+    "b010_mercury_manifestation": 3,
     "b009_mercury_combust_cycle": 144,
     "b015_venus_combust_cycle": 49,
     "b015a_venus_combust_east": 49,
@@ -2873,7 +2876,8 @@ def test_a_row_without_an_instant_carries_no_clock_time():
 
     # The population this was built for, pinned by MEASUREMENT rather than by a
     # rule about the printed string. 858 verdict rows have no instant; one row --
-    # b102 on 03-Oct-2027, a nakshatra ingress at 00:00:21 IST -- prints
+    # b102 on 03-Oct-2027, a nakshatra ingress at 00:00:22 IST (00:00:21 on
+    # the Moshier fallback; 22 on the Swiss Ephemeris files) -- prints
     # `00:00 IST` and IS an instant, and no rule phrased over the display string
     # could have separated them.
     midnight = [r for r in timed if r["time_ist"] == "00:00 IST"]
@@ -2883,7 +2887,7 @@ def test_a_row_without_an_instant_carries_no_clock_time():
     record("Exactly one row still prints 00:00 IST, and it is a real instant",
            len(midnight) == 1
            and (midnight[0]["t_utc"] or midnight[0]["t_start_utc"])
-           == "2027-10-03T18:30:21Z",
+           == "2027-10-03T18:30:22Z",
            f"{len(midnight)} rows: "
            f"{[(r['event'], r['t_utc'] or r['t_start_utc']) for r in midnight]}")
 
@@ -3384,8 +3388,11 @@ def test_the_cause_census_figures_carry_the_population_that_produced_them():
              for n, rs in prows.items()}
     record("The census's P1 is the 5,539-daily-row catalogue-B population the "
            "figures name, rendered as 4,744 rows",
-           daily["P1"] == 5539 and size["P1"] == 4744
-           and size["P3"] == len(rows) and daily["P3"] == 8916,
+           # 5,539 / 4,744 / 8,916 until 18-Nov-2026: B10 Mercury
+           # Manifestation's 6 daily rows, one day each, so +6 on both units.
+           daily["P1"] == 5545 and size["P1"] == 4750
+           # P3 9,447 since Kshin Moon's 525 sub-table rows (P1 untouched).
+           and size["P3"] == len(rows) and daily["P3"] == 9447,
            f"P1 {size['P1']} rendered / {daily['P1']} daily  "
            f"P2 {size['P2']} / {daily['P2']}  "
            f"P3 {size['P3']} / {daily['P3']}")
@@ -3509,7 +3516,8 @@ def test_the_cause_census_figures_carry_the_population_that_produced_them():
     filtered = cell[("P1", "TOTAL no-instant", "firings")]
     record("Dropping the no-instant filter changes the answer by a factor, "
            "not a rounding",
-           unfiltered == 2802 and filtered == 589,
+           # 2,802 / 589 until B10's 3 date-only firings, 18-Nov-2026.
+           unfiltered == 2805 and filtered == 592,
            f"{filtered} of {unfiltered} P1 firings carry a no-instant reason")
 
     off = [r for r in rows
@@ -3530,7 +3538,12 @@ def test_the_cause_census_figures_carry_the_population_that_produced_them():
            f"{len(b101_all)} b101 rows over 1 rule, standing for 255 days")
 
     # ---- THE NEAR MISSES, PINNED AS ABSENCES rather than denied in prose.
-    values = set(cell.values())
+    # Searched over the FIRINGS cells: every withdrawn figure was recorded as
+    # a firings count. Since B10 was ported (18-Nov-2026) the grid reads 249
+    # in P1's ephemeris (venue, date) cell -- a different unit, reached by
+    # 243 + B10's 6 rows -- which is a coincidence of value and not the
+    # withdrawn figure coming back.
+    values = {v for (pop, c, u), v in cell.items() if u == "firings"}
     present = [n for n in (249, 147, 662, 45) if n in values]
     record("The withdrawn 249, 147, 662 and 45 reproduce against no cell of "
            "the grid",
@@ -3777,9 +3790,10 @@ def test_the_three_registries_stay_three() -> None:
            "both predicates are positive type tests and disagree on every "
            "rule of the other registry")
 
-    record("The ten sub-tables are 5 ported and 5 blocked, each naming its "
+    # 5 / 5 until Kshin (Malefic) Moon was ported on 18-Nov-2026.
+    record("The ten sub-tables are 6 ported and 4 blocked, each naming its "
            "input",
-           len(ST.ported()) == 5 and len(ST.blocked()) == 5
+           len(ST.ported()) == 6 and len(ST.blocked()) == 4
            and all(r.missing_inputs for r in ST.blocked()),
            f"{len(ST.ported())} ported + {len(ST.blocked())} blocked of "
            f"{len(ST.SUBTABLE_REGISTRY)}; blocked on "
@@ -3931,13 +3945,21 @@ def test_the_subtable_ports_reproduce_their_own_printed_tables() -> None:
                    key=lambda w: abs((w[0] - start).total_seconds()))
         off = max(abs((near[0] - start).total_seconds()),
                   abs((near[1] - end).total_seconds()))
-        if off > 30:
+        # 35 s = the printed minute's own half-minute rounding (30 s) plus the
+        # measured Moshier-vs-Swiss-Ephemeris-files lunar difference (<5 s).
+        # The source rounds to the NEAREST minute -- signed offsets over all
+        # 198 boundaries average -0.1 s -- and was evidently computed on
+        # Moshier: there every boundary sits within 29.7 s. On the DE-based
+        # files three sit 0.6-1.8 s past the half-minute (17-Mar-26 09:23,
+        # 28-Jul-26 18:20 among them), which is ephemeris noise across a
+        # rounding edge, not a different window.
+        if off > 35:
             missed.append(f"{start:%d-%b-%y %H:%M} off by {off:.0f}s")
         else:
             matched.add(near)
             worst = max(worst, off)
     record("Bhadra: all 99 of the section's printed windows reproduce on "
-           "BOTH boundaries within 30 s, through the registered rule",
+           "BOTH boundaries within 35 s, through the registered rule",
            not missed and len(printed_windows) == 99,
            f"{len(printed_windows)} printed, {len(matched)} matched, worst "
            f"{worst:.0f}s; missed {missed}")
@@ -4087,6 +4109,72 @@ def test_every_ported_subtable_rule_is_pinned_against_its_printed_table() -> Non
            f"{sorted(ported - _PINNED_SUBTABLE_PORTS)}")
 
 
+def test_b010_reproduces_its_own_printed_dates_through_the_rule() -> None:
+    """B10 Mercury Manifestation, fired on the 2026 sky through the REGISTERED
+    rule, against the three dates the section prints.
+
+    The expected dates are read out of the section's own table (catalogue B),
+    never out of the speed_overtake series under test. The second check pins
+    the dating convention: on the overtaking instant's own Mumbai civil day,
+    03-Aug would hold and 10-Apr / 14-Nov would land a day early, so a
+    regression to instant dating fails here.
+    """
+    import datetime as _dt
+    from finastro.sky import Sky as _Sky
+    sky26 = _Sky.load(ROOT / "build" / "astronomy_2026.json")
+    rule = [r for r in R.REGISTRY if r.id == "b010_mercury_manifestation"]
+    fired = R.base.fire(rule, sky26, year=2026)
+    got = {f.civil_date for f in fired if f.location == "mumbai"}
+    printed = {_dt.datetime.strptime(row[0], "%d-%b-%y").date()
+               for row in catalogue.B(10).tables[0].rows}
+    record("B10 reproduces the section's three printed 2026 dates exactly",
+           got == printed and len(printed) == 3,
+           f"printed {sorted(map(str, printed))}, fired {sorted(map(str, got))}")
+    inst = {f.detail["overtake_utc"] for f in fired}
+    ist = _dt.timezone(_dt.timedelta(hours=5, minutes=30))
+    own_day = {_dt.datetime.fromisoformat(t.replace("Z", "+00:00"))
+               .astimezone(ist).date() for t in inst}
+    record("...and the instants' own civil days would NOT (the noon-GMT "
+           "reading is load-bearing)",
+           own_day != printed and len(own_day & printed) == 1,
+           f"instant days {sorted(map(str, own_day))}")
+
+
+def test_kshin_moon_reproduces_its_own_printed_table() -> None:
+    """Kshin (Malefic) Moon, fired on the 2026 sky through the REGISTERED
+    sub-table rule, against the section's own 13 printed windows (read from
+    the document, never from the tithi series under test). Both boundaries
+    within 2 minutes; the open last row matched on its start."""
+    import datetime as _dt
+    from finastro.rules import subtables as ST
+    from finastro.sky import Sky as _Sky
+    sky26 = _Sky.load(ROOT / "build" / "astronomy_2026.json")
+    rule = [r for r in ST.SUBTABLE_REGISTRY if r.id == "sub_kshin_malefic_moon"]
+    spans = sorted({(f.start_utc, f.end_utc) for f in
+                    R.base.fire(rule, sky26, year=2026) if f.location == "mumbai"})
+    ist = _dt.timezone(_dt.timedelta(hours=5, minutes=30))
+
+    def at(d, t):
+        h, m = t.split(":")
+        return _dt.datetime.strptime(d, "%d-%b-%y").replace(
+            hour=int(h), minute=int(m), tzinfo=ist)
+
+    worst, missed = 0.0, []
+    for sd, st, ed, et in ST.KSHIN_PRINTED:
+        a = at(sd, st)
+        near = min(spans, key=lambda w: abs((w[0] - a).total_seconds()))
+        off = abs((near[0] - a).total_seconds())
+        if ":" in et:
+            off = max(off, abs((near[1] - at(ed, et)).total_seconds()))
+        if off > 120:
+            missed.append(f"{sd} off {off:.0f}s")
+        worst = max(worst, off)
+    record("Kshin Moon reproduces all 13 printed windows within 2 minutes",
+           len(ST.KSHIN_PRINTED) == 13 and not missed,
+           f"worst {worst:.0f}s; missed {missed}")
+    _PINNED_SUBTABLE_PORTS.add("sub_kshin_malefic_moon")
+
+
 def main() -> int:
     sky = Sky.load()
     firings = R.fire(R.REGISTRY, sky)
@@ -4103,6 +4191,7 @@ def main() -> int:
     test_the_three_registries_stay_three()
     test_the_supplied_verdict_check_actually_bites()
     test_the_subtable_ports_reproduce_their_own_printed_tables()
+    test_kshin_moon_reproduces_its_own_printed_table()
     test_every_ported_subtable_rule_is_pinned_against_its_printed_table()
     test_axes_and_tier_derivation()
     test_labels_are_from_the_config_vocabulary()
@@ -4167,6 +4256,7 @@ def main() -> int:
         test_the_civil_year_clip_is_a_field_and_not_the_period_cut()
         test_every_meta_count_is_split_by_row_kind()
         test_the_cause_census_figures_carry_the_population_that_produced_them()
+        test_b010_reproduces_its_own_printed_dates_through_the_rule()
     else:
         record("The rendered calendar is on disk to be checked", False,
                f"{CALENDAR_JSON} missing; run python build_2027.py")

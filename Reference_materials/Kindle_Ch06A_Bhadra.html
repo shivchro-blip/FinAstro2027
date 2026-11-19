@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Celestial Ledger — Chapter 6A: Bhadra, the Shadow on the Clock</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --paper:#fbf9f4; --paper2:#f4efe4; --card:#ffffff; --ink:#26211c; --ink-soft:#4f463c; --ink-faint:#857a6c;
+  --line:#e6dfce; --line-soft:#efe9dc;
+  --gold:#9a7113; --gold-soft:#fbf2da; --gold-line:#e7cf94;
+  --teal:#0c7d68; --teal-soft:#e3f3ef;
+  --coral:#b23a2e; --coral-soft:#f8e9e6;
+  --violet:#6244a8; --violet-soft:#efeafa;
+  --green:#2f7d4f; --green-soft:#e6f3ea;
+  --blue:#1f6aa6; --blue-soft:#e7f0f8;
+  --slate:#566273; --slate-soft:#eaeef3;
+  --serif:'Playfair Display',Georgia,'Times New Roman',serif;
+  --body:Georgia,'Iowan Old Style','Palatino Linotype',serif;
+  --sans:'Inter',system-ui,-apple-system,sans-serif;
+  --r:10px; --r-sm:7px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{ -webkit-text-size-adjust:100%; }
+body{ background:var(--paper); color:var(--ink); font-family:var(--body); font-size:18px; line-height:1.72; max-width:780px; margin:0 auto; padding:30px 26px 90px; }
+p{ margin:0 0 14px; } strong{ color:var(--ink); font-weight:600; } em{ font-style:italic; }
+
+.hero{ text-align:center; padding:22px 0 30px; border-bottom:2px solid var(--gold-line); margin-bottom:34px; }
+.hero .kicker{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:var(--gold); }
+.hero h1{ font-family:var(--serif); font-weight:900; font-size:40px; line-height:1.12; margin:14px 0 0; }
+.hero h1 em{ color:var(--gold); font-style:italic; }
+.hero .sub{ font-style:italic; color:var(--ink-soft); font-size:17px; max-width:580px; margin:16px auto 0; }
+.hero .ornament{ color:var(--gold); letter-spacing:.5em; margin-top:18px; font-size:14px; }
+
+.lesson{ margin:0 0 50px; }
+.lesson-head{ display:flex; align-items:baseline; gap:12px; border-bottom:1px solid var(--line); padding-bottom:8px; margin-bottom:18px; }
+.lesson-no{ font-family:var(--sans); font-size:12px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); white-space:nowrap; }
+.lesson-title{ font-family:var(--serif); font-weight:700; font-size:25px; line-height:1.2; }
+.lesson-title em{ color:var(--gold); font-style:italic; }
+h3.sec{ font-family:var(--serif); font-style:italic; font-weight:600; font-size:21px; color:var(--gold); margin:28px 0 10px; }
+h4.lab{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-faint); margin:22px 0 9px; }
+
+.callout{ border-left:4px solid var(--gold); background:var(--gold-soft); border-radius:0 var(--r-sm) var(--r-sm) 0; padding:14px 18px; margin:18px 0; font-size:16.5px; line-height:1.62; }
+.callout .ct{ display:block; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:5px; color:var(--gold); }
+.callout.teal{ border-color:var(--teal); background:var(--teal-soft);} .callout.teal .ct{ color:var(--teal);}
+.callout.coral{ border-color:var(--coral); background:var(--coral-soft);} .callout.coral .ct{ color:var(--coral);}
+.callout.violet{ border-color:var(--violet); background:var(--violet-soft);} .callout.violet .ct{ color:var(--violet);}
+.callout.green{ border-color:var(--green); background:var(--green-soft);} .callout.green .ct{ color:var(--green);}
+.callout.slate{ border-color:var(--slate); background:var(--slate-soft);} .callout.slate .ct{ color:var(--slate);}
+.honest{ border-left:4px solid var(--violet); background:var(--violet-soft); border-radius:0 var(--r-sm) var(--r-sm) 0; padding:14px 18px; margin:18px 0; font-size:16px; }
+.honest .ct{ display:block; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:5px; color:var(--violet); }
+
+.keyrule{ text-align:center; font-family:var(--serif); font-style:italic; font-size:20px; line-height:1.5; color:var(--gold); border-top:1px solid var(--gold-line); border-bottom:1px solid var(--gold-line); padding:18px 14px; margin:22px 0; }
+.keyrule .small{ display:block; font-family:var(--sans); font-style:normal; font-size:10px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:8px; }
+.keyrule b{ font-style:normal; color:var(--ink); }
+
+.tag{ display:inline-block; font-family:var(--sans); font-size:10px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:1px 7px; border-radius:4px; vertical-align:middle; }
+.tag.cl{ background:var(--blue-soft); color:var(--blue); } .tag.fw{ background:var(--gold-soft); color:var(--gold); } .tag.vf{ background:var(--violet-soft); color:var(--violet); }
+.tag.ob{ background:var(--teal-soft); color:var(--teal); } .tag.as{ background:var(--slate-soft); color:var(--slate); }
+
+.cards{ display:flex; flex-wrap:wrap; gap:12px; margin:16px 0; }
+.card{ flex:1 1 220px; background:var(--card); border:1px solid var(--line); border-top:3px solid var(--gold); border-radius:var(--r-sm); padding:14px 16px; }
+.card.up{ border-top-color:var(--green);} .card.down{ border-top-color:var(--coral);} .card.teal{ border-top-color:var(--teal);} .card.violet{ border-top-color:var(--violet);} .card.slate{ border-top-color:var(--slate);}
+.card .ic{ font-size:24px; line-height:1; } .card .ti{ font-family:var(--serif); font-weight:700; font-size:18px; margin:6px 0 2px; } .card .ti em{ color:var(--gold); font-style:italic; font-weight:400; font-size:14px; }
+.card .mt{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px; } .card p{ font-size:15px; line-height:1.55; margin:0; color:var(--ink-soft); }
+
+.tw{ overflow-x:auto; border:1px solid var(--line); border-radius:var(--r-sm); margin:16px 0; }
+table{ width:100%; border-collapse:collapse; font-family:var(--sans); }
+thead tr{ background:var(--gold-soft); }
+th{ font-size:10.5px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:var(--gold); text-align:left; padding:9px 11px; white-space:nowrap; }
+td{ font-size:13px; padding:8px 11px; border-top:1px solid var(--line-soft); vertical-align:top; color:var(--ink-soft); }
+td.g{ color:var(--gold); font-weight:600; white-space:nowrap; }
+td.up{ color:var(--green); font-weight:600;} td.dn{ color:var(--coral); font-weight:600;}
+tbody tr:nth-child(even){ background:#fcfaf5; }
+
+.qa{ border:1px solid var(--line); border-radius:var(--r-sm); overflow:hidden; margin:20px 0; }
+.qa-h{ background:var(--paper2); padding:9px 15px; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); border-bottom:1px solid var(--line); }
+.qa-i{ padding:12px 15px; border-bottom:1px solid var(--line-soft); } .qa-i:last-child{ border-bottom:none; }
+.qa-q{ font-size:16px; } .qa-q b{ color:var(--gold); font-family:var(--sans); font-size:12px; font-weight:700; margin-right:8px; }
+.qa-a{ font-size:16px; color:var(--ink-soft); margin-top:5px; } .qa-a b{ color:var(--teal); font-family:var(--sans); font-size:12px; font-weight:700; margin-right:8px; }
+
+.recap{ display:flex; align-items:center; gap:18px; background:var(--gold-soft); border:1px solid var(--gold-line); border-radius:var(--r-sm); padding:16px 20px; margin:20px 0; }
+.recap .n{ font-family:var(--serif); font-weight:900; font-size:38px; color:var(--gold); line-height:1; flex-shrink:0; }
+.recap .l{ font-family:var(--sans); font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); }
+.recap .t{ font-family:var(--serif); font-weight:700; font-size:18px; margin:2px 0; } .recap .d{ font-size:14px; color:var(--ink-soft); }
+
+.ladder{ counter-reset:rk; list-style:none; padding:0; margin:14px 0; }
+.ladder li{ counter-increment:rk; display:flex; gap:14px; align-items:flex-start; padding:9px 0; border-bottom:1px solid var(--line-soft); font-size:15.5px; }
+.ladder li:last-child{ border-bottom:none; }
+.ladder li::before{ content:counter(rk); flex-shrink:0; width:26px; height:26px; background:var(--gold); color:#fff; border-radius:50%; font-family:var(--sans); font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center; }
+.ladder b{ color:var(--ink); }
+
+.checklist{ list-style:none; padding:0; margin:14px 0; }
+.checklist li{ display:flex; gap:13px; align-items:flex-start; padding:11px 0; border-bottom:1px solid var(--line-soft); font-size:16px; }
+.checklist li:last-child{ border-bottom:none; }
+.checklist .box{ flex-shrink:0; width:22px; height:22px; border:2px solid var(--gold); border-radius:5px; margin-top:2px; }
+.checklist b{ color:var(--ink); }
+
+.takeaways{ counter-reset:tk; list-style:none; padding:0; margin:14px 0; }
+.takeaways li{ counter-increment:tk; position:relative; padding:10px 0 10px 46px; border-bottom:1px solid var(--line-soft); font-size:16.5px; }
+.takeaways li:last-child{ border-bottom:none; }
+.takeaways li::before{ content:counter(tk); position:absolute; left:0; top:9px; width:30px; height:30px; border:1.5px solid var(--gold); color:var(--gold); border-radius:50%; font-family:var(--serif); font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center; }
+
+.gloss{ background:var(--card); border:1px solid var(--line); border-radius:var(--r-sm); padding:6px 18px; margin:16px 0; }
+.gloss dt{ font-family:var(--serif); font-weight:700; font-size:16px; color:var(--gold); margin:12px 0 1px; }
+.gloss dd{ margin:0 0 4px; font-size:15.5px; color:var(--ink-soft); }
+
+.bridge{ text-align:center; font-style:italic; color:var(--ink-faint); font-size:15px; border-top:1px solid var(--line); padding-top:22px; margin-top:34px; }
+hr.soft{ border:none; border-top:1px solid var(--line); margin:30px 0; }
+@media (max-width:600px){ body{font-size:17px;padding:20px 16px 70px;} .hero h1{font-size:31px;} .lesson-title{font-size:21px;} }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="kicker">The Celestial Ledger · Volume I · Chapter Six-A</div>
+  <h1>Bhadra <em>— The Shadow on the Clock</em></h1>
+  <div class="sub">The Vishti karana: the one element of the Panchanga that Indian practice treats not as a flavour but as an outright prohibition on beginning anything. What it is, how to compute it to the minute, why its day/night label has nothing to do with daylight — and what a market practitioner should and should not do with it.</div>
+  <div class="ornament">◑ ✦ ◐</div>
+</div>
+
+<p>Chapter 6 named the five limbs of the Panchanga and developed four of them. Tithi, vara, nakshatra and yoga each got their paragraph. The fifth — <strong>karana</strong> — was defined in six words as "a half-tithi" and left there. This chapter pays that debt, because the karana carries something the other four limbs do not: a rule that tells you to <em>stop</em>.</p>
+
+<p>Every other element of the almanac tints a day. It says this session may feel optimistic, that one heavy, this one nervous. Bhadra says something categorically different. It says: <strong>not now — do not begin.</strong> It is the closest thing in the Indian toolkit to a hard veto, and it is therefore the element most likely to be misused by a trader who mistakes a prohibition on <em>starting</em> for a prediction about <em>direction</em>.</p>
+
+<div class="callout slate">
+  <span class="ct">The claim-type key — the five labels, unchanged</span>
+  The honest labels carry forward from Chapter 6 without addition. <span class="tag cl">Classical</span> an established rule of the tradition · <span class="tag as">Astronomical</span> a verifiable astronomical fact · <span class="tag ob">Observed</span> an empirical finding or caveat · <span class="tag fw">Framework</span> this book's market interpretation · <span class="tag vf">Verify</span> to confirm. This chapter leans unusually hard on <span class="tag as">Astronomical</span>, because Bhadra is arithmetic before it is doctrine — its timing is not a matter of interpretation at all. Every window quoted here was computed with <strong>Swiss Ephemeris for calendar year 2026</strong>; none was copied from a published almanac, for reasons Lesson 6A.6 makes uncomfortably clear.
+</div>
+
+<div class="callout coral">
+  <span class="ct">A name collision, cleared up first</span>
+  <strong>Bhadra</strong> in this chapter is the Vishti karana. It has nothing whatever to do with <strong>Purva Bhadrapada</strong> and <strong>Uttara Bhadrapada</strong>, the twenty-fifth and twenty-sixth nakshatras met in Chapter 0. The shared syllable is coincidental to our purposes. A reader searching this book for "Bhadra" will land on both; they are unrelated objects on different clocks — the karana on the synodic, the nakshatras on the sidereal.
+</div>
+
+<!-- ═══════════ 6A.1 ═══════════ -->
+<div class="lesson">
+  <div class="lesson-head"><div class="lesson-no">Lesson 6A.1</div><div class="lesson-title">The Karana <em>Nobody Wants</em></div></div>
+
+  <p><span class="tag as">Astronomical</span> Chapter 6 defined the tithi as a 12° step of the Moon's elongation from the Sun — thirty of them to a lunar month. The karana is simply the half-step: <strong>6° of elongation</strong>, sixty to a lunar month, two to every tithi. It is the fourth limb of the Panchanga and the one most readers skip.</p>
+
+  <h3 class="sec">Eleven karanas, in two classes</h3>
+
+  <p><span class="tag cl">Classical</span> Eleven karanas exist. Seven are <strong>movable</strong> (<em>chara</em>) and cycle in a fixed order, repeating eight times over to fill karanas 2 through 57. Four are <strong>fixed</strong> (<em>sthira</em>), occurring once each per month, bracketing the cycle at either end.</p>
+
+  <ol class="ladder">
+    <li><b>Bava, Balava, Kaulava, Taitila, Gara, Vanija, Vishti</b> — the seven movable karanas, in their unvarying order.</li>
+    <li><b>Kimstughna</b> — fixed; always karana 1, opening the lunar month.</li>
+    <li><b>Shakuni, Chatushpada, Naga</b> — fixed; karanas 58, 59 and 60, closing it.</li>
+  </ol>
+
+  <p>Six of the seven movable karanas carry mild flavourings — favourable for this kind of work, less so for that. The seventh does not. <strong>Vishti is the one the tradition tells you to stop for.</strong></p>
+
+  <h3 class="sec">Vishti and Bhadra are the same thing</h3>
+
+  <p><span class="tag cl">Classical</span> The karana is named Vishti; the interval during which it runs is called Bhadra. Muhurta texts and modern almanacs use the two names interchangeably and print the timings under either heading. When a panchang says "Bhadra 12:31 to 23:30," it is telling you when Vishti karana begins and ends — nothing more and nothing less.</p>
+
+  <p><span class="tag vf">Verify</span> Mythologically Bhadra is described as a daughter of Surya and a sister of Shani, fierce-tempered, set by Brahma to obstruct undertakings. This book has not traced the account to a named text and carries it flagged rather than asserted. Little rests on it: the doctrine stands on the muhurta literature, not on the story.</p>
+
+  <h3 class="sec">What the prohibition actually covers</h3>
+
+  <p><span class="tag cl">Classical</span> Bhadra is a prohibition on <strong>beginnings</strong>. The standard list of what to avoid runs: marriage, entering a new house, setting out on a journey, coronation or the taking of office, and the inauguration of any venture intended to prosper. Restated for our purposes — <strong>the initiation of any transaction whose success you care about.</strong></p>
+
+  <p><span class="tag vf">Verify</span> What it does <em>not</em> cover, in most texts: work already underway, routine maintenance, and — this is the interesting exception — acts of a Saturnine or destructive character. Several sources specifically permit surgery, demolition, litigation and warfare during Bhadra. The exact scope of the exception list varies between texts, and this book will not print it as settled doctrine without a named citation.</p>
+
+  <div class="cards">
+    <div class="card slate"><div class="ic">◐</div><div class="ti">Vishti <em>the 7th movable karana</em></div><div class="mt">What it is</div><p>A 6° step of Moon−Sun elongation — half a tithi. Fixed position in the cycle, eight times a lunar month.</p></div>
+    <div class="card down"><div class="ic">⛔</div><div class="ti">A prohibition <em>not a flavour</em></div><div class="mt">What it does</div><p>The only Panchanga element that vetoes. Every other limb colours the day; this one says do not begin.</p></div>
+    <div class="card teal"><div class="ic">⏱</div><div class="ti">About 11.8 hours <em>each time</em></div><div class="mt">How long</div><p>In 2026 the range runs 10h06m to 13h20m, with the width set by the Moon's varying speed.</p></div>
+    <div class="card violet"><div class="ic">🧭</div><div class="ti">Never directional <em>not ever</em></div><div class="mt">What it is not</div><p>It says nothing about which way price will move. Chapter 6's clock-not-compass warning applies without discount.</p></div>
+  </div>
+
+  <div class="keyrule"><span class="small">The rule to lock in</span>Bhadra is the only limb of the Panchanga that says <b>not now</b>. Every other element tints the day; this one vetoes the start.</div>
+
+  <div class="qa">
+    <div class="qa-h">💬 Check yourself · Lesson 6A.1</div>
+    <div class="qa-i"><div class="qa-q"><b>Q1</b>What is a karana, precisely, and how many are there in a lunar month?</div><div class="qa-a"><b>A</b>A <strong>6° step of Moon−Sun elongation</strong> — half a tithi. <strong>Sixty</strong> to a lunar month, made from eleven named karanas: seven movable repeating eight times, plus four fixed.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q2</b>What is the relationship between Vishti and Bhadra?</div><div class="qa-a"><b>A</b>They are the <strong>same thing</strong>. Vishti is the karana's name; Bhadra is the interval during which it runs. Almanacs print the timings under either heading.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q3</b>What class of action does the Bhadra prohibition target?</div><div class="qa-a"><b>A</b><strong>Beginnings.</strong> Marriage, house-entry, journeys, taking office, launching a venture — and for a trader, the <em>initiation</em> of a position. Not work already underway, and not exits.</div></div>
+  </div>
+  <div class="recap"><div class="n">⛔</div><div><div class="l">Lesson 6A.1 — Locked In</div><div class="t">The limb that vetoes</div><div class="d">Vishti is the seventh movable karana and the only Panchanga element carrying a prohibition rather than a flavour — and what it prohibits is starting, never holding and never exiting.</div></div></div>
+</div>
+
+<hr class="soft"/>
+
+<!-- ═══════════ 6A.2 ═══════════ -->
+<div class="lesson">
+  <div class="lesson-head"><div class="lesson-no">Lesson 6A.2</div><div class="lesson-title">Where Bhadra Falls, <em>and Why It Is Arithmetic</em></div></div>
+
+  <p><span class="tag as">Astronomical</span> Because the seven movable karanas repeat in strict order from karana 2 through karana 57, Vishti's position is entirely determined. There is no discretion in it, no astrologer's judgement, nothing to disagree about. Number the karanas 1 to 60 across the lunar month and Vishti lands on exactly these:</p>
+
+  <div class="callout slate">
+    <span class="ct">The lattice</span>
+    Karana <strong>8, 15, 22, 29, 36, 43, 50 and 57</strong> — eight windows to every lunar month, without exception, in every lunar month there has ever been.
+  </div>
+
+  <p>Each of those eight sits on a specific half of a specific tithi, and the pattern is worth learning as a table rather than a rule, because it is the fastest way to sanity-check any almanac you are handed.</p>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>Karana #</th><th>Elongation span</th><th>Tithi and half</th><th>Classification</th></tr></thead>
+      <tbody>
+        <tr><td class="g">8</td><td>42° − 48°</td><td>Shukla Chaturthi, second half</td><td>Night Bhadra</td></tr>
+        <tr><td class="g">15</td><td>84° − 90°</td><td>Shukla Ashtami, first half</td><td>Day Bhadra</td></tr>
+        <tr><td class="g">22</td><td>126° − 132°</td><td>Shukla Ekadashi, second half</td><td>Night Bhadra</td></tr>
+        <tr><td class="g">29</td><td>168° − 174°</td><td>Shukla Purnima, first half</td><td>Day Bhadra</td></tr>
+        <tr><td class="g">36</td><td>210° − 216°</td><td>Krishna Tritiya, second half</td><td>Night Bhadra</td></tr>
+        <tr><td class="g">43</td><td>252° − 258°</td><td>Krishna Saptami, first half</td><td>Day Bhadra</td></tr>
+        <tr><td class="g">50</td><td>294° − 300°</td><td>Krishna Dashami, second half</td><td>Night Bhadra</td></tr>
+        <tr><td class="g">57</td><td>336° − 342°</td><td>Krishna Chaturdashi, first half</td><td>Day Bhadra</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p><span class="tag fw">Framework</span> The entire table collapses to a single line, and it is the one thing from this chapter worth committing to memory:</p>
+
+  <div class="callout green">
+    <span class="ct">The collapse</span>
+    <strong>Odd karana number → Day Bhadra. Even karana number → Night Bhadra.</strong> Equivalently: the first half of a tithi gives Day Bhadra, the second half gives Night Bhadra. That is the whole classification, and because it is arithmetic it cannot fail — which makes it the cheapest error-detector you will ever run against a published table.
+  </div>
+
+  <h3 class="sec">How long a window runs</h3>
+
+  <p><span class="tag as">Astronomical</span> Six degrees of elongation at the mean synodic rate of about 12.19° per day gives roughly <strong>11.8 hours</strong>. But the Moon's speed varies with its distance, so the real range is wider. In calendar 2026 the extremes are <strong>10h 06m</strong> on 23 December and <strong>13h 20m</strong> on 13 December — the shortest and longest windows of the year falling ten days apart, which is what a perigee-to-apogee swing looks like from the inside.</p>
+
+  <p><span class="tag as">Astronomical</span> A detail that catches almost everyone: <strong>fifty-two of the ninety-nine windows in 2026 cross midnight.</strong> A reader who checks only today's row in an almanac will routinely miss a window that opened last night and is still running at breakfast.</p>
+
+  <h3 class="sec">One rule, two clocks</h3>
+
+  <div class="callout teal">
+    <span class="ct">Callout · Two Clocks, One Karana</span>
+    Bhadra lives entirely on Chapter 6's <strong>synodic</strong> clock. It is an angular relationship between two bodies, so it is zodiac-free and <strong>ayanamsa-free</strong> — a Bhadra window is identical in tropical and sidereal calculation, and identical whether you use Lahiri, Raman or KP. The Moon's <em>sign</em> during Bhadra, which Lesson 6A.4 needs, is a placement: sidereal-only and ayanamsa-dependent, on the star clock. One rule, both clocks, kept carefully apart. Confusing them is how practitioners end up arguing about Bhadra timings that were never in dispute.
+  </div>
+
+  <div class="keyrule"><span class="small">The rule to lock in</span>Bhadra is not a judgement. It is <b>arithmetic on the Moon−Sun angle</b> — 6° wide, eight times a lunar month, computable to the second and identical in every zodiac.</div>
+
+  <div class="qa">
+    <div class="qa-h">💬 Check yourself · Lesson 6A.2</div>
+    <div class="qa-i"><div class="qa-q"><b>Q1</b>How many Bhadra windows occur in a lunar month, and why is the number fixed?</div><div class="qa-a"><b>A</b><strong>Eight.</strong> The seven movable karanas repeat in strict order eight times between karana 2 and karana 57, so Vishti necessarily falls on karanas <strong>8, 15, 22, 29, 36, 43, 50 and 57</strong> — no more, no fewer.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q2</b>Give the one-line rule for Day versus Night Bhadra.</div><div class="qa-a"><b>A</b><strong>Odd karana number is Day Bhadra; even is Night Bhadra</strong> — that is, the first half of the tithi versus the second half.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q3</b>Why does the choice of ayanamsa not affect a Bhadra window's timing?</div><div class="qa-a"><b>A</b>Because the window is defined by an <strong>angle between two bodies</strong>, not by a position against the zodiac. Angles are zodiac-independent (Chapter 2), so the timing is identical in every frame. Only the Moon's <em>sign</em> during the window is ayanamsa-dependent.</div></div>
+  </div>
+  <div class="recap"><div class="n">8</div><div><div class="l">Lesson 6A.2 — Locked In</div><div class="t">The lattice, fixed</div><div class="d">Eight windows a lunar month on karanas 8, 15, 22, 29, 36, 43, 50 and 57; about 11.8 hours each; odd for Day and even for Night; and all of it zodiac-free arithmetic.</div></div></div>
+</div>
+
+<hr class="soft"/>
+
+<!-- ═══════════ 6A.3 ═══════════ -->
+<div class="lesson">
+  <div class="lesson-head"><div class="lesson-no">Lesson 6A.3</div><div class="lesson-title">How to Calculate It <em>— and for Anywhere</em></div></div>
+
+  <p><span class="tag fw">Framework</span> Five steps. Any ephemeris that returns Moon and Sun longitudes will do the work; this book uses Swiss Ephemeris throughout.</p>
+
+  <ol class="ladder">
+    <li><b>Longitudes.</b> Compute the tropical longitudes of the Moon and the Sun at the instant in question.</li>
+    <li><b>Elongation.</b> Take E = (Moon − Sun) mod 360.</li>
+    <li><b>Karana number.</b> K = floor(E ÷ 6) + 1, giving a value from 1 to 60.</li>
+    <li><b>Classification.</b> If K is not one of 8, 15, 22, 29, 36, 43, 50, 57, no Bhadra is running. If it is: odd K gives Day Bhadra, even K gives Night Bhadra.</li>
+    <li><b>Boundaries.</b> Bisect on the exact 6° multiples — the window opens where E first reaches 6 × (K − 1), and closes where it first reaches 6 × K.</li>
+  </ol>
+
+  <p>Step five is the one people skip, and it is where the precision lives. Do not sample the elongation on a half-hourly grid and report the grid point as the boundary; that is exactly how a published table ends up two hours out, as Lesson 6A.6 demonstrates on real data.</p>
+
+  <h3 class="sec">A window computed in full — 9 September 2026</h3>
+
+  <p><span class="tag as">Astronomical</span> At 00:00 IST the elongation stands at 315.84°, giving karana 53 — Kaulava. Not Bhadra. By 15:00 it has advanced to 324.15°, karana 55 — Gara. Still not Bhadra. Vishti for this lunar month sits at karana 57, which opens at 336°.</p>
+
+  <p>Bisecting: the elongation reaches 336.000° at <strong>12:31 IST on 9 September</strong> and 342.000° at <strong>23:30 IST</strong> the same day. Karana 57 is odd, so this is a <strong>Day Bhadra</strong>, falling on Krishna Chaturdashi, running 10h 59m. The Moon at the opening instant stands at 118°24' sidereal — Cancer.</p>
+
+  <p>Note carefully what the label does not mean. This window runs from lunchtime into late evening, well over half of it after dark, and it is <em>still</em> a Day Bhadra. Lesson 6A.4 explains why, and it is the single most common misreading of the whole doctrine.</p>
+
+  <h3 class="sec">Reading a window from another timezone</h3>
+
+  <p><span class="tag fw">Framework</span> Three distinct things happen when a Bhadra window is moved to a different part of the world, and keeping them apart is most of the work.</p>
+
+  <p><strong>The window itself does not move.</strong> Its start and end are absolute instants, defined by the Moon−Sun angle reaching an exact 6° multiple. Converting to another zone changes the digits on the clock and sometimes the calendar date. It changes nothing else, including the duration.</p>
+
+  <p><strong>The Day/Night classification does not change either.</strong> It derives from karana parity — a property of which half of the tithi you are in. There is no clock and no location anywhere in that derivation. A Day Bhadra is a Day Bhadra in Mumbai, London and New York simultaneously.</p>
+
+  <p><strong>Only one thing is local, and it changes with latitude and longitude rather than with the timezone.</strong> The crossing rule of Lesson 6A.4 asks whether the window opens after sunrise or after sunset — and sunrise is a local event. Two readers in the same timezone but at different latitudes can legitimately reach different verdicts on the same window.</p>
+
+  <p>The 9 September window makes the point concretely. Everything in the upper half of this table is fixed everywhere on Earth; everything in the lower half is not.</p>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th></th><th>Mumbai</th><th>New York</th></tr></thead>
+      <tbody>
+        <tr><td class="g">Window opens</td><td>12:31 IST, 9 Sep</td><td>03:01 EDT, 9 Sep</td></tr>
+        <tr><td class="g">Window closes</td><td>23:30 IST, 9 Sep</td><td>14:00 EDT, 9 Sep</td></tr>
+        <tr><td class="g">Karana</td><td>57</td><td>57</td></tr>
+        <tr><td class="g">Stay</td><td>Day Bhadra</td><td>Day Bhadra</td></tr>
+        <tr><td class="g">Moon at open</td><td>118°24' — Cancer</td><td>118°24' — Cancer</td></tr>
+        <tr><td class="g">Bhadra Nature 2</td><td>Earth Bhadra</td><td>Earth Bhadra</td></tr>
+        <tr><td class="g">Result 2</td><td class="dn">Negative</td><td class="dn">Negative</td></tr>
+        <tr><td class="g">Local sunrise</td><td>06:25</td><td>06:29</td></tr>
+        <tr><td class="g">Local sunset</td><td>18:46</td><td>19:16</td></tr>
+        <tr><td class="g">Opens after…</td><td>sunrise — Day Time</td><td>sunset — Night Time</td></tr>
+        <tr><td class="g">Result 1</td><td class="dn">Negative</td><td class="up">Positive</td></tr>
+        <tr><td class="g">Overall</td><td class="dn">Negative</td><td>Neutral</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout coral">
+    <span class="ct">The tables and your own screen will disagree</span>
+    <span class="tag ob">Observed</span> This is not an edge case. Across all ninety-nine windows of 2026, Mumbai and New York classify <strong>eighty-three of them differently</strong> on the day/night axis — <strong>84%</strong> — and every one of those carries a different composite verdict as a result. The cause is arithmetic, not error: New York runs nine and a half hours behind IST, so a window opening in Indian daylight usually opens in American darkness, and the crossing rule inverts. A reader who compares this book's tables against a locally computed Bhadra and finds them disagreeing four times in five has not found a bug. They have found the reference location.
+  </div>
+
+  <p><span class="tag fw">Framework</span> This book computes local sunrise and sunset for <strong>18°N58', 72°E50' — Mumbai</strong>, and reports all times in <strong>IST</strong>. Steps one through three above are universal and may be used exactly as printed anywhere in the world. Only the sunrise test must be recomputed for your own place — and if you choose not to recompute it, say so. A Mumbai-based day/night reading used in another city is a stated approximation, which is a perfectly respectable thing to be. An unstated one is not.</p>
+
+  <div class="keyrule"><span class="small">The rule to lock in</span>Timezone changes the clock. <b>Latitude and longitude change the verdict.</b> Only the sunrise test is local — everything else in a Bhadra reading travels unchanged.</div>
+
+  <div class="qa">
+    <div class="qa-h">💬 Check yourself · Lesson 6A.3</div>
+    <div class="qa-i"><div class="qa-q"><b>Q1</b>The elongation reads 338.5°. Is Bhadra running, and of which kind?</div><div class="qa-a"><b>A</b>K = floor(338.5 ÷ 6) + 1 = 56 + 1 = <strong>57</strong>, which is on the lattice — so <strong>yes</strong>. Karana 57 is odd, giving <strong>Day Bhadra</strong>, on the first half of Krishna Chaturdashi. The window runs from 336° to 342°, so it is about two-fifths elapsed.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q2</b>Which parts of a Bhadra reading change when you move from Mumbai to New York?</div><div class="qa-a"><b>A</b>Only the <strong>day/night crossing test</strong>, because it depends on local sunrise. The window's instants, its duration, its karana number, its Day/Night classification, the Moon's sign and the loka all stay identical.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q3</b>Why is bisection required for the boundaries rather than sampling?</div><div class="qa-a"><b>A</b>Because a boundary is the <strong>instant</strong> the elongation crosses an exact 6° multiple. Sampling on a grid reports the grid point, not the crossing — an error of up to the sampling interval, and the mechanism behind several of the published errors examined in Lesson 6A.6.</div></div>
+  </div>
+  <div class="recap"><div class="n">5</div><div><div class="l">Lesson 6A.3 — Locked In</div><div class="t">Five steps, one of them local</div><div class="d">Longitudes, elongation, karana number, parity, bisected boundaries — and the discipline of declaring which coordinates your sunrise test used, since that single step is the only part of the reading that travels badly.</div></div></div>
+</div>
+
+<hr class="soft"/>
+
+<!-- ═══════════ 6A.4 ═══════════ -->
+<div class="lesson">
+  <div class="lesson-head"><div class="lesson-no">Lesson 6A.4</div><div class="lesson-title">Reading the Effect <em>on the Day</em></div></div>
+
+  <p>A Bhadra window becomes something you can act on only after two independent classical tests, and both must fail before the window is genuinely adverse. Most windows fail only one, which is why the doctrine is far less prohibitive in practice than its reputation suggests.</p>
+
+  <h3 class="sec">Axis one — the crossing rule</h3>
+
+  <p><span class="tag cl">Classical</span> The first test asks whether the window's <em>nature</em> and its <em>timing</em> agree. Bhadra classified as Day but opening after sunset, or classified as Night but opening after sunrise, is held to be <strong>defused</strong> — the classical formulation being that Day Bhadra is auspicious at night and Night Bhadra auspicious by day. It is the same-period pairing that is live and harmful.</p>
+
+  <p><span class="tag fw">Framework</span> The reference is <strong>true sunrise and sunset at the place of the query, evaluated at the moment the window opens</strong>. A Bhadra beginning after sunrise is read as "in Day Time"; one beginning after sunset as "in Night Time." Not a fixed clock hour — in 2026 four windows open close enough to a boundary that a fixed 06:00 to 18:00 approximation would classify them differently, which is precisely why the convention must be declared rather than assumed.</p>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th></th><th>Opens after sunrise</th><th>Opens after sunset</th></tr></thead>
+      <tbody>
+        <tr><td class="g">Day Bhadra</td><td class="dn">Live — Negative</td><td class="up">Defused — Positive</td></tr>
+        <tr><td class="g">Night Bhadra</td><td class="up">Defused — Positive</td><td class="dn">Live — Negative</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout coral">
+    <span class="ct">The trap, stated plainly</span>
+    <strong>"Day Bhadra" is a tithi-half, read off the karana number. "In Day Time" is a clock fact, read off sunrise.</strong> They are different questions, and the answer to one tells you nothing about the other. Roughly half of all Day Bhadras open at night. The 9 September window computed in the previous lesson is a Day Bhadra that runs mostly after dark — and in New York it opens at three in the morning and is still a Day Bhadra.
+  </div>
+
+  <h3 class="sec">Axis two — Bhadra's address</h3>
+
+  <p><span class="tag cl">Classical</span> The second test asks <em>where Bhadra is residing</em>, read from the Moon's sidereal rashi during the window. Only the earthly residence is held to bite.</p>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>Moon in</th><th>Bhadra resides in</th><th>Read as</th></tr></thead>
+      <tbody>
+        <tr><td class="g">Aries, Taurus, Gemini, Scorpio</td><td>Swarga-loka — heaven</td><td class="up">Not here. Harmless.</td></tr>
+        <tr><td class="g">Virgo, Libra, Sagittarius, Capricorn</td><td>Patala-loka — the nether world</td><td class="up">Not here. Harmless.</td></tr>
+        <tr><td class="g">Cancer, Leo, Aquarius, Pisces</td><td>Mrityu-loka — earth</td><td class="dn">Present. The malefic case.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p><span class="tag fw">Framework</span> This axis is sidereal and therefore <strong>ayanamsa-dependent</strong>, unlike the first — and borderline cases are real. One 2026 window has the Moon at 2°04' into Sagittarius; under Lahiri that is Patala, and a materially different ayanamsa could move it. Flag borderline entries as borderline. Do not launder them into certainty.</p>
+
+  <h3 class="sec">The composite verdict</h3>
+
+  <p><span class="tag fw">Framework</span> Combining the two axes gives the reading a practitioner actually uses. Both defused gives <strong>Positive</strong> — a window that may reasonably be ignored. Both live gives <strong>Negative</strong> — the genuine avoid-window. A split gives <strong>Neutral</strong>.</p>
+
+  <p><span class="tag as">Astronomical</span> Computed across calendar 2026: <strong>33 Positive, 50 Neutral, and 16 Negative</strong> out of ninety-nine windows. Only about one Bhadra in six is fully live on both axes — a figure worth holding onto when someone describes Bhadra as though it shuts down a fifth of the year.</p>
+
+  <h3 class="sec">The five limbs — noted, not reproduced</h3>
+
+  <p><span class="tag vf">Verify</span> The tradition carries a refinement this book does not reproduce. The Bhadra interval is subdivided into five limbs — <em>mukha</em> (face), <em>kantha</em> (throat), <em>hridaya</em> (heart), <em>nabhi</em> (navel) and <em>puchha</em> (tail) — with the tail held to be not merely harmless but positively favourable, so that work begun in the closing portion of a Bhadra is said to succeed rather than merely survive.</p>
+
+  <p>The proportions assigned to each limb vary between texts, and several sources make them vary by loka as well, so that a Swarga Bhadra and a Mrityu Bhadra are divided differently. Rather than print an averaged figure matching no actual text, this book records that the doctrine exists and leaves the numbers to a properly sourced treatment.</p>
+
+  <div class="honest">
+    <span class="ct">Why the omission is deliberate</span>
+    The temptation here is worth naming. A five-limb subdivision would let a practitioner rescue any window at all by locating the tail — and a rule that can always be satisfied has stopped constraining anything. If the limbs are to be used, the proportions must be fixed in advance from a named text and applied without adjustment, which is exactly what the absence of an agreed set of proportions makes difficult.
+  </div>
+
+  <div class="keyrule"><span class="small">The rule to lock in</span>Two independent tests, and <b>both must fail</b> before a window is genuinely adverse. A table reporting Bhadra as a single yes or no has thrown away most of the doctrine.</div>
+
+  <div class="qa">
+    <div class="qa-h">💬 Check yourself · Lesson 6A.4</div>
+    <div class="qa-i"><div class="qa-q"><b>Q1</b>A Night Bhadra opens at 10:40 local time, well after sunrise. Is axis one live or defused?</div><div class="qa-a"><b>A</b><strong>Defused — Positive.</strong> Night Bhadra falling in the day is the crossing case; only Night-in-night and Day-in-day are live.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q2</b>The Moon is in Leo during a Bhadra window. What does axis two give, and why?</div><div class="qa-a"><b>A</b><strong>Mrityu-loka — Negative.</strong> Cancer, Leo, Aquarius and Pisces place Bhadra on earth, which is the only residence held to be harmful.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q3</b>Which of the two axes is ayanamsa-dependent, and why does it matter?</div><div class="qa-a"><b>A</b><strong>Axis two</strong>, because it reads the Moon's <em>sign</em> — a sidereal placement. Axis one uses only an angle and a sunrise, both ayanamsa-free. It matters because a Moon within a degree or two of a sign boundary can change loka under a different ayanamsa, and such cases should be flagged rather than reported flatly.</div></div>
+  </div>
+  <div class="recap"><div class="n">2</div><div><div class="l">Lesson 6A.4 — Locked In</div><div class="t">Two axes, both must fail</div><div class="d">The crossing rule against local sunrise, the loka read from the Moon's rashi, and the composite that follows — with only one window in six live on both counts across 2026.</div></div></div>
+</div>
+
+<hr class="soft"/>
+
+<!-- ═══════════ 6A.5 ═══════════ -->
+<div class="lesson">
+  <div class="lesson-head"><div class="lesson-no">Lesson 6A.5</div><div class="lesson-title">What a Market Practitioner <em>Should Actually Do</em></div></div>
+
+  <p><span class="tag fw">Framework</span> Bhadra is a muhurta rule about <strong>initiation</strong>. Exactly one trading concept maps onto it: <strong>entry timing</strong>. Not direction, not magnitude, not exits. Everything legitimate follows from that single correspondence, and every abuse follows from ignoring it.</p>
+
+  <h3 class="sec">The three legitimate uses</h3>
+
+  <ol class="ladder">
+    <li><b>A veto filter on discretionary new entries</b> during windows that are Negative on the composite reading — the sixteen days of 2026, not the ninety-nine windows.</li>
+    <li><b>A position-sizing haircut</b> rather than a hard block, for practitioners who prefer a graded response to a binary one.</li>
+    <li><b>Scheduling.</b> Where the timing of a planned entry is genuinely yours to choose — a rebalance, a new allocation, the opening of a position with no urgency — choose outside the window. This costs nothing and is the only use that survives every objection in this lesson.</li>
+  </ol>
+
+  <h3 class="sec">What it cannot do</h3>
+
+  <div class="cards">
+    <div class="card down"><div class="ic">🧭</div><div class="ti">1 · Not directional</div><div class="mt">Never a compass</div><p>A Bhadra window contains rallies and sell-offs in whatever proportion the market supplies. Chapter 6's warning applies without modification: this is a clock.</p></div>
+    <div class="card down"><div class="ic">🚪</div><div class="ti">2 · Nothing about exits</div><div class="mt">Beginnings only</div><p>The prohibition covers initiation. It is silent on holding, adding, trimming and closing — and a rule extended past its own scope is no longer that rule.</p></div>
+    <div class="card down"><div class="ic">📈</div><div class="ti">3 · Not a signal generator</div><div class="mt">Eight a month is too many</div><p>Eight windows per lunar month is eight fresh reasons to act. Chapter 6's overtrading caution applies with force: the clock should filter attention, never manufacture trades.</p></div>
+  </div>
+
+  <h3 class="sec">The base rate, computed rather than asserted</h3>
+
+  <p><span class="tag ob">Observed</span> This is the honest counterweight, and it belongs before any enthusiasm rather than after it. Computed for calendar 2026 against the NSE session, 09:15 to 15:30 IST, weekdays only:</p>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>Measure</th><th>2026</th><th>What it means</th></tr></thead>
+      <tbody>
+        <tr><td class="g">Total Bhadra hours</td><td>1,170 of 8,760</td><td>13.4% of the year sits under some Bhadra window</td></tr>
+        <tr><td class="g">Share of session hours</td><td>13.0%</td><td>Almost exactly the same fraction of actual trading time</td></tr>
+        <tr><td class="g">Weekdays touched</td><td>54 of 261 — 20.7%</td><td>One trading day in five touches a window</td></tr>
+        <tr><td class="g">Weekdays touched by a Negative window</td><td>8 of 261 — 3.1%</td><td>The genuinely selective filter — and a very small sample</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout coral">
+    <span class="ct">The base-rate trap</span>
+    One trading day in five touches a Bhadra window. Any list of bad things that happened during Bhadra will therefore be long <em>by construction</em> — and so will the equivalent list for any other arbitrary 13% slice of the clock. If you find yourself assembling such a list, you are performing Chapter 18's spurious-correlation exercise without noticing. The composite filter is the only genuinely selective one, and <strong>eight days a year is far too small a sample to establish anything</strong>. A rule this rare needs decades of data before it can be distinguished from noise, and by then the sample is contaminated by every regime change in the period.
+  </div>
+
+  <h3 class="sec">The unfalsifiability problem</h3>
+
+  <p><span class="tag fw">Framework</span> Practitioners of this material commonly hold that any astrological indication may be neutralised by a contrary indication running at the same time. As classical doctrine that is entirely defensible — competing yogas cancelling is a real principle, and the two-axis structure of Bhadra itself is an instance of it.</p>
+
+  <p>As an <em>empirical</em> claim it is a trapdoor. If every failed signal can be attributed to an unnamed simultaneous counter-signal, the rule has been placed permanently beyond testing. That is not a criticism of anyone's sincerity; it is a structural feature of how the claim is worded.</p>
+
+  <div class="honest">
+    <span class="ct">The discipline that repairs it</span>
+    <strong>Name the counter-signals in advance.</strong> If Bhadra is to be overridden by a specific set of conditions, enumerate them before the test rather than after the result. A rule with a pre-registered exception list is testable. A rule with a retrospective one is not — and the difference between the two is the entire subject of Chapter 19.
+  </div>
+
+  <p><span class="tag vf">Verify</span> There is <strong>no peer-reviewed literature</strong> on Bhadra and market returns, in either direction. It is untested rather than disproven, and the distinction matters in both directions: nobody has shown it works, and nobody has shown it does not. If you intend to use it, Chapter 19's standard applies without discount — pre-register the rule including its exceptions, backtest across enough lunar months to accumulate a usable sample, and hold out data for genuine out-of-sample testing (Chapter 18).</p>
+
+  <div class="keyrule"><span class="small">The rule to lock in</span>Bhadra is a <b>veto on beginnings</b>, never a forecast of outcomes. If your rule tells you which way price will go, you have stopped using Bhadra and started using something else.</div>
+
+  <div class="qa">
+    <div class="qa-h">💬 Check yourself · Lesson 6A.5</div>
+    <div class="qa-i"><div class="qa-q"><b>Q1</b>A position is already open when a Negative Bhadra window begins. What does the doctrine say to do?</div><div class="qa-a"><b>A</b><strong>Nothing.</strong> The prohibition covers initiation only. Work already underway is explicitly outside its scope, and using it as an exit signal is an extension the tradition does not support.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q2</b>Why is "here are ten crashes that happened during Bhadra" a worthless argument?</div><div class="qa-a"><b>A</b>Because Bhadra covers <strong>13% of all clock time</strong> and touches one trading day in five. A list that long is guaranteed by the base rate alone, and an identical list could be produced for any other arbitrary 13% slice.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q3</b>What single change makes the "contra-indication" defence testable?</div><div class="qa-a"><b>A</b><strong>Pre-registration.</strong> Enumerate the overriding conditions before the test rather than invoking them after a failure. A fixed exception list constrains the rule; a retrospective one immunises it.</div></div>
+  </div>
+  <div class="recap"><div class="n">🧭</div><div><div class="l">Lesson 6A.5 — Locked In</div><div class="t">Entries only, and honestly</div><div class="d">Three legitimate uses, three things it cannot do, a base rate that makes casual evidence worthless, and the pre-registration discipline that keeps the contra-indication defence from becoming a trapdoor.</div></div></div>
+</div>
+
+<hr class="soft"/>
+
+<!-- ═══════════ 6A.6 ═══════════ -->
+<div class="lesson">
+  <div class="lesson-head"><div class="lesson-no">Lesson 6A.6</div><div class="lesson-title">Auditing a Bhadra Table <em>— and Its Copies</em></div></div>
+
+  <p><span class="tag fw">Framework</span> Bhadra timings are published in thousands of almanacs, apps and annual calendars, and they disagree with one another. Some of that disagreement is legitimate — different reference locations produce different day/night classifications, as Lesson 6A.3 showed. Most of it is not.</p>
+
+  <h3 class="sec">The six checks</h3>
+
+  <p>Run these against any Bhadra table before trusting a single row of it. None requires more than arithmetic, and the first two cannot fail on correctly computed data.</p>
+
+  <ol class="ladder">
+    <li><b>Tithi against karana.</b> Does the tithi label match the karana number? Karana 43 must be Krishna Saptami. Always, with no exceptions.</li>
+    <li><b>Day/Night against parity.</b> Odd karana must read Day Bhadra, even must read Night. This is the single cheapest error-detector in the chapter.</li>
+    <li><b>Boundaries on the lattice.</b> Do start and end sit on exact 6° elongation multiples?</li>
+    <li><b>Sign against ephemeris.</b> Does the Moon's sidereal longitude at the opening instant fall in the printed sign?</li>
+    <li><b>Loka against sign.</b> Does the residence follow from the rashi by the table in Lesson 6A.4?</li>
+    <li><b>Composite against its inputs.</b> Does the overall verdict follow from the table's own two axis results?</li>
+  </ol>
+
+  <p>Any table failing check one or check two has been hand-edited somewhere, because neither can fail arithmetically.</p>
+
+  <h3 class="sec">The audit, run on real data</h3>
+
+  <p><span class="tag ob">Observed</span> These checks were run against a widely circulated 2026 panchang calendar carrying ninety-nine Bhadra rows for the year. <strong>Thirteen disagree with computation</strong> — nine timing errors and four wrong Moon signs. Four representative examples, one of each failure type:</p>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>Row</th><th>As printed</th><th>Computed</th><th>Failure type</th></tr></thead>
+      <tbody>
+        <tr><td class="g">16 Jan 2026</td><td>opens 20:22</td><td>opens 22:22</td><td>Boundary off by exactly two hours — check 3</td></tr>
+        <tr><td class="g">8 Oct 2026</td><td>08:07 to 22:17</td><td>22:16 to 09:54 on 9 Oct</td><td>Not a Vishti karana at all; the printed span is the preceding Gara/Vanija pair, and its <em>end</em> is the true <em>start</em> — check 3</td></tr>
+        <tr><td class="g">9 Jan 2026</td><td>Leo, Earth Bhadra</td><td>Virgo 156°34', Patal Bhadra</td><td>Wrong sign — check 4. Cascades: Result 2 flips, composite moves Negative to Positive</td></tr>
+        <tr><td class="g">20 Dec 2026</td><td>Pisces, Earth Bhadra</td><td>Aries 10°01', Swarg Bhadra</td><td>Wrong sign — check 4. Same cascade, opposite direction</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p><span class="tag ob">Observed</span> The timing errors carry a signature worth recognising. Five of the nine are almost exactly <strong>two hours</strong>, in both directions. That is not an ephemeris disagreement, which would be a matter of seconds; it is what isolated hand-adjusted cells look like. The 8 October row is worse in kind rather than degree — every field downstream on that row, including both axis verdicts, is computed from the wrong window entirely.</p>
+
+  <h3 class="sec">The second failure mode, which is the dangerous one</h3>
+
+  <div class="honest">
+    <span class="ct">A lesson learned the hard way, in preparing this chapter</span>
+    The audit above was first run against a <em>digital transcription</em> of the printed table rather than the printed pages themselves, and it produced a much longer and much worse error list — including two rows whose Day/Night classification appeared to violate check two, which is arithmetically impossible.
+    <br><br>
+    That impossibility was the tell. Checking against the printed pages showed the transcription was corrupt: a single dropped cell had shifted an entire column from mid-December onward, silently misdating four windows, and a second column was scrambled across roughly two dozen rows. <strong>Most of the apparent errors were in the copy, not the source.</strong> Publishing that first list would have produced an errata that was itself false.
+  </div>
+
+  <p><span class="tag fw">Framework</span> Two distinct failure modes, then, and the second is by far the more dangerous because it is invisible. A <strong>computational error</strong> in an original is bounded and detectable. A <strong>transmission error</strong> in a copy makes a correct source look wrong, and it arrives without any of the tells that mark a miscalculation.</p>
+
+  <p>Anyone downloading almanac data rather than computing it is exposed to the second mode continuously. Check two — Day/Night against karana parity — is the cheapest available detector for it. It costs nothing, it runs in seconds, and it catches corruption that no amount of careful reading will.</p>
+
+  <div class="callout green">
+    <span class="ct">Reproducibility, so you need not take any of this on trust</span>
+    Everything needed to run this audit yourself is in this chapter. The lattice is in Lesson 6A.2, the five-step computation in Lesson 6A.3, the reference coordinates (18°N58', 72°E50') in the same lesson, the two axis rules in Lesson 6A.4, and the six checks above. Any Bhadra table — including the one audited here, and including this book's own figures — can be verified against them with an ephemeris and an afternoon.
+  </div>
+
+  <div class="keyrule"><span class="small">The rule to lock in</span><b>Compute it.</b> Published tables fail, and copies of published tables fail worse — and only the copy fails in a way that makes the original look guilty.</div>
+
+  <div class="qa">
+    <div class="qa-h">💬 Check yourself · Lesson 6A.6</div>
+    <div class="qa-i"><div class="qa-q"><b>Q1</b>A table shows karana 50 labelled Day Bhadra. What do you conclude, and why immediately?</div><div class="qa-a"><b>A</b>The table has been <strong>hand-edited or corrupted</strong>. Karana 50 is even, so it must read Night Bhadra. Check two cannot fail arithmetically, so any failure of it is a human artefact — no further investigation is needed to distrust the row.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q2</b>What distinguishes a computational error from a transmission error in practice?</div><div class="qa-a"><b>A</b>A computational error is <strong>bounded and internally consistent</strong> — a boundary two hours out, or a sign misread by one. A transmission error breaks <strong>impossible things</strong>, like parity, and often shifts whole columns, making a correct source appear wrong.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q3</b>Why does a two-hour offset point to hand editing rather than a different ephemeris?</div><div class="qa-a"><b>A</b>Because ephemerides agree on lunar and solar longitudes to <strong>far better than a second of time</strong> for a modern date. A discrepancy of exactly two hours, appearing in both directions on isolated rows, is a human or spreadsheet artefact, not a difference of astronomical method.</div></div>
+  </div>
+  <div class="recap"><div class="n">6</div><div><div class="l">Lesson 6A.6 — Locked In</div><div class="t">Trust nothing you did not compute</div><div class="d">Six checks, thirteen real errors in a published year, a two-hour signature that gives hand editing away — and the harder lesson that a corrupt copy will frame an innocent source.</div></div></div>
+</div>
+
+<hr class="soft"/>
+
+<h3 class="sec" style="font-size:24px;text-align:center;">Chapter 6A — Locked In</h3>
+<p style="text-align:center;color:var(--ink-soft);">You have learned the Panchanga's fifth limb, the one Chapter 6 named and left. Here are the five things to carry forward.</p>
+<ol class="takeaways">
+  <li><strong>Bhadra is the Vishti karana</strong> — a 6° step of Moon−Sun elongation, eight times a lunar month, about 11.8 hours each, sitting on karanas 8, 15, 22, 29, 36, 43, 50 and 57. It is arithmetic, not judgement.</li>
+  <li><strong>It vetoes beginnings.</strong> It is never directional, and it is silent on holding, adding and exiting. A Bhadra rule that predicts direction is no longer a Bhadra rule.</li>
+  <li><strong>Day and Night Bhadra is a tithi-half</strong>, read from karana parity — odd is Day, even is Night. It has nothing to do with daylight and does not change with timezone. Half of all Day Bhadras open after dark.</li>
+  <li><strong>Two axes, both of which must fail</strong> before a window is adverse: the crossing rule against local sunrise, and the loka read from the Moon's rashi. Across 2026 only sixteen windows in ninety-nine are live on both. Only the sunrise test is local.</li>
+  <li><strong>Compute it yourself.</strong> Thirteen of ninety-nine rows in a published 2026 table disagree with the ephemeris — and a corrupt transcription of that same table disagreed far more, in ways that made the original look worse than it was.</li>
+</ol>
+
+<h4 class="lab">The practitioner's checklist</h4>
+<ul class="checklist">
+  <li><span class="box"></span><div><b>1. Computed to the minute?</b> Never treat Bhadra as a property of a <em>date</em> — the whole value is in knowing which part of the day is clear.</div></li>
+  <li><span class="box"></span><div><b>2. Yesterday's window checked?</b> Fifty-two of ninety-nine windows in 2026 cross midnight; today's row alone will not tell you whether one is running now.</div></li>
+  <li><span class="box"></span><div><b>3. Day/Night read from the karana number?</b> Never from the clock, and never from the window's position relative to daylight.</div></li>
+  <li><span class="box"></span><div><b>4. Sunrise test recomputed for your own coordinates?</b> Mumbai and New York disagree on 84% of windows. If you are using the book's Mumbai basis elsewhere, that is fine — but say so.</div></li>
+  <li><span class="box"></span><div><b>5. Both axes checked before treating a window as adverse?</b> Only about one in six is live on both counts; a single-axis reading over-prohibits by a factor of five.</div></li>
+  <li><span class="box"></span><div><b>6. Applied to entries only?</b> Never to direction, never to exits, never as a trade trigger in its own right.</div></li>
+  <li><span class="box"></span><div><b>7. Exceptions pre-registered?</b> If a contrary indication is allowed to override Bhadra, the list of such indications must be fixed before the test, not assembled after a failure.</div></li>
+  <li><span class="box"></span><div><b>8. Six audit checks run on any table you did not compute?</b> Especially check two, which catches transmission corruption that reading will not.</div></li>
+</ul>
+
+<h4 class="lab">A small glossary — the words you met</h4>
+<div class="gloss"><dl>
+  <dt>Karana</dt><dd>A half-tithi — 6° of Moon−Sun elongation; sixty to a lunar month, and the fifth limb of the Panchanga.</dd>
+  <dt>Chara karanas (movable)</dt><dd>Bava, Balava, Kaulava, Taitila, Gara, Vanija, Vishti — the seven that cycle in fixed order, repeating eight times to fill karanas 2 through 57.</dd>
+  <dt>Sthira karanas (fixed)</dt><dd>Kimstughna, Shakuni, Chatushpada, Naga — the four occurring once each per lunar month, bracketing the movable cycle at karana 1 and karanas 58 to 60.</dd>
+  <dt>Vishti</dt><dd>The seventh movable karana; the only one carrying a prohibition rather than a flavour.</dd>
+  <dt>Bhadra</dt><dd>The interval during which Vishti karana runs. Interchangeable with Vishti in almanac usage. Unrelated to the nakshatras Purva and Uttara Bhadrapada.</dd>
+  <dt>The karana lattice</dt><dd>Karanas 8, 15, 22, 29, 36, 43, 50 and 57 — the eight fixed positions at which Vishti falls in every lunar month.</dd>
+  <dt>Day Bhadra / Night Bhadra</dt><dd>Classification by karana parity — odd gives Day, even gives Night; equivalently, the first versus the second half of a tithi. A property of the lunar month, not of daylight, and invariant with timezone.</dd>
+  <dt>The crossing rule</dt><dd>A Bhadra opening in the opposite period to its own classification is held to be defused; the same-period pairing is the live, harmful case.</dd>
+  <dt>Bhadra-vaas</dt><dd>Bhadra's residence — which of the three worlds it occupies during a window, read from the Moon's sidereal rashi.</dd>
+  <dt>Swarga-loka</dt><dd>The heavenly residence; Moon in Aries, Taurus, Gemini or Scorpio. Held harmless to earthly affairs.</dd>
+  <dt>Patala-loka</dt><dd>The nether residence; Moon in Virgo, Libra, Sagittarius or Capricorn. Likewise held harmless here.</dd>
+  <dt>Mrityu-loka</dt><dd>The earthly residence; Moon in Cancer, Leo, Aquarius or Pisces. The only case the tradition treats as genuinely malefic.</dd>
+  <dt>Mukha, kantha, hridaya, nabhi, puchha</dt><dd>Face, throat, heart, navel and tail — the five limbs into which some texts subdivide a Bhadra interval, the tail being held favourable. Proportions vary by source and are not reproduced in this book.</dd>
+  <dt>Muhurta</dt><dd>Electional timing — the choosing of an auspicious moment, assembled from the Panchanga. Bhadra is its most-used prohibition.</dd>
+</dl></div>
+
+<p class="bridge">End of Chapter 6A. The Panchanga's fifth limb is developed, its one prohibition computed, and its evidence stated at its true weight.<br/>Next: <strong>Chapter 7 — "Dignity, Strength &amp; Speed,"</strong> which makes precise the "state" of a planet that Chapters 4–6 kept invoking — exaltation and debilitation, retrogradation, combustion, and stations — and why a planet's <em>condition</em>, not just its identity, drives its market effect.</p>
+
+</body>
+</html>

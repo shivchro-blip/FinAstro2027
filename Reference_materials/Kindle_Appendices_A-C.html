@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Celestial Ledger — Appendices A–C: Reference Material</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --paper:#fbf9f4; --paper2:#f4efe4; --card:#ffffff; --ink:#26211c; --ink-soft:#4f463c; --ink-faint:#857a6c;
+  --line:#e6dfce; --line-soft:#efe9dc;
+  --gold:#9a7113; --gold-soft:#fbf2da; --gold-line:#e7cf94;
+  --teal:#0c7d68; --teal-soft:#e3f3ef;
+  --coral:#b23a2e; --coral-soft:#f8e9e6;
+  --violet:#6244a8; --violet-soft:#efeafa;
+  --green:#2f7d4f; --green-soft:#e6f3ea;
+  --blue:#1f6aa6; --blue-soft:#e7f0f8;
+  --slate:#46586b; --slate-soft:#e9eef3;
+  --serif:'Playfair Display',Georgia,'Times New Roman',serif;
+  --body:Georgia,'Iowan Old Style','Palatino Linotype',serif;
+  --sans:'Inter',system-ui,-apple-system,sans-serif;
+  --mono:'JetBrains Mono','SF Mono',Menlo,Consolas,monospace;
+  --r:10px; --r-sm:7px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{ -webkit-text-size-adjust:100%; }
+body{ background:var(--paper); color:var(--ink); font-family:var(--body); font-size:18px; line-height:1.72; max-width:780px; margin:0 auto; padding:30px 26px 90px; }
+p{ margin:0 0 14px; } strong{ color:var(--ink); font-weight:600; } em{ font-style:italic; }
+
+.hero{ text-align:center; padding:22px 0 30px; border-bottom:2px solid var(--gold-line); margin-bottom:34px; }
+.hero .kicker{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:var(--gold); }
+.hero h1{ font-family:var(--serif); font-weight:900; font-size:40px; line-height:1.12; margin:14px 0 0; }
+.hero h1 em{ color:var(--gold); font-style:italic; }
+.hero .sub{ font-style:italic; color:var(--ink-soft); font-size:17px; max-width:580px; margin:16px auto 0; }
+.hero .ornament{ color:var(--gold); letter-spacing:.5em; margin-top:18px; font-size:14px; }
+
+.lesson{ margin:0 0 50px; }
+.lesson-head{ display:flex; align-items:baseline; gap:12px; border-bottom:1px solid var(--line); padding-bottom:8px; margin-bottom:18px; }
+.lesson-no{ font-family:var(--sans); font-size:12px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); white-space:nowrap; }
+.lesson-title{ font-family:var(--serif); font-weight:700; font-size:25px; line-height:1.2; }
+.lesson-title em{ color:var(--gold); font-style:italic; }
+h3.sec{ font-family:var(--serif); font-style:italic; font-weight:600; font-size:21px; color:var(--gold); margin:28px 0 10px; }
+h4.lab{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-faint); margin:22px 0 9px; }
+
+.callout{ border-left:4px solid var(--gold); background:var(--gold-soft); border-radius:0 var(--r-sm) var(--r-sm) 0; padding:14px 18px; margin:18px 0; font-size:16.5px; line-height:1.62; }
+.callout .ct{ display:block; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:5px; color:var(--gold); }
+.callout.teal{ border-color:var(--teal); background:var(--teal-soft);} .callout.teal .ct{ color:var(--teal);}
+.callout.coral{ border-color:var(--coral); background:var(--coral-soft);} .callout.coral .ct{ color:var(--coral);}
+.callout.violet{ border-color:var(--violet); background:var(--violet-soft);} .callout.violet .ct{ color:var(--violet);}
+.callout.green{ border-color:var(--green); background:var(--green-soft);} .callout.green .ct{ color:var(--green);}
+.callout.slate{ border-color:var(--slate); background:var(--slate-soft);} .callout.slate .ct{ color:var(--slate);}
+.honest{ border-left:4px solid var(--violet); background:var(--violet-soft); border-radius:0 var(--r-sm) var(--r-sm) 0; padding:14px 18px; margin:18px 0; font-size:16px; }
+.honest .ct{ display:block; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:5px; color:var(--violet); }
+
+.keyrule{ text-align:center; font-family:var(--serif); font-style:italic; font-size:20px; line-height:1.5; color:var(--gold); border-top:1px solid var(--gold-line); border-bottom:1px solid var(--gold-line); padding:18px 14px; margin:22px 0; }
+.keyrule .small{ display:block; font-family:var(--sans); font-style:normal; font-size:10px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:8px; }
+.keyrule b{ font-style:normal; color:var(--ink); }
+
+.tag{ display:inline-block; font-family:var(--sans); font-size:10px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:1px 7px; border-radius:4px; vertical-align:middle; }
+.tag.cl{ background:var(--blue-soft); color:var(--blue); } .tag.fw{ background:var(--gold-soft); color:var(--gold); } .tag.vf{ background:var(--violet-soft); color:var(--violet); }
+.tag.ob{ background:var(--teal-soft); color:var(--teal); } .tag.as{ background:var(--slate-soft); color:var(--slate); } .tag.hi{ background:var(--coral-soft); color:var(--coral); } .tag.rg{ background:var(--green-soft); color:var(--green); }
+
+.cards{ display:flex; flex-wrap:wrap; gap:12px; margin:16px 0; }
+.card{ flex:1 1 220px; background:var(--card); border:1px solid var(--line); border-top:3px solid var(--gold); border-radius:var(--r-sm); padding:14px 16px; }
+.card.up{ border-top-color:var(--green);} .card.down{ border-top-color:var(--coral);} .card.teal{ border-top-color:var(--teal);} .card.violet{ border-top-color:var(--violet);} .card.slate{ border-top-color:var(--slate);} .card.blue{ border-top-color:var(--blue);}
+.card .ic{ font-size:24px; line-height:1; } .card .ti{ font-family:var(--serif); font-weight:700; font-size:18px; margin:6px 0 2px; } .card .ti em{ color:var(--gold); font-style:italic; font-weight:400; font-size:14px; }
+.card .mt{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px; } .card p{ font-size:15px; line-height:1.55; margin:0; color:var(--ink-soft); }
+
+.tw{ overflow-x:auto; border:1px solid var(--line); border-radius:var(--r-sm); margin:16px 0; }
+table{ width:100%; border-collapse:collapse; font-family:var(--sans); }
+thead tr{ background:var(--gold-soft); }
+th{ font-size:10.5px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:var(--gold); text-align:left; padding:9px 11px; white-space:nowrap; }
+td{ font-size:13px; padding:8px 11px; border-top:1px solid var(--line-soft); vertical-align:top; color:var(--ink-soft); }
+td.g{ color:var(--gold); font-weight:600; white-space:nowrap; }
+td.up{ color:var(--green); font-weight:600;} td.dn{ color:var(--coral); font-weight:600;}
+td.s{ color:var(--slate); font-weight:600; white-space:nowrap; }
+tbody tr:nth-child(even){ background:#fcfaf5; }
+tr.total td{ background:var(--gold-soft); color:var(--gold); font-weight:700; border-top:2px solid var(--gold-line); }
+
+pre{ background:var(--paper2); border:1px solid var(--line); border-left:3px solid var(--slate); border-radius:var(--r-sm); padding:14px 16px; margin:14px 0; overflow-x:auto; }
+pre code{ font-family:var(--mono); font-size:13.5px; line-height:1.62; color:var(--ink); white-space:pre; display:block; }
+code{ font-family:var(--mono); font-size:.9em; background:var(--paper2); padding:1px 5px; border-radius:4px; color:var(--slate); }
+pre code .cm{ color:var(--ink-faint); font-style:italic; }
+
+.qa{ border:1px solid var(--line); border-radius:var(--r-sm); overflow:hidden; margin:20px 0; }
+.qa-h{ background:var(--paper2); padding:9px 15px; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); border-bottom:1px solid var(--line); }
+.qa-i{ padding:12px 15px; border-bottom:1px solid var(--line-soft); } .qa-i:last-child{ border-bottom:none; }
+.qa-q{ font-size:16px; } .qa-q b{ color:var(--gold); font-family:var(--sans); font-size:12px; font-weight:700; margin-right:8px; }
+.qa-a{ font-size:16px; color:var(--ink-soft); margin-top:5px; } .qa-a b{ color:var(--teal); font-family:var(--sans); font-size:12px; font-weight:700; margin-right:8px; }
+
+.gloss{ background:var(--card); border:1px solid var(--line); border-radius:var(--r-sm); padding:6px 18px; margin:16px 0; }
+.gloss dt{ font-family:var(--serif); font-weight:700; font-size:16px; color:var(--gold); margin:12px 0 1px; }
+.gloss dd{ margin:0 0 4px; font-size:15.5px; color:var(--ink-soft); }
+
+.checklist{ list-style:none; padding:0; margin:14px 0; }
+.checklist li{ position:relative; padding:8px 0 8px 32px; border-bottom:1px solid var(--line-soft); font-size:15.5px; }
+.checklist li:last-child{ border-bottom:none; }
+.checklist li::before{ content:"\2610"; position:absolute; left:0; top:6px; font-size:19px; color:var(--gold); }
+
+.bridge{ text-align:center; font-style:italic; color:var(--ink-faint); font-size:15px; border-top:1px solid var(--line); padding-top:22px; margin-top:34px; }
+hr.soft{ border:none; border-top:1px solid var(--line); margin:30px 0; }
+@media (max-width:600px){ body{font-size:17px;padding:20px 16px 70px;} .hero h1{font-size:31px;} .lesson-title{font-size:21px;} pre code{font-size:12px;} }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="kicker">The Celestial Ledger · Reference Material</div>
+  <h1>Appendices <em>A–C</em></h1>
+  <div class="sub">Reference appendices to <em>The Celestial Ledger</em>. Appendix A gives working Swiss Ephemeris recipes; Appendix B consolidates the book's reference tables; Appendix C presents the foundation and crash charts as data. All computations use Swiss Ephemeris (pyswisseph); planetary positions are sidereal/Lahiri unless stated.</div>
+  <div class="ornament">✦ ✦ ✦</div>
+</div>
+
+<div class="callout violet">
+  <span class="ct">Claim-type key</span>
+  <span class="tag as">Astronomical</span> verifiable · <span class="tag cl">Classical</span> traditional doctrine · <span class="tag fw">Framework</span> this book's (non-standardized) construct · <span class="tag ob">Observed</span> empirical caveat. These are reference data and teaching aids, <strong>not</strong> trading signals or advice.
+</div>
+
+<!-- ===================== APPENDIX A ===================== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Appendix A</span>
+    <span class="lesson-title">The Ephemeris <em>How-To</em> — Swiss Ephemeris / pyswisseph</span>
+  </div>
+
+  <div class="callout slate">
+    <span class="ct"><span class="tag as">Astronomical</span></span>
+    Everything numeric in this book was computed, not recalled. This appendix lets the reader reproduce it. (Astronomy is verifiable; the <em>interpretations</em> remain unproven — Chapter 19.)
+  </div>
+
+  <h3 class="sec">A.1 Installation</h3>
+  <pre><code>pip install pyswisseph --break-system-packages</code></pre>
+
+  <h3 class="sec">A.2 The Julian Day (the time backbone)</h3>
+  <p>All Swiss Ephemeris calls use <strong>Universal Time (UT)</strong> via a Julian Day number. Hours are decimal (10:30 → 10.5):</p>
+  <pre><code>import swisseph as swe
+jd = swe.julday(2026, 6, 22, 12.0)   <span class="cm"># 22 Jun 2026, 12:00 UT</span></code></pre>
+  <p><strong>Caveat:</strong> convert local clock time to UT first (e.g., IST = UT + 5:30, so 18:14 IST → 12.733 UT). Birth/first-trade charts are time-sensitive (Chapter 13).</p>
+
+  <h3 class="sec">A.3 Tropical and sidereal positions</h3>
+  <pre><code>trop = swe.calc_ut(jd, swe.SUN)[0][0]                 <span class="cm"># tropical longitude (deg)</span>
+swe.set_sid_mode(swe.SIDM_LAHIRI)                      <span class="cm"># choose ayanamsa</span>
+ay   = swe.get_ayanamsa_ut(jd)                         <span class="cm"># the ayanamsa value</span>
+sid  = (trop - ay) % 360                               <span class="cm"># sidereal longitude</span></code></pre>
+  <div class="callout slate">
+    <span class="ct"><span class="tag as">Astronomical</span></span>
+    Validated for 22 Jun 2026: <strong>Lahiri ayanamsa 24.2269°</strong>, <strong>KP ayanamsa 24.1300°</strong> (they differ by ~5.8′ — Chapter 2). Tropical Sun 91.10° → sidereal Sun <strong>6.87° Gemini</strong>. For KP work use <code>swe.SIDM_KRISHNAMURTI</code>.
+  </div>
+
+  <h3 class="sec">A.4 Sign, nakshatra, and pada from a longitude</h3>
+  <pre><code>signs = ["Aries","Taurus","Gemini","Cancer","Leo","Virgo","Libra",
+         "Scorpio","Sagittarius","Capricorn","Aquarius","Pisces"]
+sign  = signs[int(sid // 30)]            <span class="cm"># 30° per sign</span>
+naks  = int(sid // (360/27))             <span class="cm"># 27 nakshatras of 13°20′</span>
+pada  = int((sid % (360/27)) // (360/108))  <span class="cm"># 4 padas per nakshatra</span></code></pre>
+
+  <h3 class="sec">A.5 Speed, retrograde, and stations</h3>
+  <pre><code>lon, _, _, speed = swe.calc_ut(jd, swe.SATURN)[0][:4]
+retrograde = speed < 0                    <span class="cm"># negative longitude-speed = retrograde</span></code></pre>
+  <p>A <strong>station</strong> is where speed crosses zero — scan day-by-day for a sign change in speed to date it (Chapters 7, 10).</p>
+
+  <h3 class="sec">A.6 Tithi (lunar day) and phase</h3>
+  <pre><code>sun  = (swe.calc_ut(jd, swe.SUN)[0][0]  - ay) % 360
+moon = (swe.calc_ut(jd, swe.MOON)[0][0] - ay) % 360
+tithi = int(((moon - sun) % 360) / 12) + 1   <span class="cm"># 1–30; 1–15 waxing, 16–30 waning</span></code></pre>
+  <div class="callout slate">
+    <span class="ct"><span class="tag as">Astronomical</span></span>
+    Tithi is <strong>zodiac-independent</strong> (a Sun–Moon angle) — it is identical in any ayanamsa (Chapter 6).
+  </div>
+
+  <h3 class="sec">A.7 Combustion check (proximity to the Sun)</h3>
+  <pre><code>def gap_from_sun(jd, planet):
+    s = swe.calc_ut(jd, swe.SUN)[0][0]
+    p = swe.calc_ut(jd, planet)[0][0]
+    d = abs((p - s) % 360); return min(d, 360 - d)
+<span class="cm"># compare to the planet's combustion orb (Appendix B.6)</span></code></pre>
+
+  <h3 class="sec">A.8 Vimshottari mahadasha lord at birth</h3>
+  <pre><code>order = ["Ketu","Venus","Sun","Moon","Mars","Rahu","Jupiter","Saturn","Mercury"]
+naks  = int(moon // (360/27))
+birth_dasha_lord = order[naks % 9]      <span class="cm"># from the Moon's nakshatra</span></code></pre>
+  <div class="callout slate">
+    <span class="ct"><span class="tag as">Astronomical</span></span>
+    Validated: Moon 13.76° Virgo → Hasta (nakshatra #13) → birth mahadasha lord <strong>Moon</strong>. Full dasha <em>dates</em> require the elapsed fraction of the nakshatra at birth × the lord's years (Appendix B.4; Chapter 12).
+  </div>
+
+  <h3 class="sec">A.9 Aspects / separations between two bodies</h3>
+  <pre><code>def separation(jd, p1, p2):
+    a = swe.calc_ut(jd, p1)[0][0]; b = swe.calc_ut(jd, p2)[0][0]
+    d = abs((a - b) % 360); return min(d, 360 - d)</code></pre>
+  <div class="callout slate">
+    <span class="ct"><span class="tag as">Astronomical</span></span>
+    Separations and aspects are <strong>zodiac-independent</strong> — the Jupiter–Saturn angle is the same in tropical and sidereal (Chapter 2). This is why the Western cycle toolkit transfers unchanged.
+  </div>
+
+  <div class="callout">
+    <span class="ct">A.10 — What needs more inputs</span>
+    Houses, ascendant, and KP sub-lord cusps require <strong>latitude, longitude, and exact time</strong> (<code>swe.houses_ex</code> with a house system such as Placidus for KP). These are the <em>fragile</em> layers (Chapters 13–14); planet-in-sign is the robust one.
+  </div>
+</div>
+
+<hr class="soft"/>
+
+<!-- ===================== APPENDIX B ===================== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Appendix B</span>
+    <span class="lesson-title">Reference <em>Tables</em></span>
+  </div>
+
+  <h3 class="sec">B.1 Planetary dignities <span class="tag cl">Classical</span></h3>
+  <div class="tw">
+    <table>
+      <thead><tr><th>Planet</th><th>Exaltation</th><th>Debilitation</th><th>Own sign(s)</th><th>Moolatrikona</th></tr></thead>
+      <tbody>
+        <tr><td class="g">Sun</td><td>10° Aries</td><td>10° Libra</td><td>Leo</td><td>Leo 0–20°</td></tr>
+        <tr><td class="g">Moon</td><td>3° Taurus</td><td>3° Scorpio</td><td>Cancer</td><td>Taurus 3–30°</td></tr>
+        <tr><td class="g">Mars</td><td>28° Capricorn</td><td>28° Cancer</td><td>Aries, Scorpio</td><td>Aries 0–12°</td></tr>
+        <tr><td class="g">Mercury</td><td>15° Virgo</td><td>15° Pisces</td><td>Gemini, Virgo</td><td>Virgo 15–20°</td></tr>
+        <tr><td class="g">Jupiter</td><td>5° Cancer</td><td>5° Capricorn</td><td>Sagittarius, Pisces</td><td>Sagittarius 0–10°</td></tr>
+        <tr><td class="g">Venus</td><td>27° Pisces</td><td>27° Virgo</td><td>Taurus, Libra</td><td>Libra 0–15°</td></tr>
+        <tr><td class="g">Saturn</td><td>20° Libra</td><td>20° Aries</td><td>Capricorn, Aquarius</td><td>Aquarius 0–20°</td></tr>
+        <tr><td class="g">Rahu</td><td>(disputed — some say Taurus/Gemini)</td><td>(disputed — Scorpio/Sagittarius)</td><td>—</td><td>—</td></tr>
+        <tr><td class="g">Ketu</td><td>(disputed — Scorpio/Sagittarius)</td><td>(disputed — Taurus/Gemini)</td><td>—</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout teal">
+    <span class="ct"><span class="tag ob">Observed</span></span>
+    Rahu/Ketu dignities are <strong>not agreed</strong> across authorities (Chapter 0) — treat as disputed.
+  </div>
+
+  <h3 class="sec">B.2 Aspects</h3>
+  <h4 class="lab">Western aspects [Framework / Classical] — angle and typical orb</h4>
+  <div class="tw">
+    <table>
+      <thead><tr><th>Aspect</th><th>Angle</th><th>Typical orb</th></tr></thead>
+      <tbody>
+        <tr><td class="g">Conjunction</td><td>0°</td><td>8°</td></tr>
+        <tr><td class="g">Sextile</td><td>60°</td><td>6°</td></tr>
+        <tr><td class="g">Square</td><td>90°</td><td>8°</td></tr>
+        <tr><td class="g">Trine</td><td>120°</td><td>8°</td></tr>
+        <tr><td class="g">Opposition</td><td>180°</td><td>8°</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <h4 class="lab">Vedic special aspects (drishti) <span class="tag cl">Classical</span> — all planets aspect the 7th; additionally</h4>
+  <div class="tw">
+    <table>
+      <thead><tr><th>Planet</th><th>Special aspects</th></tr></thead>
+      <tbody>
+        <tr><td class="g">Mars</td><td>4th, 7th, 8th</td></tr>
+        <tr><td class="g">Jupiter</td><td>5th, 7th, 9th</td></tr>
+        <tr><td class="g">Saturn</td><td>3rd, 7th, 10th</td></tr>
+        <tr><td class="g">Rahu (some schools)</td><td>5th, 7th, 9th</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout slate">
+    <span class="ct"><span class="tag as">Astronomical</span></span>
+    Aspect <em>angles</em> are zodiac-independent; only sign/house placement shifts between tropical and sidereal (Chapter 2).
+  </div>
+
+  <h3 class="sec">B.3 The 27 nakshatras (span, Vimshottari lord)</h3>
+  <div class="tw">
+    <table>
+      <thead><tr><th>#</th><th>Nakshatra</th><th>Span (sidereal)</th><th>Lord</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td class="g">Ashwini</td><td>0°00′–13°20′ Ar</td><td>Ketu</td></tr>
+        <tr><td>2</td><td class="g">Bharani</td><td>13°20′–26°40′ Ar</td><td>Venus</td></tr>
+        <tr><td>3</td><td class="g">Krittika</td><td>26°40′ Ar–10°00′ Ta</td><td>Sun</td></tr>
+        <tr><td>4</td><td class="g">Rohini</td><td>10°00′–23°20′ Ta</td><td>Moon</td></tr>
+        <tr><td>5</td><td class="g">Mrigashira</td><td>23°20′ Ta–6°40′ Ge</td><td>Mars</td></tr>
+        <tr><td>6</td><td class="g">Ardra</td><td>6°40′–20°00′ Ge</td><td>Rahu</td></tr>
+        <tr><td>7</td><td class="g">Punarvasu</td><td>20°00′ Ge–3°20′ Cn</td><td>Jupiter</td></tr>
+        <tr><td>8</td><td class="g">Pushya</td><td>3°20′–16°40′ Cn</td><td>Saturn</td></tr>
+        <tr><td>9</td><td class="g">Ashlesha</td><td>16°40′–30°00′ Cn</td><td>Mercury</td></tr>
+        <tr><td>10</td><td class="g">Magha</td><td>0°00′–13°20′ Le</td><td>Ketu</td></tr>
+        <tr><td>11</td><td class="g">P. Phalguni</td><td>13°20′–26°40′ Le</td><td>Venus</td></tr>
+        <tr><td>12</td><td class="g">U. Phalguni</td><td>26°40′ Le–10°00′ Vi</td><td>Sun</td></tr>
+        <tr><td>13</td><td class="g">Hasta</td><td>10°00′–23°20′ Vi</td><td>Moon</td></tr>
+        <tr><td>14</td><td class="g">Chitra</td><td>23°20′ Vi–6°40′ Li</td><td>Mars</td></tr>
+        <tr><td>15</td><td class="g">Swati</td><td>6°40′–20°00′ Li</td><td>Rahu</td></tr>
+        <tr><td>16</td><td class="g">Vishakha</td><td>20°00′ Li–3°20′ Sc</td><td>Jupiter</td></tr>
+        <tr><td>17</td><td class="g">Anuradha</td><td>3°20′–16°40′ Sc</td><td>Saturn</td></tr>
+        <tr><td>18</td><td class="g">Jyeshtha</td><td>16°40′–30°00′ Sc</td><td>Mercury</td></tr>
+        <tr><td>19</td><td class="g">Mula</td><td>0°00′–13°20′ Sg</td><td>Ketu</td></tr>
+        <tr><td>20</td><td class="g">P. Ashadha</td><td>13°20′–26°40′ Sg</td><td>Venus</td></tr>
+        <tr><td>21</td><td class="g">U. Ashadha</td><td>26°40′ Sg–10°00′ Cp</td><td>Sun</td></tr>
+        <tr><td>22</td><td class="g">Shravana</td><td>10°00′–23°20′ Cp</td><td>Moon</td></tr>
+        <tr><td>23</td><td class="g">Dhanishta</td><td>23°20′ Cp–6°40′ Aq</td><td>Mars</td></tr>
+        <tr><td>24</td><td class="g">Shatabhisha</td><td>6°40′–20°00′ Aq</td><td>Rahu</td></tr>
+        <tr><td>25</td><td class="g">P. Bhadrapada</td><td>20°00′ Aq–3°20′ Pi</td><td>Jupiter</td></tr>
+        <tr><td>26</td><td class="g">U. Bhadrapada</td><td>3°20′–16°40′ Pi</td><td>Saturn</td></tr>
+        <tr><td>27</td><td class="g">Revati</td><td>16°40′–30°00′ Pi</td><td>Mercury</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="sec">B.4 Vimshottari dasha lengths <span class="tag cl">Classical</span></h3>
+  <div class="tw">
+    <table>
+      <thead><tr><th>Lord</th><th>Years</th><th></th><th>Lord</th><th>Years</th></tr></thead>
+      <tbody>
+        <tr><td class="g">Ketu</td><td>7</td><td></td><td class="g">Rahu</td><td>18</td></tr>
+        <tr><td class="g">Venus</td><td>20</td><td></td><td class="g">Jupiter</td><td>16</td></tr>
+        <tr><td class="g">Sun</td><td>6</td><td></td><td class="g">Saturn</td><td>19</td></tr>
+        <tr><td class="g">Moon</td><td>10</td><td></td><td class="g">Mercury</td><td>17</td></tr>
+        <tr class="total"><td class="g">Mars</td><td>7</td><td></td><td>Total</td><td>120</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="sec">B.5 The sector → planet map <span class="tag fw">Framework — NOT standardized</span></h3>
+  <div class="callout teal">
+    <span class="ct"><span class="tag ob">Observed</span></span>
+    This mapping is a <em>convenience</em>, not classical doctrine, and <strong>practitioners disagree</strong> (Chapter 16). Pre-commit it before testing; never treat it as fixed truth.
+  </div>
+  <div class="tw">
+    <table>
+      <thead><tr><th>Significator</th><th>Sectors (illustrative)</th></tr></thead>
+      <tbody>
+        <tr><td class="g">Sun</td><td>Government, power/energy, gold</td></tr>
+        <tr><td class="g">Moon</td><td>FMCG, dairy, liquids, silver, public sentiment</td></tr>
+        <tr><td class="g">Mars</td><td>Metals, defence, real estate, engineering</td></tr>
+        <tr><td class="g">Mercury</td><td>IT, telecom, media, trading/brokerage</td></tr>
+        <tr><td class="g">Jupiter</td><td>Banking/financials, education, pharma</td></tr>
+        <tr><td class="g">Venus</td><td>Autos, luxury, entertainment, textiles</td></tr>
+        <tr><td class="g">Saturn</td><td>Oil, PSUs, mining, infrastructure, labour</td></tr>
+        <tr><td class="g">Rahu</td><td>Speculation, tech/crypto, aviation</td></tr>
+        <tr><td class="g">Ketu</td><td>Pharma niches, spirituality, sudden moves</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="sec">B.6 Combustion orbs (proximity to Sun) <span class="tag cl">Classical — typical values</span></h3>
+  <div class="tw">
+    <table>
+      <thead><tr><th>Planet</th><th>Combustion orb</th></tr></thead>
+      <tbody>
+        <tr><td class="g">Moon</td><td>~12°</td></tr>
+        <tr><td class="g">Mars</td><td>~17°</td></tr>
+        <tr><td class="g">Mercury</td><td>~14° (≈12° if retrograde)</td></tr>
+        <tr><td class="g">Jupiter</td><td>~11°</td></tr>
+        <tr><td class="g">Venus</td><td>~10° (≈8° if retrograde)</td></tr>
+        <tr><td class="g">Saturn</td><td>~15°</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<hr class="soft"/>
+
+<!-- ===================== APPENDIX C ===================== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Appendix C</span>
+    <span class="lesson-title">Key Charts <em>(as data)</em></span>
+  </div>
+
+  <div class="callout teal">
+    <span class="ct"><span class="tag ob">Observed</span></span>
+    Below are <strong>sidereal/Lahiri planet-in-sign</strong> positions — the <em>robust</em> tier (Chapter 13). The ascendant, houses, and dasha for the foundation charts depend on exact (and often contested) times and are <strong>not</strong> reproduced as if reliable. Tropical positions differ by the ayanamsa (~24.2° today). These are reference data, <strong>not</strong> signals.
+  </div>
+
+  <h3 class="sec">C.1 Foundation charts</h3>
+  <div class="cards">
+    <div class="card blue">
+      <div class="ti">NYSE</div>
+      <div class="mt">Buttonwood · 17 May 1792 · ~10:30 LMT <em>(time approximate)</em></div>
+      <p>Sun 6.33° Taurus · Mars 27.79° Leo · Jupiter 1.99° Libra · Saturn 5.42° Aries · Rahu 11.27° Virgo</p>
+    </div>
+    <div class="card blue">
+      <div class="ti">BSE</div>
+      <div class="mt">9 July 1875 · ~12:44 LMT <em>(time contested)</em></div>
+      <p>Sun 24.51° Gemini · Mars 1.05° Sagittarius · Jupiter 0.25° Libra · Saturn 3.11° Aquarius · Rahu 20.38° Pisces</p>
+    </div>
+    <div class="card blue">
+      <div class="ti">NSE (equities)</div>
+      <div class="mt">3 November 1994 <em>(time unrecorded)</em></div>
+      <p>Sun 16.80° Libra · Mars 21.70° Cancer · Jupiter 28.24° Libra · Saturn 11.93° Aquarius · Rahu 21.02° Libra</p>
+    </div>
+  </div>
+
+  <h3 class="sec">C.2 Touchstone crashes (sidereal planet-in-sign + Jupiter–Saturn phase)</h3>
+  <div class="tw">
+    <table>
+      <thead><tr><th>Event</th><th>Date</th><th>Sun</th><th>Mars</th><th>Jupiter</th><th>Saturn</th><th>Rahu</th><th>Jup–Sat sep</th></tr></thead>
+      <tbody>
+        <tr><td class="g">Wall St. Crash</td><td>24 Oct 1929</td><td>7.97° Li</td><td>19.63° Li</td><td>22.91° Ta</td><td>3.50° Sg</td><td>19.36° Ar</td><td class="s">169.4° (≈opposition)</td></tr>
+        <tr><td class="g">Black Monday</td><td>19 Oct 1987</td><td>2.13° Li</td><td>13.35° Vi</td><td>0.83° Ar</td><td>23.72° Sc</td><td>8.63° Pi</td><td>127.1°</td></tr>
+        <tr><td class="g">Dot-com peak</td><td>10 Mar 2000</td><td>26.61° Aq</td><td>27.03° Pi</td><td>10.73° Ar</td><td>19.41° Ar</td><td>8.66° Cn</td><td class="s">8.7° (≈conjunction)</td></tr>
+        <tr><td class="g">Lehman</td><td>15 Sep 2008</td><td>29.28° Le</td><td>23.72° Vi</td><td>18.65° Sg</td><td>19.41° Le</td><td>24.24° Cp</td><td>119.2°</td></tr>
+        <tr><td class="g">COVID low</td><td>23 Mar 2020</td><td>9.43° Pi</td><td>0.95° Cp</td><td>29.15° Sg</td><td>5.98° Cp</td><td>9.70° Ge</td><td class="s">6.8° (≈conjunction)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="sec">C.3 The honest punchline of Appendix C</h3>
+  <div class="callout teal">
+    <span class="ct"><span class="tag ob">Observed</span></span>
+    Read the final column. The Jupiter–Saturn cycle — the book's "master clock" (Chapter 8) — stood at <strong>near-opposition</strong> in 1929, <strong>near-conjunction</strong> in 2000 and 2020, and <strong>mid-cycle</strong> in 1987 and 2008. The Suns span Libra, Aquarius, Leo, Pisces; the Jupiters span Taurus, Aries, Sagittarius. <strong>There is no single repeating planetary signature across the five great crashes.</strong> The most-cited "crash configurations" simply do not converge — exactly as Chapters 1 and 8 argued, and exactly what the always-on-sky combinatorics of Chapter 18 predict. The data in this very appendix is the cleanest refutation of a simple astrological crash-predictor — and the strongest case for the book's <em>clock-not-compass</em>, discipline-over-prediction thesis.
+  </div>
+  <div class="callout teal">
+    <span class="ct"><span class="tag ob">Observed</span></span>
+    Use these charts to <em>study</em> the relationship between sky and market history with honest, pre-registered scoring (Chapter 18) — never as a template to forecast or trade.
+  </div>
+</div>
+
+<div class="bridge">
+  Appendices A–C complete. Appendices D–F follow: D — a consolidated glossary; E — the bibliography of cited authors and works; F — a NotebookLM query pack for interrogating the wider 78-book library.
+</div>
+
+</body>
+</html>

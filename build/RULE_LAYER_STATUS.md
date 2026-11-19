@@ -1,6 +1,6 @@
 # Rule layer status — catalogue B, and what catalogue B is not
 
-Generated 21-Sep-2026 from the live registry, not by hand. Year 2027.
+Generated 19-Nov-2026 from the live registry, not by hand. Year 2027.
 
 ## Coverage, in three denominators
 
@@ -10,9 +10,9 @@ Three counts, because there are three catalogues in this document and only one o
 | --- | --- | --- | --- |
 | **Catalogue B** — `<h3 class="section">`, the rule sections of Chapter 1 | 141 sections | **141 of 141** | every section carries a status |
 | **Instrument configuration sections** — `<section id="...">` with an `<h2>`, Chapter 1 Sr.No 149-154 | **58 named groups** | **38 of 58** | **20 blocked, each on a named input** |
-| **`<h2>` sub-tables** — `<section id="...">` with an `<h2>` that states no direction | **10 sub-tables** | **5 of 10** | **5 blocked or out of scope, each on a named input** |
+| **`<h2>` sub-tables** — `<section id="...">` with an `<h2>` that states no direction | **10 sub-tables** | **6 of 10** | **4 blocked or out of scope, each on a named input** |
 
-**So: catalogue B 141/141 · configuration sections 38/58 · sub-tables 5/10.** THREE DENOMINATORS OVER THREE SHAPES OF MARKUP, and none of them is in either of the others. That separation is what keeps "141 of 141" honest: it is a statement about `<h3 class="section">` and about nothing else. All three DO feed the calendar — `verdicts.py` fires all three registries — and the 8,511 verdict rows split **5,539 catalogue B · 1,468 configuration · 1,504 sub-table**.
+**So: catalogue B 141/141 · configuration sections 38/58 · sub-tables 6/10.** THREE DENOMINATORS OVER THREE SHAPES OF MARKUP, and none of them is in either of the others. That separation is what keeps "141 of 141" honest: it is a statement about `<h3 class="section">` and about nothing else. All three DO feed the calendar — `verdicts.py` fires all three registries — and the 9,042 verdict rows split **5,545 catalogue B · 1,468 configuration · 2,029 sub-table**.
 
 **A row's registry is readable off its `event` field with no lookup**: `cfg_<block>_` for a configuration group, `sub_` for a sub-table, and `b<nn>` or a panchang family name for catalogue B. That convention is asserted at registration rather than left to discipline, because the one thing that would make all three of these numbers wrong at once is a rule in the wrong registry.
 
@@ -36,13 +36,13 @@ The counts, from the document (read out of `data/source_2026.html` at generation
 
 **Ported IS wired, since the 14-Sep-2026 change to `verdicts.py`, and the distinction this section used to draw is the one thing about it that is now out of date.** `build_verdicts()` fires both registries; `config_instruments_for` routes a group to the instrument its BLOCK names rather than through the rulership table, so a *Gold — Bullish* group reaches gold because the source filed it under gold.
 
-**1,468 of 8,511 verdict rows in `build/calendar_2027.*` originate in a configuration section**, from 26 groups, split **gold-bearish 167** · **gold-bullish 61** · **silver-bearish 164** · **silver-bullish 923** · **sugar-bullish 153**.
+**1,468 of 9,042 verdict rows in `build/calendar_2027.*` originate in a configuration section**, from 26 groups, split **gold-bearish 167** · **gold-bullish 61** · **silver-bearish 164** · **silver-bullish 923** · **sugar-bullish 153**.
 
 **How to tell one apart, because the old test no longer works.** This page used to say that no row originates in a configuration section and offered a check: the `event_section` field never reads `gold-bullish`. It still never does — `event_section` carries the group's own printed title, such as `Venus Alone in Leo or Libra — Bearish`, and never the block id. The test passes and its conclusion is now wrong. **The field that separates them is `event`**, whose rule id begins `cfg_<block>_` for a configuration row and `b<nn>` or a panchang family name for a catalogue-B one.
 
 What gold, silver and sugar got BEFORE the wiring is still in the file and is still not the source's verdicts for them: every generic catalogue-B rule whose bodies resolve to an instrument still emits there — a Venus rule reaches SUGAR because SUGAR's rulership is Venus, not because the source said anything about sugar. The wiring added the source's own conditions beside those rows; it removed none of them.
 
-Sugar is the clearest case and is the reason the gap was found at all: it emits rows from 12 different Venus-ruled catalogue-B sections, and **153** from its own nine groups — 153 of its 549 rows. That figure was **0** until the wiring, and a reader seeing SUGAR's rows then would have seen a covered instrument.
+Sugar is the clearest case and is the reason the gap was found at all: it emits rows from 12 different Venus-ruled catalogue-B sections, and **153** from its own nine groups — 153 of its 552 rows. That figure was **0** until the wiring, and a reader seeing SUGAR's rows then would have seen a covered instrument.
 
 Gold and silver reach tier 1 through their MCX legs (`MCXGOLD`, `MCXSILVER`); their COMEX legs (`GC`, `SI`) emit `venue_shifted` instead, by the 14-Sep-2026 localised split. Both legs are the same generic rules on the same sky. The tier says where a claim was authored and how the civil day is bounded; it does not say the source's own gold and silver conditions were ported.
 
@@ -52,14 +52,14 @@ Gold and silver reach tier 1 through their MCX legs (`MCXGOLD`, `MCXSILVER`); th
 
 The same chapter carries 10 further `<h2>` sub-tables that are neither catalogue B nor any of the six blocks above: *Bhadra -- verified against Swiss Ephemeris*, *Kshin (Malefic) Moon*, *Total Days in Year*, *Rahu or Ketu Nakshtra on a Thursday*, *Moon Mercury in the Same Navamsh (D9)*, *Rainfall Calculation*, *Mars With or Aspecting Mercury*, *Eclipse*, *Planet Vargottam in Their Own Nakshatra*, *Moon Rashi Parivartan Yog with Other Planets in D1*.
 
-**This heading read "There is a third UNPORTED body of material" until 20-Sep-2026.** These nine now have a registry of their own and a denominator of their own, at the top of this page: 5 of 10 ported, 5 registered and blocked with the input each waits on NAMED. Registering the blocked seven rather than describing them in prose is what makes "blocked on what" countable off the registry instead of parsed out of a sentence.
+**This heading read "There is a third UNPORTED body of material" until 20-Sep-2026.** These nine now have a registry of their own and a denominator of their own, at the top of this page: 6 of 10 ported, 4 registered and blocked with the input each waits on NAMED. Registering the blocked seven rather than describing them in prose is what makes "blocked on what" countable off the registry instead of parsed out of a sentence.
 
 | sub-table | status | rule | blocked on |
 | --- | --- | --- | --- |
 | Bhadra — verified against Swiss Ephemeris (pp. 120–124) | **ported** | `sub_bhadra` | — |
 | Total Days in Year (p. 126) | **ported** | `sub_total_days_in_year` | — |
 | Rahu or Ketu Nakshtra on a Thursday (p. 127) | **ported** | `sub_rahu_or_ketu_nakshatra_on_a_thursday` | — |
-| Kshin (Malefic) Moon (p. 125) | blocked | `sub_kshin_malefic_moon` | `scope` |
+| Kshin (Malefic) Moon (p. 125) | **ported** | `sub_kshin_malefic_moon` | — |
 | Moon Mercury in the Same Navamsh (D9) (pp. 128–129) | **ported** | `sub_moon_mercury_in_the_same_navamsh` | — |
 | Rainfall Calculation (p. 130) | blocked | `sub_rainfall_calculation` | `no_dated_window` |
 | Mars With or Aspecting Mercury (p. 131) | blocked | `sub_mars_with_or_aspecting_mercury` | `aspect_orb` |
@@ -77,7 +77,7 @@ And the source's own monthly prophecy tables (Chapter 3) print named verdicts fo
 
 ---
 
-**172 rules over 141 of 141 catalogue-B sections — full coverage of catalogue B — 3689 dated rows in 2027.** 134 executable, 5 resolved, 32 blocked, 1 ambiguous.
+**172 rules over 141 of 141 catalogue-B sections — full coverage of catalogue B — 3692 dated rows in 2027.** 135 executable, 5 resolved, 31 blocked, 1 ambiguous.
 
 `zero` in the firing column means the rule runs and produces no row this year. That is either the configuration genuinely not occurring or a porting error, and the two look identical from outside — so every zero is pinned by name with its kind in `tests/test_rule_layer.py`. `BLOCKED` means the rule is registered, counted, emits nothing, and **names the input it is waiting for**.
 
@@ -96,7 +96,7 @@ Status keys: `ok` executable · `ok*` fires on a reading we supplied, flagged on
 | 7 | p.8 | Journey of Mercury | ok | 1 | 16 / 16 |  |
 | 8 | pp.8-9 | Mercury Motion | ok | 1 | 1 / 0 |  |
 | 9 | p.10 | Mercury Combust Rise Cycle | ok | 1 | 144 / 0 |  |
-| 10 | p.11 | Mercury Manifestation | BLOCKED | 1 | 0 / 0 | see blockers |
+| 10 | p.11 | Mercury Manifestation | ok | 1 | 3 / 0 |  |
 | 11 | p.12 | Mercury - Furthest from Sun | BLOCKED | 1 | 0 / 0 | see blockers |
 | 12 | p.12 | Mars Mercury Conjunction | ok | 1 | 0 / 0 | zero this year (pinned) |
 | 13 | p.12-13 | Journey of Venus | ok | 1 | 15 / 15 |  |
@@ -235,7 +235,6 @@ Status keys: `ok` executable · `ok*` fires on a reading we supplied, flagged on
 | --- | --- | --- | --- |
 | 5 | Mars in Pisces Navmansh (D9) | `b005_not_an_ingress_view` | Mars's rashi windows while its navamsa is Pisces -- a residency rule over a D9 position, not a D9 ingress series, and the layer emits no Mars D9 ingress table because the source prints none |
 | 6 | Vargottam Mars | `b006_not_an_ingress_view` | Vargottam Mars -- needs the D1 and D9 signs to agree at an instant, and the config already notes the source prints no Mars D9 ingress table to bound it |
-| 10 | Mercury Manifestation | `b010_mercury_manifestation` | a continuous Mercury-vs-Venus speed comparison. speed_deg_day is emitted only at event instants, so the date Mercury attains higher speed than Venus is not derivable from the astronomy layer |
 | 11 | Mercury - Furthest from Sun | `b011_mercury_furthest_from_sun` | a greatest-elongation event class. The astronomy layer emits elongation per record but never its extrema, and recovering a maximum from instants sampled at other events would be a scan, not a read |
 | 19 | Venus Ahead, Sun Behind and Mercury in the Middle | `b019_venus_ahead_sun_behind_mercury_middle` | a benefic/malefic classification of the aspects on a body. The remark's verdict holds only 'provided there is a malefic aspect on Mercury'; the layer carries aspect records but no valence for them, and the source prints none either |
 | 30 | Demoted and Shadow Speed of Saturn | `b030_demoted_shadow_speed_of_saturn` | a rule, not merely the interval. B30 states when Saturn is in Demoted or Shadow Speed -- from 11-Dec-2026 until it crosses back over 20 deg 31' of Pisces direct on 15-Mar-2027 -- and its two printed values are VERIFIED to the arcminute (the engine puts Saturn at 20.508963 deg on 27-Jul-2026 and 20.507990 deg on 15-Mar-2027, and at 13.694991 deg on 11-Dec-2026). What the section never states is what makes a planet Demoted or Shadow: it names the band and the two dates and no condition. So the interval can be reproduced and the rule that generates it in another year cannot |

@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Celestial Ledger — Chapter 20: Ethics, Risk &amp; the Pitfalls of Prediction</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --paper:#fbf9f4; --paper2:#f4efe4; --card:#ffffff; --ink:#26211c; --ink-soft:#4f463c; --ink-faint:#857a6c;
+  --line:#e6dfce; --line-soft:#efe9dc;
+  --gold:#9a7113; --gold-soft:#fbf2da; --gold-line:#e7cf94;
+  --teal:#0c7d68; --teal-soft:#e3f3ef;
+  --coral:#b23a2e; --coral-soft:#f8e9e6;
+  --violet:#6244a8; --violet-soft:#efeafa;
+  --green:#2f7d4f; --green-soft:#e6f3ea;
+  --blue:#1f6aa6; --blue-soft:#e7f0f8;
+  --slate:#4a5b6e; --slate-soft:#eaeef2;
+  --serif:'Playfair Display',Georgia,'Times New Roman',serif;
+  --body:Georgia,'Iowan Old Style','Palatino Linotype',serif;
+  --sans:'Inter',system-ui,-apple-system,sans-serif;
+  --r:10px; --r-sm:7px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{ -webkit-text-size-adjust:100%; }
+body{ background:var(--paper); color:var(--ink); font-family:var(--body); font-size:18px; line-height:1.72; max-width:780px; margin:0 auto; padding:30px 26px 90px; }
+p{ margin:0 0 14px; } strong{ color:var(--ink); font-weight:600; } em{ font-style:italic; }
+
+.hero{ text-align:center; padding:22px 0 30px; border-bottom:2px solid var(--gold-line); margin-bottom:34px; }
+.hero .kicker{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:var(--gold); }
+.hero h1{ font-family:var(--serif); font-weight:900; font-size:40px; line-height:1.12; margin:14px 0 0; }
+.hero h1 em{ color:var(--gold); font-style:italic; }
+.hero .sub{ font-style:italic; color:var(--ink-soft); font-size:17px; max-width:580px; margin:16px auto 0; }
+.hero .ornament{ color:var(--gold); letter-spacing:.5em; margin-top:18px; font-size:14px; }
+
+.lesson{ margin:0 0 50px; }
+.lesson-head{ display:flex; align-items:baseline; gap:12px; border-bottom:1px solid var(--line); padding-bottom:8px; margin-bottom:18px; }
+.lesson-no{ font-family:var(--sans); font-size:12px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); white-space:nowrap; }
+.lesson-title{ font-family:var(--serif); font-weight:700; font-size:25px; line-height:1.2; }
+.lesson-title em{ color:var(--gold); font-style:italic; }
+h3.sec{ font-family:var(--serif); font-style:italic; font-weight:600; font-size:21px; color:var(--gold); margin:28px 0 10px; }
+h4.lab{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-faint); margin:22px 0 9px; }
+
+.callout{ border-left:4px solid var(--gold); background:var(--gold-soft); border-radius:0 var(--r-sm) var(--r-sm) 0; padding:14px 18px; margin:18px 0; font-size:16.5px; line-height:1.62; }
+.callout .ct{ display:block; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:5px; color:var(--gold); }
+.callout.teal{ border-color:var(--teal); background:var(--teal-soft);} .callout.teal .ct{ color:var(--teal);}
+.callout.coral{ border-color:var(--coral); background:var(--coral-soft);} .callout.coral .ct{ color:var(--coral);}
+.callout.violet{ border-color:var(--violet); background:var(--violet-soft);} .callout.violet .ct{ color:var(--violet);}
+.callout.green{ border-color:var(--green); background:var(--green-soft);} .callout.green .ct{ color:var(--green);}
+.callout.slate{ border-color:var(--slate); background:var(--slate-soft);} .callout.slate .ct{ color:var(--slate);}
+.honest{ border-left:4px solid var(--violet); background:var(--violet-soft); border-radius:0 var(--r-sm) var(--r-sm) 0; padding:14px 18px; margin:18px 0; font-size:16px; }
+.honest .ct{ display:block; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:5px; color:var(--violet); }
+
+.keyrule{ text-align:center; font-family:var(--serif); font-style:italic; font-size:20px; line-height:1.5; color:var(--gold); border-top:1px solid var(--gold-line); border-bottom:1px solid var(--gold-line); padding:18px 14px; margin:22px 0; }
+.keyrule .small{ display:block; font-family:var(--sans); font-style:normal; font-size:10px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:8px; }
+.keyrule b{ font-style:normal; color:var(--ink); }
+
+.tag{ display:inline-block; font-family:var(--sans); font-size:10px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:1px 7px; border-radius:4px; vertical-align:middle; }
+.tag.cl{ background:var(--blue-soft); color:var(--blue); } .tag.fw{ background:var(--gold-soft); color:var(--gold); } .tag.vf{ background:var(--violet-soft); color:var(--violet); }
+.tag.ob{ background:var(--teal-soft); color:var(--teal); } .tag.as{ background:var(--slate-soft); color:var(--slate); } .tag.hi{ background:var(--coral-soft); color:var(--coral); }
+.tag.rg{ background:var(--green-soft); color:var(--green); }
+
+.cards{ display:flex; flex-wrap:wrap; gap:12px; margin:16px 0; }
+.card{ flex:1 1 220px; background:var(--card); border:1px solid var(--line); border-top:3px solid var(--gold); border-radius:var(--r-sm); padding:14px 16px; }
+.card.up{ border-top-color:var(--green);} .card.down{ border-top-color:var(--coral);} .card.teal{ border-top-color:var(--teal);} .card.violet{ border-top-color:var(--violet);} .card.slate{ border-top-color:var(--slate);} .card.blue{ border-top-color:var(--blue);}
+.card .ic{ font-size:24px; line-height:1; } .card .ti{ font-family:var(--serif); font-weight:700; font-size:18px; margin:6px 0 2px; } .card .ti em{ color:var(--gold); font-style:italic; font-weight:400; font-size:14px; }
+.card .mt{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px; } .card p{ font-size:15px; line-height:1.55; margin:0; color:var(--ink-soft); }
+
+.tw{ overflow-x:auto; border:1px solid var(--line); border-radius:var(--r-sm); margin:16px 0; }
+table{ width:100%; border-collapse:collapse; font-family:var(--sans); }
+thead tr{ background:var(--gold-soft); }
+th{ font-size:10.5px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:var(--gold); text-align:left; padding:9px 11px; white-space:nowrap; }
+td{ font-size:13px; padding:8px 11px; border-top:1px solid var(--line-soft); vertical-align:top; color:var(--ink-soft); }
+td.g{ color:var(--gold); font-weight:600; white-space:nowrap; }
+td.up{ color:var(--green); font-weight:600;} td.dn{ color:var(--coral); font-weight:600;} td.s{ color:var(--slate); font-weight:600;}
+tbody tr:nth-child(even){ background:#fcfaf5; }
+tr.total td{ background:var(--gold-soft); color:var(--gold); font-weight:700; border-top:2px solid var(--gold-line); }
+
+.qa{ border:1px solid var(--line); border-radius:var(--r-sm); overflow:hidden; margin:20px 0; }
+.qa-h{ background:var(--paper2); padding:9px 15px; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); border-bottom:1px solid var(--line); }
+.qa-i{ padding:12px 15px; border-bottom:1px solid var(--line-soft); } .qa-i:last-child{ border-bottom:none; }
+.qa-q{ font-size:16px; } .qa-q b{ color:var(--gold); font-family:var(--sans); font-size:12px; font-weight:700; margin-right:8px; }
+.qa-a{ font-size:16px; color:var(--ink-soft); margin-top:5px; } .qa-a b{ color:var(--teal); font-family:var(--sans); font-size:12px; font-weight:700; margin-right:8px; }
+
+.recap{ display:flex; align-items:center; gap:18px; background:var(--gold-soft); border:1px solid var(--gold-line); border-radius:var(--r-sm); padding:16px 20px; margin:20px 0; }
+.recap .n{ font-family:var(--serif); font-weight:900; font-size:38px; color:var(--gold); line-height:1; flex-shrink:0; }
+.recap .l{ font-family:var(--sans); font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); }
+.recap .t{ font-family:var(--serif); font-weight:700; font-size:18px; margin:2px 0; } .recap .d{ font-size:14px; color:var(--ink-soft); }
+
+.ladder{ counter-reset:rk; list-style:none; padding:0; margin:14px 0; }
+.ladder li{ counter-increment:rk; display:flex; gap:14px; align-items:flex-start; padding:9px 0; border-bottom:1px solid var(--line-soft); font-size:15.5px; }
+.ladder li:last-child{ border-bottom:none; }
+.ladder li::before{ content:counter(rk); flex-shrink:0; width:26px; height:26px; background:var(--gold); color:#fff; border-radius:50%; font-family:var(--sans); font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center; }
+.ladder b{ color:var(--ink); }
+
+.takeaways{ counter-reset:tk; list-style:none; padding:0; margin:14px 0; }
+.takeaways li{ counter-increment:tk; position:relative; padding:10px 0 10px 46px; border-bottom:1px solid var(--line-soft); font-size:16.5px; }
+.takeaways li:last-child{ border-bottom:none; }
+.takeaways li::before{ content:counter(tk); position:absolute; left:0; top:9px; width:30px; height:30px; border:1.5px solid var(--gold); color:var(--gold); border-radius:50%; font-family:var(--serif); font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center; }
+
+.checklist{ list-style:none; padding:0; margin:14px 0; }
+.checklist li{ position:relative; padding:10px 0 10px 34px; border-bottom:1px solid var(--line-soft); font-size:16px; }
+.checklist li:last-child{ border-bottom:none; }
+.checklist li::before{ content:"\2610"; position:absolute; left:0; top:8px; font-size:21px; line-height:1; color:var(--gold); }
+
+.gloss{ background:var(--card); border:1px solid var(--line); border-radius:var(--r-sm); padding:6px 18px; margin:16px 0; }
+.gloss dt{ font-family:var(--serif); font-weight:700; font-size:16px; color:var(--gold); margin:12px 0 1px; }
+.gloss dd{ margin:0 0 4px; font-size:15.5px; color:var(--ink-soft); }
+
+.bridge{ text-align:center; font-style:italic; color:var(--ink-faint); font-size:15px; border-top:1px solid var(--line); padding-top:22px; margin-top:34px; }
+hr.soft{ border:none; border-top:1px solid var(--line); margin:30px 0; }
+@media (max-width:600px){ body{font-size:17px;padding:20px 16px 70px;} .hero h1{font-size:31px;} .lesson-title{font-size:21px;} }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="kicker">The Celestial Ledger · Volume I · Part IV — Rigor &amp; Conscience</div>
+  <h1>Ethics, Risk &amp; the <em>Pitfalls of Prediction</em></h1>
+  <p class="sub">The book’s conscience. Chapter 19 delivered the verdict — no validated edge. When the signal is unproven, risk management and ethics are not an appendix to the method; they are its only safety net.</p>
+  <div class="ornament">✦ ✦ ✦</div>
+</div>
+
+<p><em>Chapter 19 delivered the verdict: financial astrology has no validated predictive edge. That verdict changes the status of this chapter completely. When the signal is unproven, risk management and ethics are not an appendix to the method — they <strong>are</strong> the method’s safety net. This chapter sets out the arithmetic of ruin, the conviction trap that makes astrology specifically dangerous to capital, the hard boundary against giving investment advice, the duty of honest disclosure, and the regulatory reality (in India, SEBI’s rules). The goal is to protect two things: your capital, and the people who might trust your forecasts.</em></p>
+
+<p><em>Claim-type key: <span class="tag fw">Framework</span> this book’s method · <span class="tag ob">Observed</span> an empirical or mathematical result · <span class="tag rg">Regulatory</span> a rule as of early 2026, to be re-verified · <span class="tag vf">Verify</span> to confirm independently. Risk figures were computed for this book. <strong>This chapter is not legal or financial advice.</strong></em></p>
+
+<hr class="soft"/>
+
+<!-- ===================== LESSON 20.1 ===================== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <div class="lesson-no">Lesson 20.1</div>
+    <div class="lesson-title">When the Signal Is Unproven, <em>Risk Is Everything</em></div>
+  </div>
+
+  <p>Every prior chapter could afford to treat risk as the disciplined sixth step in a process. This one cannot, because Chapter 19 changed the stakes. If financial astrology has <strong>no demonstrated forecasting power</strong>, then nothing inside the method protects your capital — only your risk management does. The astrology is, at best, a lens and a discipline; the <strong>safety net is entirely the risk and ethics framework of this chapter.</strong> That is precisely why the book ends here, on conscience, and not on a clever technique.</p>
+
+  <p>There are three duties to discharge, and the rest of the chapter is built around them. The <strong>first is to your own capital</strong> — the arithmetic of ruin is unforgiving, and a method that breeds false confidence is a specific hazard to it. The <strong>second is to other people</strong> — anyone who might act on your forecasts, especially inexperienced retail investors, to whom an unproven prediction dressed as certainty can do real financial harm. The <strong>third is to the truth</strong> — honest disclosure of what the method is and is not, with no fabricated track records and no guarantees. We take each in turn, anchored throughout by the mathematics that make risk non-negotiable.</p>
+
+  <div class="keyrule">
+    <span class="small">Key Rule</span>
+    Because the method carries <b>no proven edge</b>, your capital is protected by <b>your risk rules alone</b> — never by the reading. The lens may inform discipline; it can never be the safety net.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself</div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q1</b>Why does Chapter 19’s verdict make this an ethics-and-risk chapter rather than a technique chapter?</div>
+      <div class="qa-a"><b>A</b>Because if the signal is unproven, no technique protects capital — only risk management and honest conduct do. With the edge gone, the safety net is all that remains, so the book closes on it.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q2</b>What are the three duties this chapter is organized around?</div>
+      <div class="qa-a"><b>A</b>To your capital (survive the arithmetic of ruin), to others (do no financial harm to those who might trust a forecast), and to the truth (disclose honestly what the method is and is not).</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q3</b>What is the “lens” permitted to do, and what is it never permitted to do?</div>
+      <div class="qa-a"><b>A</b>It may inform timing and discipline. It may never serve as the safety net, justify oversized bets, or stand in for capital protection — the risk framework, not the reading, keeps you solvent.</div>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">1</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">The unproven signal makes risk everything</div>
+      <div class="d">No edge means no protection from the method — capital is defended by your rules alone, which is why the book ends on conscience.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== LESSON 20.2 ===================== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <div class="lesson-no">Lesson 20.2</div>
+    <div class="lesson-title">Core Concepts — The Pillars of <em>Survival and Conscience</em></div>
+  </div>
+
+  <p>Five concepts carry the chapter. Two are mathematical and govern survival; three are ethical and govern conduct. Together they explain why sizing — not signal — is the master variable, and why the most dangerous thing about astrology is not that it is wrong, but that it <em>feels</em> right.</p>
+
+  <div class="cards">
+    <div class="card down">
+      <div class="ic">📉</div>
+      <div class="mt">Pillar 1 · <span class="tag ob">Observed</span></div>
+      <div class="ti">The arithmetic of ruin</div>
+      <p>Two facts govern everything. <strong>Drawdown asymmetry:</strong> a 50% loss needs a +100% gain to break even; a 90% loss needs +900%. Deep drawdowns are near-fatal. <strong>Position size dominates:</strong> how much you bet matters more than what you bet on — over-betting destroys capital even with no edge.</p>
+    </div>
+    <div class="card down">
+      <div class="ic">🪤</div>
+      <div class="mt">Pillar 2 · <span class="tag fw">Framework</span></div>
+      <div class="ti">The conviction trap</div>
+      <p>Astrology’s specific danger. A rich reading manufactures a <strong>feeling of certainty</strong> wildly out of proportion to its (zero) proven edge. False certainty drives oversizing and leverage — exactly what the arithmetic of ruin punishes most. The risk is not that it is wrong; it is that it feels right.</p>
+    </div>
+    <div class="card slate">
+      <div class="ic">🚧</div>
+      <div class="mt">Pillar 3 · <span class="tag fw">Framework</span></div>
+      <div class="ti">The role boundary</div>
+      <p>A market astrologer is <strong>not</strong> a licensed financial adviser. The honest role is educational and self-directed — exploring a lens for one’s own disciplined use. It does not extend to telling others what to buy or sell, managing their money, or guaranteeing outcomes.</p>
+    </div>
+    <div class="card violet">
+      <div class="ic">📖</div>
+      <div class="mt">Pillar 4 · <span class="tag fw">Framework</span></div>
+      <div class="ti">Honest disclosure</div>
+      <p>Integrity requires it: never present a cherry-picked or fabricated track record; always disclose that the method is unproven; claim-tag what is classical versus framework versus observed; and never, ever guarantee returns.</p>
+    </div>
+    <div class="card blue">
+      <div class="ic">⚖️</div>
+      <div class="mt">Pillar 5 · <span class="tag rg">Regulatory</span></div>
+      <div class="ti">Regulation</div>
+      <p>In India, giving specific securities advice for consideration is governed by SEBI and generally <strong>requires registration</strong>; broad education is treated differently from actionable advice. This is a legal line with real penalties, not a courtesy.</p>
+    </div>
+  </div>
+
+  <div class="callout coral">
+    <span class="ct">Callout — The Method Doesn’t Protect You; Your Risk Rules Do</span>
+    Internalise the consequence of Chapter 19: since the astrology has no proven edge, <strong>your stop-loss, your position size, and your refusal to over-leverage are the only things standing between you and ruin.</strong> Treat them as sacred — far more sacred than any planetary signal.
+  </div>
+
+  <div class="keyrule">
+    <span class="small">Key Rule</span>
+    <b>Sizing, not signal, is the master variable.</b> The two mathematical pillars (drawdown asymmetry and position size) outrank every interpretive pillar — and the conviction trap is where the two halves collide.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself</div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q1</b>State the two mathematical facts in the arithmetic of ruin.</div>
+      <div class="qa-a"><b>A</b>Drawdown asymmetry (losses need disproportionately larger gains to recover — 50% needs +100%, 90% needs +900%), and position-size dominance (how much you bet matters more than what you bet on; over-betting destroys capital even with no edge).</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q2</b>What makes the conviction trap astrology’s <em>specific</em> danger?</div>
+      <div class="qa-a"><b>A</b>A rich reading produces a strong feeling of certainty wholly disconnected from its zero proven edge. That false confidence drives the oversizing and leverage the ruin math punishes most — the danger is the feeling of rightness, not the wrongness.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q3</b>Where does the honest role of a market astrologer end?</div>
+      <div class="qa-a"><b>A</b>At self-directed education. It does not include telling others what to buy or sell, managing their money, or guaranteeing outcomes — those cross the role boundary into advice, with legal consequences.</div>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">2</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">Two math pillars, three conscience pillars</div>
+      <div class="d">Sizing dominates signal; the conviction trap is where false certainty meets the ruin math; the role boundary, honest disclosure, and regulation govern conduct.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== LESSON 20.3 ===================== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <div class="lesson-no">Lesson 20.3</div>
+    <div class="lesson-title">Framework — The Three Duties and the <em>Regulatory Reality</em></div>
+  </div>
+
+  <p>The five pillars resolve into three duties — to your capital, to others, and to the truth — and then into the legal landscape that polices the boundary between education and advice.</p>
+
+  <div class="cards">
+    <div class="card down">
+      <div class="ic">🛡️</div>
+      <div class="mt">Duty 1 · <span class="tag fw">Framework</span></div>
+      <div class="ti">To your capital</div>
+      <p>Survival first. Use <strong>fixed-fractional sizing</strong> (risk only a small, pre-set fraction per trade — commonly 1–2%), <strong>never leverage an unproven signal</strong>, predefine the stop and exit before entry, and <strong>size as if the edge were zero.</strong> The aim is to stay in the game across the long losing streaks an edgeless method will inevitably produce.</p>
+    </div>
+    <div class="card teal">
+      <div class="ic">🤝</div>
+      <div class="mt">Duty 2 · <span class="tag fw">Framework</span></div>
+      <div class="ti">To others</div>
+      <p>The moment a forecast reaches another person, the harm calculus changes. So: <strong>do not give personalized buy/sell advice</strong>, do not guarantee, state plainly that the method is unproven and not advice, and steer people toward licensed professionals and their own due diligence. Be especially careful with the vulnerable.</p>
+    </div>
+    <div class="card violet">
+      <div class="ic">🕯️</div>
+      <div class="mt">Duty 3 · <span class="tag fw">Framework</span></div>
+      <div class="ti">To the truth</div>
+      <p>No fabricated or selectively-presented results; honest claim-tagging; transparency that this is a lens and a discipline, not a proven forecasting system. The trading journal is the only honest “track record,” and even it is personal, not a marketing tool.</p>
+    </div>
+  </div>
+
+  <h3 class="sec">The regulatory landscape — India, as of early 2026</h3>
+
+  <p><span class="tag rg">Regulatory</span> A careful, non-exhaustive picture — re-verify current rules; this is not legal advice:</p>
+
+  <ul class="ladder">
+    <li>Investment advice and research in India are governed by the <b>SEBI (Investment Advisers) Regulations, 2013</b> and the <b>SEBI (Research Analysts) Regulations, 2014.</b> Providing specific <b>buy/sell/hold recommendations</b> on securities for consideration generally <b>requires SEBI registration</b> as an Investment Adviser or Research Analyst.</li>
+    <li>A <b>SEBI circular dated 29 January 2025</b> (under the Intermediaries Amendment Regulations, 2024) tightened the rules on “finfluencers”: registered intermediaries are <b>barred from associating</b> with unregistered financial influencers, and educational content generally may <b>not use real-time market data</b> (only data lagged by at least roughly three months), drawing a sharper line between neutral education and actionable advice.</li>
+    <li>Enforcement has been significant: in 2025–26 SEBI took high-profile action against unregistered “educator” operations (impounding very large sums), ruling that <b>“education” can be a cloak for unregistered advisory/research</b> when it involves specific calls, real-time data, performance guarantees, or structured systems guiding individual trades.</li>
+    <li>The practical line: <b>broad, lagged, educational commentary</b> on markets and methods sits outside registration; <b>specific securities calls, real-time tips, guarantees, or running a paid advisory</b> do not — and selling astrological buy/sell forecasts on securities would risk falling on the wrong side of that line.</li>
+    <li>Other jurisdictions have analogous regimes — for example the <b>SEC and the Investment Advisers Act</b> in the United States, and ASIC in Australia.</li>
+  </ul>
+
+  <p><span class="tag fw">Framework</span> The safe posture for an astrological market writer: present the work as <strong>education and personal research</strong>, avoid specific security recommendations and guarantees, disclose that it is unproven and not advice, and <strong>consult a qualified professional</strong> about registration before doing anything commercial.</p>
+
+  <div class="callout coral">
+    <span class="ct">Callout — “Education” Is Not a Magic Shield</span>
+    Regulators look at <strong>substance, not labels.</strong> Calling a service “educational” while issuing specific buy/sell calls, flashing live prices, promising profits, or guiding individual trades has been treated as <strong>unregistered advice</strong> regardless of the branding. If your astrology produces actionable securities calls for others, assume the advice rules apply — and get professional guidance.
+  </div>
+
+  <div class="keyrule">
+    <span class="small">Key Rule</span>
+    The three duties — <b>capital, others, truth</b> — are not aspirations; they are obligations, and the law enforces the second and third. Stay on the <b>education</b> side of the line and get professional advice before anything commercial.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself</div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q1</b>Name the four practices that satisfy Duty 1 (to your capital).</div>
+      <div class="qa-a"><b>A</b>Fixed-fractional sizing (risk a small pre-set fraction, often 1–2%), no leverage on an unproven signal, a stop and exit predefined before entry, and sizing as if the edge were zero — all aimed at surviving long losing streaks.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q2</b>Which two SEBI regulations and which 2025 circular set the Indian line?</div>
+      <div class="qa-a"><b>A</b>The SEBI (Investment Advisers) Regulations, 2013 and the SEBI (Research Analysts) Regulations, 2014, plus the 29 January 2025 finfluencer circular barring registered intermediaries from associating with unregistered influencers and restricting real-time data in education.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q3</b>Where does broad education end and registrable advice begin?</div>
+      <div class="qa-a"><b>A</b>Broad, lagged, educational commentary sits outside registration; specific securities calls, real-time tips, guarantees, or a paid advisory cross into registrable advice — regulators judge by substance, not by the “educational” label.</div>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">3</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">Capital, others, truth — and the law</div>
+      <div class="d">Survive by fixed sizing and no leverage; protect others by refusing advice and guarantees; tell the truth; and keep commercial activity on the education side of the SEBI line.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== LESSON 20.4 ===================== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <div class="lesson-no">Lesson 20.4</div>
+    <div class="lesson-title">The Arithmetic That Makes Risk <em>Non-Negotiable</em></div>
+  </div>
+
+  <p>This section’s “correlation analysis” is the mathematics of ruin — the hardest numbers in the book. Three results, each unforgiving: drawdown asymmetry, the destructiveness of over-betting, and the conviction-trap mechanism that combines them.</p>
+
+  <h3 class="sec">Drawdown asymmetry — why deep losses are near-fatal</h3>
+
+  <p><span class="tag ob">Observed</span> The gain required merely to <strong>recover</strong> a loss grows brutally nonlinearly. The recovery hurdle is not the mirror of the loss; it accelerates away from it.</p>
+
+  <div class="tw">
+    <table>
+      <thead>
+        <tr><th>Loss</th><th>Gain needed to break even</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="dn">−10%</td><td class="g">+11.1%</td></tr>
+        <tr><td class="dn">−20%</td><td class="g">+25.0%</td></tr>
+        <tr><td class="dn">−33%</td><td class="g">+49.3%</td></tr>
+        <tr><td class="dn">−50%</td><td class="g"><strong>+100%</strong></td></tr>
+        <tr><td class="dn">−75%</td><td class="g">+300%</td></tr>
+        <tr><td class="dn">−90%</td><td class="g">+900%</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>A 50% drawdown means <strong>doubling what remains just to get back to where you started.</strong> This is why avoiding deep losses matters more than capturing big gains — and why an edgeless method must be sized so that deep drawdowns are made impossible in the first place.</p>
+
+  <h3 class="sec">Over-betting destroys capital — even with no edge, even with one</h3>
+
+  <p><span class="tag ob">Observed</span> Computed simulations make the point unforgettable.</p>
+
+  <div class="cards">
+    <div class="card down">
+      <div class="mt">A fair coin · no edge</div>
+      <div class="ti">More betting → faster ruin</div>
+      <p>Betting a fixed fraction each toss, 200 tosses, 10,000 simulations — median ending bankroll: at 1% per bet ×0.99; at 5% ×0.78; at 10% ×0.37; at 25% ×0.0016; at 50% ≈ 0. Even with <strong>zero edge</strong>, the more you bet, the faster you go broke (volatility drag). On a no-edge game, any repeated sizable bet trends to ruin.</p>
+    </div>
+    <div class="card down">
+      <div class="mt">A real 55/45 edge</div>
+      <div class="ti">Over-betting kills a winning game</div>
+      <p>Even <strong>with</strong> a genuine edge, expected log-growth per bet peaks near a ~10% fraction (the Kelly optimum) and turns <strong>negative by ~20%</strong> — at 40–60% bet sizes the winning game becomes a losing one. Over-betting converts even a real edge into ruin.</p>
+    </div>
+  </div>
+
+  <h3 class="sec">The conviction-trap mechanism, quantified</h3>
+
+  <p><span class="tag fw">Framework</span> Now combine these with Chapter 19. The astrology offers a <em>zero</em> proven edge but a <em>high</em> feeling of certainty. That feeling tempts large bets. The simulations above show that large bets on a no-edge process are <strong>maximally destructive.</strong> So the specific failure mode is unmistakable:</p>
+
+  <div class="callout coral">
+    <span class="ct">The Failure Cascade</span>
+    Rich reading → false confidence → oversized or leveraged position → drawdown asymmetry → ruin. The cure is to <strong>sever sizing from conviction</strong>: size every position by fixed risk rules, as if the edge were zero — because, per Chapter 19, it is.
+  </div>
+
+  <div class="callout coral">
+    <span class="ct">Callout — Size by Rules, Not by Feelings</span>
+    The single most important sentence in this book for protecting capital: <strong>your position size must be set by a fixed risk rule, never by how convinced the astrology makes you feel.</strong> The more certain a reading makes you, the more deliberately you should hold your size to the rule — because that certainty is precisely the unproven, dangerous part.
+  </div>
+
+  <div class="keyrule">
+    <span class="small">Key Rule</span>
+    Recovery is asymmetric and over-betting is fatal — so <b>size by rule, never by feeling.</b> The more certain the reading makes you, the more strictly you hold your size, because the certainty is the unproven part.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself</div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q1</b>What gain recovers a 50% loss, and what gain recovers a 90% loss?</div>
+      <div class="qa-a"><b>A</b>A 50% loss requires +100% (doubling what remains); a 90% loss requires +900%. The recovery hurdle accelerates away from the loss — deep drawdowns are mathematically near-fatal.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q2</b>Does a real edge make over-betting safe?</div>
+      <div class="qa-a"><b>A</b>No. Even with a genuine 55/45 edge, log-growth peaks near a ~10% fraction and turns negative by ~20%; at 40–60% bet sizes the winning game becomes a losing one. Over-betting converts even a real edge into ruin.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q3</b>Write out the conviction-trap failure cascade.</div>
+      <div class="qa-a"><b>A</b>Rich reading → false confidence → oversized or leveraged position → drawdown asymmetry → ruin. The cure is to sever sizing from conviction and size as if the edge were zero.</div>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">4</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">The math forces the discipline</div>
+      <div class="d">Recovery is asymmetric, over-betting destroys even a real edge, and false certainty drives over-betting — so sizing must be severed from conviction entirely.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== LESSON 20.5 ===================== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <div class="lesson-no">Lesson 20.5</div>
+    <div class="lesson-title">The Practitioner’s Method — <em>Risk and Ethics Rules</em></div>
+  </div>
+
+  <p>The pillars and the arithmetic collapse into eight operating rules — four guarding capital, four guarding conduct. They are the working form of the survive-then-be-honest hierarchy.</p>
+
+  <ul class="ladder">
+    <li><b>Fixed-fractional sizing, always.</b> Risk a small, pre-set fraction of capital per trade (e.g., 1–2%), computed from your stop — never sized by conviction.</li>
+    <li><b>No leverage on an unproven signal.</b> Astrology has no validated edge; leveraging it multiplies the ruin math. Avoid F&amp;O and leverage driven by astrological conviction.</li>
+    <li><b>Predefine stop and exit before entry.</b> Decide where you are wrong before you put money on, and honour it mechanically. Avoiding deep drawdowns is the whole game.</li>
+    <li><b>Size as if the edge is zero.</b> Let the astrology inform timing and discipline, never size. Sever sizing from feeling.</li>
+    <li><b>Never give personalized advice or guarantees.</b> Do not tell others what to buy or sell, do not manage their money, do not promise returns. Point people to licensed professionals and their own due diligence.</li>
+    <li><b>Disclose honestly.</b> State the method is unproven and not advice; claim-tag; keep no cherry-picked or fabricated track records. Your journal is your only honest record.</li>
+    <li><b>Know and respect the regulation.</b> Understand the SEBI RA/IA framework and the finfluencer rules (or your jurisdiction’s equivalent); keep commercial activity on the education side of the line; consult a professional before anything resembling advice for consideration.</li>
+    <li><b>Protect the vulnerable, including yourself.</b> Watch for gambling behaviour, loss-chasing, and trading with money you cannot afford to lose. If trading stops being disciplined and starts being compulsive, step away and seek help.</li>
+  </ul>
+
+  <div class="callout violet">
+    <span class="ct">Callout — The Final Order of Priority</span>
+    <strong>Survive → stay honest → maybe profit.</strong> Capital preservation outranks every signal; truth-telling outranks every sale; and any edge is a distant third that the evidence does not even grant. A practitioner who keeps that order can enjoy the lens for a lifetime; one who inverts it will not last.
+  </div>
+
+  <div class="keyrule">
+    <span class="small">Key Rule</span>
+    Four rules guard <b>capital</b> (fixed size, no leverage, predefined exits, edge-zero sizing); four guard <b>conduct</b> (no advice, honest disclosure, regulatory respect, protect the vulnerable). The priority order is <b>survive, stay honest, maybe profit.</b>
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself</div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q1</b>Which four rules guard capital, and which four guard conduct?</div>
+      <div class="qa-a"><b>A</b>Capital: fixed-fractional sizing, no leverage on the signal, predefined stop and exit, sizing as if edge is zero. Conduct: no personalized advice or guarantees, honest disclosure, knowing and respecting regulation, and protecting the vulnerable including yourself.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q2</b>State the final order of priority, in order.</div>
+      <div class="qa-a"><b>A</b>Survive, then stay honest, then maybe profit. Capital preservation outranks every signal, truth-telling outranks every sale, and any edge is a distant third the evidence does not grant.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q3</b>What is the only honest “track record” a practitioner has?</div>
+      <div class="qa-a"><b>A</b>The personal trading journal. It is a private discipline tool, not a marketing instrument — anything cherry-picked or fabricated violates the duty to the truth.</div>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">5</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">Eight rules, one priority order</div>
+      <div class="d">Four rules defend capital and four defend conduct; above them all sits the order survive → stay honest → maybe profit.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== LESSON 20.6 ===================== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <div class="lesson-no">Lesson 20.6</div>
+    <div class="lesson-title">Edge Cases and <em>Cautions</em></div>
+  </div>
+
+  <p>Eight places where the duties are most likely to fail — the ethical red lines, the regulatory traps, and the human hazards that the arithmetic alone cannot police.</p>
+
+  <ul class="ladder">
+    <li><b>Selling forecasts to others — the ethical red line.</b> <span class="tag rg">Regulatory</span> Charging for specific astrological buy/sell calls risks unregistered-advisory liability and can harm trusting investors. This is the sharpest line in the chapter — do not cross it without registration and professional advice.</li>
+    <li><b>The “guru” / finfluencer temptation.</b> The same dynamics SEBI is prosecuting — flashy “education,” live tips, selective wins, guarantees — are easy to drift into with an astrological hook. Treat that drift as both an ethical and a legal hazard.</li>
+    <li><b>Harm to inexperienced retail investors.</b> A confident-sounding astrological forecast can move someone to bet the rent. The asymmetry of harm — your “interesting idea” versus their lost savings — demands restraint and clear disclaimers.</li>
+    <li><b>Leverage and F&amp;O ruin.</b> Indian retail option-trading losses are well documented; astrological conviction plus leverage is a textbook path to ruin. Keep them apart.</li>
+    <li><b>Gambling and addiction.</b> <span class="tag fw">Framework</span> Trading driven by the thrill of prediction can become compulsive. If the journal, the rules, and the risk caps fall away and chasing takes over, that is a wellbeing issue, not a strategy — disengage and seek support.</li>
+    <li><b>Borrowed or essential money.</b> Never deploy money you cannot afford to lose, and never others’ money informally. The ruin math is the same; the human cost is higher.</li>
+    <li><b>Regulatory change.</b> <span class="tag rg">Regulatory</span> <span class="tag vf">Verify</span> Rules evolve — the 2024–2025 SEBI tightening shows how fast. Re-verify current regulations and take professional advice before any commercial step.</li>
+    <li><b>The standing caveat.</b> <span class="tag ob">Observed</span> With no validated edge, <strong>risk management is the entire safety net.</strong> Fixed sizing, no leverage, predefined exits, honest disclosure, and regulatory compliance are not optional refinements — they are what make engaging with this subject survivable and ethical.</li>
+  </ul>
+
+  <div class="keyrule">
+    <span class="small">Key Rule</span>
+    The failures cluster at three seams: <b>selling advice</b> (legal), <b>leverage and over-betting</b> (capital), and <b>compulsion</b> (wellbeing). With no edge, the risk framework is not a refinement — it is the entire safety net.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself</div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q1</b>What is the sharpest ethical and legal red line in the chapter?</div>
+      <div class="qa-a"><b>A</b>Charging for specific astrological buy/sell calls on securities — it risks unregistered-advisory liability and can harm trusting investors. Do not cross it without registration and professional advice.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q2</b>When does trading become a wellbeing issue rather than a strategy?</div>
+      <div class="qa-a"><b>A</b>When the journal, rules, and risk caps fall away and loss-chasing or compulsive thrill-seeking takes over. At that point it is an addiction concern — the correct response is to disengage and seek support, not to refine the method.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q3</b>Restate the standing caveat in one sentence.</div>
+      <div class="qa-a"><b>A</b>With no validated edge, risk management is the entire safety net — fixed sizing, no leverage, predefined exits, honest disclosure, and compliance are what make engaging with the subject survivable and ethical, not optional extras.</div>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">6</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">Know where the duties break</div>
+      <div class="d">Selling calls, the finfluencer drift, retail harm, leverage, compulsion, and borrowed money are the failure seams — and with no edge, the risk framework is the whole net.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== CHAPTER SUMMARY ===================== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <div class="lesson-no">Summary</div>
+    <div class="lesson-title">Chapter 20 — <em>Five Takeaways</em></div>
+  </div>
+
+  <ol class="takeaways">
+    <li><strong>Because the method is unproven, risk management <em>is</em> the safety net</strong> — not an appendix. Capital preservation outranks every signal.</li>
+    <li><strong>The arithmetic of ruin is unforgiving:</strong> a 50% loss needs +100% to recover; over-betting destroys capital even with no edge, and even a real 55/45 edge becomes a losing game when over-bet. <strong>Position size dominates signal.</strong></li>
+    <li><strong>The conviction trap is astrology’s specific danger:</strong> a rich reading manufactures false certainty → oversizing or leverage → ruin. The cure is to <strong>size by fixed rules, as if the edge were zero</strong> — never by how convinced you feel.</li>
+    <li><strong>Three ethical duties:</strong> to your capital (fixed sizing, no leverage, hard stops), to others (no personalized advice, no guarantees, honest disclaimers, protect the vulnerable), and to the truth (no fabricated track records; disclose it is unproven).</li>
+    <li><strong>Respect the regulation:</strong> in India the SEBI IA (2013) and RA (2014) regulations and the January-2025 finfluencer circular draw a hard line between education and actionable advice — specific securities calls and guarantees require registration. Keep to education, disclose honestly, and consult a professional. <em>(Not legal or financial advice.)</em></li>
+  </ol>
+
+  <div class="recap">
+    <div class="n">7</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">The conscience, in five lines</div>
+      <div class="d">Risk is the net; the ruin math is unforgiving; the conviction trap is the specific danger; three duties bind the practitioner; and the law polices the education-versus-advice line.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== CHECKLIST ===================== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <div class="lesson-no">Checklist</div>
+    <div class="lesson-title">Practitioner’s Checklist — <em>Ethics &amp; Risk</em></div>
+  </div>
+
+  <p>Run this before every position, and before anything commercial. It is the survive-then-be-honest hierarchy turned into eight questions.</p>
+
+  <ul class="checklist">
+    <li><strong>Fixed-fractional size set?</strong> Risk per trade a small pre-set fraction (e.g., 1–2%), computed from the stop — <strong>not</strong> from conviction?</li>
+    <li><strong>No leverage on the astrology?</strong> Are you avoiding F&amp;O and leverage driven by an unproven signal?</li>
+    <li><strong>Stop &amp; exit predefined?</strong> Decided before entry and honoured mechanically, to avoid deep (asymmetric) drawdowns?</li>
+    <li><strong>Sized as if edge = zero?</strong> Is the astrology informing timing and discipline only, never position size?</li>
+    <li><strong>No advice, no guarantees?</strong> Refraining from personalized buy/sell calls and any promise of returns; pointing others to professionals?</li>
+    <li><strong>Honest disclosure?</strong> Method stated as unproven and not advice, claim-tagged, with no cherry-picked or fabricated track record?</li>
+    <li><strong>Regulation respected?</strong> Aware of SEBI RA/IA and finfluencer rules (or your local equivalent), staying on the education side, and consulting a professional before anything commercial?</li>
+    <li><strong>Wellbeing protected?</strong> No essential or borrowed money at risk; watching for gambling and loss-chasing; willing to step away and seek help?</li>
+  </ul>
+
+  <div class="recap">
+    <div class="n">8</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">Eight checks, run every time</div>
+      <div class="d">Size, leverage, exits, edge-zero sizing, no advice, honest disclosure, regulation, and wellbeing — clear all eight before risking capital or going commercial.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== GLOSSARY ===================== -->
+<h4 class="lab">Glossary — Chapter 20</h4>
+<dl class="gloss">
+  <dt>Drawdown asymmetry <span class="tag ob">Observed</span></dt>
+  <dd>The fact that the gain needed to recover a loss exceeds the loss itself, and accelerates: −50% needs +100%, −90% needs +900%. The reason deep losses are near-fatal and must be made impossible by sizing.</dd>
+
+  <dt>Fixed-fractional sizing <span class="tag fw">Framework</span></dt>
+  <dd>Risking a small, pre-set fraction of capital per trade (commonly 1–2%), computed from the stop — the core capital-preservation rule, set by rule and never by conviction.</dd>
+
+  <dt>The conviction trap <span class="tag fw">Framework</span></dt>
+  <dd>Astrology’s specific danger: a rich reading manufactures a feeling of certainty disconnected from its zero proven edge, tempting the oversizing and leverage that the ruin math punishes most.</dd>
+
+  <dt>Over-betting / volatility drag <span class="tag ob">Observed</span></dt>
+  <dd>Betting too large a fraction repeatedly, which trends a no-edge game to ruin and turns even a real 55/45 edge into a losing game beyond roughly a 20% fraction (log-growth peaks near the ~10% Kelly optimum).</dd>
+
+  <dt>Role boundary <span class="tag fw">Framework</span></dt>
+  <dd>The line separating self-directed education (permitted) from giving others buy/sell advice, managing their money, or guaranteeing outcomes (not permitted, and legally regulated).</dd>
+
+  <dt>SEBI IA / RA Regulations <span class="tag rg">Regulatory</span></dt>
+  <dd>The SEBI (Investment Advisers) Regulations, 2013 and (Research Analysts) Regulations, 2014 — the Indian framework requiring registration to give specific securities recommendations for consideration.</dd>
+
+  <dt>Finfluencer circular <span class="tag rg">Regulatory</span></dt>
+  <dd>SEBI’s 29 January 2025 circular barring registered intermediaries from associating with unregistered financial influencers and restricting real-time market data in educational content — sharpening the education-versus-advice line.</dd>
+
+  <dt>The final order of priority <span class="tag fw">Framework</span></dt>
+  <dd>Survive → stay honest → maybe profit. Capital preservation outranks every signal, truth-telling outranks every sale, and any edge is a distant third the evidence does not grant.</dd>
+</dl>
+
+<!-- ===================== BRIDGE ===================== -->
+<p class="bridge">End of Chapter 20 — and of Part IV, Rigor &amp; Conscience. The craft, the timing, the application, the evidence, and the ethics are now complete. What remains is to draw the whole into a single coherent picture: the <strong>Conclusion — “The Celestial Ledger: A Unified, Honest Model”</strong> — followed by the reference Appendices (A: ephemeris how-to · B: reference tables · C: key charts · D: glossary · E: bibliography · F: NotebookLM query pack).</p>
+
+</body>
+</html>

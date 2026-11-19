@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Celestial Ledger — Chapter 12: Dashas &amp; Indian Time Cycles for Markets</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --paper:#fbf9f4; --paper2:#f4efe4; --card:#ffffff; --ink:#26211c; --ink-soft:#4f463c; --ink-faint:#857a6c;
+  --line:#e6dfce; --line-soft:#efe9dc;
+  --gold:#9a7113; --gold-soft:#fbf2da; --gold-line:#e7cf94;
+  --teal:#0c7d68; --teal-soft:#e3f3ef;
+  --coral:#b23a2e; --coral-soft:#f8e9e6;
+  --violet:#6244a8; --violet-soft:#efeafa;
+  --green:#2f7d4f; --green-soft:#e6f3ea;
+  --blue:#1f6aa6; --blue-soft:#e7f0f8;
+  --slate:#4a5568; --slate-soft:#eceef2;
+  --serif:'Playfair Display',Georgia,'Times New Roman',serif;
+  --body:Georgia,'Iowan Old Style','Palatino Linotype',serif;
+  --sans:'Inter',system-ui,-apple-system,sans-serif;
+  --r:10px; --r-sm:7px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{ -webkit-text-size-adjust:100%; }
+body{ background:var(--paper); color:var(--ink); font-family:var(--body); font-size:18px; line-height:1.72; max-width:780px; margin:0 auto; padding:30px 26px 90px; }
+p{ margin:0 0 14px; } strong{ color:var(--ink); font-weight:600; } em{ font-style:italic; }
+
+.hero{ text-align:center; padding:22px 0 30px; border-bottom:2px solid var(--gold-line); margin-bottom:34px; }
+.hero .kicker{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:var(--gold); }
+.hero h1{ font-family:var(--serif); font-weight:900; font-size:40px; line-height:1.12; margin:14px 0 0; }
+.hero h1 em{ color:var(--gold); font-style:italic; }
+.hero .sub{ font-style:italic; color:var(--ink-soft); font-size:17px; max-width:580px; margin:16px auto 0; }
+.hero .ornament{ color:var(--gold); letter-spacing:.5em; margin-top:18px; font-size:14px; }
+
+.lesson{ margin:0 0 50px; }
+.lesson-head{ display:flex; align-items:baseline; gap:12px; border-bottom:1px solid var(--line); padding-bottom:8px; margin-bottom:18px; }
+.lesson-no{ font-family:var(--sans); font-size:12px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); white-space:nowrap; }
+.lesson-title{ font-family:var(--serif); font-weight:700; font-size:25px; line-height:1.2; }
+.lesson-title em{ color:var(--gold); font-style:italic; }
+h3.sec{ font-family:var(--serif); font-style:italic; font-weight:600; font-size:21px; color:var(--gold); margin:28px 0 10px; }
+h4.lab{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-faint); margin:22px 0 9px; }
+
+.callout{ border-left:4px solid var(--gold); background:var(--gold-soft); border-radius:0 var(--r-sm) var(--r-sm) 0; padding:14px 18px; margin:18px 0; font-size:16.5px; line-height:1.62; }
+.callout .ct{ display:block; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:5px; color:var(--gold); }
+.callout.teal{ border-color:var(--teal); background:var(--teal-soft);} .callout.teal .ct{ color:var(--teal);}
+.callout.coral{ border-color:var(--coral); background:var(--coral-soft);} .callout.coral .ct{ color:var(--coral);}
+.callout.violet{ border-color:var(--violet); background:var(--violet-soft);} .callout.violet .ct{ color:var(--violet);}
+.callout.green{ border-color:var(--green); background:var(--green-soft);} .callout.green .ct{ color:var(--green);}
+.callout.slate{ border-color:var(--slate); background:var(--slate-soft);} .callout.slate .ct{ color:var(--slate);}
+.honest{ border-left:4px solid var(--violet); background:var(--violet-soft); border-radius:0 var(--r-sm) var(--r-sm) 0; padding:14px 18px; margin:18px 0; font-size:16px; }
+.honest .ct{ display:block; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:5px; color:var(--violet); }
+
+.keyrule{ text-align:center; font-family:var(--serif); font-style:italic; font-size:20px; line-height:1.5; color:var(--gold); border-top:1px solid var(--gold-line); border-bottom:1px solid var(--gold-line); padding:18px 14px; margin:22px 0; }
+.keyrule .small{ display:block; font-family:var(--sans); font-style:normal; font-size:10px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:8px; }
+.keyrule b{ font-style:normal; color:var(--ink); }
+
+.tag{ display:inline-block; font-family:var(--sans); font-size:10px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:1px 7px; border-radius:4px; vertical-align:middle; }
+.tag.cl{ background:var(--blue-soft); color:var(--blue); } .tag.fw{ background:var(--gold-soft); color:var(--gold); } .tag.vf{ background:var(--violet-soft); color:var(--violet); }
+.tag.ob{ background:var(--teal-soft); color:var(--teal); } .tag.as{ background:var(--slate-soft); color:var(--slate); } .tag.hi{ background:var(--coral-soft); color:var(--coral); }
+
+.cards{ display:flex; flex-wrap:wrap; gap:12px; margin:16px 0; }
+.card{ flex:1 1 220px; background:var(--card); border:1px solid var(--line); border-top:3px solid var(--gold); border-radius:var(--r-sm); padding:14px 16px; }
+.card.up{ border-top-color:var(--green);} .card.down{ border-top-color:var(--coral);} .card.teal{ border-top-color:var(--teal);} .card.violet{ border-top-color:var(--violet);} .card.slate{ border-top-color:var(--slate);}
+.card .ic{ font-size:24px; line-height:1; } .card .ti{ font-family:var(--serif); font-weight:700; font-size:18px; margin:6px 0 2px; } .card .ti em{ color:var(--gold); font-style:italic; font-weight:400; font-size:14px; }
+.card .mt{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px; } .card p{ font-size:15px; line-height:1.55; margin:0; color:var(--ink-soft); }
+
+.tw{ overflow-x:auto; border:1px solid var(--line); border-radius:var(--r-sm); margin:16px 0; }
+table{ width:100%; border-collapse:collapse; font-family:var(--sans); }
+thead tr{ background:var(--gold-soft); }
+th{ font-size:10.5px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:var(--gold); text-align:left; padding:9px 11px; white-space:nowrap; }
+td{ font-size:13px; padding:8px 11px; border-top:1px solid var(--line-soft); vertical-align:top; color:var(--ink-soft); }
+td.g{ color:var(--gold); font-weight:600; white-space:nowrap; }
+td.up{ color:var(--green); font-weight:600;} td.dn{ color:var(--coral); font-weight:600;} td.s{ color:var(--slate); font-weight:600; white-space:nowrap; }
+tbody tr:nth-child(even){ background:#fcfaf5; }
+tbody tr.total td{ background:var(--gold-soft); color:var(--gold); font-weight:700; border-top:2px solid var(--gold-line); }
+
+.qa{ border:1px solid var(--line); border-radius:var(--r-sm); overflow:hidden; margin:20px 0; }
+.qa-h{ background:var(--paper2); padding:9px 15px; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); border-bottom:1px solid var(--line); }
+.qa-i{ padding:12px 15px; border-bottom:1px solid var(--line-soft); } .qa-i:last-child{ border-bottom:none; }
+.qa-q{ font-size:16px; } .qa-q b{ color:var(--gold); font-family:var(--sans); font-size:12px; font-weight:700; margin-right:8px; }
+.qa-a{ font-size:16px; color:var(--ink-soft); margin-top:5px; } .qa-a b{ color:var(--teal); font-family:var(--sans); font-size:12px; font-weight:700; margin-right:8px; }
+
+.recap{ display:flex; align-items:center; gap:18px; background:var(--gold-soft); border:1px solid var(--gold-line); border-radius:var(--r-sm); padding:16px 20px; margin:20px 0; }
+.recap .n{ font-family:var(--serif); font-weight:900; font-size:38px; color:var(--gold); line-height:1; flex-shrink:0; }
+.recap .l{ font-family:var(--sans); font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); }
+.recap .t{ font-family:var(--serif); font-weight:700; font-size:18px; margin:2px 0; } .recap .d{ font-size:14px; color:var(--ink-soft); }
+
+.ladder{ counter-reset:rk; list-style:none; padding:0; margin:14px 0; }
+.ladder li{ counter-increment:rk; display:flex; gap:14px; align-items:flex-start; padding:9px 0; border-bottom:1px solid var(--line-soft); font-size:15.5px; }
+.ladder li:last-child{ border-bottom:none; }
+.ladder li::before{ content:counter(rk); flex-shrink:0; width:26px; height:26px; background:var(--gold); color:#fff; border-radius:50%; font-family:var(--sans); font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center; }
+.ladder b{ color:var(--ink); }
+
+.takeaways{ counter-reset:tk; list-style:none; padding:0; margin:14px 0; }
+.takeaways li{ counter-increment:tk; position:relative; padding:10px 0 10px 46px; border-bottom:1px solid var(--line-soft); font-size:16.5px; }
+.takeaways li:last-child{ border-bottom:none; }
+.takeaways li::before{ content:counter(tk); position:absolute; left:0; top:9px; width:30px; height:30px; border:1.5px solid var(--gold); color:var(--gold); border-radius:50%; font-family:var(--serif); font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center; }
+
+.checklist{ list-style:none; padding:0; margin:14px 0; }
+.checklist li{ position:relative; padding:10px 0 10px 38px; border-bottom:1px solid var(--line-soft); font-size:16px; }
+.checklist li:last-child{ border-bottom:none; }
+.checklist li::before{ content:"\2610"; position:absolute; left:0; top:8px; font-size:22px; line-height:1; color:var(--teal); }
+.checklist b{ color:var(--ink); }
+
+.gloss{ background:var(--card); border:1px solid var(--line); border-radius:var(--r-sm); padding:6px 18px; margin:16px 0; }
+.gloss dt{ font-family:var(--serif); font-weight:700; font-size:16px; color:var(--gold); margin:12px 0 1px; }
+.gloss dd{ margin:0 0 4px; font-size:15.5px; color:var(--ink-soft); }
+
+.bridge{ text-align:center; font-style:italic; color:var(--ink-faint); font-size:15px; border-top:1px solid var(--line); padding-top:22px; margin-top:34px; }
+hr.soft{ border:none; border-top:1px solid var(--line); margin:30px 0; }
+@media (max-width:600px){ body{font-size:17px;padding:20px 16px 70px;} .hero h1{font-size:31px;} .lesson-title{font-size:21px;} }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="kicker">The Celestial Ledger · Volume I · Part II — Timing the Market</div>
+  <h1>Dashas &amp; Indian <em>Time Cycles</em> for Markets</h1>
+  <div class="sub">Part II closes with the timing apparatus that is uniquely Indian — a clock built into a chart at birth, paired with transits to form the field's own confluence rule, and carrying its hardest honesty problem.</div>
+  <div class="ornament">✦ ✦ ✦</div>
+</div>
+
+<p><em>Part II closes with the timing apparatus that is uniquely Indian — and unlike anything in the Western toolkit so far. Where the great cycles, eclipses, and the siderograph all read the <strong>sky's</strong> motion, the <strong>dasha</strong> reads a <strong>chart's own internal clock</strong>: a pre-set sequence of planetary periods, fixed at birth, that "switches on" different planets over a lifetime. Paired with <strong>gochar</strong> (transits), it forms Indian astrology's own version of the book's confluence rule. And it carries the field's hardest honesty problem — because a chart is</em> always <em>in some dasha, the system can "explain" anything after the fact. This chapter teaches it, and shows where its one genuinely defensible use lies: not on the market, but on the <strong>trader</strong>.</em></p>
+
+<div class="callout violet">
+  <span class="ct">Claim-Type Key</span>
+  <span class="tag cl">Classical</span> an established rule of the tradition · <span class="tag as">Astronomical</span> verifiable astronomy · <span class="tag fw">Framework</span> this book's market interpretation · <span class="tag ob">Observed</span> an empirical caveat · <span class="tag vf">Verify</span> to confirm. Dasha maths and gochar computed with Swiss Ephemeris.
+</div>
+
+<hr class="soft"/>
+
+<!-- ============================ LESSON 12.1 ============================ -->
+<section class="lesson">
+  <div class="lesson-head">
+    <div class="lesson-no">Lesson 12.1</div>
+    <div class="lesson-title">Chapter Introduction — <em>A Clock Inside the Chart</em></div>
+  </div>
+
+  <p>Every Part II tool so far has been <em>transit-based</em>: it watches where the planets are <em>now</em>. The <strong>dasha</strong> system is different in kind. It is a <strong>clock built into a chart at the moment of birth</strong> — a fixed, pre-determined sequence of planetary "periods" that unfold over a lifetime, each one handing the baton to the next, switching on a different planet's significations as it runs. It answers the question the transits cannot: <em>of all the promises in this chart, which one is ripe right now?</em></p>
+
+  <p>Indian timing then pairs this internal clock with <strong>gochar</strong> — the transits — under a classical rule that is, in essence, the book's own confluence principle: <strong>an event fires when the dasha promises it and the transit triggers it.</strong> Dual confirmation. This chapter builds the <strong>Vimshottari dasha</strong> (the default system), explains gochar and the famous <strong>Sade Sati</strong>, and then applies them to markets with the highest honesty bar in the book — because the dasha is the <em>least falsifiable</em> tool here. The conclusion will be that its cleanest, most defensible market use is <strong>on the trader's own chart</strong> (timing one's discipline and activity), not as a market predictor at all.</p>
+
+  <div class="keyrule">
+    <span class="small">Key Rule · 12.1</span>
+    The transits read the <b>sky's</b> clock; the dasha reads the <b>chart's</b> clock. Indian timing's power — and its peril — is that it reads <b>both at once.</b>
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself · 12.1</div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q1</b> How does a dasha differ in kind from every other Part II timing tool?</div>
+      <div class="qa-a"><b>A</b> Every other tool is transit-based — it reads where the planets are <em>now</em>, the same sky for everyone. A dasha is fixed at birth and is unique to one chart: a pre-set sequence of planetary periods unfolding over a lifetime, reading the chart's <em>internal</em> clock rather than the sky's.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q2</b> What question does the dasha answer that the transits cannot?</div>
+      <div class="qa-a"><b>A</b> Of all the promises latent in a chart, <em>which one is ripe right now</em> — which planet's significations are currently "switched on." Transits can say what the sky is doing; only the dasha says what this particular chart is ready for.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q3</b> Why does the chapter promise the highest honesty bar in the book?</div>
+      <div class="qa-a"><b>A</b> Because the dasha is the least falsifiable tool covered. A chart is always in <em>some</em> period, so the system can be made to "explain" any past move after the fact — which is exactly why its claims demand the most candour.</div>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">✓</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">The chart has its own calendar.</div>
+      <div class="d">A dasha is a birth-fixed sequence of planetary periods — the chart's internal clock — answering which promise is ripe now, a question no transit can.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ LESSON 12.2 ============================ -->
+<section class="lesson">
+  <div class="lesson-head">
+    <div class="lesson-no">Lesson 12.2</div>
+    <div class="lesson-title">Core Concepts — <em>The Vimshottari Dasha</em></div>
+  </div>
+
+  <h3 class="sec">Keyed to the Moon's nakshatra</h3>
+  <p><span class="tag cl">Classical</span> The Vimshottari dasha — the dominant system — is anchored to the <strong>Moon's nakshatra at birth</strong> (Chapters 0 and 6). The nakshatra's lord becomes the <strong>operating period</strong> at birth, and how far the Moon had already travelled through that nakshatra sets the <strong>balance</strong> of that first period. From there the periods proceed in a fixed order.</p>
+
+  <h3 class="sec">The nine periods — 120 years</h3>
+  <p><span class="tag cl">Classical</span> There are nine <strong>mahadashas</strong> (major periods), in this fixed sequence and length, totalling a symbolic <strong>120 years</strong> (computed):</p>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>Mahadasha</th><th>Years</th></tr></thead>
+      <tbody>
+        <tr><td class="g">Ketu</td><td>7</td></tr>
+        <tr><td class="g">Venus</td><td>20</td></tr>
+        <tr><td class="g">Sun</td><td>6</td></tr>
+        <tr><td class="g">Moon</td><td>10</td></tr>
+        <tr><td class="g">Mars</td><td>7</td></tr>
+        <tr><td class="g">Rahu</td><td>18</td></tr>
+        <tr><td class="g">Jupiter</td><td>16</td></tr>
+        <tr><td class="g">Saturn</td><td>19</td></tr>
+        <tr><td class="g">Mercury</td><td>17</td></tr>
+        <tr class="total"><td>Total</td><td>120</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="sec">Fractal sub-periods</h3>
+  <p><span class="tag cl">Classical</span> Each mahadasha subdivides into <strong>antardashas</strong> (sub-periods, <em>bhukti</em>) in the same nine-planet sequence, each scaled by <strong>sub-length = mahadasha-years × sub-years ÷ 120</strong>, and those subdivide again (<em>pratyantardasha</em>), and so on — a <strong>fractal</strong> of nested periods. Computed example, the antardashas inside an 18-year <strong>Rahu</strong> mahadasha:</p>
+
+  <p style="font-family:var(--sans);font-size:14.5px;background:var(--slate-soft);border-radius:var(--r-sm);padding:12px 16px;line-height:1.7;">
+    Rahu–Ketu 12.6&nbsp;mo · Rahu–Venus 36.0&nbsp;mo · Rahu–Sun 10.8&nbsp;mo · Rahu–Moon 18.0&nbsp;mo · Rahu–Mars 12.6&nbsp;mo · Rahu–Rahu 32.4&nbsp;mo · Rahu–Jupiter 28.8&nbsp;mo · Rahu–Saturn 34.2&nbsp;mo · Rahu–Mercury 30.6&nbsp;mo.
+  </p>
+
+  <p><span class="tag cl">Classical</span> <span class="tag fw">Framework</span> The running dasha lord <strong>"activates" its significations and the houses it owns/occupies</strong> — that planet's promises come due. <span class="tag fw">Framework</span> In financial terms, a period ruled by a <strong>wealth-house lord</strong> (2nd/5th/9th/11th — Chapter 5) is read as a <em>wealth-favourable</em> period for that chart; a period ruled by a difficult-house lord, as a cautious one.</p>
+
+  <p><span class="tag cl">Classical</span> Other dasha systems exist — <strong>Ashtottari, Yogini, and the Jaimini Chara dasha</strong> among them — and they do <strong>not</strong> agree with Vimshottari or each other. Vimshottari is the default; which system one uses must be stated (§12.6).</p>
+
+  <div class="callout">
+    <span class="ct">Callout — The Dasha Is the Chart's Calendar</span>
+    Transits ask <em>what is the sky doing now?</em> The dasha asks <em>what is this particular chart ripe for now?</em> The two are different clocks — one universal (the sky), one personal (the chart's pre-set sequence) — and Indian timing reads them <strong>together.</strong>
+  </div>
+
+  <div class="keyrule">
+    <span class="small">Key Rule · 12.2</span>
+    Nine lords, a fixed order, <b>120 years</b>, nested fractally — and each scaled by <b>maha × sub ÷ 120.</b> The lord in power activates its houses; a wealth-house lord reads favourable, a difficult-house lord cautious.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself · 12.2</div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q1</b> What sets the operating period and its balance at birth?</div>
+      <div class="qa-a"><b>A</b> The Moon's nakshatra at birth: its lord becomes the operating mahadasha, and how far the Moon had already moved through that nakshatra fixes the balance (the remaining fraction) of that first period.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q2</b> How is an antardasha's length calculated, and why does it total what it does?</div>
+      <div class="qa-a"><b>A</b> Sub-length = mahadasha-years × sub-years ÷ 120. Because every mahadasha cycles through all nine sub-lords whose own full periods sum to 120, the nine antardashas of any mahadasha sum back to that mahadasha's full length — e.g. the nine sub-periods of an 18-year Rahu mahadasha sum to 18 years.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q3</b> In financial terms, what makes a period read as favourable versus cautious?</div>
+      <div class="qa-a"><b>A</b> The houses the running lord owns or occupies. A wealth-house lord (2nd/5th/9th/11th) reads as a wealth-favourable season for that chart; a difficult-house lord reads as a cautious one. This is interpretation laid over the classical mechanics — Framework, not doctrine.</div>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">✓</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">A fractal of nine lords, summing to 120.</div>
+      <div class="d">Vimshottari keys to the natal Moon's nakshatra, runs nine mahadashas in fixed order totalling 120 years, and subdivides fractally — the lord in power activating its houses, read favourable or cautious by which houses those are.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ LESSON 12.3 ============================ -->
+<section class="lesson">
+  <div class="lesson-head">
+    <div class="lesson-no">Lesson 12.3</div>
+    <div class="lesson-title">Classical Framework — <em>Gochar and the Combination Rule</em></div>
+  </div>
+
+  <p><span class="tag cl">Classical</span> <strong>Gochar</strong> is transit analysis, and in Vedic practice transits are traditionally read <strong>from the natal Moon sign</strong> (the <em>Chandra lagna</em>), not only from the ascendant. The slow transits carry the timing weight:</p>
+
+  <ul class="ladder">
+    <li><span><b>Saturn</b> — ~2.5 years per sign; the heaviest transit.</span></li>
+    <li><span><b>Jupiter</b> — ~1 year per sign; the benefic "where does expansion go this year" transit.</span></li>
+    <li><span><b>Rahu/Ketu</b> — ~1.5 years per sign (regressing).</span></li>
+  </ul>
+
+  <p><span class="tag cl">Classical</span> <strong>Sade Sati</strong> — the famous ~7.5-year span when <strong>Saturn transits the 12th, 1st, and 2nd signs from the natal Moon</strong> — is the most culturally weighted transit in Indian astrology, reputed to bring hardship and tests. <span class="tag ob">Observed</span> It is <em>heavily believed</em> and its effects are <em>not</em> empirically established; it should never be allowed to drive fearful decision-making (§12.6). <span class="tag cl">Classical</span> The classical system also grades transit strength via <strong>Ashtakavarga</strong> (a points scheme), noted here and not developed further.</p>
+
+  <p><span class="tag cl">Classical</span> The <strong>combination rule</strong> is the heart of Indian timing and, strikingly, the book's confluence principle in older dress: <strong>an event manifests when the <em>dasha</em> promises it (the relevant planet/house is active) AND the <em>gochar</em> triggers it (a transit activates the same significations).</strong> Neither alone is enough — dual confirmation. A practitioner who internalised Chapter 3's "require confluence" has already met this rule in Western form.</p>
+
+  <div class="keyrule">
+    <span class="small">Key Rule · 12.3</span>
+    Read gochar <b>from the natal Moon</b>, weight the slow planets, and require the <b>combination rule</b>: an event fires only when the dasha promises it <b>and</b> the transit triggers the same significations.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself · 12.3</div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q1</b> From what reference point does Vedic practice read transits, and which planets carry the weight?</div>
+      <div class="qa-a"><b>A</b> From the natal Moon sign (the Chandra lagna), not only the ascendant. The slow planets carry the timing weight — Saturn (~2.5 yr/sign, the heaviest), Jupiter (~1 yr/sign), and Rahu/Ketu (~1.5 yr/sign, regressing).</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q2</b> What is Sade Sati, and what is its honest evidential status?</div>
+      <div class="qa-a"><b>A</b> The ~7.5-year span when Saturn transits the 12th, 1st, and 2nd signs from the natal Moon — the most culturally weighted Indian transit, reputed to bring hardship. It is heavily believed but empirically unestablished, and must never be allowed to drive fearful decisions.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q3</b> How does the combination rule relate to the book's Western framework?</div>
+      <div class="qa-a"><b>A</b> It is the confluence principle in classical dress: an event manifests only when the dasha promises it <em>and</em> the gochar triggers the same significations — dual confirmation. Anyone who internalised Chapter 3's "require confluence" has already met this rule in Western form.</div>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">✓</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">Same principle, older dress.</div>
+      <div class="d">Gochar reads slow transits from the natal Moon; Sade Sati is its most weighted (and unproven) span; and the combination rule — dasha promises <em>and</em> gochar triggers — is the book's confluence principle in classical form.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ LESSON 12.4 ============================ -->
+<section class="lesson">
+  <div class="lesson-head">
+    <div class="lesson-no">Lesson 12.4</div>
+    <div class="lesson-title">Market Correlation Analysis — <em>The Honest Test, and the Right Application</em></div>
+  </div>
+
+  <h3 class="sec">The three possible applications</h3>
+  <p><span class="tag fw">Framework</span> Dashas and gochar can be pointed at markets three ways:</p>
+
+  <div class="cards">
+    <div class="card">
+      <div class="mt">Application 1</div>
+      <div class="ti">The market chart's dasha</div>
+      <p>The "theme of the era" for that market. <em>But this needs a validated foundation chart, and those are contested (Chapter 13).</em></p>
+    </div>
+    <div class="card">
+      <div class="mt">Application 2</div>
+      <div class="ti">Slow gochar over the chart</div>
+      <p>The slow planets transiting the market chart's sensitive points — transit timing for the market itself.</p>
+    </div>
+    <div class="card slate">
+      <div class="mt">Application 3</div>
+      <div class="ti">The trader's own chart</div>
+      <p>The practitioner's personal dasha &amp; gochar — wealth periods, active phases, and cautious phases.</p>
+    </div>
+  </div>
+
+  <h3 class="sec">The honest evidence — and the highest honesty bar in the book</h3>
+  <p><span class="tag ob">Observed</span> The dasha is the <strong>least falsifiable</strong> tool covered so far, and that demands the most candour:</p>
+
+  <ul class="ladder">
+    <li><span><b>A chart is <em>always</em> in some dasha, sub-dasha, and sub-sub-dasha.</b> With a fractal of nested periods, <em>some</em> active planet can be found to "explain" <em>any</em> market move after the fact. This makes naive dasha-fitting almost meaninglessly easy — the data-mining trap (Chapter 1) raised to a higher power.</span></li>
+    <li><span><b>No validated market-predictive power.</b> Dasha is a personal-horoscope technique; its transplant to markets is entirely unproven.</span></li>
+    <li><span><b>The market-chart problem compounds it.</b> A dasha is only as good as the birth time it is keyed to — and exchange foundation times are disputed (Chapter 13). A dasha on the wrong chart is noise dressed as insight.</span></li>
+    <li><span><b>Small N.</b> Any single market chart yields only a handful of major-period changes in a century — unprovable, like the great cycles.</span></li>
+  </ul>
+
+  <h3 class="sec">The one genuinely defensible use — turn it on yourself</h3>
+  <p><span class="tag fw">Framework</span> Here is this chapter's most useful, most honest claim. The dasha's cleanest application is <strong>not predicting the market — it is knowing the trader.</strong> Run on <em>your own</em> chart, the dasha and gochar can be reframed as <strong>self-management</strong>, not forecasting:</p>
+
+  <ul class="ladder">
+    <li><span>A wealth-house-lord period, or a supportive Jupiter transit, as a season to be <b>more active and confident</b> (still within your risk rules).</span></li>
+    <li><span>A difficult-house-lord period, a Sade Sati, or a hard Saturn transit as a <b>flag to reduce size, slow down, and guard against overtrading</b> — regardless of what the market is doing.</span></li>
+  </ul>
+
+  <p>This reframing is defensible because it makes <strong>no claim about the market</strong> — it is a discipline applied to the <em>person</em>, aligning with the risk-and-psychology spine of Chapter 20. The dasha becomes a structured prompt for self-awareness, not an oracle for prices.</p>
+
+  <h3 class="sec">Worked example — the current gochar backdrop</h3>
+  <p>Computed slow-planet transits for <strong>22 June 2026</strong> (sidereal/Lahiri):</p>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>Planet</th><th>Sidereal position</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td class="g">Jupiter</td><td class="s">4.14° Cancer</td><td>Exalted (Chapter 7)</td></tr>
+        <tr><td class="g">Saturn</td><td class="s">19.54° Pisces</td><td>Late in Pisces; leaves for Aries ~3 Jun 2027</td></tr>
+        <tr><td class="g">Rahu</td><td class="s">8.81° Aquarius</td><td>Mean node, regressing</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout slate">
+    <span class="ct">Astronomical — Computed &amp; Verified</span>
+    Swiss Ephemeris (sidereal/Lahiri, 22 Jun 2026, 13:00 UT) confirms each figure to 0.01°: <strong>Jupiter 4.14° Cancer</strong> (exalted), <strong>Saturn 19.54° Pisces</strong> (retrograde-speed near zero, still direct; the sign change into Aries falls ~3 Jun 2027 — so "about to change signs" is a ~1-year horizon), and <strong>Rahu 8.81° Aquarius</strong> (mean node, regressing). These are <span class="tag as">Astronomical</span> facts; everything read <em>into</em> them is interpretation.
+  </div>
+
+  <p><span class="tag fw">Framework</span> This is the <em>transit backdrop</em> every Indian chart currently experiences: an exalted Jupiter in Cancer, Saturn late in Pisces (about to change signs — Chapter 10), Rahu in Aquarius. <strong>The discipline:</strong> to turn this into a <em>market</em> read would require a <strong>validated market foundation chart</strong> (which we do not yet have — Chapter 13); to turn it into a <em>trader</em> read, you would overlay these transits and the running dasha on <strong>your own</strong> chart. Either way, this is <strong>method illustration, not prediction</strong> — the gochar locates where the slow transits are, and nothing here forecasts a price.</p>
+
+  <div class="callout">
+    <span class="ct">Callout — Aim the Dasha at the Mirror</span>
+    The honest power of the dasha is self-knowledge: <em>which season am I in — one to press, or one to protect capital?</em> Used on the market it is nearly unfalsifiable and unproven; used on the trader it is a disciplined prompt to manage one's own behaviour. Point it at the mirror, not the ticker.
+  </div>
+
+  <div class="keyrule">
+    <span class="small">Key Rule · 12.4</span>
+    The dasha is the book's <b>least falsifiable</b> tool — a chart is always in <em>some</em> period — so on the market it has no validated edge. Its one defensible use is <b>on the trader:</b> a claim about the person, never about prices.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself · 12.4</div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q1</b> Why is dasha-fitting "the data-mining trap raised to a higher power"?</div>
+      <div class="qa-a"><b>A</b> Because a chart is perpetually in nested dashas, sub-dashas and sub-sub-dashas, so <em>some</em> active planet can be matched to <em>any</em> past move after the fact. The fractal of periods makes post-hoc "explanation" almost meaninglessly easy — and an unvalidated market foundation chart compounds it.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q2</b> What makes the trader-chart use defensible when the market use is not?</div>
+      <div class="qa-a"><b>A</b> The trader-chart use makes <em>no claim about the market</em>. It reframes the dasha as self-management — press in supportive seasons, protect capital in difficult ones — a discipline applied to the person, aligned with Chapter 20's risk-and-psychology spine, not a forecast of prices.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q3</b> What does the 22 June 2026 gochar backdrop establish, and what does it not?</div>
+      <div class="qa-a"><b>A</b> It establishes <em>where</em> the slow transits sit — Jupiter exalted at 4.14° Cancer, Saturn at 19.54° Pisces (leaving for Aries ~Jun 2027), Rahu at 8.81° Aquarius — verified by Swiss Ephemeris. It forecasts nothing: a market read would need a validated foundation chart, and a trader read would overlay these on one's own chart. Method illustration, not prediction.</div>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">✓</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">Aim it at the mirror.</div>
+      <div class="d">Of three possible applications, only the trader's-own-chart use survives the highest honesty bar in the book: the dasha has no validated market edge, but as self-management — press or protect — it makes a defensible claim about the person, not prices.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ LESSON 12.5 ============================ -->
+<section class="lesson">
+  <div class="lesson-head">
+    <div class="lesson-no">Lesson 12.5</div>
+    <div class="lesson-title">The Practitioner's Method — <em>Indian Timing, Honestly Applied</em></div>
+  </div>
+
+  <ul class="ladder">
+    <li><span><b>For yourself: run your Vimshottari dasha and note the seasons.</b> Identify your current mahadasha/antardasha and which houses their lords rule. Mark <b>wealth-house-lord periods</b> (potentially more active) and <b>difficult-house-lord periods / Sade Sati / hard Saturn transits</b> (reduce size, slow down). This is self-management, not market prediction.</span></li>
+    <li><span><b>For the market: only with a validated chart.</b> Read a market chart's dasha and slow gochar <em>only</em> once you trust its foundation time (Chapter 13), and even then as <b>era-context</b>, not forecast.</span></li>
+    <li><span><b>Apply the combination rule.</b> Require <b>dasha + gochar agreement</b> (the classical dual confirmation) — and, for any trade, the Western confluence too: price structure and sentiment (Chapter 3).</span></li>
+    <li><span><b>State your dasha system.</b> Vimshottari by default; if you use Ashtottari/Yogini/Chara, say so — they disagree, and switching between them to fit is self-deception.</span></li>
+    <li><span><b>Don't double-count, and fix risk.</b> Indian and Western timing layers built from the same sky (gochar and Western transits) are <b>not</b> independent confirmations. Size for weak/unproven evidence; set risk independently of any period or transit.</span></li>
+  </ul>
+
+  <div class="keyrule">
+    <span class="small">Key Rule · 12.5</span>
+    Run the dasha on <b>yourself</b> first; touch a market chart only when its foundation time is validated; require the <b>combination rule</b>; name your system; and never let two readings of <b>one sky</b> masquerade as independent confirmation.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself · 12.5</div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q1</b> What is the first and most defensible thing to do with your dasha?</div>
+      <div class="qa-a"><b>A</b> Run it on yourself: identify your current mahadasha/antardasha and the houses their lords rule, then mark wealth-house-lord periods as potentially more active and difficult-lord periods, Sade Sati, or hard Saturn transits as flags to reduce size and slow down. Self-management, not prediction.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q2</b> Under what condition may you read a market chart's dasha, and in what register?</div>
+      <div class="qa-a"><b>A</b> Only once you trust its foundation time (Chapter 13), and even then only as era-context — never as a price forecast. An unvalidated chart makes the whole reading noise.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q3</b> Why must gochar and Western transits not be stacked as separate confirmations?</div>
+      <div class="qa-a"><b>A</b> They are built from the same physical sky, so they are two readings of one signal, not two independent ones. Treating them as independent inflates apparent evidence; size for weak, unproven evidence and set risk independently of any period or transit.</div>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">✓</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">Yourself first, the market last.</div>
+      <div class="d">Run the dasha on your own chart for discipline; touch a market chart only with a validated time and only as context; require the combination rule plus Western confluence; name your system; and never double-count one sky.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ LESSON 12.6 ============================ -->
+<section class="lesson">
+  <div class="lesson-head">
+    <div class="lesson-no">Lesson 12.6</div>
+    <div class="lesson-title">Edge Cases and Cautions</div>
+  </div>
+
+  <ul class="ladder">
+    <li><span><b>Near-unfalsifiability (the central caution).</b> <span class="tag ob">Observed</span> A chart is perpetually in nested dashas, so <em>some</em> active planet can be matched to <em>any</em> past move. Dasha-fitting is therefore the easiest self-deception in the book. Only <b>pre-stated, dated</b> dasha calls — scored with misses counted (Chapter 18) — mean anything.</span></li>
+    <li><span><b>The market-chart problem.</b> <span class="tag vf">Verify</span> A dasha keyed to a wrong/disputed foundation time is worthless. Until the chart is validated (Chapter 13), treat all market-dasha claims as provisional.</span></li>
+    <li><span><b>Competing dasha systems disagree.</b> Vimshottari, Ashtottari, Yogini, Chara — different periods, different "explanations." State which you use; never shop among them for a fit.</span></li>
+    <li><span><b>Sade Sati fear is folklore — don't trade on dread.</b> <span class="tag ob">Observed</span> Sade Sati is intensely believed and empirically unestablished. Letting it trigger fearful, oversized, or paralysed trading is a real behavioural risk; use it (if at all) only as a gentle "be disciplined" prompt.</span></li>
+    <li><span><b>A personal technique transplanted to markets.</b> Dasha was built for individual horoscopes; applying it to an exchange is an <b>unvalidated transplant.</b> The trader-chart use is defensible; the market-prediction use is not.</span></li>
+    <li><span><b>Small N.</b> Any one market chart shows only a few period-changes per century — unprovable, like every long cycle.</span></li>
+    <li><span><b>The standing caveat.</b> <span class="tag ob">Observed</span> Dashas and gochar have <b>no validated market-predictive power.</b> Their honest worth is the <b>combination-rule discipline</b> and, above all, <b>self-timing on the trader's own chart</b> — confirmed by price, governed by risk.</span></li>
+  </ul>
+
+  <div class="keyrule">
+    <span class="small">Key Rule · 12.6</span>
+    Guard the unfalsifiability: <b>pre-state and date</b> every dasha call, count the misses, never shop among systems, never trade on Sade Sati dread — and remember the standing caveat that the only validated worth is discipline.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself · 12.6</div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q1</b> What is the single discipline that rescues a dasha call from unfalsifiability?</div>
+      <div class="qa-a"><b>A</b> Pre-stating and dating the call, then scoring it with misses counted (Chapter 18). A fitted-after-the-move "explanation" means nothing; only a forward, dated, miss-counted call carries any weight.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q2</b> Why is "shopping among dasha systems" flagged as self-deception?</div>
+      <div class="qa-a"><b>A</b> Vimshottari, Ashtottari, Yogini and Chara give different periods and therefore different "explanations." Switching among them until one fits the move guarantees a match for any outcome — so the system must be named in advance and held fixed.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q3</b> What is the standing caveat's bottom line on dasha and gochar?</div>
+      <div class="qa-a"><b>A</b> They have no validated market-predictive power. Their honest worth is the combination-rule discipline and, above all, self-timing on the trader's own chart — always confirmed by price and governed by risk.</div>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">✓</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">The easiest self-deception in the book.</div>
+      <div class="d">Nested periods make any past move "explainable," disputed charts and competing systems compound it, and Sade Sati invites fearful trading — so pre-state, date, and count misses, and trust only the discipline.</div>
+    </div>
+  </div>
+</section>
+
+<hr class="soft"/>
+
+<!-- ============================ 12.7 SUMMARY ============================ -->
+<section class="lesson">
+  <div class="lesson-head">
+    <div class="lesson-no">Section 12.7</div>
+    <div class="lesson-title">Chapter Summary — <em>Five Takeaways</em></div>
+  </div>
+
+  <ol class="takeaways">
+    <li><strong>The dasha is a clock <em>inside</em> the chart</strong> — a fixed sequence of planetary periods set at birth, keyed to the Moon's nakshatra. Vimshottari (9 periods, 120 years, fractally nested) is the default.</li>
+    <li><strong>Gochar (transits, read from the natal Moon) supplies the trigger</strong>, and Indian timing's <strong>combination rule</strong> — event = dasha promises it <em>and</em> gochar triggers it — is the book's confluence principle in classical form.</li>
+    <li><strong>The honesty bar is the highest here:</strong> because a chart is <em>always</em> in some dasha, the system can post-hoc "explain" anything; it has no validated market edge, and the contested market-chart problem compounds the doubt.</li>
+    <li><strong>The one genuinely defensible use is on the <em>trader</em>, not the market</strong> — reframing dasha/gochar (and Sade Sati) as <strong>self-management</strong>: which season to press, which to protect capital — a claim about the person, not prices.</li>
+    <li><strong>Current gochar</strong> (exalted Jupiter in Cancer, Saturn leaving Pisces, Rahu in Aquarius) is <em>context</em>, not forecast — and turning it into a market call would require a validated foundation chart (Chapter 13). Aim the dasha at the mirror.</li>
+  </ol>
+</section>
+
+<!-- ============================ 12.8 CHECKLIST ============================ -->
+<section class="lesson">
+  <div class="lesson-head">
+    <div class="lesson-no">Section 12.8</div>
+    <div class="lesson-title">Practitioner's Checklist — <em>Indian Timing</em></div>
+  </div>
+
+  <ul class="checklist">
+    <li><b>1. Whose chart?</b> Are you applying the dasha to <em>yourself</em> (defensible self-timing) or to a market chart (needs a validated time, era-context only)?</li>
+    <li><b>2. Current periods identified?</b> Your running mahadasha/antardasha and the houses their lords rule — wealth seasons vs cautious seasons?</li>
+    <li><b>3. Combination rule applied?</b> Dasha <em>and</em> gochar agreement required — plus Western price/sentiment confluence?</li>
+    <li><b>4. Dasha system stated?</b> Vimshottari (or named alternative), not shopped among systems to fit?</li>
+    <li><b>5. Sade Sati kept in proportion?</b> Used (if at all) as a discipline prompt, never as a trigger for fearful or oversized trading?</li>
+    <li><b>6. Unfalsifiability guarded?</b> Are your dasha calls pre-stated and dated, with misses counted — not fitted after the move?</li>
+    <li><b>7. Not double-counted, risk fixed?</b> Gochar not treated as independent of Western transits; risk set independently of any period?</li>
+  </ul>
+
+  <div class="recap">
+    <div class="n">✓</div>
+    <div>
+      <div class="l">Locked In · Chapter 12</div>
+      <div class="t">Part II's timing toolkit is complete.</div>
+      <div class="d">The Indian dasha/gochar apparatus joins the great cycles, the nodal/McWhirter cycle, the eclipse-ingress-station triggers, and the Bradley siderograph — every one honestly bounded. The dasha's clean use is the combination-rule discipline and self-timing on the trader's own chart, never an oracle for prices.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ GLOSSARY ============================ -->
+<section class="lesson">
+  <div class="lesson-head">
+    <div class="lesson-no">Reference</div>
+    <div class="lesson-title">Glossary — <em>Chapter 12</em></div>
+  </div>
+
+  <dl class="gloss">
+    <dt>Dasha</dt>
+    <dd><span class="tag cl">Classical</span> A planetary period in Indian astrology — a clock built into a chart at birth, switching on a different planet's significations as it runs. Distinct from a transit, which reads the live sky.</dd>
+
+    <dt>Vimshottari dasha</dt>
+    <dd><span class="tag cl">Classical</span> The dominant dasha system: nine mahadashas in fixed order totalling 120 years, keyed to the Moon's nakshatra at birth and subdivided fractally.</dd>
+
+    <dt>Mahadasha</dt>
+    <dd><span class="tag cl">Classical</span> A major planetary period. The nine, in order, are Ketu 7, Venus 20, Sun 6, Moon 10, Mars 7, Rahu 18, Jupiter 16, Saturn 19, Mercury 17 years.</dd>
+
+    <dt>Antardasha (bhukti)</dt>
+    <dd><span class="tag cl">Classical</span> A sub-period within a mahadasha, length = mahadasha-years × sub-years ÷ 120, cycling through all nine lords. These subdivide again into <em>pratyantardasha</em> — a fractal of nested periods.</dd>
+
+    <dt>Nakshatra</dt>
+    <dd><span class="tag cl">Classical</span> A lunar mansion (Chapters 0 and 6); the Moon's nakshatra at birth fixes which lord opens the Vimshottari sequence and the balance of that first period.</dd>
+
+    <dt>Gochar</dt>
+    <dd><span class="tag cl">Classical</span> Vedic transit analysis, traditionally read from the natal Moon sign (the <em>Chandra lagna</em>). The slow planets — Saturn, Jupiter, Rahu/Ketu — carry the timing weight.</dd>
+
+    <dt>Sade Sati</dt>
+    <dd><span class="tag cl">Classical</span> <span class="tag ob">Observed</span> The ~7.5-year span when Saturn transits the 12th, 1st, and 2nd signs from the natal Moon; the most culturally weighted Indian transit, reputed to bring hardship — heavily believed but empirically unestablished.</dd>
+
+    <dt>Combination rule</dt>
+    <dd><span class="tag cl">Classical</span> Indian timing's confluence principle: an event manifests only when the dasha promises it <em>and</em> the gochar triggers the same significations — dual confirmation.</dd>
+
+    <dt>Ashtakavarga</dt>
+    <dd><span class="tag cl">Classical</span> A classical points scheme for grading transit strength, noted in this chapter but not developed further.</dd>
+
+    <dt>Chandra lagna</dt>
+    <dd><span class="tag cl">Classical</span> The natal Moon sign used as the reference ascendant for reading gochar in Vedic practice.</dd>
+  </dl>
+</section>
+
+<div class="bridge">
+  End of Chapter 12 — and of Part II, Timing the Market. The reader now holds the full timing toolkit: the great cycles, the nodal/McWhirter cycle, the eclipse-ingress-station triggers, the Bradley siderograph, and the Indian dasha/gochar apparatus — every one of them honestly bounded. Part III now turns to applied practice, beginning with Chapter 13 — "The Chart of the Market," which confronts head-on the contested foundation charts (NSE, BSE, NYSE) that so many earlier chapters have deferred to.
+</div>
+
+</body>
+</html>

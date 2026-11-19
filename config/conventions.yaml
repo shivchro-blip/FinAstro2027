@@ -13,8 +13,17 @@ node: mean                 # validated: Rahu->Capricorn 05-Dec-26 21:52 source
 nakshatra_scheme: 27       # 27 for transits; 28 (with Abhijit) only for Vedha tables
 abhijit_span_deg: [276.6667, 280.8889]   # 276d40' - 280d53'20"
 ephemeris:
-  preferred: swisseph_files      # uses sepl_*.se1 / semo_*.se1 if SE_EPHE_PATH set
+  preferred: swisseph_files      # sepl_18/semo_18 from SE_EPHE_PATH, else ./ephe (tools/fetch_ephe.py)
   fallback: moshier              # sub-arcsecond 1900-2100; adequate but diff before publishing
+  # PUBLISHED ON swisseph_files since 18-Nov-2026. The diff against the Moshier
+  # run, all 6,720 records of 2027: every record matched, no date moved; 111
+  # displayed IST minutes moved, by 1 min except slow-planet D9/nakshatra
+  # ingresses and speed crossings (Neptune D9 8 min, Pluto 6, Venus fast-start
+  # 12). Sun/Moon/lunation/tithi/karana within 4 s, sign ingresses 15 s.
+  # Two latent bugs surfaced only on the files and are fixed: the ephemeris flag
+  # was OR'd into rise_trans's rsmi (FLG_SWIEPH == CALC_SET, so every sunrise
+  # became a sunset), and the backend probe reported swisseph_files for any
+  # existing directory because Swiss Ephemeris falls back without raising.
   se_ephe_path_env: SE_EPHE_PATH
 
 # ---------------------------------------------------------------- locations
@@ -383,8 +392,14 @@ labels:
   #: single-point fit "an undocumented source rule" would send a reader hunting
   #: for a page that does not exist.
   #:
-  #: A station is frame-free -- it is where the longitude is stationary, and no
-  #: parameter stands between the sky and the instant. A crossing of 0.6583
+  #: A station has no fitted parameter -- it is where the longitude is
+  #: stationary, and no level stands between the sky and the instant. It is
+  #: NOT frame-free, which this comment claimed until 18-Nov-2026: the sidereal
+  #: speed is the tropical speed minus the ayanamsha and nutation rates (~6e-5
+  #: deg/day), and that moves a slow planet's zero by hours. Stations are
+  #: computed on the speed of date (ephem.Position.speed_of_date): all 18
+  #: printed 2026 station times reproduce within 1.7 min that way, against
+  #: misses of up to 3h20m (Pluto) on the sidereal speed. A crossing of 0.6583
   #: deg/day is only as meaningful as 0.6583 is.
   data_certainty_grounds:
     undocumented_source_rule: "the rule itself is not recoverable from the source"
@@ -469,7 +484,9 @@ open_questions:
   # threshold. The missing input is therefore named as the slow-planet doctrine.
   #
   # Retrograde/Direct is unaffected and remains the sign of the emitted speed,
-  # reproducing the source's stations to the day (Jupiter 11-Mar-26, Saturn
+  # reproducing the source's stations to the MINUTE on the speed of date --
+  # all 18 printed station times within 1.7 min; see data_certainty_grounds --
+  # and to the day before 18-Nov-2026 (Jupiter 11-Mar-26, Saturn
   # 27-Jul-26, Neptune 07-Jul-26, Pluto 06-May-26, Herschel 11-Sep vs 10-Sep),
   # with Mercury the documented 2-7 day lag that mercury_shar_lag records.
   - speed_class_thresholds        # RESOLVED for Mercury (1.745), Venus (1.224),
@@ -1195,7 +1212,7 @@ source_defects:
       - "25-Jan-26 23:10 -> 26-Jan-26 10:17  (karana 15, Day)   section only; ABSENT from the monthly table"
       - "29-Jan-26 03:17 -> 29-Jan-26 13:55  (karana 22, Night) section and monthly both agree"
     agreement_measured:
-      bhadra_section: "all 16 January boundaries within 25 seconds of the computed value -- the section's 'verified against Swiss Ephemeris' claim holds"
+      bhadra_section: "all 16 January boundaries within 30 seconds of the computed value (25 on Moshier, 26 worst on the Swiss Ephemeris files) -- the section's 'verified against Swiss Ephemeris' claim holds"
       monthly_calendar: "7 of its 8 boundaries within 79 seconds; the eighth is the 13-Jan start, off by 7134 seconds"
     scope: >
       A single bad row, not a systematic offset. The monthly calendar also omits
@@ -3032,18 +3049,25 @@ row_kinds:
       is the count of RENDERED ROWS, and that is published under its own name
       beside the daily-row equivalent rather than left to move underneath
       `records`.
+    # RE-MEASURED 18-Nov-2026 when B10 Mercury Manifestation was ported: its
+    # 3 Mumbai firings render 6 one-day window rows (instrument + USDINR), all
+    # under the ephemeris-dated cause. Was 8121 / 8916 / 118 / 913; the delta
+    # (-795) and every other cause are unchanged, which is the check.
     measured_2027:
-      rendered_rows: 8121
-      daily_row_equivalent: 8916
+      # 8127 / 8922 / 8003 until 18-Nov-2026, when Kshin (Malefic) Moon was
+      # ported: 525 timed day rows (13 windows x Mumbai days x instruments).
+      # Timed rows are not collapsed, so window_rows and the delta hold.
+      rendered_rows: 8652
+      daily_row_equivalent: 9447
       delta: -795
-      window_rows: 118
-      day_rows: 8003
-      daily_rows_collapsed: 913
+      window_rows: 124
+      day_rows: 8528
+      daily_rows_collapsed: 919
       non_contiguous_groups_left_daily: 0
       per_cause_P3:
         date_only_ephemeris:
-          daily_rows: 507
-          window_rows: 94
+          daily_rows: 513
+          window_rows: 100
           delta: -413
         civil_day_span_b101:
           daily_rows: 255
@@ -3207,7 +3231,7 @@ row_kinds:
         did.
       measured_2027:
         span_unit: (row_kind, event, instrument, venue, t_start_utc, t_end_utc)
-        span_groups: 2938
+        span_groups: 2983   # 2938 -> 2944 (B10) -> 2983 (Kshin Moon), 18-Nov-2026
         span_groups_note: >
           2,202 until 21-Sep-2026, when the Moon's navamsa series unblocked
           b071d and split b105, adding 736 span groups and -- this is the
@@ -3244,13 +3268,16 @@ row_kinds:
           that the last window of the year straddles the boundary -- this is
           the expected behaviour of a short-span rule at a year edge and not a
           defect.
-        clipped_start: 10
-        clipped_end: 27
-        clipped_start_with_open_start_false: 7
-        clipped_end_with_open_end_false: 22
-        real_endpoint_outside_the_year: 29
+        # 10 / 27 / 7 / 22 / 29 / 28 until Kshin Moon (18-Nov-2026): its
+        # windows that open in Dec-2026 and run past 31-Dec-2027 are clipped
+        # at both year edges, three instrument rows each, all timed.
+        clipped_start: 13
+        clipped_end: 30
+        clipped_start_with_open_start_false: 10
+        clipped_end_with_open_end_false: 25
+        real_endpoint_outside_the_year: 35
         of_which_no_instant: 1
-        of_which_timed: 28
+        of_which_timed: 34
         under_the_rule_span_unit: >
           18 spans, 1 no-instant and 17 timed, grouping by (row_kind, event,
           location, t_start_utc, t_end_utc) instead -- the unit fire() emits,
@@ -3330,7 +3357,7 @@ row_kinds:
         renderer that did not.
       why_the_display_string_was_not_the_test: >
         THE PRINCIPLE, which does not depend on the count: b102_anuradha_on_sunday
-        on 03-Oct-2027 is a nakshatra ingress at 00:00:21 IST -- a genuine
+        on 03-Oct-2027 is a nakshatra ingress at 00:00:22 IST -- a genuine
         instant that renders as 00:00 -- so no rule phrased over the printed
         time could keep it while dropping the rows that have no instant at all.
         The artifact's surface is not the thing to test; the property behind it
@@ -3409,7 +3436,7 @@ row_kinds:
             venues, so counting by venue turns b101's 105 into 150.
           filter: >
             no_instant_reason is not null. Not a display-string test -- b102
-            renders 00:00 IST from a real instant at 00:00:21 and is outside
+            renders 00:00 IST from a real instant at 00:00:22 and is outside
             this population, which is how the withdrawn 662 was built.
           generator: tools/cause_census.py
           asserted_by: >
@@ -3422,13 +3449,14 @@ row_kinds:
             period_cut: period_cut
             civil_day_span: date_only_b101
             anchored: anchored
+        # 331 / 431 until 18-Nov-2026; B10 adds 3 firings, 6 daily rows.
         catalogue_b_firings:
-          date_only_ephemeris: 331
+          date_only_ephemeris: 334
           period_cut: 142
           civil_day_span: 105
           anchored: 11
         catalogue_b_rows:
-          date_only_ephemeris: 431
+          date_only_ephemeris: 437
           period_cut: 151
           civil_day_span: 255
           anchored: 12
@@ -3460,7 +3488,11 @@ row_kinds:
             An invariant figure passes a check that names the wrong population.
             331 does not, and it is the one the harness therefore pins in all
             three -- 331 occupies exactly ONE cell of the census grid's 108.
-          date_only_ephemeris: {P1: 331, P1x: 12, P2: 352, P3: 383}
+          date_only_ephemeris: {P1: 334, P1x: 12, P2: 355, P3: 386}
+          b010_port_2026_11_18: >
+            331 / 352 / 383 before B10 was ported; its 3 firings move all three
+            nested populations by exactly 3 and leave P1x and the other three
+            causes where they were.
           period_cut:          {P1: 142, P1x:  0, P2: 142, P3: 142}
           civil_day_span:      {P1: 105, P1x:  0, P2: 105, P3: 105}
           anchored:            {P1:  11, P1x:  0, P2:  11, P3:  11}
@@ -3491,7 +3523,7 @@ row_kinds:
           none of them catalogue B. Every difference between the two recorded
           sets is a unit or a derivation defect.
         the_diagnosable_ones_measured:
-          at_282s_cell: 300
+          at_282s_cell: 305   # 300 until B10 added its 3 Mumbai dates
           what: >
             THE CELL, NOT THE VALUE. 282 was diagnosed by finding WHERE it
             came from: the first cause's distinct (venue, date) count in P3,
@@ -3759,6 +3791,12 @@ source_probability:
           # thing worth keeping; a single mutable field would erase it.
           measured_2026_09_15: 26
           measured_2026_09_20: 27
+          measured_2026_11_18: 29
+          what_moved_it_2026_11_18: >
+            Two families: motion/mercury_overtakes_venus and
+            motion/venus_overtakes_mercury, the speed_overtake series added to
+            port B10 Mercury Manifestation. Neither is a relative-house or node
+            colocation family, so the recount is unaffected.
           what_moved_it_2026_09_20: >
             One family: ingress/karana, the karana boundary series added with
             the Bhadra port. 866 records a year, the tithi scan at half its

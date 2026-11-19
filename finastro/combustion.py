@@ -42,9 +42,13 @@ _RS_FLAGS = swe.BIT_DISC_CENTER | swe.BIT_NO_REFRACTION
 def _rise_or_set(day: dt.date, body: str, rising: bool, loc: dict) -> float:
     jd0 = swe.julday(day.year, day.month, day.day) - 0.5 - loc["lon"] / 360.0
     flag = swe.CALC_RISE if rising else swe.CALC_SET
-    res = swe.rise_trans(jd0, ephem.body_id(body),
-                         ephem.backend_flag() | flag | _RS_FLAGS,
-                         (loc["lon"], loc["lat"], loc["alt"]), 0, 0)
+    # The ephemeris flag goes in `flags`, never OR'd into `rsmi`: FLG_SWIEPH
+    # is 2, which is CALC_SET, so under the Swiss Ephemeris files a "rise"
+    # silently became a set. Under Moshier (4 = CALC_MTRANSIT, ignored beside
+    # CALC_RISE/SET) it happened to work, which is how it went unseen.
+    res = swe.rise_trans(jd0, ephem.body_id(body), flag | _RS_FLAGS,
+                         (loc["lon"], loc["lat"], loc["alt"]), 0, 0,
+                         ephem.backend_flag())
     return res[1][0]
 
 

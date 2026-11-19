@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Celestial Ledger — Chapter 13: The Chart of the Market</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --paper:#fbf9f4; --paper2:#f4efe4; --card:#ffffff; --ink:#26211c; --ink-soft:#4f463c; --ink-faint:#857a6c;
+  --line:#e6dfce; --line-soft:#efe9dc;
+  --gold:#9a7113; --gold-soft:#fbf2da; --gold-line:#e7cf94;
+  --teal:#0c7d68; --teal-soft:#e3f3ef;
+  --coral:#b23a2e; --coral-soft:#f8e9e6;
+  --violet:#6244a8; --violet-soft:#efeafa;
+  --green:#2f7d4f; --green-soft:#e6f3ea;
+  --blue:#1f6aa6; --blue-soft:#e7f0f8;
+  --slate:#475569; --slate-soft:#eef1f5;
+  --serif:'Playfair Display',Georgia,'Times New Roman',serif;
+  --body:Georgia,'Iowan Old Style','Palatino Linotype',serif;
+  --sans:'Inter',system-ui,-apple-system,sans-serif;
+  --r:10px; --r-sm:7px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{ -webkit-text-size-adjust:100%; }
+body{ background:var(--paper); color:var(--ink); font-family:var(--body); font-size:18px; line-height:1.72; max-width:780px; margin:0 auto; padding:30px 26px 90px; }
+p{ margin:0 0 14px; } strong{ color:var(--ink); font-weight:600; } em{ font-style:italic; }
+
+.hero{ text-align:center; padding:22px 0 30px; border-bottom:2px solid var(--gold-line); margin-bottom:34px; }
+.hero .kicker{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:var(--gold); }
+.hero h1{ font-family:var(--serif); font-weight:900; font-size:40px; line-height:1.12; margin:14px 0 0; }
+.hero h1 em{ color:var(--gold); font-style:italic; }
+.hero .sub{ font-style:italic; color:var(--ink-soft); font-size:17px; max-width:600px; margin:16px auto 0; }
+.hero .ornament{ color:var(--gold); letter-spacing:.5em; margin-top:18px; font-size:14px; }
+
+.lesson{ margin:0 0 50px; }
+.lesson-head{ display:flex; align-items:baseline; gap:12px; border-bottom:1px solid var(--line); padding-bottom:8px; margin-bottom:18px; }
+.lesson-no{ font-family:var(--sans); font-size:12px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); white-space:nowrap; }
+.lesson-title{ font-family:var(--serif); font-weight:700; font-size:25px; line-height:1.2; }
+.lesson-title em{ color:var(--gold); font-style:italic; }
+h3.sec{ font-family:var(--serif); font-style:italic; font-weight:600; font-size:21px; color:var(--gold); margin:28px 0 10px; }
+h4.lab{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-faint); margin:22px 0 9px; }
+
+.callout{ border-left:4px solid var(--gold); background:var(--gold-soft); border-radius:0 var(--r-sm) var(--r-sm) 0; padding:14px 18px; margin:18px 0; font-size:16.5px; line-height:1.62; }
+.callout .ct{ display:block; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:5px; color:var(--gold); }
+.callout.teal{ border-color:var(--teal); background:var(--teal-soft);} .callout.teal .ct{ color:var(--teal);}
+.callout.coral{ border-color:var(--coral); background:var(--coral-soft);} .callout.coral .ct{ color:var(--coral);}
+.callout.violet{ border-color:var(--violet); background:var(--violet-soft);} .callout.violet .ct{ color:var(--violet);}
+.callout.green{ border-color:var(--green); background:var(--green-soft);} .callout.green .ct{ color:var(--green);}
+.callout.slate{ border-color:var(--slate); background:var(--slate-soft);} .callout.slate .ct{ color:var(--slate);}
+.honest{ border-left:4px solid var(--violet); background:var(--violet-soft); border-radius:0 var(--r-sm) var(--r-sm) 0; padding:14px 18px; margin:18px 0; font-size:16px; }
+.honest .ct{ display:block; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:5px; color:var(--violet); }
+
+.keyrule{ text-align:center; font-family:var(--serif); font-style:italic; font-size:20px; line-height:1.5; color:var(--gold); border-top:1px solid var(--gold-line); border-bottom:1px solid var(--gold-line); padding:18px 14px; margin:22px 0; }
+.keyrule .small{ display:block; font-family:var(--sans); font-style:normal; font-size:10px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:8px; }
+.keyrule b{ font-style:normal; color:var(--ink); }
+
+.tag{ display:inline-block; font-family:var(--sans); font-size:10px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:1px 7px; border-radius:4px; vertical-align:middle; }
+.tag.cl{ background:var(--blue-soft); color:var(--blue); }
+.tag.fw{ background:var(--gold-soft); color:var(--gold); }
+.tag.vf{ background:var(--violet-soft); color:var(--violet); }
+.tag.ob{ background:var(--teal-soft); color:var(--teal); }
+.tag.as{ background:var(--slate-soft); color:var(--slate); }
+.tag.hi{ background:var(--coral-soft); color:var(--coral); }
+
+.cards{ display:flex; flex-wrap:wrap; gap:12px; margin:16px 0; }
+.card{ flex:1 1 220px; background:var(--card); border:1px solid var(--line); border-top:3px solid var(--gold); border-radius:var(--r-sm); padding:14px 16px; }
+.card.up{ border-top-color:var(--green);} .card.down{ border-top-color:var(--coral);} .card.teal{ border-top-color:var(--teal);} .card.violet{ border-top-color:var(--violet);} .card.slate{ border-top-color:var(--slate);}
+.card .ic{ font-size:24px; line-height:1; } .card .ti{ font-family:var(--serif); font-weight:700; font-size:18px; margin:6px 0 2px; } .card .ti em{ color:var(--gold); font-style:italic; font-weight:400; font-size:14px; }
+.card .mt{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px; } .card p{ font-size:15px; line-height:1.55; margin:0; color:var(--ink-soft); }
+
+.tw{ overflow-x:auto; border:1px solid var(--line); border-radius:var(--r-sm); margin:16px 0; }
+table{ width:100%; border-collapse:collapse; font-family:var(--sans); }
+thead tr{ background:var(--gold-soft); }
+th{ font-size:10.5px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:var(--gold); text-align:left; padding:9px 11px; white-space:nowrap; }
+td{ font-size:13px; padding:8px 11px; border-top:1px solid var(--line-soft); vertical-align:top; color:var(--ink-soft); }
+td.g{ color:var(--gold); font-weight:600; white-space:nowrap; }
+td.up{ color:var(--green); font-weight:600;} td.dn{ color:var(--coral); font-weight:600;}
+td.s{ color:var(--slate); font-weight:600; white-space:nowrap; }
+tbody tr:nth-child(even){ background:#fcfaf5; }
+tr.total td{ background:var(--gold-soft); color:var(--gold); font-weight:700; border-top:2px solid var(--gold-line); }
+
+.qa{ border:1px solid var(--line); border-radius:var(--r-sm); overflow:hidden; margin:20px 0; }
+.qa-h{ background:var(--paper2); padding:9px 15px; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); border-bottom:1px solid var(--line); }
+.qa-i{ padding:12px 15px; border-bottom:1px solid var(--line-soft); } .qa-i:last-child{ border-bottom:none; }
+.qa-q{ font-size:16px; } .qa-q b{ color:var(--gold); font-family:var(--sans); font-size:12px; font-weight:700; margin-right:8px; }
+.qa-a{ font-size:16px; color:var(--ink-soft); margin-top:5px; } .qa-a b{ color:var(--teal); font-family:var(--sans); font-size:12px; font-weight:700; margin-right:8px; }
+
+.recap{ display:flex; align-items:center; gap:18px; background:var(--gold-soft); border:1px solid var(--gold-line); border-radius:var(--r-sm); padding:16px 20px; margin:20px 0; }
+.recap .n{ font-family:var(--serif); font-weight:900; font-size:38px; color:var(--gold); line-height:1; flex-shrink:0; }
+.recap .l{ font-family:var(--sans); font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); }
+.recap .t{ font-family:var(--serif); font-weight:700; font-size:18px; margin:2px 0; } .recap .d{ font-size:14px; color:var(--ink-soft); }
+
+.ladder{ counter-reset:rk; list-style:none; padding:0; margin:14px 0; }
+.ladder li{ counter-increment:rk; display:flex; gap:14px; align-items:flex-start; padding:9px 0; border-bottom:1px solid var(--line-soft); font-size:15.5px; }
+.ladder li:last-child{ border-bottom:none; }
+.ladder li::before{ content:counter(rk); flex-shrink:0; width:26px; height:26px; background:var(--gold); color:#fff; border-radius:50%; font-family:var(--sans); font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center; }
+.ladder b{ color:var(--ink); }
+
+.takeaways{ counter-reset:tk; list-style:none; padding:0; margin:14px 0; }
+.takeaways li{ counter-increment:tk; position:relative; padding:10px 0 10px 46px; border-bottom:1px solid var(--line-soft); font-size:16.5px; }
+.takeaways li:last-child{ border-bottom:none; }
+.takeaways li::before{ content:counter(tk); position:absolute; left:0; top:9px; width:30px; height:30px; border:1.5px solid var(--gold); color:var(--gold); border-radius:50%; font-family:var(--serif); font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center; }
+
+.checklist{ list-style:none; padding:0; margin:14px 0; }
+.checklist li{ position:relative; padding:10px 0 10px 34px; border-bottom:1px solid var(--line-soft); font-size:16px; }
+.checklist li:last-child{ border-bottom:none; }
+.checklist li::before{ content:"\2610"; position:absolute; left:0; top:8px; font-size:21px; line-height:1; color:var(--gold); }
+.checklist b{ color:var(--ink); }
+
+.gloss{ background:var(--card); border:1px solid var(--line); border-radius:var(--r-sm); padding:6px 18px; margin:16px 0; }
+.gloss dt{ font-family:var(--serif); font-weight:700; font-size:16px; color:var(--gold); margin:12px 0 1px; }
+.gloss dd{ margin:0 0 4px; font-size:15.5px; color:var(--ink-soft); }
+
+.bridge{ text-align:center; font-style:italic; color:var(--ink-faint); font-size:15px; border-top:1px solid var(--line); padding-top:22px; margin-top:34px; }
+hr.soft{ border:none; border-top:1px solid var(--line); margin:30px 0; }
+@media (max-width:600px){ body{font-size:17px;padding:20px 16px 70px;} .hero h1{font-size:31px;} .lesson-title{font-size:21px;} }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="kicker">The Celestial Ledger · Volume I · Part III — Applied Practice</div>
+  <h1>The Chart of the <em>Market</em></h1>
+  <p class="sub">Part III opens by confronting the problem Chapters 5 and 12 kept deferring: to read a market's houses or run its dasha, you need the market's birth moment — and market birth moments are genuinely contested. This chapter lays the candidates out honestly, draws the line between what is <em>robust</em> and what is <em>fragile</em> in a market chart, and shows where the reliable applied work actually lives.</p>
+  <div class="ornament">✶ ✦ ✶</div>
+</div>
+
+<div class="callout slate">
+  <span class="ct">Claim-type key</span>
+  <span class="tag hi">Historical</span> documented/attributed · <span class="tag as">Astronomical</span> verifiable astronomy · <span class="tag fw">Framework</span> this book's market interpretation · <span class="tag ob">Observed</span> an empirical caveat · <span class="tag vf">Verify</span> a contested fact to confirm. Foundation-chart figures computed with Swiss Ephemeris (sidereal/Lahiri).
+</div>
+
+
+<!-- ===================== 13.1 ===================== -->
+<section class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Lesson 13.1</span>
+    <span class="lesson-title">Chapter Introduction — <em>The Problem We Deferred</em></span>
+  </div>
+
+  <p>Again and again the book has said "we will return to this in Chapter 13." The wealth-house method of Chapter 5 needs a chart with an ascendant. The dasha of Chapter 12 needs a chart keyed to a precise Moon position. Both presuppose something not yet supplied: <strong>the birth chart of the market itself.</strong></p>
+
+  <p>Here is the uncomfortable truth this chapter cannot dodge: <strong>a market's birth moment is contested.</strong> Unlike a person, an exchange has <em>several</em> plausible "births" — the day it was founded, the day it was legally incorporated, the day the first trade printed — and for the older exchanges the <strong>exact time is simply not recorded.</strong> Practitioners fill the gap by <em>rectifying</em> — working backward from known events to guess a time — which risks becoming circular.</p>
+
+  <p>So the chapter does four things. It sets out the <strong>candidate charts</strong> for the major exchanges, explains the <strong>incorporation-versus-first-trade</strong> methodology, confronts the <strong>rectification trap</strong>, and — most usefully — draws the line between the parts of a market chart that are <strong>robust</strong> (knowable regardless of the time) and the parts that are <strong>fragile</strong> (entirely dependent on the contested time). That single distinction decides which applied techniques you can trust.</p>
+
+  <div class="keyrule">
+    <span class="small">Key Rule</span>
+    A market's chart is only as trustworthy as its birth moment — and that moment is <b>contested</b>. Before any house or dasha reading, ask which birth you are using and whether its time is real or rectified.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself</div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q1</b>Why can a market not simply be given a single birth chart the way a person is?</p>
+      <p class="qa-a"><b>A1</b>Because an exchange has several plausible birth events — founding, incorporation, first trade — and for the older ones no recorded time, so there is no single agreed moment to cast from.</p>
+    </div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q2</b>What gap does rectification try to fill, and what is its danger?</p>
+      <p class="qa-a"><b>A2</b>It fills the missing exact time by working backward from known events; its danger is circularity — tuning the time to fit the past rather than discovering it.</p>
+    </div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q3</b>Which single distinction does the chapter say decides what you can trust in a market chart?</p>
+      <p class="qa-a"><b>A3</b>The robust-versus-fragile split: the parts knowable regardless of the time versus the parts that depend entirely on the contested time.</p>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">✓</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">The deferred problem, now faced</div>
+      <div class="d">House- and dasha-based market work has always rested on a chart the book had not yet justified. The justification is uncomfortable: the birth moment is contested, and the robust/fragile line is the way through.</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== 13.2 ===================== -->
+<section class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Lesson 13.2</span>
+    <span class="lesson-title">Core Concepts — <em>What "a Market's Chart" Even Means</em></span>
+  </div>
+
+  <p><span class="tag fw">Framework</span> Financial astrology treats an exchange, an index, or a stock as an <strong>entity with a birth</strong> — a moment from which a horoscope can be cast and then "aged" by transits and dashas. The whole difficulty lies in choosing <em>which</em> moment.</p>
+
+  <h3 class="sec">The candidate-event problem</h3>
+
+  <p><span class="tag fw">Framework</span> For any market there are competing "birth" events, and different astrologers choose differently:</p>
+
+  <div class="cards">
+    <div class="card">
+      <div class="mt">Candidate I</div>
+      <div class="ti">Incorporation / founding</div>
+      <p>The legal or historical birth — the exchange comes into being as an institution.</p>
+    </div>
+    <div class="card teal">
+      <div class="mt">Candidate II</div>
+      <div class="ti">First trade</div>
+      <p>The first actual transaction — "the moment you could truly buy." The choice many practitioners prefer.</p>
+    </div>
+    <div class="card">
+      <div class="mt">Candidate III</div>
+      <div class="ti">Constitution / reorganization</div>
+      <p>Later formal re-foundings, when an exchange is legally remade.</p>
+    </div>
+    <div class="card violet">
+      <div class="mt">Candidate IV</div>
+      <div class="ti">Index inception / base date</div>
+      <p>For an index (Sensex, Nifty), an administrative start — not really a "birth" at all.</p>
+    </div>
+  </div>
+
+  <p>Each yields a <em>different chart</em>, hence a different reading. <strong>There is no consensus on which event is canonical</strong> — the first and deepest uncertainty.</p>
+
+  <h3 class="sec">The time problem and rectification</h3>
+
+  <p><span class="tag fw">Framework</span> Even once a date is chosen, the <strong>exact time is often unrecorded</strong> — and the chart's ascendant and houses move about one degree every four minutes. Practitioners respond by <strong>rectification</strong>: adjusting the unknown time until the chart "fits" known historical turns. Done honestly on a few events and then tested forward, rectification is defensible. Done by tuning the time until it explains every past crash, it is <strong>circular curve-fitting</strong> (Chapter 1) — a chart rectified to past crashes will of course "predict" them.</p>
+
+  <h3 class="sec">The methodology (first-trade vs incorporation)</h3>
+
+  <p><span class="tag fw">Framework</span> The practitioner tradition — for example, Bill Meridian's incorporation and first-trade databases — typically sets a <strong>first-trade</strong> chart to the <strong>exchange's opening time</strong> on the first-trade day, the moment buying became possible. A debated refinement is whether to convert that to the company's <strong>headquarters time zone</strong>, so that many stocks listing the same day do not share an identical chart, or to keep exchange-local time. State your convention.</p>
+
+  <div class="callout">
+    <span class="ct">Callout — Robust vs. Fragile: the Line That Matters</span>
+    In any market chart, <strong>planet-in-sign positions are robust</strong> — the planets barely move in a day, so they are knowable even when the time is not. But the <strong>ascendant, the houses, and the precise Moon position are fragile</strong> — they swing with the contested time. Every applied technique inherits the reliability of the part of the chart it depends on. This line, drawn precisely in §13.4, decides what you can trust.
+  </div>
+
+  <div class="keyrule">
+    <span class="small">Key Rule</span>
+    A "market's chart" is an entity-with-a-birth — but the birth has <b>two</b> uncertainties: <em>which event</em> and <em>which time</em>. Name both, and label them assumptions, before you read a single house.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself</div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q1</b>Name the four candidate "birth" events for a market.</p>
+      <p class="qa-a"><b>A1</b>Incorporation/founding, first trade, constitution/reorganization, and index inception/base date.</p>
+    </div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q2</b>How fast does the ascendant move, and why does that make the time problem acute?</p>
+      <p class="qa-a"><b>A2</b>About one degree every four minutes, so even a small error in an unrecorded time shifts the whole house framework.</p>
+    </div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q3</b>When is rectification defensible, and when is it circular curve-fitting?</p>
+      <p class="qa-a"><b>A3</b>Defensible when fitted on a few events and tested forward; circular when the time is tuned until it explains every past crash.</p>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">✓</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">Two uncertainties, not one</div>
+      <div class="d">Choosing a market chart means choosing both an event and a time, with no consensus on either. The robust/fragile callout previews the rescue: trust what does not move with the clock.</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== 13.3 ===================== -->
+<section class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Lesson 13.3</span>
+    <span class="lesson-title">Historical Framework — <em>The Candidate Charts</em></span>
+  </div>
+
+  <p><span class="tag hi">Historical</span> The major exchanges, with their candidate births — times flagged as contested:</p>
+
+  <h4 class="lab">The New York Stock Exchange (NYSE)</h4>
+  <p>The romantic birth is the <strong>Buttonwood Agreement of 17 May 1792</strong>, when twenty-four brokers agreed to trade under a buttonwood tree in lower Manhattan; a widely-used astrological chart sets this to <strong>about 10:30 AM local time, New York</strong> <span class="tag vf">Verify Time</span>. But there are rivals: <strong>first-trade / opening-bell</strong> charts (the exchange opened at 10:00 AM until 1985, 9:30 AM since), and later <strong>incorporation / constitution</strong> dates. Louise McWhirter (Chapter 9) famously used <strong>her own rectified NYSE chart</strong>; Bill Meridian and others built <strong>incorporation and first-trade</strong> charts. The NYSE alone has several competing horoscopes in active use.</p>
+
+  <h4 class="lab">The Bombay Stock Exchange (BSE)</h4>
+  <p>Asia's oldest exchange, <strong>founded 9 July 1875</strong> in Bombay (Mumbai). A time of <strong>about 12:44 PM is sometimes cited</strong>, but its source is uncertain and the time is <strong>contested</strong> <span class="tag vf">Verify</span>.</p>
+
+  <h4 class="lab">The National Stock Exchange (NSE)</h4>
+  <p>Incorporated <strong>1992</strong>; the <strong>equities (capital-market) segment commenced about 3 November 1994.</strong> The exact time is <strong>not standardized</strong> <span class="tag vf">Verify</span>.</p>
+
+  <h4 class="lab">Index inceptions</h4>
+  <p>Sometimes used as "births," though they are administrative: the <strong>Sensex</strong> base period is <strong>1978–79</strong> (base 100); the <strong>Nifty 50</strong> base is <strong>3 November 1995</strong> (base 1000).</p>
+
+  <h3 class="sec">What the computation shows — robust planets, fragile ascendant</h3>
+
+  <p>Two foundation charts, computed live (sidereal/Lahiri), illustrate the §13.2 line exactly. The slow-planet rows are <em>computed</em>; the ascendant rows are shown at the <em>claimed</em> time and explicitly flagged as time-dependent.</p>
+
+  <div class="tw">
+    <table>
+      <thead>
+        <tr><th>Body</th><th>BSE — 9 Jul 1875</th><th>NYSE Buttonwood — 17 May 1792</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Sun</td><td>24.5° Gemini</td><td>6.4° Taurus</td></tr>
+        <tr><td>Moon (fragile — needs exact time)</td><td class="s">11.9° Virgo (Hasta)</td><td class="s">29.1° Pisces (Revati)</td></tr>
+        <tr><td>Mars</td><td>1.0° Sagittarius</td><td>27.8° Leo</td></tr>
+        <tr><td>Mercury</td><td>20.8° Gemini</td><td>2.8° Taurus</td></tr>
+        <tr><td>Jupiter</td><td class="g">0.3° Libra</td><td class="g">2.0° Libra</td></tr>
+        <tr><td>Venus</td><td>4.1° Gemini</td><td>14.6° Aries</td></tr>
+        <tr><td>Saturn</td><td class="g">3.1° Aquarius</td><td class="g">5.4° Aries</td></tr>
+        <tr><td>Rahu</td><td>20.5° Pisces</td><td>9.7° Virgo</td></tr>
+        <tr><td>Ascendant <em>(depends on the contested time)</em></td><td class="s">~4.1° Libra</td><td class="s">~24.5° Cancer</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p><span class="tag fw">Framework</span> The planet-in-sign rows would barely change if the true time were hours off; the <strong>ascendant</strong> rows would change completely. That is the robust/fragile split made visible — and it dictates the method in §13.5.</p>
+
+  <div class="keyrule">
+    <span class="small">Key Rule</span>
+    The major exchanges each carry <b>several</b> competing horoscopes, all with contested times. Compute the slow planets with confidence; treat every ascendant and house as provisional until the time is genuinely established.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself</div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q1</b>What is the "romantic" birth of the NYSE, and why is even its time flagged?</p>
+      <p class="qa-a"><b>A1</b>The Buttonwood Agreement of 17 May 1792; the popular ~10:30 AM time is unverified, and first-trade and incorporation charts rival it, so the NYSE has several horoscopes in use.</p>
+    </div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q2</b>In the computed charts, which rows stay put across hours of time error and which do not?</p>
+      <p class="qa-a"><b>A2</b>The planet-in-sign rows stay put (Jupiter, Saturn, the nodes barely move); the ascendant — and the precise Moon — change completely with the time.</p>
+    </div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q3</b>Why is an index inception treated with more skepticism than an exchange founding?</p>
+      <p class="qa-a"><b>A3</b>Because a base date (Sensex 1978–79, Nifty 1995) is an administrative accounting choice, not a meaningful "birth."</p>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">✓</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">The candidates, computed and flagged</div>
+      <div class="d">BSE 1875 and NYSE 1792, cast in sidereal/Lahiri, show the same thing: the slow planets are solid ground, the ascendant is quicksand. The data carries the argument the prose has been making.</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== 13.4 ===================== -->
+<section class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Lesson 13.4</span>
+    <span class="lesson-title">Market Correlation Analysis — <em>The Honest Test, and the Robust/Fragile Split</em></span>
+  </div>
+
+  <h3 class="sec">The claim</h3>
+
+  <p><span class="tag fw">Framework</span> The applied proposition: <strong>transits and dashas to the market's natal chart time its moves</strong> — slow transits crossing natal planets or angles, dasha periods of natal wealth-house lords, eclipses on sensitive degrees. This is the engine behind claims like "Saturn transiting a key point of the BSE chart marks corrections."</p>
+
+  <h3 class="sec">The honest evidence — uncertainty all the way down</h3>
+
+  <p><span class="tag ob">Observed</span> This is the <strong>deepest reliability problem in applied financial astrology</strong>, for stacked reasons:</p>
+
+  <div class="honest">
+    <span class="ct">Uncertainty all the way down</span>
+    <strong>The chart itself is uncertain</strong> — multiple candidate events, unrecorded times. Any house, dasha, or sensitive-degree reading is only as trustworthy as a chart we cannot pin down. <strong>Rectification is circular</strong> — tuning the time to fit past turns guarantees in-sample "hits" and proves nothing (Chapter 1); a chart fitted to history is not evidence. <strong>Vendor accuracy claims are unverified</strong> — marketing lines such as "AI correlating Saturn's transit over the BSE chart achieved notable backtest accuracy" are not independently validated and deserve the same skepticism as any unbacktested claim. <strong>Small N compounds it</strong> — a century holds few slow-transit hits to any one natal point, too few to validate, doubly so on an uncertain chart.
+  </div>
+
+  <h3 class="sec">The split that rescues some usefulness</h3>
+
+  <p><span class="tag fw">Framework</span> Not all of the chart is equally doomed. The computation above shows the way out — and the numbers make it concrete. Across a six-hour swing in the assumed birth time, the BSE's Jupiter, Saturn, and Rahu each move only about <strong>one-hundredth of a degree</strong>, while its ascendant travels through <strong>three whole signs</strong> (roughly Leo to Scorpio). The same sweep on the NYSE chart leaves Jupiter and Saturn essentially fixed while the ascendant runs from Gemini to Virgo. One side of the chart ignores the clock; the other is governed by it.</p>
+
+  <div class="cards">
+    <div class="card teal">
+      <div class="mt">Usable even with an uncertain time</div>
+      <div class="ti">Robust</div>
+      <p>The natal planet-in-sign positions, and therefore slow transits to those natal planets — for example, transiting Saturn conjoining the BSE's natal Jupiter at about 0° Libra. These barely depend on the birth time.</p>
+    </div>
+    <div class="card down">
+      <div class="mt">Unreliable when the time is uncertain</div>
+      <div class="ti">Fragile</div>
+      <p>The ascendant, the house placements, and — most fragile of all — the dasha, because it is keyed to the <em>exact</em> Moon position. On a day-uncertain time even the <em>balance of dasha</em> can shift, throwing the whole period timeline off.</p>
+    </div>
+  </div>
+
+  <p><span class="tag fw">Framework</span> The disciplined consequence: <strong>when the birth time is in doubt, prefer robust signals and down-weight fragile ones.</strong> Read slow transits to natal planets; be very cautious with house- and dasha-based market calls until a chart's time is genuinely established.</p>
+
+  <h3 class="sec">Worked example, and the modern-stock exception</h3>
+
+  <p><span class="tag fw">Framework</span> Using the BSE chart honestly: a <em>robust</em> read would watch <strong>slow transits to its natal planets</strong> — transiting Saturn, Jupiter, or the nodes crossing the natal Jupiter at about 0° Libra or Saturn at about 3° Aquarius — knowable regardless of the contested 12:44 time. A <em>fragile</em> read — "the BSE's 7th house lord is activated" or "the BSE is in its Saturn dasha" — rests on the unverified ascendant and Moon-time and should be treated as provisional.</p>
+
+  <p><strong>The bright spot — individual modern stocks.</strong> For a stock listed in the modern era, the <strong>first-trade time is genuinely knowable</strong> from intraday data. So a <strong>modern stock's first-trade chart is far more reliable than the old exchange charts</strong> — the ascendant and houses are real, not rectified. This is why the cleaner applied work lives at the <strong>single-stock</strong> level (Chapter 16), not the contested exchange level.</p>
+
+  <div class="callout coral">
+    <span class="ct">Callout — Trust the Planets, Doubt the Ascendant</span>
+    When a market's birth time is uncertain — as it is for every major exchange — <strong>lean on what doesn't move with the clock</strong> (natal planet positions, slow transits to them) and <strong>distrust what does</strong> (ascendant, houses, dasha). And reach for <strong>modern first-trade charts</strong>, whose times are actually recorded, before trusting a rectified 18th- or 19th-century horoscope.
+  </div>
+
+  <div class="keyrule">
+    <span class="small">Key Rule</span>
+    The market-chart edge, such as it is, lives entirely on the <b>robust</b> side: slow transits to natal planets, and modern first-trade charts. Everything keyed to the contested time — houses, dasha — is provisional at best.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself</div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q1</b>List the stacked reasons the market chart is the deepest reliability problem in the field.</p>
+      <p class="qa-a"><b>A1</b>The chart itself is uncertain (events and times), rectification is circular, vendor accuracy claims are unverified, and small N gives too few hits to validate.</p>
+    </div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q2</b>Which natal feature is the single most fragile market technique, and why?</p>
+      <p class="qa-a"><b>A2</b>The dasha, because it is keyed to the exact Moon position; an uncertain time can shift the dasha balance and derail the entire period timeline.</p>
+    </div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q3</b>Why is a modern individual stock's chart more trustworthy than an old exchange's?</p>
+      <p class="qa-a"><b>A3</b>Its first-trade time is recorded in intraday data, so its ascendant and houses are real rather than rectified — the cleaner applied tier.</p>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">✓</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">The split that rescues usefulness</div>
+      <div class="d">There is no validated market-chart forecasting power, and rectification cannot manufacture it. What survives is narrow: slow transits to the robust natal planets, and the genuinely-timed charts of modern stocks — confirmed by price, governed by risk.</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== 13.5 ===================== -->
+<section class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Lesson 13.5</span>
+    <span class="lesson-title">The Practitioner's Method — <em>Working With (Uncertain) Market Charts</em></span>
+  </div>
+
+  <ol class="ladder">
+    <li><span><b>Declare the event and time, as a hypothesis.</b> State explicitly which birth you use — incorporation, first trade, inception — and what time, and label it <em>provisional</em>, not fact. An undeclared market chart is an undeclared assumption.</span></li>
+    <li><span><b>Prefer robust over fragile when the time is in doubt.</b> Build readings on natal planet-in-sign positions and slow transits to those natal planets. Treat ascendant-, house-, and dasha-based market calls as low-confidence until the time is genuinely established.</span></li>
+    <li><span><b>For modern stocks, use the knowable first-trade time.</b> Set the chart to the exchange-open time on the first-trade day (state your HQ-versus-exchange time-zone convention). These charts are real, not rectified — the reliable applied tier (Chapter 16).</span></li>
+    <li><span><b>If you rectify, do it honestly and test out-of-sample.</b> Rectify against a <em>few</em> events, then check the chart forward on <em>different</em> events (Chapter 18). Never tune the time until it explains every past crash — that is circular and worthless.</span></li>
+    <li><span><b>Distrust unverified accuracy claims.</b> Vendor or AI "backtest accuracy" on a market chart means nothing without transparent, out-of-sample, pre-registered methodology. Demand it or discount the claim.</span></li>
+    <li><span><b>Require price confluence; fix risk.</b> Even a robust transit-to-natal-planet signal is a <em>hypothesis</em>, acted on only with structural and sentiment confirmation, risk set independently.</span></li>
+  </ol>
+
+  <div class="keyrule">
+    <span class="small">Key Rule</span>
+    Declare the chart as a hypothesis, lean on its robust half, reserve rectification for honest out-of-sample testing, and never let any market-chart signal act without price confluence and fixed risk.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself</div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q1</b>What must accompany any market chart you use, and in what spirit?</p>
+      <p class="qa-a"><b>A1</b>A declared event and time, explicitly labelled provisional — a hypothesis, not a fact.</p>
+    </div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q2</b>How does the honest rectifier guard against circularity?</p>
+      <p class="qa-a"><b>A2</b>By rectifying against only a few events and then testing the chart forward on different ones, never tuning it to explain every past crash.</p>
+    </div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q3</b>What is the standing condition on acting upon even a robust signal?</p>
+      <p class="qa-a"><b>A3</b>Price and sentiment confluence, with risk set independently — the signal is only ever a hypothesis.</p>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">✓</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">A method that respects the uncertainty</div>
+      <div class="d">The six rules turn the robust/fragile split into practice: declare and provisionalize, weight toward the robust, keep rectification honest, discount unverified vendors, and never trade a chart signal without confluence and risk control.</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== 13.6 ===================== -->
+<section class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Lesson 13.6</span>
+    <span class="lesson-title">Edge Cases <em>and Cautions</em></span>
+  </div>
+
+  <ol class="ladder">
+    <li><span><b>The chart-uncertainty problem (central).</b> <span class="tag vf">Verify</span> Multiple candidate events plus unrecorded times mean no major exchange has a single, agreed, time-accurate chart. All house and dasha market work inherits this. Hold it consciously.</span></li>
+    <li><span><b>Rectification is curve-fitting in disguise.</b> A time tuned to past turns will "predict" them trivially. Rectify sparingly, test forward, and never treat a fitted chart as evidence.</span></li>
+    <li><span><b>Dasha is the most fragile market technique.</b> Because it needs the exact Moon position, an uncertain time can shift the dasha <em>balance</em> and derail the whole timeline. Market dashas on unverified charts are the least trustworthy reading of all.</span></li>
+    <li><span><b>Competing charts become cherry-picked "winners."</b> With several candidate charts available, declaring the one that "works" is itself selection bias. Pre-commit to a chart and convention; don't shop for the best-fitting horoscope after the fact.</span></li>
+    <li><span><b>The HQ-vs-exchange time-zone debate (stocks).</b> Same-day listings share a chart unless you adjust to the company's headquarters time. State and keep one convention.</span></li>
+    <li><span><b>An index "birth" is largely administrative.</b> A base date (Sensex 1978–79, Nifty 1995) is an accounting choice, not a meaningful "birth"; treat index-inception charts with extra skepticism.</span></li>
+    <li><span><b>The standing caveat.</b> <span class="tag ob">Observed</span> Market-chart astrology has no validated predictive power, and its reliability is further capped by chart uncertainty. Its most defensible form is robust signals (transits to natal planets) and modern first-trade charts — confirmed by price, governed by risk.</span></li>
+  </ol>
+
+  <div class="keyrule">
+    <span class="small">Key Rule</span>
+    The dangers compound: an uncertain chart, a circular fix, a fragile dasha, and a buffet of horoscopes to cherry-pick from. Pre-commit, test forward, and remember there is no validated edge to begin with.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself</div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q1</b>Why does having several candidate charts available create a hidden bias?</p>
+      <p class="qa-a"><b>A1</b>Because choosing the one that "works" after the fact is selection bias; the fix is to pre-commit to a single chart and convention.</p>
+    </div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q2</b>What practical convention resolves same-day listings sharing one chart?</p>
+      <p class="qa-a"><b>A2</b>Adjusting to the company's headquarters time zone — then keeping that one convention consistently.</p>
+    </div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q3</b>State the standing caveat on market-chart astrology in one line.</p>
+      <p class="qa-a"><b>A3</b>It has no validated predictive power; its most defensible form is robust signals and modern first-trade charts, confirmed by price and governed by risk.</p>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">✓</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">Seven ways it goes wrong</div>
+      <div class="d">From the central chart-uncertainty problem to the administrative emptiness of an index "birth," the cautions all point one way: pre-commit, test out-of-sample, and stay anchored to robust signals confirmed by price.</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== 13.7 ===================== -->
+<section class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Lesson 13.7</span>
+    <span class="lesson-title">Chapter Summary — <em>Five Takeaways</em></span>
+  </div>
+
+  <ol class="takeaways">
+    <li><strong>A market's birth moment is contested</strong> — competing events (incorporation, first trade, inception) and mostly unrecorded times — so every house- and dasha-based market reading rests on an uncertain chart.</li>
+    <li><strong>The robust/fragile split is the key:</strong> natal planet-in-sign positions (and slow transits to them) are knowable even with a wrong time; the ascendant, houses, and dasha swing with the contested time.</li>
+    <li><strong>Prefer robust, distrust fragile.</strong> When the time is in doubt — always, for the old exchanges — lean on transits to natal planets and down-weight ascendant, house, and dasha market calls.</li>
+    <li><strong>Rectification is a curve-fitting trap;</strong> modern <strong>individual-stock first-trade charts</strong> (with genuinely recorded times) are the reliable applied tier, not the rectified 1792 or 1875 exchange horoscopes.</li>
+    <li><strong>Candidate charts (flagged, times contested):</strong> NYSE Buttonwood 17 May 1792; BSE 9 July 1875; NSE equities about November 1994 — useful as <em>robust</em>-signal anchors, never as precise rectified oracles, always confirmed by price.</li>
+  </ol>
+
+  <div class="recap">
+    <div class="n">✓</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">The chapter in one breath</div>
+      <div class="d">Market charts are real entities with contested births; the robust planets are trustworthy and the time-bound houses are not; the honest applied work is slow transits to natal planets and modern first-trade charts, confirmed by price and governed by risk.</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===================== 13.8 ===================== -->
+<section class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Lesson 13.8</span>
+    <span class="lesson-title">Practitioner's Checklist — <em>Casting and Using a Market Chart</em></span>
+  </div>
+
+  <ul class="checklist">
+    <li><b>Event &amp; time declared as provisional?</b> Which birth (incorporation / first trade / inception) and time — and is it labelled a hypothesis, not a fact?</li>
+    <li><b>Robust vs fragile separated?</b> Are you building on natal planets and slow transits to them (robust), and down-weighting ascendant, house, and dasha (fragile) given the uncertain time?</li>
+    <li><b>Modern stock? Use the real first-trade time.</b> Exchange-open on the first-trade day, with a stated HQ/exchange time-zone convention?</li>
+    <li><b>Rectification disciplined?</b> If used, fitted on a few events and tested out-of-sample — never tuned to explain all past crashes?</li>
+    <li><b>Vendor claims discounted?</b> Are "AI/backtest accuracy" claims on a market chart treated skeptically absent transparent out-of-sample proof?</li>
+    <li><b>One chart pre-committed?</b> Have you avoided shopping among candidate charts for the best-fitting one after the fact?</li>
+    <li><b>Confluence required, risk fixed?</b> Even robust signals confirmed by price and sentiment, with risk set independently?</li>
+  </ul>
+</section>
+
+
+<hr class="soft"/>
+
+<h4 class="lab">Glossary</h4>
+<dl class="gloss">
+  <dt>First-trade chart <span class="tag fw">Framework</span></dt>
+  <dd>A market horoscope cast for the exchange's opening time on the day of its first transaction — "the moment you could truly buy." Often the practitioner's preferred birth.</dd>
+
+  <dt>Incorporation chart <span class="tag fw">Framework</span></dt>
+  <dd>A chart cast for the legal or founding birth of an exchange, when it came into being as an institution.</dd>
+
+  <dt>Rectification <span class="tag fw">Framework</span></dt>
+  <dd>Adjusting an unknown birth time until the chart "fits" known historical turns. Defensible on a few events tested forward; circular curve-fitting when tuned to explain every past crash.</dd>
+
+  <dt>Robust (chart feature) <span class="tag fw">Framework</span></dt>
+  <dd>The parts of a chart that barely move within a day — the planet-in-sign positions — and are therefore knowable even when the exact time is not.</dd>
+
+  <dt>Fragile (chart feature) <span class="tag fw">Framework</span></dt>
+  <dd>The parts that depend entirely on the exact time — the ascendant, the houses, the precise Moon, and the dasha — which swing across signs as the contested time shifts.</dd>
+
+  <dt>Ascendant <span class="tag as">Astronomical</span></dt>
+  <dd>The zodiac degree rising on the eastern horizon at the birth moment; it advances about one degree every four minutes, which is what makes it fragile for a market with an unrecorded time.</dd>
+
+  <dt>Buttonwood Agreement <span class="tag hi">Historical</span></dt>
+  <dd>The 17 May 1792 pact among twenty-four brokers in lower Manhattan, the romantic "birth" of the NYSE; a popular chart sets it to about 10:30 AM, a time that remains unverified.</dd>
+
+  <dt>Index inception / base date <span class="tag fw">Framework</span></dt>
+  <dd>The administrative start of an index (Sensex 1978–79, Nifty 1995) — an accounting choice rather than a meaningful "birth," and treated with extra skepticism.</dd>
+
+  <dt>Modern first-trade chart <span class="tag fw">Framework</span></dt>
+  <dd>The chart of a recently-listed stock, whose first-trade time is recorded in intraday data, giving it a real (not rectified) ascendant and houses — the cleaner applied tier.</dd>
+
+  <dt>Sensitive degree <span class="tag fw">Framework</span></dt>
+  <dd>A natal point (planet or angle) thought to mark turns when crossed by a transit or eclipse; only as reliable as the chart it sits in.</dd>
+</dl>
+
+<div class="recap">
+  <div class="n">✓</div>
+  <div>
+    <div class="l">Locked In</div>
+    <div class="t">Chapter 13 complete</div>
+    <div class="d">Part III opens by facing the deferred problem head-on. A market's chart is an entity with a contested birth; the robust planets are usable and the time-bound houses are not; the honest applied work is slow transits to natal planets and the genuinely-timed charts of modern stocks — always confirmed by price and governed by risk.</div>
+  </div>
+</div>
+
+<p class="bridge">End of Chapter 13. Next: Chapter 14 — "KP &amp; Horary for Markets," which applies the Krishnamurti Paddhati sub-lord system and the horary "will it rise?" question to markets — techniques prized for giving sharp, falsifiable yes/no answers, and tested accordingly.</p>
+
+</body>
+</html>

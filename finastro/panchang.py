@@ -181,9 +181,10 @@ def _horizon_crossing(day: dt.date, loc: dict, calc: int) -> dt.datetime:
     """
     ephem.init()
     lo, _ = civil_day_bounds(day, ZoneInfo(loc["tz"]))
-    flags = ephem.backend_flag() | calc | RISE_SET_BITS
-    res = swe.rise_trans(ephem.to_jd(lo), swe.SUN, flags,
-                         (loc["lon"], loc["lat"], loc["alt"]), 0, 0)
+    # Ephemeris flag in `flags`, not in `rsmi` -- see combustion._rise_or_set.
+    res = swe.rise_trans(ephem.to_jd(lo), swe.SUN, calc | RISE_SET_BITS,
+                         (loc["lon"], loc["lat"], loc["alt"]), 0, 0,
+                         ephem.backend_flag())
     return ephem.from_jd(res[1][0])
 
 

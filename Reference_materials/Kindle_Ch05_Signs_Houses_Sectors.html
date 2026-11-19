@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Celestial Ledger — Chapter 5: Signs, Houses &amp; Sectors</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --paper:#fbf9f4; --paper2:#f4efe4; --card:#ffffff; --ink:#26211c; --ink-soft:#4f463c; --ink-faint:#857a6c;
+  --line:#e6dfce; --line-soft:#efe9dc;
+  --gold:#9a7113; --gold-soft:#fbf2da; --gold-line:#e7cf94;
+  --teal:#0c7d68; --teal-soft:#e3f3ef;
+  --coral:#b23a2e; --coral-soft:#f8e9e6;
+  --violet:#6244a8; --violet-soft:#efeafa;
+  --green:#2f7d4f; --green-soft:#e6f3ea;
+  --blue:#1f6aa6; --blue-soft:#e7f0f8;
+  --serif:'Playfair Display',Georgia,'Times New Roman',serif;
+  --body:Georgia,'Iowan Old Style','Palatino Linotype',serif;
+  --sans:'Inter',system-ui,-apple-system,sans-serif;
+  --r:10px; --r-sm:7px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{ -webkit-text-size-adjust:100%; }
+body{ background:var(--paper); color:var(--ink); font-family:var(--body); font-size:18px; line-height:1.72; max-width:780px; margin:0 auto; padding:30px 26px 90px; }
+p{ margin:0 0 14px; } strong{ color:var(--ink); font-weight:600; } em{ font-style:italic; }
+
+.hero{ text-align:center; padding:22px 0 30px; border-bottom:2px solid var(--gold-line); margin-bottom:34px; }
+.hero .kicker{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:var(--gold); }
+.hero h1{ font-family:var(--serif); font-weight:900; font-size:40px; line-height:1.12; margin:14px 0 0; }
+.hero h1 em{ color:var(--gold); font-style:italic; }
+.hero .sub{ font-style:italic; color:var(--ink-soft); font-size:17px; max-width:580px; margin:16px auto 0; }
+.hero .ornament{ color:var(--gold); letter-spacing:.5em; margin-top:18px; font-size:14px; }
+
+.lesson{ margin:0 0 50px; }
+.lesson-head{ display:flex; align-items:baseline; gap:12px; border-bottom:1px solid var(--line); padding-bottom:8px; margin-bottom:18px; }
+.lesson-no{ font-family:var(--sans); font-size:12px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); white-space:nowrap; }
+.lesson-title{ font-family:var(--serif); font-weight:700; font-size:25px; line-height:1.2; }
+.lesson-title em{ color:var(--gold); font-style:italic; }
+h3.sec{ font-family:var(--serif); font-style:italic; font-weight:600; font-size:21px; color:var(--gold); margin:28px 0 10px; }
+h4.lab{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-faint); margin:22px 0 9px; }
+
+.callout{ border-left:4px solid var(--gold); background:var(--gold-soft); border-radius:0 var(--r-sm) var(--r-sm) 0; padding:14px 18px; margin:18px 0; font-size:16.5px; line-height:1.62; }
+.callout .ct{ display:block; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:5px; color:var(--gold); }
+.callout.teal{ border-color:var(--teal); background:var(--teal-soft);} .callout.teal .ct{ color:var(--teal);}
+.callout.coral{ border-color:var(--coral); background:var(--coral-soft);} .callout.coral .ct{ color:var(--coral);}
+.callout.violet{ border-color:var(--violet); background:var(--violet-soft);} .callout.violet .ct{ color:var(--violet);}
+.callout.green{ border-color:var(--green); background:var(--green-soft);} .callout.green .ct{ color:var(--green);}
+.honest{ border-left:4px solid var(--violet); background:var(--violet-soft); border-radius:0 var(--r-sm) var(--r-sm) 0; padding:14px 18px; margin:18px 0; font-size:16px; }
+.honest .ct{ display:block; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:5px; color:var(--violet); }
+
+.keyrule{ text-align:center; font-family:var(--serif); font-style:italic; font-size:20px; line-height:1.5; color:var(--gold); border-top:1px solid var(--gold-line); border-bottom:1px solid var(--gold-line); padding:18px 14px; margin:22px 0; }
+.keyrule .small{ display:block; font-family:var(--sans); font-style:normal; font-size:10px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:8px; }
+.keyrule b{ font-style:normal; color:var(--ink); }
+
+.tag{ display:inline-block; font-family:var(--sans); font-size:10px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:1px 7px; border-radius:4px; vertical-align:middle; }
+.tag.cl{ background:var(--blue-soft); color:var(--blue); } .tag.fw{ background:var(--gold-soft); color:var(--gold); } .tag.vf{ background:var(--violet-soft); color:var(--violet); } .tag.ob{ background:var(--teal-soft); color:var(--teal); }
+
+.cards{ display:flex; flex-wrap:wrap; gap:12px; margin:16px 0; }
+.card{ flex:1 1 220px; background:var(--card); border:1px solid var(--line); border-top:3px solid var(--gold); border-radius:var(--r-sm); padding:14px 16px; }
+.card.up{ border-top-color:var(--green);} .card.down{ border-top-color:var(--coral);} .card.teal{ border-top-color:var(--teal);} .card.violet{ border-top-color:var(--violet);}
+.card .ic{ font-size:24px; line-height:1; } .card .ti{ font-family:var(--serif); font-weight:700; font-size:18px; margin:6px 0 2px; } .card .ti em{ color:var(--gold); font-style:italic; font-weight:400; font-size:14px; }
+.card .mt{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px; } .card p{ font-size:15px; line-height:1.55; margin:0; color:var(--ink-soft); }
+
+.tw{ overflow-x:auto; border:1px solid var(--line); border-radius:var(--r-sm); margin:16px 0; }
+table{ width:100%; border-collapse:collapse; font-family:var(--sans); }
+thead tr{ background:var(--gold-soft); }
+th{ font-size:10.5px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:var(--gold); text-align:left; padding:9px 11px; white-space:nowrap; }
+td{ font-size:13px; padding:8px 11px; border-top:1px solid var(--line-soft); vertical-align:top; color:var(--ink-soft); }
+td.g{ color:var(--gold); font-weight:600; white-space:nowrap; }
+td.up{ color:var(--green); font-weight:600;} td.dn{ color:var(--coral); font-weight:600;}
+tbody tr:nth-child(even){ background:#fcfaf5; }
+
+.qa{ border:1px solid var(--line); border-radius:var(--r-sm); overflow:hidden; margin:20px 0; }
+.qa-h{ background:var(--paper2); padding:9px 15px; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); border-bottom:1px solid var(--line); }
+.qa-i{ padding:12px 15px; border-bottom:1px solid var(--line-soft); } .qa-i:last-child{ border-bottom:none; }
+.qa-q{ font-size:16px; } .qa-q b{ color:var(--gold); font-family:var(--sans); font-size:12px; font-weight:700; margin-right:8px; }
+.qa-a{ font-size:16px; color:var(--ink-soft); margin-top:5px; } .qa-a b{ color:var(--teal); font-family:var(--sans); font-size:12px; font-weight:700; margin-right:8px; }
+
+.recap{ display:flex; align-items:center; gap:18px; background:var(--gold-soft); border:1px solid var(--gold-line); border-radius:var(--r-sm); padding:16px 20px; margin:20px 0; }
+.recap .n{ font-family:var(--serif); font-weight:900; font-size:38px; color:var(--gold); line-height:1; flex-shrink:0; }
+.recap .l{ font-family:var(--sans); font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); }
+.recap .t{ font-family:var(--serif); font-weight:700; font-size:18px; margin:2px 0; } .recap .d{ font-size:14px; color:var(--ink-soft); }
+
+.ladder{ counter-reset:rk; list-style:none; padding:0; margin:14px 0; }
+.ladder li{ counter-increment:rk; display:flex; gap:14px; align-items:flex-start; padding:9px 0; border-bottom:1px solid var(--line-soft); font-size:15.5px; }
+.ladder li:last-child{ border-bottom:none; }
+.ladder li::before{ content:counter(rk); flex-shrink:0; width:26px; height:26px; background:var(--gold); color:#fff; border-radius:50%; font-family:var(--sans); font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center; }
+.ladder b{ color:var(--ink); }
+
+.takeaways{ counter-reset:tk; list-style:none; padding:0; margin:14px 0; }
+.takeaways li{ counter-increment:tk; position:relative; padding:10px 0 10px 46px; border-bottom:1px solid var(--line-soft); font-size:16.5px; }
+.takeaways li:last-child{ border-bottom:none; }
+.takeaways li::before{ content:counter(tk); position:absolute; left:0; top:9px; width:30px; height:30px; border:1.5px solid var(--gold); color:var(--gold); border-radius:50%; font-family:var(--serif); font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center; }
+
+.gloss{ background:var(--card); border:1px solid var(--line); border-radius:var(--r-sm); padding:6px 18px; margin:16px 0; }
+.gloss dt{ font-family:var(--serif); font-weight:700; font-size:16px; color:var(--gold); margin:12px 0 1px; }
+.gloss dd{ margin:0 0 4px; font-size:15.5px; color:var(--ink-soft); }
+
+.bridge{ text-align:center; font-style:italic; color:var(--ink-faint); font-size:15px; border-top:1px solid var(--line); padding-top:22px; margin-top:34px; }
+hr.soft{ border:none; border-top:1px solid var(--line); margin:30px 0; }
+@media (max-width:600px){ body{font-size:17px;padding:20px 16px 70px;} .hero h1{font-size:31px;} .lesson-title{font-size:21px;} }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="kicker">The Celestial Ledger · Volume I · Part I</div>
+  <h1>Signs, Houses <em>&amp; Sectors</em></h1>
+  <div class="sub">The significators told you <em>which</em> planet carries a market force; the signs told you the <em>costume</em> it wears. This chapter adds the third and final coordinate — the <em>house</em>, the arena in which the force plays out — and with it, the heart of financial astrology: the wealth houses.</div>
+  <div class="ornament">✦ ✦ ✦</div>
+</div>
+
+<div class="callout teal">
+  <span class="ct">The four labels, still in force</span>
+  Every assertion in this chapter wears one of four honest labels. <span class="tag cl">Classical</span> means an established rule of the tradition. <span class="tag fw">Framework</span> means this book's market interpretation — a working hypothesis. <span class="tag ob">Observed</span> means an empirical caveat, its limits stated plainly. And <span class="tag vf">Verify</span> marks a claim still to be confirmed. They are the discipline that keeps a doctrine of houses from hardening into a map of the future.
+</div>
+
+<div class="honest">
+  <span class="ct">The discipline this chapter introduces</span>
+  Houses bring a constraint the earlier coordinates did not. A significator and a sign are <strong>sky-wide</strong> — true for everyone, everywhere, at a given instant. A house is <strong>local and temporal</strong>: it exists only relative to a chart, fixed by the horizon at a particular moment and place. That means every house-based market claim presupposes a real, time-accurate chart — of the exchange, the stock, or the trader — and is only ever as trustworthy as the moment it was cast for.
+</div>
+
+<!-- ═══════════ 5.1 ═══════════ -->
+<div class="lesson">
+  <div class="lesson-head"><div class="lesson-no">Lesson 5.1</div><div class="lesson-title">The Missing <em>Third Coordinate</em></div></div>
+
+  <p>A planet is read on three axes. <strong>Which planet</strong> it is — the significator and its nature (Chapter 4). <strong>Which sign</strong> it occupies — its quality and dignity (Chapter 0). And <strong>which house</strong> it falls in — the department of life, or of a market, where its energy actually lands. Miss the third axis and your reading floats free: "Jupiter is strong" is incomplete until you can say <em>Jupiter is strong, and it sits in — or rules — the house of gains.</em></p>
+
+  <p>For financial work the houses matter more than anywhere else, because the tradition concentrates money in a specific set of them — the <strong>wealth houses</strong>. And houses introduce a discipline the previous coordinates did not require: <strong>a house only exists relative to a chart.</strong> Signs and significators are sky-wide — true for everyone, everywhere, at a given instant. Houses are local and temporal: they are fixed by the <strong>horizon at a particular moment and place</strong>. That means all house-based market work presupposes a <em>chart</em> — of the exchange, of a stock's listing, or of the trader — which is why this chapter ends by pointing forward to the foundation-chart problem of Chapter 13.</p>
+
+  <div class="keyrule"><span class="small">The rule to lock in</span>The house is the third coordinate — the arena. <b>Who</b> (significator) × <b>how</b> (sign) × <b>where</b> (house) is the whole read; drop any one and the reading floats free.</div>
+
+  <div class="qa">
+    <div class="qa-h">💬 Check yourself · Lesson 5.1</div>
+    <div class="qa-i"><div class="qa-q"><b>Q1</b>What are the three axes on which a planet is read?</div><div class="qa-a"><b>A</b><strong>Which planet</strong> (significator + nature), <strong>which sign</strong> (quality + dignity), and <strong>which house</strong> (the arena where its energy lands).</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q2</b>What discipline does the house coordinate impose that the others do not?</div><div class="qa-a"><b>A</b>A house <strong>exists only relative to a chart</strong> — fixed by the horizon at a moment and place — so all house work presupposes a time-accurate chart.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q3</b>Why do houses matter more in financial work than anywhere else?</div><div class="qa-a"><b>A</b>Because the tradition <strong>concentrates money in a specific set of them</strong> — the wealth houses — which a financial practitioner lives inside.</div></div>
+  </div>
+  <div class="recap"><div class="n">✦</div><div><div class="l">Lesson 5.1 — Locked In</div><div class="t">The third axis named</div><div class="d">Significator and sign were sky-wide; the house is the arena, local to a chart — and the gateway to the wealth houses at the heart of the craft.</div></div></div>
+</div>
+
+<!-- ═══════════ 5.2 ═══════════ -->
+<div class="lesson">
+  <div class="lesson-head"><div class="lesson-no">Lesson 5.2</div><div class="lesson-title">What a <em>House</em> Is</div></div>
+
+  <h3 class="sec">The ascendant anchors everything</h3>
+  <p><span class="tag cl">Classical</span> At any moment and place, one degree of the zodiac is rising on the eastern horizon — the <strong>ascendant</strong> (Sanskrit <em>lagna</em>). That rising degree begins the <strong>1st house</strong>, and the remaining eleven houses follow in sequence around the chart. Because the Earth rotates once a day, the ascendant moves through all twelve signs every ~24 hours — roughly one sign every two hours. <span class="tag fw">Framework</span> This is why <em>timing and location are everything</em> for house work: a chart cast two hours later has a different ascendant and therefore reshuffles every planet into different houses. A market reading built on houses is only as good as the accuracy of the moment it is cast for.</p>
+
+  <h3 class="sec">Sign versus house — the distinction to nail</h3>
+  <p><span class="tag fw">Framework</span> A beginner conflates these constantly. A <strong>sign</strong> is a fixed 30° zone of the zodiac (Aries, Taurus…). It does not depend on time or place. A <strong>house</strong> is a department of life or market, anchored to the horizon, that <em>contains</em> whatever sign and planets happen to fall there at a given moment and location.</p>
+  <p>A planet "in Taurus" is a sky-fact. A planet "in the 11th house" is a chart-fact. The same planet can be in Taurus in <em>everyone's</em> sky tonight, but in the 11th house for one chart and the 2nd for another.</p>
+
+  <h3 class="sec">The house families</h3>
+  <p><span class="tag cl">Classical</span> Houses group into families that grade their strength and character:</p>
+  <div class="cards">
+    <div class="card up"><div class="ic">🏛️</div><div class="ti">Kendras <em>angular</em></div><div class="mt">1 · 4 · 7 · 10</div><p>The pillars. Planets here are strong and active — the load-bearing structure of the chart.</p></div>
+    <div class="card"><div class="ic">🔱</div><div class="ti">Trikonas <em>trinal</em></div><div class="mt">1 · 5 · 9</div><p>The houses of fortune and <em>dharma</em> — the most auspicious group in the chart.</p></div>
+    <div class="card down"><div class="ic">⚠️</div><div class="ti">Dusthanas <em>difficult</em></div><div class="mt">6 · 8 · 12</div><p>Houses of debt, sudden upheaval, and loss — the chart's zones of friction and risk.</p></div>
+    <div class="card teal"><div class="ic">📈</div><div class="ti">Upachayas <em>growing</em></div><div class="mt">3 · 6 · 10 · 11</div><p>Houses that <em>improve with time and effort</em>. Note that gains (11) and competition (6) sit here — which matters for markets.</p></div>
+  </div>
+
+  <h3 class="sec">House systems — a real ambiguity</h3>
+  <p><span class="tag fw">Framework · caution</span> <em>How</em> the twelve houses are carved differs by system. Classical Vedic practice often uses <strong>whole-sign</strong> houses (the rising sign is the entire 1st house). KP and most Western work use <strong>Placidus</strong>, an unequal time-based division. Near a house cusp, the two systems can place a planet in <strong>different houses</strong> — a genuine ambiguity on the order of the ayanamsa problem of Chapter 2. This book uses <strong>whole-sign for Vedic/rashi reading and Placidus for KP work</strong> (because KP's cuspal method requires it), and flags any borderline placement.</p>
+
+  <div class="callout">
+    <span class="ct">Callout · Planet, Sign, House — the Three Questions</span>
+    For any market read, answer all three: <strong>Who?</strong> (significator + nature) · <strong>How?</strong> (sign + dignity) · <strong>Where?</strong> (house + chart). A reading missing any one is a reading you cannot trust.
+  </div>
+
+  <div class="keyrule"><span class="small">The rule to lock in</span>The ascendant begins the 1st house and turns once a day — so a house is a <b>chart-fact</b>, not a sky-fact. Sign is fixed; house is local, temporal, and system-dependent at the cusp.</div>
+
+  <div class="qa">
+    <div class="qa-h">💬 Check yourself · Lesson 5.2</div>
+    <div class="qa-i"><div class="qa-q"><b>Q1</b>What begins the 1st house, and how fast does it move?</div><div class="qa-a"><b>A</b>The <strong>ascendant</strong> (<em>lagna</em>) — the degree rising on the eastern horizon. It crosses all twelve signs in ~24 hours, about one sign every two hours.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q2</b>"In Taurus" versus "in the 11th house" — what is the difference?</div><div class="qa-a"><b>A</b>"In Taurus" is a <strong>sky-fact</strong>, true for everyone; "in the 11th house" is a <strong>chart-fact</strong>, true only for a chart cast at a particular time and place.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q3</b>Which house family contains both gains and competition, and why does it matter?</div><div class="qa-a"><b>A</b>The <strong>Upachayas</strong> (3, 6, 10, 11) — houses that improve with time. Gains (11) and competition (6) sitting here is significant for market reading.</div></div>
+  </div>
+  <div class="recap"><div class="n">4</div><div><div class="l">Lesson 5.2 — Locked In</div><div class="t">The anatomy of a house</div><div class="d">Ascendant-anchored, chart-local, grouped into four families (kendra, trikona, dusthana, upachaya), and genuinely ambiguous at the cusp between whole-sign and Placidus.</div></div></div>
+</div>
+
+<!-- ═══════════ 5.3 ═══════════ -->
+<div class="lesson">
+  <div class="lesson-head"><div class="lesson-no">Lesson 5.3</div><div class="lesson-title">The Twelve Houses &amp; the <em>Doctrine of Wealth</em></div></div>
+
+  <p><span class="tag cl">Classical</span> The bhavas, in their classical meanings, stated in their traditional terms:</p>
+  <div class="tw">
+    <table>
+      <thead><tr><th>House</th><th>Sanskrit</th><th>Core classical meaning</th></tr></thead>
+      <tbody>
+        <tr><td class="g">1st</td><td>Tanu / Lagna</td><td>the self, body, vitality, the entity, beginnings</td></tr>
+        <tr><td class="g">2nd</td><td>Dhana</td><td><strong>accumulated wealth, savings, liquid assets,</strong> family, speech, food</td></tr>
+        <tr><td class="g">3rd</td><td>Sahaja</td><td>siblings, courage, communication, short journeys, self-effort, enterprise</td></tr>
+        <tr><td class="g">4th</td><td>Sukha / Bandhu</td><td>home, <strong>fixed property and land,</strong> mother, comfort, vehicles, the masses</td></tr>
+        <tr><td class="g">5th</td><td>Putra / Vidya</td><td>children, intelligence, <strong>speculation and investment,</strong> creativity, past merit (<em>poorva-punya</em>)</td></tr>
+        <tr><td class="g">6th</td><td>Ari / Roga</td><td>enemies, <strong>debts,</strong> disease, competition, daily work, service, obstacles</td></tr>
+        <tr><td class="g">7th</td><td>Yuvati / Kalatra</td><td>spouse, <strong>partnership and business, trade, the "other," the public / market</strong></td></tr>
+        <tr><td class="g">8th</td><td>Randhra / Ayur</td><td>longevity, <strong>sudden events, others' money, inheritance, leverage,</strong> transformation, the hidden</td></tr>
+        <tr><td class="g">9th</td><td>Dharma / Bhagya</td><td><strong>fortune, luck, grace,</strong> father, higher learning, long journeys, <em>dharma</em></td></tr>
+        <tr><td class="g">10th</td><td>Karma</td><td><strong>career, status, authority, action in the world, government, the economy's standing</strong></td></tr>
+        <tr><td class="g">11th</td><td>Labha</td><td><strong>gains, income, profits,</strong> fulfilment of desires, networks, elder siblings</td></tr>
+        <tr><td class="g">12th</td><td>Vyaya</td><td><strong>losses, expenses, foreign lands,</strong> isolation, the hidden, liberation</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="sec">The wealth houses</h3>
+  <p><span class="tag cl">Classical</span> Indian astrology concentrates money in four houses, and a financial practitioner lives in them:</p>
+  <div class="cards">
+    <div class="card up"><div class="ic">🏦</div><div class="ti">2nd <em>Dhana</em></div><div class="mt">What you have</div><p>Accumulated assets, savings, the value of holdings, liquidity.</p></div>
+    <div class="card up"><div class="ic">💰</div><div class="ti">11th <em>Labha</em></div><div class="mt">What you gain</div><p>Income, profits, realized returns — the single most important house for <em>gains</em>.</p></div>
+    <div class="card teal"><div class="ic">🎲</div><div class="ti">5th <em>Poorva-punya</em></div><div class="mt">Speculation</div><p>The house of <em>investment and speculation</em> itself — the trading and punting house.</p></div>
+    <div class="card violet"><div class="ic">🍀</div><div class="ti">9th <em>Bhagya</em></div><div class="mt">Fortune</div><p>Fortune and grace — windfalls, luck, the favour that lets gains arrive.</p></div>
+  </div>
+  <p>Two further classical groupings sharpen this. The <strong>Artha trikona (2, 6, 10)</strong> is the material / wealth trine of the <em>purushartha</em> scheme — earning, debt-and-effort, and career. And the <strong>Lakshmi-sthanas</strong>, the trinal houses of fortune (especially <strong>5 and 9</strong>), are where prosperity is said to be <em>earned by merit</em>.</p>
+
+  <h3 class="sec">Dhana yogas — the combinations of wealth</h3>
+  <p><span class="tag cl">Classical</span> The tradition holds that <strong>wealth is produced when the lords of the wealth houses connect</strong> — by conjunction, mutual aspect, sign-exchange (<em>parivartana</em>), or placement in one another's houses. The classic engines are links between the lords of the <strong>2nd and 11th</strong> (assets meeting gains), the <strong>5th and 9th</strong> (speculation meeting fortune), and the lords of <strong>2, 5, 9, 11</strong> woven together. These are the <strong>Dhana yogas.</strong></p>
+  <div class="callout violet">
+    <span class="ct">Honest note · the yoga lists are author-dependent</span>
+    The specific combination lists vary considerably across texts. This book states the <em>principle</em> — wealth comes from wealth-house lords connecting — and treats individual yoga rules as author-dependent rather than canonical. The full, carefully-sourced yoga treatment belongs to a later combinations chapter.
+  </div>
+
+  <div class="keyrule"><span class="small">The rule to lock in</span>Four wealth houses — <b>2nd</b> assets, <b>11th</b> gains, <b>5th</b> speculation, <b>9th</b> fortune — and wealth is produced when their <b>lords connect</b>, not from any one house alone.</div>
+
+  <div class="qa">
+    <div class="qa-h">💬 Check yourself · Lesson 5.3</div>
+    <div class="qa-i"><div class="qa-q"><b>Q1</b>Name the four wealth houses and what each governs.</div><div class="qa-a"><b>A</b><strong>2nd</strong> (assets / savings), <strong>11th</strong> (gains / profits — the most important), <strong>5th</strong> (speculation / investment), <strong>9th</strong> (fortune / windfalls).</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q2</b>According to the tradition, how is wealth actually <em>produced</em> in a chart?</div><div class="qa-a"><b>A</b>When the <strong>lords of the wealth houses connect</strong> — by conjunction, mutual aspect, sign-exchange, or mutual placement. These links are the <strong>Dhana yogas</strong>.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q3</b>How does this book treat the specific Dhana-yoga lists?</div><div class="qa-a"><b>A</b>As <strong>author-dependent, not canonical</strong> — the lists vary across texts, so the book states the principle and defers the full sourced treatment to a later combinations chapter.</div></div>
+  </div>
+  <div class="recap"><div class="n">12</div><div><div class="l">Lesson 5.3 — Locked In</div><div class="t">The doctrine of wealth</div><div class="d">All twelve bhavas in their classical meanings, the four wealth houses a practitioner lives in, the Artha trikona and Lakshmi-sthanas, and the Dhana-yoga principle of connecting lords.</div></div></div>
+</div>
+
+<!-- ═══════════ 5.4 ═══════════ -->
+<div class="lesson">
+  <div class="lesson-head"><div class="lesson-no">Lesson 5.4</div><div class="lesson-title">Houses as <em>Market Arenas</em></div></div>
+
+  <p><span class="tag fw">Framework</span> Houses become market tools only when attached to a chart — and <em>which</em> chart changes what a house means. The three charts a financial practitioner uses:</p>
+  <div class="cards">
+    <div class="card"><div class="ic">🏛️</div><div class="ti">The Market / Exchange Chart</div><div class="mt">The market as a whole</div><p>The NSE, BSE, or NYSE foundation chart — for reading the market itself.</p></div>
+    <div class="card teal"><div class="ic">📊</div><div class="ti">A Stock's Chart</div><div class="mt">An individual instrument</div><p>Its listing / first-trade moment — for a single security (Chapter 13).</p></div>
+    <div class="card violet"><div class="ic">🧭</div><div class="ti">The Trader's Own Chart</div><div class="mt">The practitioner</div><p>For <em>your</em> timing, discipline, and earning periods (Chapter 12).</p></div>
+  </div>
+
+  <p>Read across these three, the houses map roughly as follows:</p>
+  <div class="tw">
+    <table>
+      <thead><tr><th>House</th><th>In the market / index chart</th><th>In a stock's chart</th><th>In the trader's chart</th></tr></thead>
+      <tbody>
+        <tr><td class="g">1</td><td>the market / exchange itself; ascendant lord = trend significator</td><td>the company / stock itself, its vitality</td><td>the trader; their drive &amp; approach</td></tr>
+        <tr><td class="g">2</td><td>the market's capital base, valuation</td><td>the firm's assets, book value</td><td>the trader's capital &amp; savings</td></tr>
+        <tr><td class="g">5</td><td>speculative mood, the punting public</td><td>the stock's speculative appeal</td><td><strong>the trader's speculation / trading</strong></td></tr>
+        <tr><td class="g">7</td><td>the broad public / counterparties</td><td>the market the stock trades in</td><td>counterparties, partnerships</td></tr>
+        <tr><td class="g">8</td><td><strong>sudden shocks, leverage, crashes, others' money</strong></td><td>sudden moves, debt, transformation</td><td><strong>leverage, sudden gain / loss, F&amp;O</strong></td></tr>
+        <tr><td class="g">9</td><td>fortune / luck of the market</td><td>the firm's fortune</td><td><strong>the trader's luck &amp; windfalls</strong></td></tr>
+        <tr><td class="g">10</td><td>the economy's standing, policy / authority</td><td>the firm's business &amp; status</td><td>the trader's career / standing</td></tr>
+        <tr><td class="g">11</td><td><strong>realized gains, profits, the up-move</strong></td><td>the firm's profits &amp; gains</td><td><strong>the trader's profits</strong></td></tr>
+        <tr><td class="g">12</td><td><strong>losses, capital flight, foreign outflows</strong></td><td>the firm's losses &amp; expenses</td><td><strong>the trader's losses &amp; expenses</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p><span class="tag fw">Framework</span> Two market-specific readings worth fixing in mind. The <strong>11th–12th axis is the gain–loss axis</strong> of any financial chart: strength or activation of the 11th leans toward realized gains; of the 12th, toward loss and outflow. And the <strong>8th house is the leverage-and-shock house</strong> — others' money, sudden reversals, and the violent moves that define crashes. A practitioner watching for <em>risk</em> watches the 8th.</p>
+
+  <div class="callout coral">
+    <span class="ct">Callout · A House Without a Chart Is Nothing</span>
+    Unlike a significator or a sign, you cannot speak of "the 11th house" in the abstract sky — only in <em>a chart cast for a defined moment and place</em>. This is the discipline houses impose: <strong>before any house-based market claim, you must have a real, time-accurate chart.</strong> The hardest part of that — pinning the exchange's true foundation moment — is Chapter 13's problem, and a genuinely contested one.
+  </div>
+
+  <div class="keyrule"><span class="small">The rule to lock in</span>The same house number means different things in different charts. The <b>11th–12th</b> is the gain–loss axis; the <b>8th</b> is the leverage-and-shock house where a risk-watcher looks first.</div>
+
+  <div class="qa">
+    <div class="qa-h">💬 Check yourself · Lesson 5.4</div>
+    <div class="qa-i"><div class="qa-q"><b>Q1</b>What are the three charts a financial practitioner uses?</div><div class="qa-a"><b>A</b>The <strong>market / exchange chart</strong> (the whole market), <strong>a stock's chart</strong> (one instrument), and <strong>the trader's own chart</strong> (their timing and discipline).</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q2</b>Which axis is the gain–loss axis of a financial chart?</div><div class="qa-a"><b>A</b>The <strong>11th–12th</strong>: the 11th leans toward realized gains and the up-move; the 12th toward loss, expense, and outflow.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q3</b>Which house does a practitioner watch for risk, and why?</div><div class="qa-a"><b>A</b>The <strong>8th</strong> — the leverage-and-shock house of others' money, sudden reversals, and the violent moves that define crashes.</div></div>
+  </div>
+  <div class="recap"><div class="n">3</div><div><div class="l">Lesson 5.4 — Locked In</div><div class="t">Houses become arenas</div><div class="d">Three charts, one house-map read across each; the 11th–12th gain–loss axis and the 8th as the risk house — all of it useless without a real, time-accurate chart.</div></div></div>
+</div>
+
+<!-- ═══════════ 5.5 ═══════════ -->
+<div class="lesson">
+  <div class="lesson-head"><div class="lesson-no">Lesson 5.5</div><div class="lesson-title">The Three-Layer <em>Read</em></div></div>
+
+  <p>Houses complete the reading method the book has been assembling. To judge any market question — a trend, a sector, a stock, a window — layer the three coordinates:</p>
+
+  <ol class="ladder">
+    <li><b>Pick the chart and verify its time.</b> Market question → market chart; stock question → that stock's listing chart; your-own-timing question → your chart. A house read on a wrong or unverified time is worthless (and many "market charts" have disputed times — see Lesson 5.6).</li>
+    <li><b>Read the three layers together.</b> <em>Significator (who):</em> the planet for the matter (Chapter 4) — e.g. Jupiter for banking, Sun for gold. <em>Sign (how):</em> its dignity and quality (Chapters 0 / 7) — exalted, debilitated, retrograde? <em>House (where):</em> the arena it occupies <em>and the houses it rules and aspects</em> in this chart.</li>
+    <li><b>Weight the wealth houses for money questions.</b> For <em>gains</em>, watch the <strong>11th</strong> and its lord; for <em>assets / value</em>, the <strong>2nd</strong>; for <em>speculation</em>, the <strong>5th</strong>; for <em>fortune / windfall</em>, the <strong>9th</strong>; for <em>risk / leverage / crash</em>, the <strong>8th and 12th</strong>.</li>
+    <li><b>Look for the lords' connections, not just placements.</b> Classical wealth comes from <strong>lords linking</strong> (the Dhana-yoga principle) — a 2nd-lord with an 11th-lord matters more than either alone. Read relationships, not isolated planets.</li>
+    <li><b>Confluence, still and always.</b> A favourable wealth-house configuration is a <em>hypothesis</em>. Act only where it agrees with price structure and sentiment (Chapter 3), with risk fixed first.</li>
+  </ol>
+
+  <div class="callout">
+    <span class="ct">Callout · The Full Reading Stack</span>
+    <strong>Chart → ascendant → significator → sign / dignity → house (occupied, ruled, aspected) → lord-connections → hypothesis → confluence with price → risk.</strong> Chapters 0, 4, and 5 have now built the first six rungs; the timing chapters add <em>when</em>, and Chapter 17 assembles the whole stack into a working method.
+  </div>
+
+  <div class="keyrule"><span class="small">The rule to lock in</span>Pick the chart, verify the time, read all three layers, weight the wealth houses, follow the lords' connections — then act only on confluence with price and fixed risk.</div>
+
+  <div class="qa">
+    <div class="qa-h">💬 Check yourself · Lesson 5.5</div>
+    <div class="qa-i"><div class="qa-q"><b>Q1</b>What are the three layers read together in Rule 2?</div><div class="qa-a"><b>A</b><strong>Significator</strong> (who — the planet for the matter), <strong>sign</strong> (how — its dignity and quality), and <strong>house</strong> (where — occupied, ruled, and aspected in this chart).</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q2</b>Why does Rule 4 insist on lords' connections rather than placements?</div><div class="qa-a"><b>A</b>Because classical wealth comes from <strong>lords linking</strong> (Dhana yoga) — a 2nd-lord with an 11th-lord matters more than either house considered alone.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q3</b>What does the full reading stack still require before a configuration becomes a trade?</div><div class="qa-a"><b>A</b><strong>Confluence with price and fixed risk.</strong> A favourable wealth-house picture is only a hypothesis until price and sentiment agree and risk is set first.</div></div>
+  </div>
+  <div class="recap"><div class="n">5</div><div><div class="l">Lesson 5.5 — Locked In</div><div class="t">The method, assembled</div><div class="d">Five rules — chart-and-time, three layers, weighted wealth houses, lords' connections, and mandatory confluence — building the first six rungs of the full reading stack.</div></div></div>
+</div>
+
+<!-- ═══════════ 5.6 ═══════════ -->
+<div class="lesson">
+  <div class="lesson-head"><div class="lesson-no">Lesson 5.6</div><div class="lesson-title">Edge Cases <em>and Cautions</em></div></div>
+
+  <p>A master is defined by how clearly they see the failure modes. Five cautions guard house-based market work from misuse.</p>
+
+  <ol class="ladder">
+    <li><b>The house-system disagreement.</b> <span class="tag fw">Framework · caution</span> Whole-sign and Placidus (KP) can place a cusp-straddling planet in different houses — flipping it from, say, the 10th to the 11th, and changing the conclusion. Near any cusp, compute under the system the technique demands and treat a borderline placement as genuinely uncertain. Never mix a whole-sign reading with KP cuspal sub-lords.</li>
+    <li><b>The chart-time problem — the big one.</b> <span class="tag vf">Verify</span> House work needs an accurate birth moment, and market charts are <em>contested</em>: there are competing candidate times for the NSE, the BSE, and "India" charts, and a small error in time swings the ascendant and every house. This is not a detail — it can invalidate an entire house-based analysis. Chapter 13 treats the candidate charts explicitly and flags them; until then, treat any specific exchange-chart house claim as provisional.</li>
+    <li><b>House-juggling to fit.</b> Because every chart has all twelve houses and many planets, a determined analyst can always find <em>some</em> house story for any past move. That is hindsight, not method — the data-mining trap of Chapter 1 in house form. A house read counts only when stated <em>before</em> the event.</li>
+    <li><b>"Benefic in a good house" ≠ guaranteed up.</b> A benefic in the 11th is not a buy signal. Direction depends on the whole chart, the running period (dasha / transit), and — decisively — the price structure. Houses describe <em>arenas of emphasis</em>, not price direction.</li>
+    <li><b>The standing caveat.</b> <span class="tag ob">Observed</span> House-based market forecasting has no validated predictive power; the wealth-house <em>doctrine</em> is genuinely classical, but its market application is interpretive framework. Use the houses to organize <em>where</em> to look and <em>what</em> to test — never as a guarantee.</li>
+  </ol>
+
+  <div class="keyrule"><span class="small">The rule to lock in</span>Systems disagree at the cusp, the chart time is contested, hindsight always finds a house, and a benefic in a good house is not a buy. Houses say <b>where to look</b>, never <b>which way price goes</b>.</div>
+
+  <div class="qa">
+    <div class="qa-h">💬 Check yourself · Lesson 5.6</div>
+    <div class="qa-i"><div class="qa-q"><b>Q1</b>Why is the chart-time problem "the big one"?</div><div class="qa-a"><b>A</b>Because market charts have <strong>contested times</strong>, and a small time error swings the ascendant and every house — potentially invalidating an entire house-based analysis (Chapter 13).</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q2</b>Is a benefic in the 11th house a buy signal?</div><div class="qa-a"><b>A</b><strong>No.</strong> Direction depends on the whole chart, the running dasha / transit, and price structure. Houses describe <em>arenas of emphasis</em>, not direction.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q3</b>What is the standing caveat over all house-based market work?</div><div class="qa-a"><b>A</b><span class="tag ob">Observed</span> — it has <strong>no validated predictive power</strong>. The wealth-house doctrine is classical, but its market application is interpretive framework, useful only for organizing where to look.</div></div>
+  </div>
+  <div class="recap"><div class="n">6</div><div><div class="l">Lesson 5.6 — Locked In</div><div class="t">Seeing the failure modes</div><div class="d">The system disagreement, the contested chart time, the hindsight trap, the benefic-direction error, and the standing caveat — the clear-eyed catalogue that keeps house work honest.</div></div></div>
+</div>
+
+<hr class="soft"/>
+
+<h3 class="sec" style="font-size:24px;text-align:center;">Chapter 5 — Locked In</h3>
+<p style="text-align:center;color:var(--ink-soft);">You now hold the third coordinate, and with it the heart of financial astrology. Here are the things to carry forward.</p>
+<ol class="takeaways">
+  <li><strong>The house is the third coordinate</strong> — the arena. Read every market factor as <em>who</em> (significator) × <em>how</em> (sign) × <em>where</em> (house).</li>
+  <li><strong>A house exists only inside a chart,</strong> fixed by the ascendant — so all house work demands a time-accurate chart of the market, the stock, or the trader.</li>
+  <li><strong>The wealth houses are the heart of financial astrology:</strong> 2nd (assets), 11th (gains), 5th (speculation), 9th (fortune) — plus the 8th / 12th for leverage, shocks, and loss.</li>
+  <li><strong>Wealth comes from lords <em>connecting</em></strong> (the Dhana-yoga principle), not from isolated planets — read relationships, and treat specific yoga lists as author-dependent.</li>
+  <li><strong>Houses say where to look, not which way price goes.</strong> House-system and chart-time ambiguities are real; confluence with price and fixed risk remain non-negotiable.</li>
+</ol>
+
+<h4 class="lab" style="margin-top:30px;">Practitioner's Checklist — before any house-based market read</h4>
+<p style="color:var(--ink-soft);font-size:16px;">Run all seven gates on any house-based read before it reaches your position size. A read that fails the lower gates should never set a trade.</p>
+<ol class="ladder">
+  <li><b>Which chart, and is its time verified?</b> Market, stock, or trader chart — cast for a moment you actually trust?</li>
+  <li><b>House system matched to method?</b> Whole-sign for rashi reading, Placidus for KP — and not mixed?</li>
+  <li><b>All three layers read?</b> Significator (who) × sign / dignity (how) × house occupied, ruled, aspected (where)?</li>
+  <li><b>Wealth houses weighted for money questions?</b> 11th (gains), 2nd (assets), 5th (speculation), 9th (fortune); 8th / 12th for risk?</li>
+  <li><b>Lord-connections checked, not just placements?</b> Are the wealth-house <em>lords</em> linked (the Dhana-yoga principle)?</li>
+  <li><b>Cusp-sensitive?</b> Any key planet near a house cusp — checked under both systems and flagged uncertain?</li>
+  <li><b>Hypothesis, not verdict?</b> Stated before the event, confirmed by price / sentiment, with risk fixed first?</li>
+</ol>
+
+<h4 class="lab" style="margin-top:30px;">A small glossary — the words you met</h4>
+<div class="gloss"><dl>
+  <dt>Bhava</dt><dd>A house — one of the twelve life- or market-areas of a chart, anchored to the horizon.</dd>
+  <dt>Ascendant (Lagna)</dt><dd>The degree of the zodiac rising on the eastern horizon; it begins the 1st house and turns through all twelve signs each day.</dd>
+  <dt>Kendra (angular)</dt><dd>Houses 1, 4, 7, 10 — the strong, active "pillars" of the chart.</dd>
+  <dt>Trikona (trinal)</dt><dd>Houses 1, 5, 9 — the auspicious houses of fortune and <em>dharma</em>.</dd>
+  <dt>Dusthana</dt><dd>Houses 6, 8, 12 — the difficult houses of debt, upheaval, and loss.</dd>
+  <dt>Upachaya (growing)</dt><dd>Houses 3, 6, 10, 11 — houses that improve with time and effort; they include gains (11) and competition (6).</dd>
+  <dt>The wealth houses</dt><dd>The 2nd (assets / <em>Dhana</em>), 11th (gains / <em>Labha</em>), 5th (speculation / <em>Poorva-punya</em>), and 9th (fortune / <em>Bhagya</em>) — the heart of financial chart-reading.</dd>
+  <dt>Artha trikona</dt><dd>Houses 2, 6, 10 — the material / wealth trine of the <em>purushartha</em> scheme: earning, debt-and-effort, and career.</dd>
+  <dt>Lakshmi-sthanas</dt><dd>The trinal houses of fortune (especially 5 and 9) where prosperity is said to be earned by merit.</dd>
+  <dt>Dhana yoga</dt><dd>A wealth-producing combination formed when the lords of the wealth houses connect — by conjunction, aspect, sign-exchange, or mutual placement. Specific lists are author-dependent.</dd>
+  <dt>Parivartana</dt><dd>Sign-exchange — two planets occupying each other's signs; one of the ways wealth-house lords connect.</dd>
+  <dt>Whole-sign houses</dt><dd>A house system in which the entire rising sign is the 1st house; classical Vedic / rashi practice.</dd>
+  <dt>Placidus</dt><dd>An unequal, time-based house division used in KP and most Western work; can disagree with whole-sign at the cusp.</dd>
+  <dt>The 11th–12th axis</dt><dd>The gain–loss axis of a financial chart: the 11th leans to realized gains, the 12th to loss and outflow.</dd>
+</dl></div>
+
+<p class="bridge">End of Chapter 5. You now hold both halves of the picture — the planets (Chapter 4) and the houses they fall in (this chapter), read together through signs and dignity.<br/>Next we turn from structure to <em>time</em>: the first deep dive into short-term timing — lunar phase, tithi, the nakshatra-of-the-day, void-of-course, and the daily Moon–planet mood that drives intraday sentiment.<br/>Chapter 6 — The Moon: The Trader's Clock.</p>
+
+</body>
+</html>
