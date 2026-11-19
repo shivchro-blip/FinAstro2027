@@ -3391,8 +3391,10 @@ def test_the_cause_census_figures_carry_the_population_that_produced_them():
            # 5,539 / 4,744 / 8,916 until 18-Nov-2026: B10 Mercury
            # Manifestation's 6 daily rows, one day each, so +6 on both units.
            daily["P1"] == 5545 and size["P1"] == 4750
-           # P3 9,447 since Kshin Moon's 525 sub-table rows (P1 untouched).
-           and size["P3"] == len(rows) and daily["P3"] == 9447,
+           # P3 9,447 after Kshin Moon's 525 sub-table rows, 9,534 after
+           # Mars/Mercury's 87, 9,764 after Eclipse + Parivartan's 230 (P1
+           # untouched by any of them).
+           and size["P3"] == len(rows) and daily["P3"] == 9764,
            f"P1 {size['P1']} rendered / {daily['P1']} daily  "
            f"P2 {size['P2']} / {daily['P2']}  "
            f"P3 {size['P3']} / {daily['P3']}")
@@ -3790,10 +3792,12 @@ def test_the_three_registries_stay_three() -> None:
            "both predicates are positive type tests and disagree on every "
            "rule of the other registry")
 
-    # 5 / 5 until Kshin (Malefic) Moon was ported on 18-Nov-2026.
-    record("The ten sub-tables are 6 ported and 4 blocked, each naming its "
+    # 5 / 5 until Kshin (Malefic) Moon (18-Nov-2026); 6 / 4 until Mars With
+    # or Aspecting Mercury (19-Nov-2026).
+    # Eclipse and Moon Rashi Parivartan ported 19-Nov-2026: 9 / 1.
+    record("The ten sub-tables are 9 ported and 1 blocked, each naming its "
            "input",
-           len(ST.ported()) == 6 and len(ST.blocked()) == 4
+           len(ST.ported()) == 9 and len(ST.blocked()) == 1
            and all(r.missing_inputs for r in ST.blocked()),
            f"{len(ST.ported())} ported + {len(ST.blocked())} blocked of "
            f"{len(ST.SUBTABLE_REGISTRY)}; blocked on "
@@ -4140,6 +4144,85 @@ def test_b010_reproduces_its_own_printed_dates_through_the_rule() -> None:
            f"instant days {sorted(map(str, own_day))}")
 
 
+def test_mars_mercury_reproduces_its_own_printed_table() -> None:
+    """Mars With or Aspecting Mercury, fired on the 2026 sky through the
+    REGISTERED rule. Every printed row (all '4th') must come back as a 4th
+    window with the printed signs, start within 15 minutes or on the
+    documented typo date; the six unprinted 'with' windows are pinned as a
+    count so a change in the reading shows up here."""
+    import datetime as _dt
+    from finastro.rules import subtables as ST
+    from finastro.sky import Sky as _Sky
+    sky26 = _Sky.load(ROOT / "build" / "astronomy_2026.json")
+    rule = [r for r in ST.SUBTABLE_REGISTRY
+            if r.id == "sub_mars_with_or_aspecting_mercury"]
+    fired = {(f.start_utc, f.end_utc): f.detail for f in
+             R.base.fire(rule, sky26, year=2026) if f.location == "mumbai"}
+    ist = _dt.timezone(_dt.timedelta(hours=5, minutes=30))
+    ok = 0
+    for start, _end, aspect, mars, merc in ST.MARS_MERCURY_PRINTED:
+        t = _dt.datetime.strptime(start, "%d-%b-%y %H:%M").replace(tzinfo=ist)
+        for (a, _b), d in fired.items():
+            off = abs((a - t).total_seconds())
+            # 01-Dec-26 17:27 is the 02-Dec 17:27 ingress, date mistyped.
+            if (off <= 15 * 60 or abs(off - 86400) <= 60) \
+                    and d["aspect"] == aspect \
+                    and d["mars_sign"] == mars.split(" (")[0] \
+                    and d["mercury_sign"] == merc.split(" (")[0]:
+                ok += 1
+                break
+    with_ = [d for (a, b), d in fired.items()
+             if d["aspect"].startswith("With") and a.year <= 2026 <= b.year]
+    record("Mars/Mercury reproduces all 3 printed rows as 4th-house windows",
+           ok == len(ST.MARS_MERCURY_PRINTED) == 3, f"{ok} of 3")
+    record("...and carries the six 'with' windows the page omits",
+           len(with_) == 6, f"{len(with_)} same-sign windows touching 2026")
+    _PINNED_SUBTABLE_PORTS.add("sub_mars_with_or_aspecting_mercury")
+
+
+def test_eclipse_and_parivartan_reproduce_their_own_printed_tables() -> None:
+    """Eclipse and Moon Rashi Parivartan, fired on the 2026 sky through the
+    REGISTERED sub-table rules, against the sections' own printed rows."""
+    import datetime as _dt
+    from finastro.rules import subtables as ST
+    from finastro.sky import Sky as _Sky
+    sky26 = _Sky.load(ROOT / "build" / "astronomy_2026.json")
+    ist = _dt.timezone(_dt.timedelta(hours=5, minutes=30))
+
+    def spans(rid):
+        rule = [r for r in ST.SUBTABLE_REGISTRY if r.id == rid]
+        return {(f.start_utc, f.end_utc): f.detail for f in
+                R.base.fire(rule, sky26, year=2026) if f.location == "mumbai"}
+
+    def at(d, t):
+        h, m = t.split(":")[:2]
+        return _dt.datetime.strptime(d, "%d-%b-%y").replace(
+            hour=int(h), minute=int(m), tzinfo=ist)
+
+    ecl = spans("sub_eclipse")
+    ok = sum(1 for d, kind, month, st, *_ in ST.ECLIPSE_PRINTED
+             if any(abs((a - at(d, st)).total_seconds()) <= 120
+                    and v["eclipse"] == kind and v["month"] == month
+                    for (a, _b), v in ecl.items()))
+    record("Eclipse: all 4 printed rows on date, kind, start and purnimanta month",
+           ok == len(ST.ECLIPSE_PRINTED) == 4, f"{ok} of 4")
+
+    par = spans("sub_moon_rashi_parivartan_yog")
+    on_name = tight = 0
+    for sd, st, ed, et, planet, sign in ST.PARIVARTAN_PRINTED:
+        cand = [(a, b) for (a, b), v in par.items()
+                if v["planet"] == planet and v["sign"] == sign
+                and abs((a - at(sd, st)).total_seconds()) <= 6 * 3600]
+        on_name += bool(cand)
+        tight += any(abs((a - at(sd, st)).total_seconds()) <= 300
+                     and abs((b - at(ed, et)).total_seconds()) <= 300
+                     for a, b in cand)
+    record("Parivartan: all 19 printed rows on planet and sign, 17 within 5 minutes",
+           on_name == len(ST.PARIVARTAN_PRINTED) == 19 and tight == 17,
+           f"{on_name} on name, {tight} tight")
+    _PINNED_SUBTABLE_PORTS.update({"sub_eclipse", "sub_moon_rashi_parivartan_yog"})
+
+
 def test_kshin_moon_reproduces_its_own_printed_table() -> None:
     """Kshin (Malefic) Moon, fired on the 2026 sky through the REGISTERED
     sub-table rule, against the section's own 13 printed windows (read from
@@ -4192,6 +4275,8 @@ def main() -> int:
     test_the_supplied_verdict_check_actually_bites()
     test_the_subtable_ports_reproduce_their_own_printed_tables()
     test_kshin_moon_reproduces_its_own_printed_table()
+    test_mars_mercury_reproduces_its_own_printed_table()
+    test_eclipse_and_parivartan_reproduce_their_own_printed_tables()
     test_every_ported_subtable_rule_is_pinned_against_its_printed_table()
     test_axes_and_tier_derivation()
     test_labels_are_from_the_config_vocabulary()
