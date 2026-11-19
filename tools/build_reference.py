@@ -1171,6 +1171,15 @@ DIRECT = {
     54: lambda: b_outer_aspects("Pluto", "opposition"),
     57: lambda: b_apsis("apogee"), 58: lambda: b_apsis("perigee"),
     59: b_perihelion,
+    111: lambda: [T(["Date", "Day", "Month"],
+                    [[f.civil_date.strftime("%d-%b-%y"), f.civil_date.strftime("%A"),
+                      f.detail["month"]] for f in sorted(FIRED.get(
+                          "b111_lunar_eclipse_in_vaishakha_shravana_or_ashwin", []),
+                          key=lambda f: f.civil_date)] or
+                    [[f"No occurrence in {YEAR}", "", ""]]),
+                  N("Lunar eclipses in the purnimanta months Vaishakh, Shravan or Ashwin; a "
+                    "lunar eclipse is named for its Purnima. Run on 2026 this reproduces the "
+                    "printed 28-Aug-26 (Shravan).", "flag")],
 }
 
 #: Remarks carried over only when they are doctrine, not a dated statement

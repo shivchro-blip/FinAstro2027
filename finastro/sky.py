@@ -456,6 +456,62 @@ class Sky:
                        if set(r["bodies"]) == want),
                       key=lambda r: r["time"]["t_start_utc"])
 
+    # ---------------------------------------------------------- lunar months
+    #: Lunar month named by the Sun's sidereal sign at the new moon that opens
+    #: it, in the 2026 document's own spelling ("Falgun", "Shravan").
+    MONTH_BY_SUN_SIGN = {
+        "Pisces": "Chaitra", "Aries": "Vaishakh", "Taurus": "Jyeshtha",
+        "Gemini": "Ashadh", "Cancer": "Shravan", "Leo": "Bhadrapad",
+        "Virgo": "Ashwin", "Libra": "Kartik", "Scorpio": "Margashirsh",
+        "Sagittarius": "Paush", "Capricorn": "Magh", "Aquarius": "Falgun"}
+
+    @functools.lru_cache(maxsize=None)
+    def lunar_months(self) -> tuple:
+        """((new_moon, next_new_moon, name), ...) -- AMANTA months off the
+        lunation series, named by the Sun's sign at the opening new moon. A
+        month whose closing new moon finds the Sun in the same sign is Adhik
+        (2026's Adhik Jyeshtha comes out of this)."""
+        nms = [parse(r["time"]["t_start_utc"])
+               for r in self.class_records("lunation", family="lunation/new_moon")]
+        sun = self.spans("Sun", "sign")
+
+        def sign_at(t):
+            return next(sp.value for sp in sun if sp.start <= t < sp.end)
+        out = []
+        for a, b in zip(nms, nms[1:]):
+            name = self.MONTH_BY_SUN_SIGN[sign_at(a)]
+            out.append((a, b, ("Adhik " + name) if sign_at(a) == sign_at(b) else name))
+        return tuple(out)
+
+    def purnimanta_month(self, t) -> str | None:
+        """The PURNIMANTA month holding instant `t`: the 2026 document's system,
+        settled by its own eclipse labels (solar 17-Feb-26 Falgun, 12-Aug-26
+        Shravan -- amanta would read Magh and Ashadh). Shukla paksha carries
+        the amanta month's name; Krishna paksha, after the full moon, already
+        belongs to the next month."""
+        months = self.lunar_months()
+        fms = [parse(r["time"]["t_start_utc"])
+               for r in self.class_records("lunation", family="lunation/full_moon")]
+        for k, (a, b, name) in enumerate(months):
+            if a <= t < b:
+                fm = next((f for f in fms if a <= f < b), None)
+                if fm is not None and t >= fm:
+                    return months[k + 1][2] if k + 1 < len(months) else None
+                return name
+        return None
+
+    def eclipse_month(self, rec: dict) -> str | None:
+        """Purnimanta month of an eclipse, by the lunation it sits on: a solar
+        eclipse is named for its Amavasya (the month that new moon CLOSES, which
+        is the amanta month it opens) and a lunar one for its Purnima (the same
+        name in both systems). Read off the eclipse's maximum."""
+        mx = parse(rec["time"]["contacts_global"]["max"]["utc"])
+        months = self.lunar_months()
+        if rec["rule_family"] == "eclipse/solar":
+            m = min(months, key=lambda m: abs((m[0] - mx).total_seconds()))
+            return m[2]
+        return next((m[2] for m in months if m[0] <= mx < m[1]), None)
+
     def class_records(self, event_class: str, family: str | None = None,
                       body: str | None = None) -> list[dict]:
         out = list(self.by_class[event_class])
