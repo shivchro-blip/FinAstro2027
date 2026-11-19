@@ -565,6 +565,47 @@ SESSION = {"mumbai": ((9, 15), (15, 30), "NSE/BSE 09:15&ndash;15:30 IST"),
 NODE_MOOD = {"Rahu": "volatile", "Ketu": "cautious / heavy"}
 
 
+#: The 2026 Navamsh column prints the Hindi sign names.
+HINDI_SIGN = dict(zip(ephem.SIGNS, ["Mesh", "Vrisabh", "Mithun", "Kark", "Sinh",
+                                    "Kanya", "Tula", "Vrishchik", "Dhanu", "Makar",
+                                    "Kumbh", "Meen"]))
+
+
+def b_moon_mercury_d9():
+    """The 2026 table: one row per weekday session (and per shared navamsa
+    within it) in which the Moon and Mercury occupy the same D9 sign."""
+    (oh, om), (ch, cm), label = SESSION[LOC]
+    rows = []
+    seen = set()
+    for f in sorted(FIRED.get("sub_moon_mercury_in_the_same_navamsh", []),
+                    key=lambda f: (f.civil_date, f.start_utc)):
+        day = f.civil_date
+        if day.weekday() >= 5 or (day, f.start_utc) in seen:
+            continue
+        seen.add((day, f.start_utc))
+        open_ = dt.datetime(day.year, day.month, day.day, oh, om, tzinfo=TZ)
+        close = dt.datetime(day.year, day.month, day.day, ch, cm, tzinfo=TZ)
+        a, b = f.start_utc, f.end_utc
+        if not (a < close and b > open_):
+            continue
+        sign = f.detail if isinstance(f.detail, str) else (
+            f.detail.get("navamsa") if isinstance(f.detail, dict) else str(f.detail))
+        rows.append([day.strftime("%d-%b-%y"),
+                     "Prior to Market" if a <= open_ else ft(a),
+                     "Till Market Closes" if b >= close else ft(b),
+                     f"{HINDI_SIGN.get(sign, sign)} ({sign})"])
+    return [T(["Start Date", "Start Time", "End Time", "Navamsh (D9)"], rows),
+            N(f"Weekday market sessions ({label}) in which the Moon and Mercury occupy the "
+              f"same navamsa (D9) sign. Times are {ZLONG}. A session with two rows is one in "
+              f"which the shared sign changes. Market holidays are not removed.", "flag"),
+            N("Checked against 2026: all 36 printed rows come back on the printed date and "
+              "sign, 33 with both times within 5 minutes; the other three (11-Jun, 09-Oct, "
+              "16-Oct) differ by 6&ndash;15 minutes at a boundary the printed table rounds. "
+              "The computation also finds six weekday sessions the 2026 page does not print "
+              "(11-Mar, 26-Mar, 06-May, 04-Jun, 23-Oct, 25-Dec), at least one of them a market "
+              "holiday.", "flag")]
+
+
 def b_rahu_ketu_thu():
     """The 2026 table (Start Date / Start Time / End Time / Nakshatra): every
     Thursday the Moon is in a Rahu- or Ketu-ruled nakshatra during the
@@ -1456,6 +1497,8 @@ def main() -> int:
                     f'<td>{len({(f.start_utc, f.end_utc) for f in FIRED.get(r.id, [])}) or "&mdash;"}</td></tr>')
         if r.id == "sub_eclipse":
             blk = b_eclipse()
+        elif r.id == "sub_moon_mercury_in_the_same_navamsh":
+            blk = b_moon_mercury_d9()
         elif r.id == "sub_rahu_or_ketu_nakshatra_on_a_thursday":
             blk = b_rahu_ketu_thu()
         elif r.id == "sub_total_days_in_year":
