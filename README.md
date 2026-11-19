@@ -525,7 +525,8 @@ pip install -r requirements.txt
 python3 tools/fetch_ephe.py          # Swiss Ephemeris files -> ephe/ (sha256-pinned)
 python3 build_2027.py                # astronomy layer
 python3 -m finastro.render           # calendar_2027.{json,csv,html}
-python3 tools/build_reference.py     # build/reference_2027.html
+python3 tools/build_reference.py     # build/reference_2027.html    (IST, Mumbai)
+python3 tools/build_reference.py --zone ET   # build/reference_2027_ET.html (EST/EDT, New York)
 python3 tests/test_2026_regression.py
 ```
 

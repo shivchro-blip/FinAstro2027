@@ -51,6 +51,8 @@ sys.path.insert(0, str(ROOT))
 _ap = argparse.ArgumentParser()
 _ap.add_argument("--year", type=int, default=2027)
 _ap.add_argument("--out", type=pathlib.Path, default=None)
+_ap.add_argument("--zone", choices=("IST", "ET"), default="IST",
+                 help="IST: Mumbai edition. ET: New York edition (EST/EDT).")
 ARGS = _ap.parse_args()
 YEAR = ARGS.year
 
@@ -62,7 +64,7 @@ _config.YEAR = YEAR
 
 from finastro import combustion as cb           # noqa: E402
 from finastro import ephem                      # noqa: E402
-from finastro.panchang import YOGA_NAMES        # noqa: E402
+from finastro.panchang import VISHTI_KARANAS, tithi_name  # noqa: E402
 from finastro.rules import (CONFIG_REGISTRY, REGISTRY,  # noqa: E402
                             SUBTABLE_REGISTRY)
 from finastro.rules import catalogue as CAT     # noqa: E402
@@ -71,13 +73,23 @@ from finastro.sky import Sky                    # noqa: E402
 
 SOURCE = ROOT / "data" / "source_2026.html"
 ASTRO = ROOT / "build" / f"astronomy_{YEAR}.json"
-OUT = ARGS.out or (ROOT / "build" / (f"reference_{YEAR}.html" if YEAR != 2026
-                                     else "reference_2026_recomputed.html"))
-
 IST = ZoneInfo("Asia/Kolkata")
 UTC = dt.timezone.utc
-Y0 = dt.datetime(YEAR, 1, 1, tzinfo=IST)
-Y1 = dt.datetime(YEAR + 1, 1, 1, tzinfo=IST)
+
+#: The edition. Every printed date and time is in TZ; rule tables read the
+#: firings at LOC (each venue's own civil days); the Bhadra day/night test
+#: uses LOC's own sunrise and sunset.
+ZONE = ARGS.zone
+TZ = IST if ZONE == "IST" else ZoneInfo("America/New_York")
+LOC = "mumbai" if ZONE == "IST" else "new_york"
+CITY = "Mumbai" if ZONE == "IST" else "New York"
+ZLABEL = "IST" if ZONE == "IST" else "ET"
+ZLONG = "IST (Mumbai)" if ZONE == "IST" else "US Eastern, EST/EDT (New York)"
+_SUFFIX = "" if ZONE == "IST" else "_ET"
+OUT = ARGS.out or (ROOT / "build" / (f"reference_{YEAR}{_SUFFIX}.html" if YEAR != 2026
+                                     else f"reference_2026_recomputed{_SUFFIX}.html"))
+Y0 = dt.datetime(YEAR, 1, 1, tzinfo=TZ)
+Y1 = dt.datetime(YEAR + 1, 1, 1, tzinfo=TZ)
 D = dt.timedelta
 
 #: How far either side of the year each body is scanned, so the window in force
@@ -105,10 +117,11 @@ MUHURTA_45 = {"Rohini", "Punarvasu", "Vishakha", "Uttara Phalguni",
 # ------------------------------------------------------------------ format
 
 def ist(t: dt.datetime) -> dt.datetime:
+    """The instant in the edition's zone (IST or ET), rounded to the second."""
     t = t.astimezone(UTC)
     if t.microsecond >= 500_000:
         t += D(seconds=1)
-    return t.replace(microsecond=0).astimezone(IST)
+    return t.replace(microsecond=0).astimezone(TZ)
 
 
 def fd(t): return ist(t).strftime("%d-%b-%y") if t else ""
@@ -246,7 +259,10 @@ def end_cells(b):
 # ("note", text). Rows are lists of cell strings.
 
 def T(headers, rows, caption=None):
-    return ("table", list(headers), [list(map(str, r)) for r in rows], caption)
+    # A cell is a string, or (css_class, text) for a coloured verdict cell.
+    return ("table", list(headers),
+            [[c if isinstance(c, tuple) else str(c) for c in r] for r in rows],
+            caption)
 
 
 def N(text, cls="note"):
@@ -472,7 +488,9 @@ def b_combust(body, conj=False, sign_cols=True):
                     f"(threshold {cb.threshold(body, False)}&deg; direct, "
                     f"{cb.threshold(body, True)}&deg; retrograde, calibrated on the "
                     f"2026 edition); precision &plusmn;{cb.precision_days(body)} day(s), "
-                    f"grade {cb.certainty_of(body)}.", "flag"))
+                    f"grade {cb.certainty_of(body)}."
+                    + (" Dates are Mumbai civil days: kalamsha is measured at the Mumbai "
+                       "horizon." if ZONE == "ET" else ""), "flag"))
     return blocks
 
 
@@ -487,12 +505,113 @@ def b_mercury_manifestation():
         rows.append([f.civil_date.strftime("%d-%b-%y"), f.civil_date.strftime("%A"),
                      f"{fd(t)} {ft(t)}", f"{m.speed:.3f}&deg;/day",
                      f"{abs(ephem.separation(t, 'Mercury', 'Sun')):.1f}&deg; East"])
-    return [T(["Date", "Day", "Mercury overtakes Venus (IST)", "Speed (both)",
+    return [T(["Date", "Day", f"Mercury overtakes Venus ({ZLABEL})", "Speed (both)",
                "Mercury from Sun"], rows),
             N("The date is the first day a 12:00 UT daily ephemeris shows Mercury "
               "faster than Venus while rising in the East; the same reading "
               "reproduces all three printed 2026 dates (10-Apr, 03-Aug, 14-Nov).",
               "flag")]
+
+
+# ------------------------------------------------------------------ Bhadra
+
+LOKA = {**{s: "Swarg" for s in ("Aries", "Taurus", "Gemini", "Scorpio")},
+        **{s: "Patal" for s in ("Virgo", "Libra", "Sagittarius", "Capricorn")},
+        **{s: "Earth" for s in ("Cancer", "Leo", "Aquarius", "Pisces")}}
+
+
+def _verdict(text):
+    return ({"Positive": "pos", "Negative": "neg"}.get(text, "neu"), text)
+
+
+def _tithi_label(n):
+    paksha = "Shukla" if n <= 15 else "Krishna"
+    return f"{paksha} {tithi_name(n)}"
+
+
+def bhadra_windows():
+    """[(start, end, karana)] for every Vishti window touching the year,
+    from the karana series (a Vishti opens at its ingress and closes at the
+    next karana ingress)."""
+    ks = sorted((r for r in ASTRO_DOC["records"] if r["event_class"] == "karana_ingress"),
+                key=lambda r: r["time"]["t_start_utc"])
+    out = []
+    for r, nxt in zip(ks, ks[1:]):
+        k = r["astronomy"]["karana_to"]
+        if k in VISHTI_KARANAS:
+            a = dt.datetime.fromisoformat(r["time"]["t_start_utc"].replace("Z", "+00:00"))
+            b = dt.datetime.fromisoformat(nxt["time"]["t_start_utc"].replace("Z", "+00:00"))
+            if in_year(a, b):
+                out.append((a, b, k, r["astronomy"]["sign"]))
+    return out
+
+
+def _horizon(loc):
+    ev = []
+    for r in ASTRO_DOC["records"]:
+        if r["event_class"] in ("sunrise", "sunset") and r["id"].endswith(":" + loc):
+            ev.append((dt.datetime.fromisoformat(r["time"]["t_start_utc"].replace("Z", "+00:00")),
+                       r["event_class"]))
+    return sorted(ev)
+
+
+BHADRA_SCORE: list = []
+
+
+def b_bhadra():
+    """The 2026 Bhadra table, column for column, for the edition's venue."""
+    hz = _horizon(LOC)
+    wins = bhadra_windows()
+    # Same population the calendar's Bhadra rule fires on.
+    fired = {(f.start_utc, f.end_utc) for f in _FIRINGS
+             if f.rule_id == "sub_bhadra" and f.location == LOC}
+    have = {(a, b) for a, b, _k, _s in wins}
+    missing = {w for w in fired if w not in have}
+    if missing:
+        raise SystemExit(f"Bhadra: {len(missing)} calendar windows not in the table")
+    rows, close = [], []
+    for a, b, k, sign in wins:
+        tithi = (k + 1) // 2
+        stay = "Day Bhadra" if k % 2 == 1 else "Night Bhadra"
+        last = max((x for x in hz if x[0] <= a), default=None)
+        period = "Day Time" if last and last[1] == "sunrise" else "Night Time"
+        r1 = "Positive" if (stay == "Day Bhadra") == (period == "Night Time") else "Negative"
+        loka = LOKA[sign]
+        r2 = "Negative" if loka == "Earth" else "Positive"
+        overall = r1 if r1 == r2 else "Neutral"
+        rows.append([fd(a), ft(a), fd(b), ft(b), _tithi_label(tithi), stay,
+                     f"{stay} in {period}", _verdict(r1), sign, f"{loka} Bhadra",
+                     _verdict(r2), _verdict(overall)])
+        near = min(hz, key=lambda x: abs((x[0] - a).total_seconds()))
+        if abs((near[0] - a).total_seconds()) <= 45 * 60:
+            close.append(f"<strong>{fd(a)}</strong> (opens {ft(a)}, {CITY} {near[1]} "
+                         f"{ft(near[0])} &rarr; {period.split()[0]})")
+    blocks = [
+        N(f"<strong>Method.</strong> Every window is computed with the Swiss Ephemeris. A Bhadra "
+          f"(Vishti karana) is a 6&deg; step of Moon&minus;Sun elongation, so the eight windows of each "
+          f"lunar month fall on karana numbers 8, 15, 22, 29, 36, 43, 50 and 57. All times are "
+          f"<strong>{ZLONG}</strong>.<br><br>"
+          f"<strong>Stay</strong> (Day / Night Bhadra) is karana parity &mdash; odd (first half of the "
+          f"tithi) = Day Bhadra, even = Night Bhadra; it never changes with place or timezone.<br><br>"
+          f"<strong>Sign</strong> is the Moon&rsquo;s sidereal sign (Lahiri) when the window opens; "
+          f"<strong>Bhadra Nature 2</strong> follows the loka rule &mdash; Aries/Taurus/Gemini/Scorpio "
+          f"&rarr; Swarg, Virgo/Libra/Sagittarius/Capricorn &rarr; Patal, Cancer/Leo/Aquarius/Pisces "
+          f"&rarr; Earth (Mrityu-loka), the malefic case.<br><br>"
+          f"<strong>Bhadra Nature 1</strong> asks whether the window opens after sunrise (Day Time) or "
+          f"after sunset (Night Time) at <strong>{CITY}</strong>; this is the one local column. "
+          f"<strong>Result 1</strong>: a Bhadra opening in the opposite period is defused (Positive), "
+          f"in the same period it is live (Negative). <strong>Overall</strong> is Positive or Negative "
+          f"when both results agree, Neutral when they split."),
+        T(["Start Date", "Start Time", "End Date", "End Time", "Tithi", "Stay",
+           "Bhadra Nature 1", "Result 1", "Sign", "Bhadra Nature 2", "Result 2", "Overall"],
+          rows),
+    ]
+    if close:
+        blocks.append(N(f"<strong>Why the reference place matters.</strong> {len(close)} windows "
+                        f"open within 45 minutes of {CITY} sunrise or sunset, where a fixed "
+                        f"06:00&ndash;18:00 clock could classify them differently: "
+                        + "; ".join(close) + "."))
+    return blocks
 
 
 def _max_elongations(body="Mercury"):
@@ -678,7 +797,7 @@ def b_eclipse():
                "End Time", "Day", "Start Nakshatra", "End Nakshatra",
                "India"], rows),
             N("Global contact times (first to last contact of the eclipse anywhere "
-              "on Earth), IST. The source's lunar-month column is not printed: "
+              f"on Earth), {ZLABEL}. The source's lunar-month column is not printed: "
               "the month system (amanta / purnimanta) is one of the five doctrinal "
               "decisions the 2026 edition never states.", "flag")]
 
@@ -689,9 +808,15 @@ SKY = Sky.load(ASTRO)
 ALL_RULES = list(REGISTRY) + list(CONFIG_REGISTRY) + list(SUBTABLE_REGISTRY)
 _FIRINGS = fire([r for r in ALL_RULES if r.status in FIRING_STATUSES], SKY, YEAR)
 FIRED: dict[str, list] = collections.defaultdict(list)
+_BY_ID = {r.id: r for r in ALL_RULES}
+#: Rules evaluated at Mumbai only (the kalamsha horizon family, B10's
+#: noon-GMT date) print their Mumbai rows in the New York edition too.
+FIRED_AT: dict[str, str] = {}
 for _f in _FIRINGS:
-    if _f.location == "mumbai":
+    _want = LOC if LOC in _BY_ID[_f.rule_id].locations else "mumbai"
+    if _f.location == _want:
         FIRED[_f.rule_id].append(_f)
+        FIRED_AT[_f.rule_id] = _want
 
 _SKIP_KEYS = {"id", "utc", "flags", "how_read", "anchor", "carried_in",
               "residency_open_end", "target_unavailable_because",
@@ -748,7 +873,8 @@ def rule_table(r, caption=None):
                          "" if f.open_start else fw(a),
                          b_s, "" if dated or f.open_end else ft(b), held, det])
     hdr = ["Start Date", "Start Time", "Day", "End Date", "End Time",
-           "Mumbai civil day(s)", "Detail"]
+           f"{'Mumbai' if FIRED_AT.get(r.id, LOC) == 'mumbai' else 'New York'} civil day(s)",
+           "Detail"]
     if not rows:
         rows = [[f"No occurrence in {YEAR}", "", "", "", "", "", ""]]
     # drop an all-empty Detail column
@@ -859,7 +985,7 @@ def section_title(sec) -> str:
 # --------------------------------------------------------- yearly events
 
 def yearly_events():
-    """Month-by-month list of the year's slow-body events (Mumbai, IST)."""
+    """Month-by-month list of the year's slow-body events, in the edition's zone."""
     keep_cls = {"sign_ingress", "station", "combustion", "conjunction",
                 "opposition", "eclipse", "apsis"}
     by_m = collections.defaultdict(list)
@@ -977,6 +1103,36 @@ def _near_station(body, t) -> bool:
     return any(abs(x - t) < D(minutes=10) for x, _ in stations(body))
 
 
+def score_bhadra(blocks):
+    """(windows matched, printed, cell mismatches) for the Bhadra table."""
+    def rows_of(html_seg):
+        out = []
+        for tr in re.findall(r"<tr[^>]*>(.*?)</tr>", html_seg, re.S):
+            c = [html.unescape(re.sub(r"<[^>]+>", "", x)).strip()
+                 for x in re.findall(r"<td[^>]*>(.*?)</td>", tr, re.S)]
+            if c:
+                out.append(c)
+        return out
+    a = _SRC_HTML.find('<section id="sec-142">')
+    printed = rows_of(_SRC_HTML[a:_SRC_HTML.find("</table>", a)])
+    ours = [r for b in blocks if b[0] == "table" for r in b[2]]
+    ours = [[c[1] if isinstance(c, tuple) else c for c in r] for r in ours]
+    def t(d, h):
+        hh, mm = h.split(":")
+        return dt.datetime.strptime(d, "%d-%b-%y").replace(hour=int(hh), minute=int(mm))
+    matched, cells = 0, []
+    for p in printed:
+        o = min(ours, key=lambda o: abs((t(o[0], o[1]) - t(p[0], p[1])).total_seconds()))
+        if (abs((t(o[0], o[1]) - t(p[0], p[1])).total_seconds()) > 120
+                or abs((t(o[2], o[3]) - t(p[2], p[3])).total_seconds()) > 120):
+            continue
+        matched += 1
+        for i in range(5, 12):
+            if p[i].lower() != o[i].lower():
+                cells.append(f"{p[0]} {p[i]} &rarr; {o[i]}")
+    return matched, len(printed), cells
+
+
 def score_against_source(sections):
     """{b: (matched, printed, unmatched_rows)} for every DIRECT section.
 
@@ -1092,7 +1248,9 @@ def render_blocks(blocks) -> str:
                 h.append(f"<caption>{cap}</caption>")
             h.append("<tr>" + "".join(f'<th scope="col">{x}</th>' for x in hdr) + "</tr>")
             for r in rows:
-                h.append("<tr>" + "".join(f"<td>{c}</td>" for c in r) + "</tr>")
+                h.append("<tr>" + "".join(
+                    f'<td class="{c[0]}">{c[1]}</td>' if isinstance(c, tuple)
+                    else f"<td>{c}</td>" for c in r) + "</tr>")
             h += ["</table>", "</div>"]
             out.append("\n".join(h))
         else:
@@ -1156,6 +1314,7 @@ def source_css() -> str:
 
 
 EXTRA_CSS = """
+  #sec-142 td:nth-child(-n+4) { white-space: nowrap; }
   .validation td:nth-child(2), .validation td:nth-child(4) { text-align: left; }
   .validation td:nth-child(n+3) { text-align: center; }
   .ok { color: var(--pos); font-weight: 600; }
@@ -1180,8 +1339,8 @@ def main() -> int:
         blocks = DIRECT[n]() if n in DIRECT else b_rules(n)
         sections[n] = blocks
 
-    score = score_against_source(sections) if YEAR == 2026 else None
-    if score is None:
+    score = score_against_source(sections) if YEAR == 2026 and ZONE == "IST" else None
+    if score is None and ZONE == "IST":
         sj = ROOT / "build" / "reference_2026_score.json"
         if sj.exists():
             raw = json.loads(sj.read_text(encoding="utf-8"))
@@ -1219,6 +1378,10 @@ def main() -> int:
                     f'<td>{len({(f.start_utc, f.end_utc) for f in FIRED.get(r.id, [])}) or "&mdash;"}</td></tr>')
         if r.id == "sub_eclipse":
             blk = b_eclipse()
+        elif r.id == "sub_bhadra":
+            blk = b_bhadra()
+            if YEAR == 2026 and ZONE == "IST":
+                BHADRA_SCORE.extend(score_bhadra(blk))
         elif r.status in FIRING_STATUSES:
             blk = [rule_table(r)]
         else:
@@ -1283,6 +1446,14 @@ def main() -> int:
                     f'<div class="table-scroll"><table class="validation"><tr><th>Sec</th>'
                     f'<th>Section</th><th>Rows</th><th>Unmatched printed rows</th></tr>'
                     f'{"".join(vrows)}</table></div>')
+        if BHADRA_SCORE:
+            bm, bp, bc = BHADRA_SCORE
+            val_html += (f'<div class="note"><b>Bhadra (pp.120&ndash;124):</b> {bm} of {bp} printed '
+                         f'windows reproduce on both boundaries within 2 min; {len(bc)} classification '
+                         f'cell(s) differ: {"; ".join(bc) or "none"}. On 24-Feb-26 the window opens at '
+                         f'07:03 and Mumbai sunrise is 07:05 (disc centre, no refraction &mdash; the '
+                         f'locked convention), so it opens in Night Time, which is what the printed book '
+                         f'says; the 2026 HTML changed it to Day Time.</div>')
         if YEAR == 2026:
             SCORE_JSON.write_text(json.dumps(
                 {str(k): {"matched": v[0], "printed": v[1], "unmatched": v[2]}
@@ -1295,12 +1466,12 @@ def main() -> int:
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Parth Prophecies {YEAR} — Complete Reference</title>
+<title>Parth Prophecies {YEAR} — Complete Reference ({ZLABEL})</title>
 <style>{css}</style>
 </head>
 <body>
 
-{source_front()}
+{source_front().replace('</h1>', f'</h1>{chr(10)}<p class="subtitle">{YEAR} edition &middot; all times in {ZLONG}</p>', 1)}
 <hr>
 
 {chr(10).join(parts)}
@@ -1318,8 +1489,8 @@ def main() -> int:
 {val_html}
 
 <div class="note"><b>About this edition.</b> Every table is computed, not transcribed: sidereal
-zodiac, Lahiri ayanamsha, mean lunar node, 27 nakshatras, Swiss Ephemeris ({backend}). Times are IST
-(Mumbai), 24-hour, seconds dropped; windows open before 1-Jan or still running on 31-Dec are printed whole.
+zodiac, Lahiri ayanamsha, mean lunar node, 27 nakshatras, Swiss Ephemeris ({backend}). Times are {ZLONG},
+24-hour, seconds dropped; windows open before 1-Jan or still running on 31-Dec are printed whole.
 Section numbers, ids and page references follow the 2026 edition. Remarks are the 2026 edition's own rule
 text, kept only where they state a rule rather than describe 2026. A section whose rule needs a doctrine
 the 2026 edition never states prints that missing input instead of a table. Not reproduced (prose, not
@@ -1336,6 +1507,9 @@ chapter, the per-event commentaries and the Rainfall formula. Generated {gen} by
     print(f"cross-checked against {ASTRO.name}: {dict(CROSSCHECK)}")
     print(f"{len(CAT.SECTIONS)} sections, "
           f"{sum(1 for n in sections if any(b[0] == 'table' for b in sections[n]))} with tables -> {OUT.relative_to(ROOT)}")
+    if BHADRA_SCORE:
+        print(f"2026 Bhadra: {BHADRA_SCORE[0]} / {BHADRA_SCORE[1]} windows, "
+              f"cell differences: {BHADRA_SCORE[2]}")
     if score is not None and YEAR == 2026:
         tot_m = sum(v[0] for v in score.values())
         tot_p = sum(v[1] for v in score.values())
