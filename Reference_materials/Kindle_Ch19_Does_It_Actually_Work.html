@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Celestial Ledger — Chapter 19: Does It Actually Work? The Honest Evidence</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --paper:#fbf9f4; --paper2:#f4efe4; --card:#ffffff; --ink:#26211c; --ink-soft:#4f463c; --ink-faint:#857a6c;
+  --line:#e6dfce; --line-soft:#efe9dc;
+  --gold:#9a7113; --gold-soft:#fbf2da; --gold-line:#e7cf94;
+  --teal:#0c7d68; --teal-soft:#e3f3ef;
+  --coral:#b23a2e; --coral-soft:#f8e9e6;
+  --violet:#6244a8; --violet-soft:#efeafa;
+  --green:#2f7d4f; --green-soft:#e6f3ea;
+  --blue:#1f6aa6; --blue-soft:#e7f0f8;
+  --slate:#516170; --slate-soft:#eceff2;
+  --serif:'Playfair Display',Georgia,'Times New Roman',serif;
+  --body:Georgia,'Iowan Old Style','Palatino Linotype',serif;
+  --sans:'Inter',system-ui,-apple-system,sans-serif;
+  --r:10px; --r-sm:7px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{ -webkit-text-size-adjust:100%; }
+body{ background:var(--paper); color:var(--ink); font-family:var(--body); font-size:18px; line-height:1.72; max-width:780px; margin:0 auto; padding:30px 26px 90px; }
+p{ margin:0 0 14px; } strong{ color:var(--ink); font-weight:600; } em{ font-style:italic; }
+
+.hero{ text-align:center; padding:22px 0 30px; border-bottom:2px solid var(--gold-line); margin-bottom:34px; }
+.hero .kicker{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:var(--gold); }
+.hero h1{ font-family:var(--serif); font-weight:900; font-size:40px; line-height:1.12; margin:14px 0 0; }
+.hero h1 em{ color:var(--gold); font-style:italic; }
+.hero .sub{ font-style:italic; color:var(--ink-soft); font-size:17px; max-width:580px; margin:16px auto 0; }
+.hero .ornament{ color:var(--gold); letter-spacing:.5em; margin-top:18px; font-size:14px; }
+
+.lesson{ margin:0 0 50px; }
+.lesson-head{ display:flex; align-items:baseline; gap:12px; border-bottom:1px solid var(--line); padding-bottom:8px; margin-bottom:18px; }
+.lesson-no{ font-family:var(--sans); font-size:12px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); white-space:nowrap; }
+.lesson-title{ font-family:var(--serif); font-weight:700; font-size:25px; line-height:1.2; }
+.lesson-title em{ color:var(--gold); font-style:italic; }
+h3.sec{ font-family:var(--serif); font-style:italic; font-weight:600; font-size:21px; color:var(--gold); margin:28px 0 10px; }
+h4.lab{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-faint); margin:22px 0 9px; }
+
+.callout{ border-left:4px solid var(--gold); background:var(--gold-soft); border-radius:0 var(--r-sm) var(--r-sm) 0; padding:14px 18px; margin:18px 0; font-size:16.5px; line-height:1.62; }
+.callout .ct{ display:block; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:5px; color:var(--gold); }
+.callout.teal{ border-color:var(--teal); background:var(--teal-soft);} .callout.teal .ct{ color:var(--teal);}
+.callout.coral{ border-color:var(--coral); background:var(--coral-soft);} .callout.coral .ct{ color:var(--coral);}
+.callout.violet{ border-color:var(--violet); background:var(--violet-soft);} .callout.violet .ct{ color:var(--violet);}
+.callout.green{ border-color:var(--green); background:var(--green-soft);} .callout.green .ct{ color:var(--green);}
+.callout.slate{ border-color:var(--slate); background:var(--slate-soft);} .callout.slate .ct{ color:var(--slate);}
+.honest{ border-left:4px solid var(--violet); background:var(--violet-soft); border-radius:0 var(--r-sm) var(--r-sm) 0; padding:14px 18px; margin:18px 0; font-size:16px; }
+.honest .ct{ display:block; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:5px; color:var(--violet); }
+
+.keyrule{ text-align:center; font-family:var(--serif); font-style:italic; font-size:20px; line-height:1.5; color:var(--gold); border-top:1px solid var(--gold-line); border-bottom:1px solid var(--gold-line); padding:18px 14px; margin:22px 0; }
+.keyrule .small{ display:block; font-family:var(--sans); font-style:normal; font-size:10px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:8px; }
+.keyrule b{ font-style:normal; color:var(--ink); }
+
+.tag{ display:inline-block; font-family:var(--sans); font-size:10px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:1px 7px; border-radius:4px; vertical-align:middle; }
+.tag.cl{ background:var(--blue-soft); color:var(--blue); } .tag.fw{ background:var(--gold-soft); color:var(--gold); } .tag.vf{ background:var(--violet-soft); color:var(--violet); }
+.tag.ob{ background:var(--teal-soft); color:var(--teal); } .tag.as{ background:var(--slate-soft); color:var(--slate); } .tag.hi{ background:var(--coral-soft); color:var(--coral); }
+
+.cards{ display:flex; flex-wrap:wrap; gap:12px; margin:16px 0; }
+.card{ flex:1 1 220px; background:var(--card); border:1px solid var(--line); border-top:3px solid var(--gold); border-radius:var(--r-sm); padding:14px 16px; }
+.card.up{ border-top-color:var(--green);} .card.down{ border-top-color:var(--coral);} .card.teal{ border-top-color:var(--teal);} .card.violet{ border-top-color:var(--violet);} .card.slate{ border-top-color:var(--slate);} .card.blue{ border-top-color:var(--blue);}
+.card .ic{ font-size:24px; line-height:1; } .card .ti{ font-family:var(--serif); font-weight:700; font-size:18px; margin:6px 0 2px; } .card .ti em{ color:var(--gold); font-style:italic; font-weight:400; font-size:14px; }
+.card .mt{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px; } .card p{ font-size:15px; line-height:1.55; margin:0; color:var(--ink-soft); }
+
+.tw{ overflow-x:auto; border:1px solid var(--line); border-radius:var(--r-sm); margin:16px 0; }
+table{ width:100%; border-collapse:collapse; font-family:var(--sans); }
+thead tr{ background:var(--gold-soft); }
+th{ font-size:10.5px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:var(--gold); text-align:left; padding:9px 11px; white-space:nowrap; }
+td{ font-size:13px; padding:8px 11px; border-top:1px solid var(--line-soft); vertical-align:top; color:var(--ink-soft); }
+td.g{ color:var(--gold); font-weight:600; white-space:nowrap; }
+td.up{ color:var(--green); font-weight:600;} td.dn{ color:var(--coral); font-weight:600;} td.s{ color:var(--slate); font-weight:600;}
+tbody tr:nth-child(even){ background:#fcfaf5; }
+tr.total td{ background:var(--gold-soft); color:var(--gold); font-weight:700; border-top:2px solid var(--gold-line); }
+
+.qa{ border:1px solid var(--line); border-radius:var(--r-sm); overflow:hidden; margin:20px 0; }
+.qa-h{ background:var(--paper2); padding:9px 15px; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); border-bottom:1px solid var(--line); }
+.qa-i{ padding:12px 15px; border-bottom:1px solid var(--line-soft); } .qa-i:last-child{ border-bottom:none; }
+.qa-q{ font-size:16px; } .qa-q b{ color:var(--gold); font-family:var(--sans); font-size:12px; font-weight:700; margin-right:8px; }
+.qa-a{ font-size:16px; color:var(--ink-soft); margin-top:5px; } .qa-a b{ color:var(--teal); font-family:var(--sans); font-size:12px; font-weight:700; margin-right:8px; }
+
+.recap{ display:flex; align-items:center; gap:18px; background:var(--gold-soft); border:1px solid var(--gold-line); border-radius:var(--r-sm); padding:16px 20px; margin:20px 0; }
+.recap .n{ font-family:var(--serif); font-weight:900; font-size:38px; color:var(--gold); line-height:1; flex-shrink:0; }
+.recap .l{ font-family:var(--sans); font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); }
+.recap .t{ font-family:var(--serif); font-weight:700; font-size:18px; margin:2px 0; } .recap .d{ font-size:14px; color:var(--ink-soft); }
+
+.ladder{ counter-reset:rk; list-style:none; padding:0; margin:14px 0; }
+.ladder li{ counter-increment:rk; display:flex; gap:14px; align-items:flex-start; padding:9px 0; border-bottom:1px solid var(--line-soft); font-size:15.5px; }
+.ladder li:last-child{ border-bottom:none; }
+.ladder li::before{ content:counter(rk); flex-shrink:0; width:26px; height:26px; background:var(--gold); color:#fff; border-radius:50%; font-family:var(--sans); font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center; }
+.ladder b{ color:var(--ink); }
+
+.takeaways{ counter-reset:tk; list-style:none; padding:0; margin:14px 0; }
+.takeaways li{ counter-increment:tk; position:relative; padding:10px 0 10px 46px; border-bottom:1px solid var(--line-soft); font-size:16.5px; }
+.takeaways li:last-child{ border-bottom:none; }
+.takeaways li::before{ content:counter(tk); position:absolute; left:0; top:9px; width:30px; height:30px; border:1.5px solid var(--gold); color:var(--gold); border-radius:50%; font-family:var(--serif); font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center; }
+
+.checklist{ list-style:none; padding:0; margin:14px 0; }
+.checklist li{ position:relative; padding:10px 0 10px 34px; border-bottom:1px solid var(--line-soft); font-size:16px; }
+.checklist li:last-child{ border-bottom:none; }
+.checklist li::before{ content:"\2610"; position:absolute; left:0; top:8px; font-size:21px; line-height:1; color:var(--gold); }
+
+.gloss{ background:var(--card); border:1px solid var(--line); border-radius:var(--r-sm); padding:6px 18px; margin:16px 0; }
+.gloss dt{ font-family:var(--serif); font-weight:700; font-size:16px; color:var(--gold); margin:12px 0 1px; }
+.gloss dd{ margin:0 0 4px; font-size:15.5px; color:var(--ink-soft); }
+
+.bridge{ text-align:center; font-style:italic; color:var(--ink-faint); font-size:15px; border-top:1px solid var(--line); padding-top:22px; margin-top:34px; }
+hr.soft{ border:none; border-top:1px solid var(--line); margin:30px 0; }
+@media (max-width:600px){ body{font-size:17px;padding:20px 16px 70px;} .hero h1{font-size:31px;} .lesson-title{font-size:21px;} }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="kicker">The Celestial Ledger · Part IV · Rigor &amp; Conscience</div>
+  <h1>Does It Actually <em>Work?</em></h1>
+  <div class="sub">The Honest Evidence — eighteen chapters of craft, and the question answered at last: financial astrology has no demonstrated power to predict prices.</div>
+  <div class="ornament">✦ ✦ ✦</div>
+</div>
+
+<p>The book's moment of truth. Eighteen chapters have taught the craft while repeating a single refrain — <em>no validated edge; test it.</em> This chapter gathers what the published research and the honest practitioner's record actually show, and answers the question directly. The verdict, stated plainly up front: <strong>financial astrology has no demonstrated power to predict prices.</strong> The few replicable effects in its vicinity — a small lunar-return pattern, a seasonal calendar effect — are <strong>behavioral and seasonal, not astrological</strong>, are contested, and are often not even tradeable after costs. The honest task is to separate what is real from what merely feels real, and to hold a fascination with this field without deceiving yourself.</p>
+
+<div class="callout slate">
+  <span class="ct">Claim-type key</span>
+  <span class="tag ob">Observed</span> an empirical finding with a citation · <span class="tag fw">Framework</span> this book's interpretation · <span class="tag vf">Verify</span> to confirm against the originals. Studies are attributed by author and year; readers should consult the source papers themselves.
+</div>
+
+<hr class="soft"/>
+
+<!-- ===================== LESSON 19.1 ===================== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Lesson 19.1</span>
+    <span class="lesson-title">Answering the Question <em>Directly</em></span>
+  </div>
+
+  <p>A book that spent nineteen chapters dodging the obvious question would not deserve the reader's trust. So: <strong>does financial astrology work?</strong> The honest answer has three parts, and this chapter defends each in turn.</p>
+
+  <div class="cards">
+    <div class="card down">
+      <div class="ic">✕</div>
+      <div class="mt">As a price-prediction system</div>
+      <div class="ti">No.</div>
+      <p>There is no body of replicated, out-of-sample, cost-adjusted evidence that any astrological rule forecasts markets better than chance. Chapter 18's simulation showed how easily the <em>appearance</em> of such an edge is manufactured by searching.</p>
+    </div>
+    <div class="card teal">
+      <div class="ic">≈</div>
+      <div class="mt">In astrology's neighbourhood</div>
+      <div class="ti">A few small effects are real — but they are not astrology.</div>
+      <p>A lunar-phase return pattern and a seasonal ("Sell in May") effect have genuine peer-reviewed support. Their explanations are <strong>behavioral (mood) and seasonal</strong>, not planetary — and they are small, contested, and frequently vanish after trading costs.</p>
+    </div>
+    <div class="card up">
+      <div class="ic">✓</div>
+      <div class="mt">As a symbolic &amp; behavioral discipline</div>
+      <div class="ti">Defensibly useful.</div>
+      <p>The value argued for throughout — a sentiment-cycle <em>lens</em> and a <em>discipline scaffold</em> (Chapter 17), confirmed by price and governed by risk — survives the evidence precisely <em>because</em> it makes no causal forecasting claim.</p>
+    </div>
+  </div>
+
+  <p>This chapter assembles the actual studies, sorts the field into what is supported, what has failed, and what is untestable, and closes on the only intellectually honest posture: stay curious, weigh the evidence ruthlessly, and never let fascination outrun proof.</p>
+
+  <div class="keyrule">
+    <span class="small">Key Rule · 19.1</span>
+    The question deserves a straight answer. As a forecast: <b>no.</b> As a lens and a discipline: <b>yes</b> — because the lens claims no power the evidence denies it.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself</div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q1</b> What is the book's one-line verdict on astrology as a price-prediction system?</div>
+      <div class="qa-a"><b>A</b> It does not work: no replicated, out-of-sample, cost-adjusted evidence shows any astrological rule beating chance.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q2</b> Two real effects sit "in astrology's neighbourhood." What makes them <em>not</em> astrology?</div>
+      <div class="qa-a"><b>A</b> Their causes are behavioral (mood) and seasonal (the calendar), not planetary; the planets are incidental to the explanation.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q3</b> Why does the symbolic-and-behavioral use survive the evidence when the predictive use does not?</div>
+      <div class="qa-a"><b>A</b> Because it makes no causal forecasting claim — it asks the chart to organise attention and discipline, not to foretell prices.</div>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">✓</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">Three answers, stated plainly</div>
+      <div class="d">Prediction: no. Nearby effects: real but not astrological. Lens-and-discipline: defensibly useful.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== LESSON 19.2 ===================== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Lesson 19.2</span>
+    <span class="lesson-title">How to <em>Weigh</em> the Evidence</span>
+  </div>
+
+  <p><span class="tag fw">Framework</span> Before the findings, the standards for judging them. Most arguments about whether astrology "works" go wrong not on the data but on the standard applied to it.</p>
+
+  <h3 class="sec">The evidence hierarchy</h3>
+  <p>From weakest to strongest, claims earn weight in this order:</p>
+  <ol class="ladder">
+    <li><b>Anecdote</b> — "it called the crash." A story, not evidence. No denominator.</li>
+    <li><b>In-sample correlation</b> — a pattern that fits past data. Cheap to find, easy to overfit (Chapter 18).</li>
+    <li><b>Replicated, out-of-sample effect</b> — it holds on new data, in new markets, by independent authors. Now it counts.</li>
+    <li><b>Effect with a validated mechanism</b> — we know <em>why</em> it happens. The strongest tier of all.</li>
+  </ol>
+  <p>Only the top two tiers carry real weight — and astrology's causal claims reach neither.</p>
+
+  <h3 class="sec">The efficient-market null and anomaly decay</h3>
+  <p><span class="tag ob">Observed</span> The default hypothesis is that liquid markets are broadly efficient, so a genuine, simple, public edge should be <strong>arbitraged away.</strong> And empirically, edges largely are: McLean and Pontiff (2016) showed that documented return anomalies <strong>shrink substantially after publication.</strong> Any claimed astro-edge must answer the awkward question — if it is real and has been public for decades, why has it not been competed into oblivion?</p>
+
+  <h3 class="sec">Three distinct questions</h3>
+  <p><span class="tag fw">Framework</span> Confusing these three is the field's commonest error:</p>
+  <div class="cards">
+    <div class="card teal">
+      <div class="mt">Question 1</div>
+      <div class="ti">Is there a real statistical effect?</div>
+      <p>Sometimes <strong>yes</strong> — the lunar and seasonal patterns are real.</p>
+    </div>
+    <div class="card down">
+      <div class="mt">Question 2</div>
+      <div class="ti">Does astrology explain it?</div>
+      <p><strong>No</strong> — the explanations are behavioral and seasonal, not planetary.</p>
+    </div>
+    <div class="card down">
+      <div class="mt">Question 3</div>
+      <div class="ti">Is it tradeable after costs?</div>
+      <p><strong>Usually no</strong> — small, fragile effects rarely survive slippage and fees.</p>
+    </div>
+  </div>
+  <p>An honest "does it work?" must answer all three — not wave at the first and quietly imply the other two.</p>
+
+  <div class="callout">
+    <span class="ct">Callout · A Real Effect Is Not a Vindicated Theory</span>
+    Even if the Moon's phase correlates with returns, that does <strong>not</strong> validate astrology — it points to <em>mood</em>. The existence of a small effect in astrology's territory is routinely mis-sold as "science proves astrology." It does no such thing: it relocates the cause to human psychology and the calendar.
+  </div>
+
+  <div class="keyrule">
+    <span class="small">Key Rule · 19.2</span>
+    Grant weight only at the top of the hierarchy — <b>replicated, out-of-sample, mechanism-backed</b> — and always answer all three questions: real? caused by astrology? tradeable?
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself</div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q1</b> Where do "it called the crash" anecdotes and in-sample correlations sit on the hierarchy, and why so low?</div>
+      <div class="qa-a"><b>A</b> At the bottom two rungs — anecdotes have no denominator, and in-sample fits are cheap to manufacture by searching, so neither earns real weight.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q2</b> What does the efficient-market null demand of any decades-old, public astro-edge?</div>
+      <div class="qa-a"><b>A</b> An explanation for why it has not been arbitraged away — McLean and Pontiff (2016) show that documented anomalies shrink substantially after publication.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q3</b> Which of the three questions does a dishonest "does it work?" answer, and which does it skip?</div>
+      <div class="qa-a"><b>A</b> It answers only "is there a real effect?" and skips whether astrology actually causes it and whether it survives costs.</div>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">✓</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">A standard, not a vibe</div>
+      <div class="d">Weigh by the hierarchy, respect the efficient-market null, and force all three questions — real, caused, tradeable.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== LESSON 19.3 ===================== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Lesson 19.3</span>
+    <span class="lesson-title">Sorting the Field into <em>Three Buckets</em></span>
+  </div>
+
+  <p><span class="tag fw">Framework</span> With the standard fixed, the field of financial-astrology claims sorts cleanly into three buckets. The honest map looks like this:</p>
+
+  <div class="cards">
+    <div class="card teal">
+      <div class="mt">Bucket 1</div>
+      <div class="ti">Weakly supported <em>real effect, non-astrological cause</em></div>
+      <p>The <strong>lunar-phase return effect</strong> (new-moon returns &gt; full-moon returns) and the <strong>seasonal / Halloween ("Sell in May") effect.</strong> Both have peer-reviewed support; both are explained by mood and seasonality, not planets; both are small and contested.</p>
+    </div>
+    <div class="card down">
+      <div class="mt">Bucket 2</div>
+      <div class="ti">Unsupported <em>failed under testing</em></div>
+      <p><strong>Mercury-retrograde</strong> directional lore (no evidence, Chapter 7) (though Wang et al. 2021 document a belief-driven return effect during retrograde windows; see Lesson 19.4); <strong>"a hard aspect coincided with the crash"</strong> (combinatorially meaningless — dozens of aspects active daily, Chapter 18); <strong>planetary causation of prices</strong> (no mechanism, no validated signal); and most <strong>geocosmic / aspect-timing</strong> rules when properly out-of-sample tested.</p>
+    </div>
+    <div class="card slate">
+      <div class="mt">Bucket 3</div>
+      <div class="ti">Effectively untestable <em>near-unfalsifiable</em></div>
+      <p>The <strong>dasha</strong> in aggregate (always in <em>some</em> period, Chapter 12); <strong>rectified</strong> market charts tuned to past events (Chapter 13); and small-N <strong>great-cycle</strong> claims (≈4–5 cycles per century, Chapters 8–9), whose own proponents concede frequent misses.</p>
+    </div>
+  </div>
+
+  <p>The buckets are not equal failures. Bucket 1 contains something real that simply does not belong to astrology; Bucket 2 contains claims that fail when tested; Bucket 3 contains claims that cannot be tested at all. Honest discussion keeps these straight rather than borrowing Bucket 1's credibility to defend Buckets 2 and 3.</p>
+
+  <div class="keyrule">
+    <span class="small">Key Rule · 19.3</span>
+    Three buckets, kept separate: <b>real-but-not-astrological</b>, <b>failed-under-testing</b>, and <b>untestable</b>. The grain of truth in the first never licenses the other two.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself</div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q1</b> What do the two Bucket 1 effects share that keeps them out of astrology's column?</div>
+      <div class="qa-a"><b>A</b> Real peer-reviewed support, but a behavioral or seasonal cause — mood and the calendar — rather than any planetary mechanism.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q2</b> Why does "an aspect was present at the crash" land in Bucket 2 rather than counting as evidence?</div>
+      <div class="qa-a"><b>A</b> With dozens of aspects active any given day, an aspect is present at <em>every</em> date — so the observation is combinatorially meaningless.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q3</b> What makes Bucket 3 claims "near-unfalsifiable"?</div>
+      <div class="qa-a"><b>A</b> There is always <em>some</em> dasha running, rectified charts are tuned to fit known events, and great-cycle claims have too few occurrences ever to test.</div>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">3</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">A map of the whole field</div>
+      <div class="d">Real-but-not-astrological, failed-under-testing, untestable — and never let the first vouch for the rest.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== LESSON 19.4 ===================== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Lesson 19.4</span>
+    <span class="lesson-title">The <em>Evidence Review</em></span>
+  </div>
+
+  <p>This is the chapter's core: what the studies actually say — not paraphrased lore, but the published findings with their authors, their magnitudes, and their failed replications.</p>
+
+  <h3 class="sec">The lunar-phase effect — real, small, behavioral, partly-replicated</h3>
+  <p><span class="tag ob">Observed</span> The most-cited work is <strong>Dichev and Janes (2003)</strong> (<em>Journal of Private Equity</em>; first circulated 2001): across roughly two dozen markets over about 30 years, returns in the ~15 days around the <strong>new moon</strong> were close to <strong>double</strong> those in the ~15 days around the <strong>full moon</strong>. Independently, <strong>Yuan, Zheng and Zhu (2006)</strong> (<em>Journal of Empirical Finance</em>) examined 48 countries and found returns <strong>significantly lower around the full moon than the new moon</strong> — on the order of a few percent annualized — an effect <strong>not</strong> explained by trading volume, volatility, or interest rates, and <strong>stronger in markets with less institutional dominance</strong>, pointing to individual-investor sentiment. <strong>Keef and Khaled (2011)</strong> broadly confirmed the pattern internationally.</p>
+
+  <p><span class="tag ob">Observed</span> But the honest caveats are decisive:</p>
+  <div class="cards">
+    <div class="card teal">
+      <div class="mt">Mechanism</div>
+      <div class="ti">Mood, not astrology</div>
+      <p>The authors lean on the mood-and-returns link (e.g. Hirshleifer and Shumway on sunshine and mood): the lunar cycle plausibly nudges human mood, which nudges risk appetite. No planetary "influence" is invoked or needed.</p>
+    </div>
+    <div class="card down">
+      <div class="mt">Replication</div>
+      <div class="ti">Only half holds up</div>
+      <p>Measured against <strong>lunar control days</strong>, later work (Brusa and colleagues) found new-moon returns exceeded the control, but full-moon returns did <em>not</em> differ from control (p ≈ 0.88). The "depressed full moon" half of the story failed. The effect is <strong>fragile, not bankable.</strong></p>
+    </div>
+    <div class="card slate">
+      <div class="mt">Magnitude</div>
+      <div class="ti">Small and likely decaying</div>
+      <p>A modest, public, decades-old anomaly — exactly the kind McLean and Pontiff (2016) show tends to erode — and far too small to trade after costs.</p>
+    </div>
+  </div>
+
+  <p><span class="tag ob">Observed</span> One more instability belongs on the record. <strong>Floros and Tan (2013)</strong> — the same study Chapter 1 cited for the effect's entanglement with ordinary calendar anomalies — examined <strong>59 international markets over 2004–2010</strong> and found that the generally bullish new-moon tilt <strong>inverted under acute stress</strong>: during the 2008 crisis, the full-moon window showed the <em>higher</em> relative returns. A systemic panic overrides a faint mood tilt without noticing it — one more reason the effect is context, never a rule.</p>
+
+  <h3 class="sec">The seasonal / "Sell in May" effect — robust-ish, contested, not astrological</h3>
+  <p><span class="tag ob">Observed</span> <strong>Bouman and Jacobsen (2002)</strong> (<em>American Economic Review</em>) documented that November–April returns exceeded May–October returns in <strong>36 of 37 markets</strong>, robust over time, with UK evidence traced back centuries and no convincing conventional explanation. <strong>Zhang and Jacobsen (2021)</strong> extended this to ~109 markets across ~323 years and found the pattern persisting — it "defies economic gravity" by failing to disappear despite being public for generations.</p>
+
+  <p><span class="tag ob">Observed</span> Yet it is contested precisely on the grounds this book cares about:</p>
+  <ul class="ladder">
+    <li><b>Outlier-driven.</b> Maberly and Pierce (2004) argued the U.S. result is driven by two outliers — the October 1987 crash and the 1998 LTCM collapse — and is <strong>not robust</strong> to alternative model specifications.</li>
+    <li><b>Not exploitable after costs.</b> Other work finds no tradeable effect once costs are included (e.g. in S&amp;P 500 futures over 1982–2003).</li>
+    <li><b>Seasonal, not planetary.</b> It is a calendar effect, plausibly tied to vacations, liquidity, and the tax year — its loose overlap with the solar year does not make it astrological.</li>
+  </ul>
+
+  <h3 class="sec">The Mercury-retrograde effect — a belief, priced</h3>
+  <p><span class="tag ob">Observed</span> The newest entry in this literature is the most instructive. <strong>Wang et al. (2021)</strong> examined daily index returns across <strong>48 countries from 1973 to 2019</strong> and found returns roughly <strong>3.33% lower on an annualized basis</strong> during Mercury-retrograde periods. Crucially, the study tested two rival explanations. The <strong>real-effect channel</strong> — that the apparent backward motion itself disrupts communication and commerce — was checked against aviation and U.S. road-accident frequencies (1975–2017), corporate earnings surprises, and firm-level news sentiment: no rise in real-world disruption appeared, and the channel was <strong>rejected</strong>. The <strong>investor-belief channel</strong> survived: believing the window is error-prone, a slice of investors withdraws from trading, shrinking the market's aggregate risk-bearing capacity and forcing a higher premium that depresses prices.</p>
+  <p><span class="tag ob">Observed</span> Three further findings pin the cause to belief rather than sky. The deficit is larger in countries whose markets fared poorly during the <em>prior</em> year's retrogrades (interaction coefficient −3.366, t = −2.68) — outcomes feeding beliefs feeding outcomes. Online search interest in retrograde motion negatively predicts returns, and the deficit concentrates where that interest runs high — as it does in countries with deep Hellenic cultural roots and lower scientific development, where the tradition persists. And there is a <strong>volatility paradox</strong>: despite the lore of chaos, return volatility <em>falls</em> during retrogrades — participants sit out rather than churn, exactly the wait-and-see behaviour the belief channel predicts.</p>
+  <p><span class="tag fw">Framework</span> Read carefully, this relocates rather than rescues the claim. The lore's <em>mechanism</em> — the planet disrupting affairs — was tested and failed. What is real is a return effect caused by <strong>believers</strong>: a Bucket 1 effect, mood's cousin, belonging to psychology and not to Mercury.</p>
+
+  <div class="callout">
+    <span class="ct">Callout · The Self-Fulfilling Sky</span>
+    <span class="tag fw">Framework</span> The belief channel generalises. If a critical mass of traders watches the same celestial parameter — a retrograde window, a lunar phase, a published planetary price level — their synchronized caution or selling produces the very move they expected, validating the belief that caused it. A scientifically empty input can thereby manufacture a real, measurable market outcome. This is the one mechanism by which astrology can genuinely move prices — and it is a fact about <strong>crowds, not planets</strong>: the effect lives exactly as long as the believers do, and owes nothing to the sky.
+  </div>
+
+  <h3 class="sec">Weather, mood, and the behavioral thread</h3>
+  <p><span class="tag ob">Observed</span> A related literature links <strong>environmental mood cues to returns</strong> — sunshine, and debated geomagnetic and seasonal-affective effects. These are <strong>behavioral-finance</strong> findings about human psychology — the genuine grain of truth the book has pointed to since Chapter 1: markets are mass mood, and mood has rhythms. None of it confers any planetary forecasting power.</p>
+
+  <p><span class="tag ob">Observed</span> The geomagnetic thread deserves its named study. <strong>Krivelyova and Robotti (2003)</strong> related geomagnetic-storm activity — solar-wind disturbances of Earth's magnetosphere, which a physiological literature links to cardiovascular stress, depressed mood, and heightened risk aversion — to U.S. and world index returns over <strong>1970–2002</strong>, finding that unusually high storm activity exerts a significant negative effect on the <em>following week's</em> returns, with the strongest returns arriving in geomagnetically quiet periods. The proposed mechanism is the <strong>misattribution of mood</strong>: investors feel worse for an environmental reason, misread the feeling as economic pessimism, and rotate toward safe assets. It is the same grain of truth again — environment, mood, prices — with not a planet anywhere in the chain.</p>
+
+  <h3 class="sec">What fails</h3>
+  <p><span class="tag ob">Observed</span> On the other side of the ledger:</p>
+  <div class="cards">
+    <div class="card down">
+      <div class="mt">Mercury-retrograde lore</div>
+      <div class="ti">No directional effect</div>
+      <p>No credible evidence of a directional market effect (Chapter 7) (though Wang et al. 2021 document a belief-driven return deficit during retrograde windows; see the retrograde section above).</p>
+    </div>
+    <div class="card down">
+      <div class="mt">"An aspect at the crash"</div>
+      <div class="ti">Near-zero evidential value</div>
+      <p>With ~225 aspect-slots and dozens active any day (Chapter 18), this is expected for <em>every</em> date.</p>
+    </div>
+    <div class="card down">
+      <div class="mt">Planetary price causation</div>
+      <div class="ti">No validated edge</div>
+      <p>Most aspect and geocosmic timing rules show no out-of-sample, cost-adjusted, multiple-comparisons-corrected edge.</p>
+    </div>
+    <div class="card down">
+      <div class="mt">Small-N cycle claims</div>
+      <div class="ti">Unfalsifiable</div>
+      <p>McWhirter, great conjunctions: unfalsifiable at 4–5 occurrences, and their own advocates concede frequent misses (Chapters 8–9).</p>
+    </div>
+  </div>
+
+  <h3 class="sec">The synthesis</h3>
+  <p><span class="tag fw">Framework</span> Putting it together: the honest "does it work?" verdict is that <strong>astrology has no validated predictive edge</strong>, and the small real effects in its neighbourhood (1) are <strong>behavioral / seasonal, not astrological</strong>, (2) are <strong>contested and partly-unreplicated</strong>, (3) are usually <strong>not tradeable after costs</strong>, and (4) are <strong>decaying</strong> as public anomalies do. They do not belong to astrology and do not rescue its causal claims. What <em>does</em> survive scrutiny is the book's actual thesis: astrology as a <strong>symbolic sentiment-cycle lens and behavioral discipline</strong> — useful for <em>process</em>, not <em>prophecy</em>.</p>
+
+  <div class="callout green">
+    <span class="ct">Callout · The Grain of Truth, Correctly Located</span>
+    Strip the field to what the evidence supports and you are left with one defensible sentence: <strong>human mood moves markets, and mood has cyclical rhythms.</strong> Astrology is, at best, an ancient and elaborate <em>symbolic notation</em> for those rhythms — not a mechanism, not a forecast. Credit the psychology; keep the lens; drop the causation.
+  </div>
+
+  <div class="keyrule">
+    <span class="small">Key Rule · 19.4</span>
+    The strongest evidence in astrology's territory points away from astrology: real effects trace to <b>mood and the calendar</b>, are small and fragile, and decay once known.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself</div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q1</b> What did the control-day replication (Brusa et al.) reveal about the lunar effect's two halves?</div>
+      <div class="qa-a"><b>A</b> New-moon returns beat the control, but full-moon returns did not differ from control (p ≈ 0.88) — the "depressed full moon" half did not hold up.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q2</b> On what two grounds is the "Sell in May" effect contested by Maberly and Pierce (2004) and others?</div>
+      <div class="qa-a"><b>A</b> The U.S. result is driven by two outliers (1987, 1998 LTCM) and is not robust; and it is not exploitable after trading costs.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q3</b> State the synthesis in one sentence: why don't the real effects rescue astrology?</div>
+      <div class="qa-a"><b>A</b> They are behavioral and seasonal in cause, contested, mostly untradeable, and decaying — so they belong to mood and the calendar, not to planetary causation.</div>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">✓</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">The literature, read whole</div>
+      <div class="d">Lunar and seasonal effects are real but behavioral; the rest fails or can't be tested. The grain of truth is mood, correctly located.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== LESSON 19.5 ===================== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Lesson 19.5</span>
+    <span class="lesson-title">Holding a Fascination Without <em>Self-Deception</em></span>
+  </div>
+
+  <p>The evidence is in. What remains is conduct: how a thoughtful person keeps a genuine interest in this subject without letting it corrupt judgment or capital. Six rules carry the whole posture.</p>
+
+  <ol class="ladder">
+    <li><b>Weigh by the hierarchy.</b> Discount anecdote and in-sample fit entirely; grant weight only to replicated, out-of-sample effects with a plausible mechanism.</li>
+    <li><b>Demand all three answers.</b> For any claimed effect ask: is it real? is the cause actually astrological? is it tradeable after costs? Refuse claims that answer only the first.</li>
+    <li><b>Attribute real effects to their real causes.</b> When a lunar or seasonal pattern appears, credit <strong>mood and the calendar</strong>, not planets. Resist "science proves astrology."</li>
+    <li><b>Treat astrology as lens and discipline, never oracle.</b> Use it as the sentiment-cycle framing and behavioral scaffold of Chapter 17 — confirmed by price, governed by risk — and size every position as if the astrological edge were <strong>zero</strong> (because, on the evidence, it is).</li>
+    <li><b>Make your journal your evidence.</b> Your own pre-registered, scored record (Chapter 18) is the most relevant data you will ever have; let it — not tradition or hope — update your beliefs, and be willing to conclude "this doesn't work."</li>
+    <li><b>Stay curious, stay unattached.</b> Fascination with the symbolism is legitimate; attachment to the <em>conclusion</em> is not. Hold the subject the way an honest scientist holds a beautiful hypothesis the data won't support: with affection and without illusion.</li>
+  </ol>
+
+  <div class="honest">
+    <span class="ct">Callout · The Honest Practitioner's Creed</span>
+    <em>I find this lens beautiful and useful for discipline. I have no evidence it predicts prices, and I trade as if it does not. I test what I can, I count my misses, and I follow the evidence even when it disappoints me.</em> That posture is the whole book in five sentences.
+  </div>
+
+  <div class="keyrule">
+    <span class="small">Key Rule · 19.5</span>
+    Keep the fascination; refuse the self-deception. Credit real causes, size as if the edge is zero, let the journal rule, and hold the conclusion loosely.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself</div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q1</b> Rule 4 says to size positions "as if the astrological edge were zero." Why <em>zero</em> specifically?</div>
+      <div class="qa-a"><b>A</b> Because on the evidence it <em>is</em> zero — sizing on an unproven edge risks capital on a forecast the data does not support.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q2</b> What should update a practitioner's beliefs, and what should not?</div>
+      <div class="qa-a"><b>A</b> A pre-registered, scored journal of one's own results should; tradition, hope, and remembered "hits" should not.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q3</b> The Creed permits affection but forbids one specific attachment. To what?</div>
+      <div class="qa-a"><b>A</b> Attachment to the conclusion — loving the symbolism is fine; needing it to be true is not.</div>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">6</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">A method for the honest practitioner</div>
+      <div class="d">Weigh, demand three answers, attribute correctly, treat as lens not oracle, let the journal rule, stay curious and unattached.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== LESSON 19.6 ===================== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Lesson 19.6</span>
+    <span class="lesson-title">Edge Cases &amp; <em>Cautions</em></span>
+  </div>
+
+  <p>Seven traps catch people who have read the evidence and still talk themselves past it. Each is a place where an honest reading quietly slides into a hopeful one.</p>
+
+  <ol class="ladder">
+    <li><b>Mistaking a neighbourhood effect for a vindication.</b> <span class="tag ob">Observed</span> "A journal found a lunar effect!" does not mean astrology works; it means <em>mood</em> has a rhythm. Keep the logical step honest.</li>
+    <li><b>Anomaly decay.</b> <span class="tag ob">Observed</span> Even real, published effects (lunar, seasonal) tend to shrink once known (McLean &amp; Pontiff, 2016). Yesterday's documented edge is not today's tradeable one.</li>
+    <li><b>Survivorship of famous "hits."</b> The crashes astrology "called" are remembered; the far more numerous non-events are not. Always restore the denominator (Chapter 18).</li>
+    <li><b>The seduction of the small-but-real.</b> A genuine ~few-percent, fragile, behavioral effect is easily inflated into a trading religion. Real ≠ large ≠ tradeable.</li>
+    <li><b>Contested findings are contested.</b> The seasonal effect is outlier-sensitive (Maberly &amp; Pierce, 2004) and often not exploitable after costs; the full-moon half of the lunar effect fails against control days. Cite the <em>whole</em> literature, not the flattering half.</li>
+    <li><b>Conviction outrunning evidence.</b> <span class="tag fw">Framework</span> The gap between "interesting lens" and "I am sure" is where capital — and judgment — are lost. This is the bridge to Chapter 20's ethics and risk.</li>
+    <li><b>The standing verdict.</b> <span class="tag ob">Observed</span> No validated predictive edge; the real nearby effects are behavioral / seasonal, small, contested, decaying, and non-astrological. The defensible use is symbolic and behavioral — confirmed by price, governed by risk.</li>
+  </ol>
+
+  <div class="keyrule">
+    <span class="small">Key Rule · 19.6</span>
+    Every trap is the same move in disguise: borrowing a small real effect's credibility, or a remembered hit's drama, to license a conviction the evidence won't bear.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself</div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q1</b> "A lunar effect was found, so astrology works." Name the broken logical step.</div>
+      <div class="qa-a"><b>A</b> The effect points to mood having a rhythm, not to planetary causation — the conclusion smuggles in a mechanism the finding never established.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q2</b> Why is "real" not the same as "tradeable"?</div>
+      <div class="qa-a"><b>A</b> A genuine effect can still be too small and fragile to survive costs, and can decay once it is public — real, small, and untradeable all at once.</div>
+    </div>
+    <div class="qa-i">
+      <div class="qa-q"><b>Q3</b> What single danger does Caution 6 flag as the bridge to Chapter 20?</div>
+      <div class="qa-a"><b>A</b> Conviction outrunning evidence — the gap between "interesting lens" and "I am sure," where capital and judgment are lost.</div>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">7</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">Seven ways an honest reading slips</div>
+      <div class="d">From mistaking neighbourhood effects for vindication to letting conviction outrun the evidence — name the move, refuse it.</div>
+    </div>
+  </div>
+</div>
+
+<hr class="soft"/>
+
+<!-- ===================== SUMMARY 19.7 ===================== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Summary · 19.7</span>
+    <span class="lesson-title">Five <em>Takeaways</em></span>
+  </div>
+
+  <ol class="takeaways">
+    <li><b>Does financial astrology predict prices? No.</b> There is no replicated, out-of-sample, cost-adjusted evidence of an edge, and the appearance of one is easily manufactured by searching (Chapter 18).</li>
+    <li><b>Two real effects sit in astrology's neighbourhood:</b> the <strong>lunar-phase</strong> return pattern (Dichev–Janes 2003; Yuan–Zheng–Zhu 2006) and the <strong>seasonal / Halloween</strong> effect (Bouman–Jacobsen 2002; Zhang–Jacobsen 2021) — but they are <strong>behavioral and seasonal, not astrological.</strong></li>
+    <li><b>Both are small, contested, and fragile:</b> the depressed-full-moon half fails against control days; the seasonal effect is outlier-driven (Maberly–Pierce 2004) and often not tradeable after costs; and public anomalies decay (McLean–Pontiff 2016).</li>
+    <li><b>Astrology's own causal claims fail or are untestable:</b> Mercury-retrograde lore, "an aspect at the crash," planetary price-causation, and small-N cycle claims do not survive honest scrutiny.</li>
+    <li><b>The grain of truth, correctly located:</b> <em>mood moves markets and mood has rhythms.</em> Astrology is at best a symbolic notation for those rhythms and a discipline scaffold — useful for <strong>process, not prophecy.</strong> Stay curious; never let fascination outrun the evidence.</li>
+  </ol>
+
+  <div class="recap">
+    <div class="n">5</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">The verdict, in five lines</div>
+      <div class="d">No predictive edge; two real-but-behavioral neighbours; both small and fragile; astrology's causal claims fail; the truth is mood, correctly located.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== CHECKLIST 19.8 ===================== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Checklist · 19.8</span>
+    <span class="lesson-title">Weighing an <em>Astro-Market Claim</em></span>
+  </div>
+
+  <p>Before you accept — or repeat — any claim that astrology moves markets, run it through these seven checks.</p>
+
+  <ul class="checklist">
+    <li><b>1. Where on the hierarchy?</b> Anecdote / in-sample / replicated-out-of-sample / mechanism — and am I granting weight only to the top tiers?</li>
+    <li><b>2. All three questions answered?</b> Is the effect real, is the cause actually astrological, and is it tradeable after costs?</li>
+    <li><b>3. Cause correctly attributed?</b> Have I credited mood and seasonality rather than leaping to "astrology works"?</li>
+    <li><b>4. Whole literature, not half?</b> Have I included the failed replications and the critiques — control-day, outlier, after-cost?</li>
+    <li><b>5. Decay considered?</b> If the effect is real and public, why hasn't it been arbitraged away?</li>
+    <li><b>6. Sized as if edge = zero?</b> Am I trading the position on its risk merits, not on an unproven astrological edge?</li>
+    <li><b>7. Journal updating my beliefs?</b> Is my own pre-registered, scored record — including misses — what actually moves my confidence, and am I willing to conclude "it doesn't work"?</li>
+  </ul>
+
+  <div class="recap">
+    <div class="n">✓</div>
+    <div>
+      <div class="l">Locked In</div>
+      <div class="t">A test you can apply to any claim</div>
+      <div class="d">Hierarchy, three questions, correct cause, whole literature, decay, zero-edge sizing, and a journal honest enough to say "no."</div>
+    </div>
+  </div>
+</div>
+
+<hr class="soft"/>
+
+<!-- ===================== GLOSSARY ===================== -->
+<h4 class="lab">Glossary — Chapter 19</h4>
+<dl class="gloss">
+  <dt>Evidence hierarchy <span class="tag fw">Framework</span></dt>
+  <dd>The ranking of claims from weakest to strongest: anecdote &lt; in-sample correlation &lt; replicated out-of-sample effect &lt; effect with a validated mechanism. Only the top two tiers earn real weight.</dd>
+
+  <dt>Out-of-sample <span class="tag fw">Framework</span></dt>
+  <dd>Tested on data not used to find the pattern — a different period, market, or author. The minimum bar for a correlation to count as evidence rather than a fit.</dd>
+
+  <dt>Efficient-market null <span class="tag ob">Observed</span></dt>
+  <dd>The default assumption that liquid markets price in public information, so simple, public edges get arbitraged away. The benchmark any claimed astro-edge must beat.</dd>
+
+  <dt>Anomaly decay <span class="tag ob">Observed</span></dt>
+  <dd>The empirical tendency of documented return anomalies to shrink substantially after publication (McLean &amp; Pontiff, 2016). A real, public, decades-old edge should already have eroded.</dd>
+
+  <dt>Lunar-phase effect <span class="tag ob">Observed</span></dt>
+  <dd>The finding that returns near the new moon exceed returns near the full moon (Dichev–Janes 2003; Yuan–Zheng–Zhu 2006). Real but small, attributed to mood, and only partly replicated against control days.</dd>
+
+  <dt>Seasonal / "Sell in May" effect <span class="tag ob">Observed</span></dt>
+  <dd>The pattern of higher November–April than May–October returns across most markets (Bouman–Jacobsen 2002; Zhang–Jacobsen 2021). A calendar effect, contested as outlier-driven (Maberly–Pierce 2004) and often untradeable after costs.</dd>
+
+  <dt>Control days <span class="tag ob">Observed</span></dt>
+  <dd>A replication method comparing effect-window returns against a matched baseline. The test that showed the lunar effect's "depressed full moon" half does not differ from control (p ≈ 0.88).</dd>
+
+  <dt>Survivorship of "hits" <span class="tag fw">Framework</span></dt>
+  <dd>The bias by which remembered correct calls are counted while the more numerous non-events are forgotten. Corrected by always restoring the denominator (Chapter 18).</dd>
+
+  <dt>Grain of truth <span class="tag fw">Framework</span></dt>
+  <dd>The one defensible claim left after stripping the field: human mood moves markets and mood has cyclical rhythms. Astrology is at most symbolic notation for those rhythms, not their cause.</dd>
+
+  <dt>Process, not prophecy <span class="tag fw">Framework</span></dt>
+  <dd>The book's defensible use of astrology — a sentiment-cycle lens and behavioral discipline that organises attention and risk, making no forecasting claim about prices.</dd>
+</dl>
+
+<div class="bridge">
+  End of Chapter 19. The verdict is in: no predictive edge, a grain of truth correctly located in mood, and a lens worth keeping for discipline rather than prophecy. Next, Chapter 20 — <em>"Ethics, Risk &amp; the Pitfalls of Prediction"</em> — the book's conscience: position sizing and ruin, the conviction trap, never giving investment advice, the duty of honest disclosure, regulation (SEBI and registered-adviser rules), and protecting both your capital and the people who might trust your forecasts.
+</div>
+
+</body>
+</html>

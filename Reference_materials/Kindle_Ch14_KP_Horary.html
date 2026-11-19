@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Celestial Ledger — Chapter 14: KP &amp; Horary for Markets</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --paper:#fbf9f4; --paper2:#f4efe4; --card:#ffffff; --ink:#26211c; --ink-soft:#4f463c; --ink-faint:#857a6c;
+  --line:#e6dfce; --line-soft:#efe9dc;
+  --gold:#9a7113; --gold-soft:#fbf2da; --gold-line:#e7cf94;
+  --teal:#0c7d68; --teal-soft:#e3f3ef;
+  --coral:#b23a2e; --coral-soft:#f8e9e6;
+  --violet:#6244a8; --violet-soft:#efeafa;
+  --green:#2f7d4f; --green-soft:#e6f3ea;
+  --blue:#1f6aa6; --blue-soft:#e7f0f8;
+  --slate:#3f5566; --slate-soft:#e8eef3;
+  --serif:'Playfair Display',Georgia,'Times New Roman',serif;
+  --body:Georgia,'Iowan Old Style','Palatino Linotype',serif;
+  --sans:'Inter',system-ui,-apple-system,sans-serif;
+  --r:10px; --r-sm:7px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{ -webkit-text-size-adjust:100%; }
+body{ background:var(--paper); color:var(--ink); font-family:var(--body); font-size:18px; line-height:1.72; max-width:780px; margin:0 auto; padding:30px 26px 90px; }
+p{ margin:0 0 14px; } strong{ color:var(--ink); font-weight:600; } em{ font-style:italic; }
+
+.hero{ text-align:center; padding:22px 0 30px; border-bottom:2px solid var(--gold-line); margin-bottom:34px; }
+.hero .kicker{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:var(--gold); }
+.hero h1{ font-family:var(--serif); font-weight:900; font-size:40px; line-height:1.12; margin:14px 0 0; }
+.hero h1 em{ color:var(--gold); font-style:italic; }
+.hero .sub{ font-style:italic; color:var(--ink-soft); font-size:17px; max-width:580px; margin:16px auto 0; }
+.hero .ornament{ color:var(--gold); letter-spacing:.5em; margin-top:18px; font-size:14px; }
+
+.lesson{ margin:0 0 50px; }
+.lesson-head{ display:flex; align-items:baseline; gap:12px; border-bottom:1px solid var(--line); padding-bottom:8px; margin-bottom:18px; }
+.lesson-no{ font-family:var(--sans); font-size:12px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); white-space:nowrap; }
+.lesson-title{ font-family:var(--serif); font-weight:700; font-size:25px; line-height:1.2; }
+.lesson-title em{ color:var(--gold); font-style:italic; }
+h3.sec{ font-family:var(--serif); font-style:italic; font-weight:600; font-size:21px; color:var(--gold); margin:28px 0 10px; }
+h4.lab{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-faint); margin:22px 0 9px; }
+
+.callout{ border-left:4px solid var(--gold); background:var(--gold-soft); border-radius:0 var(--r-sm) var(--r-sm) 0; padding:14px 18px; margin:18px 0; font-size:16.5px; line-height:1.62; }
+.callout .ct{ display:block; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:5px; color:var(--gold); }
+.callout.teal{ border-color:var(--teal); background:var(--teal-soft);} .callout.teal .ct{ color:var(--teal);}
+.callout.coral{ border-color:var(--coral); background:var(--coral-soft);} .callout.coral .ct{ color:var(--coral);}
+.callout.violet{ border-color:var(--violet); background:var(--violet-soft);} .callout.violet .ct{ color:var(--violet);}
+.callout.green{ border-color:var(--green); background:var(--green-soft);} .callout.green .ct{ color:var(--green);}
+.callout.slate{ border-color:var(--slate); background:var(--slate-soft);} .callout.slate .ct{ color:var(--slate);}
+.honest{ border-left:4px solid var(--violet); background:var(--violet-soft); border-radius:0 var(--r-sm) var(--r-sm) 0; padding:14px 18px; margin:18px 0; font-size:16px; }
+.honest .ct{ display:block; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:5px; color:var(--violet); }
+
+.keyrule{ text-align:center; font-family:var(--serif); font-style:italic; font-size:20px; line-height:1.5; color:var(--gold); border-top:1px solid var(--gold-line); border-bottom:1px solid var(--gold-line); padding:18px 14px; margin:22px 0; }
+.keyrule .small{ display:block; font-family:var(--sans); font-style:normal; font-size:10px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:8px; }
+.keyrule b{ font-style:normal; color:var(--ink); }
+
+.tag{ display:inline-block; font-family:var(--sans); font-size:10px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:1px 7px; border-radius:4px; vertical-align:middle; }
+.tag.cl{ background:var(--blue-soft); color:var(--blue); }
+.tag.fw{ background:var(--gold-soft); color:var(--gold); }
+.tag.vf{ background:var(--violet-soft); color:var(--violet); }
+.tag.ob{ background:var(--teal-soft); color:var(--teal); }
+.tag.as{ background:var(--slate-soft); color:var(--slate); }
+.tag.hi{ background:var(--coral-soft); color:var(--coral); }
+
+.cards{ display:flex; flex-wrap:wrap; gap:12px; margin:16px 0; }
+.card{ flex:1 1 220px; background:var(--card); border:1px solid var(--line); border-top:3px solid var(--gold); border-radius:var(--r-sm); padding:14px 16px; }
+.card.up{ border-top-color:var(--green);} .card.down{ border-top-color:var(--coral);} .card.teal{ border-top-color:var(--teal);} .card.violet{ border-top-color:var(--violet);} .card.slate{ border-top-color:var(--slate);} .card.blue{ border-top-color:var(--blue);}
+.card .ic{ font-size:24px; line-height:1; } .card .ti{ font-family:var(--serif); font-weight:700; font-size:18px; margin:6px 0 2px; } .card .ti em{ color:var(--gold); font-style:italic; font-weight:400; font-size:14px; }
+.card .mt{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px; } .card p{ font-size:15px; line-height:1.55; margin:0; color:var(--ink-soft); }
+
+.tw{ overflow-x:auto; border:1px solid var(--line); border-radius:var(--r-sm); margin:16px 0; }
+table{ width:100%; border-collapse:collapse; font-family:var(--sans); }
+thead tr{ background:var(--gold-soft); }
+th{ font-size:10.5px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:var(--gold); text-align:left; padding:9px 11px; white-space:nowrap; }
+td{ font-size:13px; padding:8px 11px; border-top:1px solid var(--line-soft); vertical-align:top; color:var(--ink-soft); }
+td.g{ color:var(--gold); font-weight:600; white-space:nowrap; }
+td.s{ color:var(--slate); font-weight:600; white-space:nowrap; }
+td.up{ color:var(--green); font-weight:600;} td.dn{ color:var(--coral); font-weight:600;}
+tbody tr:nth-child(even){ background:#fcfaf5; }
+tr.total td{ background:var(--gold-soft); color:var(--gold); font-weight:700; border-top:2px solid var(--gold-line); }
+
+.qa{ border:1px solid var(--line); border-radius:var(--r-sm); overflow:hidden; margin:20px 0; }
+.qa-h{ background:var(--paper2); padding:9px 15px; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); border-bottom:1px solid var(--line); }
+.qa-i{ padding:12px 15px; border-bottom:1px solid var(--line-soft); } .qa-i:last-child{ border-bottom:none; }
+.qa-q{ font-size:16px; } .qa-q b{ color:var(--gold); font-family:var(--sans); font-size:12px; font-weight:700; margin-right:8px; }
+.qa-a{ font-size:16px; color:var(--ink-soft); margin-top:5px; } .qa-a b{ color:var(--teal); font-family:var(--sans); font-size:12px; font-weight:700; margin-right:8px; }
+
+.recap{ display:flex; align-items:center; gap:18px; background:var(--gold-soft); border:1px solid var(--gold-line); border-radius:var(--r-sm); padding:16px 20px; margin:20px 0; }
+.recap .n{ font-family:var(--serif); font-weight:900; font-size:38px; color:var(--gold); line-height:1; flex-shrink:0; }
+.recap .l{ font-family:var(--sans); font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); }
+.recap .t{ font-family:var(--serif); font-weight:700; font-size:18px; margin:2px 0; } .recap .d{ font-size:14px; color:var(--ink-soft); }
+
+.ladder{ counter-reset:rk; list-style:none; padding:0; margin:14px 0; }
+.ladder li{ counter-increment:rk; display:flex; gap:14px; align-items:flex-start; padding:9px 0; border-bottom:1px solid var(--line-soft); font-size:15.5px; }
+.ladder li:last-child{ border-bottom:none; }
+.ladder li::before{ content:counter(rk); flex-shrink:0; width:26px; height:26px; background:var(--gold); color:#fff; border-radius:50%; font-family:var(--sans); font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center; }
+.ladder b{ color:var(--ink); }
+
+.takeaways{ counter-reset:tk; list-style:none; padding:0; margin:14px 0; }
+.takeaways li{ counter-increment:tk; position:relative; padding:10px 0 10px 46px; border-bottom:1px solid var(--line-soft); font-size:16.5px; }
+.takeaways li:last-child{ border-bottom:none; }
+.takeaways li::before{ content:counter(tk); position:absolute; left:0; top:9px; width:30px; height:30px; border:1.5px solid var(--gold); color:var(--gold); border-radius:50%; font-family:var(--serif); font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center; }
+
+.checklist{ list-style:none; padding:0; margin:14px 0; }
+.checklist li{ position:relative; padding:10px 0 10px 38px; border-bottom:1px solid var(--line-soft); font-size:16px; }
+.checklist li:last-child{ border-bottom:none; }
+.checklist li::before{ content:"\2610"; position:absolute; left:0; top:7px; font-size:24px; line-height:1; color:var(--gold); font-family:var(--sans); }
+.checklist b{ color:var(--ink); }
+
+.gloss{ background:var(--card); border:1px solid var(--line); border-radius:var(--r-sm); padding:6px 18px; margin:16px 0; }
+.gloss dt{ font-family:var(--serif); font-weight:700; font-size:16px; color:var(--gold); margin:12px 0 1px; }
+.gloss dd{ margin:0 0 4px; font-size:15.5px; color:var(--ink-soft); }
+
+.bridge{ text-align:center; font-style:italic; color:var(--ink-faint); font-size:15px; border-top:1px solid var(--line); padding-top:22px; margin-top:34px; }
+hr.soft{ border:none; border-top:1px solid var(--line); margin:30px 0; }
+@media (max-width:600px){ body{font-size:17px;padding:20px 16px 70px;} .hero h1{font-size:31px;} .lesson-title{font-size:21px;} }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="kicker">The Celestial Ledger · Volume I · Part III — Applied Practice</div>
+  <h1>KP &amp; Horary <em>for Markets</em></h1>
+  <div class="sub">Chapter Fourteen — the falsifiable school. KP drives every question to a single deciding sub-lord and returns a sharp, datable answer. That precision is its virtue and its peril in equal measure.</div>
+  <div class="ornament">✦ ✦ ✦</div>
+</div>
+
+<p>The <strong>Krishnamurti Paddhati</strong> — KP — is at once the most <strong>precise</strong> and the most <strong>falsifiable</strong> school in this book, and that is precisely why this chapter both admires it and warns about it. KP reduces a whole chart to a chain of lords ending in a decisive <strong>sub-lord</strong>, and from that sub-lord it returns sharp, yes-or-no, datable verdicts — including, in its <strong>horary</strong> form, the trader's bluntest question of all: <em>will it rise?</em> Falsifiability is a virtue this book prizes above almost any other. But the same knife-edge precision makes KP <strong>hypersensitive</strong> — a few arc-minutes of time, or a few arc-minutes of ayanamsa, can flip the verdict outright. Precision and fragility are two faces of one coin, and a serious reader must hold both at once.</p>
+
+<div class="callout">
+  <span class="ct">Claim-type key — the labels you will meet in this chapter</span>
+  Every claim below carries one of five honest labels. <span class="tag cl">Classical</span> marks an established rule of the school. <span class="tag as">Astronomical</span> marks verifiable astronomy. <span class="tag fw">Framework</span> marks this book's own market interpretation — a hypothesis to test, never to swallow. <span class="tag ob">Observed</span> marks an empirical caveat drawn from how the method actually behaves. <span class="tag vf">Verify</span> marks a point to confirm before you lean on it. Every KP figure in this chapter was computed live with Swiss Ephemeris using the <strong>KP ayanamsa</strong> — a deliberate departure from the book's usual Lahiri default, because KP's tables demand its own.
+</div>
+
+<!-- ═══════════ 14.1 ═══════════ -->
+<div class="lesson">
+  <div class="lesson-head"><div class="lesson-no">Lesson 14.1</div><div class="lesson-title">The <em>Falsifiable</em> School</div></div>
+
+  <p>Most astrology hedges. KP does not. Where a traditional reading offers a soft cloud of qualified tendencies — <em>this may incline toward that, depending</em> — Krishnamurti Paddhati drives every question down to a single deciding factor, the <strong>sub-lord</strong>, and hands back a sharp answer: yes or no, this house fructifies or it does not, the event arrives by this date or it does not. In its <strong>horary</strong> form it will even answer a question posed on the spot, with no birth chart at all: <em>will the market rise from here?</em></p>
+
+  <p>For a book built on honesty, this is genuinely attractive — because <strong>a sharp, falsifiable claim can be tested</strong>, and KP is the most testable school in the entire field. A vague forecast can always wriggle free of being wrong; a KP call cannot. But the chapter's title insight is that KP's great precision is also its peril. The sub-lord sits on a knife-edge: the zodiac is carved into <strong>249 sub-segments</strong>, some only a fraction of a degree wide, so a tiny error in the birth time, in the question moment, or in the <strong>ayanamsa</strong> (Chapter 2) can push a planet across a boundary into the next sub and <strong>reverse the verdict entirely.</strong> This chapter teaches the KP machinery, applies it honestly to markets and to horary, and then insists on the discipline that KP's own precision demands of anyone who uses it: <strong>stress-test the sub-lord, and score every call you make.</strong></p>
+
+  <div class="keyrule"><span class="small">The rule to lock in</span>KP's gift is that it can be <b>proven wrong</b> — and its danger is that the verdict balances on a sub-division sometimes a fraction of a degree wide. Honour both, or you misuse the school.</div>
+
+  <div class="qa">
+    <div class="qa-h">💬 Check yourself · Lesson 14.1</div>
+    <div class="qa-i"><div class="qa-q"><b>Q1</b>What single factor does KP drive every question down to?</div><div class="qa-a"><b>A</b>The <strong>sub-lord</strong>. KP refuses the cloud of tendencies and returns one sharp, deciding verdict.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q2</b>Why should a book built on honesty find KP attractive?</div><div class="qa-a"><b>A</b>Because its claims are <strong>falsifiable</strong> — sharp and datable, so they <em>can be tested and scored</em>, unlike vague astrology that can always escape being wrong.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q3</b>What is the flip side of that precision?</div><div class="qa-a"><b>A</b><strong>Fragility.</strong> With 249 narrow subs, a tiny error in time or ayanamsa can shove a point into the next sub and reverse the answer.</div></div>
+  </div>
+  <div class="recap"><div class="n">✦</div><div><div class="l">Lesson 14.1 — Locked In</div><div class="t">Sharp enough to be wrong</div><div class="d">KP's testability is its virtue; its knife-edge is its risk. Next, the machinery that produces the verdict.</div></div></div>
+</div>
+
+<!-- ═══════════ 14.2 ═══════════ -->
+<div class="lesson">
+  <div class="lesson-head"><div class="lesson-no">Lesson 14.2</div><div class="lesson-title">The KP <em>Machinery</em></div></div>
+
+  <h3 class="sec">The chain of lords — and the decisive sub-lord</h3>
+  <p><span class="tag cl">Classical</span> KP reads every single point in the zodiac through a <strong>three-level chain of lords</strong>, each finer than the last:</p>
+  <div class="cards">
+    <div class="card blue"><div class="ic">♌</div><div class="ti">Sign Lord</div><div class="mt">The broad backdrop</div><p>The ruler of the 30° sign the point falls in. It sets the general tone — the widest, least decisive layer.</p></div>
+    <div class="card teal"><div class="ic">🌙</div><div class="ti">Star Lord</div><div class="mt">The main significator</div><p>The ruler of the <strong>nakshatra</strong> the point occupies. It shows the tendency — what the point is inclined toward.</p></div>
+    <div class="card violet"><div class="ic">🎯</div><div class="ti">Sub-Lord</div><div class="mt">The deciding factor</div><p>The ruler of the <strong>Vimshottari-proportioned sub-division</strong> within that nakshatra — and <strong>this is what decides the outcome.</strong></p></div>
+  </div>
+  <p>The governing maxim of the whole school: <em>the star-lord shows the tendency, but the <strong>sub-lord decides the outcome.</strong></em> If the sub-lord of a relevant point favours the matter, it fructifies; if it does not, the matter fails — however promising the rest of the chart may look. This single principle is what makes KP both sharp and dangerous.</p>
+
+  <h3 class="sec">The 249 subs, the KP ayanamsa, Placidus cusps</h3>
+  <p><span class="tag cl">Classical</span> Dividing each of the 27 nakshatras into nine Vimshottari-proportional subs yields <strong>249 sub-divisions</strong> around the zodiac. KP uses its <strong>own ayanamsa</strong> — the KP ayanamsa (Chapter 2) — together with <strong>Placidus</strong> house cusps, and it reads the <strong>cuspal sub-lord</strong> of each house: the sub-lord of the exact degree rising on a house cusp tells you whether that house's matters will actually come to pass. Note the count: because some subs straddle a sign boundary and are read on either side of it, the nine-fold partition of 27 nakshatras resolves to the canonical <strong>249</strong> rather than a flat 243 — the standard KP number-table that horary depends upon.</p>
+
+  <h3 class="sec">Significators and Ruling Planets</h3>
+  <p><span class="tag cl">Classical</span> A planet <strong>signifies</strong> primarily the houses ruled by its <strong>star-lord</strong> — and secondarily the houses it rules itself. And at the very moment of judgment, KP identifies the <strong>Ruling Planets (RP)</strong>: the <strong>day-lord</strong> (the weekday), the <strong>Moon's</strong> sign, star and sub lords, and the <strong>Ascendant's</strong> sign, star and sub lords. The Ruling Planets are used both to confirm a reading and, crucially, to <em>time</em> the event it predicts.</p>
+
+  <div class="callout">
+    <span class="ct">Callout · the sub-lord decides</span>
+    Everything in KP funnels to one question: <em>what is the sub-lord, and does it favour the matter?</em> This is at once KP's power — a single, sharp verdict where other schools only murmur — and its danger, because that verdict balances on a sub-division that is sometimes only a fraction of a degree wide. Hold both halves of that truth in the same hand.
+  </div>
+
+  <div class="keyrule"><span class="small">The rule to lock in</span>Sign → star → <b>sub</b>. The sign sets the tone, the star shows the tendency, but the <b>sub-lord alone decides</b> — read through the KP ayanamsa and Placidus cusps, never any other.</div>
+
+  <div class="qa">
+    <div class="qa-h">💬 Check yourself · Lesson 14.2</div>
+    <div class="qa-i"><div class="qa-q"><b>Q1</b>Name the three levels of the KP chain of lords, finest last.</div><div class="qa-a"><b>A</b><strong>Sign lord</strong> (backdrop) → <strong>star lord</strong> (tendency) → <strong>sub-lord</strong> (the decision). <span class="tag cl">Classical</span></div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q2</b>Why does KP read the <em>cuspal</em> sub-lord of a house?</div><div class="qa-a"><b>A</b>Because the sub-lord of the degree rising on the cusp tells you whether that house's matters will actually <strong>fructify</strong> — using the KP ayanamsa and Placidus cusps.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q3</b>What are the Ruling Planets, and what are they for?</div><div class="qa-a"><b>A</b>The <strong>day-lord</strong> plus the <strong>Moon's</strong> and <strong>Ascendant's</strong> sign/star/sub lords at the moment of judgment — used to confirm and to <em>time</em> the event.</div></div>
+  </div>
+  <div class="recap"><div class="n">✦</div><div><div class="l">Lesson 14.2 — Locked In</div><div class="t">Down to the deciding sub</div><div class="d">You now know the chain, the 249 subs, the KP ayanamsa and Placidus cusps, and the Ruling Planets. Next, where this all came from.</div></div></div>
+</div>
+
+<!-- ═══════════ 14.3 ═══════════ -->
+<div class="lesson">
+  <div class="lesson-head"><div class="lesson-no">Lesson 14.3</div><div class="lesson-title">KP &amp; <em>Horary</em> — the Lineage</div></div>
+
+  <p><span class="tag cl">Classical</span> <span class="tag hi">Historical</span> <strong>K.S. Krishnamurti</strong> developed KP in mid-twentieth-century South India, setting it out across the <em>KP Readers</em>; later authors — among them S.P. Khullar, and several titles in this project's source library — extended and systematised it. Its defining contributions are the <strong>sub-lord</strong>, the <strong>249-sub system</strong>, the <strong>KP ayanamsa</strong>, and <strong>cuspal sub-lord</strong> judgment — every one of them a deliberate drive toward precision and decidability, away from the soft hedging of older practice.</p>
+
+  <p><span class="tag cl">Classical</span> <strong>Horary</strong> — <em>Prashna</em> — is the art of answering a question from <strong>the moment it is asked</strong>, rather than from a birth chart at all; a lineage running back to the classical <em>Prashna</em> texts. <strong>KP horary</strong> formalises it with characteristic sharpness: the querent gives a <strong>number from 1 to 249</strong>, which maps to a specific zodiacal degree — and thus to a specific cuspal setup; the <strong>cuspal sub-lord of the house signifying the question</strong> delivers the verdict, and the <strong>Ruling Planets</strong> time it. This is the engine behind a market horary such as <em>"will the index rise today?"</em> — a complete, datable answer drawn from a single number and a single moment.</p>
+
+  <p><span class="tag fw">Framework</span> Applied to markets, KP practitioners read <strong>trend</strong> from the cuspal sub-lords of the <strong>gain-related houses versus the loss-related houses</strong> of the market (or horary) chart — broadly, the 2nd and 11th, and the trader's 6th, leaning bullish; the 8th and 12th leaning bearish; with the 5th, the house of speculation, cutting either way — and they read <strong>timing</strong> from the Ruling Planets and the running dasha. <em>(The exact house groupings for "market up" vary between practitioners — a disagreement we return to in §14.6.)</em></p>
+
+  <div class="keyrule"><span class="small">The rule to lock in</span>Natal KP reads a birth chart; <b>horary</b> reads the moment a question is asked. A number from 1 to 249 fixes the chart, the cuspal sub-lord answers, the Ruling Planets time it.</div>
+
+  <div class="qa">
+    <div class="qa-h">💬 Check yourself · Lesson 14.3</div>
+    <div class="qa-i"><div class="qa-q"><b>Q1</b>Who developed KP, and what are its defining contributions?</div><div class="qa-a"><b>A</b><strong>K.S. Krishnamurti</strong>, in the <em>KP Readers</em>: the <strong>sub-lord</strong>, the <strong>249-sub system</strong>, the <strong>KP ayanamsa</strong>, and <strong>cuspal sub-lord</strong> judgment. <span class="tag hi">Historical</span></div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q2</b>What does horary read from, instead of a birth chart?</div><div class="qa-a"><b>A</b>From <strong>the moment the question is asked</strong>. In KP horary a number 1–249 maps to a degree, and the cuspal sub-lord of the relevant house gives the verdict.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q3</b>How do KP practitioners read market <em>trend</em>?</div><div class="qa-a"><b>A</b>From the cuspal sub-lords of the <strong>gain houses vs loss houses</strong> — 2nd/11th/6th bullish, 8th/12th bearish, 5th either way — timed by Ruling Planets and dasha. <span class="tag fw">Framework</span></div></div>
+  </div>
+  <div class="recap"><div class="n">✦</div><div><div class="l">Lesson 14.3 — Locked In</div><div class="t">A method built to decide</div><div class="d">From Krishnamurti's Readers to the trader's "will it rise?", KP and horary aim at a verdict. Next, the honest test — and a worked read.</div></div></div>
+</div>
+
+<!-- ═══════════ 14.4 ═══════════ -->
+<div class="lesson">
+  <div class="lesson-head"><div class="lesson-no">Lesson 14.4</div><div class="lesson-title">The Honest Test, &amp; a <em>Worked Read</em></div></div>
+
+  <h3 class="sec">The claim</h3>
+  <p><span class="tag fw">Framework</span> The cuspal sub-lord — whether of the market chart's gain and loss houses, or of a horary chart cast for the question — yields a <strong>sharp bullish or bearish verdict</strong>, and, with the Ruling Planets, a <strong>timing</strong>. Where other schools offer mood, KP promises a decidable market answer: up or down, by when.</p>
+
+  <h3 class="sec">The honest evidence — falsifiability as both gift and exposure</h3>
+  <p><span class="tag ob">Observed</span> KP's relationship to this book's standards is unusually pointed, and it cuts in both directions at once:</p>
+  <div class="honest">
+    <span class="ct">The ledger on KP — gift and exposure, side by side</span>
+    <p><strong>Its gift is falsifiability.</strong> A KP market call is sharp and datable, so — unlike vague astrology — it <strong>can be scored honestly.</strong> KP is therefore the <em>ideal</em> school for the backtesting discipline of Chapter 18. This is real, and it is to KP's lasting credit.</p>
+    <p><strong>Its first exposure is the chart-time problem (Chapter 13).</strong> Sub-lords need an <strong>exact</strong> time. On the contested exchange charts, the most fragile element — the sub-lord — rests on the least reliable input. Natal-KP market work inherits all of Chapter 13's uncertainty, amplified.</p>
+    <p><strong>Its second exposure is cusp-flip hypersensitivity (Chapter 2).</strong> The KP and Lahiri ayanamsas differ by roughly six arc-minutes <em>today</em>, and a few minutes of time shift the cusps further — enough to <strong>push a borderline point into the next sub and reverse the verdict.</strong> A method whose answer can flip on arc-minutes must be stress-tested every single time.</p>
+    <p><strong>Horary sidesteps the natal-time problem but adds its own.</strong> Casting from the question-moment avoids the contested birth chart — but introduces <strong>question-validity</strong> trouble: the same question asked repeatedly, or "number-shopping" for a favourable answer, invalidates the method, and its sincerity and uniqueness assumptions are unprovable.</p>
+    <p><strong>No validated edge.</strong> When KP market predictions are tracked honestly, they are <strong>not reliably better than chance.</strong> Falsifiability is precisely what lets us <em>say</em> this plainly — and so we should.</p>
+  </div>
+
+  <h3 class="sec">Worked example — today's sub-lord chains</h3>
+  <p>To make the machinery concrete, here are four bodies computed live for <strong>22 June 2026</strong> (KP ayanamsa 24.13°, verified against Swiss Ephemeris). Each row runs the full chain — sign lord, star lord, and the decisive sub-lord:</p>
+  <div class="tw">
+  <table>
+    <thead><tr><th>Body</th><th>KP position</th><th>Sign lord</th><th>Star lord</th><th>Sub-lord</th></tr></thead>
+    <tbody>
+      <tr><td class="g">Moon</td><td class="s">13.85° Virgo</td><td>Mercury</td><td>Moon</td><td class="s">Rahu</td></tr>
+      <tr><td class="g">Mercury</td><td class="s">0.14° Cancer</td><td>Moon</td><td>Jupiter</td><td class="s">Moon</td></tr>
+      <tr><td class="g">Jupiter</td><td class="s">4.23° Cancer</td><td>Moon</td><td>Saturn</td><td class="s">Saturn</td></tr>
+      <tr><td class="g">Saturn</td><td class="s">19.64° Pisces</td><td>Jupiter</td><td>Mercury</td><td class="s">Venus</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Read the Moon's row as the model: it sits at 13.85° Virgo, so its <strong>sign lord</strong> is Mercury (ruler of Virgo) and its <strong>star lord</strong> is the Moon (the nakshatra is Hasta, Moon-ruled) — but the deciding <strong>sub-lord is Rahu</strong>, and in KP it is Rahu's significations, not Mercury's or the Moon's, that settle what the Moon will deliver. A <strong>horary illustration</strong> completes the picture: KP number <strong>137</strong> maps to roughly 17.35° Libra, giving sign lord Venus, star lord Rahu, and <strong>sub-lord Venus</strong> — the number alone fixes a complete chain.</p>
+
+  <div class="callout slate">
+    <span class="ct">Astronomical note · the flip, demonstrated</span>
+    These figures are not recalled — they were computed with Swiss Ephemeris under the KP (Krishnamurti) ayanamsa and Placidus cusps, and every position reproduces the cited values to a hundredth of a degree. The fragility is just as computable: nudge the assumed time of the 22 June read forward by barely <strong>half an hour</strong> and the Moon's sub-lord flips from <strong>Rahu to Jupiter</strong> — the verdict changing not because the sky moved meaningfully, but because a knife-edge boundary was crossed. That is the whole chapter in one calculation.
+  </div>
+
+  <p><span class="tag fw">Framework</span> How a KP practitioner would actually <em>use</em> this — and the discipline that must surround it:</p>
+  <ol class="ladder">
+    <li>For a <strong>"will it rise?" horary</strong>, take the querent's number, find the <strong>cuspal sub-lord of the relevant house</strong>, and judge whether that sub-lord <strong>signifies the gain houses</strong> (lean yes) or the <strong>loss houses</strong> (lean no) — then time it with the Ruling Planets. (Today's RP would include the Moon's lords: sign Mercury, star Moon, <strong>sub Rahu</strong>.)</li>
+    <li><strong>This is method illustration, not a forecast.</strong> Nothing here predicts any market; it shows how the chain would be read.</li>
+    <li>Before trusting any such verdict, KP's own precision <strong>requires</strong> a stress test: recompute under a small time perturbation and under the Lahiri-versus-KP ayanamsa difference — <strong>and if the sub-lord flips, the answer is unreliable</strong> and must be discarded outright.</li>
+  </ol>
+
+  <div class="callout">
+    <span class="ct">Callout · precision demands KP-grade record-keeping</span>
+    KP's falsifiability is a standing invitation. <em>Because</em> its calls are sharp and datable, there is <strong>no excuse not to log and score them</strong> (Chapter 18). A KP practitioner who keeps an honest hit-and-miss ledger is doing the most rigorous work in the entire field; one who only remembers the hits is abusing the school's single greatest virtue.
+  </div>
+
+  <div class="keyrule"><span class="small">The rule to lock in</span>KP's sharpness is a gift <b>and</b> an exposure: it can be scored honestly, but its verdict can flip on arc-minutes. Compute it live, stress-test it always, discard it if the sub flips.</div>
+
+  <div class="qa">
+    <div class="qa-h">💬 Check yourself · Lesson 14.4</div>
+    <div class="qa-i"><div class="qa-q"><b>Q1</b>Why is falsifiability simultaneously KP's gift and its exposure?</div><div class="qa-a"><b>A</b>Sharp, datable calls <strong>can be scored</strong> (the gift) — but that same sharpness means they can be, and often are, <strong>proven wrong</strong> (the exposure). <span class="tag ob">Observed</span></div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q2</b>In the worked table, the Moon's sign and star lords are Mercury and the Moon — so what decides its outcome?</div><div class="qa-a"><b>A</b>The <strong>sub-lord, Rahu.</strong> In KP it is the sub-lord's significations that settle the matter, not the sign or star.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q3</b>What must you do before trusting a KP verdict, and when do you discard it?</div><div class="qa-a"><b>A</b><strong>Stress-test it</strong> under a small time/ayanamsa perturbation. If the sub-lord <strong>flips</strong>, the answer is unreliable — discard it. <span class="tag fw">Framework</span></div></div>
+  </div>
+  <div class="recap"><div class="n">✦</div><div><div class="l">Lesson 14.4 — Locked In</div><div class="t">Sharp, scorable, and fragile</div><div class="d">A real chain computed, the flip demonstrated in half an hour of motion, and no validated edge. Next, the disciplined method.</div></div></div>
+</div>
+
+<!-- ═══════════ 14.5 ═══════════ -->
+<div class="lesson">
+  <div class="lesson-head"><div class="lesson-no">Lesson 14.5</div><div class="lesson-title">KP &amp; Horary, <em>Disciplined</em></div></div>
+
+  <p>KP's precision is only an asset if it is matched by precision in the practitioner. These six rules are what turn a fragile, flip-prone verdict into something a careful trader can responsibly use — or, just as often, responsibly set aside.</p>
+
+  <ol class="ladder">
+    <li><strong>Use the KP ayanamsa and Placidus, consistently.</strong> KP's tables are built on them; never read a KP sub-lord on a Lahiri chart, or with whole-sign houses (Chapter 2). A sub-lord computed on the wrong frame is simply the wrong sub-lord.</li>
+    <li><strong>Find the cuspal sub-lord of the relevant house, and read its significations.</strong> The verdict is whether that sub-lord favours the <strong>gain</strong> houses or the <strong>loss</strong> houses. The sub-lord decides — not the sign or the star alone.</li>
+    <li><strong>Time with Ruling Planets and dasha.</strong> Use the day-lord and the Moon and Ascendant lords (the RP), confirmed by the running dasha, to fix <em>when</em> the event arrives.</li>
+    <li><strong>Stress-test the sub-lord, every time.</strong> Recompute under a small time shift and the KP-versus-Lahiri ayanamsa gap. <strong>If the sub-lord flips, treat the answer as unreliable</strong> and stand down. This single habit guards against KP's defining fragility.</li>
+    <li><strong>For horary: one question, one moment, no shopping.</strong> Fix the question and the moment honestly; do not re-ask the same question, and do not hunt for a favourable number. A repeated or gamed horary is void.</li>
+    <li><strong>Log and score every call (Chapter 18); require price confluence; fix risk.</strong> Exploit KP's falsifiability by keeping a scored ledger. Act only on confluence with price and sentiment, with risk set independently of the verdict.</li>
+  </ol>
+
+  <div class="keyrule"><span class="small">The rule to lock in</span>Right frame, cuspal sub-lord, RP timing, <b>stress-test</b>, one honest horary, scored ledger with price confluence and fixed risk — six rules, and the fourth is the one that saves you.</div>
+
+  <div class="qa">
+    <div class="qa-h">💬 Check yourself · Lesson 14.5</div>
+    <div class="qa-i"><div class="qa-q"><b>Q1</b>Which frame must a KP sub-lord always be read on?</div><div class="qa-a"><b>A</b>The <strong>KP ayanamsa with Placidus houses</strong> — never Lahiri, never whole-sign. The wrong frame gives the wrong sub-lord.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q2</b>What is the single habit that guards against KP's defining fragility?</div><div class="qa-a"><b>A</b><strong>Stress-testing the sub-lord</strong> under a small time/ayanamsa shift, and standing down if it flips (Rule 4).</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q3</b>What are the rules for a valid horary?</div><div class="qa-a"><b>A</b><strong>One sincere question, one moment, no repeats, no number-shopping.</strong> A gamed or repeated horary is void.</div></div>
+  </div>
+  <div class="recap"><div class="n">✦</div><div><div class="l">Lesson 14.5 — Locked In</div><div class="t">Precision met by discipline</div><div class="d">Six rules, with the stress-test at their heart. Next, the edge cases where even these rules are tested.</div></div></div>
+</div>
+
+<!-- ═══════════ 14.6 ═══════════ -->
+<div class="lesson">
+  <div class="lesson-head"><div class="lesson-no">Lesson 14.6</div><div class="lesson-title">Edge Cases &amp; <em>Cautions</em></div></div>
+
+  <p>Seven situations where KP's sharpness can mislead the careless. The first is the central one; the rest follow from it.</p>
+
+  <ol class="ladder">
+    <li><strong>Cusp-flip hypersensitivity — the central caution.</strong> <span class="tag as">Astronomical — Caution</span> The sub-lord can change on arc-minutes of time or ayanamsa, reversing the verdict. KP without a stress test is a coin that can land either way depending on rounding. Always perturb-and-check.</li>
+    <li><strong>The chart-time problem, amplified.</strong> <span class="tag vf">Verify</span> Natal-KP on the contested exchange charts (Chapter 13) puts the most fragile reading on the least reliable time. Prefer horary, or robust signals, for market-level KP.</li>
+    <li><strong>Horary's question-validity problem.</strong> Repeated questions, number-shopping, or insincere queries void the method; its sincerity and uniqueness assumptions are unprovable. One honest question, one moment.</li>
+    <li><strong>Don't mix ayanamsas or house systems.</strong> KP ayanamsa plus Placidus only; mixing with Lahiri or whole-sign corrupts the sub-lords (Chapter 2).</li>
+    <li><strong>House-grouping disagreements.</strong> Practitioners differ on which houses mean "market up" — the role of the 5th, the 6th, and others. State your scheme, and don't switch it to fit the result you wanted.</li>
+    <li><strong>Falsifiability cuts both ways — so don't dodge the misses.</strong> <span class="tag ob">Observed</span> KP <em>can</em> be scored, which means selectively remembering only the hits is especially dishonest here. Score everything.</li>
+    <li><strong>The standing caveat.</strong> <span class="tag ob">Observed</span> KP has <strong>no validated market edge.</strong> Its honest worth is as the field's most <em>testable</em> method — to be backtested rigorously (Chapter 18), stress-tested for cusp-flips, confirmed by price, and governed by risk.</li>
+  </ol>
+
+  <div class="keyrule"><span class="small">The rule to lock in</span>The verdict that flips on arc-minutes, the contested chart, the gamed horary, the mixed frame, the moving goalposts, the forgotten miss — and above all, <b>no validated edge.</b></div>
+
+  <div class="qa">
+    <div class="qa-h">💬 Check yourself · Lesson 14.6</div>
+    <div class="qa-i"><div class="qa-q"><b>Q1</b>What is the central caution of the whole chapter?</div><div class="qa-a"><b>A</b><strong>Cusp-flip hypersensitivity</strong> — the sub-lord can reverse on arc-minutes of time or ayanamsa, so always perturb-and-check. <span class="tag as">Astronomical — Caution</span></div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q2</b>Why is forgetting the misses <em>especially</em> dishonest in KP?</div><div class="qa-a"><b>A</b>Because KP <strong>can</strong> be scored — its falsifiability removes any excuse. Selectively remembering hits abuses its greatest virtue. <span class="tag ob">Observed</span></div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q3</b>What is KP's honest worth, given it has no validated edge?</div><div class="qa-a"><b>A</b>As the field's most <strong>testable</strong> method — to be backtested, stress-tested, confirmed by price, and governed by risk. <span class="tag ob">Observed</span></div></div>
+  </div>
+  <div class="recap"><div class="n">✦</div><div><div class="l">Lesson 14.6 — Locked In</div><div class="t">Sharp, but unproven</div><div class="d">Every caution traces back to the flip — and to the honest verdict that KP has no validated edge. Now, the chapter in five lines.</div></div></div>
+</div>
+
+<hr class="soft"/>
+
+<!-- ═══════════ 14.7 SUMMARY ═══════════ -->
+<div class="lesson">
+  <div class="lesson-head"><div class="lesson-no">Section 14.7</div><div class="lesson-title">Chapter Summary — <em>Five Takeaways</em></div></div>
+
+  <ol class="takeaways">
+    <li><strong>KP funnels every question to a decisive sub-lord</strong> (sign → star → <strong>sub</strong>), giving sharp, falsifiable, datable answers — including the horary "will it rise?"</li>
+    <li><strong>Its precision is also its fragility:</strong> with 249 narrow subs, a few arc-minutes of time or ayanamsa can flip the sub-lord and reverse the verdict — so <strong>stress-testing is mandatory,</strong> not optional.</li>
+    <li><strong>Natal-KP market work inherits the contested-chart problem (Chapter 13), amplified;</strong> horary sidesteps the birth time but adds question-validity problems — no repeats, no number-shopping.</li>
+    <li><strong>Falsifiability is KP's gift — so use it:</strong> KP is the ideal school for honest backtesting and scored ledgers (Chapter 18); remembering only the hits abuses its greatest virtue.</li>
+    <li><strong>It has no validated edge.</strong> Use the KP/Placidus framework consistently, read the cuspal sub-lord's significations, time with Ruling Planets and dasha, stress-test, score, confirm with price, and fix risk.</li>
+  </ol>
+
+  <div class="recap"><div class="n">5</div><div><div class="l">Section 14.7 — Locked In</div><div class="t">The falsifiable school, in five lines</div><div class="d">Sharp, scorable, fragile, honest about its misses, and unproven. Hold all five together.</div></div></div>
+</div>
+
+<!-- ═══════════ 14.8 CHECKLIST ═══════════ -->
+<div class="lesson">
+  <div class="lesson-head"><div class="lesson-no">Section 14.8</div><div class="lesson-title">Practitioner's Checklist — <em>KP &amp; Horary</em></div></div>
+
+  <ul class="checklist">
+    <li><strong>1. KP ayanamsa + Placidus, consistently?</strong> No mixing with Lahiri or whole-sign (Chapter 2)?</li>
+    <li><strong>2. Cuspal sub-lord identified and read?</strong> Verdict based on whether the sub-lord favours gain versus loss houses — the sub-lord decisive?</li>
+    <li><strong>3. Sub-lord stress-tested?</strong> Recomputed under a small time/ayanamsa perturbation — and the call discarded if it flips?</li>
+    <li><strong>4. Timing via Ruling Planets &amp; dasha?</strong> Day-lord, Moon/Ascendant lords, and running dasha used to time it?</li>
+    <li><strong>5. Horary integrity?</strong> One sincere question, one moment, no repeats or number-shopping?</li>
+    <li><strong>6. Logged and scored?</strong> Every call recorded with a pre-defined hit criterion, and the misses counted (Chapter 18)?</li>
+    <li><strong>7. Confluence required, risk fixed?</strong> Confirmed by price and sentiment, with risk set independently of the KP verdict?</li>
+  </ul>
+</div>
+
+<!-- ═══════════ GLOSSARY ═══════════ -->
+<div class="lesson">
+  <div class="lesson-head"><div class="lesson-no">Reference</div><div class="lesson-title">Glossary — <em>Chapter 14</em></div></div>
+
+  <dl class="gloss">
+    <dt>Krishnamurti Paddhati (KP)</dt><dd>The mid-20th-century South Indian school of K.S. Krishnamurti that drives every chart to a decisive sub-lord and returns sharp, datable verdicts. <span class="tag cl">Classical</span></dd>
+    <dt>Sub-lord</dt><dd>The ruler of the Vimshottari-proportioned sub-division within a nakshatra — the <em>deciding</em> factor in KP. The star-lord shows the tendency; the sub-lord decides the outcome. <span class="tag cl">Classical</span></dd>
+    <dt>Star lord</dt><dd>The ruler of the nakshatra a point falls in — the main significator, showing the tendency a point is inclined toward. <span class="tag cl">Classical</span></dd>
+    <dt>Sign lord</dt><dd>The ruler of the 30° sign a point occupies — the broad backdrop, the least decisive of the three levels. <span class="tag cl">Classical</span></dd>
+    <dt>249 sub-divisions</dt><dd>The partition of the zodiac that results from dividing each of the 27 nakshatras into nine Vimshottari-proportional subs (resolving to the canonical 249, the basis of the KP horary number-table). <span class="tag cl">Classical</span></dd>
+    <dt>KP ayanamsa</dt><dd>KP's own sidereal-zero offset, differing from Lahiri by roughly six arc-minutes today; KP's tables and sub-lords are built on it (Chapter 2). <span class="tag as">Astronomical</span></dd>
+    <dt>Cuspal sub-lord</dt><dd>The sub-lord of the exact degree rising on a house cusp; in KP it tells you whether that house's matters will fructify. <span class="tag cl">Classical</span></dd>
+    <dt>Significator</dt><dd>A planet that "signifies" the houses ruled by its star-lord (and secondarily its own) — the bodies a house's outcome depends upon. <span class="tag cl">Classical</span></dd>
+    <dt>Ruling Planets (RP)</dt><dd>At the moment of judgment: the day-lord, plus the Moon's and Ascendant's sign/star/sub lords — used to confirm and to <em>time</em> an event. <span class="tag cl">Classical</span></dd>
+    <dt>Horary (Prashna)</dt><dd>Answering a question from the moment it is asked rather than from a birth chart; in KP, a number 1–249 maps to a degree and the cuspal sub-lord delivers the verdict. <span class="tag cl">Classical</span></dd>
+    <dt>Cusp-flip</dt><dd>The reversal of a KP verdict when a borderline point crosses a sub boundary under a tiny shift of time or ayanamsa — KP's defining fragility. <span class="tag as">Astronomical — Caution</span></dd>
+    <dt>Falsifiability</dt><dd>The property of being sharp enough to be proven wrong; KP's signature gift, which is also what exposes its lack of a validated edge. <span class="tag ob">Observed</span></dd>
+  </dl>
+</div>
+
+<div class="recap"><div class="n">✦</div><div><div class="l">Chapter 14 — Locked In</div><div class="t">The most testable school in the book</div><div class="d">KP's falsifiability is its gift and its exposure at once: it can be scored honestly, and so it can be — and is — proven to have no validated edge. Compute it live, stress-test the sub-lord every time, confirm by price, govern by risk.</div></div></div>
+
+<!-- ═══════════ BRIDGE ═══════════ -->
+<div class="bridge">
+  <p>End of Chapter 14. Next: <strong>Chapter 15 — "Commodities: Gold, Silver &amp; the Metals,"</strong> which turns to the asset class with the clearest classical rulerships (Sun → gold, Moon → silver) and the strongest seasonal patterns — and weighs, with the same honesty, how much of that is signal and how much is story.</p>
+  <div class="ornament" style="margin-top:14px;">✦ ✦ ✦</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Celestial Ledger — Chapter 17: Building an Astro-Trading System</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --paper:#fbf9f4; --paper2:#f4efe4; --card:#ffffff; --ink:#26211c; --ink-soft:#4f463c; --ink-faint:#857a6c;
+  --line:#e6dfce; --line-soft:#efe9dc;
+  --gold:#9a7113; --gold-soft:#fbf2da; --gold-line:#e7cf94;
+  --teal:#0c7d68; --teal-soft:#e3f3ef;
+  --coral:#b23a2e; --coral-soft:#f8e9e6;
+  --violet:#6244a8; --violet-soft:#efeafa;
+  --green:#2f7d4f; --green-soft:#e6f3ea;
+  --blue:#1f6aa6; --blue-soft:#e7f0f8;
+  --slate:#4a5a6a; --slate-soft:#eaeef2;
+  --serif:'Playfair Display',Georgia,'Times New Roman',serif;
+  --body:Georgia,'Iowan Old Style','Palatino Linotype',serif;
+  --sans:'Inter',system-ui,-apple-system,sans-serif;
+  --r:10px; --r-sm:7px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{ -webkit-text-size-adjust:100%; }
+body{ background:var(--paper); color:var(--ink); font-family:var(--body); font-size:18px; line-height:1.72; max-width:780px; margin:0 auto; padding:30px 26px 90px; }
+p{ margin:0 0 14px; } strong{ color:var(--ink); font-weight:600; } em{ font-style:italic; }
+
+.hero{ text-align:center; padding:22px 0 30px; border-bottom:2px solid var(--gold-line); margin-bottom:34px; }
+.hero .kicker{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:var(--gold); }
+.hero h1{ font-family:var(--serif); font-weight:900; font-size:40px; line-height:1.12; margin:14px 0 0; }
+.hero h1 em{ color:var(--gold); font-style:italic; }
+.hero .sub{ font-style:italic; color:var(--ink-soft); font-size:17px; max-width:580px; margin:16px auto 0; }
+.hero .ornament{ color:var(--gold); letter-spacing:.5em; margin-top:18px; font-size:14px; }
+
+.lesson{ margin:0 0 50px; }
+.lesson-head{ display:flex; align-items:baseline; gap:12px; border-bottom:1px solid var(--line); padding-bottom:8px; margin-bottom:18px; }
+.lesson-no{ font-family:var(--sans); font-size:12px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); white-space:nowrap; }
+.lesson-title{ font-family:var(--serif); font-weight:700; font-size:25px; line-height:1.2; }
+.lesson-title em{ color:var(--gold); font-style:italic; }
+h3.sec{ font-family:var(--serif); font-style:italic; font-weight:600; font-size:21px; color:var(--gold); margin:28px 0 10px; }
+h4.lab{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-faint); margin:22px 0 9px; }
+
+.callout{ border-left:4px solid var(--gold); background:var(--gold-soft); border-radius:0 var(--r-sm) var(--r-sm) 0; padding:14px 18px; margin:18px 0; font-size:16.5px; line-height:1.62; }
+.callout .ct{ display:block; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:5px; color:var(--gold); }
+.callout.teal{ border-color:var(--teal); background:var(--teal-soft);} .callout.teal .ct{ color:var(--teal);}
+.callout.coral{ border-color:var(--coral); background:var(--coral-soft);} .callout.coral .ct{ color:var(--coral);}
+.callout.violet{ border-color:var(--violet); background:var(--violet-soft);} .callout.violet .ct{ color:var(--violet);}
+.callout.green{ border-color:var(--green); background:var(--green-soft);} .callout.green .ct{ color:var(--green);}
+.callout.slate{ border-color:var(--slate); background:var(--slate-soft);} .callout.slate .ct{ color:var(--slate);}
+.honest{ border-left:4px solid var(--violet); background:var(--violet-soft); border-radius:0 var(--r-sm) var(--r-sm) 0; padding:14px 18px; margin:18px 0; font-size:16px; }
+.honest .ct{ display:block; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:5px; color:var(--violet); }
+
+.keyrule{ text-align:center; font-family:var(--serif); font-style:italic; font-size:20px; line-height:1.5; color:var(--gold); border-top:1px solid var(--gold-line); border-bottom:1px solid var(--gold-line); padding:18px 14px; margin:22px 0; }
+.keyrule .small{ display:block; font-family:var(--sans); font-style:normal; font-size:10px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:8px; }
+.keyrule b{ font-style:normal; color:var(--ink); }
+
+.tag{ display:inline-block; font-family:var(--sans); font-size:10px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:1px 7px; border-radius:4px; vertical-align:middle; }
+.tag.cl{ background:var(--blue-soft); color:var(--blue); } .tag.fw{ background:var(--gold-soft); color:var(--gold); } .tag.vf{ background:var(--violet-soft); color:var(--violet); }
+.tag.ob{ background:var(--teal-soft); color:var(--teal); } .tag.as{ background:var(--slate-soft); color:var(--slate); } .tag.hi{ background:var(--coral-soft); color:var(--coral); }
+
+.cards{ display:flex; flex-wrap:wrap; gap:12px; margin:16px 0; }
+.card{ flex:1 1 220px; background:var(--card); border:1px solid var(--line); border-top:3px solid var(--gold); border-radius:var(--r-sm); padding:14px 16px; }
+.card.up{ border-top-color:var(--green);} .card.down{ border-top-color:var(--coral);} .card.teal{ border-top-color:var(--teal);} .card.violet{ border-top-color:var(--violet);} .card.blue{ border-top-color:var(--blue);} .card.slate{ border-top-color:var(--slate);}
+.card .ic{ font-size:24px; line-height:1; } .card .ti{ font-family:var(--serif); font-weight:700; font-size:18px; margin:6px 0 2px; } .card .ti em{ color:var(--gold); font-style:italic; font-weight:400; font-size:14px; }
+.card .mt{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px; } .card p{ font-size:15px; line-height:1.55; margin:0; color:var(--ink-soft); }
+
+.tw{ overflow-x:auto; border:1px solid var(--line); border-radius:var(--r-sm); margin:16px 0; }
+table{ width:100%; border-collapse:collapse; font-family:var(--sans); }
+thead tr{ background:var(--gold-soft); }
+th{ font-size:10.5px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:var(--gold); text-align:left; padding:9px 11px; white-space:nowrap; }
+td{ font-size:13px; padding:8px 11px; border-top:1px solid var(--line-soft); vertical-align:top; color:var(--ink-soft); }
+td.g{ color:var(--gold); font-weight:600; white-space:nowrap; }
+td.up{ color:var(--green); font-weight:600;} td.dn{ color:var(--coral); font-weight:600;} td.s{ color:var(--slate); font-weight:600;}
+tbody tr:nth-child(even){ background:#fcfaf5; }
+tr.total td{ background:var(--gold-soft); color:var(--gold); font-weight:700; border-top:2px solid var(--gold-line); }
+
+.qa{ border:1px solid var(--line); border-radius:var(--r-sm); overflow:hidden; margin:20px 0; }
+.qa-h{ background:var(--paper2); padding:9px 15px; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); border-bottom:1px solid var(--line); }
+.qa-i{ padding:12px 15px; border-bottom:1px solid var(--line-soft); } .qa-i:last-child{ border-bottom:none; }
+.qa-q{ font-size:16px; } .qa-q b{ color:var(--gold); font-family:var(--sans); font-size:12px; font-weight:700; margin-right:8px; }
+.qa-a{ font-size:16px; color:var(--ink-soft); margin-top:5px; } .qa-a b{ color:var(--teal); font-family:var(--sans); font-size:12px; font-weight:700; margin-right:8px; }
+
+.recap{ display:flex; align-items:center; gap:18px; background:var(--gold-soft); border:1px solid var(--gold-line); border-radius:var(--r-sm); padding:16px 20px; margin:20px 0; }
+.recap .n{ font-family:var(--serif); font-weight:900; font-size:38px; color:var(--gold); line-height:1; flex-shrink:0; }
+.recap .l{ font-family:var(--sans); font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); }
+.recap .t{ font-family:var(--serif); font-weight:700; font-size:18px; margin:2px 0; } .recap .d{ font-size:14px; color:var(--ink-soft); }
+
+.ladder{ counter-reset:rk; list-style:none; padding:0; margin:14px 0; }
+.ladder li{ counter-increment:rk; display:flex; gap:14px; align-items:flex-start; padding:9px 0; border-bottom:1px solid var(--line-soft); font-size:15.5px; }
+.ladder li:last-child{ border-bottom:none; }
+.ladder li::before{ content:counter(rk); flex-shrink:0; width:26px; height:26px; background:var(--gold); color:#fff; border-radius:50%; font-family:var(--sans); font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center; }
+.ladder b{ color:var(--ink); }
+
+.takeaways{ counter-reset:tk; list-style:none; padding:0; margin:14px 0; }
+.takeaways li{ counter-increment:tk; position:relative; padding:10px 0 10px 46px; border-bottom:1px solid var(--line-soft); font-size:16.5px; }
+.takeaways li:last-child{ border-bottom:none; }
+.takeaways li::before{ content:counter(tk); position:absolute; left:0; top:9px; width:30px; height:30px; border:1.5px solid var(--gold); color:var(--gold); border-radius:50%; font-family:var(--serif); font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center; }
+
+.checklist{ list-style:none; padding:0; margin:14px 0; }
+.checklist li{ position:relative; padding:10px 0 10px 38px; border-bottom:1px solid var(--line-soft); font-size:16px; }
+.checklist li:last-child{ border-bottom:none; }
+.checklist li::before{ content:"\2610"; position:absolute; left:0; top:7px; font-size:24px; line-height:1; color:var(--gold); }
+
+.gloss{ background:var(--card); border:1px solid var(--line); border-radius:var(--r-sm); padding:6px 18px; margin:16px 0; }
+.gloss dt{ font-family:var(--serif); font-weight:700; font-size:16px; color:var(--gold); margin:12px 0 1px; }
+.gloss dd{ margin:0 0 4px; font-size:15.5px; color:var(--ink-soft); }
+
+.bridge{ text-align:center; font-style:italic; color:var(--ink-faint); font-size:15px; border-top:1px solid var(--line); padding-top:22px; margin-top:34px; }
+hr.soft{ border:none; border-top:1px solid var(--line); margin:30px 0; }
+@media (max-width:600px){ body{font-size:17px;padding:20px 16px 70px;} .hero h1{font-size:31px;} .lesson-title{font-size:21px;} .pl-data{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="kicker">The Celestial Ledger · Part III · Applied Practice</div>
+  <h1>Building an <em>Astro-Trading System</em></h1>
+  <p class="sub">The capstone of Part III. Sixteen chapters forged individual tools; this chapter assembles them into one disciplined, testable workflow — where astrology is the sixth question, never the first, and the real output is behaviour, not prediction.</p>
+  <div class="ornament">✦ ✦ ✦</div>
+</div>
+
+<p><em>The capstone of Part III. Sixteen chapters have forged individual tools — significators, the two skies, the Moon's clock, the great cycles, the siderograph, the dasha, the market and stock charts, KP. This chapter assembles them into <strong>one disciplined, testable workflow.</strong> Its honest thesis is the one the whole book has been building toward: the value of an astro-trading system is not a predictive edge it does not possess — it is the <strong>process and discipline</strong> it imposes. Astrology enters as a subordinate timing overlay on a market-first, risk-always framework. The system's real product is patience, structure, and survival.</em></p>
+
+<div class="callout">
+  <span class="ct">Claim-Type Key</span>
+  <span class="tag fw">Framework</span> this book's method · <span class="tag as">Astronomical</span> verifiable astronomy · <span class="tag ob">Observed</span> an empirical caveat · <span class="tag vf">Verify</span> to confirm. Integrated dashboard computed with Swiss Ephemeris for 22 June 2026.
+</div>
+
+<!-- ===================== 17.1 ===================== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Lesson 17.1</span>
+    <span class="lesson-title">Chapter Introduction — From a <em>Toolbox</em> to a System</span>
+  </div>
+
+  <p>A box of tools is not a workshop. By now the reader can read a planet's significator and state, convert between the two zodiacs, time the Moon, map the great cycles, build a siderograph, run a dasha, and cast a market or stock chart. But a pile of techniques, used ad hoc, is <em>worse</em> than useless in markets — it invites cherry-picking, over-fitting, and the seductive feeling of a "signal" behind every move. A <strong>system</strong> is what turns tools into discipline: a fixed order of operations, a rule for when layers may speak, and a hard subordination of everything to risk.</p>
+
+  <p>This chapter assembles the <strong>three-layer architecture</strong> (macro, medium, micro), states the <strong>order of operations</strong> that keeps astrology in its proper subordinate place, and works a full <strong>integrated example</strong> on today's sky. And it makes the book's central honesty claim explicit one last time before the rigor chapters of Part IV: <strong>the system confers no proven forecasting edge.</strong> What it confers is <em>process</em> — a structured way to wait for confluence, to size risk, to avoid overtrading, and to convert a fascinating symbolic lens into disciplined behaviour rather than reckless conviction. Read that as the point, not a disclaimer.</p>
+
+  <div class="keyrule">
+    <span class="small">Key Rule · 17.1</span>
+    A system is not a bigger toolbox — it is a <b>discipline that subordinates every tool to a fixed order of operations and to risk.</b> Tools used ad hoc are worse than no tools at all.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself · 17.1</div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q1</b> Why is a pile of techniques used ad hoc described as <em>worse</em> than useless?</p>
+      <p class="qa-a"><b>A1</b> Because without a system to govern them, loose tools invite cherry-picking, over-fitting, and the false sense of a "signal" behind every move — actively misleading a trader rather than merely failing to help.</p>
+    </div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q2</b> What three things does a system add that a toolbox lacks?</p>
+      <p class="qa-a"><b>A2</b> A fixed order of operations, a rule governing when each layer is allowed to speak, and a hard subordination of everything to risk.</p>
+    </div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q3</b> What does the chapter say the system confers — and what does it explicitly <em>not</em> confer?</p>
+      <p class="qa-a"><b>A3</b> It confers <em>process</em> — structured patience, risk-sizing, restraint, and disciplined behaviour. It does <em>not</em> confer any proven forecasting edge. The process is the point, not a disclaimer.</p>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">✦</div>
+    <div>
+      <div class="l">Locked In · 17.1</div>
+      <div class="t">Tools become discipline only inside a system</div>
+      <div class="d">Sixteen chapters of tools are dangerous when used loosely. The system's gift is process — order, restraint, and risk-first behaviour — not a predictive edge it does not have.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== 17.2 ===================== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Lesson 17.2</span>
+    <span class="lesson-title">Core Concepts — Three Layers and an <em>Order of Operations</em></span>
+  </div>
+
+  <h3 class="sec">The three-layer architecture</h3>
+
+  <p><span class="tag fw">Framework</span> A complete astro-market view reads three time-scales at once — a telescope zooming to a microscope:</p>
+
+  <div class="cards">
+    <div class="card">
+      <div class="mt">Years</div>
+      <div class="ti">The Macro layer <em>— the backdrop</em></div>
+      <p>The great cycles of Part II: the Jupiter–Saturn cycle (~19.86 yr), the outer-planet long waves, and the nodal/McWhirter business-cycle phase (~18.6 yr). Sets the <em>primary trend context</em> — the "season" the market is in. It does not time trades.</p>
+    </div>
+    <div class="card blue">
+      <div class="mt">Weeks–Months</div>
+      <div class="ti">The Medium layer <em>— the windows</em></div>
+      <p>The datable triggers of Chapter 10 — eclipses, ingresses, stations — plus the siderograph turn dates (Chapter 11) and the running dasha/gochar (Chapter 12). Flags <em>windows to watch</em> for turning points.</p>
+    </div>
+    <div class="card teal">
+      <div class="mt">Days–Intraday</div>
+      <div class="ti">The Micro layer <em>— the trigger</em></div>
+      <p>The Moon's clock (Chapter 6) — nakshatra, tithi, phase — and the day's sector significators (Chapters 4, 16). Offers <em>short-term timing and sector tilt</em>.</p>
+    </div>
+  </div>
+
+  <p><span class="tag fw">Framework</span> The layers are weighted by reliability <em>downward</em>: the macro backdrop is the most robust (slow, zodiac-independent cycles), the micro the least (fast, noisy, easily over-read). A trade idea should be <em>consistent across</em> layers, not generated by the micro layer alone.</p>
+
+  <h3 class="sec">The order of operations (the non-negotiable sequence)</h3>
+
+  <p><span class="tag fw">Framework</span> This is the heart of the system, and it deliberately puts astrology <em>sixth</em>:</p>
+
+  <ol class="ladder">
+    <li><span><b>Market structure first</b> — trend, support/resistance, the stage of the move (Chapter 3).</span></li>
+    <li><span><b>Fundamentals &amp; macro</b> — earnings, rates, the economic backdrop.</span></li>
+    <li><span><b>Sentiment</b> — positioning, VIX/India VIX, FII–DII flows (Chapter 3).</span></li>
+    <li><span><b>Technical setup</b> — a real, independent trigger at a real level.</span></li>
+    <li><span><b>Risk parameters</b> — position size and stop, set <em>before</em> any astrology.</span></li>
+    <li><span><b>Astrology last</b> — as a <em>timing and confluence overlay</em> on a decision the first five steps already support.</span></li>
+  </ol>
+
+  <div class="callout">
+    <span class="ct">Callout — Astrology Is the Sixth Question, Never the First</span>
+    The single rule that separates a disciplined practitioner from a gambler: <strong>never let an astrological signal originate a trade.</strong> The market setup, the fundamentals, the sentiment, the level, and the risk plan come first. Astrology may <em>refine the timing</em> of a trade those steps already justify — or counsel patience — but it never overrides price or manufactures a position on its own.
+  </div>
+
+  <h3 class="sec">Confluence — and its great trap</h3>
+
+  <p><span class="tag fw">Framework</span> The system acts only on <strong>confluence</strong>: several <em>independent</em> layers pointing the same way at the same time. But Chapter 11's warning is the system's most important caveat: <strong>astrological tools built from the same sky are not independent.</strong> A siderograph turn, an eclipse, and a planetary station on the same date are <em>one</em> astronomical configuration counted three times — not three votes. True confluence means <strong>astrology agreeing with the genuinely independent evidence</strong> (price structure, sentiment, fundamentals), not astrology agreeing with itself.</p>
+
+  <div class="keyrule">
+    <span class="small">Key Rule · 17.2</span>
+    Read three time-scales, weighted <b>downward</b> by reliability — and act only on <b>true confluence</b>: astrology agreeing with independent evidence, never with itself. Coincident astrological tools are <b>one vote.</b>
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself · 17.2</div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q1</b> Which of the three layers is the most reliable, and why?</p>
+      <p class="qa-a"><b>A1</b> The macro layer (years). Its cycles are slow and zodiac-independent, making them the most robust; the micro layer is the least reliable because it is fast, noisy, and easily over-read.</p>
+    </div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q2</b> Where does astrology sit in the order of operations, and what comes before it?</p>
+      <p class="qa-a"><b>A2</b> Sixth and last. Market structure, fundamentals/macro, sentiment, the technical setup, and the risk parameters all come first; astrology enters only as a timing and confluence overlay on a decision those five steps already support.</p>
+    </div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q3</b> Why is a siderograph turn, an eclipse, and a station on the same date not "three confirmations"?</p>
+      <p class="qa-a"><b>A3</b> Because they are built from the same sky — one astronomical configuration counted three times, not three independent votes. True confluence requires astrology to agree with genuinely independent evidence such as price and sentiment.</p>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">✦</div>
+    <div>
+      <div class="l">Locked In · 17.2</div>
+      <div class="t">Three layers, one sequence, true confluence</div>
+      <div class="d">Macro backdrop, medium windows, micro trigger — weighted downward by reliability. Astrology enters sixth, as an overlay, and only counts when it agrees with independent evidence rather than itself.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== 17.3 ===================== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Lesson 17.3</span>
+    <span class="lesson-title">Classical &amp; Framework Synthesis — Assembling the Layers (Including the <em>Trader</em>)</span>
+  </div>
+
+  <p><span class="tag fw">Framework</span> The system has a fourth layer that is not about the market at all — and it may be the most defensible of all.</p>
+
+  <p><strong>The trader's-chart layer (Chapter 12).</strong> Run the dasha and gochar on <em>yourself</em>, not the market: which season are you in to press, and which to protect capital? Sade Sati or a hard transit becomes a "reduce size, slow down" flag; a supportive period, a "you may be more active — within your rules" note. This makes <strong>no claim about prices</strong> — it is self-management, and it folds the astrology into the <em>risk and psychology</em> discipline that actually governs trading outcomes.</p>
+
+  <p><span class="tag fw">Framework</span> Assembling the four layers into a single read:</p>
+
+  <div class="cards">
+    <div class="card">
+      <div class="mt">Macro</div>
+      <div class="ti">The bias &amp; the weather</div>
+      <p>Trend-context — be a buyer of dips or a seller of rallies.</p>
+    </div>
+    <div class="card blue">
+      <div class="mt">Medium</div>
+      <div class="ti">When to be alert</div>
+      <p>The windows that flag a possible turn.</p>
+    </div>
+    <div class="card teal">
+      <div class="mt">Micro</div>
+      <div class="ti">The short-term trigger</div>
+      <p>A daily timing cue and a sector tilt.</p>
+    </div>
+    <div class="card violet">
+      <div class="mt">Trader's Chart</div>
+      <div class="ti">How aggressive to be</div>
+      <p>Your own state sets the dial on your capital — press or protect.</p>
+    </div>
+  </div>
+
+  <p>And the <strong>order of operations</strong> ensures all of it sits <em>on top of</em> a market-first, risk-first decision — never underneath it.</p>
+
+  <p><span class="tag fw">Framework</span> The honest framing: this is a <strong>decision-support scaffold</strong>, not a prediction engine. Its discipline — wait for alignment across independent evidence, act only with a structural setup, size for weak signals, manage the self — is valuable <em>whether or not the astrology has any power</em>, because that discipline is what keeps traders solvent.</p>
+
+  <div class="keyrule">
+    <span class="small">Key Rule · 17.3</span>
+    A fourth layer reads the <b>trader, not the market</b> — and may be the most defensible of all. It makes no claim about prices; it folds astrology into the <b>risk and psychology</b> that actually govern outcomes.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself · 17.3</div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q1</b> What is the fourth layer, and why might it be the most defensible?</p>
+      <p class="qa-a"><b>A1</b> The trader's-chart layer — running the dasha and gochar on <em>yourself</em>. It is most defensible because it makes no claim about prices at all; it is self-management, folding astrology into the risk and psychology discipline that genuinely governs trading outcomes.</p>
+    </div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q2</b> How does a hard transit or Sade Sati translate into an action under this layer?</p>
+      <p class="qa-a"><b>A2</b> Into a "reduce size, slow down" flag — a behavioural adjustment to your own aggression, not a market forecast. A supportive period becomes a "you may be more active — within your rules" note.</p>
+    </div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q3</b> Why does the discipline matter "whether or not the astrology has any power"?</p>
+      <p class="qa-a"><b>A3</b> Because the scaffold's value lies in the behaviour it enforces — waiting for alignment, acting only on a structural setup, sizing for weak signals, managing the self. That discipline keeps traders solvent independently of any predictive claim.</p>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">✦</div>
+    <div>
+      <div class="l">Locked In · 17.3</div>
+      <div class="t">A scaffold for decisions, with a layer for the self</div>
+      <div class="d">Four layers — bias, windows, trigger, and the trader's own state — sit on top of a market-first decision. The framing is honest: decision-support, not prophecy; its discipline is what survives.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== 17.4 ===================== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Lesson 17.4</span>
+    <span class="lesson-title">Market Correlation Analysis — The Honest Test, and a Full <em>Integrated Read</em></span>
+  </div>
+
+  <h3 class="sec">The claim</h3>
+
+  <p><span class="tag fw">Framework</span> Layering macro, medium, and micro astrology — confirmed by price, sentiment, and fundamentals, sized by risk and tuned to the trader's own state — produces better-timed, better-disciplined decisions than any single tool.</p>
+
+  <h3 class="sec">The honest evidence</h3>
+
+  <p><span class="tag ob">Observed</span> Two truths held together:</p>
+
+  <div class="honest">
+    <span class="ct">The Honest Evidence</span>
+    <p><strong>No added predictive edge.</strong> Stacking unproven layers does not manufacture proven forecasting power; if each layer is individually unvalidated (as the book has shown chapter by chapter), their combination is too. A system cannot be more valid than its parts.</p>
+    <p style="margin-bottom:0;"><strong>Real added discipline.</strong> What the system <em>does</em> add is process: it forces patience (wait for confluence), structure (a fixed order of operations), humility (astrology subordinate to price), and self-management (the trader's-chart layer). This behavioural scaffolding is genuinely valuable — and is, honestly, the strongest case for the entire enterprise.</p>
+  </div>
+
+  <h3 class="sec">Worked example — the integrated dashboard for today</h3>
+
+  <p>Computed for <strong>22 June 2026</strong> (cross-referencing the book's conventions — Chapter 2's two skies in particular). All positions below were computed live with the Swiss Ephemeris; planetary placements are sidereal/Lahiri unless a tropical convention is explicitly noted (ayanamsa 24.23°).</p>
+
+  <div class="cards">
+    <div class="card">
+      <div class="mt">Macro · the backdrop</div>
+      <div class="ti">Mid-cycle</div>
+      <p><strong>Jupiter–Saturn separation ≈ 104.6°</strong> — roughly 5.5 years into the ~19.86-year cycle; next opposition ~22 Dec 2029, next conjunction 31 Oct 2040 (Chapter 8). <em>Trend-context: mid-cycle.</em></p>
+    </div>
+    <div class="card blue">
+      <div class="mt">Macro · nodal / McWhirter</div>
+      <div class="ti">A subdued-phase <em>claim</em></div>
+      <p>True North Node ~1.9° Pisces (tropical, per McWhirter's convention — Chapter 9), entering tropical Aquarius ~27 July 2026 — the McWhirter "business-low" window, one nodal cycle after the 2008 low. <em>(In sidereal/Lahiri the node already sits ~7.7° Aquarius — Chapter 2's two-skies point.)</em> The proponents' framework reads a subdued/cooling phase into 2027 — stated as the theory's claim, explicitly not a forecast, and not a basis to position for a decline (its own advocates concede frequent misses).</p>
+    </div>
+  </div>
+
+  <div class="cards">
+    <div class="card teal">
+      <div class="mt">Medium · the windows</div>
+      <div class="ti">Watch-windows ahead</div>
+      <p>Mercury retrograde ~30 Jun – 24 Jul (choppiness/disruption flag). Saturn stations retrograde ~27 Jul (a turning-point <em>watch</em> window — Chapters 7, 10). Total solar eclipse 12 Aug (Leo); partial lunar 28 Aug. Jupiter leaves exaltation, Cancer → Leo, ~1 Nov (the bull/wealth significator steps down from peak dignity).</p>
+    </div>
+    <div class="card">
+      <div class="mt">Micro · the trigger &amp; tilt</div>
+      <div class="ti">Moon &amp; sector tilt</div>
+      <p><strong>Moon 13.76° Virgo (Hasta), tithi ~9, waxing.</strong> Sector significators: Jupiter <strong>exalted</strong> in Cancer (financials — a watch-flag, Chapter 16), Mercury in Cancer (IT), Saturn in Pisces (oil/PSU), Mars in Taurus (metals/defence), Rahu in Aquarius (tech/speculation).</p>
+    </div>
+  </div>
+
+  <div class="cards">
+    <div class="card violet">
+      <div class="mt">Trader's chart</div>
+      <div class="ti">Run on yourself</div>
+      <p><em>Run on your own dasha/gochar — the self-management layer; not computable here without your birth data.</em></p>
+    </div>
+  </div>
+
+  <p><span class="tag fw">Framework</span> Reading the dashboard — and its essential cautions:</p>
+
+  <ol class="ladder">
+    <li><span><b>A trigger-dense late-Jul/Aug window stands out</b> — but note the honesty point: the McWhirter nodal low (~27 Jul), Saturn's station (~27 Jul), and the 12 Aug eclipse cluster together partly because they are overlapping astronomy. They are <em>not</em> three independent confirmations (Chapter 11). The Jupiter–Saturn <em>cycle position</em> and the <em>nodal cycle</em> are more nearly independent of each other, but the station/eclipse cluster is largely one sky counted several ways.</span></li>
+    <li><span><b>This is a calendar of <em>windows to watch</em>, not a forecast.</b> Nothing here says the market falls in August. The disciplined use is: be alert for a possible turn in that window, and confirm with price and sentiment before acting.</span></li>
+    <li><span><b>The order of operations still rules.</b> Even this rich astrological picture is the <em>sixth</em> input. Without a market-structure setup, supportive sentiment, a real level, and a risk plan, the dashboard generates <em>no trade</em> — only attention. This is context, not a trade.</span></li>
+  </ol>
+
+  <div class="callout violet">
+    <span class="ct">Callout — The System's Real Output Is Behaviour</span>
+    Notice what the integrated read actually produced: not a prediction, but a <em>posture</em> — know the cycle backdrop, mark a window to watch, keep risk fixed, manage your own aggression, and wait for independent confirmation. That posture — patient, structured, humble, solvent — is the genuine product of an astro-trading system. The discipline is the edge, not the astrology.
+  </div>
+
+  <div class="keyrule">
+    <span class="small">Key Rule · 17.4</span>
+    A full integrated read produces a <b>posture, not a prediction.</b> A trigger-dense window is something to <b>watch and confirm</b> — never a forecast, and never a trade without the first five steps in place.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself · 17.4</div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q1</b> The dashboard shows the node at ~1.9° Pisces in one frame and ~7.7° Aquarius in another. Why both?</p>
+      <p class="qa-a"><b>A1</b> Because the two skies disagree (Chapter 2). The McWhirter/business-cycle reading uses the <em>tropical</em> node (~1.9° Pisces); the book's default sidereal/Lahiri frame places the same node already at ~7.7° Aquarius. Same body, two coordinate conventions — both computed, neither "wrong."</p>
+    </div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q2</b> Why is the late-July/August cluster <em>not</em> strong confluence despite three events landing together?</p>
+      <p class="qa-a"><b>A2</b> Because the nodal low, Saturn's station, and the August eclipse are largely overlapping astronomy — one sky counted several ways, not independent confirmations. Only the Jupiter–Saturn cycle position and the nodal cycle are meaningfully independent of one another.</p>
+    </div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q3</b> What does this rich dashboard authorize a trader to do?</p>
+      <p class="qa-a"><b>A3</b> To pay attention — nothing more. As the sixth input, it generates no trade without a market-structure setup, supportive sentiment, a real level, and a risk plan. It is context and posture, not a position.</p>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">✦</div>
+    <div>
+      <div class="l">Locked In · 17.4</div>
+      <div class="t">A dashboard yields posture, never prophecy</div>
+      <div class="d">A live read of 22 June 2026 flags a trigger-dense late-Jul/Aug window on a mid Jupiter–Saturn cycle — much of it overlapping astronomy. The honest product is a watchful, risk-fixed posture, confirmed only by independent evidence.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== 17.5 ===================== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Lesson 17.5</span>
+    <span class="lesson-title">The Practitioner's Method — The <em>Complete Workflow</em></span>
+  </div>
+
+  <ol class="ladder">
+    <li><span><b>Establish the MACRO backdrop (quarterly).</b> Locate the market in the Jupiter–Saturn cycle and the nodal/McWhirter phase. Write down the <em>trend-context bias</em> (favour dips or rallies) — context, not a trade.</span></li>
+    <li><span><b>Map the MEDIUM windows (monthly/weekly).</b> Diarize the month's eclipses, ingresses, stations, siderograph turns, and dasha/gochar shifts as <em>windows to watch.</em></span></li>
+    <li><span><b>Read the MICRO layer (daily).</b> Note the Moon's nakshatra/tithi/phase and the sector-significator tilt for short-term timing and emphasis.</span></li>
+    <li><span><b>Run the TRADER'S chart.</b> Check your own dasha/gochar; set your aggression dial (press vs. protect) — self-management, not market prediction.</span></li>
+    <li><span><b>Apply the ORDER OF OPERATIONS to any specific trade.</b> Market structure → fundamentals → sentiment → technical setup → <strong>risk parameters set</strong> → <em>then</em> astrology as the confluence/timing overlay. Astrology never originates the trade.</span></li>
+    <li><span><b>Demand TRUE confluence.</b> Require astrology to agree with <em>independent</em> evidence (price, sentiment, fundamentals) — not with itself. Treat coincident astrological tools as one vote.</span></li>
+    <li><span><b>Execute with fixed risk, then LOG and SCORE.</b> Size for weak/unproven signals, honour the stop, and record every decision with a pre-defined hit criterion for backtesting (Chapter 18). The journal is the bridge to Part IV.</span></li>
+  </ol>
+
+  <div class="callout">
+    <span class="ct">Callout — The One-Page System</span>
+    <strong>Backdrop (cycles) → Windows (triggers) → Trigger (Moon/sector) → Self (your dasha) → Order of operations (market-first, risk-set) → Astrology as confluence-overlay only → Execute, log, score.</strong> If a step is missing — especially the risk plan or the market setup — there is no trade. Pin this above the desk.
+  </div>
+
+  <div class="keyrule">
+    <span class="small">Key Rule · 17.5</span>
+    The workflow runs <b>backdrop → windows → trigger → self → order-of-operations → confluence → execute-and-score.</b> Miss the risk plan or the market setup and there is <b>no trade</b> — only attention.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself · 17.5</div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q1</b> At which step is the risk plan set — and what is the rule about its timing?</p>
+      <p class="qa-a"><b>A1</b> Within Step 5, the order of operations: position size and stop are set <em>before</em> astrology enters. The standing rule is that risk parameters precede any astrological input; astrology never originates the trade.</p>
+    </div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q2</b> What is the final step, and why does it matter for Part IV?</p>
+      <p class="qa-a"><b>A2</b> Execute with fixed risk, then log and score every decision with a pre-defined hit criterion. The journal it produces is the raw material for backtesting (Chapter 18) — the bridge into the rigor chapters of Part IV.</p>
+    </div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q3</b> What does the "One-Page System" say happens when a step is missing?</p>
+      <p class="qa-a"><b>A3</b> There is no trade — especially if the missing piece is the risk plan or the market setup. The full chain must be intact; a gap converts the system back into gambling with extra steps.</p>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">✦</div>
+    <div>
+      <div class="l">Locked In · 17.5</div>
+      <div class="t">Seven steps, ending in the journal</div>
+      <div class="d">Backdrop, windows, trigger, self, order-of-operations, true confluence, then execute-and-score. The risk plan and market setup are non-negotiable gates, and the logged record is the bridge to backtesting.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== 17.6 ===================== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Lesson 17.6</span>
+    <span class="lesson-title">Edge Cases and <em>Cautions</em></span>
+  </div>
+
+  <ol class="ladder">
+    <li><span><b>A system of unvalidated parts is still unvalidated (the central caution).</b> <span class="tag ob">Observed</span> Layering does not create predictive power from its absence. Be clear-eyed: the system's value is <em>discipline</em>, not forecasting. Never market or trade it as proven.</span></li>
+    <li><span><b>False confluence from shared astronomy.</b> Coincident siderograph/eclipse/station dates are <em>one</em> configuration (Chapter 11). Counting them as independent confirmations is the system's most seductive error.</span></li>
+    <li><span><b>Over-engineering and curve-fitting.</b> <span class="tag fw">Framework</span> More layers and finer rules feel rigorous but invite over-fitting (Chapter 1) and analysis-paralysis. A simpler system, honestly scored, beats a baroque one tuned to the past.</span></li>
+    <li><span><b>Letting astrology breach the order of operations.</b> The instant an astrological signal <em>originates</em> a trade or <em>overrides</em> price/risk, the discipline is gone and the system has become gambling with extra steps.</span></li>
+    <li><span><b>Complexity as false confidence.</b> A rich dashboard can manufacture <em>conviction</em> out of proportion to evidence — precisely the danger Chapter 20 addresses. Elaborateness is not accuracy.</span></li>
+    <li><span><b>The trader's-chart layer is self-management, not prophecy.</b> Use it to govern <em>your</em> behaviour and risk, never as a market forecast or a reason to abandon rules (Chapter 12).</span></li>
+    <li><span><b>The standing caveat.</b> <span class="tag ob">Observed</span> The complete system has <em>no validated predictive edge.</em> Its honest worth is the disciplined <em>process</em> it enforces — market-first, risk-always, confluence-required, self-aware — to be backtested (Chapter 18), weighed against the evidence (Chapter 19), and governed by ethics and risk (Chapter 20).</span></li>
+  </ol>
+
+  <div class="keyrule">
+    <span class="small">Key Rule · 17.6</span>
+    The system's two deadliest failures are <b>false confluence from shared astronomy</b> and <b>letting a chart originate a trade.</b> Complexity breeds false confidence; a simpler system, honestly scored, wins.
+  </div>
+
+  <div class="qa">
+    <div class="qa-h">Check Yourself · 17.6</div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q1</b> Why can a more elaborate system be <em>worse</em> than a simpler one?</p>
+      <p class="qa-a"><b>A1</b> Because more layers and finer rules invite over-fitting and analysis-paralysis, and a rich dashboard can manufacture conviction out of proportion to the evidence. A simpler system, honestly scored, beats a baroque one tuned to the past.</p>
+    </div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q2</b> What single act converts the whole system back into gambling?</p>
+      <p class="qa-a"><b>A2</b> Letting an astrological signal originate a trade or override price and risk — breaching the order of operations. At that instant the discipline is gone and the system is gambling with extra steps.</p>
+    </div>
+    <div class="qa-i">
+      <p class="qa-q"><b>Q3</b> The complete system layers many tools. Does that make it more valid?</p>
+      <p class="qa-a"><b>A3</b> No. A system cannot be more valid than its parts; layering unvalidated tools does not create predictive power from its absence. The standing caveat holds — no validated predictive edge; the worth is the disciplined process, to be tested in Part IV.</p>
+    </div>
+  </div>
+
+  <div class="recap">
+    <div class="n">✦</div>
+    <div>
+      <div class="l">Locked In · 17.6</div>
+      <div class="t">Guard against false confluence and false confidence</div>
+      <div class="d">The seductive errors are counting shared astronomy as votes and dressing conviction in complexity. The standing caveat is unchanged: no validated edge — only a disciplined process to be tested, weighed, and governed in Part IV.</div>
+    </div>
+  </div>
+</div>
+
+<hr class="soft"/>
+
+<!-- ===================== 17.7 SUMMARY ===================== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Lesson 17.7</span>
+    <span class="lesson-title">Chapter Summary — <em>Five Takeaways</em></span>
+  </div>
+
+  <ol class="takeaways">
+    <li><strong>A system turns tools into discipline:</strong> three layers — <strong>macro</strong> (cycles/backdrop), <strong>medium</strong> (triggers/windows), <strong>micro</strong> (Moon/sector trigger) — plus a <strong>trader's-chart</strong> self-management layer, weighted downward by reliability.</li>
+    <li><strong>The order of operations puts astrology <em>sixth</em>:</strong> market structure → fundamentals → sentiment → technical setup → <strong>risk set</strong> → <em>then</em> astrology as a confluence/timing overlay. <strong>Astrology never originates a trade.</strong></li>
+    <li><strong>Confluence must be <em>true</em>:</strong> astrology agreeing with <em>independent</em> evidence (price, sentiment, fundamentals) — not coincident astrological tools (the same sky) agreeing with themselves.</li>
+    <li><strong>Today's integrated dashboard</strong> shows a trigger-dense late-Jul/Aug <em>window to watch</em> (Saturn station, eclipse, nodal phase — largely overlapping astronomy), an exalted-Jupiter financials tilt, all on a mid Jupiter–Saturn cycle — read as <strong>context and posture, not a forecast or a trade.</strong></li>
+    <li><strong>The system's real product is behaviour, not prediction</strong> — patience, structure, humility, and survival. It adds <strong>discipline, not a proven edge</strong> — which is the honest case for the whole enterprise, and the bridge to Part IV's rigor.</li>
+  </ol>
+
+  <div class="recap">
+    <div class="n">5</div>
+    <div>
+      <div class="l">Locked In · 17.7</div>
+      <div class="t">The capstone in five lines</div>
+      <div class="d">Three layers plus the self, weighted downward; astrology sixth and overlay-only; confluence must be true; the dashboard yields posture, not forecast; and the product is disciplined behaviour, not a proven edge.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== 17.8 CHECKLIST ===================== -->
+<div class="lesson">
+  <div class="lesson-head">
+    <span class="lesson-no">Lesson 17.8</span>
+    <span class="lesson-title">Practitioner's Checklist — The <em>Complete System</em></span>
+  </div>
+
+  <ul class="checklist">
+    <li><strong>Macro backdrop set?</strong> Jupiter–Saturn cycle position and nodal/McWhirter phase noted as <em>trend-context</em>, not a trade?</li>
+    <li><strong>Medium windows diarized?</strong> This period's eclipses, ingresses, stations, siderograph turns, dasha/gochar shifts marked as <em>windows to watch</em>?</li>
+    <li><strong>Micro layer read?</strong> Moon nakshatra/tithi/phase and sector-significator tilt noted for short-term timing?</li>
+    <li><strong>Trader's chart checked?</strong> Your own dasha/gochar consulted to set your aggression dial (press vs. protect)?</li>
+    <li><strong>Order of operations honoured?</strong> Market structure, fundamentals, sentiment, technical setup, and <strong>risk plan</strong> all in place <em>before</em> astrology entered — and astrology used only as an overlay?</li>
+    <li><strong>True confluence required?</strong> Astrology agreeing with <em>independent</em> evidence, with coincident astrological tools counted as one vote?</li>
+    <li><strong>Executed with fixed risk, logged, and scored?</strong> Position sized for weak signals, stop honoured, decision recorded with a pre-defined hit criterion for backtesting?</li>
+  </ul>
+
+  <div class="recap">
+    <div class="n">✦</div>
+    <div>
+      <div class="l">Locked In · 17.8</div>
+      <div class="t">A complete workflow — and a complete discipline</div>
+      <div class="d">The reader now holds the whole system on one page: four layers, a non-negotiable sequence, true confluence, and a scored record. "Complete" means complete <em>discipline</em> — market-first, risk-always — not validated forecasting. The journal of Chapter 18 is the judge.</div>
+    </div>
+  </div>
+</div>
+
+<hr class="soft"/>
+
+<!-- ===================== GLOSSARY ===================== -->
+<h4 class="lab">Chapter Glossary</h4>
+<dl class="gloss">
+  <dt>Three-layer architecture</dt>
+  <dd>The system's structure: <em>macro</em> (years — the great cycles, the trend-context backdrop), <em>medium</em> (weeks–months — eclipses, ingresses, stations, siderograph turns, dasha/gochar, the windows to watch), and <em>micro</em> (days — the Moon's clock and sector significators, the short-term trigger). Weighted downward by reliability.</dd>
+
+  <dt>Order of operations</dt>
+  <dd>The non-negotiable decision sequence: market structure → fundamentals/macro → sentiment → technical setup → risk parameters set → <em>then</em> astrology as a timing and confluence overlay. Astrology is the sixth question, never the first, and never originates a trade.</dd>
+
+  <dt>Confluence (true vs. false)</dt>
+  <dd><em>True</em> confluence is astrology agreeing with genuinely independent evidence — price structure, sentiment, fundamentals. <em>False</em> confluence is coincident astrological tools built from the same sky (a siderograph turn, an eclipse, a station on one date) treated as separate votes when they are one configuration counted several times.</dd>
+
+  <dt>Trader's-chart layer</dt>
+  <dd>The fourth layer, run on the trader's own dasha and gochar rather than the market. It makes no claim about prices; it sets the aggression dial (press vs. protect) and folds astrology into the risk-and-psychology discipline that governs outcomes — arguably the system's most defensible component.</dd>
+
+  <dt>Decision-support scaffold</dt>
+  <dd>The honest description of the whole system: a structured aid to disciplined decisions, not a prediction engine. Its value — patience, structure, humility, self-management — holds whether or not the astrology has any predictive power.</dd>
+
+  <dt>Integrated dashboard</dt>
+  <dd>A single read assembling all four layers for a given date (here, 22 June 2026, computed live with the Swiss Ephemeris). Its product is a <em>posture</em> — backdrop, watch-windows, tilt, and self-management — not a forecast or a trade.</dd>
+
+  <dt>The standing caveat</dt>
+  <dd>The book's recurring honesty marker: the complete system has no validated predictive edge. Its worth is the disciplined process it enforces, to be backtested (Chapter 18), weighed against the evidence (Chapter 19), and governed by ethics and risk (Chapter 20).</dd>
+</dl>
+
+<!-- ===================== BRIDGE ===================== -->
+<p class="bridge">End of Chapter 17 — and of Part III, Applied Practice. The reader now holds a complete, disciplined workflow. Part IV turns to rigor and conscience: Chapter 18, <em>"Backtesting &amp; the Trading Journal,"</em> the discipline every preceding chapter has pointed to — how to test an astrological claim honestly, with pre-registration, out-of-sample data, and the traps that make false signals look real.</p>
+
+</body>
+</html>

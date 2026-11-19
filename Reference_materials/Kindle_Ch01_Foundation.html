@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Celestial Ledger — Chapter 1: The Foundation — Why the Planets Move Markets</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --paper:#fbf9f4; --paper2:#f4efe4; --card:#ffffff; --ink:#26211c; --ink-soft:#4f463c; --ink-faint:#857a6c;
+  --line:#e6dfce; --line-soft:#efe9dc;
+  --gold:#9a7113; --gold-soft:#fbf2da; --gold-line:#e7cf94;
+  --teal:#0c7d68; --teal-soft:#e3f3ef;
+  --coral:#b23a2e; --coral-soft:#f8e9e6;
+  --violet:#6244a8; --violet-soft:#efeafa;
+  --green:#2f7d4f; --green-soft:#e6f3ea;
+  --blue:#1f6aa6; --blue-soft:#e7f0f8;
+  --serif:'Playfair Display',Georgia,'Times New Roman',serif;
+  --body:Georgia,'Iowan Old Style','Palatino Linotype',serif;
+  --sans:'Inter',system-ui,-apple-system,sans-serif;
+  --r:10px; --r-sm:7px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{ -webkit-text-size-adjust:100%; }
+body{ background:var(--paper); color:var(--ink); font-family:var(--body); font-size:18px; line-height:1.72; max-width:780px; margin:0 auto; padding:30px 26px 90px; }
+p{ margin:0 0 14px; } strong{ color:var(--ink); font-weight:600; } em{ font-style:italic; }
+
+.hero{ text-align:center; padding:22px 0 30px; border-bottom:2px solid var(--gold-line); margin-bottom:34px; }
+.hero .kicker{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:var(--gold); }
+.hero h1{ font-family:var(--serif); font-weight:900; font-size:40px; line-height:1.12; margin:14px 0 0; }
+.hero h1 em{ color:var(--gold); font-style:italic; }
+.hero .sub{ font-style:italic; color:var(--ink-soft); font-size:17px; max-width:580px; margin:16px auto 0; }
+.hero .ornament{ color:var(--gold); letter-spacing:.5em; margin-top:18px; font-size:14px; }
+
+.lesson{ margin:0 0 50px; }
+.lesson-head{ display:flex; align-items:baseline; gap:12px; border-bottom:1px solid var(--line); padding-bottom:8px; margin-bottom:18px; }
+.lesson-no{ font-family:var(--sans); font-size:12px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); white-space:nowrap; }
+.lesson-title{ font-family:var(--serif); font-weight:700; font-size:25px; line-height:1.2; }
+.lesson-title em{ color:var(--gold); font-style:italic; }
+h3.sec{ font-family:var(--serif); font-style:italic; font-weight:600; font-size:21px; color:var(--gold); margin:28px 0 10px; }
+h4.lab{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-faint); margin:22px 0 9px; }
+
+.callout{ border-left:4px solid var(--gold); background:var(--gold-soft); border-radius:0 var(--r-sm) var(--r-sm) 0; padding:14px 18px; margin:18px 0; font-size:16.5px; line-height:1.62; }
+.callout .ct{ display:block; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:5px; color:var(--gold); }
+.callout.teal{ border-color:var(--teal); background:var(--teal-soft);} .callout.teal .ct{ color:var(--teal);}
+.callout.coral{ border-color:var(--coral); background:var(--coral-soft);} .callout.coral .ct{ color:var(--coral);}
+.callout.violet{ border-color:var(--violet); background:var(--violet-soft);} .callout.violet .ct{ color:var(--violet);}
+.callout.green{ border-color:var(--green); background:var(--green-soft);} .callout.green .ct{ color:var(--green);}
+.honest{ border-left:4px solid var(--violet); background:var(--violet-soft); border-radius:0 var(--r-sm) var(--r-sm) 0; padding:14px 18px; margin:18px 0; font-size:16px; }
+.honest .ct{ display:block; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:5px; color:var(--violet); }
+
+.keyrule{ text-align:center; font-family:var(--serif); font-style:italic; font-size:20px; line-height:1.5; color:var(--gold); border-top:1px solid var(--gold-line); border-bottom:1px solid var(--gold-line); padding:18px 14px; margin:22px 0; }
+.keyrule .small{ display:block; font-family:var(--sans); font-style:normal; font-size:10px; font-weight:600; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:8px; }
+.keyrule b{ font-style:normal; color:var(--ink); }
+
+.tag{ display:inline-block; font-family:var(--sans); font-size:10px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:1px 7px; border-radius:4px; vertical-align:middle; }
+.tag.cl{ background:var(--blue-soft); color:var(--blue); } .tag.fw{ background:var(--gold-soft); color:var(--gold); } .tag.vf{ background:var(--violet-soft); color:var(--violet); } .tag.ob{ background:var(--teal-soft); color:var(--teal); }
+
+.cards{ display:flex; flex-wrap:wrap; gap:12px; margin:16px 0; }
+.card{ flex:1 1 220px; background:var(--card); border:1px solid var(--line); border-top:3px solid var(--gold); border-radius:var(--r-sm); padding:14px 16px; }
+.card.up{ border-top-color:var(--green);} .card.down{ border-top-color:var(--coral);} .card.teal{ border-top-color:var(--teal);} .card.violet{ border-top-color:var(--violet);}
+.card .ic{ font-size:24px; line-height:1; } .card .ti{ font-family:var(--serif); font-weight:700; font-size:18px; margin:6px 0 2px; } .card .ti em{ color:var(--gold); font-style:italic; font-weight:400; font-size:14px; }
+.card .mt{ font-family:var(--sans); font-size:11px; font-weight:600; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:6px; } .card p{ font-size:15px; line-height:1.55; margin:0; color:var(--ink-soft); }
+
+/* ===== DETAILED PLANET PROFILE ===== */
+.planet{ background:var(--card); border:1px solid var(--line); border-radius:var(--r); margin:18px 0; overflow:hidden; box-shadow:0 1px 3px rgba(0,0,0,.04); }
+.planet-head{ display:flex; align-items:center; gap:16px; padding:16px 20px; background:linear-gradient(180deg,var(--gold-soft),#fff); border-bottom:1px solid var(--line); }
+.planet-head.up{ background:linear-gradient(180deg,var(--green-soft),#fff);} .planet-head.down{ background:linear-gradient(180deg,var(--coral-soft),#fff);} .planet-head.violet{ background:linear-gradient(180deg,var(--violet-soft),#fff);} .planet-head.neutral{ background:linear-gradient(180deg,var(--blue-soft),#fff);}
+.pl-glyph{ font-size:38px; line-height:1; color:var(--gold); flex-shrink:0; width:46px; text-align:center; }
+.pl-id{ flex:1; }
+.pl-name{ font-family:var(--serif); font-weight:700; font-size:23px; line-height:1.1; }
+.pl-name em{ color:var(--gold); font-style:italic; font-weight:400; font-size:16px; }
+.pl-arch{ font-family:var(--sans); font-size:12.5px; color:var(--ink-faint); margin-top:3px; letter-spacing:.02em; }
+.pl-class{ font-family:var(--sans); font-size:10px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; padding:4px 10px; border-radius:999px; white-space:nowrap; align-self:flex-start; }
+.pl-class.ben{ background:var(--green-soft); color:var(--green); } .pl-class.mal{ background:var(--coral-soft); color:var(--coral); } .pl-class.neu{ background:var(--blue-soft); color:var(--blue); }
+.planet-body{ padding:16px 20px 18px; }
+.pl-sketch{ font-size:16.5px; margin-bottom:12px; }
+.pl-data{ display:grid; grid-template-columns:1fr 1fr; gap:7px 22px; margin:12px 0; font-family:var(--sans); font-size:13.5px; line-height:1.5; }
+.pl-data .row{ border-bottom:1px solid var(--line-soft); padding-bottom:6px; color:var(--ink-soft); }
+.pl-data .full{ grid-column:1 / -1; }
+.pl-k{ display:block; font-size:10px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); margin-bottom:1px; }
+.pl-rules{ background:var(--gold-soft); border-radius:var(--r-sm); padding:9px 13px; font-family:var(--sans); font-size:13.5px; margin-top:8px; }
+.pl-rules .pl-k{ color:var(--gold); }
+.pl-market{ font-size:15px; font-style:italic; color:var(--ink-soft); border-left:3px solid var(--gold-line); padding-left:12px; margin-top:11px; }
+@media (max-width:600px){ .pl-data{ grid-template-columns:1fr; } }
+
+.tw{ overflow-x:auto; border:1px solid var(--line); border-radius:var(--r-sm); margin:16px 0; }
+table{ width:100%; border-collapse:collapse; font-family:var(--sans); }
+thead tr{ background:var(--gold-soft); }
+th{ font-size:10.5px; font-weight:700; letter-spacing:.07em; text-transform:uppercase; color:var(--gold); text-align:left; padding:9px 11px; white-space:nowrap; }
+td{ font-size:13px; padding:8px 11px; border-top:1px solid var(--line-soft); vertical-align:top; color:var(--ink-soft); }
+td.g{ color:var(--gold); font-weight:600; white-space:nowrap; }
+td.up{ color:var(--green); font-weight:600;} td.dn{ color:var(--coral); font-weight:600;}
+tbody tr:nth-child(even){ background:#fcfaf5; }
+
+.qa{ border:1px solid var(--line); border-radius:var(--r-sm); overflow:hidden; margin:20px 0; }
+.qa-h{ background:var(--paper2); padding:9px 15px; font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); border-bottom:1px solid var(--line); }
+.qa-i{ padding:12px 15px; border-bottom:1px solid var(--line-soft); } .qa-i:last-child{ border-bottom:none; }
+.qa-q{ font-size:16px; } .qa-q b{ color:var(--gold); font-family:var(--sans); font-size:12px; font-weight:700; margin-right:8px; }
+.qa-a{ font-size:16px; color:var(--ink-soft); margin-top:5px; } .qa-a b{ color:var(--teal); font-family:var(--sans); font-size:12px; font-weight:700; margin-right:8px; }
+
+.recap{ display:flex; align-items:center; gap:18px; background:var(--gold-soft); border:1px solid var(--gold-line); border-radius:var(--r-sm); padding:16px 20px; margin:20px 0; }
+.recap .n{ font-family:var(--serif); font-weight:900; font-size:38px; color:var(--gold); line-height:1; flex-shrink:0; }
+.recap .l{ font-family:var(--sans); font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); }
+.recap .t{ font-family:var(--serif); font-weight:700; font-size:18px; margin:2px 0; } .recap .d{ font-size:14px; color:var(--ink-soft); }
+
+.ladder{ counter-reset:rk; list-style:none; padding:0; margin:14px 0; }
+.ladder li{ counter-increment:rk; display:flex; gap:14px; align-items:flex-start; padding:9px 0; border-bottom:1px solid var(--line-soft); font-size:15.5px; }
+.ladder li:last-child{ border-bottom:none; }
+.ladder li::before{ content:counter(rk); flex-shrink:0; width:26px; height:26px; background:var(--gold); color:#fff; border-radius:50%; font-family:var(--sans); font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center; }
+.ladder b{ color:var(--ink); }
+
+.takeaways{ counter-reset:tk; list-style:none; padding:0; margin:14px 0; }
+.takeaways li{ counter-increment:tk; position:relative; padding:10px 0 10px 46px; border-bottom:1px solid var(--line-soft); font-size:16.5px; }
+.takeaways li:last-child{ border-bottom:none; }
+.takeaways li::before{ content:counter(tk); position:absolute; left:0; top:9px; width:30px; height:30px; border:1.5px solid var(--gold); color:var(--gold); border-radius:50%; font-family:var(--serif); font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center; }
+
+.gloss{ background:var(--card); border:1px solid var(--line); border-radius:var(--r-sm); padding:6px 18px; margin:16px 0; }
+.gloss dt{ font-family:var(--serif); font-weight:700; font-size:16px; color:var(--gold); margin:12px 0 1px; }
+.gloss dd{ margin:0 0 4px; font-size:15.5px; color:var(--ink-soft); }
+
+.bridge{ text-align:center; font-style:italic; color:var(--ink-faint); font-size:15px; border-top:1px solid var(--line); padding-top:22px; margin-top:34px; }
+hr.soft{ border:none; border-top:1px solid var(--line); margin:30px 0; }
+@media (max-width:600px){ body{font-size:17px;padding:20px 16px 70px;} .hero h1{font-size:31px;} .lesson-title{font-size:21px;} }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="kicker">The Celestial Ledger · Volume I · Chapter One</div>
+  <h1>The <em>Foundation</em></h1>
+  <div class="sub">Why the Planets Move Markets — the hardest question in the book, asked in the skeptic's own voice. The honest answer hides inside a single, slippery word: <em>move</em>.</div>
+  <div class="ornament">✦ ✦ ✦</div>
+</div>
+
+<p>Most books on this subject begin by assuming the very thing they ought to prove. They open with a chart of the 1929 crash, point a finger at a planet, and proceed as though the matter were settled. This book will not do that — because a practitioner who cannot answer the skeptic has no foundation to stand on, only a habit he is afraid to examine.</p>
+
+<p>So we begin with the hardest question, and we ask it in the skeptic's own voice: <em>why should a serious analyst — someone who respects price, volume, liquidity, and the brutal efficiency of modern markets — pay any attention to where the planets are?</em> The honest answer is neither the one a believer wants nor the one a debunker expects. It rests on a single distinction, and that distinction is hiding inside the verb in our title. Before we can say whether the planets <strong>move</strong> markets, we must be ruthless about what that word is allowed to mean.</p>
+
+<div class="callout teal">
+  <span class="ct">The four labels you will meet</span>
+  A good teacher tells you not only what the tradition says, but <em>how sure we are of it</em>. Four small, honest labels run through this chapter. <span class="tag cl">Classical</span> means an established rule of the tradition. <span class="tag ob">Observed</span> means a reported empirical correlation, with its limits stated plainly. <span class="tag fw">Framework</span> means this book's own interpretive synthesis — a way of reading, to be tested, never swallowed whole. And <span class="tag vf">Verify</span> marks a figure or claim I could not confirm, flagged so you never lean on it. This honesty is the very thing that will one day protect your money.
+</div>
+
+<!-- ═══════════ 1.1 ═══════════ -->
+<div class="lesson">
+  <div class="lesson-head"><div class="lesson-no">Lesson 1.1</div><div class="lesson-title">The Question We <em>Refuse to Dodge</em></div></div>
+
+  <p>The field's whole bad reputation begins with one sloppy sentence: <em>"the planets move markets."</em> It sounds like a single claim. It is actually three completely different claims wearing the same coat, and almost every argument — for and against — collapses because the speakers never agree on which one they mean.</p>
+
+  <p>A market analyst lives by a hard discipline: a statement is only worth holding if it can be tested, and only worth trading if it can be falsified. We will hold the tradition to exactly that standard — not to dismiss it, but because anything that survives that standard is worth far more than a thousand things that merely feel true. So before any chart, any cycle, any aspect, we settle the meaning of the verb.</p>
+
+  <div class="keyrule"><span class="small">The rule to lock in</span>Before we ask whether the planets <b>move</b> markets, we must be ruthless about what that verb is permitted to mean. The whole book turns on the answer.</div>
+
+  <div class="qa">
+    <div class="qa-h">💬 Check yourself · Lesson 1.1</div>
+    <div class="qa-i"><div class="qa-q"><b>Q1</b>Why does the author refuse to open with a crash chart and a planet?</div><div class="qa-a"><b>A</b>Because it <strong>assumes what it should prove</strong>. A foundation that cannot answer the skeptic is just a habit afraid of examination.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q2</b>What single standard will every method in this book be judged against?</div><div class="qa-a"><b>A</b>Whether it is <strong>testable and falsifiable</strong> — the market analyst's own discipline, applied to the stars.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q3</b>Where does the real ambiguity in "the planets move markets" live?</div><div class="qa-a"><b>A</b>In the verb <strong>move</strong> — which secretly carries three different claims at once.</div></div>
+  </div>
+  <div class="recap"><div class="n">✦</div><div><div class="l">Lesson 1.1 — Locked In</div><div class="t">The skeptic gets the first word</div><div class="d">We meet the field's defining question head-on, and resolve to judge every claim by whether it can be tested.</div></div></div>
+</div>
+
+<!-- ═══════════ 1.2 ═══════════ -->
+<div class="lesson">
+  <div class="lesson-head"><div class="lesson-no">Lesson 1.2</div><div class="lesson-title">Three Readings of <em>One Verb</em></div></div>
+
+  <p>Three completely different claims shelter inside the sentence "the planets move markets." They are routinely blurred together, and most of the field's bad name comes from that blur. Pull them apart and the picture clears at once.</p>
+
+  <div class="cards">
+    <div class="card down"><div class="ic">🚫</div><div class="ti">Reading 1 <em>Causation</em></div><div class="mt">Rejected</div><p>Planetary bodies exert a <strong>physical force</strong> that pushes prices. There is no known mechanism — gravity, magnetism, or otherwise — and no replicated evidence. <span class="tag fw">Framework</span> Anyone asserting celestial cause of prices has left defensible ground.</p></div>
+    <div class="card"><div class="ic">⚖️</div><div class="ti">Reading 2 <em>Correlation</em></div><div class="mt">Test it</div><p>Certain celestial cycles <strong>statistically coincide</strong> with certain market behaviours. Weaker and testable — and in a few narrow cases it survives (Lesson 1.4). A correlation that won't replicate out-of-sample is a coincidence in a lab coat.</p></div>
+    <div class="card up"><div class="ic">🕰️</div><div class="ti">Reading 3 <em>Clock</em></div><div class="mt">The foundation</div><p>The sky is a <strong>clock and a symbolic language</strong> for cycles really driven by collective human behaviour. The planets keep time alongside the market — like tides read by a sailor, not the cause of the water's motion. <span class="tag fw">Framework</span> This is the book.</p></div>
+  </div>
+
+  <div class="callout">
+    <span class="ct">Callout · the clock, not the cause</span>
+    A wall clock does not <em>cause</em> the meeting. But if you can read it, it tells you <em>when</em> the meeting will happen. Financial astrology, practiced honestly, is <strong>horology</strong> — the craft of reading a celestial clock — not a theory of celestial force. Judge every method by that one standard: <em>does it help you read the timing of a rhythm that is actually driven by human crowds?</em>
+  </div>
+
+  <p>If the engine is not the planets, what is it? Two pillars hold up the entire structure.</p>
+
+  <h3 class="sec">Pillar One — The market is a machine for measuring mass psychology</h3>
+  <p>Prices are not the output of a rational calculator. They are the running tally of fear and greed across a crowd. This is not an astrological claim; it is the consensus of behavioural finance. Keynes named the crowd's non-rational drive <em>animal spirits</em> (1936). Minsky showed how stability itself breeds the leverage that ends in instability. Shiller catalogued <em>irrational exuberance</em> and the feedback loops that inflate bubbles; Soros formalised the same loop as <em>reflexivity</em> — perception altering the very fundamentals it is supposed to track. Herding, recency bias, capitulation, euphoria: these are the real movers of price at the turns.</p>
+  <p><span class="tag fw">Framework</span> Here is the bridge. If markets are, at the extremes, an instrument that registers <em>collective mood and herd behaviour</em>, then any external rhythm that happens to correlate with collective mood will also correlate with markets — <strong>without any force passing from sky to ticker.</strong> The astrologer's bet is narrow and specific: that certain celestial cycles are <em>time-markers of mood</em>. That bet is mostly unproven and, in one or two cases, modestly supported. We will be exact about which.</p>
+
+  <h3 class="sec">Pillar Two — Markets move in cycles, and cycles need a clock</h3>
+  <p>Manias and panics recur. Tulip mania (1637), the South Sea Bubble (1720), 1929, 1987, 2000, 2008, 2020 — different assets, identical emotional architecture. Markets are not a straight line with noise; they are a layering of cycles of many lengths. The entire enterprise of technical analysis exists because price exhibits rhythm.</p>
+  <p><span class="tag fw">Framework</span> A cycle is only useful if you can time it, and timing requires a clock <em>external</em> to the thing being timed. The astronomical cycles — the solar year, the lunar month, the synodic periods of the planets — are the most precise, most ancient, and most objective clocks humanity possesses. So the legitimate question is never "do the planets emit market-force?" but <strong>"do any astronomical cycles serve as usable clocks for the cycles of crowd psychology?"</strong> That question is empirical — and we turn to the evidence next.</p>
+
+  <div class="keyrule"><span class="small">The rule to lock in</span>Cause · correlate · clock. Reject the first, test the second, build on the third — the sky as a timekeeper for a rhythm whose true engine is the human crowd.</div>
+
+  <div class="qa">
+    <div class="qa-h">💬 Check yourself · Lesson 1.2</div>
+    <div class="qa-i"><div class="qa-q"><b>Q1</b>Which of the three readings does this book adopt, and which does it reject outright?</div><div class="qa-a"><b>A</b>It builds on <strong>Reading 3 (clock)</strong>, tests Reading 2 (correlation), and rejects <strong>Reading 1 (causation)</strong>.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q2</b>How can a celestial cycle track markets with no force passing from sky to ticker?</div><div class="qa-a"><b>A</b>Because markets measure <strong>mass mood</strong>. Anything that correlates with collective mood will correlate with prices — no physical link required.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q3</b>Why does a cycle need a clock "external" to itself?</div><div class="qa-a"><b>A</b>You cannot time a rhythm with itself. The <strong>astronomical periods</strong> are the most precise external clocks we have — which is the only legitimate role for the sky here.</div></div>
+  </div>
+  <div class="recap"><div class="n">3</div><div><div class="l">Lesson 1.2 — Locked In</div><div class="t">One verb, three claims</div><div class="d">The whole defensible enterprise lives in the third reading: the planets as a timekeeper for cycles driven by human crowds.</div></div></div>
+</div>
+
+<!-- ═══════════ 1.3 ═══════════ -->
+<div class="lesson">
+  <div class="lesson-head"><div class="lesson-no">Lesson 1.3</div><div class="lesson-title">What the Tradition <em>Actually Claimed</em></div></div>
+
+  <p>Before judging the tradition, we should state it accurately and in our own words — not the caricature, and not the sales pitch. What the old sources actually said is more modest, and far more interesting, than either side admits.</p>
+
+  <div class="cards">
+    <div class="card"><div class="ic">🌾</div><div class="ti">The Babylonian Root</div><div class="mt">Mundane &amp; agricultural</div><p><span class="tag cl">Classical</span> The oldest sky-watching for worldly outcomes is Mesopotamian — the omen series later compiled as <em>Enūma Anu Enlil</em>, read for the king, the state, the weather, the harvest. Because pre-industrial wealth was agricultural, omens about rain and grain were, in effect, omens about <strong>prices</strong>.</p></div>
+    <div class="card violet"><div class="ic">🪔</div><div class="ti">The Vedic Frame</div><div class="mt">Correspondence, not force</div><p><span class="tag cl">Classical</span> <em>Jyotiṣa</em> — "the science of light," the eye of the Veda. Two features matter: the <strong>27 nakṣatras</strong> (a lunar zodiac the Moon steps through about one station a day), and the Moon assigned to <em>manas</em>, the mind. Its metaphysic is <em>yathā piṇḍe tathā brahmāṇḍe</em> — pattern mirrored across scales, not a doctrine of force.</p></div>
+    <div class="card teal"><div class="ic">📐</div><div class="ti">The Western Reformers</div><div class="mt">Keep the geometry</div><p><span class="tag cl">Classical</span> Ptolemy's <em>Tetrabiblos</em> gave a whole book to mundane prediction — again via weather and agriculture. Kepler held sign-astrology in contempt yet kept the <strong>aspects</strong>, believing the geometry was real where the mythology was not. <span class="tag fw">Framework</span> He is this book's patron saint: <em>keep the geometry; drop the superstition.</em></p></div>
+    <div class="card up"><div class="ic">🥇</div><div class="ti">The Metals</div><div class="mt">Sun–gold, Moon–silver</div><p><span class="tag cl">Classical</span> Across Western alchemy and Indian metal lore, two rulerships are stated with unusual consistency: <strong>the Sun rules gold; the Moon rules silver.</strong> (The fuller set: Mars–iron, Venus–copper, Jupiter–tin, Saturn–lead, Mercury–quicksilver.) We will <em>test</em>, not assume, whether they have timing value.</p></div>
+  </div>
+
+  <p>Notice what binds these four together. The classical sources are overwhelmingly <em>mundane and agricultural</em>, and their deepest logic — Babylonian omen, Vedic correspondence, Keplerian geometry — sits much closer to Reading 3 (clock) than to Reading 1 (force). A tradition that already equates the swiftest luminary with the collective <em>mind</em> is one short step from equating it with collective <em>sentiment</em>.</p>
+
+  <div class="callout coral">
+    <span class="ct">Callout · read the tradition honestly</span>
+    The classical canon is overwhelmingly <em>mundane and agricultural</em>, and its own deepest metaphysic is <strong>correspondence, not force</strong>. Much of what is sold today as "ancient planetary market secrets" is a modern overlay on a tradition that was actually about rain and grain. State what the tradition said; do not inflate it.
+  </div>
+
+  <div class="keyrule"><span class="small">The rule to lock in</span>The real tradition was about harvest and mood, and read the sky as a mirror, not a motor — which is exactly why an honest "celestial clock" can claim its lineage.</div>
+
+  <div class="qa">
+    <div class="qa-h">💬 Check yourself · Lesson 1.3</div>
+    <div class="qa-i"><div class="qa-q"><b>Q1</b>Why is the grain forecast, not the natal horoscope, the true ancestor of financial astrology?</div><div class="qa-a"><b>A</b>Because the oldest mundane omens were about <strong>harvest and weather</strong> — and in an agricultural world, that <em>is</em> a forecast of prices.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q2</b>What did Kepler keep, and what did he throw away?</div><div class="qa-a"><b>A</b>He kept the <strong>aspects</strong> (the geometry) and discarded the <strong>zodiacal mythology</strong> — the exact posture of this book.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q3</b>Which two metal rulerships are stated most consistently across traditions?</div><div class="qa-a"><b>A</b><strong>Sun–gold and Moon–silver</strong> — to be tested in the commodity chapters, not assumed.</div></div>
+  </div>
+  <div class="recap"><div class="n">4</div><div><div class="l">Lesson 1.3 — Locked In</div><div class="t">The tradition, stated straight</div><div class="d">Mundane, agricultural, and built on correspondence — a lineage that fits the clock far better than the cause.</div></div></div>
+</div>
+
+<!-- ═══════════ 1.4 ═══════════ -->
+<div class="lesson">
+  <div class="lesson-head"><div class="lesson-no">Lesson 1.4</div><div class="lesson-title">What the Evidence <em>Does and Does Not Show</em></div></div>
+
+  <p>This is the section that wins or loses the skeptic, so it is the section where we are most disciplined. We grade every effect by the standard a market researcher would apply to any other anomaly: <em>Does it replicate across markets and decades? Is the sample large? Could it have been data-mined?</em></p>
+
+  <h3 class="sec">The strongest bridge is solar — and it is called seasonality</h3>
+  <p><span class="tag ob">Observed</span> The most robust "celestial" timing effects in all of finance are not exotic at all — they are <strong>annual seasonalities keyed to the Sun's position in the tropical year.</strong> The "Halloween effect," or "Sell in May and Go Away" — the tendency for equity returns from roughly November through April to exceed those from May through October — was documented across a large majority of 37 international markets by <strong>Bouman and Jacobsen (2002)</strong> in the <em>American Economic Review</em>. The January effect and the turn-of-the-month effect are likewise well-attested calendar anomalies.</p>
+  <p><span class="tag fw">Framework</span> These deserve pride of place because they make the astrologer's logic legitimate on the researcher's own turf: the tropical year <em>is</em> a solar cycle, "seasonality" <em>is</em> the Sun's ingress through the signs by another name, and here is a genuinely replicated, mood-and-behaviour-linked annual rhythm. The honest caveats: such anomalies are partly explained by liquidity, tax, and reporting calendars, and once published they tend to weaken as traders arbitrage them away.</p>
+
+  <h3 class="sec">The lunar effect is real, small, and about mood — not force</h3>
+  <p><span class="tag ob">Observed</span> Three peer-reviewed studies form the spine of the lunar evidence. <strong>Dichev and Janes (2003)</strong> found that returns in the roughly fifteen days around the <strong>new</strong> Moon were about double those in the fifteen days around the <strong>full</strong> Moon — across major U.S. indices over a century and across two dozen other countries. <strong>Yuan, Zheng, and Zhu (2006)</strong>, in <em>Are Investors Moonstruck?</em>, independently found global returns lower around the full Moon than the new Moon, on the order of a few percent annualised. <strong>Floros and Tan (2013)</strong> confirmed the direction internationally but showed the effect is <strong>tangled up with ordinary calendar anomalies</strong> (the Monday and January effects) and is uneven across markets.</p>
+  <p>Three disciplines must be imposed on this finding before a practitioner leans on it:</p>
+  <ol class="ladder">
+    <li><b>It is a mood story, not a force story.</b> The proposed mechanism is the same lunar-phase influence on human emotion studied elsewhere in behavioural science — it routes through <em>crowd psychology</em>, exactly Reading 3. No author claims a physical pull on prices.</li>
+    <li><b>It is small and possibly fragile.</b> A few percent per year, or tens of basis points per lunar cycle, is real in a large sample and <strong>invisible inside the noise of any single month</strong>. It showed <em>no reliable effect on volume or volatility</em> — only on the return tilt.</li>
+    <li><b>The authors themselves flag the spuriousness risk.</b> When thousands of researchers comb historical returns, some "significant" patterns appear by chance. Replication across many markets lifts the lunar effect above pure data-mining — but it remains a modest tilt, not an edge you can size a position on.</li>
+  </ol>
+
+  <div class="callout green">
+    <span class="ct">Callout · what actually replicates</span>
+    If a practitioner remembers one empirical fact from this chapter, make it this: <strong>the celestial timing signals with genuine published support are the slow, mood-linked ones — solar seasonality and the lunar new/full tilt.</strong> Both are <em>small</em>, both run <em>through human behaviour</em>, and neither is a standalone trade. Everything faster, sharper, or more spectacular has a far weaker evidential footing.
+  </div>
+
+  <h3 class="sec">The sunspot–economy hypothesis: historically serious, largely rejected</h3>
+  <p><span class="tag ob">Observed</span> The idea that the ~11-year solar-activity cycle drives the business cycle is not fringe in origin: William Herschel conjectured a link between sunspots and wheat prices (1801), and the eminent economist W. S. Jevons built a sunspot theory of commercial crises in the 1870s. <span class="tag fw">Framework</span> It belongs here as intellectual ancestry, stated honestly: mainstream economics does <strong>not</strong> accept a sunspot driver of the modern business cycle, the early correlations did not hold up as data accumulated, and contemporary revivals remain unproven and contested. It is a cautionary example of a beautiful cycle that the data declined to confirm.</p>
+
+  <h3 class="sec">Aspects, first-trade horoscopes, and the Bradley siderograph: no robust validation</h3>
+  <p><span class="tag fw">Framework</span> The techniques that dominate practitioner literature — timing turns by hard aspects between planets, casting a "first-trade" or incorporation horoscope for an individual stock, or following Donald Bradley's <em>siderograph</em> (a weighted algebraic sum of aspect values, built in 1948) — do <strong>not</strong> have credible independent statistical validation that they beat chance or simple baselines. This is not a slur; it is the state of the evidence, and the field's most honest figures said so themselves.</p>
+
+  <div class="callout">
+    <span class="ct">Callout · Bradley's own warning</span>
+    The author of the most famous astro-market indicator cautioned, in his own book, that the siderograph should <em>not</em> be taken as a forecast of what the market will actually do — only as a gauge of shifts in collective mood, and explicitly not a predictor of the longer trend. <em>(Paraphrased, not quoted, per this book's sourcing rules.)</em> When the inventor of the tool tells you it is a sentiment barometer and not a crystal ball, believe him. <span class="tag ob">Observed</span> — a practitioner's own stated limitation.
+  </div>
+
+  <h3 class="sec">Gold and silver: the right test bed, the thin evidence</h3>
+  <p><span class="tag fw">Framework</span> Precious metals are the natural laboratory for this book's commodity work, for three reasons: they are the market's purest <em>fear-and-sentiment</em> assets (so Pillar One bites hardest), they carry the cleanest classical rulerships (Sun–gold, Moon–silver), and they have strong, documented <strong>calendar</strong> seasonality. <span class="tag ob">Observed</span> Gold in particular shows recurring demand seasonality — much of it driven, in the Indian context, by the wedding and festival calendar (Akshaya Tritiya, Dhanteras / Diwali) — which is itself reckoned by the <strong>lunisolar Hindu calendar</strong>, i.e., by the Moon and Sun.</p>
+  <p><span class="tag fw">Framework</span> Note the honesty trap and the opportunity together: that seasonality is <em>cultural-calendrical</em>, not evidence of planetary force on price — but the cultural calendar is itself astronomical, which is precisely the kind of mood-and-behaviour-via-the-sky linkage this book takes seriously. Beyond seasonality, claims that specific Sun– or Moon–metal aspects time gold and silver turns are <span class="tag vf">Verify</span>-class folklore until tested on out-of-sample data, and we will treat them that way in the commodity chapters.</p>
+
+  <div class="keyrule"><span class="small">The rule to lock in</span>What survives honest scrutiny is slow and small — solar seasonality and the lunar new/full tilt — both routed through human mood, neither a trade on its own.</div>
+
+  <div class="qa">
+    <div class="qa-h">💬 Check yourself · Lesson 1.4</div>
+    <div class="qa-i"><div class="qa-q"><b>Q1</b>Name the two celestial timing effects that have genuine published support.</div><div class="qa-a"><b>A</b><strong>Solar seasonality</strong> (Sell-in-May / Halloween) and the <strong>lunar new/full return tilt</strong> — both small, both behavioural.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q2</b>Why is the lunar effect a "mood story, not a force story"?</div><div class="qa-a"><b>A</b>Its only proposed mechanism is lunar phase acting on <strong>human emotion</strong> — crowd psychology, never a physical pull on prices.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q3</b>What did Bradley himself say his siderograph was — and was not?</div><div class="qa-a"><b>A</b>A <strong>gauge of collective mood</strong>, explicitly <em>not</em> a forecast of the market or the longer trend.</div></div>
+  </div>
+  <div class="recap"><div class="n">2</div><div><div class="l">Lesson 1.4 — Locked In</div><div class="t">The evidence, graded honestly</div><div class="d">Two slow, mood-linked effects replicate; everything flashier has weak support. The honest signals are small by their very nature.</div></div></div>
+</div>
+
+<!-- ═══════════ 1.5 ═══════════ -->
+<div class="lesson">
+  <div class="lesson-head"><div class="lesson-no">Lesson 1.5</div><div class="lesson-title">Using This <em>Without Fooling Yourself</em></div></div>
+
+  <p>If the honest evidence is this narrow, what is a practitioner actually entitled to <em>do</em>? The answer is a disciplined method, not a leap of faith. Four working rules carry the entire practice of the book.</p>
+
+  <ol class="ladder">
+    <li><b>Astrology is an overlay, never the system.</b> Price structure comes first — trend, momentum, support and resistance, accumulation and distribution. The astro-clock is laid <em>on top</em> of that structure to inform <strong>timing and sentiment context</strong>, never to override what price is telling you. A bullish configuration in a confirmed downtrend is a reason to watch, not to buy.</li>
+    <li><b>Trade confluence, not single signals.</b> A lone astro-event is noise. The method seeks <strong>alignment of independent layers</strong> — a slow cycle, a calendar/seasonal tilt, and a price level all pointing at the same window. The astrology earns its place only when it agrees with non-astrological evidence; that is also what protects you from your own pattern-seeking.</li>
+    <li><b>Pre-register and journal out-of-sample.</b> The single discipline that separates research from self-deception: write the prediction <strong>before</strong> the event — the window, the rationale — and log every call, hits <em>and</em> misses, in a forward-tested journal. Hindsight "it predicted the crash" stories are worthless; a dated, time-stamped, falsifiable forecast is worth everything.</li>
+    <li><b>Risk management is the real edge.</b> Position sizing, stops, and survival come first and last. No celestial signal, however elegant, justifies oversizing. <span class="tag fw">Framework</span> Used correctly, astrology's most defensible contribution is as a <strong>risk-and-volatility heuristic</strong> — a reason to reduce size or tighten stops into a high-emotion window — far more than as a directional oracle.</li>
+  </ol>
+
+  <div class="honest">
+    <span class="ct">A standing disclaimer</span>
+    This book documents observed correlations and an interpretive method. It is <strong>not financial advice</strong>, and nothing in it is a recommendation to buy or sell any instrument. Every method here is a lens for thinking about timing and risk — never a signal to act on blindly.
+  </div>
+
+  <div class="keyrule"><span class="small">The rule to lock in</span>Overlay on price, demand confluence, pre-register and journal, and let risk management — not the stars — size every position.</div>
+
+  <div class="qa">
+    <div class="qa-h">💬 Check yourself · Lesson 1.5</div>
+    <div class="qa-i"><div class="qa-q"><b>Q1</b>A bullish aspect appears inside a confirmed downtrend. What does the method say?</div><div class="qa-a"><b>A</b>A reason to <strong>watch, not to buy</strong>. Astrology is the overlay; price structure rules.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q2</b>What single habit most separates research from self-deception?</div><div class="qa-a"><b>A</b><strong>Pre-registration</strong> — dating a specific, falsifiable call <em>before</em> the event and journalling every hit and miss.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q3</b>What is astrology's most defensible contribution to a trade?</div><div class="qa-a"><b>A</b>A <strong>risk-and-volatility heuristic</strong> — a cue to trim size into a high-emotion window — not a directional oracle.</div></div>
+  </div>
+  <div class="recap"><div class="n">5</div><div><div class="l">Lesson 1.5 — Locked In</div><div class="t">Method over belief</div><div class="d">A disciplined overlay, confluence, an honest journal, and risk first — the practice that keeps an unproven art from emptying an account.</div></div></div>
+</div>
+
+<!-- ═══════════ 1.6 ═══════════ -->
+<div class="lesson">
+  <div class="lesson-head"><div class="lesson-no">Lesson 1.6</div><div class="lesson-title">Where the Framework <em>Breaks Down</em></div></div>
+
+  <p>A master practitioner is defined less by what they believe than by how clearly they see the failure modes. The most seductive of these is the one we can demonstrate on the page.</p>
+
+  <h3 class="sec">The data-mining trap, demonstrated</h3>
+  <p>Practitioners love to say a great crash "had" some dramatic aspect. To test that honestly, here are the <strong>actual outer-planet positions computed for the five reference crashes</strong> — geocentric, tropical, midday UT, calculated with the Swiss Ephemeris for this book, not recalled from memory.</p>
+
+  <div class="tw">
+    <table>
+      <thead>
+        <tr><th>Event</th><th>Jupiter–Saturn</th><th>Saturn–Uranus</th><th>Saturn–Pluto</th><th>"Signature"</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="g">1929-10-28</td><td>~169° (opposition)</td><td>~102°</td><td>~157°</td><td>Jup–Sat opposition</td></tr>
+        <tr><td class="g">1987-10-19</td><td>~127°</td><td><strong>~6° (conjunction, Sagittarius)</strong></td><td>~38°</td><td>Saturn–Uranus conjunction</td></tr>
+        <tr><td class="g">2000-03-10</td><td><strong>~9° (conjunction, Taurus)</strong></td><td>~85°</td><td>~150°</td><td>Jup–Sat conjunction</td></tr>
+        <tr><td class="g">2008-09-15</td><td>~119°</td><td><strong>~173° (opposition)</strong></td><td>~105°</td><td>Saturn–Uranus opposition</td></tr>
+        <tr><td class="g">2020-03-23</td><td>~7° (closing)</td><td>~95°</td><td><strong>~5° (conjunction, Capricorn)</strong></td><td>Saturn–Pluto conjunction</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p><span class="tag fw">Framework</span> Read this table the way a skeptic should. There is <strong>no single repeating configuration.</strong> 1987 had Saturn <em>conjunct</em> Uranus; 2008 had Saturn <em>opposite</em> Uranus — the same pair, opposite geometry. 2000 was a Jupiter–Saturn conjunction; 1929 a Jupiter–Saturn opposition. 2020 was a Saturn–Pluto conjunction matched by nothing else on the list. The "signature" column is simply what you get by <em>choosing, after the fact,</em> whichever aspect happens to be tightest.</p>
+
+  <div class="callout coral">
+    <span class="ct">Callout · the always-on sky</span>
+    At any given moment the slow planets are forming <em>some</em> hard aspect to <em>something</em> — they are never all unaspected. So "there was a major planetary aspect near the crash" is <strong>guaranteed to be true of every crash, and of most ordinary weeks as well.</strong> A statement that cannot be false carries no information. This single fact dissolves the majority of "the planets predicted it" claims.
+  </div>
+
+  <p>The one honest nuance: the two modern systemic crises, <strong>2008 and 2020, both involved hard Saturn–outer-planet configurations</strong> (Saturn–Uranus opposition; Saturn–Pluto conjunction). Practitioners make much of this, and it is genuinely worth studying. But with a sample of two — and with such configurations recurring every few years <em>without</em> producing crashes — it is <strong>suggestive at most, and nowhere near evidence.</strong> That is the correct epistemic temperature.</p>
+
+  <h4 class="lab">Other failure modes the practitioner must watch</h4>
+  <ol class="ladder">
+    <li><b>Survivorship in the stories.</b> You hear about the newsletter call that nailed the top; you never hear about the same author's nine misses. A track record must include the misses, or it is advertising.</li>
+    <li><b>Confirmation bias.</b> A vague forecast ("volatility around the eclipse") will always seem fulfilled. Only specific, falsifiable, dated calls count.</li>
+    <li><b>The efficiency objection.</b> Liquid modern markets arbitrage away knowable patterns quickly. Any astro-edge both real and well-known would tend to decay — which is itself a reason the honest signals are small.</li>
+    <li><b>Structural breaks.</b> Cycles fitted to history can shatter when the regime changes — the end of the gold standard (1971), decimalisation and electronic order books, algorithmic and passive flows, shifting central-bank regimes — in ways no planetary cycle anticipates.</li>
+    <li><b>Apocrypha and false precision.</b> <span class="tag fw">Framework</span> W. D. Gann's celebrated "Financial Time Table" is a cautionary classic: analysts have shown it was built (c. 1908–09) without a proper ephemeris, approximating the lunar nodal period by alternating 18- and 19-year intervals — an error of roughly 47 days per cycle against the true nodal period of ~18.61 years. This book states such authors' rules <em>only to the extent they can be checked</em>, and flags the rest.</li>
+    <li><b>Conviction risk — the deadliest one.</b> The real danger is not that astrology is useless; it is that a <em>belief</em> in a celestial signal seduces a trader into oversizing a position and abandoning the stop. The sky has never once met a margin call.</li>
+  </ol>
+
+  <div class="keyrule"><span class="small">The rule to lock in</span>The slow planets are always aspecting <b>something</b> — so a claim that cannot be false is no claim at all. Demand falsifiability, or demand nothing.</div>
+
+  <div class="qa">
+    <div class="qa-h">💬 Check yourself · Lesson 1.6</div>
+    <div class="qa-i"><div class="qa-q"><b>Q1</b>What does the five-crash table actually prove?</div><div class="qa-a"><b>A</b>That there is <strong>no single repeating signature</strong> — the "signature" is just the tightest aspect chosen with hindsight.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q2</b>Why is "there was a major aspect near the crash" an empty statement?</div><div class="qa-a"><b>A</b>Because of the <strong>always-on sky</strong> — some hard aspect is forming at almost all times, so the claim cannot be false.</div></div>
+    <div class="qa-i"><div class="qa-q"><b>Q3</b>Which failure mode does the author call the deadliest, and why?</div><div class="qa-a"><b>A</b><strong>Conviction risk</strong> — belief in a signal tempts a trader to oversize and drop the stop. "The sky has never met a margin call."</div></div>
+  </div>
+  <div class="recap"><div class="n">6</div><div><div class="l">Lesson 1.6 — Locked In</div><div class="t">Seeing the failure modes</div><div class="d">From the always-on sky to conviction risk — the clear-eyed catalogue of how this craft fools the people who practice it.</div></div></div>
+</div>
+
+<hr class="soft"/>
+
+<h3 class="sec" style="font-size:24px;text-align:center;">Chapter 1 — Locked In</h3>
+<p style="text-align:center;color:var(--ink-soft);">You now have the foundation the whole book stands on — the one distinction that makes an honest celestial clock possible. Carry these forward.</p>
+<ol class="takeaways">
+  <li><strong>"Move" has three meanings — cause, correlate, clock — and only the last is defensible.</strong> This book reads the planets as a <em>timing-and-sentiment clock</em> for cycles driven by human crowds, never as a physical force on price.</li>
+  <li><strong>The foundation is behavioural, not occult.</strong> Markets measure mass psychology; if any celestial cycle tracks collective mood, it will track markets <em>without any force passing from sky to ticker.</em></li>
+  <li><strong>The honest evidence is narrow and slow.</strong> What replicates is solar <em>seasonality</em> and a small, mood-linked <em>lunar</em> new/full tilt. Both are minor, both run through behaviour, and neither is a standalone trade. Bradley himself called his indicator a mood gauge, not a forecast.</li>
+  <li><strong>The classical tradition was mundane, agricultural, and built on <em>correspondence</em>, not force</strong> — and its deepest logic (Vedic <em>yathā piṇḍe tathā brahmāṇḍe</em>; Kepler's reformed aspects) sits closer to "clock" than to "cause."</li>
+  <li><strong>Method beats belief.</strong> Overlay on price structure, demand confluence, pre-register and journal out-of-sample, and let risk management — not the stars — size every position. The slow planets are always aspecting <em>something</em>, so a claim that cannot be false is no claim at all.</li>
+</ol>
+
+<h4 class="lab" style="margin-top:30px;">The Six-Gate Checklist — run this on any astro-signal before you trust it</h4>
+<p style="color:var(--ink-soft);font-size:16px;">Score every celestial signal against these six gates. A signal that fails the lower gates should never reach your position size.</p>
+<ol class="ladder">
+  <li><b>Which claim is it?</b> Are you being sold <em>causation</em> (reject), <em>correlation</em> (test it), or <em>timing/clock</em> (the usable category)?</li>
+  <li><b>Does it replicate?</b> Evidence across multiple markets and decades, or one cherry-picked chart? What is the sample size?</li>
+  <li><b>Pre-registered or hindsight?</b> Was the call dated and specific <em>before</em> the event, or fitted afterward to what already happened?</li>
+  <li><b>Could it be data-mined?</b> Is the "aspect" one present most of the time anyway (the always-on sky)? How many other configurations were available to choose after the fact?</li>
+  <li><b>Confluence with price?</b> Does independent, non-astrological evidence — trend, level, momentum, seasonality — point at the same window? If the astrology stands alone, stand down.</li>
+  <li><b>Is risk defined first?</b> Are your stop and size set by your risk plan, <em>independent</em> of how convinced the chart makes you feel? If a signal tempts you to widen a stop or add size, that is the cue to do the opposite.</li>
+</ol>
+
+<h4 class="lab" style="margin-top:30px;">A small glossary — the words you met</h4>
+<div class="gloss"><dl>
+  <dt>Causation / Correlation / Synchronicity</dt><dd>The three readings of "move": a physical force (rejected), a statistical coincidence (tested), and the sky as a clock for human-driven cycles (the foundation).</dd>
+  <dt>Mundane astrology</dt><dd>Astrology of collective matters — weather, harvest, the state — as opposed to the personal natal horoscope; the true ancestor of market work.</dd>
+  <dt>Correspondence doctrine</dt><dd><em>Yathā piṇḍe tathā brahmāṇḍe</em> — "as in the microcosm, so in the macrocosm"; pattern mirrored across scales, not force transmitted between them.</dd>
+  <dt>Animal spirits / Reflexivity</dt><dd>Keynes's name for the crowd's non-rational drive; Soros's loop in which perception alters the fundamentals it tracks — the behavioural engine under Pillar One.</dd>
+  <dt>Seasonality (Halloween / Sell-in-May)</dt><dd>The annual solar-keyed return pattern (stronger Nov–Apr than May–Oct); the most robust "celestial" timing effect in finance.</dd>
+  <dt>Lunar new/full tilt</dt><dd>The small, replicated tendency for returns near the new Moon to exceed those near the full Moon — a mood effect, not a force.</dd>
+  <dt>Siderograph</dt><dd>Donald Bradley's 1948 weighted sum of aspect values; per its own author, a gauge of collective mood, not a market forecast.</dd>
+  <dt>The always-on sky</dt><dd>The fact that slow planets are almost always forming some hard aspect — which makes "there was a major aspect" unfalsifiable and therefore empty.</dd>
+  <dt>Confluence</dt><dd>The alignment of independent layers (cycle, seasonal tilt, price level) on the same window; the only condition under which an astro-signal earns its place.</dd>
+  <dt>Pre-registration</dt><dd>Dating a specific, falsifiable forecast <em>before</em> the event and journalling every hit and miss — the discipline that separates research from self-deception.</dd>
+  <dt>Sun–gold, Moon–silver</dt><dd>The most consistently stated classical metal rulerships; to be tested, not assumed, in the commodity chapters.</dd>
+</dl></div>
+
+<p class="bridge">End of Chapter 1. You have the foundation; the rest of the book is the craft built upon it.<br/>Next we resolve the one complication we have twice deferred — the two different skies the West and India count from.<br/>Chapter 2 — Two Skies, Two Grammars: reconciling the tropical and sidereal frames into a single working toolkit.</p>
+
+</body>
+</html>
