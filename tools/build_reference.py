@@ -555,6 +555,18 @@ def _horizon(loc):
     return sorted(ev)
 
 
+def b_total_days():
+    """The 2026 layout: twelve dates, January-June left, July-December right,
+    no header row. Read from the registered rule's own firings."""
+    days = sorted({f.civil_date for f in FIRED.get("sub_total_days_in_year", [])})
+    left, right = days[:6], days[6:]
+    rows = [[a.strftime("%d-%b-%y"), b.strftime("%d-%b-%y") if b else ""]
+            for a, b in zip(left, right + [None] * (6 - len(right)))]
+    return [T([], rows),
+            N(f"Dates whose day + month equals {YEAR % 100} (the year's last two digits). "
+              f"Calendar dates, the same in every timezone.", "flag")]
+
+
 def b_kshin():
     """The 2026 Kshin Moon table: Start Date / Start Time / End Date / End Time."""
     rows = []
@@ -1261,7 +1273,8 @@ def render_blocks(blocks) -> str:
             h = ['<div class="table-scroll">', "<table>"]
             if cap:
                 h.append(f"<caption>{cap}</caption>")
-            h.append("<tr>" + "".join(f'<th scope="col">{x}</th>' for x in hdr) + "</tr>")
+            if hdr:
+                h.append("<tr>" + "".join(f'<th scope="col">{x}</th>' for x in hdr) + "</tr>")
             for r in rows:
                 h.append("<tr>" + "".join(
                     f'<td class="{c[0]}">{c[1]}</td>' if isinstance(c, tuple)
@@ -1393,6 +1406,8 @@ def main() -> int:
                     f'<td>{len({(f.start_utc, f.end_utc) for f in FIRED.get(r.id, [])}) or "&mdash;"}</td></tr>')
         if r.id == "sub_eclipse":
             blk = b_eclipse()
+        elif r.id == "sub_total_days_in_year":
+            blk = b_total_days()
         elif r.id == "sub_kshin_malefic_moon":
             blk = b_kshin()
         elif r.id == "sub_bhadra":
