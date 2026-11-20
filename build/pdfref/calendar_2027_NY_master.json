@@ -9,8 +9,8 @@
    "build/calendar_2027.json (existing calendar)"
   ],
   "counts": {
-   "pdf_rules": 728,
-   "pdf_rules_with_detector": 719,
+   "pdf_rules": 730,
+   "pdf_rules_with_detector": 721,
    "pdf_rules_mapped_to_existing": 79,
    "new_events_major_yearly": 1606,
    "new_events_moon_layer": 4566,
@@ -454,10 +454,10 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
-   "uid": "90d834eb05a1b1e7",
+   "uid": "c0904952dcda12f7",
    "source": "reference_pdfs",
    "tier": "major",
-   "event_title": "Rahu Nakshatra Vedha (all three sides)",
+   "event_title": "Rahu Nakshatra Vedha (all three sides) / Rahu in Dhanishta (market and bullion risk)",
    "date_time": {
     "kind": "window",
     "start_NY": "2026-08-01 17:43 EDT",
@@ -470,29 +470,37 @@
     "continues_after_scan": false,
     "duration_days": 251.61
    },
-   "planetary_condition": "At start: Rahu 06.67 deg Aquarius (Dhanishta pada 4; D9 Scorpio) | At end: Rahu 23.33 deg Capricorn (Dhanishta pada 1; D9 Leo) | Computed: value: Rahu in Dhanishta: Left Ashlesha (lord Mercury), Right Shravana (lord Moon), Front Vishakha (lord Jupiter)",
-   "astrological_rule": "Rahu's residency and the three nakshatras it vedhas.",
-   "source_interpretation": "Rahu Nakshatra Vedha (all three sides): Malefic Vedha: good rally may appear in sectors ruled by the Nakshatra lord (KD p.130 #1); Vedha by malefic is Bullish and reverses the trend (TA p.137 #4)",
-   "financial_market_significance": "Malefic Vedha: good rally may appear in sectors ruled by the Nakshatra lord (KD p.130 #1); Vedha by malefic is Bullish and reverses the trend (TA p.137 #4) -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named), Sector - nakshatra lord (as the source states it; not a forecast)",
+   "planetary_condition": "At start: Rahu 06.67 deg Aquarius (Dhanishta pada 4; D9 Scorpio) | At end: Rahu 23.33 deg Capricorn (Dhanishta pada 1; D9 Leo) | Computed: value: Dhanishta",
+   "astrological_rule": "Rahu's residency and the three nakshatras it vedhas. || Rahu in Dhanishta nakshatra.",
+   "source_interpretation": "Rahu Nakshatra Vedha (all three sides): Malefic Vedha: good rally may appear in sectors ruled by the Nakshatra lord (KD p.130 #1); Vedha by malefic is Bullish and reverses the trend (TA p.137 #4) || Rahu in Dhanishta (market and bullion risk): Market and bullion: negative outlook ('Rahu in Dhanistha, ruled by Mars (enemy), is bearish'; 'High probability of adverse moves')",
+   "financial_market_significance": "Malefic Vedha: good rally may appear in sectors ruled by the Nakshatra lord (KD p.130 #1); Vedha by malefic is Bullish and reverses the trend (TA p.137 #4) -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named), Sector - nakshatra lord; Market and bullion: negative outlook ('Rahu in Dhanistha, ruled by Mars (enemy), is bearish'; 'High probability of adverse moves') -> Gold (XAUUSD / COMEX GC), Silver (COMEX SI), General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
    "conditions_and_qualifications": [
     "Unblocks the 2026 document's B137 for 2027: 217/227 of the 2026 printed cells equal the TA wheel; see vedha.py.",
-    "KD p.93 (2026): 'Rahu doing Vedh of Pushya, Swati and Abhijeet ... Abhijeet lord Sun: sectors ruled by Sun (NIFTY, Power) to outperform; Swati ruled by Rahu' ."
+    "KD p.93 (2026): 'Rahu doing Vedh of Pushya, Swati and Abhijeet ... Abhijeet lord Sun: sectors ruled by Sun (NIFTY, Power) to outperform; Swati ruled by Rahu' .",
+    "KD prints the window as '2 August to year end' (2026); the configuration itself lasts until Rahu leaves Dhanishta, which is the window computed here.",
+    "KD p.111: 'Rahu's vedh of Vishaka supports stability' for banking and finance; KD p.113: 'Jupiter trine may prevent' a general fall.",
+    "KD p.111 bottom: 'Trading guidance: exercise extreme caution'."
    ],
    "source_reference": [
     "TA p.134 [printed 104] Section 32 A rule 1 'Sun, Moon, Rahu & Ketu do Vedha all 3 sides'",
     "TA pp.131-133 wheel",
     "2026 document B137 (same table, 2026)",
-    "KD p.84 / p.130 #1-#2 (sector rule)"
+    "KD p.84 / p.130 #1-#2 (sector rule)",
+    "KD p.111 'Rahu in Dhanistha: Market and Bullion Risk'",
+    "KD p.113 'Rahu in Dhanistha: Negative for Markets and Bullion'"
    ],
-   "calculation_method": "Rahu's nakshatra (28-name, Abhijit) -> TA wheel Front/Left/Right (2026 labels). || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "calculation_method": "Rahu's nakshatra (28-name, Abhijit) -> TA wheel Front/Left/Right (2026 labels). || Sidereal (Lahiri) nakshatra of the body, 27 x 13deg20'; window = the residency, boundaries bisected to 30 s. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
    "markets": [
     "general",
-    "sector:nakshatra lord"
+    "gold",
+    "sector:nakshatra lord",
+    "silver"
    ],
    "rule_ids": [
-    "ta_s32_rahu_nakshatra_vedha"
+    "ta_s32_rahu_nakshatra_vedha",
+    "kd_111_rahu_in_dhanishta"
    ],
-   "gold_silver_relevance": "not stated by source"
+   "gold_silver_relevance": "gold and silver"
   },
   {
    "uid": "3d359ef21c290b60",

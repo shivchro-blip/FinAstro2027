@@ -3,6 +3,34 @@
  "time_zone": "America/New_York",
  "rows": [
   {
+   "start_ET": "Sat 01 Aug 2026 17:43 EDT",
+   "end_ET": "Sat 10 Apr 2027 08:22 EDT",
+   "title": "Rahu in Dhanishta (market and bullion risk)",
+   "tone": "Bearish",
+   "verdicts": [
+    "Market and bullion: negative outlook ('Rahu in Dhanistha, ruled by Mars (enemy), is bearish'; 'High probability of adverse moves')"
+   ],
+   "rule": "Rahu in Dhanishta nakshatra.",
+   "detail": "Rahu 6.67 deg Aquarius (Dhanishta p4) | value: Dhanishta",
+   "refs": [
+    "KD p.111 'Rahu in Dhanistha: Market and Bullion Risk'",
+    "KD p.113 'Rahu in Dhanistha: Negative for Markets and Bullion'"
+   ],
+   "quals": [
+    "KD prints the window as '2 August to year end' (2026); the configuration itself lasts until Rahu leaves Dhanishta, which is the window computed here.",
+    "KD p.111: 'Rahu's vedh of Vishaka supports stability' for banking and finance; KD p.113: 'Jupiter trine may prevent' a general fall.",
+    "KD p.111 bottom: 'Trading guidance: exercise extreme caution'.",
+    "Rahu/Ketu sign/nakshatra changes: the 2026 document's almanac prints the 5 Dec 2026 node ingress 40 min earlier (21:52 IST) than the mean node computed here (22:32 IST) - a known 5-arcsecond formulation gap (config/conventions.yaml)."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Rahu \u2713",
+    "end = astronomy-layer nakshatra ingress of Rahu \u2713"
+   ],
+   "rule_ids": [
+    "kd_111_rahu_in_dhanishta"
+   ]
+  },
+  {
    "start_ET": "Thu 19 Nov 2026 16:34 EST",
    "end_ET": "Wed 02 Dec 2026 20:58 EST",
    "title": "Sun in a Saturn or Rahu nakshatra (user note)",

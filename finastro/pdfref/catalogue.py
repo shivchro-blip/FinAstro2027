@@ -1931,6 +1931,21 @@ rule(id="kd_032_hemisphere_dates", title="Hemisphere date (equinox) - high-proba
      detector=_hemisphere, quals=("KD p.31: identify the high or low price on the turning date and use it as the reference level; treat turning dates as signals within a broader strategy, not standalone predictors.",))
 
 
+# ---------------- added after the silver coverage audit ----------------
+win("ta_261_venus_retro_in_taurus", "Venus retrograde in Taurus", ("TA p.261 [printed 231] 2020 story #8 'PROPHECY - Venus getting Retrograde in the Sign of Taurus is high Bullish on Cotton, Silver & Sugar industries'",),
+    "High Bullish on Cotton, Silver & Sugar industries", ("silver", "sugar", "sector:Cotton"), "Venus retrograde while in Taurus.",
+    lambda s: s["Venus"].retro and s["Venus"].sign == "Taurus", ("Venus",), SIGNCALC + " " + RETCALC,
+    quals=("TA p.260 (same page group): 'Retrograde Venus Bearish for five months thereafter Bullish' for the general market.",))
+win("kd_111_rahu_in_dhanishta", "Rahu in Dhanishta (market and bullion risk)", ("KD p.111 'Rahu in Dhanistha: Market and Bullion Risk'", "KD p.113 'Rahu in Dhanistha: Negative for Markets and Bullion'"),
+    "Market and bullion: negative outlook ('Rahu in Dhanistha, ruled by Mars (enemy), is bearish'; 'High probability of adverse moves')", ("gold", "silver", "general"),
+    "Rahu in Dhanishta nakshatra.", nak_is("Rahu", "Dhanishta"), ("Rahu",), NAKCALC,
+    quals=("KD prints the window as '2 August to year end' (2026); the configuration itself lasts until Rahu leaves Dhanishta, which is the window computed here.",
+           "KD p.111: 'Rahu's vedh of Vishaka supports stability' for banking and finance; KD p.113: 'Jupiter trine may prevent' a general fall.",
+           "KD p.111 bottom: 'Trading guidance: exercise extreme caution'."))
+nc("TA pp.31-39 [printed 1-9] Sections 1-2", "Sectors ruled by each planet (silver: Moon, Jupiter; gold: Sun (western), Mars) and sectors represented by each sign (silver: Cancer; gold: Aries, Leo, Capricorn)",
+   "Rulership tables, not dated rules. Recorded so the sector rule of KD p.84/p.130 (malefic Vedha of a nakshatra -> rally in its lord's sectors; benefic Vedha -> fall) could be applied to silver via the Moon and Jupiter nakshatras; not applied, at the user's direction, until confirmed.")
+
+
 # ======================================================================
 # Annotation-only entries: the condition is already a calendar rule and the
 # PDF adds source text, not a new date.
