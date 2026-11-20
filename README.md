@@ -736,3 +736,23 @@ over-determined and the source's weighting is not recoverable, so reconstruction
 are emitted as candidates and never as fact. It is ported as a **recorded
 absence** with its C flag and `source_selection_rule` named as the missing input,
 not reconstructed.
+
+
+## Reference PDFs (Reference_materials/) -> New York calendar
+
+`finastro/pdfref/` holds every rule read from the two reference PDFs (Tech Astro
+Analysis 2020 and the KD 2026 deck), with page references, verbatim results and
+bottom-of-table notes, on its own engine (Swiss Ephemeris, Lahiri, mean node).
+
+    python tools/build_pdf_calendar.py   # build/pdfref/calendar_2027_NY_master.{json,csv,html,ics} + Moon layer
+    python tools/validate_pdfref.py      # recompute the PDFs' own dated claims (build/pdfref/validation.json)
+    python tools/pdfref_docs.py          # build/pdfref/REFERENCE_PDF_RULES.md and COMPLETION_REPORT.md
+    python tests/test_pdfref.py
+
+The existing calendar (`build/calendar_2027.*`) is not modified: its rows are
+carried into the New York master calendar, annotated with the PDF text where a
+PDF rule states the same condition.
+
+A page-by-page extraction of both PDFs (page image, verified table
+transcriptions, OCR text, searchable) is in `Reference_materials/extracted/`
+(open `index.html`); rebuild it with `python tools/extract_reference_pdfs.py`.

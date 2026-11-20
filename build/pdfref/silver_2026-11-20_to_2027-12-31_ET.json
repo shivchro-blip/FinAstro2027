@@ -1,0 +1,2816 @@
+{
+ "period": "2026-11-20 to 2027-12-31",
+ "time_zone": "America/New_York",
+ "rows": [
+  {
+   "start_ET": "Mon 09 Nov 2026 02:02 EST",
+   "end_ET": "Tue 24 Nov 2026 09:53 EST",
+   "title": "Shukla Paksha of 16 days or Krishna Paksha of 14 days",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish"
+   ],
+   "rule": "A bright fortnight spanning 16 sunrises or a dark fortnight spanning 14.",
+   "detail": "Moon 22.66 deg Libra (Vishakha p1); Sun 22.66 deg Libra (Vishakha p1) | paksha: Shukla; sunrises inside: 16",
+   "refs": [
+    "TA p.159 S35 A21",
+    "2026 document (data/source_2026.html), Silver section - Bullish #14"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer lunation of Moon \u2713",
+    "end = astronomy-layer lunation of Moon \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a21_paksha_16_or_14"
+   ]
+  },
+  {
+   "start_ET": "Sun 22 Nov 2026 06:51 EST",
+   "end_ET": "Fri 01 Jan 2027 12:52 EST",
+   "title": "Venus in Leo or Libra",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish"
+   ],
+   "rule": "Venus in Leo or Libra.",
+   "detail": "Venus 0.00 deg Libra (Chitra p3) | value: Libra",
+   "refs": [
+    "TA p.160 [printed 130] Section 35 B 'Bearish configuration - silver' #1"
+   ],
+   "quals": [
+    "The 2026 config rule adds 'alone'; TA does not."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Venus \u2713",
+    "end = astronomy-layer sign ingress of Venus \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35b01_venus_leo_libra"
+   ]
+  },
+  {
+   "start_ET": "Tue 24 Nov 2026 09:53 EST",
+   "end_ET": "Tue 08 Dec 2026 19:51 EST",
+   "title": "Shukla Paksha of 16 days or Krishna Paksha of 14 days",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish"
+   ],
+   "rule": "A bright fortnight spanning 16 sunrises or a dark fortnight spanning 14.",
+   "detail": "Moon 8.10 deg Taurus (Krittika p4); Sun 8.10 deg Scorpio (Anuradha p2) | paksha: Krishna; sunrises inside: 14",
+   "refs": [
+    "TA p.159 S35 A21",
+    "2026 document (data/source_2026.html), Silver section - Bullish #14"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer lunation of Moon \u2713",
+    "end = astronomy-layer lunation of Moon \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a21_paksha_16_or_14"
+   ]
+  },
+  {
+   "start_ET": "Wed 02 Dec 2026 06:57 EST",
+   "end_ET": "Tue 15 Dec 2026 23:55 EST",
+   "title": "Only Sun-Mercury or Moon-Mercury alone in a sign",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish"
+   ],
+   "rule": "Mercury shares a sign only with the Sun (or only with the Moon).",
+   "detail": "Sun 16.07 deg Scorpio (Anuradha p4); Mercury 0.00 deg Scorpio (Vishakha p4) | value: Scorpio",
+   "refs": [
+    "TA p.159 [printed 129] Section 35 A #17"
+   ],
+   "quals": [
+    "Moon-Mercury variant belongs to the Moon layer (2.5-day windows)."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Mercury \u2713",
+    "end = astronomy-layer sign ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a17_sun_or_moon_mercury_alone"
+   ]
+  },
+  {
+   "start_ET": "Wed 02 Dec 2026 06:57 EST",
+   "end_ET": "Fri 01 Jan 2027 12:52 EST",
+   "title": "Venus alone in Leo or Libra",
+   "tone": "Bearish",
+   "verdicts": [
+    "Bearish"
+   ],
+   "rule": "Venus in Leo or Libra with no other graha (Moon excluded) in the sign.",
+   "detail": "Venus 4.63 deg Libra (Chitra p4) | value: Libra",
+   "refs": [
+    "2026 document (data/source_2026.html), Silver section - Bearish #1",
+    "TA p.160 S35 B1 ('Venus in leo or Libra')"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer sign ingress of Mercury \u2713",
+    "end = astronomy-layer sign ingress of Venus \u2713",
+    "matches existing calendar SI row (cfg_silver_bearish_01_venus_alone_in_leo_or_libra) \u2713"
+   ],
+   "rule_ids": [
+    "doc26_silver_bear_01_venus_alone_leo_libra"
+   ]
+  },
+  {
+   "start_ET": "Thu 10 Dec 2026 18:31 EST",
+   "end_ET": "",
+   "title": "Saturn direct from retrograde",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish (September 2019)"
+   ],
+   "rule": "Saturn direct from retrograde.",
+   "detail": "Saturn 13.69 deg Pisces (Uttara Bhadrapada p4)",
+   "refs": [
+    "TA p.160 [printed 130] Section 35 B (silver) #10"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer station of Saturn \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35b10_saturn_direct"
+   ]
+  },
+  {
+   "start_ET": "Sat 12 Dec 2026 19:56 EST",
+   "end_ET": "Tue 09 Feb 2027 12:36 EST",
+   "title": "Retrograde Mercury or Jupiter",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver: increases volatility & prices start rising"
+   ],
+   "rule": "Mercury or Jupiter retrograde.",
+   "detail": "value: ('Jupiter',)",
+   "refs": [
+    "TA p.157 [printed 127] Section 35 A #1"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer station of Jupiter \u2713",
+    "end = astronomy-layer station of Mercury \u2713",
+    "matches existing calendar SI row (cfg_silver_bullish_02_retrograde_mercury_or_jupiter) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a01_retro_mercury_or_jupiter"
+   ]
+  },
+  {
+   "start_ET": "Tue 15 Dec 2026 01:23 EST",
+   "end_ET": "Wed 16 Dec 2026 03:33 EST",
+   "title": "Moon-Venus mutual Vedha",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish"
+   ],
+   "rule": "Moon and Venus vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
+   "detail": "Moon 6.67 deg Aquarius (Shatabhisha p1); Venus 13.83 deg Libra (Swati p3) | value: Moon in Shatabhisha vedhas Swati (Front side) where Venus is; Venus in Swati vedhas Shatabhisha (Front side) where Moon is",
+   "refs": [
+    "TA p.160 [printed 130] Section 35 B (silver) #7"
+   ],
+   "quals": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Moon \u2713",
+    "end = astronomy-layer nakshatra ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35b07_moon_venus_mutual_vedha"
+   ]
+  },
+  {
+   "start_ET": "Tue 15 Dec 2026",
+   "end_ET": "",
+   "title": "Silver prophecy: Shukla Shashti range",
+   "tone": "Neutral",
+   "verdicts": [
+    "Watch prices on Shashti of Shukla Paksh: whichever side the range breaks next day, it moves that way till Full Moon (worked 9 of 12 months)"
+   ],
+   "rule": "Udaya tithi Shukla Shashti.",
+   "detail": "Moon 9.65 deg Aquarius (Shatabhisha p1); Sun 29.30 deg Scorpio (Jyeshtha p4) | tithi at sunrise: Shukla Shashti",
+   "refs": [
+    "TA p.157 [printed 127] Section 35 'Silver prophecy'",
+    "2026 document (data/source_2026.html), Silver section - Bullish #1 'Turning dates'"
+   ],
+   "quals": [
+    "Direction is set by the next day's range break, not by the configuration; tagged Neutral here."
+   ],
+   "checks": [
+    "darshan criterion reproduces all 4 Moon-darshan dates printed in the 2026 document at Mumbai (3 of 4 at New York); both sightings shown"
+   ],
+   "rule_ids": [
+    "ta_s35_silver_prophecy_shashti"
+   ]
+  },
+  {
+   "start_ET": "Mon 21 Dec 2026 21:09 EST",
+   "end_ET": "Sat 09 Jan 2027 14:07 EST",
+   "title": "Only Sun-Mercury or Moon-Mercury alone in a sign",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish"
+   ],
+   "rule": "Mercury shares a sign only with the Sun (or only with the Moon).",
+   "detail": "Sun 5.99 deg Sagittarius (Mula p2); Mercury 0.00 deg Sagittarius (Mula p1) | value: Sagittarius",
+   "refs": [
+    "TA p.159 [printed 129] Section 35 A #17"
+   ],
+   "quals": [
+    "Moon-Mercury variant belongs to the Moon layer (2.5-day windows)."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Mercury \u2713",
+    "end = astronomy-layer sign ingress of Mercury \u2713",
+    "matches existing calendar SI row (cfg_silver_bullish_15_sun_or_moon_with_mercury_alone) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a17_sun_or_moon_mercury_alone"
+   ]
+  },
+  {
+   "start_ET": "Sat 09 Jan 2027",
+   "end_ET": "",
+   "title": "Moon darshan on Friday or Saturday",
+   "tone": "Bullish",
+   "verdicts": [
+    "Bullish (silver Bullish)"
+   ],
+   "rule": "Moon darshan on Friday or Saturday.",
+   "detail": "Moon 17.38 deg Capricorn (Shravana p3); Sun 25.16 deg Sagittarius (Purva Ashadha p4) | weekday: Saturday; moon nakshatra: Shravana; tithi at sunset: Shukla Dwitiya; elongation deg: 22.2; Mumbai sighting: Sat 09 Jan 2027 (rule also met in India)",
+   "refs": [
+    "TA p.79 [printed 49] Section 24 #15",
+    "TA p.158 [printed 128] Section 35 A (silver) #8",
+    "KD p.133 #2"
+   ],
+   "quals": [
+    "'Moon rise' / 'Moon darshan' read as the first evening sighting after Amavasya (Chandra Darshan). Operational criterion (not in either PDF): first New York sunset with elongation >= 12 deg and Moon age >= 20 h. Indian almanacs date the darshan for Indian sunset and can be a day earlier.",
+    "CONFLICT: TA S34 B9 (gold) 'Moon darshan on Saturday is Bearish' (for gold)."
+   ],
+   "checks": [
+    "darshan criterion reproduces all 4 Moon-darshan dates printed in the 2026 document at Mumbai (3 of 4 at New York); both sightings shown"
+   ],
+   "rule_ids": [
+    "ta_s24_15_moon_darshan_fri_sat"
+   ]
+  },
+  {
+   "start_ET": "Wed 13 Jan 2027",
+   "end_ET": "",
+   "title": "Silver prophecy: Shukla Shashti range",
+   "tone": "Neutral",
+   "verdicts": [
+    "Watch prices on Shashti of Shukla Paksh: whichever side the range breaks next day, it moves that way till Full Moon (worked 9 of 12 months)"
+   ],
+   "rule": "Udaya tithi Shukla Shashti.",
+   "detail": "Moon 1.15 deg Pisces (Purva Bhadrapada p4); Sun 28.84 deg Sagittarius (Uttara Ashadha p1) | tithi at sunrise: Shukla Shashti",
+   "refs": [
+    "TA p.157 [printed 127] Section 35 'Silver prophecy'",
+    "2026 document (data/source_2026.html), Silver section - Bullish #1 'Turning dates'"
+   ],
+   "quals": [
+    "Direction is set by the next day's range break, not by the configuration; tagged Neutral here."
+   ],
+   "checks": [
+    "darshan criterion reproduces all 4 Moon-darshan dates printed in the 2026 document at Mumbai (3 of 4 at New York); both sightings shown",
+    "existing calendar (cfg_silver_bullish_01_shukla_shashti_turning_dates) has no SI row at this start"
+   ],
+   "rule_ids": [
+    "ta_s35_silver_prophecy_shashti"
+   ]
+  },
+  {
+   "start_ET": "Thu 21 Jan 2027 23:55 EST",
+   "end_ET": "Fri 22 Jan 2027 21:01 EST",
+   "title": "Moon-Venus mutual Vedha",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish"
+   ],
+   "rule": "Moon and Venus vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
+   "detail": "Moon 3.34 deg Cancer (Pushya p1); Venus 21.76 deg Scorpio (Jyeshtha p2) | value: Moon in Pushya vedhas Jyeshtha (Front side) where Venus is; Venus in Jyeshtha vedhas Pushya (Front side) where Moon is",
+   "refs": [
+    "TA p.160 [printed 130] Section 35 B (silver) #7"
+   ],
+   "quals": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Moon \u2713",
+    "end = astronomy-layer nakshatra ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35b07_moon_venus_mutual_vedha"
+   ]
+  },
+  {
+   "start_ET": "Sat 06 Feb 2027 09:38 EST",
+   "end_ET": "Fri 12 Feb 2027 23:39 EST",
+   "title": "Sun in Pushya or Dhanishta without benefic planets",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish"
+   ],
+   "rule": "Sun in Pushya/Dhanishta with no benefic in its sign.",
+   "detail": "Sun 23.33 deg Capricorn (Dhanishta p1) | value: Dhanishta",
+   "refs": [
+    "TA p.157 [printed 127] Section 35 A #2"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Sun \u2713",
+    "matches existing calendar SI row (cfg_silver_bullish_03_sun_pushya_or_dhanistha_without_benefic) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a02_sun_pushya_dhanishta_no_benefic"
+   ]
+  },
+  {
+   "start_ET": "Sat 06 Feb 2027 09:38 EST",
+   "end_ET": "Wed 17 Feb 2027 11:42 EST",
+   "title": "Sun in Pushya or Dhanishta with no benefic in the same nakshatra",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish"
+   ],
+   "rule": "Sun in Pushya or Dhanishta and no benefic (Mercury, Venus, Jupiter) in that nakshatra.",
+   "detail": "Sun 23.33 deg Capricorn (Dhanishta p1) | value: Dhanishta",
+   "refs": [
+    "2026 document (data/source_2026.html), Silver section - Bullish #3",
+    "TA p.157 S35 A2 ('Sun in Pushya or Dhanishtha without Benefic Planets')"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Sun \u2713",
+    "end = astronomy-layer nakshatra ingress of Mercury \u2713"
+   ],
+   "rule_ids": [
+    "doc26_silver_bull_03_sun_pushya_dhanishta_no_benefic_nak"
+   ]
+  },
+  {
+   "start_ET": "Sun 07 Feb 2027 00:07 EST",
+   "end_ET": "Tue 09 Feb 2027 10:47 EST",
+   "title": "Only Moon and Mercury alone in a sign",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish"
+   ],
+   "rule": "Moon and Mercury share a sign with no other graha in it.",
+   "detail": "Moon 0.00 deg Aquarius (Dhanishta p3); Mercury 11.18 deg Aquarius (Shatabhisha p2) | value: Aquarius",
+   "refs": [
+    "TA p.159 S35 A17 (Moon-Mercury half)"
+   ],
+   "quals": [
+    "The 2026 document prints only the Sun-Mercury half of this rule."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer sign ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a17b_moon_mercury_alone"
+   ]
+  },
+  {
+   "start_ET": "Tue 09 Feb 2027 12:36 EST",
+   "end_ET": "Wed 03 Mar 2027 07:32 EST",
+   "title": "Mercury & Jupiter both retrograde (even in different signs)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish"
+   ],
+   "rule": "Both retrograde.",
+   "detail": "Mercury 11.74 deg Aquarius (Shatabhisha p2) R; Jupiter 27.97 deg Cancer (Ashlesha p4) R",
+   "refs": [
+    "TA p.159 [printed 129] Section 35 A #18"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer station of Mercury \u2713",
+    "end = astronomy-layer station of Mercury \u2713",
+    "matches existing calendar SI row (cfg_silver_bullish_16_mercury_jupiter_both_retrograde) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a18_mercury_jupiter_retro"
+   ]
+  },
+  {
+   "start_ET": "Tue 09 Feb 2027 12:36 EST",
+   "end_ET": "Wed 03 Mar 2027 07:32 EST",
+   "title": "Retrograde Mercury or Jupiter",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver: increases volatility & prices start rising"
+   ],
+   "rule": "Mercury or Jupiter retrograde.",
+   "detail": "value: ('Mercury', 'Jupiter')",
+   "refs": [
+    "TA p.157 [printed 127] Section 35 A #1"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer station of Mercury \u2713",
+    "end = astronomy-layer station of Mercury \u2713",
+    "existing calendar (cfg_silver_bullish_02_retrograde_mercury_or_jupiter) has no SI row at this start"
+   ],
+   "rule_ids": [
+    "ta_s35a01_retro_mercury_or_jupiter"
+   ]
+  },
+  {
+   "start_ET": "Fri 12 Feb 2027",
+   "end_ET": "",
+   "title": "Silver prophecy: Shukla Shashti range",
+   "tone": "Neutral",
+   "verdicts": [
+    "Watch prices on Shashti of Shukla Paksh: whichever side the range breaks next day, it moves that way till Full Moon (worked 9 of 12 months)"
+   ],
+   "rule": "Udaya tithi Shukla Shashti.",
+   "detail": "Moon 6.44 deg Aries (Ashwini p2); Sun 29.30 deg Capricorn (Dhanishta p2) | tithi at sunrise: Shukla Shashti",
+   "refs": [
+    "TA p.157 [printed 127] Section 35 'Silver prophecy'",
+    "2026 document (data/source_2026.html), Silver section - Bullish #1 'Turning dates'"
+   ],
+   "quals": [
+    "Direction is set by the next day's range break, not by the configuration; tagged Neutral here."
+   ],
+   "checks": [
+    "darshan criterion reproduces all 4 Moon-darshan dates printed in the 2026 document at Mumbai (3 of 4 at New York); both sightings shown",
+    "existing calendar (cfg_silver_bullish_01_shukla_shashti_turning_dates) has no SI row at this start"
+   ],
+   "rule_ids": [
+    "ta_s35_silver_prophecy_shashti"
+   ]
+  },
+  {
+   "start_ET": "Sat 13 Feb 2027 (civil date)",
+   "end_ET": "Wed 24 Feb 2027 (civil date)",
+   "title": "Retrograde Mercury goes combust",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver: short term uptrend; market Bullish"
+   ],
+   "rule": "Retrograde Mercury goes combust.",
+   "detail": "Mercury 10.92 deg Aquarius (Shatabhisha p2) R; Sun 29.57 deg Capricorn (Dhanishta p2) | combust direction: West; rise direction: East; days: 11; retro at combust: True; retro mid: True; sign at combust: Aquarius; sign at rise: Aquarius; nakshatra at rise: Dhanishta; with at rise: ['Sun']",
+   "refs": [
+    "TA p.159 [printed 129] Section 35 A (silver) #19",
+    "TA p.70 'if Combust in Retrogression its Bullish'"
+   ],
+   "quals": [
+    "Combust/rise dates are civil dates, not instants: the event is date-only."
+   ],
+   "checks": [
+    "combust/rise civil dates from the astronomy layer (Mumbai kalamsha)"
+   ],
+   "rule_ids": [
+    "ta_s35a19_retro_mercury_combust"
+   ]
+  },
+  {
+   "start_ET": "Fri 12 Feb 2027 23:39 EST",
+   "end_ET": "Tue 23 Feb 2027 18:10 EST",
+   "title": "Only Sun-Mercury or Moon-Mercury alone in a sign",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish"
+   ],
+   "rule": "Mercury shares a sign only with the Sun (or only with the Moon).",
+   "detail": "Sun 0.00 deg Aquarius (Dhanishta p3); Mercury 10.68 deg Aquarius (Shatabhisha p2) R | value: Aquarius",
+   "refs": [
+    "TA p.159 [printed 129] Section 35 A #17"
+   ],
+   "quals": [
+    "Moon-Mercury variant belongs to the Moon layer (2.5-day windows)."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Mercury \u2713",
+    "matches existing calendar SI row (cfg_silver_bullish_15_sun_or_moon_with_mercury_alone) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a17_sun_or_moon_mercury_alone"
+   ]
+  },
+  {
+   "start_ET": "Tue 16 Feb 2027 15:08 EST",
+   "end_ET": "Wed 17 Feb 2027 12:59 EST",
+   "title": "Moon-Venus mutual Vedha",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish"
+   ],
+   "rule": "Moon and Venus vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
+   "detail": "Moon 6.67 deg Gemini (Ardra p1); Venus 21.10 deg Sagittarius (Purva Ashadha p3) | value: Moon in Ardra vedhas Purva Ashadha (Front side) where Venus is; Venus in Purva Ashadha vedhas Ardra (Front side) where Moon is",
+   "refs": [
+    "TA p.160 [printed 130] Section 35 B (silver) #7"
+   ],
+   "quals": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Moon \u2713",
+    "end = astronomy-layer nakshatra ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35b07_moon_venus_mutual_vedha"
+   ]
+  },
+  {
+   "start_ET": "Wed 03 Mar 2027 07:32 EST",
+   "end_ET": "Mon 12 Apr 2027 22:11 EDT",
+   "title": "Retrograde Mercury or Jupiter",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver: increases volatility & prices start rising"
+   ],
+   "rule": "Mercury or Jupiter retrograde.",
+   "detail": "value: ('Jupiter',)",
+   "refs": [
+    "TA p.157 [printed 127] Section 35 A #1"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer station of Mercury \u2713",
+    "end = astronomy-layer station of Jupiter \u2713",
+    "existing calendar (cfg_silver_bullish_02_retrograde_mercury_or_jupiter) has no SI row at this start"
+   ],
+   "rule_ids": [
+    "ta_s35a01_retro_mercury_or_jupiter"
+   ]
+  },
+  {
+   "start_ET": "Wed 03 Mar 2027 07:32 EST",
+   "end_ET": "",
+   "title": "Mercury turns direct from retrograde",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver: short term bounce"
+   ],
+   "rule": "Mercury turns direct from retrograde.",
+   "detail": "Mercury 26.68 deg Capricorn (Dhanishta p2)",
+   "refs": [
+    "TA p.159 [printed 129] Section 35 A (silver) #16"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer station of Mercury \u2713",
+    "matches existing calendar SI row (cfg_silver_bullish_13_jupiter_or_mercury_turns_direct) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a16_mercury_turns_direct"
+   ]
+  },
+  {
+   "start_ET": "Fri 05 Mar 2027 09:04 EST",
+   "end_ET": "Sat 06 Mar 2027 07:32 EST",
+   "title": "Mercury does Vedha of Venus",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish"
+   ],
+   "rule": "Mercury does Vedha to the nakshatra Venus occupies on the Sarvatobhadra wheel (TA pp.131-133).",
+   "detail": "Mercury 26.91 deg Capricorn (Dhanishta p2); Venus 10.89 deg Capricorn (Shravana p1) | value: Mercury in Dhanishta vedhas Shravana (Right side) where Venus is",
+   "refs": [
+    "TA p.158 [printed 128] Section 35 A (silver) #11"
+   ],
+   "quals": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "checks": [
+    "start: computed boundary (no single layer record)",
+    "end: computed boundary (no single layer record)"
+   ],
+   "rule_ids": [
+    "ta_s35a11_mercury_vedha_venus"
+   ]
+  },
+  {
+   "start_ET": "Tue 09 Mar 2027 13:43 EST",
+   "end_ET": "Mon 26 Apr 2027 02:17 EDT",
+   "title": "Mars in 4th pada of Ashlesha",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver: good fall"
+   ],
+   "rule": "Mars in Ashlesha pada 4 (Cancer 26deg40'-30deg).",
+   "detail": "Mars 30.00 deg Cancer (Ashlesha p4) R",
+   "refs": [
+    "TA p.160 [printed 130] Section 35 B #3"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer sign ingress of Mars \u2713",
+    "end = astronomy-layer sign ingress of Mars \u2713",
+    "matches existing calendar SI row (cfg_silver_bearish_03_mars_in_fourth_pad_of_ashlesha) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35b03_mars_ashlesha_pada4"
+   ]
+  },
+  {
+   "start_ET": "Tue 09 Mar 2027 13:43 EST",
+   "end_ET": "Thu 01 Apr 2027 10:08 EDT",
+   "title": "Retrograde Mars with Ketu",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver huge Bearish; sugar 5 days Bearish then reversal"
+   ],
+   "rule": "Mars retrograde in the same sign as Ketu.",
+   "detail": "Mars 30.00 deg Cancer (Ashlesha p4) R; Ketu 25.02 deg Cancer (Ashlesha p3)",
+   "refs": [
+    "TA p.160 [printed 130] Section 35 B #8",
+    "TA p.165 [printed 135] Section 36 B (sugar) #4"
+   ],
+   "quals": [
+    "Rahu/Ketu sign/nakshatra changes: the 2026 document's almanac prints the 5 Dec 2026 node ingress 40 min earlier (21:52 IST) than the mean node computed here (22:32 IST) - a known 5-arcsecond formulation gap (config/conventions.yaml)."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Mars \u2713",
+    "end = astronomy-layer station of Mars \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35b08_retro_mars_with_ketu"
+   ]
+  },
+  {
+   "start_ET": "Thu 11 Mar 2027 18:37 EST",
+   "end_ET": "Sun 14 Mar 2027 21:30 EDT",
+   "title": "Only Sun-Mercury or Moon-Mercury alone in a sign",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish"
+   ],
+   "rule": "Mercury shares a sign only with the Sun (or only with the Moon).",
+   "detail": "Sun 26.93 deg Aquarius (Purva Bhadrapada p3); Mercury 0.00 deg Aquarius (Dhanishta p3) | value: Aquarius",
+   "refs": [
+    "TA p.159 [printed 129] Section 35 A #17"
+   ],
+   "quals": [
+    "Moon-Mercury variant belongs to the Moon layer (2.5-day windows)."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Mercury \u2713",
+    "end = astronomy-layer sign ingress of Sun \u2713",
+    "matches existing calendar SI row (cfg_silver_bullish_15_sun_or_moon_with_mercury_alone) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a17_sun_or_moon_mercury_alone"
+   ]
+  },
+  {
+   "start_ET": "Sat 13 Mar 2027 00:33 EST",
+   "end_ET": "Sat 13 Mar 2027 23:53 EST",
+   "title": "Moon-Venus mutual Vedha",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish"
+   ],
+   "rule": "Moon and Venus vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
+   "detail": "Moon 26.67 deg Aries (Krittika p1); Venus 20.02 deg Capricorn (Shravana p4) | value: Moon in Krittika vedhas Shravana (Front side) where Venus is; Venus in Shravana vedhas Krittika (Front side) where Moon is",
+   "refs": [
+    "TA p.160 [printed 130] Section 35 B (silver) #7"
+   ],
+   "quals": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Moon \u2713",
+    "end = astronomy-layer nakshatra ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35b07_moon_venus_mutual_vedha"
+   ]
+  },
+  {
+   "start_ET": "Sat 13 Mar 2027",
+   "end_ET": "",
+   "title": "Silver prophecy: Shukla Shashti range",
+   "tone": "Neutral",
+   "verdicts": [
+    "Watch prices on Shashti of Shukla Paksh: whichever side the range breaks next day, it moves that way till Full Moon (worked 9 of 12 months)"
+   ],
+   "rule": "Udaya tithi Shukla Shashti.",
+   "detail": "Moon 29.91 deg Aries (Krittika p1); Sun 28.41 deg Aquarius (Purva Bhadrapada p3) | tithi at sunrise: Shukla Shashti",
+   "refs": [
+    "TA p.157 [printed 127] Section 35 'Silver prophecy'",
+    "2026 document (data/source_2026.html), Silver section - Bullish #1 'Turning dates'"
+   ],
+   "quals": [
+    "Direction is set by the next day's range break, not by the configuration; tagged Neutral here."
+   ],
+   "checks": [
+    "darshan criterion reproduces all 4 Moon-darshan dates printed in the 2026 document at Mumbai (3 of 4 at New York); both sightings shown",
+    "existing calendar (cfg_silver_bullish_01_shukla_shashti_turning_dates) has no SI row at this start"
+   ],
+   "rule_ids": [
+    "ta_s35_silver_prophecy_shashti"
+   ]
+  },
+  {
+   "start_ET": "Sun 14 Mar 2027 21:30 EDT",
+   "end_ET": "Mon 05 Apr 2027 06:46 EDT",
+   "title": "Sun in Virgo, Libra or Pisces with or aspected by benefics",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish"
+   ],
+   "rule": "Sun in Virgo/Libra/Pisces with a benefic in its sign or aspecting it.",
+   "detail": "Sun 0.00 deg Pisces (Purva Bhadrapada p4) | value: ('Jupiter',)",
+   "refs": [
+    "TA p.161 [printed 131] Section 35 B #13"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer sign ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Mercury \u2713",
+    "matches existing calendar SI row (cfg_silver_bearish_09_sun_three_signs_with_or_aspected_by_benefics) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35b13_sun_vir_lib_pis_benefic"
+   ]
+  },
+  {
+   "start_ET": "Mon 15 Mar 2027 20:01 EDT",
+   "end_ET": "Fri 26 Mar 2027 22:21 EDT",
+   "title": "Jupiter does Vedha of Venus",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish"
+   ],
+   "rule": "Jupiter does Vedha to the nakshatra Venus occupies on the Sarvatobhadra wheel (TA pp.131-133).",
+   "detail": "Jupiter 23.98 deg Cancer (Ashlesha p3) R; Venus 23.33 deg Capricorn (Dhanishta p1) | value: Jupiter in Ashlesha vedhas Dhanishta (Right side) where Venus is",
+   "refs": [
+    "TA p.158 [printed 128] Section 35 A (silver) #11"
+   ],
+   "quals": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Venus \u2713",
+    "end = astronomy-layer nakshatra ingress of Venus \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a11_jupiter_vedha_venus"
+   ]
+  },
+  {
+   "start_ET": "Thu 25 Mar 2027 10:10 EDT",
+   "end_ET": "Fri 26 Mar 2027 11:06 EDT",
+   "title": "Moon-Venus mutual Vedha",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish"
+   ],
+   "rule": "Moon and Venus vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
+   "detail": "Moon 20.00 deg Libra (Vishakha p1); Venus 4.85 deg Aquarius (Dhanishta p4) | value: Moon in Vishakha vedhas Dhanishta (Front side) where Venus is; Venus in Dhanishta vedhas Vishakha (Front side) where Moon is",
+   "refs": [
+    "TA p.160 [printed 130] Section 35 B (silver) #7"
+   ],
+   "quals": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Moon \u2713",
+    "end = astronomy-layer nakshatra ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35b07_moon_venus_mutual_vedha"
+   ]
+  },
+  {
+   "start_ET": "Mon 05 Apr 2027 06:46 EDT",
+   "end_ET": "Wed 14 Apr 2027 05:58 EDT",
+   "title": "Sun in Virgo, Libra or Pisces with or aspected by benefics",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish"
+   ],
+   "rule": "Sun in Virgo/Libra/Pisces with a benefic in its sign or aspecting it.",
+   "detail": "Sun 21.19 deg Pisces (Revati p2) | value: ('Mercury', 'Jupiter')",
+   "refs": [
+    "TA p.161 [printed 131] Section 35 B #13"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer sign ingress of Mercury \u2713",
+    "end = astronomy-layer sign ingress of Sun \u2713",
+    "matches existing calendar SI row (cfg_silver_bearish_09_sun_three_signs_with_or_aspected_by_benefics) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35b13_sun_vir_lib_pis_benefic"
+   ]
+  },
+  {
+   "start_ET": "Tue 06 Apr 2027 19:51 EDT",
+   "end_ET": "",
+   "title": "Chaitra Shukla Pratipada on Wednesday",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver: short term Bullish"
+   ],
+   "rule": "Hindu new year's day falls on a Wednesday.",
+   "detail": "Sun 22.71 deg Pisces (Revati p2) | role: King (Raja); basis: Chaitra Shukla Pratipada; location: new_york; weekday: Wednesday; lord: Mercury; result: Business is good despite soft prices & sufficient availability of goods; pratipada touches sunrise: True",
+   "refs": [
+    "TA p.158 [printed 128] Section 35 A (silver) #5"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer lunation of Moon \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a05_chaitra_shukla_pratipada_wednesday"
+   ]
+  },
+  {
+   "start_ET": "Mon 12 Apr 2027",
+   "end_ET": "",
+   "title": "Silver prophecy: Shukla Shashti range",
+   "tone": "Neutral",
+   "verdicts": [
+    "Watch prices on Shashti of Shukla Paksh: whichever side the range breaks next day, it moves that way till Full Moon (worked 9 of 12 months)"
+   ],
+   "rule": "Udaya tithi Shukla Shashti.",
+   "detail": "Moon 8.06 deg Gemini (Ardra p1); Sun 28.06 deg Pisces (Revati p4) | tithi at sunrise: Shukla Shashti",
+   "refs": [
+    "TA p.157 [printed 127] Section 35 'Silver prophecy'",
+    "2026 document (data/source_2026.html), Silver section - Bullish #1 'Turning dates'"
+   ],
+   "quals": [
+    "Direction is set by the next day's range break, not by the configuration; tagged Neutral here."
+   ],
+   "checks": [
+    "darshan criterion reproduces all 4 Moon-darshan dates printed in the 2026 document at Mumbai (3 of 4 at New York); both sightings shown",
+    "existing calendar (cfg_silver_bullish_01_shukla_shashti_turning_dates) has no SI row at this start"
+   ],
+   "rule_ids": [
+    "ta_s35_silver_prophecy_shashti"
+   ]
+  },
+  {
+   "start_ET": "Mon 12 Apr 2027 22:11 EDT",
+   "end_ET": "",
+   "title": "Jupiter turns direct from retrograde",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver: short term bounce"
+   ],
+   "rule": "Jupiter turns direct from retrograde.",
+   "detail": "Jupiter 22.75 deg Cancer (Ashlesha p2)",
+   "refs": [
+    "TA p.159 [printed 129] Section 35 A (silver) #16"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer station of Jupiter \u2713",
+    "matches existing calendar SI row (cfg_silver_bullish_13_jupiter_or_mercury_turns_direct) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a16_jupiter_turns_direct"
+   ]
+  },
+  {
+   "start_ET": "Thu 15 Apr 2027 05:50 EDT",
+   "end_ET": "Wed 21 Apr 2027 22:42 EDT",
+   "title": "Mercury & Venus both in Pisces",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish"
+   ],
+   "rule": "Mercury and Venus in Pisces.",
+   "detail": "Mercury 17.08 deg Pisces (Revati p1); Venus 0.00 deg Pisces (Purva Bhadrapada p4)",
+   "refs": [
+    "TA p.161 [printed 131] Section 35 B #15"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer sign ingress of Venus \u2713",
+    "end = astronomy-layer sign ingress of Mercury \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35b15_mercury_venus_pisces"
+   ]
+  },
+  {
+   "start_ET": "Sun 18 Apr 2027 19:45 EDT",
+   "end_ET": "Mon 19 Apr 2027 19:11 EDT",
+   "title": "Moon-Venus mutual Vedha",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish"
+   ],
+   "rule": "Moon and Venus vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
+   "detail": "Moon 10.00 deg Virgo (Hasta p1); Venus 4.34 deg Pisces (Uttara Bhadrapada p1) | value: Moon in Hasta vedhas Uttara Bhadrapada (Front side) where Venus is; Venus in Uttara Bhadrapada vedhas Hasta (Front side) where Moon is",
+   "refs": [
+    "TA p.160 [printed 130] Section 35 B (silver) #7"
+   ],
+   "quals": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Moon \u2713",
+    "end = astronomy-layer nakshatra ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35b07_moon_venus_mutual_vedha"
+   ]
+  },
+  {
+   "start_ET": "Wed 21 Apr 2027 22:42 EDT",
+   "end_ET": "Thu 06 May 2027 03:06 EDT",
+   "title": "Mercury in Aries or Virgo",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish"
+   ],
+   "rule": "Mercury in Aries or Virgo.",
+   "detail": "Mercury 0.00 deg Aries (Ashwini p1) | value: Aries",
+   "refs": [
+    "TA p.160 [printed 130] Section 35 B #2"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer sign ingress of Mercury \u2713",
+    "end = astronomy-layer sign ingress of Mercury \u2713",
+    "existing calendar (cfg_silver_bearish_02_mercury_alone_in_aries_or_virgo) has no SI row at this start"
+   ],
+   "rule_ids": [
+    "ta_s35b02_mercury_aries_virgo"
+   ]
+  },
+  {
+   "start_ET": "Wed 21 Apr 2027 22:42 EDT",
+   "end_ET": "Thu 06 May 2027 03:06 EDT",
+   "title": "Only Sun-Mercury or Moon-Mercury alone in a sign",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish"
+   ],
+   "rule": "Mercury shares a sign only with the Sun (or only with the Moon).",
+   "detail": "Sun 7.52 deg Aries (Ashwini p3); Mercury 0.00 deg Aries (Ashwini p1) | value: Aries",
+   "refs": [
+    "TA p.159 [printed 129] Section 35 A #17"
+   ],
+   "quals": [
+    "Moon-Mercury variant belongs to the Moon layer (2.5-day windows)."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Mercury \u2713",
+    "end = astronomy-layer sign ingress of Mercury \u2713",
+    "matches existing calendar SI row (cfg_silver_bullish_15_sun_or_moon_with_mercury_alone) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a17_sun_or_moon_mercury_alone"
+   ]
+  },
+  {
+   "start_ET": "Thu 06 May 2027 21:26 EDT",
+   "end_ET": "Sat 08 May 2027 23:26 EDT",
+   "title": "Only Moon and Mercury alone in a sign",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish"
+   ],
+   "rule": "Moon and Mercury share a sign with no other graha in it.",
+   "detail": "Moon 0.00 deg Taurus (Krittika p2); Mercury 1.60 deg Taurus (Krittika p2) | value: Taurus",
+   "refs": [
+    "TA p.159 S35 A17 (Moon-Mercury half)"
+   ],
+   "quals": [
+    "The 2026 document prints only the Sun-Mercury half of this rule."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer sign ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a17b_moon_mercury_alone"
+   ]
+  },
+  {
+   "start_ET": "Fri 07 May 2027",
+   "end_ET": "",
+   "title": "Moon darshan on Friday or Saturday",
+   "tone": "Bullish",
+   "verdicts": [
+    "Bullish (silver Bullish)"
+   ],
+   "rule": "Moon darshan on Friday or Saturday.",
+   "detail": "Moon 13.41 deg Taurus (Rohini p2); Sun 22.96 deg Aries (Bharani p3) | weekday: Friday; moon nakshatra: Rohini; tithi at sunset: Shukla Dwitiya; elongation deg: 20.5; Mumbai sighting: Fri 07 May 2027 (rule also met in India)",
+   "refs": [
+    "TA p.79 [printed 49] Section 24 #15",
+    "TA p.158 [printed 128] Section 35 A (silver) #8",
+    "KD p.133 #2"
+   ],
+   "quals": [
+    "'Moon rise' / 'Moon darshan' read as the first evening sighting after Amavasya (Chandra Darshan). Operational criterion (not in either PDF): first New York sunset with elongation >= 12 deg and Moon age >= 20 h. Indian almanacs date the darshan for Indian sunset and can be a day earlier.",
+    "CONFLICT: TA S34 B9 (gold) 'Moon darshan on Saturday is Bearish' (for gold)."
+   ],
+   "checks": [
+    "darshan criterion reproduces all 4 Moon-darshan dates printed in the 2026 document at Mumbai (3 of 4 at New York); both sightings shown"
+   ],
+   "rule_ids": [
+    "ta_s24_15_moon_darshan_fri_sat"
+   ]
+  },
+  {
+   "start_ET": "Tue 11 May 2027",
+   "end_ET": "",
+   "title": "Silver prophecy: Shukla Shashti range",
+   "tone": "Neutral",
+   "verdicts": [
+    "Watch prices on Shashti of Shukla Paksh: whichever side the range breaks next day, it moves that way till Full Moon (worked 9 of 12 months)"
+   ],
+   "rule": "Udaya tithi Shukla Shashti.",
+   "detail": "Moon 2.66 deg Cancer (Punarvasu p4); Sun 26.26 deg Aries (Bharani p4) | tithi at sunrise: Shukla Shashti",
+   "refs": [
+    "TA p.157 [printed 127] Section 35 'Silver prophecy'",
+    "2026 document (data/source_2026.html), Silver section - Bullish #1 'Turning dates'"
+   ],
+   "quals": [
+    "Direction is set by the next day's range break, not by the configuration; tagged Neutral here."
+   ],
+   "checks": [
+    "darshan criterion reproduces all 4 Moon-darshan dates printed in the 2026 document at Mumbai (3 of 4 at New York); both sightings shown",
+    "existing calendar (cfg_silver_bullish_01_shukla_shashti_turning_dates) has no SI row at this start"
+   ],
+   "rule_ids": [
+    "ta_s35_silver_prophecy_shashti"
+   ]
+  },
+  {
+   "start_ET": "Fri 14 May 2027 03:12 EDT",
+   "end_ET": "Sat 15 May 2027 02:30 EDT",
+   "title": "Moon-Venus mutual Vedha",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish"
+   ],
+   "rule": "Moon and Venus vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
+   "detail": "Moon 13.34 deg Leo (Purva Phalguni p1); Venus 5.06 deg Aries (Ashwini p2) | value: Moon in Purva Phalguni vedhas Ashwini (Front side) where Venus is; Venus in Ashwini vedhas Purva Phalguni (Front side) where Moon is",
+   "refs": [
+    "TA p.160 [printed 130] Section 35 B (silver) #7"
+   ],
+   "quals": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Moon \u2713",
+    "end = astronomy-layer nakshatra ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35b07_moon_venus_mutual_vedha"
+   ]
+  },
+  {
+   "start_ET": "Sat 15 May 2027 02:50 EDT",
+   "end_ET": "Sun 23 May 2027 09:02 EDT",
+   "title": "Only Sun-Mercury or Moon-Mercury alone in a sign",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish"
+   ],
+   "rule": "Mercury shares a sign only with the Sun (or only with the Moon).",
+   "detail": "Sun 0.00 deg Taurus (Krittika p2); Mercury 17.50 deg Taurus (Rohini p3) | value: Taurus",
+   "refs": [
+    "TA p.159 [printed 129] Section 35 A #17"
+   ],
+   "quals": [
+    "Moon-Mercury variant belongs to the Moon layer (2.5-day windows)."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Mercury \u2713",
+    "existing calendar (cfg_silver_bullish_15_sun_or_moon_with_mercury_alone) has no SI row at this start"
+   ],
+   "rule_ids": [
+    "ta_s35a17_sun_or_moon_mercury_alone"
+   ]
+  },
+  {
+   "start_ET": "Wed 02 Jun 2027 19:58 EDT",
+   "end_ET": "Tue 19 Oct 2027 21:42 EDT",
+   "title": "Saturn in Aquarius or Aries",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish trend"
+   ],
+   "rule": "Saturn in Aquarius or Aries.",
+   "detail": "Saturn 0.00 deg Aries (Ashwini p1) | value: Aries",
+   "refs": [
+    "TA p.158 [printed 128] Section 35 A #9"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer sign ingress of Saturn \u2713",
+    "end = astronomy-layer sign ingress of Saturn \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a09_saturn_aquarius_aries"
+   ]
+  },
+  {
+   "start_ET": "Sat 05 Jun 2027 08:21 EDT",
+   "end_ET": "Mon 07 Jun 2027 08:50 EDT",
+   "title": "Only Moon and Mercury alone in a sign",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish"
+   ],
+   "rule": "Moon and Mercury share a sign with no other graha in it.",
+   "detail": "Moon 0.00 deg Gemini (Mrigashira p3); Mercury 11.07 deg Gemini (Ardra p2) | value: Gemini",
+   "refs": [
+    "TA p.159 S35 A17 (Moon-Mercury half)"
+   ],
+   "quals": [
+    "The 2026 document prints only the Sun-Mercury half of this rule."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer sign ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a17b_moon_mercury_alone"
+   ]
+  },
+  {
+   "start_ET": "Sat 05 Jun 2027",
+   "end_ET": "",
+   "title": "Moon darshan on Friday or Saturday",
+   "tone": "Bullish",
+   "verdicts": [
+    "Bullish (silver Bullish)"
+   ],
+   "rule": "Moon darshan on Friday or Saturday.",
+   "detail": "Moon 7.40 deg Gemini (Ardra p1); Sun 20.87 deg Taurus (Rohini p4) | weekday: Saturday; moon nakshatra: Ardra; tithi at sunset: Shukla Dwitiya; elongation deg: 16.5; Mumbai sighting: Sun 06 Jun 2027 (rule NOT met at Mumbai: different weekday)",
+   "refs": [
+    "TA p.79 [printed 49] Section 24 #15",
+    "TA p.158 [printed 128] Section 35 A (silver) #8",
+    "KD p.133 #2"
+   ],
+   "quals": [
+    "'Moon rise' / 'Moon darshan' read as the first evening sighting after Amavasya (Chandra Darshan). Operational criterion (not in either PDF): first New York sunset with elongation >= 12 deg and Moon age >= 20 h. Indian almanacs date the darshan for Indian sunset and can be a day earlier.",
+    "CONFLICT: TA S34 B9 (gold) 'Moon darshan on Saturday is Bearish' (for gold)."
+   ],
+   "checks": [
+    "darshan criterion reproduces all 4 Moon-darshan dates printed in the 2026 document at Mumbai (3 of 4 at New York); both sightings shown"
+   ],
+   "rule_ids": [
+    "ta_s24_15_moon_darshan_fri_sat"
+   ]
+  },
+  {
+   "start_ET": "Wed 09 Jun 2027",
+   "end_ET": "",
+   "title": "Silver prophecy: Shukla Shashti range",
+   "tone": "Neutral",
+   "verdicts": [
+    "Watch prices on Shashti of Shukla Paksh: whichever side the range breaks next day, it moves that way till Full Moon (worked 9 of 12 months)"
+   ],
+   "rule": "Udaya tithi Shukla Shashti.",
+   "detail": "Moon 27.13 deg Cancer (Ashlesha p4); Sun 24.11 deg Taurus (Mrigashira p1) | tithi at sunrise: Shukla Shashti",
+   "refs": [
+    "TA p.157 [printed 127] Section 35 'Silver prophecy'",
+    "2026 document (data/source_2026.html), Silver section - Bullish #1 'Turning dates'"
+   ],
+   "quals": [
+    "Direction is set by the next day's range break, not by the configuration; tagged Neutral here."
+   ],
+   "checks": [
+    "darshan criterion reproduces all 4 Moon-darshan dates printed in the 2026 document at Mumbai (3 of 4 at New York); both sightings shown",
+    "existing calendar (cfg_silver_bullish_01_shukla_shashti_turning_dates) has no SI row at this start"
+   ],
+   "rule_ids": [
+    "ta_s35_silver_prophecy_shashti"
+   ]
+  },
+  {
+   "start_ET": "Thu 10 Jun 2027 14:15 EDT",
+   "end_ET": "Sun 04 Jul 2027 15:39 EDT",
+   "title": "Retrograde Mercury or Jupiter",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver: increases volatility & prices start rising"
+   ],
+   "rule": "Mercury or Jupiter retrograde.",
+   "detail": "value: ('Mercury',)",
+   "refs": [
+    "TA p.157 [printed 127] Section 35 A #1"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer station of Mercury \u2713",
+    "end = astronomy-layer station of Mercury \u2713",
+    "matches existing calendar SI row (cfg_silver_bullish_02_retrograde_mercury_or_jupiter) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a01_retro_mercury_or_jupiter"
+   ]
+  },
+  {
+   "start_ET": "Tue 15 Jun 2027 (civil date)",
+   "end_ET": "Fri 02 Jul 2027 (civil date)",
+   "title": "Retrograde Mercury goes combust",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver: short term uptrend; market Bullish"
+   ],
+   "rule": "Retrograde Mercury goes combust.",
+   "detail": "Mercury 11.53 deg Gemini (Ardra p2) R; Sun 29.25 deg Taurus (Mrigashira p2) | combust direction: West; rise direction: East; days: 17; retro at combust: True; retro mid: True; sign at combust: Gemini; sign at rise: Gemini; nakshatra at rise: Mrigashira; with at rise: ['Sun']",
+   "refs": [
+    "TA p.159 [printed 129] Section 35 A (silver) #19",
+    "TA p.70 'if Combust in Retrogression its Bullish'"
+   ],
+   "quals": [
+    "Combust/rise dates are civil dates, not instants: the event is date-only."
+   ],
+   "checks": [
+    "combust/rise civil dates from the astronomy layer (Mumbai kalamsha)"
+   ],
+   "rule_ids": [
+    "ta_s35a19_retro_mercury_combust"
+   ]
+  },
+  {
+   "start_ET": "Tue 15 Jun 2027 09:26 EDT",
+   "end_ET": "Mon 28 Jun 2027 05:09 EDT",
+   "title": "Only Sun-Mercury or Moon-Mercury alone in a sign",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish"
+   ],
+   "rule": "Mercury shares a sign only with the Sun (or only with the Moon).",
+   "detail": "Sun 0.00 deg Gemini (Mrigashira p3); Mercury 11.29 deg Gemini (Ardra p2) R | value: Gemini",
+   "refs": [
+    "TA p.159 [printed 129] Section 35 A #17"
+   ],
+   "quals": [
+    "Moon-Mercury variant belongs to the Moon layer (2.5-day windows)."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Venus \u2713",
+    "matches existing calendar SI row (cfg_silver_bullish_15_sun_or_moon_with_mercury_alone) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a17_sun_or_moon_mercury_alone"
+   ]
+  },
+  {
+   "start_ET": "Mon 21 Jun 2027 15:52 EDT",
+   "end_ET": "Tue 22 Jun 2027 00:27 EDT",
+   "title": "Moon-Venus mutual Vedha",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish"
+   ],
+   "rule": "Moon and Venus vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
+   "detail": "Moon 6.67 deg Capricorn (Uttara Ashadha p4); Venus 21.99 deg Taurus (Rohini p4) | value: Moon in Abhijeet vedhas Rohini (Front side) where Venus is; Venus in Rohini vedhas Abhijeet (Front side) where Moon is",
+   "refs": [
+    "TA p.160 [printed 130] Section 35 B (silver) #7"
+   ],
+   "quals": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "checks": [
+    "start = astronomy-layer navamsa ingress of Moon \u2713",
+    "end: computed boundary (no single layer record)"
+   ],
+   "rule_ids": [
+    "ta_s35b07_moon_venus_mutual_vedha"
+   ]
+  },
+  {
+   "start_ET": "Sun 27 Jun 2027 11:29 EDT",
+   "end_ET": "Mon 28 Jun 2027 12:18 EDT",
+   "title": "Mercury combust and retrograde does mutual Vedha with Moon",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver: Bullish day"
+   ],
+   "rule": "Mercury combust (Mumbai kalamsha window) and retrograde, and Mercury and Moon vedha each other.",
+   "detail": "Mercury 5.08 deg Gemini (Mrigashira p4) R; Moon 16.67 deg Pisces (Revati p1) | value: Mercury in Mrigashira vedhas Revati (Right side) where Moon is; Moon in Revati vedhas Mrigashira (Left side) where Mercury is",
+   "refs": [
+    "TA p.158 S35 A13",
+    "2026 document (data/source_2026.html), Silver section - Bullish #11"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Moon \u2713",
+    "end = astronomy-layer sign ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a13_mercury_combust_retro_mutual_moon"
+   ]
+  },
+  {
+   "start_ET": "Sun 04 Jul 2027 15:39 EDT",
+   "end_ET": "",
+   "title": "Mercury turns direct from retrograde",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver: short term bounce"
+   ],
+   "rule": "Mercury turns direct from retrograde.",
+   "detail": "Mercury 3.22 deg Gemini (Mrigashira p3)",
+   "refs": [
+    "TA p.159 [printed 129] Section 35 A (silver) #16"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer station of Mercury \u2713",
+    "matches existing calendar SI row (cfg_silver_bullish_13_jupiter_or_mercury_turns_direct) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a16_mercury_turns_direct"
+   ]
+  },
+  {
+   "start_ET": "Fri 09 Jul 2027 13:46 EDT",
+   "end_ET": "Sat 10 Jul 2027 13:21 EDT",
+   "title": "Moon-Venus mutual Vedha",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish"
+   ],
+   "rule": "Moon and Venus vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
+   "detail": "Moon 10.00 deg Virgo (Hasta p1); Venus 13.91 deg Gemini (Ardra p3) | value: Moon in Hasta vedhas Ardra (Right side) where Venus is; Venus in Ardra vedhas Hasta (Left side) where Moon is",
+   "refs": [
+    "TA p.160 [printed 130] Section 35 B (silver) #7"
+   ],
+   "quals": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Moon \u2713",
+    "end = astronomy-layer nakshatra ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35b07_moon_venus_mutual_vedha"
+   ]
+  },
+  {
+   "start_ET": "Sun 18 Jul 2027 11:56 EDT",
+   "end_ET": "",
+   "title": "Moon eclipse on Sunday",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver: falls 15 days ahead"
+   ],
+   "rule": "Moon eclipse on Sunday.",
+   "detail": "Sun 1.57 deg Cancer (Punarvasu p4); Moon 1.66 deg Capricorn (Uttara Ashadha p2) | weekday NY: Sunday; weekday IST: Sunday; month: Ashadh; moon nakshatra: Uttara Ashadha; sun sign: Cancer; moon sign: Capricorn; yoga: Vishkambha; type: ",
+   "refs": [
+    "TA p.160 [printed 130] Section 35 B (silver) #9"
+   ],
+   "quals": [
+    "An eclipse's visibility from New York is not required by either source."
+   ],
+   "checks": [
+    "start = astronomy-layer eclipse of Moon \u2713",
+    "matches existing calendar SI row (cfg_silver_bearish_07_moon_eclipse_on_sunday) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35b09_moon_eclipse_sunday"
+   ]
+  },
+  {
+   "start_ET": "Tue 20 Jul 2027 08:11 EDT",
+   "end_ET": "Thu 22 Jul 2027 16:17 EDT",
+   "title": "Sun in Pushya or Dhanishta without benefic planets",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish"
+   ],
+   "rule": "Sun in Pushya/Dhanishta with no benefic in its sign.",
+   "detail": "Sun 3.33 deg Cancer (Pushya p1) | value: Pushya",
+   "refs": [
+    "TA p.157 [printed 127] Section 35 A #2"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Venus \u2713",
+    "matches existing calendar SI row (cfg_silver_bullish_03_sun_pushya_or_dhanistha_without_benefic) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a02_sun_pushya_dhanishta_no_benefic"
+   ]
+  },
+  {
+   "start_ET": "Tue 20 Jul 2027 08:11 EDT",
+   "end_ET": "Sun 25 Jul 2027 09:19 EDT",
+   "title": "Sun in Pushya or Dhanishta with no benefic in the same nakshatra",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish"
+   ],
+   "rule": "Sun in Pushya or Dhanishta and no benefic (Mercury, Venus, Jupiter) in that nakshatra.",
+   "detail": "Sun 3.33 deg Cancer (Pushya p1) | value: Pushya",
+   "refs": [
+    "2026 document (data/source_2026.html), Silver section - Bullish #3",
+    "TA p.157 S35 A2 ('Sun in Pushya or Dhanishtha without Benefic Planets')"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Sun \u2713",
+    "end = astronomy-layer nakshatra ingress of Venus \u2713"
+   ],
+   "rule_ids": [
+    "doc26_silver_bull_03_sun_pushya_dhanishta_no_benefic_nak"
+   ]
+  },
+  {
+   "start_ET": "Fri 30 Jul 2027 05:00 EDT",
+   "end_ET": "Fri 30 Jul 2027 09:01 EDT",
+   "title": "Only Moon and Mercury alone in a sign",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish"
+   ],
+   "rule": "Moon and Mercury share a sign with no other graha in it.",
+   "detail": "Moon 0.00 deg Gemini (Mrigashira p3); Mercury 29.68 deg Gemini (Punarvasu p3) | value: Gemini",
+   "refs": [
+    "TA p.159 S35 A17 (Moon-Mercury half)"
+   ],
+   "quals": [
+    "The 2026 document prints only the Sun-Mercury half of this rule."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer sign ingress of Mercury \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a17b_moon_mercury_alone"
+   ]
+  },
+  {
+   "start_ET": "Mon 02 Aug 2027",
+   "end_ET": "",
+   "title": "Amavasya on Monday",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish"
+   ],
+   "rule": "Udaya tithi Amavasya on a Monday.",
+   "detail": "Moon 15.60 deg Cancer (Pushya p4) | weekday: Monday; tithi at NY sunrise: Amavasya; moon nakshatra: Pushya; yoga: Siddhi",
+   "refs": [
+    "TA p.160 [printed 130] Section 35 B (silver) #4"
+   ],
+   "quals": [
+    "Panchang read at New York sunrise (the Hindu day runs sunrise to sunrise). Indian almanacs read it at Indian sunrise, so a day near a tithi/nakshatra/yoga change can differ."
+   ],
+   "checks": [
+    "darshan criterion reproduces all 4 Moon-darshan dates printed in the 2026 document at Mumbai (3 of 4 at New York); both sightings shown",
+    "matches existing calendar SI row (cfg_silver_bearish_05_amavasya_on_monday) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35b04_amavasya_monday"
+   ]
+  },
+  {
+   "start_ET": "Wed 04 Aug 2027 02:07 EDT",
+   "end_ET": "Wed 04 Aug 2027 23:49 EDT",
+   "title": "Moon-Venus mutual Vedha",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish"
+   ],
+   "rule": "Moon and Venus vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
+   "detail": "Moon 13.33 deg Leo (Purva Phalguni p1); Venus 15.29 deg Cancer (Pushya p4) | value: Moon in Purva Phalguni vedhas Pushya (Right side) where Venus is; Venus in Pushya vedhas Purva Phalguni (Left side) where Moon is",
+   "refs": [
+    "TA p.160 [printed 130] Section 35 B (silver) #7"
+   ],
+   "quals": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Moon \u2713",
+    "end = astronomy-layer nakshatra ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35b07_moon_venus_mutual_vedha"
+   ]
+  },
+  {
+   "start_ET": "Sat 07 Aug 2027",
+   "end_ET": "",
+   "title": "Silver prophecy: Shukla Shashti range",
+   "tone": "Neutral",
+   "verdicts": [
+    "Watch prices on Shashti of Shukla Paksh: whichever side the range breaks next day, it moves that way till Full Moon (worked 9 of 12 months)"
+   ],
+   "rule": "Udaya tithi Shukla Shashti.",
+   "detail": "Moon 28.54 deg Virgo (Chitra p2); Sun 20.46 deg Cancer (Ashlesha p2) | tithi at sunrise: Shukla Shashti",
+   "refs": [
+    "TA p.157 [printed 127] Section 35 'Silver prophecy'",
+    "2026 document (data/source_2026.html), Silver section - Bullish #1 'Turning dates'"
+   ],
+   "quals": [
+    "Direction is set by the next day's range break, not by the configuration; tagged Neutral here."
+   ],
+   "checks": [
+    "darshan criterion reproduces all 4 Moon-darshan dates printed in the 2026 document at Mumbai (3 of 4 at New York); both sightings shown",
+    "existing calendar (cfg_silver_bullish_01_shukla_shashti_turning_dates) has no SI row at this start"
+   ],
+   "rule_ids": [
+    "ta_s35_silver_prophecy_shashti"
+   ]
+  },
+  {
+   "start_ET": "Mon 16 Aug 2027 00:05 EDT",
+   "end_ET": "Thu 09 Sep 2027 05:11 EDT",
+   "title": "Venus in Leo or Libra",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish"
+   ],
+   "rule": "Venus in Leo or Libra.",
+   "detail": "Venus 0.00 deg Leo (Magha p1) | value: Leo",
+   "refs": [
+    "TA p.160 [printed 130] Section 35 B 'Bearish configuration - silver' #1"
+   ],
+   "quals": [
+    "The 2026 config rule adds 'alone'; TA does not."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Venus \u2713",
+    "end = astronomy-layer sign ingress of Venus \u2713",
+    "existing calendar (cfg_silver_bearish_01_venus_alone_in_leo_or_libra) has no SI row at this start"
+   ],
+   "rule_ids": [
+    "ta_s35b01_venus_leo_libra"
+   ]
+  },
+  {
+   "start_ET": "Mon 16 Aug 2027 00:05 EDT",
+   "end_ET": "Mon 16 Aug 2027 14:04 EDT",
+   "title": "Moon-Venus mutual Vedha",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish"
+   ],
+   "rule": "Moon and Venus vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
+   "detail": "Moon 16.45 deg Capricorn (Shravana p2); Venus 0.00 deg Leo (Magha p1) | value: Moon in Shravana vedhas Magha (Right side) where Venus is; Venus in Magha vedhas Shravana (Left side) where Moon is",
+   "refs": [
+    "TA p.160 [printed 130] Section 35 B (silver) #7"
+   ],
+   "quals": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Venus \u2713",
+    "end = astronomy-layer nakshatra ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35b07_moon_venus_mutual_vedha"
+   ]
+  },
+  {
+   "start_ET": "Mon 30 Aug 2027 16:31 EDT",
+   "end_ET": "Tue 21 Sep 2027 08:51 EDT",
+   "title": "Mercury in Aries or Virgo",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish"
+   ],
+   "rule": "Mercury in Aries or Virgo.",
+   "detail": "Mercury 0.00 deg Virgo (Uttara Phalguni p2) | value: Virgo",
+   "refs": [
+    "TA p.160 [printed 130] Section 35 B #2"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer sign ingress of Mercury \u2713",
+    "end = astronomy-layer sign ingress of Mercury \u2713",
+    "matches existing calendar SI row (cfg_silver_bearish_02_mercury_alone_in_aries_or_virgo) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35b02_mercury_aries_virgo"
+   ]
+  },
+  {
+   "start_ET": "Mon 30 Aug 2027 16:31 EDT",
+   "end_ET": "Thu 09 Sep 2027 05:11 EDT",
+   "title": "Mercury alone in Aries or Virgo",
+   "tone": "Bearish",
+   "verdicts": [
+    "Bearish"
+   ],
+   "rule": "Mercury in Aries or Virgo with no other graha (Moon excluded) in the sign.",
+   "detail": "Mercury 0.00 deg Virgo (Uttara Phalguni p2) | value: Virgo",
+   "refs": [
+    "2026 document (data/source_2026.html), Silver section - Bearish #2",
+    "TA p.160 S35 B2"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer sign ingress of Mercury \u2713",
+    "end = astronomy-layer sign ingress of Venus \u2713",
+    "matches existing calendar SI row (cfg_silver_bearish_02_mercury_alone_in_aries_or_virgo) \u2713"
+   ],
+   "rule_ids": [
+    "doc26_silver_bear_02_mercury_alone_aries_virgo"
+   ]
+  },
+  {
+   "start_ET": "Wed 01 Sep 2027 15:43 EDT",
+   "end_ET": "Fri 03 Sep 2027 17:46 EDT",
+   "title": "Only Moon and Mercury alone in a sign",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish"
+   ],
+   "rule": "Moon and Mercury share a sign with no other graha in it.",
+   "detail": "Moon 0.00 deg Virgo (Uttara Phalguni p2); Mercury 3.15 deg Virgo (Uttara Phalguni p2) | value: Virgo",
+   "refs": [
+    "TA p.159 S35 A17 (Moon-Mercury half)"
+   ],
+   "quals": [
+    "The 2026 document prints only the Sun-Mercury half of this rule."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer sign ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a17b_moon_mercury_alone"
+   ]
+  },
+  {
+   "start_ET": "Sun 05 Sep 2027",
+   "end_ET": "",
+   "title": "Silver prophecy: Shukla Shashti range",
+   "tone": "Neutral",
+   "verdicts": [
+    "Watch prices on Shashti of Shukla Paksh: whichever side the range breaks next day, it moves that way till Full Moon (worked 9 of 12 months)"
+   ],
+   "rule": "Udaya tithi Shukla Shashti.",
+   "detail": "Moon 20.84 deg Libra (Vishakha p1); Sun 18.41 deg Leo (Purva Phalguni p2) | tithi at sunrise: Shukla Shashti",
+   "refs": [
+    "TA p.157 [printed 127] Section 35 'Silver prophecy'",
+    "2026 document (data/source_2026.html), Silver section - Bullish #1 'Turning dates'"
+   ],
+   "quals": [
+    "Direction is set by the next day's range break, not by the configuration; tagged Neutral here."
+   ],
+   "checks": [
+    "darshan criterion reproduces all 4 Moon-darshan dates printed in the 2026 document at Mumbai (3 of 4 at New York); both sightings shown",
+    "existing calendar (cfg_silver_bullish_01_shukla_shashti_turning_dates) has no SI row at this start"
+   ],
+   "rule_ids": [
+    "ta_s35_silver_prophecy_shashti"
+   ]
+  },
+  {
+   "start_ET": "Wed 08 Sep 2027 (civil date)",
+   "end_ET": "",
+   "title": "Venus rises in West",
+   "tone": "Mixed",
+   "verdicts": [
+    "Bearish; in Aries, Leo, Libra, Capricorn, Aquarius with Sun, Mars, Saturn or Rahu - sharp upturn after a small dip"
+   ],
+   "rule": "Venus rises in West.",
+   "detail": "Venus 28.00 deg Leo (Uttara Phalguni p1); Sun 20.67 deg Leo (Purva Phalguni p3) | combust direction: East; rise direction: West; days: 49; retro at combust: False; retro mid: False; sign at combust: Gemini; sign at rise: Leo; nakshatra at rise: Uttara Phalguni; with at rise: ['Sun']",
+   "refs": [
+    "TA p.71 Section 18",
+    "TA p.161 [printed 131] Section 35 B (silver) #16"
+   ],
+   "quals": [
+    "Combust/rise dates are civil dates, not instants: the event is date-only."
+   ],
+   "checks": [
+    "combust/rise civil dates from the astronomy layer (Mumbai kalamsha)"
+   ],
+   "rule_ids": [
+    "ta_s18_venus_rise_west"
+   ]
+  },
+  {
+   "start_ET": "Fri 10 Sep 2027 14:21 EDT",
+   "end_ET": "Sat 11 Sep 2027 10:41 EDT",
+   "title": "Moon-Venus mutual Vedha",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish"
+   ],
+   "rule": "Moon and Venus vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
+   "detail": "Moon 26.67 deg Sagittarius (Uttara Ashadha p1); Venus 1.72 deg Virgo (Uttara Phalguni p2) | value: Moon in Uttara Ashadha vedhas Uttara Phalguni (Right side) where Venus is; Venus in Uttara Phalguni vedhas Uttara Ashadha (Left side) where Moon is",
+   "refs": [
+    "TA p.160 [printed 130] Section 35 B (silver) #7"
+   ],
+   "quals": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Moon \u2713",
+    "end = astronomy-layer navamsa ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35b07_moon_venus_mutual_vedha"
+   ]
+  },
+  {
+   "start_ET": "Wed 15 Sep 2027 19:03 EDT",
+   "end_ET": "Wed 29 Sep 2027 22:36 EDT",
+   "title": "Shukla Paksha of 16 days or Krishna Paksha of 14 days",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish"
+   ],
+   "rule": "A bright fortnight spanning 16 sunrises or a dark fortnight spanning 14.",
+   "detail": "Moon 28.63 deg Aquarius (Purva Bhadrapada p3); Sun 28.63 deg Leo (Uttara Phalguni p1) | paksha: Krishna; sunrises inside: 14",
+   "refs": [
+    "TA p.159 S35 A21",
+    "2026 document (data/source_2026.html), Silver section - Bullish #14"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer lunation of Moon \u2713",
+    "end = astronomy-layer lunation of Moon \u2713",
+    "existing calendar (cfg_silver_bullish_14_paksha_of_16_or_14_days) has no SI row at this start"
+   ],
+   "rule_ids": [
+    "ta_s35a21_paksha_16_or_14"
+   ]
+  },
+  {
+   "start_ET": "Fri 17 Sep 2027 04:40 EDT",
+   "end_ET": "Sun 03 Oct 2027 08:54 EDT",
+   "title": "Venus in Virgo with malefic",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish (August 2019)"
+   ],
+   "rule": "Venus in Virgo with a malefic in Virgo.",
+   "detail": "Venus 9.90 deg Virgo (Uttara Phalguni p4) | value: ('Sun',)",
+   "refs": [
+    "TA p.158 [printed 128] Section 35 A #7"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer sign ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Venus \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a07_venus_virgo_malefic"
+   ]
+  },
+  {
+   "start_ET": "Fri 17 Sep 2027 04:40 EDT",
+   "end_ET": "Tue 21 Sep 2027 08:51 EDT",
+   "title": "Sun in Virgo, Libra or Pisces with or aspected by benefics",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish"
+   ],
+   "rule": "Sun in Virgo/Libra/Pisces with a benefic in its sign or aspecting it.",
+   "detail": "Sun 0.00 deg Virgo (Uttara Phalguni p2) | value: ('Mercury', 'Venus')",
+   "refs": [
+    "TA p.161 [printed 131] Section 35 B #13"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer sign ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Mercury \u2713",
+    "matches existing calendar SI row (cfg_silver_bearish_09_sun_three_signs_with_or_aspected_by_benefics) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35b13_sun_vir_lib_pis_benefic"
+   ]
+  },
+  {
+   "start_ET": "Tue 21 Sep 2027 08:51 EDT",
+   "end_ET": "Sun 03 Oct 2027 08:54 EDT",
+   "title": "Sun in Virgo, Libra or Pisces with or aspected by benefics",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish"
+   ],
+   "rule": "Sun in Virgo/Libra/Pisces with a benefic in its sign or aspecting it.",
+   "detail": "Sun 4.07 deg Virgo (Uttara Phalguni p3) | value: ('Venus',)",
+   "refs": [
+    "TA p.161 [printed 131] Section 35 B #13"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer sign ingress of Mercury \u2713",
+    "end = astronomy-layer sign ingress of Venus \u2713",
+    "matches existing calendar SI row (cfg_silver_bearish_09_sun_three_signs_with_or_aspected_by_benefics) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35b13_sun_vir_lib_pis_benefic"
+   ]
+  },
+  {
+   "start_ET": "Wed 29 Sep 2027 22:36 EDT",
+   "end_ET": "Fri 15 Oct 2027 09:47 EDT",
+   "title": "Shukla Paksha of 16 days or Krishna Paksha of 14 days",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish"
+   ],
+   "rule": "A bright fortnight spanning 16 sunrises or a dark fortnight spanning 14.",
+   "detail": "Moon 12.48 deg Virgo (Hasta p1); Sun 12.48 deg Virgo (Hasta p1) | paksha: Shukla; sunrises inside: 16",
+   "refs": [
+    "TA p.159 S35 A21",
+    "2026 document (data/source_2026.html), Silver section - Bullish #14"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer lunation of Moon \u2713",
+    "end = astronomy-layer lunation of Moon \u2713",
+    "existing calendar (cfg_silver_bullish_14_paksha_of_16_or_14_days) has no SI row at this start"
+   ],
+   "rule_ids": [
+    "ta_s35a21_paksha_16_or_14"
+   ]
+  },
+  {
+   "start_ET": "Fri 01 Oct 2027",
+   "end_ET": "",
+   "title": "Moon darshan on Friday or Saturday",
+   "tone": "Bullish",
+   "verdicts": [
+    "Bullish (silver Bullish)"
+   ],
+   "rule": "Moon darshan on Friday or Saturday.",
+   "detail": "Moon 8.55 deg Libra (Swati p1); Sun 14.28 deg Virgo (Hasta p2) | weekday: Friday; moon nakshatra: Swati; tithi at sunset: Shukla Tritiya; elongation deg: 24.3; Mumbai sighting: Fri 01 Oct 2027 (rule also met in India)",
+   "refs": [
+    "TA p.79 [printed 49] Section 24 #15",
+    "TA p.158 [printed 128] Section 35 A (silver) #8",
+    "KD p.133 #2"
+   ],
+   "quals": [
+    "'Moon rise' / 'Moon darshan' read as the first evening sighting after Amavasya (Chandra Darshan). Operational criterion (not in either PDF): first New York sunset with elongation >= 12 deg and Moon age >= 20 h. Indian almanacs date the darshan for Indian sunset and can be a day earlier.",
+    "CONFLICT: TA S34 B9 (gold) 'Moon darshan on Saturday is Bearish' (for gold)."
+   ],
+   "checks": [
+    "darshan criterion reproduces all 4 Moon-darshan dates printed in the 2026 document at Mumbai (3 of 4 at New York); both sightings shown"
+   ],
+   "rule_ids": [
+    "ta_s24_15_moon_darshan_fri_sat"
+   ]
+  },
+  {
+   "start_ET": "Sun 03 Oct 2027 08:54 EDT",
+   "end_ET": "Thu 07 Oct 2027 15:59 EDT",
+   "title": "Venus-Mars or Sun-Mars together in any sign",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish (July, August 2019)"
+   ],
+   "rule": "Venus with Mars, or Sun with Mars, in one sign.",
+   "detail": "Mars 27.00 deg Libra (Vishakha p3) | value: ('Venus',)",
+   "refs": [
+    "TA p.157 [printed 127] Section 35 A 'Bullish configurations - silver' #3"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer sign ingress of Venus \u2713",
+    "end = astronomy-layer sign ingress of Mars \u2713",
+    "matches existing calendar SI row (cfg_silver_bullish_05_venus_mars_same_sign) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a03_venus_mars_or_sun_mars"
+   ]
+  },
+  {
+   "start_ET": "Sun 03 Oct 2027 08:54 EDT",
+   "end_ET": "Wed 27 Oct 2027 12:27 EDT",
+   "title": "Venus in Leo or Libra",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish"
+   ],
+   "rule": "Venus in Leo or Libra.",
+   "detail": "Venus 0.00 deg Libra (Chitra p3) | value: Libra",
+   "refs": [
+    "TA p.160 [printed 130] Section 35 B 'Bearish configuration - silver' #1"
+   ],
+   "quals": [
+    "The 2026 config rule adds 'alone'; TA does not."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Venus \u2713",
+    "end = astronomy-layer sign ingress of Venus \u2713",
+    "existing calendar (cfg_silver_bearish_01_venus_alone_in_leo_or_libra) has no SI row at this start"
+   ],
+   "rule_ids": [
+    "ta_s35b01_venus_leo_libra"
+   ]
+  },
+  {
+   "start_ET": "Tue 05 Oct 2027",
+   "end_ET": "",
+   "title": "Silver prophecy: Shukla Shashti range",
+   "tone": "Neutral",
+   "verdicts": [
+    "Watch prices on Shashti of Shukla Paksh: whichever side the range breaks next day, it moves that way till Full Moon (worked 9 of 12 months)"
+   ],
+   "rule": "Udaya tithi Shukla Shashti.",
+   "detail": "Moon 24.96 deg Scorpio (Jyeshtha p3); Sun 17.74 deg Virgo (Hasta p3) | tithi at sunrise: Shukla Shashti",
+   "refs": [
+    "TA p.157 [printed 127] Section 35 'Silver prophecy'",
+    "2026 document (data/source_2026.html), Silver section - Bullish #1 'Turning dates'"
+   ],
+   "quals": [
+    "Direction is set by the next day's range break, not by the configuration; tagged Neutral here."
+   ],
+   "checks": [
+    "darshan criterion reproduces all 4 Moon-darshan dates printed in the 2026 document at Mumbai (3 of 4 at New York); both sightings shown",
+    "existing calendar (cfg_silver_bullish_01_shukla_shashti_turning_dates) has no SI row at this start"
+   ],
+   "rule_ids": [
+    "ta_s35_silver_prophecy_shashti"
+   ]
+  },
+  {
+   "start_ET": "Tue 05 Oct 2027 16:45 EDT",
+   "end_ET": "Wed 06 Oct 2027 18:59 EDT",
+   "title": "Moon-Venus mutual Vedha",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish"
+   ],
+   "rule": "Moon and Venus vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
+   "detail": "Moon 0.00 deg Sagittarius (Mula p1); Venus 2.89 deg Libra (Chitra p3) | value: Moon in Mula vedhas Chitra (Right side) where Venus is; Venus in Chitra vedhas Mula (Left side) where Moon is",
+   "refs": [
+    "TA p.160 [printed 130] Section 35 B (silver) #7"
+   ],
+   "quals": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer nakshatra ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35b07_moon_venus_mutual_vedha"
+   ]
+  },
+  {
+   "start_ET": "Thu 07 Oct 2027 10:37 EDT",
+   "end_ET": "Thu 28 Oct 2027 10:10 EDT",
+   "title": "Retrograde Mercury or Jupiter",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver: increases volatility & prices start rising"
+   ],
+   "rule": "Mercury or Jupiter retrograde.",
+   "detail": "value: ('Mercury',)",
+   "refs": [
+    "TA p.157 [printed 127] Section 35 A #1"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer station of Mercury \u2713",
+    "end = astronomy-layer station of Mercury \u2713",
+    "matches existing calendar SI row (cfg_silver_bullish_02_retrograde_mercury_or_jupiter) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a01_retro_mercury_or_jupiter"
+   ]
+  },
+  {
+   "start_ET": "Sun 10 Oct 2027 (civil date)",
+   "end_ET": "Mon 25 Oct 2027 (civil date)",
+   "title": "Retrograde Mercury goes combust",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver: short term uptrend; market Bullish"
+   ],
+   "rule": "Retrograde Mercury goes combust.",
+   "detail": "Mercury 10.39 deg Libra (Swati p2) R; Sun 21.99 deg Virgo (Hasta p4) | combust direction: West; rise direction: East; days: 15; retro at combust: True; retro mid: True; sign at combust: Libra; sign at rise: Virgo; nakshatra at rise: Chitra; with at rise: []",
+   "refs": [
+    "TA p.159 [printed 129] Section 35 A (silver) #19",
+    "TA p.70 'if Combust in Retrogression its Bullish'"
+   ],
+   "quals": [
+    "Combust/rise dates are civil dates, not instants: the event is date-only."
+   ],
+   "checks": [
+    "combust/rise civil dates from the astronomy layer (Mumbai kalamsha)"
+   ],
+   "rule_ids": [
+    "ta_s35a19_retro_mercury_combust"
+   ]
+  },
+  {
+   "start_ET": "Fri 15 Oct 2027 09:47 EDT",
+   "end_ET": "Fri 29 Oct 2027 09:36 EDT",
+   "title": "Shukla Paksha of 16 days or Krishna Paksha of 14 days",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish"
+   ],
+   "rule": "A bright fortnight spanning 16 sunrises or a dark fortnight spanning 14.",
+   "detail": "Moon 27.73 deg Pisces (Revati p4); Sun 27.73 deg Virgo (Chitra p2) | paksha: Krishna; sunrises inside: 14",
+   "refs": [
+    "TA p.159 S35 A21",
+    "2026 document (data/source_2026.html), Silver section - Bullish #14"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer lunation of Moon \u2713",
+    "end = astronomy-layer lunation of Moon \u2713",
+    "existing calendar (cfg_silver_bullish_14_paksha_of_16_or_14_days) has no SI row at this start"
+   ],
+   "rule_ids": [
+    "ta_s35a21_paksha_16_or_14"
+   ]
+  },
+  {
+   "start_ET": "Sun 17 Oct 2027 16:39 EDT",
+   "end_ET": "Wed 20 Oct 2027 22:42 EDT",
+   "title": "Sun in Virgo, Libra or Pisces with or aspected by benefics",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish"
+   ],
+   "rule": "Sun in Virgo/Libra/Pisces with a benefic in its sign or aspecting it.",
+   "detail": "Sun 0.00 deg Libra (Chitra p3) | value: ('Mercury', 'Venus')",
+   "refs": [
+    "TA p.161 [printed 131] Section 35 B #13"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer sign ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Mercury \u2713",
+    "matches existing calendar SI row (cfg_silver_bearish_09_sun_three_signs_with_or_aspected_by_benefics) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35b13_sun_vir_lib_pis_benefic"
+   ]
+  },
+  {
+   "start_ET": "Tue 19 Oct 2027 13:46 EDT",
+   "end_ET": "Wed 20 Oct 2027 13:00 EDT",
+   "title": "Mercury combust and retrograde does mutual Vedha with Moon",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver: Bullish day"
+   ],
+   "rule": "Mercury combust (Mumbai kalamsha window) and retrograde, and Mercury and Moon vedha each other.",
+   "detail": "Mercury 1.66 deg Libra (Chitra p3) R; Moon 23.34 deg Taurus (Mrigashira p1) | value: Mercury in Chitra vedhas Mrigashira (Right side) where Moon is; Moon in Mrigashira vedhas Chitra (Left side) where Mercury is",
+   "refs": [
+    "TA p.158 S35 A13",
+    "2026 document (data/source_2026.html), Silver section - Bullish #11"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Moon \u2713",
+    "end = astronomy-layer nakshatra ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a13_mercury_combust_retro_mutual_moon"
+   ]
+  },
+  {
+   "start_ET": "Wed 20 Oct 2027 22:42 EDT",
+   "end_ET": "Fri 05 Nov 2027 07:41 EDT",
+   "title": "Mercury in Aries or Virgo / Mercury alone in Aries or Virgo",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish",
+    "Bearish"
+   ],
+   "rule": "Mercury in Aries or Virgo. || Mercury in Aries or Virgo with no other graha (Moon excluded) in the sign.",
+   "detail": "Mercury 30.00 deg Virgo (Chitra p2) R | value: Virgo",
+   "refs": [
+    "TA p.160 [printed 130] Section 35 B #2",
+    "2026 document (data/source_2026.html), Silver section - Bearish #2",
+    "TA p.160 S35 B2"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer sign ingress of Mercury \u2713",
+    "end = astronomy-layer sign ingress of Mercury \u2713",
+    "matches existing calendar SI row (cfg_silver_bearish_02_mercury_alone_in_aries_or_virgo) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35b02_mercury_aries_virgo",
+    "doc26_silver_bear_02_mercury_alone_aries_virgo"
+   ]
+  },
+  {
+   "start_ET": "Wed 20 Oct 2027 22:42 EDT",
+   "end_ET": "Wed 27 Oct 2027 12:27 EDT",
+   "title": "Sun in Virgo, Libra or Pisces with or aspected by benefics",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish"
+   ],
+   "rule": "Sun in Virgo/Libra/Pisces with a benefic in its sign or aspecting it.",
+   "detail": "Sun 3.23 deg Libra (Chitra p3) | value: ('Venus',)",
+   "refs": [
+    "TA p.161 [printed 131] Section 35 B #13"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer sign ingress of Mercury \u2713",
+    "end = astronomy-layer sign ingress of Venus \u2713",
+    "matches existing calendar SI row (cfg_silver_bearish_09_sun_three_signs_with_or_aspected_by_benefics) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35b13_sun_vir_lib_pis_benefic"
+   ]
+  },
+  {
+   "start_ET": "Tue 26 Oct 2027 10:40 EDT",
+   "end_ET": "Thu 28 Oct 2027 13:29 EDT",
+   "title": "Only Moon and Mercury alone in a sign",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish"
+   ],
+   "rule": "Moon and Mercury share a sign with no other graha in it.",
+   "detail": "Moon 0.00 deg Virgo (Uttara Phalguni p2); Mercury 25.44 deg Virgo (Chitra p1) R | value: Virgo",
+   "refs": [
+    "TA p.159 S35 A17 (Moon-Mercury half)"
+   ],
+   "quals": [
+    "The 2026 document prints only the Sun-Mercury half of this rule."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer sign ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a17b_moon_mercury_alone"
+   ]
+  },
+  {
+   "start_ET": "Wed 27 Oct 2027 12:27 EDT",
+   "end_ET": "Tue 16 Nov 2027 15:29 EST",
+   "title": "Venus-Mars or Sun-Mars together in any sign",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish (July, August 2019)"
+   ],
+   "rule": "Venus with Mars, or Sun with Mars, in one sign.",
+   "detail": "Mars 14.18 deg Scorpio (Anuradha p4) | value: ('Venus',)",
+   "refs": [
+    "TA p.157 [printed 127] Section 35 A 'Bullish configurations - silver' #3"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer sign ingress of Venus \u2713",
+    "end = astronomy-layer sign ingress of Sun \u2713",
+    "matches existing calendar SI row (cfg_silver_bullish_05_venus_mars_same_sign) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a03_venus_mars_or_sun_mars"
+   ]
+  },
+  {
+   "start_ET": "Thu 28 Oct 2027 10:10 EDT",
+   "end_ET": "",
+   "title": "Mercury turns direct from retrograde",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver: short term bounce"
+   ],
+   "rule": "Mercury turns direct from retrograde.",
+   "detail": "Mercury 25.06 deg Virgo (Chitra p1)",
+   "refs": [
+    "TA p.159 [printed 129] Section 35 A (silver) #16"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer station of Mercury \u2713",
+    "matches existing calendar SI row (cfg_silver_bullish_13_jupiter_or_mercury_turns_direct) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a16_mercury_turns_direct"
+   ]
+  },
+  {
+   "start_ET": "Sat 30 Oct 2027 04:52 EDT",
+   "end_ET": "Sun 31 Oct 2027 00:01 EDT",
+   "title": "Moon-Venus mutual Vedha",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish"
+   ],
+   "rule": "Moon and Venus vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
+   "detail": "Moon 22.63 deg Libra (Vishakha p1); Venus 3.33 deg Scorpio (Anuradha p1) | value: Moon in Vishakha vedhas Anuradha (Left side) where Venus is; Venus in Anuradha vedhas Vishakha (Left side) where Moon is",
+   "refs": [
+    "TA p.160 [printed 130] Section 35 B (silver) #7"
+   ],
+   "quals": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Venus \u2713",
+    "end = astronomy-layer nakshatra ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35b07_moon_venus_mutual_vedha"
+   ]
+  },
+  {
+   "start_ET": "Sat 30 Oct 2027",
+   "end_ET": "",
+   "title": "Moon darshan on Friday or Saturday",
+   "tone": "Bullish",
+   "verdicts": [
+    "Bullish (silver Bullish)"
+   ],
+   "rule": "Moon darshan on Friday or Saturday.",
+   "detail": "Moon 29.90 deg Libra (Vishakha p3); Sun 13.00 deg Libra (Swati p2) | weekday: Saturday; moon nakshatra: Vishakha; tithi at sunset: Shukla Dwitiya; elongation deg: 16.9; Mumbai sighting: Sat 30 Oct 2027 (rule also met in India)",
+   "refs": [
+    "TA p.79 [printed 49] Section 24 #15",
+    "TA p.158 [printed 128] Section 35 A (silver) #8",
+    "KD p.133 #2"
+   ],
+   "quals": [
+    "'Moon rise' / 'Moon darshan' read as the first evening sighting after Amavasya (Chandra Darshan). Operational criterion (not in either PDF): first New York sunset with elongation >= 12 deg and Moon age >= 20 h. Indian almanacs date the darshan for Indian sunset and can be a day earlier.",
+    "CONFLICT: TA S34 B9 (gold) 'Moon darshan on Saturday is Bearish' (for gold)."
+   ],
+   "checks": [
+    "darshan criterion reproduces all 4 Moon-darshan dates printed in the 2026 document at Mumbai (3 of 4 at New York); both sightings shown"
+   ],
+   "rule_ids": [
+    "ta_s24_15_moon_darshan_fri_sat"
+   ]
+  },
+  {
+   "start_ET": "Thu 04 Nov 2027",
+   "end_ET": "",
+   "title": "Silver prophecy: Shukla Shashti range",
+   "tone": "Neutral",
+   "verdicts": [
+    "Watch prices on Shashti of Shukla Paksh: whichever side the range breaks next day, it moves that way till Full Moon (worked 9 of 12 months)"
+   ],
+   "rule": "Udaya tithi Shukla Shashti.",
+   "detail": "Moon 27.49 deg Sagittarius (Uttara Ashadha p1); Sun 17.57 deg Libra (Swati p4) | tithi at sunrise: Shukla Shashti",
+   "refs": [
+    "TA p.157 [printed 127] Section 35 'Silver prophecy'",
+    "2026 document (data/source_2026.html), Silver section - Bullish #1 'Turning dates'"
+   ],
+   "quals": [
+    "Direction is set by the next day's range break, not by the configuration; tagged Neutral here."
+   ],
+   "checks": [
+    "darshan criterion reproduces all 4 Moon-darshan dates printed in the 2026 document at Mumbai (3 of 4 at New York); both sightings shown",
+    "existing calendar (cfg_silver_bullish_01_shukla_shashti_turning_dates) has no SI row at this start"
+   ],
+   "rule_ids": [
+    "ta_s35_silver_prophecy_shashti"
+   ]
+  },
+  {
+   "start_ET": "Fri 05 Nov 2027 07:41 EDT",
+   "end_ET": "Tue 16 Nov 2027 15:29 EST",
+   "title": "Sun in Virgo, Libra or Pisces with or aspected by benefics",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish"
+   ],
+   "rule": "Sun in Virgo/Libra/Pisces with a benefic in its sign or aspecting it.",
+   "detail": "Sun 18.58 deg Libra (Swati p4) | value: ('Mercury',)",
+   "refs": [
+    "TA p.161 [printed 131] Section 35 B #13"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer sign ingress of Mercury \u2713",
+    "end = astronomy-layer sign ingress of Sun \u2713",
+    "matches existing calendar SI row (cfg_silver_bearish_09_sun_three_signs_with_or_aspected_by_benefics) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35b13_sun_vir_lib_pis_benefic"
+   ]
+  },
+  {
+   "start_ET": "Fri 05 Nov 2027 07:41 EDT",
+   "end_ET": "Tue 16 Nov 2027 15:29 EST",
+   "title": "Only Sun-Mercury or Moon-Mercury alone in a sign",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish"
+   ],
+   "rule": "Mercury shares a sign only with the Sun (or only with the Moon).",
+   "detail": "Sun 18.58 deg Libra (Swati p4); Mercury 0.00 deg Libra (Chitra p3) | value: Libra",
+   "refs": [
+    "TA p.159 [printed 129] Section 35 A #17"
+   ],
+   "quals": [
+    "Moon-Mercury variant belongs to the Moon layer (2.5-day windows)."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Mercury \u2713",
+    "end = astronomy-layer sign ingress of Sun \u2713",
+    "matches existing calendar SI row (cfg_silver_bullish_15_sun_or_moon_with_mercury_alone) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a17_sun_or_moon_mercury_alone"
+   ]
+  },
+  {
+   "start_ET": "Thu 11 Nov 2027 21:26 EST",
+   "end_ET": "Fri 12 Nov 2027 21:41 EST",
+   "title": "Moon-Venus mutual Vedha",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish"
+   ],
+   "rule": "Moon and Venus vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
+   "detail": "Moon 0.00 deg Aries (Ashwini p1); Venus 19.14 deg Scorpio (Jyeshtha p1) | value: Moon in Ashwini vedhas Jyeshtha (Right side) where Venus is; Venus in Jyeshtha vedhas Ashwini (Left side) where Moon is",
+   "refs": [
+    "TA p.160 [printed 130] Section 35 B (silver) #7"
+   ],
+   "quals": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer nakshatra ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35b07_moon_venus_mutual_vedha"
+   ]
+  },
+  {
+   "start_ET": "Sat 13 Nov 2027 22:25 EST",
+   "end_ET": "Sat 27 Nov 2027 22:24 EST",
+   "title": "Shukla Paksha of 16 days or Krishna Paksha of 14 days",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish"
+   ],
+   "rule": "A bright fortnight spanning 16 sunrises or a dark fortnight spanning 14.",
+   "detail": "Moon 27.27 deg Aries (Krittika p1); Sun 27.27 deg Libra (Vishakha p3) | paksha: Krishna; sunrises inside: 14",
+   "refs": [
+    "TA p.159 S35 A21",
+    "2026 document (data/source_2026.html), Silver section - Bullish #14"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer lunation of Moon \u2713",
+    "end = astronomy-layer lunation of Moon \u2713",
+    "existing calendar (cfg_silver_bullish_14_paksha_of_16_or_14_days) has no SI row at this start"
+   ],
+   "rule_ids": [
+    "ta_s35a21_paksha_16_or_14"
+   ]
+  },
+  {
+   "start_ET": "Tue 16 Nov 2027 15:29 EST",
+   "end_ET": "Wed 17 Nov 2027 22:15 EST",
+   "title": "Venus-Mars or Sun-Mars together in any sign",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish (July, August 2019)"
+   ],
+   "rule": "Venus with Mars, or Sun with Mars, in one sign.",
+   "detail": "Mars 29.04 deg Scorpio (Jyeshtha p4) | value: ('Venus', 'Sun')",
+   "refs": [
+    "TA p.157 [printed 127] Section 35 A 'Bullish configurations - silver' #3"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer sign ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Mars \u2713",
+    "matches existing calendar SI row (cfg_silver_bullish_06_sun_mars_same_sign) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a03_venus_mars_or_sun_mars"
+   ]
+  },
+  {
+   "start_ET": "Sat 20 Nov 2027 15:38 EST",
+   "end_ET": "Tue 14 Dec 2027 21:41 EST",
+   "title": "Venus-Mars or Sun-Mars together in any sign",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish (July, August 2019)"
+   ],
+   "rule": "Venus with Mars, or Sun with Mars, in one sign.",
+   "detail": "Mars 2.04 deg Sagittarius (Mula p1) | value: ('Venus',)",
+   "refs": [
+    "TA p.157 [printed 127] Section 35 A 'Bullish configurations - silver' #3"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer sign ingress of Venus \u2713",
+    "end = astronomy-layer sign ingress of Venus \u2713",
+    "matches existing calendar SI row (cfg_silver_bullish_05_venus_mars_same_sign) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a03_venus_mars_or_sun_mars"
+   ]
+  },
+  {
+   "start_ET": "Wed 24 Nov 2027 20:03 EST",
+   "end_ET": "Thu 25 Nov 2027 13:59 EST",
+   "title": "Only Moon and Mercury alone in a sign",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish"
+   ],
+   "rule": "Moon and Mercury share a sign with no other graha in it.",
+   "detail": "Moon 0.00 deg Libra (Chitra p3); Mercury 28.82 deg Libra (Vishakha p3) | value: Libra",
+   "refs": [
+    "TA p.159 S35 A17 (Moon-Mercury half)"
+   ],
+   "quals": [
+    "The 2026 document prints only the Sun-Mercury half of this rule."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer sign ingress of Mercury \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a17b_moon_mercury_alone"
+   ]
+  },
+  {
+   "start_ET": "Thu 25 Nov 2027 13:59 EST",
+   "end_ET": "Tue 14 Dec 2027 15:37 EST",
+   "title": "Only Sun-Mercury or Moon-Mercury alone in a sign",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish"
+   ],
+   "rule": "Mercury shares a sign only with the Sun (or only with the Moon).",
+   "detail": "Sun 9.02 deg Scorpio (Anuradha p2); Mercury 0.00 deg Scorpio (Vishakha p4) | value: Scorpio",
+   "refs": [
+    "TA p.159 [printed 129] Section 35 A #17"
+   ],
+   "quals": [
+    "Moon-Mercury variant belongs to the Moon layer (2.5-day windows)."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Mercury \u2713",
+    "end = astronomy-layer sign ingress of Mercury \u2713",
+    "existing calendar (cfg_silver_bullish_15_sun_or_moon_with_mercury_alone) has no SI row at this start"
+   ],
+   "rule_ids": [
+    "ta_s35a17_sun_or_moon_mercury_alone"
+   ]
+  },
+  {
+   "start_ET": "Sat 27 Nov 2027 22:24 EST",
+   "end_ET": "Mon 13 Dec 2027 11:08 EST",
+   "title": "Shukla Paksha of 16 days or Krishna Paksha of 14 days",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish"
+   ],
+   "rule": "A bright fortnight spanning 16 sunrises or a dark fortnight spanning 14.",
+   "detail": "Moon 11.40 deg Scorpio (Anuradha p3); Sun 11.40 deg Scorpio (Anuradha p3) | paksha: Shukla; sunrises inside: 16",
+   "refs": [
+    "TA p.159 S35 A21",
+    "2026 document (data/source_2026.html), Silver section - Bullish #14"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer lunation of Moon \u2713",
+    "end = astronomy-layer lunation of Moon \u2713",
+    "existing calendar (cfg_silver_bullish_14_paksha_of_16_or_14_days) has no SI row at this start"
+   ],
+   "rule_ids": [
+    "ta_s35a21_paksha_16_or_14"
+   ]
+  },
+  {
+   "start_ET": "Fri 03 Dec 2027",
+   "end_ET": "",
+   "title": "Silver prophecy: Shukla Shashti range",
+   "tone": "Neutral",
+   "verdicts": [
+    "Watch prices on Shashti of Shukla Paksh: whichever side the range breaks next day, it moves that way till Full Moon (worked 9 of 12 months)"
+   ],
+   "rule": "Udaya tithi Shukla Shashti.",
+   "detail": "Moon 17.47 deg Capricorn (Shravana p3); Sun 16.84 deg Scorpio (Jyeshtha p1) | tithi at sunrise: Shukla Shashti",
+   "refs": [
+    "TA p.157 [printed 127] Section 35 'Silver prophecy'",
+    "2026 document (data/source_2026.html), Silver section - Bullish #1 'Turning dates'"
+   ],
+   "quals": [
+    "Direction is set by the next day's range break, not by the configuration; tagged Neutral here."
+   ],
+   "checks": [
+    "darshan criterion reproduces all 4 Moon-darshan dates printed in the 2026 document at Mumbai (3 of 4 at New York); both sightings shown",
+    "existing calendar (cfg_silver_bullish_01_shukla_shashti_turning_dates) has no SI row at this start"
+   ],
+   "rule_ids": [
+    "ta_s35_silver_prophecy_shashti"
+   ]
+  },
+  {
+   "start_ET": "Sat 04 Dec 2027",
+   "end_ET": "",
+   "title": "Silver prophecy: Shukla Shashti range",
+   "tone": "Neutral",
+   "verdicts": [
+    "Watch prices on Shashti of Shukla Paksh: whichever side the range breaks next day, it moves that way till Full Moon (worked 9 of 12 months)"
+   ],
+   "rule": "Udaya tithi Shukla Shashti.",
+   "detail": "Moon 29.27 deg Capricorn (Dhanishta p2); Sun 17.85 deg Scorpio (Jyeshtha p1) | tithi at sunrise: Shukla Shashti",
+   "refs": [
+    "TA p.157 [printed 127] Section 35 'Silver prophecy'",
+    "2026 document (data/source_2026.html), Silver section - Bullish #1 'Turning dates'"
+   ],
+   "quals": [
+    "Direction is set by the next day's range break, not by the configuration; tagged Neutral here."
+   ],
+   "checks": [
+    "darshan criterion reproduces all 4 Moon-darshan dates printed in the 2026 document at Mumbai (3 of 4 at New York); both sightings shown",
+    "existing calendar (cfg_silver_bullish_01_shukla_shashti_turning_dates) has no SI row at this start"
+   ],
+   "rule_ids": [
+    "ta_s35_silver_prophecy_shashti"
+   ]
+  },
+  {
+   "start_ET": "Tue 07 Dec 2027 03:45 EST",
+   "end_ET": "Wed 08 Dec 2027 05:43 EST",
+   "title": "Moon-Venus mutual Vedha",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish"
+   ],
+   "rule": "Moon and Venus vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
+   "detail": "Moon 3.34 deg Pisces (Uttara Bhadrapada p1); Venus 20.44 deg Sagittarius (Purva Ashadha p3) | value: Moon in Uttara Bhadrapada vedhas Purva Ashadha (Right side) where Venus is; Venus in Purva Ashadha vedhas Uttara Bhadrapada (Left side) where Moon is",
+   "refs": [
+    "TA p.160 [printed 130] Section 35 B (silver) #7"
+   ],
+   "quals": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Moon \u2713",
+    "end = astronomy-layer nakshatra ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35b07_moon_venus_mutual_vedha"
+   ]
+  },
+  {
+   "start_ET": "Mon 13 Dec 2027 11:08 EST",
+   "end_ET": "Mon 27 Dec 2027 15:12 EST",
+   "title": "Shukla Paksha of 16 days or Krishna Paksha of 14 days",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish"
+   ],
+   "rule": "A bright fortnight spanning 16 sunrises or a dark fortnight spanning 14.",
+   "detail": "Moon 27.16 deg Taurus (Mrigashira p2); Sun 27.16 deg Scorpio (Jyeshtha p4) | paksha: Krishna; sunrises inside: 14",
+   "refs": [
+    "TA p.159 S35 A21",
+    "2026 document (data/source_2026.html), Silver section - Bullish #14"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer lunation of Moon \u2713",
+    "end = astronomy-layer lunation of Moon \u2713",
+    "existing calendar (cfg_silver_bullish_14_paksha_of_16_or_14_days) has no SI row at this start"
+   ],
+   "rule_ids": [
+    "ta_s35a21_paksha_16_or_14"
+   ]
+  },
+  {
+   "start_ET": "Thu 16 Dec 2027 06:09 EST",
+   "end_ET": "Mon 27 Dec 2027 02:35 EST",
+   "title": "Venus-Mars or Sun-Mars together in any sign",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish (July, August 2019)"
+   ],
+   "rule": "Venus with Mars, or Sun with Mars, in one sign.",
+   "detail": "Mars 21.58 deg Sagittarius (Purva Ashadha p3) | value: ('Sun',)",
+   "refs": [
+    "TA p.157 [printed 127] Section 35 A 'Bullish configurations - silver' #3"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer sign ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Mars \u2713",
+    "matches existing calendar SI row (cfg_silver_bullish_06_sun_mars_same_sign) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a03_venus_mars_or_sun_mars"
+   ]
+  },
+  {
+   "start_ET": "Wed 22 Dec 2027 19:50 EST",
+   "end_ET": "Sat 08 Jan 2028 21:05 EST",
+   "title": "Rahu and Mars in the same nakshatra",
+   "tone": "Bullish",
+   "verdicts": [
+    "More Bullish"
+   ],
+   "rule": "Rahu and Mars in one nakshatra.",
+   "detail": "Rahu 9.74 deg Capricorn (Uttara Ashadha p4); Mars 26.67 deg Sagittarius (Uttara Ashadha p1) | value: Uttara Ashadha",
+   "refs": [
+    "2026 document (data/source_2026.html), Silver section - Bullish #7 second row",
+    "TA p.158 S35 A4 ('More Bullish when in same Nakshatra')"
+   ],
+   "quals": [
+    "Rahu/Ketu sign/nakshatra changes: the 2026 document's almanac prints the 5 Dec 2026 node ingress 40 min earlier (21:52 IST) than the mean node computed here (22:32 IST) - a known 5-arcsecond formulation gap (config/conventions.yaml)."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Mars \u2713",
+    "end = astronomy-layer nakshatra ingress of Mars \u2713"
+   ],
+   "rule_ids": [
+    "doc26_silver_bull_07b_rahu_mars_same_nakshatra"
+   ]
+  },
+  {
+   "start_ET": "Thu 23 Dec 2027 21:47 EST",
+   "end_ET": "",
+   "title": "Saturn direct from retrograde",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish (September 2019)"
+   ],
+   "rule": "Saturn direct from retrograde.",
+   "detail": "Saturn 26.77 deg Pisces (Revati p4)",
+   "refs": [
+    "TA p.160 [printed 130] Section 35 B (silver) #10"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer station of Saturn \u2713",
+    "matches existing calendar SI row (cfg_silver_bearish_08_saturn_direct_from_retrograde) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35b10_saturn_direct"
+   ]
+  },
+  {
+   "start_ET": "Mon 27 Dec 2027 02:35 EST",
+   "end_ET": "Thu 03 Feb 2028 05:14 EST",
+   "title": "Rahu & Mars together in any sign",
+   "tone": "Bullish",
+   "verdicts": [
+    "Gold can rally; silver Bullish, more when same nakshatra"
+   ],
+   "rule": "Rahu and Mars in one sign.",
+   "detail": "Rahu 9.51 deg Capricorn (Uttara Ashadha p4); Mars 0.00 deg Capricorn (Uttara Ashadha p2) | value: Capricorn",
+   "refs": [
+    "TA p.154 [printed 124] Section 34 A #4",
+    "TA p.158 [printed 128] Section 35 A (silver) #4"
+   ],
+   "quals": [
+    "Rahu/Ketu sign/nakshatra changes: the 2026 document's almanac prints the 5 Dec 2026 node ingress 40 min earlier (21:52 IST) than the mean node computed here (22:32 IST) - a known 5-arcsecond formulation gap (config/conventions.yaml)."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Mars \u2713",
+    "end: after the astronomy layer's span (engine value)",
+    "matches existing calendar SI row (cfg_silver_bullish_07_rahu_mars_same_sign) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s34a04_rahu_mars_together"
+   ]
+  },
+  {
+   "start_ET": "Mon 27 Dec 2027 02:35 EST",
+   "end_ET": "Sat 08 Jan 2028 08:46 EST",
+   "title": "Venus-Mars or Sun-Mars together in any sign",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish (July, August 2019)"
+   ],
+   "rule": "Venus with Mars, or Sun with Mars, in one sign.",
+   "detail": "Mars 0.00 deg Capricorn (Uttara Ashadha p2) | value: ('Venus',)",
+   "refs": [
+    "TA p.157 [printed 127] Section 35 A 'Bullish configurations - silver' #3"
+   ],
+   "quals": [],
+   "checks": [
+    "start = astronomy-layer sign ingress of Mars \u2713",
+    "end = astronomy-layer sign ingress of Venus \u2713",
+    "matches existing calendar SI row (cfg_silver_bullish_05_venus_mars_same_sign) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a03_venus_mars_or_sun_mars"
+   ]
+  },
+  {
+   "start_ET": "Mon 27 Dec 2027 02:35 EST",
+   "end_ET": "Sun 02 Jan 2028 10:25 EST",
+   "title": "Only Sun-Mercury or Moon-Mercury alone in a sign",
+   "tone": "Bullish",
+   "verdicts": [
+    "Silver Bullish"
+   ],
+   "rule": "Mercury shares a sign only with the Sun (or only with the Moon).",
+   "detail": "Sun 11.05 deg Sagittarius (Mula p4); Mercury 19.82 deg Sagittarius (Purva Ashadha p2) | value: Sagittarius",
+   "refs": [
+    "TA p.159 [printed 129] Section 35 A #17"
+   ],
+   "quals": [
+    "Moon-Mercury variant belongs to the Moon layer (2.5-day windows)."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Mars \u2713",
+    "end = astronomy-layer sign ingress of Mercury \u2713",
+    "matches existing calendar SI row (cfg_silver_bullish_15_sun_or_moon_with_mercury_alone) \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35a17_sun_or_moon_mercury_alone"
+   ]
+  },
+  {
+   "start_ET": "Mon 27 Dec 2027",
+   "end_ET": "",
+   "title": "Amavasya on Monday",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish"
+   ],
+   "rule": "Udaya tithi Amavasya on a Monday.",
+   "detail": "Moon 7.58 deg Sagittarius (Mula p3) | weekday: Monday; tithi at NY sunrise: Amavasya; moon nakshatra: Mula; yoga: Vriddhi",
+   "refs": [
+    "TA p.160 [printed 130] Section 35 B (silver) #4"
+   ],
+   "quals": [
+    "Panchang read at New York sunrise (the Hindu day runs sunrise to sunrise). Indian almanacs read it at Indian sunrise, so a day near a tithi/nakshatra/yoga change can differ."
+   ],
+   "checks": [
+    "darshan criterion reproduces all 4 Moon-darshan dates printed in the 2026 document at Mumbai (3 of 4 at New York); both sightings shown",
+    "existing calendar (cfg_silver_bearish_05_amavasya_on_monday) has no SI row at this start"
+   ],
+   "rule_ids": [
+    "ta_s35b04_amavasya_monday"
+   ]
+  },
+  {
+   "start_ET": "Fri 31 Dec 2027 02:36 EST",
+   "end_ET": "Fri 31 Dec 2027 16:57 EST",
+   "title": "Moon-Venus mutual Vedha",
+   "tone": "Bearish",
+   "verdicts": [
+    "Silver Bearish"
+   ],
+   "rule": "Moon and Venus vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
+   "detail": "Moon 23.34 deg Capricorn (Dhanishta p1); Venus 19.92 deg Capricorn (Shravana p3) | value: Moon in Dhanishta vedhas Shravana (Right side) where Venus is; Venus in Shravana vedhas Dhanishta (Left side) where Moon is",
+   "refs": [
+    "TA p.160 [printed 130] Section 35 B (silver) #7"
+   ],
+   "quals": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Moon \u2713",
+    "end = astronomy-layer speed crossing of Venus \u2713"
+   ],
+   "rule_ids": [
+    "ta_s35b07_moon_venus_mutual_vedha"
+   ]
+  }
+ ]
+}

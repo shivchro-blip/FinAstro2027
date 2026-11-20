@@ -1,0 +1,1544 @@
+{
+ "ta_s3_moon_12th_to_saturn": {
+  "pdf_rule": "Moon 12th to Saturn (Shani Chandra Dwidwadash Yog)",
+  "existing": [
+   "b094_shani_chandra_dwidwadash_yog"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 14,
+  "existing_rows": 14,
+  "matched": 14,
+  "only_ours": [],
+  "only_existing": []
+ },
+ "ta_s24_23_venus_ahead_of_jupiter": {
+  "pdf_rule": "Venus ahead of Jupiter in same sign",
+  "existing": [
+   "b080_venus_ahead_of_jupiter_same_sign"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 1,
+  "existing_rows": 1,
+  "matched": 0,
+  "only_ours": [
+   "2027-08-26T03:00:00+00:00"
+  ],
+  "only_existing": [
+   "2027-08-26T22:38:31+00:00"
+  ]
+ },
+ "ta_s24_47_venus_behind_jupiter": {
+  "pdf_rule": "Venus behind Jupiter in same sign",
+  "existing": [
+   "b079_venus_behind_jupiter_same_sign"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 1,
+  "existing_rows": 1,
+  "matched": 1,
+  "only_ours": [],
+  "only_existing": []
+ },
+ "ta_s24_30_saturn_mercury_retro": {
+  "pdf_rule": "Saturn & Mercury all retrograde together",
+  "existing": [
+   "b081_saturn_mercury_both_retrograde"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 1,
+  "existing_rows": 1,
+  "matched": 1,
+  "only_ours": [],
+  "only_existing": []
+ },
+ "ta_s24_35_jupiter_mercury_retro": {
+  "pdf_rule": "Jupiter & Mercury all retrograde together",
+  "existing": [
+   "cfg_silver_bullish_16_mercury_jupiter_both_retrograde"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 1,
+  "existing_rows": 1,
+  "matched": 1,
+  "only_ours": [],
+  "only_existing": []
+ },
+ "ta_s24_43_moon_rahu_same_nakshatra": {
+  "pdf_rule": "Moon & Rahu in same nakshatra",
+  "existing": [
+   "b087_moon_rahu_same_nakshatra",
+   "b088_moon_rahu_same_nakshatra_rahu_in_dhanishta"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 14,
+  "existing_rows": 14,
+  "matched": 14,
+  "only_ours": [],
+  "only_existing": []
+ },
+ "ta_s24_45_venus_mars_same_nakshatra": {
+  "pdf_rule": "Venus & Mars in same nakshatra",
+  "existing": [
+   "b090_venus_mars_same_nakshatra"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 5,
+  "existing_rows": 5,
+  "matched": 5,
+  "only_ours": [],
+  "only_existing": []
+ },
+ "ta_s24_52_sun_in_uttara": {
+  "pdf_rule": "Sun enters Uttara Ashadha",
+  "existing": [
+   "b091_sun_in_uttara_ashadha_ashwini_or_chitra"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 1,
+  "existing_rows": 3,
+  "matched": 1,
+  "only_ours": [],
+  "only_existing": [
+   "2027-04-14T09:58:23+00:00",
+   "2027-10-11T03:01:55+00:00"
+  ]
+ },
+ "ta_s24_53_sun_in_chitra": {
+  "pdf_rule": "Sun enters Chitra",
+  "existing": [
+   "b091_sun_in_uttara_ashadha_ashwini_or_chitra"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 1,
+  "existing_rows": 3,
+  "matched": 1,
+  "only_ours": [],
+  "only_existing": [
+   "2027-01-11T09:09:49+00:00",
+   "2027-04-14T09:58:23+00:00"
+  ]
+ },
+ "ta_s24_55_sun_in_ashwini": {
+  "pdf_rule": "Sun enters Ashwini",
+  "existing": [
+   "b091_sun_in_uttara_ashadha_ashwini_or_chitra"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 1,
+  "existing_rows": 3,
+  "matched": 1,
+  "only_ours": [],
+  "only_existing": [
+   "2027-01-11T09:09:49+00:00",
+   "2027-10-11T03:01:55+00:00"
+  ]
+ },
+ "ta_s24_73_sun_in_krittika": {
+  "pdf_rule": "Sun enters Krittika",
+  "existing": [
+   "b092_sun_in_krittika"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 1,
+  "existing_rows": 1,
+  "matched": 1,
+  "only_ours": [],
+  "only_existing": []
+ },
+ "ta_s24_54_moon_mars_together": {
+  "pdf_rule": "Moon & Mars together",
+  "existing": [
+   "b093_moon_mars_same_sign"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 14,
+  "existing_rows": 14,
+  "matched": 14,
+  "only_ours": [],
+  "only_existing": []
+ },
+ "ta_s34a03_sun_libra_with_malefic": {
+  "pdf_rule": "Sun in Libra with other malefic (Saturn, Mars, Rahu)",
+  "existing": [
+   "cfg_gold_bullish_02_sun_libra_aspected_by_malefics"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 0,
+  "existing_rows": 1,
+  "matched": 0,
+  "only_ours": [],
+  "only_existing": [
+   "2027-10-17T20:38:58+00:00"
+  ]
+ },
+ "ta_s34a04_rahu_mars_together": {
+  "pdf_rule": "Rahu & Mars together in any sign",
+  "existing": [
+   "cfg_gold_bullish_03_rahu_mars_same_sign",
+   "cfg_silver_bullish_07_rahu_mars_same_sign"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 1,
+  "existing_rows": 1,
+  "matched": 1,
+  "only_ours": [],
+  "only_existing": []
+ },
+ "ta_s34b03_saturn_or_mercury_gemini": {
+  "pdf_rule": "Saturn or Mercury in Gemini",
+  "existing": [
+   "cfg_gold_bearish_02_saturn_or_mercury_in_gemini"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 1,
+  "existing_rows": 1,
+  "matched": 1,
+  "only_ours": [],
+  "only_existing": []
+ },
+ "ta_s35a03_venus_mars_or_sun_mars": {
+  "pdf_rule": "Venus-Mars or Sun-Mars together in any sign",
+  "existing": [
+   "cfg_silver_bullish_05_venus_mars_same_sign",
+   "cfg_silver_bullish_06_sun_mars_same_sign"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 6,
+  "existing_rows": 6,
+  "matched": 6,
+  "only_ours": [],
+  "only_existing": []
+ },
+ "ta_s35b01_venus_leo_libra": {
+  "pdf_rule": "Venus in Leo or Libra",
+  "existing": [
+   "cfg_silver_bearish_01_venus_alone_in_leo_or_libra"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 3,
+  "existing_rows": 1,
+  "matched": 0,
+  "only_ours": [
+   "2026-11-22T11:51:33+00:00",
+   "2027-08-16T04:05:09+00:00",
+   "2027-10-03T12:54:50+00:00"
+  ],
+  "only_existing": [
+   "2026-12-02T11:57:32+00:00"
+  ]
+ },
+ "ta_s35b02_mercury_aries_virgo": {
+  "pdf_rule": "Mercury in Aries or Virgo",
+  "existing": [
+   "cfg_silver_bearish_02_mercury_alone_in_aries_or_virgo"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 3,
+  "existing_rows": 2,
+  "matched": 2,
+  "only_ours": [
+   "2027-04-22T02:42:39+00:00"
+  ],
+  "only_existing": []
+ },
+ "ta_s35b03_mars_ashlesha_pada4": {
+  "pdf_rule": "Mars in 4th pada of Ashlesha",
+  "existing": [
+   "cfg_silver_bearish_03_mars_in_fourth_pad_of_ashlesha"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 1,
+  "existing_rows": 1,
+  "matched": 1,
+  "only_ours": [],
+  "only_existing": []
+ },
+ "ta_s35b13_sun_vir_lib_pis_benefic": {
+  "pdf_rule": "Sun in Virgo, Libra or Pisces with or aspected by benefics",
+  "existing": [
+   "cfg_silver_bearish_09_sun_three_signs_with_or_aspected_by_benefics"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 7,
+  "existing_rows": 14,
+  "matched": 7,
+  "only_ours": [],
+  "only_existing": [
+   "2027-03-21T22:14:59+00:00",
+   "2027-03-24T02:03:24+00:00",
+   "2027-09-18T11:17:58+00:00",
+   "2027-10-13T09:01:36+00:00",
+   "2027-10-18T00:31:49+00:00",
+   "2027-11-12T02:25:46+00:00",
+   "2027-11-14T08:12:57+00:00"
+  ]
+ },
+ "ta_s35a18_mercury_jupiter_retro": {
+  "pdf_rule": "Mercury & Jupiter both retrograde (even in different signs)",
+  "existing": [
+   "cfg_silver_bullish_16_mercury_jupiter_both_retrograde"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 1,
+  "existing_rows": 1,
+  "matched": 1,
+  "only_ours": [],
+  "only_existing": []
+ },
+ "ta_s35a01_retro_mercury_or_jupiter": {
+  "pdf_rule": "Retrograde Mercury or Jupiter",
+  "existing": [
+   "cfg_silver_bullish_02_retrograde_mercury_or_jupiter"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 5,
+  "existing_rows": 3,
+  "matched": 3,
+  "only_ours": [
+   "2027-02-09T17:36:33+00:00",
+   "2027-03-03T12:32:20+00:00"
+  ],
+  "only_existing": []
+ },
+ "ta_s35a02_sun_pushya_dhanishta_no_benefic": {
+  "pdf_rule": "Sun in Pushya or Dhanishta without benefic planets",
+  "existing": [
+   "cfg_silver_bullish_03_sun_pushya_or_dhanistha_without_benefic"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 2,
+  "existing_rows": 2,
+  "matched": 2,
+  "only_ours": [],
+  "only_existing": []
+ },
+ "ta_s35a17_sun_or_moon_mercury_alone": {
+  "pdf_rule": "Only Sun-Mercury or Moon-Mercury alone in a sign",
+  "existing": [
+   "cfg_silver_bullish_15_sun_or_moon_with_mercury_alone"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 9,
+  "existing_rows": 13,
+  "matched": 7,
+  "only_ours": [
+   "2027-05-15T06:50:09+00:00",
+   "2027-11-25T18:59:31+00:00"
+  ],
+  "only_existing": [
+   "2027-02-07T05:06:47+00:00",
+   "2027-06-05T12:20:43+00:00",
+   "2027-07-30T09:00:00+00:00",
+   "2027-09-01T19:43:19+00:00",
+   "2027-10-26T14:40:32+00:00",
+   "2027-11-25T01:03:21+00:00"
+  ]
+ },
+ "ta_s36a01_jupiter_cancer_or_saturn_gemini": {
+  "pdf_rule": "Jupiter in Cancer or Saturn in Gemini",
+  "existing": [
+   "cfg_sugar_bullish_01_jupiter_in_cancer"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 1,
+  "existing_rows": 1,
+  "matched": 1,
+  "only_ours": [],
+  "only_existing": []
+ },
+ "ta_s36a13_herschel_with_malefic": {
+  "pdf_rule": "Herschel with any malefic planet in any sign",
+  "existing": [
+   "cfg_sugar_bullish_06_herschel_with_any_malefic"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 1,
+  "existing_rows": 9,
+  "matched": 1,
+  "only_ours": [],
+  "only_existing": [
+   "2027-04-09T17:26:48+00:00",
+   "2027-05-07T01:26:00+00:00",
+   "2027-06-03T11:07:57+00:00",
+   "2027-06-05T12:20:43+00:00",
+   "2027-06-30T21:12:42+00:00",
+   "2027-07-28T06:09:25+00:00",
+   "2027-08-24T14:55:11+00:00",
+   "2027-09-22T23:07:15+00:00"
+  ]
+ },
+ "kd_034_mercury_venus_conjunction": {
+  "pdf_rule": "Mercury-Venus conjunction (turning event)",
+  "existing": [
+   "b017_venus_mercury_conjunction"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 3,
+  "existing_rows": 3,
+  "matched": 3,
+  "only_ours": [],
+  "only_existing": []
+ },
+ "ta_s24_19_ashtami_saturday": {
+  "pdf_rule": "Ashtami on Saturday",
+  "existing": [
+   "b073_ashtami_on_tuesday_saturday"
+  ],
+  "method": "day rule: our Mumbai-sunrise days vs existing Indian-venue days; our New York-sunrise days vs existing US-venue days",
+  "mumbai_ours": 7,
+  "mumbai_existing": 18,
+  "mumbai_common": 7,
+  "mumbai_only_ours": [],
+  "mumbai_only_existing": [
+   "2027-01-30",
+   "2027-02-27",
+   "2027-04-13",
+   "2027-06-12",
+   "2027-06-26",
+   "2027-07-10",
+   "2027-08-24",
+   "2027-09-07",
+   "2027-11-20",
+   "2027-12-07",
+   "2027-12-21"
+  ],
+  "ny_ours": 4,
+  "ny_existing": 13,
+  "ny_common": 4,
+  "ny_only_ours": []
+ },
+ "ta_s24_18_ashwini_tuesday": {
+  "pdf_rule": "Ashwini nakshatra on Tuesday",
+  "existing": [
+   "b072_ashwini_on_tuesday"
+  ],
+  "method": "day rule: our Mumbai-sunrise days vs existing Indian-venue days; our New York-sunrise days vs existing US-venue days",
+  "mumbai_ours": 1,
+  "mumbai_existing": 3,
+  "mumbai_common": 1,
+  "mumbai_only_ours": [],
+  "mumbai_only_existing": [
+   "2027-06-01",
+   "2027-07-27"
+  ],
+  "ny_ours": 2,
+  "ny_existing": 3,
+  "ny_common": 2,
+  "ny_only_ours": []
+ },
+ "ta_s24_05_ekadashi_friday": {
+  "pdf_rule": "Ekadashi on Friday",
+  "existing": [
+   "b065_ekadashi_on_friday"
+  ],
+  "method": "day rule: our Mumbai-sunrise days vs existing Indian-venue days; our New York-sunrise days vs existing US-venue days",
+  "mumbai_ours": 1,
+  "mumbai_existing": 8,
+  "mumbai_common": 1,
+  "mumbai_only_ours": [],
+  "mumbai_only_existing": [
+   "2027-03-19",
+   "2027-04-16",
+   "2027-07-30",
+   "2027-08-13",
+   "2027-08-27",
+   "2027-09-10",
+   "2027-12-10"
+  ],
+  "ny_ours": 3,
+  "ny_existing": 4,
+  "ny_common": 3,
+  "ny_only_ours": []
+ },
+ "ta_s24_04_pradosh": {
+  "pdf_rule": "Pradosh (Trayodashi) day",
+  "existing": [
+   "b064_pradosh"
+  ],
+  "method": "day rule: our Mumbai-sunrise days vs existing Indian-venue days; our New York-sunrise days vs existing US-venue days",
+  "mumbai_ours": 24,
+  "mumbai_existing": 25,
+  "mumbai_common": 12,
+  "mumbai_only_ours": [
+   "2027-02-04",
+   "2027-02-19",
+   "2027-03-06",
+   "2027-05-18",
+   "2027-06-03",
+   "2027-07-02",
+   "2027-07-16",
+   "2027-08-15",
+   "2027-09-28",
+   "2027-10-13",
+   "2027-11-12",
+   "2027-11-26"
+  ],
+  "mumbai_only_existing": [
+   "2027-02-03",
+   "2027-02-18",
+   "2027-03-05",
+   "2027-04-18",
+   "2027-05-17",
+   "2027-06-02",
+   "2027-07-01",
+   "2027-07-15",
+   "2027-08-29",
+   "2027-09-27",
+   "2027-10-12",
+   "2027-11-11",
+   "2027-11-25"
+  ],
+  "ny_ours": 26,
+  "ny_existing": 25,
+  "ny_common": 12,
+  "ny_only_ours": [
+   "2027-01-05",
+   "2027-03-20",
+   "2027-04-04",
+   "2027-05-04",
+   "2027-05-18",
+   "2027-06-16",
+   "2027-07-02",
+   "2027-07-16",
+   "2027-07-31",
+   "2027-08-14",
+   "2027-09-13",
+   "2027-10-13",
+   "2027-10-27",
+   "2027-12-25"
+  ]
+ },
+ "ta_s24_01_chaturthi": {
+  "pdf_rule": "Sankashti (Krishna Chaturthi) / Vinayak (Shukla Chaturthi)",
+  "existing": [
+   "b075_chaturthi_shukla_paksha",
+   "b076_chaturthi_krishna_paksha"
+  ],
+  "method": "day rule: our Mumbai-sunrise days vs existing Indian-venue days; our New York-sunrise days vs existing US-venue days",
+  "mumbai_ours": 24,
+  "mumbai_existing": 48,
+  "mumbai_common": 24,
+  "mumbai_only_ours": [],
+  "mumbai_only_existing": [
+   "2027-01-11",
+   "2027-01-25",
+   "2027-01-26",
+   "2027-02-11",
+   "2027-02-23",
+   "2027-03-11",
+   "2027-03-25",
+   "2027-04-25",
+   "2027-05-09",
+   "2027-05-23",
+   "2027-06-07",
+   "2027-06-22",
+   "2027-07-06",
+   "2027-08-06",
+   "2027-08-20",
+   "2027-09-03",
+   "2027-09-19",
+   "2027-10-04",
+   "2027-10-18",
+   "2027-11-01",
+   "2027-11-18",
+   "2027-12-01",
+   "2027-12-16",
+   "2027-12-31"
+  ],
+  "ny_ours": 24,
+  "ny_existing": 51,
+  "ny_common": 24,
+  "ny_only_ours": []
+ },
+ "ta_s24_27_ekadashi_vyatipata_vaidhriti": {
+  "pdf_rule": "Ekadashi with Vyatipata or Vaidhriti yoga",
+  "existing": [
+   "b108_shukla_ekadashi_with_vyatipata_or_vaidhriti"
+  ],
+  "method": "day rule: our Mumbai-sunrise days vs existing Indian-venue days; our New York-sunrise days vs existing US-venue days",
+  "mumbai_ours": 2,
+  "mumbai_existing": 2,
+  "mumbai_common": 1,
+  "mumbai_only_ours": [
+   "2027-03-03"
+  ],
+  "mumbai_only_existing": [
+   "2027-12-09"
+  ],
+  "ny_ours": 2,
+  "ny_existing": 3,
+  "ny_common": 1,
+  "ny_only_ours": [
+   "2027-03-03"
+  ]
+ },
+ "ta_s24_28_amavasya_sag_pisces": {
+  "pdf_rule": "Amavasya with Moon in Sagittarius or Pisces",
+  "existing": [
+   "b060s_amavasya_moon_in_sagittarius_or_pisces"
+  ],
+  "method": "day rule: our Mumbai-sunrise days vs existing Indian-venue days; our New York-sunrise days vs existing US-venue days",
+  "mumbai_ours": 3,
+  "mumbai_existing": 3,
+  "mumbai_common": 0,
+  "mumbai_only_ours": [
+   "2027-01-07",
+   "2027-04-06",
+   "2027-12-27"
+  ],
+  "mumbai_only_existing": [
+   "2027-01-08",
+   "2027-04-07",
+   "2027-12-28"
+  ],
+  "ny_ours": 3,
+  "ny_existing": 3,
+  "ny_common": 3,
+  "ny_only_ours": []
+ },
+ "ta_s24_58_amavasya_tuesday": {
+  "pdf_rule": "Amavasya on Tuesday",
+  "existing": [
+   "b060t_amavasya_on_tuesday"
+  ],
+  "method": "day rule: our Mumbai-sunrise days vs existing Indian-venue days; our New York-sunrise days vs existing US-venue days",
+  "mumbai_ours": 2,
+  "mumbai_existing": 2,
+  "mumbai_common": 1,
+  "mumbai_only_ours": [
+   "2027-04-06"
+  ],
+  "mumbai_only_existing": [
+   "2027-12-28"
+  ],
+  "ny_ours": 2,
+  "ny_existing": 2,
+  "ny_common": 2,
+  "ny_only_ours": []
+ },
+ "ta_s35b04_amavasya_monday": {
+  "pdf_rule": "Amavasya on Monday",
+  "existing": [
+   "cfg_silver_bearish_05_amavasya_on_monday"
+  ],
+  "method": "day rule: our Mumbai-sunrise days vs existing Indian-venue days; our New York-sunrise days vs existing US-venue days",
+  "mumbai_ours": 3,
+  "mumbai_existing": 2,
+  "mumbai_common": 2,
+  "mumbai_only_ours": [
+   "2027-12-27"
+  ],
+  "mumbai_only_existing": [],
+  "ny_ours": 2,
+  "ny_existing": 3,
+  "ny_common": 2,
+  "ny_only_ours": []
+ },
+ "ta_s24_59_shukla_pratipada_sat_sun": {
+  "pdf_rule": "Shukla Pratipada on Saturday or Sunday",
+  "existing": [
+   "b095_shukla_pratipada_on_saturday_or_sunday"
+  ],
+  "method": "day rule: our Mumbai-sunrise days vs existing Indian-venue days; our New York-sunrise days vs existing US-venue days",
+  "mumbai_ours": 3,
+  "mumbai_existing": 7,
+  "mumbai_common": 3,
+  "mumbai_only_ours": [],
+  "mumbai_only_existing": [
+   "2027-01-09",
+   "2027-02-06",
+   "2027-07-04",
+   "2027-11-28"
+  ],
+  "ny_ours": 5,
+  "ny_existing": 8,
+  "ny_common": 5,
+  "ny_only_ours": []
+ },
+ "ta_s24_60_vyatipata_sun_tue_sat": {
+  "pdf_rule": "Vyatipata yoga on Sunday, Tuesday or Saturday",
+  "existing": [
+   "b096_vyatipata_yoga_on_tuesday_saturday_or_sunday"
+  ],
+  "method": "day rule: our Mumbai-sunrise days vs existing Indian-venue days; our New York-sunrise days vs existing US-venue days",
+  "mumbai_ours": 9,
+  "mumbai_existing": 11,
+  "mumbai_common": 9,
+  "mumbai_only_ours": [],
+  "mumbai_only_existing": [
+   "2027-06-12",
+   "2027-08-28"
+  ],
+  "ny_ours": 7,
+  "ny_existing": 11,
+  "ny_common": 7,
+  "ny_only_ours": []
+ },
+ "ta_s24_62_mrigashira_monday": {
+  "pdf_rule": "Mrigashira on Monday",
+  "existing": [
+   "b097_moon_in_mrigashira_on_monday"
+  ],
+  "method": "day rule: our Mumbai-sunrise days vs existing Indian-venue days; our New York-sunrise days vs existing US-venue days",
+  "mumbai_ours": 1,
+  "mumbai_existing": 3,
+  "mumbai_common": 1,
+  "mumbai_only_ours": [],
+  "mumbai_only_existing": [
+   "2027-03-15",
+   "2027-12-13"
+  ],
+  "ny_ours": 2,
+  "ny_existing": 5,
+  "ny_common": 2,
+  "ny_only_ours": []
+ },
+ "ta_s24_82_shukla_shashti_friday": {
+  "pdf_rule": "Shukla Shashti on Friday",
+  "existing": [
+   "b100_shukla_shasthi_on_friday"
+  ],
+  "method": "day rule: our Mumbai-sunrise days vs existing Indian-venue days; our New York-sunrise days vs existing US-venue days",
+  "mumbai_ours": 2,
+  "mumbai_existing": 3,
+  "mumbai_common": 2,
+  "mumbai_only_ours": [],
+  "mumbai_only_existing": [
+   "2027-12-03"
+  ],
+  "ny_ours": 2,
+  "ny_existing": 4,
+  "ny_common": 2,
+  "ny_only_ours": []
+ },
+ "ta_s24_84_ashtami_mon_thu_fri": {
+  "pdf_rule": "Ashtami on Monday, Thursday or Friday",
+  "existing": [
+   "b074_ashtami_on_monday_thursday_friday"
+  ],
+  "method": "day rule: our Mumbai-sunrise days vs existing Indian-venue days; our New York-sunrise days vs existing US-venue days",
+  "mumbai_ours": 9,
+  "mumbai_existing": 18,
+  "mumbai_common": 9,
+  "mumbai_only_ours": [],
+  "mumbai_only_existing": [
+   "2027-01-15",
+   "2027-02-15",
+   "2027-03-15",
+   "2027-03-29",
+   "2027-05-28",
+   "2027-07-26",
+   "2027-09-24",
+   "2027-10-08",
+   "2027-10-22"
+  ],
+  "ny_ours": 13,
+  "ny_existing": 19,
+  "ny_common": 13,
+  "ny_only_ours": []
+ },
+ "ta_s24_86_anuradha_sunday": {
+  "pdf_rule": "Anuradha on Sunday",
+  "existing": [
+   "b102_anuradha_on_sunday"
+  ],
+  "method": "day rule: our Mumbai-sunrise days vs existing Indian-venue days; our New York-sunrise days vs existing US-venue days",
+  "mumbai_ours": 3,
+  "mumbai_existing": 6,
+  "mumbai_common": 3,
+  "mumbai_only_ours": [],
+  "mumbai_only_existing": [
+   "2027-01-03",
+   "2027-10-31",
+   "2027-12-26"
+  ],
+  "ny_ours": 3,
+  "ny_existing": 6,
+  "ny_common": 3,
+  "ny_only_ours": []
+ },
+ "ta_s24_88_tuesday_shatabhisha": {
+  "pdf_rule": "Shatabhisha on Tuesday",
+  "existing": [
+   "b103_shatabhisha_on_tuesday"
+  ],
+  "method": "day rule: our Mumbai-sunrise days vs existing Indian-venue days; our New York-sunrise days vs existing US-venue days",
+  "mumbai_ours": 2,
+  "mumbai_existing": 5,
+  "mumbai_common": 2,
+  "mumbai_only_ours": [],
+  "mumbai_only_existing": [
+   "2027-02-09",
+   "2027-09-14",
+   "2027-11-09"
+  ],
+  "ny_ours": 3,
+  "ny_existing": 4,
+  "ny_common": 3,
+  "ny_only_ours": []
+ },
+ "ta_s24_89_thursday_mrigashira": {
+  "pdf_rule": "Mrigashira on Thursday",
+  "existing": [
+   "b104_mrigashira_on_thursday"
+  ],
+  "method": "day rule: our Mumbai-sunrise days vs existing Indian-venue days; our New York-sunrise days vs existing US-venue days",
+  "mumbai_ours": 1,
+  "mumbai_existing": 2,
+  "mumbai_common": 1,
+  "mumbai_only_ours": [],
+  "mumbai_only_existing": [
+   "2027-08-26"
+  ],
+  "ny_ours": 2,
+  "ny_existing": 3,
+  "ny_common": 2,
+  "ny_only_ours": []
+ },
+ "ta_s24_90_uttara_ashadha_monday": {
+  "pdf_rule": "Uttara Ashadha on Monday",
+  "existing": [
+   "b105n_uttara_ashadha_on_monday_moon_not_vargottama"
+  ],
+  "method": "day rule: our Mumbai-sunrise days vs existing Indian-venue days; our New York-sunrise days vs existing US-venue days",
+  "mumbai_ours": 2,
+  "mumbai_existing": 2,
+  "mumbai_common": 2,
+  "mumbai_only_ours": [],
+  "mumbai_only_existing": [],
+  "ny_ours": 1,
+  "ny_existing": 2,
+  "ny_common": 1,
+  "ny_only_ours": []
+ },
+ "ta_s24_99_shukla_trayodashi_sat_tue": {
+  "pdf_rule": "Shukla Trayodashi on Saturday or Tuesday",
+  "existing": [
+   "b109_shukla_trayodashi_on_tuesday_or_saturday"
+  ],
+  "method": "day rule: our Mumbai-sunrise days vs existing Indian-venue days; our New York-sunrise days vs existing US-venue days",
+  "mumbai_ours": 4,
+  "mumbai_existing": 6,
+  "mumbai_common": 4,
+  "mumbai_only_ours": [],
+  "mumbai_only_existing": [
+   "2027-09-14",
+   "2027-10-12"
+  ],
+  "ny_ours": 5,
+  "ny_existing": 8,
+  "ny_common": 5,
+  "ny_only_ours": []
+ },
+ "ta_s36b03_margshirsh_krishna_panchami_thu_fri": {
+  "pdf_rule": "Margshirsh Krishna Panchami on Thursday/Friday",
+  "existing": [
+   "cfg_sugar_bullish_07_margshirsh_krishna_panchami"
+  ],
+  "method": "day rule: our Mumbai-sunrise days vs existing Indian-venue days; our New York-sunrise days vs existing US-venue days",
+  "mumbai_ours": 1,
+  "mumbai_existing": 1,
+  "mumbai_common": 1,
+  "mumbai_only_ours": [],
+  "mumbai_only_existing": [],
+  "ny_ours": 1,
+  "ny_existing": 0,
+  "ny_common": null,
+  "ny_only_ours": "existing rule has no US-venue rows"
+ },
+ "ta_s24_17_krishna_trayodashi_kshay": {
+  "pdf_rule": "Trayodashi Kshay in dark fortnight",
+  "existing": [
+   "b067_kshay_tithi_krishna_paksha"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 1,
+  "existing_rows": 14,
+  "matched": 1,
+  "only_ours": [],
+  "only_existing": [
+   "2027-01-25T02:40:53+00:00",
+   "2027-06-03T01:05:01+00:00",
+   "2027-07-02T09:53:47+00:00",
+   "2027-07-29T02:04:37+00:00",
+   "2027-08-26T12:09:51+00:00",
+   "2027-08-29T04:06:04+00:00",
+   "2027-09-21T01:13:15+00:00",
+   "2027-10-18T12:22:05+00:00",
+   "2027-10-24T02:23:53+00:00",
+   "2027-11-15T01:58:54+00:00",
+   "2027-11-20T13:47:48+00:00",
+   "2027-12-14T13:31:52+00:00",
+   "2027-12-18T02:28:11+00:00"
+  ]
+ },
+ "ta_s24_85_shukla_trayodashi_kshay": {
+  "pdf_rule": "Kshay of Shukla Trayodashi",
+  "existing": [
+   "b066_kshay_tithi_shukla_paksha"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 0,
+  "existing_rows": 18,
+  "matched": 0,
+  "only_ours": [],
+  "only_existing": [
+   "2027-01-19T02:20:00+00:00",
+   "2027-01-21T16:00:31+00:00",
+   "2027-02-17T12:02:22+00:00",
+   "2027-02-20T02:30:22+00:00",
+   "2027-03-16T03:24:55+00:00",
+   "2027-03-21T12:52:01+00:00",
+   "2027-04-13T11:59:26+00:00",
+   "2027-04-18T02:12:39+00:00",
+   "2027-05-06T10:58:38+00:00",
+   "2027-05-10T00:53:25+00:00",
+   "2027-06-07T09:56:29+00:00",
+   "2027-06-10T01:42:01+00:00",
+   "2027-07-04T03:02:06+00:00",
+   "2027-07-08T10:37:44+00:00",
+   "2027-08-02T10:05:15+00:00",
+   "2027-08-04T02:50:11+00:00",
+   "2027-09-02T11:20:33+00:00",
+   "2027-09-30T02:36:05+00:00"
+  ]
+ },
+ "ta_s24_94_kshay_shukla_dashami_to_purnima": {
+  "pdf_rule": "Tithi Kshay from Shukla Dashami till Purnima",
+  "existing": [
+   "b066_kshay_tithi_shukla_paksha"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 3,
+  "existing_rows": 18,
+  "matched": 3,
+  "only_ours": [],
+  "only_existing": [
+   "2027-01-19T02:20:00+00:00",
+   "2027-02-20T02:30:22+00:00",
+   "2027-03-16T03:24:55+00:00",
+   "2027-04-13T11:59:26+00:00",
+   "2027-04-18T02:12:39+00:00",
+   "2027-05-06T10:58:38+00:00",
+   "2027-05-10T00:53:25+00:00",
+   "2027-06-07T09:56:29+00:00",
+   "2027-06-10T01:42:01+00:00",
+   "2027-07-04T03:02:06+00:00",
+   "2027-07-08T10:37:44+00:00",
+   "2027-08-02T10:05:15+00:00",
+   "2027-08-04T02:50:11+00:00",
+   "2027-09-02T11:20:33+00:00",
+   "2027-09-30T02:36:05+00:00"
+  ]
+ },
+ "kd_147_kshay_krishna_dashami_to_amavasya": {
+  "pdf_rule": "Tithi Kshay from Krishna Dashami to Amavasya",
+  "existing": [
+   "b067_kshay_tithi_krishna_paksha"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 3,
+  "existing_rows": 14,
+  "matched": 3,
+  "only_ours": [],
+  "only_existing": [
+   "2027-01-25T02:40:53+00:00",
+   "2027-06-03T01:05:01+00:00",
+   "2027-07-29T02:04:37+00:00",
+   "2027-08-29T04:06:04+00:00",
+   "2027-09-21T01:13:15+00:00",
+   "2027-10-18T12:22:05+00:00",
+   "2027-10-24T02:23:53+00:00",
+   "2027-11-15T01:58:54+00:00",
+   "2027-11-20T13:47:48+00:00",
+   "2027-12-14T13:31:52+00:00",
+   "2027-12-18T02:28:11+00:00"
+  ]
+ },
+ "ta_s24_103_moon_eclipse_tuesday": {
+  "pdf_rule": "Moon eclipse on Tuesday",
+  "existing": [
+   "b110_lunar_eclipse_on_tuesday"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 1,
+  "existing_rows": 1,
+  "matched": 1,
+  "only_ours": [],
+  "only_existing": []
+ },
+ "ta_s35b09_moon_eclipse_sunday": {
+  "pdf_rule": "Moon eclipse on Sunday",
+  "existing": [
+   "cfg_silver_bearish_07_moon_eclipse_on_sunday"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 1,
+  "existing_rows": 2,
+  "matched": 1,
+  "only_ours": [],
+  "only_existing": [
+   "2027-02-20T21:12:23+00:00"
+  ]
+ },
+ "ta_s24_104_moon_eclipse_vaishakh_shravan_ashvin": {
+  "pdf_rule": "Moon eclipse in Vaishakh, Shravan or Ashvin month",
+  "existing": [
+   "b111_lunar_eclipse_in_vaishakha_shravana_or_ashwin"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 1,
+  "existing_rows": 1,
+  "matched": 1,
+  "only_ours": [],
+  "only_existing": []
+ },
+ "ta_s17_mercury_rise_west": {
+  "pdf_rule": "Mercury rises in West",
+  "existing": [
+   "cfg_gold_bearish_04_mercury_rise_in_west"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 1 civil day (date-only))",
+  "ours": 4,
+  "existing_rows": 4,
+  "matched": 4,
+  "only_ours": [],
+  "only_existing": []
+ },
+ "ta_s35a19_retro_mercury_combust": {
+  "pdf_rule": "Retrograde Mercury goes combust",
+  "existing": [
+   "cfg_silver_bullish_17_retrograde_mercury_goes_combust"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 1 civil day (date-only))",
+  "ours": 3,
+  "existing_rows": 3,
+  "matched": 3,
+  "only_ours": [],
+  "only_existing": []
+ },
+ "ta_s18_venus_combust_east": {
+  "pdf_rule": "Venus combust in East",
+  "existing": [
+   "b015a_venus_combust_east"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 1 civil day (date-only))",
+  "ours": 1,
+  "existing_rows": 1,
+  "matched": 1,
+  "only_ours": [],
+  "only_existing": []
+ },
+ "ta_s18_venus_rise_west": {
+  "pdf_rule": "Venus rises in West",
+  "existing": [
+   "b015b_venus_rise_west",
+   "cfg_silver_bearish_10_venus_rise_in_west"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 1 civil day (date-only))",
+  "ours": 1,
+  "existing_rows": 1,
+  "matched": 1,
+  "only_ours": [],
+  "only_existing": []
+ },
+ "ta_s24_110_venus_rising_nakshatras": {
+  "pdf_rule": "Venus rising in Uttara Phalguni, Uttara Ashadha, Uttara Bhadrapada, Ardra, Bharani or Rohini",
+  "existing": [
+   "b015c_venus_rise_star_list"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 1 civil day (date-only))",
+  "ours": 1,
+  "existing_rows": 1,
+  "matched": 1,
+  "only_ours": [],
+  "only_existing": []
+ },
+ "ta_s34b02_jupiter_rise": {
+  "pdf_rule": "Rise of Jupiter",
+  "existing": [
+   "cfg_gold_bearish_01_jupiter_rise"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 1 civil day (date-only))",
+  "ours": 1,
+  "existing_rows": 1,
+  "matched": 1,
+  "only_ours": [],
+  "only_existing": []
+ },
+ "ta_s23_panchak": {
+  "pdf_rule": "Panchak (Moon in Dhanishta 3rd pada to Revati)",
+  "existing": [
+   "b056_aindra_vaidhriti_or_vyatipata_yoga_in_panchak"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 14,
+  "existing_rows": 8,
+  "matched": 0,
+  "only_ours": [
+   "2027-01-10T09:42:11+00:00",
+   "2027-02-06T15:49:41+00:00",
+   "2027-03-05T22:51:05+00:00",
+   "2027-04-02T06:46:52+00:00",
+   "2027-04-29T15:01:24+00:00",
+   "2027-05-26T22:50:09+00:00",
+   "2027-06-23T05:48:16+00:00",
+   "2027-07-20T12:01:52+00:00",
+   "2027-08-16T18:04:41+00:00",
+   "2027-09-13T00:35:09+00:00",
+   "2027-10-10T07:55:46+00:00",
+   "2027-11-06T15:57:11+00:00",
+   "2027-12-04T00:03:45+00:00",
+   "2027-12-31T07:36:33+00:00"
+  ],
+  "only_existing": [
+   "2027-01-11T12:08:45+00:00",
+   "2027-04-06T03:21:31+00:00",
+   "2027-04-07T01:56:33+00:00",
+   "2027-05-01T13:13:38+00:00",
+   "2027-05-02T12:59:39+00:00",
+   "2027-05-27T12:19:38+00:00",
+   "2027-05-27T21:28:08+00:00",
+   "2027-12-08T01:27:45+00:00"
+  ]
+ },
+ "kd_129_shar_mars": {
+  "pdf_rule": "Shar (celestial latitude) of Mars",
+  "existing": [
+   "b118_shar_direction"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 2,
+  "existing_rows": 12,
+  "matched": 0,
+  "only_ours": [
+   "2026-07-25T00:14:31+00:00",
+   "2027-08-11T14:00:28+00:00"
+  ],
+  "only_existing": [
+   "2027-02-01T19:28:51+00:00",
+   "2027-03-11T23:37:18+00:00",
+   "2027-03-16T00:01:35+00:00",
+   "2027-05-01T14:56:02+00:00",
+   "2027-06-10T18:15:14+00:00",
+   "2027-07-06T13:11:42+00:00",
+   "2027-07-28T18:33:52+00:00",
+   "2027-08-13T15:03:35+00:00",
+   "2027-09-04T01:51:12+00:00",
+   "2027-10-24T11:11:41+00:00",
+   "2027-10-25T00:03:09+00:00",
+   "2027-12-02T03:09:34+00:00"
+  ]
+ },
+ "kd_129_shar_mercury": {
+  "pdf_rule": "Shar (celestial latitude) of Mercury",
+  "existing": [
+   "b118_shar_direction"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 9,
+  "existing_rows": 12,
+  "matched": 0,
+  "only_ours": [
+   "2026-12-13T23:13:07+00:00",
+   "2027-02-01T15:43:35+00:00",
+   "2027-03-11T22:24:50+00:00",
+   "2027-04-30T15:01:24+00:00",
+   "2027-06-07T21:37:30+00:00",
+   "2027-07-27T14:15:00+00:00",
+   "2027-09-03T20:56:43+00:00",
+   "2027-10-23T13:27:39+00:00",
+   "2027-11-30T20:14:31+00:00"
+  ],
+  "only_existing": [
+   "2027-02-01T19:28:51+00:00",
+   "2027-03-11T23:37:18+00:00",
+   "2027-03-16T00:01:35+00:00",
+   "2027-05-01T14:56:02+00:00",
+   "2027-06-10T18:15:14+00:00",
+   "2027-07-06T13:11:42+00:00",
+   "2027-07-28T18:33:52+00:00",
+   "2027-08-13T15:03:35+00:00",
+   "2027-09-04T01:51:12+00:00",
+   "2027-10-24T11:11:41+00:00",
+   "2027-10-25T00:03:09+00:00",
+   "2027-12-02T03:09:34+00:00"
+  ]
+ },
+ "kd_129_shar_jupiter": {
+  "pdf_rule": "Shar (celestial latitude) of Jupiter",
+  "existing": [
+   "b118_shar_direction"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 1,
+  "existing_rows": 12,
+  "matched": 0,
+  "only_ours": [
+   "2026-06-01T00:00:00+00:00"
+  ],
+  "only_existing": [
+   "2027-02-01T19:28:51+00:00",
+   "2027-03-11T23:37:18+00:00",
+   "2027-03-16T00:01:35+00:00",
+   "2027-05-01T14:56:02+00:00",
+   "2027-06-10T18:15:14+00:00",
+   "2027-07-06T13:11:42+00:00",
+   "2027-07-28T18:33:52+00:00",
+   "2027-08-13T15:03:35+00:00",
+   "2027-09-04T01:51:12+00:00",
+   "2027-10-24T11:11:41+00:00",
+   "2027-10-25T00:03:09+00:00",
+   "2027-12-02T03:09:34+00:00"
+  ]
+ },
+ "kd_129_shar_venus": {
+  "pdf_rule": "Shar (celestial latitude) of Venus",
+  "existing": [
+   "b118_shar_direction"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 4,
+  "existing_rows": 12,
+  "matched": 0,
+  "only_ours": [
+   "2026-11-21T22:05:37+00:00",
+   "2027-03-13T11:45:28+00:00",
+   "2027-07-04T15:03:16+00:00",
+   "2027-10-24T04:31:24+00:00"
+  ],
+  "only_existing": [
+   "2027-02-01T19:28:51+00:00",
+   "2027-03-11T23:37:18+00:00",
+   "2027-03-16T00:01:35+00:00",
+   "2027-05-01T14:56:02+00:00",
+   "2027-06-10T18:15:14+00:00",
+   "2027-07-06T13:11:42+00:00",
+   "2027-07-28T18:33:52+00:00",
+   "2027-08-13T15:03:35+00:00",
+   "2027-09-04T01:51:12+00:00",
+   "2027-10-24T11:11:41+00:00",
+   "2027-10-25T00:03:09+00:00",
+   "2027-12-02T03:09:34+00:00"
+  ]
+ },
+ "kd_129_shar_saturn": {
+  "pdf_rule": "Shar (celestial latitude) of Saturn",
+  "existing": [
+   "b118_shar_direction"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 1,
+  "existing_rows": 12,
+  "matched": 0,
+  "only_ours": [
+   "2026-06-01T00:00:00+00:00"
+  ],
+  "only_existing": [
+   "2027-02-01T19:28:51+00:00",
+   "2027-03-11T23:37:18+00:00",
+   "2027-03-16T00:01:35+00:00",
+   "2027-05-01T14:56:02+00:00",
+   "2027-06-10T18:15:14+00:00",
+   "2027-07-06T13:11:42+00:00",
+   "2027-07-28T18:33:52+00:00",
+   "2027-08-13T15:03:35+00:00",
+   "2027-09-04T01:51:12+00:00",
+   "2027-10-24T11:11:41+00:00",
+   "2027-10-25T00:03:09+00:00",
+   "2027-12-02T03:09:34+00:00"
+  ]
+ },
+ "ta_s35a16_jupiter_turns_direct": {
+  "pdf_rule": "Jupiter turns direct from retrograde",
+  "existing": [
+   "cfg_silver_bullish_13_jupiter_or_mercury_turns_direct"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 1,
+  "existing_rows": 4,
+  "matched": 1,
+  "only_ours": [],
+  "only_existing": [
+   "2027-03-03T12:32:02+00:00",
+   "2027-07-04T19:39:23+00:00",
+   "2027-10-28T14:10:38+00:00"
+  ]
+ },
+ "ta_s35a16_mercury_turns_direct": {
+  "pdf_rule": "Mercury turns direct from retrograde",
+  "existing": [
+   "cfg_silver_bullish_13_jupiter_or_mercury_turns_direct"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 3,
+  "existing_rows": 4,
+  "matched": 3,
+  "only_ours": [],
+  "only_existing": [
+   "2027-04-13T02:11:25+00:00"
+  ]
+ },
+ "ta_s35b10_saturn_direct": {
+  "pdf_rule": "Saturn direct from retrograde",
+  "existing": [
+   "cfg_silver_bearish_08_saturn_direct_from_retrograde"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 1,
+  "existing_rows": 1,
+  "matched": 1,
+  "only_ours": [],
+  "only_existing": []
+ },
+ "kd_091_rahu_kaal_thursday_rahu_ketu_nakshatra": {
+  "pdf_rule": "Thursday Rahu Kaal with a Rahu/Ketu nakshatra",
+  "existing": [
+   "sub_rahu_or_ketu_nakshatra_on_a_thursday"
+  ],
+  "method": "day rule: our Mumbai-sunrise days vs existing Indian-venue days; our New York-sunrise days vs existing US-venue days",
+  "mumbai_ours": 12,
+  "mumbai_existing": 0,
+  "mumbai_common": 0,
+  "mumbai_only_ours": [
+   "2027-02-25",
+   "2027-03-11",
+   "2027-03-25",
+   "2027-04-08",
+   "2027-05-13",
+   "2027-06-10",
+   "2027-06-24",
+   "2027-07-22",
+   "2027-08-12",
+   "2027-09-09",
+   "2027-10-21",
+   "2027-12-23"
+  ],
+  "mumbai_only_existing": [],
+  "ny_ours": 10,
+  "ny_existing": 22,
+  "ny_common": 10,
+  "ny_only_ours": []
+ },
+ "ta_s24_02_tithi_vruddhi_kshay_shukla": {
+  "pdf_rule": "Tithi Vruddhi / Kshay in Shukla Paksha",
+  "existing": [
+   "b068_vriddhi_tithi_shukla_paksha",
+   "b066_kshay_tithi_shukla_paksha"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 0,
+  "existing_rows": 28,
+  "matched": 0,
+  "only_ours": [],
+  "only_existing": [
+   "2027-01-10T01:37:46+00:00",
+   "2027-01-19T02:20:00+00:00",
+   "2027-01-21T16:00:31+00:00",
+   "2027-02-17T12:02:22+00:00",
+   "2027-02-20T02:30:22+00:00",
+   "2027-03-16T03:24:55+00:00",
+   "2027-03-21T12:52:01+00:00",
+   "2027-04-13T11:59:26+00:00",
+   "2027-04-18T02:12:39+00:00",
+   "2027-05-06T10:58:38+00:00",
+   "2027-05-10T00:53:25+00:00",
+   "2027-06-07T09:56:29+00:00",
+   "2027-06-10T01:42:01+00:00",
+   "2027-06-17T23:05:14+00:00",
+   "2027-07-04T03:02:06+00:00",
+   "2027-07-08T10:37:44+00:00",
+   "2027-07-15T09:11:02+00:00",
+   "2027-08-02T10:05:15+00:00",
+   "2027-08-04T02:50:11+00:00",
+   "2027-08-13T23:51:38+00:00",
+   "2027-09-02T11:20:33+00:00",
+   "2027-09-09T09:09:20+00:00",
+   "2027-09-30T02:36:05+00:00",
+   "2027-10-08T00:58:02+00:00",
+   "2027-10-12T10:44:17+00:00",
+   "2027-11-07T23:54:11+00:00",
+   "2027-12-03T10:43:52+00:00",
+   "2027-12-30T00:10:37+00:00"
+  ]
+ },
+ "ta_s24_03_tithi_vruddhi_kshay_krishna": {
+  "pdf_rule": "Tithi Kshay / Vruddhi in Krishna Paksha",
+  "existing": [
+   "b067_kshay_tithi_krishna_paksha",
+   "b069_vriddhi_tithi_krishna_paksha"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 0,
+  "existing_rows": 26,
+  "matched": 0,
+  "only_ours": [],
+  "only_existing": [
+   "2027-01-03T10:38:51+00:00",
+   "2027-01-25T02:40:53+00:00",
+   "2027-01-31T01:04:16+00:00",
+   "2027-02-04T11:01:49+00:00",
+   "2027-03-02T23:14:50+00:00",
+   "2027-03-28T09:35:26+00:00",
+   "2027-04-25T00:12:16+00:00",
+   "2027-04-29T09:31:57+00:00",
+   "2027-05-26T22:35:16+00:00",
+   "2027-06-03T01:05:01+00:00",
+   "2027-06-22T07:37:45+00:00",
+   "2027-07-02T09:53:47+00:00",
+   "2027-07-21T23:17:16+00:00",
+   "2027-07-29T02:04:37+00:00",
+   "2027-08-18T09:46:12+00:00",
+   "2027-08-26T12:09:51+00:00",
+   "2027-08-29T04:06:04+00:00",
+   "2027-09-17T00:22:19+00:00",
+   "2027-09-21T01:13:15+00:00",
+   "2027-09-27T11:25:44+00:00",
+   "2027-10-18T12:22:05+00:00",
+   "2027-10-24T02:23:53+00:00",
+   "2027-11-15T01:58:54+00:00",
+   "2027-11-20T13:47:48+00:00",
+   "2027-12-14T13:31:52+00:00",
+   "2027-12-18T02:28:11+00:00"
+  ]
+ },
+ "ta_s24_83_three_saturdays_shukla": {
+  "pdf_rule": "Three Saturdays in Shukla Paksha",
+  "existing": [
+   "b101_three_saturdays_in_shukla_paksha"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 0,
+  "existing_rows": 7,
+  "matched": 0,
+  "only_ours": [],
+  "only_existing": [
+   "2027-02-05T18:30:00+00:00",
+   "2027-02-06T05:00:00+00:00",
+   "2027-06-04T18:30:00+00:00",
+   "2027-07-03T04:00:00+00:00",
+   "2027-10-29T18:30:00+00:00",
+   "2027-10-30T04:00:00+00:00",
+   "2027-11-27T05:00:00+00:00"
+  ]
+ },
+ "ta_s24_92_krishna_chaturdashi_longer": {
+  "pdf_rule": "Krishna paksha (Chaturdashi) 14 ghadi more than Amavasya",
+  "existing": [
+   "b106_amavasya_ghadi_lesser_than_chaturdashi"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 0,
+  "existing_rows": 7,
+  "matched": 0,
+  "only_ours": [],
+  "only_existing": [
+   "2027-02-05T13:35:47+00:00",
+   "2027-03-07T08:16:51+00:00",
+   "2027-04-06T00:10:56+00:00",
+   "2027-05-05T12:47:06+00:00",
+   "2027-06-03T22:35:38+00:00",
+   "2027-07-03T06:36:10+00:00",
+   "2027-08-01T13:50:34+00:00"
+  ]
+ },
+ "ta_s24_08_panchak_yogas": {
+  "pdf_rule": "Indra, Vaidhriti or Vyatipata yoga on Panchak days",
+  "existing": [
+   "b056_aindra_vaidhriti_or_vyatipata_yoga_in_panchak"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 0,
+  "existing_rows": 8,
+  "matched": 0,
+  "only_ours": [],
+  "only_existing": [
+   "2027-01-11T12:08:45+00:00",
+   "2027-04-06T03:21:31+00:00",
+   "2027-04-07T01:56:33+00:00",
+   "2027-05-01T13:13:38+00:00",
+   "2027-05-02T12:59:39+00:00",
+   "2027-05-27T12:19:38+00:00",
+   "2027-05-27T21:28:08+00:00",
+   "2027-12-08T01:27:45+00:00"
+  ]
+ },
+ "ta_s35_silver_prophecy_shukla_shashti": {
+  "pdf_rule": "Silver prophecy: range of Shukla Shashti",
+  "existing": [
+   "cfg_silver_bullish_01_shukla_shashti_turning_dates"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 0,
+  "existing_rows": 12,
+  "matched": 0,
+  "only_ours": [],
+  "only_existing": [
+   "2027-01-13T07:32:20+00:00",
+   "2027-02-11T21:48:48+00:00",
+   "2027-03-13T08:25:03+00:00",
+   "2027-04-11T16:10:02+00:00",
+   "2027-05-10T22:18:38+00:00",
+   "2027-06-09T04:05:51+00:00",
+   "2027-07-08T10:37:44+00:00",
+   "2027-08-06T18:53:22+00:00",
+   "2027-09-05T05:47:56+00:00",
+   "2027-10-04T20:06:39+00:00",
+   "2027-11-03T14:02:18+00:00",
+   "2027-12-03T10:43:52+00:00"
+  ]
+ },
+ "ta_s35a21_paksha_16_14": {
+  "pdf_rule": "Shukla Paksha of 16 days or Krishna Paksha of 14 days",
+  "existing": [
+   "cfg_silver_bullish_14_paksha_of_16_or_14_days"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 0,
+  "existing_rows": 9,
+  "matched": 0,
+  "only_ours": [],
+  "only_existing": [
+   "2027-01-07T20:24:24+00:00",
+   "2027-02-06T15:56:08+00:00",
+   "2027-07-04T03:02:06+00:00",
+   "2027-08-02T10:05:15+00:00",
+   "2027-08-31T17:41:12+00:00",
+   "2027-09-30T02:36:05+00:00",
+   "2027-10-29T13:36:35+00:00",
+   "2027-11-28T03:24:27+00:00",
+   "2027-12-27T20:12:20+00:00"
+  ]
+ },
+ "ta_s17_mercury_manifestation": {
+  "pdf_rule": "Mercury speed crosses Venus speed",
+  "existing": [
+   "b010_mercury_manifestation"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 0,
+  "existing_rows": 3,
+  "matched": 0,
+  "only_ours": [],
+  "only_existing": [
+   "2027-03-21T18:30:00+00:00",
+   "2027-07-19T18:30:00+00:00",
+   "2027-11-06T18:30:00+00:00"
+  ]
+ },
+ "ta_s24_115_sun_venus_shatabhisha": {
+  "pdf_rule": "Sun or Venus in Shatabhisha",
+  "existing": [
+   "b115_sun_or_venus_in_shatabhisha"
+  ],
+  "method": "instants: our start instants vs existing rows' start instants (tolerance 10 min)",
+  "ours": 0,
+  "existing_rows": 2,
+  "matched": 0,
+  "only_ours": [],
+  "only_existing": [
+   "2027-02-19T19:07:48+00:00",
+   "2027-03-27T02:21:13+00:00"
+  ]
+ }
+}
