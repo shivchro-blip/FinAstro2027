@@ -13221,7 +13221,7 @@
    "tier": "major",
    "existing": [],
    "effect": "",
-   "hits_2027": 2
+   "hits_2027": 1
   },
   {
    "id": "ta_s32e_venus_rahu",
@@ -13243,7 +13243,7 @@
    "tier": "major",
    "existing": [],
    "effect": "",
-   "hits_2027": 2
+   "hits_2027": 3
   },
   {
    "id": "ta_s32e_venus_mercury",
@@ -13265,7 +13265,7 @@
    "tier": "major",
    "existing": [],
    "effect": "",
-   "hits_2027": 0
+   "hits_2027": 1
   },
   {
    "id": "ta_s32e_venus_herschel_mutual",
@@ -13331,7 +13331,7 @@
    "tier": "moon",
    "existing": [],
    "effect": "",
-   "hits_2027": 13
+   "hits_2027": 14
   },
   {
    "id": "ta_s32e_venus_moon",
@@ -13353,7 +13353,7 @@
    "tier": "moon",
    "existing": [],
    "effect": "",
-   "hits_2027": 14
+   "hits_2027": 16
   },
   {
    "id": "ta_s32e_mars_mercury",
@@ -13441,7 +13441,7 @@
    "tier": "major",
    "existing": [],
    "effect": "20 days",
-   "hits_2027": 1
+   "hits_2027": 2
   },
   {
    "id": "ta_s32e_saturn_mars",
@@ -13463,7 +13463,7 @@
    "tier": "major",
    "existing": [],
    "effect": "10 days",
-   "hits_2027": 1
+   "hits_2027": 2
   },
   {
    "id": "ta_s32e_venus_jupiter",
@@ -13485,7 +13485,7 @@
    "tier": "major",
    "existing": [],
    "effect": "",
-   "hits_2027": 0
+   "hits_2027": 1
   },
   {
    "id": "ta_s35a11_mercury_vedha_venus",
@@ -13529,7 +13529,7 @@
    "tier": "major",
    "existing": [],
    "effect": "",
-   "hits_2027": 2
+   "hits_2027": 1
   },
   {
    "id": "ta_s35b07_mercury_venus_mutual_vedha",
@@ -13573,7 +13573,7 @@
    "tier": "moon",
    "existing": [],
    "effect": "",
-   "hits_2027": 14
+   "hits_2027": 16
   },
   {
    "id": "ta_s35a13_mercury_moon_mutual_vedha",
@@ -13618,7 +13618,7 @@
    "tier": "major",
    "existing": [],
    "effect": "",
-   "hits_2027": 45
+   "hits_2027": 42
   },
   {
    "id": "ta_s36_sugar_vedha_ashlesha_magha_jyeshtha_ubh",

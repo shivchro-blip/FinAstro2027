@@ -12,8 +12,8 @@
    "pdf_rules": 724,
    "pdf_rules_with_detector": 715,
    "pdf_rules_mapped_to_existing": 79,
-   "new_events_major_yearly": 1532,
-   "new_events_moon_layer": 4563,
+   "new_events_major_yearly": 1530,
+   "new_events_moon_layer": 4566,
    "existing_rows_carried": 601,
    "existing_rows_with_pdf_text": 463
   },
@@ -4915,48 +4915,6 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
-   "uid": "124b50c9937fe678",
-   "source": "reference_pdfs",
-   "tier": "moon",
-   "event_title": "Mercury-Moon Vedha / Mercury (combust & retrograde) mutual Vedha with Moon",
-   "date_time": {
-    "kind": "window",
-    "start_NY": "2027-01-12 09:44 EST",
-    "end_NY": "2027-01-13 11:35 EST",
-    "start_IST": "2027-01-12 20:14 IST",
-    "end_IST": "2027-01-13 22:05 IST",
-    "start_UTC": "2027-01-12T14:44:31+00:00",
-    "end_UTC": "2027-01-13T16:35:09+00:00",
-    "began_before_scan": false,
-    "continues_after_scan": false,
-    "duration_days": 1.08
-   },
-   "planetary_condition": "At start: Mercury 04.69 deg Capricorn (Uttara Ashadha pada 3; D9 Aquarius), 1.673 deg/day; Moon 20.00 deg Aquarius (Purva Bhadrapada pada 1; D9 Aries), 12.255 deg/day | At end: Mercury 06.49 deg Capricorn (Uttara Ashadha pada 3; D9 Aquarius), 1.678 deg/day; Moon 03.33 deg Pisces (Purva Bhadrapada pada 4; D9 Cancer), 12.520 deg/day | Computed: value: Mercury in Uttara Ashadha vedhas Purva Bhadrapada (Left side) where Moon is; Moon in Purva Bhadrapada vedhas Uttara Ashadha (Right side) where Mercury is",
-   "astrological_rule": "Mercury does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133). || Mercury and Moon vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
-   "source_interpretation": "Mercury-Moon Vedha: Bearish || Mercury (combust & retrograde) mutual Vedha with Moon: Silver: Bullish day",
-   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named); Silver: Bullish day -> Silver (COMEX SI) (as the source states it; not a forecast)",
-   "conditions_and_qualifications": [
-    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
-    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
-    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md.",
-    "The combust & retrograde condition on Mercury is reported in the facts, not filtered."
-   ],
-   "source_reference": [
-    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'",
-    "TA p.158 [printed 128] Section 35 A (silver) #13"
-   ],
-   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
-   "markets": [
-    "general",
-    "silver"
-   ],
-   "rule_ids": [
-    "ta_s32e_mercury_moon",
-    "ta_s35a13_mercury_moon_mutual_vedha"
-   ],
-   "gold_silver_relevance": "silver"
-  },
-  {
    "uid": "b3ebbdc577e7cd51",
    "source": "reference_pdfs",
    "tier": "moon",
@@ -7114,6 +7072,48 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
+   "uid": "b28ef96c34445046",
+   "source": "reference_pdfs",
+   "tier": "moon",
+   "event_title": "Mercury-Moon Vedha / Mercury (combust & retrograde) mutual Vedha with Moon",
+   "date_time": {
+    "kind": "window",
+    "start_NY": "2027-01-17 12:12 EST",
+    "end_NY": "2027-01-18 10:36 EST",
+    "start_IST": "2027-01-17 22:42 IST",
+    "end_IST": "2027-01-18 21:06 IST",
+    "start_UTC": "2027-01-17T17:12:39+00:00",
+    "end_UTC": "2027-01-18T15:36:05+00:00",
+    "began_before_scan": false,
+    "continues_after_scan": false,
+    "duration_days": 0.93
+   },
+   "planetary_condition": "At start: Mercury 13.28 deg Capricorn (Shravana pada 1; D9 Aries), 1.688 deg/day; Moon 26.67 deg Aries (Krittika pada 1; D9 Sagittarius), 14.092 deg/day | At end: Mercury 14.85 deg Capricorn (Shravana pada 2; D9 Taurus), 1.688 deg/day; Moon 09.99 deg Taurus (Krittika pada 4; D9 Pisces), 14.493 deg/day | Computed: value: Mercury in Shravana vedhas Krittika (Front side) where Moon is; Moon in Krittika vedhas Shravana (Front side) where Mercury is",
+   "astrological_rule": "Mercury does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133). || Mercury and Moon vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
+   "source_interpretation": "Mercury-Moon Vedha: Bearish || Mercury (combust & retrograde) mutual Vedha with Moon: Silver: Bullish day",
+   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named); Silver: Bullish day -> Silver (COMEX SI) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md.",
+    "The combust & retrograde condition on Mercury is reported in the facts, not filtered."
+   ],
+   "source_reference": [
+    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'",
+    "TA p.158 [printed 128] Section 35 A (silver) #13"
+   ],
+   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "general",
+    "silver"
+   ],
+   "rule_ids": [
+    "ta_s32e_mercury_moon",
+    "ta_s35a13_mercury_moon_mutual_vedha"
+   ],
+   "gold_silver_relevance": "silver"
+  },
+  {
    "uid": "e990961a179c55a2",
    "source": "reference_pdfs",
    "tier": "moon",
@@ -8665,44 +8665,6 @@
    ],
    "rule_ids": [
     "ta_s16_moon_navamsa"
-   ],
-   "gold_silver_relevance": "not stated by source"
-  },
-  {
-   "uid": "cfd3504fd71678db",
-   "source": "reference_pdfs",
-   "tier": "moon",
-   "event_title": "Saturn-Moon Vedha",
-   "date_time": {
-    "kind": "window",
-    "start_NY": "2027-01-20 05:47 EST",
-    "end_NY": "2027-01-21 02:54 EST",
-    "start_IST": "2027-01-20 16:17 IST",
-    "end_IST": "2027-01-21 13:24 IST",
-    "start_UTC": "2027-01-20T10:47:48+00:00",
-    "end_UTC": "2027-01-21T07:54:22+00:00",
-    "began_before_scan": false,
-    "continues_after_scan": false,
-    "duration_days": 0.88
-   },
-   "planetary_condition": "At start: Saturn 15.14 deg Pisces (Uttara Bhadrapada pada 4; D9 Scorpio), 0.069 deg/day; Moon 06.67 deg Gemini (Ardra pada 1; D9 Sagittarius), 15.080 deg/day | At end: Saturn 15.20 deg Pisces (Uttara Bhadrapada pada 4; D9 Scorpio), 0.070 deg/day; Moon 19.99 deg Gemini (Ardra pada 4; D9 Pisces), 15.212 deg/day | Computed: value: Saturn in Uttara Bhadrapada vedhas Ardra (Left side) where Moon is",
-   "astrological_rule": "Saturn does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133).",
-   "source_interpretation": "Saturn-Moon Vedha: Bullish",
-   "financial_market_significance": "Bullish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
-   "conditions_and_qualifications": [
-    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
-    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
-    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
-   ],
-   "source_reference": [
-    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'"
-   ],
-   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
-   "markets": [
-    "general"
-   ],
-   "rule_ids": [
-    "ta_s32e_saturn_moon"
    ],
    "gold_silver_relevance": "not stated by source"
   },
@@ -12039,6 +12001,44 @@
    ],
    "rule_ids": [
     "ta_s16_moon_navamsa"
+   ],
+   "gold_silver_relevance": "not stated by source"
+  },
+  {
+   "uid": "3845bea72a41501e",
+   "source": "reference_pdfs",
+   "tier": "moon",
+   "event_title": "Saturn-Moon Vedha",
+   "date_time": {
+    "kind": "window",
+    "start_NY": "2027-01-26 13:37 EST",
+    "end_NY": "2027-01-27 13:26 EST",
+    "start_IST": "2027-01-27 00:07 IST",
+    "end_IST": "2027-01-27 23:56 IST",
+    "start_UTC": "2027-01-26T18:37:01+00:00",
+    "end_UTC": "2027-01-27T18:26:43+00:00",
+    "began_before_scan": false,
+    "continues_after_scan": false,
+    "duration_days": 0.99
+   },
+   "planetary_condition": "At start: Saturn 15.61 deg Pisces (Uttara Bhadrapada pada 4; D9 Scorpio), 0.078 deg/day; Moon 10.00 deg Virgo (Hasta pada 1; D9 Aries), 13.656 deg/day | At end: Saturn 15.69 deg Pisces (Uttara Bhadrapada pada 4; D9 Scorpio), 0.079 deg/day; Moon 23.33 deg Virgo (Hasta pada 4; D9 Cancer), 13.214 deg/day | Computed: value: Saturn in Uttara Bhadrapada vedhas Hasta (Front side) where Moon is",
+   "astrological_rule": "Saturn does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133).",
+   "source_interpretation": "Saturn-Moon Vedha: Bullish",
+   "financial_market_significance": "Bullish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "source_reference": [
+    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'"
+   ],
+   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "general"
+   ],
+   "rule_ids": [
+    "ta_s32e_saturn_moon"
    ],
    "gold_silver_relevance": "not stated by source"
   },
@@ -20283,44 +20283,6 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
-   "uid": "b430d27f35695912",
-   "source": "reference_pdfs",
-   "tier": "moon",
-   "event_title": "Saturn-Moon Vedha",
-   "date_time": {
-    "kind": "window",
-    "start_NY": "2027-02-15 16:56 EST",
-    "end_NY": "2027-02-16 15:08 EST",
-    "start_IST": "2027-02-16 03:26 IST",
-    "end_IST": "2027-02-17 01:38 IST",
-    "start_UTC": "2027-02-15T21:56:15+00:00",
-    "end_UTC": "2027-02-16T20:08:26+00:00",
-    "began_before_scan": false,
-    "continues_after_scan": false,
-    "duration_days": 0.93
-   },
-   "planetary_condition": "At start: Saturn 17.43 deg Pisces (Revati pada 1; D9 Sagittarius), 0.102 deg/day; Moon 23.34 deg Taurus (Mrigashira pada 1; D9 Leo), 14.276 deg/day | At end: Saturn 17.52 deg Pisces (Revati pada 1; D9 Sagittarius), 0.102 deg/day; Moon 06.66 deg Gemini (Mrigashira pada 4; D9 Scorpio), 14.537 deg/day | Computed: value: Saturn in Revati vedhas Mrigashira (Left side) where Moon is",
-   "astrological_rule": "Saturn does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133).",
-   "source_interpretation": "Saturn-Moon Vedha: Bullish",
-   "financial_market_significance": "Bullish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
-   "conditions_and_qualifications": [
-    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
-    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
-    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
-   ],
-   "source_reference": [
-    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'"
-   ],
-   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
-   "markets": [
-    "general"
-   ],
-   "rule_ids": [
-    "ta_s32e_saturn_moon"
-   ],
-   "gold_silver_relevance": "not stated by source"
-  },
-  {
    "uid": "e6d3ee24d463e72e",
    "source": "reference_pdfs",
    "tier": "moon",
@@ -23507,6 +23469,44 @@
    ],
    "rule_ids": [
     "ta_s16_moon_navamsa"
+   ],
+   "gold_silver_relevance": "not stated by source"
+  },
+  {
+   "uid": "ecd8e54e3afe8588",
+   "source": "reference_pdfs",
+   "tier": "moon",
+   "event_title": "Saturn-Moon Vedha",
+   "date_time": {
+    "kind": "window",
+    "start_NY": "2027-02-22 01:25 EST",
+    "end_NY": "2027-02-22 23:58 EST",
+    "start_IST": "2027-02-22 11:55 IST",
+    "end_IST": "2027-02-23 10:28 IST",
+    "start_UTC": "2027-02-22T06:25:18+00:00",
+    "end_UTC": "2027-02-23T04:58:35+00:00",
+    "began_before_scan": false,
+    "continues_after_scan": false,
+    "duration_days": 0.94
+   },
+   "planetary_condition": "At start: Saturn 18.09 deg Pisces (Revati pada 1; D9 Sagittarius), 0.107 deg/day; Moon 26.67 deg Leo (Uttara Phalguni pada 1; D9 Sagittarius), 14.358 deg/day | At end: Saturn 18.20 deg Pisces (Revati pada 1; D9 Sagittarius), 0.108 deg/day; Moon 09.99 deg Virgo (Uttara Phalguni pada 4; D9 Pisces), 14.006 deg/day | Computed: value: Saturn in Revati vedhas Uttara Phalguni (Front side) where Moon is",
+   "astrological_rule": "Saturn does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133).",
+   "source_interpretation": "Saturn-Moon Vedha: Bullish",
+   "financial_market_significance": "Bullish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "source_reference": [
+    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'"
+   ],
+   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "general"
+   ],
+   "rule_ids": [
+    "ta_s32e_saturn_moon"
    ],
    "gold_silver_relevance": "not stated by source"
   },
@@ -32717,44 +32717,6 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
-   "uid": "866a6aa2adde1245",
-   "source": "reference_pdfs",
-   "tier": "moon",
-   "event_title": "Saturn-Moon Vedha",
-   "date_time": {
-    "kind": "window",
-    "start_NY": "2027-03-14 23:56 EDT",
-    "end_NY": "2027-03-15 22:43 EDT",
-    "start_IST": "2027-03-15 09:26 IST",
-    "end_IST": "2027-03-16 08:13 IST",
-    "start_UTC": "2027-03-15T03:56:43+00:00",
-    "end_UTC": "2027-03-16T02:43:35+00:00",
-    "began_before_scan": false,
-    "continues_after_scan": false,
-    "duration_days": 0.95
-   },
-   "planetary_condition": "At start: Saturn 20.50 deg Pisces (Revati pada 2; D9 Capricorn), 0.121 deg/day; Moon 23.34 deg Taurus (Mrigashira pada 1; D9 Leo), 13.970 deg/day | At end: Saturn 20.61 deg Pisces (Revati pada 2; D9 Capricorn), 0.121 deg/day; Moon 06.66 deg Gemini (Mrigashira pada 4; D9 Scorpio), 14.124 deg/day | Computed: value: Saturn in Revati vedhas Mrigashira (Left side) where Moon is",
-   "astrological_rule": "Saturn does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133).",
-   "source_interpretation": "Saturn-Moon Vedha: Bullish",
-   "financial_market_significance": "Bullish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
-   "conditions_and_qualifications": [
-    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
-    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
-    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
-   ],
-   "source_reference": [
-    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'"
-   ],
-   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
-   "markets": [
-    "general"
-   ],
-   "rule_ids": [
-    "ta_s32e_saturn_moon"
-   ],
-   "gold_silver_relevance": "not stated by source"
-  },
-  {
    "uid": "7257b81929a6138c",
    "source": "reference_pdfs",
    "tier": "moon",
@@ -35837,6 +35799,44 @@
    ],
    "rule_ids": [
     "ta_s16_moon_navamsa"
+   ],
+   "gold_silver_relevance": "not stated by source"
+  },
+  {
+   "uid": "ac2d7af78063eaf6",
+   "source": "reference_pdfs",
+   "tier": "moon",
+   "event_title": "Saturn-Moon Vedha",
+   "date_time": {
+    "kind": "window",
+    "start_NY": "2027-03-21 12:37 EDT",
+    "end_NY": "2027-03-22 11:16 EDT",
+    "start_IST": "2027-03-21 22:07 IST",
+    "end_IST": "2027-03-22 20:46 IST",
+    "start_UTC": "2027-03-21T16:37:30+00:00",
+    "end_UTC": "2027-03-22T15:16:24+00:00",
+    "began_before_scan": false,
+    "continues_after_scan": false,
+    "duration_days": 0.94
+   },
+   "planetary_condition": "At start: Saturn 21.29 deg Pisces (Revati pada 2; D9 Capricorn), 0.123 deg/day; Moon 26.67 deg Leo (Uttara Phalguni pada 1; D9 Sagittarius), 14.229 deg/day | At end: Saturn 21.41 deg Pisces (Revati pada 2; D9 Capricorn), 0.124 deg/day; Moon 09.99 deg Virgo (Uttara Phalguni pada 4; D9 Pisces), 14.014 deg/day | Computed: value: Saturn in Revati vedhas Uttara Phalguni (Front side) where Moon is",
+   "astrological_rule": "Saturn does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133).",
+   "source_interpretation": "Saturn-Moon Vedha: Bullish",
+   "financial_market_significance": "Bullish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "source_reference": [
+    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'"
+   ],
+   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "general"
+   ],
+   "rule_ids": [
+    "ta_s32e_saturn_moon"
    ],
    "gold_silver_relevance": "not stated by source"
   },
@@ -45010,44 +45010,6 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
-   "uid": "55785f4ea86c943b",
-   "source": "reference_pdfs",
-   "tier": "moon",
-   "event_title": "Saturn-Moon Vedha",
-   "date_time": {
-    "kind": "window",
-    "start_NY": "2027-04-11 05:23 EDT",
-    "end_NY": "2027-04-12 04:04 EDT",
-    "start_IST": "2027-04-11 14:53 IST",
-    "end_IST": "2027-04-12 13:34 IST",
-    "start_UTC": "2027-04-11T09:23:54+00:00",
-    "end_UTC": "2027-04-12T08:04:41+00:00",
-    "began_before_scan": false,
-    "continues_after_scan": false,
-    "duration_days": 0.94
-   },
-   "planetary_condition": "At start: Saturn 23.89 deg Pisces (Revati pada 3; D9 Aquarius), 0.126 deg/day; Moon 23.34 deg Taurus (Mrigashira pada 1; D9 Leo), 14.089 deg/day | At end: Saturn 24.01 deg Pisces (Revati pada 3; D9 Aquarius), 0.126 deg/day; Moon 06.66 deg Gemini (Mrigashira pada 4; D9 Scorpio), 14.125 deg/day | Computed: value: Saturn in Revati vedhas Mrigashira (Left side) where Moon is",
-   "astrological_rule": "Saturn does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133).",
-   "source_interpretation": "Saturn-Moon Vedha: Bullish",
-   "financial_market_significance": "Bullish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
-   "conditions_and_qualifications": [
-    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
-    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
-    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
-   ],
-   "source_reference": [
-    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'"
-   ],
-   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
-   "markets": [
-    "general"
-   ],
-   "rule_ids": [
-    "ta_s32e_saturn_moon"
-   ],
-   "gold_silver_relevance": "not stated by source"
-  },
-  {
    "uid": "ea38da6ffa7af3f9",
    "source": "reference_pdfs",
    "tier": "moon",
@@ -48173,6 +48135,44 @@
    ],
    "rule_ids": [
     "ta_s16_moon_navamsa"
+   ],
+   "gold_silver_relevance": "not stated by source"
+  },
+  {
+   "uid": "d8347096101f29c2",
+   "source": "reference_pdfs",
+   "tier": "moon",
+   "event_title": "Saturn-Moon Vedha",
+   "date_time": {
+    "kind": "window",
+    "start_NY": "2027-04-17 20:36 EDT",
+    "end_NY": "2027-04-18 19:45 EDT",
+    "start_IST": "2027-04-18 06:06 IST",
+    "end_IST": "2027-04-19 05:15 IST",
+    "start_UTC": "2027-04-18T00:36:05+00:00",
+    "end_UTC": "2027-04-18T23:45:28+00:00",
+    "began_before_scan": false,
+    "continues_after_scan": false,
+    "duration_days": 0.96
+   },
+   "planetary_condition": "At start: Saturn 24.72 deg Pisces (Revati pada 3; D9 Aquarius), 0.125 deg/day; Moon 26.67 deg Leo (Uttara Phalguni pada 1; D9 Sagittarius), 13.886 deg/day | At end: Saturn 24.84 deg Pisces (Revati pada 3; D9 Aquarius), 0.125 deg/day; Moon 09.99 deg Virgo (Uttara Phalguni pada 4; D9 Pisces), 13.748 deg/day | Computed: value: Saturn in Revati vedhas Uttara Phalguni (Front side) where Moon is",
+   "astrological_rule": "Saturn does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133).",
+   "source_interpretation": "Saturn-Moon Vedha: Bullish",
+   "financial_market_significance": "Bullish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "source_reference": [
+    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'"
+   ],
+   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "general"
+   ],
+   "rule_ids": [
+    "ta_s32e_saturn_moon"
    ],
    "gold_silver_relevance": "not stated by source"
   },
@@ -57303,44 +57303,6 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
-   "uid": "c6c0cd4c9825efbe",
-   "source": "reference_pdfs",
-   "tier": "moon",
-   "event_title": "Saturn-Moon Vedha",
-   "date_time": {
-    "kind": "window",
-    "start_NY": "2027-05-08 12:23 EDT",
-    "end_NY": "2027-05-09 10:30 EDT",
-    "start_IST": "2027-05-08 21:53 IST",
-    "end_IST": "2027-05-09 20:00 IST",
-    "start_UTC": "2027-05-08T16:23:26+00:00",
-    "end_UTC": "2027-05-09T14:30:00+00:00",
-    "began_before_scan": false,
-    "continues_after_scan": false,
-    "duration_days": 0.92
-   },
-   "planetary_condition": "At start: Saturn 27.25 deg Pisces (Revati pada 4; D9 Pisces), 0.118 deg/day; Moon 23.33 deg Taurus (Mrigashira pada 1; D9 Leo), 14.465 deg/day | At end: Saturn 27.35 deg Pisces (Revati pada 4; D9 Pisces), 0.117 deg/day; Moon 06.66 deg Gemini (Mrigashira pada 4; D9 Scorpio), 14.473 deg/day | Computed: value: Saturn in Revati vedhas Mrigashira (Left side) where Moon is",
-   "astrological_rule": "Saturn does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133).",
-   "source_interpretation": "Saturn-Moon Vedha: Bullish",
-   "financial_market_significance": "Bullish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
-   "conditions_and_qualifications": [
-    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
-    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
-    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
-   ],
-   "source_reference": [
-    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'"
-   ],
-   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
-   "markets": [
-    "general"
-   ],
-   "rule_ids": [
-    "ta_s32e_saturn_moon"
-   ],
-   "gold_silver_relevance": "not stated by source"
-  },
-  {
    "uid": "aeafa14baa272af3",
    "source": "reference_pdfs",
    "tier": "moon",
@@ -59895,44 +59857,6 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
-   "uid": "ab60dbf172df62bf",
-   "source": "reference_pdfs",
-   "tier": "moon",
-   "event_title": "Jupiter-Moon Vedha",
-   "date_time": {
-    "kind": "window",
-    "start_NY": "2027-05-13 04:11 EDT",
-    "end_NY": "2027-05-14 03:12 EDT",
-    "start_IST": "2027-05-13 13:41 IST",
-    "end_IST": "2027-05-14 12:42 IST",
-    "start_UTC": "2027-05-13T08:11:15+00:00",
-    "end_UTC": "2027-05-14T07:12:39+00:00",
-    "began_before_scan": false,
-    "continues_after_scan": false,
-    "duration_days": 0.96
-   },
-   "planetary_condition": "At start: Jupiter 24.12 deg Cancer (Ashlesha pada 3; D9 Aquarius), 0.088 deg/day; Moon 00.00 deg Leo (Magha pada 1; D9 Aries), 13.984 deg/day | At end: Jupiter 24.21 deg Cancer (Ashlesha pada 3; D9 Aquarius), 0.090 deg/day; Moon 13.33 deg Leo (Magha pada 4; D9 Cancer), 13.817 deg/day | Computed: value: Jupiter in Ashlesha vedhas Magha (Left side) where Moon is",
-   "astrological_rule": "Jupiter does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133).",
-   "source_interpretation": "Jupiter-Moon Vedha: Bearish",
-   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
-   "conditions_and_qualifications": [
-    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
-    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
-    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
-   ],
-   "source_reference": [
-    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'"
-   ],
-   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
-   "markets": [
-    "general"
-   ],
-   "rule_ids": [
-    "ta_s32e_jupiter_moon"
-   ],
-   "gold_silver_relevance": "not stated by source"
-  },
-  {
    "uid": "30e9ab573ce4249a",
    "source": "reference_pdfs",
    "tier": "moon",
@@ -60430,6 +60354,44 @@
    ],
    "rule_ids": [
     "ta_s16_moon_navamsa"
+   ],
+   "gold_silver_relevance": "not stated by source"
+  },
+  {
+   "uid": "4cc840033ec2334e",
+   "source": "reference_pdfs",
+   "tier": "moon",
+   "event_title": "Saturn-Moon Vedha",
+   "date_time": {
+    "kind": "window",
+    "start_NY": "2027-05-15 02:30 EDT",
+    "end_NY": "2027-05-16 02:06 EDT",
+    "start_IST": "2027-05-15 12:00 IST",
+    "end_IST": "2027-05-16 11:36 IST",
+    "start_UTC": "2027-05-15T06:30:28+00:00",
+    "end_UTC": "2027-05-16T06:06:05+00:00",
+    "began_before_scan": false,
+    "continues_after_scan": false,
+    "duration_days": 0.98
+   },
+   "planetary_condition": "At start: Saturn 28.01 deg Pisces (Revati pada 4; D9 Pisces), 0.114 deg/day; Moon 26.67 deg Leo (Uttara Phalguni pada 1; D9 Sagittarius), 13.650 deg/day | At end: Saturn 28.12 deg Pisces (Revati pada 4; D9 Pisces), 0.113 deg/day; Moon 09.99 deg Virgo (Uttara Phalguni pada 4; D9 Pisces), 13.481 deg/day | Computed: value: Saturn in Revati vedhas Uttara Phalguni (Front side) where Moon is",
+   "astrological_rule": "Saturn does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133).",
+   "source_interpretation": "Saturn-Moon Vedha: Bullish",
+   "financial_market_significance": "Bullish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "source_reference": [
+    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'"
+   ],
+   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "general"
+   ],
+   "rule_ids": [
+    "ta_s32e_saturn_moon"
    ],
    "gold_silver_relevance": "not stated by source"
   },
@@ -63049,6 +63011,44 @@
    ],
    "rule_ids": [
     "ta_s16_moon_navamsa"
+   ],
+   "gold_silver_relevance": "not stated by source"
+  },
+  {
+   "uid": "a6ab33aa489b74f6",
+   "source": "reference_pdfs",
+   "tier": "moon",
+   "event_title": "Jupiter-Moon Vedha",
+   "date_time": {
+    "kind": "window",
+    "start_NY": "2027-05-20 03:51 EDT",
+    "end_NY": "2027-05-21 05:21 EDT",
+    "start_IST": "2027-05-20 13:21 IST",
+    "end_IST": "2027-05-21 14:51 IST",
+    "start_UTC": "2027-05-20T07:51:33+00:00",
+    "end_UTC": "2027-05-21T09:21:33+00:00",
+    "began_before_scan": false,
+    "continues_after_scan": false,
+    "duration_days": 1.06
+   },
+   "planetary_condition": "At start: Jupiter 24.80 deg Cancer (Ashlesha pada 3; D9 Aquarius), 0.105 deg/day; Moon 03.34 deg Scorpio (Anuradha pada 1; D9 Leo), 12.668 deg/day | At end: Jupiter 24.91 deg Cancer (Ashlesha pada 3; D9 Aquarius), 0.107 deg/day; Moon 16.66 deg Scorpio (Anuradha pada 4; D9 Scorpio), 12.431 deg/day | Computed: value: Jupiter in Ashlesha vedhas Anuradha (Front side) where Moon is",
+   "astrological_rule": "Jupiter does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133).",
+   "source_interpretation": "Jupiter-Moon Vedha: Bearish",
+   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "source_reference": [
+    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'"
+   ],
+   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "general"
+   ],
+   "rule_ids": [
+    "ta_s32e_jupiter_moon"
    ],
    "gold_silver_relevance": "not stated by source"
   },
@@ -69516,44 +69516,6 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
-   "uid": "d718539e94f19f4d",
-   "source": "reference_pdfs",
-   "tier": "moon",
-   "event_title": "Saturn-Moon Vedha",
-   "date_time": {
-    "kind": "window",
-    "start_NY": "2027-06-03 23:44 EDT",
-    "end_NY": "2027-06-04 21:32 EDT",
-    "start_IST": "2027-06-04 09:14 IST",
-    "end_IST": "2027-06-05 07:02 IST",
-    "start_UTC": "2027-06-04T03:44:31+00:00",
-    "end_UTC": "2027-06-05T01:32:20+00:00",
-    "began_before_scan": false,
-    "continues_after_scan": false,
-    "duration_days": 0.91
-   },
-   "planetary_condition": "At start: Saturn 00.11 deg Aries (Ashwini pada 1; D9 Aries), 0.097 deg/day; Moon 10.00 deg Taurus (Rohini pada 1; D9 Aries), 14.564 deg/day | At end: Saturn 00.20 deg Aries (Ashwini pada 1; D9 Aries), 0.096 deg/day; Moon 23.32 deg Taurus (Rohini pada 4; D9 Cancer), 14.771 deg/day | Computed: value: Saturn in Ashwini vedhas Rohini (Left side) where Moon is",
-   "astrological_rule": "Saturn does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133).",
-   "source_interpretation": "Saturn-Moon Vedha: Bullish",
-   "financial_market_significance": "Bullish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
-   "conditions_and_qualifications": [
-    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
-    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
-    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
-   ],
-   "source_reference": [
-    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'"
-   ],
-   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
-   "markets": [
-    "general"
-   ],
-   "rule_ids": [
-    "ta_s32e_saturn_moon"
-   ],
-   "gold_silver_relevance": "not stated by source"
-  },
-  {
    "uid": "9866d413059ed5d3",
    "source": "reference_pdfs",
    "tier": "moon",
@@ -72424,44 +72386,6 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
-   "uid": "caf2770e68205e0a",
-   "source": "reference_pdfs",
-   "tier": "moon",
-   "event_title": "Jupiter-Moon Vedha",
-   "date_time": {
-    "kind": "window",
-    "start_NY": "2027-06-09 10:18 EDT",
-    "end_NY": "2027-06-10 08:54 EDT",
-    "start_IST": "2027-06-09 19:48 IST",
-    "end_IST": "2027-06-10 18:24 IST",
-    "start_UTC": "2027-06-09T14:18:45+00:00",
-    "end_UTC": "2027-06-10T12:54:22+00:00",
-    "began_before_scan": false,
-    "continues_after_scan": false,
-    "duration_days": 0.94
-   },
-   "planetary_condition": "At start: Jupiter 27.37 deg Cancer (Ashlesha pada 4; D9 Pisces), 0.147 deg/day; Moon 00.00 deg Leo (Magha pada 1; D9 Aries), 14.296 deg/day | At end: Jupiter 27.51 deg Cancer (Ashlesha pada 4; D9 Pisces), 0.149 deg/day; Moon 13.32 deg Leo (Magha pada 4; D9 Cancer), 14.021 deg/day | Computed: value: Jupiter in Ashlesha vedhas Magha (Left side) where Moon is",
-   "astrological_rule": "Jupiter does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133).",
-   "source_interpretation": "Jupiter-Moon Vedha: Bearish",
-   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
-   "conditions_and_qualifications": [
-    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
-    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
-    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
-   ],
-   "source_reference": [
-    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'"
-   ],
-   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
-   "markets": [
-    "general"
-   ],
-   "rule_ids": [
-    "ta_s32e_jupiter_moon"
-   ],
-   "gold_silver_relevance": "not stated by source"
-  },
-  {
    "uid": "c5989c9f125a0e39",
    "source": "reference_pdfs",
    "tier": "moon",
@@ -72670,6 +72594,44 @@
    ],
    "rule_ids": [
     "ta_s16_moon_navamsa"
+   ],
+   "gold_silver_relevance": "not stated by source"
+  },
+  {
+   "uid": "8f06dc3822738aff",
+   "source": "reference_pdfs",
+   "tier": "moon",
+   "event_title": "Saturn-Moon Vedha",
+   "date_time": {
+    "kind": "window",
+    "start_NY": "2027-06-10 08:54 EDT",
+    "end_NY": "2027-06-11 07:58 EDT",
+    "start_IST": "2027-06-10 18:24 IST",
+    "end_IST": "2027-06-11 17:28 IST",
+    "start_UTC": "2027-06-10T12:54:22+00:00",
+    "end_UTC": "2027-06-11T11:58:07+00:00",
+    "began_before_scan": false,
+    "continues_after_scan": false,
+    "duration_days": 0.96
+   },
+   "planetary_condition": "At start: Saturn 00.71 deg Aries (Ashwini pada 1; D9 Aries), 0.090 deg/day; Moon 13.33 deg Leo (Purva Phalguni pada 1; D9 Leo), 14.021 deg/day | At end: Saturn 00.80 deg Aries (Ashwini pada 1; D9 Aries), 0.089 deg/day; Moon 26.66 deg Leo (Purva Phalguni pada 4; D9 Scorpio), 13.738 deg/day | Computed: value: Saturn in Ashwini vedhas Purva Phalguni (Front side) where Moon is",
+   "astrological_rule": "Saturn does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133).",
+   "source_interpretation": "Saturn-Moon Vedha: Bullish",
+   "financial_market_significance": "Bullish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "source_reference": [
+    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'"
+   ],
+   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "general"
+   ],
+   "rule_ids": [
+    "ta_s32e_saturn_moon"
    ],
    "gold_silver_relevance": "not stated by source"
   },
@@ -75399,6 +75361,44 @@
    ],
    "rule_ids": [
     "ta_s16_moon_navamsa"
+   ],
+   "gold_silver_relevance": "not stated by source"
+  },
+  {
+   "uid": "2f28641a45ea55c8",
+   "source": "reference_pdfs",
+   "tier": "moon",
+   "event_title": "Jupiter-Moon Vedha",
+   "date_time": {
+    "kind": "window",
+    "start_NY": "2027-06-16 10:14 EDT",
+    "end_NY": "2027-06-17 12:00 EDT",
+    "start_IST": "2027-06-16 19:44 IST",
+    "end_IST": "2027-06-17 21:30 IST",
+    "start_UTC": "2027-06-16T14:14:31+00:00",
+    "end_UTC": "2027-06-17T16:00:56+00:00",
+    "began_before_scan": false,
+    "continues_after_scan": false,
+    "duration_days": 1.07
+   },
+   "planetary_condition": "At start: Jupiter 28.44 deg Cancer (Ashlesha pada 4; D9 Pisces), 0.159 deg/day; Moon 03.33 deg Scorpio (Anuradha pada 1; D9 Leo), 12.519 deg/day | At end: Jupiter 28.61 deg Cancer (Ashlesha pada 4; D9 Pisces), 0.161 deg/day; Moon 16.66 deg Scorpio (Anuradha pada 4; D9 Scorpio), 12.321 deg/day | Computed: value: Jupiter in Ashlesha vedhas Anuradha (Front side) where Moon is",
+   "astrological_rule": "Jupiter does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133).",
+   "source_interpretation": "Jupiter-Moon Vedha: Bearish",
+   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "source_reference": [
+    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'"
+   ],
+   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "general"
+   ],
+   "rule_ids": [
+    "ta_s32e_jupiter_moon"
    ],
    "gold_silver_relevance": "not stated by source"
   },
@@ -80654,6 +80654,44 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
+   "uid": "ea80356662849f50",
+   "source": "reference_pdfs",
+   "tier": "moon",
+   "event_title": "Jupiter-Moon Vedha",
+   "date_time": {
+    "kind": "window",
+    "start_NY": "2027-06-29 12:19 EDT",
+    "end_NY": "2027-06-30 11:31 EDT",
+    "start_IST": "2027-06-29 21:49 IST",
+    "end_IST": "2027-06-30 21:01 IST",
+    "start_UTC": "2027-06-29T16:19:13+00:00",
+    "end_UTC": "2027-06-30T15:31:52+00:00",
+    "began_before_scan": false,
+    "continues_after_scan": false,
+    "duration_days": 0.97
+   },
+   "planetary_condition": "At start: Jupiter 00.65 deg Leo (Magha pada 1; D9 Aries), 0.178 deg/day; Moon 13.34 deg Aries (Bharani pada 1; D9 Leo), 13.561 deg/day | At end: Jupiter 00.82 deg Leo (Magha pada 1; D9 Aries), 0.179 deg/day; Moon 26.66 deg Aries (Bharani pada 4; D9 Scorpio), 14.013 deg/day | Computed: value: Jupiter in Magha vedhas Bharani (Front side) where Moon is",
+   "astrological_rule": "Jupiter does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133).",
+   "source_interpretation": "Jupiter-Moon Vedha: Bearish",
+   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "source_reference": [
+    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'"
+   ],
+   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "general"
+   ],
+   "rule_ids": [
+    "ta_s32e_jupiter_moon"
+   ],
+   "gold_silver_relevance": "not stated by source"
+  },
+  {
    "uid": "4b89d9ecfb904c8b",
    "source": "reference_pdfs",
    "tier": "moon",
@@ -81623,44 +81661,6 @@
    ],
    "rule_ids": [
     "ta_s16_moon_navamsa"
-   ],
-   "gold_silver_relevance": "not stated by source"
-  },
-  {
-   "uid": "61bb65ae4b29193d",
-   "source": "reference_pdfs",
-   "tier": "moon",
-   "event_title": "Saturn-Moon Vedha",
-   "date_time": {
-    "kind": "window",
-    "start_NY": "2027-07-01 10:01 EDT",
-    "end_NY": "2027-07-02 07:56 EDT",
-    "start_IST": "2027-07-01 19:31 IST",
-    "end_IST": "2027-07-02 17:26 IST",
-    "start_UTC": "2027-07-01T14:01:52+00:00",
-    "end_UTC": "2027-07-02T11:56:43+00:00",
-    "began_before_scan": false,
-    "continues_after_scan": false,
-    "duration_days": 0.91
-   },
-   "planetary_condition": "At start: Saturn 02.34 deg Aries (Ashwini pada 1; D9 Aries), 0.064 deg/day; Moon 10.00 deg Taurus (Rohini pada 1; D9 Aries), 14.425 deg/day | At end: Saturn 02.40 deg Aries (Ashwini pada 1; D9 Aries), 0.062 deg/day; Moon 23.33 deg Taurus (Rohini pada 4; D9 Cancer), 14.762 deg/day | Computed: value: Saturn in Ashwini vedhas Rohini (Left side) where Moon is",
-   "astrological_rule": "Saturn does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133).",
-   "source_interpretation": "Saturn-Moon Vedha: Bullish",
-   "financial_market_significance": "Bullish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
-   "conditions_and_qualifications": [
-    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
-    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
-    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
-   ],
-   "source_reference": [
-    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'"
-   ],
-   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
-   "markets": [
-    "general"
-   ],
-   "rule_ids": [
-    "ta_s32e_saturn_moon"
    ],
    "gold_silver_relevance": "not stated by source"
   },
@@ -84687,6 +84687,44 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
+   "uid": "238e336107f801ad",
+   "source": "reference_pdfs",
+   "tier": "moon",
+   "event_title": "Saturn-Moon Vedha",
+   "date_time": {
+    "kind": "window",
+    "start_NY": "2027-07-07 16:26 EDT",
+    "end_NY": "2027-07-08 14:48 EDT",
+    "start_IST": "2027-07-08 01:56 IST",
+    "end_IST": "2027-07-09 00:18 IST",
+    "start_UTC": "2027-07-07T20:26:15+00:00",
+    "end_UTC": "2027-07-08T18:48:45+00:00",
+    "began_before_scan": false,
+    "continues_after_scan": false,
+    "duration_days": 0.93
+   },
+   "planetary_condition": "At start: Saturn 02.72 deg Aries (Ashwini pada 1; D9 Aries), 0.055 deg/day; Moon 13.33 deg Leo (Purva Phalguni pada 1; D9 Leo), 14.474 deg/day | At end: Saturn 02.77 deg Aries (Ashwini pada 1; D9 Aries), 0.053 deg/day; Moon 26.66 deg Leo (Purva Phalguni pada 4; D9 Scorpio), 14.125 deg/day | Computed: value: Saturn in Ashwini vedhas Purva Phalguni (Front side) where Moon is",
+   "astrological_rule": "Saturn does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133).",
+   "source_interpretation": "Saturn-Moon Vedha: Bullish",
+   "financial_market_significance": "Bullish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "source_reference": [
+    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'"
+   ],
+   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "general"
+   ],
+   "rule_ids": [
+    "ta_s32e_saturn_moon"
+   ],
+   "gold_silver_relevance": "not stated by source"
+  },
+  {
    "uid": "1c254a15add8ec71",
    "source": "reference_pdfs",
    "tier": "moon",
@@ -85688,6 +85726,47 @@
     "ta_s16_moon_navamsa"
    ],
    "gold_silver_relevance": "not stated by source"
+  },
+  {
+   "uid": "833d9092f06d5560",
+   "source": "reference_pdfs",
+   "tier": "moon",
+   "event_title": "Venus-Moon Vedha / Moon-Venus mutual Vedha",
+   "date_time": {
+    "kind": "window",
+    "start_NY": "2027-07-09 13:46 EDT",
+    "end_NY": "2027-07-10 13:21 EDT",
+    "start_IST": "2027-07-09 23:16 IST",
+    "end_IST": "2027-07-10 22:51 IST",
+    "start_UTC": "2027-07-09T17:46:24+00:00",
+    "end_UTC": "2027-07-10T17:21:33+00:00",
+    "began_before_scan": false,
+    "continues_after_scan": false,
+    "duration_days": 0.98
+   },
+   "planetary_condition": "At start: Venus 13.91 deg Gemini (Ardra pada 3; D9 Aquarius), 1.226 deg/day; Moon 10.00 deg Virgo (Hasta pada 1; D9 Aries), 13.753 deg/day | At end: Venus 15.12 deg Gemini (Ardra pada 3; D9 Aquarius), 1.226 deg/day; Moon 23.33 deg Virgo (Hasta pada 4; D9 Cancer), 13.383 deg/day | Computed: value: Moon in Hasta vedhas Ardra (Right side) where Venus is; Venus in Ardra vedhas Hasta (Left side) where Moon is",
+   "astrological_rule": "Venus does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133). || Moon and Venus vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
+   "source_interpretation": "Venus-Moon Vedha: Bearish || Moon-Venus mutual Vedha: Silver Bearish",
+   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named); Silver Bearish -> Silver (COMEX SI) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "source_reference": [
+    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'",
+    "TA p.160 [printed 130] Section 35 B (silver) #7"
+   ],
+   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "general",
+    "silver"
+   ],
+   "rule_ids": [
+    "ta_s32e_venus_moon",
+    "ta_s35b07_moon_venus_mutual_vedha"
+   ],
+   "gold_silver_relevance": "silver"
   },
   {
    "uid": "fa79bb40ffbb041a",
@@ -88416,47 +88495,6 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
-   "uid": "519566679563b3cd",
-   "source": "reference_pdfs",
-   "tier": "moon",
-   "event_title": "Venus-Moon Vedha / Moon-Venus mutual Vedha",
-   "date_time": {
-    "kind": "window",
-    "start_NY": "2027-07-15 20:10 EDT",
-    "end_NY": "2027-07-16 22:52 EDT",
-    "start_IST": "2027-07-16 05:40 IST",
-    "end_IST": "2027-07-17 08:22 IST",
-    "start_UTC": "2027-07-16T00:10:18+00:00",
-    "end_UTC": "2027-07-17T02:52:01+00:00",
-    "began_before_scan": false,
-    "continues_after_scan": false,
-    "duration_days": 1.11
-   },
-   "planetary_condition": "At start: Venus 21.60 deg Gemini (Punarvasu pada 1; D9 Aries), 1.228 deg/day; Moon 00.00 deg Sagittarius (Mula pada 1; D9 Aries), 12.056 deg/day | At end: Venus 22.96 deg Gemini (Punarvasu pada 1; D9 Aries), 1.228 deg/day; Moon 13.33 deg Sagittarius (Mula pada 4; D9 Cancer), 11.925 deg/day | Computed: value: Moon in Mula vedhas Punarvasu (Front side) where Venus is; Venus in Punarvasu vedhas Mula (Front side) where Moon is",
-   "astrological_rule": "Venus does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133). || Moon and Venus vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
-   "source_interpretation": "Venus-Moon Vedha: Bearish || Moon-Venus mutual Vedha: Silver Bearish",
-   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named); Silver Bearish -> Silver (COMEX SI) (as the source states it; not a forecast)",
-   "conditions_and_qualifications": [
-    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
-    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
-    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
-   ],
-   "source_reference": [
-    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'",
-    "TA p.160 [printed 130] Section 35 B (silver) #7"
-   ],
-   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
-   "markets": [
-    "general",
-    "silver"
-   ],
-   "rule_ids": [
-    "ta_s32e_venus_moon",
-    "ta_s35b07_moon_venus_mutual_vedha"
-   ],
-   "gold_silver_relevance": "silver"
-  },
-  {
    "uid": "019c6f1bdd600e58",
    "source": "reference_pdfs",
    "tier": "moon",
@@ -89746,44 +89784,6 @@
    ],
    "rule_ids": [
     "ta_s16_moon_navamsa"
-   ],
-   "gold_silver_relevance": "not stated by source"
-  },
-  {
-   "uid": "c485776f50065ed2",
-   "source": "reference_pdfs",
-   "tier": "moon",
-   "event_title": "Jupiter-Moon Vedha",
-   "date_time": {
-    "kind": "window",
-    "start_NY": "2027-07-19 06:42 EDT",
-    "end_NY": "2027-07-20 08:01 EDT",
-    "start_IST": "2027-07-19 16:12 IST",
-    "end_IST": "2027-07-20 17:31 IST",
-    "start_UTC": "2027-07-19T10:42:39+00:00",
-    "end_UTC": "2027-07-20T12:01:52+00:00",
-    "began_before_scan": false,
-    "continues_after_scan": false,
-    "duration_days": 1.06
-   },
-   "planetary_condition": "At start: Jupiter 04.39 deg Leo (Magha pada 2; D9 Taurus), 0.199 deg/day; Moon 10.89 deg Capricorn (Shravana pada 1; D9 Aries), 11.793 deg/day | At end: Jupiter 04.60 deg Leo (Magha pada 2; D9 Taurus), 0.200 deg/day; Moon 23.33 deg Capricorn (Shravana pada 4; D9 Cancer), 11.802 deg/day | Computed: value: Jupiter in Magha vedhas Shravana (Left side) where Moon is",
-   "astrological_rule": "Jupiter does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133).",
-   "source_interpretation": "Jupiter-Moon Vedha: Bearish",
-   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
-   "conditions_and_qualifications": [
-    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
-    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
-    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
-   ],
-   "source_reference": [
-    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'"
-   ],
-   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
-   "markets": [
-    "general"
-   ],
-   "rule_ids": [
-    "ta_s32e_jupiter_moon"
    ],
    "gold_silver_relevance": "not stated by source"
   },
@@ -92973,6 +92973,44 @@
    ],
    "rule_ids": [
     "ta_s16_moon_navamsa"
+   ],
+   "gold_silver_relevance": "not stated by source"
+  },
+  {
+   "uid": "e72e55e144314c2e",
+   "source": "reference_pdfs",
+   "tier": "moon",
+   "event_title": "Jupiter-Moon Vedha",
+   "date_time": {
+    "kind": "window",
+    "start_NY": "2027-07-26 20:23 EDT",
+    "end_NY": "2027-07-27 20:17 EDT",
+    "start_IST": "2027-07-27 05:53 IST",
+    "end_IST": "2027-07-28 05:47 IST",
+    "start_UTC": "2027-07-27T00:23:26+00:00",
+    "end_UTC": "2027-07-28T00:17:48+00:00",
+    "began_before_scan": false,
+    "continues_after_scan": false,
+    "duration_days": 1.0
+   },
+   "planetary_condition": "At start: Jupiter 05.92 deg Leo (Magha pada 2; D9 Taurus), 0.205 deg/day; Moon 13.33 deg Aries (Bharani pada 1; D9 Leo), 13.178 deg/day | At end: Jupiter 06.13 deg Leo (Magha pada 2; D9 Taurus), 0.206 deg/day; Moon 26.66 deg Aries (Bharani pada 4; D9 Scorpio), 13.597 deg/day | Computed: value: Jupiter in Magha vedhas Bharani (Front side) where Moon is",
+   "astrological_rule": "Jupiter does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133).",
+   "source_interpretation": "Jupiter-Moon Vedha: Bearish",
+   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "source_reference": [
+    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'"
+   ],
+   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "general"
+   ],
+   "rule_ids": [
+    "ta_s32e_jupiter_moon"
    ],
    "gold_silver_relevance": "not stated by source"
   },
@@ -97010,6 +97048,47 @@
    "gold_silver_relevance": "silver"
   },
   {
+   "uid": "909a54e133046b72",
+   "source": "reference_pdfs",
+   "tier": "moon",
+   "event_title": "Venus-Moon Vedha / Moon-Venus mutual Vedha",
+   "date_time": {
+    "kind": "window",
+    "start_NY": "2027-08-04 02:07 EDT",
+    "end_NY": "2027-08-04 23:49 EDT",
+    "start_IST": "2027-08-04 11:37 IST",
+    "end_IST": "2027-08-05 09:19 IST",
+    "start_UTC": "2027-08-04T06:07:01+00:00",
+    "end_UTC": "2027-08-05T03:49:41+00:00",
+    "began_before_scan": false,
+    "continues_after_scan": false,
+    "duration_days": 0.9
+   },
+   "planetary_condition": "At start: Venus 15.29 deg Cancer (Pushya pada 4; D9 Scorpio), 1.234 deg/day; Moon 13.33 deg Leo (Purva Phalguni pada 1; D9 Leo), 14.886 deg/day | At end: Venus 16.40 deg Cancer (Pushya pada 4; D9 Scorpio), 1.234 deg/day; Moon 26.66 deg Leo (Purva Phalguni pada 4; D9 Scorpio), 14.580 deg/day | Computed: value: Moon in Purva Phalguni vedhas Pushya (Right side) where Venus is; Venus in Pushya vedhas Purva Phalguni (Left side) where Moon is",
+   "astrological_rule": "Venus does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133). || Moon and Venus vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
+   "source_interpretation": "Venus-Moon Vedha: Bearish || Moon-Venus mutual Vedha: Silver Bearish",
+   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named); Silver Bearish -> Silver (COMEX SI) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "source_reference": [
+    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'",
+    "TA p.160 [printed 130] Section 35 B (silver) #7"
+   ],
+   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "general",
+    "silver"
+   ],
+   "rule_ids": [
+    "ta_s32e_venus_moon",
+    "ta_s35b07_moon_venus_mutual_vedha"
+   ],
+   "gold_silver_relevance": "silver"
+  },
+  {
    "uid": "2e3e11b739ab7186",
    "source": "reference_pdfs",
    "tier": "moon",
@@ -99881,47 +99960,6 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
-   "uid": "cfa515e724e1ed93",
-   "source": "reference_pdfs",
-   "tier": "moon",
-   "event_title": "Venus-Moon Vedha / Moon-Venus mutual Vedha",
-   "date_time": {
-    "kind": "window",
-    "start_NY": "2027-08-09 21:58 EDT",
-    "end_NY": "2027-08-10 23:44 EDT",
-    "start_IST": "2027-08-10 07:28 IST",
-    "end_IST": "2027-08-11 09:14 IST",
-    "start_UTC": "2027-08-10T01:58:07+00:00",
-    "end_UTC": "2027-08-11T03:44:31+00:00",
-    "began_before_scan": false,
-    "continues_after_scan": false,
-    "duration_days": 1.07
-   },
-   "planetary_condition": "At start: Venus 22.48 deg Cancer (Ashlesha pada 2; D9 Capricorn), 1.235 deg/day; Moon 03.34 deg Scorpio (Anuradha pada 1; D9 Leo), 12.574 deg/day | At end: Venus 23.80 deg Cancer (Ashlesha pada 3; D9 Aquarius), 1.235 deg/day; Moon 16.66 deg Scorpio (Anuradha pada 4; D9 Scorpio), 12.272 deg/day | Computed: value: Moon in Anuradha vedhas Ashlesha (Front side) where Venus is; Venus in Ashlesha vedhas Anuradha (Front side) where Moon is",
-   "astrological_rule": "Venus does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133). || Moon and Venus vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
-   "source_interpretation": "Venus-Moon Vedha: Bearish || Moon-Venus mutual Vedha: Silver Bearish",
-   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named); Silver Bearish -> Silver (COMEX SI) (as the source states it; not a forecast)",
-   "conditions_and_qualifications": [
-    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
-    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
-    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
-   ],
-   "source_reference": [
-    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'",
-    "TA p.160 [printed 130] Section 35 B (silver) #7"
-   ],
-   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
-   "markets": [
-    "general",
-    "silver"
-   ],
-   "rule_ids": [
-    "ta_s32e_venus_moon",
-    "ta_s35b07_moon_venus_mutual_vedha"
-   ],
-   "gold_silver_relevance": "silver"
-  },
-  {
    "uid": "74129dec885c9f5b",
    "source": "reference_pdfs",
    "tier": "moon",
@@ -102117,44 +102155,6 @@
    "gold_silver_relevance": "silver"
   },
   {
-   "uid": "b12bfbed833e8b15",
-   "source": "reference_pdfs",
-   "tier": "moon",
-   "event_title": "Jupiter-Moon Vedha",
-   "date_time": {
-    "kind": "window",
-    "start_NY": "2027-08-15 12:46 EDT",
-    "end_NY": "2027-08-16 14:04 EDT",
-    "start_IST": "2027-08-15 22:16 IST",
-    "end_IST": "2027-08-16 23:34 IST",
-    "start_UTC": "2027-08-15T16:46:52+00:00",
-    "end_UTC": "2027-08-16T18:04:41+00:00",
-    "began_before_scan": false,
-    "continues_after_scan": false,
-    "duration_days": 1.05
-   },
-   "planetary_condition": "At start: Jupiter 10.07 deg Leo (Magha pada 4; D9 Cancer), 0.215 deg/day; Moon 10.89 deg Capricorn (Shravana pada 1; D9 Aries), 11.793 deg/day | At end: Jupiter 10.29 deg Leo (Magha pada 4; D9 Cancer), 0.215 deg/day; Moon 23.33 deg Capricorn (Shravana pada 4; D9 Cancer), 11.830 deg/day | Computed: value: Jupiter in Magha vedhas Shravana (Left side) where Moon is",
-   "astrological_rule": "Jupiter does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133).",
-   "source_interpretation": "Jupiter-Moon Vedha: Bearish",
-   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
-   "conditions_and_qualifications": [
-    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
-    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
-    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
-   ],
-   "source_reference": [
-    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'"
-   ],
-   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
-   "markets": [
-    "general"
-   ],
-   "rule_ids": [
-    "ta_s32e_jupiter_moon"
-   ],
-   "gold_silver_relevance": "not stated by source"
-  },
-  {
    "uid": "34e63102d73e4e4b",
    "source": "reference_pdfs",
    "tier": "moon",
@@ -102364,6 +102364,47 @@
     "ta_s25_moon_venus_6"
    ],
    "gold_silver_relevance": "not stated by source"
+  },
+  {
+   "uid": "63c1f554d2d92bb4",
+   "source": "reference_pdfs",
+   "tier": "moon",
+   "event_title": "Venus-Moon Vedha / Moon-Venus mutual Vedha",
+   "date_time": {
+    "kind": "window",
+    "start_NY": "2027-08-16 00:05 EDT",
+    "end_NY": "2027-08-16 14:04 EDT",
+    "start_IST": "2027-08-16 09:35 IST",
+    "end_IST": "2027-08-16 23:34 IST",
+    "start_UTC": "2027-08-16T04:05:09+00:00",
+    "end_UTC": "2027-08-16T18:04:41+00:00",
+    "began_before_scan": false,
+    "continues_after_scan": false,
+    "duration_days": 0.58
+   },
+   "planetary_condition": "At start: Venus 00.00 deg Leo (Magha pada 1; D9 Aries), 1.236 deg/day; Moon 16.45 deg Capricorn (Shravana pada 2; D9 Taurus), 11.804 deg/day | At end: Venus 00.72 deg Leo (Magha pada 1; D9 Aries), 1.236 deg/day; Moon 23.33 deg Capricorn (Shravana pada 4; D9 Cancer), 11.830 deg/day | Computed: value: Moon in Shravana vedhas Magha (Right side) where Venus is; Venus in Magha vedhas Shravana (Left side) where Moon is",
+   "astrological_rule": "Venus does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133). || Moon and Venus vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
+   "source_interpretation": "Venus-Moon Vedha: Bearish || Moon-Venus mutual Vedha: Silver Bearish",
+   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named); Silver Bearish -> Silver (COMEX SI) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "source_reference": [
+    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'",
+    "TA p.160 [printed 130] Section 35 B (silver) #7"
+   ],
+   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "general",
+    "silver"
+   ],
+   "rule_ids": [
+    "ta_s32e_venus_moon",
+    "ta_s35b07_moon_venus_mutual_vedha"
+   ],
+   "gold_silver_relevance": "silver"
   },
   {
    "uid": "a35823c69a56baa7",
@@ -105245,10 +105286,10 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
-   "uid": "cae4728d5ba4bcfb",
+   "uid": "9fdc8b7fb6eee1bb",
    "source": "reference_pdfs",
    "tier": "moon",
-   "event_title": "Venus-Moon Vedha / Moon-Venus mutual Vedha",
+   "event_title": "Jupiter-Moon Vedha",
    "date_time": {
     "kind": "window",
     "start_NY": "2027-08-23 02:42 EDT",
@@ -105261,29 +105302,26 @@
     "continues_after_scan": false,
     "duration_days": 1.02
    },
-   "planetary_condition": "At start: Venus 08.80 deg Leo (Magha pada 3; D9 Gemini), 1.238 deg/day; Moon 13.34 deg Aries (Bharani pada 1; D9 Leo), 12.941 deg/day | At end: Venus 10.06 deg Leo (Magha pada 4; D9 Cancer), 1.238 deg/day; Moon 26.66 deg Aries (Bharani pada 4; D9 Scorpio), 13.256 deg/day | Computed: value: Moon in Bharani vedhas Magha (Front side) where Venus is; Venus in Magha vedhas Bharani (Front side) where Moon is",
-   "astrological_rule": "Venus does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133). || Moon and Venus vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
-   "source_interpretation": "Venus-Moon Vedha: Bearish || Moon-Venus mutual Vedha: Silver Bearish",
-   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named); Silver Bearish -> Silver (COMEX SI) (as the source states it; not a forecast)",
+   "planetary_condition": "At start: Jupiter 11.70 deg Leo (Magha pada 4; D9 Cancer), 0.217 deg/day; Moon 13.34 deg Aries (Bharani pada 1; D9 Leo), 12.941 deg/day | At end: Jupiter 11.92 deg Leo (Magha pada 4; D9 Cancer), 0.217 deg/day; Moon 26.66 deg Aries (Bharani pada 4; D9 Scorpio), 13.256 deg/day | Computed: value: Jupiter in Magha vedhas Bharani (Front side) where Moon is",
+   "astrological_rule": "Jupiter does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133).",
+   "source_interpretation": "Jupiter-Moon Vedha: Bearish",
+   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
    "conditions_and_qualifications": [
     "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
     "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
     "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
    ],
    "source_reference": [
-    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'",
-    "TA p.160 [printed 130] Section 35 B (silver) #7"
+    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'"
    ],
    "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
    "markets": [
-    "general",
-    "silver"
+    "general"
    ],
    "rule_ids": [
-    "ta_s32e_venus_moon",
-    "ta_s35b07_moon_venus_mutual_vedha"
+    "ta_s32e_jupiter_moon"
    ],
-   "gold_silver_relevance": "silver"
+   "gold_silver_relevance": "not stated by source"
   },
   {
    "uid": "0b92d31effacf1ad",
@@ -113825,6 +113863,47 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
+   "uid": "59ea6de63f8cd502",
+   "source": "reference_pdfs",
+   "tier": "moon",
+   "event_title": "Venus-Moon Vedha / Moon-Venus mutual Vedha",
+   "date_time": {
+    "kind": "window",
+    "start_NY": "2027-09-10 14:21 EDT",
+    "end_NY": "2027-09-11 10:41 EDT",
+    "start_IST": "2027-09-10 23:51 IST",
+    "end_IST": "2027-09-11 20:11 IST",
+    "start_UTC": "2027-09-10T18:21:05+00:00",
+    "end_UTC": "2027-09-11T14:41:43+00:00",
+    "began_before_scan": false,
+    "continues_after_scan": false,
+    "duration_days": 0.85
+   },
+   "planetary_condition": "At start: Venus 01.72 deg Virgo (Uttara Phalguni pada 2; D9 Capricorn), 1.241 deg/day; Moon 26.67 deg Sagittarius (Uttara Ashadha pada 1; D9 Sagittarius), 11.812 deg/day | At end: Venus 02.77 deg Virgo (Uttara Phalguni pada 2; D9 Capricorn), 1.241 deg/day; Moon 06.66 deg Capricorn (Uttara Ashadha pada 3; D9 Aquarius), 11.784 deg/day | Computed: value: Moon in Uttara Ashadha vedhas Uttara Phalguni (Right side) where Venus is; Venus in Uttara Phalguni vedhas Uttara Ashadha (Left side) where Moon is",
+   "astrological_rule": "Venus does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133). || Moon and Venus vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
+   "source_interpretation": "Venus-Moon Vedha: Bearish || Moon-Venus mutual Vedha: Silver Bearish",
+   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named); Silver Bearish -> Silver (COMEX SI) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "source_reference": [
+    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'",
+    "TA p.160 [printed 130] Section 35 B (silver) #7"
+   ],
+   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "general",
+    "silver"
+   ],
+   "rule_ids": [
+    "ta_s32e_venus_moon",
+    "ta_s35b07_moon_venus_mutual_vedha"
+   ],
+   "gold_silver_relevance": "silver"
+  },
+  {
    "uid": "f801cbc4a69d4a65",
    "source": "reference_pdfs",
    "tier": "moon",
@@ -114403,44 +114482,6 @@
    ],
    "rule_ids": [
     "ta_s16_moon_navamsa"
-   ],
-   "gold_silver_relevance": "not stated by source"
-  },
-  {
-   "uid": "672e0b4648374e16",
-   "source": "reference_pdfs",
-   "tier": "moon",
-   "event_title": "Jupiter-Moon Vedha",
-   "date_time": {
-    "kind": "window",
-    "start_NY": "2027-09-11 10:41 EDT",
-    "end_NY": "2027-09-11 19:17 EDT",
-    "start_IST": "2027-09-11 20:11 IST",
-    "end_IST": "2027-09-12 04:47 IST",
-    "start_UTC": "2027-09-11T14:41:43+00:00",
-    "end_UTC": "2027-09-11T23:17:48+00:00",
-    "began_before_scan": false,
-    "continues_after_scan": false,
-    "duration_days": 0.36
-   },
-   "planetary_condition": "At start: Jupiter 15.90 deg Leo (Purva Phalguni pada 1; D9 Leo), 0.216 deg/day; Moon 06.67 deg Capricorn (Uttara Ashadha pada 4; D9 Pisces), 11.784 deg/day | At end: Jupiter 15.97 deg Leo (Purva Phalguni pada 1; D9 Leo), 0.216 deg/day; Moon 10.88 deg Capricorn (Shravana pada 1; D9 Aries), 11.787 deg/day | Computed: value: Jupiter in Purva Phalguni vedhas Abhijeet (Left side) where Moon is",
-   "astrological_rule": "Jupiter does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133).",
-   "source_interpretation": "Jupiter-Moon Vedha: Bearish",
-   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
-   "conditions_and_qualifications": [
-    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
-    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
-    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
-   ],
-   "source_reference": [
-    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'"
-   ],
-   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
-   "markets": [
-    "general"
-   ],
-   "rule_ids": [
-    "ta_s32e_jupiter_moon"
    ],
    "gold_silver_relevance": "not stated by source"
   },
@@ -116745,47 +116786,6 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
-   "uid": "f7245a6e89eac8db",
-   "source": "reference_pdfs",
-   "tier": "moon",
-   "event_title": "Venus-Moon Vedha / Moon-Venus mutual Vedha",
-   "date_time": {
-    "kind": "window",
-    "start_NY": "2027-09-17 05:59 EDT",
-    "end_NY": "2027-09-17 06:32 EDT",
-    "start_IST": "2027-09-17 15:29 IST",
-    "end_IST": "2027-09-17 16:02 IST",
-    "start_UTC": "2027-09-17T09:59:31+00:00",
-    "end_UTC": "2027-09-17T10:32:20+00:00",
-    "began_before_scan": false,
-    "continues_after_scan": false,
-    "duration_days": 0.02
-   },
-   "planetary_condition": "At start: Venus 09.97 deg Virgo (Uttara Phalguni pada 4; D9 Pisces), 1.242 deg/day; Moon 16.67 deg Pisces (Revati pada 1; D9 Sagittarius), 12.534 deg/day | At end: Venus 10.00 deg Virgo (Uttara Phalguni pada 4; D9 Pisces), 1.242 deg/day; Moon 16.95 deg Pisces (Revati pada 1; D9 Sagittarius), 12.538 deg/day | Computed: value: Moon in Revati vedhas Uttara Phalguni (Front side) where Venus is; Venus in Uttara Phalguni vedhas Revati (Front side) where Moon is",
-   "astrological_rule": "Venus does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133). || Moon and Venus vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
-   "source_interpretation": "Venus-Moon Vedha: Bearish || Moon-Venus mutual Vedha: Silver Bearish",
-   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named); Silver Bearish -> Silver (COMEX SI) (as the source states it; not a forecast)",
-   "conditions_and_qualifications": [
-    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
-    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
-    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
-   ],
-   "source_reference": [
-    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'",
-    "TA p.160 [printed 130] Section 35 B (silver) #7"
-   ],
-   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
-   "markets": [
-    "general",
-    "silver"
-   ],
-   "rule_ids": [
-    "ta_s32e_venus_moon",
-    "ta_s35b07_moon_venus_mutual_vedha"
-   ],
-   "gold_silver_relevance": "silver"
-  },
-  {
    "uid": "532f396f5a29b857",
    "source": "reference_pdfs",
    "tier": "moon",
@@ -117469,6 +117469,44 @@
    ],
    "rule_ids": [
     "ta_s16_moon_navamsa"
+   ],
+   "gold_silver_relevance": "not stated by source"
+  },
+  {
+   "uid": "a28b0db5bad9b352",
+   "source": "reference_pdfs",
+   "tier": "moon",
+   "event_title": "Jupiter-Moon Vedha",
+   "date_time": {
+    "kind": "window",
+    "start_NY": "2027-09-18 07:18 EDT",
+    "end_NY": "2027-09-19 08:11 EDT",
+    "start_IST": "2027-09-18 16:48 IST",
+    "end_IST": "2027-09-19 17:41 IST",
+    "start_UTC": "2027-09-18T11:18:16+00:00",
+    "end_UTC": "2027-09-19T12:11:15+00:00",
+    "began_before_scan": false,
+    "continues_after_scan": false,
+    "duration_days": 1.04
+   },
+   "planetary_condition": "At start: Jupiter 17.37 deg Leo (Purva Phalguni pada 2; D9 Virgo), 0.214 deg/day; Moon 00.00 deg Aries (Ashwini pada 1; D9 Aries), 12.749 deg/day | At end: Jupiter 17.59 deg Leo (Purva Phalguni pada 2; D9 Virgo), 0.214 deg/day; Moon 13.32 deg Aries (Ashwini pada 4; D9 Cancer), 12.967 deg/day | Computed: value: Jupiter in Purva Phalguni vedhas Ashwini (Front side) where Moon is",
+   "astrological_rule": "Jupiter does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133).",
+   "source_interpretation": "Jupiter-Moon Vedha: Bearish",
+   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "source_reference": [
+    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'"
+   ],
+   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "general"
+   ],
+   "rule_ids": [
+    "ta_s32e_jupiter_moon"
    ],
    "gold_silver_relevance": "not stated by source"
   },
@@ -125380,6 +125418,47 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
+   "uid": "aed334ca7dfb496a",
+   "source": "reference_pdfs",
+   "tier": "moon",
+   "event_title": "Venus-Moon Vedha / Moon-Venus mutual Vedha",
+   "date_time": {
+    "kind": "window",
+    "start_NY": "2027-10-05 16:45 EDT",
+    "end_NY": "2027-10-06 18:59 EDT",
+    "start_IST": "2027-10-06 02:15 IST",
+    "end_IST": "2027-10-07 04:29 IST",
+    "start_UTC": "2027-10-05T20:45:28+00:00",
+    "end_UTC": "2027-10-06T22:59:03+00:00",
+    "began_before_scan": false,
+    "continues_after_scan": false,
+    "duration_days": 1.09
+   },
+   "planetary_condition": "At start: Venus 02.89 deg Libra (Chitra pada 3; D9 Libra), 1.243 deg/day; Moon 00.00 deg Sagittarius (Mula pada 1; D9 Aries), 12.360 deg/day | At end: Venus 04.25 deg Libra (Chitra pada 4; D9 Scorpio), 1.243 deg/day; Moon 13.33 deg Sagittarius (Mula pada 4; D9 Cancer), 12.065 deg/day | Computed: value: Moon in Mula vedhas Chitra (Right side) where Venus is; Venus in Chitra vedhas Mula (Left side) where Moon is",
+   "astrological_rule": "Venus does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133). || Moon and Venus vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
+   "source_interpretation": "Venus-Moon Vedha: Bearish || Moon-Venus mutual Vedha: Silver Bearish",
+   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named); Silver Bearish -> Silver (COMEX SI) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "source_reference": [
+    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'",
+    "TA p.160 [printed 130] Section 35 B (silver) #7"
+   ],
+   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "general",
+    "silver"
+   ],
+   "rule_ids": [
+    "ta_s32e_venus_moon",
+    "ta_s35b07_moon_venus_mutual_vedha"
+   ],
+   "gold_silver_relevance": "silver"
+  },
+  {
    "uid": "21b51eb1625e4c16",
    "source": "reference_pdfs",
    "tier": "moon",
@@ -126527,44 +126606,6 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
-   "uid": "9adc7167748e70f4",
-   "source": "reference_pdfs",
-   "tier": "moon",
-   "event_title": "Jupiter-Moon Vedha",
-   "date_time": {
-    "kind": "window",
-    "start_NY": "2027-10-08 18:01 EDT",
-    "end_NY": "2027-10-09 02:37 EDT",
-    "start_IST": "2027-10-09 03:31 IST",
-    "end_IST": "2027-10-09 12:07 IST",
-    "start_UTC": "2027-10-08T22:01:24+00:00",
-    "end_UTC": "2027-10-09T06:37:01+00:00",
-    "began_before_scan": false,
-    "continues_after_scan": false,
-    "duration_days": 0.36
-   },
-   "planetary_condition": "At start: Jupiter 21.64 deg Leo (Purva Phalguni pada 3; D9 Libra), 0.202 deg/day; Moon 06.67 deg Capricorn (Uttara Ashadha pada 4; D9 Pisces), 11.801 deg/day | At end: Jupiter 21.71 deg Leo (Purva Phalguni pada 3; D9 Libra), 0.202 deg/day; Moon 10.88 deg Capricorn (Shravana pada 1; D9 Aries), 11.790 deg/day | Computed: value: Jupiter in Purva Phalguni vedhas Abhijeet (Left side) where Moon is",
-   "astrological_rule": "Jupiter does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133).",
-   "source_interpretation": "Jupiter-Moon Vedha: Bearish",
-   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
-   "conditions_and_qualifications": [
-    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
-    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
-    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
-   ],
-   "source_reference": [
-    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'"
-   ],
-   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
-   "markets": [
-    "general"
-   ],
-   "rule_ids": [
-    "ta_s32e_jupiter_moon"
-   ],
-   "gold_silver_relevance": "not stated by source"
-  },
-  {
    "uid": "fddfa9ebb3ee63a1",
    "source": "reference_pdfs",
    "tier": "moon",
@@ -127633,47 +127674,6 @@
     "ta_s16_moon_navamsa"
    ],
    "gold_silver_relevance": "not stated by source"
-  },
-  {
-   "uid": "ca612ce4ee35a8e9",
-   "source": "reference_pdfs",
-   "tier": "moon",
-   "event_title": "Venus-Moon Vedha / Moon-Venus mutual Vedha",
-   "date_time": {
-    "kind": "window",
-    "start_NY": "2027-10-11 06:52 EDT",
-    "end_NY": "2027-10-12 09:25 EDT",
-    "start_IST": "2027-10-11 16:22 IST",
-    "end_IST": "2027-10-12 18:55 IST",
-    "start_UTC": "2027-10-11T10:52:01+00:00",
-    "end_UTC": "2027-10-12T13:25:46+00:00",
-    "began_before_scan": false,
-    "continues_after_scan": false,
-    "duration_days": 1.11
-   },
-   "planetary_condition": "At start: Venus 09.84 deg Libra (Swati pada 1; D9 Sagittarius), 1.242 deg/day; Moon 06.67 deg Aquarius (Shatabhisha pada 1; D9 Sagittarius), 11.951 deg/day | At end: Venus 11.21 deg Libra (Swati pada 2; D9 Capricorn), 1.242 deg/day; Moon 19.99 deg Aquarius (Shatabhisha pada 4; D9 Pisces), 12.155 deg/day | Computed: value: Moon in Shatabhisha vedhas Swati (Front side) where Venus is; Venus in Swati vedhas Shatabhisha (Front side) where Moon is",
-   "astrological_rule": "Venus does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133). || Moon and Venus vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
-   "source_interpretation": "Venus-Moon Vedha: Bearish || Moon-Venus mutual Vedha: Silver Bearish",
-   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named); Silver Bearish -> Silver (COMEX SI) (as the source states it; not a forecast)",
-   "conditions_and_qualifications": [
-    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
-    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
-    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
-   ],
-   "source_reference": [
-    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'",
-    "TA p.160 [printed 130] Section 35 B (silver) #7"
-   ],
-   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
-   "markets": [
-    "general",
-    "silver"
-   ],
-   "rule_ids": [
-    "ta_s32e_venus_moon",
-    "ta_s35b07_moon_venus_mutual_vedha"
-   ],
-   "gold_silver_relevance": "silver"
   },
   {
    "uid": "0220d6a9f47763cf",
@@ -129476,6 +129476,44 @@
    ],
    "rule_ids": [
     "ta_s16_moon_navamsa"
+   ],
+   "gold_silver_relevance": "not stated by source"
+  },
+  {
+   "uid": "fbd3e635adba0246",
+   "source": "reference_pdfs",
+   "tier": "moon",
+   "event_title": "Jupiter-Moon Vedha",
+   "date_time": {
+    "kind": "window",
+    "start_NY": "2027-10-15 14:00 EDT",
+    "end_NY": "2027-10-16 14:29 EDT",
+    "start_IST": "2027-10-15 23:30 IST",
+    "end_IST": "2027-10-16 23:59 IST",
+    "start_UTC": "2027-10-15T18:00:00+00:00",
+    "end_UTC": "2027-10-16T18:29:31+00:00",
+    "began_before_scan": false,
+    "continues_after_scan": false,
+    "duration_days": 1.02
+   },
+   "planetary_condition": "At start: Jupiter 23.00 deg Leo (Purva Phalguni pada 3; D9 Libra), 0.196 deg/day; Moon 00.00 deg Aries (Ashwini pada 1; D9 Aries), 12.941 deg/day | At end: Jupiter 23.20 deg Leo (Purva Phalguni pada 3; D9 Libra), 0.195 deg/day; Moon 13.33 deg Aries (Ashwini pada 4; D9 Cancer), 13.183 deg/day | Computed: value: Jupiter in Purva Phalguni vedhas Ashwini (Front side) where Moon is",
+   "astrological_rule": "Jupiter does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133).",
+   "source_interpretation": "Jupiter-Moon Vedha: Bearish",
+   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "source_reference": [
+    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'"
+   ],
+   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "general"
+   ],
+   "rule_ids": [
+    "ta_s32e_jupiter_moon"
    ],
    "gold_silver_relevance": "not stated by source"
   },
@@ -136049,6 +136087,47 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
+   "uid": "8f5e292c9af4107b",
+   "source": "reference_pdfs",
+   "tier": "moon",
+   "event_title": "Venus-Moon Vedha / Moon-Venus mutual Vedha",
+   "date_time": {
+    "kind": "window",
+    "start_NY": "2027-10-30 04:52 EDT",
+    "end_NY": "2027-10-31 00:01 EDT",
+    "start_IST": "2027-10-30 14:22 IST",
+    "end_IST": "2027-10-31 09:31 IST",
+    "start_UTC": "2027-10-30T08:52:01+00:00",
+    "end_UTC": "2027-10-31T04:01:52+00:00",
+    "began_before_scan": false,
+    "continues_after_scan": false,
+    "duration_days": 0.8
+   },
+   "planetary_condition": "At start: Venus 03.33 deg Scorpio (Anuradha pada 1; D9 Leo), 1.242 deg/day; Moon 22.63 deg Libra (Vishakha pada 1; D9 Aries), 13.548 deg/day | At end: Venus 04.32 deg Scorpio (Anuradha pada 1; D9 Leo), 1.242 deg/day; Moon 03.33 deg Scorpio (Vishakha pada 4; D9 Cancer), 13.275 deg/day | Computed: value: Moon in Vishakha vedhas Anuradha (Left side) where Venus is; Venus in Anuradha vedhas Vishakha (Left side) where Moon is",
+   "astrological_rule": "Venus does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133). || Moon and Venus vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
+   "source_interpretation": "Venus-Moon Vedha: Bearish || Moon-Venus mutual Vedha: Silver Bearish",
+   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named); Silver Bearish -> Silver (COMEX SI) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "source_reference": [
+    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'",
+    "TA p.160 [printed 130] Section 35 B (silver) #7"
+   ],
+   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "general",
+    "silver"
+   ],
+   "rule_ids": [
+    "ta_s32e_venus_moon",
+    "ta_s35b07_moon_venus_mutual_vedha"
+   ],
+   "gold_silver_relevance": "silver"
+  },
+  {
    "uid": "3feabd9d906da7e9",
    "source": "reference_pdfs",
    "tier": "moon",
@@ -138229,44 +138308,6 @@
    ],
    "rule_ids": [
     "ta_d9_moon_jupiter"
-   ],
-   "gold_silver_relevance": "not stated by source"
-  },
-  {
-   "uid": "965460ce2d530640",
-   "source": "reference_pdfs",
-   "tier": "moon",
-   "event_title": "Jupiter-Moon Vedha",
-   "date_time": {
-    "kind": "window",
-    "start_NY": "2027-11-04 11:18 EDT",
-    "end_NY": "2027-11-05 02:04 EDT",
-    "start_IST": "2027-11-04 20:48 IST",
-    "end_IST": "2027-11-05 11:34 IST",
-    "start_UTC": "2027-11-04T15:18:45+00:00",
-    "end_UTC": "2027-11-05T06:04:41+00:00",
-    "began_before_scan": false,
-    "continues_after_scan": false,
-    "duration_days": 0.62
-   },
-   "planetary_condition": "At start: Jupiter 26.67 deg Leo (Uttara Phalguni pada 1; D9 Sagittarius), 0.171 deg/day; Moon 29.35 deg Sagittarius (Uttara Ashadha pada 1; D9 Sagittarius), 11.937 deg/day | At end: Jupiter 26.77 deg Leo (Uttara Phalguni pada 1; D9 Sagittarius), 0.170 deg/day; Moon 06.66 deg Capricorn (Uttara Ashadha pada 3; D9 Aquarius), 11.854 deg/day | Computed: value: Jupiter in Uttara Phalguni vedhas Uttara Ashadha (Left side) where Moon is",
-   "astrological_rule": "Jupiter does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133).",
-   "source_interpretation": "Jupiter-Moon Vedha: Bearish",
-   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
-   "conditions_and_qualifications": [
-    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
-    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
-    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
-   ],
-   "source_reference": [
-    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'"
-   ],
-   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
-   "markets": [
-    "general"
-   ],
-   "rule_ids": [
-    "ta_s32e_jupiter_moon"
    ],
    "gold_silver_relevance": "not stated by source"
   },
@@ -141156,6 +141197,44 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
+   "uid": "a31b9b23bced3bba",
+   "source": "reference_pdfs",
+   "tier": "moon",
+   "event_title": "Jupiter-Moon Vedha",
+   "date_time": {
+    "kind": "window",
+    "start_NY": "2027-11-10 20:32 EST",
+    "end_NY": "2027-11-11 21:26 EST",
+    "start_IST": "2027-11-11 07:02 IST",
+    "end_IST": "2027-11-12 07:56 IST",
+    "start_UTC": "2027-11-11T01:32:20+00:00",
+    "end_UTC": "2027-11-12T02:26:15+00:00",
+    "began_before_scan": false,
+    "continues_after_scan": false,
+    "duration_days": 1.04
+   },
+   "planetary_condition": "At start: Jupiter 27.73 deg Leo (Uttara Phalguni pada 1; D9 Sagittarius), 0.161 deg/day; Moon 16.67 deg Pisces (Revati pada 1; D9 Sagittarius), 12.680 deg/day | At end: Jupiter 27.90 deg Leo (Uttara Phalguni pada 1; D9 Sagittarius), 0.159 deg/day; Moon 30.00 deg Pisces (Revati pada 4; D9 Pisces), 13.027 deg/day | Computed: value: Jupiter in Uttara Phalguni vedhas Revati (Front side) where Moon is",
+   "astrological_rule": "Jupiter does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133).",
+   "source_interpretation": "Jupiter-Moon Vedha: Bearish",
+   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "source_reference": [
+    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'"
+   ],
+   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "general"
+   ],
+   "rule_ids": [
+    "ta_s32e_jupiter_moon"
+   ],
+   "gold_silver_relevance": "not stated by source"
+  },
+  {
    "uid": "d0a7f255647974fe",
    "source": "reference_pdfs",
    "tier": "moon",
@@ -141804,6 +141883,47 @@
     "ta_s16_moon_navamsa"
    ],
    "gold_silver_relevance": "not stated by source"
+  },
+  {
+   "uid": "d71ae6411c775dc9",
+   "source": "reference_pdfs",
+   "tier": "moon",
+   "event_title": "Venus-Moon Vedha / Moon-Venus mutual Vedha",
+   "date_time": {
+    "kind": "window",
+    "start_NY": "2027-11-11 21:26 EST",
+    "end_NY": "2027-11-12 21:41 EST",
+    "start_IST": "2027-11-12 07:56 IST",
+    "end_IST": "2027-11-13 08:11 IST",
+    "start_UTC": "2027-11-12T02:26:15+00:00",
+    "end_UTC": "2027-11-13T02:41:15+00:00",
+    "began_before_scan": false,
+    "continues_after_scan": false,
+    "duration_days": 1.01
+   },
+   "planetary_condition": "At start: Venus 19.14 deg Scorpio (Jyeshtha pada 1; D9 Sagittarius), 1.241 deg/day; Moon 00.00 deg Aries (Ashwini pada 1; D9 Aries), 13.027 deg/day | At end: Venus 20.39 deg Scorpio (Jyeshtha pada 2; D9 Capricorn), 1.240 deg/day; Moon 13.33 deg Aries (Ashwini pada 4; D9 Cancer), 13.359 deg/day | Computed: value: Moon in Ashwini vedhas Jyeshtha (Right side) where Venus is; Venus in Jyeshtha vedhas Ashwini (Left side) where Moon is",
+   "astrological_rule": "Venus does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133). || Moon and Venus vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
+   "source_interpretation": "Venus-Moon Vedha: Bearish || Moon-Venus mutual Vedha: Silver Bearish",
+   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named); Silver Bearish -> Silver (COMEX SI) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "source_reference": [
+    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'",
+    "TA p.160 [printed 130] Section 35 B (silver) #7"
+   ],
+   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "general",
+    "silver"
+   ],
+   "rule_ids": [
+    "ta_s32e_venus_moon",
+    "ta_s35b07_moon_venus_mutual_vedha"
+   ],
+   "gold_silver_relevance": "silver"
   },
   {
    "uid": "2ab640995f34823f",
@@ -144861,47 +144981,6 @@
     "ta_s16_moon_navamsa"
    ],
    "gold_silver_relevance": "not stated by source"
-  },
-  {
-   "uid": "c5f858a4cae10901",
-   "source": "reference_pdfs",
-   "tier": "moon",
-   "event_title": "Venus-Moon Vedha / Moon-Venus mutual Vedha",
-   "date_time": {
-    "kind": "window",
-    "start_NY": "2027-11-18 15:22 EST",
-    "end_NY": "2027-11-19 13:58 EST",
-    "start_IST": "2027-11-19 01:52 IST",
-    "end_IST": "2027-11-20 00:28 IST",
-    "start_UTC": "2027-11-18T20:22:30+00:00",
-    "end_UTC": "2027-11-19T18:58:07+00:00",
-    "began_before_scan": false,
-    "continues_after_scan": false,
-    "duration_days": 0.94
-   },
-   "planetary_condition": "At start: Venus 27.51 deg Scorpio (Jyeshtha pada 4; D9 Pisces), 1.240 deg/day; Moon 03.34 deg Cancer (Pushya pada 1; D9 Leo), 14.178 deg/day | At end: Venus 28.67 deg Scorpio (Jyeshtha pada 4; D9 Pisces), 1.240 deg/day; Moon 16.66 deg Cancer (Pushya pada 4; D9 Scorpio), 14.146 deg/day | Computed: value: Moon in Pushya vedhas Jyeshtha (Front side) where Venus is; Venus in Jyeshtha vedhas Pushya (Front side) where Moon is",
-   "astrological_rule": "Venus does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133). || Moon and Venus vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
-   "source_interpretation": "Venus-Moon Vedha: Bearish || Moon-Venus mutual Vedha: Silver Bearish",
-   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named); Silver Bearish -> Silver (COMEX SI) (as the source states it; not a forecast)",
-   "conditions_and_qualifications": [
-    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
-    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
-    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
-   ],
-   "source_reference": [
-    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'",
-    "TA p.160 [printed 130] Section 35 B (silver) #7"
-   ],
-   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
-   "markets": [
-    "general",
-    "silver"
-   ],
-   "rule_ids": [
-    "ta_s32e_venus_moon",
-    "ta_s35b07_moon_venus_mutual_vedha"
-   ],
-   "gold_silver_relevance": "silver"
   },
   {
    "uid": "d1fa3a531f5a0bcc",
@@ -150472,44 +150551,6 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
-   "uid": "9c7f794e81df30fb",
-   "source": "reference_pdfs",
-   "tier": "moon",
-   "event_title": "Jupiter-Moon Vedha",
-   "date_time": {
-    "kind": "window",
-    "start_NY": "2027-12-01 13:15 EST",
-    "end_NY": "2027-12-02 09:16 EST",
-    "start_IST": "2027-12-01 23:45 IST",
-    "end_IST": "2027-12-02 19:46 IST",
-    "start_UTC": "2027-12-01T18:15:56+00:00",
-    "end_UTC": "2027-12-02T14:16:52+00:00",
-    "began_before_scan": false,
-    "continues_after_scan": false,
-    "duration_days": 0.83
-   },
-   "planetary_condition": "At start: Jupiter 00.65 deg Virgo (Uttara Phalguni pada 2; D9 Capricorn), 0.119 deg/day; Moon 26.67 deg Sagittarius (Uttara Ashadha pada 1; D9 Sagittarius), 12.065 deg/day | At end: Jupiter 00.75 deg Virgo (Uttara Phalguni pada 2; D9 Capricorn), 0.117 deg/day; Moon 06.66 deg Capricorn (Uttara Ashadha pada 3; D9 Aquarius), 11.921 deg/day | Computed: value: Jupiter in Uttara Phalguni vedhas Uttara Ashadha (Left side) where Moon is",
-   "astrological_rule": "Jupiter does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133).",
-   "source_interpretation": "Jupiter-Moon Vedha: Bearish",
-   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
-   "conditions_and_qualifications": [
-    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
-    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
-    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
-   ],
-   "source_reference": [
-    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'"
-   ],
-   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
-   "markets": [
-    "general"
-   ],
-   "rule_ids": [
-    "ta_s32e_jupiter_moon"
-   ],
-   "gold_silver_relevance": "not stated by source"
-  },
-  {
    "uid": "1e54da4ae557e4b5",
    "source": "reference_pdfs",
    "tier": "moon",
@@ -153000,6 +153041,47 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
+   "uid": "9fdd3eb59a2cdba2",
+   "source": "reference_pdfs",
+   "tier": "moon",
+   "event_title": "Venus-Moon Vedha / Moon-Venus mutual Vedha",
+   "date_time": {
+    "kind": "window",
+    "start_NY": "2027-12-07 03:45 EST",
+    "end_NY": "2027-12-08 05:43 EST",
+    "start_IST": "2027-12-07 14:15 IST",
+    "end_IST": "2027-12-08 16:13 IST",
+    "start_UTC": "2027-12-07T08:45:28+00:00",
+    "end_UTC": "2027-12-08T10:43:35+00:00",
+    "began_before_scan": false,
+    "continues_after_scan": false,
+    "duration_days": 1.08
+   },
+   "planetary_condition": "At start: Venus 20.44 deg Sagittarius (Purva Ashadha pada 3; D9 Libra), 1.236 deg/day; Moon 03.34 deg Pisces (Uttara Bhadrapada pada 1; D9 Leo), 12.169 deg/day | At end: Venus 21.77 deg Sagittarius (Purva Ashadha pada 3; D9 Libra), 1.236 deg/day; Moon 16.66 deg Pisces (Uttara Bhadrapada pada 4; D9 Scorpio), 12.493 deg/day | Computed: value: Moon in Uttara Bhadrapada vedhas Purva Ashadha (Right side) where Venus is; Venus in Purva Ashadha vedhas Uttara Bhadrapada (Left side) where Moon is",
+   "astrological_rule": "Venus does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133). || Moon and Venus vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
+   "source_interpretation": "Venus-Moon Vedha: Bearish || Moon-Venus mutual Vedha: Silver Bearish",
+   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named); Silver Bearish -> Silver (COMEX SI) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "source_reference": [
+    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'",
+    "TA p.160 [printed 130] Section 35 B (silver) #7"
+   ],
+   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "general",
+    "silver"
+   ],
+   "rule_ids": [
+    "ta_s32e_venus_moon",
+    "ta_s35b07_moon_venus_mutual_vedha"
+   ],
+   "gold_silver_relevance": "silver"
+  },
+  {
    "uid": "5242fe1b19e3d27e",
    "source": "reference_pdfs",
    "tier": "moon",
@@ -153278,6 +153360,44 @@
    ],
    "rule_ids": [
     "ta_s16_moon_navamsa"
+   ],
+   "gold_silver_relevance": "not stated by source"
+  },
+  {
+   "uid": "291791b1fa8520a5",
+   "source": "reference_pdfs",
+   "tier": "moon",
+   "event_title": "Jupiter-Moon Vedha",
+   "date_time": {
+    "kind": "window",
+    "start_NY": "2027-12-08 05:43 EST",
+    "end_NY": "2027-12-09 06:57 EST",
+    "start_IST": "2027-12-08 16:13 IST",
+    "end_IST": "2027-12-09 17:27 IST",
+    "start_UTC": "2027-12-08T10:43:35+00:00",
+    "end_UTC": "2027-12-09T11:57:39+00:00",
+    "began_before_scan": false,
+    "continues_after_scan": false,
+    "duration_days": 1.05
+   },
+   "planetary_condition": "At start: Jupiter 01.39 deg Virgo (Uttara Phalguni pada 2; D9 Capricorn), 0.103 deg/day; Moon 16.67 deg Pisces (Revati pada 1; D9 Sagittarius), 12.493 deg/day | At end: Jupiter 01.50 deg Virgo (Uttara Phalguni pada 2; D9 Capricorn), 0.100 deg/day; Moon 29.99 deg Pisces (Revati pada 4; D9 Pisces), 12.878 deg/day | Computed: value: Jupiter in Uttara Phalguni vedhas Revati (Front side) where Moon is",
+   "astrological_rule": "Jupiter does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133).",
+   "source_interpretation": "Jupiter-Moon Vedha: Bearish",
+   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "source_reference": [
+    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'"
+   ],
+   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "general"
+   ],
+   "rule_ids": [
+    "ta_s32e_jupiter_moon"
    ],
    "gold_silver_relevance": "not stated by source"
   },
@@ -155363,47 +155483,6 @@
     "ta_s16_moon_navamsa"
    ],
    "gold_silver_relevance": "not stated by source"
-  },
-  {
-   "uid": "dc5653a065468efc",
-   "source": "reference_pdfs",
-   "tier": "moon",
-   "event_title": "Venus-Moon Vedha / Moon-Venus mutual Vedha",
-   "date_time": {
-    "kind": "window",
-    "start_NY": "2027-12-13 04:45 EST",
-    "end_NY": "2027-12-14 02:55 EST",
-    "start_IST": "2027-12-13 15:15 IST",
-    "end_IST": "2027-12-14 13:25 IST",
-    "start_UTC": "2027-12-13T09:45:00+00:00",
-    "end_UTC": "2027-12-14T07:55:18+00:00",
-    "began_before_scan": false,
-    "continues_after_scan": false,
-    "duration_days": 0.92
-   },
-   "planetary_condition": "At start: Venus 27.90 deg Sagittarius (Uttara Ashadha pada 1; D9 Sagittarius), 1.234 deg/day; Moon 23.33 deg Taurus (Mrigashira pada 1; D9 Leo), 14.329 deg/day | At end: Venus 29.04 deg Sagittarius (Uttara Ashadha pada 1; D9 Sagittarius), 1.233 deg/day; Moon 06.66 deg Gemini (Mrigashira pada 4; D9 Scorpio), 14.525 deg/day | Computed: value: Moon in Mrigashira vedhas Uttara Ashadha (Front side) where Venus is; Venus in Uttara Ashadha vedhas Mrigashira (Front side) where Moon is",
-   "astrological_rule": "Venus does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133). || Moon and Venus vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
-   "source_interpretation": "Venus-Moon Vedha: Bearish || Moon-Venus mutual Vedha: Silver Bearish",
-   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named); Silver Bearish -> Silver (COMEX SI) (as the source states it; not a forecast)",
-   "conditions_and_qualifications": [
-    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
-    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
-    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
-   ],
-   "source_reference": [
-    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'",
-    "TA p.160 [printed 130] Section 35 B (silver) #7"
-   ],
-   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
-   "markets": [
-    "general",
-    "silver"
-   ],
-   "rule_ids": [
-    "ta_s32e_venus_moon",
-    "ta_s35b07_moon_venus_mutual_vedha"
-   ],
-   "gold_silver_relevance": "silver"
   },
   {
    "uid": "b107951abc1912a2",
@@ -163525,6 +163604,47 @@
     "ta_s16_moon_navamsa"
    ],
    "gold_silver_relevance": "not stated by source"
+  },
+  {
+   "uid": "d430dcee16a6fcfa",
+   "source": "reference_pdfs",
+   "tier": "moon",
+   "event_title": "Venus-Moon Vedha / Moon-Venus mutual Vedha",
+   "date_time": {
+    "kind": "window",
+    "start_NY": "2027-12-31 02:36 EST",
+    "end_NY": "2027-12-31 16:57 EST",
+    "start_IST": "2027-12-31 13:06 IST",
+    "end_IST": "2028-01-01 03:27 IST",
+    "start_UTC": "2027-12-31T07:36:33+00:00",
+    "end_UTC": "2027-12-31T21:57:11+00:00",
+    "began_before_scan": false,
+    "continues_after_scan": false,
+    "duration_days": 0.6
+   },
+   "planetary_condition": "At start: Venus 19.92 deg Capricorn (Shravana pada 3; D9 Gemini), 1.224 deg/day; Moon 23.34 deg Capricorn (Dhanishta pada 1; D9 Leo), 11.811 deg/day | At end: Venus 20.65 deg Capricorn (Shravana pada 4; D9 Cancer), 1.224 deg/day; Moon 00.38 deg Aquarius (Dhanishta pada 3; D9 Libra), 11.784 deg/day | Computed: value: Moon in Dhanishta vedhas Shravana (Right side) where Venus is; Venus in Shravana vedhas Dhanishta (Left side) where Moon is",
+   "astrological_rule": "Venus does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133). || Moon and Venus vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
+   "source_interpretation": "Venus-Moon Vedha: Bearish || Moon-Venus mutual Vedha: Silver Bearish",
+   "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named); Silver Bearish -> Silver (COMEX SI) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "source_reference": [
+    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'",
+    "TA p.160 [printed 130] Section 35 B (silver) #7"
+   ],
+   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "general",
+    "silver"
+   ],
+   "rule_ids": [
+    "ta_s32e_venus_moon",
+    "ta_s35b07_moon_venus_mutual_vedha"
+   ],
+   "gold_silver_relevance": "silver"
   },
   {
    "uid": "13494ee5cc9b0292",

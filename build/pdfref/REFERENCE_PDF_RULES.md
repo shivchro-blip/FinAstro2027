@@ -251,26 +251,26 @@ Grouped by first source page. **Status**: `new` = new calendar events; `annotate
 | Ketu Nakshatra Vedha (all three sides) | TA p.134 [printed 104] Section 32 A rule 1 'Sun, Moon, Rahu & Ketu do Vedha all 3 sides'; TA pp.131-133 wheel; 2026 document B138 (same table, 2026); KD p.84 / p.130 #1-#2 (sector rule) | Malefic Vedha: good rally may appear in sectors ruled by the Nakshatra lord (KD p.130 #1); Vedha by malefic is Bullish and reverses the trend (TA p.137 #4) | new: 2 in 2027 |
 | Sun-Ketu Vedha | TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results' | Bearish | new: 3 in 2027 |
 | Mars-Rahu Vedha | TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results' | Bearish | new: 1 in 2027 |
-| Venus-Ketu Vedha | TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results' | Bearish | new: 2 in 2027 |
-| Venus-Rahu Vedha | TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results' | Bearish | new: 2 in 2027 |
-| Venus-Mercury Vedha | TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results' | Bearish | computed - does not occur in 2027 |
+| Venus-Ketu Vedha | TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results' | Bearish | new: 1 in 2027 |
+| Venus-Rahu Vedha | TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results' | Bearish | new: 3 in 2027 |
+| Venus-Mercury Vedha | TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results' | Bearish | new: 1 in 2027 |
 | Venus-Herschel mutual Vedha | TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results' | Bearish (mutual) | new: 1 in 2027 |
 | Mercury-Moon Vedha | TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results' | Bearish | Moon layer (14 in 2027) |
-| Jupiter-Moon Vedha | TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results' | Bearish | Moon layer (13 in 2027) |
-| Venus-Moon Vedha | TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results' | Bearish | Moon layer (14 in 2027) |
+| Jupiter-Moon Vedha | TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results' | Bearish | Moon layer (14 in 2027) |
+| Venus-Moon Vedha | TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results' | Bearish | Moon layer (16 in 2027) |
 | Mars-Mercury Vedha | TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results' | Bullish | new: 2 in 2027 |
 | Saturn-Moon Vedha | TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results' | Bullish | Moon layer (14 in 2027) |
 | Jupiter-Mars mutual Vedha | TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results' | Bullish 13 days (mutual) | computed - does not occur in 2027 |
-| Saturn-Mars mutual Vedha | TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results' | Bullish 20 days (mutual) | new: 1 in 2027 |
-| Saturn-Mars Vedha | TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results' | Bullish 10 days | new: 1 in 2027 |
-| Venus-Jupiter Vedha | TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results' | Bullish | computed - does not occur in 2027 |
+| Saturn-Mars mutual Vedha | TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results' | Bullish 20 days (mutual) | new: 2 in 2027 |
+| Saturn-Mars Vedha | TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results' | Bullish 10 days | new: 2 in 2027 |
+| Venus-Jupiter Vedha | TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results' | Bullish | new: 1 in 2027 |
 | Mars passes from Taurus | TA p.154 [printed 124] Section 34 A 'When gold can rally?' #2 | Gold can rally | computed - does not occur in 2027 |
 | Sun in Libra with other malefic (Saturn, Mars, Rahu) | TA p.154 [printed 124] Section 34 A #3 | Gold can rally | annotates existing `cfg_gold_bullish_02_sun_libra_aspected_by_malefics` |
 | Rahu & Mars together in any sign | TA p.154 [printed 124] Section 34 A #4; TA p.158 [printed 128] Section 35 A (silver) #4 | Gold can rally; silver Bullish, more when same nakshatra | annotates existing `cfg_gold_bullish_03_rahu_mars_same_sign, cfg_silver_bullish_07_rahu_mars_same_sign` |
 | Jupiter enters Scorpio | TA p.154 [printed 124] Section 34 A #5; TA p.158 [printed 128] Section 35 A (silver) #12 | Gold Bullish after 5 months (2019 move); silver trend Bullish after 5 months | computed - does not occur in 2027 |
 | Jupiter enters Gemini | TA p.154 [printed 124] Section 34 A #6 | Gold Bullish after 5 months | computed - does not occur in 2027 |
 | Moon eclipse on Wednesday | TA p.154 [printed 124] Section 34 A (gold) #7 | Gold: instant Bullish | computed - does not occur in 2027 |
-| Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) | TA p.154 [printed 124] Section 34 A (gold) #8; TA p.156 [printed 126] Section 34 B (gold) #4; KD p.92 (2026: Rahu Vedh of Pushya - high bullish for gold & silver) | Malefic Vedha: Gold Bullish (extreme if more than 1 malefic); Benefic Vedha: Gold Bearish (high if more than 1 benefic) | new: 45 in 2027 |
+| Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) | TA p.154 [printed 124] Section 34 A (gold) #8; TA p.156 [printed 126] Section 34 B (gold) #4; KD p.92 (2026: Rahu Vedh of Pushya - high bullish for gold & silver) | Malefic Vedha: Gold Bullish (extreme if more than 1 malefic); Benefic Vedha: Gold Bearish (high if more than 1 benefic) | new: 42 in 2027 |
 | Mars aspected by Saturn while Jupiter retrograde | TA p.155 [printed 125] Section 34 A #9 | Gold can rally | computed - does not occur in 2027 |
 | Sun on Bharani, Krittika, Punarvasu or Pushya, not aspected by benefic | TA p.155 [printed 125] Section 34 A #10 | Gold can rally - More Bullish if aspected by malefic | new: 4 in 2027 |
 | Saturn with Jupiter in Sagittarius | TA p.155 [printed 125] Section 34 A #11 | Gold can rally | computed - does not occur in 2027 |
@@ -293,7 +293,7 @@ Grouped by first source page. **Status**: `new` = new calendar events; `annotate
 | Sun & Moon together at Sankranti entering time | TA p.158 [printed 128] Section 35 A (silver) #10 | Silver Bullish | computed - does not occur in 2027 |
 | Chaitra Shukla Pratipada on Wednesday | TA p.158 [printed 128] Section 35 A (silver) #5 | Silver: short term Bullish | new: 2 in 2027 |
 | Mercury does Vedha of Venus | TA p.158 [printed 128] Section 35 A (silver) #11 | Silver Bullish | new: 1 in 2027 |
-| Jupiter does Vedha of Venus | TA p.158 [printed 128] Section 35 A (silver) #11 | Silver Bullish | new: 2 in 2027 |
+| Jupiter does Vedha of Venus | TA p.158 [printed 128] Section 35 A (silver) #11 | Silver Bullish | new: 1 in 2027 |
 | Mercury (combust & retrograde) mutual Vedha with Moon | TA p.158 [printed 128] Section 35 A (silver) #13 | Silver: Bullish day | Moon layer (14 in 2027) |
 | Sun in Leo with Mars or Jupiter retrograde | TA p.159 [printed 129] Section 35 A #14 | Silver high Bullish | computed - does not occur in 2027 |
 | Sun & Venus alone in Cancer | TA p.159 [printed 129] Section 35 A #20 | Silver Bullish | computed - does not occur in 2027 |
@@ -313,7 +313,7 @@ Grouped by first source page. **Status**: `new` = new calendar events; `annotate
 | Amavasya on Monday | TA p.160 [printed 130] Section 35 B (silver) #4 | Silver Bearish | annotates existing `cfg_silver_bearish_05_amavasya_on_monday` |
 | Moon eclipse on Sunday | TA p.160 [printed 130] Section 35 B (silver) #9 | Silver: falls 15 days ahead | annotates existing `cfg_silver_bearish_07_moon_eclipse_on_sunday` |
 | Mercury-Venus mutual Vedha | TA p.160 [printed 130] Section 35 B (silver) #7 | Silver Bearish | computed - does not occur in 2027 |
-| Moon-Venus mutual Vedha | TA p.160 [printed 130] Section 35 B (silver) #7 | Silver Bearish | Moon layer (14 in 2027) |
+| Moon-Venus mutual Vedha | TA p.160 [printed 130] Section 35 B (silver) #7 | Silver Bearish | Moon layer (16 in 2027) |
 | Saturn direct from retrograde | TA p.160 [printed 130] Section 35 B (silver) #10 | Silver Bearish (September 2019) | annotates existing `cfg_silver_bearish_08_saturn_direct_from_retrograde` |
 | Sun in Virgo, Libra or Pisces with or aspected by benefics | TA p.161 [printed 131] Section 35 B #13 | Silver Bearish | annotates existing `cfg_silver_bearish_09_sun_three_signs_with_or_aspected_by_benefics` |
 | Mars in Gemini with any 2 other planets | TA p.161 [printed 131] Section 35 B #14 | Silver Bearish | computed - does not occur in 2027 |
@@ -812,7 +812,7 @@ Grouped by first source page. **Status**: `new` = new calendar events; `annotate
 | 3 | 2026 Sun Nakshatra Vedh (B131) | 2026 rows Chitra..Mula: Right column shifted one row (Vishakha even vedhas itself) | TA wheel | TA value used; 7 cells listed as 2026 printing defects |
 | 4 | 2026 Saturn Vedh (B136) | Atichari targets printed in the Right column | Target equals the Left (Atichari) cell | Treated as column misplacement |
 | 5 | 2026 Herschel Vedh (B139) | Rohini Front = Uttara Ashadha | TA: Rohini Front = Abhijit | Both recorded (27- vs 28-nakshatra scheme) |
-| 6 | Normal speed | TA p.144 (and KD p.123 uses it: Mars below normal 26 Oct 2026 - reproduced, 25 Oct) | 2026 document's speed classes: TA speeds reproduce 1/12 Mercury, 0/3 Venus, 0/2 Mars printed boundaries; TA's Venus normal speed (1d36m) exceeds Venus's maximum daily motion (~1d15m), so Venus is never Atichari under TA | TA speeds used for the PDF rules; 2026 classes untouched in the existing calendar |
+| 6 | Normal speed | TA p.144 (and KD p.123 uses it: Mars below normal 26 Oct 2026 - reproduced, 25 Oct) | 2026 document's speed classes: TA speeds reproduce 1/12 Mercury, 0/3 Venus, 0/2 Mars printed boundaries; TA's Venus normal speed (1d36m) exceeds Venus's maximum daily motion (~1d15m), so Venus is never Atichari under TA | TA speeds used for the PDF speed rules (fast/slow planet, Atichari Mars, Mars below normal). For Vedha sides the 2026 levels are used: they reproduce 29/30 of the 2026 document's printed gold-Vedha rows vs 25/30 with TA speeds |
 | 7 | Malefic Moon | TA p.137: from Krishna Ekadashi to Shukla Panchami | 2026 document: Kshin Moon from Krishna Ashtami | Each layer keeps its own source's definition |
 | 8 | Mercury Paap Kartari | TA p.128: planet ahead must be retrograde; grahas only | 2026 B116: no retrograde condition; Uranus/Pluto count as malefic | Both kept as separate rules; TA's 2011 example not reproduced |
 | 9 | Moon-Mercury in D9 | TA p.147: "Temporary Bounce" | KD p.85/p.134: "Bullish" | Both quoted on the event |

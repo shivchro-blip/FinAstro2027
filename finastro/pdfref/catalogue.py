@@ -1659,7 +1659,7 @@ def vedha_of(ctx, s, body):
         for t in _direct_stations(ctx, body):
             if t <= s.t < t + dt.timedelta(days=V.POST_STATION_LAG[body]):
                 lag = True
-    return V.targets(body, p.nak28, p.retro, p.fast, lag)
+    return V.targets(body, p.nak28, p.retro, V.vedha_fast(body, p.speed, p.retro), lag)
 
 
 def occupies(s, body, nak):

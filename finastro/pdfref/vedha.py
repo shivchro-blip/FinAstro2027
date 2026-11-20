@@ -26,11 +26,31 @@ before rule 2 applies. The 2026 tables instead key the five star planets on
 speed class: Atichari -> Left, Normal -> Front, Retrograde -> Right. The two
 agree on Retrograde -> Right and on fast-direct -> Left; TA has no Front for
 the star planets. `targets()` applies the 2026 class doctrine (it is the one
-the 2026 tables evidence, 95/95) with TA's own normal speeds (p.144) as the
-Atichari threshold and TA's post-station lag, and every result carries the
-doctrine it used. The conflict is recorded in REFERENCE_PDF_RULES.md.
+the 2026 tables evidence, 95/95) and TA's post-station lag, and every result
+carries the doctrine it used. The conflict is recorded in REFERENCE_PDF_RULES.md.
+
+THE ATICHARI THRESHOLD (`vedha_fast`). Tested on the 2026 document's 30 printed
+gold-Vedha rows (gold-bullish#5 / gold-bearish#3): TA p.144's normal speeds
+reproduce 25 of 30 (TA's Venus normal speed, 1d36m, is above Venus's maximum
+daily motion, so Venus could never be Atichari); the 2026 document's own speed
+levels for Mars, Mercury and Venus (config speed_classes) reproduce 29 of 30.
+Those levels are therefore used for Vedha. Jupiter and Saturn have no level
+(TA's figures are their mean motions, which make direct Saturn 'Atichari'
+almost always and miss the 2026 Saturn->Chitra Front row), so a direct Jupiter
+or Saturn is read as Normal -> Front, flagged.
 """
+
 from __future__ import annotations
+
+from ..config import CONF
+
+_LEVEL = {b: CONF["speed_classes"][b]["threshold"] for b in ("Mars", "Mercury", "Venus")}
+
+
+def vedha_fast(body: str, speed: float, retro: bool) -> bool:
+    if retro or body not in _LEVEL:
+        return False
+    return abs(speed) > _LEVEL[body]
 
 R, L, F = "Right", "Left", "Front"
 
@@ -110,7 +130,9 @@ def direction(body: str, retro: bool, fast: bool, lag_active: bool) -> tuple:
                else "Retrograde -> Right (TA rule 2; 2026 tables)")
         return (R,), why
     if fast:
-        return (L,), "Atichari (above TA p.144 normal speed) -> Left (2026 tables; TA rule 2 'direct -> left')"
+        return (L,), "Atichari (above the 2026 document's speed level) -> Left (2026 tables; TA rule 2 'direct -> left')"
+    if body in ("Jupiter", "Saturn"):
+        return (F,), "Direct Jupiter/Saturn read as Normal -> Front (no evidence-backed speed level for them)"
     return (F,), "Normal speed -> Front (2026 tables; TA p.134 names no Front for star planets)"
 
 
