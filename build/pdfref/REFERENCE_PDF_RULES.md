@@ -390,6 +390,10 @@ Grouped by first source page. **Status**: `new` = new calendar events; `annotate
 | Saturn in Uttara Bhadrapada | KD p.142 #3 | High bullish | new: 1 in 2027 |
 | Ketu in Aquarius under 10 degrees | KD p.143 #2 | High Bullish | computed - does not occur in 2027 |
 | Tithi Kshay from Krishna Dashami to Amavasya | KD p.147 | High Bullish | annotates existing `b067_kshay_tithi_krishna_paksha` |
+| Sun in a Venus, Mercury or Jupiter nakshatra (user note) | User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md) | Can trigger gold price rise (Bullish) | new: 10 in 2027 |
+| Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note) | User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md) | Can trigger gold price hike (Bullish) | new: 74 in 2027 |
+| Sun in a Saturn or Rahu nakshatra (user note) | User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md) | Can trigger fall in gold prices (Bearish) | new: 6 in 2027 |
+| Saturn or Rahu with / aspecting the Sun (user note) | User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md) | Can crash the gold price (Bearish) | new: 8 in 2027 |
 
 ### TA Section 25 - relationship of each pair (pp.88-115)
 
@@ -828,6 +832,7 @@ Grouped by first source page. **Status**: `new` = new calendar events; `annotate
 | 19 | KD p.136 | Atichari Mars in Purva Bhadrapada Bearish | Mars in Purva Bhadrapada Bullish after 3-4 days | Both rules emitted |
 | 20 | KD p.86 citation | "Principles of Financial Astrology Book, page 79, Point No 39" | TA's point 39 is the Sagittarius-Sankranti rule | Citation unverifiable from these files |
 | 21 | KD p.83 vs p.130 | "When malefic planets TRANSIT a nakshatra" | "Malefic planets doing VEDH of any nakshatra" | Read as the vedha rule (p.130 states it fully) |
+| 23 | User gold notes (U1-U4) vs TA S34 / 2026 document | User: Sun in Saturn/Rahu nakshatra -> gold falls; Saturn/Rahu with or aspecting the Sun -> crash; benefics with the Sun -> rise | TA S34 A10: Sun on Pushya (Saturn nakshatra) is a rally star and a malefic aspect makes it MORE bullish; TA S34 A3 and 2026 gold-bullish #2: Sun in Libra with/aspected by malefics bullish; TA S34 B1: benefic with Sun on Anuradha bearish | Both shown on every event; agreement where TA's stars are Venus/Jupiter nakshatras (Bharani, Punarvasu) |
 | 22 | Dated claims not reproduced | see the validation table (Vargottam Mars in Cancer KD 13-18 Sep 2026 vs computed 18-24 Sep; TA 2020 Saturn-Mars 23 Mar vs computed 22 Mar 14:40 - same clock time, one day earlier; TA 2018 Mercury-middle as one window vs two; TA 2011 Paap Kartari) | | Both values printed |
 
 ## Dates recalculated against the PDFs' own dated claims

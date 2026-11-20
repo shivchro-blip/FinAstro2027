@@ -3,6 +3,58 @@
  "time_zone": "America/New_York",
  "rows": [
   {
+   "start_ET": "Thu 19 Nov 2026 16:34 EST",
+   "end_ET": "Wed 02 Dec 2026 20:58 EST",
+   "title": "Sun in a Saturn or Rahu nakshatra (user note)",
+   "tone": "Bearish",
+   "verdicts": [
+    "Can trigger fall in gold prices (Bearish)"
+   ],
+   "rule": "Sun in Pushya, Anuradha, Uttara Bhadrapada (Saturn) or Ardra, Swati, Shatabhisha (Rahu).",
+   "detail": "Sun 3.33 deg Scorpio (Anuradha p1) | value: Sun in Anuradha (lord Saturn)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Gold is ruled by the Sun (user note; TA S29 lists no gold sector, the PDFs' gold rules are mostly Sun placements).",
+    "Conflict: TA p.155 S34 A10 lists Sun on Bharani, Krittika, Punarvasu and Pushya as gold-RALLY stars (Pushya is a Saturn nakshatra), 'not aspected by Benefic - More Bullish if aspected by Malefic'; TA p.156 S34 B1: Sun on Anuradha (Saturn nakshatra) with or aspected by a benefic - gold can fall. Both sources are shown.",
+    "User note: 'fear, greed and market illusions are Rahu's territory'."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Sun \u2713",
+    "end = astronomy-layer nakshatra ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "user_u3_sun_in_saturn_rahu_nakshatra"
+   ]
+  },
+  {
+   "start_ET": "Mon 23 Nov 2026 20:54 EST",
+   "end_ET": "Tue 24 Nov 2026 09:53 EST",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 7.55 deg Scorpio (Anuradha p2) | separation from Sun at start: Venus 37.0 deg, Mercury 19.1 deg, Jupiter 95.3 deg, Moon 172.4 deg; value: waxing Moon aspects (7th)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer lunation of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
    "start_ET": "Wed 25 Nov 2026 03:11 EST",
    "end_ET": "Wed 02 Dec 2026 20:58 EST",
    "title": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold)",
@@ -51,6 +103,32 @@
    ]
   },
   {
+   "start_ET": "Wed 02 Dec 2026 06:57 EST",
+   "end_ET": "Tue 08 Dec 2026 19:52 EST",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 16.07 deg Scorpio (Anuradha p4) | separation from Sun at start: Venus 41.4 deg, Mercury 16.1 deg, Jupiter 103.5 deg, Moon 74.7 deg; value: Mercury conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Mercury \u2713",
+    "end = astronomy-layer lunation of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
    "start_ET": "Wed 02 Dec 2026 20:58 EST",
    "end_ET": "Fri 04 Dec 2026 12:47 EST",
    "title": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold)",
@@ -74,6 +152,31 @@
    ],
    "rule_ids": [
     "ta_s34_gold_vedha_punarvasu_pushya_chitra_dhanishta"
+   ]
+  },
+  {
+   "start_ET": "Wed 02 Dec 2026 20:58 EST",
+   "end_ET": "Tue 15 Dec 2026 23:55 EST",
+   "title": "Sun in a Venus, Mercury or Jupiter nakshatra (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price rise (Bullish)"
+   ],
+   "rule": "Sun in Bharani, Purva Phalguni, Purva Ashadha (Venus), Ashlesha, Jyeshtha, Revati (Mercury), Punarvasu, Vishakha or Purva Bhadrapada (Jupiter).",
+   "detail": "Sun 16.67 deg Scorpio (Jyeshtha p1) | value: Sun in Jyeshtha (lord Mercury)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Gold is ruled by the Sun (user note; TA S29 lists no gold sector, the PDFs' gold rules are mostly Sun placements).",
+    "Conflict: TA p.155 S34 A10 lists Sun on Bharani, Krittika, Punarvasu and Pushya as gold-RALLY stars (Pushya is a Saturn nakshatra), 'not aspected by Benefic - More Bullish if aspected by Malefic'; TA p.156 S34 B1: Sun on Anuradha (Saturn nakshatra) with or aspected by a benefic - gold can fall. Both sources are shown."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "user_u1_sun_in_venus_mercury_jupiter_nakshatra"
    ]
   },
   {
@@ -131,6 +234,32 @@
   },
   {
    "start_ET": "Tue 08 Dec 2026 19:52 EST",
+   "end_ET": "Wed 09 Dec 2026 10:30 EST",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 22.71 deg Scorpio (Jyeshtha p2) | separation from Sun at start: Venus 43.7 deg, Mercury 12.9 deg, Jupiter 109.9 deg, Moon 0.0 deg; value: Mercury conjunct (same sign); waxing Moon conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer lunation of Moon \u2713",
+    "end = astronomy-layer sign ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Tue 08 Dec 2026 19:52 EST",
    "end_ET": "",
    "title": "Sun and Moon on the same degree (new moon)",
    "tone": "Bullish",
@@ -148,6 +277,32 @@
    ],
    "rule_ids": [
     "doc26_gold_bull_10_sun_moon_same_degree"
+   ]
+  },
+  {
+   "start_ET": "Wed 09 Dec 2026 10:30 EST",
+   "end_ET": "Tue 15 Dec 2026 23:55 EST",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 23.33 deg Scorpio (Jyeshtha p2) | separation from Sun at start: Venus 43.9 deg, Mercury 12.6 deg, Jupiter 110.6 deg, Moon 6.7 deg; value: Mercury conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer sign ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
    ]
   },
   {
@@ -205,6 +360,59 @@
    ]
   },
   {
+   "start_ET": "Tue 15 Dec 2026 23:55 EST",
+   "end_ET": "Mon 21 Dec 2026 21:09 EST",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 0.00 deg Sagittarius (Mula p1) | separation from Sun at start: Venus 45.4 deg, Mercury 9.1 deg, Jupiter 117.2 deg, Moon 78.1 deg; value: Jupiter aspects (5th from Jupiter)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Mercury \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Tue 15 Dec 2026 23:55 EST",
+   "end_ET": "Thu 14 Jan 2027 10:40 EST",
+   "title": "Saturn or Rahu with / aspecting the Sun (user note)",
+   "tone": "Bearish",
+   "verdicts": [
+    "Can crash the gold price (Bearish)"
+   ],
+   "rule": "Saturn or Rahu in the Sun's sign or casting drishti on it (Rahu's 7th = Sun with Ketu).",
+   "detail": "Sun 0.00 deg Sagittarius (Mula p1) | separation from Sun at start: Saturn 103.7 deg, Rahu 59.4 deg, Ketu 120.6 deg; value: Saturn aspects (10th from Saturn)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "User note: 'fear, greed and market illusions are Rahu's territory'.",
+    "Rahu/Ketu sign/nakshatra changes: the 2026 document's almanac prints the 5 Dec 2026 node ingress 40 min earlier (21:52 IST) than the mean node computed here (22:32 IST) - a known 5-arcsecond formulation gap (config/conventions.yaml)."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "user_u4_sun_with_or_aspected_by_saturn_rahu"
+   ]
+  },
+  {
    "start_ET": "Mon 21 Dec 2026 21:09 EST",
    "end_ET": "Tue 22 Dec 2026 03:24 EST",
    "title": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold)",
@@ -229,6 +437,32 @@
    ],
    "rule_ids": [
     "ta_s34_gold_vedha_punarvasu_pushya_chitra_dhanishta"
+   ]
+  },
+  {
+   "start_ET": "Mon 21 Dec 2026 21:09 EST",
+   "end_ET": "Wed 23 Dec 2026 07:56 EST",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 5.99 deg Sagittarius (Mula p2) | separation from Sun at start: Venus 46.2 deg, Mercury 6.0 deg, Jupiter 123.3 deg, Moon 152.1 deg; value: Mercury conjunct (same sign); Jupiter aspects (5th from Jupiter)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Mercury \u2713",
+    "end = astronomy-layer sign ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
    ]
   },
   {
@@ -259,6 +493,58 @@
    ]
   },
   {
+   "start_ET": "Wed 23 Dec 2026 07:56 EST",
+   "end_ET": "Wed 23 Dec 2026 20:28 EST",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 7.46 deg Sagittarius (Mula p3) | separation from Sun at start: Venus 46.4 deg, Mercury 5.2 deg, Jupiter 124.9 deg, Moon 172.5 deg; value: Mercury conjunct (same sign); Jupiter aspects (5th from Jupiter); waxing Moon aspects (7th)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer lunation of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Wed 23 Dec 2026 20:28 EST",
+   "end_ET": "Thu 07 Jan 2027 15:24 EST",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 8.00 deg Sagittarius (Mula p3) | separation from Sun at start: Venus 46.4 deg, Mercury 4.9 deg, Jupiter 125.4 deg, Moon 180.0 deg; value: Mercury conjunct (same sign); Jupiter aspects (5th from Jupiter)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer lunation of Moon \u2713",
+    "end = astronomy-layer lunation of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
    "start_ET": "Tue 29 Dec 2026 02:14 EST",
    "end_ET": "Wed 30 Dec 2026 08:01 EST",
    "title": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold)",
@@ -283,6 +569,31 @@
    ],
    "rule_ids": [
     "ta_s34_gold_vedha_punarvasu_pushya_chitra_dhanishta"
+   ]
+  },
+  {
+   "start_ET": "Tue 29 Dec 2026 02:14 EST",
+   "end_ET": "Mon 11 Jan 2027 04:09 EST",
+   "title": "Sun in a Venus, Mercury or Jupiter nakshatra (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price rise (Bullish)"
+   ],
+   "rule": "Sun in Bharani, Purva Phalguni, Purva Ashadha (Venus), Ashlesha, Jyeshtha, Revati (Mercury), Punarvasu, Vishakha or Purva Bhadrapada (Jupiter).",
+   "detail": "Sun 13.33 deg Sagittarius (Purva Ashadha p1) | value: Sun in Purva Ashadha (lord Venus)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Gold is ruled by the Sun (user note; TA S29 lists no gold sector, the PDFs' gold rules are mostly Sun placements).",
+    "Conflict: TA p.155 S34 A10 lists Sun on Bharani, Krittika, Punarvasu and Pushya as gold-RALLY stars (Pushya is a Saturn nakshatra), 'not aspected by Benefic - More Bullish if aspected by Malefic'; TA p.156 S34 B1: Sun on Anuradha (Saturn nakshatra) with or aspected by a benefic - gold can fall. Both sources are shown."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Sun \u2713",
+    "end = astronomy-layer nakshatra ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "user_u1_sun_in_venus_mercury_jupiter_nakshatra"
    ]
   },
   {
@@ -341,6 +652,32 @@
   },
   {
    "start_ET": "Thu 07 Jan 2027 15:24 EST",
+   "end_ET": "Fri 08 Jan 2027 05:29 EST",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 23.07 deg Sagittarius (Purva Ashadha p3) | separation from Sun at start: Venus 46.8 deg, Mercury 3.7 deg, Jupiter 141.3 deg, Moon 0.0 deg; value: Mercury conjunct (same sign); Jupiter aspects (5th from Jupiter); waxing Moon conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer lunation of Moon \u2713",
+    "end = astronomy-layer sign ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Thu 07 Jan 2027 15:24 EST",
    "end_ET": "",
    "title": "Sun and Moon on the same degree (new moon)",
    "tone": "Bullish",
@@ -359,6 +696,58 @@
    ],
    "rule_ids": [
     "doc26_gold_bull_10_sun_moon_same_degree"
+   ]
+  },
+  {
+   "start_ET": "Fri 08 Jan 2027 05:29 EST",
+   "end_ET": "Sat 09 Jan 2027 14:07 EST",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 23.67 deg Sagittarius (Purva Ashadha p4) | separation from Sun at start: Venus 46.8 deg, Mercury 4.1 deg, Jupiter 142.0 deg, Moon 6.3 deg; value: Mercury conjunct (same sign); Jupiter aspects (5th from Jupiter)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer sign ingress of Mercury \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Sat 09 Jan 2027 14:07 EST",
+   "end_ET": "Thu 14 Jan 2027 10:40 EST",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 25.05 deg Sagittarius (Purva Ashadha p4) | separation from Sun at start: Venus 46.7 deg, Mercury 4.9 deg, Jupiter 143.5 deg, Moon 21.1 deg; value: Jupiter aspects (5th from Jupiter)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Mercury \u2713",
+    "end = astronomy-layer sign ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
    ]
   },
   {
@@ -436,6 +825,59 @@
    ]
   },
   {
+   "start_ET": "Thu 14 Jan 2027 10:40 EST",
+   "end_ET": "Thu 21 Jan 2027 18:40 EST",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 0.00 deg Capricorn (Uttara Ashadha p2) | separation from Sun at start: Venus 46.5 deg, Mercury 8.1 deg, Jupiter 148.9 deg, Moon 75.5 deg; value: Mercury conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Thu 14 Jan 2027 10:40 EST",
+   "end_ET": "Fri 12 Feb 2027 23:39 EST",
+   "title": "Saturn or Rahu with / aspecting the Sun (user note)",
+   "tone": "Bearish",
+   "verdicts": [
+    "Can crash the gold price (Bearish)"
+   ],
+   "rule": "Saturn or Rahu in the Sun's sign or casting drishti on it (Rahu's 7th = Sun with Ketu).",
+   "detail": "Sun 0.00 deg Capricorn (Uttara Ashadha p2) | separation from Sun at start: Saturn 74.8 deg, Rahu 27.9 deg, Ketu 152.1 deg; value: Rahu conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "User note: 'fear, greed and market illusions are Rahu's territory'.",
+    "Rahu/Ketu sign/nakshatra changes: the 2026 document's almanac prints the 5 Dec 2026 node ingress 40 min earlier (21:52 IST) than the mean node computed here (22:32 IST) - a known 5-arcsecond formulation gap (config/conventions.yaml)."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "user_u4_sun_with_or_aspected_by_saturn_rahu"
+   ]
+  },
+  {
    "start_ET": "Sun 17 Jan 2027 08:51 EST",
    "end_ET": "Sun 24 Jan 2027 15:01 EST",
    "title": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold)",
@@ -488,6 +930,58 @@
    ]
   },
   {
+   "start_ET": "Thu 21 Jan 2027 18:40 EST",
+   "end_ET": "Fri 22 Jan 2027 07:17 EST",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 7.46 deg Capricorn (Uttara Ashadha p4) | separation from Sun at start: Venus 45.9 deg, Mercury 13.0 deg, Jupiter 157.1 deg, Moon 172.5 deg; value: Mercury conjunct (same sign); waxing Moon aspects (7th)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer lunation of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Fri 22 Jan 2027 07:17 EST",
+   "end_ET": "Sun 24 Jan 2027 15:01 EST",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 8.00 deg Capricorn (Uttara Ashadha p4) | separation from Sun at start: Venus 45.9 deg, Mercury 13.3 deg, Jupiter 157.7 deg, Moon 180.0 deg; value: Mercury conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer lunation of Moon \u2713",
+    "end = astronomy-layer sign ingress of Jupiter \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
    "start_ET": "Sun 24 Jan 2027 15:01 EST",
    "end_ET": "Fri 29 Jan 2027 08:12 EST",
    "title": "Venus in Jyeshtha with or aspected by benefic",
@@ -537,6 +1031,32 @@
    ]
   },
   {
+   "start_ET": "Sun 24 Jan 2027 15:01 EST",
+   "end_ET": "Wed 27 Jan 2027 17:04 EST",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 10.36 deg Capricorn (Shravana p1) | separation from Sun at start: Venus 45.7 deg, Mercury 14.8 deg, Jupiter 160.4 deg, Moon 147.7 deg; value: Mercury conjunct (same sign); Jupiter aspects (7th from Jupiter)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Jupiter \u2713",
+    "end = astronomy-layer sign ingress of Mercury \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
    "start_ET": "Mon 25 Jan 2027 03:30 EST",
    "end_ET": "Fri 29 Jan 2027 08:12 EST",
    "title": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold)",
@@ -561,6 +1081,32 @@
    ],
    "rule_ids": [
     "ta_s34_gold_vedha_punarvasu_pushya_chitra_dhanishta"
+   ]
+  },
+  {
+   "start_ET": "Wed 27 Jan 2027 17:04 EST",
+   "end_ET": "Sat 06 Feb 2027 10:56 EST",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 13.50 deg Capricorn (Shravana p2) | separation from Sun at start: Venus 45.3 deg, Mercury 16.5 deg, Jupiter 163.9 deg, Moon 108.2 deg; value: Jupiter aspects (7th from Jupiter)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Mercury \u2713",
+    "end = astronomy-layer lunation of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
    ]
   },
   {
@@ -646,6 +1192,32 @@
   },
   {
    "start_ET": "Sat 06 Feb 2027 10:56 EST",
+   "end_ET": "Sun 07 Feb 2027 00:07 EST",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 23.39 deg Capricorn (Dhanishta p1) | separation from Sun at start: Venus 44.1 deg, Mercury 17.5 deg, Jupiter 175.0 deg, Moon 0.0 deg; value: Jupiter aspects (7th from Jupiter); waxing Moon conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer lunation of Moon \u2713",
+    "end = astronomy-layer sign ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Sat 06 Feb 2027 10:56 EST",
    "end_ET": "",
    "title": "Sun and Moon on the same degree (new moon)",
    "tone": "Bullish",
@@ -664,6 +1236,32 @@
    ],
    "rule_ids": [
     "doc26_gold_bull_10_sun_moon_same_degree"
+   ]
+  },
+  {
+   "start_ET": "Sun 07 Feb 2027 00:07 EST",
+   "end_ET": "Fri 12 Feb 2027 23:39 EST",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 23.94 deg Capricorn (Dhanishta p1) | separation from Sun at start: Venus 44.0 deg, Mercury 17.2 deg, Jupiter 175.6 deg, Moon 6.1 deg; value: Jupiter aspects (7th from Jupiter)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer sign ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
    ]
   },
   {
@@ -719,6 +1317,32 @@
   },
   {
    "start_ET": "Fri 12 Feb 2027 23:39 EST",
+   "end_ET": "Sat 20 Feb 2027 05:38 EST",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 0.00 deg Aquarius (Dhanishta p3) | separation from Sun at start: Venus 43.2 deg, Mercury 10.7 deg, Jupiter 177.5 deg, Moon 75.7 deg; value: Mercury conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Fri 12 Feb 2027 23:39 EST",
    "end_ET": "",
    "title": "Sun enters Aquarius on a Friday",
    "tone": "Bullish",
@@ -767,6 +1391,85 @@
    ]
   },
   {
+   "start_ET": "Fri 19 Feb 2027 14:07 EST",
+   "end_ET": "Thu 04 Mar 2027 20:28 EST",
+   "title": "Sun in a Saturn or Rahu nakshatra (user note)",
+   "tone": "Bearish",
+   "verdicts": [
+    "Can trigger fall in gold prices (Bearish)"
+   ],
+   "rule": "Sun in Pushya, Anuradha, Uttara Bhadrapada (Saturn) or Ardra, Swati, Shatabhisha (Rahu).",
+   "detail": "Sun 6.67 deg Aquarius (Shatabhisha p1) | value: Sun in Shatabhisha (lord Rahu)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Gold is ruled by the Sun (user note; TA S29 lists no gold sector, the PDFs' gold rules are mostly Sun placements).",
+    "Conflict: TA p.155 S34 A10 lists Sun on Bharani, Krittika, Punarvasu and Pushya as gold-RALLY stars (Pushya is a Saturn nakshatra), 'not aspected by Benefic - More Bullish if aspected by Malefic'; TA p.156 S34 B1: Sun on Anuradha (Saturn nakshatra) with or aspected by a benefic - gold can fall. Both sources are shown.",
+    "User note: 'fear, greed and market illusions are Rahu's territory'.",
+    "Rahu/Ketu sign/nakshatra changes: the 2026 document's almanac prints the 5 Dec 2026 node ingress 40 min earlier (21:52 IST) than the mean node computed here (22:32 IST) - a known 5-arcsecond formulation gap (config/conventions.yaml)."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Sun \u2713",
+    "end = astronomy-layer nakshatra ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "user_u3_sun_in_saturn_rahu_nakshatra"
+   ]
+  },
+  {
+   "start_ET": "Sat 20 Feb 2027 05:38 EST",
+   "end_ET": "Sat 20 Feb 2027 18:23 EST",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 7.32 deg Aquarius (Shatabhisha p1) | separation from Sun at start: Venus 42.0 deg, Mercury 3.7 deg, Jupiter 169.2 deg, Moon 172.7 deg; value: Mercury conjunct (same sign); waxing Moon aspects (7th)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer lunation of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Sat 20 Feb 2027 18:23 EST",
+   "end_ET": "Tue 23 Feb 2027 18:10 EST",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 7.85 deg Aquarius (Shatabhisha p1) | separation from Sun at start: Venus 41.9 deg, Mercury 4.9 deg, Jupiter 168.6 deg, Moon 180.0 deg; value: Mercury conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer lunation of Moon \u2713",
+    "end = astronomy-layer sign ingress of Mercury \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
    "start_ET": "Thu 04 Mar 2027 20:28 EST",
    "end_ET": "Tue 09 Mar 2027 13:43 EST",
    "title": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold)",
@@ -791,6 +1494,57 @@
    ],
    "rule_ids": [
     "ta_s34_gold_vedha_punarvasu_pushya_chitra_dhanishta"
+   ]
+  },
+  {
+   "start_ET": "Thu 04 Mar 2027 20:28 EST",
+   "end_ET": "Thu 18 Mar 2027 05:50 EDT",
+   "title": "Sun in a Venus, Mercury or Jupiter nakshatra (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price rise (Bullish)"
+   ],
+   "rule": "Sun in Bharani, Purva Phalguni, Purva Ashadha (Venus), Ashlesha, Jyeshtha, Revati (Mercury), Punarvasu, Vishakha or Purva Bhadrapada (Jupiter).",
+   "detail": "Sun 20.00 deg Aquarius (Purva Bhadrapada p1) | value: Sun in Purva Bhadrapada (lord Jupiter)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Gold is ruled by the Sun (user note; TA S29 lists no gold sector, the PDFs' gold rules are mostly Sun placements).",
+    "Conflict: TA p.155 S34 A10 lists Sun on Bharani, Krittika, Punarvasu and Pushya as gold-RALLY stars (Pushya is a Saturn nakshatra), 'not aspected by Benefic - More Bullish if aspected by Malefic'; TA p.156 S34 B1: Sun on Anuradha (Saturn nakshatra) with or aspected by a benefic - gold can fall. Both sources are shown."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Sun \u2713",
+    "end = astronomy-layer nakshatra ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "user_u1_sun_in_venus_mercury_jupiter_nakshatra"
+   ]
+  },
+  {
+   "start_ET": "Mon 08 Mar 2027 04:29 EST",
+   "end_ET": "Mon 08 Mar 2027 17:10 EST",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 23.34 deg Aquarius (Purva Bhadrapada p2) | separation from Sun at start: Venus 39.1 deg, Mercury 25.5 deg, Jupiter 151.4 deg, Moon 0.0 deg; value: waxing Moon conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer lunation of Moon \u2713",
+    "end = astronomy-layer sign ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
    ]
   },
   {
@@ -843,6 +1597,85 @@
    ]
   },
   {
+   "start_ET": "Thu 11 Mar 2027 18:37 EST",
+   "end_ET": "Sun 14 Mar 2027 21:30 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 26.93 deg Aquarius (Purva Bhadrapada p3) | separation from Sun at start: Venus 38.4 deg, Mercury 26.9 deg, Jupiter 147.4 deg, Moon 42.9 deg; value: Mercury conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Mercury \u2713",
+    "end = astronomy-layer sign ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Sun 14 Mar 2027 21:30 EDT",
+   "end_ET": "Sun 21 Mar 2027 18:15 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 0.00 deg Pisces (Purva Bhadrapada p4) | separation from Sun at start: Venus 37.8 deg, Mercury 27.5 deg, Jupiter 144.1 deg, Moon 81.9 deg; value: Jupiter aspects (9th from Jupiter)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Sun 14 Mar 2027 21:30 EDT",
+   "end_ET": "Wed 14 Apr 2027 05:58 EDT",
+   "title": "Saturn or Rahu with / aspecting the Sun (user note)",
+   "tone": "Bearish",
+   "verdicts": [
+    "Can crash the gold price (Bearish)"
+   ],
+   "rule": "Saturn or Rahu in the Sun's sign or casting drishti on it (Rahu's 7th = Sun with Ketu).",
+   "detail": "Sun 0.00 deg Pisces (Purva Bhadrapada p4) | separation from Sun at start: Saturn 20.5 deg, Rahu 35.3 deg, Ketu 144.7 deg; value: Saturn conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "User note: 'fear, greed and market illusions are Rahu's territory'.",
+    "Rahu/Ketu sign/nakshatra changes: the 2026 document's almanac prints the 5 Dec 2026 node ingress 40 min earlier (21:52 IST) than the mean node computed here (22:32 IST) - a known 5-arcsecond formulation gap (config/conventions.yaml)."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "user_u4_sun_with_or_aspected_by_saturn_rahu"
+   ]
+  },
+  {
    "start_ET": "Thu 18 Mar 2027 05:50 EDT",
    "end_ET": "Mon 29 Mar 2027 15:33 EDT",
    "title": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold)",
@@ -867,6 +1700,84 @@
    ],
    "rule_ids": [
     "ta_s34_gold_vedha_punarvasu_pushya_chitra_dhanishta"
+   ]
+  },
+  {
+   "start_ET": "Thu 18 Mar 2027 05:50 EDT",
+   "end_ET": "Wed 31 Mar 2027 16:44 EDT",
+   "title": "Sun in a Saturn or Rahu nakshatra (user note)",
+   "tone": "Bearish",
+   "verdicts": [
+    "Can trigger fall in gold prices (Bearish)"
+   ],
+   "rule": "Sun in Pushya, Anuradha, Uttara Bhadrapada (Saturn) or Ardra, Swati, Shatabhisha (Rahu).",
+   "detail": "Sun 3.33 deg Pisces (Uttara Bhadrapada p1) | value: Sun in Uttara Bhadrapada (lord Saturn)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Gold is ruled by the Sun (user note; TA S29 lists no gold sector, the PDFs' gold rules are mostly Sun placements).",
+    "Conflict: TA p.155 S34 A10 lists Sun on Bharani, Krittika, Punarvasu and Pushya as gold-RALLY stars (Pushya is a Saturn nakshatra), 'not aspected by Benefic - More Bullish if aspected by Malefic'; TA p.156 S34 B1: Sun on Anuradha (Saturn nakshatra) with or aspected by a benefic - gold can fall. Both sources are shown.",
+    "User note: 'fear, greed and market illusions are Rahu's territory'."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Sun \u2713",
+    "end = astronomy-layer nakshatra ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "user_u3_sun_in_saturn_rahu_nakshatra"
+   ]
+  },
+  {
+   "start_ET": "Sun 21 Mar 2027 18:15 EDT",
+   "end_ET": "Mon 22 Mar 2027 06:44 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 6.83 deg Pisces (Uttara Bhadrapada p2) | separation from Sun at start: Venus 36.4 deg, Mercury 27.1 deg, Jupiter 136.7 deg, Moon 173.2 deg; value: Jupiter aspects (9th from Jupiter); waxing Moon aspects (7th)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer lunation of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Mon 22 Mar 2027 06:44 EDT",
+   "end_ET": "Mon 05 Apr 2027 06:46 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 7.34 deg Pisces (Uttara Bhadrapada p2) | separation from Sun at start: Venus 36.3 deg, Mercury 27.0 deg, Jupiter 136.1 deg, Moon 180.0 deg; value: Jupiter aspects (9th from Jupiter)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer lunation of Moon \u2713",
+    "end = astronomy-layer sign ingress of Mercury \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
    ]
   },
   {
@@ -897,6 +1808,57 @@
    ]
   },
   {
+   "start_ET": "Wed 31 Mar 2027 16:44 EDT",
+   "end_ET": "Wed 14 Apr 2027 05:58 EDT",
+   "title": "Sun in a Venus, Mercury or Jupiter nakshatra (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price rise (Bullish)"
+   ],
+   "rule": "Sun in Bharani, Purva Phalguni, Purva Ashadha (Venus), Ashlesha, Jyeshtha, Revati (Mercury), Punarvasu, Vishakha or Purva Bhadrapada (Jupiter).",
+   "detail": "Sun 16.67 deg Pisces (Revati p1) | value: Sun in Revati (lord Mercury)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Gold is ruled by the Sun (user note; TA S29 lists no gold sector, the PDFs' gold rules are mostly Sun placements).",
+    "Conflict: TA p.155 S34 A10 lists Sun on Bharani, Krittika, Punarvasu and Pushya as gold-RALLY stars (Pushya is a Saturn nakshatra), 'not aspected by Benefic - More Bullish if aspected by Malefic'; TA p.156 S34 B1: Sun on Anuradha (Saturn nakshatra) with or aspected by a benefic - gold can fall. Both sources are shown."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "user_u1_sun_in_venus_mercury_jupiter_nakshatra"
+   ]
+  },
+  {
+   "start_ET": "Mon 05 Apr 2027 06:46 EDT",
+   "end_ET": "Tue 06 Apr 2027 19:51 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 21.19 deg Pisces (Revati p2) | separation from Sun at start: Venus 33.2 deg, Mercury 21.2 deg, Jupiter 121.7 deg, Moon 18.7 deg; value: Mercury conjunct (same sign); Jupiter aspects (9th from Jupiter)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Mercury \u2713",
+    "end = astronomy-layer lunation of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
    "start_ET": "Mon 05 Apr 2027 10:08 EDT",
    "end_ET": "Tue 06 Apr 2027 23:29 EDT",
    "title": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold)",
@@ -921,6 +1883,32 @@
    ],
    "rule_ids": [
     "ta_s34_gold_vedha_punarvasu_pushya_chitra_dhanishta"
+   ]
+  },
+  {
+   "start_ET": "Tue 06 Apr 2027 19:51 EDT",
+   "end_ET": "Wed 07 Apr 2027 08:56 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 22.71 deg Pisces (Revati p2) | separation from Sun at start: Venus 32.9 deg, Mercury 20.2 deg, Jupiter 120.1 deg, Moon 0.0 deg; value: Mercury conjunct (same sign); Jupiter aspects (9th from Jupiter); waxing Moon conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer lunation of Moon \u2713",
+    "end = astronomy-layer sign ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
    ]
   },
   {
@@ -1000,6 +1988,32 @@
    ]
   },
   {
+   "start_ET": "Wed 07 Apr 2027 08:56 EDT",
+   "end_ET": "Wed 14 Apr 2027 05:58 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 23.25 deg Pisces (Revati p2) | separation from Sun at start: Venus 32.8 deg, Mercury 19.9 deg, Jupiter 119.6 deg, Moon 6.8 deg; value: Mercury conjunct (same sign); Jupiter aspects (9th from Jupiter)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer sign ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
    "start_ET": "Sat 10 Apr 2027 08:22 EDT",
    "end_ET": "Sat 17 Apr 2027 23:54 EDT",
    "title": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold)",
@@ -1054,6 +2068,32 @@
    ]
   },
   {
+   "start_ET": "Tue 20 Apr 2027 07:01 EDT",
+   "end_ET": "Tue 20 Apr 2027 18:27 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 5.91 deg Aries (Ashwini p2) | separation from Sun at start: Venus 29.8 deg, Mercury 9.2 deg, Jupiter 106.9 deg, Moon 174.1 deg; value: waxing Moon aspects (7th)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer lunation of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
    "start_ET": "Tue 20 Apr 2027 22:11 EDT",
    "end_ET": "Tue 08 Jun 2027 10:02 EDT",
    "title": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold)",
@@ -1081,6 +2121,57 @@
    ]
   },
   {
+   "start_ET": "Wed 21 Apr 2027 22:42 EDT",
+   "end_ET": "Thu 06 May 2027 03:06 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 7.52 deg Aries (Ashwini p3) | separation from Sun at start: Venus 29.4 deg, Mercury 7.5 deg, Jupiter 105.4 deg, Moon 165.6 deg; value: Mercury conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Mercury \u2713",
+    "end = astronomy-layer sign ingress of Mercury \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Tue 27 Apr 2027 21:52 EDT",
+   "end_ET": "Tue 11 May 2027 15:57 EDT",
+   "title": "Sun in a Venus, Mercury or Jupiter nakshatra (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price rise (Bullish)"
+   ],
+   "rule": "Sun in Bharani, Purva Phalguni, Purva Ashadha (Venus), Ashlesha, Jyeshtha, Revati (Mercury), Punarvasu, Vishakha or Purva Bhadrapada (Jupiter).",
+   "detail": "Sun 13.33 deg Aries (Bharani p1) | value: Sun in Bharani (lord Venus)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Gold is ruled by the Sun (user note; TA S29 lists no gold sector, the PDFs' gold rules are mostly Sun placements).",
+    "Conflict: TA p.155 S34 A10 lists Sun on Bharani, Krittika, Punarvasu and Pushya as gold-RALLY stars (Pushya is a Saturn nakshatra), 'not aspected by Benefic - More Bullish if aspected by Malefic'; TA p.156 S34 B1: Sun on Anuradha (Saturn nakshatra) with or aspected by a benefic - gold can fall. Both sources are shown."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Sun \u2713",
+    "end = astronomy-layer nakshatra ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "user_u1_sun_in_venus_mercury_jupiter_nakshatra"
+   ]
+  },
+  {
    "start_ET": "Thu 06 May 2027 03:06 EDT",
    "end_ET": "Sun 09 May 2027 23:19 EDT",
    "title": "Sun on Bharani, Krittika, Punarvasu or Pushya, not aspected by benefic",
@@ -1100,6 +2191,32 @@
    ],
    "rule_ids": [
     "ta_s34a10_sun_bharani_krittika_punarvasu_pushya"
+   ]
+  },
+  {
+   "start_ET": "Thu 06 May 2027 06:59 EDT",
+   "end_ET": "Thu 06 May 2027 21:26 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 21.47 deg Aries (Bharani p3) | separation from Sun at start: Venus 25.9 deg, Mercury 8.9 deg, Jupiter 92.1 deg, Moon 0.0 deg; value: waxing Moon conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer lunation of Moon \u2713",
+    "end = astronomy-layer sign ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
    ]
   },
   {
@@ -1173,6 +2290,137 @@
    ]
   },
   {
+   "start_ET": "Sun 09 May 2027 23:19 EDT",
+   "end_ET": "Sat 15 May 2027 02:50 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 25.03 deg Aries (Bharani p4) | separation from Sun at start: Venus 25.0 deg, Mercury 12.8 deg, Jupiter 88.8 deg, Moon 49.4 deg; value: Venus conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Venus \u2713",
+    "end = astronomy-layer sign ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Sat 15 May 2027 02:50 EDT",
+   "end_ET": "Wed 19 May 2027 21:33 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 0.00 deg Taurus (Krittika p2) | separation from Sun at start: Venus 23.7 deg, Mercury 17.5 deg, Jupiter 84.3 deg, Moon 116.9 deg; value: Mercury conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Sat 15 May 2027 02:50 EDT",
+   "end_ET": "Wed 02 Jun 2027 19:58 EDT",
+   "title": "Saturn or Rahu with / aspecting the Sun (user note)",
+   "tone": "Bearish",
+   "verdicts": [
+    "Can crash the gold price (Bearish)"
+   ],
+   "rule": "Saturn or Rahu in the Sun's sign or casting drishti on it (Rahu's 7th = Sun with Ketu).",
+   "detail": "Sun 0.00 deg Taurus (Krittika p2) | separation from Sun at start: Saturn 32.0 deg, Rahu 98.5 deg, Ketu 81.5 deg; value: Saturn aspects (3rd from Saturn)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "User note: 'fear, greed and market illusions are Rahu's territory'.",
+    "Rahu/Ketu sign/nakshatra changes: the 2026 document's almanac prints the 5 Dec 2026 node ingress 40 min earlier (21:52 IST) than the mean node computed here (22:32 IST) - a known 5-arcsecond formulation gap (config/conventions.yaml)."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Saturn \u2713"
+   ],
+   "rule_ids": [
+    "user_u4_sun_with_or_aspected_by_saturn_rahu"
+   ]
+  },
+  {
+   "start_ET": "Wed 19 May 2027 21:33 EDT",
+   "end_ET": "Thu 20 May 2027 06:59 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 4.61 deg Taurus (Krittika p3) | separation from Sun at start: Venus 22.5 deg, Mercury 20.6 deg, Jupiter 80.2 deg, Moon 175.4 deg; value: Mercury conjunct (same sign); waxing Moon aspects (7th)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer lunation of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Thu 20 May 2027 06:59 EDT",
+   "end_ET": "Sun 23 May 2027 09:02 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 4.98 deg Taurus (Krittika p3) | separation from Sun at start: Venus 22.4 deg, Mercury 20.8 deg, Jupiter 79.8 deg, Moon 180.0 deg; value: Mercury conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer lunation of Moon \u2713",
+    "end = astronomy-layer sign ingress of Mercury \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
    "start_ET": "Sun 23 May 2027 09:02 EDT",
    "end_ET": "Tue 25 May 2027 12:15 EDT",
    "title": "Sun on Bharani, Krittika, Punarvasu or Pushya, not aspected by benefic",
@@ -1218,6 +2466,58 @@
    ]
   },
   {
+   "start_ET": "Thu 03 Jun 2027 15:11 EDT",
+   "end_ET": "Fri 04 Jun 2027 15:40 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 18.75 deg Taurus (Rohini p3) | separation from Sun at start: Venus 18.8 deg, Mercury 21.5 deg, Jupiter 67.8 deg, Moon 13.9 deg; value: Venus conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Venus \u2713",
+    "end = astronomy-layer lunation of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Fri 04 Jun 2027 15:40 EDT",
+   "end_ET": "Sat 05 Jun 2027 08:21 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 19.73 deg Taurus (Rohini p3) | separation from Sun at start: Venus 18.5 deg, Mercury 21.0 deg, Jupiter 67.0 deg, Moon 0.0 deg; value: Venus conjunct (same sign); waxing Moon conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer lunation of Moon \u2713",
+    "end = astronomy-layer sign ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
    "start_ET": "Fri 04 Jun 2027 15:40 EDT",
    "end_ET": "",
    "title": "Sun and Moon on the same degree (new moon)",
@@ -1237,6 +2537,32 @@
    ],
    "rule_ids": [
     "doc26_gold_bull_10_sun_moon_same_degree"
+   ]
+  },
+  {
+   "start_ET": "Sat 05 Jun 2027 08:21 EDT",
+   "end_ET": "Tue 15 Jun 2027 09:26 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 20.39 deg Taurus (Rohini p4) | separation from Sun at start: Venus 18.3 deg, Mercury 20.7 deg, Jupiter 66.4 deg, Moon 9.6 deg; value: Venus conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer sign ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
    ]
   },
   {
@@ -1313,6 +2639,111 @@
    ]
   },
   {
+   "start_ET": "Tue 15 Jun 2027 09:26 EDT",
+   "end_ET": "Fri 18 Jun 2027 14:10 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 0.00 deg Gemini (Mrigashira p3) | separation from Sun at start: Venus 15.7 deg, Mercury 11.3 deg, Jupiter 58.3 deg, Moon 140.3 deg; value: Mercury conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Tue 15 Jun 2027 09:26 EDT",
+   "end_ET": "Fri 16 Jul 2027 20:19 EDT",
+   "title": "Saturn or Rahu with / aspecting the Sun (user note)",
+   "tone": "Bearish",
+   "verdicts": [
+    "Can crash the gold price (Bearish)"
+   ],
+   "rule": "Saturn or Rahu in the Sun's sign or casting drishti on it (Rahu's 7th = Sun with Ketu).",
+   "detail": "Sun 0.00 deg Gemini (Mrigashira p3) | separation from Sun at start: Saturn 58.8 deg, Rahu 130.2 deg, Ketu 49.8 deg; value: Saturn aspects (3rd from Saturn)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "User note: 'fear, greed and market illusions are Rahu's territory'.",
+    "Rahu/Ketu sign/nakshatra changes: the 2026 document's almanac prints the 5 Dec 2026 node ingress 40 min earlier (21:52 IST) than the mean node computed here (22:32 IST) - a known 5-arcsecond formulation gap (config/conventions.yaml)."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "user_u4_sun_with_or_aspected_by_saturn_rahu"
+   ]
+  },
+  {
+   "start_ET": "Fri 18 Jun 2027 14:10 EDT",
+   "end_ET": "Fri 18 Jun 2027 20:44 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 3.05 deg Gemini (Mrigashira p3) | separation from Sun at start: Venus 14.8 deg, Mercury 6.9 deg, Jupiter 55.7 deg, Moon 176.9 deg; value: Mercury conjunct (same sign); waxing Moon aspects (7th)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer lunation of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Fri 18 Jun 2027 20:44 EDT",
+   "end_ET": "Mon 28 Jun 2027 05:09 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 3.31 deg Gemini (Mrigashira p3) | separation from Sun at start: Venus 14.7 deg, Mercury 6.5 deg, Jupiter 55.5 deg, Moon 180.0 deg; value: Mercury conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer lunation of Moon \u2713",
+    "end = astronomy-layer sign ingress of Venus \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
    "start_ET": "Tue 22 Jun 2027 09:06 EDT",
    "end_ET": "Thu 01 Jul 2027 02:10 EDT",
    "title": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold)",
@@ -1337,6 +2768,59 @@
    ],
    "rule_ids": [
     "ta_s34_gold_vedha_punarvasu_pushya_chitra_dhanishta"
+   ]
+  },
+  {
+   "start_ET": "Tue 22 Jun 2027 09:06 EDT",
+   "end_ET": "Tue 06 Jul 2027 08:37 EDT",
+   "title": "Sun in a Saturn or Rahu nakshatra (user note)",
+   "tone": "Bearish",
+   "verdicts": [
+    "Can trigger fall in gold prices (Bearish)"
+   ],
+   "rule": "Sun in Pushya, Anuradha, Uttara Bhadrapada (Saturn) or Ardra, Swati, Shatabhisha (Rahu).",
+   "detail": "Sun 6.67 deg Gemini (Ardra p1) | value: Sun in Ardra (lord Rahu)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Gold is ruled by the Sun (user note; TA S29 lists no gold sector, the PDFs' gold rules are mostly Sun placements).",
+    "Conflict: TA p.155 S34 A10 lists Sun on Bharani, Krittika, Punarvasu and Pushya as gold-RALLY stars (Pushya is a Saturn nakshatra), 'not aspected by Benefic - More Bullish if aspected by Malefic'; TA p.156 S34 B1: Sun on Anuradha (Saturn nakshatra) with or aspected by a benefic - gold can fall. Both sources are shown.",
+    "User note: 'fear, greed and market illusions are Rahu's territory'.",
+    "Rahu/Ketu sign/nakshatra changes: the 2026 document's almanac prints the 5 Dec 2026 node ingress 40 min earlier (21:52 IST) than the mean node computed here (22:32 IST) - a known 5-arcsecond formulation gap (config/conventions.yaml)."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Sun \u2713",
+    "end = astronomy-layer nakshatra ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "user_u3_sun_in_saturn_rahu_nakshatra"
+   ]
+  },
+  {
+   "start_ET": "Mon 28 Jun 2027 05:09 EDT",
+   "end_ET": "Sat 03 Jul 2027 23:02 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 12.23 deg Gemini (Ardra p2) | separation from Sun at start: Venus 12.2 deg, Mercury 7.5 deg, Jupiter 48.2 deg, Moon 76.1 deg; value: Venus conjunct (same sign); Mercury conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Venus \u2713",
+    "end = astronomy-layer lunation of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
    ]
   },
   {
@@ -1395,6 +2879,32 @@
   },
   {
    "start_ET": "Sat 03 Jul 2027 23:02 EDT",
+   "end_ET": "Sun 04 Jul 2027 18:32 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 17.71 deg Gemini (Ardra p4) | separation from Sun at start: Venus 10.7 deg, Mercury 14.5 deg, Jupiter 43.7 deg, Moon 0.0 deg; value: Venus conjunct (same sign); Mercury conjunct (same sign); waxing Moon conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer lunation of Moon \u2713",
+    "end = astronomy-layer sign ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Sat 03 Jul 2027 23:02 EDT",
    "end_ET": "",
    "title": "Sun and Moon on the same degree (new moon)",
    "tone": "Bullish",
@@ -1413,6 +2923,32 @@
    ],
    "rule_ids": [
     "doc26_gold_bull_10_sun_moon_same_degree"
+   ]
+  },
+  {
+   "start_ET": "Sun 04 Jul 2027 18:32 EDT",
+   "end_ET": "Thu 15 Jul 2027 20:10 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 18.49 deg Gemini (Ardra p4) | separation from Sun at start: Venus 10.5 deg, Mercury 15.3 deg, Jupiter 43.1 deg, Moon 11.5 deg; value: Venus conjunct (same sign); Mercury conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer sign ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
    ]
   },
   {
@@ -1440,6 +2976,31 @@
    ]
   },
   {
+   "start_ET": "Tue 06 Jul 2027 08:37 EDT",
+   "end_ET": "Tue 20 Jul 2027 08:11 EDT",
+   "title": "Sun in a Venus, Mercury or Jupiter nakshatra (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price rise (Bullish)"
+   ],
+   "rule": "Sun in Bharani, Purva Phalguni, Purva Ashadha (Venus), Ashlesha, Jyeshtha, Revati (Mercury), Punarvasu, Vishakha or Purva Bhadrapada (Jupiter).",
+   "detail": "Sun 20.00 deg Gemini (Punarvasu p1) | value: Sun in Punarvasu (lord Jupiter)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Gold is ruled by the Sun (user note; TA S29 lists no gold sector, the PDFs' gold rules are mostly Sun placements).",
+    "Conflict: TA p.155 S34 A10 lists Sun on Bharani, Krittika, Punarvasu and Pushya as gold-RALLY stars (Pushya is a Saturn nakshatra), 'not aspected by Benefic - More Bullish if aspected by Malefic'; TA p.156 S34 B1: Sun on Anuradha (Saturn nakshatra) with or aspected by a benefic - gold can fall. Both sources are shown."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Sun \u2713",
+    "end = astronomy-layer nakshatra ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "user_u1_sun_in_venus_mercury_jupiter_nakshatra"
+   ]
+  },
+  {
    "start_ET": "Wed 14 Jul 2027 12:54 EDT",
    "end_ET": "Sun 25 Jul 2027 09:19 EDT",
    "title": "Venus in Punarvasu",
@@ -1460,6 +3021,32 @@
    ],
    "rule_ids": [
     "doc26_gold_bear_06_venus_punarvasu"
+   ]
+  },
+  {
+   "start_ET": "Thu 15 Jul 2027 20:10 EDT",
+   "end_ET": "Fri 16 Jul 2027 20:19 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 29.04 deg Gemini (Punarvasu p3) | separation from Sun at start: Venus 7.4 deg, Mercury 20.5 deg, Jupiter 34.7 deg, Moon 151.0 deg; value: Venus conjunct (same sign); Mercury conjunct (same sign); waxing Moon aspects (7th)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer sign ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
    ]
   },
   {
@@ -1487,6 +3074,59 @@
    ]
   },
   {
+   "start_ET": "Fri 16 Jul 2027 20:19 EDT",
+   "end_ET": "Tue 17 Aug 2027 04:44 EDT",
+   "title": "Saturn or Rahu with / aspecting the Sun (user note)",
+   "tone": "Bearish",
+   "verdicts": [
+    "Can crash the gold price (Bearish)"
+   ],
+   "rule": "Saturn or Rahu in the Sun's sign or casting drishti on it (Rahu's 7th = Sun with Ketu).",
+   "detail": "Sun 0.00 deg Cancer (Punarvasu p4) | separation from Sun at start: Saturn 86.9 deg, Rahu 161.8 deg, Ketu 18.2 deg; value: Rahu aspects (7th from Rahu); Rahu aspects via 7th (Sun with Ketu)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "User note: 'fear, greed and market illusions are Rahu's territory'.",
+    "Rahu/Ketu sign/nakshatra changes: the 2026 document's almanac prints the 5 Dec 2026 node ingress 40 min earlier (21:52 IST) than the mean node computed here (22:32 IST) - a known 5-arcsecond formulation gap (config/conventions.yaml)."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "user_u4_sun_with_or_aspected_by_saturn_rahu"
+   ]
+  },
+  {
+   "start_ET": "Sun 18 Jul 2027 08:34 EDT",
+   "end_ET": "Sun 18 Jul 2027 11:45 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 1.44 deg Cancer (Punarvasu p4) | separation from Sun at start: Venus 6.8 deg, Mercury 20.3 deg, Jupiter 32.8 deg, Moon 178.6 deg; value: waxing Moon aspects (7th)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer lunation of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
    "start_ET": "Tue 20 Jul 2027 08:11 EDT",
    "end_ET": "Thu 22 Jul 2027 16:17 EDT",
    "title": "Sun on Bharani, Krittika, Punarvasu or Pushya, not aspected by benefic",
@@ -1511,6 +3151,110 @@
    ]
   },
   {
+   "start_ET": "Tue 20 Jul 2027 08:11 EDT",
+   "end_ET": "Tue 03 Aug 2027 07:03 EDT",
+   "title": "Sun in a Saturn or Rahu nakshatra (user note)",
+   "tone": "Bearish",
+   "verdicts": [
+    "Can trigger fall in gold prices (Bearish)"
+   ],
+   "rule": "Sun in Pushya, Anuradha, Uttara Bhadrapada (Saturn) or Ardra, Swati, Shatabhisha (Rahu).",
+   "detail": "Sun 3.33 deg Cancer (Pushya p1) | value: Sun in Pushya (lord Saturn)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Gold is ruled by the Sun (user note; TA S29 lists no gold sector, the PDFs' gold rules are mostly Sun placements).",
+    "Conflict: TA p.155 S34 A10 lists Sun on Bharani, Krittika, Punarvasu and Pushya as gold-RALLY stars (Pushya is a Saturn nakshatra), 'not aspected by Benefic - More Bullish if aspected by Malefic'; TA p.156 S34 B1: Sun on Anuradha (Saturn nakshatra) with or aspected by a benefic - gold can fall. Both sources are shown.",
+    "User note: 'fear, greed and market illusions are Rahu's territory'."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Sun \u2713",
+    "end = astronomy-layer nakshatra ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "user_u3_sun_in_saturn_rahu_nakshatra"
+   ]
+  },
+  {
+   "start_ET": "Thu 22 Jul 2027 16:17 EDT",
+   "end_ET": "Fri 30 Jul 2027 09:01 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 5.56 deg Cancer (Pushya p1) | separation from Sun at start: Venus 5.6 deg, Mercury 18.8 deg, Jupiter 29.5 deg, Moon 134.4 deg; value: Venus conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Venus \u2713",
+    "end = astronomy-layer sign ingress of Mercury \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Fri 30 Jul 2027 09:01 EDT",
+   "end_ET": "Mon 02 Aug 2027 06:05 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 12.92 deg Cancer (Pushya p3) | separation from Sun at start: Venus 3.4 deg, Mercury 12.9 deg, Jupiter 23.7 deg, Moon 40.5 deg; value: Venus conjunct (same sign); Mercury conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Mercury \u2713",
+    "end = astronomy-layer lunation of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Mon 02 Aug 2027 06:05 EDT",
+   "end_ET": "Tue 03 Aug 2027 04:46 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 15.67 deg Cancer (Pushya p4) | separation from Sun at start: Venus 2.6 deg, Mercury 10.0 deg, Jupiter 21.6 deg, Moon 0.0 deg; value: Venus conjunct (same sign); Mercury conjunct (same sign); waxing Moon conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer lunation of Moon \u2713",
+    "end = astronomy-layer sign ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
    "start_ET": "Mon 02 Aug 2027 06:05 EDT",
    "end_ET": "",
    "title": "Sun and Moon on the same degree (new moon)",
@@ -1530,6 +3274,32 @@
    ],
    "rule_ids": [
     "doc26_gold_bull_10_sun_moon_same_degree"
+   ]
+  },
+  {
+   "start_ET": "Tue 03 Aug 2027 04:46 EDT",
+   "end_ET": "Sat 14 Aug 2027 02:23 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 16.58 deg Cancer (Pushya p4) | separation from Sun at start: Venus 2.4 deg, Mercury 9.0 deg, Jupiter 20.9 deg, Moon 13.4 deg; value: Venus conjunct (same sign); Mercury conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer sign ingress of Mercury \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
    ]
   },
   {
@@ -1560,6 +3330,57 @@
    ]
   },
   {
+   "start_ET": "Tue 03 Aug 2027 07:03 EDT",
+   "end_ET": "Tue 17 Aug 2027 04:44 EDT",
+   "title": "Sun in a Venus, Mercury or Jupiter nakshatra (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price rise (Bullish)"
+   ],
+   "rule": "Sun in Bharani, Purva Phalguni, Purva Ashadha (Venus), Ashlesha, Jyeshtha, Revati (Mercury), Punarvasu, Vishakha or Purva Bhadrapada (Jupiter).",
+   "detail": "Sun 16.67 deg Cancer (Ashlesha p1) | value: Sun in Ashlesha (lord Mercury)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Gold is ruled by the Sun (user note; TA S29 lists no gold sector, the PDFs' gold rules are mostly Sun placements).",
+    "Conflict: TA p.155 S34 A10 lists Sun on Bharani, Krittika, Punarvasu and Pushya as gold-RALLY stars (Pushya is a Saturn nakshatra), 'not aspected by Benefic - More Bullish if aspected by Malefic'; TA p.156 S34 B1: Sun on Anuradha (Saturn nakshatra) with or aspected by a benefic - gold can fall. Both sources are shown."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "user_u1_sun_in_venus_mercury_jupiter_nakshatra"
+   ]
+  },
+  {
+   "start_ET": "Sat 14 Aug 2027 02:23 EDT",
+   "end_ET": "Sat 14 Aug 2027 14:37 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 27.03 deg Cancer (Ashlesha p4) | separation from Sun at start: Venus 0.6 deg, Mercury 3.0 deg, Jupiter 12.7 deg, Moon 147.0 deg; value: Venus conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Mercury \u2713",
+    "end = astronomy-layer sign ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
    "start_ET": "Sat 14 Aug 2027 03:41 EDT",
    "end_ET": "Tue 17 Aug 2027 04:44 EDT",
    "title": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold)",
@@ -1584,6 +3405,58 @@
    ],
    "rule_ids": [
     "ta_s34_gold_vedha_punarvasu_pushya_chitra_dhanishta"
+   ]
+  },
+  {
+   "start_ET": "Sat 14 Aug 2027 14:37 EDT",
+   "end_ET": "Mon 16 Aug 2027 00:05 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 27.51 deg Cancer (Ashlesha p4) | separation from Sun at start: Venus 0.8 deg, Mercury 3.5 deg, Jupiter 12.4 deg, Moon 152.5 deg; value: Venus conjunct (same sign); waxing Moon aspects (7th)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer sign ingress of Venus \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Mon 16 Aug 2027 00:05 EDT",
+   "end_ET": "Tue 17 Aug 2027 03:29 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 28.85 deg Cancer (Ashlesha p4) | separation from Sun at start: Venus 1.1 deg, Mercury 4.9 deg, Jupiter 11.3 deg, Moon 167.6 deg; value: waxing Moon aspects (7th)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Venus \u2713",
+    "end = astronomy-layer lunation of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
    ]
   },
   {
@@ -1614,6 +3487,32 @@
    ]
   },
   {
+   "start_ET": "Tue 17 Aug 2027 04:44 EDT",
+   "end_ET": "Mon 30 Aug 2027 16:31 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 0.00 deg Leo (Magha p1) | separation from Sun at start: Venus 1.5 deg, Mercury 6.1 deg, Jupiter 10.4 deg, Moon 179.4 deg; value: Venus conjunct (same sign); Mercury conjunct (same sign); Jupiter conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Mercury \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
    "start_ET": "Wed 25 Aug 2027 (civil date)",
    "end_ET": "",
    "title": "Mercury rises in West",
@@ -1635,6 +3534,32 @@
    ],
    "rule_ids": [
     "ta_s17_mercury_rise_west"
+   ]
+  },
+  {
+   "start_ET": "Mon 30 Aug 2027 16:31 EDT",
+   "end_ET": "Tue 31 Aug 2027 13:41 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 13.00 deg Leo (Magha p4) | separation from Sun at start: Venus 5.2 deg, Mercury 17.0 deg, Jupiter 0.3 deg, Moon 12.4 deg; value: Venus conjunct (same sign); Jupiter conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Mercury \u2713",
+    "end = astronomy-layer lunation of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
    ]
   },
   {
@@ -1665,6 +3590,57 @@
    ]
   },
   {
+   "start_ET": "Tue 31 Aug 2027 00:42 EDT",
+   "end_ET": "Mon 13 Sep 2027 18:32 EDT",
+   "title": "Sun in a Venus, Mercury or Jupiter nakshatra (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price rise (Bullish)"
+   ],
+   "rule": "Sun in Bharani, Purva Phalguni, Purva Ashadha (Venus), Ashlesha, Jyeshtha, Revati (Mercury), Punarvasu, Vishakha or Purva Bhadrapada (Jupiter).",
+   "detail": "Sun 13.33 deg Leo (Purva Phalguni p1) | value: Sun in Purva Phalguni (lord Venus)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Gold is ruled by the Sun (user note; TA S29 lists no gold sector, the PDFs' gold rules are mostly Sun placements).",
+    "Conflict: TA p.155 S34 A10 lists Sun on Bharani, Krittika, Punarvasu and Pushya as gold-RALLY stars (Pushya is a Saturn nakshatra), 'not aspected by Benefic - More Bullish if aspected by Malefic'; TA p.156 S34 B1: Sun on Anuradha (Saturn nakshatra) with or aspected by a benefic - gold can fall. Both sources are shown."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Sun \u2713",
+    "end = astronomy-layer nakshatra ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "user_u1_sun_in_venus_mercury_jupiter_nakshatra"
+   ]
+  },
+  {
+   "start_ET": "Tue 31 Aug 2027 13:41 EDT",
+   "end_ET": "Wed 01 Sep 2027 15:43 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 13.86 deg Leo (Purva Phalguni p1) | separation from Sun at start: Venus 5.4 deg, Mercury 17.6 deg, Jupiter 0.3 deg, Moon 0.0 deg; value: Venus conjunct (same sign); Jupiter conjunct (same sign); waxing Moon conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer lunation of Moon \u2713",
+    "end = astronomy-layer sign ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
    "start_ET": "Tue 31 Aug 2027 13:41 EDT",
    "end_ET": "",
    "title": "Sun and Moon on the same degree (new moon)",
@@ -1684,6 +3660,58 @@
    ],
    "rule_ids": [
     "doc26_gold_bull_10_sun_moon_same_degree"
+   ]
+  },
+  {
+   "start_ET": "Wed 01 Sep 2027 15:43 EDT",
+   "end_ET": "Thu 09 Sep 2027 05:11 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 14.91 deg Leo (Purva Phalguni p1) | separation from Sun at start: Venus 5.7 deg, Mercury 18.2 deg, Jupiter 1.1 deg, Moon 15.1 deg; value: Venus conjunct (same sign); Jupiter conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer sign ingress of Venus \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Thu 09 Sep 2027 05:11 EDT",
+   "end_ET": "Mon 13 Sep 2027 10:04 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 22.24 deg Leo (Purva Phalguni p3) | separation from Sun at start: Venus 7.8 deg, Mercury 22.3 deg, Jupiter 6.8 deg, Moon 108.0 deg; value: Jupiter conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Venus \u2713",
+    "end = astronomy-layer sign ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
    ]
   },
   {
@@ -1707,6 +3735,32 @@
    ],
    "rule_ids": [
     "ta_s34b02_jupiter_rise"
+   ]
+  },
+  {
+   "start_ET": "Mon 13 Sep 2027 10:04 EDT",
+   "end_ET": "Wed 15 Sep 2027 19:03 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 26.32 deg Leo (Purva Phalguni p4) | separation from Sun at start: Venus 8.9 deg, Mercury 24.0 deg, Jupiter 10.0 deg, Moon 153.7 deg; value: Jupiter conjunct (same sign); waxing Moon aspects (7th)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer lunation of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
    ]
   },
   {
@@ -1734,6 +3788,84 @@
    ],
    "rule_ids": [
     "ta_s34_gold_vedha_punarvasu_pushya_chitra_dhanishta"
+   ]
+  },
+  {
+   "start_ET": "Wed 15 Sep 2027 19:03 EDT",
+   "end_ET": "Fri 17 Sep 2027 04:40 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 28.64 deg Leo (Uttara Phalguni p1) | separation from Sun at start: Venus 9.5 deg, Mercury 24.7 deg, Jupiter 11.8 deg, Moon 180.0 deg; value: Jupiter conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer lunation of Moon \u2713",
+    "end = astronomy-layer sign ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Fri 17 Sep 2027 04:40 EDT",
+   "end_ET": "Tue 21 Sep 2027 08:51 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 0.00 deg Virgo (Uttara Phalguni p2) | separation from Sun at start: Venus 9.9 deg, Mercury 25.1 deg, Jupiter 12.9 deg, Moon 164.0 deg; value: Venus conjunct (same sign); Mercury conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Mercury \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Tue 21 Sep 2027 08:51 EDT",
+   "end_ET": "Wed 29 Sep 2027 22:36 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 4.07 deg Virgo (Uttara Phalguni p3) | separation from Sun at start: Venus 11.0 deg, Mercury 25.9 deg, Jupiter 16.0 deg, Moon 114.0 deg; value: Venus conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Mercury \u2713",
+    "end = astronomy-layer lunation of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
    ]
   },
   {
@@ -1765,6 +3897,32 @@
   },
   {
    "start_ET": "Wed 29 Sep 2027 22:36 EDT",
+   "end_ET": "Fri 01 Oct 2027 03:56 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 12.48 deg Virgo (Hasta p1) | separation from Sun at start: Venus 13.3 deg, Mercury 25.4 deg, Jupiter 22.6 deg, Moon 0.0 deg; value: Venus conjunct (same sign); waxing Moon conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer lunation of Moon \u2713",
+    "end = astronomy-layer sign ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Wed 29 Sep 2027 22:36 EDT",
    "end_ET": "",
    "title": "Sun and Moon on the same degree (new moon)",
    "tone": "Bullish",
@@ -1783,6 +3941,32 @@
    ],
    "rule_ids": [
     "doc26_gold_bull_10_sun_moon_same_degree"
+   ]
+  },
+  {
+   "start_ET": "Fri 01 Oct 2027 03:56 EDT",
+   "end_ET": "Sun 03 Oct 2027 08:54 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 13.68 deg Virgo (Hasta p2) | separation from Sun at start: Venus 13.6 deg, Mercury 25.0 deg, Jupiter 23.6 deg, Moon 16.3 deg; value: Venus conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer sign ingress of Venus \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
    ]
   },
   {
@@ -1810,6 +3994,85 @@
    ]
   },
   {
+   "start_ET": "Wed 13 Oct 2027 05:01 EDT",
+   "end_ET": "Fri 15 Oct 2027 09:47 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 25.56 deg Virgo (Chitra p1) | separation from Sun at start: Venus 16.7 deg, Mercury 13.0 deg, Jupiter 33.0 deg, Moon 154.4 deg; value: waxing Moon aspects (7th)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer lunation of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Sun 17 Oct 2027 16:39 EDT",
+   "end_ET": "Wed 20 Oct 2027 22:42 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 0.00 deg Libra (Chitra p3) | separation from Sun at start: Venus 17.8 deg, Mercury 4.0 deg, Jupiter 36.6 deg, Moon 152.2 deg; value: Venus conjunct (same sign); Mercury conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Mercury \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Sun 17 Oct 2027 16:39 EDT",
+   "end_ET": "Tue 19 Oct 2027 21:42 EDT",
+   "title": "Saturn or Rahu with / aspecting the Sun (user note)",
+   "tone": "Bearish",
+   "verdicts": [
+    "Can crash the gold price (Bearish)"
+   ],
+   "rule": "Saturn or Rahu in the Sun's sign or casting drishti on it (Rahu's 7th = Sun with Ketu).",
+   "detail": "Sun 0.00 deg Libra (Chitra p3) | separation from Sun at start: Saturn 179.8 deg, Rahu 103.2 deg, Ketu 76.8 deg; value: Saturn aspects (7th from Saturn)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "User note: 'fear, greed and market illusions are Rahu's territory'.",
+    "Rahu/Ketu sign/nakshatra changes: the 2026 document's almanac prints the 5 Dec 2026 node ingress 40 min earlier (21:52 IST) than the mean node computed here (22:32 IST) - a known 5-arcsecond formulation gap (config/conventions.yaml)."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Saturn \u2713"
+   ],
+   "rule_ids": [
+    "user_u4_sun_with_or_aspected_by_saturn_rahu"
+   ]
+  },
+  {
    "start_ET": "Sun 17 Oct 2027 16:39 EDT",
    "end_ET": "Tue 19 Oct 2027 21:42 EDT",
    "title": "Sun in Libra aspected by (or with) malefics",
@@ -1831,6 +4094,85 @@
    ],
    "rule_ids": [
     "doc26_gold_bull_02_sun_libra_aspected"
+   ]
+  },
+  {
+   "start_ET": "Wed 20 Oct 2027 22:42 EDT",
+   "end_ET": "Wed 27 Oct 2027 12:27 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 3.23 deg Libra (Chitra p3) | separation from Sun at start: Venus 18.6 deg, Mercury 3.2 deg, Jupiter 39.2 deg, Moon 111.0 deg; value: Venus conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Mercury \u2713",
+    "end = astronomy-layer sign ingress of Venus \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Sun 24 Oct 2027 09:37 EDT",
+   "end_ET": "Sat 06 Nov 2027 17:41 EDT",
+   "title": "Sun in a Saturn or Rahu nakshatra (user note)",
+   "tone": "Bearish",
+   "verdicts": [
+    "Can trigger fall in gold prices (Bearish)"
+   ],
+   "rule": "Sun in Pushya, Anuradha, Uttara Bhadrapada (Saturn) or Ardra, Swati, Shatabhisha (Rahu).",
+   "detail": "Sun 6.67 deg Libra (Swati p1) | value: Sun in Swati (lord Rahu)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Gold is ruled by the Sun (user note; TA S29 lists no gold sector, the PDFs' gold rules are mostly Sun placements).",
+    "Conflict: TA p.155 S34 A10 lists Sun on Bharani, Krittika, Punarvasu and Pushya as gold-RALLY stars (Pushya is a Saturn nakshatra), 'not aspected by Benefic - More Bullish if aspected by Malefic'; TA p.156 S34 B1: Sun on Anuradha (Saturn nakshatra) with or aspected by a benefic - gold can fall. Both sources are shown.",
+    "User note: 'fear, greed and market illusions are Rahu's territory'.",
+    "Rahu/Ketu sign/nakshatra changes: the 2026 document's almanac prints the 5 Dec 2026 node ingress 40 min earlier (21:52 IST) than the mean node computed here (22:32 IST) - a known 5-arcsecond formulation gap (config/conventions.yaml)."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Sun \u2713",
+    "end = astronomy-layer nakshatra ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "user_u3_sun_in_saturn_rahu_nakshatra"
+   ]
+  },
+  {
+   "start_ET": "Fri 29 Oct 2027 09:37 EDT",
+   "end_ET": "Sat 30 Oct 2027 18:01 EDT",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 11.65 deg Libra (Swati p2) | separation from Sun at start: Venus 20.7 deg, Mercury 16.5 deg, Jupiter 46.1 deg, Moon 0.0 deg; value: waxing Moon conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer lunation of Moon \u2713",
+    "end = astronomy-layer sign ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
    ]
   },
   {
@@ -1879,6 +4221,32 @@
    ]
   },
   {
+   "start_ET": "Fri 05 Nov 2027 07:41 EDT",
+   "end_ET": "Thu 11 Nov 2027 21:26 EST",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 18.58 deg Libra (Swati p4) | separation from Sun at start: Venus 22.4 deg, Mercury 18.6 deg, Jupiter 51.8 deg, Moon 80.9 deg; value: Mercury conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Mercury \u2713",
+    "end = astronomy-layer sign ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
    "start_ET": "Sat 06 Nov 2027 17:41 EDT",
    "end_ET": "Fri 19 Nov 2027 05:54 EST",
    "title": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold)",
@@ -1903,6 +4271,109 @@
    ],
    "rule_ids": [
     "ta_s34_gold_vedha_punarvasu_pushya_chitra_dhanishta"
+   ]
+  },
+  {
+   "start_ET": "Sat 06 Nov 2027 17:41 EDT",
+   "end_ET": "Fri 19 Nov 2027 22:50 EST",
+   "title": "Sun in a Venus, Mercury or Jupiter nakshatra (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price rise (Bullish)"
+   ],
+   "rule": "Sun in Bharani, Purva Phalguni, Purva Ashadha (Venus), Ashlesha, Jyeshtha, Revati (Mercury), Punarvasu, Vishakha or Purva Bhadrapada (Jupiter).",
+   "detail": "Sun 20.00 deg Libra (Vishakha p1) | value: Sun in Vishakha (lord Jupiter)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Gold is ruled by the Sun (user note; TA S29 lists no gold sector, the PDFs' gold rules are mostly Sun placements).",
+    "Conflict: TA p.155 S34 A10 lists Sun on Bharani, Krittika, Punarvasu and Pushya as gold-RALLY stars (Pushya is a Saturn nakshatra), 'not aspected by Benefic - More Bullish if aspected by Malefic'; TA p.156 S34 B1: Sun on Anuradha (Saturn nakshatra) with or aspected by a benefic - gold can fall. Both sources are shown."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Sun \u2713",
+    "end = astronomy-layer nakshatra ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "user_u1_sun_in_venus_mercury_jupiter_nakshatra"
+   ]
+  },
+  {
+   "start_ET": "Thu 11 Nov 2027 21:26 EST",
+   "end_ET": "Sat 13 Nov 2027 22:26 EST",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 25.22 deg Libra (Vishakha p2) | separation from Sun at start: Venus 23.9 deg, Mercury 16.5 deg, Jupiter 57.3 deg, Moon 154.8 deg; value: Mercury conjunct (same sign); waxing Moon aspects (7th)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer lunation of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Sat 13 Nov 2027 22:26 EST",
+   "end_ET": "Tue 16 Nov 2027 15:29 EST",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 27.27 deg Libra (Vishakha p3) | separation from Sun at start: Venus 24.4 deg, Mercury 15.5 deg, Jupiter 59.1 deg, Moon 180.0 deg; value: Mercury conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer lunation of Moon \u2713",
+    "end = astronomy-layer sign ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Tue 16 Nov 2027 15:29 EST",
+   "end_ET": "Sat 20 Nov 2027 15:38 EST",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 0.00 deg Scorpio (Vishakha p4) | separation from Sun at start: Venus 25.0 deg, Mercury 14.1 deg, Jupiter 61.4 deg, Moon 144.9 deg; value: Venus conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Venus \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
    ]
   },
   {
@@ -1982,6 +4453,32 @@
    ]
   },
   {
+   "start_ET": "Fri 19 Nov 2027 22:50 EST",
+   "end_ET": "Fri 03 Dec 2027 03:04 EST",
+   "title": "Sun in a Saturn or Rahu nakshatra (user note)",
+   "tone": "Bearish",
+   "verdicts": [
+    "Can trigger fall in gold prices (Bearish)"
+   ],
+   "rule": "Sun in Pushya, Anuradha, Uttara Bhadrapada (Saturn) or Ardra, Swati, Shatabhisha (Rahu).",
+   "detail": "Sun 3.33 deg Scorpio (Anuradha p1) | value: Sun in Anuradha (lord Saturn)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Gold is ruled by the Sun (user note; TA S29 lists no gold sector, the PDFs' gold rules are mostly Sun placements).",
+    "Conflict: TA p.155 S34 A10 lists Sun on Bharani, Krittika, Punarvasu and Pushya as gold-RALLY stars (Pushya is a Saturn nakshatra), 'not aspected by Benefic - More Bullish if aspected by Malefic'; TA p.156 S34 B1: Sun on Anuradha (Saturn nakshatra) with or aspected by a benefic - gold can fall. Both sources are shown.",
+    "User note: 'fear, greed and market illusions are Rahu's territory'."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Sun \u2713",
+    "end = astronomy-layer nakshatra ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "user_u3_sun_in_saturn_rahu_nakshatra"
+   ]
+  },
+  {
    "start_ET": "Thu 25 Nov 2027 13:59 EST",
    "end_ET": "Fri 03 Dec 2027 03:04 EST",
    "title": "Sun on Anuradha with or aspected by benefic",
@@ -2001,6 +4498,32 @@
    ],
    "rule_ids": [
     "ta_s34b01_sun_anuradha_benefic"
+   ]
+  },
+  {
+   "start_ET": "Thu 25 Nov 2027 13:59 EST",
+   "end_ET": "Sat 27 Nov 2027 22:24 EST",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 9.02 deg Scorpio (Anuradha p2) | separation from Sun at start: Venus 27.1 deg, Mercury 9.0 deg, Jupiter 69.1 deg, Moon 28.8 deg; value: Mercury conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Mercury \u2713",
+    "end = astronomy-layer lunation of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
    ]
   },
   {
@@ -2032,6 +4555,32 @@
   },
   {
    "start_ET": "Sat 27 Nov 2027 22:24 EST",
+   "end_ET": "Mon 29 Nov 2027 09:17 EST",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 11.40 deg Scorpio (Anuradha p3) | separation from Sun at start: Venus 27.6 deg, Mercury 7.7 deg, Jupiter 71.2 deg, Moon 0.0 deg; value: Mercury conjunct (same sign); waxing Moon conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer lunation of Moon \u2713",
+    "end = astronomy-layer sign ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Sat 27 Nov 2027 22:24 EST",
    "end_ET": "",
    "title": "Sun and Moon on the same degree (new moon)",
    "tone": "Bullish",
@@ -2050,6 +4599,32 @@
    ],
    "rule_ids": [
     "doc26_gold_bull_10_sun_moon_same_degree"
+   ]
+  },
+  {
+   "start_ET": "Mon 29 Nov 2027 09:17 EST",
+   "end_ET": "Sat 11 Dec 2027 12:57 EST",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 12.88 deg Scorpio (Anuradha p3) | separation from Sun at start: Venus 27.9 deg, Mercury 6.9 deg, Jupiter 72.5 deg, Moon 17.1 deg; value: Mercury conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer sign ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
    ]
   },
   {
@@ -2103,6 +4678,31 @@
    ]
   },
   {
+   "start_ET": "Fri 03 Dec 2027 03:04 EST",
+   "end_ET": "Thu 16 Dec 2027 06:09 EST",
+   "title": "Sun in a Venus, Mercury or Jupiter nakshatra (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price rise (Bullish)"
+   ],
+   "rule": "Sun in Bharani, Purva Phalguni, Purva Ashadha (Venus), Ashlesha, Jyeshtha, Revati (Mercury), Punarvasu, Vishakha or Purva Bhadrapada (Jupiter).",
+   "detail": "Sun 16.67 deg Scorpio (Jyeshtha p1) | value: Sun in Jyeshtha (lord Mercury)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Gold is ruled by the Sun (user note; TA S29 lists no gold sector, the PDFs' gold rules are mostly Sun placements).",
+    "Conflict: TA p.155 S34 A10 lists Sun on Bharani, Krittika, Punarvasu and Pushya as gold-RALLY stars (Pushya is a Saturn nakshatra), 'not aspected by Benefic - More Bullish if aspected by Malefic'; TA p.156 S34 B1: Sun on Anuradha (Saturn nakshatra) with or aspected by a benefic - gold can fall. Both sources are shown."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "user_u1_sun_in_venus_mercury_jupiter_nakshatra"
+   ]
+  },
+  {
    "start_ET": "Mon 06 Dec 2027 03:58 EST",
    "end_ET": "Tue 14 Dec 2027 15:37 EST",
    "title": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold)",
@@ -2126,6 +4726,58 @@
    ],
    "rule_ids": [
     "ta_s34_gold_vedha_punarvasu_pushya_chitra_dhanishta"
+   ]
+  },
+  {
+   "start_ET": "Sat 11 Dec 2027 12:57 EST",
+   "end_ET": "Mon 13 Dec 2027 11:08 EST",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 25.21 deg Scorpio (Jyeshtha p3) | separation from Sun at start: Venus 30.6 deg, Mercury 0.1 deg, Jupiter 83.5 deg, Moon 154.8 deg; value: Mercury conjunct (same sign); waxing Moon aspects (7th)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer lunation of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Mon 13 Dec 2027 11:08 EST",
+   "end_ET": "Tue 14 Dec 2027 15:37 EST",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 27.16 deg Scorpio (Jyeshtha p4) | separation from Sun at start: Venus 31.1 deg, Mercury 1.0 deg, Jupiter 85.3 deg, Moon 180.0 deg; value: Mercury conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer lunation of Moon \u2713",
+    "end = astronomy-layer sign ingress of Mercury \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
    ]
   },
   {
@@ -2178,6 +4830,59 @@
    ],
    "rule_ids": [
     "ta_s34_gold_vedha_punarvasu_pushya_chitra_dhanishta"
+   ]
+  },
+  {
+   "start_ET": "Thu 16 Dec 2027 06:09 EST",
+   "end_ET": "Mon 27 Dec 2027 15:12 EST",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 0.00 deg Sagittarius (Mula p1) | separation from Sun at start: Venus 31.7 deg, Mercury 2.5 deg, Jupiter 87.9 deg, Moon 142.1 deg; value: Mercury conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Sun \u2713",
+    "end = astronomy-layer lunation of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Thu 16 Dec 2027 06:09 EST",
+   "end_ET": "Fri 14 Jan 2028 16:54 EST",
+   "title": "Saturn or Rahu with / aspecting the Sun (user note)",
+   "tone": "Bearish",
+   "verdicts": [
+    "Can crash the gold price (Bearish)"
+   ],
+   "rule": "Saturn or Rahu in the Sun's sign or casting drishti on it (Rahu's 7th = Sun with Ketu).",
+   "detail": "Sun 0.00 deg Sagittarius (Mula p1) | separation from Sun at start: Saturn 116.8 deg, Rahu 40.1 deg, Ketu 139.9 deg; value: Saturn aspects (10th from Saturn)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "User note: 'fear, greed and market illusions are Rahu's territory'.",
+    "Rahu/Ketu sign/nakshatra changes: the 2026 document's almanac prints the 5 Dec 2026 node ingress 40 min earlier (21:52 IST) than the mean node computed here (22:32 IST) - a known 5-arcsecond formulation gap (config/conventions.yaml)."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "user_u4_sun_with_or_aspected_by_saturn_rahu"
    ]
   },
   {
@@ -2260,6 +4965,32 @@
   },
   {
    "start_ET": "Mon 27 Dec 2027 15:12 EST",
+   "end_ET": "Wed 29 Dec 2027 03:34 EST",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 11.59 deg Sagittarius (Mula p4) | separation from Sun at start: Venus 34.1 deg, Mercury 9.1 deg, Jupiter 98.7 deg, Moon 0.0 deg; value: Mercury conjunct (same sign); waxing Moon conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer lunation of Moon \u2713",
+    "end = astronomy-layer sign ingress of Moon \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
+   ]
+  },
+  {
+   "start_ET": "Mon 27 Dec 2027 15:12 EST",
    "end_ET": "",
    "title": "Sun and Moon on the same degree (new moon)",
    "tone": "Bullish",
@@ -2278,6 +5009,32 @@
    ],
    "rule_ids": [
     "doc26_gold_bull_10_sun_moon_same_degree"
+   ]
+  },
+  {
+   "start_ET": "Wed 29 Dec 2027 03:34 EST",
+   "end_ET": "Sun 02 Jan 2028 10:25 EST",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price hike (Bullish)"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "detail": "Sun 13.13 deg Sagittarius (Mula p4) | separation from Sun at start: Venus 34.4 deg, Mercury 10.0 deg, Jupiter 100.2 deg, Moon 16.9 deg; value: Mercury conjunct (same sign)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Moon \u2713",
+    "end = astronomy-layer sign ingress of Mercury \u2713"
+   ],
+   "rule_ids": [
+    "user_u2_sun_with_or_aspected_by_benefics"
    ]
   },
   {
@@ -2304,6 +5061,31 @@
    ],
    "rule_ids": [
     "ta_s34_gold_vedha_punarvasu_pushya_chitra_dhanishta"
+   ]
+  },
+  {
+   "start_ET": "Wed 29 Dec 2027 08:21 EST",
+   "end_ET": "Tue 11 Jan 2028 10:21 EST",
+   "title": "Sun in a Venus, Mercury or Jupiter nakshatra (user note)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Can trigger gold price rise (Bullish)"
+   ],
+   "rule": "Sun in Bharani, Purva Phalguni, Purva Ashadha (Venus), Ashlesha, Jyeshtha, Revati (Mercury), Punarvasu, Vishakha or Purva Bhadrapada (Jupiter).",
+   "detail": "Sun 13.33 deg Sagittarius (Purva Ashadha p1) | value: Sun in Purva Ashadha (lord Venus)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "quals": [
+    "Gold is ruled by the Sun (user note; TA S29 lists no gold sector, the PDFs' gold rules are mostly Sun placements).",
+    "Conflict: TA p.155 S34 A10 lists Sun on Bharani, Krittika, Punarvasu and Pushya as gold-RALLY stars (Pushya is a Saturn nakshatra), 'not aspected by Benefic - More Bullish if aspected by Malefic'; TA p.156 S34 B1: Sun on Anuradha (Saturn nakshatra) with or aspected by a benefic - gold can fall. Both sources are shown."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Sun \u2713",
+    "end = astronomy-layer nakshatra ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "user_u1_sun_in_venus_mercury_jupiter_nakshatra"
    ]
   },
   {

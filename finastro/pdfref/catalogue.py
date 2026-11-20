@@ -1982,3 +1982,7 @@ for ref, text, why in (
     ("KD p.115", "Mars in Ardra (ruled by Rahu) with Rahu in Dhanishta (ruled by Mars) - mutual rulership, ultra-volatile", "2026-specific nakshatra-lord exchange; the general rule (nakshatra parivartana) is not stated, so only the 2026 instance is recorded."),
 ):
     nc(ref, text, why)
+
+
+# User-supplied gold rules (Reference_materials/user_notes_gold.md).
+from . import user_rules  # noqa: E402,F401

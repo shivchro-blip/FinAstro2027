@@ -9,10 +9,10 @@
    "build/calendar_2027.json (existing calendar)"
   ],
   "counts": {
-   "pdf_rules": 724,
-   "pdf_rules_with_detector": 715,
+   "pdf_rules": 728,
+   "pdf_rules_with_detector": 719,
    "pdf_rules_mapped_to_existing": 79,
-   "new_events_major_yearly": 1530,
+   "new_events_major_yearly": 1606,
    "new_events_moon_layer": 4566,
    "existing_rows_carried": 601,
    "existing_rows_with_pdf_text": 463

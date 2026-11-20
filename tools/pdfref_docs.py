@@ -56,6 +56,7 @@ CONFLICTS = """## Conflicts and discrepancies (both values kept)
 | 19 | KD p.136 | Atichari Mars in Purva Bhadrapada Bearish | Mars in Purva Bhadrapada Bullish after 3-4 days | Both rules emitted |
 | 20 | KD p.86 citation | "Principles of Financial Astrology Book, page 79, Point No 39" | TA's point 39 is the Sagittarius-Sankranti rule | Citation unverifiable from these files |
 | 21 | KD p.83 vs p.130 | "When malefic planets TRANSIT a nakshatra" | "Malefic planets doing VEDH of any nakshatra" | Read as the vedha rule (p.130 states it fully) |
+| 23 | User gold notes (U1-U4) vs TA S34 / 2026 document | User: Sun in Saturn/Rahu nakshatra -> gold falls; Saturn/Rahu with or aspecting the Sun -> crash; benefics with the Sun -> rise | TA S34 A10: Sun on Pushya (Saturn nakshatra) is a rally star and a malefic aspect makes it MORE bullish; TA S34 A3 and 2026 gold-bullish #2: Sun in Libra with/aspected by malefics bullish; TA S34 B1: benefic with Sun on Anuradha bearish | Both shown on every event; agreement where TA's stars are Venus/Jupiter nakshatras (Bharani, Punarvasu) |
 | 22 | Dated claims not reproduced | see the validation table (Vargottam Mars in Cancer KD 13-18 Sep 2026 vs computed 18-24 Sep; TA 2020 Saturn-Mars 23 Mar vs computed 22 Mar 14:40 - same clock time, one day earlier; TA 2018 Mercury-middle as one window vs two; TA 2011 Paap Kartari) | | Both values printed |
 """
 
