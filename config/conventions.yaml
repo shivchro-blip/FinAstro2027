@@ -2126,8 +2126,11 @@ verdict_coverage:
       gold-bearish:   {pages: "pp.145-148", named_groups: 6}
     total_named_groups: 58
     per_instrument: {gold: 19, silver: 30, sugar: 9}
-    ported: 38
-    blocked: 20
+    # 38 / 20 until 19-Nov-2026, when the month system was settled
+    # (purnimanta, from the Eclipse sub-table's own labels) and the three
+    # groups it bounded were ported: silver-bullish#18, sugar-bullish#2, #7.
+    ported: 41
+    blocked: 17
     # Counted off finastro/rules/config_rules.CONFIG_REGISTRY, not typed here:
     # config_rules.missing_input_counts() is the source of these numbers and the
     # harness re-derives them. silver-bearish#9 is blocked on TWO inputs and so
@@ -2135,7 +2138,6 @@ verdict_coverage:
     blocked_by_input:
       valence: 9
       darshan: 4
-      month_system: 3
       aspect_orb: 2
       vedha_wheel: 2
       no_dated_window: 1
@@ -3061,11 +3063,13 @@ row_kinds:
       # Mercury was ported: +87 timed day rows, sub-table population only.
       # 8739 / 9534 / 8615 until 19-Nov-2026, when Eclipse and Moon Rashi
       # Parivartan were ported: +230 timed day rows, sub-table population only.
-      rendered_rows: 8969
-      daily_row_equivalent: 9764
+      # 8969 / 9764 / 8845 until the month-system ports (19-Nov-2026): B111
+      # adds 3 catalogue-B rows, sugar-bullish#7 one configuration row.
+      rendered_rows: 8973
+      daily_row_equivalent: 9768
       delta: -795
       window_rows: 124
-      day_rows: 8845
+      day_rows: 8849
       daily_rows_collapsed: 919
       non_contiguous_groups_left_daily: 0
       per_cause_P3:
@@ -3235,7 +3239,7 @@ row_kinds:
         did.
       measured_2027:
         span_unit: (row_kind, event, instrument, venue, t_start_utc, t_end_utc)
-        span_groups: 3073   # 2938 -> 2944 (B10) -> 2983 (Kshin) -> 2988 (Mars/Mercury) -> 3073 (Eclipse, Parivartan)
+        span_groups: 3074   # 2938 -> 2944 (B10) -> 2983 (Kshin) -> 2988 (Mars/Mercury) -> 3073 (Eclipse, Parivartan) -> 3074 (month-system ports)
         span_groups_note: >
           2,202 until 21-Sep-2026, when the Moon's navamsa series unblocked
           b071d and split b105, adding 736 span groups and -- this is the

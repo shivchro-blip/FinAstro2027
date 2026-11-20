@@ -1195,8 +1195,38 @@ _rule(
           "stretch, not the stretch.",
 )(_goes_combust_while_retrograde("Mercury", instant=True))
 
+def _eclipses_in_months(family, months):
+    """Eclipses whose purnimanta month (Sky.eclipse_month) is listed."""
+    wanted = set(months)
+
+    def fn(sky):
+        out = []
+        for r in sky.class_records("eclipse", family=family):
+            m = sky.eclipse_month(r)
+            if m in wanted:
+                t = parse(r["time"]["t_start_utc"])
+                out.append(Span(t, t, {"id": r["id"], "month": m}))
+        return out
+    return fn
+
+
+def _margshirsh_krishna_panchami(sky):
+    """Krishna Panchami (tithi 20) spans in the purnimanta month Margashirsh,
+    judged at the tithi's midpoint."""
+    out = []
+    for sp in sky.tithi_spans():
+        if sp.value["tithi"] != 20:
+            continue
+        mid = sp.start + (sp.end - sp.start) / 2
+        if sky.purnimanta_month(mid) == "Margashirsh":
+            out.append(Span(sp.start, sp.end, {"tithi": "Krishna Panchami",
+                                               "month": "Margashirsh"},
+                            sp.open_start, sp.open_end))
+    return out
+
+
 _g = G("silver-bullish", 18)
-_blocked(
+_rule(
     _g,
     id="cfg_silver_bullish_18_sun_eclipse_in_falgun_or_jyestha",
     rule_family="eclipse/solar",
@@ -1204,11 +1234,13 @@ _blocked(
     condition_from="title",
     verdict_text=_g.block.verdict,
     verdict_from="block_h2",
-    missing_inputs=("month_system",),
-    notes="The eclipse series carries the date and the weekday; NAMING the "
-          "month Falgun is what needs amanta or purnimanta settled. The second "
-          "section bounded by `month_system_confirmation` after B111.",
-)
+    inputs=("eclipse", "lunation", "ingress/sign", "weekday"),
+    weekdays=names.weekdays_in(_g.title),
+    notes="PORTED 19-Nov-2026 on the purnimanta month (Sky.eclipse_month). "
+          "Its own printed row, 17-Feb-26 Falgun Tuesday, is a SOLAR eclipse "
+          "named by the purnimanta system -- amanta would call it Magh -- so "
+          "this group is itself evidence for the ruling, and it reproduces.",
+)(_eclipses_in_months("eclipse/solar", ("Falgun", "Jyeshtha")))
 
 _g = G("silver-bullish", 19)
 _rule(
@@ -1436,7 +1468,7 @@ _rule(
 )(_sign("Jupiter", "Cancer"))
 
 _g = G("sugar-bullish", 2)
-_blocked(
+_rule(
     _g,
     id="cfg_sugar_bullish_02_eclipse_in_falgun",
     rule_family="eclipse/any",
@@ -1444,10 +1476,16 @@ _blocked(
     condition_from="title",
     verdict_text=_g.block.verdict,
     verdict_from="block_h2",
-    missing_inputs=("month_system",),
-    notes=f"The group's impact note is {_g.notes[0]!r}. The eclipse date is "
-          "emitted; the month name is the open question.",
-)
+    inputs=("eclipse", "lunation", "ingress/sign"),
+    flags=("solar_falgun_eclipse_not_printed_in_2026",),
+    notes=f"PORTED 19-Nov-2026 on the purnimanta month. The group's impact note "
+          f"is {_g.notes[0]!r}. CARRIED, NOT TUNED AWAY: it prints only "
+          "03-Mar-26 (lunar, Falgun under either system) and not 17-Feb-26, the "
+          "solar eclipse silver-bullish#18 prints as Falgun on the same "
+          "purnimanta reckoning. The document disagrees with itself here; this "
+          "rule follows the system the other three sources settle and so fires "
+          "on both.",
+)(_eclipses_in_months(None, ("Falgun",)))
 
 _g = G("sugar-bullish", 3)
 _blocked(
@@ -1521,7 +1559,7 @@ _blocked(
 )
 
 _g = G("sugar-bullish", 7)
-_blocked(
+_rule(
     _g,
     id="cfg_sugar_bullish_07_margshirsh_krishna_panchami",
     rule_family="panchang/tithi",
@@ -1529,10 +1567,15 @@ _blocked(
     condition_from="title",
     verdict_text=_g.block.verdict,
     verdict_from="block_h2",
-    missing_inputs=("month_system",),
-    notes="Panchami and the weekday are both emitted; naming the month "
-          "Margshirsh is the month system. The third section bounded by it.",
-)
+    inputs=("panchang/tithi", "lunation", "ingress/sign", "weekday"),
+    weekdays=names.weekdays_in(_g.title),
+    notes="PORTED 19-Nov-2026: Krishna Panchami (tithi 20) in the purnimanta "
+          "month Margashirsh, i.e. the Krishna fortnight after Kartik Purnima. "
+          "The printed 28-Nov-26 is that tithi's sunrise day (amanta would put "
+          "it near 28-Dec), which supports purnimanta; 28-Nov is a Saturday, so "
+          "the row lists the tithi and not a qualifying weekday, and the "
+          "weekday half is applied as the title states it.",
+)(_margshirsh_krishna_panchami)
 
 
 # ========================================================== SUGAR -- BEARISH

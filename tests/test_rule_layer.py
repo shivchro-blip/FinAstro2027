@@ -201,6 +201,8 @@ EXPECTED_FIRINGS_MUMBAI = {
     # Ported 18-Nov-2026: Mercury overtakes Venus as a morning star three
     # times in 2027 -- 22-Mar, 20-Jul, 07-Nov on the noon-GMT reading.
     "b010_mercury_manifestation": 3,
+    # Ported 19-Nov-2026 on the purnimanta month: 17-Aug-2027, Shravan.
+    "b111_lunar_eclipse_in_vaishakha_shravana_or_ashwin": 1,
     "b009_mercury_combust_cycle": 144,
     "b015_venus_combust_cycle": 49,
     "b015a_venus_combust_east": 49,
@@ -2693,6 +2695,10 @@ def test_configuration_zero_firings_are_each_the_kind_they_claim(
         "cfg_sugar_bearish_01_jupiter_or_mars_in_three_stars":
             "Jupiter reaches neither Hasta nor Shravana; Mars enters Dhanishta "
             "on 25-Jan-2028, in the carry-out",
+        "cfg_silver_bullish_18_sun_eclipse_in_falgun_or_jyestha":
+            "2027's solar eclipses fall in Magh (06-Feb) and Shravan (02-Aug)",
+        "cfg_sugar_bullish_02_eclipse_in_falgun":
+            "no 2027 eclipse falls in Falgun: Magh, Magh, Ashadh, Shravan, Shravan",
     }
     zero = {r.id for r in config_rules.zero_firing(cfg_firings)}
     record("The configuration zero-firing set is exactly the pinned one",
@@ -3389,12 +3395,13 @@ def test_the_cause_census_figures_carry_the_population_that_produced_them():
     record("The census's P1 is the 5,539-daily-row catalogue-B population the "
            "figures name, rendered as 4,744 rows",
            # 5,539 / 4,744 / 8,916 until 18-Nov-2026: B10 Mercury
-           # Manifestation's 6 daily rows, one day each, so +6 on both units.
-           daily["P1"] == 5545 and size["P1"] == 4750
+           # Manifestation's 6 daily rows, one day each, so +6 on both units;
+           # then B111's 3 timed rows on 19-Nov-2026.
+           daily["P1"] == 5548 and size["P1"] == 4753
            # P3 9,447 after Kshin Moon's 525 sub-table rows, 9,534 after
-           # Mars/Mercury's 87, 9,764 after Eclipse + Parivartan's 230 (P1
-           # untouched by any of them).
-           and size["P3"] == len(rows) and daily["P3"] == 9764,
+           # Mars/Mercury's 87, 9,764 after Eclipse + Parivartan's 230, 9,768
+           # after the month-system ports (B111 3, sugar-bullish#7 1).
+           and size["P3"] == len(rows) and daily["P3"] == 9768,
            f"P1 {size['P1']} rendered / {daily['P1']} daily  "
            f"P2 {size['P2']} / {daily['P2']}  "
            f"P3 {size['P3']} / {daily['P3']}")
@@ -3518,8 +3525,9 @@ def test_the_cause_census_figures_carry_the_population_that_produced_them():
     filtered = cell[("P1", "TOTAL no-instant", "firings")]
     record("Dropping the no-instant filter changes the answer by a factor, "
            "not a rounding",
-           # 2,802 / 589 until B10's 3 date-only firings, 18-Nov-2026.
-           unfiltered == 2805 and filtered == 592,
+           # 2,802 / 589 until B10's 3 date-only firings, 18-Nov-2026;
+           # 2,807 after B111's 2 timed firings (19-Nov), filtered unchanged.
+           unfiltered == 2807 and filtered == 592,
            f"{filtered} of {unfiltered} P1 firings carry a no-instant reason")
 
     off = [r for r in rows
@@ -4223,6 +4231,51 @@ def test_eclipse_and_parivartan_reproduce_their_own_printed_tables() -> None:
     _PINNED_SUBTABLE_PORTS.update({"sub_eclipse", "sub_moon_rashi_parivartan_yog"})
 
 
+def test_month_system_ports_reproduce_their_printed_rows() -> None:
+    """B111 and the three configuration groups the month system bounded, fired
+    on the 2026 sky through the REGISTERED rules, against their own printed
+    rows (read from the document). sugar-bullish#2's extra 17-Feb row is the
+    document's own inconsistency and is pinned, not ignored; sugar-bullish#7's
+    printed 28-Nov-26 is a Saturday, so the Thursday/Friday rule correctly
+    stays silent in 2026, and the test pins the tithi date instead."""
+    import datetime as _dt
+    from finastro.rules.config_catalogue import G
+    from finastro.sky import Sky as _Sky
+    sky26 = _Sky.load(ROOT / "build" / "astronomy_2026.json")
+    reg = {r.id: r for r in list(R.REGISTRY) + list(config_rules.CONFIG_REGISTRY)}
+
+    def days(rid):
+        return {f.civil_date for f in R.base.fire([reg[rid]], sky26, year=2026)
+                if f.location == "mumbai"}
+
+    def d(x):
+        return _dt.datetime.strptime(x, "%d-%b-%y").date()
+    b111 = {d(r[0]) for r in catalogue.B(111).tables[0].rows}
+    s18 = {d(r[0]) for r in G("silver-bullish", 18).tables[0].rows}
+    s2 = {d(r[0]) for r in G("sugar-bullish", 2).tables[0].rows}
+    record("B111 reproduces its printed 28-Aug-26 Shravan lunar eclipse",
+           days("b111_lunar_eclipse_in_vaishakha_shravana_or_ashwin") == b111,
+           str(sorted(map(str, b111))))
+    record("silver-bullish#18 reproduces its printed 17-Feb-26 Falgun Tuesday",
+           days("cfg_silver_bullish_18_sun_eclipse_in_falgun_or_jyestha") == s18,
+           str(sorted(map(str, s18))))
+    got2 = days("cfg_sugar_bullish_02_eclipse_in_falgun")
+    record("sugar-bullish#2 fires its printed 03-Mar-26 plus the solar 17-Feb-26 "
+           "the page omits",
+           got2 == s2 | {_dt.date(2026, 2, 17)}, str(sorted(map(str, got2))))
+    tithi = [sp for sp in sky26.tithi_spans() if sp.value["tithi"] == 20
+             and sky26.purnimanta_month(sp.start + (sp.end - sp.start) / 2)
+             == "Margashirsh"]
+    ist = _dt.timezone(_dt.timedelta(hours=5, minutes=30))
+    printed7 = {d(r[0]) for r in G("sugar-bullish", 7).tables[0].rows}
+    record("sugar-bullish#7's printed 28-Nov-26 is purnimanta Margashirsh "
+           "Krishna Panchami, and not a Thursday/Friday, so nothing fires",
+           len(tithi) == 1 and tithi[0].start.astimezone(ist).date() in printed7
+           and not days("cfg_sugar_bullish_07_margshirsh_krishna_panchami"),
+           f"tithi starts {tithi[0].start.astimezone(ist):%a %d-%b-%y}"
+           if tithi else "no tithi")
+
+
 def test_kshin_moon_reproduces_its_own_printed_table() -> None:
     """Kshin (Malefic) Moon, fired on the 2026 sky through the REGISTERED
     sub-table rule, against the section's own 13 printed windows (read from
@@ -4277,6 +4330,7 @@ def main() -> int:
     test_kshin_moon_reproduces_its_own_printed_table()
     test_mars_mercury_reproduces_its_own_printed_table()
     test_eclipse_and_parivartan_reproduce_their_own_printed_tables()
+    test_month_system_ports_reproduce_their_printed_rows()
     test_every_ported_subtable_rule_is_pinned_against_its_printed_table()
     test_axes_and_tier_derivation()
     test_labels_are_from_the_config_vocabulary()

@@ -1349,7 +1349,29 @@ rule(
 
 # ================================= B111 Moon eclipse in a named lunar month
 _B111_COND, _B111_VERDICT = split_statement(B(111).title)
-blocked(
+#: The section's three months, read off its own title through the document's
+#: spelling ("Vaishak" is Vaishakh).
+B111_MONTHS = ("Vaishakh", "Shravan", "Ashwin")
+
+
+def _eclipses_in_months(family: str | None, months):
+    """One zero-length span at each eclipse whose purnimanta month is listed
+    (`Sky.eclipse_month`)."""
+    wanted = set(months)
+
+    def fn(sky):
+        out = []
+        for r in sky.class_records("eclipse", family=family):
+            m = sky.eclipse_month(r)
+            if m in wanted:
+                t = parse(r["time"]["t_start_utc"])
+                out.append(Span(t, t, {"id": r["id"], "month": m,
+                                       "flags": r["qa"]["flags"]}))
+        return out
+    return fn
+
+
+rule(
     id="b111_lunar_eclipse_in_vaishakha_shravana_or_ashwin",
     section=B(111),
     rule_family="eclipse/lunar",
@@ -1357,19 +1379,16 @@ blocked(
     condition_from="title",
     verdict_text=_B111_VERDICT,
     verdict_from="title",
-    inputs=("eclipse", "source_selection_rule"),
-    certainty_ground=GROUND_UNDOCUMENTED,
-    missing_inputs=(
-        "the lunar month system. Naming a month Vaishakha, Shravana or Ashwin "
-        "requires knowing whether the source counts months amanta or "
-        "purnimanta -- the two disagree by a fortnight and therefore about "
-        "which month an eclipse falls in. `month_system_confirmation` is open "
-        "in config/conventions.yaml and this is a section it bounds",
-    ),
-    notes="The eclipse half is exact; the month half is a convention nobody "
-          "has confirmed. Choosing amanta because it is commoner in western "
-          "India would date this rule on a coin toss.",
-)
+    inputs=("eclipse", "lunation", "ingress/sign"),
+    notes="PORTED 19-Nov-2026 (blocked on the month system until then). The "
+          "system is PURNIMANTA, settled by the Eclipse sub-table's own Month "
+          "column (its solar eclipses read Falgun and Shravan; amanta would read "
+          "Magh and Ashadh) and confirmed by silver-bullish#18 and "
+          "sugar-bullish#7. A lunar eclipse is named for its Purnima, which is "
+          "the same month in either system, so this rule could not have been "
+          "dated wrong by the choice -- it was blocked on principle. The single "
+          "printed row, 28-Aug-26 Shravan, reproduces.",
+)(_eclipses_in_months("eclipse/lunar", B111_MONTHS))
 
 
 # ============================== B056 Yoga in Panchak, last because it needs both

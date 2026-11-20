@@ -623,31 +623,9 @@ _rule(
 #: The printed table's own rows, sliced from the section.
 ECLIPSE_PRINTED = tuple(S("eclipse").tables[0].rows)
 
-#: Lunar month named by the Sun's sidereal sign at the new moon that begins
-#: it (amanta reckoning), in the section's own spelling ("Falgun", "Shravan").
-MONTH_BY_SUN_SIGN = {"Pisces": "Chaitra", "Aries": "Vaishakh", "Taurus": "Jyeshtha",
-                     "Gemini": "Ashadh", "Cancer": "Shravan", "Leo": "Bhadrapad",
-                     "Virgo": "Ashwin", "Libra": "Kartik", "Scorpio": "Margashirsh",
-                     "Sagittarius": "Paush", "Capricorn": "Magh", "Aquarius": "Falgun"}
-
-
 def lunar_months(sky):
-    """[(new_moon_start, next_new_moon, name)] -- amanta months off the
-    lunation series, named by the Sun's sign at the opening new moon; a month
-    whose next new moon finds the Sun in the same sign is Adhik."""
-    nms = [parse(r["time"]["t_start_utc"])
-           for r in sky.class_records("lunation", family="lunation/new_moon")]
-    sun = list(sky.spans("Sun", "sign"))
-
-    def sun_sign(t):
-        return next(sp.value for sp in sun if sp.start <= t < sp.end)
-    out = []
-    for a, b in zip(nms, nms[1:]):
-        name = MONTH_BY_SUN_SIGN[sun_sign(a)]
-        if sun_sign(a) == sun_sign(b):
-            name = "Adhik " + name
-        out.append((a, b, name))
-    return out
+    """Amanta months with names -- defined once, in `Sky.lunar_months`."""
+    return list(sky.lunar_months())
 
 
 def _eclipses(sky):
@@ -661,20 +639,14 @@ def _eclipses(sky):
     solar eclipse takes the month the new moon OPENS (amanta), which is the
     purnimanta month that Amavasya closes, and a lunar eclipse the month
     containing its full moon, the same in both systems."""
-    months = lunar_months(sky)
     out = []
     for r in sky.class_records("eclipse"):
         c = r["time"]["contacts_global"]
-        mx = parse(c["max"]["utc"])
         solar = r["rule_family"] == "eclipse/solar"
-        if solar:
-            m = min(months, key=lambda m: abs((m[0] - mx).total_seconds()))
-        else:
-            m = next((m for m in months if m[0] <= mx < m[1]), None)
         out.append(Span(parse(r["time"]["t_start_utc"]), parse(r["time"]["t_end_utc"]),
                         {"eclipse": "Solar" if solar else "Lunar",
                          "type": r["astronomy"].get("eclipse_type"),
-                         "month": m[2] if m else None,
+                         "month": sky.eclipse_month(r),
                          "max_utc": c["max"]["utc"]}))
     return out
 
