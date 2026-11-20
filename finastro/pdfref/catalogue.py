@@ -1357,7 +1357,8 @@ def _cabinet(ctx):
               "Mars": "Wheat & Milk products become very costly", "Mercury": "Everything available in plenty & cheap",
               "Jupiter": "Dry fruits, Fruits & Grains all available in excess with good rainfall", "Venus": "Similar like Jupiter", "Saturn": "Similar to Mars"}
     for role, basis, t, loc, lord, wd, ok in hits:
-        res = KING.get(lord) if role.startswith("King") else MANTRI.get(lord) if role == "Mantri" else ""
+        res = (KING.get(lord) if role.startswith("King") else MANTRI.get(lord) if role == "Mantri"
+               else "TA prints no result table for this rank (p.125 defines it only)")
         out.append(Hit(t, None, ("Sun",), {"role": role, "basis": basis, "location": loc, "weekday": wd, "lord": lord, "result": res,
                                            "pratipada_touches_sunrise": ok}))
     return out

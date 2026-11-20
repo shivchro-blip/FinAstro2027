@@ -173,7 +173,7 @@ def main():
             tol = 86400 * 1.01 if date_only else 600
             common = [t for t in ours if near(t, ex_inst, tol)]
             cc.update(method="instants: our start instants vs existing rows' start instants (tolerance " + ("1 civil day (date-only)" if date_only else "10 min") + ")",
-                      ours=len(ours), existing=len(ex_inst), matched=len(common),
+                      ours=len(ours), existing_rows=len(ex_inst), matched=len(common),
                       only_ours=[t.isoformat() for t in ours if not near(t, ex_inst, tol)][:60],
                       only_existing=[t.isoformat() for t in ex_inst if not near(t, ours, tol)][:60])
             for h in hits:
@@ -188,8 +188,13 @@ def main():
     # ---------------- merge identical windows across rules ----------------
     groups = collections.OrderedDict()
     for r, h in new:
-        key = (frozenset(h.bodies) if h.bodies else r.id, h.start.replace(second=0), (h.end or h.start).replace(second=0), h.day,
-               json.dumps(h.facts.get("value"), default=str) if not h.bodies else "")
+        is_window = h.day is None and h.end is not None and h.end != h.start
+        if is_window and h.bodies:
+            # identical windows of the same bodies from several rules (e.g. a pair
+            # in S3, S19 and S25) are one event carrying every source
+            key = (frozenset(h.bodies), h.start.replace(second=0), h.end.replace(second=0))
+        else:
+            key = (r.id, h.start, h.end, h.day, json.dumps(h.facts, default=str, sort_keys=True))
         groups.setdefault(key, []).append((r, h))
 
     events = []
@@ -259,7 +264,7 @@ def main():
             "calculation_method": " || ".join(dict.fromkeys(r.calc for r, _ in rules)) + " || " + ENGINE,
             "markets": mk,
             "rule_ids": [r.id for r, _ in rules],
-            "gold_silver_relevance": ("gold" if "gold" in mk else "") + (" silver" if "silver" in mk else "") or "not stated by source",
+            "gold_silver_relevance": " and ".join(x for x in ("gold" if "gold" in mk else "", "silver" if "silver" in mk else "") if x) or "not stated by source",
         }
         events.append(ev)
 

@@ -1,0 +1,466 @@
+[
+ {
+  "item": "Shani Chandra Dwidwadash 2026 (13 windows)",
+  "source": "KD p.94",
+  "claim": "13 printed start/end times",
+  "computed_IST": "13 windows; worst endpoint difference 1.4 min",
+  "agreement": true,
+  "note": "Moon in 12th sign from Saturn (Aquarius-Pisces axis)"
+ },
+ {
+  "item": "Saturn-Mars conjunction",
+  "source": "KD p.96",
+  "claim": "same sign 2 Apr-11 May 2026; exact 20 Apr 04:13",
+  "computed_IST": "same sign 02-Apr-2026 15:30 - 11-May-2026 12:38; exact 20-Apr-2026 04:14",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Venus-Herschel conjunction",
+  "source": "KD p.98",
+  "claim": "24 April 2026",
+  "computed_IST": "24-Apr-2026 07:28",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Sun-Mercury conjunction",
+  "source": "KD p.108",
+  "claim": "13 Jul 2026",
+  "computed_IST": "13-Jul-2026 06:56",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Sun-Mercury conjunction",
+  "source": "KD p.117",
+  "claim": "27 Aug 2026",
+  "computed_IST": "27-Aug-2026 22:34",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Sun-Mercury conjunction",
+  "source": "KD p.126",
+  "claim": "04 Nov 2026",
+  "computed_IST": "04-Nov-2026 19:54",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Sun-Mercury conjunction (May)",
+  "source": "KD p.100",
+  "claim": "'14 May 2026' (title) / '1? May' (body, illegible)",
+  "computed_IST": "14-May-2026 19:54",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Jupiter Vargottam",
+  "source": "KD p.101 / p.104",
+  "claim": "Gemini 14 May-2 Jun 2026; Cancer 2 Jun-18 Jun 2026",
+  "computed_IST": "Gemini 14-May-2026 06:36 - 02-Jun-2026 01:50; Cancer 02-Jun-2026 01:50 - 18-Jun-2026 21:02",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Mercury & Venus alone in a sign",
+  "source": "KD p.102",
+  "claim": "2-8 June 2026",
+  "computed_IST": "Gemini 02-Jun-2026 01:50 - 08-Jun-2026 17:43; Libra 26-Sep-2026 12:38 - 17-Oct-2026 19:52; Libra 22-Nov-2026 17:21 - 02-Dec-2026 17:27",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Mercury & Venus alone in a sign",
+  "source": "KD p.121",
+  "claim": "26 Sep-17 Oct 2026",
+  "computed_IST": "Gemini 02-Jun-2026 01:50 - 08-Jun-2026 17:43; Libra 26-Sep-2026 12:38 - 17-Oct-2026 19:52; Libra 22-Nov-2026 17:21 - 02-Dec-2026 17:27",
+  "agreement": true,
+  "note": "KD's 17 Oct is the post-conjunction reversal date it names; compared on the start"
+ },
+ {
+  "item": "Jupiter direct opposite retrograde Pluto",
+  "source": "KD p.103",
+  "claim": "2 Jun-16 Oct 2026",
+  "computed_IST": "02-Jun-2026 01:50 - 16-Oct-2026 08:10",
+  "agreement": true,
+  "note": "whole-sign opposition, motions as printed"
+ },
+ {
+  "item": "Venus behind / ahead of Jupiter (same sign)",
+  "source": "KD p.105",
+  "claim": "behind until 10 Jun; ahead 10 Jun-4 Jul 2026",
+  "computed_IST": "behind 14-May-2026 10:53 - 02-Jun-2026 01:50; behind 08-Jun-2026 17:43 - 10-Jun-2026 01:29; ahead 10-Jun-2026 01:29 - 04-Jul-2026 19:14",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Jupiter in Pushya & Rahu in Shatabhisha (mutual Vedh)",
+  "source": "KD p.107",
+  "claim": "18 Jun-2 Aug 2026",
+  "computed_IST": "18-Jun-2026 21:02 - 02-Aug-2026 03:13",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Pushya <-> Shatabhisha on the TA wheel",
+  "source": "TA pp.131-133 / KD p.107",
+  "claim": "mutual Vedh",
+  "computed_IST": "Pushya vedhas {'Left': 'Purva Phalguni', 'Right': 'Shatabhisha', 'Front': 'Jyeshtha'}; Shatabhisha vedhas {'Left': 'Pushya', 'Right': 'Abhijeet', 'Front': 'Swati'}",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Jupiter combust in West",
+  "source": "KD p.109",
+  "claim": "16 Jul 2026",
+  "computed_IST": "16-Jul-2026 (IST civil date), West",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Venus combust in West",
+  "source": "KD p.122",
+  "claim": "15 Oct 2026",
+  "computed_IST": "15-Oct-2026 (IST civil date), West",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Venus rise (East)",
+  "source": "KD p.122/124",
+  "claim": "27 Oct 2026",
+  "computed_IST": "27-Oct-2026 (IST civil date), East",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Mars rise in East",
+  "source": "KD p.97",
+  "claim": "10 Apr 2026",
+  "computed_IST": "11-Apr-2026 (IST civil date), East",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Saturn rise in East",
+  "source": "KD p.97",
+  "claim": "15 Apr 2026",
+  "computed_IST": "15-Apr-2026 (IST civil date), East",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Rahu enters Dhanishta",
+  "source": "KD p.111",
+  "claim": "02-Aug-2026 00:00",
+  "computed_IST": "02-Aug-2026 03:13",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Mars enters Ardra",
+  "source": "KD p.115",
+  "claim": "12-Aug-2026 22:35",
+  "computed_IST": "12-Aug-2026 22:34",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Vargottam Mars in Cancer",
+  "source": "KD p.119",
+  "claim": "13-18 Sep 2026",
+  "computed_IST": "18-Sep-2026 16:36 - 24-Sep-2026 05:41",
+  "agreement": false,
+  "note": ""
+ },
+ {
+  "item": "Mars behind Jupiter in same sign",
+  "source": "KD p.120",
+  "claim": "18 Sep-31 Oct 2026",
+  "computed_IST": "Mars behind 18-Sep-2026 16:36 - 31-Oct-2026 12:02; Mars behind 12-Nov-2026 20:18 - 16-Nov-2026 11:53; Mars ahead 16-Nov-2026 11:53 - 25-Jan-2027 01:31",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Mars & Jupiter same sign; Mars ahead",
+  "source": "KD p.128",
+  "claim": "together from 12 Nov; Mars behind 12-16 Nov, ahead from 16 Nov 2026",
+  "computed_IST": "Mars behind 18-Sep-2026 16:36 - 31-Oct-2026 12:02; Mars behind 12-Nov-2026 20:18 - 16-Nov-2026 11:53; Mars ahead 16-Nov-2026 11:53 - 25-Jan-2027 01:31",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Jupiter in Ashlesha & Ketu in Magha (mutual Vedh)",
+  "source": "KD p.116",
+  "claim": "19 Aug-31 Oct 2026",
+  "computed_IST": "residency overlap: 19-Aug-2026 03:12 - 31-Oct-2026 12:02 | mutual under this engine's direction doctrine: 19-Aug-2026 03:12 - 31-Oct-2026 12:02",
+  "agreement": true,
+  "note": "Ashlesha-Magha: TA wheel has Ashlesha->Magha (Right) and Magha->Ashlesha (Left); which pairs count as 'mutual' depends on the direction doctrine"
+ },
+ {
+  "item": "Mars in Ashlesha & Ketu in Magha (mutual Vedh)",
+  "source": "KD p.125",
+  "claim": "17 Oct-12 Nov 2026",
+  "computed_IST": "residency overlap: 17-Oct-2026 12:46 - 12-Nov-2026 20:18 | mutual under this engine's direction doctrine: 17-Oct-2026 12:46 - 25-Oct-2026 11:22",
+  "agreement": true,
+  "note": "Ashlesha-Magha: TA wheel has Ashlesha->Magha (Right) and Magha->Ashlesha (Left); which pairs count as 'mutual' depends on the direction doctrine"
+ },
+ {
+  "item": "Mars speed falls below TA normal speed (0d31m26.46s)",
+  "source": "KD p.123 + TA p.144",
+  "claim": "26 Oct 2026",
+  "computed_IST": "25-Oct-2026 11:22",
+  "agreement": true,
+  "note": "Independent confirmation that KD uses TA p.144's normal speed"
+ },
+ {
+  "item": "Atichari Mars in Purva Bhadrapada",
+  "source": "KD p.88",
+  "claim": "20 Mar-06 Apr 2026",
+  "computed_IST": "20-Mar-2026 21:22 - 06-Apr-2026 21:56; above TA normal speed: True",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Solar eclipse",
+  "source": "KD p.114",
+  "claim": "12 Aug 2026; Wednesday, Shravan, Cancer",
+  "computed_IST": "12-Aug-2026 21:04, Wednesday, Shravan, Cancer",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Lunar eclipse",
+  "source": "KD p.118",
+  "claim": "28 Aug 2026; Shravan, Aquarius",
+  "computed_IST": "28-Aug-2026 06:53, Friday, Shravan, Aquarius",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Mercury manifestation (Mercury's speed overtakes Venus's)",
+  "source": "KD p.99",
+  "claim": "10 Apr 2026",
+  "computed_IST": "09-Apr-2026 21:44",
+  "agreement": true,
+  "note": "TA p.70: 'Bullishness returns after speed of Mercury cross speed of Venus'"
+ },
+ {
+  "item": "Mercury manifestation (Mercury's speed overtakes Venus's)",
+  "source": "KD p.112",
+  "claim": "03 Aug 2026",
+  "computed_IST": "03-Aug-2026 13:01",
+  "agreement": true,
+  "note": "TA p.70: 'Bullishness returns after speed of Mercury cross speed of Venus'"
+ },
+ {
+  "item": "Mercury manifestation (Mercury's speed overtakes Venus's)",
+  "source": "KD p.127",
+  "claim": "14 Nov 2026",
+  "computed_IST": "13-Nov-2026 19:02",
+  "agreement": true,
+  "note": "TA p.70: 'Bullishness returns after speed of Mercury cross speed of Venus'"
+ },
+ {
+  "item": "Mercury in middle (sun ahead)",
+  "source": "TA p.25/p.49 ('18 Feb ... till end of April')",
+  "claim": "18 Feb 2014 - 30 Apr 2014",
+  "computed_IST": "16-Feb-2014 01:52 - 26-Apr-2014 08:57",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Mercury in middle (sun ahead)",
+  "source": "TA p.50",
+  "claim": "20 Apr 2017 - 22 Jun 2017",
+  "computed_IST": "20-Apr-2017 11:24 - 21-Jun-2017 19:44",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Mercury in middle (sun ahead)",
+  "source": "TA p.50",
+  "claim": "27 Aug 2017 - 08 Oct 2017",
+  "computed_IST": "27-Aug-2017 02:12 - 09-Oct-2017 02:23",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Mercury in middle (venus ahead)",
+  "source": "TA p.50",
+  "claim": "18 Feb 2018 - 21 Mar 2018",
+  "computed_IST": "17-Feb-2018 17:57 - 04-Mar-2018 23:34",
+  "agreement": false,
+  "note": "2018 Feb-Mar: computes as two windows (Mercury passed Venus 4-20 Mar)"
+ },
+ {
+  "item": "Mercury in middle (venus ahead)",
+  "source": "TA p.50",
+  "claim": "21 Sep 2018 - 16 Oct 2018",
+  "computed_IST": "21-Sep-2018 07:22 - 16-Oct-2018 01:50",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Mercury in middle (venus ahead)",
+  "source": "TA p.256",
+  "claim": "11 Jan 2020 - 26 Feb 2020",
+  "computed_IST": "10-Jan-2020 20:49 - 26-Feb-2020 07:15",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Mercury in middle (sun ahead)",
+  "source": "TA p.262",
+  "claim": "01 Jul 2020 - 18 Aug 2020",
+  "computed_IST": "01-Jul-2020 08:22 - 17-Aug-2020 20:37",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Mercury in middle (sun ahead)",
+  "source": "KD p.126/127",
+  "claim": "from 04 Nov 2026",
+  "computed_IST": "04-Nov-2026 19:54 - 01-Jan-2027 22:37",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Mercury Paap Kartari (TA definition)",
+  "source": "TA p.22",
+  "claim": "28 Oct 2011 - 2 Jan 2012",
+  "computed_IST": "Sun behind, Rahu ahead (retrograde): 15-Nov-2011 01:19 - 15-Nov-2011 20:15; Sun behind, Rahu ahead (retrograde): 02-Dec-2011 14:29 - 04-Dec-2011 14:22; Saturn behind, Rahu ahead (retrograde): 07-Dec-2011 00:45 - 27-Dec-2011 01:12",
+  "agreement": false,
+  "note": "Not reproduced: the TA definition gives only part of the window"
+ },
+ {
+  "item": "Saturn & Mars together in Capricorn 2020",
+  "source": "TA p.259",
+  "claim": "23 Mar 2020 14:42 - 4 May 2020 20:42",
+  "computed_IST": "22-Mar-2020 14:40 - 04-May-2020 20:40",
+  "agreement": false,
+  "note": ""
+ },
+ {
+  "item": "Mars enters Sagittarius 2020",
+  "source": "TA p.257",
+  "claim": "8 Feb 2020 03:52",
+  "computed_IST": "08-Feb-2020 03:52",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Venus retrograde 2020",
+  "source": "TA p.260",
+  "claim": "13 May 2020 12:16 - 25 Jun 2020 11:19",
+  "computed_IST": "13-May-2020 12:15 - 25-Jun-2020 12:18",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Saturn & Mars both retrograde 2020",
+  "source": "TA p.263",
+  "claim": "10 Sep 2020 03:54 - 29 Sep 2020 10:43",
+  "computed_IST": "10-Sep-2020 03:52 - 29-Sep-2020 10:41",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Mars in Aries & Vargottam 2020",
+  "source": "TA p.263",
+  "claim": "16 Aug 2020 18:35 - 31 Aug 2020 12:23",
+  "computed_IST": "16-Aug-2020 18:28 - 31-Aug-2020 12:09; 19-Sep-2020 16:07 - 04-Oct-2020 10:07; 24-Dec-2020 10:19 - 31-Dec-2020 05:30",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Saturn enters Capricorn navamsa 2020",
+  "source": "TA p.256",
+  "claim": "24 Jan 2020 09:50",
+  "computed_IST": "24-Jan-2020 09:56",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Jupiter leaves Sagittarius 2020",
+  "source": "TA p.258",
+  "claim": "30 Mar 2020 03:55",
+  "computed_IST": "30-Mar-2020 03:55, 20-Nov-2020 13:23",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Venus-Herschel within 7 deg 2020",
+  "source": "TA p.258",
+  "claim": "1-16 Mar 2020",
+  "computed_IST": "02-Mar-2020 09:37 - 15-Mar-2020 22:10",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Mercury-Venus conjunction 2020",
+  "source": "TA p.254-255",
+  "claim": "22 May 2020 late evening (contra-directional)",
+  "computed_IST": "22-May-2020 14:11",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Venus-Neptune conjunction 2020",
+  "source": "TA p.265 a",
+  "claim": "27 Jan 2020",
+  "computed_IST": "28-Jan-2020 01:30",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Sun-Neptune conjunction 2020",
+  "source": "TA p.265 b",
+  "claim": "08 Mar 2020",
+  "computed_IST": "08-Mar-2020 17:53",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "Mercury-Neptune conjunction 2020",
+  "source": "TA p.265 c",
+  "claim": "04 Apr 2020",
+  "computed_IST": "04-Apr-2020 06:45",
+  "agreement": true,
+  "note": ""
+ },
+ {
+  "item": "TA p.144 normal speed reproduces the 2026 Mercury speed-class boundaries",
+  "source": "TA p.144 vs 2026 document B122",
+  "claim": "12 printed boundaries",
+  "computed_IST": "1/12 within 1 day; TA crossings: 2026-01-20, 2026-02-11, 2026-04-24, 2026-06-02, 2026-08-11, 2026-09-12",
+  "agreement": false,
+  "note": "Fast/Normal edges only (Retrograde edges are stations)"
+ },
+ {
+  "item": "TA p.144 normal speed reproduces the 2026 Venus speed-class boundaries",
+  "source": "TA p.144 vs 2026 document B123",
+  "claim": "3 printed boundaries",
+  "computed_IST": "0/3 within 1 day; TA crossings: ",
+  "agreement": false,
+  "note": "Fast/Normal edges only (Retrograde edges are stations)"
+ },
+ {
+  "item": "TA p.144 normal speed reproduces the 2026 Mars speed-class boundaries",
+  "source": "TA p.144 vs 2026 document B120",
+  "claim": "2 printed boundaries",
+  "computed_IST": "0/2 within 1 day; TA crossings: 2026-10-25",
+  "agreement": false,
+  "note": "Fast/Normal edges only (Retrograde edges are stations)"
+ },
+ {
+  "item": "TA Vedha wheel vs 2026 nakshatra-Vedha tables",
+  "source": "TA pp.131-133 vs 2026 B131-B141",
+  "claim": "227 printed target cells",
+  "computed_IST": "217 agree; 10 differ (listed in finastro/pdfref/vedha.py EXCEPTIONS_2026)",
+  "agreement": true,
+  "note": "Front column mutual in TA; Left/Right labels swapped for 24 of 28 nakshatras"
+ }
+]
