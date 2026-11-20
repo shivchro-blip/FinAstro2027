@@ -13999,6 +13999,53 @@
    "hits_2027": 2
   },
   {
+   "id": "ta_261_venus_retro_in_taurus",
+   "title": "Venus retrograde in Taurus",
+   "refs": [
+    "TA p.261 [printed 231] 2020 story #8 'PROPHECY - Venus getting Retrograde in the Sign of Taurus is high Bullish on Cotton, Silver & Sugar industries'"
+   ],
+   "verdict": "High Bullish on Cotton, Silver & Sugar industries",
+   "markets": [
+    "silver",
+    "sugar",
+    "sector:Cotton"
+   ],
+   "rule": "Venus retrograde while in Taurus.",
+   "calc": "Sidereal (Lahiri) whole sign of the body; window bounded by its ingresses. Retrograde = of-date longitudinal speed < 0 (station instants as almanacs define them); Rahu/Ketu always retrograde (TA p.73).",
+   "quals": [
+    "TA p.260 (same page group): 'Retrograde Venus Bearish for five months thereafter Bullish' for the general market."
+   ],
+   "tier": "major",
+   "existing": [],
+   "effect": "",
+   "hits_2027": 0
+  },
+  {
+   "id": "kd_111_rahu_in_dhanishta",
+   "title": "Rahu in Dhanishta (market and bullion risk)",
+   "refs": [
+    "KD p.111 'Rahu in Dhanistha: Market and Bullion Risk'",
+    "KD p.113 'Rahu in Dhanistha: Negative for Markets and Bullion'"
+   ],
+   "verdict": "Market and bullion: negative outlook ('Rahu in Dhanistha, ruled by Mars (enemy), is bearish'; 'High probability of adverse moves')",
+   "markets": [
+    "gold",
+    "silver",
+    "general"
+   ],
+   "rule": "Rahu in Dhanishta nakshatra.",
+   "calc": "Sidereal (Lahiri) nakshatra of the body, 27 x 13deg20'; window = the residency, boundaries bisected to 30 s.",
+   "quals": [
+    "KD prints the window as '2 August to year end' (2026); the configuration itself lasts until Rahu leaves Dhanishta, which is the window computed here.",
+    "KD p.111: 'Rahu's vedh of Vishaka supports stability' for banking and finance; KD p.113: 'Jupiter trine may prevent' a general fall.",
+    "KD p.111 bottom: 'Trading guidance: exercise extreme caution'."
+   ],
+   "tier": "major",
+   "existing": [],
+   "effect": "",
+   "hits_2027": 1
+  },
+  {
    "id": "ta_s24_02_tithi_vruddhi_kshay_shukla",
    "title": "Tithi Vruddhi / Kshay in Shukla Paksha",
    "refs": [
@@ -14274,6 +14321,11 @@
   }
  ],
  "not_computable": [
+  {
+   "ref": "TA pp.31-39 [printed 1-9] Sections 1-2",
+   "rule": "Sectors ruled by each planet (silver: Moon, Jupiter; gold: Sun (western), Mars) and sectors represented by each sign (silver: Cancer; gold: Aries, Leo, Capricorn)",
+   "reason": "Rulership tables, not dated rules. Recorded so the sector rule of KD p.84/p.130 (malefic Vedha of a nakshatra -> rally in its lord's sectors; benefic Vedha -> fall) could be applied to silver via the Moon and Jupiter nakshatras; not applied, at the user's direction, until confirmed."
+  },
   {
    "ref": "TA pp.18-29",
    "rule": "Historical narratives 1992-2019 (Herschel-Neptune 1992, Jupiter-Saturn 2000, Rahu-Saturn 2002-03, 2008 crash factors, etc.)",

@@ -20,6 +20,7 @@ RULES = cat["rules"]
 FILES = """## 1. The two files
 
 **TA - "Tech Astro Analysis pages 1 to 265 all final new printout cq 10 2 2020.pdf"** (Parth Prophesies, 2020; 265 scanned pages, image-only, OCR'd at 150 dpi and every table read from the page image). Printed page = PDF page - 30 in the lesson part.
+* pp.31-39: Sections 1-2 - sectors ruled by each planet and represented by each sign (silver: Moon, Jupiter, Cancer; gold: Sun (western), Mars, Aries, Leo, Capricorn).
 * pp.18-30: market history 1992-2019 read astrologically (Herschel-Neptune 1992, Jupiter-Saturn 2000, 2008 crash factors, Mercury-Venus contra-directional periods, Saturn-Mars 2016/2018, Saturn-Ketu 2019) and seven "important quotes".
 * pp.40-168: the lessons - Sections 3-37: Dwidwadash/Shadashtak sign tables, day & nakshatra lords, Mercury between Sun and Venus, Mercury combustion types, dignity tables, bullish/bearish nature of signs and of each planet's placement, Moon rise, Navamsh results, Venus combustion, strong bearish/bullish aspect combinations, Panchak, 113 "important observations", the full planet-pair relationship tables (Section 25), Sankranti (window, muhurta class, yearly majority), Bhadra, sectors, the yearly cabinet, Mercury Paap Kartari, the Sarvatobhadra Vedha wheel and its rules, normal planetary speeds, D9 conjunction tables, and the gold / silver / sugar / commercial-turning sections.
 * pp.245-265: the 2020 forecast ("story of the year"), the technical corner (price rules), total days and Samvat rainfall.
