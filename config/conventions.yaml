@@ -1475,6 +1475,54 @@ node_lord_relationship:
   no_anchor_flag: no_anchor_ingress_in_span
 
 # --------------------------------------------------- conjunctions/oppositions
+# ---------------------------------------------------------------- valence
+# RULED 20-Nov-2026. The 2026 document selects rows on "malefic" and "benefic"
+# and never defines either; 12 rules were blocked on it. The classification
+# below is Reference_materials Ch 0 ("Benefic and malefic": natural benefics
+# Jupiter, Venus, a well-placed Mercury, the waxing Moon; natural malefics
+# Saturn, Mars, Sun, Rahu, Ketu, the waning Moon), refined only where the 2026
+# document's OWN rows say how it applies the words. Each refinement is measured.
+valence:
+  benefic: [Jupiter, Venus, Mercury]
+  malefic: [Sun, Mars, Saturn, Rahu, Ketu, Uranus, Pluto]
+  unclassified: [Neptune]
+  moon: kshin            # malefic inside the Kshin (Malefic) Moon window, benefic outside
+  evidence:
+    moon_is_kshin: >
+      sugar-bullish#6 prints its Moon rows as "Kshin Chandra", and every one of
+      them is a Moon-in-Taurus stretch inside the sub-table "Kshin (Malefic)
+      Moon" (Krishna Ashtami to Shukla Panchami). The document's malefic Moon
+      is its own Kshin Moon -- Ch 0's "waning Moon", made exact by the page.
+    uranus_and_pluto_malefic: >
+      B116 prints "Sun | Pluto" (21-Jan-26) and "Sun | Herschel" (14-May-26)
+      as the malefics hemming Mercury. Ch 0 classifies only the nine grahas;
+      the outers are the document's extension, followed here.
+    neptune_not_malefic: >
+      Counting Neptune as malefic adds a B116 window 13-20 Apr 2026 the page
+      does not print; leaving it out reproduces the printed rows exactly.
+    mercury_benefic: >
+      Ch 0's "well-placed" is undefined. The document treats Mercury as benefic
+      in silver-bearish#9 (Sun WITH Mercury, Mercury itself with the Sun) and
+      gold-bearish#3 (Mercury's vedh while combust), and as malefic only in
+      sugar-bullish#6's one Mercury row. Two rules to one: benefic; the
+      sugar-bullish#6 row is carried as unreproduced.
+  drishti:               # whole signs, no orb (Ch 0, Appendix B.2)
+    all: [7]
+    Mars: [4, 7, 8]
+    Jupiter: [5, 7, 9]
+    Saturn: [3, 7, 10]
+    nodes: [7]           # Appendix B.2's "some schools" 5/9 for Rahu is NOT used:
+                         # gold-bullish#2 prints only Mars on Sun in Libra
+                         # (Oct-Nov 2026), where Rahu in Aquarius would cast a
+                         # 9th onto Libra under it
+    outers: []           # Uranus, Neptune, Pluto cast no Vedic drishti
+  kartari: >
+    Paap Kartari is hemming: the nearest body behind and the nearest ahead in
+    longitude (Moon excluded) are both malefic AND each sits in the planet's
+    own sign or the sign either side (the 12th and 2nd sides). Reproduces all 9
+    B116 rows and B117's window; without the adjacency condition, bodies 120
+    degrees away "hem" and five unprinted windows appear.
+
 conjunctions:
   bodies: [Sun, Mercury, Venus, Mars, Jupiter, Saturn, Uranus, Neptune, Pluto]
   exclude_moon: true
@@ -2129,17 +2177,19 @@ verdict_coverage:
     # 38 / 20 until 19-Nov-2026, when the month system was settled
     # (purnimanta, from the Eclipse sub-table's own labels) and the three
     # groups it bounded were ported: silver-bullish#18, sugar-bullish#2, #7.
-    ported: 41
-    blocked: 17
+    # 41 / 17 until 20-Nov-2026, when the valence ruling ported gold-bullish#2,
+    # silver-bullish#3, silver-bearish#9 and sugar-bullish#6; the four Vedh
+    # groups moved from valence to vedha_wheel, gold-bullish#7 to aspect_orb.
+    ported: 45
+    blocked: 13
     # Counted off finastro/rules/config_rules.CONFIG_REGISTRY, not typed here:
     # config_rules.missing_input_counts() is the source of these numbers and the
     # harness re-derives them. silver-bearish#9 is blocked on TWO inputs and so
     # appears in two rows; the group total is 20, not 21.
     blocked_by_input:
-      valence: 9
       darshan: 4
       aspect_orb: 2
-      vedha_wheel: 2
+      vedha_wheel: 6
       no_dated_window: 1
     port_report: build/CONFIG_PORT_REPORT.md
     scope_said_41_port_delivered_38: >
@@ -2923,7 +2973,7 @@ row_kinds:
         those blanket all 365 days. The combined calendar is never empty.
       days_with_no_event_row: 105
       days_with_no_row_of_any_kind: 0
-      days_with_no_row_carrying_a_verdict_text: 2
+      days_with_no_row_carrying_a_verdict_text: 0   # 2 until the valence ports (20-Nov-2026) covered both days
       consequence: >
         Absence is reportable on the BASE TRACK, which means it is reportable
         only through `row_kind`. Filter to row_kind=event and the empty days
@@ -3063,14 +3113,17 @@ row_kinds:
       # Mercury was ported: +87 timed day rows, sub-table population only.
       # 8739 / 9534 / 8615 until 19-Nov-2026, when Eclipse and Moon Rashi
       # Parivartan were ported: +230 timed day rows, sub-table population only.
-      # 8969 / 9764 / 8845 until the month-system ports (19-Nov-2026): B111
-      # adds 3 catalogue-B rows, sugar-bullish#7 one configuration row.
-      rendered_rows: 8973
-      daily_row_equivalent: 9768
-      delta: -795
-      window_rows: 124
-      day_rows: 8849
-      daily_rows_collapsed: 919
+      # 8973 / 9768 / -795 / 124 / 8849 / 919 until the valence ports
+      # (20-Nov-2026). B117's first 2027 window is a carry-in (Jupiter already
+      # hemmed by Ketu and Mars when the span opens), so 60 period-cut days
+      # collapse to one window row and the delta moves by -59; every other
+      # cause is unchanged.
+      rendered_rows: 9651
+      daily_row_equivalent: 10505
+      delta: -854
+      window_rows: 125
+      day_rows: 9526
+      daily_rows_collapsed: 979
       non_contiguous_groups_left_daily: 0
       per_cause_P3:
         date_only_ephemeris:
@@ -3081,10 +3134,10 @@ row_kinds:
           daily_rows: 255
           window_rows: 17
           delta: -238
-        period_cut:
-          daily_rows: 151
-          window_rows: 7
-          delta: -144
+        period_cut:          # 151 / 7 / -144 until B117's carry-in (20-Nov-2026)
+          daily_rows: 211
+          window_rows: 8
+          delta: -203
         anchored:
           daily_rows: 12
           window_rows: 0
@@ -3239,7 +3292,7 @@ row_kinds:
         did.
       measured_2027:
         span_unit: (row_kind, event, instrument, venue, t_start_utc, t_end_utc)
-        span_groups: 3074   # 2938 -> 2944 (B10) -> 2983 (Kshin) -> 2988 (Mars/Mercury) -> 3073 (Eclipse, Parivartan) -> 3074 (month-system ports)
+        span_groups: 3146   # ... -> 3074 (month-system ports) -> 3146 (valence ports)
         span_groups_note: >
           2,202 until 21-Sep-2026, when the Moon's navamsa series unblocked
           b071d and split b105, adding 736 span groups and -- this is the
@@ -3279,13 +3332,16 @@ row_kinds:
         # 10 / 27 / 7 / 22 / 29 / 28 until Kshin Moon (18-Nov-2026): its
         # windows that open in Dec-2026 and run past 31-Dec-2027 are clipped
         # at both year edges, three instrument rows each, all timed.
-        clipped_start: 13
-        clipped_end: 30
+        # 13 / 30 / 10 / 25 / 35 / 34 until the valence ports (20-Nov-2026):
+        # B117's carry-in clips at the start, and windows running past
+        # 31-Dec-2027 clip at the end.
+        clipped_start: 14
+        clipped_end: 35
         clipped_start_with_open_start_false: 10
-        clipped_end_with_open_end_false: 25
-        real_endpoint_outside_the_year: 35
+        clipped_end_with_open_end_false: 30
+        real_endpoint_outside_the_year: 40
         of_which_no_instant: 1
-        of_which_timed: 34
+        of_which_timed: 39
         under_the_rule_span_unit: >
           18 spans, 1 no-instant and 17 timed, grouping by (row_kind, event,
           location, t_start_utc, t_end_utc) instead -- the unit fire() emits,
@@ -3460,12 +3516,12 @@ row_kinds:
         # 331 / 431 until 18-Nov-2026; B10 adds 3 firings, 6 daily rows.
         catalogue_b_firings:
           date_only_ephemeris: 334
-          period_cut: 142
+          period_cut: 202      # 142 until B117's carry-in (20-Nov-2026)
           civil_day_span: 105
           anchored: 11
         catalogue_b_rows:
           date_only_ephemeris: 437
-          period_cut: 151
+          period_cut: 211      # 151 until B117's carry-in (20-Nov-2026)
           civil_day_span: 255
           anchored: 12
         population_sensitivity:
@@ -3501,7 +3557,7 @@ row_kinds:
             331 / 352 / 383 before B10 was ported; its 3 firings move all three
             nested populations by exactly 3 and leave P1x and the other three
             causes where they were.
-          period_cut:          {P1: 142, P1x:  0, P2: 142, P3: 142}
+          period_cut:          {P1: 202, P1x:  0, P2: 202, P3: 202}
           civil_day_span:      {P1: 105, P1x:  0, P2: 105, P3: 105}
           anchored:            {P1:  11, P1x:  0, P2:  11, P3:  11}
           superseded_before_the_sub_table_port: >
@@ -3800,6 +3856,10 @@ source_probability:
           measured_2026_09_15: 26
           measured_2026_09_20: 27
           measured_2026_11_18: 29
+          measured_2026_11_20: 30
+          what_moved_it_2026_11_20: >
+            One family: order/neighbours, the neighbour_change series added to
+            port B116 and B117. Not a relative-house or node colocation family.
           what_moved_it_2026_11_18: >
             Two families: motion/mercury_overtakes_venus and
             motion/venus_overtakes_mercury, the speed_overtake series added to

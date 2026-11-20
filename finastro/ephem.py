@@ -367,6 +367,49 @@ def relative_speed_crossings(a: str, b: str, start: dt.datetime,
     return out
 
 
+#: The bodies a neighbour series ranks: everything with a longitude the
+#: 2026 Paap Kartari tables name, the Moon excluded (B117's own remark makes
+#: the Moon's passage an exception to the yog, not a neighbour).
+NEIGHBOUR_BODIES = ("Sun", "Mercury", "Venus", "Mars", "Jupiter", "Saturn",
+                    "Rahu", "Ketu", "Uranus", "Neptune", "Pluto")
+
+
+def neighbours(when: dt.datetime, body: str) -> tuple[str, str]:
+    """(nearest body behind, nearest body ahead) of `body` in sidereal longitude."""
+    me = longitude(when, body)
+    gaps = [(b, (longitude(when, b) - me) % 360) for b in NEIGHBOUR_BODIES
+            if b != body]
+    return (max(gaps, key=lambda g: g[1])[0], min(gaps, key=lambda g: g[1])[0])
+
+
+def neighbour_changes(body: str, start: dt.datetime, end: dt.datetime):
+    """[(instant, (behind, ahead) before, (behind, ahead) after)].
+
+    A neighbour changes only when two ranked bodies pass each other, so the
+    series is scanned hourly and each change bisected on the discrete state to
+    the second. Two changes inside one hour would be merged; the fastest
+    ranked body (Mercury, under 2.3 deg/day) cannot pass two bodies that close.
+    """
+    step = dt.timedelta(hours=1)
+    out = []
+    t = start
+    prev = neighbours(t, body)
+    while t < end:
+        nxt = min(t + step, end)
+        cur = neighbours(nxt, body)
+        if cur != prev:
+            lo, hi = t, nxt
+            while (hi - lo) > dt.timedelta(seconds=1):
+                mid = lo + (hi - lo) / 2
+                if neighbours(mid, body) == prev:
+                    lo = mid
+                else:
+                    hi = mid
+            out.append((_round_second(hi), prev, cur))
+        t, prev = nxt, cur
+    return out
+
+
 def scan_step(body: str, arc: float) -> dt.timedelta:
     """Step small enough that no arc can be skipped between samples."""
     if body in _SCAN_STEP:

@@ -786,6 +786,34 @@ def speed_overtakes():
     return out
 
 
+#: The bodies whose neighbours the build tracks: the two the 2026 Paap
+#: Kartari sections hem (B116 Mercury, B117 Jupiter).
+NEIGHBOUR_TARGETS = ("Mercury", "Jupiter")
+
+
+def neighbour_changes():
+    """Which bodies sit immediately behind and ahead of Mercury and Jupiter.
+
+    An astronomical fact with no doctrine in it: the nearest body on each side
+    in sidereal longitude, among the Sun, the planets, Uranus, Neptune, Pluto
+    and the mean nodes (the Moon excluded). Whether a neighbour is malefic, and
+    whether it is close enough to hem, is the rule layer's business (B116,
+    B117). Certainty A: each change is the exact instant two bodies pass.
+    """
+    out = []
+    for body in NEIGHBOUR_TARGETS:
+        for inst, (b0, a0), (b1, a1) in ephem.neighbour_changes(
+                body, SPAN_START, SPAN_END):
+            astro, pflags = ev.positional(inst, body)
+            astro = replace(astro, neighbour_behind_from=b0, neighbour_ahead_from=a0,
+                            neighbour_behind=b1, neighbour_ahead=a1)
+            out.append(ev.build(
+                "neighbour_change", "order/neighbours", [body], "instant", inst,
+                astro, ev.qa_for(inst, "A", flags=pflags), precision="exact",
+                id_suffix=f"{b1}-{a1}".lower()))
+    return out
+
+
 def eclipses():
     """All solar and lunar eclipses in the span.
 
@@ -951,6 +979,7 @@ GENERATORS = [
     ("stations", stations),
     ("speed-class crossings", speed_class_crossings),
     ("Mercury/Venus speed overtakes", speed_overtakes),
+    ("Mercury/Jupiter neighbours", neighbour_changes),
     ("combust / rise", combustions),
     ("eclipses", eclipses),
     ("lunations", lunations),

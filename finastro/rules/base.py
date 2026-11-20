@@ -106,6 +106,8 @@ INPUT_CERTAINTY = {
     "motion/speed_crossing": "B",
     # A — a bisected zero of a speed DIFFERENCE, no fitted level.
     "motion/speed_overtake": "A",
+    # A — the exact instants two bodies pass (the neighbour series).
+    "order/neighbours": "A",
     "visibility/combust": "B",
     "apsis": "B",
     # Shar -- B118 and B119. The quantity is exact; the INSTANT is not. The

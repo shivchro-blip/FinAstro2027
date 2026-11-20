@@ -203,6 +203,10 @@ EXPECTED_FIRINGS_MUMBAI = {
     "b010_mercury_manifestation": 3,
     # Ported 19-Nov-2026 on the purnimanta month: 17-Aug-2027, Shravan.
     "b111_lunar_eclipse_in_vaishakha_shravana_or_ashwin": 1,
+    # Ported 20-Nov-2026 on the valence ruling (Mumbai civil days).
+    "b019_venus_ahead_sun_behind_mercury_middle": 30,
+    "b116_mercury_in_paap_kartari": 133,
+    "b117_jupiter_in_paap_kartari": 224,
     "b009_mercury_combust_cycle": 144,
     "b015_venus_combust_cycle": 49,
     "b015a_venus_combust_east": 49,
@@ -3139,7 +3143,8 @@ def test_the_span_collapse_is_model_A_and_no_day_keyed_figure_moved():
            meta["days"]["days_in_year"] == 365
            and meta["days"]["days_with_no_event_row"] == 105
            and meta["days"]["days_with_no_row_of_any_kind"] == 0
-           and meta["days"]["days_with_no_row_carrying_a_verdict_text"] == 2,
+           # 2 until the valence ports (20-Nov-2026) put verdict text on both.
+           and meta["days"]["days_with_no_row_carrying_a_verdict_text"] == 0,
            f"{ {k: v for k, v in meta['days'].items() if isinstance(v, int)} }")
     record("meta publishes the rendered count, the daily equivalent and the "
            "signed delta between them",
@@ -3219,8 +3224,9 @@ def test_the_civil_year_clip_is_a_field_and_not_the_period_cut():
     both = [k for k, v in first.items()
             if v["open_start"] and v["clipped_start"]]
     record("A period-cut span can be open and clipped at once",
-           len(both) == 3,
-           f"{len(both)} spans are both; expected the three carry-in windows")
+           # Four since 20-Nov-2026: B117's Ketu|Mars hemming is the fourth.
+           len(both) == 4,
+           f"{len(both)} spans are both; expected the four carry-in windows")
 
 
 def test_every_meta_count_is_split_by_row_kind():
@@ -3397,11 +3403,12 @@ def test_the_cause_census_figures_carry_the_population_that_produced_them():
            # 5,539 / 4,744 / 8,916 until 18-Nov-2026: B10 Mercury
            # Manifestation's 6 daily rows, one day each, so +6 on both units;
            # then B111's 3 timed rows on 19-Nov-2026.
-           daily["P1"] == 5548 and size["P1"] == 4753
+           # ... then B19/B116/B117's rows on 20-Nov-2026 (6,026 / 5,172).
+           daily["P1"] == 6026 and size["P1"] == 5172
            # P3 9,447 after Kshin Moon's 525 sub-table rows, 9,534 after
            # Mars/Mercury's 87, 9,764 after Eclipse + Parivartan's 230, 9,768
            # after the month-system ports (B111 3, sugar-bullish#7 1).
-           and size["P3"] == len(rows) and daily["P3"] == 9768,
+           and size["P3"] == len(rows) and daily["P3"] == 10505,
            f"P1 {size['P1']} rendered / {daily['P1']} daily  "
            f"P2 {size['P2']} / {daily['P2']}  "
            f"P3 {size['P3']} / {daily['P3']}")
@@ -3527,7 +3534,9 @@ def test_the_cause_census_figures_carry_the_population_that_produced_them():
            "not a rounding",
            # 2,802 / 589 until B10's 3 date-only firings, 18-Nov-2026;
            # 2,807 after B111's 2 timed firings (19-Nov), filtered unchanged.
-           unfiltered == 2807 and filtered == 592,
+           # 3,219 / 652 after the valence ports (20-Nov-2026): B117's 60
+           # carry-in firings are the no-instant additions.
+           unfiltered == 3219 and filtered == 652,
            f"{filtered} of {unfiltered} P1 firings carry a no-instant reason")
 
     off = [r for r in rows
@@ -4276,6 +4285,74 @@ def test_month_system_ports_reproduce_their_printed_rows() -> None:
            if tithi else "no tithi")
 
 
+def test_valence_ports_reproduce_their_printed_rows() -> None:
+    """The valence ruling, scored through the REGISTERED rules on the 2026 sky
+    against each section's own printed rows (read from the document). A row
+    reproduces when a fired span carries the printed planets and starts within
+    the tolerance stated per check."""
+    import datetime as _dt
+    from finastro.rules.config_catalogue import G
+    from finastro.sky import Sky as _Sky
+    sky26 = _Sky.load(ROOT / "build" / "astronomy_2026.json")
+    reg = {r.id: r for r in list(R.REGISTRY) + list(config_rules.CONFIG_REGISTRY)}
+    ist = _dt.timezone(_dt.timedelta(hours=5, minutes=30))
+
+    def fired(rid):
+        return {(f.start_utc, f.end_utc): f.detail for f in
+                R.base.fire([reg[rid]], sky26, year=2026) if f.location == "mumbai"}
+
+    def at(d, t):
+        h, m = t.split(":")
+        return _dt.datetime.strptime(d.strip(), "%d-%b-%y").replace(
+            hour=int(h), minute=int(m), tzinfo=ist)
+
+    def hits(rid, rows, start_of, keyfn, tol_min):
+        sp = fired(rid)
+        n = 0
+        for row in rows:
+            t = start_of(row)
+            n += any(abs((a - t).total_seconds()) <= tol_min * 60 and keyfn(row, d)
+                     for (a, _b), d in sp.items())
+        return n
+
+    names_ = {"Herschel": "Uranus"}
+    pk = lambda row, d: {names_.get(row[4], row[4]), names_.get(row[5], row[5])} \
+        == {d["planet_1"], d["planet_2"]}
+    b116 = catalogue.B(116).tables[0].rows
+    n116 = hits("b116_mercury_in_paap_kartari", b116, lambda r: at(r[0], r[1]),
+                pk, 5) + hits("b116_mercury_in_paap_kartari",
+                              [r for r in b116 if r[0] == "14-Jul-26"],
+                              lambda r: at(r[0], r[1]) - _dt.timedelta(days=1, hours=9),
+                              pk, 5)
+    record("B116 Paap Kartari reproduces all 9 printed rows (14-Jul-26 opens at "
+           "the 13-Jul Sun-Mercury conjunction)", n116 == 9,
+           f"{n116} of {len(b116)}")
+    b117 = catalogue.B(117).tables[0].rows[:1]
+    record("B117 reproduces its printed 25-Aug-26 Mars|Ketu window",
+           hits("b117_jupiter_in_paap_kartari", b117, lambda r: at(r[0], r[1]),
+                pk, 5) == 1, "25-Aug-26")
+    g2 = G("gold-bullish", 2).tables[0].rows
+    record("gold-bullish#2 reproduces Mars 4th on the Libra Sun",
+           hits("cfg_gold_bullish_02_sun_libra_aspected_by_malefics", g2,
+                lambda r: at(r[2], r[3]), lambda r, d: "Mars 4th" in d, 5) == 1,
+           str(g2))
+    s3 = G("silver-bullish", 3).tables[0].rows
+    record("silver-bullish#3 reproduces its Dhanistha window",
+           hits("cfg_silver_bullish_03_sun_pushya_or_dhanistha_without_benefic", s3,
+                lambda r: at(r[0], r[1]), lambda r, d: True, 5) == 1, str(s3))
+    b9 = G("silver-bearish", 9).tables[0].rows
+    record("silver-bearish#9 reproduces both printed 'with Mercury' rows",
+           hits("cfg_silver_bearish_09_sun_three_signs_with_or_aspected_by_benefics",
+                b9, lambda r: at(r[3].replace("-25", "-26"), r[4]),
+                lambda r, d: "With Mercury" in d, 5) == 2, f"{len(b9)} printed")
+    u6 = [r for r in G("sugar-bullish", 6).tables[0].rows if r[0] != "Mercury"]
+    record("sugar-bullish#6 reproduces every non-Mercury row (Kshin Chandra = the "
+           "Kshin Moon); its Mercury row is the ruling's one carried miss",
+           hits("cfg_sugar_bullish_06_herschel_with_any_malefic", u6,
+                lambda r: at(r[1], r[2]),
+                lambda r, d: r[0] in d, 5) == len(u6) == 7, f"{len(u6)} rows")
+
+
 def test_kshin_moon_reproduces_its_own_printed_table() -> None:
     """Kshin (Malefic) Moon, fired on the 2026 sky through the REGISTERED
     sub-table rule, against the section's own 13 printed windows (read from
@@ -4331,6 +4408,7 @@ def main() -> int:
     test_mars_mercury_reproduces_its_own_printed_table()
     test_eclipse_and_parivartan_reproduce_their_own_printed_tables()
     test_month_system_ports_reproduce_their_printed_rows()
+    test_valence_ports_reproduce_their_printed_rows()
     test_every_ported_subtable_rule_is_pinned_against_its_printed_table()
     test_axes_and_tier_derivation()
     test_labels_are_from_the_config_vocabulary()

@@ -762,6 +762,27 @@ def b_bhadra():
     return blocks
 
 
+def b_kartari(rid, body):
+    """The 2026 Paap Kartari table: window, the two hemming malefics, and the
+    hemmed planet's sign (with any sign change inside the window)."""
+    rows = []
+    for f in sorted({(f.start_utc, f.end_utc): f for f in FIRED.get(rid, [])}.values(),
+                    key=lambda f: f.start_utc):
+        d = f.detail
+        s0 = ephem.position(max(f.start_utc, Y0 - D(days=400)) + D(minutes=1), body).sign
+        s1 = ephem.position(f.end_utc - D(minutes=1), body).sign
+        sign = s0 if s0 == s1 else f"{s0}, then {s1}"
+        rows.append(_firing_cells(f) + [SOURCE_NAME.get(d["planet_1"], d["planet_1"]),
+                                        SOURCE_NAME.get(d["planet_2"], d["planet_2"]), sign])
+    return [T(["Start Date", "Start Time", "End Date", "End Time", "Planet-1",
+               "Planet-2", "Sign"], rows or [[f"No occurrence in {YEAR}"] + [""] * 6]),
+            N(f"{body} hemmed by malefics: the nearest body behind it and the nearest ahead "
+              f"in longitude (Moon excluded) are both malefic, each in {body}'s sign or the "
+              f"sign either side. Malefic: Sun, Mars, Saturn, Rahu, Ketu, Uranus (Herschel) and "
+              f"Pluto (Reference_materials Ch 0, plus the 2026 tables' own Herschel and Pluto "
+              f"rows; Neptune is not malefic there). Times {ZLONG}.", "flag")]
+
+
 def _max_elongations(body="Mercury"):
     lo, hi = Y0 - D(days=10), Y1 + D(days=10)
     f = lambda t: abs(ephem.separation(t, body, "Sun"))
@@ -1171,6 +1192,8 @@ DIRECT = {
     54: lambda: b_outer_aspects("Pluto", "opposition"),
     57: lambda: b_apsis("apogee"), 58: lambda: b_apsis("perigee"),
     59: b_perihelion,
+    116: lambda: b_kartari("b116_mercury_in_paap_kartari", "Mercury"),
+    117: lambda: b_kartari("b117_jupiter_in_paap_kartari", "Jupiter"),
     111: lambda: [T(["Date", "Day", "Month"],
                     [[f.civil_date.strftime("%d-%b-%y"), f.civil_date.strftime("%A"),
                       f.detail["month"]] for f in sorted(FIRED.get(

@@ -691,23 +691,38 @@ rule(
 # proviso, fired without evaluating the proviso, would assert something the
 # source conditioned -- so the ordering half is left uncomputed with the
 # missing input named, rather than fired with the condition quietly dropped.
-blocked(
+def _b19(sky):
+    """B18's mirror ordering (Venus ahead, Sun behind, Mercury between),
+    kept only where a malefic casts a drishti on Mercury's sign."""
+    from . import valence as VAL
+    order = _middle("Venus", "Sun", "Mercury")(sky)
+    bodies = ["Mercury"] + [b for b in VAL.CLASSICAL if b != "Mercury"]
+
+    def malefic_aspect(st, t):
+        ms = st.at("Mercury", "sign", t)
+        hits = sorted(f"{b} {VAL.ordinal(h)}" for b in VAL.CLASSICAL
+                      if b != "Mercury" and st.valence(b, t) == "malefic"
+                      and (h := VAL.aspects(b, st.at(b, "sign", t), ms)))
+        return ", ".join(hits) or None
+    asp = VAL.piecewise(sky, bodies, malefic_aspect)
+    return intersect(order, asp, lambda o, a: {"malefic_aspect": a})
+
+
+rule(
     id="b019_venus_ahead_sun_behind_mercury_middle",
     section=B(19),
     rule_family="residency/order_in_sign",
     condition_text=B(19).remarks[0],
     condition_from="remark[0]",
-    inputs=("ingress/nakshatra", "ingress/navamsa"),
-    missing_inputs=(
-        "a benefic/malefic classification of the aspects on a body. The "
-        "remark's verdict holds only 'provided there is a malefic aspect on "
-        "Mercury'; the layer carries aspect records but no valence for them, "
-        "and the source prints none either",
-    ),
+    inputs=("ingress/nakshatra", "ingress/navamsa", "ingress/sign",
+            "panchang/tithi"),
     flags=(ORDER_FLAG, "ordering_is_three_body",
-           "verdict_withheld_proviso_unevaluated"),
-    notes="The ordering half -- Venus ahead, Sun behind, Mercury between -- is "
-          "computable and is the mirror of B18. It is not emitted, because the "
-          "section's verdict is the conditioned one and firing the condition "
-          "without it would strand a row with no statable outcome.",
-)
+           "outcome_stated_but_not_separable_no_dash"),
+    notes="PORTED 20-Nov-2026 (blocked on valence until then). The ordering is "
+          "B18's ladder mirrored; the proviso 'a malefic aspect on Mercury' is "
+          "a whole-sign drishti from a malefic (config `valence`). The verdict "
+          "('it is Bearish') sits inside the remark, joined by a comma, as in "
+          "B18, so it travels in condition_text and not as a separate field. "
+          "The section's printed remarks describe Mercury's hemming and its "
+          "aspects rather than stating dated windows the rule can be scored on.",
+)(_b19)

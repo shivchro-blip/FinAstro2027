@@ -229,6 +229,12 @@ class Astronomy:
     lord_relationship: Any = UNSET      # nodes only, in place of a dignity
     eclipse_type: Any = UNSET
     magnitude: Any = UNSET
+    #: Neighbour-change records only: the nearest body behind and ahead of the
+    #: record's body in sidereal longitude (Moon excluded), before and after.
+    neighbour_behind_from: Any = UNSET
+    neighbour_ahead_from: Any = UNSET
+    neighbour_behind: Any = UNSET
+    neighbour_ahead: Any = UNSET
 
     def as_dict(self) -> dict:
         return {f.name: getattr(self, f.name) for f in fields(self)
