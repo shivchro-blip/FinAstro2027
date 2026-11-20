@@ -1,0 +1,70 @@
+# TA image transcriptions (verified by viewing page images)
+p41 S4 Dwidwadash (2/12) by sign, AUSPICIOUS BULLISH pairs (from 041.png, transcribed pre-compaction) -- note "IF BOTH PLANET DIRECT RESULT RELIABILITY VERY HIGH / IF ANY OF THEM RETRO OR COMBUST RESULT WILL BE CONTRA"
+p42 S4 INAUSPICIOUS BEARISH 2/12 pairs: Libra-Scorpio (Remember Jan-Feb 2016); Sagittarius-Capricorn; Aquarius-Pisces; Aries-Taurus; Gemini-Cancer; Leo-Virgo
+p43 S5 Shadashtak (6/8) by sign AUSPICIOUS BULLISH: Aries-Scorpio; Taurus-Libra; Gemini-Capricorn; Cancer-Sagittarius; Leo-Pisces; Virgo-Aquarius
+p44 S5 INAUSPICIOUS BEARISH 6/8: Aries-Virgo; Taurus-Sagittarius; Gemini-Scorpio; Cancer-Aquarius; Leo-Capricorn; Libra-Pisces
+p45 S6 Day lord = nakshatra lord -> day Bullish. Mon Moon; Tue Mars; Wed Mercury & Rahu; Thu Jupiter Ketu; Fri Venus; Sat Saturn; Sun Sun
+p52 S11 exalt/debil/trine(mooltrikona): Sun Ari/Lib/Leo; Moon Tau/Sco/Tau; Mars Cap/Can/Ari; Mer Vir/Pis/Vir; Jup Can/Cap/Sag; Ven Pis/Vir/Lib; Sat Lib/Ari/Aqu
+p53 S12 exaltation degrees: Sun10 Moon3 Mars28 Mer15 Jup5 Ven27 Sat20. Vargottam = same sign in D1 and D9
+p54 S13 Aries Bullish: Sun or Mars with Saturn & Rahu very Bullish; Jupiter with Venus or Mercury Bearish. Taurus Very Bullish: Mars, Venus(R), Saturn, Rahu or Pluto there very Bullish; Direct Jupiter, Moon, Neptune or Ketu there Bearish
+p41 S4 2/12 AUSPICIOUS BULLISH: Aries-Pisces; Taurus-Gemini; Cancer-Leo; Virgo-Libra; Scorpio-Sagittarius; Capricorn-Aquarius. Footnote: IF BOTH PLANET DIRECT RESULT RELIABILITY VERY HIGH; IF ANY OF THEM RETRO OR COMBUST RESULT WILL BE CONTRA
+p55 S13 Gemini Bearish: Saturn(R), Mercury(R), Mars, Rahu, Sun any 2 together very Bullish; Mercury, Jupiter, Venus, Neptune any 2 together very Bearish
+    Cancer Bearish: Mars(R), Saturn(R), Mercury(R) with either Rahu/Herschel Bullish; Jupiter, Venus, Mercury & Neptune any 2 together very Bearish
+    Leo Bullish: Venus(R), Sun, Saturn or Herschel any 2 very Bullish; Jupiter, Venus, Mercury, Neptune any 2 Bearish
+p56 Virgo Bearish: Saturn, Sun, Mars, Herschel, Rahu any 2 extreme Bullish; Jupiter, Venus, Ketu any 2 extreme Bearish
+    Libra Bearish: Saturn(R), Venus(R), Rahu or Mars any 2 very Bullish; Jupiter, Mercury, Moon any 2 extreme Bearish
+    Scorpio Bullish: Mars(R), Saturn(R), Rahu, Sun any 2 historically Bullish; If Sun Eclipse too happen unprecedented Bullish; Jupiter, Mercury, Moon or Ketu any 2 very Bearish
+    Sagittarius Bearish: Jupiter(R), Venus(R), Saturn(R), Rahu or Sun any 2 extreme Bullish; Jupiter, Venus, Mercury, Moon any 2 very Bearish
+p57 Capricorn 1-sided Bullish: Mars(R), Saturn(R), Sun, Rahu, Herschel, Pluto any 2 very very Bullish; Mercury & Moon together little Bearish
+    Aquarius Bearish: Mars(R), Venus(R), Rahu, Sun any 2 Bullish; Saturn, Jupiter, Mercury all 3 together extreme Bearish
+    Pisces Bearish: Jupiter(R), Saturn(R), Mars & Rahu any 2 sudden Bullish; Mercury, Moon, Neptune, Jupiter any 2 extreme Bearish
+    footer every page: (R) MEANS RETROGRADE
+p58 S14 Nature of planets (placement only). SUN extreme bullish: Ari,Tau,Sco,Cap very Bullish; Gem,Can,Pis Bearish; with Saturn or Mars in bullish signs very Bullish; with Jupiter, Mercury, Neptune in bearish signs very Bearish
+p59 MOON very short term: Ari,Tau,Leo,Lib,Sco,Cap,Aqu Bullish; Gem,Can,Vir,Sag,Pis Bearish; with Mars,Venus,Saturn,Rahu,Herschel,Pluto Bullish; with Jupiter,Neptune,Mercury,Ketu Bearish
+    MARS extreme bullish: Ari,Tau,Sco,Cap,Aqu Bullish; Gem,Vir,Lib,Pis Bearish; with Saturn Rahu in bullish signs very Bullish; with Jupiter,Moon,Neptune in bearish signs Bearish
+p60 MERCURY sudden sentiment changer: Ari,Tau,Leo,Lib,Sco,Aqu Bullish; with Sun,Mars,Saturn,Rahu,Pluto,Herschel Bullish; with Jupiter,Neptune,Moon,Ketu Bearish; with Venus dealt separately; Direct mostly Bearish; Retrograde mostly Bullish
+p61 JUPITER mostly bearish: Ari,Leo,Lib,Sco,Cap,Aqu Bullish; Gem,Can,Vir,Sag,Pis Bearish; with Sun,Mars,Venus,Saturn,Rahu Bullish; with Mercury,Neptune,Ketu,Moon Bearish, trend different in Direct & Retrograde
+    VENUS extreme bullish: Ari,Tau,Leo,Lib,Sco,Cap,Aqu Bullish; Gem,Can,Vir,Sag,Pis Bearish; with Sun,Mars(R),Saturn(R),Rahu,Herschel high Bullish; with Mercury,Jupiter,Moon,Neptune Bearish
+p62 SATURN unstable: Ari,Leo,Lib,Sco,Cap,Aqu Bullish; Gem,Can,Sag,Pis Bearish; with Mars(R),Sun,Rahu,Venus,Herschel very Bullish; with Mercury,Jupiter,Moon,Neptune ultra Bearish; more Bullish or Bearish as Direct/Retrograde is mirror image
+p63 RAHU/KETU one-sided Bullish: Gem,Leo,Lib,Sco,Cap with Retro Bullish planets Very Bullish; Can,Vir,Sag,Pis with Bearish planets Very Bearish; with Sun, Moon after Ashtami to Amavasya, Mars(R), Saturn(R), Venus(R), Herschel, Pluto one sided Bullish; with Direct Venus, Mercury & Neptune Bearish
+p64 HERSCHEL extreme bullish: Ari,Tau,Sco,Cap,Aqu extreme Bullish; Gem,Vir,Lib,Pis ordinary Bearish; with Saturn,Rahu,Sun in bullish signs great Bullish; with Jupiter,Moon,Neptune in bearish signs Bearish
+p66 PLUTO bullish: Ari,Leo,Lib,Cap,Aqu Bullish; Gem,Can,Sag,Pis Bearish; with Mars(R),Sun,Rahu,Venus,Herschel Bullish; with Mercury,Jupiter,Moon,Neptune Bearish; very volatile at time of changing direction.
+    BOTTOM NOTE (S14): THIS IS JUST PLACEMENT OF PLANET WHICH HAS VERY SMALL ROLE TO PLAY IN DECIDING BULLISH/BEARISH MARKETS SO SHOULD NOT BE TAKEN AS EXCLUSIVE RESULTS BASED ON IT
+p65 NEPTUNE bearish: Ari,Leo,Lib,Sco,Cap,Aqu Bullish; Gem,Can,Vir,Sag,Pis Bearish; more Bullish as Retrograde; more Bearish as Direct; with Sun,Mars,Venus,Saturn & Rahu Bullish; with Mercury,Jupiter,Ketu,Moon Bearish; scams & bull/bear syndicate ruled by it
+p46-48 S7/S8 standard sign lords and Vimshottari nakshatra lords (identical to finastro tables; verified 47). Note p46: Rahu/Ketu have no sign lordship. Note p48: every nakshatra has 4 charans; every sign = 9 charans
+p68 S16 NAVAMSH RESULTS (Moon's navamsa sign): Aries+ Taurus+ Gemini- Cancer+ Leo+ Virgo- Libra+ Scorpio+ Sagittarius- Capricorn+ Aquarius+ Pisces-. Bottom: RELIABILITY VERY LOW AS MOON ALONE DON'T DRIVE THE MARKETS
+p72 S19 STRONG BEARISH: Mars-Saturn 2/12 (seen Jan/Feb 16), 3/11, 5/9; Mars-Herschel 6/8; Mars-Neptune 6/8; Mars-Jupiter 4/10, 5/9, 6/8; Mars-Neptune 5/9; Mars-Rahu 4/10; Sun-Herschel 4/10; Neptune-Rahu 4/10
+p73 S20 VERY STRONG BEARISH: Herschel-Pluto 6/8; Herschel-Neptune conjunction (worst, like 1992); Saturn 10th aspect on Jupiter (2015). Notes: IMPACT STARTS WHILE PLANETS MOVE CLOSER TO THIS ASPECT; ONCE THEY MOVE AWAY FROM THOSE DEGREES IMPACT GETS OVER; CONDITION - BOTH PLANETS SHOULD BE DIRECT FOR 100% OF RESULT EXCEPT RAHU WHICH IS ALWAYS RETROGRADE
+p74-75 S21 STRONG BULLISH: Jup-Sat 6/8 (2012); Jup-Her 3/11; Jup-Her 6/8 (2016); Jup-Nep 5/9 (2013/14); Jup-Nep 6/8 (Sept'16 top example); Jup-Plu 3/11; Jup-Plu 5/9; Jup-Rahu 5/9 (2013/14); Jup-Rahu 6/8 (2012); Mars-Sat conj (6826-8968); Rahu-Sat 5/9 (2017); Rahu-Her 5/9; Rahu-Nep 5/9 (2016); Rahu-Nep 6/8 (Oct15). Bottom: BASED ON BOTH PLANETS EXCEPT RAHU DIRECT
+p76 S22 STRONG BULLISH SHORT TERM: Ven-Sat 3/11; Ven-Sat 5/9; Ven-Her conj; Ven-Her 5/9; Ven-Rahu 5/9; Mer-Sat 3/11; Mer-Sat 5/9; Mer-Her 2/12; Mer-Rahu conj; Mer-Rahu 5/9. Bottom: RELIABILITY OF ALL THESE IS SUBJECT TO NO MAJOR CONTRA EFFECT PLAYING & MOSTLY LIMITED TO SECTOR SPECIFIC
+p93 header printed "SUN WITH MARS" a second time (p88-89 already has Sun with Mars with different results). Sits between Sun-Neptune and Moon-Mercury -> printing error, context = MOON WITH MARS. Together Bullish; 7th Bullish; 6/8 Bearish; 5/9 Bearish; 3/11 both side; 2/12 both side; 4/10 after mild fall sudden big upmove
+p131-133 (printed 101-103) VEDHA wheel BY NAKSHTRA -> TO SOUTH/RIGHT, TO EAST/LEFT, TO FRONT: full 28 rows transcribed in work/ta_wheel.py (viewed images).
+   VALIDATION vs 2026 B131-B141 printed cells: 217/227 agree once 2026 Left/Right labelling is mapped (2026 labels == TA labels for Revati, Ashwini, Bharani, Krittika; swapped for the other 24). Front column fully mutual (symmetric) in TA.
+   Mismatches: B131 Sun rows Chitra..Mula Right column shifted one row (2026 error: Chitra R=Jyeshtha exp Mrigashira; Swati R=Anuradha exp Rohini; Vishakha R=Vishakha(!) exp Krittika; Anuradha L=Bharani exp Vishakha, R=Swati exp Bharani; Jyeshtha R=Chitra exp Swati; Mula R=Hasta exp Chitra)
+               B136 Saturn Atichari rows Uttara Bhadrapada/Revati print target in Right column but target = 2026-Left target (column placement)
+               B139 Herschel Rohini Front printed Uttara Ashadha; TA = Abhijeet (27-nakshatra simplification?)
+   All 95 wheel entries in vedha.py are members of TA's 3-target set for that nakshatra.
+p134 A BASIC RULES: 1 Sun, Moon, Rahu & Ketu do Vedha all 3 sides. 2 Jup, Mars, Ven, Sat, Mer: right side while Retrograde, left side while Direct. 3 Mars R->D continues left 4 days then rule 2. 4 Mercury 3 days. 5 Jupiter 8 days. p135 6 Venus 5 days. 7 Saturn 10 days.
+   [NB the literal text says "continue Vedha on LEFT hand side" after turning direct -- i.e. post-station lag; we read as: the retro (right) side persists? text literally says left. Record verbatim.]
+p136 B STRENGTH: strong = 2 planets vedha each other (mutual). Weak: A. Moon,Mars,Mercury,Jupiter,Venus or Saturn if vedha by Sun; B. Moon < 8 deg or > 22 deg (of sign? phase?) weak
+p137 C BENEFIC/MALEFIC: 1 Moon, Mercury, Jupiter, Venus benefic -> their Vedha Bearish. 2 Moon malefic from Krishna Ekadashi till Shukla Panchami -> Vedha Bullish. 3 Moon & Mercury become malefic if with malefic planets in single pad of any nakshatra -> Vedha Bullish. 4 Sun, Mars, Saturn, Rahu, Ketu malefic -> Vedha Bullish & reverses trend. 5 When Vedha ends with bearish implications it reverses the trend
+p138-139 D EFFECT ON SIGNS: Vargottam planet -> vedha intensity highest; sector rulership per sign ... Bearish if Vedha by Benefic Planets (sign-sector, needs sector table)
+p140-141 E SPECIFIC VEDHA: Sun-Ketu Bearish; Mars-Rahu Bearish; Venus-Ketu Bearish; Venus-Rahu Bearish; Venus-Mercury Bearish; Venus-Herschel mutual Bearish; Mercury-Moon Bearish; Jupiter-Moon Bearish; Venus-Moon Bearish; Mars-Mercury Bullish; Saturn-Moon Bullish; Jupiter-Mars mutual Bullish 13 days; Saturn-Mars mutual Bullish 20 days; Saturn-Mars Bullish 10 days; Venus-Jupiter Bullish
+p144 (printed 114) NORMAL SPEED PER DAY: Sun 0d59m10.68s; Moon 13d20m0s; Mars 0d31m26.46s; Mercury 1d40m0s; Jupiter 0d4m59.17s; Venus 1d36m0s; Saturn 0d2m0.4s; Node 0d3m11s. Lower = slow/Mand; higher = fast/Atichari
+p146-153 (printed 116-123) NAVAMSH (D9) CONJUNCTION RESULTS (two bodies in same navamsa sign):
+ SUN: Moon Bullish; Mars Bullish; Mercury Bullish; Jupiter Bullish; Venus Bullish; Saturn Bearish; Rahu Bearish; Ketu Bearish; Herschel Bullish; Neptune Bearish; Pluto Bullish
+ MOON: Mars Bullish; Mercury Temporary Bounce; Jupiter Bearish; Venus Bearish; Saturn Bullish; Herschel Bullish; Neptune Bearish; Pluto Bullish; Rahu Bullish; Ketu Bearish
+ MARS: Mercury Bullish; Jupiter Bullish; Venus Bullish; Saturn Bullish; Rahu Bearish; Herschel Sudden Rally; Neptune Bearish; Pluto Bullish
+ MERCURY: Jupiter Bullish; Venus Turning; Saturn Bullish; Rahu Bullish; Ketu Bullish; Herschel Sudden Rally; Neptune Bearish; Pluto Bullish
+ JUPITER: Venus Bullish; Saturn Bullish; Rahu Turning; Ketu Bullish; Herschel Bullish; Neptune Bearish; Pluto Bullish
+ VENUS: Saturn Bullish; Rahu Bearish; Ketu Bullish; Herschel Positive turning; Neptune Bearish; Pluto Bullish
+ SATURN: Rahu Positive turning; Ketu Positive turning; Herschel Bearish; Neptune Bearish; Pluto Bearish
+ RAHU: Herschel Bullish; Neptune Bearish; Pluto Bullish
+ HERSCHEL: Neptune Biggest crash; Pluto Bullish
+ NEPTUNE: Pluto Bearish
+p123-124 S29 SECTORS: Govt Bank Guru+Sun; Private bank Guru+Mercury; Construction Mars+Saturn; Medicine Mars+Sun; FMCG Venus+Moon; Cement Moon+Saturn; Computer Mercury+Venus+Rahu; Electricity Mars+Mercury; Communications Mercury+Moon; Media Mercury+Venus; Automobile Mars+Venus; Iron Saturn; Electronic Mercury+Rahu; Oil Saturn+Moon; Textile Venus+Guru; Compost Fertilizers Saturn+Mars; Chemical Mars; Bank Nifty Jupiter; Nifty Sun; Metal Mars. (No gold/silver row; gold/silver handled in S34/S35.)
+p118 (printed 88) S27: 15 Muhurta: Bharani, Ardra, Ashlesha, Swati, Jyeshtha, Shatabhisha. 30 Muhurta: Ashwini, Krittika, Mrigashira, Pushya, Magha, Purva Phalguni, Hasta, Chitra, Anuradha, Mula, Purva Ashadha, Shravana, Dhanishta, Purva Bhadrapada, Revati. Row label printed "60 Muhurta" but row text says "than 45 Muhurta": Rohini, Punarvasu, Uttara Phalguni, Vishakha, Uttara Ashadha, Uttara Bhadrapada. (p119 results table uses 45 -> label "60" is a printing error)
+p119: 15 M: Grains, fruits & vegetables costly, inflation rises, Bullish in stock market, excess or deficiency of rains. 30 M: prices & inflation in small range, markets neutral, medium rains. 45 M: excessive rains, supply exceeds demand, negative markets & low inflation.
+p125 S30 cabinet: King = day(lord) of Chaitra Shukla Pratipada; Mantri = day of Sun ingress Aries; Sasyesh = Cancer ingress; Dhanyesh = Sagittarius ingress; Meghesh = Sun enters Ardra; Rashesh (juicy products) = Libra ingress; Nirshesh (metals & mining) = Capricorn ingress; Falesh = Pisces ingress; Dhanesh (wealth) = Virgo ingress; Durgesh (defence) = Leo ingress.
+p126 King results: Sun: production of grains, veg & fruits less, end of year most deficient. Moon: excess of everything, still 7th & 8th month prices rise. Mars: deficiency & prices higher, unrest & chaos. Mercury: business good despite soft prices, sufficient goods. Jupiter: excess & prices fall but if rains in Ashvin prices rise again. Venus: excess & prices fall except Rice which rises big in last 6 months. Saturn: less rainfall & price rise, esp. coal, iron & wool.
+p127 Mantri results: Sun grains & juicy products bullish. Moon white goods production high so prices fall (rice, cotton, silver, all white goods). Mars wheat & milk products very costly. Mercury everything plenty & cheap. Jupiter dry fruits, fruits & grains in excess with good rainfall. Venus similar to Jupiter. Saturn similar to Mars.

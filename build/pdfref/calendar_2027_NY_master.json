@@ -9,10 +9,10 @@
    "build/calendar_2027.json (existing calendar)"
   ],
   "counts": {
-   "pdf_rules": 723,
-   "pdf_rules_with_detector": 714,
+   "pdf_rules": 724,
+   "pdf_rules_with_detector": 715,
    "pdf_rules_mapped_to_existing": 79,
-   "new_events_major_yearly": 1530,
+   "new_events_major_yearly": 1532,
    "new_events_moon_layer": 4563,
    "existing_rows_carried": 601,
    "existing_rows_with_pdf_text": 463
@@ -26886,6 +26886,37 @@
    "tier_existing": "source_backed",
    "claim_tag": "Observed",
    "gold_silver_relevance": "not in a gold/silver instrument"
+  },
+  {
+   "uid": "e15816d4c2204945",
+   "source": "reference_pdfs",
+   "tier": "major",
+   "event_title": "Hemisphere date (equinox) - high-probable turning event",
+   "date_time": {
+    "kind": "instant",
+    "start_NY": "2027-03-20 16:24 EDT",
+    "start_IST": "2027-03-21 01:54 IST",
+    "start_UTC": "2027-03-20T20:24:50+00:00"
+   },
+   "planetary_condition": "At start: Sun 05.76 deg Pisces (Uttara Bhadrapada pada 1; D9 Leo), 0.993 deg/day | Computed: hemisphere: North (March equinox, tropical Sun 0 deg)",
+   "astrological_rule": "The Sun crosses the celestial equator (tropical 0 deg / 180 deg).",
+   "source_interpretation": "Hemisphere date (equinox) - high-probable turning event: High-probable turning event (twice a year)",
+   "financial_market_significance": "High-probable turning event (twice a year) -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "KD p.31: identify the high or low price on the turning date and use it as the reference level; treat turning dates as signals within a broader strategy, not standalone predictors."
+   ],
+   "source_reference": [
+    "KD p.32",
+    "KD pp.37-70 charts ('North Hemisphere' ~20-21 Mar, 'South Hemisphere' ~22-23 Sep)"
+   ],
+   "calculation_method": "Tropical (not sidereal) solar longitude crossing 0 or 180 deg; the KD charts date the North/South hemisphere events at the equinoxes. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "general"
+   ],
+   "rule_ids": [
+    "kd_032_hemisphere_dates"
+   ],
+   "gold_silver_relevance": "not stated by source"
   },
   {
    "uid": "17b5d11092766801",
@@ -81466,6 +81497,37 @@
    "tier_existing": "source_backed",
    "claim_tag": "Classical",
    "gold_silver_relevance": "not in a gold/silver instrument"
+  },
+  {
+   "uid": "552152a15e9c88d0",
+   "source": "reference_pdfs",
+   "tier": "major",
+   "event_title": "Hemisphere date (equinox) - high-probable turning event",
+   "date_time": {
+    "kind": "instant",
+    "start_NY": "2027-09-23 02:01 EDT",
+    "start_IST": "2027-09-23 11:31 IST",
+    "start_UTC": "2027-09-23T06:01:52+00:00"
+   },
+   "planetary_condition": "At start: Sun 05.75 deg Virgo (Uttara Phalguni pada 3; D9 Aquarius), 0.978 deg/day | Computed: hemisphere: South (September equinox, tropical Sun 180 deg)",
+   "astrological_rule": "The Sun crosses the celestial equator (tropical 0 deg / 180 deg).",
+   "source_interpretation": "Hemisphere date (equinox) - high-probable turning event: High-probable turning event (twice a year)",
+   "financial_market_significance": "High-probable turning event (twice a year) -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "KD p.31: identify the high or low price on the turning date and use it as the reference level; treat turning dates as signals within a broader strategy, not standalone predictors."
+   ],
+   "source_reference": [
+    "KD p.32",
+    "KD pp.37-70 charts ('North Hemisphere' ~20-21 Mar, 'South Hemisphere' ~22-23 Sep)"
+   ],
+   "calculation_method": "Tropical (not sidereal) solar longitude crossing 0 or 180 deg; the KD charts date the North/South hemisphere events at the equinoxes. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "general"
+   ],
+   "rule_ids": [
+    "kd_032_hemisphere_dates"
+   ],
+   "gold_silver_relevance": "not stated by source"
   },
   {
    "uid": "0fe236c057459f20",

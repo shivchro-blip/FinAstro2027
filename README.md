@@ -752,3 +752,7 @@ bottom-of-table notes, on its own engine (Swiss Ephemeris, Lahiri, mean node).
 The existing calendar (`build/calendar_2027.*`) is not modified: its rows are
 carried into the New York master calendar, annotated with the PDF text where a
 PDF rule states the same condition.
+
+A page-by-page extraction of both PDFs (page image, verified table
+transcriptions, OCR text, searchable) is in `Reference_materials/extracted/`
+(open `index.html`); rebuild it with `python tools/extract_reference_pdfs.py`.

@@ -1914,6 +1914,23 @@ rule(id="kd_091_rahu_kaal_thursday_rahu_ketu_nakshatra", title="Thursday Rahu Ka
      calc="Rahu Kaal = 6th eighth of New York daylight on Thursday (sunrise-sunset from the astronomy layer); Moon's nakshatra sampled across the window.",
      detector=_rahu_kaal_thursday, existing=("sub_rahu_or_ketu_nakshatra_on_a_thursday",))
 
+def _hemisphere(ctx):
+    from .. import ephem as E
+    from .engine import crossings
+    out = []
+    for t, a, b in crossings(ctx.grid, lambda s: int(E.position(s.t, "Sun", sidereal=False).lon // 180)):
+        if t.year == ctx.year:
+            out.append(Hit(t, None, ("Sun",), {"hemisphere": "North (March equinox, tropical Sun 0 deg)" if b == 0 else "South (September equinox, tropical Sun 180 deg)"}))
+    return out
+
+
+rule(id="kd_032_hemisphere_dates", title="Hemisphere date (equinox) - high-probable turning event", refs=("KD p.32", "KD pp.37-70 charts ('North Hemisphere' ~20-21 Mar, 'South Hemisphere' ~22-23 Sep)"),
+     verdict="High-probable turning event (twice a year)", markets=("general",),
+     rule="The Sun crosses the celestial equator (tropical 0 deg / 180 deg).",
+     calc="Tropical (not sidereal) solar longitude crossing 0 or 180 deg; the KD charts date the North/South hemisphere events at the equinoxes.",
+     detector=_hemisphere, quals=("KD p.31: identify the high or low price on the turning date and use it as the reference level; treat turning dates as signals within a broader strategy, not standalone predictors.",))
+
+
 # ======================================================================
 # Annotation-only entries: the condition is already a calendar rule and the
 # PDF adds source text, not a new date.
@@ -1953,7 +1970,11 @@ for ref, text, why in (
     ("TA pp.254-265", "Story of 2020 (dated 2020 events)", "2020-specific; used to validate the computations (Mercury middle 2020, Venus-Herschel, Saturn-Mars) and as source text for the rules they illustrate."),
     ("TA p.252-253", "Concept of Total Day; rainfall by Samvat year", "Already in the calendar (2026 document's Total Days and Rainfall tables)."),
     ("KD pp.23-34", "Methodology: how to track events, turning-date usage, risk controls, position sizing", "Guidance, no astronomical condition; quoted in the report's caution notes."),
-    ("KD p.32", "Hemisphere dates (twice a year)", "The slide names them without defining them (equinox, solstice or declination crossing?); not guessed."),
+    ("KD pp.5-22", "2016-2032 transit review: Herschel in Aries 2016, Saturn-Neptune conjunction as a decade-defining reset (effects 2-3 years before, peak at exact conjunction, smaller planets crossing Neptune over 30-45 days), 2026-27 shock events, 2030 new order", "Mundane narrative, not a dated market rule; the Saturn-Neptune relationship itself is computed under TA Section 25."),
+    ("KD pp.36-81", "Charts of past turning dates (Mercury retrograde, hemisphere dates, Mercury manifestation) with index ranges 2020-2025", "Historical examples; they define 'hemisphere dates' as the equinoxes (North ~20-21 Mar, South ~22-23 Sep), which is implemented."),
+    ("KD pp.149-163, 167-223", "Sector relative-strength cycles, technical learning (opening range, breakout purity, squares & cubes, total day, rule of averages, two-candle SMA, divergence), gold/macro essays", "Price and macro material, no astronomical condition (total day already in the calendar)."),
+    ("KD p.164", "Conflict checklist: list positive and negative prophecies, check for contra prophecies, stay cautious while both are active", "Method; reflected in the 'Conditions & qualifications' field."),
+    ("KD p.166", "Month bias (Jan/Feb/Oct highest volatility; Mar/Aug/Sep negative; Apr/May/Nov/Dec positive; Jun/Jul avoid fresh investment)", "Conclusion of the 2026 deck for 2026, not a rule that carries to 2027."),
     ("KD p.84 / p.130 #1-#2", "Malefic/benefic Vedh of any nakshatra -> rally/fall in sectors of the nakshatra lord", "Applies to every vedha of every planet at all times (always some nakshatra is vedha'd), so it is not a dated event; applied through the Sun/Rahu/Ketu nakshatra-vedha windows and the named gold/sugar nakshatras."),
     ("KD pp.95-128", "2026-dated prophecies", "2026 events; used to validate this engine's calculations (see the validation table); the underlying rules are implemented for 2027."),
     ("KD p.129", "Slow planets extend a rally / larger fall", "Carried as a qualification on the two-planets-in-a-sign windows (speeds in facts)."),

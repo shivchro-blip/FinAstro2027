@@ -13978,6 +13978,27 @@
    "hits_2027": 10
   },
   {
+   "id": "kd_032_hemisphere_dates",
+   "title": "Hemisphere date (equinox) - high-probable turning event",
+   "refs": [
+    "KD p.32",
+    "KD pp.37-70 charts ('North Hemisphere' ~20-21 Mar, 'South Hemisphere' ~22-23 Sep)"
+   ],
+   "verdict": "High-probable turning event (twice a year)",
+   "markets": [
+    "general"
+   ],
+   "rule": "The Sun crosses the celestial equator (tropical 0 deg / 180 deg).",
+   "calc": "Tropical (not sidereal) solar longitude crossing 0 or 180 deg; the KD charts date the North/South hemisphere events at the equinoxes.",
+   "quals": [
+    "KD p.31: identify the high or low price on the turning date and use it as the reference level; treat turning dates as signals within a broader strategy, not standalone predictors."
+   ],
+   "tier": "major",
+   "existing": [],
+   "effect": "",
+   "hits_2027": 2
+  },
+  {
    "id": "ta_s24_02_tithi_vruddhi_kshay_shukla",
    "title": "Tithi Vruddhi / Kshay in Shukla Paksha",
    "refs": [
@@ -14237,9 +14258,29 @@
    "reason": "Guidance, no astronomical condition; quoted in the report's caution notes."
   },
   {
-   "ref": "KD p.32",
-   "rule": "Hemisphere dates (twice a year)",
-   "reason": "The slide names them without defining them (equinox, solstice or declination crossing?); not guessed."
+   "ref": "KD pp.5-22",
+   "rule": "2016-2032 transit review: Herschel in Aries 2016, Saturn-Neptune conjunction as a decade-defining reset (effects 2-3 years before, peak at exact conjunction, smaller planets crossing Neptune over 30-45 days), 2026-27 shock events, 2030 new order",
+   "reason": "Mundane narrative, not a dated market rule; the Saturn-Neptune relationship itself is computed under TA Section 25."
+  },
+  {
+   "ref": "KD pp.36-81",
+   "rule": "Charts of past turning dates (Mercury retrograde, hemisphere dates, Mercury manifestation) with index ranges 2020-2025",
+   "reason": "Historical examples; they define 'hemisphere dates' as the equinoxes (North ~20-21 Mar, South ~22-23 Sep), which is implemented."
+  },
+  {
+   "ref": "KD pp.149-163, 167-223",
+   "rule": "Sector relative-strength cycles, technical learning (opening range, breakout purity, squares & cubes, total day, rule of averages, two-candle SMA, divergence), gold/macro essays",
+   "reason": "Price and macro material, no astronomical condition (total day already in the calendar)."
+  },
+  {
+   "ref": "KD p.164",
+   "rule": "Conflict checklist: list positive and negative prophecies, check for contra prophecies, stay cautious while both are active",
+   "reason": "Method; reflected in the 'Conditions & qualifications' field."
+  },
+  {
+   "ref": "KD p.166",
+   "rule": "Month bias (Jan/Feb/Oct highest volatility; Mar/Aug/Sep negative; Apr/May/Nov/Dec positive; Jun/Jul avoid fresh investment)",
+   "reason": "Conclusion of the 2026 deck for 2026, not a rule that carries to 2027."
   },
   {
    "ref": "KD p.84 / p.130 #1-#2",
