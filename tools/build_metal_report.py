@@ -278,6 +278,42 @@ xrule("ta_s30_mantri_moon_silver", "Moon is Mantri of the year", ("TA p.127 [pri
       "Weekday of the Aries Sankranti at New York and Mumbai.", _mantri_moon, metal="silver")
 
 
+# --------------------------------------------- gold demand calendar (Kindle Ch15)
+def _festival(kind):
+    """Indian festival dates from the panchang at Mumbai (the festivals are Indian)."""
+    def run(ctx):
+        IST = ZoneInfo("Asia/Kolkata")
+        srs, sss = list(ctx.sky.sunrises("mumbai")), list(ctx.sky.sunsets("mumbai"))
+        out = []
+        for t in (sss if kind != "akshaya" else srs):
+            d = t.astimezone(IST).date()
+            if d.year != ctx.year:
+                continue
+            s = snapshot(t.replace(microsecond=0))
+            m = ctx.sky.purnimanta_month(t) or ""
+            ok = ((kind == "akshaya" and s.tithi == 3 and m.endswith("Vaishakh")) or
+                  (kind == "dhanteras" and s.tithi == 28 and m.endswith("Kartik")) or
+                  (kind == "diwali" and s.tithi == 30 and m.endswith("Kartik")))
+            if ok and not any(h.day == d for h in out):
+                out.append(Hit(t, None, ("Sun", "Moon"), {"Indian_date": f"{d:%a %d %b %Y}", "tithi": ("Shukla Tritiya" if kind == "akshaya" else "Krishna Trayodashi" if kind == "dhanteras" else "Amavasya"),
+                                                          "read_at": "Mumbai sunrise" if kind == "akshaya" else "Mumbai sunset (pradosh)"}, day=d))
+        return out
+    return run
+
+
+DEMAND_Q = ("Kindle Ch15 labels this 'entirely non-astrological': physical-demand seasonality (festivals, weddings, harvests), and warns 'Credit the jeweller, not the Sun'. Shown as context, not as an astrological signal.",
+            "Kindle Ch15 also lists wedding seasons (Oct-Dec, Apr-Jun) and post-monsoon rural buying (from Sep) as demand periods.")
+xrule("kindle15_akshaya_tritiya", "Akshaya Tritiya (Indian gold-buying day)", ("Kindle Ch15 'Commodities: Gold, Silver & the Metals' - Indian physical-gold demand calendar",),
+      "The single most auspicious gold-buying day of the year (physical demand; neutral as a price signal)", "Vaishakh Shukla Tritiya.",
+      "Tritiya prevailing at Mumbai sunrise in Vaishakh (the festival is Indian; its date is given as the Indian civil date).", _festival("akshaya"), quals=DEMAND_Q)
+xrule("kindle15_dhanteras", "Dhanteras (Indian festival gold buying)", ("Kindle Ch15 - Indian physical-gold demand calendar",),
+      "Peak festival gold buying (physical demand; neutral as a price signal)", "Kartik (purnimanta) Krishna Trayodashi.",
+      "Krishna Trayodashi prevailing at Mumbai sunset (pradosh) in purnimanta Kartik.", _festival("dhanteras"), quals=DEMAND_Q)
+xrule("kindle15_diwali", "Diwali / Lakshmi Puja (Indian festival gold buying)", ("Kindle Ch15 - Indian physical-gold demand calendar",),
+      "Peak festival gold buying; Diwali Muhurat trading (physical demand; neutral as a price signal)", "Kartik (purnimanta) Amavasya.",
+      "Amavasya prevailing at Mumbai sunset (pradosh) in purnimanta Kartik.", _festival("diwali"), quals=DEMAND_Q)
+
+
 NOT_COMPUTED = {"gold": [
     (DOC26 + " - Bullish #9", "Moonrise in Libra - Bullish", "The 2026 printed rows (28-May-26 Libra/Swati, 12-Oct-26) are not all darshan evenings and the document does not say which moonrise; not guessed."),
 ], "silver": [
@@ -476,7 +512,7 @@ def main():
     for r in rows:
         if any(b in ("Rahu", "Ketu") for b in r["detail"].split()) or "Ketu" in r["detail"] or "Rahu" in r["detail"]:
             r["quals"].append("Rahu/Ketu sign/nakshatra changes: the 2026 document's almanac prints the 5 Dec 2026 node ingress 40 min earlier (21:52 IST) than the mean node computed here (22:32 IST) - a known 5-arcsecond formulation gap (config/conventions.yaml).")
-    write(rows, checked, compare_2026(rows) if METAL == "gold" else compare_2026_silver(ctxs[0]))
+    write(rows, checked, compare_2026_metal(ctxs[0], GOLD_MAP, GOLD_ROW_NOTES) if METAL == "gold" else compare_2026_metal(ctxs[0], SILVER_MAP, SILVER_ROW_NOTES))
 
 
 def compare_2026(rows):
@@ -531,6 +567,26 @@ SILVER_MAP = {
 }
 
 
+GOLD_MAP = {
+    "gold-bullish#1": ["ta_s34a02_mars_in_taurus"], "gold-bullish#2": ["doc26_gold_bull_02_sun_libra_aspected"],
+    "gold-bullish#3": ["ta_s34a04_rahu_mars_together"], "gold-bullish#4": ["doc26_gold_bull_04_jupiter_gemini"],
+    "gold-bullish#5": ["ta_s34_gold_vedha_punarvasu_pushya_chitra_dhanishta"], "gold-bullish#6": ["ta_s34a09_mars_aspected_saturn_jupiter_retro"],
+    "gold-bullish#7": ["ta_s34a10_sun_bharani_krittika_punarvasu_pushya"], "gold-bullish#8": ["doc26_gold_bull_08_moonrise_mon_fri"],
+    "gold-bullish#10": ["doc26_gold_bull_10_sun_moon_same_degree"], "gold-bullish#11": ["doc26_gold_bull_11_venus_rohini"],
+    "gold-bullish#12": ["doc26_gold_bull_12_mars_pushya"], "gold-bullish#13": ["doc26_gold_bull_13_aquarius_sankranti_friday"],
+    "gold-bearish#1": ["ta_s34b02_jupiter_rise"], "gold-bearish#2": ["ta_s34b03_saturn_or_mercury_gemini"],
+    "gold-bearish#3": ["ta_s34_gold_vedha_punarvasu_pushya_chitra_dhanishta"], "gold-bearish#4": ["ta_s17_mercury_rise_west"],
+    "gold-bearish#5": ["ta_s34b09_moon_darshan_saturday_gold"], "gold-bearish#6": ["doc26_gold_bear_06_venus_punarvasu"],
+}
+GOLD_ROW_NOTES = {
+    ("gold-bullish#5", "24-Jan-26"): "2 h 50 min apart: the Sun reaches 280deg00' (start of Shravana) at 10:50 IST; the printed 8:00 is copied from the document's Sun table, whose own Mars and Venus tables start Shravana at exactly 280deg00'.",
+    ("gold-bearish#3", "28-Jan-26"): "18 h apart: the row starts when Mercury turns Atichari; the 2026 document's speed table (B122) gives only the date (28-Jan-26) and its calibrated level reproduces that date within the documented 1.1-day tolerance.",
+    ("gold-bullish#7", "29-Apr-26"): "Not reproduced, by design: the row's own note says Mercury (a benefic) joins the Sun in Bharani, which TA S34 A10's condition 'not aspected by Benefic' excludes; the 2026 document's selection of this row is not explained.",
+    ("gold-bullish#7", "11-May-26"): "Not reproduced: the row's note says 'Sun alone from 11th-15th', but Mercury (a benefic) is in Aries with the Sun until 15-May-26 00:32 IST, which the TA condition excludes.",
+    ("gold-bullish#13", "13-Feb-26"): "Weekday convention: the Sun enters Aquarius at 04:09 IST on Friday 13-Feb-26 by the civil date, but before Mumbai sunrise, so by the Hindu day (sunrise to sunrise) it is still Thursday. This report uses the Hindu day; the 2026 document uses the civil date.",
+    ("gold-bearish#4", "12-Sep-26"): "2 days apart: the document prints Mercury's rise on 12-Sep-26; the astronomy layer's kalamsha computation (11.68 deg) gives 14-Sep-26, West. A visibility-threshold difference.",
+    ("gold-bearish#3", "22-Dec-26"): "10 h later here (13:54 IST). The 2026 document's own Venus Vedh table (B134) prints Venus entering Vishakha at 22-Dec-26 3:50, but its neighbouring rows agree with this engine within 4 min and the astronomy layer independently gives 13:54 IST: the printed '3:50' has almost certainly lost a digit (13:50)."}
+
 SILVER_ROW_NOTES = {
     ("silver-bullish#15", "15-May-26"): "Printed start is Mercury's entry into Taurus (00:32 IST); the Sun only enters Taurus at 06:22 IST, so 'Sun and Mercury alone in Taurus' starts 6 h later than printed. This report uses 06:22 IST.",
     ("silver-bearish#9", "17-Oct-25"): "Year misprint: the Sun enters Libra (joining Mercury and Venus) on 17-Oct-2026 at 19:52 IST, exactly the printed time; the row is dated 2025.",
@@ -538,7 +594,7 @@ SILVER_ROW_NOTES = {
 }
 
 
-def compare_2026_silver(ctx26):
+def compare_2026_metal(ctx26, MAP, ROW_NOTES):
     """Every row the 2026 document prints for silver, looked up in this engine's 2026 output."""
     import re as _re
     from finastro.rules.config_catalogue import GROUPS
@@ -552,12 +608,12 @@ def compare_2026_silver(ctx26):
     def hits(rid):
         if rid not in cache:
             r = rules[rid]
-            c = ctx_m if ("darshan" in rid or "amavasya" in rid or "shashti" in rid or "paksha" in rid) else ctx26
+            c = ctx_m if ("darshan" in rid or "moonrise" in rid or "amavasya" in rid or "shashti" in rid or "paksha" in rid) else ctx26
             cache[rid] = r.detector(c)
         return cache[rid]
     out = []
     for g in GROUPS:
-        if g.key not in SILVER_MAP:
+        if g.key not in MAP:
             continue
         for t in g.tables:
             for row in t.rows:
@@ -575,25 +631,27 @@ def compare_2026_silver(ctx26):
                         continue
                 for dstr, tm in items:
                     label = " | ".join(x for x in cells if x and x not in ("—",))[:90]
-                    note = SILVER_ROW_NOTES.get((g.key, dstr[:9]))
+                    note = ROW_NOTES.get((g.key, dstr[:9]))
                     if note:
                         NOTE26[label] = note
+                    if dstr[:9] == "01-Jan-26" and (tm or "0:00") in ("0:00", "0:01", "0:02"):
+                        dstr = "start of year"
                     if dstr.lower().startswith("start of"):
-                        ok = any((h.end or h.start) > utc(2026, 1, 1) and h.start <= utc(2026, 1, 2) for rid in SILVER_MAP[g.key] for h in hits(rid))
+                        ok = any((h.end or h.start) > utc(2026, 1, 1) and h.start <= utc(2026, 1, 2) for rid in MAP[g.key] for h in hits(rid))
                         out.append((g.key, label, "start of 2026", None, 0 if ok else None))
                         continue
                     day = dt.datetime.strptime(dstr[:9], "%d-%b-%y").date()
                     if tm:
                         tt = dt.datetime.combine(day, dt.time(*map(int, tm.split(":"))), IST)
                         best = None
-                        for rid in SILVER_MAP[g.key]:
+                        for rid in MAP[g.key]:
                             for h in hits(rid):
                                 d = abs((h.start - tt).total_seconds()) / 60
                                 best = d if best is None or d < best else best
                         out.append((g.key, label, f"{dstr} {tm} IST", tt, best if best is not None and best <= 24 * 60 else None))
                     else:
                         ok = None
-                        for rid in SILVER_MAP[g.key]:
+                        for rid in MAP[g.key]:
                             for h in hits(rid):
                                 hd = h.day or h.start.astimezone(IST).date()
                                 if abs((hd - day).days) <= 1:
@@ -751,8 +809,8 @@ ul{{max-width:85em}}li{{margin:3px 0}}
 <li><b>Dated claims in the PDFs.</b> 51 of 58 recomputed (build/pdfref/validation.json), including KD's Saturn-Mars, Venus-Herschel and Mars-speed dates.</li>
 <li>Day rules (darshan) use New York sunset; combust/rise dates are civil dates (Indian, kalamsha method) as in the existing calendar.</li>
 </ul>
-<h2>{'Late-2026 rows vs the 2026 document' + chr(39) + 's own printed gold rows' if METAL == 'gold' else 'Every 2026 row the 2026 document prints for silver vs this engine'}</h2>
-<p class="m">{'The 2026 document prints its gold Vedha and new-moon rows through 31 Dec 2026; every one that falls after 18 Nov 2026 is looked up in this report.' if METAL == 'gold' else 'All dated rows of the silver section (bullish #1-#20, bearish #1-#10) for 2026, recomputed for 2026 with the same rules and compared (time within 45 min where a time is printed; civil date +/-1 day otherwise).'}</p>
+<h2>Every 2026 row the 2026 document prints for {Wd} vs this engine</h2>
+<p class="m">All dated rows of the {Wd} section for 2026, recomputed for 2026 with the same rules and compared (time within 45 min where a time is printed; civil date +/-1 day otherwise).</p>
 <div class="wrap"><table><thead><tr><th>Printed in</th><th>Row</th><th>Printed start</th><th>Printed start in ET</th><th>This report</th></tr></thead><tbody>{cmprows}</tbody></table></div>
 <h2>{W} rules checked that do not occur in this period</h2><ul>{zrows}</ul>
 <h2>{W} rules not computed</h2><ul>{ncrows}</ul>

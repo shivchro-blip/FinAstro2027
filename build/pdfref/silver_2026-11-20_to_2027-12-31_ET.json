@@ -606,7 +606,7 @@
    ]
   },
   {
-   "start_ET": "Fri 05 Mar 2027 09:04 EST",
+   "start_ET": "Thu 04 Mar 2027 15:09 EST",
    "end_ET": "Sat 06 Mar 2027 07:32 EST",
    "title": "Mercury does Vedha of Venus",
    "tone": "Bullish",
@@ -614,7 +614,7 @@
     "Silver Bullish"
    ],
    "rule": "Mercury does Vedha to the nakshatra Venus occupies on the Sarvatobhadra wheel (TA pp.131-133).",
-   "detail": "Mercury 26.91 deg Capricorn (Dhanishta p2); Venus 10.89 deg Capricorn (Shravana p1) | value: Mercury in Dhanishta vedhas Shravana (Right side) where Venus is",
+   "detail": "Mercury 26.78 deg Capricorn (Dhanishta p2); Venus 10.00 deg Capricorn (Shravana p1) | value: Mercury in Dhanishta vedhas Shravana (Right side) where Venus is",
    "refs": [
     "TA p.158 [printed 128] Section 35 A (silver) #11"
    ],
@@ -624,7 +624,7 @@
     "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
    ],
    "checks": [
-    "start: computed boundary (no single layer record)",
+    "start = astronomy-layer nakshatra ingress of Venus \u2713",
     "end: computed boundary (no single layer record)"
    ],
    "rule_ids": [
@@ -1314,7 +1314,7 @@
   },
   {
    "start_ET": "Mon 21 Jun 2027 15:52 EDT",
-   "end_ET": "Tue 22 Jun 2027 00:27 EDT",
+   "end_ET": "Mon 21 Jun 2027 22:38 EDT",
    "title": "Moon-Venus mutual Vedha",
    "tone": "Bearish",
    "verdicts": [
@@ -1332,7 +1332,7 @@
    ],
    "checks": [
     "start = astronomy-layer navamsa ingress of Moon \u2713",
-    "end: computed boundary (no single layer record)"
+    "end = astronomy-layer nakshatra ingress of Moon \u2713"
    ],
    "rule_ids": [
     "ta_s35b07_moon_venus_mutual_vedha"
