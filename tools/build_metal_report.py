@@ -471,6 +471,8 @@ def main():
             "rule": " || ".join(dict.fromkeys(r.rule for r, _ in items)), "detail": " | ".join(detail), "refs": list(dict.fromkeys(refs)),
             "quals": quals, "checks": checks, "rule_ids": [r.id for r, _ in items], "date_only": date_only})
     rows.sort(key=lambda x: x["start"])
+    if METAL == "gold":
+        TIMELINE.extend(user_timeline(grid))
     for r in rows:
         if any(b in ("Rahu", "Ketu") for b in r["detail"].split()) or "Ketu" in r["detail"] or "Rahu" in r["detail"]:
             r["quals"].append("Rahu/Ketu sign/nakshatra changes: the 2026 document's almanac prints the 5 Dec 2026 node ingress 40 min earlier (21:52 IST) than the mean node computed here (22:32 IST) - a known 5-arcsecond formulation gap (config/conventions.yaml).")
@@ -600,6 +602,43 @@ def compare_2026_silver(ctx26):
     return out
 
 
+TIMELINE = []
+
+
+def user_timeline(grid):
+    from finastro.pdfref.engine import value_windows
+    from finastro.pdfref.user_rules import sun_state
+    out = []
+    for w in value_windows(grid, sun_state):
+        if w.start < P1 and w.end >= P0:
+            out.append(w)
+    return out
+
+
+def user_section(rows):
+    ur = [r for r in rows if any(i.startswith("user_") for i in r["rule_ids"])]
+    if not ur:
+        return ""
+    tl = "".join(
+        f"<tr class='{('bullish' if len(w.value[1]) > len(w.value[2]) else 'bearish' if len(w.value[2]) > len(w.value[1]) else 'mixed')}'>"
+        f"<td class='w'>{html.escape(et(max(w.start, P0)))}</td><td class='w'>{html.escape(et(w.end))}</td><td>{html.escape(w.value[0])}</td>"
+        f"<td class='bu'>{html.escape('; '.join(w.value[1])) or '-'}</td><td class='be'>{html.escape('; '.join(w.value[2])) or '-'}</td>"
+        f"<td class='n'><span class='tag {('bullish' if len(w.value[1]) > len(w.value[2]) else 'bearish' if len(w.value[2]) > len(w.value[1]) else 'mixed')}'>{len(w.value[1])} : {len(w.value[2])}</span></td></tr>"
+        for w in TIMELINE)
+    trs = "".join(f"<tr class='{r['tone'].lower()}'><td class='w'>{html.escape(when(r)[0])}</td><td class='w'>{html.escape(when(r)[1])}</td>"
+                  f"<td><b>{html.escape(r['title'])}</b></td><td><span class='tag {r['tone'].lower()}'>{r['tone']}</span></td>"
+                  f"<td class='s'>{html.escape(r['detail'].replace('value: ', ''))}</td></tr>" for r in ur)
+    return f"""<h2>Your notes on the Sun (U1-U4): every window</h2>
+<p class="m">'Gold is ruled by the Sun': Sun in a Venus / Mercury / Jupiter nakshatra (rise), Venus, Mercury, Jupiter or a waxing Moon with or aspecting the Sun (hike),
+Sun in a Saturn / Rahu nakshatra (fall), Saturn or Rahu with or aspecting the Sun (crash). Conjunction = same sign; aspect = whole-sign drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7, so Sun with Ketu counts as Rahu's aspect);
+waxing = Shukla paksha. These rules disagree with TA Section 34 in places (Pushya is a TA rally star; TA and the 2026 document make malefics with the Sun in Libra bullish): every row carries the conflict note.</p>
+<h2>Sun-state timeline under your notes (Moon contacts listed separately below)</h2>
+<p class="m">Each row is a stretch in which the Sun's nakshatra and the planets with or aspecting it stay the same. "Rise : fall" counts the signals of each kind your notes give for that stretch; it is a count, not a weighting. Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for much of the year and U2 is active often.</p>
+<div class="wrap"><table><thead><tr><th>From (ET)</th><th>To (ET)</th><th>Sun's nakshatra</th><th>Rise signals (U1, U2)</th><th>Fall signals (U3, U4)</th><th>Rise : fall</th></tr></thead><tbody>{tl}</tbody></table></div>
+<h2>Your notes: every window, including waxing-Moon contacts</h2>
+<div class="wrap"><table><thead><tr><th>Start (ET)</th><th>End (ET)</th><th>Rule</th><th>Effect</th><th>Detail</th></tr></thead><tbody>{trs}</tbody></table></div>"""
+
+
 def when(r):
     if r["day"] is not None:
         return et_date(r["day"]), ""
@@ -694,7 +733,7 @@ td.bu{{color:var(--bu);font-weight:600}}td.be{{color:var(--be);font-weight:600}}
 ul{{max-width:85em}}li{{margin:3px 0}}
 </style></head><body>
 <h1>{L}: astrological windows, 20 Nov 2026 &ndash; 31 Dec 2027</h1>
-<p class="m">Every rule in the two reference PDFs and in the 2026 document that names {Wd}, recomputed (Swiss Ephemeris, sidereal Lahiri, mean node). Times are US Eastern (America/New_York: EST, shown as EDT 14 Mar&ndash;7 Nov 2027). Results are quoted from the sources; they are the sources' claims, not forecasts or investment advice.</p>
+<p class="m">Every rule in the two reference PDFs{', the user notes (Reference_materials/user_notes_gold.md)' if METAL == 'gold' else ''} and in the 2026 document that names {Wd}, recomputed (Swiss Ephemeris, sidereal Lahiri, mean node). Times are US Eastern (America/New_York: EST, shown as EDT 14 Mar&ndash;7 Nov 2027). Results are quoted from the sources; they are the sources' claims, not forecasts or investment advice.</p>
 <div class="kpi"><div><b>{len(rows)}</b>windows / dates</div><div><b style="color:var(--bu)">{cnt['Bullish']}</b>Bullish per source</div><div><b style="color:var(--be)">{cnt['Bearish']}</b>Bearish per source</div><div><b style="color:var(--mx)">{cnt['Mixed']}</b>{'Mixed (malefic and benefic Vedha at once)' if METAL == 'gold' else 'Mixed (source states both directions)'}</div></div>
 <h2>Month by month (conditions active at any time in the month)</h2>
 <p class="m">A count of active conditions, not a net forecast: the sources give no weighting between rules, and TA p.30 says longer multi-planet combinations dominate single ones.</p>
@@ -702,6 +741,7 @@ ul{{max-width:85em}}li{{margin:3px 0}}
 <h2>All windows and dates (chronological)</h2>
 <div class="bar"><input id="q" placeholder="Filter (e.g. Mars, Vedha, Rahu, March)" size="34"><select id="tone"><option value="">All</option><option>Bullish</option><option>Bearish</option><option>Mixed</option></select></div>
 <div class="wrap"><table><thead><tr><th>#</th><th>Start (ET)</th><th>End (ET)</th><th>Combination</th><th>{W} effect (source, verbatim)</th><th>Planetary detail at start</th><th>Source</th><th>Double-check</th></tr></thead><tbody id="t">{''.join(trs)}</tbody></table></div>
+{user_section(rows) if METAL == 'gold' else ''}
 <h2>How each row was double-checked</h2>
 <ul>
 <li><b>Boundaries vs the astronomy layer.</b> Every window start/end was compared with the records written independently by <code>build_2027.py</code> (sign, nakshatra and navamsa ingresses, stations, speed crossings, conjunctions, eclipses, lunations), within 3 minutes. The "Double-check" column names the matching record.</li>

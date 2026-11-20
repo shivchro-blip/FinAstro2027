@@ -14184,6 +14184,93 @@
    ],
    "effect": "",
    "hits_2027": null
+  },
+  {
+   "id": "user_u1_sun_in_venus_mercury_jupiter_nakshatra",
+   "title": "Sun in a Venus, Mercury or Jupiter nakshatra (user note)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "verdict": "Can trigger gold price rise (Bullish)",
+   "markets": [
+    "gold"
+   ],
+   "rule": "Sun in Bharani, Purva Phalguni, Purva Ashadha (Venus), Ashlesha, Jyeshtha, Revati (Mercury), Punarvasu, Vishakha or Purva Bhadrapada (Jupiter).",
+   "calc": "Sidereal (Lahiri) nakshatra of the body, 27 x 13deg20'; window = the residency, boundaries bisected to 30 s. Lords per Vimshottari (TA pp.47-48).",
+   "quals": [
+    "Gold is ruled by the Sun (user note; TA S29 lists no gold sector, the PDFs' gold rules are mostly Sun placements).",
+    "Conflict: TA p.155 S34 A10 lists Sun on Bharani, Krittika, Punarvasu and Pushya as gold-RALLY stars (Pushya is a Saturn nakshatra), 'not aspected by Benefic - More Bullish if aspected by Malefic'; TA p.156 S34 B1: Sun on Anuradha (Saturn nakshatra) with or aspected by a benefic - gold can fall. Both sources are shown."
+   ],
+   "tier": "major",
+   "existing": [],
+   "effect": "",
+   "hits_2027": 10
+  },
+  {
+   "id": "user_u2_sun_with_or_aspected_by_benefics",
+   "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "verdict": "Can trigger gold price hike (Bullish)",
+   "markets": [
+    "gold"
+   ],
+   "rule": "Venus, Mercury or Jupiter in the Sun's sign or casting drishti on it, or the Moon doing so during Shukla paksha.",
+   "calc": "Sidereal (Lahiri) whole sign of the body; window bounded by its ingresses. Waxing = Shukla paksha (elongation 0-180 deg). Window changes whenever the set of contacts changes.",
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "Mercury is never more than ~28 deg from the Sun, so it shares the Sun's sign for long stretches of the year."
+   ],
+   "tier": "major",
+   "existing": [],
+   "effect": "",
+   "hits_2027": 74
+  },
+  {
+   "id": "user_u3_sun_in_saturn_rahu_nakshatra",
+   "title": "Sun in a Saturn or Rahu nakshatra (user note)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "verdict": "Can trigger fall in gold prices (Bearish)",
+   "markets": [
+    "gold"
+   ],
+   "rule": "Sun in Pushya, Anuradha, Uttara Bhadrapada (Saturn) or Ardra, Swati, Shatabhisha (Rahu).",
+   "calc": "Sidereal (Lahiri) nakshatra of the body, 27 x 13deg20'; window = the residency, boundaries bisected to 30 s. Lords per Vimshottari (TA pp.47-48).",
+   "quals": [
+    "Gold is ruled by the Sun (user note; TA S29 lists no gold sector, the PDFs' gold rules are mostly Sun placements).",
+    "Conflict: TA p.155 S34 A10 lists Sun on Bharani, Krittika, Punarvasu and Pushya as gold-RALLY stars (Pushya is a Saturn nakshatra), 'not aspected by Benefic - More Bullish if aspected by Malefic'; TA p.156 S34 B1: Sun on Anuradha (Saturn nakshatra) with or aspected by a benefic - gold can fall. Both sources are shown.",
+    "User note: 'fear, greed and market illusions are Rahu's territory'."
+   ],
+   "tier": "major",
+   "existing": [],
+   "effect": "",
+   "hits_2027": 6
+  },
+  {
+   "id": "user_u4_sun_with_or_aspected_by_saturn_rahu",
+   "title": "Saturn or Rahu with / aspecting the Sun (user note)",
+   "refs": [
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+   ],
+   "verdict": "Can crash the gold price (Bearish)",
+   "markets": [
+    "gold"
+   ],
+   "rule": "Saturn or Rahu in the Sun's sign or casting drishti on it (Rahu's 7th = Sun with Ketu).",
+   "calc": "Sidereal (Lahiri) whole sign of the body; window bounded by its ingresses. Window changes whenever the set of contacts changes.",
+   "quals": [
+    "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
+    "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
+    "User note: 'fear, greed and market illusions are Rahu's territory'."
+   ],
+   "tier": "major",
+   "existing": [],
+   "effect": "",
+   "hits_2027": 8
   }
  ],
  "not_computable": [
