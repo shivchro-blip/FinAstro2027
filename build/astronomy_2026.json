@@ -11,7 +11,7 @@
     "span_end_utc": "2027-01-31T18:30:00Z",
     "primary_tz": "Asia/Kolkata",
     "secondary_tz": "America/New_York",
-    "record_count": 6735
+    "record_count": 6781
   },
   "records": [
     {
@@ -42086,6 +42086,74 @@
       }
     },
     {
+      "id": "neighbour_change:mercury:20260106T163600Z:ketu-sun",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-01-06T16:36:00Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-01-06T16:36:00Z",
+          "ist_date": "06-Jan-2026",
+          "ist_time": "22:06",
+          "ist_weekday": "Tue",
+          "et_date": "06-Jan-2026",
+          "et_time": "11:36",
+          "et_weekday": "Tue",
+          "et_abbr": "EST",
+          "et_offset": "-05:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Sagittarius",
+        "lon_sid": 253.208178,
+        "nakshatra": "Mula",
+        "pada": 4,
+        "navamsa": "Cancer",
+        "motion": "direct",
+        "speed_deg_day": 1.559801,
+        "latitude": -1.149337,
+        "declination": -24.377284,
+        "elongation": -8.937095,
+        "distance": 1.411751962,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Ketu",
+        "neighbour_ahead_from": "Venus",
+        "neighbour_behind": "Ketu",
+        "neighbour_ahead": "Sun"
+      },
+      "panchang": {
+        "tithi": 19,
+        "tithi_name": "Chaturthi",
+        "paksha": "Krishna",
+        "moon_nakshatra": "Magha",
+        "yoga": "Ayushman",
+        "karana": "Balava"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.220522,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
+      }
+    },
+    {
       "id": "navamsa_ingress:moon:20260106T183114Z",
       "event_class": "navamsa_ingress",
       "rule_family": "ingress/navamsa",
@@ -45200,6 +45268,74 @@
           "separation_deg=0",
           "astronomy_block_body=Sun"
         ]
+      }
+    },
+    {
+      "id": "neighbour_change:mercury:20260109T114113Z:ketu-mars",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-01-09T11:41:13Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-01-09T11:41:13Z",
+          "ist_date": "09-Jan-2026",
+          "ist_time": "17:11",
+          "ist_weekday": "Fri",
+          "et_date": "09-Jan-2026",
+          "et_time": "06:41",
+          "et_weekday": "Fri",
+          "et_abbr": "EST",
+          "et_offset": "-05:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Sagittarius",
+        "lon_sid": 257.593939,
+        "nakshatra": "Purva Ashadha",
+        "pada": 2,
+        "navamsa": "Virgo",
+        "motion": "direct",
+        "speed_deg_day": 1.578428,
+        "latitude": -1.394029,
+        "declination": -24.301388,
+        "elongation": -7.399327,
+        "distance": 1.422169073,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Ketu",
+        "neighbour_ahead_from": "Sun",
+        "neighbour_behind": "Ketu",
+        "neighbour_ahead": "Mars"
+      },
+      "panchang": {
+        "tithi": 22,
+        "tithi_name": "Saptami",
+        "paksha": "Krishna",
+        "moon_nakshatra": "Hasta",
+        "yoga": "Atiganda",
+        "karana": "Vishti"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.220629,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
       }
     },
     {
@@ -55135,6 +55271,74 @@
       }
     },
     {
+      "id": "neighbour_change:mercury:20260118T074032Z:mars-sun",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-01-18T07:40:32Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-01-18T07:40:32Z",
+          "ist_date": "18-Jan-2026",
+          "ist_time": "13:10",
+          "ist_weekday": "Sun",
+          "et_date": "18-Jan-2026",
+          "et_time": "02:40",
+          "et_weekday": "Sun",
+          "et_abbr": "EST",
+          "et_offset": "-05:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Capricorn",
+        "lon_sid": 271.834062,
+        "nakshatra": "Uttara Ashadha",
+        "pada": 2,
+        "navamsa": "Capricorn",
+        "motion": "direct",
+        "speed_deg_day": 1.649021,
+        "latitude": -1.948917,
+        "declination": -22.850392,
+        "elongation": -2.157891,
+        "distance": 1.427200992,
+        "dignity": [],
+        "trine": false,
+        "vargottama": true,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Ketu",
+        "neighbour_ahead_from": "Mars",
+        "neighbour_behind": "Mars",
+        "neighbour_ahead": "Sun"
+      },
+      "panchang": {
+        "tithi": 30,
+        "tithi_name": "Amavasya",
+        "paksha": "Krishna",
+        "moon_nakshatra": "Uttara Ashadha",
+        "yoga": "Harshana",
+        "karana": "Naga"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.220966,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
+      }
+    },
+    {
       "id": "navamsa_ingress:moon:20260118T111109Z",
       "event_class": "navamsa_ingress",
       "rule_family": "ingress/navamsa",
@@ -59151,6 +59355,74 @@
       }
     },
     {
+      "id": "neighbour_change:mercury:20260121T154855Z:sun-pluto",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-01-21T15:48:55Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-01-21T15:48:55Z",
+          "ist_date": "21-Jan-2026",
+          "ist_time": "21:18",
+          "ist_weekday": "Wed",
+          "et_date": "21-Jan-2026",
+          "et_time": "10:48",
+          "et_weekday": "Wed",
+          "et_abbr": "EST",
+          "et_offset": "-05:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Capricorn",
+        "lon_sid": 277.391675,
+        "nakshatra": "Uttara Ashadha",
+        "pada": 4,
+        "navamsa": "Pisces",
+        "motion": "direct",
+        "speed_deg_day": 1.680012,
+        "latitude": -2.053666,
+        "declination": -21.801431,
+        "elongation": 7e-06,
+        "distance": 1.41735293,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Mars",
+        "neighbour_ahead_from": "Sun",
+        "neighbour_behind": "Sun",
+        "neighbour_ahead": "Pluto"
+      },
+      "panchang": {
+        "tithi": 3,
+        "tithi_name": "Tritiya",
+        "paksha": "Shukla",
+        "moon_nakshatra": "Shatabhisha",
+        "yoga": "Variyana",
+        "karana": "Gara"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.221094,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
+      }
+    },
+    {
       "id": "navamsa_ingress:moon:20260121T204539Z",
       "event_class": "navamsa_ingress",
       "rule_family": "ingress/navamsa",
@@ -60145,6 +60417,74 @@
       }
     },
     {
+      "id": "neighbour_change:mercury:20260122T171450Z:pluto-venus",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-01-22T17:14:50Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-01-22T17:14:50Z",
+          "ist_date": "22-Jan-2026",
+          "ist_time": "22:44",
+          "ist_weekday": "Thu",
+          "et_date": "22-Jan-2026",
+          "et_time": "12:14",
+          "et_weekday": "Thu",
+          "et_abbr": "EST",
+          "et_offset": "-05:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Capricorn",
+        "lon_sid": 279.17726,
+        "nakshatra": "Uttara Ashadha",
+        "pada": 4,
+        "navamsa": "Pisces",
+        "motion": "direct",
+        "speed_deg_day": 1.690099,
+        "latitude": -2.072616,
+        "declination": -21.409629,
+        "elongation": 0.707199,
+        "distance": 1.412750545,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Sun",
+        "neighbour_ahead_from": "Pluto",
+        "neighbour_behind": "Pluto",
+        "neighbour_ahead": "Venus"
+      },
+      "panchang": {
+        "tithi": 4,
+        "tithi_name": "Chaturthi",
+        "paksha": "Shukla",
+        "moon_nakshatra": "Purva Bhadrapada",
+        "yoga": "Parigha",
+        "karana": "Vishti"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.221135,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
+      }
+    },
+    {
       "id": "karana_ingress:moon-sun:20260122T205853Z:k09",
       "event_class": "karana_ingress",
       "rule_family": "ingress/karana",
@@ -61057,6 +61397,74 @@
           "separation_deg=0",
           "astronomy_block_body=Sun"
         ]
+      }
+    },
+    {
+      "id": "neighbour_change:mercury:20260123T102815Z:sun-venus",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-01-23T10:28:15Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-01-23T10:28:15Z",
+          "ist_date": "23-Jan-2026",
+          "ist_time": "15:58",
+          "ist_weekday": "Fri",
+          "et_date": "23-Jan-2026",
+          "et_time": "05:28",
+          "et_weekday": "Fri",
+          "et_abbr": "EST",
+          "et_offset": "-05:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Capricorn",
+        "lon_sid": 280.392616,
+        "nakshatra": "Shravana",
+        "pada": 1,
+        "navamsa": "Aries",
+        "motion": "direct",
+        "speed_deg_day": 1.696949,
+        "latitude": -2.08126,
+        "declination": -21.128077,
+        "elongation": 1.192383,
+        "distance": 1.409209779,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Pluto",
+        "neighbour_ahead_from": "Venus",
+        "neighbour_behind": "Sun",
+        "neighbour_ahead": "Venus"
+      },
+      "panchang": {
+        "tithi": 5,
+        "tithi_name": "Panchami",
+        "paksha": "Shukla",
+        "moon_nakshatra": "Uttara Bhadrapada",
+        "yoga": "Parigha",
+        "karana": "Balava"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.221162,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
       }
     },
     {
@@ -68441,6 +68849,74 @@
           "separation_deg=0",
           "astronomy_block_body=Mercury"
         ]
+      }
+    },
+    {
+      "id": "neighbour_change:mercury:20260129T101706Z:venus-rahu",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-01-29T10:17:06Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-01-29T10:17:06Z",
+          "ist_date": "29-Jan-2026",
+          "ist_time": "15:47",
+          "ist_weekday": "Thu",
+          "et_date": "29-Jan-2026",
+          "et_time": "05:17",
+          "et_weekday": "Thu",
+          "et_abbr": "EST",
+          "et_offset": "-05:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Capricorn",
+        "lon_sid": 290.726921,
+        "nakshatra": "Shravana",
+        "pada": 4,
+        "navamsa": "Cancer",
+        "motion": "direct",
+        "speed_deg_day": 1.750364,
+        "latitude": -2.006231,
+        "declination": -18.26727,
+        "elongation": 5.435919,
+        "distance": 1.365094324,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Sun",
+        "neighbour_ahead_from": "Venus",
+        "neighbour_behind": "Venus",
+        "neighbour_ahead": "Rahu"
+      },
+      "panchang": {
+        "tithi": 12,
+        "tithi_name": "Dwadashi",
+        "paksha": "Shukla",
+        "moon_nakshatra": "Mrigashira",
+        "yoga": "Indra",
+        "karana": "Bava"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.221391,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
       }
     },
     {
@@ -84627,6 +85103,74 @@
       }
     },
     {
+      "id": "neighbour_change:mercury:20260212T191517Z:rahu-saturn",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-02-12T19:15:17Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-02-12T19:15:17Z",
+          "ist_date": "13-Feb-2026",
+          "ist_time": "00:45",
+          "ist_weekday": "Fri",
+          "et_date": "12-Feb-2026",
+          "et_time": "14:15",
+          "et_weekday": "Thu",
+          "et_abbr": "EST",
+          "et_offset": "-05:00",
+          "day_shift": -1
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Aquarius",
+        "lon_sid": 315.680745,
+        "nakshatra": "Shatabhisha",
+        "pada": 3,
+        "navamsa": "Aquarius",
+        "motion": "direct",
+        "speed_deg_day": 1.591236,
+        "latitude": -0.407061,
+        "declination": -8.231834,
+        "elongation": 15.823801,
+        "distance": 1.124402577,
+        "dignity": [],
+        "trine": false,
+        "vargottama": true,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Venus",
+        "neighbour_ahead_from": "Rahu",
+        "neighbour_behind": "Rahu",
+        "neighbour_ahead": "Saturn"
+      },
+      "panchang": {
+        "tithi": 26,
+        "tithi_name": "Ekadashi",
+        "paksha": "Krishna",
+        "moon_nakshatra": "Mula",
+        "yoga": "Harshana",
+        "karana": "Bava"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.221941,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
+      }
+    },
+    {
       "id": "karana_ingress:moon-sun:20260212T195737Z:k52",
       "event_class": "karana_ingress",
       "rule_family": "ingress/karana",
@@ -90782,6 +91326,74 @@
       }
     },
     {
+      "id": "neighbour_change:mercury:20260218T024805Z:venus-saturn",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-02-18T02:48:05Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-02-18T02:48:05Z",
+          "ist_date": "18-Feb-2026",
+          "ist_time": "08:18",
+          "ist_weekday": "Wed",
+          "et_date": "17-Feb-2026",
+          "et_time": "21:48",
+          "et_weekday": "Tue",
+          "et_abbr": "EST",
+          "et_offset": "-05:00",
+          "day_shift": -1
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Aquarius",
+        "lon_sid": 323.182027,
+        "nakshatra": "Purva Bhadrapada",
+        "pada": 1,
+        "navamsa": "Aries",
+        "motion": "direct",
+        "speed_deg_day": 1.180787,
+        "latitude": 0.775732,
+        "declination": -4.260872,
+        "elongation": 17.955542,
+        "distance": 0.983900912,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Rahu",
+        "neighbour_ahead_from": "Saturn",
+        "neighbour_behind": "Venus",
+        "neighbour_ahead": "Saturn"
+      },
+      "panchang": {
+        "tithi": 1,
+        "tithi_name": "Pratipada",
+        "paksha": "Shukla",
+        "moon_nakshatra": "Shatabhisha",
+        "yoga": "Shiva",
+        "karana": "Bava"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.222144,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
+      }
+    },
+    {
       "id": "navamsa_ingress:moon:20260218T034936Z",
       "event_class": "navamsa_ingress",
       "rule_family": "ingress/navamsa",
@@ -93819,6 +94431,74 @@
           "separation_deg=0",
           "astronomy_block_body=Saturn"
         ]
+      }
+    },
+    {
+      "id": "neighbour_change:mercury:20260220T165400Z:venus-neptune",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-02-20T16:54:00Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-02-20T16:54:00Z",
+          "ist_date": "20-Feb-2026",
+          "ist_time": "22:24",
+          "ist_weekday": "Fri",
+          "et_date": "20-Feb-2026",
+          "et_time": "11:54",
+          "et_weekday": "Fri",
+          "et_abbr": "EST",
+          "et_offset": "-05:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Aquarius",
+        "lon_sid": 325.846553,
+        "nakshatra": "Purva Bhadrapada",
+        "pada": 2,
+        "navamsa": "Taurus",
+        "motion": "direct",
+        "speed_deg_day": 0.866466,
+        "latitude": 1.42753,
+        "declination": -2.619841,
+        "elongation": 18.010012,
+        "distance": 0.911103384,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Venus",
+        "neighbour_ahead_from": "Saturn",
+        "neighbour_behind": "Venus",
+        "neighbour_ahead": "Neptune"
+      },
+      "panchang": {
+        "tithi": 4,
+        "tithi_name": "Chaturthi",
+        "paksha": "Shukla",
+        "moon_nakshatra": "Revati",
+        "yoga": "Shubha",
+        "karana": "Vanija"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.222243,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
       }
     },
     {
@@ -102678,6 +103358,74 @@
       }
     },
     {
+      "id": "neighbour_change:mercury:20260228T053502Z:sun-venus",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-02-28T05:35:02Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-02-28T05:35:02Z",
+          "ist_date": "28-Feb-2026",
+          "ist_time": "11:05",
+          "ist_weekday": "Sat",
+          "et_date": "28-Feb-2026",
+          "et_time": "00:35",
+          "et_weekday": "Sat",
+          "et_abbr": "EST",
+          "et_offset": "-05:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Aquarius",
+        "lon_sid": 328.033185,
+        "nakshatra": "Purva Bhadrapada",
+        "pada": 3,
+        "navamsa": "Gemini",
+        "motion": "retrograde",
+        "speed_deg_day": -0.312463,
+        "latitude": 3.167665,
+        "declination": -0.160707,
+        "elongation": 12.622071,
+        "distance": 0.721836703,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Venus",
+        "neighbour_ahead_from": "Neptune",
+        "neighbour_behind": "Sun",
+        "neighbour_ahead": "Venus"
+      },
+      "panchang": {
+        "tithi": 12,
+        "tithi_name": "Dwadashi",
+        "paksha": "Shukla",
+        "moon_nakshatra": "Pushya",
+        "yoga": "Saubhagya",
+        "karana": "Balava"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.222531,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
+      }
+    },
+    {
       "id": "navamsa_ingress:moon:20260228T094836Z",
       "event_class": "navamsa_ingress",
       "rule_family": "ingress/navamsa",
@@ -110713,6 +111461,74 @@
       }
     },
     {
+      "id": "neighbour_change:mercury:20260307T110145Z:rahu-sun",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-03-07T11:01:45Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-03-07T11:01:45Z",
+          "ist_date": "07-Mar-2026",
+          "ist_time": "16:31",
+          "ist_weekday": "Sat",
+          "et_date": "07-Mar-2026",
+          "et_time": "06:01",
+          "et_weekday": "Sat",
+          "et_abbr": "EST",
+          "et_offset": "-05:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Aquarius",
+        "lon_sid": 322.653934,
+        "nakshatra": "Purva Bhadrapada",
+        "pada": 1,
+        "navamsa": "Aries",
+        "motion": "retrograde",
+        "speed_deg_day": -1.007614,
+        "latitude": 3.635816,
+        "declination": -1.830024,
+        "elongation": -3e-05,
+        "distance": 0.626540643,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Sun",
+        "neighbour_ahead_from": "Venus",
+        "neighbour_behind": "Rahu",
+        "neighbour_ahead": "Sun"
+      },
+      "panchang": {
+        "tithi": 19,
+        "tithi_name": "Chaturthi",
+        "paksha": "Krishna",
+        "moon_nakshatra": "Swati",
+        "yoga": "Dhruva",
+        "karana": "Balava"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.222808,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
+      }
+    },
+    {
       "id": "sunrise:sun:20260307T112454Z:new_york",
       "event_class": "sunrise",
       "rule_family": "horizon/sunrise",
@@ -117081,6 +117897,74 @@
       }
     },
     {
+      "id": "neighbour_change:mercury:20260313T060653Z:mars-sun",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-03-13T06:06:53Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-03-13T06:06:53Z",
+          "ist_date": "13-Mar-2026",
+          "ist_time": "11:36",
+          "ist_weekday": "Fri",
+          "et_date": "13-Mar-2026",
+          "et_time": "02:06",
+          "et_weekday": "Fri",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Aquarius",
+        "lon_sid": 317.211738,
+        "nakshatra": "Shatabhisha",
+        "pada": 4,
+        "navamsa": "Pisces",
+        "motion": "retrograde",
+        "speed_deg_day": -0.767658,
+        "latitude": 2.802843,
+        "declination": -4.681273,
+        "elongation": -11.232425,
+        "distance": 0.624577903,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Rahu",
+        "neighbour_ahead_from": "Sun",
+        "neighbour_behind": "Mars",
+        "neighbour_ahead": "Sun"
+      },
+      "panchang": {
+        "tithi": 25,
+        "tithi_name": "Dashami",
+        "paksha": "Krishna",
+        "moon_nakshatra": "Purva Ashadha",
+        "yoga": "Variyana",
+        "karana": "Vanija"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.223029,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
+      }
+    },
+    {
       "id": "navamsa_ingress:moon:20260313T082712Z",
       "event_class": "navamsa_ingress",
       "rule_family": "ingress/navamsa",
@@ -119492,6 +120376,74 @@
           "separation_deg=0",
           "astronomy_block_body=Mercury"
         ]
+      }
+    },
+    {
+      "id": "neighbour_change:mercury:20260315T080759Z:rahu-mars",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-03-15T08:07:59Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-03-15T08:07:59Z",
+          "ist_date": "15-Mar-2026",
+          "ist_time": "13:37",
+          "ist_weekday": "Sun",
+          "et_date": "15-Mar-2026",
+          "et_time": "04:07",
+          "et_weekday": "Sun",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Aquarius",
+        "lon_sid": 315.81365,
+        "nakshatra": "Shatabhisha",
+        "pada": 3,
+        "navamsa": "Aquarius",
+        "motion": "retrograde",
+        "speed_deg_day": -0.568899,
+        "latitude": 2.334252,
+        "declination": -5.641832,
+        "elongation": -14.708989,
+        "distance": 0.636738366,
+        "dignity": [],
+        "trine": false,
+        "vargottama": true,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Mars",
+        "neighbour_ahead_from": "Sun",
+        "neighbour_behind": "Rahu",
+        "neighbour_ahead": "Mars"
+      },
+      "panchang": {
+        "tithi": 27,
+        "tithi_name": "Dwadashi",
+        "paksha": "Krishna",
+        "moon_nakshatra": "Shravana",
+        "yoga": "Shiva",
+        "karana": "Kaulava"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.223109,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
       }
     },
     {
@@ -151273,6 +152225,76 @@
       }
     },
     {
+      "id": "neighbour_change:mercury:20260413T053017Z:rahu-neptune",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-04-13T05:30:17Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-04-13T05:30:17Z",
+          "ist_date": "13-Apr-2026",
+          "ist_time": "11:00",
+          "ist_weekday": "Mon",
+          "et_date": "13-Apr-2026",
+          "et_time": "01:30",
+          "et_weekday": "Mon",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Pisces",
+        "lon_sid": 333.143878,
+        "nakshatra": "Purva Bhadrapada",
+        "pada": 4,
+        "navamsa": "Cancer",
+        "motion": "direct",
+        "speed_deg_day": 1.346436,
+        "latitude": -2.524403,
+        "declination": -3.36212,
+        "elongation": -25.935434,
+        "distance": 1.019280897,
+        "dignity": [
+          "debilitated"
+        ],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Rahu",
+        "neighbour_ahead_from": "Mars",
+        "neighbour_behind": "Rahu",
+        "neighbour_ahead": "Neptune"
+      },
+      "panchang": {
+        "tithi": 26,
+        "tithi_name": "Ekadashi",
+        "paksha": "Krishna",
+        "moon_nakshatra": "Dhanishta",
+        "yoga": "Shubha",
+        "karana": "Bava"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.224214,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
+      }
+    },
+    {
       "id": "karana_ingress:moon-sun:20260413T074923Z:k52",
       "event_class": "karana_ingress",
       "rule_family": "ingress/karana",
@@ -156063,6 +157085,76 @@
       }
     },
     {
+      "id": "neighbour_change:mercury:20260417T020129Z:neptune-mars",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-04-17T02:01:29Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-04-17T02:01:29Z",
+          "ist_date": "17-Apr-2026",
+          "ist_time": "07:31",
+          "ist_weekday": "Fri",
+          "et_date": "16-Apr-2026",
+          "et_time": "22:01",
+          "et_weekday": "Thu",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": -1
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Pisces",
+        "lon_sid": 338.566313,
+        "nakshatra": "Uttara Bhadrapada",
+        "pada": 2,
+        "navamsa": "Virgo",
+        "motion": "direct",
+        "speed_deg_day": 1.465178,
+        "latitude": -2.628621,
+        "declination": -1.301971,
+        "elongation": -24.289434,
+        "distance": 1.073709053,
+        "dignity": [
+          "debilitated"
+        ],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Rahu",
+        "neighbour_ahead_from": "Neptune",
+        "neighbour_behind": "Neptune",
+        "neighbour_ahead": "Mars"
+      },
+      "panchang": {
+        "tithi": 30,
+        "tithi_name": "Amavasya",
+        "paksha": "Krishna",
+        "moon_nakshatra": "Revati",
+        "yoga": "Vishkambha",
+        "karana": "Naga"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.224362,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
+      }
+    },
+    {
       "id": "nakshatra_ingress:moon:20260417T063227Z",
       "event_class": "nakshatra_ingress",
       "rule_family": "ingress/nakshatra",
@@ -159498,6 +160590,76 @@
       }
     },
     {
+      "id": "neighbour_change:mercury:20260419T224358Z:neptune-saturn",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-04-19T22:43:58Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-04-19T22:43:58Z",
+          "ist_date": "20-Apr-2026",
+          "ist_time": "04:13",
+          "ist_weekday": "Mon",
+          "et_date": "19-Apr-2026",
+          "et_time": "18:43",
+          "et_weekday": "Sun",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": -1
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Pisces",
+        "lon_sid": 342.881049,
+        "nakshatra": "Uttara Bhadrapada",
+        "pada": 3,
+        "navamsa": "Libra",
+        "motion": "direct",
+        "speed_deg_day": 1.548693,
+        "latitude": -2.620916,
+        "declination": 0.412894,
+        "elongation": -22.774099,
+        "distance": 1.113132049,
+        "dignity": [
+          "debilitated"
+        ],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Neptune",
+        "neighbour_ahead_from": "Mars",
+        "neighbour_behind": "Neptune",
+        "neighbour_ahead": "Saturn"
+      },
+      "panchang": {
+        "tithi": 3,
+        "tithi_name": "Tritiya",
+        "paksha": "Shukla",
+        "moon_nakshatra": "Krittika",
+        "yoga": "Saubhagya",
+        "karana": "Gara"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.224471,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
+      }
+    },
+    {
       "id": "nakshatra_ingress:moon:20260419T230523Z",
       "event_class": "nakshatra_ingress",
       "rule_family": "ingress/nakshatra",
@@ -160449,6 +161611,76 @@
       }
     },
     {
+      "id": "neighbour_change:mercury:20260420T112211Z:saturn-mars",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-04-20T11:22:11Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-04-20T11:22:11Z",
+          "ist_date": "20-Apr-2026",
+          "ist_time": "16:52",
+          "ist_weekday": "Mon",
+          "et_date": "20-Apr-2026",
+          "et_time": "07:22",
+          "et_weekday": "Mon",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Pisces",
+        "lon_sid": 343.700478,
+        "nakshatra": "Uttara Bhadrapada",
+        "pada": 4,
+        "navamsa": "Scorpio",
+        "motion": "direct",
+        "speed_deg_day": 1.563813,
+        "latitude": -2.611647,
+        "declination": 0.744238,
+        "elongation": -22.46903,
+        "distance": 1.120266935,
+        "dignity": [
+          "debilitated"
+        ],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Neptune",
+        "neighbour_ahead_from": "Saturn",
+        "neighbour_behind": "Saturn",
+        "neighbour_ahead": "Mars"
+      },
+      "panchang": {
+        "tithi": 4,
+        "tithi_name": "Chaturthi",
+        "paksha": "Shukla",
+        "moon_nakshatra": "Rohini",
+        "yoga": "Shobhana",
+        "karana": "Vanija"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.224491,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
+      }
+    },
+    {
       "id": "karana_ingress:moon-sun:20260420T121959Z:k08",
       "event_class": "karana_ingress",
       "rule_family": "ingress/karana",
@@ -160885,6 +162117,76 @@
           "separation_deg=0",
           "astronomy_block_body=Mercury"
         ]
+      }
+    },
+    {
+      "id": "neighbour_change:mercury:20260420T214446Z:mars-sun",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-04-20T21:44:46Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-04-20T21:44:46Z",
+          "ist_date": "21-Apr-2026",
+          "ist_time": "03:14",
+          "ist_weekday": "Tue",
+          "et_date": "20-Apr-2026",
+          "et_time": "17:44",
+          "et_weekday": "Mon",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": -1
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Pisces",
+        "lon_sid": 344.379269,
+        "nakshatra": "Uttara Bhadrapada",
+        "pada": 4,
+        "navamsa": "Scorpio",
+        "motion": "direct",
+        "speed_deg_day": 1.576194,
+        "latitude": -2.602216,
+        "declination": 1.019864,
+        "elongation": -22.212467,
+        "distance": 1.126095034,
+        "dignity": [
+          "debilitated"
+        ],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Saturn",
+        "neighbour_ahead_from": "Mars",
+        "neighbour_behind": "Mars",
+        "neighbour_ahead": "Sun"
+      },
+      "panchang": {
+        "tithi": 4,
+        "tithi_name": "Chaturthi",
+        "paksha": "Shukla",
+        "moon_nakshatra": "Mrigashira",
+        "yoga": "Shobhana",
+        "karana": "Vishti"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.224508,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
       }
     },
     {
@@ -164853,6 +166155,74 @@
           "separation_deg=0",
           "astronomy_block_body=Venus"
         ]
+      }
+    },
+    {
+      "id": "neighbour_change:jupiter:20260424T015816Z:venus-ketu",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Jupiter"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-04-24T01:58:16Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-04-24T01:58:16Z",
+          "ist_date": "24-Apr-2026",
+          "ist_time": "07:28",
+          "ist_weekday": "Fri",
+          "et_date": "23-Apr-2026",
+          "et_time": "21:58",
+          "et_weekday": "Thu",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": -1
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Gemini",
+        "lon_sid": 83.774147,
+        "nakshatra": "Punarvasu",
+        "pada": 2,
+        "navamsa": "Taurus",
+        "motion": "direct",
+        "speed_deg_day": 0.124656,
+        "latitude": 0.386171,
+        "declination": 22.610628,
+        "elongation": 74.084194,
+        "distance": 5.43853622,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 5,
+        "neighbour_behind_from": "Uranus",
+        "neighbour_ahead_from": "Ketu",
+        "neighbour_behind": "Venus",
+        "neighbour_ahead": "Ketu"
+      },
+      "panchang": {
+        "tithi": 8,
+        "tithi_name": "Ashtami",
+        "paksha": "Shukla",
+        "moon_nakshatra": "Pushya",
+        "yoga": "Shula",
+        "karana": "Vishti"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.224629,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
       }
     },
     {
@@ -187748,6 +189118,74 @@
       }
     },
     {
+      "id": "neighbour_change:mercury:20260514T142423Z:sun-uranus",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-05-14T14:24:23Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-05-14T14:24:23Z",
+          "ist_date": "14-May-2026",
+          "ist_time": "19:54",
+          "ist_weekday": "Thu",
+          "et_date": "14-May-2026",
+          "et_time": "10:24",
+          "et_weekday": "Thu",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Aries",
+        "lon_sid": 29.579349,
+        "nakshatra": "Krittika",
+        "pada": 1,
+        "navamsa": "Sagittarius",
+        "motion": "direct",
+        "speed_deg_day": 2.181904,
+        "latitude": 0.14986,
+        "declination": 18.868667,
+        "elongation": 3e-06,
+        "distance": 1.322765109,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Mars",
+        "neighbour_ahead_from": "Sun",
+        "neighbour_behind": "Sun",
+        "neighbour_ahead": "Uranus"
+      },
+      "panchang": {
+        "tithi": 28,
+        "tithi_name": "Trayodashi",
+        "paksha": "Krishna",
+        "moon_nakshatra": "Revati",
+        "yoga": "Ayushman",
+        "karana": "Gara"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.225414,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
+      }
+    },
+    {
       "id": "karana_ingress:moon-sun:20260514T163053Z:k56",
       "event_class": "karana_ingress",
       "rule_family": "ingress/karana",
@@ -192248,6 +193686,74 @@
           "separation_deg=0",
           "astronomy_block_body=Mercury"
         ]
+      }
+    },
+    {
+      "id": "neighbour_change:mercury:20260518T001010Z:uranus-venus",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-05-18T00:10:10Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-05-18T00:10:10Z",
+          "ist_date": "18-May-2026",
+          "ist_time": "05:40",
+          "ist_weekday": "Mon",
+          "et_date": "17-May-2026",
+          "et_time": "20:10",
+          "et_weekday": "Sun",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": -1
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Taurus",
+        "lon_sid": 37.020862,
+        "nakshatra": "Krittika",
+        "pada": 4,
+        "navamsa": "Pisces",
+        "motion": "direct",
+        "speed_deg_day": 2.179558,
+        "latitude": 0.73604,
+        "declination": 21.129387,
+        "elongation": 4.155614,
+        "distance": 1.307068497,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Sun",
+        "neighbour_ahead_from": "Uranus",
+        "neighbour_behind": "Uranus",
+        "neighbour_ahead": "Venus"
+      },
+      "panchang": {
+        "tithi": 2,
+        "tithi_name": "Dwitiya",
+        "paksha": "Shukla",
+        "moon_nakshatra": "Rohini",
+        "yoga": "Sukarma",
+        "karana": "Balava"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.225544,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
       }
     },
     {
@@ -197995,6 +199501,74 @@
           "separation_deg=0",
           "astronomy_block_body=Sun"
         ]
+      }
+    },
+    {
+      "id": "neighbour_change:mercury:20260522T142617Z:sun-venus",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-05-22T14:26:17Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-05-22T14:26:17Z",
+          "ist_date": "22-May-2026",
+          "ist_time": "19:56",
+          "ist_weekday": "Fri",
+          "et_date": "22-May-2026",
+          "et_time": "10:26",
+          "et_weekday": "Fri",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Taurus",
+        "lon_sid": 46.874452,
+        "nakshatra": "Rohini",
+        "pada": 3,
+        "navamsa": "Gemini",
+        "motion": "direct",
+        "speed_deg_day": 2.094155,
+        "latitude": 1.42919,
+        "declination": 23.5209,
+        "elongation": 9.585499,
+        "distance": 1.260387661,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Uranus",
+        "neighbour_ahead_from": "Venus",
+        "neighbour_behind": "Sun",
+        "neighbour_ahead": "Venus"
+      },
+      "panchang": {
+        "tithi": 7,
+        "tithi_name": "Saptami",
+        "paksha": "Shukla",
+        "moon_nakshatra": "Ashlesha",
+        "yoga": "Dhruva",
+        "karana": "Vanija"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.22572,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
       }
     },
     {
@@ -217623,6 +219197,146 @@
           "separation_deg=0",
           "astronomy_block_body=Venus"
         ]
+      }
+    },
+    {
+      "id": "neighbour_change:jupiter:20260609T195913Z:mercury-venus",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Jupiter"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-06-09T19:59:13Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-06-09T19:59:13Z",
+          "ist_date": "10-Jun-2026",
+          "ist_time": "01:29",
+          "ist_weekday": "Wed",
+          "et_date": "09-Jun-2026",
+          "et_time": "15:59",
+          "et_weekday": "Tue",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": -1
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Cancer",
+        "lon_sid": 91.549691,
+        "nakshatra": "Punarvasu",
+        "pada": 4,
+        "navamsa": "Cancer",
+        "motion": "direct",
+        "speed_deg_day": 0.198261,
+        "latitude": 0.41915,
+        "declination": 21.399978,
+        "elongation": 36.784057,
+        "distance": 6.0466969,
+        "dignity": [
+          "exalted"
+        ],
+        "trine": false,
+        "vargottama": true,
+        "deep_exaltation_deg": 5,
+        "neighbour_behind_from": "Venus",
+        "neighbour_ahead_from": "Ketu",
+        "neighbour_behind": "Mercury",
+        "neighbour_ahead": "Venus"
+      },
+      "panchang": {
+        "tithi": 24,
+        "tithi_name": "Navami",
+        "paksha": "Krishna",
+        "moon_nakshatra": "Uttara Bhadrapada",
+        "yoga": "Ayushman",
+        "karana": "Gara"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.226417,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
+      }
+    },
+    {
+      "id": "neighbour_change:mercury:20260609T195913Z:sun-jupiter",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-06-09T19:59:13Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-06-09T19:59:13Z",
+          "ist_date": "10-Jun-2026",
+          "ist_time": "01:29",
+          "ist_weekday": "Wed",
+          "et_date": "09-Jun-2026",
+          "et_time": "15:59",
+          "et_weekday": "Tue",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": -1
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Gemini",
+        "lon_sid": 78.230424,
+        "nakshatra": "Ardra",
+        "pada": 4,
+        "navamsa": "Pisces",
+        "motion": "direct",
+        "speed_deg_day": 1.287635,
+        "latitude": 1.801091,
+        "declination": 24.647517,
+        "elongation": 23.464791,
+        "distance": 0.93100637,
+        "dignity": [
+          "own"
+        ],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Sun",
+        "neighbour_ahead_from": "Venus",
+        "neighbour_behind": "Sun",
+        "neighbour_ahead": "Jupiter"
+      },
+      "panchang": {
+        "tithi": 24,
+        "tithi_name": "Navami",
+        "paksha": "Krishna",
+        "moon_nakshatra": "Uttara Bhadrapada",
+        "yoga": "Ayushman",
+        "karana": "Gara"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.226417,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
       }
     },
     {
@@ -253052,6 +254766,76 @@
       }
     },
     {
+      "id": "neighbour_change:jupiter:20260711T130921Z:mercury-ketu",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Jupiter"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-07-11T13:09:21Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-07-11T13:09:21Z",
+          "ist_date": "11-Jul-2026",
+          "ist_time": "18:39",
+          "ist_weekday": "Sat",
+          "et_date": "11-Jul-2026",
+          "et_time": "09:09",
+          "et_weekday": "Sat",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Cancer",
+        "lon_sid": 98.216798,
+        "nakshatra": "Pushya",
+        "pada": 2,
+        "navamsa": "Virgo",
+        "motion": "direct",
+        "speed_deg_day": 0.218742,
+        "latitude": 0.450612,
+        "declination": 20.051646,
+        "elongation": 13.186544,
+        "distance": 6.264434196,
+        "dignity": [
+          "exalted"
+        ],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 5,
+        "neighbour_behind_from": "Mercury",
+        "neighbour_ahead_from": "Venus",
+        "neighbour_behind": "Mercury",
+        "neighbour_ahead": "Ketu"
+      },
+      "panchang": {
+        "tithi": 27,
+        "tithi_name": "Dwadashi",
+        "paksha": "Krishna",
+        "moon_nakshatra": "Rohini",
+        "yoga": "Ganda",
+        "karana": "Taitila"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.227631,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
+      }
+    },
+    {
       "id": "sunset:sun:20260711T134613Z:mumbai",
       "event_class": "sunset",
       "rule_family": "horizon/sunset",
@@ -255047,6 +256831,146 @@
           "separation_deg=0",
           "astronomy_block_body=Sun"
         ]
+      }
+    },
+    {
+      "id": "neighbour_change:jupiter:20260713T012547Z:sun-ketu",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Jupiter"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-07-13T01:25:47Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-07-13T01:25:47Z",
+          "ist_date": "13-Jul-2026",
+          "ist_time": "06:55",
+          "ist_weekday": "Mon",
+          "et_date": "12-Jul-2026",
+          "et_time": "21:25",
+          "et_weekday": "Sun",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": -1
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Cancer",
+        "lon_sid": 98.547782,
+        "nakshatra": "Pushya",
+        "pada": 2,
+        "navamsa": "Virgo",
+        "motion": "direct",
+        "speed_deg_day": 0.219229,
+        "latitude": 0.452376,
+        "declination": 19.977815,
+        "elongation": 12.075606,
+        "distance": 6.270027106,
+        "dignity": [
+          "exalted"
+        ],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 5,
+        "neighbour_behind_from": "Mercury",
+        "neighbour_ahead_from": "Ketu",
+        "neighbour_behind": "Sun",
+        "neighbour_ahead": "Ketu"
+      },
+      "panchang": {
+        "tithi": 29,
+        "tithi_name": "Chaturdashi",
+        "paksha": "Krishna",
+        "moon_nakshatra": "Ardra",
+        "yoga": "Dhruva",
+        "karana": "Vishti"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.227688,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
+      }
+    },
+    {
+      "id": "neighbour_change:mercury:20260713T012547Z:mars-sun",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-07-13T01:25:47Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-07-13T01:25:47Z",
+          "ist_date": "13-Jul-2026",
+          "ist_time": "06:55",
+          "ist_weekday": "Mon",
+          "et_date": "12-Jul-2026",
+          "et_time": "21:25",
+          "et_weekday": "Sun",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": -1
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Gemini",
+        "lon_sid": 86.472158,
+        "nakshatra": "Punarvasu",
+        "pada": 2,
+        "navamsa": "Taurus",
+        "motion": "retrograde",
+        "speed_deg_day": -0.643414,
+        "latitude": -4.837951,
+        "declination": 17.059652,
+        "elongation": -1.7e-05,
+        "distance": 0.573224401,
+        "dignity": [
+          "own"
+        ],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Sun",
+        "neighbour_ahead_from": "Jupiter",
+        "neighbour_behind": "Mars",
+        "neighbour_ahead": "Sun"
+      },
+      "panchang": {
+        "tithi": 29,
+        "tithi_name": "Chaturdashi",
+        "paksha": "Krishna",
+        "moon_nakshatra": "Ardra",
+        "yoga": "Dhruva",
+        "karana": "Vishti"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.227688,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
       }
     },
     {
@@ -273080,6 +275004,146 @@
           "separation_deg=0",
           "astronomy_block_body=Sun"
         ]
+      }
+    },
+    {
+      "id": "neighbour_change:jupiter:20260729T121753Z:mercury-sun",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Jupiter"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-07-29T12:17:53Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-07-29T12:17:53Z",
+          "ist_date": "29-Jul-2026",
+          "ist_time": "17:47",
+          "ist_weekday": "Wed",
+          "et_date": "29-Jul-2026",
+          "et_time": "08:17",
+          "et_weekday": "Wed",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Cancer",
+        "lon_sid": 102.179954,
+        "nakshatra": "Pushya",
+        "pada": 3,
+        "navamsa": "Libra",
+        "motion": "direct",
+        "speed_deg_day": 0.221072,
+        "latitude": 0.473698,
+        "declination": 19.128086,
+        "elongation": -5e-06,
+        "distance": 6.301097009,
+        "dignity": [
+          "exalted"
+        ],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 5,
+        "neighbour_behind_from": "Sun",
+        "neighbour_ahead_from": "Ketu",
+        "neighbour_behind": "Mercury",
+        "neighbour_ahead": "Sun"
+      },
+      "panchang": {
+        "tithi": 15,
+        "tithi_name": "Purnima",
+        "paksha": "Shukla",
+        "moon_nakshatra": "Shravana",
+        "yoga": "Priti",
+        "karana": "Bava"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.228318,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
+      }
+    },
+    {
+      "id": "neighbour_change:mercury:20260729T121753Z:mars-jupiter",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-07-29T12:17:53Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-07-29T12:17:53Z",
+          "ist_date": "29-Jul-2026",
+          "ist_time": "17:47",
+          "ist_weekday": "Wed",
+          "et_date": "29-Jul-2026",
+          "et_time": "08:17",
+          "et_weekday": "Wed",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Gemini",
+        "lon_sid": 83.603725,
+        "nakshatra": "Punarvasu",
+        "pada": 2,
+        "navamsa": "Taurus",
+        "motion": "direct",
+        "speed_deg_day": 0.552374,
+        "latitude": -2.791095,
+        "declination": 19.482315,
+        "elongation": -18.576233,
+        "distance": 0.79113924,
+        "dignity": [
+          "own"
+        ],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Mars",
+        "neighbour_ahead_from": "Sun",
+        "neighbour_behind": "Mars",
+        "neighbour_ahead": "Jupiter"
+      },
+      "panchang": {
+        "tithi": 15,
+        "tithi_name": "Purnima",
+        "paksha": "Shukla",
+        "moon_nakshatra": "Shravana",
+        "yoga": "Priti",
+        "karana": "Bava"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.228318,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
       }
     },
     {
@@ -293189,6 +295253,144 @@
       }
     },
     {
+      "id": "neighbour_change:jupiter:20260815T112256Z:mars-mercury",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Jupiter"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-08-15T11:22:56Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-08-15T11:22:56Z",
+          "ist_date": "15-Aug-2026",
+          "ist_time": "16:52",
+          "ist_weekday": "Sat",
+          "et_date": "15-Aug-2026",
+          "et_time": "07:22",
+          "et_weekday": "Sat",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Cancer",
+        "lon_sid": 105.919309,
+        "nakshatra": "Pushya",
+        "pada": 4,
+        "navamsa": "Scorpio",
+        "motion": "direct",
+        "speed_deg_day": 0.21853,
+        "latitude": 0.499291,
+        "declination": 18.180361,
+        "elongation": -12.514642,
+        "distance": 6.275736331,
+        "dignity": [
+          "exalted"
+        ],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 5,
+        "neighbour_behind_from": "Mercury",
+        "neighbour_ahead_from": "Sun",
+        "neighbour_behind": "Mars",
+        "neighbour_ahead": "Mercury"
+      },
+      "panchang": {
+        "tithi": 3,
+        "tithi_name": "Tritiya",
+        "paksha": "Shukla",
+        "moon_nakshatra": "Uttara Phalguni",
+        "yoga": "Siddha",
+        "karana": "Gara"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.228966,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
+      }
+    },
+    {
+      "id": "neighbour_change:mercury:20260815T112256Z:jupiter-sun",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-08-15T11:22:56Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-08-15T11:22:56Z",
+          "ist_date": "15-Aug-2026",
+          "ist_time": "16:52",
+          "ist_weekday": "Sat",
+          "et_date": "15-Aug-2026",
+          "et_time": "07:22",
+          "et_weekday": "Sat",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Cancer",
+        "lon_sid": 105.919308,
+        "nakshatra": "Pushya",
+        "pada": 4,
+        "navamsa": "Scorpio",
+        "motion": "direct",
+        "speed_deg_day": 1.899417,
+        "latitude": 1.052908,
+        "declination": 18.71336,
+        "elongation": -12.514643,
+        "distance": 1.203725497,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Mars",
+        "neighbour_ahead_from": "Jupiter",
+        "neighbour_behind": "Jupiter",
+        "neighbour_ahead": "Sun"
+      },
+      "panchang": {
+        "tithi": 3,
+        "tithi_name": "Tritiya",
+        "paksha": "Shukla",
+        "moon_nakshatra": "Uttara Phalguni",
+        "yoga": "Siddha",
+        "karana": "Gara"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.228966,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
+      }
+    },
+    {
       "id": "karana_ingress:moon-sun:20260815T115925Z:k07",
       "event_class": "karana_ingress",
       "rule_family": "ingress/karana",
@@ -301757,6 +303959,74 @@
       }
     },
     {
+      "id": "neighbour_change:mercury:20260822T210051Z:jupiter-ketu",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-08-22T21:00:51Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-08-22T21:00:51Z",
+          "ist_date": "23-Aug-2026",
+          "ist_time": "02:30",
+          "ist_weekday": "Sun",
+          "et_date": "22-Aug-2026",
+          "et_time": "17:00",
+          "et_weekday": "Sat",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": -1
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Leo",
+        "lon_sid": 120.585671,
+        "nakshatra": "Magha",
+        "pada": 1,
+        "navamsa": "Aries",
+        "motion": "direct",
+        "speed_deg_day": 2.012451,
+        "latitude": 1.713698,
+        "declination": 14.863423,
+        "elongation": -4.969706,
+        "distance": 1.322346834,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Jupiter",
+        "neighbour_ahead_from": "Sun",
+        "neighbour_behind": "Jupiter",
+        "neighbour_ahead": "Ketu"
+      },
+      "panchang": {
+        "tithi": 11,
+        "tithi_name": "Ekadashi",
+        "paksha": "Shukla",
+        "moon_nakshatra": "Mula",
+        "yoga": "Vishkambha",
+        "karana": "Vanija"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.22925,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
+      }
+    },
+    {
       "id": "navamsa_ingress:mars:20260822T214050Z",
       "event_class": "navamsa_ingress",
       "rule_family": "ingress/navamsa",
@@ -304197,6 +306467,144 @@
         "flags": [
           "source_section_not_printed_in_2026"
         ]
+      }
+    },
+    {
+      "id": "neighbour_change:jupiter:20260825T065815Z:mars-ketu",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Jupiter"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-08-25T06:58:15Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-08-25T06:58:15Z",
+          "ist_date": "25-Aug-2026",
+          "ist_time": "12:28",
+          "ist_weekday": "Tue",
+          "et_date": "25-Aug-2026",
+          "et_time": "02:58",
+          "et_weekday": "Tue",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Cancer",
+        "lon_sid": 108.044221,
+        "nakshatra": "Ashlesha",
+        "pada": 1,
+        "navamsa": "Sagittarius",
+        "motion": "direct",
+        "speed_deg_day": 0.214098,
+        "latitude": 0.516385,
+        "declination": 17.611543,
+        "elongation": -19.838451,
+        "distance": 6.234512327,
+        "dignity": [
+          "exalted"
+        ],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 5,
+        "neighbour_behind_from": "Mars",
+        "neighbour_ahead_from": "Mercury",
+        "neighbour_behind": "Mars",
+        "neighbour_ahead": "Ketu"
+      },
+      "panchang": {
+        "tithi": 13,
+        "tithi_name": "Trayodashi",
+        "paksha": "Shukla",
+        "moon_nakshatra": "Uttara Ashadha",
+        "yoga": "Saubhagya",
+        "karana": "Kaulava"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.229342,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
+      }
+    },
+    {
+      "id": "neighbour_change:mercury:20260825T065815Z:ketu-sun",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-08-25T06:58:15Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-08-25T06:58:15Z",
+          "ist_date": "25-Aug-2026",
+          "ist_time": "12:28",
+          "ist_weekday": "Tue",
+          "et_date": "25-Aug-2026",
+          "et_time": "02:58",
+          "et_weekday": "Tue",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Leo",
+        "lon_sid": 125.427437,
+        "nakshatra": "Magha",
+        "pada": 2,
+        "navamsa": "Taurus",
+        "motion": "direct",
+        "speed_deg_day": 1.994485,
+        "latitude": 1.764787,
+        "declination": 13.243083,
+        "elongation": -2.455235,
+        "distance": 1.345674,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Jupiter",
+        "neighbour_ahead_from": "Ketu",
+        "neighbour_behind": "Ketu",
+        "neighbour_ahead": "Sun"
+      },
+      "panchang": {
+        "tithi": 13,
+        "tithi_name": "Trayodashi",
+        "paksha": "Shukla",
+        "moon_nakshatra": "Uttara Ashadha",
+        "yoga": "Saubhagya",
+        "karana": "Kaulava"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.229342,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
       }
     },
     {
@@ -306859,6 +309267,74 @@
           "separation_deg=0",
           "astronomy_block_body=Sun"
         ]
+      }
+    },
+    {
+      "id": "neighbour_change:mercury:20260827T170349Z:sun-venus",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-08-27T17:03:49Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-08-27T17:03:49Z",
+          "ist_date": "27-Aug-2026",
+          "ist_time": "22:33",
+          "ist_weekday": "Thu",
+          "et_date": "27-Aug-2026",
+          "et_time": "13:03",
+          "et_weekday": "Thu",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Leo",
+        "lon_sid": 130.217615,
+        "nakshatra": "Magha",
+        "pada": 4,
+        "navamsa": "Cancer",
+        "motion": "direct",
+        "speed_deg_day": 1.961526,
+        "latitude": 1.747235,
+        "declination": 11.504752,
+        "elongation": 1.6e-05,
+        "distance": 1.362164887,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Ketu",
+        "neighbour_ahead_from": "Sun",
+        "neighbour_behind": "Sun",
+        "neighbour_ahead": "Venus"
+      },
+      "panchang": {
+        "tithi": 15,
+        "tithi_name": "Purnima",
+        "paksha": "Shukla",
+        "moon_nakshatra": "Dhanishta",
+        "yoga": "Atiganda",
+        "karana": "Bava"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.229434,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
       }
     },
     {
@@ -352637,6 +355113,74 @@
       }
     },
     {
+      "id": "neighbour_change:mercury:20261007T001024Z:venus-pluto",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-10-07T00:10:24Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-10-07T00:10:24Z",
+          "ist_date": "07-Oct-2026",
+          "ist_time": "05:40",
+          "ist_weekday": "Wed",
+          "et_date": "06-Oct-2026",
+          "et_time": "20:10",
+          "et_weekday": "Tue",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": -1
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Libra",
+        "lon_sid": 193.988399,
+        "nakshatra": "Swati",
+        "pada": 3,
+        "navamsa": "Aquarius",
+        "motion": "direct",
+        "speed_deg_day": 1.178083,
+        "latitude": -2.418396,
+        "declination": -16.534419,
+        "elongation": 24.468308,
+        "distance": 1.090956109,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Sun",
+        "neighbour_ahead_from": "Venus",
+        "neighbour_behind": "Venus",
+        "neighbour_ahead": "Pluto"
+      },
+      "panchang": {
+        "tithi": 27,
+        "tithi_name": "Dwadashi",
+        "paksha": "Krishna",
+        "moon_nakshatra": "Magha",
+        "yoga": "Shubha",
+        "karana": "Kaulava"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.230976,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
+      }
+    },
+    {
       "id": "sunrise:sun:20261007T010408Z:mumbai",
       "event_class": "sunrise",
       "rule_family": "horizon/sunrise",
@@ -370699,6 +373243,74 @@
       }
     },
     {
+      "id": "neighbour_change:mercury:20261024T034408Z:sun-pluto",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-10-24T03:44:08Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-10-24T03:44:08Z",
+          "ist_date": "24-Oct-2026",
+          "ist_time": "09:14",
+          "ist_weekday": "Sat",
+          "et_date": "23-Oct-2026",
+          "et_time": "23:44",
+          "et_weekday": "Fri",
+          "et_abbr": "EDT",
+          "et_offset": "-04:00",
+          "day_shift": -1
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Libra",
+        "lon_sid": 206.74379,
+        "nakshatra": "Vishakha",
+        "pada": 3,
+        "navamsa": "Gemini",
+        "motion": "direct",
+        "speed_deg_day": 0.019067,
+        "latitude": -3.018258,
+        "declination": -20.909833,
+        "elongation": 20.22687,
+        "distance": 0.78803234,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Venus",
+        "neighbour_ahead_from": "Pluto",
+        "neighbour_behind": "Sun",
+        "neighbour_ahead": "Pluto"
+      },
+      "panchang": {
+        "tithi": 13,
+        "tithi_name": "Trayodashi",
+        "paksha": "Shukla",
+        "moon_nakshatra": "Uttara Bhadrapada",
+        "yoga": "Vyaghata",
+        "karana": "Taitila"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.231632,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
+      }
+    },
+    {
       "id": "station:mercury:20261024T071243Z:R",
       "event_class": "station",
       "rule_family": "motion/station_R",
@@ -383970,6 +386582,74 @@
       }
     },
     {
+      "id": "neighbour_change:mercury:20261104T142419Z:venus-sun",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-11-04T14:24:19Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-11-04T14:24:19Z",
+          "ist_date": "04-Nov-2026",
+          "ist_time": "19:54",
+          "ist_weekday": "Wed",
+          "et_date": "04-Nov-2026",
+          "et_time": "09:24",
+          "et_weekday": "Wed",
+          "et_abbr": "EST",
+          "et_offset": "-05:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Libra",
+        "lon_sid": 197.946579,
+        "nakshatra": "Swati",
+        "pada": 4,
+        "navamsa": "Pisces",
+        "motion": "retrograde",
+        "speed_deg_day": -1.307058,
+        "latitude": -0.373566,
+        "declination": -15.846361,
+        "elongation": -1e-06,
+        "distance": 0.674132624,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Sun",
+        "neighbour_ahead_from": "Pluto",
+        "neighbour_behind": "Venus",
+        "neighbour_ahead": "Sun"
+      },
+      "panchang": {
+        "tithi": 26,
+        "tithi_name": "Ekadashi",
+        "paksha": "Krishna",
+        "moon_nakshatra": "Purva Phalguni",
+        "yoga": "Indra",
+        "karana": "Bava"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.232069,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
+      }
+    },
+    {
       "id": "navamsa_ingress:moon:20261104T155720Z",
       "event_class": "navamsa_ingress",
       "rule_family": "ingress/navamsa",
@@ -391458,6 +394138,74 @@
       }
     },
     {
+      "id": "neighbour_change:jupiter:20261111T203018Z:ketu-venus",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Jupiter"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-11-11T20:30:18Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-11-11T20:30:18Z",
+          "ist_date": "12-Nov-2026",
+          "ist_time": "02:00",
+          "ist_weekday": "Thu",
+          "et_date": "11-Nov-2026",
+          "et_time": "15:30",
+          "et_weekday": "Wed",
+          "et_abbr": "EST",
+          "et_offset": "-05:00",
+          "day_shift": -1
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Leo",
+        "lon_sid": 121.264148,
+        "nakshatra": "Magha",
+        "pada": 1,
+        "navamsa": "Aries",
+        "motion": "direct",
+        "speed_deg_day": 0.094391,
+        "latitude": 0.728422,
+        "declination": 13.706206,
+        "elongation": -83.965751,
+        "distance": 5.332409984,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 5,
+        "neighbour_behind_from": "Mars",
+        "neighbour_ahead_from": "Ketu",
+        "neighbour_behind": "Ketu",
+        "neighbour_ahead": "Venus"
+      },
+      "panchang": {
+        "tithi": 3,
+        "tithi_name": "Tritiya",
+        "paksha": "Shukla",
+        "moon_nakshatra": "Jyeshtha",
+        "yoga": "Atiganda",
+        "karana": "Taitila"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.232347,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
+      }
+    },
+    {
       "id": "sunset:sun:20261111T213641Z:new_york",
       "event_class": "sunset",
       "rule_family": "horizon/sunset",
@@ -395150,6 +397898,74 @@
       }
     },
     {
+      "id": "neighbour_change:jupiter:20261115T003102Z:mars-venus",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Jupiter"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-11-15T00:31:02Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-11-15T00:31:02Z",
+          "ist_date": "15-Nov-2026",
+          "ist_time": "06:01",
+          "ist_weekday": "Sun",
+          "et_date": "14-Nov-2026",
+          "et_time": "19:31",
+          "et_weekday": "Sat",
+          "et_abbr": "EST",
+          "et_offset": "-05:00",
+          "day_shift": -1
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Leo",
+        "lon_sid": 121.549581,
+        "nakshatra": "Magha",
+        "pada": 1,
+        "navamsa": "Aries",
+        "motion": "direct",
+        "speed_deg_day": 0.085809,
+        "latitude": 0.740177,
+        "declination": 13.620749,
+        "elongation": -86.867878,
+        "distance": 5.28278314,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 5,
+        "neighbour_behind_from": "Ketu",
+        "neighbour_ahead_from": "Venus",
+        "neighbour_behind": "Mars",
+        "neighbour_ahead": "Venus"
+      },
+      "panchang": {
+        "tithi": 6,
+        "tithi_name": "Shashthi",
+        "paksha": "Shukla",
+        "moon_nakshatra": "Uttara Ashadha",
+        "yoga": "Shula",
+        "karana": "Kaulava"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.232468,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
+      }
+    },
+    {
       "id": "yoga_ingress:moon-sun:20261115T005242Z:y10",
       "event_class": "yoga_ingress",
       "rule_family": "ingress/yoga",
@@ -396295,6 +399111,74 @@
           "separation_deg=0",
           "astronomy_block_body=Mars"
         ]
+      }
+    },
+    {
+      "id": "neighbour_change:jupiter:20261116T062339Z:ketu-mars",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Jupiter"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2026-11-16T06:23:39Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2026-11-16T06:23:39Z",
+          "ist_date": "16-Nov-2026",
+          "ist_time": "11:53",
+          "ist_weekday": "Mon",
+          "et_date": "16-Nov-2026",
+          "et_time": "01:23",
+          "et_weekday": "Mon",
+          "et_abbr": "EST",
+          "et_offset": "-05:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Leo",
+        "lon_sid": 121.654261,
+        "nakshatra": "Magha",
+        "pada": 1,
+        "navamsa": "Aries",
+        "motion": "direct",
+        "speed_deg_day": 0.082363,
+        "latitude": 0.744862,
+        "declination": 13.589695,
+        "elongation": -88.017171,
+        "distance": 5.263232224,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 5,
+        "neighbour_behind_from": "Mars",
+        "neighbour_ahead_from": "Venus",
+        "neighbour_behind": "Ketu",
+        "neighbour_ahead": "Mars"
+      },
+      "panchang": {
+        "tithi": 7,
+        "tithi_name": "Saptami",
+        "paksha": "Shukla",
+        "moon_nakshatra": "Shravana",
+        "yoga": "Vriddhi",
+        "karana": "Gara"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.232516,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
       }
     },
     {
@@ -447937,6 +450821,74 @@
       }
     },
     {
+      "id": "neighbour_change:mercury:20270101T170732Z:sun-pluto",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2027-01-01T17:07:32Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2027-01-01T17:07:32Z",
+          "ist_date": "01-Jan-2027",
+          "ist_time": "22:37",
+          "ist_weekday": "Fri",
+          "et_date": "01-Jan-2027",
+          "et_time": "12:07",
+          "et_weekday": "Fri",
+          "et_abbr": "EST",
+          "et_offset": "-05:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Sagittarius",
+        "lon_sid": 256.81046,
+        "nakshatra": "Purva Ashadha",
+        "pada": 2,
+        "navamsa": "Virgo",
+        "motion": "direct",
+        "speed_deg_day": 1.60754,
+        "latitude": -1.763661,
+        "declination": -24.735665,
+        "elongation": 3e-06,
+        "distance": 1.438852781,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Venus",
+        "neighbour_ahead_from": "Sun",
+        "neighbour_behind": "Sun",
+        "neighbour_ahead": "Pluto"
+      },
+      "panchang": {
+        "tithi": 25,
+        "tithi_name": "Dashami",
+        "paksha": "Krishna",
+        "moon_nakshatra": "Swati",
+        "yoga": "Sukarma",
+        "karana": "Vanija"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.234292,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
+      }
+    },
+    {
       "id": "navamsa_ingress:venus:20270101T175253Z",
       "event_class": "navamsa_ingress",
       "rule_family": "ingress/navamsa",
@@ -463116,6 +466068,74 @@
       }
     },
     {
+      "id": "neighbour_change:mercury:20270116T024843Z:pluto-rahu",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2027-01-16T02:48:43Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2027-01-16T02:48:43Z",
+          "ist_date": "16-Jan-2027",
+          "ist_time": "08:18",
+          "ist_weekday": "Sat",
+          "et_date": "15-Jan-2027",
+          "et_time": "21:48",
+          "et_weekday": "Fri",
+          "et_abbr": "EST",
+          "et_offset": "-05:00",
+          "day_shift": -1
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Capricorn",
+        "lon_sid": 280.577219,
+        "nakshatra": "Shravana",
+        "pada": 1,
+        "navamsa": "Aries",
+        "motion": "direct",
+        "speed_deg_day": 1.68644,
+        "latitude": -2.058947,
+        "declination": -21.05757,
+        "elongation": 9.085962,
+        "distance": 1.336361978,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Sun",
+        "neighbour_ahead_from": "Pluto",
+        "neighbour_behind": "Pluto",
+        "neighbour_ahead": "Rahu"
+      },
+      "panchang": {
+        "tithi": 8,
+        "tithi_name": "Ashtami",
+        "paksha": "Shukla",
+        "moon_nakshatra": "Ashwini",
+        "yoga": "Siddha",
+        "karana": "Bava"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.234843,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
+      }
+    },
+    {
       "id": "navamsa_ingress:moon:20270116T062046Z",
       "event_class": "navamsa_ingress",
       "rule_family": "ingress/navamsa",
@@ -474088,6 +477108,74 @@
       }
     },
     {
+      "id": "neighbour_change:mercury:20270125T080124Z:sun-rahu",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2027-01-25T08:01:24Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2027-01-25T08:01:24Z",
+          "ist_date": "25-Jan-2027",
+          "ist_time": "13:31",
+          "ist_weekday": "Mon",
+          "et_date": "25-Jan-2027",
+          "et_time": "03:01",
+          "et_weekday": "Mon",
+          "et_abbr": "EST",
+          "et_offset": "-05:00",
+          "day_shift": 0
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Capricorn",
+        "lon_sid": 295.955285,
+        "nakshatra": "Dhanishta",
+        "pada": 1,
+        "navamsa": "Leo",
+        "motion": "direct",
+        "speed_deg_day": 1.606892,
+        "latitude": -1.336657,
+        "declination": -16.019887,
+        "elongation": 15.086346,
+        "distance": 1.182225518,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Pluto",
+        "neighbour_ahead_from": "Rahu",
+        "neighbour_behind": "Sun",
+        "neighbour_ahead": "Rahu"
+      },
+      "panchang": {
+        "tithi": 19,
+        "tithi_name": "Chaturthi",
+        "paksha": "Krishna",
+        "moon_nakshatra": "Purva Phalguni",
+        "yoga": "Shobhana",
+        "karana": "Bava"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.235196,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
+      }
+    },
+    {
       "id": "navamsa_ingress:moon:20270125T081734Z",
       "event_class": "navamsa_ingress",
       "rule_family": "ingress/navamsa",
@@ -475152,6 +478240,74 @@
           "horizon_geo_lat_lon_alt=18.9667,72.8333,0",
           "civil_date_at_venue=2027-01-26"
         ]
+      }
+    },
+    {
+      "id": "neighbour_change:mercury:20270126T035130Z:rahu-neptune",
+      "event_class": "neighbour_change",
+      "rule_family": "order/neighbours",
+      "bodies": [
+        "Mercury"
+      ],
+      "kind": "instant",
+      "time": {
+        "t_start_utc": "2027-01-26T03:51:30Z",
+        "t_end_utc": null,
+        "precision": "exact",
+        "start_stamp": {
+          "utc": "2027-01-26T03:51:30Z",
+          "ist_date": "26-Jan-2027",
+          "ist_time": "09:21",
+          "ist_weekday": "Tue",
+          "et_date": "25-Jan-2027",
+          "et_time": "22:51",
+          "et_weekday": "Mon",
+          "et_abbr": "EST",
+          "et_offset": "-05:00",
+          "day_shift": -1
+        },
+        "end_stamp": null
+      },
+      "astronomy": {
+        "sign": "Capricorn",
+        "lon_sid": 297.273512,
+        "nakshatra": "Dhanishta",
+        "pada": 2,
+        "navamsa": "Virgo",
+        "motion": "direct",
+        "speed_deg_day": 1.582436,
+        "latitude": -1.222663,
+        "declination": -15.489517,
+        "elongation": 15.564505,
+        "distance": 1.164307515,
+        "dignity": [],
+        "trine": false,
+        "vargottama": false,
+        "deep_exaltation_deg": 15,
+        "neighbour_behind_from": "Sun",
+        "neighbour_ahead_from": "Rahu",
+        "neighbour_behind": "Rahu",
+        "neighbour_ahead": "Neptune"
+      },
+      "panchang": {
+        "tithi": 20,
+        "tithi_name": "Panchami",
+        "paksha": "Krishna",
+        "moon_nakshatra": "Uttara Phalguni",
+        "yoga": "Atiganda",
+        "karana": "Kaulava"
+      },
+      "location": null,
+      "qa": {
+        "engine": "finastro/step3-astronomy",
+        "ephemeris": "swisseph_files",
+        "ayanamsha": "LAHIRI",
+        "ayanamsha_deg": 24.235227,
+        "node": "mean",
+        "data_certainty": "A",
+        "precision_days": null,
+        "source_2026_equivalent": null,
+        "flags": []
       }
     },
     {

@@ -1,6 +1,6 @@
 # Rule layer status — catalogue B, and what catalogue B is not
 
-Generated 19-Nov-2026 from the live registry, not by hand. Year 2027.
+Generated 20-Nov-2026 from the live registry, not by hand. Year 2027.
 
 ## Coverage, in three denominators
 
@@ -9,40 +9,40 @@ Three counts, because there are three catalogues in this document and only one o
 | | sections | ported | reading |
 | --- | --- | --- | --- |
 | **Catalogue B** — `<h3 class="section">`, the rule sections of Chapter 1 | 141 sections | **141 of 141** | every section carries a status |
-| **Instrument configuration sections** — `<section id="...">` with an `<h2>`, Chapter 1 Sr.No 149-154 | **58 named groups** | **41 of 58** | **17 blocked, each on a named input** |
+| **Instrument configuration sections** — `<section id="...">` with an `<h2>`, Chapter 1 Sr.No 149-154 | **58 named groups** | **45 of 58** | **13 blocked, each on a named input** |
 | **`<h2>` sub-tables** — `<section id="...">` with an `<h2>` that states no direction | **10 sub-tables** | **9 of 10** | **1 blocked or out of scope, each on a named input** |
 
-**So: catalogue B 141/141 · configuration sections 41/58 · sub-tables 9/10.** THREE DENOMINATORS OVER THREE SHAPES OF MARKUP, and none of them is in either of the others. That separation is what keeps "141 of 141" honest: it is a statement about `<h3 class="section">` and about nothing else. All three DO feed the calendar — `verdicts.py` fires all three registries — and the 9,363 verdict rows split **5,548 catalogue B · 1,469 configuration · 2,346 sub-table**.
+**So: catalogue B 141/141 · configuration sections 45/58 · sub-tables 9/10.** THREE DENOMINATORS OVER THREE SHAPES OF MARKUP, and none of them is in either of the others. That separation is what keeps "141 of 141" honest: it is a statement about `<h3 class="section">` and about nothing else. All three DO feed the calendar — `verdicts.py` fires all three registries — and the 10,100 verdict rows split **6,026 catalogue B · 1,728 configuration · 2,346 sub-table**.
 
 **A row's registry is readable off its `event` field with no lookup**: `cfg_<block>_` for a configuration group, `sub_` for a sub-table, and `b<nn>` or a panchang family name for catalogue B. That convention is asserted at registration rather than left to discipline, because the one thing that would make all three of these numbers wrong at once is a rule in the wrong registry.
 
-**141 of 141 is TRUE OF CATALOGUE B and is not a coverage claim about the source.** The instrument configuration sections are a different shape of markup and were never in the 141, so they were never in the denominator and a reader seeing "141/141" could conclude the source is fully covered when 17 of those 58 named groups have still never had a rule written for them.
+**141 of 141 is TRUE OF CATALOGUE B and is not a coverage claim about the source.** The instrument configuration sections are a different shape of markup and were never in the 141, so they were never in the denominator and a reader seeing "141/141" could conclude the source is fully covered when 13 of those 58 named groups have still never had a rule written for them.
 
 The counts, from the document (read out of `data/source_2026.html` at generation time by `finastro/cfgsections.py`, not out of config — a count taken from the thing being audited is not an audit):
 
 | block | instrument | direction | pages | named groups | ported |
 | --- | --- | --- | --- | --- | --- |
-| `gold-bullish` | gold | bullish | pp.136-144 | 13 | **7** |
+| `gold-bullish` | gold | bullish | pp.136-144 | 13 | **8** |
 | `gold-bearish` | gold | bearish | pp.145-148 | 6 | **4** |
-| `silver-bullish` | silver | bullish | pp.149-161 | 20 | **16** |
-| `silver-bearish` | silver | bearish | pp.162-167 | 10 | **8** |
-| `sugar-bullish` | sugar | bullish | pp.168-173 | 7 | **5** |
+| `silver-bullish` | silver | bullish | pp.149-161 | 20 | **17** |
+| `silver-bearish` | silver | bearish | pp.162-167 | 10 | **9** |
+| `sugar-bullish` | sugar | bullish | pp.168-173 | 7 | **6** |
 | `sugar-bearish` | sugar | bearish | pp.174-175 | 2 | **1** |
-| | | | | **58** | **41 of 58** |
+| | | | | **58** | **45 of 58** |
 
 ### Gold, silver and sugar now reach the calendar through their own configuration groups as well as through generic catalogue-B rules
 
-**Gold, silver and sugar are the three instruments the source prints verdicts for** — that is why they carry evidence blocks naming their own configuration sections, and it is what their tiers rest on. Their own configuration groups are **gold 19** · **silver 30** · **sugar 9** named groups, of which **41** now carry a rule and **17** are blocked on a named input. **27 of those 41 fire in 2027**, for 1,469 rows.
+**Gold, silver and sugar are the three instruments the source prints verdicts for** — that is why they carry evidence blocks naming their own configuration sections, and it is what their tiers rest on. Their own configuration groups are **gold 19** · **silver 30** · **sugar 9** named groups, of which **45** now carry a rule and **13** are blocked on a named input. **31 of those 45 fire in 2027**, for 1,728 rows.
 
 **Ported IS wired, since the 14-Sep-2026 change to `verdicts.py`, and the distinction this section used to draw is the one thing about it that is now out of date.** `build_verdicts()` fires both registries; `config_instruments_for` routes a group to the instrument its BLOCK names rather than through the rulership table, so a *Gold — Bullish* group reaches gold because the source filed it under gold.
 
-**1,469 of 9,363 verdict rows in `build/calendar_2027.*` originate in a configuration section**, from 27 groups, split **gold-bearish 167** · **gold-bullish 61** · **silver-bearish 164** · **silver-bullish 923** · **sugar-bullish 154**.
+**1,728 of 10,100 verdict rows in `build/calendar_2027.*` originate in a configuration section**, from 31 groups, split **gold-bearish 167** · **gold-bullish 67** · **silver-bearish 331** · **silver-bullish 959** · **sugar-bullish 204**.
 
 **How to tell one apart, because the old test no longer works.** This page used to say that no row originates in a configuration section and offered a check: the `event_section` field never reads `gold-bullish`. It still never does — `event_section` carries the group's own printed title, such as `Venus Alone in Leo or Libra — Bearish`, and never the block id. The test passes and its conclusion is now wrong. **The field that separates them is `event`**, whose rule id begins `cfg_<block>_` for a configuration row and `b<nn>` or a panchang family name for a catalogue-B one.
 
 What gold, silver and sugar got BEFORE the wiring is still in the file and is still not the source's verdicts for them: every generic catalogue-B rule whose bodies resolve to an instrument still emits there — a Venus rule reaches SUGAR because SUGAR's rulership is Venus, not because the source said anything about sugar. The wiring added the source's own conditions beside those rows; it removed none of them.
 
-Sugar is the clearest case and is the reason the gap was found at all: it emits rows from 12 different Venus-ruled catalogue-B sections, and **154** from its own nine groups — 154 of its 553 rows. That figure was **0** until the wiring, and a reader seeing SUGAR's rows then would have seen a covered instrument.
+Sugar is the clearest case and is the reason the gap was found at all: it emits rows from 12 different Venus-ruled catalogue-B sections, and **204** from its own nine groups — 204 of its 633 rows. That figure was **0** until the wiring, and a reader seeing SUGAR's rows then would have seen a covered instrument.
 
 Gold and silver reach tier 1 through their MCX legs (`MCXGOLD`, `MCXSILVER`); their COMEX legs (`GC`, `SI`) emit `venue_shifted` instead, by the 14-Sep-2026 localised split. Both legs are the same generic rules on the same sky. The tier says where a claim was authored and how the civil day is bounded; it does not say the source's own gold and silver conditions were ported.
 
@@ -77,7 +77,7 @@ And the source's own monthly prophecy tables (Chapter 3) print named verdicts fo
 
 ---
 
-**172 rules over 141 of 141 catalogue-B sections — full coverage of catalogue B — 3694 dated rows in 2027.** 136 executable, 5 resolved, 30 blocked, 1 ambiguous.
+**172 rules over 141 of 141 catalogue-B sections — full coverage of catalogue B — 4468 dated rows in 2027.** 139 executable, 5 resolved, 27 blocked, 1 ambiguous.
 
 `zero` in the firing column means the rule runs and produces no row this year. That is either the configuration genuinely not occurring or a porting error, and the two look identical from outside — so every zero is pinned by name with its kind in `tests/test_rule_layer.py`. `BLOCKED` means the rule is registered, counted, emits nothing, and **names the input it is waiting for**.
 
@@ -105,7 +105,7 @@ Status keys: `ok` executable · `ok*` fires on a reading we supplied, flagged on
 | 16 | p.16 | Mercury Venus Alone in Any Sign | ok | 1 | 43 / 43 |  |
 | 17 | p.16 | Venus Mercury Conjunction | ok | 1 | 3 / 3 |  |
 | 18 | p.17 | Sun Ahead, Venus Behind and Mercury in the Middle | ok | 1 | 117 / 117 |  |
-| 19 | p.18 | Venus Ahead, Sun Behind and Mercury in the Middle | BLOCKED | 1 | 0 / 0 | see blockers |
+| 19 | p.18 | Venus Ahead, Sun Behind and Mercury in the Middle | ok | 1 | 30 / 31 |  |
 | 20 | p.18-19 | Journey of Jupiter | ok | 1 | 3 / 3 |  |
 | 21 | p.20 | Jupiter Motion | ok | 1 | 1 / 0 |  |
 | 22 | p.20 | Jupiter Combust Rise Cycle | ok | 2 | 52 / 0 |  |
@@ -202,8 +202,8 @@ Status keys: `ok` executable · `ok*` fires on a reading we supplied, flagged on
 | 113 | p.88 | Mars in Dhanistha — Immediate Bearish | ok | 1 | 0 / 0 | zero this year (pinned) |
 | 114 | p.89 | Mercury in Purva Bhadrapada — First Bullish Then Bearish | ok | 1 | 9 / 10 |  |
 | 115 | p.89 | Either Sun or Venus in Shatbhisha — Bullish | ok | 1 | 26 / 26 |  |
-| 116 | p.90 | Mercury in Paap Kartari | BLOCKED | 1 | 0 / 0 | see blockers |
-| 117 | p.91 | Jupiter in Paap Kartari | BLOCKED | 1 | 0 / 0 | see blockers |
+| 116 | p.90 | Mercury in Paap Kartari | ok | 1 | 133 / 132 |  |
+| 117 | p.91 | Jupiter in Paap Kartari | ok | 1 | 224 / 224 |  |
 | 118 | p.92 | Shar — Mars, Mercury, Jupiter, Venus, Saturn, Herschel, Neptune | ok | 1 | 12 / 12 |  |
 | 119 | p.93 | Moon Shar Parivartan | ok | 1 | 27 / 27 |  |
 | 120 | p.94 | Mars Speed and Vedh | BLOCKED | 1 | 0 / 0 | see blockers |
@@ -236,13 +236,10 @@ Status keys: `ok` executable · `ok*` fires on a reading we supplied, flagged on
 | 5 | Mars in Pisces Navmansh (D9) | `b005_not_an_ingress_view` | Mars's rashi windows while its navamsa is Pisces -- a residency rule over a D9 position, not a D9 ingress series, and the layer emits no Mars D9 ingress table because the source prints none |
 | 6 | Vargottam Mars | `b006_not_an_ingress_view` | Vargottam Mars -- needs the D1 and D9 signs to agree at an instant, and the config already notes the source prints no Mars D9 ingress table to bound it |
 | 11 | Mercury - Furthest from Sun | `b011_mercury_furthest_from_sun` | a greatest-elongation event class. The astronomy layer emits elongation per record but never its extrema, and recovering a maximum from instants sampled at other events would be a scan, not a read |
-| 19 | Venus Ahead, Sun Behind and Mercury in the Middle | `b019_venus_ahead_sun_behind_mercury_middle` | a benefic/malefic classification of the aspects on a body. The remark's verdict holds only 'provided there is a malefic aspect on Mercury'; the layer carries aspect records but no valence for them, and the source prints none either |
 | 30 | Demoted and Shadow Speed of Saturn | `b030_demoted_shadow_speed_of_saturn` | a rule, not merely the interval. B30 states when Saturn is in Demoted or Shadow Speed -- from 11-Dec-2026 until it crosses back over 20 deg 31' of Pisces direct on 15-Mar-2027 -- and its two printed values are VERIFIED to the arcminute (the engine puts Saturn at 20.508963 deg on 27-Jul-2026 and 20.507990 deg on 15-Mar-2027, and at 13.694991 deg on 11-Dec-2026). What the section never states is what makes a planet Demoted or Shadow: it names the band and the two dates and no condition. So the interval can be reproduced and the rule that generates it in another year cannot |
 | 62 | Chandra Darshan (New Moon) | `b062_chandra_darshan` | a first-crescent visibility computation. The section's Tithi column reads Pratipada or Dwitiya, so the event is the sighting and not the conjunction; Step 3 measured swe.heliacal_ut against the source's own Venus rise dates and found it 9-10 days out, so the one routine available was rejected on evidence rather than on principle |
 | 63 | Hemisphere | `b063_hemisphere_range` | a tropical solar longitude, or the equinox instant the layer would have to emit for one to be read. The equinox is a TROPICAL solar longitude of 0 or 180 degrees and every longitude the astronomy layer carries is sidereal ('lon_sid'), which is a frame the equinox slides through by about 50 arc seconds a year. The same record carries qa.ayanamsha_deg, so `lon_sid + ayanamsha_deg` reconstructs the tropical longitude at the instants the layer happens to sample the Sun -- but the Sun's own ingress series only marks whole signs, nakshatras and navamsas, which bracket an equinox date to 3 degrees 20 minutes, and the only dense solar series in the file is the per-venue horizon records, whose existence depends on a location rising. Pinning the date from those means interpolating a longitude between two of one venue's sunsets, and the rule layer is not licensed to reconstruct a longitude: measured, the interpolation reproduces the true equinox to about 5 minutes and the navamsa bracket to about 3.6 hours, so this is a licence question and not a numerical one **AND** a decision on what the range is and what breaks it. The note says 'Calculate range of the Hemisphere +/- 2/3 days any side' and never says the centre; and it says 'Breakout/breakdown is medium term trade' and 'When range is broken on both side, 2nd break is very powerful' without saying whether the range is a range of PRICES or the six-day window in TIME that the sentence before it just built. The word 'range' appears in both senses in the same line |
 | 70 | Big Volatile — Major Turning Days | `b070_big_volatile_major_turning_days` | the selection rule itself. The section states only that its dates "have been sorted on multiple parameters" and names none of them and no weighting; four candidate discriminators (lunation, station, sign ingress, inner-planet conjunction or slow-pair aspect) were tested and rejected, and all 51 dates carry at least one major configuration, so the list is over-determined and a fitted reconstruction would describe our fit rather than the source's rule |
-| 116 | Mercury in Paap Kartari | `b116_mercury_in_paap_kartari` | a benefic/malefic classification of the bodies. Paap Kartari is a hemming by malefics, and the section's own Planet-1/Planet-2 columns name the bodies that happen to hem Mercury in 2026 without ever stating what makes a body malefic. The same missing input blocks B19 and B117, and it is the third time it has been the binding constraint |
-| 117 | Jupiter in Paap Kartari | `b117_jupiter_in_paap_kartari` | a benefic/malefic classification of the bodies. Paap Kartari is Jupiter hemmed between two malefics; the section's own Planet-1 and Planet-2 columns name the two for each printed row and never say what makes them malefic, and the astronomy layer carries each body's sign and nakshatra ingress but no valence for any of them. The identical absence blocks B19 in batch 2, whose verdict holds only 'provided there is a malefic aspect on Mercury' |
 | 120 | Mars Speed and Vedh | `b120_mars_speed_and_vedh` | a threshold constrained by more than one crossing. Mars's speed crosses 0.658287 exactly ONCE in the whole of 2026, so the calibration solved one equation in one unknown: the feasible interval is just the speed's own change across the +/-1 day scoring window, and no other printed row in the year can falsify it. Zero degrees of freedom. The fit is therefore true by construction and carries no evidence, so the Vedha direction cannot be anchored to it. Mercury is the only inner planet whose level is overdetermined (six crossings); a later year supplying a second crossing for Mars would make this testable rather than re-derivable |
 | 121 | Jupiter Speed and Vedh | `b121_jupiter_speed_and_vedh` | a slow-planet speed doctrine. Jupiter's Fast and Normal boundaries have no common speed level -- the two printed boundaries are 0.013750 (Jupiter) apart in threshold space. B30 'Demoted and Shadow Speed of Saturn' p.26 shows the slow planets answer to a different doctrine and defines its interval by LONGITUDE (Saturn at 20 deg 31' of Pisces, crossed retrograde 27-Jul-2026 and direct again 15-Mar-2027), supplying no speed level, so the class cannot be computed and the Vedha direction cannot be selected |
 | 123 | Venus Speed and Vedh | `b123_venus_speed_and_vedh` | a threshold constrained by more than one crossing. Venus's speed crosses 1.223981 exactly ONCE in the whole of 2026, so the calibration solved one equation in one unknown: the feasible interval is just the speed's own change across the +/-1 day scoring window, and no other printed row in the year can falsify it. Zero degrees of freedom. The fit is therefore true by construction and carries no evidence, so the Vedha direction cannot be anchored to it. Mercury is the only inner planet whose level is overdetermined (six crossings); a later year supplying a second crossing for Venus would make this testable rather than re-derivable |
@@ -315,4 +312,4 @@ Never counted in with the executable rules. The words these fire on are partly o
 
 This is the **condition** layer: dated, per location, traceable to a page. It states when a rule's condition holds. It does **not** yet state what the market does — that is the verdict layer, which applies `evidence_source` x `construction` per instrument and per venue day, and then renders. Nothing here is a forecast or investment advice.
 
-**And "this page" is not the whole source.** It covers catalogue B. Of the 58 named groups of the instrument configuration sections (Chapter 1, Sr.No 149-154), **41 are ported and reach the rows above** and 17 are blocked on a named input, per group in `build/CONFIG_PORT_REPORT.md`; `build/CONFIG_SECTIONS_SCOPE.md` is the scope survey as it stood BEFORE that port and its ported column is a record of that date, not a live count. The source's monthly prophecy tables (Chapter 3) are unported and are not scoped anywhere yet. See **Coverage, in two denominators** at the top of this page before reading any number on it as a statement about coverage of the document.
+**And "this page" is not the whole source.** It covers catalogue B. Of the 58 named groups of the instrument configuration sections (Chapter 1, Sr.No 149-154), **45 are ported and reach the rows above** and 13 are blocked on a named input, per group in `build/CONFIG_PORT_REPORT.md`; `build/CONFIG_SECTIONS_SCOPE.md` is the scope survey as it stood BEFORE that port and its ported column is a record of that date, not a live count. The source's monthly prophecy tables (Chapter 3) are unported and are not scoped anywhere yet. See **Coverage, in two denominators** at the top of this page before reading any number on it as a statement about coverage of the document.

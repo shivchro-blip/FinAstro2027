@@ -88,8 +88,8 @@ instrument configuration sections   38 /  58 named groups   (ported AND wired)
 
 **That line is the coverage claim, and all three numbers travel together.** Each
 counts a different shape of markup, none is inside either of the others, and
-`verdicts.py` fires all three registries. **48 rules are blocked**, each on an
-input the document withholds and each named on the rule — 30 in catalogue B, 17
+`verdicts.py` fires all three registries. **41 rules are blocked**, each on an
+input the document withholds and each named on the rule — 27 in catalogue B, 13
 configuration groups, 1 sub-table (Rainfall: a whole-year forecast with no dated
 window, shown in the reference but not fired). Eclipse (purnimanta month, settled
 by the 2026 table's own Month column) and Moon Rashi Parivartan (sign lordship
@@ -101,7 +101,9 @@ Manifestation was ported on a new Mercury-vs-Venus `speed_overtake` series: it
 reproduces all three printed 2026 dates, and its 2027 dates are 22-Mar, 20-Jul
 and 07-Nov.)
 
-**41 of the 58 are ported and 17 are blocked, each on a named input** (38 / 20
+**45 of the 58 are ported and 13 are blocked, each on a named input** (benefic/malefic
+valence ruled 20-Nov-2026 from `Reference_materials` Ch 0 and the 2026 tables' own
+rows -- see `valence` in config -- porting B19, B116, B117 and four groups) (38 / 20
 until 19-Nov-2026, when the purnimanta month system -- settled by the Eclipse
 table's own labels -- unblocked silver-bullish#18, sugar-bullish#2 and #7, and B111)
 (`build/CONFIG_PORT_REPORT.md`). **Ported is now wired**, since the 14-Sep-2026

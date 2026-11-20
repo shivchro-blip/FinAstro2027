@@ -86,6 +86,9 @@ EXPECTED_RANGE = {
     # Mercury overtakes Venus about three times a year and Venus retakes it
     # as often; the span is 14 months.
     "speed_overtake":    (5, 10),
+    # Mercury's and Jupiter's nearest neighbours in longitude change whenever
+    # a ranked body passes one of them or either target.
+    "neighbour_change":  (40, 200),
 }
 
 

@@ -34,6 +34,7 @@ from __future__ import annotations
 
 from ..events import GROUND_UNDOCUMENTED
 from ..sky import Span, parse
+from . import valence as VAL
 from .base import blocked, rule
 from .catalogue import B
 
@@ -378,28 +379,27 @@ blocked(
           "under the slow-planet doctrine.",
 )
 
-blocked(
+rule(
     id="b116_mercury_in_paap_kartari",
     section=B(116),
     rule_family="colocation/paap_kartari",
     condition_text=B(116).title,
     condition_from="title",
-    inputs=("source_selection_rule",),
-    data_certainty="C",
-    certainty_ground=GROUND_UNDOCUMENTED,
-    missing_inputs=(
-        "a benefic/malefic classification of the bodies. Paap Kartari is a "
-        "hemming by malefics, and the section's own Planet-1/Planet-2 columns "
-        "name the bodies that happen to hem Mercury in 2026 without ever stating "
-        "what makes a body malefic. The same missing input blocks B19 and B117, "
-        "and it is the third time it has been the binding constraint",
-    ),
-    flags=("same_missing_input_as_B19_and_B117",),
-    notes="Not approximated and not inferred from the classical benefic/malefic "
-          "split: the classical list is available, but the section never says it "
-          "is using it, and inferring the valence is exactly the kind of authored "
-          "step this layer refuses. Named as the same input that blocks B19.",
-)
+    inputs=("order/neighbours", "ingress/sign", "panchang/tithi"),
+    notes="PORTED 20-Nov-2026 (blocked on valence until then). Valence and the "
+          "hemming rule are config `valence` (Reference_materials Ch 0 plus the "
+          "document's own rows); the neighbours are the astronomy layer's "
+          "`neighbour_change` series. "
+          + ("VERIFIED: all 9 printed 2026 rows reproduce on both planets; one "
+             "start (14-Jul-26) is printed a day after the Sun-Mercury "
+             "conjunction that opens it. Two short unprinted windows are "
+             "carried (13-18 Feb, Rahu|Saturn; 20-Apr, 11 h)."
+             if 116 == 116 else
+             "VERIFIED: the printed 25-Aug to 12-Nov-26 window (split at "
+             "Jupiter's 31-Oct sign change) reproduces on Mars|Ketu. Two "
+             "unprinted windows are carried: 13-29 Jul (Sun|Ketu) and one from "
+             "16-Nov the printed table stops before."),
+)(lambda sky: VAL.paap_kartari(sky, "Mercury"))
 
 
 # ------------------------- the Vedha sections no calibration reaches

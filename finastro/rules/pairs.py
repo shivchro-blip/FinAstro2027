@@ -86,6 +86,7 @@ from __future__ import annotations
 from ..ephem import SIGNS
 from ..sky import Span, intersect, same
 from . import names
+from . import valence as VAL
 from .base import blocked, resolved, rule
 from .catalogue import B, split_statement
 from .colocation import ORDER_FLAG, RESIDENCY_BODIES
@@ -677,31 +678,21 @@ rule(
 # flanking bodies rather than a classification -- Mars and Ketu on both of its
 # 2026 rows. Naming the pair is not the rule; the rule is that both are
 # malefic, and nothing on the page says which planets are.
-blocked(
+rule(
     id="b117_jupiter_in_paap_kartari",
     section=B(117),
     rule_family="residency/hemmed_between_malefics",
     condition_text=B(117).title,
     condition_from="title",
-    inputs=("ingress/nakshatra", "ingress/navamsa"),
-    missing_inputs=(
-        "a benefic/malefic classification of the bodies. Paap Kartari is "
-        "Jupiter hemmed between two malefics; the section's own Planet-1 and "
-        "Planet-2 columns name the two for each printed row and never say what "
-        "makes them malefic, and the astronomy layer carries each body's sign "
-        "and nakshatra ingress but no valence for any of them. The identical "
-        "absence blocks B19 in batch 2, whose verdict holds only 'provided "
-        "there is a malefic aspect on Mercury'",
-    ),
-    flags=(ORDER_FLAG,),
-    notes="The ordering half is also not free, and it is recorded rather than "
-          "folded into the missing input: hemming is a three-body arrangement, "
-          "which batch 2's navamsa ladder supplies only where it separates the "
-          "bodies and is silent inside a shared navamsa. The section's remark "
-          "is a defeater rather than a second verdict -- it withdraws the yoga "
-          "while the Moon runs from Jupiter to Ketu -- and gives the rule no "
-          "outcome of its own, so it is recorded here and not ported as a "
-          "second rule. Nothing fires: the section prints no verdict, and a "
-          "condition whose one unstated word is malefic would assert nothing "
-          "even if it were computed.",
-)
+    inputs=("order/neighbours", "ingress/sign", "panchang/tithi"),
+    notes="PORTED 20-Nov-2026 (blocked on valence until then), on the same "
+          "definition as B116: config `valence` and its `kartari` hemming rule, "
+          "over the astronomy layer's `neighbour_change` series. VERIFIED: the "
+          "printed 25-Aug to 12-Nov-26 window on Mars|Ketu reproduces (the page "
+          "splits it at Jupiter's 31-Oct sign change). CARRIED: 13-29 Jul "
+          "(Sun|Ketu) and a window from 16-Nov the printed table stops before. "
+          "The section's remark -- the yog is ineffective while the Moon runs "
+          "from Jupiter to Ketu -- is a defeater recorded and NOT applied: the "
+          "layer has no Moon-planet crossing series, and the printed window "
+          "does not apply it either (it runs unbroken through two lunar passes).",
+)(lambda sky: VAL.paap_kartari(sky, "Jupiter"))

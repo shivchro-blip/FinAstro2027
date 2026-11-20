@@ -579,6 +579,82 @@ def _mercury_vedh_of_moon_combust_retrograde():
 
 
 # =========================================================== GOLD -- BULLISH
+# --------------------------------------------- valence helpers (20-Nov-2026)
+def _sun_aspected(sign, kind):
+    """Sun in `sign` with a `kind` (benefic/malefic) drishti on that sign."""
+    from . import valence as VAL
+
+    def fn(sky):
+        def pred(st, t):
+            if st.at("Sun", "sign", t) != sign:
+                return None
+            hits = sorted(f"{b} {VAL.ordinal(h)}" for b in VAL.CLASSICAL
+                          if b != "Sun" and st.valence(b, t) == kind
+                          and (h := VAL.aspects(b, st.at(b, "sign", t), sign)))
+            return ", ".join(hits) or None
+        return VAL.piecewise(sky, list(VAL.CLASSICAL), pred)
+    return fn
+
+
+def _sun_with_or_aspected(signs, kind):
+    """Sun in one of `signs` with a `kind` body in the same sign or casting a
+    drishti on it."""
+    from . import valence as VAL
+
+    def fn(sky):
+        def pred(st, t):
+            ss = st.at("Sun", "sign", t)
+            if ss not in signs:
+                return None
+            hits = []
+            for b in VAL.CLASSICAL:
+                if b == "Sun" or st.valence(b, t) != kind:
+                    continue
+                bs = st.at(b, "sign", t)
+                if bs == ss:
+                    hits.append(f"With {b}")
+                elif (h := VAL.aspects(b, bs, ss)):
+                    hits.append(f"{b} {VAL.ordinal(h)} aspect")
+            return ", ".join(sorted(hits)) or None
+        return VAL.piecewise(sky, list(VAL.CLASSICAL), pred)
+    return fn
+
+
+def _sun_in_stars_without_benefic(stars):
+    """Sun in one of `stars` with no benefic in the same nakshatra."""
+    from . import valence as VAL
+
+    def fn(sky):
+        def pred(st, t):
+            n = st.at("Sun", "nakshatra", t)
+            if n not in stars:
+                return None
+            if any(st.valence(b, t) == "benefic" and st.at(b, "nakshatra", t) == n
+                   for b in VAL.CLASSICAL if b != "Sun"):
+                return None
+            return n
+        return VAL.piecewise(sky, list(VAL.CLASSICAL), pred, frames=("nakshatra",))
+    return fn
+
+
+def _with_malefic(body):
+    """`body` sharing a sign with a malefic (the Moon only while Kshin)."""
+    from . import valence as VAL
+
+    def fn(sky):
+        cands = [b for b in ("Sun", "Moon", "Mars", "Saturn", "Rahu", "Ketu",
+                             "Pluto") if b != body]
+
+        def pred(st, t):
+            s0 = st.at(body, "sign", t)
+            hits = sorted(("Kshin Chandra" if b == "Moon" else b) for b in cands
+                          if st.at(b, "sign", t) == s0
+                          and st.valence(b, t) == "malefic")
+            return ", ".join(hits) or None
+        return VAL.piecewise(sky, [body] + cands, pred)
+    return fn
+
+
 _g = G("gold-bullish", 1)
 _rule(
     _g,
@@ -598,19 +674,21 @@ _rule(
 )(_sign("Mars", "Taurus"))
 
 _g = G("gold-bullish", 2)
-_blocked(
+_rule(
     _g,
     id="cfg_gold_bullish_02_sun_libra_aspected_by_malefics",
-    rule_family="residency/planet_sign",
+    rule_family="aspect/drishti",
     condition_text=_g.title,
     condition_from="title",
     verdict_text=_g.block.verdict,
     verdict_from="block_h2",
-    missing_inputs=("valence",),
-    notes="The Sun's Libra residency and Mars's aspect to it are both emitted; "
-          "WHICH aspects count as malefic is what the source never states. Its "
-          "single printed row is Mars's 4th aspect, 17-Oct-26 to 12-Nov-26.",
-)
+    inputs=("ingress/sign", "panchang/tithi"),
+    notes="PORTED 20-Nov-2026 on config `valence` and whole-sign drishti. "
+          "VERIFIED: the printed row, Mars 4th on the Sun in Libra 17-Oct-26 "
+          "19:52 to 12-Nov-26 20:22, reproduces to the minute -- and only it: "
+          "Rahu in Aquarius casts no 9th onto Libra under the ruling, which is "
+          "the evidence the ruling cites.",
+)(_sun_aspected("Libra", "malefic"))
 
 _g = G("gold-bullish", 3)
 _rule(
@@ -650,7 +728,7 @@ _blocked(
     condition_from="title",
     verdict_text=_g.block.verdict,
     verdict_from="block_h2",
-    missing_inputs=("valence",),
+    missing_inputs=("vedha_wheel",),  # valence ruled 20-Nov-2026; the Vedh wheels for Sun, Mars, Saturn, the nodes, Jupiter and Venus are what remain
     notes="Twenty printed rows. A vedha wheel exists for the planets that have "
           "one, but the ROW SELECTION is 'malefic planets', so the valence "
           "binds before the wheel does. The heading's own "
@@ -683,12 +761,15 @@ _g = G("gold-bullish", 7)
 _blocked(
     _g,
     id="cfg_gold_bullish_07_sun_four_stars_not_aspected_by_benefic",
+    # 20-Nov-2026: valence is ruled; what remains is the aspect doctrine its
+    # rows use -- "Moon enters Swati opposite Bharni", a NAKSHATRA-level
+    # opposition -- which no section defines.
     rule_family="residency/planet_nakshatra",
     condition_text=split_statement(_g.title)[0],
     condition_from="title",
     verdict_text=_g.block.verdict,
     verdict_from="block_h2",
-    missing_inputs=("valence",),
+    missing_inputs=("aspect_orb",),
     notes="Negated on a BENEFIC aspect and intensified on a malefic one, so "
           "the valence is needed in both directions before either branch can "
           "fire. The Sun's four nakshatra residencies are emitted and are not "
@@ -830,7 +911,7 @@ _blocked(
     condition_from="title",
     verdict_text=_g.block.verdict,
     verdict_from="block_h2",
-    missing_inputs=("valence",),
+    missing_inputs=("vedha_wheel",),  # valence ruled 20-Nov-2026; the Vedh wheels for Sun, Mars, Saturn, the nodes, Jupiter and Venus are what remain
     notes="The mirror of gold-bullish#5: eleven printed rows selected on "
           "BENEFICS. One missing input, two groups, and they are one batch "
           "once it is supplied.",
@@ -915,18 +996,21 @@ _rule(
 )(_retrograde("Mercury", "Jupiter"))
 
 _g = G("silver-bullish", 3)
-_blocked(
+_rule(
     _g,
     id="cfg_silver_bullish_03_sun_pushya_or_dhanistha_without_benefic",
-    rule_family="residency/planet_nakshatra",
+    rule_family="residency/nakshatra",
     condition_text=_g.title,
     condition_from="title",
     verdict_text=_g.block.verdict,
     verdict_from="block_h2",
-    missing_inputs=("valence",),
-    notes="Negated on a BENEFIC presence. The Sun's two nakshatra residencies "
-          "are emitted; the selection is not.",
-)
+    inputs=("ingress/nakshatra", "panchang/tithi"),
+    notes="PORTED 20-Nov-2026 on config `valence`. 'Without benefic planet' is "
+          "read as no benefic in the Sun's nakshatra. VERIFIED: the printed "
+          "11-Feb-26 08:53 to 19-Feb-26 18:34 (Dhanistha) reproduces; it opens "
+          "the minute Venus leaves Dhanistha, which is what fixes the reading "
+          "at nakshatra level rather than sign level.",
+)(_sun_in_stars_without_benefic(("Pushya", "Dhanishta")))
 
 _g = G("silver-bullish", 4)
 _blocked(
@@ -1419,21 +1503,23 @@ _rule(
 )(_turns_direct("Saturn"))
 
 _g = G("silver-bearish", 9)
-_blocked(
+_rule(
     _g,
     id="cfg_silver_bearish_09_sun_three_signs_with_or_aspected_by_benefics",
-    rule_family="aspect/graha_drishti",
+    rule_family="aspect/drishti",
     condition_text=_g.title,
     condition_from="title",
     verdict_text=_g.block.verdict,
     verdict_from="block_h2",
-    missing_inputs=("aspect_orb", "valence"),
-    notes="The residency half is computable and the 'with' branch would need "
-          "only the valence; the 'aspected by' branch needs the orb as well, "
-          "and the orb is the more binding of the two because the aspect "
-          "machinery is validated only against exact-ish printed rows. Both "
-          "printed rows are 'With', not 'Aspected'.",
-)
+    inputs=("ingress/sign", "panchang/tithi"),
+    notes="PORTED 20-Nov-2026 on config `valence` and whole-sign drishti. "
+          "VERIFIED: both printed rows (Virgo with Mercury 17-Sep-26; Libra "
+          "with Mercury from 17-Oct, printed '17-Oct-25') reproduce. CARRIED: "
+          "the page prints only those two; the computation also finds the Sun "
+          "in Pisces with Venus and with Mercury, Venus with the Sun in Libra, "
+          "and the waxing Moon's 7th aspect near full moons. The page's list is "
+          "a subset, not a different rule.",
+)(_sun_with_or_aspected(("Virgo", "Libra", "Pisces"), "benefic"))
 
 _g = G("silver-bearish", 10)
 _rule(
@@ -1496,7 +1582,7 @@ _blocked(
     condition_from="title",
     verdict_text=split_final(_g.title)[1],
     verdict_from="title",
-    missing_inputs=("valence",),
+    missing_inputs=("vedha_wheel",),  # valence ruled 20-Nov-2026; the Vedh wheels for Sun, Mars, Saturn, the nodes, Jupiter and Venus are what remain
     notes="Twenty-one printed rows selected on malefic planets. Split at the "
           "heading's LAST dash and not its first: the middle segment ('if More "
           "than One Nakshtra Vedh at the Same Time') is part of the condition, "
@@ -1540,23 +1626,22 @@ _rule(
 )(_goes_combust_while_retrograde("Mercury", instant=False, signs=("Cancer",)))
 
 _g = G("sugar-bullish", 6)
-_blocked(
+_rule(
     _g,
     id="cfg_sugar_bullish_06_herschel_with_any_malefic",
-    rule_family="residency/same_sign",
-    condition_text=split_statement(_g.title)[0],
+    rule_family="colocation/sign",
+    condition_text=_g.title,
     condition_from="title",
-    verdict_text=split_statement(_g.title)[1],
-    verdict_from="title",
-    missing_inputs=("valence",),
-    notes="Blocked twice over by one absence. 'With any malefic planet' needs "
-          "the valence, and this group's own table names 'Kshin Chandra' -- "
-          "the waning Moon -- as one of its malefics, which needs the Kshin "
-          "definition the source states nowhere. The Kshin (Malefic) Moon "
-          "sub-table in the same chapter is unported for the same reason, so "
-          "the valence question and the Kshin question are one question asked "
-          "twice.",
-)
+    verdict_text=_g.block.verdict,
+    verdict_from="block_h2",
+    inputs=("ingress/sign", "panchang/tithi"),
+    notes="PORTED 20-Nov-2026 on config `valence`. VERIFIED: the Sun, Mars and "
+          "all five 'Kshin Chandra' rows reproduce -- the page's own name for "
+          "the malefic Moon is its Kshin Moon, which is the ruling. CARRIED: "
+          "its Mercury row (15-29 May 2026) treats Mercury as malefic, against "
+          "silver-bearish#9 and gold-bearish#3; it is not reproduced. Two "
+          "partial Kshin overlaps the page omits (23-Mar, 04-Sep) are emitted.",
+)(_with_malefic("Uranus"))
 
 _g = G("sugar-bullish", 7)
 _rule(
@@ -1602,7 +1687,7 @@ _blocked(
     condition_from="title",
     verdict_text=split_final(_g.title)[1],
     verdict_from="title",
-    missing_inputs=("valence",),
+    missing_inputs=("vedha_wheel",),  # valence ruled 20-Nov-2026; the Vedh wheels for Sun, Mars, Saturn, the nodes, Jupiter and Venus are what remain
     flags=("source_states_its_own_incompleteness",),
     notes="The bearish half of sugar-bullish#3's table -- one input, one "
           "batch, with the bullish half. The group closes with the source's "
