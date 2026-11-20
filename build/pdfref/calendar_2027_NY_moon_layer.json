@@ -12,7 +12,7 @@
    "pdf_rules": 730,
    "pdf_rules_with_detector": 721,
    "pdf_rules_mapped_to_existing": 79,
-   "new_events_major_yearly": 1606,
+   "new_events_major_yearly": 1607,
    "new_events_moon_layer": 4566,
    "existing_rows_carried": 601,
    "existing_rows_with_pdf_text": 463
@@ -28250,23 +28250,23 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
-   "uid": "3f4041b98f1d7906",
+   "uid": "e56a1ecfa31fd417",
    "source": "reference_pdfs",
    "tier": "moon",
    "event_title": "Mercury-Moon Vedha / Mercury (combust & retrograde) mutual Vedha with Moon",
    "date_time": {
     "kind": "window",
-    "start_NY": "2027-03-04 16:53 EST",
+    "start_NY": "2027-03-04 15:06 EST",
     "end_NY": "2027-03-05 17:51 EST",
-    "start_IST": "2027-03-05 03:23 IST",
+    "start_IST": "2027-03-05 01:36 IST",
     "end_IST": "2027-03-06 04:21 IST",
-    "start_UTC": "2027-03-04T21:53:54+00:00",
+    "start_UTC": "2027-03-04T20:06:05+00:00",
     "end_UTC": "2027-03-05T22:51:05+00:00",
     "began_before_scan": false,
     "continues_after_scan": false,
-    "duration_days": 1.04
+    "duration_days": 1.11
    },
-   "planetary_condition": "At start: Mercury 26.79 deg Capricorn (Dhanishta pada 2; D9 Virgo), 0.146 deg/day; Moon 10.89 deg Capricorn (Shravana pada 1; D9 Aries), 11.899 deg/day | At end: Mercury 26.99 deg Capricorn (Dhanishta pada 2; D9 Virgo), 0.247 deg/day; Moon 23.33 deg Capricorn (Shravana pada 4; D9 Cancer), 12.045 deg/day | Computed: value: Mercury in Dhanishta vedhas Shravana (Right side) where Moon is; Moon in Shravana vedhas Dhanishta (Left side) where Mercury is",
+   "planetary_condition": "At start: Mercury 26.77 deg Capricorn (Dhanishta pada 2; D9 Virgo), 0.138 deg/day; Moon 10.00 deg Capricorn (Shravana pada 1; D9 Aries), 11.891 deg/day | At end: Mercury 26.99 deg Capricorn (Dhanishta pada 2; D9 Virgo), 0.247 deg/day; Moon 23.33 deg Capricorn (Shravana pada 4; D9 Cancer), 12.045 deg/day | Computed: value: Mercury in Dhanishta vedhas Shravana (Right side) where Moon is; Moon in Shravana vedhas Dhanishta (Left side) where Mercury is",
    "astrological_rule": "Mercury does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133). || Mercury and Moon vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
    "source_interpretation": "Mercury-Moon Vedha: Bearish || Mercury (combust & retrograde) mutual Vedha with Moon: Silver: Bullish day",
    "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named); Silver: Bullish day -> Silver (COMEX SI) (as the source states it; not a forecast)",
@@ -77445,23 +77445,23 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
-   "uid": "add4478d5308a1cb",
+   "uid": "e1c71259e6f92a3f",
    "source": "reference_pdfs",
    "tier": "moon",
    "event_title": "Venus-Moon Vedha / Moon-Venus mutual Vedha",
    "date_time": {
     "kind": "window",
     "start_NY": "2027-06-21 15:52 EDT",
-    "end_NY": "2027-06-22 00:27 EDT",
+    "end_NY": "2027-06-21 22:38 EDT",
     "start_IST": "2027-06-22 01:22 IST",
-    "end_IST": "2027-06-22 09:57 IST",
+    "end_IST": "2027-06-22 08:08 IST",
     "start_UTC": "2027-06-21T19:52:01+00:00",
-    "end_UTC": "2027-06-22T04:27:11+00:00",
+    "end_UTC": "2027-06-22T02:38:54+00:00",
     "began_before_scan": false,
     "continues_after_scan": false,
-    "duration_days": 0.36
+    "duration_days": 0.28
    },
-   "planetary_condition": "At start: Venus 21.99 deg Taurus (Rohini pada 4; D9 Cancer), 1.221 deg/day; Moon 06.67 deg Capricorn (Uttara Ashadha pada 4; D9 Pisces), 11.802 deg/day | At end: Venus 22.43 deg Taurus (Rohini pada 4; D9 Cancer), 1.221 deg/day; Moon 10.88 deg Capricorn (Shravana pada 1; D9 Aries), 11.788 deg/day | Computed: value: Moon in Abhijeet vedhas Rohini (Front side) where Venus is; Venus in Rohini vedhas Abhijeet (Front side) where Moon is",
+   "planetary_condition": "At start: Venus 21.99 deg Taurus (Rohini pada 4; D9 Cancer), 1.221 deg/day; Moon 06.67 deg Capricorn (Uttara Ashadha pada 4; D9 Pisces), 11.802 deg/day | At end: Venus 22.33 deg Taurus (Rohini pada 4; D9 Cancer), 1.221 deg/day; Moon 09.99 deg Capricorn (Uttara Ashadha pada 4; D9 Pisces), 11.791 deg/day | Computed: value: Moon in Abhijeet vedhas Rohini (Front side) where Venus is; Venus in Rohini vedhas Abhijeet (Front side) where Moon is",
    "astrological_rule": "Venus does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133). || Moon and Venus vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
    "source_interpretation": "Venus-Moon Vedha: Bearish || Moon-Venus mutual Vedha: Silver Bearish",
    "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named); Silver Bearish -> Silver (COMEX SI) (as the source states it; not a forecast)",
@@ -102113,23 +102113,23 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
-   "uid": "c96e92cb9760ed1f",
+   "uid": "658d567ac8d5df50",
    "source": "reference_pdfs",
    "tier": "moon",
    "event_title": "Mercury-Moon Vedha / Mercury (combust & retrograde) mutual Vedha with Moon",
    "date_time": {
     "kind": "window",
-    "start_NY": "2027-08-15 12:46 EDT",
+    "start_NY": "2027-08-15 10:58 EDT",
     "end_NY": "2027-08-16 14:04 EDT",
-    "start_IST": "2027-08-15 22:16 IST",
+    "start_IST": "2027-08-15 20:28 IST",
     "end_IST": "2027-08-16 23:34 IST",
-    "start_UTC": "2027-08-15T16:46:52+00:00",
+    "start_UTC": "2027-08-15T14:58:35+00:00",
     "end_UTC": "2027-08-16T18:04:41+00:00",
     "began_before_scan": false,
     "continues_after_scan": false,
-    "duration_days": 1.05
+    "duration_days": 1.13
    },
-   "planetary_condition": "At start: Mercury 02.84 deg Leo (Magha pada 1; D9 Aries), 1.964 deg/day; Moon 10.89 deg Capricorn (Shravana pada 1; D9 Aries), 11.793 deg/day | At end: Mercury 04.89 deg Leo (Magha pada 2; D9 Taurus), 1.941 deg/day; Moon 23.33 deg Capricorn (Shravana pada 4; D9 Cancer), 11.830 deg/day | Computed: value: Mercury in Magha vedhas Shravana (Left side) where Moon is; Moon in Shravana vedhas Magha (Right side) where Mercury is",
+   "planetary_condition": "At start: Mercury 02.69 deg Leo (Magha pada 1; D9 Aries), 1.966 deg/day; Moon 10.00 deg Capricorn (Shravana pada 1; D9 Aries), 11.792 deg/day | At end: Mercury 04.89 deg Leo (Magha pada 2; D9 Taurus), 1.941 deg/day; Moon 23.33 deg Capricorn (Shravana pada 4; D9 Cancer), 11.830 deg/day | Computed: value: Mercury in Magha vedhas Shravana (Left side) where Moon is; Moon in Shravana vedhas Magha (Right side) where Mercury is",
    "astrological_rule": "Mercury does Vedha to the nakshatra Moon occupies on the Sarvatobhadra wheel (TA pp.131-133). || Mercury and Moon vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
    "source_interpretation": "Mercury-Moon Vedha: Bearish || Mercury (combust & retrograde) mutual Vedha with Moon: Silver: Bullish day",
    "financial_market_significance": "Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named); Silver: Bullish day -> Silver (COMEX SI) (as the source states it; not a forecast)",

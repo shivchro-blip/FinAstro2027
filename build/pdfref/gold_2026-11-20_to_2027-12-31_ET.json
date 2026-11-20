@@ -907,7 +907,7 @@
   },
   {
    "start_ET": "Sun 17 Jan 2027 08:51 EST",
-   "end_ET": "Sun 24 Jan 2027 15:01 EST",
+   "end_ET": "Sun 24 Jan 2027 06:30 EST",
    "title": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold)",
    "tone": "Mixed",
    "verdicts": [
@@ -926,7 +926,7 @@
    ],
    "checks": [
     "start = astronomy-layer nakshatra ingress of Venus \u2713",
-    "end = astronomy-layer sign ingress of Jupiter \u2713"
+    "end = astronomy-layer nakshatra ingress of Sun \u2713"
    ],
    "rule_ids": [
     "ta_s34_gold_vedha_punarvasu_pushya_chitra_dhanishta"
@@ -1010,6 +1010,33 @@
    ]
   },
   {
+   "start_ET": "Sun 24 Jan 2027 06:30 EST",
+   "end_ET": "Sun 24 Jan 2027 15:01 EST",
+   "title": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold)",
+   "tone": "Mixed",
+   "verdicts": [
+    "MALEFIC Vedha: gold Bullish / BENEFIC Vedha: gold Bearish"
+   ],
+   "rule": "A malefic or benefic planet's Vedha falls on Punarvasu, Pushya, Chitra, Dhanishta.",
+   "detail": "value: MALEFIC vedha (Sun->Dhanishta, Mars->Pushya, Ketu->Dhanishta) - Gold Bullish (extreme if more than 1 malefic) - more than one malefic: stronger | BENEFIC vedha (Venus->Pushya) - Gold Bearish (high if more than 1 benefic)",
+   "refs": [
+    "TA p.154 [printed 124] Section 34 A (gold) #8",
+    "TA p.156 [printed 126] Section 34 B (gold) #4",
+    "KD p.92 (2026: Rahu Vedh of Pushya - high bullish for gold & silver)"
+   ],
+   "quals": [
+    "TA p.137: Moon, Mercury, Jupiter & Venus benefic (their Vedha Bearish); Sun, Mars, Saturn, Rahu & Ketu malefic (their Vedha Bullish & reverses the trend).",
+    "Rahu/Ketu sign/nakshatra changes: the 2026 document's almanac prints the 5 Dec 2026 node ingress 40 min earlier (21:52 IST) than the mean node computed here (22:32 IST) - a known 5-arcsecond formulation gap (config/conventions.yaml)."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Jupiter \u2713"
+   ],
+   "rule_ids": [
+    "ta_s34_gold_vedha_punarvasu_pushya_chitra_dhanishta"
+   ]
+  },
+  {
    "start_ET": "Sun 24 Jan 2027 15:01 EST",
    "end_ET": "Fri 29 Jan 2027 08:12 EST",
    "title": "Venus in Jyeshtha with or aspected by benefic",
@@ -1033,14 +1060,14 @@
   },
   {
    "start_ET": "Sun 24 Jan 2027 15:01 EST",
-   "end_ET": "Mon 25 Jan 2027 03:30 EST",
+   "end_ET": "Fri 29 Jan 2027 08:12 EST",
    "title": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold)",
    "tone": "Mixed",
    "verdicts": [
     "MALEFIC Vedha: gold Bullish / BENEFIC Vedha: gold Bearish"
    ],
    "rule": "A malefic or benefic planet's Vedha falls on Punarvasu, Pushya, Chitra, Dhanishta.",
-   "detail": "value: MALEFIC vedha (Mars->Pushya, Ketu->Dhanishta) - Gold Bullish (extreme if more than 1 malefic) - more than one malefic: stronger | BENEFIC vedha (Jupiter->Dhanishta, Venus->Pushya) - Gold Bearish (high if more than 1 benefic) - more than one benefic: stronger",
+   "detail": "value: MALEFIC vedha (Sun->Dhanishta, Mars->Pushya, Ketu->Dhanishta) - Gold Bullish (extreme if more than 1 malefic) - more than one malefic: stronger | BENEFIC vedha (Jupiter->Dhanishta, Venus->Pushya) - Gold Bearish (high if more than 1 benefic) - more than one benefic: stronger",
    "refs": [
     "TA p.154 [printed 124] Section 34 A (gold) #8",
     "TA p.156 [printed 126] Section 34 B (gold) #4",
@@ -1052,7 +1079,7 @@
    ],
    "checks": [
     "start = astronomy-layer sign ingress of Jupiter \u2713",
-    "end: computed boundary (no single layer record)"
+    "end = astronomy-layer sign ingress of Venus \u2713"
    ],
    "rule_ids": [
     "ta_s34_gold_vedha_punarvasu_pushya_chitra_dhanishta"
@@ -1082,33 +1109,6 @@
    ],
    "rule_ids": [
     "user_u2_sun_with_or_aspected_by_benefics"
-   ]
-  },
-  {
-   "start_ET": "Mon 25 Jan 2027 03:30 EST",
-   "end_ET": "Fri 29 Jan 2027 08:12 EST",
-   "title": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold)",
-   "tone": "Mixed",
-   "verdicts": [
-    "MALEFIC Vedha: gold Bullish / BENEFIC Vedha: gold Bearish"
-   ],
-   "rule": "A malefic or benefic planet's Vedha falls on Punarvasu, Pushya, Chitra, Dhanishta.",
-   "detail": "value: MALEFIC vedha (Sun->Dhanishta, Mars->Pushya, Ketu->Dhanishta) - Gold Bullish (extreme if more than 1 malefic) - more than one malefic: stronger | BENEFIC vedha (Jupiter->Dhanishta, Venus->Pushya) - Gold Bearish (high if more than 1 benefic) - more than one benefic: stronger",
-   "refs": [
-    "TA p.154 [printed 124] Section 34 A (gold) #8",
-    "TA p.156 [printed 126] Section 34 B (gold) #4",
-    "KD p.92 (2026: Rahu Vedh of Pushya - high bullish for gold & silver)"
-   ],
-   "quals": [
-    "TA p.137: Moon, Mercury, Jupiter & Venus benefic (their Vedha Bearish); Sun, Mars, Saturn, Rahu & Ketu malefic (their Vedha Bullish & reverses the trend).",
-    "Rahu/Ketu sign/nakshatra changes: the 2026 document's almanac prints the 5 Dec 2026 node ingress 40 min earlier (21:52 IST) than the mean node computed here (22:32 IST) - a known 5-arcsecond formulation gap (config/conventions.yaml)."
-   ],
-   "checks": [
-    "start: computed boundary (no single layer record)",
-    "end = astronomy-layer sign ingress of Venus \u2713"
-   ],
-   "rule_ids": [
-    "ta_s34_gold_vedha_punarvasu_pushya_chitra_dhanishta"
    ]
   },
   {
@@ -2315,6 +2315,30 @@
    ],
    "rule_ids": [
     "doc26_gold_bull_08_moonrise_mon_fri"
+   ]
+  },
+  {
+   "start_ET": "Sun 09 May 2027",
+   "end_ET": "",
+   "title": "Akshaya Tritiya (Indian gold-buying day)",
+   "tone": "Neutral",
+   "verdicts": [
+    "The single most auspicious gold-buying day of the year (physical demand; neutral as a price signal)"
+   ],
+   "rule": "Vaishakh Shukla Tritiya.",
+   "detail": "Sun 23.96 deg Aries (Bharani p4); Moon 28.33 deg Taurus (Mrigashira p2) | Indian date: Sun 09 May 2027; tithi: Shukla Tritiya; read at: Mumbai sunrise",
+   "refs": [
+    "Kindle Ch15 'Commodities: Gold, Silver & the Metals' - Indian physical-gold demand calendar"
+   ],
+   "quals": [
+    "Kindle Ch15 labels this 'entirely non-astrological': physical-demand seasonality (festivals, weddings, harvests), and warns 'Credit the jeweller, not the Sun'. Shown as context, not as an astrological signal.",
+    "Kindle Ch15 also lists wedding seasons (Oct-Dec, Apr-Jun) and post-monsoon rural buying (from Sep) as demand periods."
+   ],
+   "checks": [
+    "darshan criterion reproduces all 4 Moon-darshan dates printed in the 2026 document at Mumbai (3 of 4 at New York); both sightings shown"
+   ],
+   "rule_ids": [
+    "kindle15_akshaya_tritiya"
    ]
   },
   {
@@ -4178,6 +4202,54 @@
    ]
   },
   {
+   "start_ET": "Wed 27 Oct 2027",
+   "end_ET": "",
+   "title": "Dhanteras (Indian festival gold buying)",
+   "tone": "Neutral",
+   "verdicts": [
+    "Peak festival gold buying (physical demand; neutral as a price signal)"
+   ],
+   "rule": "Kartik (purnimanta) Krishna Trayodashi.",
+   "detail": "Sun 9.61 deg Libra (Swati p1); Moon 13.00 deg Virgo (Hasta p1) | Indian date: Wed 27 Oct 2027; tithi: Krishna Trayodashi; read at: Mumbai sunset (pradosh)",
+   "refs": [
+    "Kindle Ch15 - Indian physical-gold demand calendar"
+   ],
+   "quals": [
+    "Kindle Ch15 labels this 'entirely non-astrological': physical-demand seasonality (festivals, weddings, harvests), and warns 'Credit the jeweller, not the Sun'. Shown as context, not as an astrological signal.",
+    "Kindle Ch15 also lists wedding seasons (Oct-Dec, Apr-Jun) and post-monsoon rural buying (from Sep) as demand periods."
+   ],
+   "checks": [
+    "darshan criterion reproduces all 4 Moon-darshan dates printed in the 2026 document at Mumbai (3 of 4 at New York); both sightings shown"
+   ],
+   "rule_ids": [
+    "kindle15_dhanteras"
+   ]
+  },
+  {
+   "start_ET": "Fri 29 Oct 2027",
+   "end_ET": "",
+   "title": "Diwali / Lakshmi Puja (Indian festival gold buying)",
+   "tone": "Neutral",
+   "verdicts": [
+    "Peak festival gold buying; Diwali Muhurat trading (physical demand; neutral as a price signal)"
+   ],
+   "rule": "Kartik (purnimanta) Amavasya.",
+   "detail": "Sun 11.61 deg Libra (Swati p2); Moon 11.05 deg Libra (Swati p2) | Indian date: Fri 29 Oct 2027; tithi: Amavasya; read at: Mumbai sunset (pradosh)",
+   "refs": [
+    "Kindle Ch15 - Indian physical-gold demand calendar"
+   ],
+   "quals": [
+    "Kindle Ch15 labels this 'entirely non-astrological': physical-demand seasonality (festivals, weddings, harvests), and warns 'Credit the jeweller, not the Sun'. Shown as context, not as an astrological signal.",
+    "Kindle Ch15 also lists wedding seasons (Oct-Dec, Apr-Jun) and post-monsoon rural buying (from Sep) as demand periods."
+   ],
+   "checks": [
+    "darshan criterion reproduces all 4 Moon-darshan dates printed in the 2026 document at Mumbai (3 of 4 at New York); both sightings shown"
+   ],
+   "rule_ids": [
+    "kindle15_diwali"
+   ]
+  },
+  {
    "start_ET": "Fri 29 Oct 2027 09:37 EDT",
    "end_ET": "Sat 30 Oct 2027 18:01 EDT",
    "title": "Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note)",
@@ -4556,7 +4628,7 @@
   },
   {
    "start_ET": "Sat 27 Nov 2027 16:38 EST",
-   "end_ET": "Wed 01 Dec 2027 03:26 EST",
+   "end_ET": "Fri 03 Dec 2027 03:04 EST",
    "title": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold)",
    "tone": "Bullish",
    "verdicts": [
@@ -4575,7 +4647,7 @@
    ],
    "checks": [
     "start = astronomy-layer nakshatra ingress of Mercury \u2713",
-    "end: computed boundary (no single layer record)"
+    "end = astronomy-layer nakshatra ingress of Sun \u2713"
    ],
    "rule_ids": [
     "ta_s34_gold_vedha_punarvasu_pushya_chitra_dhanishta"
@@ -4688,14 +4760,15 @@
     "MALEFIC Vedha: gold Bullish"
    ],
    "rule": "A malefic or benefic planet's Vedha falls on Punarvasu, Pushya, Chitra, Dhanishta.",
-   "detail": "value: MALEFIC vedha (Sun->Pushya) - Gold Bullish (extreme if more than 1 malefic)",
+   "detail": "value: MALEFIC vedha (Sun->Pushya, Rahu->Dhanishta) - Gold Bullish (extreme if more than 1 malefic) - more than one malefic: stronger",
    "refs": [
     "TA p.154 [printed 124] Section 34 A (gold) #8",
     "TA p.156 [printed 126] Section 34 B (gold) #4",
     "KD p.92 (2026: Rahu Vedh of Pushya - high bullish for gold & silver)"
    ],
    "quals": [
-    "TA p.137: Moon, Mercury, Jupiter & Venus benefic (their Vedha Bearish); Sun, Mars, Saturn, Rahu & Ketu malefic (their Vedha Bullish & reverses the trend)."
+    "TA p.137: Moon, Mercury, Jupiter & Venus benefic (their Vedha Bearish); Sun, Mars, Saturn, Rahu & Ketu malefic (their Vedha Bullish & reverses the trend).",
+    "Rahu/Ketu sign/nakshatra changes: the 2026 document's almanac prints the 5 Dec 2026 node ingress 40 min earlier (21:52 IST) than the mean node computed here (22:32 IST) - a known 5-arcsecond formulation gap (config/conventions.yaml)."
    ],
    "checks": [
     "start = astronomy-layer nakshatra ingress of Sun \u2713",
@@ -4739,14 +4812,15 @@
     "MALEFIC Vedha: gold Bullish / BENEFIC Vedha: gold Bearish"
    ],
    "rule": "A malefic or benefic planet's Vedha falls on Punarvasu, Pushya, Chitra, Dhanishta.",
-   "detail": "value: MALEFIC vedha (Sun->Pushya) - Gold Bullish (extreme if more than 1 malefic) | BENEFIC vedha (Mercury->Pushya) - Gold Bearish (high if more than 1 benefic)",
+   "detail": "value: MALEFIC vedha (Sun->Pushya, Rahu->Dhanishta) - Gold Bullish (extreme if more than 1 malefic) - more than one malefic: stronger | BENEFIC vedha (Mercury->Pushya) - Gold Bearish (high if more than 1 benefic)",
    "refs": [
     "TA p.154 [printed 124] Section 34 A (gold) #8",
     "TA p.156 [printed 126] Section 34 B (gold) #4",
     "KD p.92 (2026: Rahu Vedh of Pushya - high bullish for gold & silver)"
    ],
    "quals": [
-    "TA p.137: Moon, Mercury, Jupiter & Venus benefic (their Vedha Bearish); Sun, Mars, Saturn, Rahu & Ketu malefic (their Vedha Bullish & reverses the trend)."
+    "TA p.137: Moon, Mercury, Jupiter & Venus benefic (their Vedha Bearish); Sun, Mars, Saturn, Rahu & Ketu malefic (their Vedha Bullish & reverses the trend).",
+    "Rahu/Ketu sign/nakshatra changes: the 2026 document's almanac prints the 5 Dec 2026 node ingress 40 min earlier (21:52 IST) than the mean node computed here (22:32 IST) - a known 5-arcsecond formulation gap (config/conventions.yaml)."
    ],
    "checks": [
     "start = astronomy-layer nakshatra ingress of Mercury \u2713",
@@ -4817,14 +4891,15 @@
     "MALEFIC Vedha: gold Bullish / BENEFIC Vedha: gold Bearish"
    ],
    "rule": "A malefic or benefic planet's Vedha falls on Punarvasu, Pushya, Chitra, Dhanishta.",
-   "detail": "value: MALEFIC vedha (Sun->Pushya) - Gold Bullish (extreme if more than 1 malefic) | BENEFIC vedha (Mercury->Punarvasu) - Gold Bearish (high if more than 1 benefic)",
+   "detail": "value: MALEFIC vedha (Sun->Pushya, Rahu->Dhanishta) - Gold Bullish (extreme if more than 1 malefic) - more than one malefic: stronger | BENEFIC vedha (Mercury->Punarvasu) - Gold Bearish (high if more than 1 benefic)",
    "refs": [
     "TA p.154 [printed 124] Section 34 A (gold) #8",
     "TA p.156 [printed 126] Section 34 B (gold) #4",
     "KD p.92 (2026: Rahu Vedh of Pushya - high bullish for gold & silver)"
    ],
    "quals": [
-    "TA p.137: Moon, Mercury, Jupiter & Venus benefic (their Vedha Bearish); Sun, Mars, Saturn, Rahu & Ketu malefic (their Vedha Bullish & reverses the trend)."
+    "TA p.137: Moon, Mercury, Jupiter & Venus benefic (their Vedha Bearish); Sun, Mars, Saturn, Rahu & Ketu malefic (their Vedha Bullish & reverses the trend).",
+    "Rahu/Ketu sign/nakshatra changes: the 2026 document's almanac prints the 5 Dec 2026 node ingress 40 min earlier (21:52 IST) than the mean node computed here (22:32 IST) - a known 5-arcsecond formulation gap (config/conventions.yaml)."
    ],
    "checks": [
     "start = astronomy-layer sign ingress of Mercury \u2713",
@@ -4836,25 +4911,26 @@
   },
   {
    "start_ET": "Thu 16 Dec 2027 06:09 EST",
-   "end_ET": "Thu 23 Dec 2027 01:27 EST",
+   "end_ET": "Fri 17 Dec 2027 22:00 EST",
    "title": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold)",
    "tone": "Mixed",
    "verdicts": [
     "MALEFIC Vedha: gold Bullish / BENEFIC Vedha: gold Bearish"
    ],
    "rule": "A malefic or benefic planet's Vedha falls on Punarvasu, Pushya, Chitra, Dhanishta.",
-   "detail": "value: MALEFIC vedha (Sun->Chitra, Sun->Punarvasu) - Gold Bullish (extreme if more than 1 malefic) - more than one malefic: stronger | BENEFIC vedha (Mercury->Punarvasu) - Gold Bearish (high if more than 1 benefic)",
+   "detail": "value: MALEFIC vedha (Sun->Chitra, Sun->Punarvasu, Rahu->Dhanishta) - Gold Bullish (extreme if more than 1 malefic) - more than one malefic: stronger | BENEFIC vedha (Mercury->Punarvasu) - Gold Bearish (high if more than 1 benefic)",
    "refs": [
     "TA p.154 [printed 124] Section 34 A (gold) #8",
     "TA p.156 [printed 126] Section 34 B (gold) #4",
     "KD p.92 (2026: Rahu Vedh of Pushya - high bullish for gold & silver)"
    ],
    "quals": [
-    "TA p.137: Moon, Mercury, Jupiter & Venus benefic (their Vedha Bearish); Sun, Mars, Saturn, Rahu & Ketu malefic (their Vedha Bullish & reverses the trend)."
+    "TA p.137: Moon, Mercury, Jupiter & Venus benefic (their Vedha Bearish); Sun, Mars, Saturn, Rahu & Ketu malefic (their Vedha Bullish & reverses the trend).",
+    "Rahu/Ketu sign/nakshatra changes: the 2026 document's almanac prints the 5 Dec 2026 node ingress 40 min earlier (21:52 IST) than the mean node computed here (22:32 IST) - a known 5-arcsecond formulation gap (config/conventions.yaml)."
    ],
    "checks": [
     "start = astronomy-layer sign ingress of Sun \u2713",
-    "end = astronomy-layer nakshatra ingress of Mercury \u2713"
+    "end = astronomy-layer nakshatra ingress of Rahu \u2713"
    ],
    "rule_ids": [
     "ta_s34_gold_vedha_punarvasu_pushya_chitra_dhanishta"
@@ -4914,15 +4990,15 @@
    ]
   },
   {
-   "start_ET": "Thu 23 Dec 2027 01:27 EST",
-   "end_ET": "Thu 23 Dec 2027 17:58 EST",
+   "start_ET": "Fri 17 Dec 2027 22:00 EST",
+   "end_ET": "Thu 23 Dec 2027 00:37 EST",
    "title": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold)",
-   "tone": "Bullish",
+   "tone": "Mixed",
    "verdicts": [
-    "MALEFIC Vedha: gold Bullish"
+    "MALEFIC Vedha: gold Bullish / BENEFIC Vedha: gold Bearish"
    ],
    "rule": "A malefic or benefic planet's Vedha falls on Punarvasu, Pushya, Chitra, Dhanishta.",
-   "detail": "value: MALEFIC vedha (Sun->Chitra, Sun->Punarvasu) - Gold Bullish (extreme if more than 1 malefic) - more than one malefic: stronger",
+   "detail": "value: MALEFIC vedha (Sun->Chitra, Sun->Punarvasu) - Gold Bullish (extreme if more than 1 malefic) - more than one malefic: stronger | BENEFIC vedha (Mercury->Punarvasu) - Gold Bearish (high if more than 1 benefic)",
    "refs": [
     "TA p.154 [printed 124] Section 34 A (gold) #8",
     "TA p.156 [printed 126] Section 34 B (gold) #4",
@@ -4932,15 +5008,41 @@
     "TA p.137: Moon, Mercury, Jupiter & Venus benefic (their Vedha Bearish); Sun, Mars, Saturn, Rahu & Ketu malefic (their Vedha Bullish & reverses the trend)."
    ],
    "checks": [
-    "start = astronomy-layer nakshatra ingress of Mercury \u2713",
-    "end: computed boundary (no single layer record)"
+    "start = astronomy-layer nakshatra ingress of Rahu \u2713",
+    "end = astronomy-layer nakshatra ingress of Venus \u2713"
    ],
    "rule_ids": [
     "ta_s34_gold_vedha_punarvasu_pushya_chitra_dhanishta"
    ]
   },
   {
-   "start_ET": "Thu 23 Dec 2027 17:58 EST",
+   "start_ET": "Thu 23 Dec 2027 00:37 EST",
+   "end_ET": "Thu 23 Dec 2027 01:27 EST",
+   "title": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold)",
+   "tone": "Mixed",
+   "verdicts": [
+    "MALEFIC Vedha: gold Bullish / BENEFIC Vedha: gold Bearish"
+   ],
+   "rule": "A malefic or benefic planet's Vedha falls on Punarvasu, Pushya, Chitra, Dhanishta.",
+   "detail": "value: MALEFIC vedha (Sun->Chitra, Sun->Punarvasu) - Gold Bullish (extreme if more than 1 malefic) - more than one malefic: stronger | BENEFIC vedha (Mercury->Punarvasu, Venus->Dhanishta) - Gold Bearish (high if more than 1 benefic) - more than one benefic: stronger",
+   "refs": [
+    "TA p.154 [printed 124] Section 34 A (gold) #8",
+    "TA p.156 [printed 126] Section 34 B (gold) #4",
+    "KD p.92 (2026: Rahu Vedh of Pushya - high bullish for gold & silver)"
+   ],
+   "quals": [
+    "TA p.137: Moon, Mercury, Jupiter & Venus benefic (their Vedha Bearish); Sun, Mars, Saturn, Rahu & Ketu malefic (their Vedha Bullish & reverses the trend)."
+   ],
+   "checks": [
+    "start = astronomy-layer nakshatra ingress of Venus \u2713",
+    "end = astronomy-layer nakshatra ingress of Mercury \u2713"
+   ],
+   "rule_ids": [
+    "ta_s34_gold_vedha_punarvasu_pushya_chitra_dhanishta"
+   ]
+  },
+  {
+   "start_ET": "Thu 23 Dec 2027 01:27 EST",
    "end_ET": "Wed 29 Dec 2027 08:21 EST",
    "title": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold)",
    "tone": "Mixed",
@@ -4958,7 +5060,7 @@
     "TA p.137: Moon, Mercury, Jupiter & Venus benefic (their Vedha Bearish); Sun, Mars, Saturn, Rahu & Ketu malefic (their Vedha Bullish & reverses the trend)."
    ],
    "checks": [
-    "start: computed boundary (no single layer record)",
+    "start = astronomy-layer nakshatra ingress of Mercury \u2713",
     "end = astronomy-layer nakshatra ingress of Sun \u2713"
    ],
    "rule_ids": [

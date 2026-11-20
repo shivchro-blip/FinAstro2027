@@ -12,7 +12,7 @@
    "pdf_rules": 730,
    "pdf_rules_with_detector": 721,
    "pdf_rules_mapped_to_existing": 79,
-   "new_events_major_yearly": 1606,
+   "new_events_major_yearly": 1607,
    "new_events_moon_layer": 4566,
    "existing_rows_carried": 601,
    "existing_rows_with_pdf_text": 463
@@ -8126,21 +8126,21 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
-   "uid": "e2e2ce80a2bb7d7d",
+   "uid": "313954880014d38e",
    "source": "reference_pdfs",
    "tier": "major",
    "event_title": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold)",
    "date_time": {
     "kind": "window",
     "start_NY": "2027-01-17 08:51 EST",
-    "end_NY": "2027-01-24 15:01 EST",
+    "end_NY": "2027-01-24 06:30 EST",
     "start_IST": "2027-01-17 19:21 IST",
-    "end_IST": "2027-01-25 01:31 IST",
+    "end_IST": "2027-01-24 17:00 IST",
     "start_UTC": "2027-01-17T13:51:33+00:00",
-    "end_UTC": "2027-01-24T20:01:52+00:00",
+    "end_UTC": "2027-01-24T11:30:56+00:00",
     "began_before_scan": false,
     "continues_after_scan": false,
-    "duration_days": 7.26
+    "duration_days": 6.9
    },
    "planetary_condition": "Computed: value: MALEFIC vedha (Mars->Pushya, Ketu->Dhanishta) - Gold Bullish (extreme if more than 1 malefic) - more than one malefic: stronger | BENEFIC vedha (Venus->Pushya) - Gold Bearish (high if more than 1 benefic)",
    "astrological_rule": "A malefic or benefic planet's Vedha falls on Punarvasu, Pushya, Chitra, Dhanishta.",
@@ -8164,21 +8164,21 @@
    "gold_silver_relevance": "gold"
   },
   {
-   "uid": "814fd335a46ff08c",
+   "uid": "122cd3ffc2e061a5",
    "source": "reference_pdfs",
    "tier": "major",
    "event_title": "Vedha of Ashlesha, Magha, Jyeshtha or Uttara Bhadrapada (sugar)",
    "date_time": {
     "kind": "window",
     "start_NY": "2027-01-17 08:51 EST",
-    "end_NY": "2027-01-24 15:01 EST",
+    "end_NY": "2027-01-24 06:30 EST",
     "start_IST": "2027-01-17 19:21 IST",
-    "end_IST": "2027-01-25 01:31 IST",
+    "end_IST": "2027-01-24 17:00 IST",
     "start_UTC": "2027-01-17T13:51:33+00:00",
-    "end_UTC": "2027-01-24T20:01:52+00:00",
+    "end_UTC": "2027-01-24T11:30:56+00:00",
     "began_before_scan": false,
     "continues_after_scan": false,
-    "duration_days": 7.26
+    "duration_days": 6.9
    },
    "planetary_condition": "Computed: value: MALEFIC vedha (Rahu->Ashlesha, Ketu->Magha) - Sugar Bullish (high if more than one) - more than one malefic: stronger | BENEFIC vedha (Jupiter->Ashlesha) - Sugar Bearish (high if more than one)",
    "astrological_rule": "A malefic or benefic planet's Vedha falls on Ashlesha, Magha, Jyeshtha, Uttara Bhadrapada.",
@@ -9124,23 +9124,23 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
-   "uid": "6671c72e7903108b",
+   "uid": "6bc01e36c7738a66",
    "source": "reference_pdfs",
    "tier": "major",
    "event_title": "Sun Nakshatra Vedha (all three sides)",
    "date_time": {
     "kind": "window",
     "start_NY": "2027-01-20 23:51 EST",
-    "end_NY": "2027-01-25 03:30 EST",
+    "end_NY": "2027-01-24 06:30 EST",
     "start_IST": "2027-01-21 10:21 IST",
-    "end_IST": "2027-01-25 14:00 IST",
+    "end_IST": "2027-01-24 17:00 IST",
     "start_UTC": "2027-01-21T04:51:05+00:00",
-    "end_UTC": "2027-01-25T08:30:00+00:00",
+    "end_UTC": "2027-01-24T11:30:56+00:00",
     "began_before_scan": false,
     "continues_after_scan": false,
-    "duration_days": 4.15
+    "duration_days": 3.28
    },
-   "planetary_condition": "At start: Sun 06.67 deg Capricorn (Uttara Ashadha pada 4; D9 Pisces), 1.017 deg/day | At end: Sun 10.89 deg Capricorn (Shravana pada 1; D9 Aries), 1.017 deg/day | Computed: value: Sun in Abhijeet: Left Shatabhisha (lord Rahu), Right Purva Phalguni (lord Venus), Front Rohini (lord Moon)",
+   "planetary_condition": "At start: Sun 06.67 deg Capricorn (Uttara Ashadha pada 4; D9 Pisces), 1.017 deg/day | At end: Sun 10.00 deg Capricorn (Uttara Ashadha pada 4; D9 Pisces), 1.017 deg/day | Computed: value: Sun in Abhijeet: Left Shatabhisha (lord Rahu), Right Purva Phalguni (lord Venus), Front Rohini (lord Moon)",
    "astrological_rule": "Sun's residency and the three nakshatras it vedhas.",
    "source_interpretation": "Sun Nakshatra Vedha (all three sides): Malefic Vedha: good rally may appear in sectors ruled by the Nakshatra lord (KD p.130 #1); Vedha by malefic is Bullish and reverses the trend (TA p.137 #4)",
    "financial_market_significance": "Malefic Vedha: good rally may appear in sectors ruled by the Nakshatra lord (KD p.130 #1); Vedha by malefic is Bullish and reverses the trend (TA p.137 #4) -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named), Sector - nakshatra lord (as the source states it; not a forecast)",
@@ -9730,6 +9730,121 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
+   "uid": "1ed87726c65b4ffb",
+   "source": "reference_pdfs",
+   "tier": "major",
+   "event_title": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold)",
+   "date_time": {
+    "kind": "window",
+    "start_NY": "2027-01-24 06:30 EST",
+    "end_NY": "2027-01-24 15:01 EST",
+    "start_IST": "2027-01-24 17:00 IST",
+    "end_IST": "2027-01-25 01:31 IST",
+    "start_UTC": "2027-01-24T11:30:56+00:00",
+    "end_UTC": "2027-01-24T20:01:52+00:00",
+    "began_before_scan": false,
+    "continues_after_scan": false,
+    "duration_days": 0.35
+   },
+   "planetary_condition": "Computed: value: MALEFIC vedha (Sun->Dhanishta, Mars->Pushya, Ketu->Dhanishta) - Gold Bullish (extreme if more than 1 malefic) - more than one malefic: stronger | BENEFIC vedha (Venus->Pushya) - Gold Bearish (high if more than 1 benefic)",
+   "astrological_rule": "A malefic or benefic planet's Vedha falls on Punarvasu, Pushya, Chitra, Dhanishta.",
+   "source_interpretation": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold): Malefic Vedha: Gold Bullish (extreme if more than 1 malefic); Benefic Vedha: Gold Bearish (high if more than 1 benefic)",
+   "financial_market_significance": "Malefic Vedha: Gold Bullish (extreme if more than 1 malefic); Benefic Vedha: Gold Bearish (high if more than 1 benefic) -> Gold (XAUUSD / COMEX GC) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "TA p.137: Moon, Mercury, Jupiter & Venus benefic (their Vedha Bearish); Sun, Mars, Saturn, Rahu & Ketu malefic (their Vedha Bullish & reverses the trend)."
+   ],
+   "source_reference": [
+    "TA p.154 [printed 124] Section 34 A (gold) #8",
+    "TA p.156 [printed 126] Section 34 B (gold) #4",
+    "KD p.92 (2026: Rahu Vedh of Pushya - high bullish for gold & silver)"
+   ],
+   "calculation_method": "Every graha's vedha targets (Moon excluded: it vedhas every target in turn within ~27 days) checked against the listed nakshatras; window while the set of vedhas is unchanged. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "gold"
+   ],
+   "rule_ids": [
+    "ta_s34_gold_vedha_punarvasu_pushya_chitra_dhanishta"
+   ],
+   "gold_silver_relevance": "gold"
+  },
+  {
+   "uid": "067b484e921a3adf",
+   "source": "reference_pdfs",
+   "tier": "major",
+   "event_title": "Vedha of Ashlesha, Magha, Jyeshtha or Uttara Bhadrapada (sugar)",
+   "date_time": {
+    "kind": "window",
+    "start_NY": "2027-01-24 06:30 EST",
+    "end_NY": "2027-01-24 15:01 EST",
+    "start_IST": "2027-01-24 17:00 IST",
+    "end_IST": "2027-01-25 01:31 IST",
+    "start_UTC": "2027-01-24T11:30:56+00:00",
+    "end_UTC": "2027-01-24T20:01:52+00:00",
+    "began_before_scan": false,
+    "continues_after_scan": false,
+    "duration_days": 0.35
+   },
+   "planetary_condition": "Computed: value: MALEFIC vedha (Sun->Magha, Rahu->Ashlesha, Ketu->Magha) - Sugar Bullish (high if more than one) - more than one malefic: stronger | BENEFIC vedha (Jupiter->Ashlesha) - Sugar Bearish (high if more than one)",
+   "astrological_rule": "A malefic or benefic planet's Vedha falls on Ashlesha, Magha, Jyeshtha, Uttara Bhadrapada.",
+   "source_interpretation": "Vedha of Ashlesha, Magha, Jyeshtha or Uttara Bhadrapada (sugar): Malefic Vedha: Sugar Bullish (high if more than one); Benefic Vedha: Sugar Bearish (high if more than one)",
+   "financial_market_significance": "Malefic Vedha: Sugar Bullish (high if more than one); Benefic Vedha: Sugar Bearish (high if more than one) -> Sugar & jaggery (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "TA p.137: Moon, Mercury, Jupiter & Venus benefic (their Vedha Bearish); Sun, Mars, Saturn, Rahu & Ketu malefic (their Vedha Bullish & reverses the trend)."
+   ],
+   "source_reference": [
+    "TA p.163 [printed 133] Section 36 A (sugar) #9",
+    "TA p.166 [printed 136] Section 36 B (sugar) #11"
+   ],
+   "calculation_method": "Every graha's vedha targets (Moon excluded: it vedhas every target in turn within ~27 days) checked against the listed nakshatras; window while the set of vedhas is unchanged. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "sugar"
+   ],
+   "rule_ids": [
+    "ta_s36_sugar_vedha_ashlesha_magha_jyeshtha_ubh"
+   ],
+   "gold_silver_relevance": "not stated by source"
+  },
+  {
+   "uid": "b99e04d3dff46723",
+   "source": "reference_pdfs",
+   "tier": "major",
+   "event_title": "Sun Nakshatra Vedha (all three sides)",
+   "date_time": {
+    "kind": "window",
+    "start_NY": "2027-01-24 06:30 EST",
+    "end_NY": "2027-02-06 09:38 EST",
+    "start_IST": "2027-01-24 17:00 IST",
+    "end_IST": "2027-02-06 20:08 IST",
+    "start_UTC": "2027-01-24T11:30:56+00:00",
+    "end_UTC": "2027-02-06T14:38:26+00:00",
+    "began_before_scan": false,
+    "continues_after_scan": false,
+    "duration_days": 13.13
+   },
+   "planetary_condition": "At start: Sun 10.00 deg Capricorn (Shravana pada 1; D9 Aries), 1.017 deg/day | At end: Sun 23.33 deg Capricorn (Shravana pada 4; D9 Cancer), 1.014 deg/day | Computed: value: Sun in Shravana: Left Dhanishta (lord Mars), Right Magha (lord Ketu), Front Krittika (lord Sun)",
+   "astrological_rule": "Sun's residency and the three nakshatras it vedhas.",
+   "source_interpretation": "Sun Nakshatra Vedha (all three sides): Malefic Vedha: good rally may appear in sectors ruled by the Nakshatra lord (KD p.130 #1); Vedha by malefic is Bullish and reverses the trend (TA p.137 #4)",
+   "financial_market_significance": "Malefic Vedha: good rally may appear in sectors ruled by the Nakshatra lord (KD p.130 #1); Vedha by malefic is Bullish and reverses the trend (TA p.137 #4) -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named), Sector - nakshatra lord (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "Unblocks the 2026 document's B131 for 2027: 217/227 of the 2026 printed cells equal the TA wheel; see vedha.py."
+   ],
+   "source_reference": [
+    "TA p.134 [printed 104] Section 32 A rule 1 'Sun, Moon, Rahu & Ketu do Vedha all 3 sides'",
+    "TA pp.131-133 wheel",
+    "2026 document B131 (same table, 2026)",
+    "KD p.84 / p.130 #1-#2 (sector rule)"
+   ],
+   "calculation_method": "Sun's nakshatra (28-name, Abhijit) -> TA wheel Front/Left/Right (2026 labels). || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "general",
+    "sector:nakshatra lord"
+   ],
+   "rule_ids": [
+    "ta_s32_sun_nakshatra_vedha"
+   ],
+   "gold_silver_relevance": "not stated by source"
+  },
+  {
    "uid": "0193c69f072492e1",
    "source": "reference_pdfs",
    "tier": "major",
@@ -10309,23 +10424,23 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
-   "uid": "005c364f8f3c91e8",
+   "uid": "278572bb430e8c00",
    "source": "reference_pdfs",
    "tier": "major",
    "event_title": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold)",
    "date_time": {
     "kind": "window",
     "start_NY": "2027-01-24 15:01 EST",
-    "end_NY": "2027-01-25 03:30 EST",
+    "end_NY": "2027-01-29 08:12 EST",
     "start_IST": "2027-01-25 01:31 IST",
-    "end_IST": "2027-01-25 14:00 IST",
+    "end_IST": "2027-01-29 18:42 IST",
     "start_UTC": "2027-01-24T20:01:52+00:00",
-    "end_UTC": "2027-01-25T08:30:00+00:00",
+    "end_UTC": "2027-01-29T13:12:11+00:00",
     "began_before_scan": false,
     "continues_after_scan": false,
-    "duration_days": 0.52
+    "duration_days": 4.72
    },
-   "planetary_condition": "Computed: value: MALEFIC vedha (Mars->Pushya, Ketu->Dhanishta) - Gold Bullish (extreme if more than 1 malefic) - more than one malefic: stronger | BENEFIC vedha (Jupiter->Dhanishta, Venus->Pushya) - Gold Bearish (high if more than 1 benefic) - more than one benefic: stronger",
+   "planetary_condition": "Computed: value: MALEFIC vedha (Sun->Dhanishta, Mars->Pushya, Ketu->Dhanishta) - Gold Bullish (extreme if more than 1 malefic) - more than one malefic: stronger | BENEFIC vedha (Jupiter->Dhanishta, Venus->Pushya) - Gold Bearish (high if more than 1 benefic) - more than one benefic: stronger",
    "astrological_rule": "A malefic or benefic planet's Vedha falls on Punarvasu, Pushya, Chitra, Dhanishta.",
    "source_interpretation": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold): Malefic Vedha: Gold Bullish (extreme if more than 1 malefic); Benefic Vedha: Gold Bearish (high if more than 1 benefic)",
    "financial_market_significance": "Malefic Vedha: Gold Bullish (extreme if more than 1 malefic); Benefic Vedha: Gold Bearish (high if more than 1 benefic) -> Gold (XAUUSD / COMEX GC) (as the source states it; not a forecast)",
@@ -10347,23 +10462,23 @@
    "gold_silver_relevance": "gold"
   },
   {
-   "uid": "0d3182065b6e21b9",
+   "uid": "6a00065f0e70d944",
    "source": "reference_pdfs",
    "tier": "major",
    "event_title": "Vedha of Ashlesha, Magha, Jyeshtha or Uttara Bhadrapada (sugar)",
    "date_time": {
     "kind": "window",
     "start_NY": "2027-01-24 15:01 EST",
-    "end_NY": "2027-01-25 03:30 EST",
+    "end_NY": "2027-01-31 05:37 EST",
     "start_IST": "2027-01-25 01:31 IST",
-    "end_IST": "2027-01-25 14:00 IST",
+    "end_IST": "2027-01-31 16:07 IST",
     "start_UTC": "2027-01-24T20:01:52+00:00",
-    "end_UTC": "2027-01-25T08:30:00+00:00",
+    "end_UTC": "2027-01-31T10:37:01+00:00",
     "began_before_scan": false,
     "continues_after_scan": false,
-    "duration_days": 0.52
+    "duration_days": 6.61
    },
-   "planetary_condition": "Computed: value: MALEFIC vedha (Rahu->Ashlesha, Ketu->Magha) - Sugar Bullish (high if more than one) - more than one malefic: stronger",
+   "planetary_condition": "Computed: value: MALEFIC vedha (Sun->Magha, Rahu->Ashlesha, Ketu->Magha) - Sugar Bullish (high if more than one) - more than one malefic: stronger",
    "astrological_rule": "A malefic or benefic planet's Vedha falls on Ashlesha, Magha, Jyeshtha, Uttara Bhadrapada.",
    "source_interpretation": "Vedha of Ashlesha, Magha, Jyeshtha or Uttara Bhadrapada (sugar): Malefic Vedha: Sugar Bullish (high if more than one); Benefic Vedha: Sugar Bearish (high if more than one)",
    "financial_market_significance": "Malefic Vedha: Sugar Bullish (high if more than one); Benefic Vedha: Sugar Bearish (high if more than one) -> Sugar & jaggery (as the source states it; not a forecast)",
@@ -10898,121 +11013,6 @@
    "tier_existing": "source_backed",
    "claim_tag": "Classical",
    "gold_silver_relevance": "MCXSILVER, SI"
-  },
-  {
-   "uid": "5b02744429972c29",
-   "source": "reference_pdfs",
-   "tier": "major",
-   "event_title": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold)",
-   "date_time": {
-    "kind": "window",
-    "start_NY": "2027-01-25 03:30 EST",
-    "end_NY": "2027-01-29 08:12 EST",
-    "start_IST": "2027-01-25 14:00 IST",
-    "end_IST": "2027-01-29 18:42 IST",
-    "start_UTC": "2027-01-25T08:30:00+00:00",
-    "end_UTC": "2027-01-29T13:12:11+00:00",
-    "began_before_scan": false,
-    "continues_after_scan": false,
-    "duration_days": 4.2
-   },
-   "planetary_condition": "Computed: value: MALEFIC vedha (Sun->Dhanishta, Mars->Pushya, Ketu->Dhanishta) - Gold Bullish (extreme if more than 1 malefic) - more than one malefic: stronger | BENEFIC vedha (Jupiter->Dhanishta, Venus->Pushya) - Gold Bearish (high if more than 1 benefic) - more than one benefic: stronger",
-   "astrological_rule": "A malefic or benefic planet's Vedha falls on Punarvasu, Pushya, Chitra, Dhanishta.",
-   "source_interpretation": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold): Malefic Vedha: Gold Bullish (extreme if more than 1 malefic); Benefic Vedha: Gold Bearish (high if more than 1 benefic)",
-   "financial_market_significance": "Malefic Vedha: Gold Bullish (extreme if more than 1 malefic); Benefic Vedha: Gold Bearish (high if more than 1 benefic) -> Gold (XAUUSD / COMEX GC) (as the source states it; not a forecast)",
-   "conditions_and_qualifications": [
-    "TA p.137: Moon, Mercury, Jupiter & Venus benefic (their Vedha Bearish); Sun, Mars, Saturn, Rahu & Ketu malefic (their Vedha Bullish & reverses the trend)."
-   ],
-   "source_reference": [
-    "TA p.154 [printed 124] Section 34 A (gold) #8",
-    "TA p.156 [printed 126] Section 34 B (gold) #4",
-    "KD p.92 (2026: Rahu Vedh of Pushya - high bullish for gold & silver)"
-   ],
-   "calculation_method": "Every graha's vedha targets (Moon excluded: it vedhas every target in turn within ~27 days) checked against the listed nakshatras; window while the set of vedhas is unchanged. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
-   "markets": [
-    "gold"
-   ],
-   "rule_ids": [
-    "ta_s34_gold_vedha_punarvasu_pushya_chitra_dhanishta"
-   ],
-   "gold_silver_relevance": "gold"
-  },
-  {
-   "uid": "bf9b63433b78c344",
-   "source": "reference_pdfs",
-   "tier": "major",
-   "event_title": "Vedha of Ashlesha, Magha, Jyeshtha or Uttara Bhadrapada (sugar)",
-   "date_time": {
-    "kind": "window",
-    "start_NY": "2027-01-25 03:30 EST",
-    "end_NY": "2027-01-31 05:37 EST",
-    "start_IST": "2027-01-25 14:00 IST",
-    "end_IST": "2027-01-31 16:07 IST",
-    "start_UTC": "2027-01-25T08:30:00+00:00",
-    "end_UTC": "2027-01-31T10:37:01+00:00",
-    "began_before_scan": false,
-    "continues_after_scan": false,
-    "duration_days": 6.09
-   },
-   "planetary_condition": "Computed: value: MALEFIC vedha (Sun->Magha, Rahu->Ashlesha, Ketu->Magha) - Sugar Bullish (high if more than one) - more than one malefic: stronger",
-   "astrological_rule": "A malefic or benefic planet's Vedha falls on Ashlesha, Magha, Jyeshtha, Uttara Bhadrapada.",
-   "source_interpretation": "Vedha of Ashlesha, Magha, Jyeshtha or Uttara Bhadrapada (sugar): Malefic Vedha: Sugar Bullish (high if more than one); Benefic Vedha: Sugar Bearish (high if more than one)",
-   "financial_market_significance": "Malefic Vedha: Sugar Bullish (high if more than one); Benefic Vedha: Sugar Bearish (high if more than one) -> Sugar & jaggery (as the source states it; not a forecast)",
-   "conditions_and_qualifications": [
-    "TA p.137: Moon, Mercury, Jupiter & Venus benefic (their Vedha Bearish); Sun, Mars, Saturn, Rahu & Ketu malefic (their Vedha Bullish & reverses the trend)."
-   ],
-   "source_reference": [
-    "TA p.163 [printed 133] Section 36 A (sugar) #9",
-    "TA p.166 [printed 136] Section 36 B (sugar) #11"
-   ],
-   "calculation_method": "Every graha's vedha targets (Moon excluded: it vedhas every target in turn within ~27 days) checked against the listed nakshatras; window while the set of vedhas is unchanged. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
-   "markets": [
-    "sugar"
-   ],
-   "rule_ids": [
-    "ta_s36_sugar_vedha_ashlesha_magha_jyeshtha_ubh"
-   ],
-   "gold_silver_relevance": "not stated by source"
-  },
-  {
-   "uid": "364e9a0cb7080b50",
-   "source": "reference_pdfs",
-   "tier": "major",
-   "event_title": "Sun Nakshatra Vedha (all three sides)",
-   "date_time": {
-    "kind": "window",
-    "start_NY": "2027-01-25 03:30 EST",
-    "end_NY": "2027-02-06 09:38 EST",
-    "start_IST": "2027-01-25 14:00 IST",
-    "end_IST": "2027-02-06 20:08 IST",
-    "start_UTC": "2027-01-25T08:30:00+00:00",
-    "end_UTC": "2027-02-06T14:38:26+00:00",
-    "began_before_scan": false,
-    "continues_after_scan": false,
-    "duration_days": 12.26
-   },
-   "planetary_condition": "At start: Sun 10.89 deg Capricorn (Shravana pada 1; D9 Aries), 1.017 deg/day | At end: Sun 23.33 deg Capricorn (Shravana pada 4; D9 Cancer), 1.014 deg/day | Computed: value: Sun in Shravana: Left Dhanishta (lord Mars), Right Magha (lord Ketu), Front Krittika (lord Sun)",
-   "astrological_rule": "Sun's residency and the three nakshatras it vedhas.",
-   "source_interpretation": "Sun Nakshatra Vedha (all three sides): Malefic Vedha: good rally may appear in sectors ruled by the Nakshatra lord (KD p.130 #1); Vedha by malefic is Bullish and reverses the trend (TA p.137 #4)",
-   "financial_market_significance": "Malefic Vedha: good rally may appear in sectors ruled by the Nakshatra lord (KD p.130 #1); Vedha by malefic is Bullish and reverses the trend (TA p.137 #4) -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named), Sector - nakshatra lord (as the source states it; not a forecast)",
-   "conditions_and_qualifications": [
-    "Unblocks the 2026 document's B131 for 2027: 217/227 of the 2026 printed cells equal the TA wheel; see vedha.py."
-   ],
-   "source_reference": [
-    "TA p.134 [printed 104] Section 32 A rule 1 'Sun, Moon, Rahu & Ketu do Vedha all 3 sides'",
-    "TA pp.131-133 wheel",
-    "2026 document B131 (same table, 2026)",
-    "KD p.84 / p.130 #1-#2 (sector rule)"
-   ],
-   "calculation_method": "Sun's nakshatra (28-name, Abhijit) -> TA wheel Front/Left/Right (2026 labels). || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
-   "markets": [
-    "general",
-    "sector:nakshatra lord"
-   ],
-   "rule_ids": [
-    "ta_s32_sun_nakshatra_vedha"
-   ],
-   "gold_silver_relevance": "not stated by source"
   },
   {
    "uid": "71b596bd3f31292e",
@@ -21580,6 +21580,82 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
+   "uid": "6da6be6fe0469550",
+   "source": "reference_pdfs",
+   "tier": "major",
+   "event_title": "Venus-Herschel mutual Vedha",
+   "date_time": {
+    "kind": "window",
+    "start_NY": "2027-03-04 15:09 EST",
+    "end_NY": "2027-03-15 20:01 EDT",
+    "start_IST": "2027-03-05 01:39 IST",
+    "end_IST": "2027-03-16 05:31 IST",
+    "start_UTC": "2027-03-04T20:09:22+00:00",
+    "end_UTC": "2027-03-16T00:01:52+00:00",
+    "began_before_scan": false,
+    "continues_after_scan": false,
+    "duration_days": 11.16
+   },
+   "planetary_condition": "At start: Venus 10.00 deg Capricorn (Shravana pada 1; D9 Aries), 1.190 deg/day; Herschel 07.70 deg Taurus (Krittika pada 4; D9 Pisces), 0.021 deg/day | At end: Venus 23.33 deg Capricorn (Shravana pada 4; D9 Cancer), 1.198 deg/day; Herschel 07.99 deg Taurus (Krittika pada 4; D9 Pisces), 0.030 deg/day | Computed: value: Venus in Shravana vedhas Krittika (Front side) where Herschel is; Herschel in Krittika vedhas Shravana (Front side) where Venus is",
+   "astrological_rule": "Venus and Herschel vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
+   "source_interpretation": "Venus-Herschel mutual Vedha: Bearish (mutual)",
+   "financial_market_significance": "Bearish (mutual) -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "source_reference": [
+    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'"
+   ],
+   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "general"
+   ],
+   "rule_ids": [
+    "ta_s32e_venus_herschel_mutual"
+   ],
+   "gold_silver_relevance": "not stated by source"
+  },
+  {
+   "uid": "a53566bb7c4bd290",
+   "source": "reference_pdfs",
+   "tier": "major",
+   "event_title": "Mercury does Vedha of Venus",
+   "date_time": {
+    "kind": "window",
+    "start_NY": "2027-03-04 15:09 EST",
+    "end_NY": "2027-03-06 07:32 EST",
+    "start_IST": "2027-03-05 01:39 IST",
+    "end_IST": "2027-03-06 18:02 IST",
+    "start_UTC": "2027-03-04T20:09:22+00:00",
+    "end_UTC": "2027-03-06T12:32:20+00:00",
+    "began_before_scan": false,
+    "continues_after_scan": false,
+    "duration_days": 1.68
+   },
+   "planetary_condition": "At start: Mercury 26.78 deg Capricorn (Dhanishta pada 2; D9 Virgo), 0.138 deg/day; Venus 10.00 deg Capricorn (Shravana pada 1; D9 Aries), 1.190 deg/day | At end: Mercury 27.15 deg Capricorn (Dhanishta pada 2; D9 Virgo), 0.300 deg/day; Venus 12.00 deg Capricorn (Shravana pada 1; D9 Aries), 1.192 deg/day | Computed: value: Mercury in Dhanishta vedhas Shravana (Right side) where Venus is",
+   "astrological_rule": "Mercury does Vedha to the nakshatra Venus occupies on the Sarvatobhadra wheel (TA pp.131-133).",
+   "source_interpretation": "Mercury does Vedha of Venus: Silver Bullish",
+   "financial_market_significance": "Silver Bullish -> Silver (COMEX SI) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
+    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
+    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
+   ],
+   "source_reference": [
+    "TA p.158 [printed 128] Section 35 A (silver) #11"
+   ],
+   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "silver"
+   ],
+   "rule_ids": [
+    "ta_s35a11_mercury_vedha_venus"
+   ],
+   "gold_silver_relevance": "silver"
+  },
+  {
    "uid": "9ad756dfd14ed7ef",
    "source": "reference_pdfs",
    "tier": "major",
@@ -21948,82 +22024,6 @@
    "tier_existing": "source_backed",
    "claim_tag": "Observed",
    "gold_silver_relevance": "not in a gold/silver instrument"
-  },
-  {
-   "uid": "80ea31fe7b03772a",
-   "source": "reference_pdfs",
-   "tier": "major",
-   "event_title": "Venus-Herschel mutual Vedha",
-   "date_time": {
-    "kind": "window",
-    "start_NY": "2027-03-05 09:04 EST",
-    "end_NY": "2027-03-15 20:01 EDT",
-    "start_IST": "2027-03-05 19:34 IST",
-    "end_IST": "2027-03-16 05:31 IST",
-    "start_UTC": "2027-03-05T14:04:41+00:00",
-    "end_UTC": "2027-03-16T00:01:52+00:00",
-    "began_before_scan": false,
-    "continues_after_scan": false,
-    "duration_days": 10.41
-   },
-   "planetary_condition": "At start: Venus 10.89 deg Capricorn (Shravana pada 1; D9 Aries), 1.191 deg/day; Herschel 07.72 deg Taurus (Krittika pada 4; D9 Pisces), 0.022 deg/day | At end: Venus 23.33 deg Capricorn (Shravana pada 4; D9 Cancer), 1.198 deg/day; Herschel 07.99 deg Taurus (Krittika pada 4; D9 Pisces), 0.030 deg/day | Computed: value: Venus in Shravana vedhas Krittika (Front side) where Herschel is; Herschel in Krittika vedhas Shravana (Front side) where Venus is",
-   "astrological_rule": "Venus and Herschel vedha each other (mutual) on the Sarvatobhadra wheel (TA pp.131-133).",
-   "source_interpretation": "Venus-Herschel mutual Vedha: Bearish (mutual)",
-   "financial_market_significance": "Bearish (mutual) -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
-   "conditions_and_qualifications": [
-    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
-    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
-    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
-   ],
-   "source_reference": [
-    "TA p.140-141 [printed 110-111] Section 32 E 'Specific Vedha & their results'"
-   ],
-   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
-   "markets": [
-    "general"
-   ],
-   "rule_ids": [
-    "ta_s32e_venus_herschel_mutual"
-   ],
-   "gold_silver_relevance": "not stated by source"
-  },
-  {
-   "uid": "ea2e71eb807c6e78",
-   "source": "reference_pdfs",
-   "tier": "major",
-   "event_title": "Mercury does Vedha of Venus",
-   "date_time": {
-    "kind": "window",
-    "start_NY": "2027-03-05 09:04 EST",
-    "end_NY": "2027-03-06 07:32 EST",
-    "start_IST": "2027-03-05 19:34 IST",
-    "end_IST": "2027-03-06 18:02 IST",
-    "start_UTC": "2027-03-05T14:04:41+00:00",
-    "end_UTC": "2027-03-06T12:32:20+00:00",
-    "began_before_scan": false,
-    "continues_after_scan": false,
-    "duration_days": 0.94
-   },
-   "planetary_condition": "At start: Mercury 26.91 deg Capricorn (Dhanishta pada 2; D9 Virgo), 0.212 deg/day; Venus 10.89 deg Capricorn (Shravana pada 1; D9 Aries), 1.191 deg/day | At end: Mercury 27.15 deg Capricorn (Dhanishta pada 2; D9 Virgo), 0.300 deg/day; Venus 12.00 deg Capricorn (Shravana pada 1; D9 Aries), 1.192 deg/day | Computed: value: Mercury in Dhanishta vedhas Shravana (Right side) where Venus is",
-   "astrological_rule": "Mercury does Vedha to the nakshatra Venus occupies on the Sarvatobhadra wheel (TA pp.131-133).",
-   "source_interpretation": "Mercury does Vedha of Venus: Silver Bullish",
-   "financial_market_significance": "Silver Bullish -> Silver (COMEX SI) (as the source states it; not a forecast)",
-   "conditions_and_qualifications": [
-    "TA p.136: when 2 planets do Vedha of each other it is strong Vedha (impact high); Vedha by the Sun on Moon, Mars, Mercury, Jupiter, Venus or Saturn is weak; Moon below 8 deg or above 22 deg is weak.",
-    "TA p.137 #5: when Vedha ends with Bearish implications it reverses the trend.",
-    "Direction doctrine conflict between TA p.134 and the 2026 tables: see vedha.py and REFERENCE_PDF_RULES.md."
-   ],
-   "source_reference": [
-    "TA p.158 [printed 128] Section 35 A (silver) #11"
-   ],
-   "calculation_method": "Each body's nakshatra (28-name scheme with Abhijit); vedha side per finastro/pdfref/vedha.py (TA p.134 rules + 2026 class doctrine, TA p.144 normal speeds); window while the target nakshatra is occupied. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
-   "markets": [
-    "silver"
-   ],
-   "rule_ids": [
-    "ta_s35a11_mercury_vedha_venus"
-   ],
-   "gold_silver_relevance": "silver"
   },
   {
    "uid": "ce811cd6f98a8bab",
@@ -33785,23 +33785,23 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
-   "uid": "9c7d89035b00148a",
+   "uid": "c1e69715ec3b5214",
    "source": "reference_pdfs",
    "tier": "major",
    "event_title": "Rahu Nakshatra Vedha (all three sides)",
    "date_time": {
     "kind": "window",
     "start_NY": "2027-04-10 08:22 EDT",
-    "end_NY": "2027-12-01 03:26 EST",
+    "end_NY": "2027-12-17 22:00 EST",
     "start_IST": "2027-04-10 17:52 IST",
-    "end_IST": "2027-12-01 13:56 IST",
+    "end_IST": "2027-12-18 08:30 IST",
     "start_UTC": "2027-04-10T12:22:01+00:00",
-    "end_UTC": "2027-12-01T08:26:15+00:00",
+    "end_UTC": "2027-12-18T03:00:56+00:00",
     "began_before_scan": false,
     "continues_after_scan": false,
-    "duration_days": 234.84
+    "duration_days": 251.61
    },
-   "planetary_condition": "At start: Rahu 23.33 deg Capricorn (Shravana pada 4; D9 Cancer) | At end: Rahu 10.89 deg Capricorn (Shravana pada 1; D9 Aries) | Computed: value: Rahu in Shravana: Left Dhanishta (lord Mars), Right Magha (lord Ketu), Front Krittika (lord Sun)",
+   "planetary_condition": "At start: Rahu 23.33 deg Capricorn (Shravana pada 4; D9 Cancer) | At end: Rahu 10.00 deg Capricorn (Shravana pada 1; D9 Aries) | Computed: value: Rahu in Shravana: Left Dhanishta (lord Mars), Right Magha (lord Ketu), Front Krittika (lord Sun)",
    "astrological_rule": "Rahu's residency and the three nakshatras it vedhas.",
    "source_interpretation": "Rahu Nakshatra Vedha (all three sides): Malefic Vedha: good rally may appear in sectors ruled by the Nakshatra lord (KD p.130 #1); Vedha by malefic is Bullish and reverses the trend (TA p.137 #4)",
    "financial_market_significance": "Malefic Vedha: good rally may appear in sectors ruled by the Nakshatra lord (KD p.130 #1); Vedha by malefic is Bullish and reverses the trend (TA p.137 #4) -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named), Sector - nakshatra lord (as the source states it; not a forecast)",
@@ -105063,21 +105063,21 @@
    "gold_silver_relevance": "GC, MCXGOLD"
   },
   {
-   "uid": "a1196638ac4ab380",
+   "uid": "f04bfba55406dd79",
    "source": "reference_pdfs",
    "tier": "major",
    "event_title": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold)",
    "date_time": {
     "kind": "window",
     "start_NY": "2027-11-27 16:38 EST",
-    "end_NY": "2027-12-01 03:26 EST",
+    "end_NY": "2027-12-03 03:04 EST",
     "start_IST": "2027-11-28 03:08 IST",
-    "end_IST": "2027-12-01 13:56 IST",
+    "end_IST": "2027-12-03 13:34 IST",
     "start_UTC": "2027-11-27T21:38:26+00:00",
-    "end_UTC": "2027-12-01T08:26:15+00:00",
+    "end_UTC": "2027-12-03T08:04:13+00:00",
     "began_before_scan": false,
     "continues_after_scan": false,
-    "duration_days": 3.45
+    "duration_days": 5.43
    },
    "planetary_condition": "Computed: value: MALEFIC vedha (Rahu->Dhanishta) - Gold Bullish (extreme if more than 1 malefic)",
    "astrological_rule": "A malefic or benefic planet's Vedha falls on Punarvasu, Pushya, Chitra, Dhanishta.",
@@ -105101,21 +105101,21 @@
    "gold_silver_relevance": "gold"
   },
   {
-   "uid": "8f72b6dc398db800",
+   "uid": "2aff62b0f8b3c386",
    "source": "reference_pdfs",
    "tier": "major",
    "event_title": "Vedha of Ashlesha, Magha, Jyeshtha or Uttara Bhadrapada (sugar)",
    "date_time": {
     "kind": "window",
     "start_NY": "2027-11-27 16:38 EST",
-    "end_NY": "2027-12-01 03:26 EST",
+    "end_NY": "2027-12-01 09:57 EST",
     "start_IST": "2027-11-28 03:08 IST",
-    "end_IST": "2027-12-01 13:56 IST",
+    "end_IST": "2027-12-01 20:27 IST",
     "start_UTC": "2027-11-27T21:38:26+00:00",
-    "end_UTC": "2027-12-01T08:26:15+00:00",
+    "end_UTC": "2027-12-01T14:57:39+00:00",
     "began_before_scan": false,
     "continues_after_scan": false,
-    "duration_days": 3.45
+    "duration_days": 3.72
    },
    "planetary_condition": "Computed: value: MALEFIC vedha (Sun->Ashlesha, Rahu->Magha, Ketu->Jyeshtha) - Sugar Bullish (high if more than one) - more than one malefic: stronger | BENEFIC vedha (Mercury->Ashlesha) - Sugar Bearish (high if more than one)",
    "astrological_rule": "A malefic or benefic planet's Vedha falls on Ashlesha, Magha, Jyeshtha, Uttara Bhadrapada.",
@@ -105945,84 +105945,6 @@
    "gold_silver_relevance": "not in a gold/silver instrument"
   },
   {
-   "uid": "705f7a394dcd94a6",
-   "source": "reference_pdfs",
-   "tier": "major",
-   "event_title": "Vedha of Ashlesha, Magha, Jyeshtha or Uttara Bhadrapada (sugar)",
-   "date_time": {
-    "kind": "window",
-    "start_NY": "2027-12-01 03:26 EST",
-    "end_NY": "2027-12-01 09:57 EST",
-    "start_IST": "2027-12-01 13:56 IST",
-    "end_IST": "2027-12-01 20:27 IST",
-    "start_UTC": "2027-12-01T08:26:15+00:00",
-    "end_UTC": "2027-12-01T14:57:39+00:00",
-    "began_before_scan": false,
-    "continues_after_scan": false,
-    "duration_days": 0.27
-   },
-   "planetary_condition": "Computed: value: MALEFIC vedha (Sun->Ashlesha, Ketu->Jyeshtha) - Sugar Bullish (high if more than one) - more than one malefic: stronger | BENEFIC vedha (Mercury->Ashlesha) - Sugar Bearish (high if more than one)",
-   "astrological_rule": "A malefic or benefic planet's Vedha falls on Ashlesha, Magha, Jyeshtha, Uttara Bhadrapada.",
-   "source_interpretation": "Vedha of Ashlesha, Magha, Jyeshtha or Uttara Bhadrapada (sugar): Malefic Vedha: Sugar Bullish (high if more than one); Benefic Vedha: Sugar Bearish (high if more than one)",
-   "financial_market_significance": "Malefic Vedha: Sugar Bullish (high if more than one); Benefic Vedha: Sugar Bearish (high if more than one) -> Sugar & jaggery (as the source states it; not a forecast)",
-   "conditions_and_qualifications": [
-    "TA p.137: Moon, Mercury, Jupiter & Venus benefic (their Vedha Bearish); Sun, Mars, Saturn, Rahu & Ketu malefic (their Vedha Bullish & reverses the trend)."
-   ],
-   "source_reference": [
-    "TA p.163 [printed 133] Section 36 A (sugar) #9",
-    "TA p.166 [printed 136] Section 36 B (sugar) #11"
-   ],
-   "calculation_method": "Every graha's vedha targets (Moon excluded: it vedhas every target in turn within ~27 days) checked against the listed nakshatras; window while the set of vedhas is unchanged. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
-   "markets": [
-    "sugar"
-   ],
-   "rule_ids": [
-    "ta_s36_sugar_vedha_ashlesha_magha_jyeshtha_ubh"
-   ],
-   "gold_silver_relevance": "not stated by source"
-  },
-  {
-   "uid": "97232a1fb698cba2",
-   "source": "reference_pdfs",
-   "tier": "major",
-   "event_title": "Rahu Nakshatra Vedha (all three sides)",
-   "date_time": {
-    "kind": "window",
-    "start_NY": "2027-12-01 03:26 EST",
-    "end_NY": "2028-02-18 19:40 EST",
-    "start_IST": "2027-12-01 13:56 IST",
-    "end_IST": "2028-02-19 06:10 IST",
-    "start_UTC": "2027-12-01T08:26:15+00:00",
-    "end_UTC": "2028-02-19T00:40:46+00:00",
-    "began_before_scan": false,
-    "continues_after_scan": false,
-    "duration_days": 79.68
-   },
-   "planetary_condition": "At start: Rahu 10.89 deg Capricorn (Shravana pada 1; D9 Aries) | At end: Rahu 06.67 deg Capricorn (Uttara Ashadha pada 4; D9 Pisces) | Computed: value: Rahu in Abhijeet: Left Shatabhisha (lord Rahu), Right Purva Phalguni (lord Venus), Front Rohini (lord Moon)",
-   "astrological_rule": "Rahu's residency and the three nakshatras it vedhas.",
-   "source_interpretation": "Rahu Nakshatra Vedha (all three sides): Malefic Vedha: good rally may appear in sectors ruled by the Nakshatra lord (KD p.130 #1); Vedha by malefic is Bullish and reverses the trend (TA p.137 #4)",
-   "financial_market_significance": "Malefic Vedha: good rally may appear in sectors ruled by the Nakshatra lord (KD p.130 #1); Vedha by malefic is Bullish and reverses the trend (TA p.137 #4) -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named), Sector - nakshatra lord (as the source states it; not a forecast)",
-   "conditions_and_qualifications": [
-    "Unblocks the 2026 document's B137 for 2027: 217/227 of the 2026 printed cells equal the TA wheel; see vedha.py.",
-    "KD p.93 (2026): 'Rahu doing Vedh of Pushya, Swati and Abhijeet ... Abhijeet lord Sun: sectors ruled by Sun (NIFTY, Power) to outperform; Swati ruled by Rahu' ."
-   ],
-   "source_reference": [
-    "TA p.134 [printed 104] Section 32 A rule 1 'Sun, Moon, Rahu & Ketu do Vedha all 3 sides'",
-    "TA pp.131-133 wheel",
-    "2026 document B137 (same table, 2026)",
-    "KD p.84 / p.130 #1-#2 (sector rule)"
-   ],
-   "calculation_method": "Rahu's nakshatra (28-name, Abhijit) -> TA wheel Front/Left/Right (2026 labels). || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
-   "markets": [
-    "general",
-    "sector:nakshatra lord"
-   ],
-   "rule_ids": [
-    "ta_s32_rahu_nakshatra_vedha"
-   ],
-   "gold_silver_relevance": "not stated by source"
-  },
-  {
    "uid": "50ceb4d5e77fa66c",
    "source": "reference_pdfs",
    "tier": "major",
@@ -106073,7 +105995,7 @@
     "continues_after_scan": false,
     "duration_days": 1.71
    },
-   "planetary_condition": "Computed: value: MALEFIC vedha (Sun->Ashlesha, Ketu->Jyeshtha) - Sugar Bullish (high if more than one) - more than one malefic: stronger | BENEFIC vedha (Mercury->Ashlesha, Venus->Uttara Bhadrapada) - Sugar Bearish (high if more than one) - more than one benefic: stronger",
+   "planetary_condition": "Computed: value: MALEFIC vedha (Sun->Ashlesha, Rahu->Magha, Ketu->Jyeshtha) - Sugar Bullish (high if more than one) - more than one malefic: stronger | BENEFIC vedha (Mercury->Ashlesha, Venus->Uttara Bhadrapada) - Sugar Bearish (high if more than one) - more than one benefic: stronger",
    "astrological_rule": "A malefic or benefic planet's Vedha falls on Ashlesha, Magha, Jyeshtha, Uttara Bhadrapada.",
    "source_interpretation": "Vedha of Ashlesha, Magha, Jyeshtha or Uttara Bhadrapada (sugar): Malefic Vedha: Sugar Bullish (high if more than one); Benefic Vedha: Sugar Bearish (high if more than one)",
    "financial_market_significance": "Malefic Vedha: Sugar Bullish (high if more than one); Benefic Vedha: Sugar Bearish (high if more than one) -> Sugar & jaggery (as the source states it; not a forecast)",
@@ -106456,7 +106378,7 @@
     "continues_after_scan": false,
     "duration_days": 3.04
    },
-   "planetary_condition": "Computed: value: MALEFIC vedha (Sun->Pushya) - Gold Bullish (extreme if more than 1 malefic)",
+   "planetary_condition": "Computed: value: MALEFIC vedha (Sun->Pushya, Rahu->Dhanishta) - Gold Bullish (extreme if more than 1 malefic) - more than one malefic: stronger",
    "astrological_rule": "A malefic or benefic planet's Vedha falls on Punarvasu, Pushya, Chitra, Dhanishta.",
    "source_interpretation": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold): Malefic Vedha: Gold Bullish (extreme if more than 1 malefic); Benefic Vedha: Gold Bearish (high if more than 1 benefic)",
    "financial_market_significance": "Malefic Vedha: Gold Bullish (extreme if more than 1 malefic); Benefic Vedha: Gold Bearish (high if more than 1 benefic) -> Gold (XAUUSD / COMEX GC) (as the source states it; not a forecast)",
@@ -106494,7 +106416,7 @@
     "continues_after_scan": false,
     "duration_days": 2.41
    },
-   "planetary_condition": "Computed: value: MALEFIC vedha (Ketu->Jyeshtha) - Sugar Bullish (high if more than one) | BENEFIC vedha (Mercury->Ashlesha, Venus->Uttara Bhadrapada) - Sugar Bearish (high if more than one) - more than one benefic: stronger",
+   "planetary_condition": "Computed: value: MALEFIC vedha (Rahu->Magha, Ketu->Jyeshtha) - Sugar Bullish (high if more than one) - more than one malefic: stronger | BENEFIC vedha (Mercury->Ashlesha, Venus->Uttara Bhadrapada) - Sugar Bearish (high if more than one) - more than one benefic: stronger",
    "astrological_rule": "A malefic or benefic planet's Vedha falls on Ashlesha, Magha, Jyeshtha, Uttara Bhadrapada.",
    "source_interpretation": "Vedha of Ashlesha, Magha, Jyeshtha or Uttara Bhadrapada (sugar): Malefic Vedha: Sugar Bullish (high if more than one); Benefic Vedha: Sugar Bearish (high if more than one)",
    "financial_market_significance": "Malefic Vedha: Sugar Bullish (high if more than one); Benefic Vedha: Sugar Bearish (high if more than one) -> Sugar & jaggery (as the source states it; not a forecast)",
@@ -107370,7 +107292,7 @@
     "continues_after_scan": false,
     "duration_days": 0.63
    },
-   "planetary_condition": "Computed: value: MALEFIC vedha (Mars->Uttara Bhadrapada, Ketu->Jyeshtha) - Sugar Bullish (high if more than one) - more than one malefic: stronger | BENEFIC vedha (Mercury->Ashlesha, Venus->Uttara Bhadrapada) - Sugar Bearish (high if more than one) - more than one benefic: stronger",
+   "planetary_condition": "Computed: value: MALEFIC vedha (Mars->Uttara Bhadrapada, Rahu->Magha, Ketu->Jyeshtha) - Sugar Bullish (high if more than one) - more than one malefic: stronger | BENEFIC vedha (Mercury->Ashlesha, Venus->Uttara Bhadrapada) - Sugar Bearish (high if more than one) - more than one benefic: stronger",
    "astrological_rule": "A malefic or benefic planet's Vedha falls on Ashlesha, Magha, Jyeshtha, Uttara Bhadrapada.",
    "source_interpretation": "Vedha of Ashlesha, Magha, Jyeshtha or Uttara Bhadrapada (sugar): Malefic Vedha: Sugar Bullish (high if more than one); Benefic Vedha: Sugar Bearish (high if more than one)",
    "financial_market_significance": "Malefic Vedha: Sugar Bullish (high if more than one); Benefic Vedha: Sugar Bearish (high if more than one) -> Sugar & jaggery (as the source states it; not a forecast)",
@@ -107527,7 +107449,7 @@
     "continues_after_scan": false,
     "duration_days": 8.49
    },
-   "planetary_condition": "Computed: value: MALEFIC vedha (Sun->Pushya) - Gold Bullish (extreme if more than 1 malefic) | BENEFIC vedha (Mercury->Pushya) - Gold Bearish (high if more than 1 benefic)",
+   "planetary_condition": "Computed: value: MALEFIC vedha (Sun->Pushya, Rahu->Dhanishta) - Gold Bullish (extreme if more than 1 malefic) - more than one malefic: stronger | BENEFIC vedha (Mercury->Pushya) - Gold Bearish (high if more than 1 benefic)",
    "astrological_rule": "A malefic or benefic planet's Vedha falls on Punarvasu, Pushya, Chitra, Dhanishta.",
    "source_interpretation": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold): Malefic Vedha: Gold Bullish (extreme if more than 1 malefic); Benefic Vedha: Gold Bearish (high if more than 1 benefic)",
    "financial_market_significance": "Malefic Vedha: Gold Bullish (extreme if more than 1 malefic); Benefic Vedha: Gold Bearish (high if more than 1 benefic) -> Gold (XAUUSD / COMEX GC) (as the source states it; not a forecast)",
@@ -107565,7 +107487,7 @@
     "continues_after_scan": false,
     "duration_days": 6.04
    },
-   "planetary_condition": "Computed: value: MALEFIC vedha (Mars->Uttara Bhadrapada, Ketu->Jyeshtha) - Sugar Bullish (high if more than one) - more than one malefic: stronger | BENEFIC vedha (Venus->Uttara Bhadrapada) - Sugar Bearish (high if more than one)",
+   "planetary_condition": "Computed: value: MALEFIC vedha (Mars->Uttara Bhadrapada, Rahu->Magha, Ketu->Jyeshtha) - Sugar Bullish (high if more than one) - more than one malefic: stronger | BENEFIC vedha (Venus->Uttara Bhadrapada) - Sugar Bearish (high if more than one)",
    "astrological_rule": "A malefic or benefic planet's Vedha falls on Ashlesha, Magha, Jyeshtha, Uttara Bhadrapada.",
    "source_interpretation": "Vedha of Ashlesha, Magha, Jyeshtha or Uttara Bhadrapada (sugar): Malefic Vedha: Sugar Bullish (high if more than one); Benefic Vedha: Sugar Bearish (high if more than one)",
    "financial_market_significance": "Malefic Vedha: Sugar Bullish (high if more than one); Benefic Vedha: Sugar Bearish (high if more than one) -> Sugar & jaggery (as the source states it; not a forecast)",
@@ -108975,23 +108897,23 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
-   "uid": "b5c9f9a80988ef48",
+   "uid": "96bba7d3a0b2b9b5",
    "source": "reference_pdfs",
    "tier": "major",
    "event_title": "Vedha of Ashlesha, Magha, Jyeshtha or Uttara Bhadrapada (sugar)",
    "date_time": {
     "kind": "window",
     "start_NY": "2027-12-12 04:50 EST",
-    "end_NY": "2027-12-22 19:50 EST",
+    "end_NY": "2027-12-17 22:00 EST",
     "start_IST": "2027-12-12 15:20 IST",
-    "end_IST": "2027-12-23 06:20 IST",
+    "end_IST": "2027-12-18 08:30 IST",
     "start_UTC": "2027-12-12T09:50:09+00:00",
-    "end_UTC": "2027-12-23T00:50:09+00:00",
+    "end_UTC": "2027-12-18T03:00:56+00:00",
     "began_before_scan": false,
     "continues_after_scan": false,
-    "duration_days": 10.62
+    "duration_days": 5.72
    },
-   "planetary_condition": "Computed: value: MALEFIC vedha (Mars->Uttara Bhadrapada, Ketu->Jyeshtha) - Sugar Bullish (high if more than one) - more than one malefic: stronger",
+   "planetary_condition": "Computed: value: MALEFIC vedha (Mars->Uttara Bhadrapada, Rahu->Magha, Ketu->Jyeshtha) - Sugar Bullish (high if more than one) - more than one malefic: stronger",
    "astrological_rule": "A malefic or benefic planet's Vedha falls on Ashlesha, Magha, Jyeshtha, Uttara Bhadrapada.",
    "source_interpretation": "Vedha of Ashlesha, Magha, Jyeshtha or Uttara Bhadrapada (sugar): Malefic Vedha: Sugar Bullish (high if more than one); Benefic Vedha: Sugar Bearish (high if more than one)",
    "financial_market_significance": "Malefic Vedha: Sugar Bullish (high if more than one); Benefic Vedha: Sugar Bearish (high if more than one) -> Sugar & jaggery (as the source states it; not a forecast)",
@@ -109904,7 +109826,7 @@
     "continues_after_scan": false,
     "duration_days": 1.61
    },
-   "planetary_condition": "Computed: value: MALEFIC vedha (Sun->Pushya) - Gold Bullish (extreme if more than 1 malefic) | BENEFIC vedha (Mercury->Punarvasu) - Gold Bearish (high if more than 1 benefic)",
+   "planetary_condition": "Computed: value: MALEFIC vedha (Sun->Pushya, Rahu->Dhanishta) - Gold Bullish (extreme if more than 1 malefic) - more than one malefic: stronger | BENEFIC vedha (Mercury->Punarvasu) - Gold Bearish (high if more than 1 benefic)",
    "astrological_rule": "A malefic or benefic planet's Vedha falls on Punarvasu, Pushya, Chitra, Dhanishta.",
    "source_interpretation": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold): Malefic Vedha: Gold Bullish (extreme if more than 1 malefic); Benefic Vedha: Gold Bearish (high if more than 1 benefic)",
    "financial_market_significance": "Malefic Vedha: Gold Bullish (extreme if more than 1 malefic); Benefic Vedha: Gold Bearish (high if more than 1 benefic) -> Gold (XAUUSD / COMEX GC) (as the source states it; not a forecast)",
@@ -111478,23 +111400,23 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
-   "uid": "c49741a16336c777",
+   "uid": "8452d3805340ca30",
    "source": "reference_pdfs",
    "tier": "major",
    "event_title": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold)",
    "date_time": {
     "kind": "window",
     "start_NY": "2027-12-16 06:09 EST",
-    "end_NY": "2027-12-23 01:27 EST",
+    "end_NY": "2027-12-17 22:00 EST",
     "start_IST": "2027-12-16 16:39 IST",
-    "end_IST": "2027-12-23 11:57 IST",
+    "end_IST": "2027-12-18 08:30 IST",
     "start_UTC": "2027-12-16T11:09:22+00:00",
-    "end_UTC": "2027-12-23T06:27:39+00:00",
+    "end_UTC": "2027-12-18T03:00:56+00:00",
     "began_before_scan": false,
     "continues_after_scan": false,
-    "duration_days": 6.8
+    "duration_days": 1.66
    },
-   "planetary_condition": "Computed: value: MALEFIC vedha (Sun->Chitra, Sun->Punarvasu) - Gold Bullish (extreme if more than 1 malefic) - more than one malefic: stronger | BENEFIC vedha (Mercury->Punarvasu) - Gold Bearish (high if more than 1 benefic)",
+   "planetary_condition": "Computed: value: MALEFIC vedha (Sun->Chitra, Sun->Punarvasu, Rahu->Dhanishta) - Gold Bullish (extreme if more than 1 malefic) - more than one malefic: stronger | BENEFIC vedha (Mercury->Punarvasu) - Gold Bearish (high if more than 1 benefic)",
    "astrological_rule": "A malefic or benefic planet's Vedha falls on Punarvasu, Pushya, Chitra, Dhanishta.",
    "source_interpretation": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold): Malefic Vedha: Gold Bullish (extreme if more than 1 malefic); Benefic Vedha: Gold Bearish (high if more than 1 benefic)",
    "financial_market_significance": "Malefic Vedha: Gold Bullish (extreme if more than 1 malefic); Benefic Vedha: Gold Bearish (high if more than 1 benefic) -> Gold (XAUUSD / COMEX GC) (as the source states it; not a forecast)",
@@ -111717,6 +111639,122 @@
    ],
    "rule_ids": [
     "ta_d9_saturn_rahu"
+   ],
+   "gold_silver_relevance": "not stated by source"
+  },
+  {
+   "uid": "8127c4affd1c23d2",
+   "source": "reference_pdfs",
+   "tier": "major",
+   "event_title": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold)",
+   "date_time": {
+    "kind": "window",
+    "start_NY": "2027-12-17 22:00 EST",
+    "end_NY": "2027-12-23 00:37 EST",
+    "start_IST": "2027-12-18 08:30 IST",
+    "end_IST": "2027-12-23 11:07 IST",
+    "start_UTC": "2027-12-18T03:00:56+00:00",
+    "end_UTC": "2027-12-23T05:37:30+00:00",
+    "began_before_scan": false,
+    "continues_after_scan": false,
+    "duration_days": 5.11
+   },
+   "planetary_condition": "Computed: value: MALEFIC vedha (Sun->Chitra, Sun->Punarvasu) - Gold Bullish (extreme if more than 1 malefic) - more than one malefic: stronger | BENEFIC vedha (Mercury->Punarvasu) - Gold Bearish (high if more than 1 benefic)",
+   "astrological_rule": "A malefic or benefic planet's Vedha falls on Punarvasu, Pushya, Chitra, Dhanishta.",
+   "source_interpretation": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold): Malefic Vedha: Gold Bullish (extreme if more than 1 malefic); Benefic Vedha: Gold Bearish (high if more than 1 benefic)",
+   "financial_market_significance": "Malefic Vedha: Gold Bullish (extreme if more than 1 malefic); Benefic Vedha: Gold Bearish (high if more than 1 benefic) -> Gold (XAUUSD / COMEX GC) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "TA p.137: Moon, Mercury, Jupiter & Venus benefic (their Vedha Bearish); Sun, Mars, Saturn, Rahu & Ketu malefic (their Vedha Bullish & reverses the trend)."
+   ],
+   "source_reference": [
+    "TA p.154 [printed 124] Section 34 A (gold) #8",
+    "TA p.156 [printed 126] Section 34 B (gold) #4",
+    "KD p.92 (2026: Rahu Vedh of Pushya - high bullish for gold & silver)"
+   ],
+   "calculation_method": "Every graha's vedha targets (Moon excluded: it vedhas every target in turn within ~27 days) checked against the listed nakshatras; window while the set of vedhas is unchanged. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "gold"
+   ],
+   "rule_ids": [
+    "ta_s34_gold_vedha_punarvasu_pushya_chitra_dhanishta"
+   ],
+   "gold_silver_relevance": "gold"
+  },
+  {
+   "uid": "45714a238ca97876",
+   "source": "reference_pdfs",
+   "tier": "major",
+   "event_title": "Vedha of Ashlesha, Magha, Jyeshtha or Uttara Bhadrapada (sugar)",
+   "date_time": {
+    "kind": "window",
+    "start_NY": "2027-12-17 22:00 EST",
+    "end_NY": "2027-12-22 19:50 EST",
+    "start_IST": "2027-12-18 08:30 IST",
+    "end_IST": "2027-12-23 06:20 IST",
+    "start_UTC": "2027-12-18T03:00:56+00:00",
+    "end_UTC": "2027-12-23T00:50:09+00:00",
+    "began_before_scan": false,
+    "continues_after_scan": false,
+    "duration_days": 4.91
+   },
+   "planetary_condition": "Computed: value: MALEFIC vedha (Mars->Uttara Bhadrapada, Ketu->Jyeshtha) - Sugar Bullish (high if more than one) - more than one malefic: stronger",
+   "astrological_rule": "A malefic or benefic planet's Vedha falls on Ashlesha, Magha, Jyeshtha, Uttara Bhadrapada.",
+   "source_interpretation": "Vedha of Ashlesha, Magha, Jyeshtha or Uttara Bhadrapada (sugar): Malefic Vedha: Sugar Bullish (high if more than one); Benefic Vedha: Sugar Bearish (high if more than one)",
+   "financial_market_significance": "Malefic Vedha: Sugar Bullish (high if more than one); Benefic Vedha: Sugar Bearish (high if more than one) -> Sugar & jaggery (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "TA p.137: Moon, Mercury, Jupiter & Venus benefic (their Vedha Bearish); Sun, Mars, Saturn, Rahu & Ketu malefic (their Vedha Bullish & reverses the trend)."
+   ],
+   "source_reference": [
+    "TA p.163 [printed 133] Section 36 A (sugar) #9",
+    "TA p.166 [printed 136] Section 36 B (sugar) #11"
+   ],
+   "calculation_method": "Every graha's vedha targets (Moon excluded: it vedhas every target in turn within ~27 days) checked against the listed nakshatras; window while the set of vedhas is unchanged. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "sugar"
+   ],
+   "rule_ids": [
+    "ta_s36_sugar_vedha_ashlesha_magha_jyeshtha_ubh"
+   ],
+   "gold_silver_relevance": "not stated by source"
+  },
+  {
+   "uid": "c9960eb182be7a11",
+   "source": "reference_pdfs",
+   "tier": "major",
+   "event_title": "Rahu Nakshatra Vedha (all three sides)",
+   "date_time": {
+    "kind": "window",
+    "start_NY": "2027-12-17 22:00 EST",
+    "end_NY": "2028-02-18 19:40 EST",
+    "start_IST": "2027-12-18 08:30 IST",
+    "end_IST": "2028-02-19 06:10 IST",
+    "start_UTC": "2027-12-18T03:00:56+00:00",
+    "end_UTC": "2028-02-19T00:40:46+00:00",
+    "began_before_scan": false,
+    "continues_after_scan": false,
+    "duration_days": 62.9
+   },
+   "planetary_condition": "At start: Rahu 10.00 deg Capricorn (Uttara Ashadha pada 4; D9 Pisces) | At end: Rahu 06.67 deg Capricorn (Uttara Ashadha pada 4; D9 Pisces) | Computed: value: Rahu in Abhijeet: Left Shatabhisha (lord Rahu), Right Purva Phalguni (lord Venus), Front Rohini (lord Moon)",
+   "astrological_rule": "Rahu's residency and the three nakshatras it vedhas.",
+   "source_interpretation": "Rahu Nakshatra Vedha (all three sides): Malefic Vedha: good rally may appear in sectors ruled by the Nakshatra lord (KD p.130 #1); Vedha by malefic is Bullish and reverses the trend (TA p.137 #4)",
+   "financial_market_significance": "Malefic Vedha: good rally may appear in sectors ruled by the Nakshatra lord (KD p.130 #1); Vedha by malefic is Bullish and reverses the trend (TA p.137 #4) -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named), Sector - nakshatra lord (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "Unblocks the 2026 document's B137 for 2027: 217/227 of the 2026 printed cells equal the TA wheel; see vedha.py.",
+    "KD p.93 (2026): 'Rahu doing Vedh of Pushya, Swati and Abhijeet ... Abhijeet lord Sun: sectors ruled by Sun (NIFTY, Power) to outperform; Swati ruled by Rahu' ."
+   ],
+   "source_reference": [
+    "TA p.134 [printed 104] Section 32 A rule 1 'Sun, Moon, Rahu & Ketu do Vedha all 3 sides'",
+    "TA pp.131-133 wheel",
+    "2026 document B137 (same table, 2026)",
+    "KD p.84 / p.130 #1-#2 (sector rule)"
+   ],
+   "calculation_method": "Rahu's nakshatra (28-name, Abhijit) -> TA wheel Front/Left/Right (2026 labels). || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "general",
+    "sector:nakshatra lord"
+   ],
+   "rule_ids": [
+    "ta_s32_rahu_nakshatra_vedha"
    ],
    "gold_silver_relevance": "not stated by source"
   },
@@ -112771,23 +112809,23 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
-   "uid": "ea77bdd05341e009",
+   "uid": "abb73ffa893a7291",
    "source": "reference_pdfs",
    "tier": "major",
    "event_title": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold)",
    "date_time": {
     "kind": "window",
-    "start_NY": "2027-12-23 01:27 EST",
-    "end_NY": "2027-12-23 17:58 EST",
-    "start_IST": "2027-12-23 11:57 IST",
-    "end_IST": "2027-12-24 04:28 IST",
-    "start_UTC": "2027-12-23T06:27:39+00:00",
-    "end_UTC": "2027-12-23T22:58:35+00:00",
+    "start_NY": "2027-12-23 00:37 EST",
+    "end_NY": "2027-12-23 01:27 EST",
+    "start_IST": "2027-12-23 11:07 IST",
+    "end_IST": "2027-12-23 11:57 IST",
+    "start_UTC": "2027-12-23T05:37:30+00:00",
+    "end_UTC": "2027-12-23T06:27:39+00:00",
     "began_before_scan": false,
     "continues_after_scan": false,
-    "duration_days": 0.69
+    "duration_days": 0.03
    },
-   "planetary_condition": "Computed: value: MALEFIC vedha (Sun->Chitra, Sun->Punarvasu) - Gold Bullish (extreme if more than 1 malefic) - more than one malefic: stronger",
+   "planetary_condition": "Computed: value: MALEFIC vedha (Sun->Chitra, Sun->Punarvasu) - Gold Bullish (extreme if more than 1 malefic) - more than one malefic: stronger | BENEFIC vedha (Mercury->Punarvasu, Venus->Dhanishta) - Gold Bearish (high if more than 1 benefic) - more than one benefic: stronger",
    "astrological_rule": "A malefic or benefic planet's Vedha falls on Punarvasu, Pushya, Chitra, Dhanishta.",
    "source_interpretation": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold): Malefic Vedha: Gold Bullish (extreme if more than 1 malefic); Benefic Vedha: Gold Bearish (high if more than 1 benefic)",
    "financial_market_significance": "Malefic Vedha: Gold Bullish (extreme if more than 1 malefic); Benefic Vedha: Gold Bearish (high if more than 1 benefic) -> Gold (XAUUSD / COMEX GC) (as the source states it; not a forecast)",
@@ -112809,21 +112847,21 @@
    "gold_silver_relevance": "gold"
   },
   {
-   "uid": "a712b18e46173aa1",
+   "uid": "34ddc65f6667c053",
    "source": "reference_pdfs",
    "tier": "major",
    "event_title": "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold)",
    "date_time": {
     "kind": "window",
-    "start_NY": "2027-12-23 17:58 EST",
+    "start_NY": "2027-12-23 01:27 EST",
     "end_NY": "2027-12-29 08:21 EST",
-    "start_IST": "2027-12-24 04:28 IST",
+    "start_IST": "2027-12-23 11:57 IST",
     "end_IST": "2027-12-29 18:51 IST",
-    "start_UTC": "2027-12-23T22:58:35+00:00",
+    "start_UTC": "2027-12-23T06:27:39+00:00",
     "end_UTC": "2027-12-29T13:21:05+00:00",
     "began_before_scan": false,
     "continues_after_scan": false,
-    "duration_days": 5.6
+    "duration_days": 6.29
    },
    "planetary_condition": "Computed: value: MALEFIC vedha (Sun->Chitra, Sun->Punarvasu) - Gold Bullish (extreme if more than 1 malefic) - more than one malefic: stronger | BENEFIC vedha (Venus->Dhanishta) - Gold Bearish (high if more than 1 benefic)",
    "astrological_rule": "A malefic or benefic planet's Vedha falls on Punarvasu, Pushya, Chitra, Dhanishta.",

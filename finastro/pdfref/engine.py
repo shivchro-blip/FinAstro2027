@@ -32,10 +32,13 @@ SIGNS = E.SIGNS
 NAKS = E.NAKSHATRAS
 NAK_ARC = 360 / 27
 PADA_ARC = NAK_ARC / 4
-#: Abhijit, for the 28-name Sarvatobhadra wheel: the last pada of Uttara
-#: Ashadha plus the first 1/15 of Shravana (276deg40' - 280deg53'20"), the
-#: span the 2026 document's own residency tables use.
-ABHIJIT = (276 + 40 / 60, 280 + 53 / 60 + 20 / 3600)
+#: Abhijit, for the 28-name Sarvatobhadra wheel: 276deg40' - 280deg00', the
+#: last pada of Uttara Ashadha. Measured on the 2026 document's own residency
+#: tables: Abhijit begins at 276deg40' in all four (Sun, Mars, Mercury, Venus)
+#: and Shravana begins at 280deg00' in the Sun, Mars and Venus tables; the
+#: Mercury table alone ends Abhijit at 283deg20' (recorded as a conflict).
+#: (An earlier build used 276deg40' - 280deg53'20", another convention.)
+ABHIJIT = (276 + 40 / 60, 280.0)
 
 #: TA p.144 (printed p.114) NORMAL SPEED OF PLANETS PER DAY, deg/day.
 #: "SPEED LOWER THAN SPECIFIED IS CALLED SLOW OR MAND / SPEED HIGHER THAN

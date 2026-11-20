@@ -9,11 +9,11 @@ See section 1 of REFERENCE_PDF_RULES.md. TA (2020 book, 265 pp.) is the rule boo
 730 catalogue entries in `finastro/pdfref/catalogue.py` (TA Sections 3-37 incl. the 294 Section-25 pair/relation cells and 61 D9 conjunction cells; KD pp.23-148), each with page reference, verbatim result, qualifications and calculation method; 25 further items recorded as not computable. Listed in REFERENCE_PDF_RULES.md section 2.
 
 ## 3. New events added
-1606 new events in `calendar_2027_NY_master.*` (New York time, IST alongside) and 4566 Moon-only events in `calendar_2027_NY_moon_layer.*` (separated because TA rates Moon-alone conditions as very low reliability). Of the new events, 152 name gold and 49 name silver as their market. By family:
+1607 new events in `calendar_2027_NY_master.*` (New York time, IST alongside) and 4566 Moon-only events in `calendar_2027_NY_moon_layer.*` (separated because TA rates Moon-alone conditions as very low reliability). Of the new events, 153 name gold and 49 name silver as their market. By family:
 * TA Section 25 relationships: 430
 * TA D9 conjunctions: 378
 * Other TA sections: 301
-* Vedha (S32, gold/sugar/silver vedha): 145
+* Vedha (S32, gold/sugar/silver vedha): 146
 * Section 14 placement: 117
 * KD rules: 107
 * Bhadra (S28): 99
