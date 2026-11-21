@@ -1,7 +1,10 @@
-"""Gold backtest: every gold rule in the project, 20 Nov 2025 - 20 Nov 2026.
+"""Gold backtest: every gold rule in the project over the N years to 20 Nov 2026.
 
-    python tools/build_2025.py          # once: astronomy layer for Dec 2024 - Jan 2026
-    python tools/backtest_gold.py
+    python tools/backtest_gold.py            # 1 year:  20 Nov 2025 - 20 Nov 2026
+    python tools/backtest_gold.py --years 5  # 5 years: 20 Nov 2021 - 20 Nov 2026
+
+Missing astronomy layers (build/astronomy_<year>.json) are generated on demand
+with tools/build_year.py.
 
 Rules: exactly the set the gold report uses (tools/build_metal_report.py
 metal_rules(): TA S34 + other TA/KD gold items, the 2026 document's gold
@@ -22,9 +25,11 @@ Scoring (fixed before looking at results):
     (1, 3 and 10-day returns shown as a sensitivity check);
   * |return| < 0.5 % = FLAT (neither worked nor failed);
   * Bullish rule worked if the return > +0.5 %, Bearish if < -0.5 %.
-  * Base rate = share of all 5-day (or same-length) windows in the year that
-    rose / fell, so a rule's hit rate can be read against what a coin that knew
-    the year's drift would have scored.
+  * Base rate = among all 5-day (or same-length) windows of the same backtest
+    year (Nov-Nov) that moved more than 0.5 %, the share that moved the rule's
+    way. Hit rate (worked / (worked + failed)) is compared with it, so a rule
+    gets no credit for simply riding that year's drift. With several years a
+    one-sided binomial p-value against that base rate is shown per rule.
 
 For every failed occurrence the script lists what else was on the sky:
 opposite-tone gold rules active at the same time, the Sun's (gold's karaka per
@@ -32,7 +37,7 @@ the user's notes) nakshatra lord and whole-sign contacts, Jupiter's state,
 stations, sign ingresses of the slow planets, eclipses and combustion inside
 the evaluation interval.
 
-Writes build/pdfref/gold_backtest_2025-11-20_to_2026-11-20_ET.{html,json}.
+Writes build/pdfref/gold_backtest_<start>_to_2026-11-20_ET.{html,json}.
 """
 from __future__ import annotations
 
@@ -46,6 +51,7 @@ import json
 import math
 import pathlib
 import statistics
+import subprocess
 import sys
 from zoneinfo import ZoneInfo
 
@@ -64,8 +70,9 @@ M.METAL = "gold"
 
 ET = ZoneInfo("America/New_York")
 UTC = dt.timezone.utc
+P1 = dt.datetime(2026, 11, 21, tzinfo=ET)          # exclusive: last day scored is 20 Nov 2026
+YEARS = 1
 P0 = dt.datetime(2025, 11, 20, tzinfo=ET)
-P1 = dt.datetime(2026, 11, 21, tzinfo=ET)
 OUT = ROOT / "build" / "pdfref"
 PRICES = OUT / "backtest" / "gold_GC_F_daily.csv"
 FLAT = 0.5          # percent
@@ -84,8 +91,30 @@ def load_prices():
 
 
 D, CL = load_prices()
-I0 = bisect.bisect_left(D, P0.date()) - 1           # close before the year starts
-I1 = bisect.bisect_right(D, (P1 - dt.timedelta(days=1)).date()) - 1   # last close in the year
+I0 = I1 = 0
+
+
+def configure(years):
+    """Set the backtest period: the `years` years ending 20 Nov 2026."""
+    global YEARS, P0, I0, I1
+    YEARS = years
+    P0 = dt.datetime(2026 - years, 11, 20, tzinfo=ET)
+    I0 = bisect.bisect_left(D, P0.date()) - 1           # close before the period starts
+    I1 = bisect.bisect_right(D, (P1 - dt.timedelta(days=1)).date()) - 1   # last close in the period
+    assert I0 >= 0, f"price file starts {D[0]}, after {P0.date()}"
+
+
+def year_of(idx_or_date):
+    """Backtest-year index (0 = first Nov-Nov year) of a trading index or date."""
+    d = D[idx_or_date] if isinstance(idx_or_date, int) else idx_or_date
+    k = YEARS - 1
+    while k > 0 and d < dt.date(2026 - YEARS + k, 11, 20):
+        k -= 1
+    return k
+
+
+def year_label(k):
+    return f"{2026 - YEARS + k}-{(2027 - YEARS + k) % 100:02d}"
 
 
 def entry_idx(t=None, day=None):
@@ -229,6 +258,7 @@ def score(e):
         e["max_up"] = round((max(seg) / CL[a] - 1) * 100, 2)
         e["max_dn"] = round((min(seg) / CL[a] - 1) * 100, 2)
     e["mode"], e["ret"], e["still_open"] = mode, round(ret, 2), still_open
+    e["year"] = year_of(a + 1 if a < I1 else a)
     e["eval_from"], e["eval_to"] = a, b
     if e["tone"] not in ("Bullish", "Bearish"):
         e["outcome"] = "NOT SCORED"
@@ -241,18 +271,30 @@ def score(e):
     return e
 
 
-def base_rates():
+HORIZONS = (1, 3, 5, 10, 20, 40, 80, 120)
+
+
+def base_rates(year=None):
     out = {}
-    for n in (1, 3, 5, 10, 20, 40):
-        rs = [pct(i, i + n) for i in range(I0, I1 - n + 1)]
-        out[n] = dict(up=sum(r > FLAT for r in rs) / len(rs), dn=sum(r < -FLAT for r in rs) / len(rs), n=len(rs))
+    for n in HORIZONS:
+        rs = [pct(i, i + n) for i in range(I0, I1 - n + 1) if year is None or year_of(i) == year]
+        if not rs:
+            continue
+        up, dn = sum(r > FLAT for r in rs), sum(r < -FLAT for r in rs)
+        out[n] = dict(up=up / len(rs), dn=dn / len(rs), cond_up=up / max(up + dn, 1), n=len(rs))
     return out
 
 
-def base_for(n, tone):
-    keys = sorted(BASE)
-    k = min(keys, key=lambda x: abs(x - n))
-    return BASE[k]["up" if tone == "Bullish" else "dn"]
+def base_for(n, tone, year):
+    """P(move goes the rule's way | |move| > FLAT), same horizon, same backtest year."""
+    b = BASE_Y.get(year) or BASE
+    k = min(b, key=lambda x: abs(x - n))
+    return b[k]["cond_up"] if tone == "Bullish" else 1 - b[k]["cond_up"]
+
+
+def binom_p(k, n, p):
+    """One-sided P(X >= k), X ~ Binomial(n, p)."""
+    return sum(math.comb(n, i) * p ** i * (1 - p) ** (n - i) for i in range(k, n + 1)) if n else None
 
 
 # ------------------------------------------------------------------ sky context
@@ -260,7 +302,7 @@ REC = []
 
 
 def load_records():
-    for f in ("astronomy_2025.json", "astronomy_2026.json"):
+    for f in (f"astronomy_{y}.json" for y in range(P0.year, P1.year + 1)):
         for r in json.load(open(ROOT / "build" / f, encoding="utf-8"))["records"]:
             ec = r["event_class"]
             b = r["bodies"]
@@ -509,14 +551,21 @@ def daily_net(events):
 
 # ------------------------------------------------------------------ main
 def main():
-    global BASE
+    global BASE, BASE_Y
+    years = 1
+    if "--years" in sys.argv:
+        years = int(sys.argv[sys.argv.index("--years") + 1])
+    configure(years)
+    for y in range(P0.year, P1.year + 1):
+        if not (ROOT / "build" / f"astronomy_{y}.json").exists():
+            subprocess.run([sys.executable, str(ROOT / "tools" / "build_year.py"), str(y)], check=True, stdout=subprocess.DEVNULL)
     load_records()
-    sky25, sky26 = Sky.load(ROOT / "build" / "astronomy_2025.json"), Sky.load(ROOT / "build" / "astronomy_2026.json")
-    grid = Grid(utc(2025, 5, 1), utc(2027, 1, 31))
-    ctxs = [Ctx(grid, sky25, 2025), Ctx(grid, sky26, 2026)]
+    grid = Grid(utc(P0.year, 5, 1), utc(2027, 1, 31))
+    ctxs = [Ctx(grid, Sky.load(ROOT / "build" / f"astronomy_{y}.json"), y) for y in range(P0.year, P1.year + 1)]
     events = collect(ctxs)
     events.sort(key=lambda e: (e["start"], e["rule_id"]))
     BASE = base_rates()
+    BASE_Y = {k: base_rates(k) for k in range(YEARS)}
     for e in events:
         score(e)
     scored = [e for e in events if e.get("outcome") in ("WORKED", "FAILED", "FLAT")]
@@ -529,11 +578,12 @@ def main():
         if r.id in WHOLE_SPLIT:
             continue
         per.setdefault(r.id, dict(rule_id=r.id, title=r.title, tone=collections.Counter({M.verdict_tone(r.verdict): 0}), n=0, worked=0, failed=0, flat=0,
-                                  not_scored=0, rets=[], base=[], component=False, refs=list(r.refs), sens={n: [0, 0] for n in SENS + (H,)}))
+                                  not_scored=0, rets=[], base=[], component=False, refs=list(r.refs), sens={n: [0, 0] for n in SENS + (H,)},
+                                  by_year={k: [0, 0] for k in range(YEARS)}))
     for e in events:
         p = per.setdefault(e["rule_id"], dict(rule_id=e["rule_id"], title=e["title"], tone=collections.Counter(), n=0, worked=0, failed=0, flat=0,
                                              not_scored=0, rets=[], base=[], component=e.get("component", False), refs=e["refs"],
-                                             sens={n: [0, 0] for n in SENS + (H,)}))
+                                             sens={n: [0, 0] for n in SENS + (H,)}, by_year={k: [0, 0] for k in range(YEARS)}))
         p["n"] += 1
         p["tone"][e["tone"]] += 1
         o = e.get("outcome")
@@ -548,7 +598,10 @@ def main():
         if o in ("WORKED", "FAILED", "FLAT"):
             sgn = 1 if e["tone"] == "Bullish" else -1
             p["rets"].append(sgn * e["ret"])
-            p["base"].append(base_for(e["n_days"], e["tone"]))
+            if o != "FLAT":
+                p["base"].append(base_for(e["n_days"], e["tone"], e["year"]))
+                p["by_year"][e["year"]][0] += 1
+                p["by_year"][e["year"]][1] += o == "WORKED"
             for n in SENS + (H,):
                 v = e["fwd"].get(n)
                 if v is not None and abs(v) >= FLAT:
@@ -559,73 +612,95 @@ def main():
         p["hit_rate"] = round(p["worked"] / dec * 100) if dec else None
         p["avg_dir_ret"] = round(statistics.fmean(p["rets"]), 2) if p["rets"] else None
         p["base_rate"] = round(statistics.fmean(p["base"]) * 100) if p["base"] else None
+        p["p_value"] = round(binom_p(p["worked"], dec, statistics.fmean(p["base"])), 3) if p["base"] else None
+        p["p_value_fail"] = round(binom_p(p["failed"], dec, 1 - statistics.fmean(p["base"])), 3) if p["base"] else None
+        yrs = [v for v in p["by_year"].values() if v[0]]
+        p["years_right"] = sum(1 for v in yrs if v[1] * 2 > v[0])
+        p["years_wrong"] = sum(1 for v in yrs if v[1] * 2 < v[0])
+        p["years_active"] = len(yrs)
         p["tone"] = "/".join(k for k, _ in p["tone"].most_common())
-        p["verdict"] = ("did not occur" if not p["n"] else "not scored" if not p["worked"] + p["failed"] + p["flat"] else "n/a" if not dec else "Worked" if p["hit_rate"] >= 60 and p["avg_dir_ret"] > 0 else
-                        "Failed" if p["hit_rate"] <= 40 and p["avg_dir_ret"] < 0 else "Mixed")
+        # relative to the drift-aware base rate: +/-10 points and the average move on the same side
+        p["verdict"] = ("did not occur" if not p["n"] else "not scored" if not p["worked"] + p["failed"] + p["flat"] else "n/a" if not dec else
+                        "Worked" if p["hit_rate"] >= p["base_rate"] + 10 and p["avg_dir_ret"] > 0 else
+                        "Failed" if p["hit_rate"] <= p["base_rate"] - 10 and p["avg_dir_ret"] < 0 else "Mixed")
         del p["rets"], p["base"]
-    moves = big_moves(events)
+    moves = big_moves(events, k=8 if YEARS == 1 else 15)
     net = daily_net(events)
     global FT
     FT = factor_table(moves)
     write(events, per, moves, net)
 
 
-def findings(per, moves, net, fails, cause_count):
+def findings(per, moves, net, fails, cause_count, events):
     P = per
-    W = sum(p["worked"] for p in P.values() if not p["component"])
-    F = sum(p["failed"] for p in P.values() if not p["component"])
+    main = [p for p in P.values() if not p["component"]]
+    W = sum(p["worked"] for p in main)
+    F = sum(p["failed"] for p in main)
+    dec_ev = [e for e in events if e.get("outcome") in ("WORKED", "FAILED") and not e.get("component")]
+    exp = statistics.fmean(base_for(e["n_days"], e["tone"], e["year"]) for e in dec_ev) if dec_ev else 0
     b = net["buckets"]
     neg, pos = b.get("net < 0 (more bearish rules active)"), b.get("net > 0 (more bullish rules active)")
+    sun = P.get("user_sun_state_net", {})
 
-    def r(rid):
-        return P.get(rid, {})
-
-    def wf(rid):
-        p = r(rid)
-        return f"{p.get('worked', 0)} of {p.get('worked', 0) + p.get('failed', 0)}"
-
-    good = sorted((p for p in P.values() if p["verdict"] == "Worked"), key=lambda p: (-(p["worked"] + p["failed"]), -(p["avg_dir_ret"] or 0)))
-    bad = sorted((p for p in P.values() if p["verdict"] == "Failed"), key=lambda p: (-(p["worked"] + p["failed"]), p["avg_dir_ret"] or 0))
-    li = lambda p: f"<li><b>{html.escape(p['title'])}</b> ({p['tone']}): {p['worked']} of {p['worked'] + p['failed']} worked, average move {fmt_ret(p['avg_dir_ret'])} in the stated direction (base rate {p['base_rate']}%)</li>"
-
-    def cc(tone, key):
-        for k, f_, nf, w_, nw in cause_count.get(tone, []):
-            if k == key:
-                return f"{f_ / max(nf, 1) * 100:.0f}% of the failures vs {w_ / max(nw, 1) * 100:.0f}% of the successes"
-        return "n/a"
-
-    def mv(start):
-        return next((m for m in moves if m["start"] == start), None)
+    def li(p):
+        extra = ""
+        if YEARS > 1 and p.get("p_value") is not None:
+            extra = f"; p = {p['p_value']:.3f}; right in {p['years_right']} of {p['years_active']} years with a result"
+        return (f"<li><b>{html.escape(p['title'])}</b> ({p['tone']}): {p['worked']} of {p['worked'] + p['failed']} worked ({p['hit_rate']}% vs base {p['base_rate']}%), "
+                f"average move {fmt_ret(p['avg_dir_ret'])} in the stated direction{extra}</li>")
+    key = lambda p: (-(p["worked"] + p["failed"]), -(p["avg_dir_ret"] or 0))
+    good = sorted((p for p in P.values() if p["verdict"] == "Worked"), key=key)
+    bad = sorted((p for p in P.values() if p["verdict"] == "Failed"), key=key)
+    out = [f"<li><b>Overall.</b> {W} of {W + F} decided occurrences worked ({W / max(W + F, 1) * 100:.0f}%), against {exp * 100:.0f}% expected by chance from the base rates of those same occurrences "
+           f"(p = {binom_p(W, W + F, exp):.3f} for doing this well or better by luck)."
+           + (f" On the {neg['days']} trading days when more bearish than bullish gold rules were active, gold moved {neg['avg5']:+.2f}% on average over the next 5 days ({neg['up5']:.0f}% up); "
+              f"on the {pos['days']} bullish-majority days, {pos['avg5']:+.2f}% ({pos['up5']:.0f}% up). Correlation of the daily net count with the next 5-day move: {net['corr5']:+.3f}." if neg and pos else "") + "</li>"]
+    if YEARS > 1:
+        sig = sorted((p for p in P.values() if p.get("p_value") is not None and p["p_value"] < 0.05), key=lambda p: p["p_value"])
+        sigf = sorted((p for p in P.values() if p.get("p_value_fail") is not None and p["p_value_fail"] < 0.05), key=lambda p: p["p_value_fail"])
+        out.append("<li><b>Statistically clear results</b> (p &lt; 0.05 against the base rate):<ul>"
+                   + ("".join(li(p) for p in sig) or "<li>None of the rules beat chance at that level.</li>")
+                   + ("".join(li(p).replace("<li>", "<li>Significantly <i>wrong</i>: ", 1) for p in sigf)) + "</ul></li>")
+    out.append("<li><b>What worked</b> (most decided occurrences first):<ul>" + ("".join(li(p) for p in good[:12]) or "<li>none</li>") + "</ul>"
+               + (f"Your combined Sun model (U1–U4 counted together): {sun['worked']} of {sun['worked'] + sun['failed']} stretches ({sun['hit_rate']}% vs base {sun['base_rate']}%), average {fmt_ret(sun['avg_dir_ret'])}"
+                  + (f", p = {sun['p_value']:.3f}, right in {sun['years_right']} of {sun['years_active']} years" if YEARS > 1 and sun.get('p_value') is not None else "") + "." if sun.get("hit_rate") is not None else "") + "</li>")
+    out.append("<li><b>What failed</b>:<ul>" + ("".join(li(p) for p in bad[:14]) or "<li>none</li>") + "</ul></li>")
+    for tone in ("Bullish", "Bearish"):
+        rows_ = cause_count.get(tone, [])
+        if not rows_ or not rows_[0][2]:
+            continue
+        txt = lambda r: f"{html.escape(r[0])} ({r[1] / max(r[2], 1) * 100:.0f}% of failures vs {r[3] / max(r[4], 1) * 100:.0f}% of successes)"
+        hurt = [r for r in rows_ if (r[1] / max(r[2], 1) - r[3] / max(r[4], 1)) >= 0.10][:4]
+        helped = [r for r in reversed(rows_) if (r[3] / max(r[4], 1) - r[1] / max(r[2], 1)) >= 0.10][:3]
+        out.append(f"<li><b>Why {tone.lower()} rules failed.</b> Conditions clearly more common when they failed: " + ("; ".join(txt(r) for r in hurt) or "none stood out")
+                   + ". More common when they worked: " + ("; ".join(txt(r) for r in helped) or "none stood out") + ".</li>")
     jan = next((m for m in moves if m["start"].startswith("2026-01-2") and m["dir"] == "fall"), None)
     mar = next((m for m in moves if m["start"].startswith("2026-03-1") and m["dir"] == "fall"), None)
-    nov = [m for m in moves if m["start"] >= "2026-11-01" and m["dir"] == "fall"]
-    out = [f"<li><b>Overall.</b> {W} of {W + F} decided occurrences worked ({W / max(W + F, 1) * 100:.0f}%); a random 5-day move cleared ±0.5% in either direction about {BASE[5]['up'] * 100:.0f}% of the time, so the rule set as a whole was only slightly better than chance. "
-           f"The edge was on the bearish side: on the {neg['days'] if neg else 0} trading days when more bearish than bullish gold rules were active, gold moved {neg['avg5']:+.2f}% on average over the next 5 days and rose only {neg['up5']:.0f}% of the time; on bullish-majority days the next-5-day average was {pos['avg5']:+.2f}% ({pos['up5']:.0f}% up).</li>" if neg and pos else ""]
-    out.append("<li><b>What worked</b> (best first, by number of decided occurrences):<ul>" + "".join(li(p) for p in good[:10]) + "</ul>"
-               f"Your combined Sun model (U1–U4 counted together) scored {wf('user_sun_state_net')} decided stretches, average {fmt_ret(r('user_sun_state_net').get('avg_dir_ret'))}, against a {r('user_sun_state_net').get('base_rate')}% base rate, the best record of any multi-occurrence model in the set.</li>")
-    out.append("<li><b>What failed</b>:<ul>" + "".join(li(p) for p in bad[:12]) + "</ul></li>")
-    out.append("<li><b>Why bullish rules failed.</b> The clearest difference between bullish occurrences that failed and those that worked was what touched the Sun (gold's ruler in your notes): "
-               f"Saturn, Rahu or Ketu with or aspecting the Sun was present in {cc('Bullish', 'Saturn / Rahu / Ketu on the Sun at the start')}; "
-               f"Jupiter with or aspecting the Sun in {cc('Bullish', 'Jupiter on the Sun at the start')}; "
-               f"Jupiter sharing a sign with Rahu, Ketu, Mars or Saturn in {cc('Bullish', 'Jupiter sharing a sign with Rahu / Ketu / Mars / Saturn')}. "
-               "In other words your U4 (Saturn/Rahu on the Sun) and the Jupiter part of U2 behaved like overrides: when they were present they decided the move, whatever the other bullish rules said. "
-               f"Mars on the Sun did <i>not</i> hurt ({cc('Bullish', 'Mars on the Sun at the start')}), consistent with TA's treatment of Mars as bullish for gold.</li>")
-    out.append("<li><b>Why bearish rules failed.</b> "
-               f"Jupiter with or aspecting the Sun was present in {cc('Bearish', 'Jupiter on the Sun at the start')}; Saturn/Rahu/Ketu on the Sun in {cc('Bearish', 'Saturn / Rahu / Ketu on the Sun at the start')}. "
-               "TA S34 B1 (Sun on Anuradha with a benefic: fall) is the main example: in Nov–Dec 2025 Jupiter aspected the Sun from Cancer and gold rose instead.</li>")
     if jan:
-        out.append(f"<li><b>The biggest miss: the late-January 2026 crash</b> ({jan['start']} → {jan['end']}, {jan['ret']:+.1f}%, including the {min(pct(i - 1, i) for i in range(I0 + 1, I1 + 1)):+.1f}% day on 30 Jan after the 29 Jan peak). "
+        out.append(f"<li><b>Biggest single miss: the late-January 2026 crash</b> ({jan['start']} → {jan['end']}, {jan['ret']:+.1f}%, including the −10.8% day on 30 Jan after the 29 Jan peak). "
                    f"Gold rules active: {jan['n_bull']} bullish, {jan['n_bear']} bearish. Sky: {html.escape(jan['sun'])}; {html.escape(', '.join(jan['sun_contacts']))}; {html.escape(jan['jupiter'])}; "
                    f"{html.escape('; '.join(jan['records']))}. The Sun, Mercury, Venus and Mars were all in Capricorn (Mars exalted), Venus was about to combust and Jupiter was retrograde. "
-                   "No rule in the set describes a four-planet stellium on the Sun or a Venus combustion, and none of your Sun rules treats Mars, Mercury or Venus crowding the Sun as negative, so the rules had nothing to say about it. This is the largest gap the backtest found.</li>")
+                   "No rule in the set describes a four-planet stellium on the Sun or a Venus combustion, and none of your Sun rules treats Mars, Mercury or Venus crowding the Sun as negative.</li>")
     if mar:
-        out.append(f"<li><b>The March slide</b> ({mar['start']} → {mar['end']}, {mar['ret']:+.1f}%) was flagged only by your own notes: {html.escape('; '.join(mar['bear']))}. {mar['n_bull']} bullish rules were active at the same time. "
+        out.append(f"<li><b>March 2026</b> ({mar['start']} → {mar['end']}, {mar['ret']:+.1f}%): bearish rules active: {html.escape('; '.join(mar['bear']) or 'none')}; {mar['n_bull']} bullish rules active at the same time. "
                    f"Sky: {html.escape(mar['sun'])}; {html.escape(', '.join(mar['sun_contacts']))}.</li>")
-    if nov:
-        out.append("<li><b>The autumn slide to the year's low</b> (" + "; ".join(f"{m['start']} → {m['end']} {m['ret']:+.1f}%" for m in nov) + "): bearish rules active: "
-                   + html.escape("; ".join(sorted({t for m in nov for t in m["bear"]}))) + ". Sky: Rahu in Dhanishta since 1 Aug (KD p.111), Venus retrograde 3 Oct – 14 Nov, Jupiter entered Leo on 31 Oct where Ketu already sat, Mars joined them on 12 Nov (Mars–Jupiter conjunction 16 Nov): Jupiter afflicted by Ketu, Rahu's 7th aspect and Mars.</li>")
-    out.append("<li><b>How far to trust this.</b> Most rules fired only 1–3 times in the year, so a 100% or 0% record is one or two data points. The year was also unusual: a blow-off rally to 5,318 and a 33% fall, which counts against bullish rules generally. "
-               "Running the same backtest over 3–5 years would show which of these results hold up.</li>")
+    falls = [m for m in moves if m["dir"] == "fall"]
+    if falls:
+        warned = sum(1 for m in falls if m["n_bear"] > m["n_bull"])
+        share = pos["days"] / max(sum(v["days"] for v in b.values()), 1) * 100 if pos else 0
+        out.append(f"<li><b>The {len(falls)} biggest 5-day falls:</b> bearish rules outnumbered bullish ones in {warned} of them; in the rest the rule set leaned bullish going into the fall "
+                   f"(it leans bullish on {share:.0f}% of all trading days, so a bullish majority by itself carries little information). "
+                   + "; ".join(f"{m['start']} {m['ret']:+.1f}% ({m['n_bull']}:{m['n_bear']})" for m in sorted(falls, key=lambda m: m["ret"])[:8]) + ".</li>")
+    rises = [m for m in moves if m["dir"] == "rise"]
+    if rises:
+        warned = sum(1 for m in rises if m["n_bull"] > m["n_bear"])
+        out.append(f"<li><b>The {len(rises)} biggest 5-day rises:</b> bullish rules outnumbered bearish ones in {warned} of them.</li>")
+    if YEARS == 1:
+        out.append("<li><b>How far to trust this.</b> Most rules fired only 1–3 times in the year, so a 100% or 0% record is one or two data points; see the 5-year run for which results hold up.</li>")
+    else:
+        rare = sum(1 for p in main if 0 < p["worked"] + p["failed"] < 5)
+        out.append(f"<li><b>How far to trust this.</b> {YEARS} years give the frequent rules (Sun contacts, new moons, vedha, darshan) enough occurrences to judge; {rare} rules still have fewer than 5 decided occurrences, and their records stay anecdotal. "
+                   "A rule that is right in most individual years is more trustworthy than one whose total comes from a single year; check the per-year columns.</li>")
     return "<h2>Key findings</h2><ol>" + "".join(out) + "</ol>"
 
 
@@ -639,6 +714,13 @@ def write(events, per, moves, net):
     tot = collections.Counter(e.get("outcome") for e in events if not e.get("component"))
     dec = tot["WORKED"] + tot["FAILED"]
     year_ret = pct(I0, I1)
+    YB = []
+    for k in range(YEARS):
+        idx = [i for i in range(I0 + 1, I1 + 1) if year_of(i) == k]
+        YB.append((idx[0] - 1, idx[-1]))
+    p0s, p1s = f"{P0:%d %b %Y}", f"{P1 - dt.timedelta(days=1):%d %b %Y}"
+    span = "1 year" if YEARS == 1 else f"{YEARS} years"
+    imax = I0 + CL[I0:I1 + 1].index(max(CL[I0:I1 + 1]))
 
     def rule_row(p):
         cls = {"Worked": "bullish", "Failed": "bearish", "Mixed": "mixed"}.get(p["verdict"], "")
@@ -646,14 +728,33 @@ def write(events, per, moves, net):
         return (f"<tr class='{cls}'><td><b>{html.escape(p['title'])}</b><div class='s'>{html.escape(p['rule_id'])}</div></td><td>{p['tone']}</td>"
                 f"<td class='n'>{p['n']}</td><td class='n'>{p['worked']}</td><td class='n'>{p['failed']}</td><td class='n'>{p['flat']}</td><td class='n'>{p['not_scored']}</td>"
                 f"<td class='n'><b>{'' if p['hit_rate'] is None else str(p['hit_rate']) + '%'}</b></td><td class='n'>{'' if p['base_rate'] is None else str(p['base_rate']) + '%'}</td>"
-                f"<td class='n'>{fmt_ret(p['avg_dir_ret'])}</td><td><span class='tag {cls}'>{p['verdict']}</span></td><td class='s'>{sens}</td></tr>")
+                f"<td class='n'>{fmt_ret(p['avg_dir_ret'])}</td><td><span class='tag {cls}'>{p['verdict']}</span></td>"
+                + (f"<td class='n'>{pv(p)}</td>" + "".join(f"<td class='n s'>{yc(p['by_year'][k])}</td>" for k in range(YEARS)) if YEARS > 1 else "")
+                + f"<td class='s'>{sens}</td></tr>")
+
+    def pv(p):
+        if p.get("p_value") is None:
+            return ""
+        if p["p_value"] < 0.05:
+            return f"<b style='color:var(--bu2)'>{p['p_value']:.3f}</b>"
+        if p["p_value_fail"] is not None and p["p_value_fail"] < 0.05:
+            return f"<b style='color:var(--be2)'>{p['p_value']:.3f}</b>"
+        return f"{p['p_value']:.2f}"
+
+    def yc(v):
+        if not v[0]:
+            return "–"
+        col = "var(--bu2)" if v[1] * 2 > v[0] else "var(--be2)" if v[1] * 2 < v[0] else "var(--mx2)"
+        return f"<span style='color:{col}'>{v[1]}/{v[0]}</span>"
+
+    yhead = ("<th>p-value vs base</th>" + "".join(f"<th>{year_label(k)}</th>" for k in range(YEARS))) if YEARS > 1 else ""
 
     def ev_row(e):
         o = e.get("outcome", "")
         cls = {"WORKED": "bullish", "FAILED": "bearish", "FLAT": "mixed"}.get(o, "")
         when = (e["day"].strftime("%a %d %b %Y") if e["day"] else et(e["start"]) + (f" → {et(e['end'])}" if e["end"] else ""))
         if e["open_start"] or e["start"] < P0:
-            when += " (began before the backtest year)"
+            when += " (began before the backtest period)"
         fw = " ".join(f"{n}d {fmt_ret(e['fwd'].get(n))}" for n in SENS if e.get("fwd", {}).get(n) is not None)
         det = "; ".join(f"{k}: {v}" for k, v in e["facts"].items())
         a = e.get("analysis")
@@ -686,7 +787,12 @@ def write(events, per, moves, net):
         f"<td class='s'>{html.escape(m['sun'])}; {html.escape(', '.join(m['sun_contacts']) or 'no contacts')}<br>{html.escape(m['jupiter'])}<br>{html.escape(' · '.join(m['records'][:10]))}</td></tr>"
         for m in moves)
     nb = "".join(f"<tr><td>{html.escape(k)}</td><td class='n'>{v['days']}</td><td class='n'>{v['avg1']:+.3f}%</td><td class='n'>{v['up1']}%</td><td class='n'>{v['avg5']:+.3f}%</td><td class='n'>{v['up5']}%</td></tr>" for k, v in net["buckets"].items())
-    base_tbl = "".join(f"<tr><td>{n} trading days</td><td class='n'>{BASE[n]['up'] * 100:.0f}%</td><td class='n'>{BASE[n]['dn'] * 100:.0f}%</td><td class='n'>{BASE[n]['n']}</td></tr>" for n in sorted(BASE))
+    base_tbl = "".join(f"<tr><td>{n} trading days</td><td class='n'>{BASE[n]['up'] * 100:.0f}%</td><td class='n'>{BASE[n]['dn'] * 100:.0f}%</td><td class='n'>{BASE[n]['cond_up'] * 100:.0f}%</td><td class='n'>{BASE[n]['n']}</td>"
+                       + "".join(f"<td class='n'>{BASE_Y[k][n]['cond_up'] * 100:.0f}%</td>" if n in BASE_Y[k] else "<td></td>" for k in range(YEARS) if YEARS > 1) + "</tr>" for n in sorted(BASE))
+    yr_rows = "".join(f"<tr><td>{year_label(k)}</td><td class='n'>{CL[a]:,.0f}</td><td class='n'>{CL[b]:,.0f}</td><td class='n'>{pct(a, b):+.1f}%</td>"
+                      f"<td class='n'>{sum(1 for e in events if e.get('year') == k and e.get('outcome') == 'WORKED' and not e.get('component'))}</td>"
+                      f"<td class='n'>{sum(1 for e in events if e.get('year') == k and e.get('outcome') == 'FAILED' and not e.get('component'))}</td></tr>"
+                      for k, (a, b) in enumerate(YB))
 
     worked_rules = [p for p in main_rules if p["verdict"] == "Worked"]
     failed_rules = [p for p in main_rules if p["verdict"] == "Failed"]
@@ -705,28 +811,30 @@ tr.bullish td:first-child{border-left:4px solid var(--bu2)}tr.bearish td:first-c
 details summary{cursor:pointer;color:var(--be2);font-size:12px;margin-top:4px}ul{margin:4px 0 4px 18px;padding:0}
 """
     ev_main = [e for e in events if not e.get("component")]
-    FINDINGS = findings(per, moves, net, fails, cause_count)
-    page = f"""<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gold Rules Backtest</title><style>{css}</style></head><body>
-<h1>Gold rules backtest — 20 Nov 2025 to 20 Nov 2026 (US Eastern time)</h1>
-<p class="m">Every gold rule in the project (TA Section 34 and other TA/KD gold items, the 2026 document's gold section, your Sun notes U1–U4), recomputed with the Swiss-Ephemeris engine (Lahiri, mean node, whole-sign drishti) and scored against COMEX gold futures daily closes (Yahoo Finance GC=F continuous front month). Gold went from {CL[I0]:,.1f} (19 Nov 2025) to {CL[I1]:,.1f} (20 Nov 2026), {year_ret:+.1f}%, peaking at {max(CL[I0:I1 + 1]):,.1f} on {D[I0 + CL[I0:I1 + 1].index(max(CL[I0:I1 + 1]))]:%d %b %Y}; daily volatility was high (largest one-day fall {min(pct(i - 1, i) for i in range(I0 + 1, I1 + 1)):+.1f}%).</p>
+    FINDINGS = findings(per, moves, net, fails, cause_count, events)
+    page = f"""<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gold Rules Backtest{'' if YEARS == 1 else f' {YEARS}Y'}</title><style>{css}</style></head><body>
+<h1>Gold rules backtest, {span}: {p0s} to {p1s} (US Eastern time)</h1>
+<p class="m">Every gold rule in the project (TA Section 34 and other TA/KD gold items, the 2026 document's gold section, your Sun notes U1–U4), recomputed with the Swiss-Ephemeris engine (Lahiri, mean node, whole-sign drishti) and scored against COMEX gold futures daily closes (Yahoo Finance GC=F continuous front month). Gold went from {CL[I0]:,.1f} ({D[I0]:%d %b %Y}) to {CL[I1]:,.1f} ({D[I1]:%d %b %Y}), {year_ret:+.1f}%, peaking at {CL[imax]:,.1f} on {D[imax]:%d %b %Y} (largest one-day fall {min(pct(i - 1, i) for i in range(I0 + 1, I1 + 1)):+.1f}%).</p>
 <div class="kpi"><div>Rules checked (U2, U4 split by planet)<b>{len(main_rules)}</b></div><div>Rules that fired<b>{sum(1 for p in main_rules if p['n'])}</b></div><div>Scored occurrences<b>{dec + tot['FLAT']}</b></div>
 <div>Worked<b style="color:var(--bu2)">{tot['WORKED']}</b></div><div>Failed<b style="color:var(--be2)">{tot['FAILED']}</b></div><div>Flat (&lt;0.5%)<b>{tot['FLAT']}</b></div>
 <div>Hit rate<b>{tot['WORKED'] / dec * 100:.0f}%</b></div><div>Rules: worked / mixed / failed<b>{len(worked_rules)} / {len(mixed_rules)} / {len(failed_rules)}</b></div></div>
 {FINDINGS}
 <h2>How each occurrence was scored</h2>
 <ul class="m"><li><b>Entry</b> = the last daily close before the event (events at or after 17:00 ET count from the next session; panchang day-rules from that day's open).</li>
-<li><b>Windows</b> of 3 days or more (a planet in a nakshatra or sign, Sun contacts…) are scored from entry to the last close inside the window, clipped to the backtest year. <b>Instants and short windows</b> (new moon, darshan, rise/set, ingress, vedha starts) are scored on the 5-trading-day move; 1-, 3- and 10-day moves are shown as a sensitivity check.</li>
+<li><b>Windows</b> of 3 days or more (a planet in a nakshatra or sign, Sun contacts…) are scored from entry to the last close inside the window, clipped to the backtest period. <b>Instants and short windows</b> (new moon, darshan, rise/set, ingress, vedha starts) are scored on the 5-trading-day move; 1-, 3- and 10-day moves are shown as a sensitivity check.</li>
 <li>Moves under ±0.5% are <b>FLAT</b>. Rules whose verdict is Mixed or Neutral (both vedha kinds at once; the Indian festival-demand dates) are listed but <b>not scored</b>.</li>
-<li><b>Base rate</b>: during this year a 5-day window rose more than 0.5% {BASE[5]['up'] * 100:.0f}% of the time and fell more than 0.5% {BASE[5]['dn'] * 100:.0f}% of the time. A bullish rule needs to beat the "up" figure, a bearish rule the "down" figure, to show any edge.</li>
-<li><b>Rule verdict</b>: Worked = hit rate ≥ 60% and the average move went the stated way; Failed = hit rate ≤ 40% and the average move went the wrong way; otherwise Mixed. Most rules fire only 1–6 times a year, so <b>one year is not enough to be statistically sure of any single rule</b>: read these numbers as evidence, not proof.</li></ul>
-<div class="wrap"><table><thead><tr><th>Horizon</th><th>Rose &gt;0.5%</th><th>Fell &gt;0.5%</th><th>Windows</th></tr></thead><tbody>{base_tbl}</tbody></table></div>
+<li><b>Hit rate</b> = worked ÷ (worked + failed); flat occurrences are left out of both.</li>
+<li><b>Base rate</b> = the hit rate a rule would get by chance: among all windows of the same length <i>in the same backtest year</i> that moved more than 0.5%, the share that moved the rule's way. Over the whole period a 5-day window that moved went up {BASE[5]['cond_up'] * 100:.0f}% of the time, so a bullish rule needs to beat {BASE[5]['cond_up'] * 100:.0f}% and a bearish rule {100 - BASE[5]['cond_up'] * 100:.0f}% to show any edge. Using each year's own base rate means a bullish rule gets no credit just for firing in a rising year.</li>
+<li><b>Rule verdict</b>: Worked = hit rate at least 10 points above its base rate and the average move went the stated way; Failed = at least 10 points below and the average move went the wrong way; otherwise Mixed.""" + (""" <b>p-value</b> = the chance of doing at least this well by luck at the base rate (one-sided binomial); green if below 0.05, red if the rule did significantly <i>worse</i> than chance. The per-year columns show worked/decided in each Nov–Nov year, so a rule that only worked in one year stands out.""" if YEARS > 1 else """ Most rules fire only 1–6 times a year, so <b>one year is not enough to be statistically sure of any single rule</b>: read these numbers as evidence, not proof.""") + f"""</li></ul>
+<div class="wrap"><table><thead><tr><th>Horizon</th><th>Rose &gt;0.5%</th><th>Fell &gt;0.5%</th><th>Of moves &gt;0.5%, share up (base rate for bullish rules)</th><th>Windows</th>{''.join(f"<th>{year_label(k)} share up</th>" for k in range(YEARS) if YEARS > 1)}</tr></thead><tbody>{base_tbl}</tbody></table></div>
+<div class="wrap"><table><thead><tr><th>Backtest year</th><th>Gold at start</th><th>Gold at end</th><th>Change</th><th>Rule occurrences worked</th><th>Failed</th></tr></thead><tbody>{yr_rows}</tbody></table></div>
 
 <h2>Scorecard by rule</h2>
-<div class="wrap"><table><thead><tr><th>Rule</th><th>Stated effect</th><th>Fired</th><th>Worked</th><th>Failed</th><th>Flat</th><th>Not scored</th><th>Hit rate</th><th>Base rate</th><th>Avg move in stated direction</th><th>Verdict</th><th>Instant-horizon check (hits/decided)</th></tr></thead>
-<tbody>{''.join(rule_row(p) for p in sorted(main_rules, key=lambda p: (p['hit_rate'] is None, -(p['hit_rate'] or 0), -p['n'])))}</tbody></table></div>
+<div class="wrap"><table><thead><tr><th>Rule</th><th>Stated effect</th><th>Fired</th><th>Worked</th><th>Failed</th><th>Flat</th><th>Not scored</th><th>Hit rate</th><th>Base rate</th><th>Avg move in stated direction</th><th>Verdict</th>{yhead}<th>Instant-horizon check (hits/decided)</th></tr></thead>
+<tbody>{''.join(rule_row(p) for p in sorted(main_rules, key=(lambda p: (p['hit_rate'] is None, -(p['hit_rate'] or 0), -p['n'])) if YEARS == 1 else (lambda p: (p['hit_rate'] is None, -(p['worked'] + p['failed']), -(p['hit_rate'] or 0)))))}</tbody></table></div>
 <h3>Your Sun notes as one combined model</h3>
 <p class="m">U2 and U4 are scored above per contact planet (U2 – Venus, U2 – Mercury, U2 – Jupiter, U2 – waxing Moon; U4 – Saturn, U4 – Rahu), because the whole rule's window restarts each time the set of contacts changes. Here every Sun-state stretch is scored by its rise-minus-fall count across U1–U4 (the Moon left out, as in the gold report's timeline; stretches with equal counts are not scored).</p>
-<div class="wrap"><table><thead><tr><th>Component</th><th>Stated effect</th><th>Fired</th><th>Worked</th><th>Failed</th><th>Flat</th><th>Not scored</th><th>Hit rate</th><th>Base rate</th><th>Avg move in stated direction</th><th>Verdict</th><th>Instant-horizon check</th></tr></thead>
+<div class="wrap"><table><thead><tr><th>Component</th><th>Stated effect</th><th>Fired</th><th>Worked</th><th>Failed</th><th>Flat</th><th>Not scored</th><th>Hit rate</th><th>Base rate</th><th>Avg move in stated direction</th><th>Verdict</th>{yhead}<th>Instant-horizon check</th></tr></thead>
 <tbody>{''.join(rule_row(p) for p in comp)}</tbody></table></div>
 
 <h2>Do the rules add up? Net signal each day vs the next move</h2>
@@ -738,13 +846,13 @@ details summary{cursor:pointer;color:var(--be2);font-size:12px;margin-top:4px}ul
 {''.join(f"""<h3>{tone} rules</h3><div class="wrap"><table><thead><tr><th>Condition on the sky</th><th>In failed occurrences</th><th>In occurrences that worked</th><th>Difference</th></tr></thead><tbody>""" + ''.join(f'<tr><td>{html.escape(k)}</td><td class="n">{f_}/{nf} ({f_ / max(nf, 1) * 100:.0f}%)</td><td class="n">{w_}/{nw} ({w_ / max(nw, 1) * 100:.0f}%)</td><td class="n"><b>{(f_ / max(nf, 1) - w_ / max(nw, 1)) * 100:+.0f} pts</b></td></tr>' for k, f_, nf, w_, nw in rows_) + "</tbody></table></div>" for tone, rows_ in cause_count.items())}
 <p class="m">Opposite-tone rules most often active during failures: {html.escape('; '.join(f'{k} ({v})' for k, v in opp_titles.most_common(10)))}.</p>
 
-<h2>The year's biggest 5-day moves: what the rules said</h2>
-<p class="m">The 8 largest non-overlapping 5-trading-day falls and rises, the gold rules active then (bullish : bearish count), and the sky.</p>
+<h2>The biggest 5-day moves: what the rules said</h2>
+<p class="m">The {sum(1 for m in moves if m['dir'] == 'fall')} largest non-overlapping 5-trading-day falls and rises, the gold rules active then (bullish : bearish count), and the sky.</p>
 <div class="wrap"><table><thead><tr><th>Dates</th><th>Move</th><th>Bull : Bear</th><th>Rules active</th><th>Sky (Sun = gold karaka in your notes; Jupiter; transits in the interval)</th></tr></thead><tbody>{mv_rows}</tbody></table></div>
 
 <h3>Which sky factors were present in the biggest moves?</h3>
-<p class="m">Each factor is tested at the middle of each 5-day move. "All windows" is how often the factor was present across every 5-day window of the year; a factor only says something if it shows up clearly more often in the falls than in the rises (or the reverse) <i>and</i> more often than its all-year share. Eight moves each way is a small sample; treat this as a lead to examine, not a rule.</p>
-<div class="wrap"><table><thead><tr><th>Factor</th><th>In the 8 biggest falls</th><th>In the 8 biggest rises</th><th>All windows</th></tr></thead><tbody>{''.join(f"<tr><td>{html.escape(f['factor'])}</td><td class='n'>{f['falls']}/{f['n_falls']}</td><td class='n'>{f['rises']}/{f['n_rises']}</td><td class='n'>{f['all_pct']}%</td></tr>" for f in FT)}</tbody></table></div>
+<p class="m">Each factor is tested at the middle of each 5-day move. "All windows" is how often the factor was present across every 5-day window of the period; a factor only says something if it shows up clearly more often in the falls than in the rises (or the reverse) <i>and</i> more often than its all-period share. {sum(1 for m in moves if m['dir'] == 'fall')} moves each way is a small sample; treat this as a lead to examine, not a rule.</p>
+<div class="wrap"><table><thead><tr><th>Factor</th><th>In the biggest falls</th><th>In the biggest rises</th><th>All windows</th></tr></thead><tbody>{''.join(f"<tr><td>{html.escape(f['factor'])}</td><td class='n'>{f['falls']}/{f['n_falls']}</td><td class='n'>{f['rises']}/{f['n_rises']}</td><td class='n'>{f['all_pct']}%</td></tr>" for f in FT)}</tbody></table></div>
 
 <h2>Every occurrence (failed ones carry a "Why it may have failed" panel)</h2>
 <div class="wrap"><table><thead><tr><th>When (ET)</th><th>Rule</th><th>Stated</th><th>Price used</th><th>Move</th><th>1/3/10-day</th><th>Result</th></tr></thead>
@@ -752,9 +860,9 @@ details summary{cursor:pointer;color:var(--be2);font-size:12px;margin-top:4px}ul
 <h3>Combined Sun-model occurrences</h3>
 <div class="wrap"><table><thead><tr><th>When (ET)</th><th>Rule</th><th>Stated</th><th>Price used</th><th>Move</th><th>1/3/10-day</th><th>Result</th></tr></thead>
 <tbody>{''.join(ev_row(e) for e in events if e.get('component'))}</tbody></table></div>
-<p class="s">Source: tools/backtest_gold.py; prices build/pdfref/backtest/gold_GC_F_daily.csv (Yahoo Finance GC=F, downloaded 20 Nov 2026; the continuous contract rolls between months, which can add small jumps). Astronomy: build/astronomy_2025.json / _2026.json. Rule texts and page references: build/pdfref/gold_2026-11-20_to_2027-12-31_ET.html and REFERENCE_PDF_RULES.md.</p>
+<p class="s">Source: tools/backtest_gold.py; prices build/pdfref/backtest/gold_GC_F_daily.csv (Yahoo Finance GC=F, downloaded 20 Nov 2026; the continuous contract rolls between months, which can add small jumps). Astronomy: build/astronomy_{P0.year}.json … _2026.json (tools/build_year.py). Rule texts and page references: build/pdfref/gold_2026-11-20_to_2027-12-31_ET.html and REFERENCE_PDF_RULES.md.</p>
 </body></html>"""
-    stem = "gold_backtest_2025-11-20_to_2026-11-20_ET"
+    stem = f"gold_backtest_{P0:%Y-%m-%d}_to_2026-11-20_ET"
     (OUT / f"{stem}.html").write_text(page, encoding="utf-8")
 
     def ser(e):
@@ -763,7 +871,7 @@ details summary{cursor:pointer;color:var(--be2);font-size:12px;margin-top:4px}ul
             x[k] = x[k].astimezone(ET).isoformat() if x.get(k) else None
         x["day"] = x["day"].isoformat() if x.get("day") else None
         return x
-    json.dump(dict(period="2025-11-20..2026-11-20", time_zone="America/New_York", prices="Yahoo Finance GC=F daily close",
+    json.dump(dict(period=f"{P0:%Y-%m-%d}..2026-11-20", base_rates_by_year={year_label(k): v for k, v in BASE_Y.items()}, time_zone="America/New_York", prices="Yahoo Finance GC=F daily close",
                    flat_band_pct=FLAT, instant_horizon_days=H, base_rates=BASE, totals=dict(tot), rules=list(per.values()),
                    big_moves=moves, net_signal={k: v for k, v in net.items() if k != "series"}, events=[ser(e) for e in events]),
               open(OUT / f"{stem}.json", "w", encoding="utf-8"), indent=1, default=str)
@@ -772,6 +880,7 @@ details summary{cursor:pointer;color:var(--be2);font-size:12px;margin-top:4px}ul
 
 
 BASE = {}
+BASE_Y = {}
 FT = []
 if __name__ == "__main__":
     main()
