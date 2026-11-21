@@ -1,6 +1,6 @@
 # Gold findings tracker
 
-Generated 21 Nov 2026 09:03 EST by `tools/gold_tracker.py` (`--refresh` re-runs both backtests). HTML version: `GOLD_TRACKER.html`.
+Generated 21 Nov 2026 09:27 EST by `tools/gold_tracker.py` (`--refresh` re-runs both backtests). HTML version: `GOLD_TRACKER.html`.
 
 ## Recent findings
 
@@ -156,6 +156,7 @@ Best (from the 5-year data): User Sun model: net rise vs fall signals, U2 - Merc
 
 | Date | PR | Topic | Result |
 |---|---|---|---|
+| 2026-11-21 | #12 | Silver backtest, 1 and 5 years + silver tracker | 197 of 414 worked (48%) vs 50% by chance; net rule count pointed the wrong way; outcomes followed gold (failed 153/178 when gold moved against the rule). Best: Venus-Mars / Sun-Mars together (19/30, 4 of 5 years); 'Venus alone in Leo/Libra' 5/6 vs plain 'Venus in Leo/Libra' 3/11. |
 | 2026-11-21 | #11 | Gold findings tracker + forward dates | See GOLD_TRACKER.html. |
 | 2026-11-21 | #10 | Gold backtest, 5 years | 288 of 554 worked (52%) vs 54% by chance; best: combined Sun model 105/179 (p=0.057), U2-Jupiter, U2-Venus, U2-Mercury right in 4 of 5 years; U4-Saturn did not hold up (6/20). |
 | 2026-11-20 | #9 | Gold backtest, 1 year | 61 of 124 decided occurrences worked (49%); bearish-majority days were followed by -1.49% over 5 days; the Jan-2026 crash was not flagged by any rule. |
