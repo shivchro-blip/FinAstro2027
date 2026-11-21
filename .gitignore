@@ -49,3 +49,8 @@ b7msg.txt
 b8msg.txt
 b9msg.txt
 b10msg.txt
+
+# Backtest-only astronomy layers (tools/build_year.py, ~13 MB each). Deterministic
+# and rebuilt on demand by tools/backtest_gold.py, so not tracked; 2025-2027 are.
+build/astronomy_202[1-4].json
+build/astronomy_202[1-4]_summary.txt
