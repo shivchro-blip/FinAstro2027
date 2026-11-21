@@ -1,6 +1,6 @@
 # Silver findings tracker
 
-Generated 21 Nov 2026 09:27 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
+Generated 21 Nov 2026 12:12 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
 
 ## Recent findings
 
@@ -96,6 +96,7 @@ Best (from the 5-year data): Venus-Mars or Sun-Mars together in any sign.
 
 | Date | PR | Topic | Result |
 |---|---|---|---|
+| 2026-11-21 | #13 | Review of Reference_materials/Others (45 files) + test of their gold/silver rules | 8 documents have market content; only Brihat Samhita has classical gold/silver price rules. Moon->silver rulership is sourced, a Moon version of the user's Sun rules is not. Silver guide's Moon rules: no effect over 26 years; new->full Moon hold did WORSE than full->new for both metals. BS 42.14(a) weak positive for gold; BS 10.17 (Saturn in Uttara Bhadrapada, gold afflicted) active until 8 Feb 2027. bayer_all_48_rules.docx rules 25-48 do not match Bayer's 1940 text. |
 | 2026-11-21 | #12 | Silver backtest, 1 and 5 years + silver tracker | 197 of 414 worked (48%) vs 50% by chance; net rule count pointed the wrong way; outcomes followed gold (failed 153/178 when gold moved against the rule). Best: Venus-Mars / Sun-Mars together (19/30, 4 of 5 years); 'Venus alone in Leo/Libra' 5/6 vs plain 'Venus in Leo/Libra' 3/11. |
 | 2026-11-21 | #11 | Gold findings tracker + forward dates | See GOLD_TRACKER.html. |
 | 2026-11-21 | #10 | Gold backtest, 5 years | 288 of 554 worked (52%) vs 54% by chance; best: combined Sun model 105/179 (p=0.057), U2-Jupiter, U2-Venus, U2-Mercury right in 4 of 5 years; U4-Saturn did not hold up (6/20). |

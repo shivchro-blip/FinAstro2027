@@ -111,6 +111,19 @@
     "build/pdfref/SILVER_TRACKER.html",
     "build/pdfref/silver_forward_2026-11-20_to_2027-12-31_ET.json"
    ]
+  },
+  {
+   "date": "2026-11-21",
+   "pr": "13",
+   "topic": "Review of Reference_materials/Others (45 files) + test of their gold/silver rules",
+   "analysis": "All 45 documents (~11,000 pages) text-extracted, 3 scanned books OCR'd, every page scanned for market content, financial sections read. New gold/silver rules (Brihat Samhita Ch.41-42 and 10.17, Timing Solutions Ch.9, the Moon-and-Silver guide) tested on COMEX closes 2000-2026.",
+   "result": "8 documents have market content; only Brihat Samhita has classical gold/silver price rules. Moon->silver rulership is sourced, a Moon version of the user's Sun rules is not. Silver guide's Moon rules: no effect over 26 years; new->full Moon hold did WORSE than full->new for both metals. BS 42.14(a) weak positive for gold; BS 10.17 (Saturn in Uttara Bhadrapada, gold afflicted) active until 8 Feb 2027. bayer_all_48_rules.docx rules 25-48 do not match Bayer's 1940 text.",
+   "files": [
+    "Reference_materials/extracted/OTHERS_FINANCIAL_REVIEW.md",
+    "Reference_materials/extracted/OTHERS_FINANCIAL_REVIEW.html",
+    "build/pdfref/source_rules_test_2000-2026_ET.html",
+    "Reference_materials/extracted/ocr/"
+   ]
   }
  ]
 }
