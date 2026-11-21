@@ -28,6 +28,7 @@
      "Retrograde Mercury or Jupiter [Bullish]",
      "Saturn in Aquarius or Aries [Bullish]",
      "Shukla Paksha of 16 days or Krishna Paksha of 14 days [Bullish]",
+     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish]",
      "Sun in Virgo, Libra or Pisces with or aspected by benefics [Bearish]"
     ],
     "held": [
@@ -55,11 +56,6 @@
    "verdict": "Silver Bullish (July, August 2019)",
    "hist": "19/30 (63% vs base 52%), avg +1.68%, right in 4/5 yrs",
    "conc": {
-    "failed": [
-     "Mercury alone in Aries or Virgo [Bearish]",
-     "Mercury turns direct from retrograde [Bullish]",
-     "Venus in Leo or Libra [Bearish]"
-    ],
     "other": [
      "Mercury in Aries or Virgo [Bearish]",
      "Moon darshan on Friday or Saturday [Bullish]",
@@ -68,7 +64,13 @@
      "Only Sun-Mercury or Moon-Mercury alone in a sign [Bullish]",
      "Retrograde Mercury or Jupiter [Bullish]",
      "Shukla Paksha of 16 days or Krishna Paksha of 14 days [Bullish]",
+     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish]",
      "Sun in Virgo, Libra or Pisces with or aspected by benefics [Bearish]"
+    ],
+    "failed": [
+     "Mercury alone in Aries or Virgo [Bearish]",
+     "Mercury turns direct from retrograde [Bullish]",
+     "Venus in Leo or Libra [Bearish]"
     ]
    }
   },
@@ -92,6 +94,7 @@
     "other": [
      "Only Sun-Mercury or Moon-Mercury alone in a sign [Bullish]",
      "Shukla Paksha of 16 days or Krishna Paksha of 14 days [Bullish]",
+     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish]",
      "Sun in Virgo, Libra or Pisces with or aspected by benefics [Bearish]"
     ]
    }
@@ -117,7 +120,8 @@
      "Moon-Venus mutual Vedha [Bearish]",
      "Only Moon and Mercury alone in a sign [Bullish]",
      "Only Sun-Mercury or Moon-Mercury alone in a sign [Bullish]",
-     "Shukla Paksha of 16 days or Krishna Paksha of 14 days [Bullish]"
+     "Shukla Paksha of 16 days or Krishna Paksha of 14 days [Bullish]",
+     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish]"
     ]
    }
   },
@@ -143,7 +147,8 @@
      "Rahu & Mars together in any sign [Bullish]",
      "Rahu and Mars in the same nakshatra [Bullish]",
      "Saturn direct from retrograde [Bearish]",
-     "Shukla Paksha of 16 days or Krishna Paksha of 14 days [Bullish]"
+     "Shukla Paksha of 16 days or Krishna Paksha of 14 days [Bullish]",
+     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish]"
     ]
    }
   },
@@ -171,7 +176,8 @@
      "Rahu & Mars together in any sign [Bullish]",
      "Rahu and Mars in the same nakshatra [Bullish]",
      "Saturn direct from retrograde [Bearish]",
-     "Shukla Paksha of 16 days or Krishna Paksha of 14 days [Bullish]"
+     "Shukla Paksha of 16 days or Krishna Paksha of 14 days [Bullish]",
+     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish]"
     ]
    }
   }
@@ -486,6 +492,12 @@
    "status": "Too few to judge (1/1, leans right)",
    "best": false,
    "upcoming": 1
+  },
+  "bs_42_06_sun_leo_store_gold_silver": {
+   "title": "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6)",
+   "status": "Inconclusive",
+   "best": false,
+   "upcoming": 2
   },
   "kd114_sun_eclipse_wednesday": {
    "title": "Solar eclipse on a Wednesday",

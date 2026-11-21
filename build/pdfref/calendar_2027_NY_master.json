@@ -9,10 +9,10 @@
    "build/calendar_2027.json (existing calendar)"
   ],
   "counts": {
-   "pdf_rules": 730,
-   "pdf_rules_with_detector": 721,
+   "pdf_rules": 734,
+   "pdf_rules_with_detector": 725,
    "pdf_rules_mapped_to_existing": 79,
-   "new_events_major_yearly": 1607,
+   "new_events_major_yearly": 1610,
    "new_events_moon_layer": 4566,
    "existing_rows_carried": 601,
    "existing_rows_with_pdf_text": 463
@@ -503,10 +503,10 @@
    "gold_silver_relevance": "gold and silver"
   },
   {
-   "uid": "3d359ef21c290b60",
+   "uid": "cff9e56f595c6a85",
    "source": "reference_pdfs",
    "tier": "major",
-   "event_title": "Saturn in Uttara Bhadrapada",
+   "event_title": "Saturn in Uttara Bhadrapada / Saturn in Uttara Bhadrapada (Brihat Samhita 10.17)",
    "date_time": {
     "kind": "window",
     "start_NY": "2026-10-09 11:22 EDT",
@@ -519,22 +519,28 @@
     "continues_after_scan": false,
     "duration_days": 121.46
    },
-   "planetary_condition": "At start: Saturn 16.67 deg Pisces (Uttara Bhadrapada pada 4; D9 Scorpio) R, 0.078 deg/day | At end: Saturn 16.67 deg Pisces (Uttara Bhadrapada pada 4; D9 Scorpio), 0.093 deg/day | Computed: value: Uttara Bhadrapada",
-   "astrological_rule": "Saturn in Uttara Bhadrapada.",
-   "source_interpretation": "Saturn in Uttara Bhadrapada: High bullish",
-   "financial_market_significance": "High bullish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named) (as the source states it; not a forecast)",
-   "conditions_and_qualifications": [],
+   "planetary_condition": "At start: Saturn 16.67 deg Pisces (Uttara Bhadrapada pada 4; D9 Scorpio) R, 0.078 deg/day | At end: Saturn 16.67 deg Pisces (Uttara Bhadrapada pada 4; D9 Scorpio), 0.093 deg/day | Computed: value: Saturn in Uttara Bhadrapada",
+   "astrological_rule": "Saturn in Uttara Bhadrapada. || Saturn in Uttara Bhadrapada nakshatra (333deg20' - 346deg40' sidereal).",
+   "source_interpretation": "Saturn in Uttara Bhadrapada: High bullish || Saturn in Uttara Bhadrapada (Brihat Samhita 10.17): Gold afflicted (Bearish): '... so do those living on the banks of rivers, cart-wrights, women and gold when he is in Uttarabhadra'",
+   "financial_market_significance": "High bullish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named); Gold afflicted (Bearish): '... so do those living on the banks of rivers, cart-wrights, women and gold when he is in Uttarabhadra' -> Gold (XAUUSD / COMEX GC) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "Recurs every ~29.5 years; 2000-2026 holds one passage in three windows: 28 Apr - 3 Oct 2025 gold +17%, 20 Jan - 17 May 2026 -0.7%, 9 Oct 2026 - 8 Feb 2027 (current) -15% to 20 Nov 2026.",
+    "Same verse: Saturn in Satabhishak and Purvabhadra makes 'traders' suffer (general market, not gold)."
+   ],
    "source_reference": [
-    "KD p.142 #3"
+    "KD p.142 #3",
+    "Brihat Samhita, tr. P.S. Sastri 1946, Ch.10 sl.17 (PDF p.144)"
    ],
    "calculation_method": "Sidereal (Lahiri) nakshatra of the body, 27 x 13deg20'; window = the residency, boundaries bisected to 30 s. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
    "markets": [
-    "general"
+    "general",
+    "gold"
    ],
    "rule_ids": [
-    "kd_142_saturn_in_uttara_bhadrapada"
+    "kd_142_saturn_in_uttara_bhadrapada",
+    "bs_10_17_saturn_uttarabhadra_gold"
    ],
-   "gold_silver_relevance": "not stated by source"
+   "gold_silver_relevance": "gold"
   },
   {
    "uid": "4bcd7fb8cbfadf73",
@@ -7353,10 +7359,10 @@
    "gold_silver_relevance": "not stated by source"
   },
   {
-   "uid": "b075f2f9d538ba21",
+   "uid": "b3931211209a9656",
    "source": "reference_pdfs",
    "tier": "major",
-   "event_title": "Sun sign placement (Extreme Bullish Planet) / Saturn or Rahu with / aspecting the Sun (user note)",
+   "event_title": "Sun sign placement (Extreme Bullish Planet) / Saturn or Rahu with / aspecting the Sun (user note) / Sun in Aries or Capricorn with or aspected by a malefic (Brihat Samhita 42.14)",
    "date_time": {
     "kind": "window",
     "start_NY": "2027-01-14 10:40 EST",
@@ -7369,28 +7375,33 @@
     "continues_after_scan": false,
     "duration_days": 29.54
    },
-   "planetary_condition": "At start: Sun 00.00 deg Capricorn (Uttara Ashadha pada 2; D9 Capricorn), 1.019 deg/day | At end: Sun 30.00 deg Capricorn (Dhanishta pada 2; D9 Virgo), 1.011 deg/day | Computed: value: Rahu conjunct (same sign); separation from Sun at start: Saturn 74.8 deg, Rahu 27.9 deg, Ketu 152.1 deg",
-   "astrological_rule": "Sun's sign placement. || Saturn or Rahu in the Sun's sign or casting drishti on it (Rahu's 7th = Sun with Ketu).",
-   "source_interpretation": "Sun sign placement (Extreme Bullish Planet): Aries, Taurus, Scorpio, Capricorn - very Bullish; Gemini, Cancer, Pisces - Bearish || Saturn or Rahu with / aspecting the Sun (user note): Can crash the gold price (Bearish)",
-   "financial_market_significance": "Aries, Taurus, Scorpio, Capricorn - very Bullish; Gemini, Cancer, Pisces - Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named); Can crash the gold price (Bearish) -> Gold (XAUUSD / COMEX GC) (as the source states it; not a forecast)",
+   "planetary_condition": "At start: Sun 00.00 deg Capricorn (Uttara Ashadha pada 2; D9 Capricorn), 1.019 deg/day | At end: Sun 30.00 deg Capricorn (Dhanishta pada 2; D9 Virgo), 1.011 deg/day | Computed: value: Rahu with Sun; separation from Sun at start: Saturn 74.8 deg, Rahu 27.9 deg, Ketu 152.1 deg",
+   "astrological_rule": "Sun's sign placement. || Saturn or Rahu in the Sun's sign or casting drishti on it (Rahu's 7th = Sun with Ketu). || Sun in Mesha or Makara, with Saturn, Mars, Rahu or Ketu in the same sign or aspecting it.",
+   "source_interpretation": "Sun sign placement (Extreme Bullish Planet): Aries, Taurus, Scorpio, Capricorn - very Bullish; Gemini, Cancer, Pisces - Bearish || Saturn or Rahu with / aspecting the Sun (user note): Can crash the gold price (Bearish) || Sun in Aries or Capricorn with or aspected by a malefic (Brihat Samhita 42.14): Gold price destroyed (Bearish): 'the Sun, conjoined with and aspected by malefics, destroys the price of the articles of that Rasi'",
+   "financial_market_significance": "Aries, Taurus, Scorpio, Capricorn - very Bullish; Gemini, Cancer, Pisces - Bearish -> General market (the sources write for Indian indices - NIFTY/Bank Nifty; no instrument named); Can crash the gold price (Bearish) -> Gold (XAUUSD / COMEX GC); Gold price destroyed (Bearish): 'the Sun, conjoined with and aspected by malefics, destroys the price of the articles of that Rasi' -> Gold (XAUUSD / COMEX GC) (as the source states it; not a forecast)",
    "conditions_and_qualifications": [
     "TA p.66 bottom NOTE: THIS IS JUST PLACEMENT OF PLANET WHICH HAS VERY SMALL ROLE TO PLAY IN DECIDING BULLISH/BEARISH MARKETS SO SHOULD NOT BE TAKEN AS EXCLUSIVE RESULTS BASED ON IT.",
     "Aspect = whole-sign graha drishti (Jupiter 5/7/9, Saturn 3/7/10, Rahu 7 - project convention; Rahu's 7th falls on Ketu's sign); conjunction = same sign. Venus and Mercury can only conjoin the Sun (they never get far enough to aspect it).",
     "Conflict: TA p.154 S34 A3 and the 2026 document's gold-bullish #2 make the Sun in Libra with/aspected by malefics (Saturn, Mars, Rahu) BULLISH for gold, and TA S34 A10 says a malefic aspect makes the Sun's rally stars MORE bullish; TA S34 B1 makes a benefic with the Sun on Anuradha bearish. Both sources are shown.",
-    "User note: 'fear, greed and market illusions are Rahu's territory'."
+    "User note: 'fear, greed and market illusions are Rahu's territory'.",
+    "Gold's signs per BS 41.2 (Mesha: '... and gold', PDF p.327) and 41.7 (Makara: '... gold and black metal', PDF p.329).",
+    "Text says 'conjoined with and aspected by'; implemented as either, the reading used for 'with or aspected' elsewhere in the project. 2000-2026 test: 38 windows, gold fell in 20 (53% vs 44% of all same-length windows) but averaged +0.80%."
    ],
    "source_reference": [
     "TA p.58 [printed 28] Section 14 'Nature of planets - purely only placement basis' - SUN",
-    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)"
+    "User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md)",
+    "Brihat Samhita, tr. P.S. Sastri 1946, Ch.42 sl.14 (PDF p.334)",
+    "Brihat Samhita, tr. P.S. Sastri 1946, Ch.41 sl.2, 7 (PDF pp.327, 329)"
    ],
-   "calculation_method": "Sidereal (Lahiri) whole sign of the body; window bounded by its ingresses. One event per residency; the verdict column states which list the sign is in. || Sidereal (Lahiri) whole sign of the body; window bounded by its ingresses. Window changes whenever the set of contacts changes. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "calculation_method": "Sidereal (Lahiri) whole sign of the body; window bounded by its ingresses. One event per residency; the verdict column states which list the sign is in. || Sidereal (Lahiri) whole sign of the body; window bounded by its ingresses. Window changes whenever the set of contacts changes. || Sidereal (Lahiri) whole sign of the body; window bounded by its ingresses. With = same sidereal sign; aspect = whole-sign graha drishti (all 7th; Mars 4/8, Jupiter 5/9, Saturn 3/10; Rahu 7th; Ketu by conjunction only). Benefics Mercury, Jupiter, Venus as BS 40.13 lists them; malefics Saturn, Mars, Rahu, Ketu. Window changes whenever the set of malefic contacts changes. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
    "markets": [
     "general",
     "gold"
    ],
    "rule_ids": [
     "ta_s14_sun_placement",
-    "user_u4_sun_with_or_aspected_by_saturn_rahu"
+    "user_u4_sun_with_or_aspected_by_saturn_rahu",
+    "bs_42_14b_sun_malefic_gold"
    ],
    "gold_silver_relevance": "gold"
   },
@@ -14514,6 +14525,38 @@
    ],
    "rule_ids": [
     "user_u2_sun_with_or_aspected_by_benefics"
+   ],
+   "gold_silver_relevance": "gold"
+  },
+  {
+   "uid": "2fbf5de7edf907ca",
+   "source": "reference_pdfs",
+   "tier": "major",
+   "event_title": "New / full Moon in Aries or Capricorn with a benefic (Brihat Samhita 42.14)",
+   "date_time": {
+    "kind": "instant",
+    "start_NY": "2027-02-06 10:56 EST",
+    "start_IST": "2027-02-06 21:26 IST",
+    "start_UTC": "2027-02-06T15:56:15+00:00"
+   },
+   "planetary_condition": "At start: Moon 23.39 deg Capricorn (Dhanishta pada 1; D9 Leo), 12.008 deg/day; Sun 23.39 deg Capricorn (Dhanishta pada 1; D9 Leo), 1.014 deg/day | Computed: lunation: New Moon; Moon sign: Capricorn; benefics: Jupiter aspects Moon",
+   "astrological_rule": "New Moon or full Moon with the Moon in Mesha or Makara, and Mercury, Jupiter or Venus in the Moon's sign or aspecting it.",
+   "source_interpretation": "New / full Moon in Aries or Capricorn with a benefic (Brihat Samhita 42.14): Gold price promoted (Bullish): 'promotes invariably the price of articles belonging to that particular Rasi occupied by her'",
+   "financial_market_significance": "Gold price promoted (Bullish): 'promotes invariably the price of articles belonging to that particular Rasi occupied by her' -> Gold (XAUUSD / COMEX GC) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "Gold's signs per BS 41.2 (Mesha: '... and gold', PDF p.327) and 41.7 (Makara: '... gold and black metal', PDF p.329).",
+    "The source gives no time span for the effect. 2000-2026 test: 84 cases, gold up to the next lunation in 50 (60%), average +0.89% (lunations in these signs without a benefic: +0.03%); weak, not significant on its own."
+   ],
+   "source_reference": [
+    "Brihat Samhita, tr. P.S. Sastri 1946, Ch.42 sl.14 (PDF p.334)",
+    "Brihat Samhita, tr. P.S. Sastri 1946, Ch.41 sl.2, 7 (PDF pp.327, 329)"
+   ],
+   "calculation_method": "New / full Moon = Moon-Sun elongation crossing 0 / 180 deg (bisected to 30 s); Moon's sidereal sign at that instant; With = same sidereal sign; aspect = whole-sign graha drishti (all 7th; Mars 4/8, Jupiter 5/9, Saturn 3/10; Rahu 7th; Ketu by conjunction only). Benefics Mercury, Jupiter, Venus as BS 40.13 lists them; malefics Saturn, Mars, Rahu, Ketu. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "gold"
+   ],
+   "rule_ids": [
+    "bs_42_14a_lunation_benefic_gold"
    ],
    "gold_silver_relevance": "gold"
   },
@@ -73375,6 +73418,45 @@
    "gold_silver_relevance": "gold"
   },
   {
+   "uid": "4fef895fdcbed216",
+   "source": "reference_pdfs",
+   "tier": "major",
+   "event_title": "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6)",
+   "date_time": {
+    "kind": "window",
+    "start_NY": "2027-08-17 04:44 EDT",
+    "end_NY": "2028-01-14 16:54 EST",
+    "start_IST": "2027-08-17 14:14 IST",
+    "end_IST": "2028-01-15 03:24 IST",
+    "start_UTC": "2027-08-17T08:44:03+00:00",
+    "end_UTC": "2028-01-14T21:54:22+00:00",
+    "began_before_scan": false,
+    "continues_after_scan": false,
+    "duration_days": 150.55
+   },
+   "planetary_condition": "At start: Sun 00.00 deg Leo (Magha pada 1; D9 Aries), 0.961 deg/day | At end: Sun 30.00 deg Sagittarius (Uttara Ashadha pada 1; D9 Sagittarius), 1.018 deg/day | Computed: buy: Sun enters Simha; 5th month begins utc: 2027-12-16 06:09 EST; sell by: Sun enters Makara (5th month ends)",
+   "astrological_rule": "Buy when the Sun enters Simha; sell in the 5th solar month (Sun in Dhanus).",
+   "source_interpretation": "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6): Profit on gold and silver (Bullish): 'If one stores up gold, gems, skins, armours, weapons, pearls and silver when the Sun is in Simha, and sell them in the 5th month, he will get profit and sustain loss otherwise'",
+   "financial_market_significance": "Profit on gold and silver (Bullish): 'If one stores up gold, gems, skins, armours, weapons, pearls and silver when the Sun is in Simha, and sell them in the 5th month, he will get profit and sustain loss otherwise' -> Gold (XAUUSD / COMEX GC), Silver (COMEX SI) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "2000-2025 test (25 years): gold up by mid-December in 14 and by mid-January in 18, while 66% of all same-length holds rose; silver 14 and 17. No edge over the normal drift.",
+    "42.13: the profit 'depends upon ... the Sun or the Moon ... being conjoined with very friendly planets and aspected by planets who are very friendly' - not applied (the friendship table to use is not given).",
+    "Effect timing per source: Sell in the 5th month (Sun in Sagittarius, about mid-December to mid-January)"
+   ],
+   "source_reference": [
+    "Brihat Samhita, tr. P.S. Sastri 1946, Ch.42 sl.6 (PDF p.332)"
+   ],
+   "calculation_method": "Sun's sidereal sign ingresses; window = Sun enters Simha -> Sun enters Makara (end of the 5th month); the 5th month begins at the Sun's entry into Dhanus. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "gold",
+    "silver"
+   ],
+   "rule_ids": [
+    "bs_42_06_sun_leo_store_gold_silver"
+   ],
+   "gold_silver_relevance": "gold and silver"
+  },
+  {
    "uid": "0a52d4600b989f20",
    "source": "reference_pdfs",
    "tier": "major",
@@ -99644,6 +99726,38 @@
    ],
    "rule_ids": [
     "user_u2_sun_with_or_aspected_by_benefics"
+   ],
+   "gold_silver_relevance": "gold"
+  },
+  {
+   "uid": "31217dbd10370056",
+   "source": "reference_pdfs",
+   "tier": "major",
+   "event_title": "New / full Moon in Aries or Capricorn with a benefic (Brihat Samhita 42.14)",
+   "date_time": {
+    "kind": "instant",
+    "start_NY": "2027-11-13 22:26 EST",
+    "start_IST": "2027-11-14 08:56 IST",
+    "start_UTC": "2027-11-14T03:26:15+00:00"
+   },
+   "planetary_condition": "At start: Moon 27.27 deg Aries (Krittika pada 1; D9 Sagittarius), 13.662 deg/day; Sun 27.27 deg Libra (Vishakha pada 3; D9 Gemini), 1.006 deg/day | Computed: lunation: Full Moon; Moon sign: Aries; benefics: Mercury aspects Moon; Jupiter aspects Moon",
+   "astrological_rule": "New Moon or full Moon with the Moon in Mesha or Makara, and Mercury, Jupiter or Venus in the Moon's sign or aspecting it.",
+   "source_interpretation": "New / full Moon in Aries or Capricorn with a benefic (Brihat Samhita 42.14): Gold price promoted (Bullish): 'promotes invariably the price of articles belonging to that particular Rasi occupied by her'",
+   "financial_market_significance": "Gold price promoted (Bullish): 'promotes invariably the price of articles belonging to that particular Rasi occupied by her' -> Gold (XAUUSD / COMEX GC) (as the source states it; not a forecast)",
+   "conditions_and_qualifications": [
+    "Gold's signs per BS 41.2 (Mesha: '... and gold', PDF p.327) and 41.7 (Makara: '... gold and black metal', PDF p.329).",
+    "The source gives no time span for the effect. 2000-2026 test: 84 cases, gold up to the next lunation in 50 (60%), average +0.89% (lunations in these signs without a benefic: +0.03%); weak, not significant on its own."
+   ],
+   "source_reference": [
+    "Brihat Samhita, tr. P.S. Sastri 1946, Ch.42 sl.14 (PDF p.334)",
+    "Brihat Samhita, tr. P.S. Sastri 1946, Ch.41 sl.2, 7 (PDF pp.327, 329)"
+   ],
+   "calculation_method": "New / full Moon = Moon-Sun elongation crossing 0 / 180 deg (bisected to 30 s); Moon's sidereal sign at that instant; With = same sidereal sign; aspect = whole-sign graha drishti (all 7th; Mars 4/8, Jupiter 5/9, Saturn 3/10; Rahu 7th; Ketu by conjunction only). Benefics Mercury, Jupiter, Venus as BS 40.13 lists them; malefics Saturn, Mars, Rahu, Ketu. || Swiss Ephemeris (pyswisseph, sepl/semo 18 files), sidereal Lahiri ayanamsha, mean lunar node, whole-sign relationships; condition sampled hourly and every boundary bisected to 30 seconds; times shown in New York local time (EST/EDT by IANA America/New_York) with IST alongside.",
+   "markets": [
+    "gold"
+   ],
+   "rule_ids": [
+    "bs_42_14a_lunation_benefic_gold"
    ],
    "gold_silver_relevance": "gold"
   },

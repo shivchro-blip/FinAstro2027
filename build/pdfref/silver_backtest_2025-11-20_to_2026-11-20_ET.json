@@ -108,9 +108,9 @@
   }
  },
  "totals": {
+  "WORKED": 45,
   "FLAT": 8,
-  "WORKED": 44,
-  "FAILED": 45,
+  "FAILED": 46,
   "NOT SCORED": 13
  },
  "rules": [
@@ -2100,6 +2100,53 @@
    "verdict": "Worked"
   },
   {
+   "rule_id": "bs_42_06_sun_leo_store_gold_silver",
+   "title": "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6)",
+   "tone": "Bullish",
+   "n": 2,
+   "worked": 1,
+   "failed": 1,
+   "flat": 0,
+   "not_scored": 0,
+   "component": false,
+   "refs": [
+    "Brihat Samhita, tr. P.S. Sastri 1946, Ch.42 sl.6 (PDF p.332)"
+   ],
+   "sens": {
+    "1": [
+     2,
+     1
+    ],
+    "3": [
+     2,
+     1
+    ],
+    "10": [
+     2,
+     2
+    ],
+    "5": [
+     2,
+     2
+    ]
+   },
+   "by_year": {
+    "0": [
+     2,
+     1
+    ]
+   },
+   "hit_rate": 50,
+   "avg_dir_ret": 16.11,
+   "base_rate": 29,
+   "p_value": 0.495,
+   "p_value_fail": 0.916,
+   "years_right": 0,
+   "years_wrong": 0,
+   "years_active": 1,
+   "verdict": "Worked"
+  },
+  {
    "rule_id": "kd114_sun_eclipse_wednesday",
    "title": "Solar eclipse on a Wednesday",
    "tone": "Bullish",
@@ -2848,14 +2895,15 @@
    "bull": [
     "Mercury turns direct from retrograde",
     "Only Sun-Mercury or Moon-Mercury alone in a sign",
-    "Shukla Paksha of 16 days or Krishna Paksha of 14 days"
+    "Shukla Paksha of 16 days or Krishna Paksha of 14 days",
+    "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6)"
    ],
    "bear": [
     "Moon-Venus mutual Vedha",
     "Rahu in Dhanishta (market and bullion risk)",
     "Sun in Virgo, Libra or Pisces with or aspected by benefics"
    ],
-   "n_bull": 3,
+   "n_bull": 4,
    "n_bear": 3,
    "sun": "Sun in Vishakha (lord Jupiter), Libra",
    "sun_contacts": [
@@ -3127,10 +3175,11 @@
    "bull": [
     "Rahu does Vedha of Pushya",
     "Retrograde Mercury or Jupiter",
+    "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6)",
     "Venus-Mars or Sun-Mars together in any sign"
    ],
    "bear": [],
-   "n_bull": 3,
+   "n_bull": 4,
    "n_bear": 0,
    "sun": "Sun in Uttara Ashadha (lord Sun), Sagittarius",
    "sun_contacts": [
@@ -3212,10 +3261,11 @@
    "bull": [
     "Rahu does Vedha of Pushya",
     "Retrograde Mercury or Jupiter",
+    "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6)",
     "Venus-Mars or Sun-Mars together in any sign"
    ],
    "bear": [],
-   "n_bull": 3,
+   "n_bull": 4,
    "n_bear": 0,
    "sun": "Sun in Mula (lord Ketu), Sagittarius",
    "sun_contacts": [
@@ -3253,6 +3303,7 @@
     "Rahu does Vedha of Pushya",
     "Retrograde Mercury goes combust",
     "Retrograde Mercury or Jupiter",
+    "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6)",
     "Venus-Mars or Sun-Mars together in any sign"
    ],
    "bear": [
@@ -3260,7 +3311,7 @@
     "Venus alone in Leo or Libra",
     "Venus in Leo or Libra"
    ],
-   "n_bull": 7,
+   "n_bull": 8,
    "n_bear": 3,
    "sun": "Sun in Anuradha (lord Saturn), Scorpio",
    "sun_contacts": [
@@ -3333,10 +3384,11 @@
    "bull": [
     "Rahu does Vedha of Pushya",
     "Retrograde Mercury or Jupiter",
+    "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6)",
     "Venus-Mars or Sun-Mars together in any sign"
    ],
    "bear": [],
-   "n_bull": 3,
+   "n_bull": 4,
    "n_bear": 0,
    "sun": "Sun in Purva Ashadha (lord Venus), Sagittarius",
    "sun_contacts": [
@@ -3401,33 +3453,149 @@
   }
  ],
  "net_signal": {
-  "corr1": 0.056,
-  "corr5": 0.087,
+  "corr1": 0.067,
+  "corr5": 0.111,
   "buckets": {
    "net > 0 (more bullish rules active)": {
-    "days": 178,
-    "avg1": 0.142,
-    "avg5": 0.616,
-    "up1": 53.4,
-    "up5": 50.6
+    "days": 192,
+    "avg1": 0.068,
+    "avg5": 0.493,
+    "up1": 52.6,
+    "up5": 50.5
    },
    "net = 0": {
-    "days": 26,
-    "avg1": -0.229,
-    "avg5": 0.312,
-    "up1": 50.0,
-    "up5": 61.5
+    "days": 34,
+    "avg1": 0.107,
+    "avg5": -0.821,
+    "up1": 52.9,
+    "up5": 44.1
    },
    "net < 0 (more bearish rules active)": {
-    "days": 47,
-    "avg1": -0.347,
-    "avg5": -2.581,
-    "up1": 48.9,
-    "up5": 25.5
+    "days": 25,
+    "avg1": -0.548,
+    "avg5": -2.809,
+    "up1": 48.0,
+    "up5": 24.0
    }
   }
  },
  "events": [
+  {
+   "rule_id": "bs_42_06_sun_leo_store_gold_silver",
+   "title": "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6)",
+   "refs": [
+    "Brihat Samhita, tr. P.S. Sastri 1946, Ch.42 sl.6 (PDF p.332)"
+   ],
+   "tone": "Bullish",
+   "verdict": "Profit on gold and silver (Bullish): 'If one stores up gold, gems, skins, armours, weapons, pearls and silver when the Sun is in Simha, and sell them in the 5th month, he will get profit and sustain loss otherwise'",
+   "rule": "Buy when the Sun enters Simha; sell in the 5th solar month (Sun in Dhanus).",
+   "start": "2025-08-16T16:22:58-04:00",
+   "end": "2026-01-14T04:37:30-05:00",
+   "day": null,
+   "open_start": false,
+   "open_end": false,
+   "bodies": [
+    "Sun"
+   ],
+   "facts": {
+    "buy": "Sun enters Simha",
+    "5th_month_begins_utc": "2025-12-15 22:50:09+00:00",
+    "sell_by": "Sun enters Makara (5th month ends)"
+   },
+   "effect": "Sell in the 5th month (Sun in Sagittarius, about mid-December to mid-January)",
+   "entry_date": "2025-11-19",
+   "entry_close": 50.790000915527344,
+   "fwd": {
+    "1": -1.07,
+    "3": -0.97,
+    "10": 11.93,
+    "5": 4.19
+   },
+   "exit_date": "2026-01-13",
+   "exit_close": 85.87699890136719,
+   "horizon": "window, 36 trading days",
+   "n_days": 36,
+   "max_up": 69.08,
+   "max_dn": -1.81,
+   "mode": "window",
+   "ret": 69.08,
+   "still_open": false,
+   "year": 0,
+   "outcome": "WORKED",
+   "gold_ret": 12.65,
+   "flags": {
+    "Opposite-tone rules outnumbered supporting ones": false,
+    "Saturn / Rahu / Ketu on the Moon at the start": false,
+    "Jupiter on the Moon at the start": true,
+    "Waxing Moon (Shukla) at the start": false,
+    "Jupiter sharing a sign with Rahu / Ketu / Mars / Saturn": false,
+    "Mercury or Venus retrograde at the start": true,
+    "Gold moved against the rule too (>0.5%)": false,
+    "A planet stations inside the interval": true,
+    "Eclipse inside the interval": false
+   },
+   "analysis": {
+    "sky_at_start": [
+     "Sun Scorpio 4\u00b0 Anuradha",
+     "Mercury Scorpio 4\u00b0 Anuradha R",
+     "Venus Libra 22\u00b0 Vishakha",
+     "Mars Scorpio 17\u00b0 Jyeshtha",
+     "Jupiter Cancer 1\u00b0 Punarvasu R",
+     "Saturn Pisces 1\u00b0 Purva Bhadrapada R",
+     "Rahu Aquarius 20\u00b0 Purva Bhadrapada",
+     "Ketu Leo 20\u00b0 Purva Phalguni",
+     "Moon Scorpio 3\u00b0 Vishakha"
+    ],
+    "sun": "Moon in Scorpio Vishakha (Krishna)",
+    "sun_contacts": [
+     "Sun with Moon",
+     "Mercury with Moon",
+     "Mars with Moon",
+     "Jupiter aspects Moon (5th)"
+    ],
+    "jupiter": "Jupiter Cancer Punarvasu R",
+    "paksha": "Krishna",
+    "worst_day": "Wed 31 Dec 2025 (-9.36 %)",
+    "sky_worst": "Moon in Taurus Krittika (Shukla); Saturn aspects Moon (3rd); Jupiter Gemini Punarvasu R - Mars aspects Jupiter",
+    "opposite": [
+     "Venus in Leo or Libra [Bearish] Sun 02 Nov 2025 02:45 EST",
+     "Venus alone in Leo or Libra [Bearish] Sun 16 Nov 2025 03:07 EST",
+     "Moon-Venus mutual Vedha [Bearish] Sat 27 Dec 2025 22:13 EST",
+     "Saturn direct from retrograde [Bearish] Thu 27 Nov 2025 22:52 EST"
+    ],
+    "supporting": 8,
+    "records": [
+     "20 Nov: Sun conjunction Mercury in Scorpio",
+     "23 Nov: Mercury enters Libra",
+     "24 Nov-25 Nov: Mercury combust",
+     "24 Nov: Mercury conjunction Venus in Libra",
+     "26 Nov: Venus enters Scorpio",
+     "27 Nov: Saturn stations direct in Pisces",
+     "29 Nov: Mercury stations direct in Libra",
+     "05 Dec: Jupiter enters Gemini",
+     "06 Dec: Mercury enters Scorpio",
+     "07 Dec: Mars enters Sagittarius",
+     "11 Dec-12 Dec: Venus combust",
+     "15 Dec: Sun enters Sagittarius",
+     "19 Dec: Venus enters Sagittarius",
+     "28 Dec: Mercury enters Sagittarius",
+     "01 Jan-02 Jan: Mercury combust",
+     "06 Jan: Sun conjunction Venus in Sagittarius",
+     "07 Jan: Venus conjunction Mars in Sagittarius",
+     "09 Jan: Sun conjunction Mars in Sagittarius",
+     "09 Jan: Venus opposition Jupiter in Sagittarius",
+     "10 Jan: Sun opposition Jupiter in Sagittarius",
+     "10 Jan: Mars opposition Jupiter in Sagittarius",
+     "12 Jan: Venus enters Capricorn"
+    ],
+    "causes": [
+     "4 opposite-tone silver rule(s) active vs 8 supporting: Venus in Leo or Libra; Venus alone in Leo or Libra; Moon-Venus mutual Vedha; Saturn direct from retrograde",
+     "Gold over the same dates: +12.65% (moved the same way as silver: a metals-wide move)",
+     "Station(s) inside the interval: 27 Nov: Saturn stations direct in Pisces; 29 Nov: Mercury stations direct in Libra",
+     "Ingress(es): 05 Dec: Jupiter enters Gemini; 07 Dec: Mars enters Sagittarius; 15 Dec: Sun enters Sagittarius"
+    ]
+   }
+  },
   {
    "rule_id": "ta_s35b01_venus_leo_libra",
    "title": "Venus in Leo or Libra",
@@ -3553,7 +3721,7 @@
      "Venus alone in Leo or Libra [Bearish] Sun 16 Nov 2025 03:07 EST",
      "Moon-Venus mutual Vedha [Bearish] Thu 20 Nov 2025 00:29 EST"
     ],
-    "supporting": 6,
+    "supporting": 7,
     "records": [
      "20 Nov: Sun conjunction Mercury in Scorpio",
      "23 Nov: Mercury enters Libra",
@@ -3562,7 +3730,7 @@
      "26 Nov: Venus enters Scorpio"
     ],
     "causes": [
-     "3 opposite-tone silver rule(s) active vs 6 supporting: Venus in Leo or Libra; Venus alone in Leo or Libra; Moon-Venus mutual Vedha",
+     "3 opposite-tone silver rule(s) active vs 7 supporting: Venus in Leo or Libra; Venus alone in Leo or Libra; Moon-Venus mutual Vedha",
      "Gold over the same dates: +2.02% (moved the same way as silver: a metals-wide move)"
     ]
    }
@@ -3646,7 +3814,7 @@
      "Moon-Venus mutual Vedha [Bearish] Thu 20 Nov 2025 00:29 EST",
      "Saturn direct from retrograde [Bearish] Thu 27 Nov 2025 22:52 EST"
     ],
-    "supporting": 6,
+    "supporting": 7,
     "records": [
      "20 Nov: Sun conjunction Mercury in Scorpio",
      "23 Nov: Mercury enters Libra",
@@ -3656,7 +3824,7 @@
      "27 Nov: Saturn stations direct in Pisces"
     ],
     "causes": [
-     "4 opposite-tone silver rule(s) active vs 6 supporting: Venus in Leo or Libra; Venus alone in Leo or Libra; Moon-Venus mutual Vedha; Saturn direct from retrograde",
+     "4 opposite-tone silver rule(s) active vs 7 supporting: Venus in Leo or Libra; Venus alone in Leo or Libra; Moon-Venus mutual Vedha; Saturn direct from retrograde",
      "Gold over the same dates: +4.22% (moved the same way as silver: a metals-wide move)",
      "Station(s) inside the interval: 27 Nov: Saturn stations direct in Pisces"
     ]
@@ -3745,7 +3913,7 @@
      "Moon-Venus mutual Vedha [Bearish] Thu 20 Nov 2025 00:29 EST",
      "Saturn direct from retrograde [Bearish] Thu 27 Nov 2025 22:52 EST"
     ],
-    "supporting": 6,
+    "supporting": 7,
     "records": [
      "20 Nov: Sun conjunction Mercury in Scorpio",
      "23 Nov: Mercury enters Libra",
@@ -3755,7 +3923,7 @@
      "27 Nov: Saturn stations direct in Pisces"
     ],
     "causes": [
-     "4 opposite-tone silver rule(s) active vs 6 supporting: Venus in Leo or Libra; Venus alone in Leo or Libra; Moon-Venus mutual Vedha; Saturn direct from retrograde",
+     "4 opposite-tone silver rule(s) active vs 7 supporting: Venus in Leo or Libra; Venus alone in Leo or Libra; Moon-Venus mutual Vedha; Saturn direct from retrograde",
      "Gold over the same dates: +4.22% (moved the same way as silver: a metals-wide move)",
      "Station(s) inside the interval: 27 Nov: Saturn stations direct in Pisces"
     ]
@@ -3851,12 +4019,12 @@
      "Venus alone in Leo or Libra [Bearish] Sun 16 Nov 2025 03:07 EST",
      "Moon-Venus mutual Vedha [Bearish] Thu 20 Nov 2025 00:29 EST"
     ],
-    "supporting": 5,
+    "supporting": 6,
     "records": [
      "20 Nov: Sun conjunction Mercury in Scorpio"
     ],
     "causes": [
-     "3 opposite-tone silver rule(s) active vs 5 supporting: Venus in Leo or Libra; Venus alone in Leo or Libra; Moon-Venus mutual Vedha",
+     "3 opposite-tone silver rule(s) active vs 6 supporting: Venus in Leo or Libra; Venus alone in Leo or Libra; Moon-Venus mutual Vedha",
      "Gold over the same dates: -0.08% (did not move with silver)"
     ]
    }
@@ -3938,6 +4106,7 @@
     "worst_day": "Fri 21 Nov 2025 (-0.74 %)",
     "sky_worst": "Moon in Scorpio Jyeshtha (Shukla); Sun with Moon, Mercury with Moon, Mars with Moon, Jupiter aspects Moon (5th); Jupiter Cancer Punarvasu R",
     "opposite": [
+     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish] Sat 16 Aug 2025 16:22 EDT",
      "Shukla Paksha of 16 days or Krishna Paksha of 14 days [Bullish] Wed 05 Nov 2025 08:19 EST",
      "Retrograde Mercury or Jupiter [Bullish] Tue 11 Nov 2025 11:41 EST",
      "Mercury & Jupiter both retrograde (even in different signs) [Bullish] Tue 11 Nov 2025 11:41 EST",
@@ -3950,7 +4119,7 @@
      "20 Nov: Sun conjunction Mercury in Scorpio"
     ],
     "causes": [
-     "6 opposite-tone silver rule(s) active vs 2 supporting: Shukla Paksha of 16 days or Krishna Paksha of 14 days; Retrograde Mercury or Jupiter; Mercury & Jupiter both retrograde (even in different signs); Retrograde Mercury goes combust; Venus-Mars or Sun-Mars together in any sign; Moon darshan on Friday or Saturday",
+     "7 opposite-tone silver rule(s) active vs 2 supporting: Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6); Shukla Paksha of 16 days or Krishna Paksha of 14 days; Retrograde Mercury or Jupiter; Mercury & Jupiter both retrograde (even in different signs); Retrograde Mercury goes combust; Venus-Mars or Sun-Mars together in any sign; Moon darshan on Friday or Saturday",
      "Moon (silver) supported by Jupiter at the start: Jupiter aspects Moon (5th)",
      "Gold over the same dates: -0.08% (did not move with silver)"
     ]
@@ -4077,6 +4246,7 @@
     "worst_day": "Wed 26 Nov 2025 (+3.89 %)",
     "sky_worst": "Moon in Capricorn Shravana (Shukla); Jupiter aspects Moon (7th); Jupiter Cancer Punarvasu R",
     "opposite": [
+     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish] Sat 16 Aug 2025 16:22 EDT",
      "Shukla Paksha of 16 days or Krishna Paksha of 14 days [Bullish] Wed 05 Nov 2025 08:19 EST",
      "Retrograde Mercury or Jupiter [Bullish] Tue 11 Nov 2025 11:41 EST",
      "Mercury & Jupiter both retrograde (even in different signs) [Bullish] Tue 11 Nov 2025 11:41 EST",
@@ -4094,7 +4264,7 @@
      "26 Nov: Venus enters Scorpio"
     ],
     "causes": [
-     "7 opposite-tone silver rule(s) active vs 2 supporting: Shukla Paksha of 16 days or Krishna Paksha of 14 days; Retrograde Mercury or Jupiter; Mercury & Jupiter both retrograde (even in different signs); Retrograde Mercury goes combust; Venus-Mars or Sun-Mars together in any sign; Moon darshan on Friday or Saturday; Rahu does Vedha of Pushya",
+     "8 opposite-tone silver rule(s) active vs 2 supporting: Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6); Shukla Paksha of 16 days or Krishna Paksha of 14 days; Retrograde Mercury or Jupiter; Mercury & Jupiter both retrograde (even in different signs); Retrograde Mercury goes combust; Venus-Mars or Sun-Mars together in any sign; Moon darshan on Friday or Saturday; Rahu does Vedha of Pushya",
      "Moon (silver) supported by Jupiter at the start: Jupiter aspects Moon (5th)",
      "Gold over the same dates: +2.02% (moved the same way as silver: a metals-wide move)"
     ]
@@ -4187,7 +4357,7 @@
      "Moon-Venus mutual Vedha [Bearish] Thu 20 Nov 2025 00:29 EST",
      "Saturn direct from retrograde [Bearish] Thu 27 Nov 2025 22:52 EST"
     ],
-    "supporting": 5,
+    "supporting": 6,
     "records": [
      "20 Nov: Sun conjunction Mercury in Scorpio",
      "23 Nov: Mercury enters Libra",
@@ -4197,7 +4367,7 @@
      "27 Nov: Saturn stations direct in Pisces"
     ],
     "causes": [
-     "4 opposite-tone silver rule(s) active vs 5 supporting: Venus in Leo or Libra; Venus alone in Leo or Libra; Moon-Venus mutual Vedha; Saturn direct from retrograde",
+     "4 opposite-tone silver rule(s) active vs 6 supporting: Venus in Leo or Libra; Venus alone in Leo or Libra; Moon-Venus mutual Vedha; Saturn direct from retrograde",
      "Gold over the same dates: +4.80% (moved the same way as silver: a metals-wide move)",
      "Station(s) inside the interval: 27 Nov: Saturn stations direct in Pisces"
     ]
@@ -4284,7 +4454,7 @@
      "Moon is Mantri of the year [Bearish] Tue 14 Apr 2026 00:02 EDT",
      "Mercury in Aries or Virgo [Bearish] Wed 29 Apr 2026 21:22 EDT"
     ],
-    "supporting": 22,
+    "supporting": 23,
     "records": [
      "23 Nov: Mercury enters Libra",
      "24 Nov-25 Nov: Mercury combust",
@@ -4313,7 +4483,7 @@
      "16 Jan: Mercury enters Capricorn"
     ],
     "causes": [
-     "7 opposite-tone silver rule(s) active vs 22 supporting: Venus in Leo or Libra; Venus alone in Leo or Libra; Saturn direct from retrograde; Moon-Venus mutual Vedha; Sun in Virgo, Libra or Pisces with or aspected by benefics; Moon is Mantri of the year; Mercury in Aries or Virgo",
+     "7 opposite-tone silver rule(s) active vs 23 supporting: Venus in Leo or Libra; Venus alone in Leo or Libra; Saturn direct from retrograde; Moon-Venus mutual Vedha; Sun in Virgo, Libra or Pisces with or aspected by benefics; Moon is Mantri of the year; Mercury in Aries or Virgo",
      "Moon (silver) under Saturn/Rahu/Ketu contact at the start: Saturn aspects Moon (10th)",
      "Gold over the same dates: +0.67% (moved the same way as silver: a metals-wide move)",
      "Station(s) inside the interval: 27 Nov: Saturn stations direct in Pisces; 29 Nov: Mercury stations direct in Libra; 26 Feb: Mercury stations retrograde in Aquarius; 10 Mar: Jupiter stations direct in Gemini; 20 Mar: Mercury stations direct in Aquarius; 29 Jun: Mercury stations retrograde in Cancer; 23 Jul: Mercury stations direct in Gemini; 26 Jul: Saturn stations retrograde in Pisces",
@@ -4399,7 +4569,7 @@
      "Venus in Leo or Libra [Bearish] Sun 02 Nov 2025 02:45 EST",
      "Saturn direct from retrograde [Bearish] Thu 27 Nov 2025 22:52 EST"
     ],
-    "supporting": 5,
+    "supporting": 6,
     "records": [
      "24 Nov-25 Nov: Mercury combust",
      "24 Nov: Mercury conjunction Venus in Libra",
@@ -4409,7 +4579,7 @@
      "05 Dec: Jupiter enters Gemini"
     ],
     "causes": [
-     "2 opposite-tone silver rule(s) active vs 5 supporting: Venus in Leo or Libra; Saturn direct from retrograde",
+     "2 opposite-tone silver rule(s) active vs 6 supporting: Venus in Leo or Libra; Saturn direct from retrograde",
      "Gold over the same dates: +2.49% (moved the same way as silver: a metals-wide move)",
      "Station(s) inside the interval: 27 Nov: Saturn stations direct in Pisces; 29 Nov: Mercury stations direct in Libra",
      "Ingress(es): 05 Dec: Jupiter enters Gemini"
@@ -4533,6 +4703,7 @@
     "worst_day": "Fri 28 Nov 2025 (+6.67 %)",
     "sky_worst": "Moon in Aquarius Shatabhisha (Shukla); Mars aspects Moon (4th), Rahu with Moon; Jupiter Cancer Punarvasu R",
     "opposite": [
+     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish] Sat 16 Aug 2025 16:22 EDT",
      "Retrograde Mercury or Jupiter [Bullish] Sat 29 Nov 2025 12:38 EST",
      "Mercury & Jupiter both retrograde (even in different signs) [Bullish] Tue 11 Nov 2025 11:41 EST",
      "Moon darshan on Friday or Saturday [Bullish] 2025-11-21",
@@ -4547,7 +4718,7 @@
      "29 Nov: Mercury stations direct in Libra"
     ],
     "causes": [
-     "6 opposite-tone silver rule(s) active vs 0 supporting: Retrograde Mercury or Jupiter; Mercury & Jupiter both retrograde (even in different signs); Moon darshan on Friday or Saturday; Rahu does Vedha of Pushya; Venus-Mars or Sun-Mars together in any sign; Mercury turns direct from retrograde",
+     "7 opposite-tone silver rule(s) active vs 0 supporting: Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6); Retrograde Mercury or Jupiter; Mercury & Jupiter both retrograde (even in different signs); Moon darshan on Friday or Saturday; Rahu does Vedha of Pushya; Venus-Mars or Sun-Mars together in any sign; Mercury turns direct from retrograde",
      "Gold over the same dates: +1.87% (moved the same way as silver: a metals-wide move)",
      "Station(s) inside the interval: 27 Nov: Saturn stations direct in Pisces; 29 Nov: Mercury stations direct in Libra"
     ]
@@ -4628,7 +4799,7 @@
      "Saturn direct from retrograde [Bearish] Thu 27 Nov 2025 22:52 EST",
      "Moon-Venus mutual Vedha [Bearish] Sun 01 Feb 2026 13:28 EST"
     ],
-    "supporting": 12,
+    "supporting": 13,
     "records": [
      "27 Nov: Saturn stations direct in Pisces",
      "29 Nov: Mercury stations direct in Libra",
@@ -4657,7 +4828,7 @@
      "31 Jan-01 Feb: Venus combust"
     ],
     "causes": [
-     "2 opposite-tone silver rule(s) active vs 12 supporting: Saturn direct from retrograde; Moon-Venus mutual Vedha",
+     "2 opposite-tone silver rule(s) active vs 13 supporting: Saturn direct from retrograde; Moon-Venus mutual Vedha",
      "Moon (silver) under Saturn/Rahu/Ketu contact at the start: Saturn with Moon",
      "Gold over the same dates: +22.83% (moved the same way as silver: a metals-wide move)",
      "Station(s) inside the interval: 27 Nov: Saturn stations direct in Pisces; 29 Nov: Mercury stations direct in Libra",
@@ -4742,14 +4913,14 @@
     "opposite": [
      "Saturn direct from retrograde [Bearish] Thu 27 Nov 2025 22:52 EST"
     ],
-    "supporting": 4,
+    "supporting": 5,
     "records": [
      "27 Nov: Saturn stations direct in Pisces",
      "29 Nov: Mercury stations direct in Libra",
      "05 Dec: Jupiter enters Gemini"
     ],
     "causes": [
-     "1 opposite-tone silver rule(s) active vs 4 supporting: Saturn direct from retrograde",
+     "1 opposite-tone silver rule(s) active vs 5 supporting: Saturn direct from retrograde",
      "Moon (silver) under Saturn/Rahu/Ketu contact at the start: Saturn with Moon",
      "Gold over the same dates: -0.28% (did not move with silver)",
      "Station(s) inside the interval: 27 Nov: Saturn stations direct in Pisces; 29 Nov: Mercury stations direct in Libra",
@@ -4831,7 +5002,7 @@
     "worst_day": "Thu 18 Dec 2025 (-2.48 %)",
     "sky_worst": "Moon in Scorpio Jyeshtha (Krishna); Mercury with Moon, Venus with Moon; Jupiter Gemini Punarvasu R - Mars aspects Jupiter",
     "opposite": [],
-    "supporting": 2,
+    "supporting": 3,
     "records": [
      "15 Dec: Sun enters Sagittarius"
     ],
@@ -4920,7 +5091,7 @@
     "opposite": [
      "Moon-Venus mutual Vedha [Bearish] Sat 27 Dec 2025 22:13 EST"
     ],
-    "supporting": 2,
+    "supporting": 3,
     "records": [
      "19 Dec: Venus enters Sagittarius",
      "28 Dec: Mercury enters Sagittarius",
@@ -4933,7 +5104,7 @@
      "10 Jan: Mars opposition Jupiter in Sagittarius"
     ],
     "causes": [
-     "1 opposite-tone silver rule(s) active vs 2 supporting: Moon-Venus mutual Vedha",
+     "1 opposite-tone silver rule(s) active vs 3 supporting: Moon-Venus mutual Vedha",
      "Moon (silver) under Saturn/Rahu/Ketu contact at the start: Saturn aspects Moon (10th)",
      "Gold over the same dates: +5.18% (moved the same way as silver: a metals-wide move)"
     ]
@@ -5102,7 +5273,7 @@
     "opposite": [
      "Moon-Venus mutual Vedha [Bearish] Tue 20 Jan 2026 16:20 EST"
     ],
-    "supporting": 3,
+    "supporting": 4,
     "records": [
      "12 Jan: Venus enters Capricorn",
      "14 Jan: Mercury opposition Jupiter in Sagittarius",
@@ -5112,7 +5283,7 @@
      "18 Jan: Mercury conjunction Mars in Capricorn"
     ],
     "causes": [
-     "1 opposite-tone silver rule(s) active vs 3 supporting: Moon-Venus mutual Vedha",
+     "1 opposite-tone silver rule(s) active vs 4 supporting: Moon-Venus mutual Vedha",
      "Gold over the same dates: +3.27% (moved the same way as silver: a metals-wide move)",
      "Ingress(es): 14 Jan: Sun enters Capricorn; 15 Jan: Mars enters Capricorn"
     ]
@@ -10044,6 +10215,7 @@
      "Rahu does Vedha of Pushya [Bullish] Sun 23 Nov 2025 02:04 EST",
      "Shukla Paksha of 16 days or Krishna Paksha of 14 days [Bullish] Mon 09 Nov 2026 02:02 EST",
      "Solar eclipse on a Wednesday [Bullish] Wed 12 Aug 2026 11:34 EDT",
+     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish] Sun 16 Aug 2026 22:29 EDT",
      "Only Moon and Mercury alone in a sign [Bullish] Fri 11 Sep 2026 09:38 EDT",
      "Moon darshan on Friday or Saturday [Bullish] 2026-09-12",
      "Only Sun-Mercury or Moon-Mercury alone in a sign [Bullish] Thu 05 Nov 2026 14:34 EST",
@@ -10082,7 +10254,7 @@
      "23 Oct: Sun conjunction Venus in Libra"
     ],
     "causes": [
-     "11 opposite-tone silver rule(s) active vs 8 supporting: Rahu does Vedha of Pushya; Shukla Paksha of 16 days or Krishna Paksha of 14 days; Solar eclipse on a Wednesday; Only Moon and Mercury alone in a sign; Moon darshan on Friday or Saturday; Only Sun-Mercury or Moon-Mercury alone in a sign; Venus combust in West; Retrograde Mercury or Jupiter",
+     "12 opposite-tone silver rule(s) active vs 8 supporting: Rahu does Vedha of Pushya; Shukla Paksha of 16 days or Krishna Paksha of 14 days; Solar eclipse on a Wednesday; Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6); Only Moon and Mercury alone in a sign; Moon darshan on Friday or Saturday; Only Sun-Mercury or Moon-Mercury alone in a sign; Venus combust in West",
      "Gold over the same dates: -13.83% (moved the same way as silver: a metals-wide move)",
      "Station(s) inside the interval: 03 Oct: Venus stations retrograde in Libra; 24 Oct: Mercury stations retrograde in Libra; 13 Nov: Mercury stations direct in Libra; 13 Nov: Venus stations direct in Virgo",
      "Eclipse inside the interval: 12 Aug: solar eclipse in Cancer (Ashlesha); 27 Aug: lunar eclipse in Aquarius (Shatabhisha)",
@@ -10261,7 +10433,7 @@
     "opposite": [
      "Rahu in Dhanishta (market and bullion risk) [Bearish] Sat 01 Aug 2026 17:43 EDT"
     ],
-    "supporting": 1,
+    "supporting": 2,
     "records": [
      "12 Aug: solar eclipse in Cancer (Ashlesha)",
      "15 Aug: Mercury conjunction Jupiter in Cancer",
@@ -10269,10 +10441,135 @@
      "17 Aug-18 Aug: Mercury combust"
     ],
     "causes": [
-     "1 opposite-tone silver rule(s) active vs 1 supporting: Rahu in Dhanishta (market and bullion risk)",
+     "1 opposite-tone silver rule(s) active vs 2 supporting: Rahu in Dhanishta (market and bullion risk)",
      "Gold over the same dates: -0.46% (did not move with silver)",
      "Eclipse inside the interval: 12 Aug: solar eclipse in Cancer (Ashlesha)",
      "Ingress(es): 16 Aug: Sun enters Leo"
+    ]
+   }
+  },
+  {
+   "rule_id": "bs_42_06_sun_leo_store_gold_silver",
+   "title": "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6)",
+   "refs": [
+    "Brihat Samhita, tr. P.S. Sastri 1946, Ch.42 sl.6 (PDF p.332)"
+   ],
+   "tone": "Bullish",
+   "verdict": "Profit on gold and silver (Bullish): 'If one stores up gold, gems, skins, armours, weapons, pearls and silver when the Sun is in Simha, and sell them in the 5th month, he will get profit and sustain loss otherwise'",
+   "rule": "Buy when the Sun enters Simha; sell in the 5th solar month (Sun in Dhanus).",
+   "start": "2026-08-16T22:29:03-04:00",
+   "end": "2027-01-14T10:40:46-05:00",
+   "day": null,
+   "open_start": false,
+   "open_end": false,
+   "bodies": [
+    "Sun"
+   ],
+   "facts": {
+    "buy": "Sun enters Simha",
+    "5th_month_begins_utc": "2026-12-16 04:55:18+00:00",
+    "sell_by": "Sun enters Makara (5th month ends)"
+   },
+   "effect": "Sell in the 5th month (Sun in Sagittarius, about mid-December to mid-January)",
+   "entry_date": "2026-08-14",
+   "entry_close": 64.98799896240234,
+   "fwd": {
+    "1": 1.74,
+    "3": 1.15,
+    "10": 3.09,
+    "5": 6.89
+   },
+   "exit_date": "2026-11-20",
+   "exit_close": 41.03499984741211,
+   "horizon": "window, 69 trading days",
+   "n_days": 69,
+   "max_up": 6.89,
+   "max_dn": -36.86,
+   "mode": "window",
+   "ret": -36.86,
+   "still_open": true,
+   "year": 0,
+   "outcome": "FAILED",
+   "gold_ret": -20.24,
+   "flags": {
+    "Opposite-tone rules outnumbered supporting ones": false,
+    "Saturn / Rahu / Ketu on the Moon at the start": true,
+    "Jupiter on the Moon at the start": false,
+    "Waxing Moon (Shukla) at the start": true,
+    "Jupiter sharing a sign with Rahu / Ketu / Mars / Saturn": false,
+    "Mercury or Venus retrograde at the start": false,
+    "Gold moved against the rule too (>0.5%)": true,
+    "A planet stations inside the interval": true,
+    "Eclipse inside the interval": true
+   },
+   "analysis": {
+    "sky_at_start": [
+     "Sun Leo 0\u00b0 Magha",
+     "Mercury Cancer 19\u00b0 Ashlesha",
+     "Venus Virgo 16\u00b0 Hasta",
+     "Mars Gemini 10\u00b0 Ardra",
+     "Jupiter Cancer 16\u00b0 Pushya",
+     "Saturn Pisces 20\u00b0 Revati R",
+     "Rahu Aquarius 6\u00b0 Dhanishta",
+     "Ketu Leo 6\u00b0 Magha",
+     "Moon Virgo 26\u00b0 Chitra"
+    ],
+    "sun": "Moon in Virgo Chitra (Shukla)",
+    "sun_contacts": [
+     "Venus with Moon",
+     "Mars aspects Moon (4th)",
+     "Saturn aspects Moon (7th)"
+    ],
+    "jupiter": "Jupiter Cancer Pushya",
+    "paksha": "Shukla",
+    "worst_day": "Fri 20 Nov 2026 (-7.41 %)",
+    "sky_worst": "Moon in Pisces Uttara Bhadrapada (Shukla); Venus aspects Moon (7th), Mars aspects Moon (8th), Saturn with Moon; Jupiter Leo Magha - Rahu aspects Jupiter, Ketu with Jupiter, Mars with Jupiter",
+    "opposite": [
+     "Rahu in Dhanishta (market and bullion risk) [Bearish] Sat 01 Aug 2026 17:43 EDT",
+     "Moon-Venus mutual Vedha [Bearish] Wed 18 Nov 2026 19:40 EST",
+     "Venus alone in Leo or Libra [Bearish] Wed 02 Sep 2026 04:15 EDT",
+     "Venus in Leo or Libra [Bearish] Wed 02 Sep 2026 04:15 EDT",
+     "Mercury alone in Aries or Virgo [Bearish] Mon 07 Sep 2026 04:03 EDT",
+     "Mercury in Aries or Virgo [Bearish] Mon 07 Sep 2026 04:03 EDT",
+     "Sun in Virgo, Libra or Pisces with or aspected by benefics [Bearish] Thu 05 Nov 2026 14:34 EST",
+     "Mars Vargottam in Cancer [Bearish] Fri 18 Sep 2026 07:06 EDT",
+     "Mars in 4th pada of Ashlesha [Bearish] Thu 05 Nov 2026 09:18 EST"
+    ],
+    "supporting": 10,
+    "records": [
+     "15 Aug: Mercury conjunction Jupiter in Cancer",
+     "16 Aug: Sun enters Leo",
+     "17 Aug-18 Aug: Mercury combust",
+     "21 Aug: Venus opposition Saturn in Virgo",
+     "22 Aug: Mercury enters Leo",
+     "27 Aug: Sun conjunction Mercury in Leo",
+     "27 Aug: lunar eclipse in Aquarius (Shatabhisha)",
+     "02 Sep: Venus enters Libra",
+     "07 Sep: Mercury enters Virgo",
+     "13 Sep-14 Sep: Mercury combust",
+     "16 Sep: Sun enters Virgo",
+     "18 Sep: Mercury opposition Saturn in Virgo",
+     "18 Sep: Mars enters Cancer",
+     "26 Sep: Mercury enters Libra",
+     "03 Oct: Venus stations retrograde in Libra",
+     "04 Oct: Sun opposition Saturn in Virgo",
+     "06 Oct: Mercury conjunction Venus in Libra",
+     "14 Oct-15 Oct: Venus combust",
+     "17 Oct: Sun enters Libra",
+     "23 Oct: Sun conjunction Venus in Libra",
+     "24 Oct: Mercury stations retrograde in Libra",
+     "26 Oct-27 Oct: Venus combust",
+     "27 Oct-28 Oct: Mercury combust",
+     "31 Oct: Jupiter enters Leo",
+     "04 Nov: Sun conjunction Mercury in Libra"
+    ],
+    "causes": [
+     "9 opposite-tone silver rule(s) active vs 10 supporting: Rahu in Dhanishta (market and bullion risk); Moon-Venus mutual Vedha; Venus alone in Leo or Libra; Venus in Leo or Libra; Mercury alone in Aries or Virgo; Mercury in Aries or Virgo; Sun in Virgo, Libra or Pisces with or aspected by benefics; Mars Vargottam in Cancer",
+     "Moon (silver) under Saturn/Rahu/Ketu contact at the start: Saturn aspects Moon (7th)",
+     "Gold over the same dates: -20.24% (moved the same way as silver: a metals-wide move)",
+     "Station(s) inside the interval: 03 Oct: Venus stations retrograde in Libra; 24 Oct: Mercury stations retrograde in Libra; 13 Nov: Mercury stations direct in Libra; 13 Nov: Venus stations direct in Virgo",
+     "Eclipse inside the interval: 27 Aug: lunar eclipse in Aquarius (Shatabhisha)",
+     "Ingress(es): 16 Aug: Sun enters Leo; 16 Sep: Sun enters Virgo; 18 Sep: Mars enters Cancer; 17 Oct: Sun enters Libra; 31 Oct: Jupiter enters Leo; 12 Nov: Mars enters Leo; 16 Nov: Sun enters Scorpio"
     ]
    }
   },
@@ -10404,7 +10701,7 @@
      "Mercury alone in Aries or Virgo [Bearish] Mon 07 Sep 2026 04:03 EDT",
      "Mercury in Aries or Virgo [Bearish] Mon 07 Sep 2026 04:03 EDT"
     ],
-    "supporting": 0,
+    "supporting": 1,
     "records": [
      "27 Aug: Sun conjunction Mercury in Leo",
      "27 Aug: lunar eclipse in Aquarius (Shatabhisha)",
@@ -10412,7 +10709,7 @@
      "07 Sep: Mercury enters Virgo"
     ],
     "causes": [
-     "6 opposite-tone silver rule(s) active vs 0 supporting: Rahu in Dhanishta (market and bullion risk); Moon-Venus mutual Vedha; Venus alone in Leo or Libra; Venus in Leo or Libra; Mercury alone in Aries or Virgo; Mercury in Aries or Virgo",
+     "6 opposite-tone silver rule(s) active vs 1 supporting: Rahu in Dhanishta (market and bullion risk); Moon-Venus mutual Vedha; Venus alone in Leo or Libra; Venus in Leo or Libra; Mercury alone in Aries or Virgo; Mercury in Aries or Virgo",
      "Moon (silver) under Saturn/Rahu/Ketu contact at the start: Rahu with Moon",
      "Gold over the same dates: -5.50% (moved the same way as silver: a metals-wide move)",
      "Eclipse inside the interval: 27 Aug: lunar eclipse in Aquarius (Shatabhisha)"
@@ -10497,6 +10794,7 @@
     "worst_day": "Thu 03 Sep 2026 (+3.48 %)",
     "sky_worst": "Moon in Taurus Krittika (Krishna); Saturn aspects Moon (3rd); Jupiter Cancer Ashlesha",
     "opposite": [
+     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish] Sun 16 Aug 2026 22:29 EDT",
      "Shukla Paksha of 16 days or Krishna Paksha of 14 days [Bullish] Fri 28 Aug 2026 00:18 EDT"
     ],
     "supporting": 3,
@@ -10505,7 +10803,7 @@
      "02 Sep: Venus enters Libra"
     ],
     "causes": [
-     "1 opposite-tone silver rule(s) active vs 3 supporting: Shukla Paksha of 16 days or Krishna Paksha of 14 days",
+     "2 opposite-tone silver rule(s) active vs 3 supporting: Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6); Shukla Paksha of 16 days or Krishna Paksha of 14 days",
      "Gold over the same dates: -1.18% (moved the same way as silver: a metals-wide move)",
      "Eclipse inside the interval: 27 Aug: lunar eclipse in Aquarius (Shatabhisha)"
     ]
@@ -10585,6 +10883,7 @@
     "worst_day": "Thu 03 Sep 2026 (+3.48 %)",
     "sky_worst": "Moon in Taurus Krittika (Krishna); Saturn aspects Moon (3rd); Jupiter Cancer Ashlesha",
     "opposite": [
+     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish] Sun 16 Aug 2026 22:29 EDT",
      "Shukla Paksha of 16 days or Krishna Paksha of 14 days [Bullish] Thu 10 Sep 2026 23:27 EDT",
      "Only Moon and Mercury alone in a sign [Bullish] Fri 11 Sep 2026 09:38 EDT",
      "Moon darshan on Friday or Saturday [Bullish] 2026-09-12",
@@ -10600,7 +10899,7 @@
      "18 Sep: Mars enters Cancer"
     ],
     "causes": [
-     "4 opposite-tone silver rule(s) active vs 7 supporting: Shukla Paksha of 16 days or Krishna Paksha of 14 days; Only Moon and Mercury alone in a sign; Moon darshan on Friday or Saturday; Only Sun-Mercury or Moon-Mercury alone in a sign",
+     "5 opposite-tone silver rule(s) active vs 7 supporting: Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6); Shukla Paksha of 16 days or Krishna Paksha of 14 days; Only Moon and Mercury alone in a sign; Moon darshan on Friday or Saturday; Only Sun-Mercury or Moon-Mercury alone in a sign",
      "Gold over the same dates: -1.71% (moved the same way as silver: a metals-wide move)",
      "Ingress(es): 16 Sep: Sun enters Virgo; 18 Sep: Mars enters Cancer"
     ]
@@ -10680,6 +10979,7 @@
     "worst_day": "Wed 04 Nov 2026 (+5.11 %)",
     "sky_worst": "Moon in Leo Purva Phalguni (Krishna); Jupiter with Moon, Rahu aspects Moon (7th), Ketu with Moon; Jupiter Leo Magha - Rahu aspects Jupiter, Ketu with Jupiter",
     "opposite": [
+     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish] Sun 16 Aug 2026 22:29 EDT",
      "Shukla Paksha of 16 days or Krishna Paksha of 14 days [Bullish] Mon 26 Oct 2026 00:11 EDT",
      "Only Moon and Mercury alone in a sign [Bullish] Fri 11 Sep 2026 09:38 EDT",
      "Moon darshan on Friday or Saturday [Bullish] 2026-09-12",
@@ -10711,7 +11011,7 @@
      "04 Nov: Sun conjunction Mercury in Libra"
     ],
     "causes": [
-     "8 opposite-tone silver rule(s) active vs 7 supporting: Shukla Paksha of 16 days or Krishna Paksha of 14 days; Only Moon and Mercury alone in a sign; Moon darshan on Friday or Saturday; Only Sun-Mercury or Moon-Mercury alone in a sign; Venus combust in West; Retrograde Mercury or Jupiter; Mercury combust and retrograde does mutual Vedha with Moon; Retrograde Mercury goes combust",
+     "9 opposite-tone silver rule(s) active vs 7 supporting: Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6); Shukla Paksha of 16 days or Krishna Paksha of 14 days; Only Moon and Mercury alone in a sign; Moon darshan on Friday or Saturday; Only Sun-Mercury or Moon-Mercury alone in a sign; Venus combust in West; Retrograde Mercury or Jupiter; Mercury combust and retrograde does mutual Vedha with Moon",
      "Gold over the same dates: -7.36% (moved the same way as silver: a metals-wide move)",
      "Station(s) inside the interval: 03 Oct: Venus stations retrograde in Libra; 24 Oct: Mercury stations retrograde in Libra",
      "Ingress(es): 16 Sep: Sun enters Virgo; 18 Sep: Mars enters Cancer; 17 Oct: Sun enters Libra; 31 Oct: Jupiter enters Leo"
@@ -10792,6 +11092,7 @@
     "worst_day": "Wed 09 Sep 2026 (+2.48 %)",
     "sky_worst": "Moon in Leo Magha (Krishna); Sun with Moon, Rahu aspects Moon (7th), Ketu with Moon; Jupiter Cancer Ashlesha",
     "opposite": [
+     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish] Sun 16 Aug 2026 22:29 EDT",
      "Shukla Paksha of 16 days or Krishna Paksha of 14 days [Bullish] Thu 10 Sep 2026 23:27 EDT",
      "Only Moon and Mercury alone in a sign [Bullish] Fri 11 Sep 2026 09:38 EDT",
      "Moon darshan on Friday or Saturday [Bullish] 2026-09-12"
@@ -10802,7 +11103,7 @@
      "13 Sep-14 Sep: Mercury combust"
     ],
     "causes": [
-     "3 opposite-tone silver rule(s) active vs 4 supporting: Shukla Paksha of 16 days or Krishna Paksha of 14 days; Only Moon and Mercury alone in a sign; Moon darshan on Friday or Saturday",
+     "4 opposite-tone silver rule(s) active vs 4 supporting: Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6); Shukla Paksha of 16 days or Krishna Paksha of 14 days; Only Moon and Mercury alone in a sign; Moon darshan on Friday or Saturday",
      "Moon (silver) supported by Jupiter at the start: Jupiter with Moon",
      "Gold over the same dates: -1.99% (moved the same way as silver: a metals-wide move)"
     ]
@@ -10882,6 +11183,7 @@
     "worst_day": "Wed 09 Sep 2026 (+2.48 %)",
     "sky_worst": "Moon in Leo Magha (Krishna); Sun with Moon, Rahu aspects Moon (7th), Ketu with Moon; Jupiter Cancer Ashlesha",
     "opposite": [
+     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish] Sun 16 Aug 2026 22:29 EDT",
      "Shukla Paksha of 16 days or Krishna Paksha of 14 days [Bullish] Thu 10 Sep 2026 23:27 EDT",
      "Only Moon and Mercury alone in a sign [Bullish] Fri 11 Sep 2026 09:38 EDT",
      "Moon darshan on Friday or Saturday [Bullish] 2026-09-12",
@@ -10896,7 +11198,7 @@
      "18 Sep: Mars enters Cancer"
     ],
     "causes": [
-     "4 opposite-tone silver rule(s) active vs 7 supporting: Shukla Paksha of 16 days or Krishna Paksha of 14 days; Only Moon and Mercury alone in a sign; Moon darshan on Friday or Saturday; Only Sun-Mercury or Moon-Mercury alone in a sign",
+     "5 opposite-tone silver rule(s) active vs 7 supporting: Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6); Shukla Paksha of 16 days or Krishna Paksha of 14 days; Only Moon and Mercury alone in a sign; Moon darshan on Friday or Saturday; Only Sun-Mercury or Moon-Mercury alone in a sign",
      "Moon (silver) supported by Jupiter at the start: Jupiter with Moon",
      "Gold over the same dates: -3.47% (moved the same way as silver: a metals-wide move)",
      "Ingress(es): 16 Sep: Sun enters Virgo; 18 Sep: Mars enters Cancer"
@@ -11030,13 +11332,13 @@
      "Mercury in Aries or Virgo [Bearish] Mon 07 Sep 2026 04:03 EDT",
      "Sun in Virgo, Libra or Pisces with or aspected by benefics [Bearish] Wed 16 Sep 2026 22:22 EDT"
     ],
-    "supporting": 3,
+    "supporting": 4,
     "records": [
      "13 Sep-14 Sep: Mercury combust",
      "16 Sep: Sun enters Virgo"
     ],
     "causes": [
-     "6 opposite-tone silver rule(s) active vs 3 supporting: Rahu in Dhanishta (market and bullion risk); Venus alone in Leo or Libra; Venus in Leo or Libra; Mercury alone in Aries or Virgo; Mercury in Aries or Virgo; Sun in Virgo, Libra or Pisces with or aspected by benefics",
+     "6 opposite-tone silver rule(s) active vs 4 supporting: Rahu in Dhanishta (market and bullion risk); Venus alone in Leo or Libra; Venus in Leo or Libra; Mercury alone in Aries or Virgo; Mercury in Aries or Virgo; Sun in Virgo, Libra or Pisces with or aspected by benefics",
      "Moon (silver) under Saturn/Rahu/Ketu contact at the start: Rahu aspects Moon (7th), Ketu with Moon",
      "Gold over the same dates: -0.17% (did not move with silver)",
      "Ingress(es): 16 Sep: Sun enters Virgo"
@@ -11132,7 +11434,7 @@
      "Sun in Virgo, Libra or Pisces with or aspected by benefics [Bearish] Wed 16 Sep 2026 22:22 EDT",
      "Mars Vargottam in Cancer [Bearish] Fri 18 Sep 2026 07:06 EDT"
     ],
-    "supporting": 3,
+    "supporting": 4,
     "records": [
      "13 Sep-14 Sep: Mercury combust",
      "16 Sep: Sun enters Virgo",
@@ -11140,7 +11442,7 @@
      "18 Sep: Mars enters Cancer"
     ],
     "causes": [
-     "7 opposite-tone silver rule(s) active vs 3 supporting: Rahu in Dhanishta (market and bullion risk); Venus alone in Leo or Libra; Venus in Leo or Libra; Mercury alone in Aries or Virgo; Mercury in Aries or Virgo; Sun in Virgo, Libra or Pisces with or aspected by benefics; Mars Vargottam in Cancer",
+     "7 opposite-tone silver rule(s) active vs 4 supporting: Rahu in Dhanishta (market and bullion risk); Venus alone in Leo or Libra; Venus in Leo or Libra; Mercury alone in Aries or Virgo; Mercury in Aries or Virgo; Sun in Virgo, Libra or Pisces with or aspected by benefics; Mars Vargottam in Cancer",
      "Moon (silver) under Saturn/Rahu/Ketu contact at the start: Saturn aspects Moon (7th)",
      "Gold over the same dates: +0.36% (did not move with silver)",
      "Ingress(es): 16 Sep: Sun enters Virgo; 18 Sep: Mars enters Cancer"
@@ -11348,6 +11650,7 @@
     "worst_day": "Fri 18 Sep 2026 (+1.66 %)",
     "sky_worst": "Moon in Scorpio Jyeshtha (Shukla); Jupiter aspects Moon (5th); Jupiter Cancer Ashlesha - Mars with Jupiter",
     "opposite": [
+     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish] Sun 16 Aug 2026 22:29 EDT",
      "Shukla Paksha of 16 days or Krishna Paksha of 14 days [Bullish] Thu 10 Sep 2026 23:27 EDT",
      "Moon darshan on Friday or Saturday [Bullish] 2026-09-12",
      "Only Sun-Mercury or Moon-Mercury alone in a sign [Bullish] Wed 16 Sep 2026 22:22 EDT"
@@ -11359,7 +11662,7 @@
      "18 Sep: Mars enters Cancer"
     ],
     "causes": [
-     "3 opposite-tone silver rule(s) active vs 5 supporting: Shukla Paksha of 16 days or Krishna Paksha of 14 days; Moon darshan on Friday or Saturday; Only Sun-Mercury or Moon-Mercury alone in a sign",
+     "4 opposite-tone silver rule(s) active vs 5 supporting: Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6); Shukla Paksha of 16 days or Krishna Paksha of 14 days; Moon darshan on Friday or Saturday; Only Sun-Mercury or Moon-Mercury alone in a sign",
      "Moon (silver) supported by Jupiter at the start: Jupiter aspects Moon (5th)",
      "Gold over the same dates: -1.85% (moved the same way as silver: a metals-wide move)",
      "Ingress(es): 16 Sep: Sun enters Virgo; 18 Sep: Mars enters Cancer"
@@ -11443,6 +11746,7 @@
     "worst_day": "Fri 25 Sep 2026 (+1.24 %)",
     "sky_worst": "Moon in Aquarius Purva Bhadrapada (Shukla); Mars aspects Moon (8th), Rahu with Moon; Jupiter Cancer Ashlesha - Mars with Jupiter",
     "opposite": [
+     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish] Sun 16 Aug 2026 22:29 EDT",
      "Shukla Paksha of 16 days or Krishna Paksha of 14 days [Bullish] Sat 26 Sep 2026 12:49 EDT",
      "Only Sun-Mercury or Moon-Mercury alone in a sign [Bullish] Wed 16 Sep 2026 22:22 EDT"
     ],
@@ -11451,7 +11755,7 @@
      "26 Sep: Mercury enters Libra"
     ],
     "causes": [
-     "2 opposite-tone silver rule(s) active vs 6 supporting: Shukla Paksha of 16 days or Krishna Paksha of 14 days; Only Sun-Mercury or Moon-Mercury alone in a sign",
+     "3 opposite-tone silver rule(s) active vs 6 supporting: Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6); Shukla Paksha of 16 days or Krishna Paksha of 14 days; Only Sun-Mercury or Moon-Mercury alone in a sign",
      "Gold over the same dates: -3.05% (moved the same way as silver: a metals-wide move)"
     ]
    }
@@ -11540,7 +11844,7 @@
      "Mercury in Aries or Virgo [Bearish] Mon 07 Sep 2026 04:03 EDT",
      "Sun in Virgo, Libra or Pisces with or aspected by benefics [Bearish] Wed 16 Sep 2026 22:22 EDT"
     ],
-    "supporting": 1,
+    "supporting": 2,
     "records": [
      "26 Sep: Mercury enters Libra",
      "03 Oct: Venus stations retrograde in Libra",
@@ -11548,7 +11852,7 @@
      "06 Oct: Mercury conjunction Venus in Libra"
     ],
     "causes": [
-     "5 opposite-tone silver rule(s) active vs 1 supporting: Rahu in Dhanishta (market and bullion risk); Venus alone in Leo or Libra; Venus in Leo or Libra; Mercury in Aries or Virgo; Sun in Virgo, Libra or Pisces with or aspected by benefics",
+     "5 opposite-tone silver rule(s) active vs 2 supporting: Rahu in Dhanishta (market and bullion risk); Venus alone in Leo or Libra; Venus in Leo or Libra; Mercury in Aries or Virgo; Sun in Virgo, Libra or Pisces with or aspected by benefics",
      "Moon (silver) under Saturn/Rahu/Ketu contact at the start: Saturn with Moon",
      "Jupiter in Cancer with Mars",
      "Gold over the same dates: -2.43% (moved the same way as silver: a metals-wide move)",
@@ -11644,13 +11948,13 @@
      "Venus in Leo or Libra [Bearish] Wed 02 Sep 2026 04:15 EDT",
      "Sun in Virgo, Libra or Pisces with or aspected by benefics [Bearish] Sat 17 Oct 2026 10:22 EDT"
     ],
-    "supporting": 0,
+    "supporting": 1,
     "records": [
      "14 Oct-15 Oct: Venus combust",
      "17 Oct: Sun enters Libra"
     ],
     "causes": [
-     "3 opposite-tone silver rule(s) active vs 0 supporting: Rahu in Dhanishta (market and bullion risk); Venus in Leo or Libra; Sun in Virgo, Libra or Pisces with or aspected by benefics",
+     "3 opposite-tone silver rule(s) active vs 1 supporting: Rahu in Dhanishta (market and bullion risk); Venus in Leo or Libra; Sun in Virgo, Libra or Pisces with or aspected by benefics",
      "Jupiter in Cancer with Mars",
      "Gold over the same dates: -4.06% (moved the same way as silver: a metals-wide move)",
      "Ingress(es): 17 Oct: Sun enters Libra"
@@ -11774,6 +12078,7 @@
     "worst_day": "Wed 04 Nov 2026 (+5.11 %)",
     "sky_worst": "Moon in Leo Purva Phalguni (Krishna); Jupiter with Moon, Rahu aspects Moon (7th), Ketu with Moon; Jupiter Leo Magha - Rahu aspects Jupiter, Ketu with Jupiter",
     "opposite": [
+     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish] Sun 16 Aug 2026 22:29 EDT",
      "Venus combust in West [Bullish] Wed 14 Oct 2026 14:30 EDT",
      "Retrograde Mercury or Jupiter [Bullish] Sat 24 Oct 2026 03:13 EDT",
      "Shukla Paksha of 16 days or Krishna Paksha of 14 days [Bullish] Mon 26 Oct 2026 00:11 EDT",
@@ -11791,7 +12096,7 @@
      "04 Nov: Sun conjunction Mercury in Libra"
     ],
     "causes": [
-     "5 opposite-tone silver rule(s) active vs 3 supporting: Venus combust in West; Retrograde Mercury or Jupiter; Shukla Paksha of 16 days or Krishna Paksha of 14 days; Mercury combust and retrograde does mutual Vedha with Moon; Retrograde Mercury goes combust",
+     "6 opposite-tone silver rule(s) active vs 3 supporting: Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6); Venus combust in West; Retrograde Mercury or Jupiter; Shukla Paksha of 16 days or Krishna Paksha of 14 days; Mercury combust and retrograde does mutual Vedha with Moon; Retrograde Mercury goes combust",
      "Gold over the same dates: -2.59% (moved the same way as silver: a metals-wide move)",
      "Station(s) inside the interval: 24 Oct: Mercury stations retrograde in Libra",
      "Ingress(es): 17 Oct: Sun enters Libra; 31 Oct: Jupiter enters Leo"
@@ -11876,7 +12181,7 @@
      "Moon-Venus mutual Vedha [Bearish] Thu 29 Oct 2026 01:42 EDT",
      "Mars in 4th pada of Ashlesha [Bearish] Thu 05 Nov 2026 09:18 EST"
     ],
-    "supporting": 5,
+    "supporting": 6,
     "records": [
      "23 Oct: Sun conjunction Venus in Libra",
      "24 Oct: Mercury stations retrograde in Libra",
@@ -11889,7 +12194,7 @@
      "12 Nov: Mars enters Leo"
     ],
     "causes": [
-     "5 opposite-tone silver rule(s) active vs 5 supporting: Rahu in Dhanishta (market and bullion risk); Venus in Leo or Libra; Sun in Virgo, Libra or Pisces with or aspected by benefics; Moon-Venus mutual Vedha; Mars in 4th pada of Ashlesha",
+     "5 opposite-tone silver rule(s) active vs 6 supporting: Rahu in Dhanishta (market and bullion risk); Venus in Leo or Libra; Sun in Virgo, Libra or Pisces with or aspected by benefics; Moon-Venus mutual Vedha; Mars in 4th pada of Ashlesha",
      "Moon (silver) under Saturn/Rahu/Ketu contact at the start: Saturn with Moon",
      "Jupiter in Cancer with Mars",
      "Gold over the same dates: -3.06% (moved the same way as silver: a metals-wide move)",
@@ -11982,7 +12287,7 @@
      "Moon-Venus mutual Vedha [Bearish] Thu 29 Oct 2026 01:42 EDT",
      "Mars in 4th pada of Ashlesha [Bearish] Thu 05 Nov 2026 09:18 EST"
     ],
-    "supporting": 5,
+    "supporting": 6,
     "records": [
      "23 Oct: Sun conjunction Venus in Libra",
      "24 Oct: Mercury stations retrograde in Libra",
@@ -11993,7 +12298,7 @@
      "05 Nov: Venus enters Virgo"
     ],
     "causes": [
-     "5 opposite-tone silver rule(s) active vs 5 supporting: Rahu in Dhanishta (market and bullion risk); Venus in Leo or Libra; Sun in Virgo, Libra or Pisces with or aspected by benefics; Moon-Venus mutual Vedha; Mars in 4th pada of Ashlesha",
+     "5 opposite-tone silver rule(s) active vs 6 supporting: Rahu in Dhanishta (market and bullion risk); Venus in Leo or Libra; Sun in Virgo, Libra or Pisces with or aspected by benefics; Moon-Venus mutual Vedha; Mars in 4th pada of Ashlesha",
      "Jupiter in Cancer with Mars",
      "Gold over the same dates: +1.67% (did not move with silver)",
      "Station(s) inside the interval: 24 Oct: Mercury stations retrograde in Libra",
@@ -12047,7 +12352,7 @@
    "outcome": "FAILED",
    "gold_ret": -1.7,
    "flags": {
-    "Opposite-tone rules outnumbered supporting ones": true,
+    "Opposite-tone rules outnumbered supporting ones": false,
     "Saturn / Rahu / Ketu on the Moon at the start": false,
     "Jupiter on the Moon at the start": false,
     "Waxing Moon (Shukla) at the start": false,
@@ -12085,14 +12390,14 @@
      "Sun in Virgo, Libra or Pisces with or aspected by benefics [Bearish] Sat 17 Oct 2026 10:22 EDT",
      "Moon-Venus mutual Vedha [Bearish] Thu 29 Oct 2026 01:42 EDT"
     ],
-    "supporting": 3,
+    "supporting": 4,
     "records": [
      "26 Oct-27 Oct: Venus combust",
      "27 Oct-28 Oct: Mercury combust",
      "31 Oct: Jupiter enters Leo"
     ],
     "causes": [
-     "4 opposite-tone silver rule(s) active vs 3 supporting: Rahu in Dhanishta (market and bullion risk); Venus in Leo or Libra; Sun in Virgo, Libra or Pisces with or aspected by benefics; Moon-Venus mutual Vedha",
+     "4 opposite-tone silver rule(s) active vs 4 supporting: Rahu in Dhanishta (market and bullion risk); Venus in Leo or Libra; Sun in Virgo, Libra or Pisces with or aspected by benefics; Moon-Venus mutual Vedha",
      "Jupiter in Cancer with Mars",
      "Gold over the same dates: -1.70% (moved the same way as silver: a metals-wide move)",
      "Ingress(es): 31 Oct: Jupiter enters Leo"
@@ -12151,7 +12456,7 @@
    "outcome": "FAILED",
    "gold_ret": 0.9,
    "flags": {
-    "Opposite-tone rules outnumbered supporting ones": true,
+    "Opposite-tone rules outnumbered supporting ones": false,
     "Saturn / Rahu / Ketu on the Moon at the start": true,
     "Jupiter on the Moon at the start": false,
     "Waxing Moon (Shukla) at the start": false,
@@ -12188,7 +12493,7 @@
      "Moon-Venus mutual Vedha [Bearish] Thu 29 Oct 2026 01:42 EDT",
      "Mars in 4th pada of Ashlesha [Bearish] Thu 05 Nov 2026 09:18 EST"
     ],
-    "supporting": 4,
+    "supporting": 5,
     "records": [
      "26 Oct-27 Oct: Venus combust",
      "27 Oct-28 Oct: Mercury combust",
@@ -12197,7 +12502,7 @@
      "05 Nov: Venus enters Virgo"
     ],
     "causes": [
-     "5 opposite-tone silver rule(s) active vs 4 supporting: Rahu in Dhanishta (market and bullion risk); Venus in Leo or Libra; Sun in Virgo, Libra or Pisces with or aspected by benefics; Moon-Venus mutual Vedha; Mars in 4th pada of Ashlesha",
+     "5 opposite-tone silver rule(s) active vs 5 supporting: Rahu in Dhanishta (market and bullion risk); Venus in Leo or Libra; Sun in Virgo, Libra or Pisces with or aspected by benefics; Moon-Venus mutual Vedha; Mars in 4th pada of Ashlesha",
      "Moon (silver) under Saturn/Rahu/Ketu contact at the start: Saturn aspects Moon (3rd)",
      "Jupiter in Cancer with Mars",
      "Gold over the same dates: +0.90% (did not move with silver)",
@@ -12250,7 +12555,7 @@
    "outcome": "WORKED",
    "gold_ret": 0.53,
    "flags": {
-    "Opposite-tone rules outnumbered supporting ones": false,
+    "Opposite-tone rules outnumbered supporting ones": true,
     "Saturn / Rahu / Ketu on the Moon at the start": true,
     "Jupiter on the Moon at the start": false,
     "Waxing Moon (Shukla) at the start": false,
@@ -12281,6 +12586,7 @@
     "worst_day": "Wed 04 Nov 2026 (+5.11 %)",
     "sky_worst": "Moon in Leo Purva Phalguni (Krishna); Jupiter with Moon, Rahu aspects Moon (7th), Ketu with Moon; Jupiter Leo Magha - Rahu aspects Jupiter, Ketu with Jupiter",
     "opposite": [
+     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish] Sun 16 Aug 2026 22:29 EDT",
      "Retrograde Mercury or Jupiter [Bullish] Sat 24 Oct 2026 03:13 EDT",
      "Shukla Paksha of 16 days or Krishna Paksha of 14 days [Bullish] Mon 26 Oct 2026 00:11 EDT",
      "Retrograde Mercury goes combust [Bullish] Tue 27 Oct 2026 14:30 EDT"
@@ -12292,7 +12598,7 @@
      "04 Nov: Sun conjunction Mercury in Libra"
     ],
     "causes": [
-     "3 opposite-tone silver rule(s) active vs 3 supporting: Retrograde Mercury or Jupiter; Shukla Paksha of 16 days or Krishna Paksha of 14 days; Retrograde Mercury goes combust",
+     "4 opposite-tone silver rule(s) active vs 3 supporting: Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6); Retrograde Mercury or Jupiter; Shukla Paksha of 16 days or Krishna Paksha of 14 days; Retrograde Mercury goes combust",
      "Gold over the same dates: +0.53% (did not move with silver)",
      "Ingress(es): 31 Oct: Jupiter enters Leo"
     ]
@@ -12420,7 +12726,7 @@
      "Sun in Virgo, Libra or Pisces with or aspected by benefics [Bearish] Thu 05 Nov 2026 14:34 EST",
      "Mars in 4th pada of Ashlesha [Bearish] Thu 05 Nov 2026 09:18 EST"
     ],
-    "supporting": 4,
+    "supporting": 5,
     "records": [
      "04 Nov: Sun conjunction Mercury in Libra",
      "05 Nov: Venus enters Virgo",
@@ -12429,7 +12735,7 @@
      "13 Nov: Mercury stations direct in Libra"
     ],
     "causes": [
-     "4 opposite-tone silver rule(s) active vs 4 supporting: Rahu in Dhanishta (market and bullion risk); Venus in Leo or Libra; Sun in Virgo, Libra or Pisces with or aspected by benefics; Mars in 4th pada of Ashlesha",
+     "4 opposite-tone silver rule(s) active vs 5 supporting: Rahu in Dhanishta (market and bullion risk); Venus in Leo or Libra; Sun in Virgo, Libra or Pisces with or aspected by benefics; Mars in 4th pada of Ashlesha",
      "Moon (silver) under Saturn/Rahu/Ketu contact at the start: Saturn aspects Moon (7th)",
      "Jupiter in Leo with Ketu",
      "Gold over the same dates: -4.58% (moved the same way as silver: a metals-wide move)",
@@ -12512,6 +12818,7 @@
     "worst_day": "Wed 11 Nov 2026 (+1.53 %)",
     "sky_worst": "Moon in Scorpio Jyeshtha (Shukla); ; Jupiter Leo Magha - Rahu aspects Jupiter, Ketu with Jupiter",
     "opposite": [
+     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish] Sun 16 Aug 2026 22:29 EDT",
      "Retrograde Mercury or Jupiter [Bullish] Sat 24 Oct 2026 03:13 EDT",
      "Shukla Paksha of 16 days or Krishna Paksha of 14 days [Bullish] Mon 09 Nov 2026 02:02 EST",
      "Retrograde Mercury goes combust [Bullish] Tue 27 Oct 2026 14:30 EDT",
@@ -12527,7 +12834,7 @@
      "13 Nov: Mercury stations direct in Libra"
     ],
     "causes": [
-     "5 opposite-tone silver rule(s) active vs 3 supporting: Retrograde Mercury or Jupiter; Shukla Paksha of 16 days or Krishna Paksha of 14 days; Retrograde Mercury goes combust; Only Sun-Mercury or Moon-Mercury alone in a sign; Mercury turns direct from retrograde",
+     "6 opposite-tone silver rule(s) active vs 3 supporting: Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6); Retrograde Mercury or Jupiter; Shukla Paksha of 16 days or Krishna Paksha of 14 days; Retrograde Mercury goes combust; Only Sun-Mercury or Moon-Mercury alone in a sign; Mercury turns direct from retrograde",
      "Gold over the same dates: -4.58% (moved the same way as silver: a metals-wide move)",
      "Station(s) inside the interval: 13 Nov: Mercury stations direct in Libra",
      "Ingress(es): 12 Nov: Mars enters Leo"
@@ -12617,7 +12924,7 @@
      "Sun in Virgo, Libra or Pisces with or aspected by benefics [Bearish] Thu 05 Nov 2026 14:34 EST",
      "Moon-Venus mutual Vedha [Bearish] Wed 18 Nov 2026 19:40 EST"
     ],
-    "supporting": 4,
+    "supporting": 5,
     "records": [
      "09 Nov-10 Nov: Mercury combust",
      "12 Nov: Mars enters Leo",
@@ -12627,7 +12934,7 @@
      "16 Nov: Sun enters Scorpio"
     ],
     "causes": [
-     "4 opposite-tone silver rule(s) active vs 4 supporting: Rahu in Dhanishta (market and bullion risk); Mars in 4th pada of Ashlesha; Sun in Virgo, Libra or Pisces with or aspected by benefics; Moon-Venus mutual Vedha",
+     "4 opposite-tone silver rule(s) active vs 5 supporting: Rahu in Dhanishta (market and bullion risk); Mars in 4th pada of Ashlesha; Sun in Virgo, Libra or Pisces with or aspected by benefics; Moon-Venus mutual Vedha",
      "Jupiter in Leo with Ketu",
      "Gold over the same dates: -13.15% (moved the same way as silver: a metals-wide move)",
      "Station(s) inside the interval: 13 Nov: Mercury stations direct in Libra; 13 Nov: Venus stations direct in Virgo",
@@ -12713,7 +13020,7 @@
      "Sun in Virgo, Libra or Pisces with or aspected by benefics [Bearish] Thu 05 Nov 2026 14:34 EST",
      "Moon-Venus mutual Vedha [Bearish] Wed 18 Nov 2026 19:40 EST"
     ],
-    "supporting": 3,
+    "supporting": 4,
     "records": [
      "12 Nov: Mars enters Leo",
      "13 Nov: Mercury stations direct in Libra",
@@ -12722,7 +13029,7 @@
      "16 Nov: Sun enters Scorpio"
     ],
     "causes": [
-     "3 opposite-tone silver rule(s) active vs 3 supporting: Rahu in Dhanishta (market and bullion risk); Sun in Virgo, Libra or Pisces with or aspected by benefics; Moon-Venus mutual Vedha",
+     "3 opposite-tone silver rule(s) active vs 4 supporting: Rahu in Dhanishta (market and bullion risk); Sun in Virgo, Libra or Pisces with or aspected by benefics; Moon-Venus mutual Vedha",
      "Moon (silver) under Saturn/Rahu/Ketu contact at the start: Saturn aspects Moon (10th)",
      "Jupiter in Leo with Ketu, Mars",
      "Gold over the same dates: -5.14% (moved the same way as silver: a metals-wide move)",
@@ -12852,13 +13159,14 @@
     "worst_day": "Thu 19 Nov 2026 (-1.51 %)",
     "sky_worst": "Moon in Aquarius Purva Bhadrapada (Shukla); Mars aspects Moon (7th), Jupiter aspects Moon (7th), Rahu with Moon; Jupiter Leo Magha - Rahu aspects Jupiter, Ketu with Jupiter, Mars with Jupiter",
     "opposite": [
+     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish] Sun 16 Aug 2026 22:29 EDT",
      "Shukla Paksha of 16 days or Krishna Paksha of 14 days [Bullish] Mon 09 Nov 2026 02:02 EST",
      "Mercury turns direct from retrograde [Bullish] Fri 13 Nov 2026 10:53 EST"
     ],
     "supporting": 1,
     "records": [],
     "causes": [
-     "2 opposite-tone silver rule(s) active vs 1 supporting: Shukla Paksha of 16 days or Krishna Paksha of 14 days; Mercury turns direct from retrograde",
+     "3 opposite-tone silver rule(s) active vs 1 supporting: Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6); Shukla Paksha of 16 days or Krishna Paksha of 14 days; Mercury turns direct from retrograde",
      "Moon (silver) supported by Jupiter at the start: Jupiter aspects Moon (7th)",
      "Gold over the same dates: -5.42% (moved the same way as silver: a metals-wide move)"
     ]

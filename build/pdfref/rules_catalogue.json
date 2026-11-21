@@ -14318,6 +14318,93 @@
    "existing": [],
    "effect": "",
    "hits_2027": 8
+  },
+  {
+   "id": "bs_42_14a_lunation_benefic_gold",
+   "title": "New / full Moon in Aries or Capricorn with a benefic (Brihat Samhita 42.14)",
+   "refs": [
+    "Brihat Samhita, tr. P.S. Sastri 1946, Ch.42 sl.14 (PDF p.334)",
+    "Brihat Samhita, tr. P.S. Sastri 1946, Ch.41 sl.2, 7 (PDF pp.327, 329)"
+   ],
+   "verdict": "Gold price promoted (Bullish): 'promotes invariably the price of articles belonging to that particular Rasi occupied by her'",
+   "markets": [
+    "gold"
+   ],
+   "rule": "New Moon or full Moon with the Moon in Mesha or Makara, and Mercury, Jupiter or Venus in the Moon's sign or aspecting it.",
+   "calc": "New / full Moon = Moon-Sun elongation crossing 0 / 180 deg (bisected to 30 s); Moon's sidereal sign at that instant; With = same sidereal sign; aspect = whole-sign graha drishti (all 7th; Mars 4/8, Jupiter 5/9, Saturn 3/10; Rahu 7th; Ketu by conjunction only). Benefics Mercury, Jupiter, Venus as BS 40.13 lists them; malefics Saturn, Mars, Rahu, Ketu.",
+   "quals": [
+    "Gold's signs per BS 41.2 (Mesha: '... and gold', PDF p.327) and 41.7 (Makara: '... gold and black metal', PDF p.329).",
+    "The source gives no time span for the effect. 2000-2026 test: 84 cases, gold up to the next lunation in 50 (60%), average +0.89% (lunations in these signs without a benefic: +0.03%); weak, not significant on its own."
+   ],
+   "tier": "major",
+   "existing": [],
+   "effect": "",
+   "hits_2027": 2
+  },
+  {
+   "id": "bs_42_14b_sun_malefic_gold",
+   "title": "Sun in Aries or Capricorn with or aspected by a malefic (Brihat Samhita 42.14)",
+   "refs": [
+    "Brihat Samhita, tr. P.S. Sastri 1946, Ch.42 sl.14 (PDF p.334)",
+    "Brihat Samhita, tr. P.S. Sastri 1946, Ch.41 sl.2, 7 (PDF pp.327, 329)"
+   ],
+   "verdict": "Gold price destroyed (Bearish): 'the Sun, conjoined with and aspected by malefics, destroys the price of the articles of that Rasi'",
+   "markets": [
+    "gold"
+   ],
+   "rule": "Sun in Mesha or Makara, with Saturn, Mars, Rahu or Ketu in the same sign or aspecting it.",
+   "calc": "Sidereal (Lahiri) whole sign of the body; window bounded by its ingresses. With = same sidereal sign; aspect = whole-sign graha drishti (all 7th; Mars 4/8, Jupiter 5/9, Saturn 3/10; Rahu 7th; Ketu by conjunction only). Benefics Mercury, Jupiter, Venus as BS 40.13 lists them; malefics Saturn, Mars, Rahu, Ketu. Window changes whenever the set of malefic contacts changes.",
+   "quals": [
+    "Gold's signs per BS 41.2 (Mesha: '... and gold', PDF p.327) and 41.7 (Makara: '... gold and black metal', PDF p.329).",
+    "Text says 'conjoined with and aspected by'; implemented as either, the reading used for 'with or aspected' elsewhere in the project. 2000-2026 test: 38 windows, gold fell in 20 (53% vs 44% of all same-length windows) but averaged +0.80%."
+   ],
+   "tier": "major",
+   "existing": [],
+   "effect": "",
+   "hits_2027": 1
+  },
+  {
+   "id": "bs_10_17_saturn_uttarabhadra_gold",
+   "title": "Saturn in Uttara Bhadrapada (Brihat Samhita 10.17)",
+   "refs": [
+    "Brihat Samhita, tr. P.S. Sastri 1946, Ch.10 sl.17 (PDF p.144)"
+   ],
+   "verdict": "Gold afflicted (Bearish): '... so do those living on the banks of rivers, cart-wrights, women and gold when he is in Uttarabhadra'",
+   "markets": [
+    "gold"
+   ],
+   "rule": "Saturn in Uttara Bhadrapada nakshatra (333deg20' - 346deg40' sidereal).",
+   "calc": "Sidereal (Lahiri) nakshatra of the body, 27 x 13deg20'; window = the residency, boundaries bisected to 30 s.",
+   "quals": [
+    "Recurs every ~29.5 years; 2000-2026 holds one passage in three windows: 28 Apr - 3 Oct 2025 gold +17%, 20 Jan - 17 May 2026 -0.7%, 9 Oct 2026 - 8 Feb 2027 (current) -15% to 20 Nov 2026.",
+    "Same verse: Saturn in Satabhishak and Purvabhadra makes 'traders' suffer (general market, not gold)."
+   ],
+   "tier": "major",
+   "existing": [],
+   "effect": "",
+   "hits_2027": 1
+  },
+  {
+   "id": "bs_42_06_sun_leo_store_gold_silver",
+   "title": "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6)",
+   "refs": [
+    "Brihat Samhita, tr. P.S. Sastri 1946, Ch.42 sl.6 (PDF p.332)"
+   ],
+   "verdict": "Profit on gold and silver (Bullish): 'If one stores up gold, gems, skins, armours, weapons, pearls and silver when the Sun is in Simha, and sell them in the 5th month, he will get profit and sustain loss otherwise'",
+   "markets": [
+    "gold",
+    "silver"
+   ],
+   "rule": "Buy when the Sun enters Simha; sell in the 5th solar month (Sun in Dhanus).",
+   "calc": "Sun's sidereal sign ingresses; window = Sun enters Simha -> Sun enters Makara (end of the 5th month); the 5th month begins at the Sun's entry into Dhanus.",
+   "quals": [
+    "2000-2025 test (25 years): gold up by mid-December in 14 and by mid-January in 18, while 66% of all same-length holds rose; silver 14 and 17. No edge over the normal drift.",
+    "42.13: the profit 'depends upon ... the Sun or the Moon ... being conjoined with very friendly planets and aspected by planets who are very friendly' - not applied (the friendship table to use is not given)."
+   ],
+   "tier": "major",
+   "existing": [],
+   "effect": "Sell in the 5th month (Sun in Sagittarius, about mid-December to mid-January)",
+   "hits_2027": 1
   }
  ],
  "not_computable": [

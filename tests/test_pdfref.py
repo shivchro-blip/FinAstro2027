@@ -95,7 +95,7 @@ def test_catalogue():
     ids = [r.id for r in C.RULES]
     record("Catalogue ids are unique", len(ids) == len(set(ids)), str([i for i in ids if ids.count(i) > 1][:5]))
     record("Every rule names a PDF page (or the user note it came from)",
-           all(any(("TA p." in x) or ("KD p." in x) or x.startswith("(no PDF") or x.startswith("User note") for x in r.refs) for r in C.RULES))
+           all(any(("TA p." in x) or ("KD p." in x) or x.startswith("(no PDF") or x.startswith("User note") or x.startswith("Brihat Samhita") for x in r.refs) for r in C.RULES))
     ur = [r for r in C.RULES if r.id.startswith("user_")]
     record("User gold rules U1-U4 registered, each with its conflict note", len(ur) == 4 and all(any("Conflict" in q for q in r.quals) for r in ur))
     record("Every rule has a verdict and a calculation method", all(r.verdict and r.calc for r in C.RULES))

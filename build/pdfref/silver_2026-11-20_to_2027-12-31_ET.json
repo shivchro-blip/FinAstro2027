@@ -31,6 +31,32 @@
    ]
   },
   {
+   "start_ET": "Sun 16 Aug 2026 22:29 EDT",
+   "end_ET": "Thu 14 Jan 2027 10:40 EST",
+   "title": "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Profit on gold and silver (Bullish): 'If one stores up gold, gems, skins, armours, weapons, pearls and silver when the Sun is in Simha, and sell them in the 5th month, he will get profit and sustain loss otherwise'"
+   ],
+   "rule": "Buy when the Sun enters Simha; sell in the 5th solar month (Sun in Dhanus).",
+   "detail": "Sun 0.00 deg Leo (Magha p1) | buy: Sun enters Simha; 5th month begins utc: 2026-12-16 04:55:18+00:00; sell by: Sun enters Makara (5th month ends)",
+   "refs": [
+    "Brihat Samhita, tr. P.S. Sastri 1946, Ch.42 sl.6 (PDF p.332)"
+   ],
+   "quals": [
+    "2000-2025 test (25 years): gold up by mid-December in 14 and by mid-January in 18, while 66% of all same-length holds rose; silver 14 and 17. No edge over the normal drift.",
+    "42.13: the profit 'depends upon ... the Sun or the Moon ... being conjoined with very friendly planets and aspected by planets who are very friendly' - not applied (the friendship table to use is not given).",
+    "Effect timing per source: Sell in the 5th month (Sun in Sagittarius, about mid-December to mid-January)"
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "bs_42_06_sun_leo_store_gold_silver"
+   ]
+  },
+  {
    "start_ET": "Mon 09 Nov 2026 02:02 EST",
    "end_ET": "Tue 24 Nov 2026 09:53 EST",
    "title": "Shukla Paksha of 16 days or Krishna Paksha of 14 days",
@@ -1627,6 +1653,32 @@
    ],
    "rule_ids": [
     "ta_s35b07_moon_venus_mutual_vedha"
+   ]
+  },
+  {
+   "start_ET": "Tue 17 Aug 2027 04:44 EDT",
+   "end_ET": "Fri 14 Jan 2028 16:54 EST",
+   "title": "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6)",
+   "tone": "Bullish",
+   "verdicts": [
+    "Profit on gold and silver (Bullish): 'If one stores up gold, gems, skins, armours, weapons, pearls and silver when the Sun is in Simha, and sell them in the 5th month, he will get profit and sustain loss otherwise'"
+   ],
+   "rule": "Buy when the Sun enters Simha; sell in the 5th solar month (Sun in Dhanus).",
+   "detail": "Sun 0.00 deg Leo (Magha p1) | buy: Sun enters Simha; 5th month begins utc: 2027-12-16 11:09:22+00:00; sell by: Sun enters Makara (5th month ends)",
+   "refs": [
+    "Brihat Samhita, tr. P.S. Sastri 1946, Ch.42 sl.6 (PDF p.332)"
+   ],
+   "quals": [
+    "2000-2025 test (25 years): gold up by mid-December in 14 and by mid-January in 18, while 66% of all same-length holds rose; silver 14 and 17. No edge over the normal drift.",
+    "42.13: the profit 'depends upon ... the Sun or the Moon ... being conjoined with very friendly planets and aspected by planets who are very friendly' - not applied (the friendship table to use is not given).",
+    "Effect timing per source: Sell in the 5th month (Sun in Sagittarius, about mid-December to mid-January)"
+   ],
+   "checks": [
+    "start = astronomy-layer sign ingress of Sun \u2713",
+    "end = astronomy-layer sign ingress of Sun \u2713"
+   ],
+   "rule_ids": [
+    "bs_42_06_sun_leo_store_gold_silver"
    ]
   },
   {

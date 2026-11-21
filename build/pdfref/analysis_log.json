@@ -124,6 +124,19 @@
     "build/pdfref/source_rules_test_2000-2026_ET.html",
     "Reference_materials/extracted/ocr/"
    ]
+  },
+  {
+   "date": "2026-11-21",
+   "pr": "13",
+   "topic": "Brihat Samhita gold/silver rules implemented; Bayer and Western sources excluded",
+   "analysis": "BS 42.14a (lunation in Aries/Capricorn with benefic: gold up), 42.14b (Sun in Aries/Capricorn with malefic: gold down), 10.17 (Saturn in Uttara Bhadrapada: gold afflicted), 42.6 (Sun in Leo: store gold/silver, sell in 5th month) added as sourced rules (finastro/pdfref/bs_rules.py); reports, NY calendar, backtests and trackers regenerated. Bayer, McWhirter, Williams, Weingarten, Timing Solutions and the Moon-and-Silver guide excluded by user decision; BS 41.9-13 pending.",
+   "result": "Forward dates: Saturn in Uttara Bhadrapada to 7 Feb 2027 (bearish); Sun with Rahu in Capricorn 14 Jan - 12 Feb 2027 (bearish); new Moon in Capricorn aspected by Jupiter 6 Feb 2027 and full Moon in Aries 13 Nov 2027 (bullish); store window 17 Aug 2027 - 14 Jan 2028. 5-year scores: all four 'Mixed' (too few occurrences to judge).",
+   "files": [
+    "finastro/pdfref/bs_rules.py",
+    "build/pdfref/gold_2026-11-20_to_2027-12-31_ET.html",
+    "build/pdfref/silver_2026-11-20_to_2027-12-31_ET.html",
+    "build/pdfref/calendar_2027_NY_master.html"
+   ]
   }
  ]
 }

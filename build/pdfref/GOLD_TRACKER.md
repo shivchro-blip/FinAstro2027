@@ -1,13 +1,13 @@
 # Gold findings tracker
 
-Generated 21 Nov 2026 12:12 EST by `tools/gold_tracker.py` (`--refresh` re-runs both backtests). HTML version: `GOLD_TRACKER.html`.
+Generated 21 Nov 2026 14:21 EST by `tools/gold_tracker.py` (`--refresh` re-runs both backtests). HTML version: `GOLD_TRACKER.html`.
 
 ## Recent findings
 
 | Finding | Evidence | What it means | Status |
 |---|---|---|---|
-| Rule set as a whole | 5 yr: 288 worked / 266 failed (52%); 1 yr: 61 / 63 | No better than chance in total; use individual rules, not the count of rules. | Confirmed (5 yr) |
-| Stacking rules (bullish minus bearish count) | 5 yr: next-5-day move +0.46% on bullish-majority days vs +0.05% on bearish-majority days; corr +0.025 | The net count carries almost no information; the 1-year bearish edge (-1.49%) did not repeat over 5 years. | Did not hold up |
+| Rule set as a whole | 5 yr: 308 worked / 279 failed (52%); 1 yr: 67 / 67 | No better than chance in total; use individual rules, not the count of rules. | Confirmed (5 yr) |
+| Stacking rules (bullish minus bearish count) | 5 yr: next-5-day move +0.46% on bullish-majority days vs +0.06% on bearish-majority days; corr +0.049 | The net count carries almost no information; the 1-year bearish edge (-1.49%) did not repeat over 5 years. | Did not hold up |
 | Your combined Sun model (U1-U4 together) | 5 yr: 105/179 (59% vs base 52%), p = 0.057, right in 3/5 yrs | Closest thing to an edge in the whole set; dates below. | Strongest |
 | U2 - Mercury with the Sun | 5 yr: 36/55 (65% vs base 57%), avg +0.89%, p = 0.117, right in 4/5 yrs | Consistent across years; dates below. | Consistent |
 | U2 - Venus with / aspecting the Sun | 5 yr: 18/27 (67% vs base 57%), avg +1.34%, p = 0.197, right in 4/5 yrs | Consistent across years; dates below. | Supported |
@@ -117,8 +117,11 @@ Best (from the 5-year data): User Sun model: net rise vs fall signals, U2 - Merc
 | Sun in a Venus, Mercury or Jupiter nakshatra (user note) | Bullish | 3/8 (38% vs 45%) | 22/39 (56% vs 57%) | +0.76% | 0.595 | 3/5 | At chance | 11 |
 | Sun in a Saturn or Rahu nakshatra (user note) | Bearish | 3/7 (43% vs 54%) | 9/25 (36% vs 43%) | -0.26% | 0.82 | 0/5 | At chance | 7 |
 | Moon darshan (first sighting) on Monday or Friday | Bullish | 2/4 (50% vs 50%) | 7/16 (44% vs 57%) | +0.31% | 0.904 | 1/5 | At chance | 3 |
+| New / full Moon in Aries or Capricorn with a benefic (Brihat Samhita 42.14) | Bullish | 2/4 (50% vs 50%) | 8/15 (53% vs 57%) | +1.17% | 0.706 | 2/5 | At chance | 2 |
 | Sun on Bharani, Krittika, Punarvasu or Pushya, not aspected by benefic | Bullish | 0/2 (0% vs 50%) | 6/12 (50% vs 55%) | -0.38% | 0.747 | 3/5 | At chance | 4 |
 | U4 - Rahu with / aspecting the Sun (incl. Sun with Ketu) | Bearish | 1/2 (50% vs 59%) | 4/11 (36% vs 40%) | -2.48% | 0.704 | 1/5 | At chance | 2 |
+| Sun in Aries or Capricorn with or aspected by a malefic (Brihat Samhita 42.14) | Bearish | 1/2 (50% vs 55%) | 6/9 (67% vs 44%) | -0.39% | 0.145 | 3/5 | Inconclusive | 1 |
+| Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) | Bullish | 1/2 (50% vs 36%) | 4/6 (67% vs 69%) | +5.89% | 0.723 | 3/5 | Inconclusive | 2 |
 | U4 - Saturn with / aspecting the Sun | Bearish | 3/4 (75% vs 59%) | 6/20 (30% vs 40%) | -2.03% | 0.867 | 1/5 | Did not hold up | 6 |
 | Mercury rises in West | Bearish | 1/2 (50% vs 50%) | 4/13 (31% vs 43%) | -0.93% | 0.885 | 0/5 | Did not hold up | 4 |
 | Sun on Anuradha with or aspected by benefic | Bearish | 0/2 (0% vs 50%) | 1/6 (17% vs 45%) | -1.49% | 0.972 | 1/4 | Did not hold up | 3 |
@@ -131,6 +134,7 @@ Best (from the 5-year data): User Sun model: net rise vs fall signals, U2 - Merc
 | Rahu & Mars together in any sign | Bullish | 0/1 (0% vs 41%) | 0/3 (0% vs 54%) | -2.42% | 1.0 | 0/3 | Too few to judge (0/3, leans wrong) | 1 |
 | Saturn or Mercury in Gemini | Bearish | 1/1 (100% vs 55%) | 2/3 (67% vs 48%) | +1.67% | 0.477 | 2/3 | Too few to judge (2/3, leans right) | 1 |
 | Venus in Jyeshtha with or aspected by benefic | Bearish | 0/1 (0% vs 55%) | 1/3 (33% vs 46%) | -0.93% | 0.842 | 1/3 | Too few to judge (1/3, leans wrong) | 1 |
+| Saturn in Uttara Bhadrapada (Brihat Samhita 10.17) | Bearish | 2/2 (100% vs 64%) | 2/3 (67% vs 43%) | -0.56% | 0.397 | 1/2 | Too few to judge (2/3, leans right) | 1 |
 | Mars retrograde | Bullish | – | 2/2 (100% vs 71%) | +12.63% | 0.5 | 2/2 | Too few to judge (2/2, leans right) | 1 |
 | Sun in Libra with other malefic (Saturn, Mars, Rahu) | Bullish | – | 1/2 (50% vs 63%) | -1.16% | 0.863 | 1/2 | Too few to judge (1/2, even) | 0 |
 | Jupiter enters Gemini | Bullish | 1/1 (100% vs 50%) | 2/2 (100% vs 59%) | +1.39% | 0.343 | 2/2 | Too few to judge (2/2, leans right) | 0 |
@@ -156,6 +160,7 @@ Best (from the 5-year data): User Sun model: net rise vs fall signals, U2 - Merc
 
 | Date | PR | Topic | Result |
 |---|---|---|---|
+| 2026-11-21 | #13 | Brihat Samhita gold/silver rules implemented; Bayer and Western sources excluded | Forward dates: Saturn in Uttara Bhadrapada to 7 Feb 2027 (bearish); Sun with Rahu in Capricorn 14 Jan - 12 Feb 2027 (bearish); new Moon in Capricorn aspected by Jupiter 6 Feb 2027 and full Moon in Aries 13 Nov 2027 (bullish); store window 17 Aug 2027 - 14 Jan 2028. 5-year scores: all four 'Mixed' (too few occurrences to judge). |
 | 2026-11-21 | #13 | Review of Reference_materials/Others (45 files) + test of their gold/silver rules | 8 documents have market content; only Brihat Samhita has classical gold/silver price rules. Moon->silver rulership is sourced, a Moon version of the user's Sun rules is not. Silver guide's Moon rules: no effect over 26 years; new->full Moon hold did WORSE than full->new for both metals. BS 42.14(a) weak positive for gold; BS 10.17 (Saturn in Uttara Bhadrapada, gold afflicted) active until 8 Feb 2027. bayer_all_48_rules.docx rules 25-48 do not match Bayer's 1940 text. |
 | 2026-11-21 | #12 | Silver backtest, 1 and 5 years + silver tracker | 197 of 414 worked (48%) vs 50% by chance; net rule count pointed the wrong way; outcomes followed gold (failed 153/178 when gold moved against the rule). Best: Venus-Mars / Sun-Mars together (19/30, 4 of 5 years); 'Venus alone in Leo/Libra' 5/6 vs plain 'Venus in Leo/Libra' 3/11. |
 | 2026-11-21 | #11 | Gold findings tracker + forward dates | See GOLD_TRACKER.html. |

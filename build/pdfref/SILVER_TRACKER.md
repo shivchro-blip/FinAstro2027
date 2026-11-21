@@ -1,14 +1,14 @@
 # Silver findings tracker
 
-Generated 21 Nov 2026 12:12 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
+Generated 21 Nov 2026 14:22 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
 
 ## Recent findings
 
 | Finding | Evidence | What it means | Status |
 |---|---|---|---|
-| Rule set as a whole | 5 yr: 197 worked / 217 failed (48%); 1 yr: 44 / 45 | No better than chance in total; use individual rules, not the count of rules. | Confirmed (5 yr) |
-| Stacking rules (bullish minus bearish count) | 5 yr: next-5-day move +0.21% on bullish-majority days vs +1.03% on bearish-majority days; corr -0.071 | The net count pointed the WRONG way (bearish-majority days did better). | Did not hold up |
-| Silver follows gold | 5 yr: when gold moved against a silver rule it failed 153/178; when gold moved its way it worked 143/172 | Silver rule outcomes were decided mostly by gold's direction; the silver rules add little that is specific to silver. | Confirmed (5 yr) |
+| Rule set as a whole | 5 yr: 201 worked / 219 failed (48%); 1 yr: 45 / 46 | No better than chance in total; use individual rules, not the count of rules. | Confirmed (5 yr) |
+| Stacking rules (bullish minus bearish count) | 5 yr: next-5-day move +0.17% on bullish-majority days vs +0.47% on bearish-majority days; corr -0.059 | The net count pointed the WRONG way (bearish-majority days did better). | Did not hold up |
+| Silver follows gold | 5 yr: when gold moved against a silver rule it failed 155/180; when gold moved its way it worked 147/176 | Silver rule outcomes were decided mostly by gold's direction; the silver rules add little that is specific to silver. | Confirmed (5 yr) |
 | 'Alone' qualifier: Venus alone in Leo or Libra vs Venus in Leo or Libra | 5 yr: with 'alone' 5/6 (83%); without 3/11 (27%) | The 2026 document's 'alone' condition changes the result: the qualified version worked, the plain one did not. | Strongest |
 | 'Alone' qualifier: Mercury alone in Aries or Virgo vs Mercury in Aries or Virgo | 5 yr: with 'alone' 1/7 (14%); without 4/10 (40%) | Neither version works; the 'alone' version did even worse. | Did not hold up |
 | Venus-Mars or Sun-Mars together in any sign | 5 yr: 19/30 (63% vs base 52%), avg +1.68%, p = 0.147, right in 4/5 yrs | Consistent across years; dates below. | Supported |
@@ -50,6 +50,7 @@ Best (from the 5-year data): Venus-Mars or Sun-Mars together in any sign.
 | Mercury in Aries or Virgo | Bearish | 1/2 (50% vs 57%) | 4/10 (40% vs 48%) | -4.72% | 0.798 | 0/5 | At chance | 3 |
 | Sun in Pushya or Dhanishta with no benefic in the same nakshatra | Bullish | 0/1 (0% vs 48%) | 3/9 (33% vs 54%) | +0.12% | 0.941 | 1/5 | Inconclusive | 2 |
 | Amavasya on Monday | Bearish | – | 3/7 (43% vs 42%) | -0.48% | 0.62 | 1/4 | Inconclusive | 2 |
+| Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) | Bullish | 1/2 (50% vs 29%) | 4/6 (67% vs 61%) | +18.86% | 0.56 | 3/5 | Inconclusive | 2 |
 | Mercury turns direct from retrograde | Bullish | 2/4 (50% vs 48%) | 6/15 (40% vs 54%) | -0.16% | 0.905 | 1/5 | Did not hold up | 3 |
 | Venus in Leo or Libra | Bearish | 2/2 (100% vs 58%) | 3/11 (27% vs 43%) | -2.56% | 0.914 | 1/5 | Did not hold up | 3 |
 | Mercury combust and retrograde does mutual Vedha with Moon | Bullish | 0/2 (0% vs 48%) | 2/9 (22% vs 51%) | -2.28% | 0.984 | 1/4 | Did not hold up | 2 |
@@ -96,6 +97,7 @@ Best (from the 5-year data): Venus-Mars or Sun-Mars together in any sign.
 
 | Date | PR | Topic | Result |
 |---|---|---|---|
+| 2026-11-21 | #13 | Brihat Samhita gold/silver rules implemented; Bayer and Western sources excluded | Forward dates: Saturn in Uttara Bhadrapada to 7 Feb 2027 (bearish); Sun with Rahu in Capricorn 14 Jan - 12 Feb 2027 (bearish); new Moon in Capricorn aspected by Jupiter 6 Feb 2027 and full Moon in Aries 13 Nov 2027 (bullish); store window 17 Aug 2027 - 14 Jan 2028. 5-year scores: all four 'Mixed' (too few occurrences to judge). |
 | 2026-11-21 | #13 | Review of Reference_materials/Others (45 files) + test of their gold/silver rules | 8 documents have market content; only Brihat Samhita has classical gold/silver price rules. Moon->silver rulership is sourced, a Moon version of the user's Sun rules is not. Silver guide's Moon rules: no effect over 26 years; new->full Moon hold did WORSE than full->new for both metals. BS 42.14(a) weak positive for gold; BS 10.17 (Saturn in Uttara Bhadrapada, gold afflicted) active until 8 Feb 2027. bayer_all_48_rules.docx rules 25-48 do not match Bayer's 1940 text. |
 | 2026-11-21 | #12 | Silver backtest, 1 and 5 years + silver tracker | 197 of 414 worked (48%) vs 50% by chance; net rule count pointed the wrong way; outcomes followed gold (failed 153/178 when gold moved against the rule). Best: Venus-Mars / Sun-Mars together (19/30, 4 of 5 years); 'Venus alone in Leo/Libra' 5/6 vs plain 'Venus in Leo/Libra' 3/11. |
 | 2026-11-21 | #11 | Gold findings tracker + forward dates | See GOLD_TRACKER.html. |
