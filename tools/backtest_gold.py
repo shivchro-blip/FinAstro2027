@@ -1,7 +1,14 @@
-"""Gold backtest: every gold rule in the project over the N years to 20 Nov 2026.
+"""Gold / silver backtest: every rule for the metal over the N years to 20 Nov 2026.
 
-    python tools/backtest_gold.py            # 1 year:  20 Nov 2025 - 20 Nov 2026
-    python tools/backtest_gold.py --years 5  # 5 years: 20 Nov 2021 - 20 Nov 2026
+    python tools/backtest_gold.py            # gold, 1 year:  20 Nov 2025 - 20 Nov 2026
+    python tools/backtest_gold.py --years 5  # gold, 5 years: 20 Nov 2021 - 20 Nov 2026
+    python tools/backtest_gold.py --metal silver --years 5
+
+Silver: the silver report's rule set (TA S35 + other TA/KD silver items, the
+2026 document's silver section; no user rules - the user's Sun notes are gold
+only), COMEX silver (Yahoo SI=F) closes in build/pdfref/backtest/silver_SI_F_daily.csv.
+The failure analysis reads the Moon (silver's classical significator, TA p.32,
+Kindle Ch15) instead of the Sun, and also checks whether gold moved the same way.
 
 Missing astronomy layers (build/astronomy_<year>.json) are generated on demand
 with tools/build_year.py.
@@ -74,7 +81,11 @@ P1 = dt.datetime(2026, 11, 21, tzinfo=ET)          # exclusive: last day scored 
 YEARS = 1
 P0 = dt.datetime(2025, 11, 20, tzinfo=ET)
 OUT = ROOT / "build" / "pdfref"
-PRICES = OUT / "backtest" / "gold_GC_F_daily.csv"
+METAL = "gold"
+PRICE_FILES = {"gold": OUT / "backtest" / "gold_GC_F_daily.csv", "silver": OUT / "backtest" / "silver_SI_F_daily.csv"}
+PRICES = PRICE_FILES["gold"]
+KARAKA = {"gold": "Sun", "silver": "Moon"}
+INSTR = {"gold": ("COMEX gold futures", "GC=F"), "silver": ("COMEX silver futures", "SI=F")}
 FLAT = 0.5          # percent
 H = 5               # trading days, instants
 SENS = (1, 3, 10)
@@ -83,8 +94,8 @@ SLOW = ("Sun", "Mars", "Venus", "Mercury", "Jupiter", "Saturn", "Rahu")
 
 
 # ------------------------------------------------------------------ prices
-def load_prices():
-    rows = list(csv.DictReader(open(PRICES)))
+def load_prices(path=None):
+    rows = list(csv.DictReader(open(path or PRICES)))
     d = [dt.date.fromisoformat(r["date"]) for r in rows]
     c = [float(r["close"]) for r in rows]
     return d, c
@@ -92,6 +103,17 @@ def load_prices():
 
 D, CL = load_prices()
 I0 = I1 = 0
+GOLD = {}           # date -> gold close, for the silver run's co-movement check
+
+
+def configure_metal(metal):
+    global METAL, PRICES, D, CL, GOLD
+    METAL = metal
+    M.METAL = metal
+    PRICES = PRICE_FILES[metal]
+    D, CL = load_prices()
+    gd, gc = load_prices(PRICE_FILES["gold"])
+    GOLD = dict(zip(gd, gc))
 
 
 def configure(years):
@@ -146,7 +168,7 @@ def tone_of(r, h):
         fv = str(h.facts["value"])
         bu, be = "MALEFIC" in fv, "BENEFIC" in fv
         return ("Mixed" if bu and be else "Bullish" if bu else "Bearish" if be else "Neutral"), \
-            (("MALEFIC vedha -> gold Bullish" if bu else "") + (" / " if bu and be else "") + ("BENEFIC vedha -> gold Bearish" if be else ""))
+            ((f"MALEFIC vedha -> {METAL} Bullish" if bu else "") + (" / " if bu and be else "") + (f"BENEFIC vedha -> {METAL} Bearish" if be else ""))
     return M.verdict_tone(v), v
 
 
@@ -188,6 +210,8 @@ def collect(ctxs):
                               bodies=list(h.bodies), facts={k2: str(v) for k2, v in h.facts.items() if k2 != "condition_ends_utc"},
                               effect=r.effect or "")
     grid = ctxs[0].grid
+    if METAL != "gold":
+        return list(out.values())
     for rid, (title, group, moon, tone) in SPLIT.items():
         for h in windows(_contacts(group, moon), ("Sun",))(ctxs[0]):
             if not (h.start < P1 and h.end >= P0):
@@ -372,7 +396,15 @@ def sky_at(t):
             jup.append(f"{name(b)} with Jupiter")
         elif b != "Ketu" and aspects(s, b, "Jupiter"):
             jup.append(f"{name(b)} aspects Jupiter")
-    return dict(positions=pos, sun=f"Sun in {s['Sun'].nak} (lord {sun_lord}), {s['Sun'].sign}",
+    mc = []
+    for b in ("Sun", "Mercury", "Venus", "Mars", "Jupiter", "Saturn", "Rahu", "Ketu"):
+        if s[b].sign_i == s["Moon"].sign_i:
+            mc.append(f"{name(b)} with Moon")
+        elif b not in ("Ketu",) and aspects(s, b, "Moon"):
+            n = s.sign_dist(b, "Moon")
+            mc.append(f"{name(b)} aspects Moon ({n}{ {1: 'st', 2: 'nd', 3: 'rd'}.get(n, 'th') })")
+    return dict(positions=pos, sun=f"Sun in {s['Sun'].nak} (lord {sun_lord}), {s['Sun'].sign}", moon_contacts=mc,
+                moon=f"Moon in {s['Moon'].sign} {s['Moon'].nak} ({s.paksha})",
                 sun_contacts=contacts, jupiter=f"Jupiter {s['Jupiter'].sign} {s['Jupiter'].nak}{' R' if s['Jupiter'].retro else ''}" + (f" - {', '.join(jup)}" if jup else ""),
                 paksha=s.paksha, s=s)
 
@@ -416,8 +448,10 @@ def explain(e, events):
     flags["Opposite-tone rules outnumbered supporting ones"] = len(opp) > len(same)
     if opp:
         names = collections.Counter(a["title"] for a in opp)
-        causes.append(f"{len(opp)} opposite-tone gold rule(s) active vs {len(same)} supporting: " +
+        causes.append(f"{len(opp)} opposite-tone {METAL} rule(s) active vs {len(same)} supporting: " +
                       "; ".join(k for k, v in names.most_common(8)))
+    if METAL == "silver":
+        return explain_silver(e, sk0, skw, worst, opp, same, recs, causes, flags, bull)
     sat_rahu = [c for c in mal if c.split()[0] in ("Saturn", "Rahu", "Ketu")]
     mars = [c for c in mal if c.startswith("Mars")]
     jup = [c for c in ben if c.startswith("Jupiter")]
@@ -458,6 +492,53 @@ def explain(e, events):
         worst_day=(f"{D[worst[1]]:%a %d %b %Y} ({worst[0]:+.2f} %)" if worst else ""),
         sky_worst=(skw["sun"] + "; " + ", ".join(skw["sun_contacts"]) + "; " + skw["jupiter"]) if skw else "",
         opposite=[f"{a['title']} [{a['tone']}] {et(a['start']) if a['day'] is None else a['day'].isoformat()}" for a in opp][:12],
+        supporting=len(same), records=recs[:25], causes=causes)
+    return e
+
+
+def explain_silver(e, sk0, skw, worst, opp, same, recs, causes, flags, bull):
+    """Silver: Moon (classical significator) instead of the Sun, plus gold co-movement."""
+    s0 = sk0["s"]
+    mc = sk0["moon_contacts"]
+    mal = [c for c in mc if c.split()[0] in ("Saturn", "Rahu", "Ketu")]
+    jup = [c for c in mc if c.startswith("Jupiter")]
+    flags["Saturn / Rahu / Ketu on the Moon at the start"] = bool(mal)
+    flags["Jupiter on the Moon at the start"] = bool(jup)
+    flags["Waxing Moon (Shukla) at the start"] = s0.paksha == "Shukla"
+    if bull and mal:
+        causes.append("Moon (silver) under Saturn/Rahu/Ketu contact at the start: " + ", ".join(mal))
+    if not bull and jup:
+        causes.append("Moon (silver) supported by Jupiter at the start: " + ", ".join(jup))
+    jaff = [b for b in ("Rahu", "Ketu", "Mars", "Saturn") if s0[b].sign_i == s0["Jupiter"].sign_i]
+    flags["Jupiter sharing a sign with Rahu / Ketu / Mars / Saturn"] = bool(jaff)
+    if bull and jaff:
+        causes.append(f"Jupiter in {s0['Jupiter'].sign} with {', '.join(jaff)}")
+    retro = [b for b in ("Mercury", "Venus", "Mars", "Jupiter", "Saturn") if s0[b].retro]
+    flags["Mercury or Venus retrograde at the start"] = any(b in retro for b in ("Mercury", "Venus"))
+    a, b = e["eval_from"], e["eval_to"]
+    g0, g1 = GOLD.get(D[a]), GOLD.get(D[b])
+    gret = (g1 / g0 - 1) * 100 if g0 and g1 else None
+    e["gold_ret"] = round(gret, 2) if gret is not None else None
+    flags["Gold moved against the rule too (>0.5%)"] = gret is not None and ((gret < -FLAT) if bull else (gret > FLAT))
+    if gret is not None:
+        causes.append(f"Gold over the same dates: {gret:+.2f}% " + ("(moved the same way as silver: a metals-wide move)" if (gret > 0) == (e["ret"] > 0) and abs(gret) >= FLAT else "(did not move with silver)"))
+    st_list = [r for r in recs if "station" in r]
+    flags["A planet stations inside the interval"] = bool(st_list)
+    if st_list:
+        causes.append("Station(s) inside the interval: " + "; ".join(st_list))
+    ecl = [r for r in recs if "eclipse" in r]
+    flags["Eclipse inside the interval"] = bool(ecl)
+    if ecl:
+        causes.append("Eclipse inside the interval: " + "; ".join(ecl))
+    ing = [r for r in recs if "enters" in r and any(p in r for p in ("Jupiter", "Saturn", "Rahu", "Mars", "Sun"))]
+    if ing:
+        causes.append("Ingress(es): " + "; ".join(ing))
+    e["flags"] = flags
+    e["analysis"] = dict(
+        sky_at_start=sk0["positions"], sun=sk0["moon"], sun_contacts=mc, jupiter=sk0["jupiter"], paksha=sk0["paksha"],
+        worst_day=(f"{D[worst[1]]:%a %d %b %Y} ({worst[0]:+.2f} %)" if worst else ""),
+        sky_worst=(skw["moon"] + "; " + ", ".join(skw["moon_contacts"]) + "; " + skw["jupiter"]) if skw else "",
+        opposite=[f"{x['title']} [{x['tone']}] {et(x['start']) if x['day'] is None else x['day'].isoformat()}" for x in opp][:12],
         supporting=len(same), records=recs[:25], causes=causes)
     return e
 
@@ -555,6 +636,7 @@ def main():
     years = 1
     if "--years" in sys.argv:
         years = int(sys.argv[sys.argv.index("--years") + 1])
+    configure_metal(sys.argv[sys.argv.index("--metal") + 1] if "--metal" in sys.argv else "gold")
     configure(years)
     for y in range(P0.year, P1.year + 1):
         if not (ROOT / "build" / f"astronomy_{y}.json").exists():
@@ -653,7 +735,7 @@ def findings(per, moves, net, fails, cause_count, events):
     bad = sorted((p for p in P.values() if p["verdict"] == "Failed"), key=key)
     out = [f"<li><b>Overall.</b> {W} of {W + F} decided occurrences worked ({W / max(W + F, 1) * 100:.0f}%), against {exp * 100:.0f}% expected by chance from the base rates of those same occurrences "
            f"(p = {binom_p(W, W + F, exp):.3f} for doing this well or better by luck)."
-           + (f" On the {neg['days']} trading days when more bearish than bullish gold rules were active, gold moved {neg['avg5']:+.2f}% on average over the next 5 days ({neg['up5']:.0f}% up); "
+           + (f" On the {neg['days']} trading days when more bearish than bullish {METAL} rules were active, {METAL} moved {neg['avg5']:+.2f}% on average over the next 5 days ({neg['up5']:.0f}% up); "
               f"on the {pos['days']} bullish-majority days, {pos['avg5']:+.2f}% ({pos['up5']:.0f}% up). Correlation of the daily net count with the next 5-day move: {net['corr5']:+.3f}." if neg and pos else "") + "</li>"]
     if YEARS > 1:
         sig = sorted((p for p in P.values() if p.get("p_value") is not None and p["p_value"] < 0.05), key=lambda p: p["p_value"])
@@ -674,8 +756,25 @@ def findings(per, moves, net, fails, cause_count, events):
         helped = [r for r in reversed(rows_) if (r[3] / max(r[4], 1) - r[1] / max(r[2], 1)) >= 0.10][:3]
         out.append(f"<li><b>Why {tone.lower()} rules failed.</b> Conditions clearly more common when they failed: " + ("; ".join(txt(r) for r in hurt) or "none stood out")
                    + ". More common when they worked: " + ("; ".join(txt(r) for r in helped) or "none stood out") + ".</li>")
-    jan = next((m for m in moves if m["start"].startswith("2026-01-2") and m["dir"] == "fall"), None)
-    mar = next((m for m in moves if m["start"].startswith("2026-03-1") and m["dir"] == "fall"), None)
+    jan = next((m for m in moves if m["start"].startswith("2026-01-2") and m["dir"] == "fall"), None) if METAL == "gold" else None
+    mar = next((m for m in moves if m["start"].startswith("2026-03-1") and m["dir"] == "fall"), None) if METAL == "gold" else None
+    if METAL == "silver":
+        fl = [e for e in events if e.get("outcome") == "FAILED" and e.get("gold_ret") is not None]
+        wk = [e for e in events if e.get("outcome") == "WORKED" and e.get("gold_ret") is not None]
+        if fl and wk:
+            both = fl + wk
+            same = sum(1 for e in both if (e["gold_ret"] > 0) == (e["ret"] > 0) and abs(e["gold_ret"]) > FLAT)
+            against = [e for e in both if ((e["gold_ret"] < -FLAT) if e["tone"] == "Bullish" else (e["gold_ret"] > FLAT))]
+            withr = [e for e in both if ((e["gold_ret"] > FLAT) if e["tone"] == "Bullish" else (e["gold_ret"] < -FLAT))]
+            fa = sum(1 for e in against if e["outcome"] == "FAILED")
+            ww = sum(1 for e in withr if e["outcome"] == "WORKED")
+            out.append(f"<li><b>Silver follows gold.</b> Over the same dates silver moved the same way as gold in {same} of {len(both)} decided occurrences ({same / len(both) * 100:.0f}%). "
+                       f"When gold moved against a silver rule the rule failed {fa} of {len(against)} times ({fa / max(len(against), 1) * 100:.0f}%); when gold moved the rule's way it worked {ww} of {len(withr)} times ({ww / max(len(withr), 1) * 100:.0f}%). "
+                       "So a silver rule's outcome was decided mostly by gold's direction: the rules add little that is specific to silver.</li>")
+        jan2 = next((m for m in moves if m["start"].startswith("2026-01-2") and m["dir"] == "fall"), None)
+        if jan2:
+            out.append(f"<li><b>Biggest single miss: late January 2026</b> ({jan2['start']} → {jan2['end']}, {jan2['ret']:+.1f}%, including the −31% day on 30 Jan, the same day gold fell 10.8%). "
+                       f"Silver rules active: {jan2['n_bull']} bullish, {jan2['n_bear']} bearish. Sky: {html.escape(jan2['sun'])}; {html.escape(', '.join(jan2['sun_contacts']))}; {html.escape(jan2['jupiter'])}; {html.escape('; '.join(jan2['records']))}.</li>")
     if jan:
         out.append(f"<li><b>Biggest single miss: the late-January 2026 crash</b> ({jan['start']} → {jan['end']}, {jan['ret']:+.1f}%, including the −10.8% day on 30 Jan after the 29 Jan peak). "
                    f"Gold rules active: {jan['n_bull']} bullish, {jan['n_bear']} bearish. Sky: {html.escape(jan['sun'])}; {html.escape(', '.join(jan['sun_contacts']))}; {html.escape(jan['jupiter'])}; "
@@ -699,7 +798,7 @@ def findings(per, moves, net, fails, cause_count, events):
         out.append("<li><b>How far to trust this.</b> Most rules fired only 1–3 times in the year, so a 100% or 0% record is one or two data points; see the 5-year run for which results hold up.</li>")
     else:
         rare = sum(1 for p in main if 0 < p["worked"] + p["failed"] < 5)
-        out.append(f"<li><b>How far to trust this.</b> {YEARS} years give the frequent rules (Sun contacts, new moons, vedha, darshan) enough occurrences to judge; {rare} rules still have fewer than 5 decided occurrences, and their records stay anecdotal. "
+        out.append(f"<li><b>How far to trust this.</b> {f'{YEARS} years give the frequent rules (Sun contacts, new moons, vedha, darshan) enough occurrences to judge' if METAL == 'gold' else f'{YEARS} years give the frequent rules (vedha, Mercury/Sun contacts, paksha length, retrogrades) enough occurrences to judge'}; {rare} rules still have fewer than 5 decided occurrences, and their records stay anecdotal. "
                    "A rule that is right in most individual years is more trustworthy than one whose total comes from a single year; check the per-year columns.</li>")
     return "<h2>Key findings</h2><ol>" + "".join(out) + "</ol>"
 
@@ -761,7 +860,7 @@ def write(events, per, moves, net):
         an = ""
         if a and o == "FAILED":
             an = ("<details><summary>Why it may have failed</summary><ul>" + "".join(f"<li>{html.escape(c)}</li>" for c in a["causes"]) +
-                  f"</ul><p class='s'><b>Sky at start:</b> {html.escape(' · '.join(a['sky_at_start']))}<br><b>Sun:</b> {html.escape(a['sun'])}; contacts: {html.escape(', '.join(a['sun_contacts']) or 'none')}; "
+                  f"</ul><p class='s'><b>Sky at start:</b> {html.escape(' · '.join(a['sky_at_start']))}<br><b>{KARAKA[METAL]}:</b> {html.escape(a['sun'])}; contacts: {html.escape(', '.join(a['sun_contacts']) or 'none')}; "
                   f"<b>{html.escape(a['jupiter'])}</b>; {a['paksha']} paksha<br><b>Worst day:</b> {html.escape(a['worst_day'])} — {html.escape(a['sky_worst'])}"
                   + (f"<br><b>Transits in the interval:</b> {html.escape(' · '.join(a['records']))}" if a["records"] else "") + "</p></details>")
         return (f"<tr class='{cls}'><td class='w'>{html.escape(when)}</td><td><b>{html.escape(e['title'])}</b><div class='s'>{html.escape(det)[:400]}</div>{an}</td>"
@@ -812,9 +911,13 @@ details summary{cursor:pointer;color:var(--be2);font-size:12px;margin-top:4px}ul
 """
     ev_main = [e for e in events if not e.get("component")]
     FINDINGS = findings(per, moves, net, fails, cause_count, events)
-    page = f"""<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gold Rules Backtest{'' if YEARS == 1 else f' {YEARS}Y'}</title><style>{css}</style></head><body>
-<h1>Gold rules backtest, {span}: {p0s} to {p1s} (US Eastern time)</h1>
-<p class="m">Every gold rule in the project (TA Section 34 and other TA/KD gold items, the 2026 document's gold section, your Sun notes U1–U4), recomputed with the Swiss-Ephemeris engine (Lahiri, mean node, whole-sign drishti) and scored against COMEX gold futures daily closes (Yahoo Finance GC=F continuous front month). Gold went from {CL[I0]:,.1f} ({D[I0]:%d %b %Y}) to {CL[I1]:,.1f} ({D[I1]:%d %b %Y}), {year_ret:+.1f}%, peaking at {CL[imax]:,.1f} on {D[imax]:%d %b %Y} (largest one-day fall {min(pct(i - 1, i) for i in range(I0 + 1, I1 + 1)):+.1f}%).</p>
+    W_ = METAL.capitalize()
+    SRCTXT = ("Every gold rule in the project (TA Section 34 and other TA/KD gold items, the 2026 document's gold section, your Sun notes U1–U4)" if METAL == "gold" else
+              "Every silver rule in the project (TA Section 35 and other TA/KD silver items, the 2026 document's silver section; your Sun notes are gold-only and are not used). "
+              "Failure analysis reads the Moon, silver's classical significator (TA p.32; Kindle Ch15), and checks whether gold made the same move")
+    page = f"""<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{W_} Rules Backtest{'' if YEARS == 1 else f' {YEARS}Y'}</title><style>{css}</style></head><body>
+<h1>{W_} rules backtest, {span}: {p0s} to {p1s} (US Eastern time)</h1>
+<p class="m">{SRCTXT}, recomputed with the Swiss-Ephemeris engine (Lahiri, mean node, whole-sign drishti) and scored against {INSTR[METAL][0]} daily closes (Yahoo Finance {INSTR[METAL][1]} continuous front month). {W_} went from {CL[I0]:,.1f} ({D[I0]:%d %b %Y}) to {CL[I1]:,.1f} ({D[I1]:%d %b %Y}), {year_ret:+.1f}%, peaking at {CL[imax]:,.1f} on {D[imax]:%d %b %Y} (largest one-day fall {min(pct(i - 1, i) for i in range(I0 + 1, I1 + 1)):+.1f}%).</p>
 <div class="kpi"><div>Rules checked (U2, U4 split by planet)<b>{len(main_rules)}</b></div><div>Rules that fired<b>{sum(1 for p in main_rules if p['n'])}</b></div><div>Scored occurrences<b>{dec + tot['FLAT']}</b></div>
 <div>Worked<b style="color:var(--bu2)">{tot['WORKED']}</b></div><div>Failed<b style="color:var(--be2)">{tot['FAILED']}</b></div><div>Flat (&lt;0.5%)<b>{tot['FLAT']}</b></div>
 <div>Hit rate<b>{tot['WORKED'] / dec * 100:.0f}%</b></div><div>Rules: worked / mixed / failed<b>{len(worked_rules)} / {len(mixed_rules)} / {len(failed_rules)}</b></div></div>
@@ -827,28 +930,28 @@ details summary{cursor:pointer;color:var(--be2);font-size:12px;margin-top:4px}ul
 <li><b>Base rate</b> = the hit rate a rule would get by chance: among all windows of the same length <i>in the same backtest year</i> that moved more than 0.5%, the share that moved the rule's way. Over the whole period a 5-day window that moved went up {BASE[5]['cond_up'] * 100:.0f}% of the time, so a bullish rule needs to beat {BASE[5]['cond_up'] * 100:.0f}% and a bearish rule {100 - BASE[5]['cond_up'] * 100:.0f}% to show any edge. Using each year's own base rate means a bullish rule gets no credit just for firing in a rising year.</li>
 <li><b>Rule verdict</b>: Worked = hit rate at least 10 points above its base rate and the average move went the stated way; Failed = at least 10 points below and the average move went the wrong way; otherwise Mixed.""" + (""" <b>p-value</b> = the chance of doing at least this well by luck at the base rate (one-sided binomial); green if below 0.05, red if the rule did significantly <i>worse</i> than chance. The per-year columns show worked/decided in each Nov–Nov year, so a rule that only worked in one year stands out.""" if YEARS > 1 else """ Most rules fire only 1–6 times a year, so <b>one year is not enough to be statistically sure of any single rule</b>: read these numbers as evidence, not proof.""") + f"""</li></ul>
 <div class="wrap"><table><thead><tr><th>Horizon</th><th>Rose &gt;0.5%</th><th>Fell &gt;0.5%</th><th>Of moves &gt;0.5%, share up (base rate for bullish rules)</th><th>Windows</th>{''.join(f"<th>{year_label(k)} share up</th>" for k in range(YEARS) if YEARS > 1)}</tr></thead><tbody>{base_tbl}</tbody></table></div>
-<div class="wrap"><table><thead><tr><th>Backtest year</th><th>Gold at start</th><th>Gold at end</th><th>Change</th><th>Rule occurrences worked</th><th>Failed</th></tr></thead><tbody>{yr_rows}</tbody></table></div>
+<div class="wrap"><table><thead><tr><th>Backtest year</th><th>{W_} at start</th><th>{W_} at end</th><th>Change</th><th>Rule occurrences worked</th><th>Failed</th></tr></thead><tbody>{yr_rows}</tbody></table></div>
 
 <h2>Scorecard by rule</h2>
 <div class="wrap"><table><thead><tr><th>Rule</th><th>Stated effect</th><th>Fired</th><th>Worked</th><th>Failed</th><th>Flat</th><th>Not scored</th><th>Hit rate</th><th>Base rate</th><th>Avg move in stated direction</th><th>Verdict</th>{yhead}<th>Instant-horizon check (hits/decided)</th></tr></thead>
 <tbody>{''.join(rule_row(p) for p in sorted(main_rules, key=(lambda p: (p['hit_rate'] is None, -(p['hit_rate'] or 0), -p['n'])) if YEARS == 1 else (lambda p: (p['hit_rate'] is None, -(p['worked'] + p['failed']), -(p['hit_rate'] or 0)))))}</tbody></table></div>
-<h3>Your Sun notes as one combined model</h3>
-<p class="m">U2 and U4 are scored above per contact planet (U2 – Venus, U2 – Mercury, U2 – Jupiter, U2 – waxing Moon; U4 – Saturn, U4 – Rahu), because the whole rule's window restarts each time the set of contacts changes. Here every Sun-state stretch is scored by its rise-minus-fall count across U1–U4 (the Moon left out, as in the gold report's timeline; stretches with equal counts are not scored).</p>
+{'' if METAL != 'gold' else '<h3>Your Sun notes as one combined model</h3>'}
+<p class="m" {'' if METAL == 'gold' else 'hidden'}>U2 and U4 are scored above per contact planet (U2 – Venus, U2 – Mercury, U2 – Jupiter, U2 – waxing Moon; U4 – Saturn, U4 – Rahu), because the whole rule's window restarts each time the set of contacts changes. Here every Sun-state stretch is scored by its rise-minus-fall count across U1–U4 (the Moon left out, as in the gold report's timeline; stretches with equal counts are not scored).</p>
 <div class="wrap"><table><thead><tr><th>Component</th><th>Stated effect</th><th>Fired</th><th>Worked</th><th>Failed</th><th>Flat</th><th>Not scored</th><th>Hit rate</th><th>Base rate</th><th>Avg move in stated direction</th><th>Verdict</th>{yhead}<th>Instant-horizon check</th></tr></thead>
 <tbody>{''.join(rule_row(p) for p in comp)}</tbody></table></div>
 
 <h2>Do the rules add up? Net signal each day vs the next move</h2>
-<p class="m">Each trading day: (number of distinct bullish gold rules active) − (number of distinct bearish gold rules active), with instants counted as active for one week; the combined Sun model is left out so nothing is counted twice. Correlation of that net count with the next day's return: <b>{net['corr1']:+.3f}</b>; with the next 5 days: <b>{net['corr5']:+.3f}</b> (0 = no relation, positive = the rules pointed the right way).</p>
+<p class="m">Each trading day: (number of distinct bullish {METAL} rules active) − (number of distinct bearish {METAL} rules active), with instants counted as active for one week; the combined Sun model is left out so nothing is counted twice. Correlation of that net count with the next day's return: <b>{net['corr1']:+.3f}</b>; with the next 5 days: <b>{net['corr5']:+.3f}</b> (0 = no relation, positive = the rules pointed the right way).</p>
 <div class="wrap"><table><thead><tr><th>Days when…</th><th>Days</th><th>Avg next-day move</th><th>Next day up</th><th>Avg next-5-day move</th><th>Next 5 days up</th></tr></thead><tbody>{nb}</tbody></table></div>
 
 <h2>Why rules failed: what keeps showing up</h2>
-<p class="m">Each condition is checked for every failed occurrence <i>and</i> every occurrence that worked. A condition only helps explain failures if it is clearly more common among the failures; "Sun contacts" are read at the start of the occurrence. These are pointers, not proof of cause.</p>
+<p class="m">Each condition is checked for every failed occurrence <i>and</i> every occurrence that worked. A condition only helps explain failures if it is clearly more common among the failures; {KARAKA[METAL]} contacts are read at the start of the occurrence. These are pointers, not proof of cause.</p>
 {''.join(f"""<h3>{tone} rules</h3><div class="wrap"><table><thead><tr><th>Condition on the sky</th><th>In failed occurrences</th><th>In occurrences that worked</th><th>Difference</th></tr></thead><tbody>""" + ''.join(f'<tr><td>{html.escape(k)}</td><td class="n">{f_}/{nf} ({f_ / max(nf, 1) * 100:.0f}%)</td><td class="n">{w_}/{nw} ({w_ / max(nw, 1) * 100:.0f}%)</td><td class="n"><b>{(f_ / max(nf, 1) - w_ / max(nw, 1)) * 100:+.0f} pts</b></td></tr>' for k, f_, nf, w_, nw in rows_) + "</tbody></table></div>" for tone, rows_ in cause_count.items())}
 <p class="m">Opposite-tone rules most often active during failures: {html.escape('; '.join(f'{k} ({v})' for k, v in opp_titles.most_common(10)))}.</p>
 
 <h2>The biggest 5-day moves: what the rules said</h2>
-<p class="m">The {sum(1 for m in moves if m['dir'] == 'fall')} largest non-overlapping 5-trading-day falls and rises, the gold rules active then (bullish : bearish count), and the sky.</p>
-<div class="wrap"><table><thead><tr><th>Dates</th><th>Move</th><th>Bull : Bear</th><th>Rules active</th><th>Sky (Sun = gold karaka in your notes; Jupiter; transits in the interval)</th></tr></thead><tbody>{mv_rows}</tbody></table></div>
+<p class="m">The {sum(1 for m in moves if m['dir'] == 'fall')} largest non-overlapping 5-trading-day falls and rises, the {METAL} rules active then (bullish : bearish count), and the sky.</p>
+<div class="wrap"><table><thead><tr><th>Dates</th><th>Move</th><th>Bull : Bear</th><th>Rules active</th><th>Sky (Sun, Jupiter, transits in the interval)</th></tr></thead><tbody>{mv_rows}</tbody></table></div>
 
 <h3>Which sky factors were present in the biggest moves?</h3>
 <p class="m">Each factor is tested at the middle of each 5-day move. "All windows" is how often the factor was present across every 5-day window of the period; a factor only says something if it shows up clearly more often in the falls than in the rises (or the reverse) <i>and</i> more often than its all-period share. {sum(1 for m in moves if m['dir'] == 'fall')} moves each way is a small sample; treat this as a lead to examine, not a rule.</p>
@@ -857,12 +960,12 @@ details summary{cursor:pointer;color:var(--be2);font-size:12px;margin-top:4px}ul
 <h2>Every occurrence (failed ones carry a "Why it may have failed" panel)</h2>
 <div class="wrap"><table><thead><tr><th>When (ET)</th><th>Rule</th><th>Stated</th><th>Price used</th><th>Move</th><th>1/3/10-day</th><th>Result</th></tr></thead>
 <tbody>{''.join(ev_row(e) for e in ev_main)}</tbody></table></div>
-<h3>Combined Sun-model occurrences</h3>
+{'' if METAL != 'gold' else '<h3>Combined Sun-model occurrences</h3>'}
 <div class="wrap"><table><thead><tr><th>When (ET)</th><th>Rule</th><th>Stated</th><th>Price used</th><th>Move</th><th>1/3/10-day</th><th>Result</th></tr></thead>
 <tbody>{''.join(ev_row(e) for e in events if e.get('component'))}</tbody></table></div>
-<p class="s">Source: tools/backtest_gold.py; prices build/pdfref/backtest/gold_GC_F_daily.csv (Yahoo Finance GC=F, downloaded 20 Nov 2026; the continuous contract rolls between months, which can add small jumps). Astronomy: build/astronomy_{P0.year}.json … _2026.json (tools/build_year.py). Rule texts and page references: build/pdfref/gold_2026-11-20_to_2027-12-31_ET.html and REFERENCE_PDF_RULES.md.</p>
+<p class="s">Source: tools/backtest_gold.py; prices {PRICES.relative_to(ROOT)} (Yahoo Finance {INSTR[METAL][1]}, downloaded 20/21 Nov 2026; the continuous contract rolls between months, which can add small jumps). Astronomy: build/astronomy_{P0.year}.json … _2026.json (tools/build_year.py). Rule texts and page references: build/pdfref/{METAL}_2026-11-20_to_2027-12-31_ET.html and REFERENCE_PDF_RULES.md.</p>
 </body></html>"""
-    stem = f"gold_backtest_{P0:%Y-%m-%d}_to_2026-11-20_ET"
+    stem = f"{METAL}_backtest_{P0:%Y-%m-%d}_to_2026-11-20_ET"
     (OUT / f"{stem}.html").write_text(page, encoding="utf-8")
 
     def ser(e):
@@ -871,7 +974,7 @@ details summary{cursor:pointer;color:var(--be2);font-size:12px;margin-top:4px}ul
             x[k] = x[k].astimezone(ET).isoformat() if x.get(k) else None
         x["day"] = x["day"].isoformat() if x.get("day") else None
         return x
-    json.dump(dict(period=f"{P0:%Y-%m-%d}..2026-11-20", base_rates_by_year={year_label(k): v for k, v in BASE_Y.items()}, time_zone="America/New_York", prices="Yahoo Finance GC=F daily close",
+    json.dump(dict(metal=METAL, period=f"{P0:%Y-%m-%d}..2026-11-20", base_rates_by_year={year_label(k): v for k, v in BASE_Y.items()}, time_zone="America/New_York", prices="Yahoo Finance GC=F daily close",
                    flat_band_pct=FLAT, instant_horizon_days=H, base_rates=BASE, totals=dict(tot), rules=list(per.values()),
                    big_moves=moves, net_signal={k: v for k, v in net.items() if k != "series"}, events=[ser(e) for e in events]),
               open(OUT / f"{stem}.json", "w", encoding="utf-8"), indent=1, default=str)

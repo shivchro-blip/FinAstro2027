@@ -1,7 +1,8 @@
-"""Gold findings tracker: one page that keeps every gold analysis current.
+"""Gold / silver findings tracker: one page per metal that keeps every analysis current.
 
-    python tools/gold_tracker.py              # rebuild from the existing backtest JSONs
-    python tools/gold_tracker.py --refresh    # re-run the 1- and 5-year backtests first
+    python tools/gold_tracker.py                          # gold, from the existing backtest JSONs
+    python tools/gold_tracker.py --refresh                # re-run the 1- and 5-year backtests first
+    python tools/gold_tracker.py --metal silver [--refresh]   -> SILVER_TRACKER.{html,md}
 
 Reads
   build/pdfref/gold_backtest_2025-11-20_to_2026-11-20_ET.json   (1-year backtest)
@@ -42,8 +43,16 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 OUT = ROOT / "build" / "pdfref"
 ET = ZoneInfo("America/New_York")
+METAL = "gold"
 J1 = OUT / "gold_backtest_2025-11-20_to_2026-11-20_ET.json"
 J5 = OUT / "gold_backtest_2021-11-20_to_2026-11-20_ET.json"
+
+
+def set_metal(m):
+    global METAL, J1, J5
+    METAL = m
+    J1 = OUT / f"{m}_backtest_2025-11-20_to_2026-11-20_ET.json"
+    J5 = OUT / f"{m}_backtest_2021-11-20_to_2026-11-20_ET.json"
 LOG = OUT / "analysis_log.json"
 F0 = dt.datetime(2026, 11, 20, tzinfo=ET)
 F1 = dt.datetime(2028, 1, 1, tzinfo=ET)
@@ -96,6 +105,7 @@ def forward(B):
     from finastro.sky import Sky
     from finastro.pdfref.detect import Ctx
     from finastro.pdfref.engine import Grid, utc
+    B.configure_metal(METAL)
     B.P0, B.P1 = F0, F1
     grid = Grid(utc(2026, 5, 1), utc(2028, 3, 1))
     ctxs = [Ctx(grid, Sky.load(ROOT / "build" / f"astronomy_{y}.json"), y) for y in (2026, 2027)]
@@ -111,9 +121,11 @@ def ev_span(e):
 
 
 def main():
+    set_metal(sys.argv[sys.argv.index("--metal") + 1] if "--metal" in sys.argv else "gold")
+    W_ = METAL.capitalize()
     if "--refresh" in sys.argv:
         for a in ([], ["--years", "5"]):
-            subprocess.run([sys.executable, str(ROOT / "tools" / "backtest_gold.py")] + a, check=True)
+            subprocess.run([sys.executable, str(ROOT / "tools" / "backtest_gold.py"), "--metal", METAL] + a, check=True)
     d1, d5 = json.load(open(J1)), json.load(open(J5))
     r1 = {p["rule_id"]: p for p in d1["rules"]}
     r5 = {p["rule_id"]: p for p in d5["rules"]}
@@ -151,7 +163,7 @@ def main():
                        else "failed" if st == "Did not hold up" else "other")
                 conc[grp].add(f"{o['title']} [{o['tone']}]")
         p = r5[e["rule_id"]]
-        best_rows.append(dict(rule_id=e["rule_id"], title=e["title"], tone=e["tone"], start=s, end=en,
+        best_rows.append(dict(rule_id=e["rule_id"], title=e["title"], tone=e["tone"], start=s, end=en, bodies=e.get("bodies", []),
                               days=round((en - s).total_seconds() / 86400, 1), facts=e["facts"], verdict=e["verdict"],
                               hist=f"{p['worked']}/{p['worked'] + p['failed']} ({p['hit_rate']}% vs base {p['base_rate']}%), avg {p['avg_dir_ret']:+.2f}%, right in {p['years_right']}/{p['years_active']} yrs",
                               conc={k: sorted(v) for k, v in conc.items()}))
@@ -185,14 +197,30 @@ def main():
     held = [p for p in r5.values() if p["status"] in ("Strongest", "Supported", "Consistent") and p["worked"] + p["failed"] >= 10]
     failed = sorted((p for p in r5.values() if p["status"] == "Did not hold up"), key=lambda p: -(p["worked"] + p["failed"]))
     nb = d5["net_signal"]["buckets"]
+    stack_word = ("carries almost no information" if abs(d5["net_signal"]["corr5"]) < 0.05 else
+                  "pointed the WRONG way (bearish-majority days did better)" if d5["net_signal"]["corr5"] < 0 else "pointed the right way")
     findings = [
         ("Rule set as a whole", f"5 yr: {t5['WORKED']} worked / {t5['FAILED']} failed ({t5['WORKED'] / (t5['WORKED'] + t5['FAILED']) * 100:.0f}%); 1 yr: {t1['WORKED']} / {t1['FAILED']}",
          "No better than chance in total; use individual rules, not the count of rules.", "Confirmed (5 yr)"),
         ("Stacking rules (bullish minus bearish count)", f"5 yr: next-5-day move {nb['net > 0 (more bullish rules active)']['avg5']:+.2f}% on bullish-majority days vs {nb['net < 0 (more bearish rules active)']['avg5']:+.2f}% on bearish-majority days; corr {d5['net_signal']['corr5']:+.3f}",
-         "The net count carries almost no information; the 1-year bearish edge (-1.49%) did not repeat over 5 years.", "Did not hold up"),
-        ("Your combined Sun model (U1-U4 together)", f"5 yr: {sun.get('worked')}/{sun.get('worked', 0) + sun.get('failed', 0)} ({sun.get('hit_rate')}% vs base {sun.get('base_rate')}%), p = {sun.get('p_value')}, right in {sun.get('years_right')}/{sun.get('years_active')} yrs",
-         "Closest thing to an edge in the whole set; dates below.", sun.get("status", "")),
+         f"The net count {stack_word}" + ("; the 1-year bearish edge (-1.49%) did not repeat over 5 years." if METAL == "gold" else "."), "Did not hold up"),
     ]
+    if METAL == "gold":
+        findings.append(("Your combined Sun model (U1-U4 together)", f"5 yr: {sun.get('worked')}/{sun.get('worked', 0) + sun.get('failed', 0)} ({sun.get('hit_rate')}% vs base {sun.get('base_rate')}%), p = {sun.get('p_value')}, right in {sun.get('years_right')}/{sun.get('years_active')} yrs",
+         "Closest thing to an edge in the whole set; dates below.", sun.get("status", "")))
+    if METAL == "silver":
+        ev5 = [e for e in d5["events"] if e.get("outcome") in ("WORKED", "FAILED") and e.get("gold_ret") is not None]
+        ag = [e for e in ev5 if ((e["gold_ret"] < -0.5) if e["tone"] == "Bullish" else (e["gold_ret"] > 0.5))]
+        wr = [e for e in ev5 if ((e["gold_ret"] > 0.5) if e["tone"] == "Bullish" else (e["gold_ret"] < -0.5))]
+        if ev5:
+            findings.append(("Silver follows gold", f"5 yr: when gold moved against a silver rule it failed {sum(e['outcome'] == 'FAILED' for e in ag)}/{len(ag)}; when gold moved its way it worked {sum(e['outcome'] == 'WORKED' for e in wr)}/{len(wr)}",
+                             "Silver rule outcomes were decided mostly by gold's direction; the silver rules add little that is specific to silver.", "Confirmed (5 yr)"))
+        for a_, b_ in (("doc26_silver_bear_01_venus_alone_leo_libra", "ta_s35b01_venus_leo_libra"), ("doc26_silver_bear_02_mercury_alone_aries_virgo", "ta_s35b02_mercury_aries_virgo")):
+            pa, pb = r5.get(a_), r5.get(b_)
+            if pa and pb and pa["worked"] + pa["failed"] and pb["worked"] + pb["failed"]:
+                findings.append((f"'Alone' qualifier: {pa['title']} vs {pb['title']}", f"5 yr: with 'alone' {pa['worked']}/{pa['worked'] + pa['failed']} ({pa['hit_rate']}%); without {pb['worked']}/{pb['worked'] + pb['failed']} ({pb['hit_rate']}%)",
+                                 "The 2026 document's 'alone' condition changes the result: the qualified version worked, the plain one did not." if pa["hit_rate"] > pb["hit_rate"] + 15 else
+                                 "Neither version works; the 'alone' version did even worse." if pa["hit_rate"] + 15 < pb["hit_rate"] else "The qualifier makes no clear difference.", pa["status"]))
     for p in sorted(held, key=lambda p: -(p["worked"] + p["failed"])):
         if p["rule_id"] == "user_sun_state_net":
             continue
@@ -207,8 +235,9 @@ def main():
             continue
         findings.append((p["title"], f"5 yr: {p['worked']}/{p['worked'] + p['failed']} ({p['hit_rate']}% vs base {p['base_rate']}%), avg {p['avg_dir_ret']:+.2f}%, right in {p['years_right']}/{p['years_active']} yrs",
                          "Went the wrong way more often than chance would; treat as unreliable.", "Did not hold up"))
-    findings.append(("Big falls", "Bearish rules outnumbered bullish ones before only 1 of the 15 biggest 5-day falls (5 yr); Jan-2026 crash had 6 bullish, 0 bearish",
-                     "Largest gap: no rule for a stellium on the Sun (Sun, Mercury, Venus, Mars in Capricorn, Venus combusting, Jupiter retrograde).", "Open gap"))
+    if METAL == "gold":
+        findings.append(("Big falls", "Bearish rules outnumbered bullish ones before only 1 of the 15 biggest 5-day falls (5 yr); Jan-2026 crash had 6 bullish, 0 bearish",
+                         "Largest gap: no rule for a stellium on the Sun (Sun, Mercury, Venus, Mars in Capricorn, Venus combusting, Jupiter retrograde).", "Open gap"))
 
     # ---------------- HTML
     def st_tag(st):
@@ -236,7 +265,15 @@ def main():
         f = r["facts"]
         if r["rule_id"] == "user_sun_state_net":
             return f"Sun in {f.get('Sun nakshatra')}; rise: {f.get('rise')}; fall: {f.get('fall')} ({r['verdict']})"
-        return f.get("value", "")
+        v = f.get("value", "")
+        if v.startswith("(") and r.get("bodies"):
+            import ast
+            from finastro.pdfref.engine import snapshot
+            names = ast.literal_eval(v)
+            sn = snapshot(max(r["start"], F0).astimezone(dt.timezone.utc).replace(second=0, microsecond=0) + dt.timedelta(hours=1))
+            b0 = r["bodies"][0]
+            return f"{' & '.join(names)} with {b0} in {sn[b0].sign}"
+        return v
     best_html = "".join(
         f"<tr class='{r['tone'].lower()}'><td class='w'>{html.escape(et(max(r['start'], F0)))}{' (already running)' if r['start'] < F0 else ''}</td><td class='w'>{html.escape(et(r['end']))}</td><td class='n'>{r['days']}</td>"
         f"<td><b>{html.escape(r['title'])}</b><div class='s'>{html.escape(det(r))}</div></td><td><span class='tag {r['tone'].lower()}'>{r['tone']}</span></td>"
@@ -254,43 +291,45 @@ def main():
     best_list = ", ".join(p["title"].replace(" (user note)", "") for p in best)
     css = (ROOT / "tools" / "backtest_gold.py").read_text().split('css = """', 1)[1].split('"""', 1)[0]
     now = dt.datetime.now(ET)
-    page = f"""<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gold Findings Tracker</title><style>{css}</style></head><body>
-<h1>Gold findings tracker</h1>
-<p class="m">Generated {now:%d %b %Y %H:%M %Z} by tools/gold_tracker.py from the 1-year and 5-year backtests and the analysis log. Re-run <code>python tools/gold_tracker.py --refresh</code> after any rule or data change; every number on this page is recomputed, nothing is typed in.</p>
+    AGREE_NOTE = (" (the combined Sun model counts on whichever side its net count falls). Longer stretches with 3–4 rules agreeing are the strongest signals this rule set produces. The rules are not independent: the combined Sun model already contains the U2 contacts, so agreement mostly means several of your Sun conditions hold at once."
+                  if METAL == "gold" else ". With a single best rule this simply marks when it is active.")
+    page = f"""<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{W_} Findings Tracker</title><style>{css}</style></head><body>
+<h1>{W_} findings tracker</h1>
+<p class="m">Generated {now:%d %b %Y %H:%M %Z} by tools/gold_tracker.py from the 1-year and 5-year backtests and the analysis log. Re-run <code>python tools/gold_tracker.py{'' if METAL == 'gold' else ' --metal ' + METAL} --refresh</code> after any rule or data change; every number on this page is recomputed, nothing is typed in.</p>
 <h2>Recent findings</h2>
 <div class="wrap"><table><thead><tr><th>Finding</th><th>Evidence</th><th>What it means</th><th>Status</th></tr></thead><tbody>{find_rows}</tbody></table></div>
 
 <h2>Best-performing rules: dates from 20 Nov 2026 to 31 Dec 2027 (ET)</h2>
 <p class="m">Chosen from the 5-year backtest without hand-picking (≥15 decided occurrences, hit rate above base, right in ≥4 of 5 years or p &lt; 0.10): <b>{html.escape(best_list)}</b>.
-Windows are scored in the backtest from the close before the start to the last close inside the window. The last column lists the other gold rules active at the same time, grouped by how they did over 5 years. None of these rules is statistically certain; read them as the most consistent of the set.</p>
+Windows are scored in the backtest from the close before the start to the last close inside the window. The last column lists the other {METAL} rules active at the same time, grouped by how they did over 5 years. None of these rules is statistically certain; read them as the most consistent of the set.</p>
 <div class="wrap"><table><thead><tr><th>From (ET)</th><th>To (ET)</th><th>Days</th><th>Rule / condition</th><th>Effect</th><th>5-year record</th><th>Other rules active then</th></tr></thead><tbody>{best_html}</tbody></table></div>
 
 <h3>Day-by-day agreement of the best rules</h3>
-<p class="m">Each stretch: how many of the best rules point up : down (the combined Sun model counts on whichever side its net count falls). Longer stretches with 3–4 rules agreeing are the strongest signals this rule set produces. The rules are not independent: the combined Sun model already contains the U2 contacts, so agreement mostly means several of your Sun conditions hold at once.</p>
+<p class="m">Each stretch: how many of the best rules point up : down{AGREE_NOTE}</p>
 <div class="wrap"><table><thead><tr><th>From</th><th>To</th><th>Days</th><th>Up : down</th><th>Pointing up</th><th>Pointing down</th></tr></thead><tbody>{conf_html}</tbody></table></div>
 
-<h2>Every gold rule: 1-year vs 5-year record</h2>
-<p class="m">Record = worked/decided (hit rate vs drift-aware base rate). ★ = best-performing (dates above). "Upcoming" = occurrences from 20 Nov 2026 to 31 Dec 2027; every one of them is in the gold report (build/pdfref/gold_2026-11-20_to_2027-12-31_ET.html), and its status here tells you how much weight it earned.</p>
+<h2>Every {METAL} rule: 1-year vs 5-year record</h2>
+<p class="m">Record = worked/decided (hit rate vs drift-aware base rate). ★ = best-performing (dates above). "Upcoming" = occurrences from 20 Nov 2026 to 31 Dec 2027; every one of them is in the {METAL} report (build/pdfref/{METAL}_2026-11-20_to_2027-12-31_ET.html), and its status here tells you how much weight it earned.</p>
 <div class="wrap"><table><thead><tr><th>Rule</th><th>Effect</th><th>1 yr (2025-26)</th><th>5 yr (2021-26)</th><th>Avg move (5 yr)</th><th>p (5 yr)</th><th>Years right</th><th>By year 21-22 … 25-26</th><th>Status</th><th>Upcoming</th></tr></thead><tbody>{rule_rows}</tbody></table></div>
 
 <h2>Analysis log</h2>
 <div class="wrap"><table><thead><tr><th>Date</th><th>PR</th><th>Analysis</th><th>Result</th><th>Files</th></tr></thead><tbody>{log_html}</tbody></table></div>
-<p class="s">Backtests: {J1.name}, {J5.name}. Prices: Yahoo Finance GC=F daily closes. Forward windows: same detectors as the backtest (tools/backtest_gold.py collect()), Swiss Ephemeris, Lahiri, mean node, whole-sign drishti.</p>
+<p class="s">Backtests: {J1.name}, {J5.name}. Prices: Yahoo Finance {'GC=F' if METAL == 'gold' else 'SI=F'} daily closes. Forward windows: same detectors as the backtest (tools/backtest_gold.py collect()), Swiss Ephemeris, Lahiri, mean node, whole-sign drishti.</p>
 </body></html>"""
-    (OUT / "GOLD_TRACKER.html").write_text(page, encoding="utf-8")
+    (OUT / f"{METAL.upper()}_TRACKER.html").write_text(page, encoding="utf-8")
 
     # ---------------- Markdown (diff-friendly copy)
-    md = ["# Gold findings tracker", "", f"Generated {now:%d %b %Y %H:%M %Z} by `tools/gold_tracker.py` (`--refresh` re-runs both backtests). HTML version: `GOLD_TRACKER.html`.", "",
+    md = [f"# {W_} findings tracker", "", f"Generated {now:%d %b %Y %H:%M %Z} by `tools/gold_tracker.py{'' if METAL == 'gold' else ' --metal ' + METAL}` (`--refresh` re-runs both backtests). HTML version: `{METAL.upper()}_TRACKER.html`.", "",
           "## Recent findings", "", "| Finding | Evidence | What it means | Status |", "|---|---|---|---|"]
     md += [f"| {a} | {b} | {c} | {st} |" for a, b, c, st in findings]
     md += ["", "## Best-performing rules: dates 20 Nov 2026 - 31 Dec 2027 (ET)", "", f"Best (from the 5-year data): {best_list}.", "",
            "| From (ET) | To (ET) | Days | Rule | Effect | Detail |", "|---|---|---|---|---|---|"]
     md += [f"| {et(max(r['start'], F0))} | {et(r['end'])} | {r['days']} | {r['title']} | {r['tone']} | {det(r).replace('|', '/')} |" for r in best_rows]
-    md += ["", "## Every gold rule: 1-year vs 5-year", "", "| Rule | Effect | 1 yr | 5 yr | Avg (5 yr) | p | Years right | Status | Upcoming |", "|---|---|---|---|---|---|---|---|---|"]
+    md += ["", f"## Every {METAL} rule: 1-year vs 5-year", "", "| Rule | Effect | 1 yr | 5 yr | Avg (5 yr) | p | Years right | Status | Upcoming |", "|---|---|---|---|---|---|---|---|---|"]
     md += [f"| {p['title']}{' ★' if p['best'] else ''} | {p['tone']} | {rec(r1.get(p['rule_id']))} | {rec(p)} | {'' if p['avg_dir_ret'] is None else f'{p['avg_dir_ret']:+.2f}%'} | {'' if p.get('p_value') is None else p['p_value']} | {f'{p['years_right']}/{p['years_active']}' if p.get('years_active') else ''} | {p['status']} | {fwd_count.get(p['rule_id'], 0)} |" for p in order]
     md += ["", "## Analysis log", "", "| Date | PR | Topic | Result |", "|---|---|---|---|"]
     md += [f"| {x['date']} | #{x['pr']} | {x['topic']} | {x['result']} |" for x in reversed(log)]
-    (OUT / "GOLD_TRACKER.md").write_text("\n".join(md) + "\n", encoding="utf-8")
+    (OUT / f"{METAL.upper()}_TRACKER.md").write_text("\n".join(md) + "\n", encoding="utf-8")
 
     def ser(r):
         x = dict(r)
@@ -300,7 +339,7 @@ Windows are scored in the backtest from the close before the start to the last c
                    best_windows=[ser(r) for r in best_rows],
                    agreement=[dict(frm=c["frm"].isoformat(), to=c["to"].isoformat(), up=c["bu"], down=c["be"]) for c in conf],
                    rule_status={rid: dict(title=p["title"], status=p["status"], best=p["best"], upcoming=fwd_count.get(rid, 0)) for rid, p in r5.items()}),
-              open(OUT / "gold_forward_2026-11-20_to_2027-12-31_ET.json", "w", encoding="utf-8"), indent=1, default=str)
+              open(OUT / f"{METAL}_forward_2026-11-20_to_2027-12-31_ET.json", "w", encoding="utf-8"), indent=1, default=str)
     print(f"best: {best_list}; {len(best_rows)} forward windows; {len(conf)} agreement stretches; {len(findings)} findings")
 
 

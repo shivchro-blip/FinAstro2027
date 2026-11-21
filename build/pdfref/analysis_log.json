@@ -1,41 +1,116 @@
 {
  "about": "Every analysis run in this project, newest last. tools/gold_tracker.py renders it into build/pdfref/GOLD_TRACKER.{html,md}. Append an entry for each new analysis.",
  "entries": [
-  {"date": "2026-11-19", "pr": "1-4", "topic": "Rule layer (2026 document)",
+  {
+   "date": "2026-11-19",
+   "pr": "1-4",
+   "topic": "Rule layer (2026 document)",
    "analysis": "Ported the 2026 document's configuration rules (Kshin Moon, Total Days, Rahu/Ketu nakshatra on Thursday, Moon-Mercury D9, eclipses, Moon rashi parivartan, month systems, B19/B111/B116/B117, benefic/malefic valence).",
    "result": "Rules print in the 2026 table layout; base layer for every later analysis.",
-   "files": ["build/RULE_LAYER_STATUS.md", "build/calendar_2027.html"]},
-  {"date": "2026-11-20", "pr": "5", "topic": "Reference PDFs -> rules + NY calendar",
+   "files": [
+    "build/RULE_LAYER_STATUS.md",
+    "build/calendar_2027.html"
+   ]
+  },
+  {
+   "date": "2026-11-20",
+   "pr": "5",
+   "topic": "Reference PDFs -> rules + NY calendar",
    "analysis": "Read Tech Astro Analysis (2020) and KD 2026 in full; added every computable rule; built a New York (ET) 2027 calendar with 9 fields per event; extracted both PDFs to HTML.",
    "result": "~730 rules in the catalogue; ~1,600 major events in the 2027 NY calendar; validation 51/58 against the 2026 printed rows.",
-   "files": ["build/pdfref/REFERENCE_PDF_RULES.md", "build/pdfref/COMPLETION_REPORT.md", "build/pdfref/calendar_2027_NY_master.html", "Reference_materials/extracted/"]},
-  {"date": "2026-11-20", "pr": "5", "topic": "Gold & silver reports",
+   "files": [
+    "build/pdfref/REFERENCE_PDF_RULES.md",
+    "build/pdfref/COMPLETION_REPORT.md",
+    "build/pdfref/calendar_2027_NY_master.html",
+    "Reference_materials/extracted/"
+   ]
+  },
+  {
+   "date": "2026-11-20",
+   "pr": "5",
+   "topic": "Gold & silver reports",
    "analysis": "Every rule that names gold / silver, 20 Nov 2026 - 31 Dec 2027, US Eastern time, each boundary checked against the astronomy layer.",
    "result": "Gold report ~205 rows, silver report 117 rows.",
-   "files": ["build/pdfref/gold_2026-11-20_to_2027-12-31_ET.html", "build/pdfref/silver_2026-11-20_to_2027-12-31_ET.html"]},
-  {"date": "2026-11-20", "pr": "6", "topic": "User gold notes (Sun rules U1-U4)",
+   "files": [
+    "build/pdfref/gold_2026-11-20_to_2027-12-31_ET.html",
+    "build/pdfref/silver_2026-11-20_to_2027-12-31_ET.html"
+   ]
+  },
+  {
+   "date": "2026-11-20",
+   "pr": "6",
+   "topic": "User gold notes (Sun rules U1-U4)",
    "analysis": "Added the user's Sun rules: Sun in Venus/Mercury/Jupiter nakshatra (U1, rise); Venus, Mercury, Jupiter or waxing Moon with/aspecting the Sun (U2, hike); Sun in Saturn/Rahu nakshatra (U3, fall); Saturn or Rahu with/aspecting the Sun (U4, crash).",
    "result": "U1-U4 in the gold report with a Sun-state timeline; conflicts with TA S34 noted on each row.",
-   "files": ["Reference_materials/user_notes_gold.md", "finastro/pdfref/user_rules.py"]},
-  {"date": "2026-11-20", "pr": "7", "topic": "Silver coverage audit",
+   "files": [
+    "Reference_materials/user_notes_gold.md",
+    "finastro/pdfref/user_rules.py"
+   ]
+  },
+  {
+   "date": "2026-11-20",
+   "pr": "7",
+   "topic": "Silver coverage audit",
    "analysis": "Checked every silver bull/bear item in the PDFs and resources against the report.",
    "result": "Added Rahu in Dhanishta (bullion risk) and Venus retrograde in Taurus; Moon-based mirror of U1-U4 NOT implemented (no source backing).",
-   "files": ["build/pdfref/COVERAGE_AUDIT_GOLD_SILVER.md"]},
-  {"date": "2026-11-20", "pr": "8", "topic": "Gold coverage audit",
+   "files": [
+    "build/pdfref/COVERAGE_AUDIT_GOLD_SILVER.md"
+   ]
+  },
+  {
+   "date": "2026-11-20",
+   "pr": "8",
+   "topic": "Gold coverage audit",
    "analysis": "Full 2026 comparison of the gold section; Indian gold-demand dates (Kindle Ch15); Abhijit span fix.",
    "result": "Gold coverage complete for computable rules.",
-   "files": ["build/pdfref/COVERAGE_AUDIT_GOLD_SILVER.md"]},
-  {"date": "2026-11-20", "pr": "9", "topic": "Gold backtest, 1 year",
+   "files": [
+    "build/pdfref/COVERAGE_AUDIT_GOLD_SILVER.md"
+   ]
+  },
+  {
+   "date": "2026-11-20",
+   "pr": "9",
+   "topic": "Gold backtest, 1 year",
    "analysis": "Every gold rule scored against COMEX gold (GC=F) daily closes, 20 Nov 2025 - 20 Nov 2026; failure causes, biggest moves.",
    "result": "61 of 124 decided occurrences worked (49%); bearish-majority days were followed by -1.49% over 5 days; the Jan-2026 crash was not flagged by any rule.",
-   "files": ["build/pdfref/gold_backtest_2025-11-20_to_2026-11-20_ET.html"]},
-  {"date": "2026-11-21", "pr": "10", "topic": "Gold backtest, 5 years",
+   "files": [
+    "build/pdfref/gold_backtest_2025-11-20_to_2026-11-20_ET.html"
+   ]
+  },
+  {
+   "date": "2026-11-21",
+   "pr": "10",
+   "topic": "Gold backtest, 5 years",
    "analysis": "Same rule set, 20 Nov 2021 - 20 Nov 2026, with per-year drift-aware base rates, binomial p-values and per-year results.",
    "result": "288 of 554 worked (52%) vs 54% by chance; best: combined Sun model 105/179 (p=0.057), U2-Jupiter, U2-Venus, U2-Mercury right in 4 of 5 years; U4-Saturn did not hold up (6/20).",
-   "files": ["build/pdfref/gold_backtest_2021-11-20_to_2026-11-20_ET.html"]},
-  {"date": "2026-11-21", "pr": "11", "topic": "Gold findings tracker + forward dates",
+   "files": [
+    "build/pdfref/gold_backtest_2021-11-20_to_2026-11-20_ET.html"
+   ]
+  },
+  {
+   "date": "2026-11-21",
+   "pr": "11",
+   "topic": "Gold findings tracker + forward dates",
    "analysis": "Rule-status table combining the 1- and 5-year backtests; dates of the best-performing rules from 20 Nov 2026 to 31 Dec 2027; this log.",
    "result": "See GOLD_TRACKER.html.",
-   "files": ["build/pdfref/GOLD_TRACKER.html", "build/pdfref/GOLD_TRACKER.md", "build/pdfref/gold_forward_2026-11-20_to_2027-12-31_ET.json"]}
+   "files": [
+    "build/pdfref/GOLD_TRACKER.html",
+    "build/pdfref/GOLD_TRACKER.md",
+    "build/pdfref/gold_forward_2026-11-20_to_2027-12-31_ET.json"
+   ]
+  },
+  {
+   "date": "2026-11-21",
+   "pr": "12",
+   "topic": "Silver backtest, 1 and 5 years + silver tracker",
+   "analysis": "Every silver rule (TA S35, other TA/KD silver items, 2026 document silver section) scored against COMEX silver (SI=F), 20 Nov 2021 - 20 Nov 2026, same method as gold; failure analysis reads the Moon (silver significator) and gold's move over the same dates. Tracker generalised: SILVER_TRACKER.",
+   "result": "197 of 414 worked (48%) vs 50% by chance; net rule count pointed the wrong way; outcomes followed gold (failed 153/178 when gold moved against the rule). Best: Venus-Mars / Sun-Mars together (19/30, 4 of 5 years); 'Venus alone in Leo/Libra' 5/6 vs plain 'Venus in Leo/Libra' 3/11.",
+   "files": [
+    "build/pdfref/silver_backtest_2021-11-20_to_2026-11-20_ET.html",
+    "build/pdfref/silver_backtest_2025-11-20_to_2026-11-20_ET.html",
+    "build/pdfref/SILVER_TRACKER.html",
+    "build/pdfref/silver_forward_2026-11-20_to_2027-12-31_ET.json"
+   ]
+  }
  ]
 }
