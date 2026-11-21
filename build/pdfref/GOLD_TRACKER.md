@@ -1,6 +1,6 @@
 # Gold findings tracker
 
-Generated 21 Nov 2026 15:51 EST by `tools/gold_tracker.py` (`--refresh` re-runs both backtests). HTML version: `GOLD_TRACKER.html`.
+Generated 21 Nov 2026 17:59 EST by `tools/gold_tracker.py` (`--refresh` re-runs both backtests). HTML version: `GOLD_TRACKER.html`.
 
 ## Recent findings
 
@@ -17,6 +17,10 @@ Generated 21 Nov 2026 15:51 EST by `tools/gold_tracker.py` (`--refresh` re-runs 
 | Sun on Anuradha with or aspected by benefic | 5 yr: 1/6 (17% vs base 45%), avg -1.49%, right in 1/4 yrs | Went the wrong way more often than chance would; treat as unreliable. | Did not hold up |
 | Sun in Libra aspected by (or with) malefics | 5 yr: 2/6 (33% vs base 58%), avg -0.78%, right in 1/5 yrs | Went the wrong way more often than chance would; treat as unreliable. | Did not hold up |
 | Big falls | Bearish rules outnumbered bullish ones before only 1 of the 15 biggest 5-day falls (5 yr); Jan-2026 crash had 6 bullish, 0 bearish | Largest gap: no rule for a stellium on the Sun (Sun, Mercury, Venus, Mars in Capricorn, Venus combusting, Jupiter retrograde). | Open gap |
+| New Moon -> full Moon hold (Timing Solutions / Silver guide; excluded source) | 2000-2026: new->full +0.23% per half-cycle vs full->new +0.68% (324 each) | Ran the opposite way to the claim in every 5-year block; Moon-based silver rules showed no effect. | Did not hold up |
+| Brihat Samhita 42.14a: lunation in Aries/Capricorn with a benefic (implemented) | 2000-2026: 84 cases, gold up to the next lunation in 50 (60%), avg +0.89% | Weak positive, consistent with the source but not significant. | Weak positive |
+| Brihat Samhita 10.17: Saturn in Uttara Bhadrapada afflicts gold (implemented) | 2000-2026: one passage, 3 windows: 2025-04-25 -> 2025-10-02 +17.3%; 2026-01-16 -> 2026-05-15 -0.7%; 2026-10-08 -> 2026-11-20 -15.4% | Current window runs to 7 Feb 2027; one passage in 26 years is anecdotal. | Too few to judge |
+| Financial Astrology Model v1.0 (Brihat Samhita 41.9-13 + Shadbala + Ashtakavarga) | 6572 days 2000-2026: corr(scarcity index, next 5 days) -0.002; 'Strong bullish' days avg +0.04% vs +0.23% all days | No predictive value; structural bullish lean. Use as classical context only (gold_bs41_model_*.html). | Did not hold up |
 
 ## Best-performing rules: dates 20 Nov 2026 - 31 Dec 2027 (ET)
 
@@ -115,13 +119,13 @@ Best (from the 5-year data): User Sun model: net rise vs fall signals, U2 - Merc
 | Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) | Bullish/Mixed/Bearish | 14/24 (58% vs 48%) | 58/98 (59% vs 55%) | +0.42% | 0.25 | 3/5 | At chance | 52 |
 | Sun and Moon on the same degree (new moon) | Bullish | 3/10 (30% vs 50%) | 21/48 (44% vs 56%) | +0.06% | 0.97 | 1/5 | At chance | 14 |
 | Sun in a Venus, Mercury or Jupiter nakshatra (user note) | Bullish | 3/8 (38% vs 45%) | 22/39 (56% vs 57%) | +0.76% | 0.595 | 3/5 | At chance | 11 |
-| Sun in a Saturn or Rahu nakshatra (user note) | Bearish | 3/7 (43% vs 54%) | 9/25 (36% vs 43%) | -0.26% | 0.82 | 0/5 | At chance | 7 |
+| Sun in a Saturn or Rahu nakshatra (user note) | Bearish | 3/7 (43% vs 54%) | 9/25 (36% vs 43%) | -0.24% | 0.82 | 0/5 | At chance | 7 |
 | Moon darshan (first sighting) on Monday or Friday | Bullish | 2/4 (50% vs 50%) | 7/16 (44% vs 57%) | +0.31% | 0.904 | 1/5 | At chance | 3 |
 | New / full Moon in Aries or Capricorn with a benefic (Brihat Samhita 42.14) | Bullish | 2/4 (50% vs 50%) | 8/15 (53% vs 57%) | +1.17% | 0.706 | 2/5 | At chance | 2 |
 | Sun on Bharani, Krittika, Punarvasu or Pushya, not aspected by benefic | Bullish | 0/2 (0% vs 50%) | 6/12 (50% vs 55%) | -0.38% | 0.747 | 3/5 | At chance | 4 |
 | U4 - Rahu with / aspecting the Sun (incl. Sun with Ketu) | Bearish | 1/2 (50% vs 59%) | 4/11 (36% vs 40%) | -2.48% | 0.704 | 1/5 | At chance | 2 |
 | Sun in Aries or Capricorn with or aspected by a malefic (Brihat Samhita 42.14) | Bearish | 1/2 (50% vs 55%) | 6/9 (67% vs 44%) | -0.39% | 0.145 | 3/5 | Inconclusive | 1 |
-| Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) | Bullish | 1/2 (50% vs 36%) | 4/6 (67% vs 69%) | +5.89% | 0.723 | 3/5 | Inconclusive | 2 |
+| Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) | Bullish | 1/2 (50% vs 36%) | 4/6 (67% vs 69%) | +5.80% | 0.723 | 3/5 | Inconclusive | 2 |
 | U4 - Saturn with / aspecting the Sun | Bearish | 3/4 (75% vs 59%) | 6/20 (30% vs 40%) | -2.03% | 0.867 | 1/5 | Did not hold up | 6 |
 | Mercury rises in West | Bearish | 1/2 (50% vs 50%) | 4/13 (31% vs 43%) | -0.93% | 0.885 | 0/5 | Did not hold up | 4 |
 | Sun on Anuradha with or aspected by benefic | Bearish | 0/2 (0% vs 50%) | 1/6 (17% vs 45%) | -1.49% | 0.972 | 1/4 | Did not hold up | 3 |
@@ -134,7 +138,7 @@ Best (from the 5-year data): User Sun model: net rise vs fall signals, U2 - Merc
 | Rahu & Mars together in any sign | Bullish | 0/1 (0% vs 41%) | 0/3 (0% vs 54%) | -2.42% | 1.0 | 0/3 | Too few to judge (0/3, leans wrong) | 1 |
 | Saturn or Mercury in Gemini | Bearish | 1/1 (100% vs 55%) | 2/3 (67% vs 48%) | +1.67% | 0.477 | 2/3 | Too few to judge (2/3, leans right) | 1 |
 | Venus in Jyeshtha with or aspected by benefic | Bearish | 0/1 (0% vs 55%) | 1/3 (33% vs 46%) | -0.93% | 0.842 | 1/3 | Too few to judge (1/3, leans wrong) | 1 |
-| Saturn in Uttara Bhadrapada (Brihat Samhita 10.17) | Bearish | 2/2 (100% vs 64%) | 2/3 (67% vs 43%) | -0.56% | 0.397 | 1/2 | Too few to judge (2/3, leans right) | 1 |
+| Saturn in Uttara Bhadrapada (Brihat Samhita 10.17) | Bearish | 2/2 (100% vs 64%) | 2/3 (67% vs 43%) | -0.37% | 0.397 | 1/2 | Too few to judge (2/3, leans right) | 1 |
 | Mars retrograde | Bullish | – | 2/2 (100% vs 71%) | +12.63% | 0.5 | 2/2 | Too few to judge (2/2, leans right) | 1 |
 | Sun in Libra with other malefic (Saturn, Mars, Rahu) | Bullish | – | 1/2 (50% vs 63%) | -1.16% | 0.863 | 1/2 | Too few to judge (1/2, even) | 0 |
 | Jupiter enters Gemini | Bullish | 1/1 (100% vs 50%) | 2/2 (100% vs 59%) | +1.39% | 0.343 | 2/2 | Too few to judge (2/2, leans right) | 0 |
@@ -144,7 +148,7 @@ Best (from the 5-year data): User Sun model: net rise vs fall signals, U2 - Merc
 | Solar eclipse on a Wednesday | Bullish | – | 0/2 (0% vs 59%) | -1.02% | 1.0 | 0/2 | Too few to judge (0/2, leans wrong) | 0 |
 | Retrograde Mars entering Taurus or Libra | Bullish | – | 0/1 (0% vs 47%) | -0.85% | 1.0 | 0/1 | Too few to judge (0/1, leans wrong) | 0 |
 | Jupiter in Aries | Bearish | – | 0/1 (0% vs 17%) | -15.69% | 1.0 | 0/1 | Too few to judge (0/1, leans wrong) | 0 |
-| Rahu in Dhanishta (market and bullion risk) | Bearish | 1/1 (100% vs 68%) | 1/1 (100% vs 68%) | +13.83% | 0.685 | 1/1 | Too few to judge (1/1, leans right) | 1 |
+| Rahu in Dhanishta (market and bullion risk) | Bearish | 1/1 (100% vs 68%) | 1/1 (100% vs 68%) | +14.40% | 0.685 | 1/1 | Too few to judge (1/1, leans right) | 1 |
 | Rahu does Vedha of Pushya | Bullish | 1/1 (100% vs 14%) | 1/1 (100% vs 13%) | +0.67% | 0.129 | 1/1 | Too few to judge (1/1, leans right) | 0 |
 | Jupiter enters Scorpio | Bullish | – | – |  |  |  | Did not occur | 0 |
 | Saturn with Jupiter in Sagittarius | Bullish | – | – |  |  |  | Did not occur | 0 |
@@ -160,6 +164,7 @@ Best (from the 5-year data): User Sun model: net rise vs fall signals, U2 - Merc
 
 | Date | PR | Topic | Result |
 |---|---|---|---|
+| 2026-11-21 | #13 | Project knowledge base and one-command refresh | Full refresh with fresh prices passed (7/7 tests); headline totals unchanged (gold 5 yr 308/279, silver 201/219). 20 Nov 2026 gold settlement 3,515.4. |
 | 2026-11-21 | #13 | Financial Astrology Model v1.0 (Brihat Samhita Ch.41 + BPHS Shadbala + Ashtakavarga) for gold | Backtest 2000-2026 (6,572 days): correlation of the scarcity index with the next 5 days -0.002; 'Strong bullish' days averaged +0.04% over 5 days vs +0.24% for all days. Structural bullish skew (67% of days mild bullish or stronger). Forward: bearish stretches 16 Jun - 16 Jul 2027 (Mild bearish to Bearish); strongest bullish 1-8 Aug 2027, 23-30 Aug 2027, 16-27 Dec 2027. |
 | 2026-11-21 | #13 | Brihat Samhita gold/silver rules implemented; Bayer and Western sources excluded | Forward dates: Saturn in Uttara Bhadrapada to 7 Feb 2027 (bearish); Sun with Rahu in Capricorn 14 Jan - 12 Feb 2027 (bearish); new Moon in Capricorn aspected by Jupiter 6 Feb 2027 and full Moon in Aries 13 Nov 2027 (bullish); store window 17 Aug 2027 - 14 Jan 2028. 5-year scores: all four 'Mixed' (too few occurrences to judge). |
 | 2026-11-21 | #13 | Review of Reference_materials/Others (45 files) + test of their gold/silver rules | 8 documents have market content; only Brihat Samhita has classical gold/silver price rules. Moon->silver rulership is sourced, a Moon version of the user's Sun rules is not. Silver guide's Moon rules: no effect over 26 years; new->full Moon hold did WORSE than full->new for both metals. BS 42.14(a) weak positive for gold; BS 10.17 (Saturn in Uttara Bhadrapada, gold afflicted) active until 8 Feb 2027. bayer_all_48_rules.docx rules 25-48 do not match Bayer's 1940 text. |

@@ -46637,7 +46637,7 @@
    "still_open": true,
    "year": 4,
    "outcome": "WORKED",
-   "gold_ret": -13.83,
+   "gold_ret": -14.4,
    "flags": {
     "Opposite-tone rules outnumbered supporting ones": true,
     "Saturn / Rahu / Ketu on the Moon at the start": true,
@@ -46713,7 +46713,7 @@
     ],
     "causes": [
      "12 opposite-tone silver rule(s) active vs 8 supporting: Rahu does Vedha of Pushya; Shukla Paksha of 16 days or Krishna Paksha of 14 days; Solar eclipse on a Wednesday; Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6); Only Moon and Mercury alone in a sign; Moon darshan on Friday or Saturday; Only Sun-Mercury or Moon-Mercury alone in a sign; Venus combust in West",
-     "Gold over the same dates: -13.83% (moved the same way as silver: a metals-wide move)",
+     "Gold over the same dates: -14.40% (moved the same way as silver: a metals-wide move)",
      "Station(s) inside the interval: 03 Oct: Venus stations retrograde in Libra; 24 Oct: Mercury stations retrograde in Libra; 13 Nov: Mercury stations direct in Libra; 13 Nov: Venus stations direct in Virgo",
      "Eclipse inside the interval: 12 Aug: solar eclipse in Cancer (Ashlesha); 27 Aug: lunar eclipse in Aquarius (Shatabhisha)",
      "Ingress(es): 02 Aug: Mars enters Gemini; 16 Aug: Sun enters Leo; 16 Sep: Sun enters Virgo; 18 Sep: Mars enters Cancer; 17 Oct: Sun enters Libra; 31 Oct: Jupiter enters Leo; 12 Nov: Mars enters Leo; 16 Nov: Sun enters Scorpio"
@@ -46948,7 +46948,7 @@
    "still_open": true,
    "year": 4,
    "outcome": "FAILED",
-   "gold_ret": -20.24,
+   "gold_ret": -20.78,
    "flags": {
     "Opposite-tone rules outnumbered supporting ones": false,
     "Saturn / Rahu / Ketu on the Moon at the start": true,
@@ -47024,7 +47024,7 @@
     "causes": [
      "9 opposite-tone silver rule(s) active vs 10 supporting: Rahu in Dhanishta (market and bullion risk); Moon-Venus mutual Vedha; Venus alone in Leo or Libra; Venus in Leo or Libra; Mercury alone in Aries or Virgo; Mercury in Aries or Virgo; Sun in Virgo, Libra or Pisces with or aspected by benefics; Mars Vargottam in Cancer",
      "Moon (silver) under Saturn/Rahu/Ketu contact at the start: Saturn aspects Moon (7th)",
-     "Gold over the same dates: -20.24% (moved the same way as silver: a metals-wide move)",
+     "Gold over the same dates: -20.78% (moved the same way as silver: a metals-wide move)",
      "Station(s) inside the interval: 03 Oct: Venus stations retrograde in Libra; 24 Oct: Mercury stations retrograde in Libra; 13 Nov: Mercury stations direct in Libra; 13 Nov: Venus stations direct in Virgo",
      "Eclipse inside the interval: 27 Aug: lunar eclipse in Aquarius (Shatabhisha)",
      "Ingress(es): 16 Aug: Sun enters Leo; 16 Sep: Sun enters Virgo; 18 Sep: Mars enters Cancer; 17 Oct: Sun enters Libra; 31 Oct: Jupiter enters Leo; 12 Nov: Mars enters Leo; 16 Nov: Sun enters Scorpio"
@@ -49342,7 +49342,7 @@
    "still_open": true,
    "year": 4,
    "outcome": "FAILED",
-   "gold_ret": -13.15,
+   "gold_ret": -13.73,
    "flags": {
     "Opposite-tone rules outnumbered supporting ones": false,
     "Saturn / Rahu / Ketu on the Moon at the start": false,
@@ -49394,7 +49394,7 @@
     "causes": [
      "4 opposite-tone silver rule(s) active vs 5 supporting: Rahu in Dhanishta (market and bullion risk); Mars in 4th pada of Ashlesha; Sun in Virgo, Libra or Pisces with or aspected by benefics; Moon-Venus mutual Vedha",
      "Jupiter in Leo with Ketu",
-     "Gold over the same dates: -13.15% (moved the same way as silver: a metals-wide move)",
+     "Gold over the same dates: -13.73% (moved the same way as silver: a metals-wide move)",
      "Station(s) inside the interval: 13 Nov: Mercury stations direct in Libra; 13 Nov: Venus stations direct in Virgo",
      "Ingress(es): 12 Nov: Mars enters Leo; 16 Nov: Sun enters Scorpio"
     ]
@@ -49582,7 +49582,7 @@
    "still_open": false,
    "year": 4,
    "outcome": "WORKED",
-   "gold_ret": -5.42,
+   "gold_ret": -6.05,
    "flags": {
     "Opposite-tone rules outnumbered supporting ones": true,
     "Saturn / Rahu / Ketu on the Moon at the start": true,
@@ -49626,7 +49626,7 @@
     "causes": [
      "3 opposite-tone silver rule(s) active vs 1 supporting: Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6); Shukla Paksha of 16 days or Krishna Paksha of 14 days; Mercury turns direct from retrograde",
      "Moon (silver) supported by Jupiter at the start: Jupiter aspects Moon (7th)",
-     "Gold over the same dates: -5.42% (moved the same way as silver: a metals-wide move)"
+     "Gold over the same dates: -6.05% (moved the same way as silver: a metals-wide move)"
     ]
    }
   }

@@ -1,6 +1,6 @@
 # Silver findings tracker
 
-Generated 21 Nov 2026 15:51 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
+Generated 21 Nov 2026 18:00 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
 
 ## Recent findings
 
@@ -17,6 +17,8 @@ Generated 21 Nov 2026 15:51 EST by `tools/gold_tracker.py --metal silver` (`--re
 | Mercury turns direct from retrograde | 5 yr: 6/15 (40% vs base 54%), avg -0.16%, right in 1/5 yrs | Went the wrong way more often than chance would; treat as unreliable. | Did not hold up |
 | Mercury combust and retrograde does mutual Vedha with Moon | 5 yr: 2/9 (22% vs base 51%), avg -2.28%, right in 1/4 yrs | Went the wrong way more often than chance would; treat as unreliable. | Did not hold up |
 | Sun in Pushya or Dhanishta without benefic planets | 5 yr: 2/8 (25% vs base 54%), avg -0.77%, right in 1/5 yrs | Went the wrong way more often than chance would; treat as unreliable. | Did not hold up |
+| New Moon -> full Moon hold (Timing Solutions / Silver guide; excluded source) | 2000-2026: new->full +0.19% per half-cycle vs full->new +0.90% (324 each) | Ran the opposite way to the claim in every 5-year block; Moon-based silver rules showed no effect. | Did not hold up |
+| Financial Astrology Model v1.0 for silver | Brihat Samhita Ch.41 assigns no sign to silver | Insufficient data (by methodology safeguard 7). | Not computable |
 
 ## Best-performing rules: dates 20 Nov 2026 - 31 Dec 2027 (ET)
 
@@ -97,6 +99,7 @@ Best (from the 5-year data): Venus-Mars or Sun-Mars together in any sign.
 
 | Date | PR | Topic | Result |
 |---|---|---|---|
+| 2026-11-21 | #13 | Project knowledge base and one-command refresh | Full refresh with fresh prices passed (7/7 tests); headline totals unchanged (gold 5 yr 308/279, silver 201/219). 20 Nov 2026 gold settlement 3,515.4. |
 | 2026-11-21 | #13 | Financial Astrology Model v1.0 (Brihat Samhita Ch.41 + BPHS Shadbala + Ashtakavarga) for gold | Backtest 2000-2026 (6,572 days): correlation of the scarcity index with the next 5 days -0.002; 'Strong bullish' days averaged +0.04% over 5 days vs +0.24% for all days. Structural bullish skew (67% of days mild bullish or stronger). Forward: bearish stretches 16 Jun - 16 Jul 2027 (Mild bearish to Bearish); strongest bullish 1-8 Aug 2027, 23-30 Aug 2027, 16-27 Dec 2027. |
 | 2026-11-21 | #13 | Brihat Samhita gold/silver rules implemented; Bayer and Western sources excluded | Forward dates: Saturn in Uttara Bhadrapada to 7 Feb 2027 (bearish); Sun with Rahu in Capricorn 14 Jan - 12 Feb 2027 (bearish); new Moon in Capricorn aspected by Jupiter 6 Feb 2027 and full Moon in Aries 13 Nov 2027 (bullish); store window 17 Aug 2027 - 14 Jan 2028. 5-year scores: all four 'Mixed' (too few occurrences to judge). |
 | 2026-11-21 | #13 | Review of Reference_materials/Others (45 files) + test of their gold/silver rules | 8 documents have market content; only Brihat Samhita has classical gold/silver price rules. Moon->silver rulership is sourced, a Moon version of the user's Sun rules is not. Silver guide's Moon rules: no effect over 26 years; new->full Moon hold did WORSE than full->new for both metals. BS 42.14(a) weak positive for gold; BS 10.17 (Saturn in Uttara Bhadrapada, gold afflicted) active until 8 Feb 2027. bayer_all_48_rules.docx rules 25-48 do not match Bayer's 1940 text. |

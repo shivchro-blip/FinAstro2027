@@ -1195,7 +1195,7 @@
     ]
    },
    "hit_rate": 100,
-   "avg_dir_ret": 13.83,
+   "avg_dir_ret": 14.4,
    "base_rate": 68,
    "p_value": 0.68,
    "p_value_fail": 1.0,
@@ -1338,7 +1338,7 @@
     ]
    },
    "hit_rate": 100,
-   "avg_dir_ret": 7.8,
+   "avg_dir_ret": 8.08,
    "base_rate": 64,
    "p_value": 0.414,
    "p_value_fail": 1.0,
@@ -1385,7 +1385,7 @@
     ]
    },
    "hit_rate": 50,
-   "avg_dir_ret": -3.79,
+   "avg_dir_ret": -4.07,
    "base_rate": 36,
    "p_value": 0.586,
    "p_value_fail": 0.873,
@@ -1479,7 +1479,7 @@
     ]
    },
    "hit_rate": 43,
-   "avg_dir_ret": 0.87,
+   "avg_dir_ret": 0.96,
    "base_rate": 54,
    "p_value": 0.828,
    "p_value_fail": 0.422,
@@ -2233,7 +2233,7 @@
     ]
    },
    "hit_rate": 66,
-   "avg_dir_ret": 1.44,
+   "avg_dir_ret": 1.46,
    "base_rate": 50,
    "p_value": 0.027,
    "p_value_fail": 0.988,
@@ -2481,7 +2481,7 @@
    "dir": "fall",
    "start": "2026-11-13",
    "end": "2026-11-20",
-   "ret": -8.94,
+   "ret": -9.54,
    "bull": [
     "Sun and Moon on the same degree (new moon)",
     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6)",
@@ -3109,13 +3109,13 @@
   }
  ],
  "net_signal": {
-  "corr1": 0.082,
-  "corr5": 0.207,
+  "corr1": 0.085,
+  "corr5": 0.209,
   "buckets": {
    "net > 0 (more bullish rules active)": {
     "days": 205,
     "avg1": -0.024,
-    "avg5": 0.036,
+    "avg5": 0.024,
     "up1": 51.2,
     "up5": 52.7
    },
@@ -3128,8 +3128,8 @@
    },
    "net < 0 (more bearish rules active)": {
     "days": 22,
-    "avg1": -0.489,
-    "avg5": -1.508,
+    "avg1": -0.518,
+    "avg5": -1.537,
     "up1": 40.9,
     "up5": 31.8
    }
@@ -17411,13 +17411,13 @@
     "5": 7.13
    },
    "exit_date": "2026-11-20",
-   "exit_close": 3539.0,
+   "exit_close": 3515.39990234375,
    "horizon": "window, 79 trading days",
    "n_days": 79,
    "max_up": 14.39,
-   "max_dn": -13.83,
+   "max_dn": -14.4,
    "mode": "window",
-   "ret": -13.83,
+   "ret": -14.4,
    "still_open": true,
    "year": 0,
    "outcome": "WORKED",
@@ -18340,13 +18340,13 @@
     "5": 5.48
    },
    "exit_date": "2026-11-20",
-   "exit_close": 3539.0,
+   "exit_close": 3515.39990234375,
    "horizon": "window, 69 trading days",
    "n_days": 69,
    "max_up": 5.87,
-   "max_dn": -20.24,
+   "max_dn": -20.78,
    "mode": "window",
-   "ret": -20.24,
+   "ret": -20.78,
    "still_open": true,
    "year": 0,
    "outcome": "FAILED",
@@ -18379,7 +18379,7 @@
     ],
     "jupiter": "Jupiter Cancer Pushya",
     "paksha": "Shukla",
-    "worst_day": "Fri 20 Nov 2026 (-3.98 %)",
+    "worst_day": "Fri 20 Nov 2026 (-4.62 %)",
     "sky_worst": "Sun in Anuradha (lord Saturn), Scorpio; Mars aspects Sun (4th); Jupiter Leo Magha - Rahu aspects Jupiter, Ketu with Jupiter, Mars with Jupiter",
     "opposite": [
      "Rahu in Dhanishta (market and bullion risk) [Bearish] Sat 01 Aug 2026 17:43 EDT",
@@ -20160,13 +20160,13 @@
     "5": 0.32
    },
    "exit_date": "2026-11-20",
-   "exit_close": 3539.0,
+   "exit_close": 3515.39990234375,
    "horizon": "window, 31 trading days",
    "n_days": 31,
    "max_up": 1.43,
-   "max_dn": -14.87,
+   "max_dn": -15.43,
    "mode": "window",
-   "ret": -14.87,
+   "ret": -15.43,
    "still_open": true,
    "year": 0,
    "outcome": "WORKED",
@@ -21790,7 +21790,7 @@
    "fwd": {
     "1": 0.97,
     "3": -1.83,
-    "10": -13.15,
+    "10": -13.73,
     "5": -4.63
    },
    "exit_date": "2026-11-13",
@@ -21832,7 +21832,7 @@
    "fwd": {
     "1": 0.97,
     "3": -1.83,
-    "10": -13.15,
+    "10": -13.73,
     "5": -4.63
    },
    "exit_date": "2026-11-13",
@@ -21923,7 +21923,7 @@
    "fwd": {
     "1": 0.97,
     "3": -1.83,
-    "10": -13.15,
+    "10": -13.73,
     "5": -4.63
    },
    "exit_date": "2026-11-13",
@@ -22018,7 +22018,7 @@
     "1": -0.86,
     "3": -3.72,
     "10": null,
-    "5": -8.94
+    "5": -9.54
    },
    "exit_date": "2026-11-18",
    "exit_close": 3741.89990234375,
@@ -22113,13 +22113,13 @@
     "5": null
    },
    "exit_date": "2026-11-20",
-   "exit_close": 3539.0,
+   "exit_close": 3515.39990234375,
    "horizon": "window, 2 trading days",
    "n_days": 2,
    "max_up": 0.0,
-   "max_dn": -5.42,
+   "max_dn": -6.05,
    "mode": "window",
-   "ret": -5.42,
+   "ret": -6.05,
    "still_open": true,
    "year": 0,
    "outcome": "WORKED",
@@ -22196,13 +22196,13 @@
     "5": null
    },
    "exit_date": "2026-11-20",
-   "exit_close": 3539.0,
+   "exit_close": 3515.39990234375,
    "horizon": "window, 2 trading days",
    "n_days": 2,
    "max_up": 0.0,
-   "max_dn": -5.42,
+   "max_dn": -6.05,
    "mode": "window",
-   "ret": -5.42,
+   "ret": -6.05,
    "still_open": true,
    "year": 0,
    "outcome": "WORKED",

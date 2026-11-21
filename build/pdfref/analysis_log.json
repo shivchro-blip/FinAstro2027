@@ -152,6 +152,19 @@
     "build/pdfref/gold_bs41_model_backtest_2000-2026_ET.json",
     "tests/test_shadbala.py"
    ]
+  },
+  {
+   "date": "2026-11-21",
+   "pr": "13",
+   "topic": "Project knowledge base and one-command refresh",
+   "analysis": "Consolidated every source, user decision, convention, code path, output, backtest method and finding into PROJECT_KNOWLEDGE.md (+ CLAUDE.md for future sessions); added tools/fetch_prices.py (Yahoo GC=F / SI=F) and tools/refresh_all.py (rebuilds calendar, reports, backtests, source-rule test, Model v1.0, trackers, docs; runs tests); trackers now also show the 2000-2026 results; stale statements in the Others review and README updated.",
+   "result": "Full refresh with fresh prices passed (7/7 tests); headline totals unchanged (gold 5 yr 308/279, silver 201/219). 20 Nov 2026 gold settlement 3,515.4.",
+   "files": [
+    "PROJECT_KNOWLEDGE.md",
+    "CLAUDE.md",
+    "tools/refresh_all.py",
+    "tools/fetch_prices.py"
+   ]
   }
  ]
 }

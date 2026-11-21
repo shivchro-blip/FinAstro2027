@@ -238,6 +238,33 @@ def main():
     if METAL == "gold":
         findings.append(("Big falls", "Bearish rules outnumbered bullish ones before only 1 of the 15 biggest 5-day falls (5 yr); Jan-2026 crash had 6 bullish, 0 bearish",
                          "Largest gap: no rule for a stellium on the Sun (Sun, Mercury, Venus, Mars in Capricorn, Venus combusting, Jupiter retrograde).", "Open gap"))
+    # 26-year tests (2000-2026) of the 'Others' rules and of Model v1.0, when their outputs exist
+    sr = OUT / "source_rules_test_2000-2026_ET.json"
+    if sr.exists():
+        t = json.load(open(sr))
+        lc = t["lunation_cycle"][METAL]
+        findings.append(("New Moon -> full Moon hold (Timing Solutions / Silver guide; excluded source)",
+                         f"2000-2026: new->full {lc['new_to_full']['mean']:+.2f}% per half-cycle vs full->new {lc['full_to_new']['mean']:+.2f}% ({lc['new_to_full']['n']} each)",
+                         "Ran the opposite way to the claim in every 5-year block; Moon-based silver rules showed no effect.", "Did not hold up"))
+        if METAL == "gold":
+            bl = t["bs_lunation_gold"]["with_benefics"]["r_next"]
+            findings.append(("Brihat Samhita 42.14a: lunation in Aries/Capricorn with a benefic (implemented)",
+                             f"2000-2026: {bl['n']} cases, gold up to the next lunation in {bl['up']} ({bl['up'] / max(bl['n'], 1) * 100:.0f}%), avg {bl['mean']:+.2f}%",
+                             "Weak positive, consistent with the source but not significant.", "Weak positive"))
+            sat = t["bs_saturn_ubhadra_gold"]
+            findings.append(("Brihat Samhita 10.17: Saturn in Uttara Bhadrapada afflicts gold (implemented)",
+                             "2000-2026: one passage, 3 windows: " + "; ".join(f"{w['start']} -> {w['end']} {w['ret']:+.1f}%" for w in sat["windows"]),
+                             "Current window runs to 7 Feb 2027; one passage in 26 years is anecdotal.", "Too few to judge"))
+    bm = OUT / "gold_bs41_model_backtest_2000-2026_ET.json"
+    if METAL == "gold" and bm.exists():
+        b2 = json.load(open(bm))
+        sbull = b2["by_bias"].get("Strong bullish", {})
+        findings.append(("Financial Astrology Model v1.0 (Brihat Samhita 41.9-13 + Shadbala + Ashtakavarga)",
+                         f"{b2['n_days']} days 2000-2026: corr(scarcity index, next 5 days) {b2['corr_S_5d']:+.3f}; 'Strong bullish' days avg {sbull.get('mean_5d', 0):+.2f}% vs {b2['base']['5']['mean']:+.2f}% all days",
+                         "No predictive value; structural bullish lean. Use as classical context only (gold_bs41_model_*.html).", "Did not hold up"))
+    if METAL == "silver":
+        findings.append(("Financial Astrology Model v1.0 for silver", "Brihat Samhita Ch.41 assigns no sign to silver",
+                         "Insufficient data (by methodology safeguard 7).", "Not computable"))
 
     # ---------------- HTML
     def st_tag(st):

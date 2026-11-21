@@ -115,8 +115,8 @@ None of the Silver guide's Moon conditions moved silver differently from other d
    - **Brihat Samhita 42.14(a)**: new or full Moon in Aries or Capricorn with a benefic is gold-bullish. It is a weak positive (60% of 84 up), consistent with the source but not proven.
    - **Brihat Samhita 10.17**: Saturn in Uttara Bhadrapada is gold-negative. It is active now, until 8 Feb 2027. Only one passage exists in the data, so it is anecdotal.
 
-   Neither is in the rule catalogue yet. Both can be added as sourced rules if you want.
-3. **Brihat Samhita 41.9–13** (house positions from gold's signs) needs a decision on how "costly and scarce" and "increase" map to price direction before it can be tested.
+   *Update 21 Nov 2026:* both are now implemented, together with 42.14b and 42.6 (Section 7).
+3. **Brihat Samhita 41.9–13** (house positions from gold's signs). *Update 21 Nov 2026:* implemented as Financial Astrology Model v1.0 (`FINANCIAL_ASTROLOGY_MODEL_v1.md`). Over 2000–2026 it showed no predictive value.
 4. **Bayer, McWhirter, Williams and Weingarten** are Western and tropical. Bayer is calibrated for wheat, McWhirter and Williams for US stocks and business, and Weingarten is a general overview. They hold nothing directly usable for gold or silver in the sidereal framework, apart from the cycle observations (silver 5.58 years; gold vs sunspots) and the lunation/eclipse turning-point idea that is already covered.
 
 ## 7. Decisions (user, 21 Nov 2026)
@@ -127,4 +127,4 @@ None of the Silver guide's Moon conditions moved silver differently from other d
   - the NY master calendar
   - the 1- and 5-year backtests and both trackers
 - **Excluded:** Bayer (the 1940 PDF and `bayer_all_48_rules.docx`) and the Western sources: McWhirter, Williams, Weingarten, Timing Solutions, and the 'Moon and Silver' guide, which is built on the Timing Solutions / RBS lunar method. None of these are implemented.
-- **Pending:** Brihat Samhita 41.9–13, until the price direction of "costly and scarce" and "thrive, fetch good price", and what counts as a "strong" planet, are settled.
+- **Brihat Samhita 41.9–13:** settled by the user's methodology ("costly and scarce" means scarcity price pressure; "thrive, fetch good price" means the demand/value index; "strong" means BPHS Shadbala at or above its requirement). It is implemented as Financial Astrology Model v1.0 (`finastro/pdfref/bs41_model.py`, `FINANCIAL_ASTROLOGY_MODEL_v1.md`). The 2000–2026 backtest found no predictive value: correlation −0.002 with the next 5 days.
