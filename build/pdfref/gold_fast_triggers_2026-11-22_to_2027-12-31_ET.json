@@ -1,0 +1,2093 @@
+{
+ "start": "2026-11-22",
+ "end": "2027-12-31",
+ "perm": {
+  "n": 100,
+  "mean": 2.0,
+  "p90": 4,
+  "max": 6
+ },
+ "n_win": 2498,
+ "big_win": 238,
+ "n_out": 4028,
+ "big_out": 238,
+ "factors": [
+  {
+   "factor": "Moon opposite Sun",
+   "days": 192,
+   "big": 28,
+   "exp": 18.8,
+   "lift": 1.49,
+   "p": 0.027988728629085857,
+   "q": 0.6861274596469535,
+   "episodes": 23,
+   "up": 14,
+   "lift_up": 1.55,
+   "p_up": 0.07614867647337742,
+   "down": 14,
+   "lift_down": 1.43,
+   "p_down": 0.11847506811917763,
+   "up_share": 50.0,
+   "lift_h1": 1.48,
+   "lift_h2": 1.5,
+   "lift_out": 0.74,
+   "p_out": 0.9058673780906816,
+   "passed": true,
+   "lean": "either"
+  },
+  {
+   "factor": "Moon-Saturn 6/8 (shadashtak)",
+   "days": 421,
+   "big": 54,
+   "exp": 41.2,
+   "lift": 1.31,
+   "p": 0.031187611802134252,
+   "q": 0.6861274596469535,
+   "episodes": 44,
+   "up": 27,
+   "lift_up": 1.37,
+   "p_up": 0.06865085350636801,
+   "down": 27,
+   "lift_down": 1.26,
+   "p_down": 0.13792859607596508,
+   "up_share": 50.0,
+   "lift_h1": 1.1,
+   "lift_h2": 1.57,
+   "lift_out": 1.18,
+   "p_out": 0.14437334183246697,
+   "passed": true,
+   "lean": "either"
+  },
+  {
+   "factor": "Moon opposite Rahu (= Moon with Ketu)",
+   "days": 202,
+   "big": 25,
+   "exp": 18.7,
+   "lift": 1.34,
+   "p": 0.09220705495851622,
+   "q": 0.9401832437310663,
+   "episodes": 22,
+   "up": 10,
+   "lift_up": 1.13,
+   "p_up": 0.39077214223772083,
+   "down": 15,
+   "lift_down": 1.53,
+   "p_down": 0.07449264200816363,
+   "up_share": 40.0,
+   "lift_h1": 1.19,
+   "lift_h2": 1.52,
+   "lift_out": 1.13,
+   "p_out": 0.30252770879648083,
+   "passed": true,
+   "lean": "either"
+  },
+  {
+   "factor": "Venus retrograde",
+   "days": 220,
+   "big": 33,
+   "exp": 25.9,
+   "lift": 1.28,
+   "p": 0.09901421352897088,
+   "q": 0.9401832437310663,
+   "episodes": 16,
+   "up": 15,
+   "lift_up": 1.07,
+   "p_up": 0.42538178005480787,
+   "down": 18,
+   "lift_down": 1.51,
+   "p_down": 0.05910952448159501,
+   "up_share": 45.5,
+   "lift_h1": 1.9,
+   "lift_h2": 0.91,
+   "lift_out": 0.49,
+   "p_out": 0.9825671474847311,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Mercury overtakes Venus in speed (Mercury manifestation, KD) (\u00b11 day)",
+   "days": 133,
+   "big": 17,
+   "exp": 12.2,
+   "lift": 1.4,
+   "p": 0.11121053327226105,
+   "q": 0.9401832437310663,
+   "episodes": 13,
+   "up": 7,
+   "lift_up": 1.23,
+   "p_up": 0.3478757420143752,
+   "down": 10,
+   "lift_down": 1.55,
+   "p_down": 0.11949685992032932,
+   "up_share": 41.2,
+   "lift_h1": 1.29,
+   "lift_h2": 1.5,
+   "lift_out": 0.51,
+   "p_out": 0.9778043291572975,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Lunation day: first quarter (\u00b11 day)",
+   "days": 269,
+   "big": 33,
+   "exp": 26.6,
+   "lift": 1.24,
+   "p": 0.12820680596332723,
+   "q": 0.9401832437310663,
+   "episodes": 27,
+   "up": 13,
+   "lift_up": 1.03,
+   "p_up": 0.49230205159127627,
+   "down": 20,
+   "lift_down": 1.43,
+   "p_down": 0.07683487433802394,
+   "up_share": 39.4,
+   "lift_h1": 0.99,
+   "lift_h2": 1.58,
+   "lift_out": 0.9,
+   "p_out": 0.7108111274839096,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Moon opposite Saturn",
+   "days": 222,
+   "big": 25,
+   "exp": 20.9,
+   "lift": 1.2,
+   "p": 0.2104211995183658,
+   "q": 0.9613006565173267,
+   "episodes": 22,
+   "up": 14,
+   "lift_up": 1.42,
+   "p_up": 0.12560759697215595,
+   "down": 11,
+   "lift_down": 1.0,
+   "p_down": 0.5431995343461111,
+   "up_share": 56.0,
+   "lift_h1": 1.31,
+   "lift_h2": 1.06,
+   "lift_out": 1.02,
+   "p_out": 0.5010573798969018,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Moon opposite Mars",
+   "days": 201,
+   "big": 23,
+   "exp": 19.2,
+   "lift": 1.2,
+   "p": 0.2226344920308565,
+   "q": 0.9613006565173267,
+   "episodes": 21,
+   "up": 11,
+   "lift_up": 1.16,
+   "p_up": 0.3554181969054092,
+   "down": 12,
+   "lift_down": 1.23,
+   "p_down": 0.27220354582191275,
+   "up_share": 47.8,
+   "lift_h1": 1.27,
+   "lift_h2": 1.12,
+   "lift_out": 1.03,
+   "p_out": 0.4643873649581881,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Lunation day: full moon (\u00b11 day)",
+   "days": 245,
+   "big": 28,
+   "exp": 23.9,
+   "lift": 1.17,
+   "p": 0.2272290710926611,
+   "q": 0.9613006565173267,
+   "episodes": 25,
+   "up": 15,
+   "lift_up": 1.31,
+   "p_up": 0.18406279848308071,
+   "down": 13,
+   "lift_down": 1.05,
+   "p_down": 0.4729956821424294,
+   "up_share": 53.6,
+   "lift_h1": 1.16,
+   "lift_h2": 1.19,
+   "lift_out": 0.78,
+   "p_out": 0.8907830940910453,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Moon aspected by Mars",
+   "days": 599,
+   "big": 61,
+   "exp": 56.0,
+   "lift": 1.09,
+   "p": 0.2708746797435696,
+   "q": 0.9613006565173267,
+   "episodes": 46,
+   "up": 32,
+   "lift_up": 1.17,
+   "p_up": 0.2156038213226079,
+   "down": 29,
+   "lift_down": 1.01,
+   "p_down": 0.4945408258324191,
+   "up_share": 52.5,
+   "lift_h1": 1.08,
+   "lift_h2": 1.1,
+   "lift_out": 1.26,
+   "p_out": 0.027314240588529604,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Venus combustion begins (\u00b11 day)",
+   "days": 31,
+   "big": 5,
+   "exp": 3.6,
+   "lift": 1.38,
+   "p": 0.29898836319144584,
+   "q": 0.9613006565173267,
+   "episodes": 5,
+   "up": 1,
+   "lift_up": 0.58,
+   "p_up": 0.8231888720669467,
+   "down": 4,
+   "lift_down": 2.11,
+   "p_down": 0.1245571569594025,
+   "up_share": 20.0,
+   "lift_h1": null,
+   "lift_h2": 1.22,
+   "lift_out": 0.85,
+   "p_out": 0.6832091775473333,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Lunation day: new moon (\u00b11 day)",
+   "days": 245,
+   "big": 26,
+   "exp": 23.4,
+   "lift": 1.11,
+   "p": 0.31888818213273373,
+   "q": 0.9613006565173267,
+   "episodes": 19,
+   "up": 11,
+   "lift_up": 0.99,
+   "p_up": 0.5479221115397788,
+   "down": 15,
+   "lift_down": 1.22,
+   "p_down": 0.25504873384129123,
+   "up_share": 42.3,
+   "lift_h1": 1.0,
+   "lift_h2": 1.25,
+   "lift_out": 0.86,
+   "p_out": 0.7847442849775044,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Moon with Jupiter",
+   "days": 223,
+   "big": 24,
+   "exp": 21.9,
+   "lift": 1.1,
+   "p": 0.3552475904993061,
+   "q": 0.9613006565173267,
+   "episodes": 23,
+   "up": 13,
+   "lift_up": 1.23,
+   "p_up": 0.2636899649954605,
+   "down": 11,
+   "lift_down": 0.97,
+   "p_down": 0.5817247934299807,
+   "up_share": 54.2,
+   "lift_h1": 1.03,
+   "lift_h2": 1.16,
+   "lift_out": 1.01,
+   "p_out": 0.5056880213842974,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Venus changes nakshatra (\u00b11 day)",
+   "days": 568,
+   "big": 57,
+   "exp": 54.1,
+   "lift": 1.05,
+   "p": 0.36678973106841206,
+   "q": 0.9613006565173267,
+   "episodes": 47,
+   "up": 27,
+   "lift_up": 1.06,
+   "p_up": 0.4140148960584543,
+   "down": 30,
+   "lift_down": 1.05,
+   "p_down": 0.4199877340345596,
+   "up_share": 47.4,
+   "lift_h1": 1.04,
+   "lift_h2": 1.07,
+   "lift_out": 1.09,
+   "p_out": 0.2743122190623397,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Mercury leaves combustion (\u00b11 day)",
+   "days": 118,
+   "big": 12,
+   "exp": 10.7,
+   "lift": 1.12,
+   "p": 0.3895782471317708,
+   "q": 0.9613006565173267,
+   "episodes": 11,
+   "up": 6,
+   "lift_up": 1.14,
+   "p_up": 0.4324582255918936,
+   "down": 6,
+   "lift_down": 1.1,
+   "p_down": 0.46457802517074775,
+   "up_share": 50.0,
+   "lift_h1": 0.9,
+   "lift_h2": 1.34,
+   "lift_out": 1.07,
+   "p_out": 0.4302523568628346,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Sun-Mercury exact conjunction (KD turning date) (\u00b11 day)",
+   "days": 135,
+   "big": 13,
+   "exp": 12.1,
+   "lift": 1.07,
+   "p": 0.43654992536608916,
+   "q": 0.9613006565173267,
+   "episodes": 11,
+   "up": 10,
+   "lift_up": 1.68,
+   "p_up": 0.08171621655226757,
+   "down": 3,
+   "lift_down": 0.49,
+   "p_down": 0.9440662555598295,
+   "up_share": 76.9,
+   "lift_h1": 1.14,
+   "lift_h2": 0.98,
+   "lift_out": 1.24,
+   "p_out": 0.22773316704429125,
+   "passed": false,
+   "lean": "up"
+  },
+  {
+   "factor": "Mercury stations direct (\u00b11 day)",
+   "days": 66,
+   "big": 7,
+   "exp": 6.3,
+   "lift": 1.11,
+   "p": 0.43952415756362284,
+   "q": 0.9613006565173267,
+   "episodes": 7,
+   "up": 1,
+   "lift_up": 0.32,
+   "p_up": 0.955769230245342,
+   "down": 6,
+   "lift_down": 1.89,
+   "p_down": 0.10174957656741856,
+   "up_share": 14.3,
+   "lift_h1": 1.19,
+   "lift_h2": 1.06,
+   "lift_out": 1.01,
+   "p_out": 0.5489763845591256,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Moon changes sign",
+   "days": 1094,
+   "big": 106,
+   "exp": 104.2,
+   "lift": 1.02,
+   "p": 0.44422396890532734,
+   "q": 0.9613006565173267,
+   "episodes": 65,
+   "up": 50,
+   "lift_up": 1.0,
+   "p_up": 0.5054544327523487,
+   "down": 56,
+   "lift_down": 1.03,
+   "p_down": 0.4356960456513096,
+   "up_share": 47.2,
+   "lift_h1": 0.99,
+   "lift_h2": 1.05,
+   "lift_out": 1.05,
+   "p_out": 0.3124850840306491,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Lunation day: last quarter (\u00b11 day)",
+   "days": 241,
+   "big": 22,
+   "exp": 21.1,
+   "lift": 1.04,
+   "p": 0.4545635050643365,
+   "q": 0.9613006565173267,
+   "episodes": 20,
+   "up": 10,
+   "lift_up": 0.98,
+   "p_up": 0.5641302617946219,
+   "down": 12,
+   "lift_down": 1.09,
+   "p_down": 0.41635301283296133,
+   "up_share": 45.5,
+   "lift_h1": 0.94,
+   "lift_h2": 1.19,
+   "lift_out": 1.23,
+   "p_out": 0.14979797690387475,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Moon with Sun",
+   "days": 214,
+   "big": 21,
+   "exp": 20.4,
+   "lift": 1.03,
+   "p": 0.4807818079492483,
+   "q": 0.9613006565173267,
+   "episodes": 18,
+   "up": 9,
+   "lift_up": 0.92,
+   "p_up": 0.6415561173875763,
+   "down": 12,
+   "lift_down": 1.12,
+   "p_down": 0.3816770901558818,
+   "up_share": 42.9,
+   "lift_h1": 0.83,
+   "lift_h2": 1.24,
+   "lift_out": 0.77,
+   "p_out": 0.8755392240430504,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Moon aspected by Jupiter",
+   "days": 608,
+   "big": 62,
+   "exp": 61.6,
+   "lift": 1.01,
+   "p": 0.49754191616857635,
+   "q": 0.9613006565173267,
+   "episodes": 43,
+   "up": 24,
+   "lift_up": 0.81,
+   "p_up": 0.8763769881043888,
+   "down": 38,
+   "lift_down": 1.19,
+   "p_down": 0.15916464127589758,
+   "up_share": 38.7,
+   "lift_h1": 0.92,
+   "lift_h2": 1.11,
+   "lift_out": 0.94,
+   "p_out": 0.6819802159163315,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Mercury changes sign (\u00b11 day)",
+   "days": 307,
+   "big": 30,
+   "exp": 30.0,
+   "lift": 1.0,
+   "p": 0.521026860738194,
+   "q": 0.9613006565173267,
+   "episodes": 26,
+   "up": 18,
+   "lift_up": 1.31,
+   "p_up": 0.15744750009892394,
+   "down": 12,
+   "lift_down": 0.74,
+   "p_down": 0.8814920065461792,
+   "up_share": 60.0,
+   "lift_h1": 1.0,
+   "lift_h2": 1.0,
+   "lift_out": 0.91,
+   "p_out": 0.7196495287996189,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Mars exact conjunction with Sun / Mercury / Venus (\u00b11 day)",
+   "days": 52,
+   "big": 5,
+   "exp": 4.9,
+   "lift": 1.02,
+   "p": 0.5417308476490781,
+   "q": 0.9613006565173267,
+   "episodes": 4,
+   "up": 1,
+   "lift_up": 0.46,
+   "p_up": 0.8881990295020723,
+   "down": 4,
+   "lift_down": 1.48,
+   "p_down": 0.2878146095912246,
+   "up_share": 20.0,
+   "lift_h1": 0.96,
+   "lift_h2": 1.13,
+   "lift_out": 0.97,
+   "p_out": 0.5795947589909439,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Moon with Rahu (= Moon opposite Ketu)",
+   "days": 203,
+   "big": 20,
+   "exp": 20.3,
+   "lift": 0.99,
+   "p": 0.5525128895410508,
+   "q": 0.9613006565173267,
+   "episodes": 17,
+   "up": 8,
+   "lift_up": 0.8,
+   "p_up": 0.7753078911221327,
+   "down": 12,
+   "lift_down": 1.16,
+   "p_down": 0.33866671906095447,
+   "up_share": 40.0,
+   "lift_h1": 0.88,
+   "lift_h2": 1.12,
+   "lift_out": 1.28,
+   "p_out": 0.13991613888742616,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Moon waning past Ashtami to Amavasya (malefic Moon)",
+   "days": 715,
+   "big": 64,
+   "exp": 65.9,
+   "lift": 0.97,
+   "p": 0.6088610868138045,
+   "q": 0.9613006565173267,
+   "episodes": 41,
+   "up": 34,
+   "lift_up": 1.08,
+   "p_up": 0.3545619024225387,
+   "down": 30,
+   "lift_down": 0.87,
+   "p_down": 0.7934031964606016,
+   "up_share": 53.1,
+   "lift_h1": 0.96,
+   "lift_h2": 0.99,
+   "lift_out": 0.96,
+   "p_out": 0.6485673726399606,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Moon with Saturn",
+   "days": 245,
+   "big": 21,
+   "exp": 22.3,
+   "lift": 0.94,
+   "p": 0.6350503379186241,
+   "q": 0.9613006565173267,
+   "episodes": 17,
+   "up": 10,
+   "lift_up": 0.94,
+   "p_up": 0.61378715568987,
+   "down": 11,
+   "lift_down": 0.94,
+   "p_down": 0.6185360686580117,
+   "up_share": 47.6,
+   "lift_h1": 1.17,
+   "lift_h2": 0.58,
+   "lift_out": 0.72,
+   "p_out": 0.9138155984378804,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Mars changes nakshatra (\u00b11 day)",
+   "days": 306,
+   "big": 30,
+   "exp": 32.2,
+   "lift": 0.93,
+   "p": 0.6736764155988039,
+   "q": 0.9613006565173267,
+   "episodes": 27,
+   "up": 12,
+   "lift_up": 0.78,
+   "p_up": 0.8386324984514487,
+   "down": 18,
+   "lift_down": 1.07,
+   "p_down": 0.41803379602382984,
+   "up_share": 40.0,
+   "lift_h1": 1.06,
+   "lift_h2": 0.78,
+   "lift_out": 1.34,
+   "p_out": 0.04893893784051018,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Mercury stations retrograde (\u00b11 day)",
+   "days": 59,
+   "big": 4,
+   "exp": 4.6,
+   "lift": 0.86,
+   "p": 0.6800877453848948,
+   "q": 0.9613006565173267,
+   "episodes": 4,
+   "up": 1,
+   "lift_up": 0.43,
+   "p_up": 0.8999781813532217,
+   "down": 3,
+   "lift_down": 1.29,
+   "p_down": 0.4127950260578329,
+   "up_share": 25.0,
+   "lift_h1": 1.3,
+   "lift_h2": 0.43,
+   "lift_out": 0.74,
+   "p_out": 0.8019772048741783,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Moon at perigee (\u00b11 day)",
+   "days": 288,
+   "big": 26,
+   "exp": 28.8,
+   "lift": 0.9,
+   "p": 0.721337426139427,
+   "q": 0.9613006565173267,
+   "episodes": 23,
+   "up": 14,
+   "lift_up": 1.01,
+   "p_up": 0.5271210845441483,
+   "down": 12,
+   "lift_down": 0.81,
+   "p_down": 0.8038825214473003,
+   "up_share": 53.8,
+   "lift_h1": 1.07,
+   "lift_h2": 0.72,
+   "lift_out": 0.64,
+   "p_out": 0.976370552552896,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Mars changes sign (\u00b11 day)",
+   "days": 138,
+   "big": 11,
+   "exp": 13.1,
+   "lift": 0.84,
+   "p": 0.7537526254349989,
+   "q": 0.9613006565173267,
+   "episodes": 10,
+   "up": 4,
+   "lift_up": 0.62,
+   "p_up": 0.8826892874405715,
+   "down": 7,
+   "lift_down": 1.05,
+   "p_down": 0.49562526654153993,
+   "up_share": 36.4,
+   "lift_h1": 0.64,
+   "lift_h2": 1.03,
+   "lift_out": 1.24,
+   "p_out": 0.22746415467824443,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Moon with Mercury",
+   "days": 192,
+   "big": 16,
+   "exp": 18.8,
+   "lift": 0.85,
+   "p": 0.77010492536696,
+   "q": 0.9613006565173267,
+   "episodes": 14,
+   "up": 7,
+   "lift_up": 0.79,
+   "p_up": 0.780538743843767,
+   "down": 9,
+   "lift_down": 0.91,
+   "p_down": 0.6568814655526892,
+   "up_share": 43.8,
+   "lift_h1": 0.73,
+   "lift_h2": 0.98,
+   "lift_out": 0.87,
+   "p_out": 0.7427736881294147,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Moon with Mars",
+   "days": 218,
+   "big": 16,
+   "exp": 19.1,
+   "lift": 0.84,
+   "p": 0.7895390585209308,
+   "q": 0.9613006565173267,
+   "episodes": 15,
+   "up": 4,
+   "lift_up": 0.44,
+   "p_up": 0.9788116830217974,
+   "down": 12,
+   "lift_down": 1.19,
+   "p_down": 0.31058762753955227,
+   "up_share": 25.0,
+   "lift_h1": 1.05,
+   "lift_h2": 0.58,
+   "lift_out": 1.16,
+   "p_out": 0.28847547051919087,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Moon aspected by Saturn",
+   "days": 642,
+   "big": 56,
+   "exp": 62.1,
+   "lift": 0.9,
+   "p": 0.7963901310795296,
+   "q": 0.9613006565173267,
+   "episodes": 45,
+   "up": 30,
+   "lift_up": 1.0,
+   "p_up": 0.5241076748804887,
+   "down": 26,
+   "lift_down": 0.81,
+   "p_down": 0.8799584676488172,
+   "up_share": 53.6,
+   "lift_h1": 0.95,
+   "lift_h2": 0.84,
+   "lift_out": 0.97,
+   "p_out": 0.6053969008358617,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+   "days": 1981,
+   "big": 178,
+   "exp": 189.2,
+   "lift": 0.94,
+   "p": 0.8024380674907748,
+   "q": 0.9613006565173267,
+   "episodes": 89,
+   "up": 82,
+   "lift_up": 0.91,
+   "p_up": 0.8277586877680213,
+   "down": 96,
+   "lift_down": 0.97,
+   "p_down": 0.6218826070742682,
+   "up_share": 46.1,
+   "lift_h1": 0.95,
+   "lift_h2": 0.93,
+   "lift_out": 0.99,
+   "p_out": 0.5486378941193859,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Sun changes sign (\u00b11 day)",
+   "days": 262,
+   "big": 21,
+   "exp": 24.9,
+   "lift": 0.85,
+   "p": 0.8066039417554731,
+   "q": 0.9613006565173267,
+   "episodes": 19,
+   "up": 8,
+   "lift_up": 0.68,
+   "p_up": 0.8999489906668777,
+   "down": 13,
+   "lift_down": 0.99,
+   "p_down": 0.5456807830871953,
+   "up_share": 38.1,
+   "lift_h1": 0.93,
+   "lift_h2": 0.74,
+   "lift_out": 0.88,
+   "p_out": 0.7555368445540721,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Moon 12th from Saturn (Shani-Chandra dwidwadash, KD p.94)",
+   "days": 180,
+   "big": 14,
+   "exp": 17.8,
+   "lift": 0.79,
+   "p": 0.8467181831109806,
+   "q": 0.9613006565173267,
+   "episodes": 12,
+   "up": 3,
+   "lift_up": 0.35,
+   "p_up": 0.9915471074545427,
+   "down": 11,
+   "lift_down": 1.2,
+   "p_down": 0.3153016045551076,
+   "up_share": 21.4,
+   "lift_h1": 0.7,
+   "lift_h2": 0.86,
+   "lift_out": 1.08,
+   "p_out": 0.38438040257911044,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Moon opposite Jupiter",
+   "days": 199,
+   "big": 16,
+   "exp": 20.1,
+   "lift": 0.8,
+   "p": 0.8472273605591176,
+   "q": 0.9613006565173267,
+   "episodes": 14,
+   "up": 5,
+   "lift_up": 0.51,
+   "p_up": 0.9669508195900518,
+   "down": 11,
+   "lift_down": 1.07,
+   "p_down": 0.44978123690128957,
+   "up_share": 31.2,
+   "lift_h1": 0.66,
+   "lift_h2": 0.91,
+   "lift_out": 0.93,
+   "p_out": 0.6486317804709327,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Mercury retrograde",
+   "days": 444,
+   "big": 34,
+   "exp": 40.2,
+   "lift": 0.85,
+   "p": 0.8569136899907358,
+   "q": 0.9613006565173267,
+   "episodes": 20,
+   "up": 16,
+   "lift_up": 0.8,
+   "p_up": 0.8402928053252049,
+   "down": 18,
+   "lift_down": 0.89,
+   "p_down": 0.7249922121417521,
+   "up_share": 47.1,
+   "lift_h1": 0.92,
+   "lift_h2": 0.77,
+   "lift_out": 0.95,
+   "p_out": 0.6548135655006885,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Sun changes nakshatra (\u00b11 day)",
+   "days": 527,
+   "big": 41,
+   "exp": 47.9,
+   "lift": 0.86,
+   "p": 0.8584587506503967,
+   "q": 0.9613006565173267,
+   "episodes": 34,
+   "up": 20,
+   "lift_up": 0.87,
+   "p_up": 0.7630163909527461,
+   "down": 21,
+   "lift_down": 0.84,
+   "p_down": 0.8084818690678416,
+   "up_share": 48.8,
+   "lift_h1": 0.9,
+   "lift_h2": 0.8,
+   "lift_out": 1.25,
+   "p_out": 0.040248932889957234,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Mercury-Venus exact conjunction (\u00b11 day)",
+   "days": 44,
+   "big": 3,
+   "exp": 5.1,
+   "lift": 0.59,
+   "p": 0.8856746723154797,
+   "q": 0.9613006565173267,
+   "episodes": 2,
+   "up": 1,
+   "lift_up": 0.39,
+   "p_up": 0.9247215628032728,
+   "down": 2,
+   "lift_down": 0.79,
+   "p_down": 0.7209770902025139,
+   "up_share": 33.3,
+   "lift_h1": 0.43,
+   "lift_h2": 0.72,
+   "lift_out": 0.92,
+   "p_out": 0.6357651582551899,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Moon 2nd from Saturn",
+   "days": 199,
+   "big": 13,
+   "exp": 17.7,
+   "lift": 0.74,
+   "p": 0.8957574299365998,
+   "q": 0.9613006565173267,
+   "episodes": 13,
+   "up": 7,
+   "lift_up": 0.85,
+   "p_up": 0.7130472337444287,
+   "down": 6,
+   "lift_down": 0.63,
+   "p_down": 0.9092024337411967,
+   "up_share": 53.8,
+   "lift_h1": 0.81,
+   "lift_h2": 0.61,
+   "lift_out": 1.23,
+   "p_out": 0.17798075636030064,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Venus stations direct (\u00b11 day)",
+   "days": 30,
+   "big": 1,
+   "exp": 2.7,
+   "lift": 0.37,
+   "p": 0.9333651846653142,
+   "q": 0.9730583557795968,
+   "episodes": 1,
+   "up": 0,
+   "lift_up": 0.0,
+   "p_up": 1.0,
+   "down": 1,
+   "lift_down": 0.77,
+   "p_down": 0.72843802418933,
+   "up_share": 0.0,
+   "lift_h1": 0.63,
+   "lift_h2": null,
+   "lift_out": null,
+   "p_out": null,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Mercury combustion begins (\u00b11 day)",
+   "days": 132,
+   "big": 7,
+   "exp": 12.3,
+   "lift": 0.57,
+   "p": 0.9605407173963203,
+   "q": 0.9730583557795968,
+   "episodes": 7,
+   "up": 4,
+   "lift_up": 0.69,
+   "p_up": 0.8299278952035334,
+   "down": 3,
+   "lift_down": 0.46,
+   "p_down": 0.9559357341015706,
+   "up_share": 57.1,
+   "lift_h1": 0.84,
+   "lift_h2": 0.2,
+   "lift_out": 0.91,
+   "p_out": 0.6658085252025416,
+   "passed": false,
+   "lean": "either"
+  },
+  {
+   "factor": "Venus changes sign (\u00b11 day)",
+   "days": 241,
+   "big": 14,
+   "exp": 22.1,
+   "lift": 0.63,
+   "p": 0.9730583557795968,
+   "q": 0.9730583557795968,
+   "episodes": 11,
+   "up": 8,
+   "lift_up": 0.77,
+   "p_up": 0.8123315696810955,
+   "down": 6,
+   "lift_down": 0.51,
+   "p_down": 0.9752455367178681,
+   "up_share": 57.1,
+   "lift_h1": 0.37,
+   "lift_h2": 1.04,
+   "lift_out": 1.12,
+   "p_out": 0.303224692488696,
+   "passed": false,
+   "lean": "either"
+  }
+ ],
+ "passed": [
+  "Moon opposite Sun",
+  "Moon-Saturn 6/8 (shadashtak)",
+  "Moon opposite Rahu (= Moon with Ketu)"
+ ],
+ "days": [
+  {
+   "date": "2027-01-21",
+   "item": "Big-move watch: Jupiter changes nakshatra; Jupiter changes sign; full moon",
+   "kind": "Volatility watch",
+   "window_lean": "either",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Lunation day: full moon (\u00b11 day)",
+    "Moon at perigee (\u00b11 day)"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-01-22",
+   "item": "Big-move watch: Jupiter changes nakshatra; Jupiter changes sign; full moon",
+   "kind": "Volatility watch",
+   "window_lean": "either",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Lunation day: full moon (\u00b11 day)",
+    "Moon at perigee (\u00b11 day)",
+    "Moon changes sign",
+    "Moon opposite Rahu (= Moon with Ketu)",
+    "Moon opposite Sun"
+   ],
+   "triggers": [
+    "Moon opposite Sun",
+    "Moon opposite Rahu (= Moon with Ketu)"
+   ],
+   "score": 0.83,
+   "trigger_lean": [
+    "either",
+    "either"
+   ]
+  },
+  {
+   "date": "2027-01-25",
+   "item": "Big-move watch: Jupiter changes nakshatra; Jupiter changes sign; full moon",
+   "kind": "Volatility watch",
+   "window_lean": "either",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Moon with Mars",
+    "Moon-Saturn 6/8 (shadashtak)",
+    "Sun changes nakshatra (\u00b11 day)"
+   ],
+   "triggers": [
+    "Moon-Saturn 6/8 (shadashtak)"
+   ],
+   "score": 0.31,
+   "trigger_lean": [
+    "either"
+   ]
+  },
+  {
+   "date": "2027-01-26",
+   "item": "Big-move watch: Jupiter changes nakshatra; Jupiter changes sign; full moon",
+   "kind": "Volatility watch",
+   "window_lean": "either",
+   "fast": [
+    "Moon aspected by Saturn",
+    "Moon changes sign",
+    "Moon opposite Saturn"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-01-27",
+   "item": "Big-move watch: Jupiter changes nakshatra; Jupiter changes sign; full moon",
+   "kind": "Volatility watch",
+   "window_lean": "either",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Mercury changes sign (\u00b11 day)",
+    "Moon aspected by Saturn",
+    "Moon opposite Saturn"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-03-22",
+   "item": "Big-move watch: Saturn combustion begins; full moon",
+   "kind": "Volatility watch",
+   "window_lean": "down",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Lunation day: full moon (\u00b11 day)",
+    "Mercury overtakes Venus in speed (Mercury manifestation, KD) (\u00b11 day)",
+    "Moon aspected by Saturn",
+    "Moon changes sign",
+    "Moon opposite Saturn",
+    "Moon opposite Sun",
+    "Venus changes sign (\u00b11 day)"
+   ],
+   "triggers": [
+    "Moon opposite Sun"
+   ],
+   "score": 0.49,
+   "trigger_lean": [
+    "either"
+   ]
+  },
+  {
+   "date": "2027-03-23",
+   "item": "Big-move watch: Saturn combustion begins; full moon",
+   "kind": "Volatility watch",
+   "window_lean": "down",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Lunation day: full moon (\u00b11 day)",
+    "Mercury overtakes Venus in speed (Mercury manifestation, KD) (\u00b11 day)",
+    "Moon aspected by Saturn",
+    "Moon opposite Saturn",
+    "Moon opposite Sun"
+   ],
+   "triggers": [
+    "Moon opposite Sun"
+   ],
+   "score": 0.49,
+   "trigger_lean": [
+    "either"
+   ]
+  },
+  {
+   "date": "2027-03-24",
+   "item": "Big-move watch: Saturn combustion begins; full moon",
+   "kind": "Volatility watch",
+   "window_lean": "down",
+   "fast": [
+    "Moon aspected by Mars",
+    "Moon changes sign",
+    "Moon-Saturn 6/8 (shadashtak)"
+   ],
+   "triggers": [
+    "Moon-Saturn 6/8 (shadashtak)"
+   ],
+   "score": 0.31,
+   "trigger_lean": [
+    "either"
+   ]
+  },
+  {
+   "date": "2027-03-25",
+   "item": "Big-move watch: Saturn combustion begins; full moon",
+   "kind": "Volatility watch",
+   "window_lean": "down",
+   "fast": [
+    "Moon aspected by Mars",
+    "Moon-Saturn 6/8 (shadashtak)"
+   ],
+   "triggers": [
+    "Moon-Saturn 6/8 (shadashtak)"
+   ],
+   "score": 0.31,
+   "trigger_lean": [
+    "either"
+   ]
+  },
+  {
+   "date": "2027-05-04",
+   "item": "Single lead: Venus-Saturn conjunction",
+   "kind": "Volatility watch",
+   "window_lean": "down",
+   "fast": [
+    "Moon aspected by Jupiter",
+    "Moon aspected by Mars",
+    "Moon waning past Ashtami to Amavasya (malefic Moon)",
+    "Moon with Saturn"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-05-05",
+   "item": "Single lead: Venus-Saturn conjunction",
+   "kind": "Volatility watch",
+   "window_lean": "down",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Lunation day: new moon (\u00b11 day)",
+    "Mercury changes sign (\u00b11 day)",
+    "Mercury leaves combustion (\u00b11 day)",
+    "Moon 2nd from Saturn",
+    "Moon changes sign",
+    "Moon waning past Ashtami to Amavasya (malefic Moon)",
+    "Moon with Mercury",
+    "Moon with Sun"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-05-06",
+   "item": "Single lead: Venus-Saturn conjunction",
+   "kind": "Volatility watch",
+   "window_lean": "down",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Lunation day: new moon (\u00b11 day)",
+    "Mercury changes sign (\u00b11 day)",
+    "Mercury leaves combustion (\u00b11 day)",
+    "Moon 2nd from Saturn",
+    "Moon waning past Ashtami to Amavasya (malefic Moon)",
+    "Moon with Sun"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-05-07",
+   "item": "Single lead: Venus-Saturn conjunction",
+   "kind": "Volatility watch",
+   "window_lean": "down",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Lunation day: new moon (\u00b11 day)",
+    "Mercury changes sign (\u00b11 day)",
+    "Mercury leaves combustion (\u00b11 day)",
+    "Moon aspected by Saturn",
+    "Moon changes sign",
+    "Moon with Mercury"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-05-10",
+   "item": "Single lead: Venus-Saturn conjunction",
+   "kind": "Volatility watch",
+   "window_lean": "down",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Moon at perigee (\u00b11 day)",
+    "Sun changes nakshatra (\u00b11 day)",
+    "Venus changes nakshatra (\u00b11 day)",
+    "Venus changes sign (\u00b11 day)"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-06-22",
+   "item": "Big-move watch: Jupiter changes nakshatra; Jupiter changes sign",
+   "kind": "Volatility watch",
+   "window_lean": "up",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Mercury retrograde",
+    "Moon aspected by Jupiter",
+    "Moon aspected by Saturn",
+    "Moon opposite Jupiter",
+    "Moon with Rahu (= Moon opposite Ketu)",
+    "Sun changes nakshatra (\u00b11 day)",
+    "Sun-Mercury exact conjunction (KD turning date) (\u00b11 day)",
+    "Venus changes nakshatra (\u00b11 day)"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-06-23",
+   "item": "Big-move watch: Jupiter changes nakshatra; Jupiter changes sign",
+   "kind": "Volatility watch",
+   "window_lean": "up",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Mercury retrograde",
+    "Moon aspected by Jupiter",
+    "Moon aspected by Saturn",
+    "Moon changes sign",
+    "Moon opposite Jupiter",
+    "Moon with Rahu (= Moon opposite Ketu)",
+    "Sun changes nakshatra (\u00b11 day)",
+    "Sun-Mercury exact conjunction (KD turning date) (\u00b11 day)",
+    "Venus changes nakshatra (\u00b11 day)"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-06-24",
+   "item": "Big-move watch: Jupiter changes nakshatra; Jupiter changes sign",
+   "kind": "Volatility watch",
+   "window_lean": "up",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Mercury retrograde",
+    "Moon aspected by Mars",
+    "Moon opposite Mars",
+    "Sun-Mercury exact conjunction (KD turning date) (\u00b11 day)",
+    "Venus changes nakshatra (\u00b11 day)"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-06-25",
+   "item": "Big-move watch: Jupiter changes nakshatra; Jupiter changes sign",
+   "kind": "Volatility watch",
+   "window_lean": "up",
+   "fast": [
+    "Mercury retrograde",
+    "Moon aspected by Mars",
+    "Moon opposite Mars"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-06-28",
+   "item": "Big-move watch: Jupiter changes nakshatra; Jupiter changes sign",
+   "kind": "Volatility watch",
+   "window_lean": "up",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Lunation day: last quarter (\u00b11 day)",
+    "Mars changes nakshatra (\u00b11 day)",
+    "Mercury retrograde",
+    "Moon 12th from Saturn (Shani-Chandra dwidwadash, KD p.94)",
+    "Moon aspected by Mars",
+    "Moon changes sign",
+    "Moon waning past Ashtami to Amavasya (malefic Moon)",
+    "Venus changes sign (\u00b11 day)"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-07-19",
+   "item": "Venus combust in East \u2013 Gemini / Punarvasu",
+   "kind": "Venus (TA S18)",
+   "window_lean": "up",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Lunation day: full moon (\u00b11 day)",
+    "Mercury overtakes Venus in speed (Mercury manifestation, KD) (\u00b11 day)",
+    "Moon aspected by Saturn",
+    "Moon opposite Sun",
+    "Moon with Rahu (= Moon opposite Ketu)",
+    "Sun changes nakshatra (\u00b11 day)",
+    "Venus combustion begins (\u00b11 day)"
+   ],
+   "triggers": [
+    "Moon opposite Sun"
+   ],
+   "score": 0.49,
+   "trigger_lean": [
+    "either"
+   ]
+  },
+  {
+   "date": "2027-07-20",
+   "item": "Venus combust in East \u2013 Gemini / Punarvasu",
+   "kind": "Venus (TA S18)",
+   "window_lean": "up",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Mercury overtakes Venus in speed (Mercury manifestation, KD) (\u00b11 day)",
+    "Moon aspected by Saturn",
+    "Moon opposite Sun",
+    "Moon with Rahu (= Moon opposite Ketu)",
+    "Sun changes nakshatra (\u00b11 day)",
+    "Venus combustion begins (\u00b11 day)"
+   ],
+   "triggers": [
+    "Moon opposite Sun"
+   ],
+   "score": 0.49,
+   "trigger_lean": [
+    "either"
+   ]
+  },
+  {
+   "date": "2027-07-21",
+   "item": "Venus combust in East \u2013 Gemini / Punarvasu",
+   "kind": "Venus (TA S18)",
+   "window_lean": "up",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Mars changes nakshatra (\u00b11 day)",
+    "Moon aspected by Jupiter",
+    "Moon changes sign",
+    "Moon opposite Jupiter",
+    "Sun changes nakshatra (\u00b11 day)",
+    "Venus changes sign (\u00b11 day)",
+    "Venus combustion begins (\u00b11 day)"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-07-22",
+   "item": "Venus combust in East \u2013 Gemini / Punarvasu",
+   "kind": "Venus (TA S18)",
+   "window_lean": "up",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Mars changes nakshatra (\u00b11 day)",
+    "Moon aspected by Jupiter",
+    "Moon opposite Jupiter",
+    "Venus changes sign (\u00b11 day)"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-07-23",
+   "item": "Venus combust in East \u2013 Gemini / Punarvasu",
+   "kind": "Venus (TA S18)",
+   "window_lean": "up",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Mars changes nakshatra (\u00b11 day)",
+    "Moon 12th from Saturn (Shani-Chandra dwidwadash, KD p.94)",
+    "Moon aspected by Mars",
+    "Moon changes sign",
+    "Moon opposite Mars",
+    "Venus changes sign (\u00b11 day)"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-08-27",
+   "item": "Single lead: Jupiter changes nakshatra",
+   "kind": "Volatility watch",
+   "window_lean": "up",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Moon aspected by Saturn",
+    "Moon waning past Ashtami to Amavasya (malefic Moon)",
+    "Venus changes nakshatra (\u00b11 day)"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-08-30",
+   "item": "Single lead: Jupiter changes nakshatra",
+   "kind": "Volatility watch",
+   "window_lean": "up",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Lunation day: new moon (\u00b11 day)",
+    "Mercury changes sign (\u00b11 day)",
+    "Moon at perigee (\u00b11 day)",
+    "Moon changes sign",
+    "Moon opposite Rahu (= Moon with Ketu)",
+    "Moon waning past Ashtami to Amavasya (malefic Moon)",
+    "Sun changes nakshatra (\u00b11 day)"
+   ],
+   "triggers": [
+    "Moon opposite Rahu (= Moon with Ketu)"
+   ],
+   "score": 0.34,
+   "trigger_lean": [
+    "either"
+   ]
+  },
+  {
+   "date": "2027-08-31",
+   "item": "Single lead: Jupiter changes nakshatra",
+   "kind": "Volatility watch",
+   "window_lean": "up",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Lunation day: new moon (\u00b11 day)",
+    "Mercury changes sign (\u00b11 day)",
+    "Moon at perigee (\u00b11 day)",
+    "Moon waning past Ashtami to Amavasya (malefic Moon)",
+    "Moon with Jupiter",
+    "Moon with Sun",
+    "Sun changes nakshatra (\u00b11 day)"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-09-01",
+   "item": "Single lead: Jupiter changes nakshatra",
+   "kind": "Volatility watch",
+   "window_lean": "up",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Lunation day: new moon (\u00b11 day)",
+    "Moon changes sign",
+    "Moon with Jupiter",
+    "Moon with Sun",
+    "Sun changes nakshatra (\u00b11 day)"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-09-02",
+   "item": "Single lead: Jupiter changes nakshatra",
+   "kind": "Volatility watch",
+   "window_lean": "up",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Mars changes nakshatra (\u00b11 day)",
+    "Moon with Mercury",
+    "Moon-Saturn 6/8 (shadashtak)"
+   ],
+   "triggers": [
+    "Moon-Saturn 6/8 (shadashtak)"
+   ],
+   "score": 0.31,
+   "trigger_lean": [
+    "either"
+   ]
+  },
+  {
+   "date": "2027-09-06",
+   "item": "Venus rises in West \u2013 Leo / Uttara Phalguni with Sun (qualified: sharp upturn after a small dip)",
+   "kind": "Venus (TA S18)",
+   "window_lean": "dip then up",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Lunation day: first quarter (\u00b11 day)",
+    "Moon changes sign",
+    "Moon-Saturn 6/8 (shadashtak)",
+    "Venus changes nakshatra (\u00b11 day)",
+    "Venus leaves combustion (\u00b11 day)"
+   ],
+   "triggers": [
+    "Moon-Saturn 6/8 (shadashtak)"
+   ],
+   "score": 0.31,
+   "trigger_lean": [
+    "either"
+   ]
+  },
+  {
+   "date": "2027-09-07",
+   "item": "Venus rises in West \u2013 Leo / Uttara Phalguni with Sun (qualified: sharp upturn after a small dip)",
+   "kind": "Venus (TA S18)",
+   "window_lean": "dip then up",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Lunation day: first quarter (\u00b11 day)",
+    "Moon-Saturn 6/8 (shadashtak)",
+    "Venus changes nakshatra (\u00b11 day)",
+    "Venus leaves combustion (\u00b11 day)"
+   ],
+   "triggers": [
+    "Moon-Saturn 6/8 (shadashtak)"
+   ],
+   "score": 0.31,
+   "trigger_lean": [
+    "either"
+   ]
+  },
+  {
+   "date": "2027-09-08",
+   "item": "Venus rises in West \u2013 Leo / Uttara Phalguni with Sun (qualified: sharp upturn after a small dip)",
+   "kind": "Venus (TA S18)",
+   "window_lean": "dip then up",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Lunation day: first quarter (\u00b11 day)",
+    "Moon aspected by Jupiter",
+    "Moon changes sign",
+    "Venus changes sign (\u00b11 day)",
+    "Venus leaves combustion (\u00b11 day)"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-09-09",
+   "item": "Venus rises in West \u2013 Leo / Uttara Phalguni with Sun (qualified: sharp upturn after a small dip)",
+   "kind": "Venus (TA S18)",
+   "window_lean": "dip then up",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Moon aspected by Jupiter",
+    "Venus changes sign (\u00b11 day)"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-09-10",
+   "item": "Venus rises in West \u2013 Leo / Uttara Phalguni with Sun (qualified: sharp upturn after a small dip)",
+   "kind": "Venus (TA S18)",
+   "window_lean": "dip then up",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Moon aspected by Jupiter",
+    "Venus changes sign (\u00b11 day)"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-10-18",
+   "item": "Big-move watch: full moon; Sun in Libra aspected by (or with) malefics [Bullish]",
+   "kind": "Volatility watch",
+   "window_lean": "down",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Mercury retrograde",
+    "Moon 2nd from Saturn",
+    "Moon aspected by Mars",
+    "Moon changes sign",
+    "Moon opposite Mars",
+    "Sun changes sign (\u00b11 day)",
+    "Sun-Mercury exact conjunction (KD turning date) (\u00b11 day)",
+    "Venus changes nakshatra (\u00b11 day)"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-11-01",
+   "item": "Single lead: Jupiter changes nakshatra",
+   "kind": "Volatility watch",
+   "window_lean": "up",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Mars changes nakshatra (\u00b11 day)",
+    "Moon with Mars"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-11-02",
+   "item": "Single lead: Jupiter changes nakshatra",
+   "kind": "Volatility watch",
+   "window_lean": "up",
+   "fast": [
+    "Moon aspected by Jupiter",
+    "Moon aspected by Saturn",
+    "Moon changes sign"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-11-03",
+   "item": "Single lead: Jupiter changes nakshatra",
+   "kind": "Volatility watch",
+   "window_lean": "up",
+   "fast": [
+    "Moon aspected by Jupiter",
+    "Moon aspected by Saturn"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-11-04",
+   "item": "Single lead: Jupiter changes nakshatra",
+   "kind": "Volatility watch",
+   "window_lean": "up",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Mercury changes sign (\u00b11 day)",
+    "Moon aspected by Jupiter",
+    "Moon aspected by Saturn",
+    "Moon changes sign"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-11-05",
+   "item": "Single lead: Jupiter changes nakshatra",
+   "kind": "Volatility watch",
+   "window_lean": "up",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Lunation day: first quarter (\u00b11 day)",
+    "Mercury changes sign (\u00b11 day)",
+    "Moon with Rahu (= Moon opposite Ketu)"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-11-23",
+   "item": "Single lead: Jupiter changes sign",
+   "kind": "Volatility watch",
+   "window_lean": "either",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Mercury combustion begins (\u00b11 day)",
+    "Moon aspected by Saturn",
+    "Moon opposite Saturn",
+    "Moon waning past Ashtami to Amavasya (malefic Moon)"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-11-24",
+   "item": "Single lead: Jupiter changes sign",
+   "kind": "Volatility watch",
+   "window_lean": "either",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Mars exact conjunction with Sun / Mercury / Venus (\u00b11 day)",
+    "Mercury changes sign (\u00b11 day)",
+    "Mercury combustion begins (\u00b11 day)",
+    "Moon aspected by Saturn",
+    "Moon opposite Saturn",
+    "Moon waning past Ashtami to Amavasya (malefic Moon)"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-11-25",
+   "item": "Single lead: Jupiter changes sign",
+   "kind": "Volatility watch",
+   "window_lean": "either",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Mars exact conjunction with Sun / Mercury / Venus (\u00b11 day)",
+    "Mercury changes sign (\u00b11 day)",
+    "Moon changes sign",
+    "Moon waning past Ashtami to Amavasya (malefic Moon)",
+    "Moon with Mercury",
+    "Moon-Saturn 6/8 (shadashtak)"
+   ],
+   "triggers": [
+    "Moon-Saturn 6/8 (shadashtak)"
+   ],
+   "score": 0.31,
+   "trigger_lean": [
+    "either"
+   ]
+  },
+  {
+   "date": "2027-11-26",
+   "item": "Single lead: Jupiter changes sign",
+   "kind": "Volatility watch",
+   "window_lean": "either",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Mars exact conjunction with Sun / Mercury / Venus (\u00b11 day)",
+    "Mercury changes sign (\u00b11 day)",
+    "Moon waning past Ashtami to Amavasya (malefic Moon)",
+    "Moon-Saturn 6/8 (shadashtak)"
+   ],
+   "triggers": [
+    "Moon-Saturn 6/8 (shadashtak)"
+   ],
+   "score": 0.31,
+   "trigger_lean": [
+    "either"
+   ]
+  },
+  {
+   "date": "2027-11-29",
+   "item": "Single lead: Jupiter changes sign",
+   "kind": "Volatility watch",
+   "window_lean": "either",
+   "fast": [
+    "Lunation day: new moon (\u00b11 day)",
+    "Moon aspected by Saturn",
+    "Moon changes sign",
+    "Moon with Mars"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-12-27",
+   "item": "Big-move watch: Rahu & Mars together in any sign [Bullish]; Mars in Capricorn; Mars with Rahu",
+   "kind": "Volatility watch",
+   "window_lean": "up",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Lunation day: new moon (\u00b11 day)",
+    "Mars changes sign (\u00b11 day)",
+    "Moon aspected by Saturn",
+    "Moon waning past Ashtami to Amavasya (malefic Moon)",
+    "Moon with Mercury",
+    "Moon with Sun"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-12-28",
+   "item": "Big-move watch: Rahu & Mars together in any sign [Bullish]; Mars in Capricorn; Mars with Rahu",
+   "kind": "Volatility watch",
+   "window_lean": "up",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Lunation day: new moon (\u00b11 day)",
+    "Mars changes sign (\u00b11 day)",
+    "Mercury leaves combustion (\u00b11 day)",
+    "Moon aspected by Saturn",
+    "Moon waning past Ashtami to Amavasya (malefic Moon)",
+    "Moon with Mercury",
+    "Moon with Sun",
+    "Sun changes nakshatra (\u00b11 day)"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-12-29",
+   "item": "Big-move watch: Rahu & Mars together in any sign [Bullish]; Mars in Capricorn; Mars with Rahu",
+   "kind": "Volatility watch",
+   "window_lean": "up",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Mercury leaves combustion (\u00b11 day)",
+    "Moon aspected by Jupiter",
+    "Moon changes sign",
+    "Moon with Mars",
+    "Moon with Rahu (= Moon opposite Ketu)",
+    "Sun changes nakshatra (\u00b11 day)"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-12-30",
+   "item": "Big-move watch: Rahu & Mars together in any sign [Bullish]; Mars in Capricorn; Mars with Rahu",
+   "kind": "Volatility watch",
+   "window_lean": "up",
+   "fast": [
+    "Any Mercury / Venus / Sun / Mars event (\u00b11 day)",
+    "Mercury leaves combustion (\u00b11 day)",
+    "Moon aspected by Jupiter",
+    "Moon with Mars",
+    "Moon with Rahu (= Moon opposite Ketu)",
+    "Sun changes nakshatra (\u00b11 day)"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  },
+  {
+   "date": "2027-12-31",
+   "item": "Big-move watch: Rahu & Mars together in any sign [Bullish]; Mars in Capricorn; Mars with Rahu",
+   "kind": "Volatility watch",
+   "window_lean": "up",
+   "fast": [
+    "Moon aspected by Jupiter",
+    "Moon changes sign",
+    "Moon with Mars",
+    "Moon with Rahu (= Moon opposite Ketu)"
+   ],
+   "triggers": [],
+   "score": 0,
+   "trigger_lean": []
+  }
+ ],
+ "picks": [
+  {
+   "item": "Big-move watch: Jupiter changes nakshatra; Jupiter changes sign; full moon",
+   "kind": "Volatility watch",
+   "window_lean": "either",
+   "frm": "2027-01-21",
+   "to": "2027-01-27",
+   "best": [
+    {
+     "date": "2027-01-22",
+     "triggers": [
+      "Moon opposite Sun",
+      "Moon opposite Rahu (= Moon with Ketu)"
+     ],
+     "score": 0.83
+    }
+   ]
+  },
+  {
+   "item": "Big-move watch: Saturn combustion begins; full moon",
+   "kind": "Volatility watch",
+   "window_lean": "down",
+   "frm": "2027-03-22",
+   "to": "2027-03-25",
+   "best": [
+    {
+     "date": "2027-03-22",
+     "triggers": [
+      "Moon opposite Sun"
+     ],
+     "score": 0.49
+    },
+    {
+     "date": "2027-03-23",
+     "triggers": [
+      "Moon opposite Sun"
+     ],
+     "score": 0.49
+    }
+   ]
+  },
+  {
+   "item": "Single lead: Venus-Saturn conjunction",
+   "kind": "Volatility watch",
+   "window_lean": "down",
+   "frm": "2027-05-04",
+   "to": "2027-05-10",
+   "best": []
+  },
+  {
+   "item": "Big-move watch: Jupiter changes nakshatra; Jupiter changes sign",
+   "kind": "Volatility watch",
+   "window_lean": "up",
+   "frm": "2027-06-22",
+   "to": "2027-06-28",
+   "best": []
+  },
+  {
+   "item": "Venus combust in East \u2013 Gemini / Punarvasu",
+   "kind": "Venus (TA S18)",
+   "window_lean": "up",
+   "frm": "2027-07-17",
+   "to": "2027-07-23",
+   "best": [
+    {
+     "date": "2027-07-19",
+     "triggers": [
+      "Moon opposite Sun"
+     ],
+     "score": 0.49
+    },
+    {
+     "date": "2027-07-20",
+     "triggers": [
+      "Moon opposite Sun"
+     ],
+     "score": 0.49
+    }
+   ]
+  },
+  {
+   "item": "Single lead: Jupiter changes nakshatra",
+   "kind": "Volatility watch",
+   "window_lean": "up",
+   "frm": "2027-08-27",
+   "to": "2027-09-02",
+   "best": [
+    {
+     "date": "2027-08-30",
+     "triggers": [
+      "Moon opposite Rahu (= Moon with Ketu)"
+     ],
+     "score": 0.34
+    }
+   ]
+  },
+  {
+   "item": "Venus rises in West \u2013 Leo / Uttara Phalguni with Sun (qualified: sharp upturn after a small dip)",
+   "kind": "Venus (TA S18)",
+   "window_lean": "dip then up",
+   "frm": "2027-09-04",
+   "to": "2027-09-10",
+   "best": [
+    {
+     "date": "2027-09-06",
+     "triggers": [
+      "Moon-Saturn 6/8 (shadashtak)"
+     ],
+     "score": 0.31
+    },
+    {
+     "date": "2027-09-07",
+     "triggers": [
+      "Moon-Saturn 6/8 (shadashtak)"
+     ],
+     "score": 0.31
+    }
+   ]
+  },
+  {
+   "item": "Big-move watch: full moon; Sun in Libra aspected by (or with) malefics [Bullish]",
+   "kind": "Volatility watch",
+   "window_lean": "down",
+   "frm": "2027-10-18",
+   "to": "2027-10-18",
+   "best": []
+  },
+  {
+   "item": "Single lead: Jupiter changes nakshatra",
+   "kind": "Volatility watch",
+   "window_lean": "up",
+   "frm": "2027-11-01",
+   "to": "2027-11-07",
+   "best": []
+  },
+  {
+   "item": "Single lead: Jupiter changes sign",
+   "kind": "Volatility watch",
+   "window_lean": "either",
+   "frm": "2027-11-23",
+   "to": "2027-11-29",
+   "best": [
+    {
+     "date": "2027-11-25",
+     "triggers": [
+      "Moon-Saturn 6/8 (shadashtak)"
+     ],
+     "score": 0.31
+    },
+    {
+     "date": "2027-11-26",
+     "triggers": [
+      "Moon-Saturn 6/8 (shadashtak)"
+     ],
+     "score": 0.31
+    }
+   ]
+  },
+  {
+   "item": "Big-move watch: Rahu & Mars together in any sign [Bullish]; Mars in Capricorn; Mars with Rahu",
+   "kind": "Volatility watch",
+   "window_lean": "up",
+   "frm": "2027-12-27",
+   "to": "2027-12-31",
+   "best": []
+  }
+ ]
+}

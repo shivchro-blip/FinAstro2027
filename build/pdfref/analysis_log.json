@@ -258,6 +258,18 @@
     "build/pdfref/gold_outlook_2026-11-22_to_2027-12-31_ET.html",
     "build/pdfref/gold_outlook_2026-11-22_to_2027-12-31_ET.ics"
    ]
+  },
+  {
+   "date": "2026-11-22",
+   "pr": "18",
+   "topic": "Narrowing the outlook windows with fast planets (Moon, Mercury, Venus, Sun, Mars)",
+   "analysis": "44 fast factors on the day (Moon relations to slow planets, Saturn 12th/2nd/6-8, malefic Moon, Moon sign change, lunation days, Mercury/Venus/Sun/Mars ingresses, stations, combustion ±1 day, KD Sun-Mercury conjunction and Mercury manifestation) tested on 2,498 historical watch-window days 2000-2026: same-year expected counts, Poisson p, BH q, both halves, lift outside windows, and a 100-run permutation (returns shuffled within year). Applied to every weekday of the forward watch items.",
+   "result": "Not supported beyond chance: 3 factors passed against 2.0 expected under permutation (90th pct 4); none survives FDR. Moon opposite the Sun x1.49 (only inside windows; outside x0.74), Moon 6/8 Saturn x1.31, Moon opposite Rahu x1.34; none picks a direction. Narrowed days, best guesses: 22 Jan, 22-23 Mar, 19-20 Jul, 30 Aug, 6-7 Sep, 25-26 Nov 2027; no trigger in 4-10 May, 22-28 Jun, 18 Oct, 1-7 Nov, 27-31 Dec.",
+   "files": [
+    "tools/fast_trigger_analysis.py",
+    "build/pdfref/gold_fast_triggers_2026-11-22_to_2027-12-31_ET.html",
+    "build/pdfref/gold_fast_triggers_2026-11-22_to_2027-12-31_ET.ics"
+   ]
   }
  ]
 }
