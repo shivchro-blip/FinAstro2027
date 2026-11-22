@@ -65,6 +65,7 @@ Known data problems:
 | `tools/backtest_gold.py [--metal silver] [--years N]` | Rule backtests against COMEX closes |
 | `tools/test_source_rules.py` | Tests of the 'Others' rules, 2000–2026 |
 | `tools/build_bs41_model.py` | Model v1.0 calendar and 2000–2026 backtest |
+| `tools/gold_deep_analysis.py [start] [end]` | Day-by-day gold analysis for a date range: rules with their 26-year records, transits, aspects, Model v1.0 and seasonality. A hand-written `..._notes.md` beside the output is rendered at the top |
 | `tools/gold_tracker.py [--metal silver]` | Trackers: findings, rule status, best-rule dates, analysis log |
 | `tools/build_year.py YEAR` | Astronomy layer for any year; 2000–2024 are git-ignored and rebuilt on demand |
 | `tools/fetch_prices.py` | Downloads GC=F and SI=F (Yahoo; the host must be allowed) |

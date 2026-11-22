@@ -189,6 +189,18 @@
     "reports/index.html",
     "tools/publish_reports.py"
    ]
+  },
+  {
+   "date": "2026-11-22",
+   "pr": "14",
+   "topic": "Gold deep analysis, 22 Nov - 31 Dec 2026",
+   "analysis": "Every gold rule window in the range weighted by its 26-year record (tier A/B/C), all transits (ingresses, stations, lunations, combustion), whole-sign aspects, Model v1.0 daily, and gold's seasonality over the same stretch 2000-2025; written analysis with phases and key dates.",
+   "result": "Three phases: 22 Nov - 2 Dec bearish lean (Sun in Anuradha, Mars on the Sun, benefic vedha, Saturn in Uttara Bhadrapada, Rahu in Dhanishta); 2-16 Dec neutral turning supportive (Mercury with the Sun, tier A; Saturn direct 10 Dec, Jupiter retrograde 13 Dec); 16-31 Dec mixed-supportive (Jupiter and Saturn both aspect the Sun, Mercury rejoins 22 Dec). Only U2-Mercury is tier A; seasonality +1.7% avg, up 16 of 26 years.",
+   "files": [
+    "build/pdfref/gold_deep_2026-11-22_to_2026-12-31_ET.html",
+    "build/pdfref/gold_deep_2026-11-22_to_2026-12-31_ET_notes.md",
+    "tools/gold_deep_analysis.py"
+   ]
   }
  ]
 }

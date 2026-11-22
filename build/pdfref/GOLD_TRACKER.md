@@ -1,6 +1,6 @@
 # Gold findings tracker
 
-Generated 21 Nov 2026 22:19 EST by `tools/gold_tracker.py` (`--refresh` re-runs both backtests). HTML version: `GOLD_TRACKER.html`.
+Generated 21 Nov 2026 22:48 EST by `tools/gold_tracker.py` (`--refresh` re-runs both backtests). HTML version: `GOLD_TRACKER.html`.
 
 ## Recent findings
 
@@ -104,6 +104,7 @@ Best (from the 26 yr data): Mars aspected by Saturn while Jupiter retrograde, U2
 
 | Date | PR | Topic | Result |
 |---|---|---|---|
+| 2026-11-22 | #14 | Gold deep analysis, 22 Nov - 31 Dec 2026 | Three phases: 22 Nov - 2 Dec bearish lean (Sun in Anuradha, Mars on the Sun, benefic vedha, Saturn in Uttara Bhadrapada, Rahu in Dhanishta); 2-16 Dec neutral turning supportive (Mercury with the Sun, tier A; Saturn direct 10 Dec, Jupiter retrograde 13 Dec); 16-31 Dec mixed-supportive (Jupiter and Saturn both aspect the Sun, Mercury rejoins 22 Dec). Only U2-Mercury is tier A; seasonality +1.7% avg, up 16 of 26 years. |
 | 2026-11-22 | #13 | reports/ folder with ready-to-open copies | reports/index.html lists 21 reports in four groups (start here, calendars and rule reports, backtests, source research). |
 | 2026-11-22 | #13 | 26-year backtest, gold and silver (20 Nov 2000 - 20 Nov 2026) | Gold 1,598/1,400 (53%) vs 54% by chance; silver 1,083/1,050 (51%) vs 51%; no rule p<0.05. 5-year best rules faded (gold Sun model 54% vs 53%; silver Venus-Mars 51% vs 54%). Most consistent: gold TA S34 A9 Mars aspected by Saturn with Jupiter retrograde 14/17 (p=0.07), U2-Mercury 176/291 (20 of 26 years); silver TA S35 A1 retrograde Mercury or Jupiter 78/126 (p=0.052), A17b Moon-Mercury alone 49/80 (p=0.081). Silver 'Mars rising' significantly wrong (2/10). |
 | 2026-11-21 | #13 | Project knowledge base and one-command refresh | Full refresh with fresh prices passed (7/7 tests); headline totals unchanged (gold 5 yr 308/279, silver 201/219). 20 Nov 2026 gold settlement 3,515.4. |
