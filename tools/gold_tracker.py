@@ -35,6 +35,7 @@ import html
 import importlib.util
 import json
 import pathlib
+import re
 import subprocess
 import sys
 from zoneinfo import ZoneInfo
@@ -46,13 +47,15 @@ ET = ZoneInfo("America/New_York")
 METAL = "gold"
 J1 = OUT / "gold_backtest_2025-11-20_to_2026-11-20_ET.json"
 J5 = OUT / "gold_backtest_2021-11-20_to_2026-11-20_ET.json"
+J26 = OUT / "gold_backtest_2000-11-20_to_2026-11-20_ET.json"
 
 
 def set_metal(m):
-    global METAL, J1, J5
+    global METAL, J1, J5, J26
     METAL = m
     J1 = OUT / f"{m}_backtest_2025-11-20_to_2026-11-20_ET.json"
     J5 = OUT / f"{m}_backtest_2021-11-20_to_2026-11-20_ET.json"
+    J26 = OUT / f"{m}_backtest_2000-11-20_to_2026-11-20_ET.json"
 LOG = OUT / "analysis_log.json"
 F0 = dt.datetime(2026, 11, 20, tzinfo=ET)
 F1 = dt.datetime(2028, 1, 1, tzinfo=ET)
@@ -83,7 +86,7 @@ def status(p):
         return "Strongest"
     if p["verdict"] == "Worked":
         return "Supported"
-    if dec >= 15 and p["hit_rate"] > p["base_rate"] and p.get("years_right", 0) >= 4:
+    if dec >= 15 and p["hit_rate"] > p["base_rate"] and p.get("years_right", 0) >= max(4, 0.7 * p.get("years_active", 0)):
         return "Consistent"
     if p["verdict"] == "Failed":
         return "Did not hold up"
@@ -93,7 +96,7 @@ def status(p):
 def is_best(p):
     dec = p["worked"] + p["failed"]
     return (dec >= 15 and p["hit_rate"] is not None and p["hit_rate"] > p["base_rate"]
-            and (p["years_right"] >= 4 or (p.get("p_value") is not None and p["p_value"] < 0.10)))
+            and (p["years_right"] >= max(4, 0.7 * p.get("years_active", 0)) or (p.get("p_value") is not None and p["p_value"] < 0.10)))
 
 
 def css_cls(st):
@@ -124,22 +127,26 @@ def main():
     set_metal(sys.argv[sys.argv.index("--metal") + 1] if "--metal" in sys.argv else "gold")
     W_ = METAL.capitalize()
     if "--refresh" in sys.argv:
-        for a in ([], ["--years", "5"]):
+        for a in ([], ["--years", "5"], ["--years", "26"]):
             subprocess.run([sys.executable, str(ROOT / "tools" / "backtest_gold.py"), "--metal", METAL] + a, check=True)
     d1, d5 = json.load(open(J1)), json.load(open(J5))
+    d26 = json.load(open(J26)) if J26.exists() else None
+    r26 = {p["rule_id"]: p for p in d26["rules"]} if d26 else {}
     r1 = {p["rule_id"]: p for p in d1["rules"]}
     r5 = {p["rule_id"]: p for p in d5["rules"]}
-    for p in r5.values():
+    # primary evidence = the longest backtest available (26 years when built, else 5 years)
+    prim, PL = (r26, "26 yr") if r26 else (r5, "5 yr")
+    for p in prim.values():
         p["status"] = status(p)
         p["best"] = is_best(p)
-    best = [p for p in r5.values() if p["best"]]
+    best = [p for p in prim.values() if p["best"]]
     best_ids = {p["rule_id"] for p in best}
     log = json.load(open(LOG))["entries"]
 
     B = load_bt()
     evs = forward(B)
     for e in evs:
-        p = r5.get(e["rule_id"])
+        p = prim.get(e["rule_id"])
         e["status5"] = p["status"] if p else "New in forward period"
     # per-rule forward counts
     fwd_count = collections.Counter(e["rule_id"] for e in evs)
@@ -162,7 +169,7 @@ def main():
                 grp = ("best" if o["rule_id"] in best_ids else "held" if st in ("Strongest", "Supported", "Consistent")
                        else "failed" if st == "Did not hold up" else "other")
                 conc[grp].add(f"{o['title']} [{o['tone']}]")
-        p = r5[e["rule_id"]]
+        p = prim[e["rule_id"]]
         best_rows.append(dict(rule_id=e["rule_id"], title=e["title"], tone=e["tone"], start=s, end=en, bodies=e.get("bodies", []),
                               days=round((en - s).total_seconds() / 86400, 1), facts=e["facts"], verdict=e["verdict"],
                               hist=f"{p['worked']}/{p['worked'] + p['failed']} ({p['hit_rate']}% vs base {p['base_rate']}%), avg {p['avg_dir_ret']:+.2f}%, right in {p['years_right']}/{p['years_active']} yrs",
@@ -192,10 +199,10 @@ def main():
 
     # ---------------- findings (generated from the two backtests)
     t5, t1 = d5["totals"], d1["totals"]
-    sun = r5.get("user_sun_state_net", {})
-    flipped = [p for rid, p in r5.items() if rid in r1 and r1[rid]["verdict"] == "Worked" and p["status"] == "Did not hold up"]
-    held = [p for p in r5.values() if p["status"] in ("Strongest", "Supported", "Consistent") and p["worked"] + p["failed"] >= 10]
-    failed = sorted((p for p in r5.values() if p["status"] == "Did not hold up"), key=lambda p: -(p["worked"] + p["failed"]))
+    sun = prim.get("user_sun_state_net", {})
+    flipped = [p for rid, p in prim.items() if rid in r1 and r1[rid]["verdict"] == "Worked" and p["status"] == "Did not hold up"]
+    held = [p for p in prim.values() if p["status"] in ("Strongest", "Supported", "Consistent") and p["worked"] + p["failed"] >= 10]
+    failed = sorted((p for p in prim.values() if p["status"] == "Did not hold up"), key=lambda p: -(p["worked"] + p["failed"]))
     nb = d5["net_signal"]["buckets"]
     stack_word = ("carries almost no information" if abs(d5["net_signal"]["corr5"]) < 0.05 else
                   "pointed the WRONG way (bearish-majority days did better)" if d5["net_signal"]["corr5"] < 0 else "pointed the right way")
@@ -205,9 +212,24 @@ def main():
         ("Stacking rules (bullish minus bearish count)", f"5 yr: next-5-day move {nb['net > 0 (more bullish rules active)']['avg5']:+.2f}% on bullish-majority days vs {nb['net < 0 (more bearish rules active)']['avg5']:+.2f}% on bearish-majority days; corr {d5['net_signal']['corr5']:+.3f}",
          f"The net count {stack_word}" + ("; the 1-year bearish edge (-1.49%) did not repeat over 5 years." if METAL == "gold" else "."), "Did not hold up"),
     ]
+    if d26:
+        t26 = d26["totals"]
+        dec26 = t26["WORKED"] + t26["FAILED"]
+        sig = sorted((q for q in d26["rules"] if q.get("p_value") is not None and q["p_value"] < 0.05), key=lambda q: q["p_value"])
+        sigf = [q for q in d26["rules"] if q.get("p_value_fail") is not None and q["p_value_fail"] < 0.05]
+        findings.append(("Rule set over 26 years (2000-2026)", f"26 yr: {t26['WORKED']} worked / {t26['FAILED']} failed ({t26['WORKED'] / max(dec26, 1) * 100:.0f}%)",
+                         ("Beat chance at p < 0.05: " + "; ".join(f"{q['title']} ({q['worked']}/{q['worked'] + q['failed']}, p = {q['p_value']})" for q in sig[:6]) if sig else "No rule beat chance at p < 0.05 over 26 years.")
+                         + (" Significantly WRONG: " + "; ".join(f"{q['title']} ({q['worked']}/{q['worked'] + q['failed']})" for q in sigf[:6]) if sigf else ""),
+                         "Confirmed (26 yr)"))
+        for q in (best if PL != "26 yr" else []):        # with 26-yr primary data the best rules are already chosen from it
+            z = r26.get(q["rule_id"])
+            if z and z["worked"] + z["failed"]:
+                findings.append((f"26-yr check of best rule: {q['title']}", f"26 yr: {z['worked']}/{z['worked'] + z['failed']} ({z['hit_rate']}% vs base {z['base_rate']}%), p = {z['p_value']}, right in {z['years_right']}/{z['years_active']} yrs",
+                                 "Holds up over 26 years." if z["verdict"] == "Worked" or (z.get("p_value") or 1) < 0.10 else "Does not hold up over 26 years; the 5-year result was period-specific." if z["verdict"] == "Failed" else "At chance over 26 years.",
+                                 "Supported" if z["verdict"] == "Worked" or (z.get("p_value") or 1) < 0.10 else "Did not hold up" if z["verdict"] == "Failed" else "At chance"))
     if METAL == "gold":
-        findings.append(("Your combined Sun model (U1-U4 together)", f"5 yr: {sun.get('worked')}/{sun.get('worked', 0) + sun.get('failed', 0)} ({sun.get('hit_rate')}% vs base {sun.get('base_rate')}%), p = {sun.get('p_value')}, right in {sun.get('years_right')}/{sun.get('years_active')} yrs",
-         "Closest thing to an edge in the whole set; dates below.", sun.get("status", "")))
+        findings.append(("Your combined Sun model (U1-U4 together)", f"{PL}: {sun.get('worked')}/{sun.get('worked', 0) + sun.get('failed', 0)} ({sun.get('hit_rate')}% vs base {sun.get('base_rate')}%), p = {sun.get('p_value')}, right in {sun.get('years_right')}/{sun.get('years_active')} yrs",
+         "Closest thing to an edge in the 5-year data; at chance over 26 years." if PL == "26 yr" and sun.get("status") not in ("Strongest", "Supported", "Consistent") else "Closest thing to an edge in the whole set; dates below.", sun.get("status", "")))
     if METAL == "silver":
         ev5 = [e for e in d5["events"] if e.get("outcome") in ("WORKED", "FAILED") and e.get("gold_ret") is not None]
         ag = [e for e in ev5 if ((e["gold_ret"] < -0.5) if e["tone"] == "Bullish" else (e["gold_ret"] > 0.5))]
@@ -216,24 +238,24 @@ def main():
             findings.append(("Silver follows gold", f"5 yr: when gold moved against a silver rule it failed {sum(e['outcome'] == 'FAILED' for e in ag)}/{len(ag)}; when gold moved its way it worked {sum(e['outcome'] == 'WORKED' for e in wr)}/{len(wr)}",
                              "Silver rule outcomes were decided mostly by gold's direction; the silver rules add little that is specific to silver.", "Confirmed (5 yr)"))
         for a_, b_ in (("doc26_silver_bear_01_venus_alone_leo_libra", "ta_s35b01_venus_leo_libra"), ("doc26_silver_bear_02_mercury_alone_aries_virgo", "ta_s35b02_mercury_aries_virgo")):
-            pa, pb = r5.get(a_), r5.get(b_)
+            pa, pb = prim.get(a_), prim.get(b_)
             if pa and pb and pa["worked"] + pa["failed"] and pb["worked"] + pb["failed"]:
-                findings.append((f"'Alone' qualifier: {pa['title']} vs {pb['title']}", f"5 yr: with 'alone' {pa['worked']}/{pa['worked'] + pa['failed']} ({pa['hit_rate']}%); without {pb['worked']}/{pb['worked'] + pb['failed']} ({pb['hit_rate']}%)",
+                findings.append((f"'Alone' qualifier: {pa['title']} vs {pb['title']}", f"{PL}: with 'alone' {pa['worked']}/{pa['worked'] + pa['failed']} ({pa['hit_rate']}%); without {pb['worked']}/{pb['worked'] + pb['failed']} ({pb['hit_rate']}%)",
                                  "The 2026 document's 'alone' condition changes the result: the qualified version worked, the plain one did not." if pa["hit_rate"] > pb["hit_rate"] + 15 else
                                  "Neither version works; the 'alone' version did even worse." if pa["hit_rate"] + 15 < pb["hit_rate"] else "The qualifier makes no clear difference.", pa["status"]))
     for p in sorted(held, key=lambda p: -(p["worked"] + p["failed"])):
         if p["rule_id"] == "user_sun_state_net":
             continue
-        findings.append((p["title"], f"5 yr: {p['worked']}/{p['worked'] + p['failed']} ({p['hit_rate']}% vs base {p['base_rate']}%), avg {p['avg_dir_ret']:+.2f}%, p = {p['p_value']}, right in {p['years_right']}/{p['years_active']} yrs",
+        findings.append((p["title"], f"{PL}: {p['worked']}/{p['worked'] + p['failed']} ({p['hit_rate']}% vs base {p['base_rate']}%), avg {p['avg_dir_ret']:+.2f}%, p = {p['p_value']}, right in {p['years_right']}/{p['years_active']} yrs",
                          "Consistent across years; dates below." if p["best"] else "Held up, fewer occurrences.", p["status"]))
     for p in flipped:
         q = r1[p["rule_id"]]
-        findings.append((p["title"], f"1 yr: {q['worked']}/{q['worked'] + q['failed']} worked; 5 yr: {p['worked']}/{p['worked'] + p['failed']} ({p['hit_rate']}% vs base {p['base_rate']}%)",
+        findings.append((p["title"], f"1 yr: {q['worked']}/{q['worked'] + q['failed']} worked; {PL}: {p['worked']}/{p['worked'] + p['failed']} ({p['hit_rate']}% vs base {p['base_rate']}%)",
                          "Looked good only in the falling 2025-26 year; do not rely on it.", "Did not hold up"))
     for p in failed:
         if p in flipped:
             continue
-        findings.append((p["title"], f"5 yr: {p['worked']}/{p['worked'] + p['failed']} ({p['hit_rate']}% vs base {p['base_rate']}%), avg {p['avg_dir_ret']:+.2f}%, right in {p['years_right']}/{p['years_active']} yrs",
+        findings.append((p["title"], f"{PL}: {p['worked']}/{p['worked'] + p['failed']} ({p['hit_rate']}% vs base {p['base_rate']}%), avg {p['avg_dir_ret']:+.2f}%, right in {p['years_right']}/{p['years_active']} yrs",
                          "Went the wrong way more often than chance would; treat as unreliable.", "Did not hold up"))
     if METAL == "gold":
         findings.append(("Big falls", "Bearish rules outnumbered bullish ones before only 1 of the 15 biggest 5-day falls (5 yr); Jan-2026 crash had 6 bullish, 0 bearish",
@@ -278,13 +300,32 @@ def main():
             return "–"
         return f"{p['worked']}/{dec} ({p['hit_rate']}% vs {p['base_rate']}%)"
 
-    order = sorted(r5.values(), key=lambda p: (["Strongest", "Supported", "Consistent", "At chance", "Inconclusive", "Did not hold up"].index(p["status"]) if p["status"] in ("Strongest", "Supported", "Consistent", "At chance", "Inconclusive", "Did not hold up") else 6,
+    order = sorted(prim.values(), key=lambda p: (["Strongest", "Supported", "Consistent", "At chance", "Inconclusive", "Did not hold up"].index(p["status"]) if p["status"] in ("Strongest", "Supported", "Consistent", "At chance", "Inconclusive", "Did not hold up") else 6,
                                                -(p["worked"] + p["failed"])))
+    def blocks(by):
+        v = list(by.values())
+        if len(v) <= 6:
+            return " ".join(f"{x[1]}/{x[0]}" if x[0] else "–" for x in v)
+        out = []
+        for a in range(0, len(v), 5):
+            d_ = sum(x[0] for x in v[a:a + 5])
+            w_ = sum(x[1] for x in v[a:a + 5])
+            out.append(f"{w_}/{d_}" if d_ else "–")
+        return " ".join(out)
+
+    def rec26(rid):
+        q = r26.get(rid)
+        if not q or not q["worked"] + q["failed"]:
+            return "–"
+        pv_ = q.get("p_value")
+        tag = "" if pv_ is None else (f"<div class='s'>p = {pv_}" + (" ✓" if pv_ < 0.05 else "") + f"; {q['verdict']}</div>")
+        return f"{q['worked']}/{q['worked'] + q['failed']} ({q['hit_rate']}% vs {q['base_rate']}%){tag}"
+
     rule_rows = "".join(
         f"<tr class='{css_cls(p['status'])}'><td><b>{html.escape(p['title'])}</b>{' ★' if p['best'] else ''}<div class='s'>{p['rule_id']}</div></td><td>{p['tone']}</td>"
-        f"<td class='n'>{rec(r1.get(p['rule_id']))}</td><td class='n'>{rec(p)}</td><td class='n'>{'' if p['avg_dir_ret'] is None else f'{p['avg_dir_ret']:+.2f}%'}</td>"
+        f"<td class='n'>{rec(r1.get(p['rule_id']))}</td><td class='n'>{rec(r5.get(p['rule_id']))}</td><td class='n'>{rec26(p['rule_id'])}</td><td class='n'>{'' if p['avg_dir_ret'] is None else f'{p['avg_dir_ret']:+.2f}%'}</td>"
         f"<td class='n'>{'' if p.get('p_value') is None else p['p_value']}</td><td class='n'>{f'{p['years_right']}/{p['years_active']}' if p.get('years_active') else ''}</td>"
-        f"<td class='n s'>{' '.join(f'{v[1]}/{v[0]}' if v[0] else '–' for v in p['by_year'].values())}</td>"
+        f"<td class='n s'>{blocks(p['by_year'])}</td>"
         f"<td>{st_tag(p['status'])}</td><td class='n'>{fwd_count.get(p['rule_id'], 0)}</td></tr>" for p in order)
     find_rows = "".join(f"<tr class='{css_cls(st)}'><td><b>{html.escape(a)}</b></td><td class='s'>{html.escape(b)}</td><td>{html.escape(c)}</td><td>{st_tag(st)}</td></tr>" for a, b, c, st in findings)
 
@@ -322,26 +363,26 @@ def main():
                   if METAL == "gold" else ". With a single best rule this simply marks when it is active.")
     page = f"""<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{W_} Findings Tracker</title><style>{css}</style></head><body>
 <h1>{W_} findings tracker</h1>
-<p class="m">Generated {now:%d %b %Y %H:%M %Z} by tools/gold_tracker.py from the 1-year and 5-year backtests and the analysis log. Re-run <code>python tools/gold_tracker.py{'' if METAL == 'gold' else ' --metal ' + METAL} --refresh</code> after any rule or data change; every number on this page is recomputed, nothing is typed in.</p>
+<p class="m">Generated {now:%d %b %Y %H:%M %Z} by tools/gold_tracker.py from the 1-, 5- and 26-year backtests and the analysis log; rule status and best rules come from the longest one ({PL}). Re-run <code>python tools/gold_tracker.py{'' if METAL == 'gold' else ' --metal ' + METAL} --refresh</code> after any rule or data change; every number on this page is recomputed, nothing is typed in.</p>
 <h2>Recent findings</h2>
 <div class="wrap"><table><thead><tr><th>Finding</th><th>Evidence</th><th>What it means</th><th>Status</th></tr></thead><tbody>{find_rows}</tbody></table></div>
 
 <h2>Best-performing rules: dates from 20 Nov 2026 to 31 Dec 2027 (ET)</h2>
-<p class="m">Chosen from the 5-year backtest without hand-picking (≥15 decided occurrences, hit rate above base, right in ≥4 of 5 years or p &lt; 0.10): <b>{html.escape(best_list)}</b>.
-Windows are scored in the backtest from the close before the start to the last close inside the window. The last column lists the other {METAL} rules active at the same time, grouped by how they did over 5 years. None of these rules is statistically certain; read them as the most consistent of the set.</p>
-<div class="wrap"><table><thead><tr><th>From (ET)</th><th>To (ET)</th><th>Days</th><th>Rule / condition</th><th>Effect</th><th>5-year record</th><th>Other rules active then</th></tr></thead><tbody>{best_html}</tbody></table></div>
+<p class="m">Chosen from the {PL} backtest without hand-picking (≥15 decided occurrences, hit rate above base, right in ≥70% of the years with a result (≥4 of 5 in a 5-year run) or p &lt; 0.10): <b>{html.escape(best_list) or 'none qualifies'}</b>.
+Windows are scored in the backtest from the close before the start to the last close inside the window. The last column lists the other {METAL} rules active at the same time, grouped by how they did over {PL}. None of these rules is statistically certain; read them as the most consistent of the set.</p>
+<div class="wrap"><table><thead><tr><th>From (ET)</th><th>To (ET)</th><th>Days</th><th>Rule / condition</th><th>Effect</th><th>{PL} record</th><th>Other rules active then</th></tr></thead><tbody>{best_html}</tbody></table></div>
 
 <h3>Day-by-day agreement of the best rules</h3>
 <p class="m">Each stretch: how many of the best rules point up : down{AGREE_NOTE}</p>
 <div class="wrap"><table><thead><tr><th>From</th><th>To</th><th>Days</th><th>Up : down</th><th>Pointing up</th><th>Pointing down</th></tr></thead><tbody>{conf_html}</tbody></table></div>
 
-<h2>Every {METAL} rule: 1-year vs 5-year record</h2>
+<h2>Every {METAL} rule: 1-, 5- and 26-year records</h2>
 <p class="m">Record = worked/decided (hit rate vs drift-aware base rate). ★ = best-performing (dates above). "Upcoming" = occurrences from 20 Nov 2026 to 31 Dec 2027; every one of them is in the {METAL} report (build/pdfref/{METAL}_2026-11-20_to_2027-12-31_ET.html), and its status here tells you how much weight it earned.</p>
-<div class="wrap"><table><thead><tr><th>Rule</th><th>Effect</th><th>1 yr (2025-26)</th><th>5 yr (2021-26)</th><th>Avg move (5 yr)</th><th>p (5 yr)</th><th>Years right</th><th>By year 21-22 … 25-26</th><th>Status</th><th>Upcoming</th></tr></thead><tbody>{rule_rows}</tbody></table></div>
+<div class="wrap"><table><thead><tr><th>Rule</th><th>Effect</th><th>1 yr (2025-26)</th><th>5 yr (2021-26)</th><th>26 yr (2000-26)</th><th>Avg move ({PL})</th><th>p ({PL})</th><th>Years right ({PL})</th><th>{'By 5-year block 2000-05 … 2025-26' if PL == '26 yr' else 'By year 21-22 … 25-26'}</th><th>Status</th><th>Upcoming</th></tr></thead><tbody>{rule_rows}</tbody></table></div>
 
 <h2>Analysis log</h2>
 <div class="wrap"><table><thead><tr><th>Date</th><th>PR</th><th>Analysis</th><th>Result</th><th>Files</th></tr></thead><tbody>{log_html}</tbody></table></div>
-<p class="s">Backtests: {J1.name}, {J5.name}. Prices: Yahoo Finance {'GC=F' if METAL == 'gold' else 'SI=F'} daily closes. Forward windows: same detectors as the backtest (tools/backtest_gold.py collect()), Swiss Ephemeris, Lahiri, mean node, whole-sign drishti.</p>
+<p class="s">Backtests: {J1.name}, {J5.name}{', ' + J26.name if d26 else ''}. Prices: Yahoo Finance {'GC=F' if METAL == 'gold' else 'SI=F'} daily closes. Forward windows: same detectors as the backtest (tools/backtest_gold.py collect()), Swiss Ephemeris, Lahiri, mean node, whole-sign drishti.</p>
 </body></html>"""
     (OUT / f"{METAL.upper()}_TRACKER.html").write_text(page, encoding="utf-8")
 
@@ -349,11 +390,11 @@ Windows are scored in the backtest from the close before the start to the last c
     md = [f"# {W_} findings tracker", "", f"Generated {now:%d %b %Y %H:%M %Z} by `tools/gold_tracker.py{'' if METAL == 'gold' else ' --metal ' + METAL}` (`--refresh` re-runs both backtests). HTML version: `{METAL.upper()}_TRACKER.html`.", "",
           "## Recent findings", "", "| Finding | Evidence | What it means | Status |", "|---|---|---|---|"]
     md += [f"| {a} | {b} | {c} | {st} |" for a, b, c, st in findings]
-    md += ["", "## Best-performing rules: dates 20 Nov 2026 - 31 Dec 2027 (ET)", "", f"Best (from the 5-year data): {best_list}.", "",
+    md += ["", "## Best-performing rules: dates 20 Nov 2026 - 31 Dec 2027 (ET)", "", f"Best (from the {PL} data): {best_list or 'none qualifies'}.", "",
            "| From (ET) | To (ET) | Days | Rule | Effect | Detail |", "|---|---|---|---|---|---|"]
     md += [f"| {et(max(r['start'], F0))} | {et(r['end'])} | {r['days']} | {r['title']} | {r['tone']} | {det(r).replace('|', '/')} |" for r in best_rows]
-    md += ["", f"## Every {METAL} rule: 1-year vs 5-year", "", "| Rule | Effect | 1 yr | 5 yr | Avg (5 yr) | p | Years right | Status | Upcoming |", "|---|---|---|---|---|---|---|---|---|"]
-    md += [f"| {p['title']}{' ★' if p['best'] else ''} | {p['tone']} | {rec(r1.get(p['rule_id']))} | {rec(p)} | {'' if p['avg_dir_ret'] is None else f'{p['avg_dir_ret']:+.2f}%'} | {'' if p.get('p_value') is None else p['p_value']} | {f'{p['years_right']}/{p['years_active']}' if p.get('years_active') else ''} | {p['status']} | {fwd_count.get(p['rule_id'], 0)} |" for p in order]
+    md += ["", f"## Every {METAL} rule: 1-year, 5-year and 26-year", "", f"| Rule | Effect | 1 yr | 5 yr | 26 yr | Avg ({PL}) | p ({PL}) | Years right ({PL}) | Status | Upcoming |", "|---|---|---|---|---|---|---|---|---|---|"]
+    md += [f"| {p['title']}{' ★' if p['best'] else ''} | {p['tone']} | {rec(r1.get(p['rule_id']))} | {rec(r5.get(p['rule_id']))} | {re.sub('<[^>]+>', ' ', rec26(p['rule_id'])).strip()} | {'' if p['avg_dir_ret'] is None else f'{p['avg_dir_ret']:+.2f}%'} | {'' if p.get('p_value') is None else p['p_value']} | {f'{p['years_right']}/{p['years_active']}' if p.get('years_active') else ''} | {p['status']} | {fwd_count.get(p['rule_id'], 0)} |" for p in order]
     md += ["", "## Analysis log", "", "| Date | PR | Topic | Result |", "|---|---|---|---|"]
     md += [f"| {x['date']} | #{x['pr']} | {x['topic']} | {x['result']} |" for x in reversed(log)]
     (OUT / f"{METAL.upper()}_TRACKER.md").write_text("\n".join(md) + "\n", encoding="utf-8")
@@ -365,7 +406,7 @@ Windows are scored in the backtest from the close before the start to the last c
     json.dump(dict(period="2026-11-20..2027-12-31", time_zone="America/New_York", best_rules=[p["rule_id"] for p in best],
                    best_windows=[ser(r) for r in best_rows],
                    agreement=[dict(frm=c["frm"].isoformat(), to=c["to"].isoformat(), up=c["bu"], down=c["be"]) for c in conf],
-                   rule_status={rid: dict(title=p["title"], status=p["status"], best=p["best"], upcoming=fwd_count.get(rid, 0)) for rid, p in r5.items()}),
+                   rule_status={rid: dict(title=p["title"], status=p["status"], best=p["best"], upcoming=fwd_count.get(rid, 0)) for rid, p in prim.items()}),
               open(OUT / f"{METAL}_forward_2026-11-20_to_2027-12-31_ET.json", "w", encoding="utf-8"), indent=1, default=str)
     print(f"best: {best_list}; {len(best_rows)} forward windows; {len(conf)} agreement stretches; {len(findings)} findings")
 

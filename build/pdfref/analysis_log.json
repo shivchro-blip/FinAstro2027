@@ -165,6 +165,19 @@
     "tools/refresh_all.py",
     "tools/fetch_prices.py"
    ]
+  },
+  {
+   "date": "2026-11-22",
+   "pr": "13",
+   "topic": "26-year backtest, gold and silver (20 Nov 2000 - 20 Nov 2026)",
+   "analysis": "Full rule backtest over 26 years (astronomy layers 2000-2020 built, chunked detection, prices from Aug 2000); trackers now take rule status and best rules from the 26-year data, with 1- and 5-year records alongside.",
+   "result": "Gold 1,598/1,400 (53%) vs 54% by chance; silver 1,083/1,050 (51%) vs 51%; no rule p<0.05. 5-year best rules faded (gold Sun model 54% vs 53%; silver Venus-Mars 51% vs 54%). Most consistent: gold TA S34 A9 Mars aspected by Saturn with Jupiter retrograde 14/17 (p=0.07), U2-Mercury 176/291 (20 of 26 years); silver TA S35 A1 retrograde Mercury or Jupiter 78/126 (p=0.052), A17b Moon-Mercury alone 49/80 (p=0.081). Silver 'Mars rising' significantly wrong (2/10).",
+   "files": [
+    "build/pdfref/gold_backtest_2000-11-20_to_2026-11-20_ET.html",
+    "build/pdfref/silver_backtest_2000-11-20_to_2026-11-20_ET.html",
+    "build/pdfref/GOLD_TRACKER.html",
+    "build/pdfref/SILVER_TRACKER.html"
+   ]
   }
  ]
 }

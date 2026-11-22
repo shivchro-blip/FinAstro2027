@@ -82,7 +82,7 @@ YEARS = 1
 P0 = dt.datetime(2025, 11, 20, tzinfo=ET)
 OUT = ROOT / "build" / "pdfref"
 METAL = "gold"
-PRICE_FILES = {"gold": OUT / "backtest" / "gold_GC_F_daily.csv", "silver": OUT / "backtest" / "silver_SI_F_daily.csv"}
+PRICE_FILES = {"gold": OUT / "backtest" / "gold_GC_F_daily_2000.csv", "silver": OUT / "backtest" / "silver_SI_F_daily_2000.csv"}
 PRICES = PRICE_FILES["gold"]
 KARAKA = {"gold": "Sun", "silver": "Moon"}
 INSTR = {"gold": ("COMEX gold futures", "GC=F"), "silver": ("COMEX silver futures", "SI=F")}
@@ -188,7 +188,17 @@ SPLIT = {  # user_u2 / user_u4 per contact planet
 WHOLE_SPLIT = ("user_u2_sun_with_or_aspected_by_benefics", "user_u4_sun_with_or_aspected_by_saturn_rahu")
 
 
-def collect(ctxs):
+def _keep(start, end, lo, hi):
+    """Period filter; with a chunk [lo, hi) an event belongs to the chunk holding its start
+    (events that began before the backtest period go to the first chunk)."""
+    if not (start < P1 and end >= P0):
+        return False
+    if lo is None:
+        return True
+    return (lo <= start < hi) or (lo == P0 and start < P0)
+
+
+def collect(ctxs, lo=None, hi=None):
     out = {}
     for r in M.metal_rules():
         if r.id in WHOLE_SPLIT:
@@ -199,7 +209,9 @@ def collect(ctxs):
                 if h.day is not None:
                     if not (P0.date() <= h.day < P1.date()):
                         continue
-                elif not (h.start < P1 and end >= P0):
+                    if lo is not None and not (lo.date() <= h.day < hi.date()):
+                        continue
+                elif not _keep(h.start, end, lo, hi):
                     continue
                 k = (r.id, h.start.replace(second=0, microsecond=0), end.replace(second=0, microsecond=0), h.day)
                 if k in out:
@@ -214,7 +226,7 @@ def collect(ctxs):
         return list(out.values())
     for rid, (title, group, moon, tone) in SPLIT.items():
         for h in windows(_contacts(group, moon), ("Sun",))(ctxs[0]):
-            if not (h.start < P1 and h.end >= P0):
+            if not _keep(h.start, h.end, lo, hi):
                 continue
             out[(rid, h.start, h.end, None)] = dict(rule_id=rid, title=title, refs=[M.ROOT.name and "User note (Sun)"], tone=tone,
                                                     verdict=tone, rule=title, start=h.start, end=h.end, day=None,
@@ -222,7 +234,7 @@ def collect(ctxs):
                                                     facts={"value": str(h.facts.get("value", ""))}, effect="")
     # combined Sun-state model (user notes, Moon left out as in the report timeline)
     for w in value_windows(grid, sun_state):
-        if not (w.start < P1 and w.end >= P0):
+        if not _keep(w.start, w.end, lo, hi):
             continue
         nak, rise, fall = w.value
         net = len(rise) - len(fall)
@@ -318,7 +330,14 @@ def base_for(n, tone, year):
 
 def binom_p(k, n, p):
     """One-sided P(X >= k), X ~ Binomial(n, p)."""
-    return sum(math.comb(n, i) * p ** i * (1 - p) ** (n - i) for i in range(k, n + 1)) if n else None
+    if not n:
+        return None
+    if p <= 0:
+        return 1.0 if k == 0 else 0.0
+    if p >= 1:
+        return 1.0
+    lp, lq = math.log(p), math.log(1 - p)
+    return min(1.0, sum(math.exp(math.lgamma(n + 1) - math.lgamma(i + 1) - math.lgamma(n - i + 1) + i * lp + (n - i) * lq) for i in range(k, n + 1)))
 
 
 # ------------------------------------------------------------------ sky context
@@ -642,9 +661,23 @@ def main():
         if not (ROOT / "build" / f"astronomy_{y}.json").exists():
             subprocess.run([sys.executable, str(ROOT / "tools" / "build_year.py"), str(y)], check=True, stdout=subprocess.DEVNULL)
     load_records()
-    grid = Grid(utc(P0.year, 5, 1), utc(2027, 1, 31))
-    ctxs = [Ctx(grid, Sky.load(ROOT / "build" / f"astronomy_{y}.json"), y) for y in range(P0.year, P1.year + 1)]
-    events = collect(ctxs)
+    if YEARS <= 6:
+        grid = Grid(utc(P0.year, 5, 1), utc(2027, 1, 31))
+        ctxs = [Ctx(grid, Sky.load(ROOT / "build" / f"astronomy_{y}.json"), y) for y in range(P0.year, P1.year + 1)]
+        events = collect(ctxs)
+    else:
+        # long runs: 5-year chunks, each on its own grid with 1 year before and 3 years after, so a
+        # window that starts in the chunk (Saturn in a sign: up to ~2.5 years) ends at its true date
+        events = []
+        cs = P0
+        while cs < P1:
+            ce = min(dt.datetime(cs.year + 5, 11, 20, tzinfo=ET), P1)
+            grid = Grid(utc(cs.year - 1, 11, 1), utc(min(ce.year + 3, 2028), 1, 31))
+            years = range(cs.year, ce.year + 1)
+            ctxs = [Ctx(grid, Sky.load(ROOT / "build" / f"astronomy_{y}.json"), y) for y in years]
+            events += collect(ctxs, cs, ce)
+            print(f"chunk {cs:%Y-%m-%d} - {ce:%Y-%m-%d}: {len(events)} events", flush=True)
+            cs = ce
     events.sort(key=lambda e: (e["start"], e["rule_id"]))
     BASE = base_rates()
     BASE_Y = {k: base_rates(k) for k in range(YEARS)}
@@ -828,8 +861,13 @@ def write(events, per, moves, net):
                 f"<td class='n'>{p['n']}</td><td class='n'>{p['worked']}</td><td class='n'>{p['failed']}</td><td class='n'>{p['flat']}</td><td class='n'>{p['not_scored']}</td>"
                 f"<td class='n'><b>{'' if p['hit_rate'] is None else str(p['hit_rate']) + '%'}</b></td><td class='n'>{'' if p['base_rate'] is None else str(p['base_rate']) + '%'}</td>"
                 f"<td class='n'>{fmt_ret(p['avg_dir_ret'])}</td><td><span class='tag {cls}'>{p['verdict']}</span></td>"
-                + (f"<td class='n'>{pv(p)}</td>" + "".join(f"<td class='n s'>{yc(p['by_year'][k])}</td>" for k in range(YEARS)) if YEARS > 1 else "")
+                + (f"<td class='n'>{pv(p)}</td>" + "".join(f"<td class='n s'>{yc([sum(p['by_year'][k][0] for k in ks), sum(p['by_year'][k][1] for k in ks)])}</td>" for _, ks in GROUPS) if YEARS > 1 else "")
                 + f"<td class='s'>{sens}</td></tr>")
+
+    if YEARS <= 6:
+        GROUPS = [(year_label(k), [k]) for k in range(YEARS)]
+    else:
+        GROUPS = [(f"{2026 - YEARS + a}-{(2026 - YEARS + min(a + 5, YEARS)) % 100:02d}", list(range(a, min(a + 5, YEARS)))) for a in range(0, YEARS, 5)]
 
     def pv(p):
         if p.get("p_value") is None:
@@ -846,7 +884,7 @@ def write(events, per, moves, net):
         col = "var(--bu2)" if v[1] * 2 > v[0] else "var(--be2)" if v[1] * 2 < v[0] else "var(--mx2)"
         return f"<span style='color:{col}'>{v[1]}/{v[0]}</span>"
 
-    yhead = ("<th>p-value vs base</th>" + "".join(f"<th>{year_label(k)}</th>" for k in range(YEARS))) if YEARS > 1 else ""
+    yhead = ("<th>p-value vs base</th>" + "".join(f"<th>{lab}</th>" for lab, _ in GROUPS)) if YEARS > 1 else ""
 
     def ev_row(e):
         o = e.get("outcome", "")
@@ -887,7 +925,7 @@ def write(events, per, moves, net):
         for m in moves)
     nb = "".join(f"<tr><td>{html.escape(k)}</td><td class='n'>{v['days']}</td><td class='n'>{v['avg1']:+.3f}%</td><td class='n'>{v['up1']}%</td><td class='n'>{v['avg5']:+.3f}%</td><td class='n'>{v['up5']}%</td></tr>" for k, v in net["buckets"].items())
     base_tbl = "".join(f"<tr><td>{n} trading days</td><td class='n'>{BASE[n]['up'] * 100:.0f}%</td><td class='n'>{BASE[n]['dn'] * 100:.0f}%</td><td class='n'>{BASE[n]['cond_up'] * 100:.0f}%</td><td class='n'>{BASE[n]['n']}</td>"
-                       + "".join(f"<td class='n'>{BASE_Y[k][n]['cond_up'] * 100:.0f}%</td>" if n in BASE_Y[k] else "<td></td>" for k in range(YEARS) if YEARS > 1) + "</tr>" for n in sorted(BASE))
+                       + "".join(f"<td class='n'>{BASE_Y[k][n]['cond_up'] * 100:.0f}%</td>" if n in BASE_Y[k] else "<td></td>" for k in range(YEARS) if 1 < YEARS <= 6) + "</tr>" for n in sorted(BASE))
     yr_rows = "".join(f"<tr><td>{year_label(k)}</td><td class='n'>{CL[a]:,.0f}</td><td class='n'>{CL[b]:,.0f}</td><td class='n'>{pct(a, b):+.1f}%</td>"
                       f"<td class='n'>{sum(1 for e in events if e.get('year') == k and e.get('outcome') == 'WORKED' and not e.get('component'))}</td>"
                       f"<td class='n'>{sum(1 for e in events if e.get('year') == k and e.get('outcome') == 'FAILED' and not e.get('component'))}</td></tr>"
@@ -928,8 +966,8 @@ details summary{cursor:pointer;color:var(--be2);font-size:12px;margin-top:4px}ul
 <li>Moves under ±0.5% are <b>FLAT</b>. Rules whose verdict is Mixed or Neutral (both vedha kinds at once; the Indian festival-demand dates) are listed but <b>not scored</b>.</li>
 <li><b>Hit rate</b> = worked ÷ (worked + failed); flat occurrences are left out of both.</li>
 <li><b>Base rate</b> = the hit rate a rule would get by chance: among all windows of the same length <i>in the same backtest year</i> that moved more than 0.5%, the share that moved the rule's way. Over the whole period a 5-day window that moved went up {BASE[5]['cond_up'] * 100:.0f}% of the time, so a bullish rule needs to beat {BASE[5]['cond_up'] * 100:.0f}% and a bearish rule {100 - BASE[5]['cond_up'] * 100:.0f}% to show any edge. Using each year's own base rate means a bullish rule gets no credit just for firing in a rising year.</li>
-<li><b>Rule verdict</b>: Worked = hit rate at least 10 points above its base rate and the average move went the stated way; Failed = at least 10 points below and the average move went the wrong way; otherwise Mixed.""" + (""" <b>p-value</b> = the chance of doing at least this well by luck at the base rate (one-sided binomial); green if below 0.05, red if the rule did significantly <i>worse</i> than chance. The per-year columns show worked/decided in each Nov–Nov year, so a rule that only worked in one year stands out.""" if YEARS > 1 else """ Most rules fire only 1–6 times a year, so <b>one year is not enough to be statistically sure of any single rule</b>: read these numbers as evidence, not proof.""") + f"""</li></ul>
-<div class="wrap"><table><thead><tr><th>Horizon</th><th>Rose &gt;0.5%</th><th>Fell &gt;0.5%</th><th>Of moves &gt;0.5%, share up (base rate for bullish rules)</th><th>Windows</th>{''.join(f"<th>{year_label(k)} share up</th>" for k in range(YEARS) if YEARS > 1)}</tr></thead><tbody>{base_tbl}</tbody></table></div>
+<li><b>Rule verdict</b>: Worked = hit rate at least 10 points above its base rate and the average move went the stated way; Failed = at least 10 points below and the average move went the wrong way; otherwise Mixed.""" + (""" <b>p-value</b> = the chance of doing at least this well by luck at the base rate (one-sided binomial); green if below 0.05, red if the rule did significantly <i>worse</i> than chance. The per-year columns show worked/decided in each Nov–Nov year (5-year blocks in runs longer than 6 years), so a rule that only worked in one period stands out.""" if YEARS > 1 else """ Most rules fire only 1–6 times a year, so <b>one year is not enough to be statistically sure of any single rule</b>: read these numbers as evidence, not proof.""") + f"""</li></ul>
+<div class="wrap"><table><thead><tr><th>Horizon</th><th>Rose &gt;0.5%</th><th>Fell &gt;0.5%</th><th>Of moves &gt;0.5%, share up (base rate for bullish rules)</th><th>Windows</th>{''.join(f"<th>{year_label(k)} share up</th>" for k in range(YEARS) if 1 < YEARS <= 6)}</tr></thead><tbody>{base_tbl}</tbody></table></div>
 <div class="wrap"><table><thead><tr><th>Backtest year</th><th>{W_} at start</th><th>{W_} at end</th><th>Change</th><th>Rule occurrences worked</th><th>Failed</th></tr></thead><tbody>{yr_rows}</tbody></table></div>
 
 <h2>Scorecard by rule</h2>

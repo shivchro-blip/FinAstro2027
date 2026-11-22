@@ -26,6 +26,8 @@ STEPS = [
     ["tools/backtest_gold.py", "--years", "5"],
     ["tools/backtest_gold.py", "--metal", "silver"],
     ["tools/backtest_gold.py", "--metal", "silver", "--years", "5"],
+    ["tools/backtest_gold.py", "--years", "26"],
+    ["tools/backtest_gold.py", "--metal", "silver", "--years", "26"],
     ["tools/test_source_rules.py"],
     ["tools/build_bs41_model.py"],
     ["tools/gold_tracker.py"],

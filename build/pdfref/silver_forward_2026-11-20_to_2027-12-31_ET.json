@@ -2,182 +2,340 @@
  "period": "2026-11-20..2027-12-31",
  "time_zone": "America/New_York",
  "best_rules": [
-  "ta_s35a03_venus_mars_or_sun_mars"
+  "ta_s35a01_retro_mercury_or_jupiter",
+  "ta_s35a17b_moon_mercury_alone"
  ],
  "best_windows": [
   {
-   "rule_id": "ta_s35a03_venus_mars_or_sun_mars",
-   "title": "Venus-Mars or Sun-Mars together in any sign",
+   "rule_id": "ta_s35a01_retro_mercury_or_jupiter",
+   "title": "Retrograde Mercury or Jupiter",
    "tone": "Bullish",
-   "start": "2027-10-03T12:54:50+00:00",
-   "end": "2027-10-07T19:59:03+00:00",
-   "bodies": [
-    "Mars"
-   ],
-   "days": 4.3,
+   "start": "2026-12-13T00:56:43+00:00",
+   "end": "2027-02-09T17:36:33+00:00",
+   "bodies": [],
+   "days": 58.7,
    "facts": {
-    "Mars": "Libra 28.50 deg, Vishakha pada 3, D9 Gemini, D",
-    "value": "('Venus',)"
+    "value": "('Jupiter',)"
    },
-   "verdict": "Silver Bullish (July, August 2019)",
-   "hist": "19/30 (63% vs base 52%), avg +1.68%, right in 4/5 yrs",
+   "verdict": "Silver: increases volatility & prices start rising",
+   "hist": "78/126 (62% vs base 54%), avg +1.80%, right in 15/26 yrs",
    "conc": {
     "other": [
+     "Mercury & Jupiter both retrograde (even in different signs) [Bullish]",
      "Moon darshan on Friday or Saturday [Bullish]",
      "Moon-Venus mutual Vedha [Bearish]",
-     "Retrograde Mercury or Jupiter [Bullish]",
-     "Saturn in Aquarius or Aries [Bullish]",
-     "Shukla Paksha of 16 days or Krishna Paksha of 14 days [Bullish]",
+     "Only Sun-Mercury or Moon-Mercury alone in a sign [Bullish]",
+     "Rahu in Dhanishta (market and bullion risk) [Bearish]",
      "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish]",
-     "Sun in Virgo, Libra or Pisces with or aspected by benefics [Bearish]"
-    ],
-    "held": [
-     "Venus in Virgo with malefic [Bullish]"
+     "Sun in Pushya or Dhanishta with no benefic in the same nakshatra [Bullish]",
+     "Sun in Pushya or Dhanishta without benefic planets [Bullish]",
+     "Venus alone in Leo or Libra [Bearish]",
+     "Venus in Leo or Libra [Bearish]"
     ],
     "failed": [
-     "Venus in Leo or Libra [Bearish]"
+     "Saturn direct from retrograde [Bearish]"
+    ],
+    "best": [
+     "Only Moon and Mercury alone in a sign [Bullish]"
     ]
    }
   },
   {
-   "rule_id": "ta_s35a03_venus_mars_or_sun_mars",
-   "title": "Venus-Mars or Sun-Mars together in any sign",
+   "rule_id": "ta_s35a17b_moon_mercury_alone",
+   "title": "Only Moon and Mercury alone in a sign",
    "tone": "Bullish",
-   "start": "2027-10-27T16:27:39+00:00",
-   "end": "2027-11-16T20:29:03+00:00",
+   "start": "2027-02-07T05:07:01+00:00",
+   "end": "2027-02-09T15:47:20+00:00",
    "bodies": [
-    "Mars"
+    "Moon",
+    "Mercury"
    ],
-   "days": 20.2,
+   "days": 2.4,
    "facts": {
-    "Mars": "Scorpio 21.55 deg, Jyeshtha pada 2, D9 Capricorn, D",
-    "value": "('Venus',)"
+    "value": "Aquarius"
    },
-   "verdict": "Silver Bullish (July, August 2019)",
-   "hist": "19/30 (63% vs base 52%), avg +1.68%, right in 4/5 yrs",
+   "verdict": "Silver Bullish",
+   "hist": "49/80 (61% vs base 53%), avg +0.80%, right in 15/26 yrs",
+   "conc": {
+    "other": [
+     "Rahu in Dhanishta (market and bullion risk) [Bearish]",
+     "Sun in Pushya or Dhanishta with no benefic in the same nakshatra [Bullish]",
+     "Sun in Pushya or Dhanishta without benefic planets [Bullish]"
+    ],
+    "best": [
+     "Retrograde Mercury or Jupiter [Bullish]"
+    ]
+   }
+  },
+  {
+   "rule_id": "ta_s35a01_retro_mercury_or_jupiter",
+   "title": "Retrograde Mercury or Jupiter",
+   "tone": "Bullish",
+   "start": "2027-02-09T17:36:33+00:00",
+   "end": "2027-03-03T12:32:20+00:00",
+   "bodies": [],
+   "days": 21.8,
+   "facts": {
+    "value": "('Mercury', 'Jupiter')"
+   },
+   "verdict": "Silver: increases volatility & prices start rising",
+   "hist": "78/126 (62% vs base 54%), avg +1.80%, right in 15/26 yrs",
+   "conc": {
+    "other": [
+     "Mercury & Jupiter both retrograde (even in different signs) [Bullish]",
+     "Mercury turns direct from retrograde [Bullish]",
+     "Moon-Venus mutual Vedha [Bearish]",
+     "Only Sun-Mercury or Moon-Mercury alone in a sign [Bullish]",
+     "Rahu in Dhanishta (market and bullion risk) [Bearish]",
+     "Retrograde Mercury goes combust [Bullish]",
+     "Sun in Pushya or Dhanishta with no benefic in the same nakshatra [Bullish]",
+     "Sun in Pushya or Dhanishta without benefic planets [Bullish]"
+    ]
+   }
+  },
+  {
+   "rule_id": "ta_s35a01_retro_mercury_or_jupiter",
+   "title": "Retrograde Mercury or Jupiter",
+   "tone": "Bullish",
+   "start": "2027-03-03T12:32:20+00:00",
+   "end": "2027-04-13T02:11:43+00:00",
+   "bodies": [],
+   "days": 40.6,
+   "facts": {
+    "value": "('Jupiter',)"
+   },
+   "verdict": "Silver: increases volatility & prices start rising",
+   "hist": "78/126 (62% vs base 54%), avg +1.80%, right in 15/26 yrs",
+   "conc": {
+    "other": [
+     "Chaitra Shukla Pratipada on Wednesday [Bullish]",
+     "Jupiter does Vedha of Venus [Bullish]",
+     "Mars in 4th pada of Ashlesha [Bearish]",
+     "Mercury & Jupiter both retrograde (even in different signs) [Bullish]",
+     "Mercury turns direct from retrograde [Bullish]",
+     "Moon-Venus mutual Vedha [Bearish]",
+     "Only Sun-Mercury or Moon-Mercury alone in a sign [Bullish]",
+     "Rahu in Dhanishta (market and bullion risk) [Bearish]",
+     "Retrograde Mars with Ketu [Bearish]",
+     "Sun in Virgo, Libra or Pisces with or aspected by benefics [Bearish]"
+    ],
+    "failed": [
+     "Jupiter turns direct from retrograde [Bullish]",
+     "Mercury does Vedha of Venus [Bullish]"
+    ]
+   }
+  },
+  {
+   "rule_id": "ta_s35a17b_moon_mercury_alone",
+   "title": "Only Moon and Mercury alone in a sign",
+   "tone": "Bullish",
+   "start": "2027-05-07T01:26:15+00:00",
+   "end": "2027-05-09T03:26:43+00:00",
+   "bodies": [
+    "Moon",
+    "Mercury"
+   ],
+   "days": 2.1,
+   "facts": {
+    "value": "Taurus"
+   },
+   "verdict": "Silver Bullish",
+   "hist": "49/80 (61% vs base 53%), avg +0.80%, right in 15/26 yrs",
+   "conc": {
+    "other": [
+     "Moon darshan on Friday or Saturday [Bullish]"
+    ]
+   }
+  },
+  {
+   "rule_id": "ta_s35a17b_moon_mercury_alone",
+   "title": "Only Moon and Mercury alone in a sign",
+   "tone": "Bullish",
+   "start": "2027-06-05T12:21:05+00:00",
+   "end": "2027-06-07T12:50:37+00:00",
+   "bodies": [
+    "Moon",
+    "Mercury"
+   ],
+   "days": 2.0,
+   "facts": {
+    "value": "Gemini"
+   },
+   "verdict": "Silver Bullish",
+   "hist": "49/80 (61% vs base 53%), avg +0.80%, right in 15/26 yrs",
+   "conc": {
+    "other": [
+     "Moon darshan on Friday or Saturday [Bullish]",
+     "Saturn in Aquarius or Aries [Bullish]"
+    ]
+   }
+  },
+  {
+   "rule_id": "ta_s35a01_retro_mercury_or_jupiter",
+   "title": "Retrograde Mercury or Jupiter",
+   "tone": "Bullish",
+   "start": "2027-06-10T18:15:28+00:00",
+   "end": "2027-07-04T19:39:50+00:00",
+   "bodies": [],
+   "days": 24.1,
+   "facts": {
+    "value": "('Mercury',)"
+   },
+   "verdict": "Silver: increases volatility & prices start rising",
+   "hist": "78/126 (62% vs base 54%), avg +1.80%, right in 15/26 yrs",
+   "conc": {
+    "other": [
+     "Mercury combust and retrograde does mutual Vedha with Moon [Bullish]",
+     "Mercury turns direct from retrograde [Bullish]",
+     "Moon darshan on Friday or Saturday [Bullish]",
+     "Moon-Venus mutual Vedha [Bearish]",
+     "Only Sun-Mercury or Moon-Mercury alone in a sign [Bullish]",
+     "Retrograde Mercury goes combust [Bullish]",
+     "Saturn in Aquarius or Aries [Bullish]"
+    ]
+   }
+  },
+  {
+   "rule_id": "ta_s35a17b_moon_mercury_alone",
+   "title": "Only Moon and Mercury alone in a sign",
+   "tone": "Bullish",
+   "start": "2027-07-30T09:00:28+00:00",
+   "end": "2027-07-30T13:01:52+00:00",
+   "bodies": [
+    "Moon",
+    "Mercury"
+   ],
+   "days": 0.2,
+   "facts": {
+    "value": "Gemini"
+   },
+   "verdict": "Silver Bullish",
+   "hist": "49/80 (61% vs base 53%), avg +0.80%, right in 15/26 yrs",
+   "conc": {
+    "other": [
+     "Saturn in Aquarius or Aries [Bullish]"
+    ]
+   }
+  },
+  {
+   "rule_id": "ta_s35a17b_moon_mercury_alone",
+   "title": "Only Moon and Mercury alone in a sign",
+   "tone": "Bullish",
+   "start": "2027-09-01T19:43:35+00:00",
+   "end": "2027-09-03T21:46:52+00:00",
+   "bodies": [
+    "Moon",
+    "Mercury"
+   ],
+   "days": 2.1,
+   "facts": {
+    "value": "Virgo"
+   },
+   "verdict": "Silver Bullish",
+   "hist": "49/80 (61% vs base 53%), avg +0.80%, right in 15/26 yrs",
    "conc": {
     "other": [
      "Mercury in Aries or Virgo [Bearish]",
-     "Moon darshan on Friday or Saturday [Bullish]",
-     "Moon-Venus mutual Vedha [Bearish]",
-     "Only Moon and Mercury alone in a sign [Bullish]",
-     "Only Sun-Mercury or Moon-Mercury alone in a sign [Bullish]",
-     "Retrograde Mercury or Jupiter [Bullish]",
-     "Shukla Paksha of 16 days or Krishna Paksha of 14 days [Bullish]",
+     "Saturn in Aquarius or Aries [Bullish]",
      "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish]",
-     "Sun in Virgo, Libra or Pisces with or aspected by benefics [Bearish]"
+     "Venus in Leo or Libra [Bearish]"
     ],
     "failed": [
-     "Mercury alone in Aries or Virgo [Bearish]",
-     "Mercury turns direct from retrograde [Bullish]",
-     "Venus in Leo or Libra [Bearish]"
+     "Mercury alone in Aries or Virgo [Bearish]"
     ]
    }
   },
   {
-   "rule_id": "ta_s35a03_venus_mars_or_sun_mars",
-   "title": "Venus-Mars or Sun-Mars together in any sign",
+   "rule_id": "ta_s35a01_retro_mercury_or_jupiter",
+   "title": "Retrograde Mercury or Jupiter",
    "tone": "Bullish",
-   "start": "2027-11-16T20:29:03+00:00",
-   "end": "2027-11-18T03:15:56+00:00",
-   "bodies": [
-    "Mars"
-   ],
-   "days": 1.3,
+   "start": "2027-10-07T14:37:30+00:00",
+   "end": "2027-10-28T14:10:46+00:00",
+   "bodies": [],
+   "days": 21.0,
    "facts": {
-    "Mars": "Scorpio 29.52 deg, Jyeshtha pada 4, D9 Pisces, D",
-    "value": "('Venus', 'Sun')"
+    "value": "('Mercury',)"
    },
-   "verdict": "Silver Bullish (July, August 2019)",
-   "hist": "19/30 (63% vs base 52%), avg +1.68%, right in 4/5 yrs",
+   "verdict": "Silver: increases volatility & prices start rising",
+   "hist": "78/126 (62% vs base 54%), avg +1.80%, right in 15/26 yrs",
+   "conc": {
+    "other": [
+     "Mercury combust and retrograde does mutual Vedha with Moon [Bullish]",
+     "Mercury in Aries or Virgo [Bearish]",
+     "Mercury turns direct from retrograde [Bullish]",
+     "Moon darshan on Friday or Saturday [Bullish]",
+     "Retrograde Mercury goes combust [Bullish]",
+     "Saturn in Aquarius or Aries [Bullish]",
+     "Shukla Paksha of 16 days or Krishna Paksha of 14 days [Bullish]",
+     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish]",
+     "Sun in Virgo, Libra or Pisces with or aspected by benefics [Bearish]",
+     "Venus in Leo or Libra [Bearish]",
+     "Venus-Mars or Sun-Mars together in any sign [Bullish]"
+    ],
+    "failed": [
+     "Mercury alone in Aries or Virgo [Bearish]"
+    ],
+    "best": [
+     "Only Moon and Mercury alone in a sign [Bullish]"
+    ]
+   }
+  },
+  {
+   "rule_id": "ta_s35a17b_moon_mercury_alone",
+   "title": "Only Moon and Mercury alone in a sign",
+   "tone": "Bullish",
+   "start": "2027-10-26T14:40:46+00:00",
+   "end": "2027-10-28T17:29:31+00:00",
+   "bodies": [
+    "Moon",
+    "Mercury"
+   ],
+   "days": 2.1,
+   "facts": {
+    "value": "Virgo"
+   },
+   "verdict": "Silver Bullish",
+   "hist": "49/80 (61% vs base 53%), avg +0.80%, right in 15/26 yrs",
+   "conc": {
+    "other": [
+     "Mercury in Aries or Virgo [Bearish]",
+     "Mercury turns direct from retrograde [Bullish]",
+     "Shukla Paksha of 16 days or Krishna Paksha of 14 days [Bullish]",
+     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish]",
+     "Sun in Virgo, Libra or Pisces with or aspected by benefics [Bearish]",
+     "Venus in Leo or Libra [Bearish]",
+     "Venus-Mars or Sun-Mars together in any sign [Bullish]"
+    ],
+    "best": [
+     "Retrograde Mercury or Jupiter [Bullish]"
+    ],
+    "failed": [
+     "Mercury alone in Aries or Virgo [Bearish]"
+    ]
+   }
+  },
+  {
+   "rule_id": "ta_s35a17b_moon_mercury_alone",
+   "title": "Only Moon and Mercury alone in a sign",
+   "tone": "Bullish",
+   "start": "2027-11-25T01:03:45+00:00",
+   "end": "2027-11-25T18:59:31+00:00",
+   "bodies": [
+    "Moon",
+    "Mercury"
+   ],
+   "days": 0.7,
+   "facts": {
+    "value": "Libra"
+   },
+   "verdict": "Silver Bullish",
+   "hist": "49/80 (61% vs base 53%), avg +0.80%, right in 15/26 yrs",
    "conc": {
     "other": [
      "Only Sun-Mercury or Moon-Mercury alone in a sign [Bullish]",
      "Shukla Paksha of 16 days or Krishna Paksha of 14 days [Bullish]",
      "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish]",
-     "Sun in Virgo, Libra or Pisces with or aspected by benefics [Bearish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "ta_s35a03_venus_mars_or_sun_mars",
-   "title": "Venus-Mars or Sun-Mars together in any sign",
-   "tone": "Bullish",
-   "start": "2027-11-20T20:38:26+00:00",
-   "end": "2027-12-15T02:41:15+00:00",
-   "bodies": [
-    "Mars"
-   ],
-   "days": 24.3,
-   "facts": {
-    "Mars": "Sagittarius 11.23 deg, Mula pada 4, D9 Cancer, D",
-    "value": "('Venus',)"
-   },
-   "verdict": "Silver Bullish (July, August 2019)",
-   "hist": "19/30 (63% vs base 52%), avg +1.68%, right in 4/5 yrs",
-   "conc": {
-    "other": [
-     "Moon-Venus mutual Vedha [Bearish]",
-     "Only Moon and Mercury alone in a sign [Bullish]",
-     "Only Sun-Mercury or Moon-Mercury alone in a sign [Bullish]",
-     "Shukla Paksha of 16 days or Krishna Paksha of 14 days [Bullish]",
-     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "ta_s35a03_venus_mars_or_sun_mars",
-   "title": "Venus-Mars or Sun-Mars together in any sign",
-   "tone": "Bullish",
-   "start": "2027-12-16T11:09:22+00:00",
-   "end": "2027-12-27T07:35:09+00:00",
-   "bodies": [
-    "Mars"
-   ],
-   "days": 10.9,
-   "facts": {
-    "Mars": "Sagittarius 25.78 deg, Purva Ashadha pada 4, D9 Scorpio, D",
-    "value": "('Sun',)"
-   },
-   "verdict": "Silver Bullish (July, August 2019)",
-   "hist": "19/30 (63% vs base 52%), avg +1.68%, right in 4/5 yrs",
-   "conc": {
-    "other": [
-     "Only Sun-Mercury or Moon-Mercury alone in a sign [Bullish]",
-     "Rahu & Mars together in any sign [Bullish]",
-     "Rahu and Mars in the same nakshatra [Bullish]",
-     "Saturn direct from retrograde [Bearish]",
-     "Shukla Paksha of 16 days or Krishna Paksha of 14 days [Bullish]",
-     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "ta_s35a03_venus_mars_or_sun_mars",
-   "title": "Venus-Mars or Sun-Mars together in any sign",
-   "tone": "Bullish",
-   "start": "2027-12-27T07:35:09+00:00",
-   "end": "2028-01-08T13:46:52+00:00",
-   "bodies": [
-    "Mars"
-   ],
-   "days": 12.3,
-   "facts": {
-    "Mars": "Capricorn 4.79 deg, Uttara Ashadha pada 3, D9 Aquarius, D",
-    "value": "('Venus',)"
-   },
-   "verdict": "Silver Bullish (July, August 2019)",
-   "hist": "19/30 (63% vs base 52%), avg +1.68%, right in 4/5 yrs",
-   "conc": {
-    "other": [
-     "Amavasya on Monday [Bearish]",
-     "Moon-Venus mutual Vedha [Bearish]",
-     "Only Sun-Mercury or Moon-Mercury alone in a sign [Bullish]",
-     "Rahu & Mars together in any sign [Bullish]",
-     "Rahu and Mars in the same nakshatra [Bullish]",
-     "Saturn direct from retrograde [Bearish]",
-     "Shukla Paksha of 16 days or Krishna Paksha of 14 days [Bullish]",
-     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish]"
+     "Venus-Mars or Sun-Mars together in any sign [Bullish]"
     ]
    }
   }
@@ -185,95 +343,177 @@
  "agreement": [
   {
    "frm": "2026-11-20",
-   "to": "2027-10-02",
+   "to": "2026-12-12",
    "up": [],
    "down": []
   },
   {
-   "frm": "2027-10-03",
-   "to": "2027-10-07",
+   "frm": "2026-12-13",
+   "to": "2027-02-06",
    "up": [
-    "Venus-Mars or Sun-Mars together in any sign"
+    "Retrograde Mercury or Jupiter"
    ],
    "down": []
   },
   {
-   "frm": "2027-10-08",
-   "to": "2027-10-27",
+   "frm": "2027-02-07",
+   "to": "2027-02-08",
+   "up": [
+    "Only Moon and Mercury alone in a sign",
+    "Retrograde Mercury or Jupiter"
+   ],
+   "down": []
+  },
+  {
+   "frm": "2027-02-09",
+   "to": "2027-04-12",
+   "up": [
+    "Retrograde Mercury or Jupiter"
+   ],
+   "down": []
+  },
+  {
+   "frm": "2027-04-13",
+   "to": "2027-05-06",
    "up": [],
+   "down": []
+  },
+  {
+   "frm": "2027-05-07",
+   "to": "2027-05-08",
+   "up": [
+    "Only Moon and Mercury alone in a sign"
+   ],
+   "down": []
+  },
+  {
+   "frm": "2027-05-09",
+   "to": "2027-06-04",
+   "up": [],
+   "down": []
+  },
+  {
+   "frm": "2027-06-05",
+   "to": "2027-06-06",
+   "up": [
+    "Only Moon and Mercury alone in a sign"
+   ],
+   "down": []
+  },
+  {
+   "frm": "2027-06-07",
+   "to": "2027-06-10",
+   "up": [],
+   "down": []
+  },
+  {
+   "frm": "2027-06-11",
+   "to": "2027-07-04",
+   "up": [
+    "Retrograde Mercury or Jupiter"
+   ],
+   "down": []
+  },
+  {
+   "frm": "2027-07-05",
+   "to": "2027-09-01",
+   "up": [],
+   "down": []
+  },
+  {
+   "frm": "2027-09-02",
+   "to": "2027-09-03",
+   "up": [
+    "Only Moon and Mercury alone in a sign"
+   ],
+   "down": []
+  },
+  {
+   "frm": "2027-09-04",
+   "to": "2027-10-06",
+   "up": [],
+   "down": []
+  },
+  {
+   "frm": "2027-10-07",
+   "to": "2027-10-25",
+   "up": [
+    "Retrograde Mercury or Jupiter"
+   ],
+   "down": []
+  },
+  {
+   "frm": "2027-10-26",
+   "to": "2027-10-27",
+   "up": [
+    "Only Moon and Mercury alone in a sign",
+    "Retrograde Mercury or Jupiter"
+   ],
    "down": []
   },
   {
    "frm": "2027-10-28",
-   "to": "2027-11-17",
+   "to": "2027-10-28",
    "up": [
-    "Venus-Mars or Sun-Mars together in any sign"
+    "Only Moon and Mercury alone in a sign"
    ],
    "down": []
   },
   {
-   "frm": "2027-11-18",
-   "to": "2027-11-20",
+   "frm": "2027-10-29",
+   "to": "2027-11-24",
    "up": [],
    "down": []
   },
   {
-   "frm": "2027-11-21",
-   "to": "2027-12-14",
+   "frm": "2027-11-25",
+   "to": "2027-11-25",
    "up": [
-    "Venus-Mars or Sun-Mars together in any sign"
+    "Only Moon and Mercury alone in a sign"
    ],
    "down": []
   },
   {
-   "frm": "2027-12-15",
-   "to": "2027-12-15",
-   "up": [],
-   "down": []
-  },
-  {
-   "frm": "2027-12-16",
+   "frm": "2027-11-26",
    "to": "2027-12-31",
-   "up": [
-    "Venus-Mars or Sun-Mars together in any sign"
-   ],
+   "up": [],
    "down": []
   }
  ],
  "rule_status": {
   "ta_s24_08_mars_retro_enters_taurus_libra": {
    "title": "Retrograde Mars entering Taurus or Libra",
-   "status": "Too few to judge (0/1, leans wrong)",
+   "status": "Too few to judge (0/2, leans wrong)",
    "best": false,
    "upcoming": 0
   },
   "ta_s34a04_rahu_mars_together": {
    "title": "Rahu & Mars together in any sign",
-   "status": "Too few to judge (1/3, leans wrong)",
+   "status": "At chance",
    "best": false,
    "upcoming": 1
   },
   "ta_s34a05_jupiter_enters_scorpio": {
    "title": "Jupiter enters Scorpio",
-   "status": "Did not occur",
+   "status": "Too few to judge (2/2, leans right)",
    "best": false,
    "upcoming": 0
   },
   "ta_s35a03_venus_mars_or_sun_mars": {
    "title": "Venus-Mars or Sun-Mars together in any sign",
-   "status": "Supported",
-   "best": true,
+   "status": "At chance",
+   "best": false,
    "upcoming": 6
   },
   "ta_s35a06_mars_in_aquarius": {
    "title": "Mars in Aquarius",
-   "status": "Too few to judge (1/3, leans wrong)",
+   "status": "At chance",
    "best": false,
    "upcoming": 0
   },
   "ta_s35a07_venus_virgo_malefic": {
    "title": "Venus in Virgo with malefic",
-   "status": "Supported",
+   "status": "At chance",
    "best": false,
    "upcoming": 1
   },
@@ -285,19 +525,19 @@
   },
   "ta_s35a14_sun_leo_mars_or_jupiter_retro": {
    "title": "Sun in Leo with Mars or Jupiter retrograde",
-   "status": "Too few to judge (0/2, leans wrong)",
+   "status": "At chance",
    "best": false,
    "upcoming": 0
   },
   "ta_s35a20_sun_venus_alone_cancer": {
    "title": "Sun & Venus alone in Cancer",
-   "status": "Too few to judge (1/3, leans wrong)",
+   "status": "Inconclusive",
    "best": false,
    "upcoming": 0
   },
   "ta_s35b01_venus_leo_libra": {
    "title": "Venus in Leo or Libra",
-   "status": "Did not hold up",
+   "status": "At chance",
    "best": false,
    "upcoming": 3
   },
@@ -309,7 +549,7 @@
   },
   "ta_s35b03_mars_ashlesha_pada4": {
    "title": "Mars in 4th pada of Ashlesha",
-   "status": "Too few to judge (0/2, leans wrong)",
+   "status": "At chance",
    "best": false,
    "upcoming": 1
   },
@@ -327,7 +567,7 @@
   },
   "ta_s35b08_retro_mars_with_ketu": {
    "title": "Retrograde Mars with Ketu",
-   "status": "Did not occur",
+   "status": "Too few to judge (1/2, even)",
    "best": false,
    "upcoming": 1
   },
@@ -339,37 +579,37 @@
   },
   "ta_s35b14_mars_gemini_with_two": {
    "title": "Mars in Gemini with any 2 other planets",
-   "status": "Did not occur",
+   "status": "Did not hold up",
    "best": false,
    "upcoming": 0
   },
   "ta_s35b15_mercury_venus_pisces": {
    "title": "Mercury & Venus both in Pisces",
-   "status": "Too few to judge (1/2, even)",
+   "status": "At chance",
    "best": false,
    "upcoming": 1
   },
   "ta_s35b11_rahu_enters_gemini": {
    "title": "Rahu enters Gemini",
-   "status": "Did not occur",
+   "status": "Too few to judge (0/1, leans wrong)",
    "best": false,
    "upcoming": 0
   },
   "ta_s35a18_mercury_jupiter_retro": {
    "title": "Mercury & Jupiter both retrograde (even in different signs)",
-   "status": "Supported",
+   "status": "At chance",
    "best": false,
    "upcoming": 1
   },
   "ta_s35a01_retro_mercury_or_jupiter": {
    "title": "Retrograde Mercury or Jupiter",
-   "status": "At chance",
-   "best": false,
+   "status": "Strongest",
+   "best": true,
    "upcoming": 5
   },
   "ta_s35a02_sun_pushya_dhanishta_no_benefic": {
    "title": "Sun in Pushya or Dhanishta without benefic planets",
-   "status": "Did not hold up",
+   "status": "At chance",
    "best": false,
    "upcoming": 2
   },
@@ -381,31 +621,31 @@
   },
   "ta_s35b04_amavasya_monday": {
    "title": "Amavasya on Monday",
-   "status": "Inconclusive",
+   "status": "At chance",
    "best": false,
    "upcoming": 2
   },
   "ta_s35b09_moon_eclipse_sunday": {
    "title": "Moon eclipse on Sunday",
-   "status": "Too few to judge (0/3, leans wrong)",
+   "status": "Did not hold up",
    "best": false,
    "upcoming": 1
   },
   "ta_s35a22_sun_eclipse_falgun_jyeshtha_tuesday": {
    "title": "Sun eclipse in Falgun or Jyeshtha on Tuesday",
-   "status": "Too few to judge (1/1, leans right)",
+   "status": "Too few to judge (1/2, even)",
    "best": false,
    "upcoming": 0
   },
   "ta_s35b12_cancer_sankranti_saturday": {
    "title": "Cancer Sankranti on Saturday",
-   "status": "Too few to judge (0/0, even)",
+   "status": "Too few to judge (1/3, leans wrong)",
    "best": false,
    "upcoming": 0
   },
   "ta_s35a10_sun_moon_together_sankranti": {
    "title": "Sun & Moon together at Sankranti entering time",
-   "status": "Too few to judge (2/3, leans right)",
+   "status": "At chance",
    "best": false,
    "upcoming": 0
   },
@@ -417,7 +657,7 @@
   },
   "ta_s18_venus_combust_west": {
    "title": "Venus combust in West",
-   "status": "Too few to judge (0/4, leans wrong)",
+   "status": "Did not hold up",
    "best": false,
    "upcoming": 0
   },
@@ -435,25 +675,25 @@
   },
   "ta_s35a05_chaitra_shukla_pratipada_wednesday": {
    "title": "Chaitra Shukla Pratipada on Wednesday",
-   "status": "Too few to judge (1/1, leans right)",
+   "status": "Inconclusive",
    "best": false,
    "upcoming": 1
   },
   "ta_s35a11_mercury_vedha_venus": {
    "title": "Mercury does Vedha of Venus",
-   "status": "Too few to judge (1/2, even)",
+   "status": "Did not hold up",
    "best": false,
    "upcoming": 1
   },
   "ta_s35a11_jupiter_vedha_venus": {
    "title": "Jupiter does Vedha of Venus",
-   "status": "Too few to judge (2/2, leans right)",
+   "status": "At chance",
    "best": false,
    "upcoming": 1
   },
   "ta_s35b07_mercury_venus_mutual_vedha": {
    "title": "Mercury-Venus mutual Vedha",
-   "status": "Did not occur",
+   "status": "Inconclusive",
    "best": false,
    "upcoming": 0
   },
@@ -465,49 +705,49 @@
   },
   "ta_s35a16_jupiter_turns_direct": {
    "title": "Jupiter turns direct from retrograde",
-   "status": "Too few to judge (1/3, leans wrong)",
+   "status": "Did not hold up",
    "best": false,
    "upcoming": 1
   },
   "ta_s35a16_mercury_turns_direct": {
    "title": "Mercury turns direct from retrograde",
-   "status": "Did not hold up",
+   "status": "At chance",
    "best": false,
    "upcoming": 3
   },
   "ta_s35b10_saturn_direct": {
    "title": "Saturn direct from retrograde",
-   "status": "Too few to judge (1/4, leans wrong)",
+   "status": "Did not hold up",
    "best": false,
    "upcoming": 2
   },
   "ta_261_venus_retro_in_taurus": {
    "title": "Venus retrograde in Taurus",
-   "status": "Did not occur",
+   "status": "Too few to judge (1/3, leans wrong)",
    "best": false,
    "upcoming": 0
   },
   "kd_111_rahu_in_dhanishta": {
    "title": "Rahu in Dhanishta (market and bullion risk)",
-   "status": "Too few to judge (1/1, leans right)",
+   "status": "Too few to judge (2/2, leans right)",
    "best": false,
    "upcoming": 1
   },
   "bs_42_06_sun_leo_store_gold_silver": {
    "title": "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6)",
-   "status": "Inconclusive",
+   "status": "At chance",
    "best": false,
    "upcoming": 2
   },
   "kd114_sun_eclipse_wednesday": {
    "title": "Solar eclipse on a Wednesday",
-   "status": "Too few to judge (0/3, leans wrong)",
+   "status": "At chance",
    "best": false,
    "upcoming": 0
   },
   "doc26_silver_bear_01_venus_alone_leo_libra": {
    "title": "Venus alone in Leo or Libra",
-   "status": "Strongest",
+   "status": "At chance",
    "best": false,
    "upcoming": 1
   },
@@ -519,20 +759,20 @@
   },
   "doc26_silver_bear_04_mars_vargottam_cancer": {
    "title": "Mars Vargottam in Cancer",
-   "status": "Too few to judge (3/4, leans right)",
+   "status": "Supported",
    "best": false,
    "upcoming": 0
   },
   "doc26_silver_bull_07b_rahu_mars_same_nakshatra": {
    "title": "Rahu and Mars in the same nakshatra",
-   "status": "Too few to judge (2/3, leans right)",
+   "status": "At chance",
    "best": false,
    "upcoming": 1
   },
   "ta_s35a17b_moon_mercury_alone": {
    "title": "Only Moon and Mercury alone in a sign",
-   "status": "At chance",
-   "best": false,
+   "status": "Strongest",
+   "best": true,
    "upcoming": 7
   },
   "ta_s35_silver_prophecy_shashti": {
@@ -549,19 +789,19 @@
   },
   "doc26_silver_bull_03_sun_pushya_dhanishta_no_benefic_nak": {
    "title": "Sun in Pushya or Dhanishta with no benefic in the same nakshatra",
-   "status": "Inconclusive",
+   "status": "At chance",
    "best": false,
    "upcoming": 2
   },
   "ta_s35a13_mercury_combust_retro_mutual_moon": {
    "title": "Mercury combust and retrograde does mutual Vedha with Moon",
-   "status": "Did not hold up",
+   "status": "At chance",
    "best": false,
    "upcoming": 2
   },
   "doc26_silver_bull_19_mars_rising": {
    "title": "Mars rising (after combustion)",
-   "status": "Too few to judge (1/1, leans right)",
+   "status": "Did not hold up",
    "best": false,
    "upcoming": 0
   },
@@ -573,13 +813,13 @@
   },
   "kd092_rahu_vedha_pushya": {
    "title": "Rahu does Vedha of Pushya",
-   "status": "Too few to judge (1/1, leans right)",
+   "status": "Too few to judge (3/4, leans right)",
    "best": false,
    "upcoming": 0
   },
   "ta_s30_mantri_moon_silver": {
    "title": "Moon is Mantri of the year",
-   "status": "Too few to judge (0/1, leans wrong)",
+   "status": "Supported",
    "best": false,
    "upcoming": 0
   }

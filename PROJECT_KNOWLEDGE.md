@@ -1,6 +1,6 @@
 # FinAstro 2027: project knowledge base (gold and silver work)
 
-This is the single place to start. It records every source, decision, method and finding from the gold and silver work of 19–21 Nov 2026, and the commands that rebuild every output. It was last updated 21 Nov 2026.
+This is the single place to start. It records every source, decision, method and finding from the gold and silver work of 19–21 Nov 2026, and the commands that rebuild every output. It was last updated 22 Nov 2026.
 
 The work is logged entry by entry in `build/pdfref/analysis_log.json`, which is shown in both trackers. The 2027 calendar build from before this work is described in `README.md` and `build/NEXT_SESSION.md`.
 
@@ -66,7 +66,7 @@ Known data problems:
 | `tools/test_source_rules.py` | Tests of the 'Others' rules, 2000–2026 |
 | `tools/build_bs41_model.py` | Model v1.0 calendar and 2000–2026 backtest |
 | `tools/gold_tracker.py [--metal silver]` | Trackers: findings, rule status, best-rule dates, analysis log |
-| `tools/build_year.py YEAR` | Astronomy layer for any year; 2021–2024 are git-ignored and rebuilt on demand |
+| `tools/build_year.py YEAR` | Astronomy layer for any year; 2000–2024 are git-ignored and rebuilt on demand |
 | `tools/fetch_prices.py` | Downloads GC=F and SI=F (Yahoo; the host must be allowed) |
 | `tools/refresh_all.py [--prices]` | Rebuilds everything in order and runs the tests |
 | `tests/test_pdfref.py`, `tests/test_shadbala.py` | PDF-rule checks; Shadbala vs B.V. Raman's worked example |
@@ -77,7 +77,7 @@ Known data problems:
 |---|---|
 | `gold_2026-11-20_to_2027-12-31_ET.html` / `silver_…` | Every gold or silver rule's dated windows, each checked against the astronomy layer |
 | `calendar_2027_NY_master.*` | NY 2027 calendar: all PDF rules plus the existing calendar |
-| `gold_backtest_2021-11-20_to_2026-11-20_ET.html` (and `2025-11-20` for 1 year; `silver_…`) | Rule backtests |
+| `gold_backtest_2000-11-20_to_2026-11-20_ET.html` (26 years), `…2021-11-20…` (5 years), `…2025-11-20…` (1 year); `silver_…` | Rule backtests |
 | `source_rules_test_2000-2026_ET.html` | 26-year test of the Brihat Samhita, Timing Solutions and Silver guide rules |
 | `gold_bs41_model_2026-11-20_to_2027-12-31_ET.*` | Model v1.0 daily readings, calendar (ics) and backtest |
 | `GOLD_TRACKER.html`, `SILVER_TRACKER.html` | Current status of every rule, best-rule dates, analysis log |
@@ -97,47 +97,77 @@ Known data problems:
 - For each rule the report also shows a one-sided binomial p-value and its result year by year.
 - **Daily-factor tests** (2000–2026) score each COMEX session (18:00 → 17:00 ET) by the condition holding in at least half of its hours.
 
-## 7. Findings (as of 21 Nov 2026)
+## 7. Findings (as of 22 Nov 2026)
 
-**Rule sets as a whole (5 years, 20 Nov 2021 – 20 Nov 2026):**
-- Gold: 308 worked / 279 failed (52%), against 54% expected by chance.
-- Silver: 201 / 219 (48%), against 50%.
-- No rule beats chance at p < 0.05.
-- Adding up the bullish-minus-bearish count each day carries no information for gold. For silver it pointed the wrong way.
+The primary evidence is now the **26-year backtest (20 Nov 2000 – 20 Nov 2026)**. The 5-year and 1-year runs are kept as comparisons. Both trackers take rule status and "best rules" from the 26-year data.
 
-**Gold: most consistent rules (5-year data; dates in `GOLD_TRACKER.html`):**
+**Rule sets as a whole:**
 
-| Rule | Worked / decided | Rate vs base | p | Years right |
+| Metal | 26 years | Chance | 5 years | Chance |
 |---|---|---|---|---|
-| Combined Sun model U1–U4 | 105 / 179 | 59% vs 52% | 0.057 | 3 of 5 |
-| U2 – Jupiter with / aspecting the Sun | 15 / 21 | 71% vs 61% | – | 4 of 5 |
-| U2 – Venus with the Sun | 18 / 27 | 67% vs 57% | – | 4 of 5 |
-| U2 – Mercury with the Sun | 36 / 55 | 65% vs 57% | – | 4 of 5 |
+| Gold | 1,598 worked / 1,400 failed (53%) | 54% | 308 / 279 (52%) | 54% |
+| Silver | 1,083 / 1,050 (51%) | 51% | 201 / 219 (48%) | 50% |
 
-**Gold rules that did not hold up:**
-- U4 – Saturn on the Sun: 6 / 20. It looked good only in the falling 2025–26 year.
-- New Moon bullish: 21 / 48.
-- Mercury rises in the West: 4 / 13.
-- Sun on Anuradha with a benefic: 1 / 6.
-- Sun in Libra with malefics: 2 / 6.
-- Rise of Jupiter: 0 / 4.
+- No rule beats chance at p < 0.05 over 26 years.
+- Silver's "Mars rising after combustion" is significantly *wrong*: 2 / 10, p = 0.03 for failing.
+- The daily bullish-minus-bearish count carries no information: correlation with the next 5 days is −0.004 for gold and −0.024 for silver.
 
-**Gold, open gap:** bearish rules outnumbered bullish ones before only 1 of the 15 biggest 5-day falls. The January 2026 crash came with 6 bullish rules active and none bearish. Sun, Mercury, Venus and Mars were in Capricorn and Venus was combusting; no rule covers that configuration.
+**Gold: the most consistent rules over 26 years** (the best-rule test: ≥15 decided, hit rate above base, and p < 0.10 or right in ≥70% of active years):
 
-**Silver:**
-- When gold moved against a silver rule, the rule failed 153 of 178 times. When gold moved its way, it worked 143 of 172. Silver rules mostly track gold.
-- Best rule: Venus–Mars or Sun–Mars in one sign (19 / 30, 4 of 5 years).
-- "Venus *alone* in Leo/Libra" worked 5 / 6, while "Venus in Leo/Libra" without "alone" worked 3 / 11.
+| Rule | 26 years | Rate vs base | p | Years right |
+|---|---|---|---|---|
+| TA S34 A9, Mars aspected by Saturn while Jupiter is retrograde | 14 / 17 | 82% vs 62% | 0.07 | 12 of 15 |
+| U2 – Mercury with the Sun | 176 / 291 | 60% vs 57% | 0.115 | 20 of 26 |
+
+There are no TA S34 A9 windows between now and 31 Dec 2027.
+
+**Gold: the 5-year "best" rules faded over 26 years:**
+- Combined Sun model: 509 / 939 (54% vs 53%).
+- U2 – Venus: 75 / 134 (56% vs 56%).
+- U2 – Jupiter: 65 / 104 (62% vs 57%, p = 0.17).
+
+**Gold: did not hold up over 26 years:**
+- Rise of Jupiter: 6 / 18.
+- Venus in Jyeshtha with a benefic: 5 / 16.
+- Mars in Pushya: 8 / 16.
+- Sun in Libra with another malefic: 4 / 10.
+- Sun enters Aquarius on a Friday: 1 / 5.
+- U4 – Saturn on the Sun: 39 / 105 (37% vs 43%).
+- New Moon bullish: 142 / 261 (54% vs 57%).
+
+**Gold: open gap.** Bearish rules outnumbered bullish ones before only 1 of the 15 biggest 5-day falls of 2021–26. The January 2026 crash came with 6 bullish rules active and none bearish. Sun, Mercury, Venus and Mars were in Capricorn and Venus was combusting; no rule covers that configuration.
+
+**Silver: the most consistent rules over 26 years:**
+
+| Rule | 26 years | Rate vs base | p |
+|---|---|---|---|
+| TA S35 A1, retrograde Mercury or Jupiter | 78 / 126 | 62% vs 54% | 0.052 |
+| TA S35 A17b, only Moon and Mercury alone in a sign | 49 / 80 | 61% vs 53% | 0.081 |
+
+**Silver: the 5-year results that faded:**
+- Venus–Mars or Sun–Mars in one sign: 74 / 144 (51% vs 54%) over 26 years, after 19 / 30 in 5 years.
+- "Venus *alone* in Leo/Libra": 16 / 38 (42%), the same as the plain version (22 / 54).
+
+**Silver: did not hold up over 26 years:**
+- Saturn turns direct: 8 / 23.
+- Jupiter turns direct: 9 / 21.
+- Venus combust in the West: 5 / 13.
+- Moon eclipse on Sunday: 2 / 11.
+- Mars in Gemini with two other planets: 1 / 7.
+- Mars rising: 2 / 10.
+
+**Silver follows gold (5 years):** when gold moved against a silver rule, the rule failed 155 of 180 times. When gold moved its way, it worked 147 of 176.
 
 **Moon and silver:**
 - The rulership is sourced: TA p.32, Kindle Ch.15.
 - No source applies the Sun-style rules to the Moon.
 - The Silver guide's Moon rules showed no effect over 2000–2026, and new→full Moon holding did *worse* than full→new for both metals.
 
-**Brihat Samhita (2000–2026):**
-- 42.14a (lunation in Aries or Capricorn with a benefic) is a weak positive: 60% of 84 cases were followed by a rise.
-- 42.6 (store gold and silver while the Sun is in Leo) shows no edge over drift.
-- 10.17 (Saturn in Uttara Bhadrapada) has a single passage in the data; the current window runs to 7 Feb 2027.
+**Brihat Samhita, 26 years of the full backtest:**
+- 42.14b (Sun in Aries or Capricorn with a malefic) is the best of the four: 20 / 36 (56% vs 45%, p = 0.13).
+- 42.14a: 38 / 67, at chance.
+- 42.6: 18 / 27 against a 70% base, no edge.
+- 10.17: 2 / 3, a single passage. The current window runs to 7 Feb 2027.
 
 **Model v1.0 (Ch.41 + Shadbala + Ashtakavarga), 6,572 trading days:**
 - The correlation of the scarcity index with the next 5 days is −0.002.
@@ -148,7 +178,7 @@ Known data problems:
 
 - Brihat Samhita 41.12 has a translation ambiguity: Sastri reads "fetch good price and have great demand", another translation reads moderate prices and easy availability. Kept visible; V is not a stand-alone signal.
 - A rule for a stellium on the Sun (the January 2026 gap) has no source yet.
-- Longer histories (2000–2026) exist for prices but not yet for the full rule backtest. Astronomy layers before 2021 would need `tools/build_year.py`.
+- 26-year backtests are done (`*_backtest_2000-11-20_to_2026-11-20_ET.*`). The astronomy layers for 2000–2024 are git-ignored and rebuilt on demand, which takes about 10 s per year.
 
 ## 9. Rebuild
 
