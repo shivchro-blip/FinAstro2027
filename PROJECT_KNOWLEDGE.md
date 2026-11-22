@@ -66,6 +66,7 @@ Known data problems:
 | `tools/test_source_rules.py` | Tests of the 'Others' rules, 2000–2026 |
 | `tools/build_bs41_model.py` | Model v1.0 calendar and 2000–2026 backtest |
 | `tools/gold_deep_analysis.py [start] [end]` | Day-by-day gold analysis for a date range: rules with their 26-year records, transits, aspects, Model v1.0 and seasonality. A hand-written `..._notes.md` beside the output is rendered at the top |
+| `tools/test_venus_visibility.py` | TA Section 18 Venus combust / rise rules on gold and silver 2000–2026, the January 2026 case and the next dates |
 | `tools/big_move_analysis.py [threshold_pct]` | Gold's ±2% days 2000–2026: events within ±3 days, states and active gold rules vs a same-year expected count (Poisson, FDR) |
 | `tools/big_move_forward.py [start] [end]` | Dates of the big-move leads from 22 Nov 2026 to 31 Dec 2027 with watch stretches (html, json, ics) |
 | `tools/gold_tracker.py [--metal silver]` | Trackers: findings, rule status, best-rule dates, analysis log |
@@ -83,6 +84,7 @@ Known data problems:
 | `calendar_2027_NY_master.*` | NY 2027 calendar: all PDF rules plus the existing calendar |
 | `gold_backtest_2000-11-20_to_2026-11-20_ET.html` (26 years), `…2021-11-20…` (5 years), `…2025-11-20…` (1 year); `silver_…` | Rule backtests |
 | `source_rules_test_2000-2026_ET.html` | 26-year test of the Brihat Samhita, Timing Solutions and Silver guide rules |
+| `venus_visibility_test_2000-2026_ET.html` | Venus combust / rise test 2000–2026 and the January 2026 gold crash |
 | `gold_big_moves_2000-2026_ET.html` | Every ±2% gold day 2000–2026 with the sky ±3 days; which factors were over-represented |
 | `gold_big_move_watch_2026-11-22_to_2027-12-31_ET.*` | Forward dates of the big-move leads, watch stretches, calendar (ics) |
 | `gold_bs41_model_2026-11-20_to_2027-12-31_ET.*` | Model v1.0 daily readings, calendar (ics) and backtest |
@@ -233,6 +235,26 @@ There are no TA S34 A9 windows between now and 31 Dec 2027.
   - Outer-planet events, for reference only: Sun–Uranus opposition 25 Nov 2026 and 30 Nov 2027; Neptune stations direct 12 Dec 2026 and 15 Dec 2027; Pluto stations retrograde 8 May 2027.
 
   These are dates to watch for volatility, not calls.
+
+**Venus combust and rising (TA p.71 Section 18; silver S35 A15/B16; KD p.122/124), 2000–2026, and the January 2026 crash**, in `venus_visibility_test_2000-2026_ET.html`:
+- **January 2026.** Venus rose in the West on Sat 31 Jan 2026 (1 Feb IST), in Capricorn/Dhanishta with the Sun and Mars. That is the rule's qualified case: Venus in Aries, Leo, Libra, Capricorn or Aquarius with the Sun, Mars, Saturn or Rahu, which TA says gives a "sharp upturn after a small dip".
+  - Gold fell 10.8% on Fri 30 Jan and 1.95% on Mon 2 Feb. Silver fell 31% on 30 Jan.
+  - Gold then rose 6.1% on 3 Feb and was 11.9% above the 30 Jan close 20 sessions later.
+  - The fall came the session **before** the layer's rising date. Dates for the date-only kalamsha method can be a day or two out.
+  - Read loosely, it matches the qualified rule: a fall at the rising, then a sharp recovery. But the dip was not small.
+- **26-year record on the standard scoring:**
+
+| Rule (TA says) | Gold | Silver | Longer horizon |
+|---|---|---|---|
+| Rises in West (Bearish) | 6/12, 50% vs 45%, at chance | 6/14, 43% vs 47%, at chance | Qualified rises gave dip-then-upturn in 2 of 6, against 1.8 expected. Silver had big days within ±3 days 14 times against 10.1 expected, and fell 2.7% on average in the 3 sessions before the date. |
+| Combust in East (Bullish) | 12/16, 75% vs 57%, p = 0.11, average +3.3% | 10/15, 67% vs 51% | Gold 20 sessions 82% vs 58%, p = 0.10. The 2026 document's "Bearish for 15 days" is not supported. |
+| Rises in East (Bullish for 2–3 months) | 9/12, 75% vs 58% | 9/14 | Gold 40 sessions 13/15, 87% vs 63%, p = 0.045. |
+| Combust in West (Extreme Bullish) | 7/16, 44% vs 56%, did not hold up | 5/13 | — |
+
+  None passes p < 0.05 on its stated horizon, and each rule has only about 16 events.
+- **Next dates:**
+  - Venus combust in East, 20 Jul – 7 Sep 2027 (Bullish).
+  - Venus rises in West, 7 Sep 2027, in Leo with the Sun. This is the qualified case again: watch for a dip then an upturn.
 
 **Model v1.0 (Ch.41 + Shadbala + Ashtakavarga), 6,572 trading days:**
 - The correlation of the scarcity index with the next 5 days is −0.002.
