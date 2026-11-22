@@ -1,6 +1,6 @@
 # Silver findings tracker
 
-Generated 22 Nov 2026 09:23 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
+Generated 22 Nov 2026 10:24 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
 
 ## Recent findings
 
@@ -111,6 +111,7 @@ Best (from the 26 yr data): Retrograde Mercury or Jupiter, Only Moon and Mercury
 
 | Date | PR | Topic | Result |
 |---|---|---|---|
+| 2026-11-22 | #17 | Combined gold & silver outlook, 22 Nov 2026 - 31 Dec 2027 | Gold: U2 Mercury with the Sun (small edge) on 81% of Dec 2026 days, 74% Jan, 90% Aug, 97% Dec 2027, about 13-17% Mar/Sep/Oct 2027; TA S34 A9 not before 2028. Silver: retro Mercury/Jupiter mid-Dec 2026 to mid-Apr 2027, 10 Jun - 4 Jul, 7-28 Oct 2027. Venus combust East 20 Jul - 7 Sep 2027 (bullish lead); rises West 7 Sep 2027 (qualified, no edge). Volatility watch 21-27 Jan, 22-25 Mar, 22-28 Jun, 18 Oct, 27-31 Dec 2027. None passes a strict significance test. |
 | 2026-11-22 | #16 | Venus rising in the West and the 30 Jan 2026 gold crash; TA Section 18 Venus rules 2000-2026 | Venus rose in the West on 31 Jan 2026 (Capricorn with Sun and Mars, the qualified 'sharp upturn after a small dip' case). Gold -10.8% on 30 Jan, the session before the layer's date, then +6.1% on 3 Feb and +11.9% after 20 sessions. Over 26 years, rises in West are at chance (gold 6/12, 50% vs 45%); qualified pattern 2 of 6 vs 1.8 expected. Leads: combust in East gold 12/16 (75% vs 57%, p 0.11); rises in East gold 40 sessions 13/15 (87% vs 63%, p 0.045). Combust in West did not hold up (7/16). Next: Venus rises in West 7 Sep 2027 in Leo with the Sun (qualified). |
 | 2026-11-22 | #15 | Gold big-move watch dates, 22 Nov 2026 - 31 Dec 2027 | 5 watch stretches: 21-27 Jan 2027 (Jupiter back into Cancer, full Moon; either), 22-25 Mar 2027 (Saturn combustion begins, full Moon; down), 22-28 Jun 2027 (Jupiter into Leo; up), 18 Oct 2027 (full Moon, Sun in Libra with malefics; down), 27-31 Dec 2027 (Mars in Capricorn with Rahu; up). Watch dates, not calls: no lead passed FDR and out-of-sample pooled lift x1.02. |
 | 2026-11-22 | #15 | Gold ±2% days 2000-2026: which planetary factors surround them (±3 days) | No factor significant after FDR (lowest q 0.36). Leads: Sun-Uranus opposition x2.13, Venus-Saturn conjunction x1.80, Saturn combustion begins x1.86, Jupiter nakshatra change x1.41, Rahu with Mars x1.44. Up: Mars in Capricorn x1.86 (62.5% up, p 0.003), Mars-Pluto conjunction x3.5. Down: Saturn combustion begins x2.3, Pluto R station x2.2, full Moon x1.24. The bullish rules Mars in Pushya (TA) and Sun in Libra with malefics (doc26) coincided with big falls. Out of sample: 14 of 23 early leads stayed above 1 but pooled x1.02 (p 0.34), no edge. |

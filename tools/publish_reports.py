@@ -25,6 +25,8 @@ SECTIONS = [
         ("PROJECT_KNOWLEDGE.html", "Project knowledge base", "Sources, user decisions, conventions, code map, every finding, rebuild commands."),
         (B + "GOLD_TRACKER.html", "Gold tracker", "Recent findings, every gold rule's 1 / 5 / 26-year record and status, best-rule dates to end-2027, analysis log."),
         (B + "SILVER_TRACKER.html", "Silver tracker", "The same for silver."),
+        (B + "gold_outlook_2026-11-22_to_2027-12-31_ET.html", "Outlook to end-2027 (gold & silver)", "Everything tested in one timeline: best-rule windows, volatility watch dates, Venus dates, month by month, each with its 2000-2026 evidence."),
+        (B + "gold_outlook_2026-11-22_to_2027-12-31_ET.ics", "Outlook to end-2027 (.ics)", "The same timeline as calendar entries."),
     ]),
     ("Calendars and rule reports, 20 Nov 2026 - 31 Dec 2027 (US Eastern)", [
         (B + "gold_2026-11-20_to_2027-12-31_ET.html", "Gold report", "Every rule that names gold (TA, KD, 2026 document, your Sun notes, Brihat Samhita) with dated windows."),
