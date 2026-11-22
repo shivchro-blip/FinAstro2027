@@ -70,6 +70,7 @@ Known data problems:
 | `tools/big_move_analysis.py [threshold_pct]` | Gold's ±2% days 2000–2026: events within ±3 days, states and active gold rules vs a same-year expected count (Poisson, FDR) |
 | `tools/big_move_forward.py [start] [end]` | Dates of the big-move leads from 22 Nov 2026 to 31 Dec 2027 with watch stretches (html, json, ics) |
 | `tools/gold_outlook.py [start] [end]` | One timeline to end-2027: best-rule windows, volatility watch dates, Venus dates, month by month (html, json, ics) |
+| `tools/fast_trigger_analysis.py [start] [end]` | Fast-planet triggers inside the watch windows (2000–2026 test with permutation check) and the narrowed forward days |
 | `tools/gold_tracker.py [--metal silver]` | Trackers: findings, rule status, best-rule dates, analysis log |
 | `tools/build_year.py YEAR` | Astronomy layer for any year; 2000–2024 are git-ignored and rebuilt on demand |
 | `tools/fetch_prices.py` | Downloads GC=F and SI=F (Yahoo; the host must be allowed) |
@@ -90,6 +91,7 @@ Known data problems:
 | `gold_big_move_watch_2026-11-22_to_2027-12-31_ET.*` | Forward dates of the big-move leads, watch stretches, calendar (ics) |
 | `gold_bs41_model_2026-11-20_to_2027-12-31_ET.*` | Model v1.0 daily readings, calendar (ics) and backtest |
 | `gold_outlook_2026-11-22_to_2027-12-31_ET.*` | Combined outlook to end-2027, with the evidence for each item |
+| `gold_fast_triggers_2026-11-22_to_2027-12-31_ET.*` | Watch windows narrowed to days with fast-planet triggers (html, json, ics) |
 | `GOLD_TRACKER.html`, `SILVER_TRACKER.html` | Current status of every rule, best-rule dates, analysis log |
 | `REFERENCE_PDF_RULES.md`, `COMPLETION_REPORT.md`, `COVERAGE_AUDIT_GOLD_SILVER.md` | Rule lists and audits |
 
@@ -267,6 +269,34 @@ There are no TA S34 A9 windows between now and 31 Dec 2027.
 - **Volatility watch:**
   - 21–27 Jan, 22–25 Mar (down), 22–28 Jun (up), 18 Oct (down) and 27–31 Dec 2027 (up).
   - Single leads: Venus–Saturn conjunction 7 May (down); Jupiter's nakshatra and sign changes 30 Aug, 4 Nov and 26 Nov 2027.
+
+**Narrowing the watch windows with fast planets**, in `gold_fast_triggers_2026-11-22_to_2027-12-31_ET.html`. This tests the idea that slow planets set the window and fast planets fire the move, conditionally.
+- **Windows:** 2,498 historical window days (same definition as the forward watch). Big days were 9.5% of window days against 5.9% outside. This is partly circular, because the leads were picked on the same data.
+- **Factors tested:** 44 fast factors on the day itself:
+  - Moon relations: with, opposite or aspected by a slow planet; 12th, 2nd and 6/8 from Saturn; the malefic waning Moon; Moon changing sign.
+  - Lunation days.
+  - Mercury, Venus, Sun and Mars ingresses, stations and combustion, ±1 day.
+  - KD's Sun–Mercury conjunction and Mercury manifestation.
+- **Result: fast planets do not reliably narrow the windows.** 3 factors passed (lift > 1, p < 0.10, above 1 in both halves). With returns shuffled within each year, 2.0 pass on average (90th percentile 4), so 3 is what chance gives. None survives FDR.
+
+| Factor | Lift | Count | p | Outside windows |
+|---|---|---|---|---|
+| Moon opposite the Sun (around full Moon) | ×1.49 | 28 / 18.8 | 0.03 | ×0.74 |
+| Moon 6/8 from Saturn | ×1.31 | 54 / 41 | 0.03 | ×1.18 |
+| Moon opposite Rahu (= with Ketu) | ×1.34 | 25 / 18.7 | 0.09 | — |
+
+  - Moon opposite the Sun is the only one that works inside windows but not outside, which is the pattern the idea predicts.
+  - None picks a direction.
+  - KD's Sun–Mercury conjunction (×1.07) and Mercury manifestation (×1.40, p = 0.11) did not pass.
+- **Narrowed days (best guesses inside the windows):**
+  - 22 Jan 2027
+  - 22–23 Mar
+  - 19–20 Jul (start of Venus combust in East)
+  - 30 Aug
+  - 6–7 Sep (around Venus rising in the West)
+  - 25–26 Nov
+
+  The windows of 4–10 May, 22–28 Jun, 18 Oct, 1–7 Nov and 27–31 Dec 2027 have no tested trigger.
 
 **Model v1.0 (Ch.41 + Shadbala + Ashtakavarga), 6,572 trading days:**
 - The correlation of the scarcity index with the next 5 days is −0.002.
