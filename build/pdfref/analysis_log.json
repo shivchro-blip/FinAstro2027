@@ -178,6 +178,17 @@
     "build/pdfref/GOLD_TRACKER.html",
     "build/pdfref/SILVER_TRACKER.html"
    ]
+  },
+  {
+   "date": "2026-11-22",
+   "pr": "13",
+   "topic": "reports/ folder with ready-to-open copies",
+   "analysis": "tools/publish_reports.py copies every current HTML report and the two calendar .ics files into reports/ with an index.html; tools/refresh_all.py republishes it as its last step.",
+   "result": "reports/index.html lists 21 reports in four groups (start here, calendars and rule reports, backtests, source research).",
+   "files": [
+    "reports/index.html",
+    "tools/publish_reports.py"
+   ]
   }
  ]
 }

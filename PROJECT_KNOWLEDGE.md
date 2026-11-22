@@ -68,10 +68,11 @@ Known data problems:
 | `tools/gold_tracker.py [--metal silver]` | Trackers: findings, rule status, best-rule dates, analysis log |
 | `tools/build_year.py YEAR` | Astronomy layer for any year; 2000–2024 are git-ignored and rebuilt on demand |
 | `tools/fetch_prices.py` | Downloads GC=F and SI=F (Yahoo; the host must be allowed) |
-| `tools/refresh_all.py [--prices]` | Rebuilds everything in order and runs the tests |
+| `tools/refresh_all.py [--prices]` | Rebuilds everything in order, runs the tests, re-publishes `reports/` |
+| `tools/publish_reports.py` | Copies the current HTML reports and calendar .ics files into `reports/` with an index |
 | `tests/test_pdfref.py`, `tests/test_shadbala.py` | PDF-rule checks; Shadbala vs B.V. Raman's worked example |
 
-## 5. Outputs (`build/pdfref/`)
+## 5. Outputs (`build/pdfref/`; ready-to-open copies in `reports/`, start with `reports/index.html`)
 
 | File | Content |
 |---|---|

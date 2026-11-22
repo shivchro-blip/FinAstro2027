@@ -5,7 +5,7 @@
 
 Order: prices -> rule docs and NY calendar -> gold / silver reports -> 1- and
 5-year backtests (gold, silver) -> source-rule test 2000-2026 -> Model v1.0 (BS41)
--> trackers -> Markdown -> HTML renders -> tests. The 2021-2024 astronomy layers
+-> trackers -> Markdown -> HTML renders -> tests -> copies into reports/. The 2021-2024 astronomy layers
 are rebuilt on demand by backtest_gold.py. See PROJECT_KNOWLEDGE.md.
 """
 from __future__ import annotations
@@ -55,6 +55,7 @@ def main():
     for s in STEPS:
         run(s)
     run(["-m", "pytest", "-q", "tests/test_pdfref.py", "tests/test_shadbala.py"])
+    run(["tools/publish_reports.py"])
     print("all steps done")
 
 

@@ -1,6 +1,6 @@
 # Silver findings tracker
 
-Generated 21 Nov 2026 20:08 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
+Generated 21 Nov 2026 22:19 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
 
 ## Recent findings
 
@@ -111,6 +111,7 @@ Best (from the 26 yr data): Retrograde Mercury or Jupiter, Only Moon and Mercury
 
 | Date | PR | Topic | Result |
 |---|---|---|---|
+| 2026-11-22 | #13 | reports/ folder with ready-to-open copies | reports/index.html lists 21 reports in four groups (start here, calendars and rule reports, backtests, source research). |
 | 2026-11-22 | #13 | 26-year backtest, gold and silver (20 Nov 2000 - 20 Nov 2026) | Gold 1,598/1,400 (53%) vs 54% by chance; silver 1,083/1,050 (51%) vs 51%; no rule p<0.05. 5-year best rules faded (gold Sun model 54% vs 53%; silver Venus-Mars 51% vs 54%). Most consistent: gold TA S34 A9 Mars aspected by Saturn with Jupiter retrograde 14/17 (p=0.07), U2-Mercury 176/291 (20 of 26 years); silver TA S35 A1 retrograde Mercury or Jupiter 78/126 (p=0.052), A17b Moon-Mercury alone 49/80 (p=0.081). Silver 'Mars rising' significantly wrong (2/10). |
 | 2026-11-21 | #13 | Project knowledge base and one-command refresh | Full refresh with fresh prices passed (7/7 tests); headline totals unchanged (gold 5 yr 308/279, silver 201/219). 20 Nov 2026 gold settlement 3,515.4. |
 | 2026-11-21 | #13 | Financial Astrology Model v1.0 (Brihat Samhita Ch.41 + BPHS Shadbala + Ashtakavarga) for gold | Backtest 2000-2026 (6,572 days): correlation of the scarcity index with the next 5 days -0.002; 'Strong bullish' days averaged +0.04% over 5 days vs +0.24% for all days. Structural bullish skew (67% of days mild bullish or stronger). Forward: bearish stretches 16 Jun - 16 Jul 2027 (Mild bearish to Bearish); strongest bullish 1-8 Aug 2027, 23-30 Aug 2027, 16-27 Dec 2027. |

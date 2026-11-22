@@ -754,7 +754,8 @@ carried into the New York master calendar, annotated with the PDF text where a
 PDF rule states the same condition.
 
 **Gold / silver work (Nov 2026)**: all sources, decisions, findings and commands are in
-`PROJECT_KNOWLEDGE.md`, and session notes in `CLAUDE.md`. Rebuild everything with
+`PROJECT_KNOWLEDGE.md`, and session notes in `CLAUDE.md`. Ready-to-open reports are in
+`reports/` (start with `reports/index.html`). Rebuild everything with
 `python tools/refresh_all.py --prices`. The work covers metal reports, backtests, the
 Brihat Samhita rules, Financial Astrology Model v1.0 (Shadbala/Ashtakavarga) and the
 trackers.

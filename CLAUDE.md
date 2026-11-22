@@ -1,6 +1,6 @@
 # FinAstro 2027: notes for Claude Code sessions
 
-Read `PROJECT_KNOWLEDGE.md` first. It holds the sources, conventions, user decisions, code map, findings and rebuild commands for all gold and silver work. The original 2027 calendar build is described in `README.md` and `build/NEXT_SESSION.md`.
+Read `PROJECT_KNOWLEDGE.md` first. It holds the sources, conventions, user decisions, code map, findings and rebuild commands for all gold and silver work. Finished, ready-to-open reports are in `reports/` (start with `reports/index.html`); refresh them with `tools/refresh_all.py`, never by editing the copies. The original 2027 calendar build is described in `README.md` and `build/NEXT_SESSION.md`.
 
 ## Decisions to respect
 
