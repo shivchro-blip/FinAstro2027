@@ -5,6 +5,293 @@
  "n_up": 226,
  "n_down": 250,
  "up_share": 47.5,
+ "split": {
+  "split": "2013-11-20",
+  "n_leads": 23,
+  "n_held": 14,
+  "pooled_obs": 388,
+  "pooled_exp": 379.7,
+  "pooled_lift": 1.02,
+  "pooled_p": 0.34183600959644245,
+  "leads": [
+   {
+    "factor": "Event: Jupiter changes nakshatra",
+    "side": "any",
+    "h1_obs": 31,
+    "h1_exp": 20.5,
+    "h1_lift": 1.51,
+    "h1_p": 0.018605231442499703,
+    "h2_obs": 17,
+    "h2_exp": 13.4,
+    "h2_lift": 1.27,
+    "held": true
+   },
+   {
+    "factor": "Event: Jupiter changes nakshatra",
+    "side": "up",
+    "h1_obs": 17,
+    "h1_exp": 9.4,
+    "h1_lift": 1.8,
+    "h1_p": 0.0167575950728881,
+    "h2_obs": 8,
+    "h2_exp": 6.5,
+    "h2_lift": 1.23,
+    "held": true
+   },
+   {
+    "factor": "Event: Jupiter changes sign",
+    "side": "up",
+    "h1_obs": 7,
+    "h1_exp": 3.1,
+    "h1_lift": 2.23,
+    "h1_p": 0.04064124668899538,
+    "h2_obs": 5,
+    "h2_exp": 4.0,
+    "h2_lift": 1.25,
+    "held": true
+   },
+   {
+    "factor": "Event: Mercury-Uranus opposition",
+    "side": "up",
+    "h1_obs": 7,
+    "h1_exp": 3.3,
+    "h1_lift": 2.14,
+    "h1_p": 0.04876032017741028,
+    "h2_obs": 4,
+    "h2_exp": 2.8,
+    "h2_lift": 1.43,
+    "held": true
+   },
+   {
+    "factor": "Event: Saturn combustion begins",
+    "side": "any",
+    "h1_obs": 12,
+    "h1_exp": 5.4,
+    "h1_lift": 2.21,
+    "h1_p": 0.010067465876695714,
+    "h2_obs": 5,
+    "h2_exp": 3.6,
+    "h2_lift": 1.39,
+    "held": true
+   },
+   {
+    "factor": "Event: Saturn combustion begins",
+    "side": "down",
+    "h1_obs": 7,
+    "h1_exp": 2.9,
+    "h1_lift": 2.38,
+    "h1_p": 0.03090725219387247,
+    "h2_obs": 4,
+    "h2_exp": 1.8,
+    "h2_lift": 2.22,
+    "held": true
+   },
+   {
+    "factor": "Event: Saturn leaves combustion",
+    "side": "any",
+    "h1_obs": 10,
+    "h1_exp": 5.2,
+    "h1_lift": 1.91,
+    "h1_p": 0.04170616562043439,
+    "h2_obs": 2,
+    "h2_exp": 4.3,
+    "h2_lift": 0.47,
+    "held": false
+   },
+   {
+    "factor": "Event: Saturn leaves combustion",
+    "side": "up",
+    "h1_obs": 7,
+    "h1_exp": 2.4,
+    "h1_lift": 2.9,
+    "h1_p": 0.01183960405124651,
+    "h2_obs": 1,
+    "h2_exp": 2.1,
+    "h2_lift": 0.48,
+    "held": false
+   },
+   {
+    "factor": "Event: Sun-Uranus opposition",
+    "side": "any",
+    "h1_obs": 16,
+    "h1_exp": 5.5,
+    "h1_lift": 2.92,
+    "h1_p": 0.00019286928884576504,
+    "h2_obs": 2,
+    "h2_exp": 2.9,
+    "h2_lift": 0.69,
+    "held": false
+   },
+   {
+    "factor": "Event: Sun-Uranus opposition",
+    "side": "up",
+    "h1_obs": 7,
+    "h1_exp": 2.5,
+    "h1_lift": 2.79,
+    "h1_p": 0.014476587391765605,
+    "h2_obs": 2,
+    "h2_exp": 1.5,
+    "h2_lift": 1.33,
+    "held": true
+   },
+   {
+    "factor": "Event: Sun-Uranus opposition",
+    "side": "down",
+    "h1_obs": 9,
+    "h1_exp": 3.0,
+    "h1_lift": 3.03,
+    "h1_p": 0.003574168576316872,
+    "h2_obs": 0,
+    "h2_exp": 1.4,
+    "h2_lift": 0.0,
+    "held": false
+   },
+   {
+    "factor": "Event: Venus-Uranus conjunction",
+    "side": "up",
+    "h1_obs": 6,
+    "h1_exp": 2.3,
+    "h1_lift": 2.65,
+    "h1_p": 0.027966415039207715,
+    "h2_obs": 0,
+    "h2_exp": 2.0,
+    "h2_lift": 0.0,
+    "held": false
+   },
+   {
+    "factor": "Event: full moon",
+    "side": "any",
+    "h1_obs": 81,
+    "h1_exp": 63.8,
+    "h1_lift": 1.27,
+    "h1_p": 0.02104261985607725,
+    "h2_obs": 46,
+    "h2_exp": 47.9,
+    "h2_lift": 0.96,
+    "held": false
+   },
+   {
+    "factor": "Event: full moon",
+    "side": "down",
+    "h1_obs": 46,
+    "h1_exp": 34.6,
+    "h1_lift": 1.33,
+    "h1_p": 0.03609046397963411,
+    "h2_obs": 27,
+    "h2_exp": 24.0,
+    "h2_lift": 1.12,
+    "held": true
+   },
+   {
+    "factor": "Rule: Mars in Pushya [Bullish]",
+    "side": "any",
+    "h1_obs": 26,
+    "h1_exp": 17.3,
+    "h1_lift": 1.5,
+    "h1_p": 0.030099754704991266,
+    "h2_obs": 14,
+    "h2_exp": 11.7,
+    "h2_lift": 1.2,
+    "held": true
+   },
+   {
+    "factor": "Rule: Mars in Pushya [Bullish]",
+    "side": "down",
+    "h1_obs": 17,
+    "h1_exp": 9.8,
+    "h1_lift": 1.73,
+    "h1_p": 0.022991920156411605,
+    "h2_obs": 8,
+    "h2_exp": 6.4,
+    "h2_lift": 1.25,
+    "held": true
+   },
+   {
+    "factor": "Rule: Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]",
+    "side": "any",
+    "h1_obs": 165,
+    "h1_exp": 144.4,
+    "h1_lift": 1.14,
+    "h1_p": 0.049647260921492964,
+    "h2_obs": 121,
+    "h2_exp": 122.7,
+    "h2_lift": 0.99,
+    "held": false
+   },
+   {
+    "factor": "Rule: Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]",
+    "side": "down",
+    "h1_obs": 94,
+    "h1_exp": 77.2,
+    "h1_lift": 1.22,
+    "h1_p": 0.034744119508614224,
+    "h2_obs": 61,
+    "h2_exp": 60.8,
+    "h2_lift": 1.0,
+    "held": true
+   },
+   {
+    "factor": "State: Jupiter in Capricorn",
+    "side": "any",
+    "h1_obs": 37,
+    "h1_exp": 27.4,
+    "h1_lift": 1.35,
+    "h1_p": 0.0470774682592755,
+    "h2_obs": 17,
+    "h2_exp": 15.2,
+    "h2_lift": 1.12,
+    "held": true
+   },
+   {
+    "factor": "State: Jupiter in Capricorn",
+    "side": "up",
+    "h1_obs": 20,
+    "h1_exp": 12.6,
+    "h1_lift": 1.59,
+    "h1_p": 0.03172985253522287,
+    "h2_obs": 10,
+    "h2_exp": 6.8,
+    "h2_lift": 1.47,
+    "held": true
+   },
+   {
+    "factor": "State: Jupiter with Rahu",
+    "side": "up",
+    "h1_obs": 23,
+    "h1_exp": 14.4,
+    "h1_lift": 1.6,
+    "h1_p": 0.021663601181898362,
+    "h2_obs": 6,
+    "h2_exp": 6.3,
+    "h2_lift": 0.95,
+    "held": false
+   },
+   {
+    "factor": "State: Sun in a Mars nakshatra",
+    "side": "down",
+    "h1_obs": 25,
+    "h1_exp": 16.7,
+    "h1_lift": 1.5,
+    "h1_p": 0.034689508067074604,
+    "h2_obs": 12,
+    "h2_exp": 11.2,
+    "h2_lift": 1.07,
+    "held": true
+   },
+   {
+    "factor": "State: Venus retrograde",
+    "side": "any",
+    "h1_obs": 23,
+    "h1_exp": 15.6,
+    "h1_lift": 1.47,
+    "h1_p": 0.04757497023742674,
+    "h2_obs": 16,
+    "h2_exp": 20.4,
+    "h2_lift": 0.78,
+    "held": false
+   }
+  ]
+ },
  "factors": [
   {
    "factor": "Event: Jupiter changes nakshatra",
@@ -24,9 +311,15 @@
    "lift_down": 1.27,
    "p_down": 0.14834775247446796,
    "up_share": 52.1,
-   "q": 0.6894014583150879,
-   "q_up": 0.8845669452901085,
-   "q_down": 1.0
+   "q": 0.7041322587064361,
+   "q_up": 0.9034679483945981,
+   "q_down": 1.0,
+   "lift_h1": 1.51,
+   "lift_up_h1": 1.8,
+   "lift_down_h1": 1.26,
+   "lift_h2": 1.27,
+   "lift_up_h2": 1.22,
+   "lift_down_h2": 1.31
   },
   {
    "factor": "Event: Jupiter changes sign",
@@ -46,31 +339,71 @@
    "lift_down": 1.4,
    "p_down": 0.17247324486654303,
    "up_share": 52.2,
-   "q": 0.6894014583150879,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q": 0.7041322587064361,
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.42,
+   "lift_up_h1": 2.23,
+   "lift_down_h1": 0.77,
+   "lift_h2": 1.63,
+   "lift_up_h2": 1.24,
+   "lift_down_h2": 2.02
   },
   {
    "factor": "Event: Jupiter combustion begins",
-   "episodes": 12,
-   "days": 226,
-   "share": 3.5,
-   "big": 12,
-   "exp_big": 15.9,
-   "lift": 0.75,
-   "p": 0.8697666333740548,
-   "up": 5,
-   "exp_up": 7.6,
-   "lift_up": 0.66,
-   "p_up": 0.873434233430665,
-   "down": 7,
-   "exp_down": 8.4,
-   "lift_down": 0.84,
-   "p_down": 0.7284356657515922,
-   "up_share": 41.7,
+   "episodes": 7,
+   "days": 114,
+   "share": 1.7,
+   "big": 7,
+   "exp_big": 7.6,
+   "lift": 0.92,
+   "p": 0.6336683610063627,
+   "up": 2,
+   "exp_up": 3.6,
+   "lift_up": 0.56,
+   "p_up": 0.8726643695879333,
+   "down": 5,
+   "exp_down": 4.0,
+   "lift_down": 1.25,
+   "p_down": 0.3719219193653496,
+   "up_share": 28.6,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 1.21,
+   "lift_up_h1": 1.07,
+   "lift_down_h1": 1.34,
+   "lift_h2": 0.58,
+   "lift_up_h2": 0.0,
+   "lift_down_h2": 1.15
+  },
+  {
+   "factor": "Event: Jupiter leaves combustion",
+   "episodes": 5,
+   "days": 112,
+   "share": 1.7,
+   "big": 5,
+   "exp_big": 8.3,
+   "lift": 0.6,
+   "p": 0.9186360735037582,
+   "up": 3,
+   "exp_up": 4.0,
+   "lift_up": 0.75,
+   "p_up": 0.7609245875434826,
+   "down": 2,
+   "exp_down": 4.4,
+   "lift_down": 0.46,
+   "p_down": 0.9312115492455425,
+   "up_share": 60.0,
+   "q": 1.0,
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.67,
+   "lift_up_h1": 0.97,
+   "lift_down_h1": 0.42,
+   "lift_h2": 0.52,
+   "lift_up_h2": 0.52,
+   "lift_down_h2": 0.52
   },
   {
    "factor": "Event: Jupiter stations direct",
@@ -91,8 +424,14 @@
    "p_down": 0.46235743511113003,
    "up_share": 44.4,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.27,
+   "lift_up_h1": 0.94,
+   "lift_down_h1": 1.54,
+   "lift_h2": 0.8,
+   "lift_up_h2": 1.03,
+   "lift_down_h2": 0.54
   },
   {
    "factor": "Event: Jupiter stations retrograde",
@@ -113,8 +452,14 @@
    "p_down": 0.7662036285496913,
    "up_share": 66.7,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.79,
+   "lift_up_h1": 1.28,
+   "lift_down_h1": 0.37,
+   "lift_h2": 1.92,
+   "lift_up_h2": 2.3,
+   "lift_down_h2": 1.54
   },
   {
    "factor": "Event: Ketu changes sign",
@@ -135,8 +480,14 @@
    "p_down": 0.353734375443973,
    "up_share": 33.3,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.74,
+   "lift_up_h1": 1.05,
+   "lift_down_h1": 0.47,
+   "lift_h2": 1.45,
+   "lift_up_h2": 0.0,
+   "lift_down_h2": 3.37
   },
   {
    "factor": "Event: Mars changes nakshatra",
@@ -157,8 +508,14 @@
    "p_down": 0.303877915909044,
    "up_share": 44.1,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.01,
+   "lift_up_h1": 0.95,
+   "lift_down_h1": 1.06,
+   "lift_h2": 1.0,
+   "lift_up_h2": 0.93,
+   "lift_down_h2": 1.07
   },
   {
    "factor": "Event: Mars changes sign",
@@ -179,30 +536,70 @@
    "p_down": 0.6661123867464802,
    "up_share": 48.4,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.01,
+   "lift_up_h1": 0.93,
+   "lift_down_h1": 1.09,
+   "lift_h2": 0.88,
+   "lift_up_h2": 1.03,
+   "lift_down_h2": 0.74
   },
   {
    "factor": "Event: Mars combustion begins",
-   "episodes": 4,
-   "days": 120,
-   "share": 1.8,
-   "big": 6,
-   "exp_big": 9.6,
-   "lift": 0.62,
-   "p": 0.91649691642815,
-   "up": 2,
-   "exp_up": 4.4,
-   "lift_up": 0.45,
-   "p_up": 0.9354859157601616,
-   "down": 4,
-   "exp_down": 5.2,
-   "lift_down": 0.77,
-   "p_down": 0.758468466096121,
-   "up_share": 33.3,
+   "episodes": 1,
+   "days": 60,
+   "share": 0.9,
+   "big": 1,
+   "exp_big": 4.6,
+   "lift": 0.22,
+   "p": 0.9902474394236869,
+   "up": 0,
+   "exp_up": 2.2,
+   "lift_up": 0.0,
+   "p_up": 1.0,
+   "down": 1,
+   "exp_down": 2.4,
+   "lift_down": 0.42,
+   "p_down": 0.9096877543058381,
+   "up_share": 0.0,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 0.32,
+   "lift_up_h1": 0.0,
+   "lift_down_h1": 0.59,
+   "lift_h2": 0.0,
+   "lift_up_h2": 0.0,
+   "lift_down_h2": 0.0
+  },
+  {
+   "factor": "Event: Mars leaves combustion",
+   "episodes": 3,
+   "days": 60,
+   "share": 0.9,
+   "big": 5,
+   "exp_big": 5.0,
+   "lift": 1.0,
+   "p": 0.5553841175775331,
+   "up": 2,
+   "exp_up": 2.2,
+   "lift_up": 0.91,
+   "p_up": 0.6473034251204558,
+   "down": 3,
+   "exp_down": 2.8,
+   "lift_down": 1.08,
+   "p_down": 0.523089968904817,
+   "up_share": 40.0,
+   "q": 1.0,
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.68,
+   "lift_up_h1": 1.47,
+   "lift_down_h1": 1.85,
+   "lift_h2": 0.0,
+   "lift_up_h2": 0.0,
+   "lift_down_h2": 0.0
   },
   {
    "factor": "Event: Mars stations direct",
@@ -224,7 +621,13 @@
    "up_share": null,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 0.0,
+   "lift_up_h1": 0.0,
+   "lift_down_h1": 0.0,
+   "lift_h2": 0.0,
+   "lift_up_h2": 0.0,
+   "lift_down_h2": 0.0
   },
   {
    "factor": "Event: Mars stations retrograde",
@@ -244,9 +647,15 @@
    "lift_down": 2.43,
    "p_down": 0.08492885829640684,
    "up_share": 33.3,
-   "q": 0.8909292583940955,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q": 0.9099662083597815,
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 2.88,
+   "lift_up_h1": 1.22,
+   "lift_down_h1": 4.36,
+   "lift_h2": 0.71,
+   "lift_up_h2": 1.48,
+   "lift_down_h2": 0.0
   },
   {
    "factor": "Event: Mars-Jupiter conjunction",
@@ -267,8 +676,14 @@
    "p_down": 0.7722963820270634,
    "up_share": 71.4,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.08,
+   "lift_up_h1": 2.37,
+   "lift_down_h1": 0.0,
+   "lift_h2": 1.64,
+   "lift_up_h2": 1.72,
+   "lift_down_h2": 1.57
   },
   {
    "factor": "Event: Mars-Jupiter opposition",
@@ -290,7 +705,13 @@
    "up_share": 33.3,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 0.48,
+   "lift_up_h1": 0.0,
+   "lift_down_h1": 0.91,
+   "lift_h2": 0.55,
+   "lift_up_h2": 1.14,
+   "lift_down_h2": 0.0
   },
   {
    "factor": "Event: Mars-Neptune conjunction",
@@ -312,7 +733,13 @@
    "up_share": 25.0,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 1.27,
+   "lift_up_h1": 0.95,
+   "lift_down_h1": 1.53,
+   "lift_h2": 0.4,
+   "lift_up_h2": 0.0,
+   "lift_down_h2": 0.77
   },
   {
    "factor": "Event: Mars-Neptune opposition",
@@ -333,8 +760,14 @@
    "p_down": 0.7329287816366986,
    "up_share": 60.0,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.18,
+   "lift_up_h1": 1.99,
+   "lift_down_h1": 0.53,
+   "lift_h2": 0.7,
+   "lift_up_h2": 0.0,
+   "lift_down_h2": 1.48
   },
   {
    "factor": "Event: Mars-Pluto conjunction",
@@ -354,9 +787,15 @@
    "lift_down": 0.8,
    "p_down": 0.7149800341925069,
    "up_share": 80.0,
-   "q": 0.6894014583150879,
-   "q_up": 0.3530125885053216,
-   "q_down": 1.0
+   "q": 0.7041322587064361,
+   "q_up": 0.36055559253321307,
+   "q_down": 1.0,
+   "lift_h1": 1.39,
+   "lift_up_h1": 2.01,
+   "lift_down_h1": 0.86,
+   "lift_h2": 2.67,
+   "lift_up_h2": 4.72,
+   "lift_down_h2": 0.74
   },
   {
    "factor": "Event: Mars-Pluto opposition",
@@ -377,8 +816,14 @@
    "p_down": 0.9390590374449725,
    "up_share": 71.4,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.76,
+   "lift_up_h1": 1.67,
+   "lift_down_h1": 0.0,
+   "lift_h2": 0.95,
+   "lift_up_h2": 0.66,
+   "lift_down_h2": 1.23
   },
   {
    "factor": "Event: Mars-Saturn conjunction",
@@ -399,8 +844,14 @@
    "p_down": 0.7915030159381585,
    "up_share": 50.0,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.33,
+   "lift_up_h1": 0.71,
+   "lift_down_h1": 0.0,
+   "lift_h2": 1.15,
+   "lift_up_h2": 0.79,
+   "lift_down_h2": 1.48
   },
   {
    "factor": "Event: Mars-Saturn opposition",
@@ -422,7 +873,13 @@
    "up_share": 20.0,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 1.24,
+   "lift_up_h1": 0.0,
+   "lift_down_h1": 2.23,
+   "lift_h2": 1.4,
+   "lift_up_h2": 1.33,
+   "lift_down_h2": 1.48
   },
   {
    "factor": "Event: Mars-Uranus conjunction",
@@ -444,7 +901,13 @@
    "up_share": null,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 0.0,
+   "lift_up_h1": 0.0,
+   "lift_down_h1": 0.0,
+   "lift_h2": 0.0,
+   "lift_up_h2": 0.0,
+   "lift_down_h2": 0.0
   },
   {
    "factor": "Event: Mars-Uranus opposition",
@@ -466,7 +929,13 @@
    "up_share": 0.0,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 1.0,
+   "lift_up_h1": 0.0,
+   "lift_down_h1": 1.88,
+   "lift_h2": 0.0,
+   "lift_up_h2": 0.0,
+   "lift_down_h2": 0.0
   },
   {
    "factor": "Event: Mercury changes sign",
@@ -487,30 +956,70 @@
    "p_down": 0.4088358065671962,
    "up_share": 49.3,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.02,
+   "lift_up_h1": 0.97,
+   "lift_down_h1": 1.07,
+   "lift_h2": 1.14,
+   "lift_up_h2": 1.32,
+   "lift_down_h2": 0.97
   },
   {
    "factor": "Event: Mercury combustion begins",
-   "episodes": 74,
-   "days": 1580,
-   "share": 24.2,
-   "big": 99,
-   "exp_big": 115.7,
-   "lift": 0.86,
-   "p": 0.9482374858527253,
-   "up": 50,
-   "exp_up": 55.1,
+   "episodes": 36,
+   "days": 787,
+   "share": 12.1,
+   "big": 45,
+   "exp_big": 57.4,
+   "lift": 0.78,
+   "p": 0.9602498988981704,
+   "up": 25,
+   "exp_up": 27.4,
    "lift_up": 0.91,
-   "p_up": 0.7704261838262376,
-   "down": 49,
-   "exp_down": 60.7,
-   "lift_down": 0.81,
-   "p_down": 0.9448142979234065,
-   "up_share": 50.5,
+   "p_up": 0.7017438404261176,
+   "down": 20,
+   "exp_down": 30.0,
+   "lift_down": 0.67,
+   "p_down": 0.978461190049184,
+   "up_share": 55.6,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.81,
+   "lift_up_h1": 1.04,
+   "lift_down_h1": 0.61,
+   "lift_h2": 0.75,
+   "lift_up_h2": 0.75,
+   "lift_down_h2": 0.74
+  },
+  {
+   "factor": "Event: Mercury leaves combustion",
+   "episodes": 40,
+   "days": 793,
+   "share": 12.2,
+   "big": 54,
+   "exp_big": 58.3,
+   "lift": 0.93,
+   "p": 0.7309674544794327,
+   "up": 25,
+   "exp_up": 27.7,
+   "lift_up": 0.9,
+   "p_up": 0.7202468884798512,
+   "down": 29,
+   "exp_down": 30.6,
+   "lift_down": 0.95,
+   "p_down": 0.6398531140668753,
+   "up_share": 46.3,
+   "q": 1.0,
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.99,
+   "lift_up_h1": 0.98,
+   "lift_down_h1": 0.99,
+   "lift_h2": 0.85,
+   "lift_up_h2": 0.81,
+   "lift_down_h2": 0.89
   },
   {
    "factor": "Event: Mercury stations direct",
@@ -531,8 +1040,14 @@
    "p_down": 0.13484475391093864,
    "up_share": 35.5,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.91,
+   "lift_up_h1": 0.81,
+   "lift_down_h1": 1.0,
+   "lift_h2": 1.32,
+   "lift_up_h2": 0.83,
+   "lift_down_h2": 1.8
   },
   {
    "factor": "Event: Mercury stations retrograde",
@@ -554,7 +1069,13 @@
    "up_share": 50.0,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 0.74,
+   "lift_up_h1": 0.67,
+   "lift_down_h1": 0.79,
+   "lift_h2": 0.49,
+   "lift_up_h2": 0.65,
+   "lift_down_h2": 0.33
   },
   {
    "factor": "Event: Mercury-Jupiter conjunction",
@@ -575,8 +1096,14 @@
    "p_down": 0.5609854473481657,
    "up_share": 41.7,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.14,
+   "lift_up_h1": 1.21,
+   "lift_down_h1": 1.08,
+   "lift_h2": 0.43,
+   "lift_up_h2": 0.0,
+   "lift_down_h2": 0.82
   },
   {
    "factor": "Event: Mercury-Jupiter opposition",
@@ -597,8 +1124,14 @@
    "p_down": 0.8671589313071342,
    "up_share": 66.7,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.26,
+   "lift_up_h1": 1.85,
+   "lift_down_h1": 0.77,
+   "lift_h2": 0.69,
+   "lift_up_h2": 1.01,
+   "lift_down_h2": 0.42
   },
   {
    "factor": "Event: Mercury-Mars conjunction",
@@ -618,9 +1151,15 @@
    "lift_down": 1.52,
    "p_down": 0.07584626046067722,
    "up_share": 37.5,
-   "q": 0.9624956343380309,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q": 0.9830617803708949,
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.13,
+   "lift_up_h1": 0.76,
+   "lift_down_h1": 1.43,
+   "lift_h2": 1.64,
+   "lift_up_h2": 1.54,
+   "lift_down_h2": 1.73
   },
   {
    "factor": "Event: Mercury-Mars opposition",
@@ -640,9 +1179,15 @@
    "lift_down": 2.88,
    "p_down": 0.0524861440057065,
    "up_share": 33.3,
-   "q": 0.8245562466437256,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q": 0.8421749698626086,
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.8,
+   "lift_up_h1": 2.01,
+   "lift_down_h1": 1.63,
+   "lift_h2": 2.29,
+   "lift_up_h2": 1.03,
+   "lift_down_h2": 3.87
   },
   {
    "factor": "Event: Mercury-Neptune conjunction",
@@ -663,8 +1208,14 @@
    "p_down": 0.9043154045733849,
    "up_share": 63.6,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.64,
+   "lift_up_h1": 0.55,
+   "lift_down_h1": 0.72,
+   "lift_h2": 1.13,
+   "lift_up_h2": 1.83,
+   "lift_down_h2": 0.39
   },
   {
    "factor": "Event: Mercury-Neptune opposition",
@@ -685,8 +1236,14 @@
    "p_down": 0.3501730156067787,
    "up_share": 46.2,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.65,
+   "lift_up_h1": 1.67,
+   "lift_down_h1": 1.64,
+   "lift_h2": 0.49,
+   "lift_up_h2": 0.49,
+   "lift_down_h2": 0.49
   },
   {
    "factor": "Event: Mercury-Pluto conjunction",
@@ -707,8 +1264,14 @@
    "p_down": 0.4885633295577495,
    "up_share": 50.0,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.23,
+   "lift_up_h1": 1.58,
+   "lift_down_h1": 0.95,
+   "lift_h2": 1.02,
+   "lift_up_h2": 0.84,
+   "lift_down_h2": 1.2
   },
   {
    "factor": "Event: Mercury-Pluto opposition",
@@ -730,7 +1293,13 @@
    "up_share": 50.0,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 0.39,
+   "lift_up_h1": 0.0,
+   "lift_down_h1": 0.72,
+   "lift_h2": 0.5,
+   "lift_up_h2": 1.0,
+   "lift_down_h2": 0.0
   },
   {
    "factor": "Event: Mercury-Saturn conjunction",
@@ -750,9 +1319,15 @@
    "lift_down": 1.63,
    "p_down": 0.09327819647629365,
    "up_share": 37.5,
-   "q": 0.9813968992389931,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q": 1.0,
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.68,
+   "lift_up_h1": 1.53,
+   "lift_down_h1": 1.8,
+   "lift_h2": 0.86,
+   "lift_up_h2": 0.45,
+   "lift_down_h2": 1.26
   },
   {
    "factor": "Event: Mercury-Saturn opposition",
@@ -774,7 +1349,13 @@
    "up_share": 22.2,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 1.06,
+   "lift_up_h1": 0.39,
+   "lift_down_h1": 1.63,
+   "lift_h2": 0.74,
+   "lift_up_h2": 0.49,
+   "lift_down_h2": 0.99
   },
   {
    "factor": "Event: Mercury-Uranus conjunction",
@@ -796,7 +1377,13 @@
    "up_share": 33.3,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 0.79,
+   "lift_up_h1": 0.66,
+   "lift_down_h1": 0.9,
+   "lift_h2": 1.02,
+   "lift_up_h2": 0.51,
+   "lift_down_h2": 1.54
   },
   {
    "factor": "Event: Mercury-Uranus opposition",
@@ -817,8 +1404,14 @@
    "p_down": 0.8894180989933698,
    "up_share": 73.3,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.37,
+   "lift_up_h1": 2.14,
+   "lift_down_h1": 0.74,
+   "lift_h2": 0.95,
+   "lift_up_h2": 1.43,
+   "lift_down_h2": 0.41
   },
   {
    "factor": "Event: Mercury-Venus conjunction",
@@ -839,8 +1432,14 @@
    "p_down": 0.965869246919616,
    "up_share": 65.0,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.92,
+   "lift_up_h1": 1.38,
+   "lift_down_h1": 0.52,
+   "lift_h2": 0.77,
+   "lift_up_h2": 0.94,
+   "lift_down_h2": 0.63
   },
   {
    "factor": "Event: Neptune changes sign",
@@ -861,8 +1460,14 @@
    "p_down": 0.7183539959716129,
    "up_share": 60.0,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.18,
+   "lift_up_h1": 1.52,
+   "lift_down_h1": 0.88,
+   "lift_h2": 0.0,
+   "lift_up_h2": 0.0,
+   "lift_down_h2": 0.0
   },
   {
    "factor": "Event: Neptune stations direct",
@@ -882,9 +1487,15 @@
    "lift_down": 0.68,
    "p_down": 0.8135745037258211,
    "up_share": 75.0,
-   "q": 0.9870620623378692,
-   "q_up": 0.8845669452901085,
-   "q_down": 1.0
+   "q": 1.0,
+   "q_up": 0.9034679483945981,
+   "q_down": 1.0,
+   "lift_h1": 1.28,
+   "lift_up_h1": 1.99,
+   "lift_down_h1": 0.67,
+   "lift_h2": 1.79,
+   "lift_up_h2": 2.84,
+   "lift_down_h2": 0.72
   },
   {
    "factor": "Event: Neptune stations retrograde",
@@ -905,8 +1516,14 @@
    "p_down": 0.35581672781566986,
    "up_share": 33.3,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.35,
+   "lift_up_h1": 0.84,
+   "lift_down_h1": 1.78,
+   "lift_h2": 0.5,
+   "lift_up_h2": 0.49,
+   "lift_down_h2": 0.5
   },
   {
    "factor": "Event: Pluto stations direct",
@@ -927,8 +1544,14 @@
    "p_down": 0.3884073814538028,
    "up_share": 53.8,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.65,
+   "lift_up_h1": 1.6,
+   "lift_down_h1": 1.69,
+   "lift_h2": 0.99,
+   "lift_up_h2": 1.48,
+   "lift_down_h2": 0.49
   },
   {
    "factor": "Event: Pluto stations retrograde",
@@ -948,9 +1571,15 @@
    "lift_down": 2.19,
    "p_down": 0.014152317154362049,
    "up_share": 31.2,
-   "q": 0.6894014583150879,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q": 0.7041322587064361,
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.28,
+   "lift_up_h1": 0.4,
+   "lift_down_h1": 2.02,
+   "lift_h2": 2.22,
+   "lift_up_h2": 1.98,
+   "lift_down_h2": 2.46
   },
   {
    "factor": "Event: Rahu changes nakshatra",
@@ -972,7 +1601,13 @@
    "up_share": 28.6,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 0.78,
+   "lift_up_h1": 0.34,
+   "lift_down_h1": 1.15,
+   "lift_h2": 0.36,
+   "lift_up_h2": 0.36,
+   "lift_down_h2": 0.37
   },
   {
    "factor": "Event: Rahu changes sign",
@@ -993,8 +1628,14 @@
    "p_down": 0.353734375443973,
    "up_share": 33.3,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.74,
+   "lift_up_h1": 1.05,
+   "lift_down_h1": 0.47,
+   "lift_h2": 1.45,
+   "lift_up_h2": 0.0,
+   "lift_down_h2": 3.37
   },
   {
    "factor": "Event: Saturn changes nakshatra",
@@ -1015,8 +1656,14 @@
    "p_down": 0.8496633434150079,
    "up_share": 61.1,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.1,
+   "lift_up_h1": 1.23,
+   "lift_down_h1": 1.0,
+   "lift_h2": 0.84,
+   "lift_up_h2": 1.43,
+   "lift_down_h2": 0.27
   },
   {
    "factor": "Event: Saturn changes sign",
@@ -1037,30 +1684,70 @@
    "p_down": 0.38386437942190166,
    "up_share": 50.0,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.42,
+   "lift_up_h1": 2.08,
+   "lift_down_h1": 0.87,
+   "lift_h2": 1.01,
+   "lift_up_h2": 0.0,
+   "lift_down_h2": 2.4
   },
   {
    "factor": "Event: Saturn combustion begins",
-   "episodes": 18,
-   "days": 242,
-   "share": 3.7,
-   "big": 29,
-   "exp_big": 18.5,
-   "lift": 1.57,
-   "p": 0.01455501132309256,
-   "up": 14,
-   "exp_up": 8.8,
-   "lift_up": 1.6,
-   "p_up": 0.062228423323681614,
-   "down": 15,
-   "exp_down": 9.8,
-   "lift_down": 1.54,
-   "p_down": 0.07194830453091516,
-   "up_share": 48.3,
-   "q": 0.6894014583150879,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "episodes": 11,
+   "days": 121,
+   "share": 1.9,
+   "big": 17,
+   "exp_big": 9.1,
+   "lift": 1.86,
+   "p": 0.01254891912346523,
+   "up": 6,
+   "exp_up": 4.3,
+   "lift_up": 1.39,
+   "p_up": 0.26382788117588896,
+   "down": 11,
+   "exp_down": 4.8,
+   "lift_down": 2.28,
+   "p_down": 0.010756595323217488,
+   "up_share": 35.3,
+   "q": 0.7041322587064361,
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 2.21,
+   "lift_up_h1": 2.01,
+   "lift_down_h1": 2.38,
+   "lift_h2": 1.37,
+   "lift_up_h2": 0.56,
+   "lift_down_h2": 2.17
+  },
+  {
+   "factor": "Event: Saturn leaves combustion",
+   "episodes": 7,
+   "days": 121,
+   "share": 1.9,
+   "big": 12,
+   "exp_big": 9.4,
+   "lift": 1.28,
+   "p": 0.2372967731618556,
+   "up": 8,
+   "exp_up": 4.5,
+   "lift_up": 1.8,
+   "p_up": 0.0827844107878053,
+   "down": 4,
+   "exp_down": 4.9,
+   "lift_down": 0.81,
+   "p_down": 0.7272400035102654,
+   "up_share": 66.7,
+   "q": 1.0,
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.91,
+   "lift_up_h1": 2.9,
+   "lift_down_h1": 1.06,
+   "lift_h2": 0.47,
+   "lift_up_h2": 0.48,
+   "lift_down_h2": 0.46
   },
   {
    "factor": "Event: Saturn stations direct",
@@ -1081,8 +1768,14 @@
    "p_down": 0.9315784681693773,
    "up_share": 71.4,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.92,
+   "lift_up_h1": 1.2,
+   "lift_down_h1": 0.68,
+   "lift_h2": 0.71,
+   "lift_up_h2": 1.42,
+   "lift_down_h2": 0.0
   },
   {
    "factor": "Event: Saturn stations retrograde",
@@ -1104,7 +1797,13 @@
    "up_share": 50.0,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 0.0,
+   "lift_up_h1": 0.0,
+   "lift_down_h1": 0.0,
+   "lift_h2": 0.5,
+   "lift_up_h2": 0.51,
+   "lift_down_h2": 0.5
   },
   {
    "factor": "Event: Sun changes sign",
@@ -1125,8 +1824,14 @@
    "p_down": 0.4202499741595219,
    "up_share": 45.5,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.99,
+   "lift_up_h1": 0.92,
+   "lift_down_h1": 1.06,
+   "lift_h2": 1.0,
+   "lift_up_h2": 1.0,
+   "lift_down_h2": 1.0
   },
   {
    "factor": "Event: Sun-Jupiter conjunction",
@@ -1147,8 +1852,14 @@
    "p_down": 0.9112904478179786,
    "up_share": 60.0,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.99,
+   "lift_up_h1": 1.1,
+   "lift_down_h1": 0.9,
+   "lift_h2": 0.29,
+   "lift_up_h2": 0.58,
+   "lift_down_h2": 0.0
   },
   {
    "factor": "Event: Sun-Jupiter opposition",
@@ -1169,8 +1880,14 @@
    "p_down": 0.9354548872468236,
    "up_share": 71.4,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.82,
+   "lift_up_h1": 1.37,
+   "lift_down_h1": 0.38,
+   "lift_h2": 0.87,
+   "lift_up_h2": 1.2,
+   "lift_down_h2": 0.56
   },
   {
    "factor": "Event: Sun-Mars conjunction",
@@ -1191,8 +1908,14 @@
    "p_down": 0.5580469642116874,
    "up_share": 50.0,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.13,
+   "lift_up_h1": 1.23,
+   "lift_down_h1": 1.05,
+   "lift_h2": 1.04,
+   "lift_up_h2": 1.08,
+   "lift_down_h2": 1.01
   },
   {
    "factor": "Event: Sun-Mars opposition",
@@ -1213,8 +1936,14 @@
    "p_down": 0.4542214463301577,
    "up_share": 33.3,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 2.41,
+   "lift_up_h1": 1.78,
+   "lift_down_h1": 2.93,
+   "lift_h2": 0.0,
+   "lift_up_h2": 0.0,
+   "lift_down_h2": 0.0
   },
   {
    "factor": "Event: Sun-Mercury conjunction",
@@ -1235,8 +1964,14 @@
    "p_down": 0.6285875853315277,
    "up_share": 52.5,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.16,
+   "lift_up_h1": 1.2,
+   "lift_down_h1": 1.12,
+   "lift_h2": 0.91,
+   "lift_up_h2": 1.11,
+   "lift_down_h2": 0.71
   },
   {
    "factor": "Event: Sun-Neptune conjunction",
@@ -1257,8 +1992,14 @@
    "p_down": 0.7232244562819015,
    "up_share": 66.7,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.13,
+   "lift_up_h1": 1.65,
+   "lift_down_h1": 0.7,
+   "lift_h2": 1.48,
+   "lift_up_h2": 1.98,
+   "lift_down_h2": 0.99
   },
   {
    "factor": "Event: Sun-Neptune opposition",
@@ -1280,7 +2021,13 @@
    "up_share": 27.3,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 1.64,
+   "lift_up_h1": 1.2,
+   "lift_down_h1": 2.02,
+   "lift_h2": 0.5,
+   "lift_up_h2": 0.0,
+   "lift_down_h2": 1.01
   },
   {
    "factor": "Event: Sun-Pluto conjunction",
@@ -1301,8 +2048,14 @@
    "p_down": 0.9327276056371697,
    "up_share": 60.0,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.67,
+   "lift_up_h1": 0.49,
+   "lift_down_h1": 0.83,
+   "lift_h2": 0.5,
+   "lift_up_h2": 1.03,
+   "lift_down_h2": 0.0
   },
   {
    "factor": "Event: Sun-Pluto opposition",
@@ -1323,8 +2076,14 @@
    "p_down": 0.7167864188297659,
    "up_share": 42.9,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.12,
+   "lift_up_h1": 1.22,
+   "lift_down_h1": 1.04,
+   "lift_h2": 0.26,
+   "lift_up_h2": 0.0,
+   "lift_down_h2": 0.51
   },
   {
    "factor": "Event: Sun-Saturn conjunction",
@@ -1345,8 +2104,14 @@
    "p_down": 0.7037298815192972,
    "up_share": 50.0,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.78,
+   "lift_up_h1": 0.85,
+   "lift_down_h1": 0.71,
+   "lift_h2": 1.03,
+   "lift_up_h2": 1.03,
+   "lift_down_h2": 1.02
   },
   {
    "factor": "Event: Sun-Saturn opposition",
@@ -1367,8 +2132,14 @@
    "p_down": 0.9506807636230619,
    "up_share": 60.0,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.78,
+   "lift_up_h1": 0.84,
+   "lift_down_h1": 0.73,
+   "lift_h2": 0.25,
+   "lift_up_h2": 0.5,
+   "lift_down_h2": 0.0
   },
   {
    "factor": "Event: Sun-Uranus conjunction",
@@ -1390,7 +2161,13 @@
    "up_share": 14.3,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 1.12,
+   "lift_up_h1": 0.41,
+   "lift_down_h1": 1.73,
+   "lift_h2": 0.27,
+   "lift_up_h2": 0.0,
+   "lift_down_h2": 0.53
   },
   {
    "factor": "Event: Sun-Uranus opposition",
@@ -1410,9 +2187,15 @@
    "lift_down": 2.02,
    "p_down": 0.038101686593630224,
    "up_share": 50.0,
-   "q": 0.6772354230233806,
-   "q_up": 0.8845669452901085,
-   "q_down": 1.0
+   "q": 0.691706265395675,
+   "q_up": 0.9034679483945981,
+   "q_down": 1.0,
+   "lift_h1": 2.92,
+   "lift_up_h1": 2.79,
+   "lift_down_h1": 3.03,
+   "lift_h2": 0.68,
+   "lift_up_h2": 1.34,
+   "lift_down_h2": 0.0
   },
   {
    "factor": "Event: Sun-Venus conjunction",
@@ -1434,7 +2217,13 @@
    "up_share": 30.0,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 0.78,
+   "lift_up_h1": 0.34,
+   "lift_down_h1": 1.16,
+   "lift_h2": 0.87,
+   "lift_up_h2": 0.7,
+   "lift_down_h2": 1.05
   },
   {
    "factor": "Event: Uranus changes sign",
@@ -1455,8 +2244,14 @@
    "p_down": 0.8413365095866356,
    "up_share": 66.7,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.03,
+   "lift_up_h1": 1.09,
+   "lift_down_h1": 0.97,
+   "lift_h2": 0.68,
+   "lift_up_h2": 1.52,
+   "lift_down_h2": 0.0
   },
   {
    "factor": "Event: Uranus stations direct",
@@ -1477,8 +2272,14 @@
    "p_down": 0.8488091246285487,
    "up_share": 57.1,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.09,
+   "lift_up_h1": 1.44,
+   "lift_down_h1": 0.81,
+   "lift_h2": 0.42,
+   "lift_up_h2": 0.44,
+   "lift_down_h2": 0.4
   },
   {
    "factor": "Event: Uranus stations retrograde",
@@ -1499,8 +2300,14 @@
    "p_down": 0.8510579660436046,
    "up_share": 50.0,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.96,
+   "lift_up_h1": 0.83,
+   "lift_down_h1": 1.06,
+   "lift_h2": 0.26,
+   "lift_up_h2": 0.52,
+   "lift_down_h2": 0.0
   },
   {
    "factor": "Event: Venus changes sign",
@@ -1522,29 +2329,69 @@
    "up_share": 46.5,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 0.83,
+   "lift_up_h1": 0.8,
+   "lift_down_h1": 0.86,
+   "lift_h2": 0.88,
+   "lift_up_h2": 0.9,
+   "lift_down_h2": 0.86
   },
   {
    "factor": "Event: Venus combustion begins",
-   "episodes": 14,
-   "days": 306,
-   "share": 4.7,
-   "big": 20,
-   "exp_big": 22.8,
-   "lift": 0.88,
-   "p": 0.7480686283977149,
-   "up": 8,
-   "exp_up": 11.0,
-   "lift_up": 0.73,
-   "p_up": 0.8537317404465607,
-   "down": 12,
-   "exp_down": 11.8,
-   "lift_down": 1.01,
-   "p_down": 0.5183216192972541,
+   "episodes": 9,
+   "days": 162,
+   "share": 2.5,
+   "big": 10,
+   "exp_big": 12.2,
+   "lift": 0.82,
+   "p": 0.7739273130482635,
+   "up": 4,
+   "exp_up": 6.0,
+   "lift_up": 0.67,
+   "p_up": 0.8473136633301888,
+   "down": 6,
+   "exp_down": 6.2,
+   "lift_down": 0.97,
+   "p_down": 0.5871127779943411,
    "up_share": 40.0,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 0.85,
+   "lift_up_h1": 0.3,
+   "lift_down_h1": 1.35,
+   "lift_h2": 0.78,
+   "lift_up_h2": 1.13,
+   "lift_down_h2": 0.4
+  },
+  {
+   "factor": "Event: Venus leaves combustion",
+   "episodes": 8,
+   "days": 162,
+   "share": 2.5,
+   "big": 11,
+   "exp_big": 12.1,
+   "lift": 0.91,
+   "p": 0.6632674901601778,
+   "up": 4,
+   "exp_up": 5.8,
+   "lift_up": 0.69,
+   "p_up": 0.8286890827356528,
+   "down": 7,
+   "exp_down": 6.3,
+   "lift_down": 1.11,
+   "p_down": 0.44409892648918214,
+   "up_share": 36.4,
+   "q": 1.0,
+   "q_up": 1.0,
+   "q_down": 1.0,
+   "lift_h1": 0.95,
+   "lift_up_h1": 0.34,
+   "lift_down_h1": 1.46,
+   "lift_h2": 0.87,
+   "lift_up_h2": 1.05,
+   "lift_down_h2": 0.7
   },
   {
    "factor": "Event: Venus stations direct",
@@ -1564,9 +2411,15 @@
    "lift_down": 1.65,
    "p_down": 0.18959043078595184,
    "up_share": 54.5,
-   "q": 0.8141466071544369,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q": 0.8315429021791043,
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.74,
+   "lift_up_h1": 2.24,
+   "lift_down_h1": 1.3,
+   "lift_h2": 1.86,
+   "lift_up_h2": 1.74,
+   "lift_down_h2": 2.01
   },
   {
    "factor": "Event: Venus stations retrograde",
@@ -1587,8 +2440,14 @@
    "p_down": 0.5628586866777534,
    "up_share": 50.0,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 2.41,
+   "lift_up_h1": 3.3,
+   "lift_down_h1": 1.71,
+   "lift_h2": 0.25,
+   "lift_up_h2": 0.0,
+   "lift_down_h2": 0.49
   },
   {
    "factor": "Event: Venus-Jupiter conjunction",
@@ -1610,7 +2469,13 @@
    "up_share": 22.2,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 0.71,
+   "lift_up_h1": 0.38,
+   "lift_down_h1": 1.0,
+   "lift_h2": 1.24,
+   "lift_up_h2": 0.5,
+   "lift_down_h2": 1.97
   },
   {
    "factor": "Event: Venus-Jupiter opposition",
@@ -1631,8 +2496,14 @@
    "p_down": 0.6309788402067189,
    "up_share": 50.0,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.66,
+   "lift_up_h1": 0.0,
+   "lift_down_h1": 1.2,
+   "lift_h2": 1.3,
+   "lift_up_h2": 2.25,
+   "lift_down_h2": 0.49
   },
   {
    "factor": "Event: Venus-Mars conjunction",
@@ -1653,8 +2524,14 @@
    "p_down": 0.47867623589378383,
    "up_share": 44.4,
    "q": 1.0,
-   "q_up": 0.9929485945875292,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.14,
+   "lift_up_h1": 0.85,
+   "lift_down_h1": 1.37,
+   "lift_h2": 0.99,
+   "lift_up_h2": 1.4,
+   "lift_down_h2": 0.63
   },
   {
    "factor": "Event: Venus-Mars opposition",
@@ -1675,8 +2552,14 @@
    "p_down": 0.5430641635700101,
    "up_share": 50.0,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.01,
+   "lift_up_h1": 1.06,
+   "lift_down_h1": 0.96,
+   "lift_h2": 1.33,
+   "lift_up_h2": 1.36,
+   "lift_down_h2": 1.29
   },
   {
    "factor": "Event: Venus-Neptune conjunction",
@@ -1697,8 +2580,14 @@
    "p_down": 0.9116665028484617,
    "up_share": 62.5,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.55,
+   "lift_up_h1": 0.8,
+   "lift_down_h1": 0.34,
+   "lift_h2": 0.95,
+   "lift_up_h2": 1.1,
+   "lift_down_h2": 0.79
   },
   {
    "factor": "Event: Venus-Neptune opposition",
@@ -1719,8 +2608,14 @@
    "p_down": 0.7797842320425192,
    "up_share": 50.0,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.34,
+   "lift_up_h1": 0.37,
+   "lift_down_h1": 0.3,
+   "lift_h2": 1.49,
+   "lift_up_h2": 1.49,
+   "lift_down_h2": 1.48
   },
   {
    "factor": "Event: Venus-Pluto conjunction",
@@ -1741,8 +2636,14 @@
    "p_down": 0.9954946185804172,
    "up_share": 83.3,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.46,
+   "lift_up_h1": 0.66,
+   "lift_down_h1": 0.29,
+   "lift_h2": 0.94,
+   "lift_up_h2": 2.26,
+   "lift_down_h2": 0.0
   },
   {
    "factor": "Event: Venus-Pluto opposition",
@@ -1763,8 +2664,14 @@
    "p_down": 0.966762812985229,
    "up_share": 75.0,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.84,
+   "lift_up_h1": 1.51,
+   "lift_down_h1": 0.3,
+   "lift_h2": 0.78,
+   "lift_up_h2": 1.04,
+   "lift_down_h2": 0.52
   },
   {
    "factor": "Event: Venus-Saturn conjunction",
@@ -1784,9 +2691,15 @@
    "lift_down": 1.99,
    "p_down": 0.02624572430654981,
    "up_share": 42.1,
-   "q": 0.6894014583150879,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q": 0.7041322587064361,
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.67,
+   "lift_up_h1": 1.12,
+   "lift_down_h1": 2.13,
+   "lift_h2": 1.99,
+   "lift_up_h2": 2.15,
+   "lift_down_h2": 1.81
   },
   {
    "factor": "Event: Venus-Saturn opposition",
@@ -1807,8 +2720,14 @@
    "p_down": 0.992467449448674,
    "up_share": 87.5,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.37,
+   "lift_up_h1": 0.81,
+   "lift_down_h1": 0.0,
+   "lift_h2": 1.5,
+   "lift_up_h2": 2.49,
+   "lift_down_h2": 0.5
   },
   {
    "factor": "Event: Venus-Uranus conjunction",
@@ -1829,8 +2748,14 @@
    "p_down": 0.5212008697194481,
    "up_share": 54.5,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.6,
+   "lift_up_h1": 2.65,
+   "lift_down_h1": 0.73,
+   "lift_h2": 0.74,
+   "lift_up_h2": 0.0,
+   "lift_down_h2": 1.48
   },
   {
    "factor": "Event: Venus-Uranus opposition",
@@ -1851,8 +2776,14 @@
    "p_down": 0.9295607703777735,
    "up_share": 77.8,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.14,
+   "lift_up_h1": 1.68,
+   "lift_down_h1": 0.69,
+   "lift_h2": 1.07,
+   "lift_up_h2": 2.13,
+   "lift_down_h2": 0.0
   },
   {
    "factor": "Event: first quarter",
@@ -1873,8 +2804,14 @@
    "p_down": 0.2651390886541589,
    "up_share": 45.8,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.95,
+   "lift_up_h1": 0.9,
+   "lift_down_h1": 0.99,
+   "lift_h2": 1.2,
+   "lift_up_h2": 1.16,
+   "lift_down_h2": 1.24
   },
   {
    "factor": "Event: full moon",
@@ -1894,9 +2831,15 @@
    "lift_down": 1.24,
    "p_down": 0.038703080628091246,
    "up_share": 42.5,
-   "q": 0.8505715921758091,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q": 0.8687461988462325,
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.27,
+   "lift_up_h1": 1.2,
+   "lift_down_h1": 1.33,
+   "lift_h2": 0.96,
+   "lift_up_h2": 0.79,
+   "lift_down_h2": 1.12
   },
   {
    "factor": "Event: last quarter",
@@ -1917,8 +2860,14 @@
    "p_down": 0.6235130485323626,
    "up_share": 51.7,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.12,
+   "lift_up_h1": 1.15,
+   "lift_down_h1": 1.09,
+   "lift_h2": 0.96,
+   "lift_up_h2": 1.14,
+   "lift_down_h2": 0.79
   },
   {
    "factor": "Event: lunar eclipse",
@@ -1938,9 +2887,15 @@
    "lift_down": 1.34,
    "p_down": 0.1618422792103732,
    "up_share": 44.4,
-   "q": 0.9870620623378692,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q": 1.0,
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.45,
+   "lift_up_h1": 1.4,
+   "lift_down_h1": 1.49,
+   "lift_h2": 1.01,
+   "lift_up_h2": 0.89,
+   "lift_down_h2": 1.14
   },
   {
    "factor": "Event: new moon",
@@ -1961,8 +2916,14 @@
    "p_down": 0.9558016319003632,
    "up_share": 51.0,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.8,
+   "lift_up_h1": 0.84,
+   "lift_down_h1": 0.77,
+   "lift_h2": 0.92,
+   "lift_up_h2": 1.01,
+   "lift_down_h2": 0.83
   },
   {
    "factor": "Event: solar eclipse",
@@ -1984,7 +2945,13 @@
    "up_share": 50.0,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 0.59,
+   "lift_up_h1": 0.56,
+   "lift_down_h1": 0.62,
+   "lift_h2": 0.62,
+   "lift_up_h2": 0.75,
+   "lift_down_h2": 0.5
   },
   {
    "factor": "Rule: Jupiter in Aries [Bearish]",
@@ -2005,8 +2972,14 @@
    "p_down": 0.3186645726427827,
    "up_share": 45.0,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.34,
+   "lift_up_h1": 1.38,
+   "lift_down_h1": 1.32,
+   "lift_h2": 0.62,
+   "lift_up_h2": 0.66,
+   "lift_down_h2": 0.59
   },
   {
    "factor": "Rule: Jupiter in Gemini [Bullish]",
@@ -2027,8 +3000,14 @@
    "p_down": 0.6810315247224308,
    "up_share": 55.2,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.07,
+   "lift_up_h1": 1.14,
+   "lift_down_h1": 0.99,
+   "lift_h2": 0.96,
+   "lift_up_h2": 1.04,
+   "lift_down_h2": 0.88
   },
   {
    "factor": "Rule: Jupiter in Sagittarius, Capricorn or Aries alone, with benefic or aspected by benefic [Bearish]",
@@ -2049,8 +3028,14 @@
    "p_down": 0.3059094112660429,
    "up_share": 48.2,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.14,
+   "lift_up_h1": 1.17,
+   "lift_down_h1": 1.11,
+   "lift_h2": 0.96,
+   "lift_up_h2": 0.99,
+   "lift_down_h2": 0.93
   },
   {
    "factor": "Rule: Mars aspected by Saturn while Jupiter retrograde [Bullish]",
@@ -2071,8 +3056,14 @@
    "p_down": 0.7498447705711816,
    "up_share": 55.6,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.0,
+   "lift_up_h1": 1.06,
+   "lift_down_h1": 0.95,
+   "lift_h2": 0.99,
+   "lift_up_h2": 1.25,
+   "lift_down_h2": 0.7
   },
   {
    "factor": "Rule: Mars in Pushya [Bullish]",
@@ -2092,9 +3083,15 @@
    "lift_down": 1.53,
    "p_down": 0.02739438762437507,
    "up_share": 37.5,
-   "q": 0.6894014583150879,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q": 0.7041322587064361,
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.5,
+   "lift_up_h1": 1.2,
+   "lift_down_h1": 1.73,
+   "lift_h2": 1.19,
+   "lift_up_h2": 1.13,
+   "lift_down_h2": 1.24
   },
   {
    "factor": "Rule: Mars passes from Taurus [Bullish]",
@@ -2116,7 +3113,13 @@
    "up_share": 39.3,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 0.74,
+   "lift_up_h1": 0.61,
+   "lift_down_h1": 0.84,
+   "lift_h2": 0.68,
+   "lift_up_h2": 0.6,
+   "lift_down_h2": 0.75
   },
   {
    "factor": "Rule: Mars retrograde [Bullish]",
@@ -2137,8 +3140,14 @@
    "p_down": 0.7744362507678606,
    "up_share": 55.9,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.19,
+   "lift_up_h1": 1.35,
+   "lift_down_h1": 1.06,
+   "lift_h2": 0.72,
+   "lift_up_h2": 0.82,
+   "lift_down_h2": 0.6
   },
   {
    "factor": "Rule: Mercury rises in West [Bearish]",
@@ -2159,8 +3168,14 @@
    "p_down": 0.6873430614745787,
    "up_share": 50.0,
    "q": 1.0,
-   "q_up": 0.9929485945875292,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.18,
+   "lift_up_h1": 1.15,
+   "lift_down_h1": 1.2,
+   "lift_h2": 0.64,
+   "lift_up_h2": 0.8,
+   "lift_down_h2": 0.48
   },
   {
    "factor": "Rule: Moon darshan (first sighting) on Monday or Friday [Bullish]",
@@ -2182,7 +3197,13 @@
    "up_share": 40.0,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 0.5,
+   "lift_up_h1": 0.48,
+   "lift_down_h1": 0.52,
+   "lift_h2": 1.1,
+   "lift_up_h2": 0.83,
+   "lift_down_h2": 1.36
   },
   {
    "factor": "Rule: Moon darshan on Saturday (gold) [Bearish]",
@@ -2204,7 +3225,13 @@
    "up_share": 28.6,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 0.58,
+   "lift_up_h1": 0.51,
+   "lift_down_h1": 0.64,
+   "lift_h2": 0.32,
+   "lift_up_h2": 0.0,
+   "lift_down_h2": 0.62
   },
   {
    "factor": "Rule: Moon eclipse on Wednesday [Bullish]",
@@ -2225,8 +3252,14 @@
    "p_down": 1.0,
    "up_share": 100.0,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.36,
+   "lift_up_h1": 0.81,
+   "lift_down_h1": 0.0,
+   "lift_h2": 0.0,
+   "lift_up_h2": 0.0,
+   "lift_down_h2": 0.0
   },
   {
    "factor": "Rule: New / full Moon in Aries or Capricorn with a benefic (Brihat Samhita 42.14) [Bullish]",
@@ -2247,8 +3280,14 @@
    "p_down": 0.9320325610460582,
    "up_share": 56.0,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.88,
+   "lift_up_h1": 1.07,
+   "lift_down_h1": 0.72,
+   "lift_h2": 0.69,
+   "lift_up_h2": 0.77,
+   "lift_down_h2": 0.62
   },
   {
    "factor": "Rule: Rahu & Mars together in any sign [Bullish]",
@@ -2268,9 +3307,15 @@
    "lift_down": 1.44,
    "p_down": 0.06096661502872913,
    "up_share": 43.6,
-   "q": 0.6894014583150879,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q": 0.7041322587064361,
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.45,
+   "lift_up_h1": 1.43,
+   "lift_down_h1": 1.47,
+   "lift_h2": 1.44,
+   "lift_up_h2": 1.46,
+   "lift_down_h2": 1.42
   },
   {
    "factor": "Rule: Rahu does Vedha of Pushya [Bullish]",
@@ -2290,9 +3335,15 @@
    "lift_down": 1.1,
    "p_down": 0.29076975663492755,
    "up_share": 48.2,
-   "q": 0.9624956343380309,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q": 0.9830617803708949,
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.32,
+   "lift_up_h1": 1.5,
+   "lift_down_h1": 1.2,
+   "lift_h2": 1.04,
+   "lift_up_h2": 1.07,
+   "lift_down_h2": 1.02
   },
   {
    "factor": "Rule: Rahu in Cancer without any benefic [Bullish]",
@@ -2313,8 +3364,14 @@
    "p_down": 0.8469830147746134,
    "up_share": 66.7,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": null,
+   "lift_up_h1": null,
+   "lift_down_h1": null,
+   "lift_h2": 0.74,
+   "lift_up_h2": 0.92,
+   "lift_down_h2": 0.53
   },
   {
    "factor": "Rule: Rahu in Dhanishta (market and bullion risk) [Bearish]",
@@ -2336,7 +3393,13 @@
    "up_share": 41.5,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 0.66,
+   "lift_up_h1": 0.57,
+   "lift_down_h1": 0.74,
+   "lift_h2": 0.79,
+   "lift_up_h2": 0.71,
+   "lift_down_h2": 0.87
   },
   {
    "factor": "Rule: Rise of Jupiter [Bearish]",
@@ -2357,8 +3420,14 @@
    "p_down": 0.9312115492455425,
    "up_share": 60.0,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.67,
+   "lift_up_h1": 0.97,
+   "lift_down_h1": 0.42,
+   "lift_h2": 0.52,
+   "lift_up_h2": 0.52,
+   "lift_down_h2": 0.52
   },
   {
    "factor": "Rule: Saturn in Uttara Bhadrapada (Brihat Samhita 10.17) [Bearish]",
@@ -2379,8 +3448,14 @@
    "p_down": 0.26623631700243866,
    "up_share": 47.6,
    "q": 1.0,
-   "q_up": 0.9929485945875292,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": null,
+   "lift_up_h1": null,
+   "lift_down_h1": null,
+   "lift_h2": 1.08,
+   "lift_up_h2": 0.99,
+   "lift_down_h2": 1.16
   },
   {
    "factor": "Rule: Saturn or Mercury in Gemini [Bearish]",
@@ -2402,7 +3477,13 @@
    "up_share": 34.4,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 1.03,
+   "lift_up_h1": 0.77,
+   "lift_down_h1": 1.22,
+   "lift_h2": 0.87,
+   "lift_up_h2": 0.67,
+   "lift_down_h2": 1.07
   },
   {
    "factor": "Rule: Saturn with Jupiter in Sagittarius [Bullish]",
@@ -2424,7 +3505,13 @@
    "up_share": null,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": null,
+   "lift_up_h1": null,
+   "lift_down_h1": null,
+   "lift_h2": 0.0,
+   "lift_up_h2": 0.0,
+   "lift_down_h2": 0.0
   },
   {
    "factor": "Rule: Solar eclipse on a Wednesday [Bullish]",
@@ -2446,7 +3533,13 @@
    "up_share": 50.0,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 0.68,
+   "lift_up_h1": 0.72,
+   "lift_down_h1": 0.63,
+   "lift_h2": 0.0,
+   "lift_up_h2": 0.0,
+   "lift_down_h2": 0.0
   },
   {
    "factor": "Rule: Sun and Moon on the same degree (new moon) [Bullish]",
@@ -2467,8 +3560,14 @@
    "p_down": 0.9558016319003632,
    "up_share": 51.0,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.8,
+   "lift_up_h1": 0.84,
+   "lift_down_h1": 0.77,
+   "lift_h2": 0.92,
+   "lift_up_h2": 1.01,
+   "lift_down_h2": 0.83
   },
   {
    "factor": "Rule: Sun in Aries or Capricorn with or aspected by a malefic (Brihat Samhita 42.14) [Bearish]",
@@ -2489,8 +3588,14 @@
    "p_down": 0.4292420472540063,
    "up_share": 47.2,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.11,
+   "lift_up_h1": 1.14,
+   "lift_down_h1": 1.09,
+   "lift_h2": 0.96,
+   "lift_up_h2": 0.92,
+   "lift_down_h2": 1.01
   },
   {
    "factor": "Rule: Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish]",
@@ -2511,8 +3616,14 @@
    "p_down": 0.651697216049539,
    "up_share": 50.3,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.08,
+   "lift_up_h1": 1.18,
+   "lift_down_h1": 1.0,
+   "lift_h2": 0.92,
+   "lift_up_h2": 0.94,
+   "lift_down_h2": 0.9
   },
   {
    "factor": "Rule: Sun in Libra aspected by (or with) malefics [Bullish]",
@@ -2532,9 +3643,15 @@
    "lift_down": 1.43,
    "p_down": 0.05339689724423269,
    "up_share": 43.2,
-   "q": 0.6894014583150879,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q": 0.7041322587064361,
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.25,
+   "lift_up_h1": 1.36,
+   "lift_down_h1": 1.16,
+   "lift_h2": 1.53,
+   "lift_up_h2": 1.07,
+   "lift_down_h2": 1.95
   },
   {
    "factor": "Rule: Sun in Libra with other malefic (Saturn, Mars, Rahu) [Bullish]",
@@ -2554,9 +3671,15 @@
    "lift_down": 1.86,
    "p_down": 0.01808945073207391,
    "up_share": 31.8,
-   "q": 0.8439773547060712,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q": 0.8620110588664573,
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.3,
+   "lift_up_h1": 1.01,
+   "lift_down_h1": 1.58,
+   "lift_h2": 1.9,
+   "lift_up_h2": 0.63,
+   "lift_down_h2": 3.18
   },
   {
    "factor": "Rule: Sun in a Saturn or Rahu nakshatra (user note) [Bearish]",
@@ -2577,8 +3700,14 @@
    "p_down": 0.6643112355036013,
    "up_share": 48.6,
    "q": 1.0,
-   "q_up": 0.9929485945875292,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.96,
+   "lift_up_h1": 1.03,
+   "lift_down_h1": 0.9,
+   "lift_h2": 0.99,
+   "lift_up_h2": 0.95,
+   "lift_down_h2": 1.02
   },
   {
    "factor": "Rule: Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
@@ -2599,8 +3728,14 @@
    "p_down": 0.4737465492763907,
    "up_share": 50.0,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.99,
+   "lift_up_h1": 1.04,
+   "lift_down_h1": 0.95,
+   "lift_h2": 1.16,
+   "lift_up_h2": 1.22,
+   "lift_down_h2": 1.1
   },
   {
    "factor": "Rule: Sun on Anuradha with or aspected by benefic [Bearish]",
@@ -2621,8 +3756,14 @@
    "p_down": 0.7769933096616451,
    "up_share": 54.5,
    "q": 1.0,
-   "q_up": 0.9929485945875292,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.5,
+   "lift_up_h1": 0.54,
+   "lift_down_h1": 0.47,
+   "lift_h2": 1.54,
+   "lift_up_h2": 1.79,
+   "lift_down_h2": 1.31
   },
   {
    "factor": "Rule: Sun on Bharani, Krittika, Punarvasu or Pushya, not aspected by benefic [Bullish]",
@@ -2643,8 +3784,14 @@
    "p_down": 0.8739924769204723,
    "up_share": 52.6,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.55,
+   "lift_up_h1": 0.71,
+   "lift_down_h1": 0.42,
+   "lift_h2": 1.1,
+   "lift_up_h2": 1.08,
+   "lift_down_h2": 1.13
   },
   {
    "factor": "Rule: U2 - Jupiter with / aspecting the Sun [Bullish]",
@@ -2665,8 +3812,14 @@
    "p_down": 0.9385019846128279,
    "up_share": 54.2,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.99,
+   "lift_up_h1": 1.22,
+   "lift_down_h1": 0.79,
+   "lift_h2": 0.92,
+   "lift_up_h2": 0.93,
+   "lift_down_h2": 0.9
   },
   {
    "factor": "Rule: U2 - Mercury with the Sun [Bullish]",
@@ -2687,8 +3840,14 @@
    "p_down": 0.5623277692703661,
    "up_share": 49.6,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.02,
+   "lift_up_h1": 1.02,
+   "lift_down_h1": 1.01,
+   "lift_h2": 1.05,
+   "lift_up_h2": 1.14,
+   "lift_down_h2": 0.95
   },
   {
    "factor": "Rule: U2 - Venus with / aspecting the Sun [Bullish]",
@@ -2708,9 +3867,15 @@
    "lift_down": 1.05,
    "p_down": 0.36935519419412055,
    "up_share": 49.3,
-   "q": 0.9947311296406601,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q": 1.0,
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.93,
+   "lift_up_h1": 0.92,
+   "lift_down_h1": 0.94,
+   "lift_h2": 1.38,
+   "lift_up_h2": 1.55,
+   "lift_down_h2": 1.24
   },
   {
    "factor": "Rule: U2 - waxing Moon with / aspecting the Sun [Bullish]",
@@ -2731,8 +3896,14 @@
    "p_down": 0.5284106166666875,
    "up_share": 46.3,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.94,
+   "lift_up_h1": 0.98,
+   "lift_down_h1": 0.91,
+   "lift_h2": 1.06,
+   "lift_up_h2": 0.97,
+   "lift_down_h2": 1.14
   },
   {
    "factor": "Rule: U4 - Rahu with / aspecting the Sun (incl. Sun with Ketu) [Bearish]",
@@ -2753,8 +3924,14 @@
    "p_down": 0.923863571600771,
    "up_share": 52.0,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.96,
+   "lift_up_h1": 0.93,
+   "lift_down_h1": 0.97,
+   "lift_h2": 0.78,
+   "lift_up_h2": 1.01,
+   "lift_down_h2": 0.56
   },
   {
    "factor": "Rule: U4 - Saturn with / aspecting the Sun [Bearish]",
@@ -2774,9 +3951,15 @@
    "lift_down": 1.03,
    "p_down": 0.39178326957589404,
    "up_share": 50.5,
-   "q": 0.9624956343380309,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q": 0.9830617803708949,
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.08,
+   "lift_up_h1": 1.14,
+   "lift_down_h1": 1.03,
+   "lift_h2": 1.12,
+   "lift_up_h2": 1.19,
+   "lift_down_h2": 1.04
   },
   {
    "factor": "Rule: User Sun model: net rise vs fall signals [Bearish]",
@@ -2797,8 +3980,14 @@
    "p_down": 0.4396234322473602,
    "up_share": 46.2,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.08,
+   "lift_up_h1": 0.98,
+   "lift_down_h1": 1.16,
+   "lift_h2": 0.91,
+   "lift_up_h2": 0.96,
+   "lift_down_h2": 0.86
   },
   {
    "factor": "Rule: User Sun model: net rise vs fall signals [Bullish]",
@@ -2819,8 +4008,14 @@
    "p_down": 0.4692037240844562,
    "up_share": 48.0,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.99,
+   "lift_up_h1": 1.02,
+   "lift_down_h1": 0.96,
+   "lift_h2": 1.09,
+   "lift_up_h2": 1.09,
+   "lift_down_h2": 1.09
   },
   {
    "factor": "Rule: Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bearish]",
@@ -2841,8 +4036,14 @@
    "p_down": 0.7679776524545059,
    "up_share": 44.4,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.05,
+   "lift_up_h1": 0.99,
+   "lift_down_h1": 1.11,
+   "lift_h2": 0.5,
+   "lift_up_h2": 0.56,
+   "lift_down_h2": 0.45
   },
   {
    "factor": "Rule: Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]",
@@ -2862,9 +4063,15 @@
    "lift_down": 1.12,
    "p_down": 0.08474753117889999,
    "up_share": 45.8,
-   "q": 0.9870620623378692,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q": 1.0,
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.14,
+   "lift_up_h1": 1.06,
+   "lift_down_h1": 1.22,
+   "lift_h2": 0.99,
+   "lift_up_h2": 0.97,
+   "lift_down_h2": 1.0
   },
   {
    "factor": "Rule: Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Mixed]",
@@ -2885,8 +4092,14 @@
    "p_down": 0.6981826754295977,
    "up_share": 51.0,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.88,
+   "lift_up_h1": 0.95,
+   "lift_down_h1": 0.83,
+   "lift_h2": 1.22,
+   "lift_up_h2": 1.32,
+   "lift_down_h2": 1.12
   },
   {
    "factor": "Rule: Venus in Jyeshtha with or aspected by benefic [Bearish]",
@@ -2907,8 +4120,14 @@
    "p_down": 0.5613680375341639,
    "up_share": 42.9,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.59,
+   "lift_up_h1": 0.0,
+   "lift_down_h1": 1.07,
+   "lift_h2": 1.74,
+   "lift_up_h2": 2.6,
+   "lift_down_h2": 0.88
   },
   {
    "factor": "Rule: Venus in Punarvasu [Bearish]",
@@ -2930,7 +4149,13 @@
    "up_share": 25.0,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 0.42,
+   "lift_up_h1": 0.23,
+   "lift_down_h1": 0.58,
+   "lift_h2": 0.57,
+   "lift_up_h2": 0.28,
+   "lift_down_h2": 0.86
   },
   {
    "factor": "Rule: Venus in Rohini [Bullish]",
@@ -2951,8 +4176,14 @@
    "p_down": 0.8303114652399294,
    "up_share": 54.5,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.99,
+   "lift_up_h1": 1.01,
+   "lift_down_h1": 0.97,
+   "lift_h2": 0.76,
+   "lift_up_h2": 0.97,
+   "lift_down_h2": 0.53
   },
   {
    "factor": "State: Jupiter aspects the Sun",
@@ -2973,8 +4204,14 @@
    "p_down": 0.9733543500726944,
    "up_share": 56.5,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.92,
+   "lift_up_h1": 1.13,
+   "lift_down_h1": 0.74,
+   "lift_h2": 0.89,
+   "lift_up_h2": 1.03,
+   "lift_down_h2": 0.76
   },
   {
    "factor": "State: Jupiter in Aquarius",
@@ -2996,7 +4233,13 @@
    "up_share": 26.3,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 0.72,
+   "lift_up_h1": 0.55,
+   "lift_down_h1": 0.84,
+   "lift_h2": 0.87,
+   "lift_up_h2": 0.55,
+   "lift_down_h2": 1.05
   },
   {
    "factor": "State: Jupiter in Aries",
@@ -3017,8 +4260,14 @@
    "p_down": 0.31245701978173446,
    "up_share": 43.6,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.31,
+   "lift_up_h1": 1.29,
+   "lift_down_h1": 1.32,
+   "lift_h2": 0.63,
+   "lift_up_h2": 0.66,
+   "lift_down_h2": 0.59
   },
   {
    "factor": "State: Jupiter in Cancer",
@@ -3039,8 +4288,14 @@
    "p_down": 0.37134528653278476,
    "up_share": 49.1,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.33,
+   "lift_up_h1": 1.29,
+   "lift_down_h1": 1.37,
+   "lift_h2": 0.99,
+   "lift_up_h2": 0.99,
+   "lift_down_h2": 0.98
   },
   {
    "factor": "State: Jupiter in Capricorn",
@@ -3060,9 +4315,15 @@
    "lift_down": 1.03,
    "p_down": 0.4664614798159794,
    "up_share": 55.6,
-   "q": 0.8141466071544369,
-   "q_up": 0.8845669452901085,
-   "q_down": 1.0
+   "q": 0.8315429021791043,
+   "q_up": 0.9034679483945981,
+   "q_down": 1.0,
+   "lift_h1": 1.35,
+   "lift_up_h1": 1.59,
+   "lift_down_h1": 1.14,
+   "lift_h2": 1.12,
+   "lift_up_h2": 1.47,
+   "lift_down_h2": 0.84
   },
   {
    "factor": "State: Jupiter in Gemini",
@@ -3083,8 +4344,14 @@
    "p_down": 0.673842757465838,
    "up_share": 55.2,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.07,
+   "lift_up_h1": 1.15,
+   "lift_down_h1": 1.0,
+   "lift_h2": 0.97,
+   "lift_up_h2": 1.05,
+   "lift_down_h2": 0.88
   },
   {
    "factor": "State: Jupiter in Leo",
@@ -3105,8 +4372,14 @@
    "p_down": 0.3868044902401159,
    "up_share": 44.1,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.1,
+   "lift_up_h1": 1.16,
+   "lift_down_h1": 1.07,
+   "lift_h2": 1.05,
+   "lift_up_h2": 0.99,
+   "lift_down_h2": 1.11
   },
   {
    "factor": "State: Jupiter in Libra",
@@ -3127,8 +4400,14 @@
    "p_down": 0.18861926081606528,
    "up_share": 50.0,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.17,
+   "lift_up_h1": 1.12,
+   "lift_down_h1": 1.22,
+   "lift_h2": 0.88,
+   "lift_up_h2": 0.54,
+   "lift_down_h2": 1.28
   },
   {
    "factor": "State: Jupiter in Pisces",
@@ -3150,7 +4429,13 @@
    "up_share": 42.1,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 0.36,
+   "lift_up_h1": 0.0,
+   "lift_down_h1": 0.55,
+   "lift_h2": 1.07,
+   "lift_up_h2": 1.17,
+   "lift_down_h2": 0.96
   },
   {
    "factor": "State: Jupiter in Sagittarius",
@@ -3171,8 +4456,14 @@
    "p_down": 0.4018845712106416,
    "up_share": 44.6,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.95,
+   "lift_up_h1": 0.9,
+   "lift_down_h1": 1.0,
+   "lift_h2": 1.0,
+   "lift_up_h2": 0.8,
+   "lift_down_h2": 1.24
   },
   {
    "factor": "State: Jupiter in Scorpio",
@@ -3193,8 +4484,14 @@
    "p_down": 0.7837881866084421,
    "up_share": 45.0,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.76,
+   "lift_up_h1": 0.72,
+   "lift_down_h1": 0.79,
+   "lift_h2": 1.25,
+   "lift_up_h2": 1.5,
+   "lift_down_h2": 1.0
   },
   {
    "factor": "State: Jupiter in Taurus",
@@ -3215,8 +4512,14 @@
    "p_down": 0.5970300678814183,
    "up_share": 46.2,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.83,
+   "lift_up_h1": 0.87,
+   "lift_down_h1": 0.77,
+   "lift_h2": 1.17,
+   "lift_up_h2": 1.1,
+   "lift_down_h2": 1.21
   },
   {
    "factor": "State: Jupiter in Virgo",
@@ -3238,7 +4541,13 @@
    "up_share": 37.5,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 0.41,
+   "lift_up_h1": 0.35,
+   "lift_down_h1": 0.44,
+   "lift_h2": 1.01,
+   "lift_up_h2": 0.66,
+   "lift_down_h2": 1.55
   },
   {
    "factor": "State: Jupiter retrograde",
@@ -3259,8 +4568,14 @@
    "p_down": 0.4639982394834494,
    "up_share": 49.0,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.0,
+   "lift_up_h1": 0.91,
+   "lift_down_h1": 1.07,
+   "lift_h2": 1.09,
+   "lift_up_h2": 1.29,
+   "lift_down_h2": 0.89
   },
   {
    "factor": "State: Jupiter with Rahu",
@@ -3281,8 +4596,14 @@
    "p_down": 0.7141777148348198,
    "up_share": 63.0,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.3,
+   "lift_up_h1": 1.6,
+   "lift_down_h1": 1.01,
+   "lift_h2": 0.76,
+   "lift_up_h2": 0.95,
+   "lift_down_h2": 0.47
   },
   {
    "factor": "State: Jupiter with Saturn",
@@ -3303,8 +4624,14 @@
    "p_down": 0.7147741214296831,
    "up_share": 59.1,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.53,
+   "lift_up_h1": 1.29,
+   "lift_down_h1": 2.15,
+   "lift_h2": 0.96,
+   "lift_up_h2": 1.23,
+   "lift_down_h2": 0.74
   },
   {
    "factor": "State: Jupiter with the Sun",
@@ -3325,8 +4652,14 @@
    "p_down": 0.4965512016688983,
    "up_share": 52.1,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.19,
+   "lift_up_h1": 1.48,
+   "lift_down_h1": 0.94,
+   "lift_h2": 1.01,
+   "lift_up_h2": 0.85,
+   "lift_down_h2": 1.16
   },
   {
    "factor": "State: Jupiter-Rahu in aspect",
@@ -3347,8 +4680,14 @@
    "p_down": 0.5141610678110543,
    "up_share": 50.4,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.07,
+   "lift_up_h1": 1.22,
+   "lift_down_h1": 0.96,
+   "lift_h2": 1.02,
+   "lift_up_h2": 1.04,
+   "lift_down_h2": 1.01
   },
   {
    "factor": "State: Jupiter-Saturn in aspect",
@@ -3369,8 +4708,14 @@
    "p_down": 0.7144859478698901,
    "up_share": 46.2,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.91,
+   "lift_up_h1": 0.84,
+   "lift_down_h1": 0.96,
+   "lift_h2": 1.01,
+   "lift_up_h2": 1.08,
+   "lift_down_h2": 0.93
   },
   {
    "factor": "State: Ketu with the Sun",
@@ -3391,8 +4736,14 @@
    "p_down": 0.9227394446067697,
    "up_share": 53.1,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.88,
+   "lift_up_h1": 0.8,
+   "lift_down_h1": 0.94,
+   "lift_h2": 0.73,
+   "lift_up_h2": 1.02,
+   "lift_down_h2": 0.45
   },
   {
    "factor": "State: Mars aspects the Sun",
@@ -3414,7 +4765,13 @@
    "up_share": 40.7,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 0.98,
+   "lift_up_h1": 0.84,
+   "lift_down_h1": 1.09,
+   "lift_h2": 0.69,
+   "lift_up_h2": 0.6,
+   "lift_down_h2": 0.78
   },
   {
    "factor": "State: Mars in Aquarius",
@@ -3435,8 +4792,14 @@
    "p_down": 0.29645653187468735,
    "up_share": 38.2,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.75,
+   "lift_up_h1": 0.49,
+   "lift_down_h1": 0.95,
+   "lift_h2": 1.34,
+   "lift_up_h2": 1.24,
+   "lift_down_h2": 1.44
   },
   {
    "factor": "State: Mars in Aries",
@@ -3457,8 +4820,14 @@
    "p_down": 0.3650030799490587,
    "up_share": 42.1,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.81,
+   "lift_up_h1": 0.8,
+   "lift_down_h1": 0.83,
+   "lift_h2": 1.3,
+   "lift_up_h2": 1.13,
+   "lift_down_h2": 1.44
   },
   {
    "factor": "State: Mars in Cancer",
@@ -3478,9 +4847,15 @@
    "lift_down": 1.23,
    "p_down": 0.10635083088349984,
    "up_share": 44.6,
-   "q": 0.8141466071544369,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q": 0.8315429021791043,
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.28,
+   "lift_up_h1": 1.28,
+   "lift_down_h1": 1.28,
+   "lift_h2": 1.13,
+   "lift_up_h2": 1.08,
+   "lift_down_h2": 1.17
   },
   {
    "factor": "State: Mars in Capricorn",
@@ -3500,9 +4875,15 @@
    "lift_down": 0.98,
    "p_down": 0.5650184178470431,
    "up_share": 62.5,
-   "q": 0.6894014583150879,
-   "q_up": 0.3530125885053216,
-   "q_down": 1.0
+   "q": 0.7041322587064361,
+   "q_up": 0.36055559253321307,
+   "q_down": 1.0,
+   "lift_h1": 1.14,
+   "lift_up_h1": 1.35,
+   "lift_down_h1": 0.96,
+   "lift_h2": 1.63,
+   "lift_up_h2": 2.28,
+   "lift_down_h2": 1.01
   },
   {
    "factor": "State: Mars in Gemini",
@@ -3523,8 +4904,14 @@
    "p_down": 0.9874425614531467,
    "up_share": 62.3,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.03,
+   "lift_up_h1": 1.26,
+   "lift_down_h1": 0.85,
+   "lift_h2": 0.73,
+   "lift_up_h2": 1.22,
+   "lift_down_h2": 0.27
   },
   {
    "factor": "State: Mars in Leo",
@@ -3546,7 +4933,13 @@
    "up_share": 32.4,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 0.86,
+   "lift_up_h1": 0.7,
+   "lift_down_h1": 1.01,
+   "lift_h2": 0.67,
+   "lift_up_h2": 0.16,
+   "lift_down_h2": 1.2
   },
   {
    "factor": "State: Mars in Libra",
@@ -3567,8 +4960,14 @@
    "p_down": 0.2524657010307303,
    "up_share": 47.2,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.14,
+   "lift_up_h1": 0.98,
+   "lift_down_h1": 1.29,
+   "lift_h2": 1.12,
+   "lift_up_h2": 1.19,
+   "lift_down_h2": 1.02
   },
   {
    "factor": "State: Mars in Pisces",
@@ -3590,7 +4989,13 @@
    "up_share": 35.0,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 0.43,
+   "lift_up_h1": 0.51,
+   "lift_down_h1": 0.38,
+   "lift_h2": 0.67,
+   "lift_up_h2": 0.38,
+   "lift_down_h2": 0.97
   },
   {
    "factor": "State: Mars in Sagittarius",
@@ -3610,9 +5015,15 @@
    "lift_down": 1.41,
    "p_down": 0.08888496530466972,
    "up_share": 44.1,
-   "q": 0.8909292583940955,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q": 0.9099662083597815,
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.26,
+   "lift_up_h1": 1.24,
+   "lift_down_h1": 1.28,
+   "lift_h2": 1.31,
+   "lift_up_h2": 1.06,
+   "lift_down_h2": 1.56
   },
   {
    "factor": "State: Mars in Scorpio",
@@ -3633,8 +5044,14 @@
    "p_down": 0.8646573250499737,
    "up_share": 61.8,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.1,
+   "lift_up_h1": 1.24,
+   "lift_down_h1": 0.95,
+   "lift_h2": 0.79,
+   "lift_up_h2": 1.0,
+   "lift_down_h2": 0.53
   },
   {
    "factor": "State: Mars in Taurus",
@@ -3656,7 +5073,13 @@
    "up_share": 39.3,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 0.75,
+   "lift_up_h1": 0.62,
+   "lift_down_h1": 0.86,
+   "lift_h2": 0.68,
+   "lift_up_h2": 0.6,
+   "lift_down_h2": 0.75
   },
   {
    "factor": "State: Mars in Virgo",
@@ -3677,8 +5100,14 @@
    "p_down": 0.22320264709350335,
    "up_share": 45.0,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.21,
+   "lift_up_h1": 1.18,
+   "lift_down_h1": 1.24,
+   "lift_h2": 0.88,
+   "lift_up_h2": 0.77,
+   "lift_down_h2": 0.99
   },
   {
    "factor": "State: Mars retrograde",
@@ -3699,8 +5128,14 @@
    "p_down": 0.7649350885844535,
    "up_share": 55.9,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.2,
+   "lift_up_h1": 1.35,
+   "lift_down_h1": 1.06,
+   "lift_h2": 0.73,
+   "lift_up_h2": 0.83,
+   "lift_down_h2": 0.61
   },
   {
    "factor": "State: Mars with Jupiter",
@@ -3721,8 +5156,14 @@
    "p_down": 0.22739613259138625,
    "up_share": 41.3,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.99,
+   "lift_up_h1": 1.06,
+   "lift_down_h1": 0.93,
+   "lift_h2": 1.19,
+   "lift_up_h2": 0.84,
+   "lift_down_h2": 1.53
   },
   {
    "factor": "State: Mars with Rahu",
@@ -3742,9 +5183,15 @@
    "lift_down": 1.35,
    "p_down": 0.1173558859664694,
    "up_share": 45.9,
-   "q": 0.6894014583150879,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q": 0.7041322587064361,
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.49,
+   "lift_up_h1": 1.46,
+   "lift_down_h1": 1.5,
+   "lift_h2": 1.35,
+   "lift_up_h2": 1.51,
+   "lift_down_h2": 1.22
   },
   {
    "factor": "State: Mars with Saturn",
@@ -3765,8 +5212,14 @@
    "p_down": 0.8273861929039645,
    "up_share": 55.0,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.84,
+   "lift_up_h1": 0.88,
+   "lift_down_h1": 0.8,
+   "lift_h2": 1.02,
+   "lift_up_h2": 1.19,
+   "lift_down_h2": 0.85
   },
   {
    "factor": "State: Mars with the Sun",
@@ -3787,8 +5240,14 @@
    "p_down": 0.4583795179337967,
    "up_share": 49.4,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.1,
+   "lift_up_h1": 1.03,
+   "lift_down_h1": 1.16,
+   "lift_h2": 1.08,
+   "lift_up_h2": 1.37,
+   "lift_down_h2": 0.8
   },
   {
    "factor": "State: Mars-Jupiter in aspect",
@@ -3809,8 +5268,14 @@
    "p_down": 0.753147676059964,
    "up_share": 48.3,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.93,
+   "lift_up_h1": 0.97,
+   "lift_down_h1": 0.89,
+   "lift_h2": 1.06,
+   "lift_up_h2": 1.08,
+   "lift_down_h2": 1.04
   },
   {
    "factor": "State: Mars-Rahu in aspect",
@@ -3832,7 +5297,13 @@
    "up_share": 39.3,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 0.97,
+   "lift_up_h1": 0.83,
+   "lift_down_h1": 1.09,
+   "lift_h2": 0.8,
+   "lift_up_h2": 0.55,
+   "lift_down_h2": 1.08
   },
   {
    "factor": "State: Mars-Saturn in aspect",
@@ -3853,8 +5324,14 @@
    "p_down": 0.46953145223311143,
    "up_share": 45.7,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.12,
+   "lift_up_h1": 1.12,
+   "lift_down_h1": 1.11,
+   "lift_h2": 0.8,
+   "lift_up_h2": 0.71,
+   "lift_down_h2": 0.9
   },
   {
    "factor": "State: Mercury retrograde",
@@ -3875,8 +5352,14 @@
    "p_down": 0.9201946191003054,
    "up_share": 51.2,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.93,
+   "lift_up_h1": 1.16,
+   "lift_down_h1": 0.74,
+   "lift_h2": 0.81,
+   "lift_up_h2": 0.67,
+   "lift_down_h2": 0.94
   },
   {
    "factor": "State: Mercury with the Sun",
@@ -3897,8 +5380,14 @@
    "p_down": 0.5938721555701373,
    "up_share": 50.0,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.04,
+   "lift_up_h1": 1.06,
+   "lift_down_h1": 1.03,
+   "lift_h2": 1.01,
+   "lift_up_h2": 1.11,
+   "lift_down_h2": 0.91
   },
   {
    "factor": "State: Moon Krishna paksha",
@@ -3919,8 +5408,14 @@
    "p_down": 0.7285227082852068,
    "up_share": 50.0,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.02,
+   "lift_up_h1": 1.06,
+   "lift_down_h1": 0.98,
+   "lift_h2": 0.97,
+   "lift_up_h2": 1.04,
+   "lift_down_h2": 0.9
   },
   {
    "factor": "State: Moon Shukla paksha",
@@ -3941,8 +5436,14 @@
    "p_down": 0.2959380523144389,
    "up_share": 45.0,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.98,
+   "lift_up_h1": 0.94,
+   "lift_down_h1": 1.02,
+   "lift_h2": 1.03,
+   "lift_up_h2": 0.96,
+   "lift_down_h2": 1.1
   },
   {
    "factor": "State: Moon aspects the Sun",
@@ -3963,8 +5464,14 @@
    "p_down": 0.13129522393265636,
    "up_share": 39.5,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.16,
+   "lift_up_h1": 1.07,
+   "lift_down_h1": 1.24,
+   "lift_h2": 1.02,
+   "lift_up_h2": 0.72,
+   "lift_down_h2": 1.32
   },
   {
    "factor": "State: Moon with the Sun",
@@ -3985,8 +5492,14 @@
    "p_down": 0.6659527613535734,
    "up_share": 47.2,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.74,
+   "lift_up_h1": 0.66,
+   "lift_down_h1": 0.81,
+   "lift_h2": 1.17,
+   "lift_up_h2": 1.25,
+   "lift_down_h2": 1.09
   },
   {
    "factor": "State: Rahu aspects the Sun",
@@ -4007,8 +5520,14 @@
    "p_down": 0.9227394446067697,
    "up_share": 53.1,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.88,
+   "lift_up_h1": 0.8,
+   "lift_down_h1": 0.94,
+   "lift_h2": 0.73,
+   "lift_up_h2": 1.02,
+   "lift_down_h2": 0.45
   },
   {
    "factor": "State: Rahu in Aquarius",
@@ -4029,8 +5548,14 @@
    "p_down": 0.8326117031824337,
    "up_share": 49.0,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.74,
+   "lift_up_h1": 0.72,
+   "lift_down_h1": 0.76,
+   "lift_h2": 0.98,
+   "lift_up_h2": 0.99,
+   "lift_down_h2": 0.97
   },
   {
    "factor": "State: Rahu in Aries",
@@ -4051,8 +5576,14 @@
    "p_down": 0.7727613143851044,
    "up_share": 46.7,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.87,
+   "lift_up_h1": 0.79,
+   "lift_down_h1": 0.92,
+   "lift_h2": 0.83,
+   "lift_up_h2": 0.9,
+   "lift_down_h2": 0.73
   },
   {
    "factor": "State: Rahu in Cancer",
@@ -4073,8 +5604,14 @@
    "p_down": 0.6803353949705024,
    "up_share": 50.0,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": null,
+   "lift_up_h1": null,
+   "lift_down_h1": null,
+   "lift_h2": 0.79,
+   "lift_up_h2": 0.74,
+   "lift_down_h2": 0.85
   },
   {
    "factor": "State: Rahu in Capricorn",
@@ -4095,8 +5632,14 @@
    "p_down": 0.3575600270376412,
    "up_share": 48.7,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.11,
+   "lift_up_h1": 1.16,
+   "lift_down_h1": 1.07,
+   "lift_h2": null,
+   "lift_up_h2": null,
+   "lift_down_h2": null
   },
   {
    "factor": "State: Rahu in Gemini",
@@ -4117,8 +5660,14 @@
    "p_down": 0.40966034455910216,
    "up_share": 60.0,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.0,
+   "lift_up_h1": 1.09,
+   "lift_down_h1": 0.8,
+   "lift_h2": 1.18,
+   "lift_up_h2": 1.2,
+   "lift_down_h2": 1.16
   },
   {
    "factor": "State: Rahu in Leo",
@@ -4139,8 +5688,14 @@
    "p_down": 0.49051161871273363,
    "up_share": 58.3,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": null,
+   "lift_up_h1": null,
+   "lift_down_h1": null,
+   "lift_h2": 1.11,
+   "lift_up_h2": 1.13,
+   "lift_down_h2": 1.08
   },
   {
    "factor": "State: Rahu in Libra",
@@ -4161,8 +5716,14 @@
    "p_down": 0.6064098857420246,
    "up_share": 44.8,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.99,
+   "lift_up_h1": 0.98,
+   "lift_down_h1": 0.99,
+   "lift_h2": 0.84,
+   "lift_up_h2": 0.78,
+   "lift_down_h2": 0.89
   },
   {
    "factor": "State: Rahu in Pisces",
@@ -4183,8 +5744,14 @@
    "p_down": 0.23879248785017615,
    "up_share": 47.1,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.14,
+   "lift_up_h1": 1.12,
+   "lift_down_h1": 1.16,
+   "lift_h2": 1.12,
+   "lift_up_h2": 1.14,
+   "lift_down_h2": 1.11
   },
   {
    "factor": "State: Rahu in Sagittarius",
@@ -4206,7 +5773,13 @@
    "up_share": 18.8,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 0.58,
+   "lift_up_h1": 0.3,
+   "lift_down_h1": 0.73,
+   "lift_h2": null,
+   "lift_up_h2": null,
+   "lift_down_h2": null
   },
   {
    "factor": "State: Rahu in Scorpio",
@@ -4226,9 +5799,15 @@
    "lift_down": 1.27,
    "p_down": 0.1552337417829186,
    "up_share": 47.6,
-   "q": 0.8141466071544369,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q": 0.8315429021791043,
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.31,
+   "lift_up_h1": 1.35,
+   "lift_down_h1": 1.27,
+   "lift_h2": null,
+   "lift_up_h2": null,
+   "lift_down_h2": null
   },
   {
    "factor": "State: Rahu in Taurus",
@@ -4249,8 +5828,14 @@
    "p_down": 0.35983289351967274,
    "up_share": 37.5,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.15,
+   "lift_up_h1": 1.05,
+   "lift_down_h1": 1.23,
+   "lift_h2": 0.91,
+   "lift_up_h2": 0.77,
+   "lift_down_h2": 1.0
   },
   {
    "factor": "State: Rahu in Virgo",
@@ -4271,8 +5856,14 @@
    "p_down": 0.5118290963826025,
    "up_share": 54.5,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": null,
+   "lift_up_h1": null,
+   "lift_down_h1": null,
+   "lift_h2": 1.04,
+   "lift_up_h2": 1.06,
+   "lift_down_h2": 1.02
   },
   {
    "factor": "State: Rahu with the Sun",
@@ -4293,8 +5884,14 @@
    "p_down": 0.7318468723193401,
    "up_share": 52.4,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.1,
+   "lift_up_h1": 1.12,
+   "lift_down_h1": 1.08,
+   "lift_h2": 0.83,
+   "lift_up_h2": 1.06,
+   "lift_down_h2": 0.59
   },
   {
    "factor": "State: Saturn aspects the Sun",
@@ -4315,8 +5912,14 @@
    "p_down": 0.6415085786920856,
    "up_share": 52.0,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.01,
+   "lift_up_h1": 1.08,
+   "lift_down_h1": 0.95,
+   "lift_h2": 1.1,
+   "lift_up_h2": 1.24,
+   "lift_down_h2": 0.97
   },
   {
    "factor": "State: Saturn in Aquarius",
@@ -4338,7 +5941,13 @@
    "up_share": 31.8,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": null,
+   "lift_up_h1": null,
+   "lift_down_h1": null,
+   "lift_h2": 0.77,
+   "lift_up_h2": 0.56,
+   "lift_down_h2": 0.93
   },
   {
    "factor": "State: Saturn in Cancer",
@@ -4359,8 +5968,14 @@
    "p_down": 0.4120519800018301,
    "up_share": 48.1,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.04,
+   "lift_up_h1": 1.02,
+   "lift_down_h1": 1.06,
+   "lift_h2": null,
+   "lift_up_h2": null,
+   "lift_down_h2": null
   },
   {
    "factor": "State: Saturn in Capricorn",
@@ -4381,8 +5996,14 @@
    "p_down": 0.623126992313081,
    "up_share": 51.0,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": null,
+   "lift_up_h1": null,
+   "lift_down_h1": null,
+   "lift_h2": 1.02,
+   "lift_up_h2": 1.09,
+   "lift_down_h2": 0.95
   },
   {
    "factor": "State: Saturn in Gemini",
@@ -4403,8 +6024,14 @@
    "p_down": 0.6049842317261567,
    "up_share": 41.7,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.98,
+   "lift_up_h1": 1.02,
+   "lift_down_h1": 0.95,
+   "lift_h2": null,
+   "lift_up_h2": null,
+   "lift_down_h2": null
   },
   {
    "factor": "State: Saturn in Leo",
@@ -4425,8 +6052,14 @@
    "p_down": 0.46241917823100753,
    "up_share": 46.5,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.02,
+   "lift_up_h1": 1.01,
+   "lift_down_h1": 1.02,
+   "lift_h2": null,
+   "lift_up_h2": null,
+   "lift_down_h2": null
   },
   {
    "factor": "State: Saturn in Libra",
@@ -4448,7 +6081,13 @@
    "up_share": 37.8,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 0.93,
+   "lift_up_h1": 0.78,
+   "lift_down_h1": 1.07,
+   "lift_h2": 0.84,
+   "lift_up_h2": 0.57,
+   "lift_down_h2": 1.11
   },
   {
    "factor": "State: Saturn in Pisces",
@@ -4469,8 +6108,14 @@
    "p_down": 0.32433166384285406,
    "up_share": 51.9,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": null,
+   "lift_up_h1": null,
+   "lift_down_h1": null,
+   "lift_h2": 1.1,
+   "lift_up_h2": 1.11,
+   "lift_down_h2": 1.09
   },
   {
    "factor": "State: Saturn in Sagittarius",
@@ -4491,8 +6136,14 @@
    "p_down": 0.6921166826715852,
    "up_share": 55.6,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": null,
+   "lift_up_h1": null,
+   "lift_down_h1": null,
+   "lift_h2": 0.88,
+   "lift_up_h2": 0.91,
+   "lift_down_h2": 0.85
   },
   {
    "factor": "State: Saturn in Scorpio",
@@ -4513,8 +6164,14 @@
    "p_down": 0.6276408855989339,
    "up_share": 60.0,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": null,
+   "lift_up_h1": null,
+   "lift_down_h1": null,
+   "lift_h2": 1.06,
+   "lift_up_h2": 1.17,
+   "lift_down_h2": 0.94
   },
   {
    "factor": "State: Saturn in Taurus",
@@ -4535,8 +6192,14 @@
    "p_down": 0.2783265089541561,
    "up_share": 52.9,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.15,
+   "lift_up_h1": 1.04,
+   "lift_down_h1": 1.3,
+   "lift_h2": null,
+   "lift_up_h2": null,
+   "lift_down_h2": null
   },
   {
    "factor": "State: Saturn in Virgo",
@@ -4557,8 +6220,14 @@
    "p_down": 0.8353023263561541,
    "up_share": 45.8,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.94,
+   "lift_up_h1": 1.1,
+   "lift_down_h1": 0.84,
+   "lift_h2": null,
+   "lift_up_h2": null,
+   "lift_down_h2": null
   },
   {
    "factor": "State: Saturn retrograde",
@@ -4580,7 +6249,13 @@
    "up_share": 40.1,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 0.92,
+   "lift_up_h1": 0.76,
+   "lift_down_h1": 1.06,
+   "lift_h2": 0.91,
+   "lift_up_h2": 0.79,
+   "lift_down_h2": 1.03
   },
   {
    "factor": "State: Saturn with Rahu",
@@ -4600,9 +6275,15 @@
    "lift_down": 1.26,
    "p_down": 0.12989369890301505,
    "up_share": 45.1,
-   "q": 0.8909292583940955,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q": 0.9099662083597815,
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.07,
+   "lift_up_h1": 0.97,
+   "lift_down_h1": 1.15,
+   "lift_h2": 1.47,
+   "lift_up_h2": 1.45,
+   "lift_down_h2": 1.49
   },
   {
    "factor": "State: Saturn with the Sun",
@@ -4622,9 +6303,15 @@
    "lift_down": 1.16,
    "p_down": 0.2444220172531436,
    "up_share": 50.9,
-   "q": 0.8245562466437256,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q": 0.8421749698626086,
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.27,
+   "lift_up_h1": 1.43,
+   "lift_down_h1": 1.14,
+   "lift_h2": 1.2,
+   "lift_up_h2": 1.18,
+   "lift_down_h2": 1.21
   },
   {
    "factor": "State: Saturn-Rahu in aspect",
@@ -4645,8 +6332,14 @@
    "p_down": 0.6139340320208941,
    "up_share": 49.4,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.99,
+   "lift_up_h1": 1.1,
+   "lift_down_h1": 0.9,
+   "lift_h2": 0.96,
+   "lift_up_h2": 0.83,
+   "lift_down_h2": 1.14
   },
   {
    "factor": "State: Sun in Aquarius",
@@ -4667,8 +6360,14 @@
    "p_down": 0.2552046149061121,
    "up_share": 44.2,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.02,
+   "lift_up_h1": 0.87,
+   "lift_down_h1": 1.15,
+   "lift_h2": 1.21,
+   "lift_up_h2": 1.21,
+   "lift_down_h2": 1.21
   },
   {
    "factor": "State: Sun in Aries",
@@ -4689,8 +6388,14 @@
    "p_down": 0.2975758260717387,
    "up_share": 40.5,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.89,
+   "lift_up_h1": 0.74,
+   "lift_down_h1": 1.01,
+   "lift_h2": 1.16,
+   "lift_up_h2": 0.99,
+   "lift_down_h2": 1.32
   },
   {
    "factor": "State: Sun in Cancer",
@@ -4711,8 +6416,14 @@
    "p_down": 0.5693250025517795,
    "up_share": 46.3,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.04,
+   "lift_up_h1": 1.14,
+   "lift_down_h1": 0.97,
+   "lift_h2": 0.85,
+   "lift_up_h2": 0.68,
+   "lift_down_h2": 1.01
   },
   {
    "factor": "State: Sun in Capricorn",
@@ -4733,8 +6444,14 @@
    "p_down": 0.7213927637357482,
    "up_share": 51.4,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.01,
+   "lift_up_h1": 1.11,
+   "lift_down_h1": 0.93,
+   "lift_h2": 0.91,
+   "lift_up_h2": 0.97,
+   "lift_down_h2": 0.85
   },
   {
    "factor": "State: Sun in Gemini",
@@ -4755,8 +6472,14 @@
    "p_down": 0.9387060771423462,
    "up_share": 53.1,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.87,
+   "lift_up_h1": 1.14,
+   "lift_down_h1": 0.64,
+   "lift_h2": 0.69,
+   "lift_up_h2": 0.57,
+   "lift_down_h2": 0.8
   },
   {
    "factor": "State: Sun in Leo",
@@ -4777,8 +6500,14 @@
    "p_down": 0.901820185305403,
    "up_share": 59.0,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.17,
+   "lift_up_h1": 1.43,
+   "lift_down_h1": 0.96,
+   "lift_h2": 0.69,
+   "lift_up_h2": 0.92,
+   "lift_down_h2": 0.46
   },
   {
    "factor": "State: Sun in Libra",
@@ -4798,9 +6527,15 @@
    "lift_down": 1.32,
    "p_down": 0.08964335519445477,
    "up_share": 45.1,
-   "q": 0.8141466071544369,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q": 0.8315429021791043,
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.12,
+   "lift_up_h1": 1.22,
+   "lift_down_h1": 1.03,
+   "lift_h2": 1.48,
+   "lift_up_h2": 1.19,
+   "lift_down_h2": 1.78
   },
   {
    "factor": "State: Sun in Pisces",
@@ -4821,8 +6556,14 @@
    "p_down": 0.4316714196696322,
    "up_share": 50.0,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.69,
+   "lift_up_h1": 0.38,
+   "lift_down_h1": 0.96,
+   "lift_h2": 1.69,
+   "lift_up_h2": 2.18,
+   "lift_down_h2": 1.21
   },
   {
    "factor": "State: Sun in Sagittarius",
@@ -4843,8 +6584,14 @@
    "p_down": 0.8634098314711407,
    "up_share": 50.0,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.95,
+   "lift_up_h1": 1.2,
+   "lift_down_h1": 0.74,
+   "lift_h2": 0.59,
+   "lift_up_h2": 0.4,
+   "lift_down_h2": 0.77
   },
   {
    "factor": "State: Sun in Scorpio",
@@ -4865,8 +6612,14 @@
    "p_down": 0.7278760508696038,
    "up_share": 55.6,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.9,
+   "lift_up_h1": 0.98,
+   "lift_down_h1": 0.83,
+   "lift_h2": 1.13,
+   "lift_up_h2": 1.42,
+   "lift_down_h2": 0.85
   },
   {
    "factor": "State: Sun in Taurus",
@@ -4888,7 +6641,13 @@
    "up_share": 35.0,
    "q": 1.0,
    "q_up": 1.0,
-   "q_down": 1.0
+   "q_down": 1.0,
+   "lift_h1": 1.06,
+   "lift_up_h1": 0.74,
+   "lift_down_h1": 1.34,
+   "lift_h2": 0.89,
+   "lift_up_h2": 0.71,
+   "lift_down_h2": 1.07
   },
   {
    "factor": "State: Sun in Virgo",
@@ -4909,8 +6668,14 @@
    "p_down": 0.3713064701065014,
    "up_share": 44.2,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.24,
+   "lift_up_h1": 1.09,
+   "lift_down_h1": 1.38,
+   "lift_h2": 0.73,
+   "lift_up_h2": 0.79,
+   "lift_down_h2": 0.67
   },
   {
    "factor": "State: Sun in a Jupiter nakshatra",
@@ -4931,8 +6696,14 @@
    "p_down": 0.5966438678607692,
    "up_share": 48.1,
    "q": 1.0,
-   "q_up": 0.9929485945875292,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.85,
+   "lift_up_h1": 0.97,
+   "lift_down_h1": 0.76,
+   "lift_h2": 1.16,
+   "lift_up_h2": 1.03,
+   "lift_down_h2": 1.28
   },
   {
    "factor": "State: Sun in a Ketu nakshatra",
@@ -4953,8 +6724,14 @@
    "p_down": 0.9327089772035632,
    "up_share": 52.4,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.81,
+   "lift_up_h1": 0.96,
+   "lift_down_h1": 0.69,
+   "lift_h2": 0.8,
+   "lift_up_h2": 0.81,
+   "lift_down_h2": 0.79
   },
   {
    "factor": "State: Sun in a Mars nakshatra",
@@ -4974,9 +6751,15 @@
    "lift_down": 1.32,
    "p_down": 0.060603836080769025,
    "up_share": 43.1,
-   "q": 0.8245562466437256,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q": 0.8421749698626086,
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.2,
+   "lift_up_h1": 0.85,
+   "lift_down_h1": 1.5,
+   "lift_h2": 1.25,
+   "lift_up_h2": 1.43,
+   "lift_down_h2": 1.07
   },
   {
    "factor": "State: Sun in a Mercury nakshatra",
@@ -4997,8 +6780,14 @@
    "p_down": 0.5728170280645242,
    "up_share": 54.2,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.94,
+   "lift_up_h1": 0.92,
+   "lift_down_h1": 0.96,
+   "lift_h2": 1.34,
+   "lift_up_h2": 1.72,
+   "lift_down_h2": 0.97
   },
   {
    "factor": "State: Sun in a Moon nakshatra",
@@ -5019,8 +6808,14 @@
    "p_down": 0.2097726200299146,
    "up_share": 41.1,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.1,
+   "lift_up_h1": 0.99,
+   "lift_down_h1": 1.2,
+   "lift_h2": 0.97,
+   "lift_up_h2": 0.79,
+   "lift_down_h2": 1.14
   },
   {
    "factor": "State: Sun in a Rahu nakshatra",
@@ -5041,8 +6836,14 @@
    "p_down": 0.4954791212480991,
    "up_share": 47.2,
    "q": 1.0,
-   "q_up": 0.9929485945875292,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.15,
+   "lift_up_h1": 1.26,
+   "lift_down_h1": 1.05,
+   "lift_h2": 0.84,
+   "lift_up_h2": 0.71,
+   "lift_down_h2": 0.98
   },
   {
    "factor": "State: Sun in a Saturn nakshatra",
@@ -5063,8 +6864,14 @@
    "p_down": 0.6671240917725352,
    "up_share": 47.9,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.71,
+   "lift_up_h1": 0.67,
+   "lift_down_h1": 0.75,
+   "lift_h2": 1.21,
+   "lift_up_h2": 1.27,
+   "lift_down_h2": 1.16
   },
   {
    "factor": "State: Sun in a Sun nakshatra",
@@ -5085,8 +6892,14 @@
    "p_down": 0.9339011019958736,
    "up_share": 51.2,
    "q": 1.0,
-   "q_up": 0.996302703825059,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.01,
+   "lift_up_h1": 1.22,
+   "lift_down_h1": 0.85,
+   "lift_h2": 0.52,
+   "lift_up_h2": 0.44,
+   "lift_down_h2": 0.61
   },
   {
    "factor": "State: Sun in a Venus nakshatra",
@@ -5107,8 +6920,14 @@
    "p_down": 0.2596849405466439,
    "up_share": 44.6,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.21,
+   "lift_up_h1": 1.18,
+   "lift_down_h1": 1.24,
+   "lift_h2": 0.91,
+   "lift_up_h2": 0.82,
+   "lift_down_h2": 1.0
   },
   {
    "factor": "State: Venus retrograde",
@@ -5129,8 +6948,14 @@
    "p_down": 0.25670493215397483,
    "up_share": 46.2,
    "q": 1.0,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 1.47,
+   "lift_up_h1": 1.39,
+   "lift_down_h1": 1.54,
+   "lift_h2": 0.78,
+   "lift_up_h2": 0.75,
+   "lift_down_h2": 0.82
   },
   {
    "factor": "State: Venus with the Sun",
@@ -5150,9 +6975,15 @@
    "lift_down": 1.05,
    "p_down": 0.35643486468626817,
    "up_share": 50.8,
-   "q": 0.8505715921758091,
-   "q_up": 0.9917241099953643,
-   "q_down": 1.0
+   "q": 0.8687461988462325,
+   "q_up": 0.9968240553184264,
+   "q_down": 1.0,
+   "lift_h1": 0.96,
+   "lift_up_h1": 0.97,
+   "lift_down_h1": 0.95,
+   "lift_h2": 1.43,
+   "lift_up_h2": 1.64,
+   "lift_down_h2": 1.24
   }
  ],
  "big_days": [
@@ -5217,7 +7048,7 @@
     "Event: Mars changes nakshatra",
     "Event: Mars changes sign",
     "Event: Mercury combustion begins",
-    "Event: Saturn combustion begins",
+    "Event: Saturn leaves combustion",
     "Event: full moon"
    ],
    "rules": [
@@ -5235,7 +7066,7 @@
     "Event: Mars changes nakshatra",
     "Event: Mars changes sign",
     "Event: Mars-Jupiter opposition",
-    "Event: Saturn combustion begins",
+    "Event: Saturn leaves combustion",
     "Event: Sun changes sign",
     "Event: Sun-Jupiter conjunction",
     "Event: Sun-Mars opposition",
@@ -5290,7 +7121,7 @@
     "Event: Mercury stations direct",
     "Event: Saturn stations direct",
     "Event: Venus changes sign",
-    "Event: Venus combustion begins",
+    "Event: Venus leaves combustion",
     "Event: Venus-Uranus conjunction",
     "Event: last quarter"
    ],
@@ -5306,7 +7137,7 @@
    "date": "2002-06-05",
    "ret": -2.01,
    "events": [
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Mercury stations direct",
     "Event: Sun-Pluto opposition",
     "Event: Uranus stations retrograde",
@@ -5561,7 +7392,7 @@
    "events": [
     "Event: Jupiter stations direct",
     "Event: Mercury changes sign",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Venus-Uranus conjunction",
     "Event: new moon"
    ],
@@ -5580,7 +7411,7 @@
    "ret": 2.68,
    "events": [
     "Event: Mars changes nakshatra",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Mercury stations direct",
     "Event: last quarter"
    ],
@@ -5847,7 +7678,7 @@
    "ret": -3.31,
    "events": [
     "Event: Mars changes sign",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Mercury stations direct",
     "Event: first quarter"
    ],
@@ -5886,7 +7717,7 @@
    "date": "2004-06-24",
    "ret": 2.05,
    "events": [
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Mercury-Saturn conjunction",
     "Event: Saturn combustion begins",
     "Event: first quarter"
@@ -5907,7 +7738,7 @@
    "ret": -2.12,
    "events": [
     "Event: Mercury changes sign",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Mercury-Saturn conjunction",
     "Event: Venus stations direct",
     "Event: full moon"
@@ -5985,7 +7816,7 @@
    "ret": 2.06,
    "events": [
     "Event: Mars changes nakshatra",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Sun-Neptune opposition",
     "Event: Venus changes sign",
     "Event: first quarter"
@@ -6090,7 +7921,7 @@
    "events": [
     "Event: Mars changes sign",
     "Event: Mercury changes sign",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Sun-Neptune conjunction",
     "Event: first quarter"
    ],
@@ -6107,7 +7938,7 @@
    "date": "2006-02-09",
    "ret": 2.62,
    "events": [
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Sun changes sign",
     "Event: Sun-Neptune conjunction",
     "Event: full moon"
@@ -6126,7 +7957,7 @@
    "date": "2006-02-10",
    "ret": -2.53,
    "events": [
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Sun changes sign",
     "Event: full moon"
    ],
@@ -6325,7 +8156,7 @@
    "ret": 2.44,
    "events": [
     "Event: Mars changes sign",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Neptune stations retrograde",
     "Event: Venus changes sign",
     "Event: last quarter"
@@ -6342,7 +8173,7 @@
    "ret": -5.35,
    "events": [
     "Event: Mars changes sign",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Neptune stations retrograde",
     "Event: Venus changes sign",
     "Event: new moon"
@@ -6582,7 +8413,7 @@
    "ret": -2.12,
    "events": [
     "Event: Mercury-Saturn conjunction",
-    "Event: Saturn combustion begins",
+    "Event: Saturn leaves combustion",
     "Event: Sun changes sign",
     "Event: last quarter"
    ],
@@ -6600,7 +8431,7 @@
     "Event: Mercury combustion begins",
     "Event: Mercury-Neptune opposition",
     "Event: Mercury-Saturn conjunction",
-    "Event: Saturn combustion begins",
+    "Event: Saturn leaves combustion",
     "Event: new moon"
    ],
    "rules": [
@@ -6847,7 +8678,7 @@
    "ret": -2.12,
    "events": [
     "Event: Mars changes nakshatra",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Saturn-Neptune opposition",
     "Event: full moon",
     "Event: lunar eclipse"
@@ -6865,7 +8696,7 @@
    "ret": -3.14,
    "events": [
     "Event: Mars changes nakshatra",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Saturn-Neptune opposition",
     "Event: Sun-Uranus conjunction",
     "Event: full moon",
@@ -6887,7 +8718,7 @@
     "Event: Mars changes nakshatra",
     "Event: Mars changes sign",
     "Event: Mercury changes sign",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: last quarter"
    ],
    "rules": [
@@ -6948,7 +8779,7 @@
    "events": [
     "Event: Mars changes nakshatra",
     "Event: Pluto stations direct",
-    "Event: Saturn combustion begins",
+    "Event: Saturn leaves combustion",
     "Event: Sun-Uranus opposition",
     "Event: Venus stations direct",
     "Event: last quarter"
@@ -6982,7 +8813,7 @@
    "date": "2007-10-26",
    "ret": 2.16,
    "events": [
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Sun-Mercury conjunction",
     "Event: Venus-Uranus opposition",
     "Event: full moon"
@@ -7064,10 +8895,10 @@
    "date": "2008-01-02",
    "ret": 2.65,
    "events": [
-    "Event: Jupiter combustion begins",
+    "Event: Jupiter leaves combustion",
     "Event: Mars-Pluto opposition",
     "Event: Mercury changes sign",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: last quarter"
    ],
    "rules": [
@@ -7296,7 +9127,7 @@
    "ret": -2.14,
    "events": [
     "Event: Mars-Jupiter opposition",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Neptune changes sign",
     "Event: Venus changes sign"
    ],
@@ -7476,7 +9307,7 @@
    "ret": -4.23,
    "events": [
     "Event: Mars changes sign",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Venus-Saturn conjunction",
     "Event: first quarter"
    ],
@@ -7494,7 +9325,7 @@
    "date": "2008-08-13",
    "ret": 2.08,
    "events": [
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Mercury-Saturn conjunction",
     "Event: Sun changes sign",
     "Event: Sun-Neptune opposition",
@@ -7667,7 +9498,7 @@
    "events": [
     "Event: Mars changes nakshatra",
     "Event: Mercury-Venus conjunction",
-    "Event: Saturn combustion begins",
+    "Event: Saturn leaves combustion",
     "Event: Sun changes sign",
     "Event: Sun-Uranus opposition",
     "Event: full moon"
@@ -7687,7 +9518,7 @@
    "events": [
     "Event: Mars changes nakshatra",
     "Event: Mercury-Venus conjunction",
-    "Event: Saturn combustion begins",
+    "Event: Saturn leaves combustion",
     "Event: Sun changes sign",
     "Event: Venus changes sign",
     "Event: full moon"
@@ -7706,7 +9537,7 @@
    "ret": 5.45,
    "events": [
     "Event: Mars changes nakshatra",
-    "Event: Saturn combustion begins",
+    "Event: Saturn leaves combustion",
     "Event: Sun changes sign",
     "Event: Venus changes sign",
     "Event: full moon"
@@ -7724,7 +9555,7 @@
    "date": "2008-09-19",
    "ret": -3.6,
    "events": [
-    "Event: Saturn combustion begins",
+    "Event: Saturn leaves combustion",
     "Event: Sun changes sign",
     "Event: Venus changes sign",
     "Event: last quarter"
@@ -7812,7 +9643,7 @@
    "date": "2008-10-08",
    "ret": 2.81,
    "events": [
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Sun-Mercury conjunction",
     "Event: first quarter"
    ],
@@ -7828,7 +9659,7 @@
    "date": "2008-10-09",
    "ret": -2.21,
    "events": [
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Sun-Mercury conjunction",
     "Event: first quarter"
    ],
@@ -7844,7 +9675,7 @@
    "date": "2008-10-10",
    "ret": -3.14,
    "events": [
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Venus changes sign",
     "Event: first quarter"
    ],
@@ -8168,7 +9999,7 @@
    "date": "2008-12-15",
    "ret": 2.01,
    "events": [
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Mercury-Pluto conjunction",
     "Event: Sun changes sign",
     "Event: full moon"
@@ -8189,7 +10020,7 @@
    "events": [
     "Event: Mars changes nakshatra",
     "Event: Mars changes sign",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Sun changes sign",
     "Event: last quarter"
    ],
@@ -8312,7 +10143,7 @@
     "Event: Jupiter changes nakshatra",
     "Event: Mars changes nakshatra",
     "Event: Mercury changes sign",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Sun-Jupiter conjunction",
     "Event: Sun-Mercury conjunction",
     "Event: Venus-Saturn opposition",
@@ -8374,9 +10205,9 @@
    "date": "2009-02-09",
    "ret": -2.35,
    "events": [
-    "Event: Jupiter combustion begins",
+    "Event: Jupiter leaves combustion",
     "Event: Mars changes nakshatra",
-    "Event: Mars combustion begins",
+    "Event: Mars leaves combustion",
     "Event: Mercury changes sign",
     "Event: Sun changes sign",
     "Event: Sun-Neptune conjunction",
@@ -8401,7 +10232,7 @@
    "ret": 2.39,
    "events": [
     "Event: Mars changes nakshatra",
-    "Event: Mars combustion begins",
+    "Event: Mars leaves combustion",
     "Event: Mercury changes sign",
     "Event: Neptune changes sign",
     "Event: Sun changes sign",
@@ -8425,7 +10256,7 @@
    "ret": 3.29,
    "events": [
     "Event: Mars changes nakshatra",
-    "Event: Mars combustion begins",
+    "Event: Mars leaves combustion",
     "Event: Neptune changes sign",
     "Event: Sun changes sign",
     "Event: Sun-Neptune conjunction",
@@ -8637,6 +10468,7 @@
     "Event: Mercury-Uranus conjunction",
     "Event: Sun-Venus conjunction",
     "Event: Venus combustion begins",
+    "Event: Venus leaves combustion",
     "Event: new moon"
    ],
    "rules": [
@@ -8676,7 +10508,7 @@
    "events": [
     "Event: Mars-Saturn opposition",
     "Event: Mercury changes sign",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Pluto stations retrograde",
     "Event: Uranus changes sign",
     "Event: full moon"
@@ -8930,7 +10762,7 @@
    "events": [
     "Event: Mercury changes sign",
     "Event: Venus changes sign",
-    "Event: Venus combustion begins",
+    "Event: Venus leaves combustion",
     "Event: last quarter"
    ],
    "rules": [
@@ -9149,7 +10981,7 @@
     "Event: Jupiter changes sign",
     "Event: Mars changes nakshatra",
     "Event: Mars changes sign",
-    "Event: Mars combustion begins",
+    "Event: Mars leaves combustion",
     "Event: new moon"
    ],
    "rules": [
@@ -9166,7 +10998,7 @@
    "ret": -2.11,
    "events": [
     "Event: Mars changes nakshatra",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: last quarter"
    ],
    "rules": [
@@ -9247,7 +11079,7 @@
    "ret": 2.15,
    "events": [
     "Event: Mars changes nakshatra",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Sun-Neptune opposition",
     "Event: Venus-Neptune opposition",
     "Event: last quarter"
@@ -9268,7 +11100,7 @@
    "ret": -5.61,
    "events": [
     "Event: Mars changes nakshatra",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Mercury stations direct",
     "Event: Sun-Neptune opposition",
     "Event: Venus-Neptune opposition",
@@ -9382,7 +11214,7 @@
     "Event: Mars changes sign",
     "Event: Mercury combustion begins",
     "Event: Venus changes sign",
-    "Event: Venus combustion begins",
+    "Event: Venus leaves combustion",
     "Event: full moon"
    ],
    "rules": [
@@ -9406,7 +11238,7 @@
     "Event: Mercury combustion begins",
     "Event: Pluto stations direct",
     "Event: Sun changes sign",
-    "Event: Venus combustion begins",
+    "Event: Venus leaves combustion",
     "Event: Venus-Uranus opposition",
     "Event: full moon"
    ],
@@ -9612,7 +11444,7 @@
    "date": "2011-10-20",
    "ret": -2.07,
    "events": [
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Mercury-Jupiter opposition",
     "Event: Sun changes sign",
     "Event: last quarter"
@@ -9635,7 +11467,7 @@
    "date": "2011-10-25",
    "ret": 2.91,
    "events": [
-    "Event: Saturn combustion begins",
+    "Event: Saturn leaves combustion",
     "Event: Sun-Jupiter opposition",
     "Event: Venus changes sign",
     "Event: new moon"
@@ -9904,7 +11736,7 @@
    "ret": 3.71,
    "events": [
     "Event: Mercury changes sign",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Mercury-Venus conjunction",
     "Event: Neptune stations retrograde",
     "Event: Venus combustion begins",
@@ -9928,7 +11760,7 @@
     "Event: Mercury changes sign",
     "Event: Neptune stations retrograde",
     "Event: Sun-Venus conjunction",
-    "Event: Venus combustion begins",
+    "Event: Venus leaves combustion",
     "Event: full moon",
     "Event: lunar eclipse"
    ],
@@ -10150,7 +11982,7 @@
    "date": "2013-06-20",
    "ret": -6.38,
    "events": [
-    "Event: Mars combustion begins",
+    "Event: Mars leaves combustion",
     "Event: Mercury-Venus conjunction",
     "Event: Sun-Jupiter conjunction",
     "Event: Venus changes sign",
@@ -10194,7 +12026,7 @@
    "ret": 2.62,
    "events": [
     "Event: Jupiter changes nakshatra",
-    "Event: Jupiter combustion begins",
+    "Event: Jupiter leaves combustion",
     "Event: Mars changes sign",
     "Event: Mercury combustion begins",
     "Event: Rahu changes nakshatra",
@@ -10296,7 +12128,7 @@
    "ret": -2.46,
    "events": [
     "Event: Mars changes nakshatra",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: first quarter"
    ],
    "rules": [
@@ -10694,7 +12526,7 @@
    "ret": 3.64,
    "events": [
     "Event: Saturn changes nakshatra",
-    "Event: Saturn combustion begins",
+    "Event: Saturn leaves combustion",
     "Event: first quarter"
    ],
    "rules": [
@@ -10769,7 +12601,7 @@
    "date": "2015-02-06",
    "ret": -2.23,
    "events": [
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Sun-Jupiter opposition",
     "Event: full moon"
    ],
@@ -10898,7 +12730,7 @@
    "events": [
     "Event: Mercury changes sign",
     "Event: Sun changes sign",
-    "Event: Venus combustion begins",
+    "Event: Venus leaves combustion",
     "Event: first quarter"
    ],
    "rules": [
@@ -10916,7 +12748,7 @@
    "date": "2015-10-02",
    "ret": 2.06,
    "events": [
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Sun-Mercury conjunction",
     "Event: Venus changes sign",
     "Event: last quarter"
@@ -11132,7 +12964,7 @@
    "date": "2016-10-04",
    "ret": -3.26,
    "events": [
-    "Event: Jupiter combustion begins",
+    "Event: Jupiter leaves combustion",
     "Event: Mercury changes sign"
    ],
    "rules": [
@@ -11182,7 +13014,7 @@
    "date": "2017-03-16",
    "ret": 2.2,
    "events": [
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Mercury-Venus conjunction",
     "Event: Sun changes sign"
    ],
@@ -11241,7 +13073,7 @@
    "ret": -2.25,
    "events": [
     "Event: Jupiter changes nakshatra",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Mercury-Saturn opposition",
     "Event: Neptune stations retrograde",
     "Event: Sun changes sign",
@@ -11264,7 +13096,7 @@
    "ret": 2.88,
    "events": [
     "Event: Jupiter changes sign",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Mercury-Uranus opposition",
     "Event: new moon"
    ],
@@ -11364,7 +13196,7 @@
    "ret": -4.63,
    "events": [
     "Event: Mars changes nakshatra",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Sun-Mercury conjunction",
     "Event: Venus changes sign",
     "Event: first quarter"
@@ -11380,7 +13212,7 @@
    "date": "2020-03-03",
    "ret": 3.13,
    "events": [
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: first quarter"
    ],
    "rules": [
@@ -11621,7 +13453,7 @@
    "events": [
     "Event: Mars changes nakshatra",
     "Event: Sun-Venus conjunction",
-    "Event: Venus combustion begins",
+    "Event: Venus leaves combustion",
     "Event: full moon",
     "Event: lunar eclipse"
    ],
@@ -11857,7 +13689,7 @@
    "events": [
     "Event: Jupiter changes nakshatra",
     "Event: Mercury changes sign",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Mercury-Pluto conjunction",
     "Event: Venus changes sign",
     "Event: last quarter"
@@ -11879,7 +13711,7 @@
    "events": [
     "Event: Jupiter changes nakshatra",
     "Event: Mercury changes sign",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Mercury-Pluto conjunction",
     "Event: Mercury-Saturn conjunction",
     "Event: Venus changes sign",
@@ -11900,7 +13732,7 @@
    "ret": -4.09,
    "events": [
     "Event: Jupiter changes nakshatra",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Mercury-Jupiter conjunction",
     "Event: Mercury-Saturn conjunction",
     "Event: Saturn combustion begins",
@@ -11976,7 +13808,7 @@
    "ret": -4.65,
    "events": [
     "Event: Jupiter stations retrograde",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Sun changes sign",
     "Event: first quarter"
    ],
@@ -12050,7 +13882,7 @@
    "ret": 2.01,
    "events": [
     "Event: Mars changes nakshatra",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Saturn stations direct",
     "Event: first quarter"
    ],
@@ -12086,7 +13918,7 @@
    "date": "2022-01-27",
    "ret": -2.0,
    "events": [
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Mercury-Pluto conjunction",
     "Event: Venus stations direct",
     "Event: last quarter"
@@ -12226,7 +14058,7 @@
    "date": "2022-09-28",
    "ret": 2.07,
    "events": [
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Mercury-Venus conjunction",
     "Event: Sun-Jupiter opposition",
     "Event: Venus combustion begins",
@@ -12323,7 +14155,7 @@
    "events": [
     "Event: Mars changes nakshatra",
     "Event: Mercury changes sign",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Mercury-Mars opposition",
     "Event: Neptune stations direct",
     "Event: Venus-Mars opposition",
@@ -12512,7 +14344,7 @@
    "events": [
     "Event: Jupiter-Uranus conjunction",
     "Event: Mars changes sign",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Mercury stations direct",
     "Event: Mercury-Venus conjunction",
     "Event: Venus changes sign",
@@ -12695,7 +14527,7 @@
    "events": [
     "Event: Mars changes sign",
     "Event: Mercury stations direct",
-    "Event: Saturn combustion begins",
+    "Event: Saturn leaves combustion",
     "Event: Venus-Saturn conjunction",
     "Event: first quarter"
    ],
@@ -13374,7 +15206,7 @@
     "Event: Mars changes nakshatra",
     "Event: Mars-Pluto conjunction",
     "Event: Mercury-Venus conjunction",
-    "Event: Venus combustion begins",
+    "Event: Venus leaves combustion",
     "Event: first quarter"
    ],
    "rules": [
@@ -13395,7 +15227,7 @@
     "Event: Mars changes nakshatra",
     "Event: Mars-Pluto conjunction",
     "Event: Mercury-Venus conjunction",
-    "Event: Venus combustion begins",
+    "Event: Venus leaves combustion",
     "Event: full moon"
    ],
    "rules": [
@@ -13414,10 +15246,10 @@
    "ret": 6.07,
    "events": [
     "Event: Mercury changes sign",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Uranus stations direct",
     "Event: Venus changes sign",
-    "Event: Venus combustion begins",
+    "Event: Venus leaves combustion",
     "Event: full moon"
    ],
    "rules": [
@@ -13567,7 +15399,7 @@
    "ret": 2.71,
    "events": [
     "Event: Jupiter stations direct",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Saturn combustion begins",
     "Event: Sun-Mercury conjunction",
     "Event: Venus-Neptune conjunction",
@@ -14010,7 +15842,7 @@
    "events": [
     "Event: Jupiter-Pluto opposition",
     "Event: Mars changes nakshatra",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Mercury stations direct",
     "Event: Saturn stations retrograde",
     "Event: first quarter"
@@ -14046,7 +15878,7 @@
    "date": "2026-08-07",
    "ret": 2.33,
    "events": [
-    "Event: Jupiter combustion begins",
+    "Event: Jupiter leaves combustion",
     "Event: Mercury changes sign",
     "Event: Venus-Neptune opposition",
     "Event: last quarter"
@@ -14208,7 +16040,7 @@
    "events": [
     "Event: Mars changes nakshatra",
     "Event: Mars changes sign",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Mercury stations direct",
     "Event: Venus stations direct",
     "Event: new moon"
@@ -14232,7 +16064,7 @@
    "events": [
     "Event: Mars changes nakshatra",
     "Event: Mars changes sign",
-    "Event: Mercury combustion begins",
+    "Event: Mercury leaves combustion",
     "Event: Mercury stations direct",
     "Event: Venus stations direct",
     "Event: new moon"

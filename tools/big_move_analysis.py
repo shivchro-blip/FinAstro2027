@@ -42,7 +42,8 @@ from finastro.pdfref.engine import snapshot  # noqa: E402
 
 ET = ZoneInfo("America/New_York")
 OUT = ROOT / "build" / "pdfref"
-TH = float(sys.argv[1]) if len(sys.argv) > 1 else 2.0
+TH = 2.0
+SPLIT = dt.date(2013, 11, 20)            # first half 2000-2013 picks leads, second half 2013-2026 tests them
 PL = ("Sun", "Mercury", "Venus", "Mars", "Jupiter", "Saturn", "Rahu", "Ketu")
 RETRO = ("Mercury", "Venus", "Mars", "Jupiter", "Saturn")
 
@@ -54,10 +55,10 @@ def load_prices():
     return D, C
 
 
-def load_events():
+def load_events(years=range(2000, 2027)):
     ev = collections.defaultdict(set)          # ET date -> set of factor names
     seen = set()
-    for y in range(2000, 2027):
+    for y in years:
         f = ROOT / "build" / f"astronomy_{y}.json"
         if not f.exists():
             continue
@@ -78,7 +79,7 @@ def load_events():
             elif ec == "nakshatra_ingress" and b[0] in ("Mars", "Jupiter", "Saturn", "Rahu"):
                 name = f"Event: {b[0]} changes nakshatra"
             elif ec == "combustion":
-                name = f"Event: {b[0]} combustion begins"
+                name = f"Event: {b[0]} {'combustion begins' if fam.endswith('combust') else 'leaves combustion'}"
             elif ec in ("conjunction", "opposition") and len(b) > 1 and all(x in PL + ("Moon", "Uranus", "Neptune", "Pluto") for x in b) and "Moon" not in b:
                 name = f"Event: {b[0]}-{b[1]} {ec}"
             if not name:
@@ -157,36 +158,36 @@ def bh(ps):
     return q
 
 
-def main():
-    D, C = load_prices()
-    ev = load_events()
-    rules = rule_days(D)
-    days = []
-    for i in range(1, len(D)):
-        if D[i] < dt.date(2000, 11, 20) or D[i] > dt.date(2026, 11, 20):
-            continue
-        r = (C[i] / C[i - 1] - 1) * 100
-        f = set(states(D[i]))
-        for k in range(-3, 4):
-            f |= ev.get(D[i] + dt.timedelta(days=k), set())
-        f |= rules.get(D[i], set())
-        days.append(dict(date=D[i], ret=r, f=f))
+def rule_name(e):
+    return f"Rule: {e['title']} [{e['tone']}]"
+
+
+def day_factors(day, ev, rules):
+    f = set(states(day))
+    for k in range(-3, 4):
+        f |= ev.get(day + dt.timedelta(days=k), set())
+    return f | rules.get(day, set())
+
+
+def factor_table(days, min_days=30):
+    """Lift of every factor among the big days of `days` (year-stratified expected counts)."""
     big = [x for x in days if abs(x["ret"]) >= TH]
     up = [x for x in big if x["ret"] > 0]
+    dn = [x for x in big if x["ret"] < 0]
     years = collections.defaultdict(list)
     for x in days:
         years[x["date"].year].append(x)
     allf = sorted(set().union(*(x["f"] for x in days)))
     share = {y: collections.Counter(f for x in v for f in x["f"]) for y, v in years.items()}
     nday = {y: len(v) for y, v in years.items()}
+
     def expected(sub, fac):
         cnt = collections.Counter(x["date"].year for x in sub)
         return sum(n * share[y][fac] / nday[y] for y, n in cnt.items())
     rows = []
-    up_share_all = len(up) / len(big)
     for fac in allf:
         tot = sum(1 for x in days if fac in x["f"])
-        if tot < 30:
+        if tot < min_days:
             continue
         ob = [x for x in big if fac in x["f"]]
         ep, last = 0, None
@@ -195,9 +196,7 @@ def main():
                 ep += 1
             last = x["date"]
         o_up = sum(1 for x in ob if x["ret"] > 0)
-        ex_b = expected(big, fac)
-        ex_u = expected(up, fac)
-        ex_d = expected([x for x in big if x["ret"] < 0], fac)
+        ex_b, ex_u, ex_d = expected(big, fac), expected(up, fac), expected(dn, fac)
         rows.append(dict(factor=fac, episodes=ep, days=tot, share=round(tot / len(days) * 100, 1), big=len(ob), exp_big=round(ex_b, 1), lift=round(len(ob) / ex_b, 2) if ex_b else None,
                          p=poisson_sf(len(ob), ex_b), up=o_up, exp_up=round(ex_u, 1), lift_up=round(o_up / ex_u, 2) if ex_u else None, p_up=poisson_sf(o_up, ex_u),
                          down=len(ob) - o_up, exp_down=round(ex_d, 1), lift_down=round((len(ob) - o_up) / ex_d, 2) if ex_d else None, p_down=poisson_sf(len(ob) - o_up, ex_d),
@@ -206,21 +205,77 @@ def main():
         qs = bh([r[key] for r in rows])
         for r, q in zip(rows, qs):
             r["q" + key[1:]] = q
-    res = dict(threshold=TH, n_days=len(days), n_big=len(big), n_up=len(up), n_down=len(big) - len(up), up_share=round(up_share_all * 100, 1),
-               factors=rows, big_days=[dict(date=x["date"].isoformat(), ret=round(x["ret"], 2), events=sorted(f for f in x["f"] if f.startswith("Event")),
-                                            rules=sorted(f for f in x["f"] if f.startswith("Rule"))) for x in big])
+    return rows, big, up
+
+
+SIDES = (("any", "big", "exp_big", "lift", "p"), ("up", "up", "exp_up", "lift_up", "p_up"), ("down", "down", "exp_down", "lift_down", "p_down"))
+
+
+def leads(rows, p_max=0.05, min_ep=5):
+    """(row, side) pairs: lift > 1 with p < p_max on that side and at least min_ep separate episodes."""
+    out = []
+    for r in rows:
+        for side, ok, ek, lk, pk in SIDES:
+            if r[lk] and r[lk] > 1 and r[pk] < p_max and r["episodes"] >= min_ep:
+                out.append((r, side))
+    return out
+
+
+def split_test(days):
+    """Pick leads on 2000-2013, then measure them on 2013-2026."""
+    h1 = [x for x in days if x["date"] < SPLIT]
+    h2 = [x for x in days if x["date"] >= SPLIT]
+    r1, _, _ = factor_table(h1, 15)
+    r2, _, _ = factor_table(h2, 1)
+    m2 = {r["factor"]: r for r in r2}
+    out, O, E = [], 0, 0.0
+    for r, side in leads(r1):
+        _, ok, ek, lk, pk = next(x for x in SIDES if x[0] == side)
+        t = m2.get(r["factor"])
+        o, e = (t[ok], t[ek]) if t else (0, 0.0)
+        O, E = O + o, E + e
+        out.append(dict(factor=r["factor"], side=side, h1_obs=r[ok], h1_exp=r[ek], h1_lift=r[lk], h1_p=r[pk], h2_obs=o, h2_exp=round(e, 1),
+                        h2_lift=round(o / e, 2) if e else None, held=bool(e and o / e > 1)))
+    return dict(split=SPLIT.isoformat(), n_leads=len(out), n_held=sum(x["held"] for x in out), pooled_obs=O, pooled_exp=round(E, 1),
+                pooled_lift=round(O / E, 2) if E else None, pooled_p=poisson_sf(O, E) if E else None, leads=out), {"h1": r1, "h2": m2}
+
+
+def build_days():
+    D, C = load_prices()
+    ev = load_events()
+    rules = rule_days(D)
+    days = []
+    for i in range(1, len(D)):
+        if D[i] < dt.date(2000, 11, 20) or D[i] > dt.date(2026, 11, 20):
+            continue
+        days.append(dict(date=D[i], ret=(C[i] / C[i - 1] - 1) * 100, f=day_factors(D[i], ev, rules)))
+    return days
+
+
+def main():
+    global TH
+    if len(sys.argv) > 1:
+        TH = float(sys.argv[1])
+    days = build_days()
+    rows, big, up = factor_table(days)
+    sp, halves = split_test(days)
+    h1 = {r["factor"]: r for r in halves["h1"]}
+    for r in rows:
+        for half, m in (("h1", h1), ("h2", halves["h2"])):
+            t = m.get(r["factor"])
+            for _, _, _, lk, _ in SIDES:
+                r[f"{lk}_{half}"] = t[lk] if t else None
+    res = dict(threshold=TH, n_days=len(days), n_big=len(big), n_up=len(up), n_down=len(big) - len(up), up_share=round(len(up) / len(big) * 100, 1),
+               split=sp, factors=rows, big_days=[dict(date=x["date"].isoformat(), ret=round(x["ret"], 2), events=sorted(f for f in x["f"] if f.startswith("Event")),
+                                                      rules=sorted(f for f in x["f"] if f.startswith("Rule"))) for x in big])
     json.dump(res, open(OUT / "gold_big_moves_2000-2026_ET.json", "w"), indent=1, default=str)
     write(res)
-    top = sorted(rows, key=lambda r: r["p"])[:25]
     print(f"{len(big)} big days ({len(up)} up, {len(big) - len(up)} down) of {len(days)}")
-    for r in top:
-        print(f"  lift {r['lift']:.2f}  {r['big']:3d}/{r['exp_big']:6.1f}  p {r['p']:.4f} q {r['q']:.3f}  up {r['up_share']}%  {r['factor']}")
-    print("UP")
-    for r in sorted(rows, key=lambda r: r["p_up"])[:12]:
-        print(f"  lift {r['lift_up']:.2f}  {r['up']:3d}/{r['exp_up']:6.1f}  p {r['p_up']:.4f} q {r['q_up']:.3f}  {r['factor']}")
-    print("DOWN")
-    for r in sorted(rows, key=lambda r: r["p_down"])[:12]:
-        print(f"  lift {r['lift_down']:.2f}  {r['down']:3d}/{r['exp_down']:6.1f}  p {r['p_down']:.4f} q {r['q_down']:.3f}  {r['factor']}")
+    for r in sorted(rows, key=lambda r: r["p"])[:15]:
+        print(f"  lift {r['lift']:.2f} (h1 {r['lift_h1']} h2 {r['lift_h2']})  {r['big']:3d}/{r['exp_big']:6.1f}  p {r['p']:.4f} q {r['q']:.3f}  {r['factor']}")
+    print(f"split: {sp['n_leads']} leads from 2000-2013, {sp['n_held']} held in 2013-2026; pooled {sp['pooled_obs']}/{sp['pooled_exp']} lift {sp['pooled_lift']} p {sp['pooled_p']}")
+    for x in sp["leads"]:
+        print(f"   {x['side']:4s} h1 x{x['h1_lift']} -> h2 x{x['h2_lift']}  {x['factor']}")
 
 
 def write(res):
@@ -240,6 +295,9 @@ def write(res):
     sig_d = [r for r in rows if r["q_down"] < 0.10 and r["lift_down"] > 1]
     bd = "".join(f"<tr class='{'bullish' if x['ret'] > 0 else 'bearish'}'><td class='w'>{x['date']}</td><td class='n'><b>{x['ret']:+.2f}%</b></td><td class='s'>{html.escape('; '.join(e.replace('Event: ', '') for e in x['events']) or '-')}</td>"
                  f"<td class='s'>{html.escape('; '.join(r.replace('Rule: ', '') for r in x['rules'])[:600] or '-')}</td></tr>" for x in sorted(res["big_days"], key=lambda x: x["date"], reverse=True))
+    split_rows = "".join(f"<tr class='{'bullish' if x['held'] else 'bearish'}'><td>{html.escape(x['factor'])}</td><td>{x['side']}</td><td class='n'>{x['h1_obs']} / {x['h1_exp']} (×{x['h1_lift']})</td>"
+                         f"<td class='n'>{x['h2_obs']} / {x['h2_exp']} (×{x['h2_lift']})</td><td>{'yes' if x['held'] else 'no'}</td></tr>" for x in res["split"]["leads"])
+
     def names(lst, lk):
         return "; ".join(f"{r['factor']} (×{r[lk]:.2f})" for r in sorted(lst, key=lambda r: -r[lk])) or "none"
     page = f"""<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gold Big Moves</title><style>{css}</style></head><body>
@@ -250,6 +308,10 @@ For each factor, the number of big days on which it was present (events within �
 <ul class="m"><li><b>Any big move (q &lt; 0.10):</b> {html.escape(names(sig, 'lift'))}</li>
 <li><b>Big up moves (q &lt; 0.10):</b> {html.escape(names(sig_u, 'lift_up'))}</li>
 <li><b>Big down moves (q &lt; 0.10):</b> {html.escape(names(sig_d, 'lift_down'))}</li></ul>
+<h2>Does it hold out of sample?</h2>
+<p class="m">Leads picked on {res['split']['split'][:4]} and earlier (lift &gt; 1, p &lt; 0.05 on a side, at least 5 separate episodes) and then measured on the later years:
+<b>{res['split']['n_held']} of {res['split']['n_leads']}</b> stayed above 1; pooled {res['split']['pooled_obs']} observed against {res['split']['pooled_exp']} expected (×{res['split']['pooled_lift']}, p = {res['split']['pooled_p']:.3f}).</p>
+<div class='wrap'><table><thead><tr><th>Lead (2000–2013)</th><th>Side</th><th>2000–2013</th><th>2013–2026</th><th>Held?</th></tr></thead><tbody>{split_rows}</tbody></table></div>
 <h2>Top factors</h2>
 {table('p', 'lift', 'big', 'exp_big', 'q', 'Any big move (±)', 30)}
 {table('p_up', 'lift_up', 'up', 'exp_up', 'q_up', 'Big UP moves', 20)}

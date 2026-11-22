@@ -67,6 +67,7 @@ Known data problems:
 | `tools/build_bs41_model.py` | Model v1.0 calendar and 2000–2026 backtest |
 | `tools/gold_deep_analysis.py [start] [end]` | Day-by-day gold analysis for a date range: rules with their 26-year records, transits, aspects, Model v1.0 and seasonality. A hand-written `..._notes.md` beside the output is rendered at the top |
 | `tools/big_move_analysis.py [threshold_pct]` | Gold's ±2% days 2000–2026: events within ±3 days, states and active gold rules vs a same-year expected count (Poisson, FDR) |
+| `tools/big_move_forward.py [start] [end]` | Dates of the big-move leads from 22 Nov 2026 to 31 Dec 2027 with watch stretches (html, json, ics) |
 | `tools/gold_tracker.py [--metal silver]` | Trackers: findings, rule status, best-rule dates, analysis log |
 | `tools/build_year.py YEAR` | Astronomy layer for any year; 2000–2024 are git-ignored and rebuilt on demand |
 | `tools/fetch_prices.py` | Downloads GC=F and SI=F (Yahoo; the host must be allowed) |
@@ -83,6 +84,7 @@ Known data problems:
 | `gold_backtest_2000-11-20_to_2026-11-20_ET.html` (26 years), `…2021-11-20…` (5 years), `…2025-11-20…` (1 year); `silver_…` | Rule backtests |
 | `source_rules_test_2000-2026_ET.html` | 26-year test of the Brihat Samhita, Timing Solutions and Silver guide rules |
 | `gold_big_moves_2000-2026_ET.html` | Every ±2% gold day 2000–2026 with the sky ±3 days; which factors were over-represented |
+| `gold_big_move_watch_2026-11-22_to_2027-12-31_ET.*` | Forward dates of the big-move leads, watch stretches, calendar (ics) |
 | `gold_bs41_model_2026-11-20_to_2027-12-31_ET.*` | Model v1.0 daily readings, calendar (ics) and backtest |
 | `GOLD_TRACKER.html`, `SILVER_TRACKER.html` | Current status of every rule, best-rule dates, analysis log |
 | `REFERENCE_PDF_RULES.md`, `COMPLETION_REPORT.md`, `COVERAGE_AUDIT_GOLD_SILVER.md` | Rule lists and audits |
@@ -185,30 +187,52 @@ There are no TA S34 A9 windows between now and 31 Dec 2027.
 - **The only hint ran the other way.** A sudden (more than 2σ) gold day followed within 3 days of a Jupiter/Saturn/Rahu sign change in 23% of cases, against 15% for all days (p ≈ 0.03, 77 events; silver 21% vs 15%, p ≈ 0.1). Jupiter/Saturn stations were calmer than normal (9% vs 15%). With 22 classes tested, treat this as a lead, not a rule.
 
 **Gold's big days (±2% close to close), 2000–2026**, in `gold_big_moves_2000-2026_ET.html`:
-- 476 big days (226 up, 250 down) out of 6,526. 234 factors were tested: events within ±3 days, states on the day, and active gold rules. Each one's expected count comes from the same years.
-- **No factor survives the correction for multiple testing.** The lowest q is 0.35. Every lift below is a lead, not a rule. Big days come in bursts, so the separate episodes behind each count are shown.
+- 476 big days (226 up, 250 down) out of 6,526. 239 factors were tested: events within ±3 days, states on the day, and active gold rules. Each one's expected count comes from the same years.
+- **No factor survives the correction for multiple testing.** The lowest q is 0.36. Every lift below is a lead, not a rule. Big days come in bursts, so the separate episodes behind each count are shown.
 
 | Factor | Lift | Count | Episodes | p |
 |---|---|---|---|---|
 | Sun–Uranus opposition | ×2.13 | 18 | 8 | 0.003 |
 | Venus–Saturn conjunction | ×1.80 | 19 | 9 | 0.012 |
 | Jupiter changes nakshatra | ×1.41 | 48 | 35 | 0.014 |
-| Saturn combustion begins | ×1.57 | 29 | 18 | 0.015 |
+| Saturn combustion begins | ×1.86 | 17 | 11 | 0.013 |
 | Rahu with Mars | ×1.44 | 39 | 15 | 0.018 |
 | Mars in Capricorn | ×1.39 | 40 | 12 | 0.027 |
 | Jupiter changes sign | ×1.53 | 23 | 18 | 0.034 |
 
 - **Up moves:**
   - Mars–Pluto conjunction ×3.5 (8 days, mostly March 2020 and January 2026).
-  - Mars in Capricorn, where Mars is exalted, ×1.86 (25 days, 62.5% of its big days up against 47.5% overall, p = 0.003, q = 0.35).
+  - Mars in Capricorn, where Mars is exalted, ×1.86 (25 days, 62.5% of its big days up against 47.5% overall, p = 0.003, q = 0.36).
   - Jupiter in Capricorn ×1.55.
 - **Down moves:**
   - Pluto stations retrograde ×2.2.
   - Venus–Saturn conjunction ×2.0.
+  - Saturn combustion begins ×2.3 (11 against 4.8). Saturn leaving combustion shows nothing (×0.8).
   - Full Moon ×1.24 (73 against 59, p = 0.04).
 - **Two bullish rules coincided with big falls, not big rises:** TA Mars in Pushya (25 of 40 big days down) and doc26 Sun in Libra with malefics (15 of 22 down).
 - **Slow-planet changes** (Jupiter's nakshatra and sign changes, Saturn's combustion) repeat the speed-test hint: big days cluster around them, in both directions.
 - **Uranus, Neptune and Pluto are not Vedic grahas.** Their lifts cannot become rules under the scope decision.
+- **Out of sample: no edge.** The 23 leads picked on 2000–2013 (lift > 1, p < 0.05, at least 5 episodes) were measured again on 2013–2026. 14 stayed above 1, but together they gave 388 big days against 380 expected (×1.02, p = 0.34).
+  - **Held in both halves:** Venus–Saturn conjunction, Saturn combustion begins, Jupiter's sign and nakshatra changes, Rahu with Mars, Mars in Capricorn, Jupiter in Capricorn, Mars in Pushya (down), Sun in Libra with malefics, Venus stations direct, full Moon (down).
+  - **Faded:** the Sun–Uranus opposition (×2.9 → ×0.7) and Saturn leaving combustion.
+- **Forward watch, 22 Nov 2026 – 31 Dec 2027** (`gold_big_move_watch_2026-11-22_to_2027-12-31_ET.html` / `.ics`, from `tools/big_move_forward.py`): the 19 full-sample leads, their 34 dated windows, and the weekday stretches with 3 or more leads, or 2 or more leads that held in both halves on Vedic grahas only:
+
+| Dates | Leads | Lean |
+|---|---|---|
+| 21–27 Jan 2027 | Jupiter retrogrades back into Cancer/Ashlesha (24 Jan); full Moon 22 Jan | either |
+| 22–25 Mar 2027 | Saturn combustion begins (23 Mar); full Moon 22 Mar | down |
+| 22–28 Jun 2027 | Jupiter re-enters Leo/Magha (25 Jun) | up |
+| 18 Oct 2027 | Full Moon (15 Oct); Sun in Libra with malefics | down |
+| 27–31 Dec 2027 | Mars in Capricorn and with Rahu; the Rahu & Mars rule | up |
+
+  Other single-lead windows:
+  - Venus–Saturn conjunction 7 May 2027 (down).
+  - Jupiter enters Virgo 26 Nov 2027.
+  - Jupiter nakshatra changes 30 Aug and 4 Nov 2027.
+  - Every full Moon (down lean).
+  - Outer-planet events, for reference only: Sun–Uranus opposition 25 Nov 2026 and 30 Nov 2027; Neptune stations direct 12 Dec 2026 and 15 Dec 2027; Pluto stations retrograde 8 May 2027.
+
+  These are dates to watch for volatility, not calls.
 
 **Model v1.0 (Ch.41 + Shadbala + Ashtakavarga), 6,572 trading days:**
 - The correlation of the scarcity index with the next 5 days is −0.002.

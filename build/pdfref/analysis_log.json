@@ -217,11 +217,23 @@
    "date": "2026-11-22",
    "pr": "15",
    "topic": "Gold ±2% days 2000-2026: which planetary factors surround them (±3 days)",
-   "analysis": "476 GC=F days with |close-to-close| >= 2% (20 Nov 2000 - 20 Nov 2026). 234 factors were tested: lunations, eclipses, stations, sign/nakshatra ingresses, combustion, conjunctions/oppositions within ±3 days; retrogrades, signs, Sun contacts, pair relations on the day; all active gold rules. Each factor's expected count comes from the same years; Poisson p, Benjamini-Hochberg q, separate episodes counted.",
-   "result": "No factor significant after FDR (lowest q 0.35). Leads: Sun-Uranus opposition x2.13, Venus-Saturn conjunction x1.80, Jupiter nakshatra change x1.41, Saturn combustion x1.57, Rahu with Mars x1.44. Up: Mars in Capricorn x1.86 (62.5% up, p 0.003), Mars-Pluto conjunction x3.5. Down: Pluto R station x2.2, full Moon x1.24. The bullish rules Mars in Pushya (TA) and Sun in Libra with malefics (doc26) coincided with big falls.",
+   "analysis": "476 GC=F days with |close-to-close| >= 2% (20 Nov 2000 - 20 Nov 2026). 239 factors were tested: lunations, eclipses, stations, sign/nakshatra ingresses, combustion, conjunctions/oppositions within ±3 days; retrogrades, signs, Sun contacts, pair relations on the day; all active gold rules. Each factor's expected count comes from the same years; Poisson p, Benjamini-Hochberg q, separate episodes counted. Out-of-sample: leads picked on 2000-2013 re-measured on 2013-2026.",
+   "result": "No factor significant after FDR (lowest q 0.36). Leads: Sun-Uranus opposition x2.13, Venus-Saturn conjunction x1.80, Saturn combustion begins x1.86, Jupiter nakshatra change x1.41, Rahu with Mars x1.44. Up: Mars in Capricorn x1.86 (62.5% up, p 0.003), Mars-Pluto conjunction x3.5. Down: Saturn combustion begins x2.3, Pluto R station x2.2, full Moon x1.24. The bullish rules Mars in Pushya (TA) and Sun in Libra with malefics (doc26) coincided with big falls. Out of sample: 14 of 23 early leads stayed above 1 but pooled x1.02 (p 0.34), no edge.",
    "files": [
     "tools/big_move_analysis.py",
     "build/pdfref/gold_big_moves_2000-2026_ET.html"
+   ]
+  },
+  {
+   "date": "2026-11-22",
+   "pr": "15",
+   "topic": "Gold big-move watch dates, 22 Nov 2026 - 31 Dec 2027",
+   "analysis": "The 19 full-sample big-move leads (lift > 1, p < 0.05, 5+ episodes) located forward with the same definitions. Marked whether each held in both halves and whether it uses an outer planet. Watch stretches are weekdays with 3+ leads or 2+ both-halves Vedic leads.",
+   "result": "5 watch stretches: 21-27 Jan 2027 (Jupiter back into Cancer, full Moon; either), 22-25 Mar 2027 (Saturn combustion begins, full Moon; down), 22-28 Jun 2027 (Jupiter into Leo; up), 18 Oct 2027 (full Moon, Sun in Libra with malefics; down), 27-31 Dec 2027 (Mars in Capricorn with Rahu; up). Watch dates, not calls: no lead passed FDR and out-of-sample pooled lift x1.02.",
+   "files": [
+    "tools/big_move_forward.py",
+    "build/pdfref/gold_big_move_watch_2026-11-22_to_2027-12-31_ET.html",
+    "build/pdfref/gold_big_move_watch_2026-11-22_to_2027-12-31_ET.ics"
    ]
   }
  ]
