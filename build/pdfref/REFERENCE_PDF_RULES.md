@@ -397,6 +397,10 @@ Grouped by first source page. **Status**: `new` = new calendar events; `annotate
 | Venus, Mercury, Jupiter or waxing Moon with / aspecting the Sun (user note) | User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md) | Can trigger gold price hike (Bullish) | new: 74 in 2027 |
 | Sun in a Saturn or Rahu nakshatra (user note) | User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md) | Can trigger fall in gold prices (Bearish) | new: 6 in 2027 |
 | Saturn or Rahu with / aspecting the Sun (user note) | User note (project chat, 20 Nov 2026; Reference_materials/user_notes_gold.md) | Can crash the gold price (Bearish) | new: 8 in 2027 |
+| New / full Moon in Aries or Capricorn with a benefic (Brihat Samhita 42.14) | Brihat Samhita, tr. P.S. Sastri 1946, Ch.42 sl.14 (PDF p.334); Brihat Samhita, tr. P.S. Sastri 1946, Ch.41 sl.2, 7 (PDF pp.327, 329) | Gold price promoted (Bullish): 'promotes invariably the price of articles belonging to that particular Rasi occupied by her' | new: 2 in 2027 |
+| Sun in Aries or Capricorn with or aspected by a malefic (Brihat Samhita 42.14) | Brihat Samhita, tr. P.S. Sastri 1946, Ch.42 sl.14 (PDF p.334); Brihat Samhita, tr. P.S. Sastri 1946, Ch.41 sl.2, 7 (PDF pp.327, 329) | Gold price destroyed (Bearish): 'the Sun, conjoined with and aspected by malefics, destroys the price of the articles of that Rasi' | new: 1 in 2027 |
+| Saturn in Uttara Bhadrapada (Brihat Samhita 10.17) | Brihat Samhita, tr. P.S. Sastri 1946, Ch.10 sl.17 (PDF p.144) | Gold afflicted (Bearish): '... so do those living on the banks of rivers, cart-wrights, women and gold when he is in Uttarabhadra' | new: 1 in 2027 |
+| Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) | Brihat Samhita, tr. P.S. Sastri 1946, Ch.42 sl.6 (PDF p.332) | Profit on gold and silver (Bullish): 'If one stores up gold, gems, skins, armours, weapons, pearls and silver when the Sun is in Simha, and sell them in the 5th month, he will get profit and sustain loss otherwise' | new: 1 in 2027 |
 
 ### TA Section 25 - relationship of each pair (pp.88-115)
 

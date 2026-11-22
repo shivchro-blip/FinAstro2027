@@ -1,101 +1,122 @@
 # Silver findings tracker
 
-Generated 21 Nov 2026 09:27 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
+Generated 21 Nov 2026 22:19 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
 
 ## Recent findings
 
 | Finding | Evidence | What it means | Status |
 |---|---|---|---|
-| Rule set as a whole | 5 yr: 197 worked / 217 failed (48%); 1 yr: 44 / 45 | No better than chance in total; use individual rules, not the count of rules. | Confirmed (5 yr) |
-| Stacking rules (bullish minus bearish count) | 5 yr: next-5-day move +0.21% on bullish-majority days vs +1.03% on bearish-majority days; corr -0.071 | The net count pointed the WRONG way (bearish-majority days did better). | Did not hold up |
-| Silver follows gold | 5 yr: when gold moved against a silver rule it failed 153/178; when gold moved its way it worked 143/172 | Silver rule outcomes were decided mostly by gold's direction; the silver rules add little that is specific to silver. | Confirmed (5 yr) |
-| 'Alone' qualifier: Venus alone in Leo or Libra vs Venus in Leo or Libra | 5 yr: with 'alone' 5/6 (83%); without 3/11 (27%) | The 2026 document's 'alone' condition changes the result: the qualified version worked, the plain one did not. | Strongest |
-| 'Alone' qualifier: Mercury alone in Aries or Virgo vs Mercury in Aries or Virgo | 5 yr: with 'alone' 1/7 (14%); without 4/10 (40%) | Neither version works; the 'alone' version did even worse. | Did not hold up |
-| Venus-Mars or Sun-Mars together in any sign | 5 yr: 19/30 (63% vs base 52%), avg +1.68%, p = 0.147, right in 4/5 yrs | Consistent across years; dates below. | Supported |
-| Venus in Leo or Libra | 1 yr: 2/2 worked; 5 yr: 3/11 (27% vs base 43%) | Looked good only in the falling 2025-26 year; do not rely on it. | Did not hold up |
-| Mercury alone in Aries or Virgo | 1 yr: 1/1 worked; 5 yr: 1/7 (14% vs base 47%) | Looked good only in the falling 2025-26 year; do not rely on it. | Did not hold up |
-| Mercury turns direct from retrograde | 5 yr: 6/15 (40% vs base 54%), avg -0.16%, right in 1/5 yrs | Went the wrong way more often than chance would; treat as unreliable. | Did not hold up |
-| Mercury combust and retrograde does mutual Vedha with Moon | 5 yr: 2/9 (22% vs base 51%), avg -2.28%, right in 1/4 yrs | Went the wrong way more often than chance would; treat as unreliable. | Did not hold up |
-| Sun in Pushya or Dhanishta without benefic planets | 5 yr: 2/8 (25% vs base 54%), avg -0.77%, right in 1/5 yrs | Went the wrong way more often than chance would; treat as unreliable. | Did not hold up |
+| Rule set as a whole | 5 yr: 201 worked / 219 failed (48%); 1 yr: 45 / 46 | No better than chance in total; use individual rules, not the count of rules. | Confirmed (5 yr) |
+| Stacking rules (bullish minus bearish count) | 5 yr: next-5-day move +0.17% on bullish-majority days vs +0.47% on bearish-majority days; corr -0.059 | The net count pointed the WRONG way (bearish-majority days did better). | Did not hold up |
+| Rule set over 26 years (2000-2026) | 26 yr: 1083 worked / 1050 failed (51%) | No rule beat chance at p < 0.05 over 26 years. Significantly WRONG: Mars rising (after combustion) (2/10) | Confirmed (26 yr) |
+| Silver follows gold | 5 yr: when gold moved against a silver rule it failed 155/180; when gold moved its way it worked 147/176 | Silver rule outcomes were decided mostly by gold's direction; the silver rules add little that is specific to silver. | Confirmed (5 yr) |
+| 'Alone' qualifier: Venus alone in Leo or Libra vs Venus in Leo or Libra | 26 yr: with 'alone' 16/38 (42%); without 22/54 (41%) | The qualifier makes no clear difference. | At chance |
+| 'Alone' qualifier: Mercury alone in Aries or Virgo vs Mercury in Aries or Virgo | 26 yr: with 'alone' 11/33 (33%); without 27/56 (48%) | The qualifier makes no clear difference. | Did not hold up |
+| Retrograde Mercury or Jupiter | 26 yr: 78/126 (62% vs base 54%), avg +1.80%, p = 0.052, right in 15/26 yrs | Consistent across years; dates below. | Strongest |
+| Only Moon and Mercury alone in a sign | 26 yr: 49/80 (61% vs base 53%), avg +0.80%, p = 0.081, right in 15/26 yrs | Consistent across years; dates below. | Strongest |
+| Mars Vargottam in Cancer | 26 yr: 8/14 (57% vs base 45%), avg +0.36%, p = 0.254, right in 8/14 yrs | Held up, fewer occurrences. | Supported |
+| Mercury does Vedha of Venus | 1 yr: 1/1 worked; 26 yr: 8/18 (44% vs base 54%) | Looked good only in the falling 2025-26 year; do not rely on it. | Did not hold up |
+| Mercury alone in Aries or Virgo | 1 yr: 1/1 worked; 26 yr: 11/33 (33% vs base 45%) | Looked good only in the falling 2025-26 year; do not rely on it. | Did not hold up |
+| Mars rising (after combustion) | 1 yr: 1/1 worked; 26 yr: 2/10 (20% vs base 54%) | Looked good only in the falling 2025-26 year; do not rely on it. | Did not hold up |
+| Saturn direct from retrograde | 26 yr: 8/23 (35% vs base 46%), avg -1.49%, right in 8/23 yrs | Went the wrong way more often than chance would; treat as unreliable. | Did not hold up |
+| Jupiter turns direct from retrograde | 26 yr: 9/21 (43% vs base 54%), avg -1.01%, right in 9/21 yrs | Went the wrong way more often than chance would; treat as unreliable. | Did not hold up |
+| Venus combust in West | 26 yr: 5/13 (38% vs base 54%), avg -1.32%, right in 5/13 yrs | Went the wrong way more often than chance would; treat as unreliable. | Did not hold up |
+| Moon eclipse on Sunday | 26 yr: 2/11 (18% vs base 45%), avg -1.87%, right in 1/9 yrs | Went the wrong way more often than chance would; treat as unreliable. | Did not hold up |
+| Mars in Gemini with any 2 other planets | 26 yr: 1/7 (14% vs base 48%), avg -1.59%, right in 1/6 yrs | Went the wrong way more often than chance would; treat as unreliable. | Did not hold up |
+| New Moon -> full Moon hold (Timing Solutions / Silver guide; excluded source) | 2000-2026: new->full +0.19% per half-cycle vs full->new +0.90% (324 each) | Ran the opposite way to the claim in every 5-year block; Moon-based silver rules showed no effect. | Did not hold up |
+| Financial Astrology Model v1.0 for silver | Brihat Samhita Ch.41 assigns no sign to silver | Insufficient data (by methodology safeguard 7). | Not computable |
 
 ## Best-performing rules: dates 20 Nov 2026 - 31 Dec 2027 (ET)
 
-Best (from the 5-year data): Venus-Mars or Sun-Mars together in any sign.
+Best (from the 26 yr data): Retrograde Mercury or Jupiter, Only Moon and Mercury alone in a sign.
 
 | From (ET) | To (ET) | Days | Rule | Effect | Detail |
 |---|---|---|---|---|---|
-| Sun 03 Oct 2027 08:54 EDT | Thu 07 Oct 2027 15:59 EDT | 4.3 | Venus-Mars or Sun-Mars together in any sign | Bullish | Venus with Mars in Libra |
-| Wed 27 Oct 2027 12:27 EDT | Tue 16 Nov 2027 15:29 EST | 20.2 | Venus-Mars or Sun-Mars together in any sign | Bullish | Venus with Mars in Scorpio |
-| Tue 16 Nov 2027 15:29 EST | Wed 17 Nov 2027 22:15 EST | 1.3 | Venus-Mars or Sun-Mars together in any sign | Bullish | Venus & Sun with Mars in Scorpio |
-| Sat 20 Nov 2027 15:38 EST | Tue 14 Dec 2027 21:41 EST | 24.3 | Venus-Mars or Sun-Mars together in any sign | Bullish | Venus with Mars in Sagittarius |
-| Thu 16 Dec 2027 06:09 EST | Mon 27 Dec 2027 02:35 EST | 10.9 | Venus-Mars or Sun-Mars together in any sign | Bullish | Sun with Mars in Sagittarius |
-| Mon 27 Dec 2027 02:35 EST | Sat 08 Jan 2028 08:46 EST | 12.3 | Venus-Mars or Sun-Mars together in any sign | Bullish | Venus with Mars in Capricorn |
+| Sat 12 Dec 2026 19:56 EST | Tue 09 Feb 2027 12:36 EST | 58.7 | Retrograde Mercury or Jupiter | Bullish | ('Jupiter',) |
+| Sun 07 Feb 2027 00:07 EST | Tue 09 Feb 2027 10:47 EST | 2.4 | Only Moon and Mercury alone in a sign | Bullish | Aquarius |
+| Tue 09 Feb 2027 12:36 EST | Wed 03 Mar 2027 07:32 EST | 21.8 | Retrograde Mercury or Jupiter | Bullish | ('Mercury', 'Jupiter') |
+| Wed 03 Mar 2027 07:32 EST | Mon 12 Apr 2027 22:11 EDT | 40.6 | Retrograde Mercury or Jupiter | Bullish | ('Jupiter',) |
+| Thu 06 May 2027 21:26 EDT | Sat 08 May 2027 23:26 EDT | 2.1 | Only Moon and Mercury alone in a sign | Bullish | Taurus |
+| Sat 05 Jun 2027 08:21 EDT | Mon 07 Jun 2027 08:50 EDT | 2.0 | Only Moon and Mercury alone in a sign | Bullish | Gemini |
+| Thu 10 Jun 2027 14:15 EDT | Sun 04 Jul 2027 15:39 EDT | 24.1 | Retrograde Mercury or Jupiter | Bullish | ('Mercury',) |
+| Fri 30 Jul 2027 05:00 EDT | Fri 30 Jul 2027 09:01 EDT | 0.2 | Only Moon and Mercury alone in a sign | Bullish | Gemini |
+| Wed 01 Sep 2027 15:43 EDT | Fri 03 Sep 2027 17:46 EDT | 2.1 | Only Moon and Mercury alone in a sign | Bullish | Virgo |
+| Thu 07 Oct 2027 10:37 EDT | Thu 28 Oct 2027 10:10 EDT | 21.0 | Retrograde Mercury or Jupiter | Bullish | ('Mercury',) |
+| Tue 26 Oct 2027 10:40 EDT | Thu 28 Oct 2027 13:29 EDT | 2.1 | Only Moon and Mercury alone in a sign | Bullish | Virgo |
+| Wed 24 Nov 2027 20:03 EST | Thu 25 Nov 2027 13:59 EST | 0.7 | Only Moon and Mercury alone in a sign | Bullish | Libra |
 
-## Every silver rule: 1-year vs 5-year
+## Every silver rule: 1-year, 5-year and 26-year
 
-| Rule | Effect | 1 yr | 5 yr | Avg (5 yr) | p | Years right | Status | Upcoming |
-|---|---|---|---|---|---|---|---|---|
-| Venus alone in Leo or Libra | Bearish | 2/2 (100% vs 53%) | 5/6 (83% vs 45%) | +0.87% | 0.07 | 4/5 | Strongest | 1 |
-| Venus-Mars or Sun-Mars together in any sign ★ | Bullish | 6/9 (67% vs 47%) | 19/30 (63% vs 52%) | +1.68% | 0.147 | 4/5 | Supported | 6 |
-| Mercury & Jupiter both retrograde (even in different signs) | Bullish | 1/2 (50% vs 46%) | 4/6 (67% vs 56%) | +2.06% | 0.467 | 3/5 | Supported | 1 |
-| Venus in Virgo with malefic | Bullish | – | 4/5 (80% vs 55%) | +3.76% | 0.257 | 3/4 | Supported | 1 |
-| Moon-Venus mutual Vedha | Bearish | 8/14 (57% vs 52%) | 31/68 (46% vs 46%) | -0.62% | 0.594 | 2/5 | At chance | 17 |
-| Shukla Paksha of 16 days or Krishna Paksha of 14 days | Bullish | 2/6 (33% vs 44%) | 18/34 (53% vs 53%) | +0.23% | 0.582 | 1/5 | At chance | 8 |
-| Sun in Virgo, Libra or Pisces with or aspected by benefics | Bearish | 4/4 (100% vs 54%) | 14/32 (44% vs 46%) | -0.96% | 0.668 | 2/5 | At chance | 7 |
-| Only Sun-Mercury or Moon-Mercury alone in a sign | Bullish | 1/5 (20% vs 48%) | 16/28 (57% vs 54%) | +1.27% | 0.443 | 3/5 | At chance | 10 |
-| Retrograde Mercury or Jupiter | Bullish | 2/6 (33% vs 44%) | 15/24 (62% vs 56%) | +2.36% | 0.345 | 3/5 | At chance | 5 |
-| Only Moon and Mercury alone in a sign | Bullish | 2/3 (67% vs 48%) | 8/17 (47% vs 53%) | -0.09% | 0.781 | 2/5 | At chance | 7 |
-| Retrograde Mercury goes combust | Bullish | 0/4 (0% vs 45%) | 8/16 (50% vs 54%) | +0.23% | 0.714 | 2/5 | At chance | 3 |
-| Moon darshan on Friday or Saturday | Bullish | 2/4 (50% vs 48%) | 8/16 (50% vs 53%) | -0.31% | 0.697 | 1/5 | At chance | 5 |
-| Mercury in Aries or Virgo | Bearish | 1/2 (50% vs 57%) | 4/10 (40% vs 48%) | -4.72% | 0.798 | 0/5 | At chance | 3 |
-| Sun in Pushya or Dhanishta with no benefic in the same nakshatra | Bullish | 0/1 (0% vs 48%) | 3/9 (33% vs 54%) | +0.12% | 0.941 | 1/5 | Inconclusive | 2 |
-| Amavasya on Monday | Bearish | – | 3/7 (43% vs 42%) | -0.48% | 0.62 | 1/4 | Inconclusive | 2 |
-| Mercury turns direct from retrograde | Bullish | 2/4 (50% vs 48%) | 6/15 (40% vs 54%) | -0.16% | 0.905 | 1/5 | Did not hold up | 3 |
-| Venus in Leo or Libra | Bearish | 2/2 (100% vs 58%) | 3/11 (27% vs 43%) | -2.56% | 0.914 | 1/5 | Did not hold up | 3 |
-| Mercury combust and retrograde does mutual Vedha with Moon | Bullish | 0/2 (0% vs 48%) | 2/9 (22% vs 51%) | -2.28% | 0.984 | 1/4 | Did not hold up | 2 |
-| Sun in Pushya or Dhanishta without benefic planets | Bullish | 0/1 (0% vs 48%) | 2/8 (25% vs 54%) | -0.77% | 0.978 | 1/5 | Did not hold up | 2 |
-| Mercury alone in Aries or Virgo | Bearish | 1/1 (100% vs 52%) | 1/7 (14% vs 47%) | -0.90% | 0.989 | 1/5 | Did not hold up | 2 |
-| Venus combust in West | Bullish | 0/1 (0% vs 43%) | 0/4 (0% vs 50%) | -4.66% | 1.0 | 0/4 | Too few to judge (0/4, leans wrong) | 0 |
-| Saturn direct from retrograde | Bearish | 0/1 (0% vs 52%) | 1/4 (25% vs 49%) | -1.26% | 0.932 | 1/4 | Too few to judge (1/4, leans wrong) | 2 |
-| Mars Vargottam in Cancer | Bearish | 1/1 (100% vs 49%) | 3/4 (75% vs 43%) | +2.66% | 0.212 | 3/4 | Too few to judge (3/4, leans right) | 0 |
-| Rahu & Mars together in any sign | Bullish | 0/1 (0% vs 43%) | 1/3 (33% vs 52%) | +0.14% | 0.89 | 1/3 | Too few to judge (1/3, leans wrong) | 1 |
-| Mars in Aquarius | Bullish | 0/1 (0% vs 43%) | 1/3 (33% vs 52%) | -3.45% | 0.887 | 1/3 | Too few to judge (1/3, leans wrong) | 0 |
-| Sun & Venus alone in Cancer | Bullish | – | 1/3 (33% vs 51%) | -3.00% | 0.882 | 1/3 | Too few to judge (1/3, leans wrong) | 0 |
-| Moon eclipse on Sunday | Bearish | – | 0/3 (0% vs 44%) | -2.51% | 1.0 | 0/3 | Too few to judge (0/3, leans wrong) | 1 |
-| Sun & Moon together at Sankranti entering time | Bullish | 0/1 (0% vs 48%) | 2/3 (67% vs 51%) | +2.32% | 0.519 | 1/2 | Too few to judge (2/3, leans right) | 0 |
-| Jupiter turns direct from retrograde | Bullish | 0/1 (0% vs 48%) | 1/3 (33% vs 52%) | -1.95% | 0.891 | 1/3 | Too few to judge (1/3, leans wrong) | 1 |
-| Solar eclipse on a Wednesday | Bullish | 0/1 (0% vs 48%) | 0/3 (0% vs 52%) | -2.23% | 1.0 | 0/3 | Too few to judge (0/3, leans wrong) | 0 |
-| Rahu and Mars in the same nakshatra | Bullish | 0/1 (0% vs 43%) | 2/3 (67% vs 48%) | -1.32% | 0.468 | 2/3 | Too few to judge (2/3, leans right) | 1 |
-| Saturn in Aquarius or Aries | Bullish | – | 1/2 (50% vs 57%) | +12.71% | 0.814 | 1/2 | Too few to judge (1/2, even) | 1 |
-| Sun in Leo with Mars or Jupiter retrograde | Bullish | – | 0/2 (0% vs 52%) | -4.20% | 1.0 | 0/2 | Too few to judge (0/2, leans wrong) | 0 |
-| Mars in 4th pada of Ashlesha | Bearish | – | 0/2 (0% vs 46%) | -3.07% | 1.0 | 0/2 | Too few to judge (0/2, leans wrong) | 1 |
-| Mercury & Venus both in Pisces | Bearish | – | 1/2 (50% vs 30%) | -0.65% | 0.508 | 1/2 | Too few to judge (1/2, even) | 1 |
-| Mercury does Vedha of Venus | Bullish | 1/1 (100% vs 48%) | 1/2 (50% vs 50%) | +2.06% | 0.755 | 1/2 | Too few to judge (1/2, even) | 1 |
-| Jupiter does Vedha of Venus | Bullish | 1/1 (100% vs 48%) | 2/2 (100% vs 51%) | +1.68% | 0.261 | 2/2 | Too few to judge (2/2, leans right) | 1 |
-| Retrograde Mars entering Taurus or Libra | Bullish | – | 0/1 (0% vs 48%) | -3.10% | 1.0 | 0/1 | Too few to judge (0/1, leans wrong) | 0 |
-| Sun eclipse in Falgun or Jyeshtha on Tuesday | Bullish | 1/1 (100% vs 48%) | 1/1 (100% vs 48%) | +11.14% | 0.481 | 1/1 | Too few to judge (1/1, leans right) | 0 |
-| Chaitra Shukla Pratipada on Wednesday | Bullish | – | 1/1 (100% vs 53%) | +2.31% | 0.529 | 1/1 | Too few to judge (1/1, leans right) | 1 |
-| Rahu in Dhanishta (market and bullion risk) | Bearish | 1/1 (100% vs 83%) | 1/1 (100% vs 84%) | +28.75% | 0.837 | 1/1 | Too few to judge (1/1, leans right) | 1 |
-| Mars rising (after combustion) | Bullish | 1/1 (100% vs 48%) | 1/1 (100% vs 48%) | +1.61% | 0.481 | 1/1 | Too few to judge (1/1, leans right) | 0 |
-| Saturn-Neptune conjunction | Bullish | 1/1 (100% vs 48%) | 1/1 (100% vs 48%) | +12.16% | 0.481 | 1/1 | Too few to judge (1/1, leans right) | 0 |
-| Rahu does Vedha of Pushya | Bullish | 1/1 (100% vs 17%) | 1/1 (100% vs 16%) | +15.48% | 0.16 | 1/1 | Too few to judge (1/1, leans right) | 0 |
-| Moon is Mantri of the year | Bearish | 0/1 (0% vs 52%) | 0/1 (0% vs 52%) | -5.86% | 1.0 | 0/1 | Too few to judge (0/1, leans wrong) | 0 |
-| Jupiter enters Scorpio | Bullish | – | – |  |  |  | Did not occur | 0 |
-| Mercury, Jupiter & Venus all retrograde in same sign | Bearish | – | – |  |  |  | Did not occur | 0 |
-| Jupiter in Capricorn & Saturn in Scorpio | Bearish | – | – |  |  |  | Did not occur | 0 |
-| Retrograde Mars with Ketu | Bearish | – | – |  |  |  | Did not occur | 1 |
-| Mars in Gemini with any 2 other planets | Bearish | – | – |  |  |  | Did not occur | 0 |
-| Rahu enters Gemini | Bearish | – | – |  |  |  | Did not occur | 0 |
-| Cancer Sankranti on Saturday | Bearish | – | – | -0.20% |  |  | Too few to judge (0/0, even) | 0 |
-| Venus rises in West | Mixed | – | – |  |  |  | Not scored | 1 |
-| Mercury-Venus mutual Vedha | Bearish | – | – |  |  |  | Did not occur | 0 |
-| Venus retrograde in Taurus | Bullish | – | – |  |  |  | Did not occur | 0 |
-| Silver prophecy: Shukla Shashti range | Neutral | – | – |  |  |  | Not scored | 13 |
+| Rule | Effect | 1 yr | 5 yr | 26 yr | Avg (26 yr) | p (26 yr) | Years right (26 yr) | Status | Upcoming |
+|---|---|---|---|---|---|---|---|---|---|
+| Retrograde Mercury or Jupiter ★ | Bullish | 2/6 (33% vs 44%) | 15/24 (62% vs 56%) | 78/126 (62% vs 54%) p = 0.052; Mixed | +1.80% | 0.052 | 15/26 | Strongest | 5 |
+| Only Moon and Mercury alone in a sign ★ | Bullish | 2/3 (67% vs 48%) | 8/17 (47% vs 53%) | 49/80 (61% vs 53%) p = 0.081; Mixed | +0.80% | 0.081 | 15/26 | Strongest | 7 |
+| Mars Vargottam in Cancer | Bearish | 1/1 (100% vs 49%) | 3/4 (75% vs 43%) | 8/14 (57% vs 45%) p = 0.254; Worked | +0.36% | 0.254 | 8/14 | Supported | 0 |
+| Moon is Mantri of the year | Bearish | 0/1 (0% vs 52%) | 0/1 (0% vs 52%) | 4/6 (67% vs 50%) p = 0.349; Worked | +1.29% | 0.349 | 4/6 | Supported | 0 |
+| Moon-Venus mutual Vedha | Bearish | 8/14 (57% vs 52%) | 31/68 (46% vs 46%) | 149/323 (46% vs 46%) p = 0.559; Mixed | -0.30% | 0.559 | 10/26 | At chance | 17 |
+| Only Sun-Mercury or Moon-Mercury alone in a sign | Bullish | 1/5 (20% vs 48%) | 16/28 (57% vs 54%) | 98/172 (57% vs 54%) p = 0.227; Mixed | +0.74% | 0.227 | 14/26 | At chance | 10 |
+| Shukla Paksha of 16 days or Krishna Paksha of 14 days | Bullish | 2/6 (33% vs 44%) | 18/34 (53% vs 53%) | 90/165 (55% vs 53%) p = 0.413; Mixed | +0.37% | 0.413 | 13/26 | At chance | 8 |
+| Sun in Virgo, Libra or Pisces with or aspected by benefics | Bearish | 4/4 (100% vs 54%) | 14/32 (44% vs 46%) | 79/164 (48% vs 46%) p = 0.28; Mixed | -0.40% | 0.28 | 9/26 | At chance | 7 |
+| Venus-Mars or Sun-Mars together in any sign | Bullish | 6/9 (67% vs 47%) | 19/30 (63% vs 52%) | 74/144 (51% vs 54%) p = 0.762; Mixed | +0.20% | 0.762 | 11/21 | At chance | 6 |
+| Moon darshan on Friday or Saturday | Bullish | 2/4 (50% vs 48%) | 8/16 (50% vs 53%) | 42/81 (52% vs 54%) p = 0.663; Mixed | -0.20% | 0.663 | 12/26 | At chance | 5 |
+| Retrograde Mercury goes combust | Bullish | 0/4 (0% vs 45%) | 8/16 (50% vs 54%) | 44/80 (55% vs 54%) p = 0.448; Mixed | -0.04% | 0.448 | 13/26 | At chance | 3 |
+| Mercury turns direct from retrograde | Bullish | 2/4 (50% vs 48%) | 6/15 (40% vs 54%) | 35/74 (47% vs 54%) p = 0.888; Mixed | -0.18% | 0.888 | 9/26 | At chance | 3 |
+| Mercury in Aries or Virgo | Bearish | 1/2 (50% vs 57%) | 4/10 (40% vs 48%) | 27/56 (48% vs 47%) p = 0.452; Mixed | -0.39% | 0.452 | 7/26 | At chance | 3 |
+| Venus in Leo or Libra | Bearish | 2/2 (100% vs 58%) | 3/11 (27% vs 43%) | 22/54 (41% vs 46%) p = 0.82; Mixed | -1.22% | 0.82 | 6/26 | At chance | 3 |
+| Sun in Pushya or Dhanishta with no benefic in the same nakshatra | Bullish | 0/1 (0% vs 48%) | 3/9 (33% vs 54%) | 25/45 (56% vs 54%) p = 0.479; Mixed | +1.27% | 0.479 | 9/25 | At chance | 2 |
+| Mercury combust and retrograde does mutual Vedha with Moon | Bullish | 0/2 (0% vs 48%) | 2/9 (22% vs 51%) | 23/45 (51% vs 55%) p = 0.734; Mixed | -0.51% | 0.734 | 11/23 | At chance | 2 |
+| Sun in Pushya or Dhanishta without benefic planets | Bullish | 0/1 (0% vs 48%) | 2/8 (25% vs 54%) | 19/38 (50% vs 54%) p = 0.742; Mixed | +0.89% | 0.742 | 9/22 | At chance | 2 |
+| Amavasya on Monday | Bearish | – | 3/7 (43% vs 42%) | 17/38 (45% vs 45%) p = 0.555; Mixed | -0.61% | 0.555 | 8/22 | At chance | 2 |
+| Venus alone in Leo or Libra | Bearish | 2/2 (100% vs 53%) | 5/6 (83% vs 45%) | 16/38 (42% vs 46%) p = 0.73; Mixed | -1.68% | 0.73 | 8/22 | At chance | 1 |
+| Mercury & Jupiter both retrograde (even in different signs) | Bullish | 1/2 (50% vs 46%) | 4/6 (67% vs 56%) | 16/29 (55% vs 55%) p = 0.579; Mixed | +0.62% | 0.579 | 11/24 | At chance | 1 |
+| Sun & Moon together at Sankranti entering time | Bullish | 0/1 (0% vs 48%) | 2/3 (67% vs 51%) | 16/27 (59% vs 53%) p = 0.34; Mixed | +0.15% | 0.34 | 5/13 | At chance | 0 |
+| Venus in Virgo with malefic | Bullish | – | 4/5 (80% vs 55%) | 12/26 (46% vs 55%) p = 0.855; Mixed | -0.59% | 0.855 | 7/17 | At chance | 1 |
+| Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) | Bullish | 1/2 (50% vs 29%) | 4/6 (67% vs 61%) | 17/26 (65% vs 58%) p = 0.277; Mixed | +9.87% | 0.277 | 17/26 | At chance | 2 |
+| Jupiter does Vedha of Venus | Bullish | 1/1 (100% vs 48%) | 2/2 (100% vs 51%) | 10/18 (56% vs 52%) p = 0.485; Mixed | -0.46% | 0.485 | 9/15 | At chance | 1 |
+| Mercury & Venus both in Pisces | Bearish | – | 1/2 (50% vs 30%) | 9/17 (53% vs 45%) p = 0.329; Mixed | +0.76% | 0.329 | 9/17 | At chance | 1 |
+| Rahu and Mars in the same nakshatra | Bullish | 0/1 (0% vs 43%) | 2/3 (67% vs 48%) | 6/14 (43% vs 51%) p = 0.799; Mixed | -1.17% | 0.799 | 6/13 | At chance | 1 |
+| Rahu & Mars together in any sign | Bullish | 0/1 (0% vs 43%) | 1/3 (33% vs 52%) | 6/13 (46% vs 50%) p = 0.719; Mixed | +0.12% | 0.719 | 5/12 | At chance | 1 |
+| Mars in Aquarius | Bullish | 0/1 (0% vs 43%) | 1/3 (33% vs 52%) | 7/11 (64% vs 56%) p = 0.412; Mixed | +4.66% | 0.412 | 7/11 | At chance | 0 |
+| Sun in Leo with Mars or Jupiter retrograde | Bullish | – | 0/2 (0% vs 52%) | 7/11 (64% vs 57%) p = 0.458; Mixed | +2.26% | 0.458 | 6/9 | At chance | 0 |
+| Solar eclipse on a Wednesday | Bullish | 0/1 (0% vs 48%) | 0/3 (0% vs 52%) | 6/11 (55% vs 56%) p = 0.662; Mixed | +1.54% | 0.662 | 6/11 | At chance | 0 |
+| Mars in 4th pada of Ashlesha | Bearish | – | 0/2 (0% vs 46%) | 4/10 (40% vs 45%) p = 0.731; Mixed | -1.38% | 0.731 | 4/10 | At chance | 1 |
+| Sun & Venus alone in Cancer | Bullish | – | 1/3 (33% vs 51%) | 3/7 (43% vs 52%) p = 0.811; Mixed | -1.28% | 0.811 | 3/7 | Inconclusive | 0 |
+| Chaitra Shukla Pratipada on Wednesday | Bullish | – | 1/1 (100% vs 53%) | 3/5 (60% vs 54%) p = 0.572; Mixed | +0.10% | 0.572 | 3/5 | Inconclusive | 1 |
+| Mercury-Venus mutual Vedha | Bearish | – | – | 3/5 (60% vs 48%) p = 0.456; Mixed | -0.39% | 0.456 | 3/5 | Inconclusive | 0 |
+| Mercury alone in Aries or Virgo | Bearish | 1/1 (100% vs 52%) | 1/7 (14% vs 47%) | 11/33 (33% vs 45%) p = 0.94; Failed | -0.68% | 0.94 | 7/22 | Did not hold up | 2 |
+| Saturn direct from retrograde | Bearish | 0/1 (0% vs 52%) | 1/4 (25% vs 49%) | 8/23 (35% vs 46%) p = 0.898; Failed | -1.49% | 0.898 | 8/23 | Did not hold up | 2 |
+| Jupiter turns direct from retrograde | Bullish | 0/1 (0% vs 48%) | 1/3 (33% vs 52%) | 9/21 (43% vs 54%) p = 0.899; Failed | -1.01% | 0.899 | 9/21 | Did not hold up | 1 |
+| Mercury does Vedha of Venus | Bullish | 1/1 (100% vs 48%) | 1/2 (50% vs 50%) | 8/18 (44% vs 54%) p = 0.858; Failed | -0.18% | 0.858 | 6/15 | Did not hold up | 1 |
+| Venus combust in West | Bullish | 0/1 (0% vs 43%) | 0/4 (0% vs 50%) | 5/13 (38% vs 54%) p = 0.923; Failed | -1.32% | 0.923 | 5/13 | Did not hold up | 0 |
+| Moon eclipse on Sunday | Bearish | – | 0/3 (0% vs 44%) | 2/11 (18% vs 45%) p = 0.986; Failed | -1.87% | 0.986 | 1/9 | Did not hold up | 1 |
+| Mars rising (after combustion) | Bullish | 1/1 (100% vs 48%) | 1/1 (100% vs 48%) | 2/10 (20% vs 54%) p = 0.995; Failed | -3.43% | 0.995 | 2/10 | Did not hold up | 0 |
+| Mars in Gemini with any 2 other planets | Bearish | – | – | 1/7 (14% vs 48%) p = 0.989; Failed | -1.59% | 0.989 | 1/6 | Did not hold up | 0 |
+| Rahu does Vedha of Pushya | Bullish | 1/1 (100% vs 17%) | 1/1 (100% vs 16%) | 3/4 (75% vs 47%) p = 0.271; Worked | +5.54% | 0.271 | 3/4 | Too few to judge (3/4, leans right) | 0 |
+| Cancer Sankranti on Saturday | Bearish | – | – | 1/3 (33% vs 45%) p = 0.833; Failed | -0.61% | 0.833 | 1/3 | Too few to judge (1/3, leans wrong) | 0 |
+| Venus retrograde in Taurus | Bullish | – | – | 1/3 (33% vs 59%) p = 0.931; Mixed | +0.86% | 0.931 | 1/3 | Too few to judge (1/3, leans wrong) | 0 |
+| Retrograde Mars entering Taurus or Libra | Bullish | – | 0/1 (0% vs 48%) | 0/2 (0% vs 50%) p = 1.0; Failed | -2.25% | 1.0 | 0/2 | Too few to judge (0/2, leans wrong) | 0 |
+| Jupiter enters Scorpio | Bullish | – | – | 2/2 (100% vs 54%) p = 0.296; Worked | +2.11% | 0.296 | 2/2 | Too few to judge (2/2, leans right) | 0 |
+| Saturn in Aquarius or Aries | Bullish | – | 1/2 (50% vs 57%) | 1/2 (50% vs 57%) p = 0.815; Mixed | +12.71% | 0.815 | 1/2 | Too few to judge (1/2, even) | 1 |
+| Retrograde Mars with Ketu | Bearish | – | – | 1/2 (50% vs 63%) p = 0.86; Mixed | +4.09% | 0.86 | 1/2 | Too few to judge (1/2, even) | 1 |
+| Sun eclipse in Falgun or Jyeshtha on Tuesday | Bullish | 1/1 (100% vs 48%) | 1/1 (100% vs 48%) | 1/2 (50% vs 50%) p = 0.753; Mixed | +5.15% | 0.753 | 1/2 | Too few to judge (1/2, even) | 0 |
+| Rahu in Dhanishta (market and bullion risk) | Bearish | 1/1 (100% vs 83%) | 1/1 (100% vs 84%) | 2/2 (100% vs 69%) p = 0.47; Worked | +19.43% | 0.47 | 2/2 | Too few to judge (2/2, leans right) | 1 |
+| Rahu enters Gemini | Bearish | – | – | 0/1 (0% vs 44%) p = 1.0; Failed | -2.52% | 1.0 | 0/1 | Too few to judge (0/1, leans wrong) | 0 |
+| Saturn-Neptune conjunction | Bullish | 1/1 (100% vs 48%) | 1/1 (100% vs 48%) | 1/1 (100% vs 48%) p = 0.481; Worked | +12.16% | 0.481 | 1/1 | Too few to judge (1/1, leans right) | 0 |
+| Mercury, Jupiter & Venus all retrograde in same sign | Bearish | – | – | – |  |  |  | Did not occur | 0 |
+| Jupiter in Capricorn & Saturn in Scorpio | Bearish | – | – | – |  |  |  | Did not occur | 0 |
+| Venus rises in West | Mixed | – | – | – |  |  |  | Not scored | 1 |
+| Silver prophecy: Shukla Shashti range | Neutral | – | – | – |  |  |  | Not scored | 13 |
 
 ## Analysis log
 
 | Date | PR | Topic | Result |
 |---|---|---|---|
+| 2026-11-22 | #13 | reports/ folder with ready-to-open copies | reports/index.html lists 21 reports in four groups (start here, calendars and rule reports, backtests, source research). |
+| 2026-11-22 | #13 | 26-year backtest, gold and silver (20 Nov 2000 - 20 Nov 2026) | Gold 1,598/1,400 (53%) vs 54% by chance; silver 1,083/1,050 (51%) vs 51%; no rule p<0.05. 5-year best rules faded (gold Sun model 54% vs 53%; silver Venus-Mars 51% vs 54%). Most consistent: gold TA S34 A9 Mars aspected by Saturn with Jupiter retrograde 14/17 (p=0.07), U2-Mercury 176/291 (20 of 26 years); silver TA S35 A1 retrograde Mercury or Jupiter 78/126 (p=0.052), A17b Moon-Mercury alone 49/80 (p=0.081). Silver 'Mars rising' significantly wrong (2/10). |
+| 2026-11-21 | #13 | Project knowledge base and one-command refresh | Full refresh with fresh prices passed (7/7 tests); headline totals unchanged (gold 5 yr 308/279, silver 201/219). 20 Nov 2026 gold settlement 3,515.4. |
+| 2026-11-21 | #13 | Financial Astrology Model v1.0 (Brihat Samhita Ch.41 + BPHS Shadbala + Ashtakavarga) for gold | Backtest 2000-2026 (6,572 days): correlation of the scarcity index with the next 5 days -0.002; 'Strong bullish' days averaged +0.04% over 5 days vs +0.24% for all days. Structural bullish skew (67% of days mild bullish or stronger). Forward: bearish stretches 16 Jun - 16 Jul 2027 (Mild bearish to Bearish); strongest bullish 1-8 Aug 2027, 23-30 Aug 2027, 16-27 Dec 2027. |
+| 2026-11-21 | #13 | Brihat Samhita gold/silver rules implemented; Bayer and Western sources excluded | Forward dates: Saturn in Uttara Bhadrapada to 7 Feb 2027 (bearish); Sun with Rahu in Capricorn 14 Jan - 12 Feb 2027 (bearish); new Moon in Capricorn aspected by Jupiter 6 Feb 2027 and full Moon in Aries 13 Nov 2027 (bullish); store window 17 Aug 2027 - 14 Jan 2028. 5-year scores: all four 'Mixed' (too few occurrences to judge). |
+| 2026-11-21 | #13 | Review of Reference_materials/Others (45 files) + test of their gold/silver rules | 8 documents have market content; only Brihat Samhita has classical gold/silver price rules. Moon->silver rulership is sourced, a Moon version of the user's Sun rules is not. Silver guide's Moon rules: no effect over 26 years; new->full Moon hold did WORSE than full->new for both metals. BS 42.14(a) weak positive for gold; BS 10.17 (Saturn in Uttara Bhadrapada, gold afflicted) active until 8 Feb 2027. bayer_all_48_rules.docx rules 25-48 do not match Bayer's 1940 text. |
 | 2026-11-21 | #12 | Silver backtest, 1 and 5 years + silver tracker | 197 of 414 worked (48%) vs 50% by chance; net rule count pointed the wrong way; outcomes followed gold (failed 153/178 when gold moved against the rule). Best: Venus-Mars / Sun-Mars together (19/30, 4 of 5 years); 'Venus alone in Leo/Libra' 5/6 vs plain 'Venus in Leo/Libra' 3/11. |
 | 2026-11-21 | #11 | Gold findings tracker + forward dates | See GOLD_TRACKER.html. |
 | 2026-11-21 | #10 | Gold backtest, 5 years | 288 of 554 worked (52%) vs 54% by chance; best: combined Sun model 105/179 (p=0.057), U2-Jupiter, U2-Venus, U2-Mercury right in 4 of 5 years; U4-Saturn did not hold up (6/20). |

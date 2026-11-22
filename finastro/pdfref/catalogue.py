@@ -2001,3 +2001,6 @@ for ref, text, why in (
 
 # User-supplied gold rules (Reference_materials/user_notes_gold.md).
 from . import user_rules  # noqa: E402,F401
+
+# Brihat Samhita gold / silver price rules (Reference_materials/extracted/OTHERS_FINANCIAL_REVIEW.md).
+from . import bs_rules  # noqa: E402,F401

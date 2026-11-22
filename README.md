@@ -753,6 +753,13 @@ The existing calendar (`build/calendar_2027.*`) is not modified: its rows are
 carried into the New York master calendar, annotated with the PDF text where a
 PDF rule states the same condition.
 
+**Gold / silver work (Nov 2026)**: all sources, decisions, findings and commands are in
+`PROJECT_KNOWLEDGE.md`, and session notes in `CLAUDE.md`. Ready-to-open reports are in
+`reports/` (start with `reports/index.html`). Rebuild everything with
+`python tools/refresh_all.py --prices`. The work covers metal reports, backtests, the
+Brihat Samhita rules, Financial Astrology Model v1.0 (Shadbala/Ashtakavarga) and the
+trackers.
+
 A page-by-page extraction of both PDFs (page image, verified table
 transcriptions, OCR text, searchable) is in `Reference_materials/extracted/`
 (open `index.html`); rebuild it with `python tools/extract_reference_pdfs.py`.

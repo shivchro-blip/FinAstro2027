@@ -2,44 +2,10 @@
  "period": "2026-11-20..2027-12-31",
  "time_zone": "America/New_York",
  "best_rules": [
-  "user_sun_state_net",
-  "user_u2_mercury",
-  "user_u2_venus",
-  "user_u2_jupiter"
+  "ta_s34a09_mars_aspected_saturn_jupiter_retro",
+  "user_u2_mercury"
  ],
  "best_windows": [
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bearish",
-   "start": "2026-11-19T21:34:13+00:00",
-   "end": "2026-12-02T11:57:39+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 12.6,
-   "facts": {
-    "Sun nakshatra": "Anuradha",
-    "rise": "-",
-    "fall": "Sun in Anuradha (Saturn nakshatra) [U3]"
-   },
-   "verdict": "0 rise : 1 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Rahu in Dhanishta (market and bullion risk) [Bearish]",
-     "Sun in a Saturn or Rahu nakshatra (user note) [Bearish]",
-     "U2 - waxing Moon with / aspecting the Sun [Bullish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bearish]"
-    ],
-    "failed": [
-     "Sun on Anuradha with or aspected by benefic [Bearish]"
-    ],
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]"
-    ]
-   }
-  },
   {
    "rule_id": "user_u2_mercury",
    "title": "U2 - Mercury with the Sun",
@@ -55,132 +21,23 @@
     "value": "Mercury conjunct (same sign)"
    },
    "verdict": "Bullish",
-   "hist": "36/55 (65% vs base 57%), avg +0.89%, right in 4/5 yrs",
+   "hist": "176/291 (60% vs base 57%), avg +0.62%, right in 20/26 yrs",
    "conc": {
     "other": [
      "Rahu in Dhanishta (market and bullion risk) [Bearish]",
+     "Saturn in Uttara Bhadrapada (Brihat Samhita 10.17) [Bearish]",
      "Sun and Moon on the same degree (new moon) [Bullish]",
+     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish]",
      "Sun in a Saturn or Rahu nakshatra (user note) [Bearish]",
      "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "U2 - waxing Moon with / aspecting the Sun [Bullish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bearish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "best": [
+     "Sun on Anuradha with or aspected by benefic [Bearish]",
      "U2 - Jupiter with / aspecting the Sun [Bullish]",
+     "U2 - waxing Moon with / aspecting the Sun [Bullish]",
+     "U4 - Saturn with / aspecting the Sun [Bearish]",
      "User Sun model: net rise vs fall signals [Bearish]",
-     "User Sun model: net rise vs fall signals [Bullish]"
-    ],
-    "failed": [
-     "Sun on Anuradha with or aspected by benefic [Bearish]",
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2026-12-03T01:58:35+00:00",
-   "end": "2026-12-16T04:55:18+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 13.1,
-   "facts": {
-    "Sun nakshatra": "Jyeshtha",
-    "rise": "Sun in Jyeshtha (Mercury nakshatra) [U1]; Mercury with Sun [U2]",
-    "fall": "-"
-   },
-   "verdict": "2 rise : 0 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Rahu in Dhanishta (market and bullion risk) [Bearish]",
-     "Sun and Moon on the same degree (new moon) [Bullish]",
-     "Sun in a Saturn or Rahu nakshatra (user note) [Bearish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "U2 - waxing Moon with / aspecting the Sun [Bullish]",
+     "User Sun model: net rise vs fall signals [Bullish]",
      "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bearish]",
      "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "failed": [
-     "Sun on Anuradha with or aspected by benefic [Bearish]",
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
-    ],
-    "best": [
-     "U2 - Jupiter with / aspecting the Sun [Bullish]",
-     "U2 - Mercury with the Sun [Bullish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_u2_jupiter",
-   "title": "U2 - Jupiter with / aspecting the Sun",
-   "tone": "Bullish",
-   "start": "2026-12-16T04:55:18+00:00",
-   "end": "2027-01-14T15:40:46+00:00",
-   "bodies": [
-    "Sun",
-    "Jupiter"
-   ],
-   "days": 29.4,
-   "facts": {
-    "value": "Jupiter aspects (5th from Jupiter)"
-   },
-   "verdict": "Bullish",
-   "hist": "15/21 (71% vs base 61%), avg +2.37%, right in 4/5 yrs",
-   "conc": {
-    "other": [
-     "Mars retrograde [Bullish]",
-     "Rahu in Dhanishta (market and bullion risk) [Bearish]",
-     "Sun and Moon on the same degree (new moon) [Bullish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "U2 - waxing Moon with / aspecting the Sun [Bullish]",
-     "U4 - Rahu with / aspecting the Sun (incl. Sun with Ketu) [Bearish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]",
-     "User Sun model: net rise vs fall signals [Bullish]"
-    ],
-    "failed": [
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
-    ],
-    "held": [
-     "Moon darshan on Saturday (gold) [Bearish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2026-12-22T02:09:50+00:00",
-   "end": "2026-12-29T07:14:31+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 7.2,
-   "facts": {
-    "Sun nakshatra": "Mula",
-    "rise": "Mercury with Sun [U2]; Jupiter aspects Sun [U2]",
-    "fall": "Saturn aspects Sun [U4]"
-   },
-   "verdict": "2 rise : 1 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Rahu in Dhanishta (market and bullion risk) [Bearish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "U2 - waxing Moon with / aspecting the Sun [Bullish]"
-    ],
-    "best": [
-     "U2 - Jupiter with / aspecting the Sun [Bullish]",
-     "U2 - Mercury with the Sun [Bullish]"
-    ],
-    "failed": [
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
     ]
    }
   },
@@ -199,98 +56,20 @@
     "value": "Mercury conjunct (same sign)"
    },
    "verdict": "Bullish",
-   "hist": "36/55 (65% vs base 57%), avg +0.89%, right in 4/5 yrs",
+   "hist": "176/291 (60% vs base 57%), avg +0.62%, right in 20/26 yrs",
    "conc": {
     "other": [
+     "Moon darshan on Saturday (gold) [Bearish]",
      "Rahu in Dhanishta (market and bullion risk) [Bearish]",
+     "Saturn in Uttara Bhadrapada (Brihat Samhita 10.17) [Bearish]",
      "Sun and Moon on the same degree (new moon) [Bullish]",
+     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish]",
      "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
+     "U2 - Jupiter with / aspecting the Sun [Bullish]",
      "U2 - waxing Moon with / aspecting the Sun [Bullish]",
+     "U4 - Saturn with / aspecting the Sun [Bearish]",
+     "User Sun model: net rise vs fall signals [Bullish]",
      "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "best": [
-     "U2 - Jupiter with / aspecting the Sun [Bullish]",
-     "User Sun model: net rise vs fall signals [Bullish]"
-    ],
-    "failed": [
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
-    ],
-    "held": [
-     "Moon darshan on Saturday (gold) [Bearish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2026-12-29T07:14:31+00:00",
-   "end": "2027-01-09T19:07:30+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 11.5,
-   "facts": {
-    "Sun nakshatra": "Purva Ashadha",
-    "rise": "Sun in Purva Ashadha (Venus nakshatra) [U1]; Mercury with Sun [U2]; Jupiter aspects Sun [U2]",
-    "fall": "Saturn aspects Sun [U4]"
-   },
-   "verdict": "3 rise : 1 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Rahu in Dhanishta (market and bullion risk) [Bearish]",
-     "Sun and Moon on the same degree (new moon) [Bullish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "U2 - waxing Moon with / aspecting the Sun [Bullish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "best": [
-     "U2 - Jupiter with / aspecting the Sun [Bullish]",
-     "U2 - Mercury with the Sun [Bullish]"
-    ],
-    "failed": [
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
-    ],
-    "held": [
-     "Moon darshan on Saturday (gold) [Bearish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2027-01-09T19:07:30+00:00",
-   "end": "2027-01-11T09:09:50+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 1.6,
-   "facts": {
-    "Sun nakshatra": "Purva Ashadha",
-    "rise": "Sun in Purva Ashadha (Venus nakshatra) [U1]; Jupiter aspects Sun [U2]",
-    "fall": "Saturn aspects Sun [U4]"
-   },
-   "verdict": "2 rise : 1 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Mars retrograde [Bullish]",
-     "Rahu in Dhanishta (market and bullion risk) [Bearish]",
-     "Sun and Moon on the same degree (new moon) [Bullish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "best": [
-     "U2 - Jupiter with / aspecting the Sun [Bullish]",
-     "U2 - Mercury with the Sun [Bullish]"
-    ],
-    "failed": [
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
-    ],
-    "held": [
-     "Moon darshan on Saturday (gold) [Bearish]"
     ]
    }
   },
@@ -309,121 +88,26 @@
     "value": "Mercury conjunct (same sign)"
    },
    "verdict": "Bullish",
-   "hist": "36/55 (65% vs base 57%), avg +0.89%, right in 4/5 yrs",
+   "hist": "176/291 (60% vs base 57%), avg +0.62%, right in 20/26 yrs",
    "conc": {
     "other": [
      "Mars retrograde [Bullish]",
+     "Mercury rises in West [Bearish]",
+     "Moon darshan on Saturday (gold) [Bearish]",
      "Rahu in Dhanishta (market and bullion risk) [Bearish]",
+     "Saturn in Uttara Bhadrapada (Brihat Samhita 10.17) [Bearish]",
      "Sun and Moon on the same degree (new moon) [Bullish]",
+     "Sun in Aries or Capricorn with or aspected by a malefic (Brihat Samhita 42.14) [Bearish]",
+     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish]",
+     "U2 - Jupiter with / aspecting the Sun [Bullish]",
      "U2 - waxing Moon with / aspecting the Sun [Bullish]",
      "U4 - Rahu with / aspecting the Sun (incl. Sun with Ketu) [Bearish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]",
-     "Venus in Jyeshtha with or aspected by benefic [Bearish]"
-    ],
-    "best": [
-     "U2 - Jupiter with / aspecting the Sun [Bullish]",
-     "User Sun model: net rise vs fall signals [Bullish]"
+     "U4 - Saturn with / aspecting the Sun [Bearish]",
+     "User Sun model: net rise vs fall signals [Bullish]",
+     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
     ],
     "failed": [
-     "Mercury rises in West [Bearish]",
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
-    ],
-    "held": [
-     "Moon darshan on Saturday (gold) [Bearish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2027-01-24T20:01:52+00:00",
-   "end": "2027-01-27T22:04:13+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 3.1,
-   "facts": {
-    "Sun nakshatra": "Shravana",
-    "rise": "Mercury with Sun [U2]; Jupiter aspects Sun [U2]",
-    "fall": "Rahu with Sun [U4]"
-   },
-   "verdict": "2 rise : 1 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Mars retrograde [Bullish]",
-     "Rahu in Dhanishta (market and bullion risk) [Bearish]",
-     "U4 - Rahu with / aspecting the Sun (incl. Sun with Ketu) [Bearish]",
      "Venus in Jyeshtha with or aspected by benefic [Bearish]"
-    ],
-    "best": [
-     "U2 - Jupiter with / aspecting the Sun [Bullish]",
-     "U2 - Mercury with the Sun [Bullish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_u2_jupiter",
-   "title": "U2 - Jupiter with / aspecting the Sun",
-   "tone": "Bullish",
-   "start": "2027-01-24T20:01:52+00:00",
-   "end": "2027-02-13T04:39:22+00:00",
-   "bodies": [
-    "Sun",
-    "Jupiter"
-   ],
-   "days": 19.4,
-   "facts": {
-    "value": "Jupiter aspects (7th from Jupiter)"
-   },
-   "verdict": "Bullish",
-   "hist": "15/21 (71% vs base 61%), avg +2.37%, right in 4/5 yrs",
-   "conc": {
-    "other": [
-     "Mars retrograde [Bullish]",
-     "Rahu in Dhanishta (market and bullion risk) [Bearish]",
-     "Sun and Moon on the same degree (new moon) [Bullish]",
-     "Sun enters Aquarius on a Friday [Bullish]",
-     "U2 - waxing Moon with / aspecting the Sun [Bullish]",
-     "U4 - Rahu with / aspecting the Sun (incl. Sun with Ketu) [Bearish]",
-     "Venus in Jyeshtha with or aspected by benefic [Bearish]"
-    ],
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]",
-     "User Sun model: net rise vs fall signals [Bullish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2027-02-13T04:39:22+00:00",
-   "end": "2027-02-19T19:07:58+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 6.6,
-   "facts": {
-    "Sun nakshatra": "Dhanishta",
-    "rise": "Mercury with Sun [U2]",
-    "fall": "-"
-   },
-   "verdict": "1 rise : 0 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Mars retrograde [Bullish]",
-     "Rahu in Dhanishta (market and bullion risk) [Bearish]",
-     "Sun and Moon on the same degree (new moon) [Bullish]",
-     "Sun enters Aquarius on a Friday [Bullish]",
-     "Sun in a Saturn or Rahu nakshatra (user note) [Bearish]",
-     "U4 - Rahu with / aspecting the Sun (incl. Sun with Ketu) [Bearish]"
-    ],
-    "best": [
-     "U2 - Jupiter with / aspecting the Sun [Bullish]",
-     "U2 - Mercury with the Sun [Bullish]"
     ]
    }
   },
@@ -442,114 +126,23 @@
     "value": "Mercury conjunct (same sign)"
    },
    "verdict": "Bullish",
-   "hist": "36/55 (65% vs base 57%), avg +0.89%, right in 4/5 yrs",
+   "hist": "176/291 (60% vs base 57%), avg +0.62%, right in 20/26 yrs",
    "conc": {
     "other": [
      "Mars retrograde [Bullish]",
+     "New / full Moon in Aries or Capricorn with a benefic (Brihat Samhita 42.14) [Bullish]",
      "Rahu in Dhanishta (market and bullion risk) [Bearish]",
      "Sun and Moon on the same degree (new moon) [Bullish]",
-     "Sun enters Aquarius on a Friday [Bullish]",
+     "Sun in Aries or Capricorn with or aspected by a malefic (Brihat Samhita 42.14) [Bearish]",
      "Sun in a Saturn or Rahu nakshatra (user note) [Bearish]",
+     "U2 - Jupiter with / aspecting the Sun [Bullish]",
      "U2 - waxing Moon with / aspecting the Sun [Bullish]",
-     "U4 - Rahu with / aspecting the Sun (incl. Sun with Ketu) [Bearish]"
-    ],
-    "best": [
-     "U2 - Jupiter with / aspecting the Sun [Bullish]",
+     "U4 - Rahu with / aspecting the Sun (incl. Sun with Ketu) [Bearish]",
      "User Sun model: net rise vs fall signals [Bearish]",
      "User Sun model: net rise vs fall signals [Bullish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bearish",
-   "start": "2027-02-23T23:10:46+00:00",
-   "end": "2027-03-05T01:28:07+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 9.1,
-   "facts": {
-    "Sun nakshatra": "Shatabhisha",
-    "rise": "-",
-    "fall": "Sun in Shatabhisha (Rahu nakshatra) [U3]"
-   },
-   "verdict": "0 rise : 1 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Mars retrograde [Bullish]",
-     "Rahu in Dhanishta (market and bullion risk) [Bearish]",
-     "Sun in a Saturn or Rahu nakshatra (user note) [Bearish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]"
-    ],
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2027-03-05T01:28:07+00:00",
-   "end": "2027-03-11T23:37:30+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 6.9,
-   "facts": {
-    "Sun nakshatra": "Purva Bhadrapada",
-    "rise": "Sun in Purva Bhadrapada (Jupiter nakshatra) [U1]",
-    "fall": "-"
-   },
-   "verdict": "1 rise : 0 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Mars retrograde [Bullish]",
-     "Rahu in Dhanishta (market and bullion risk) [Bearish]",
-     "Sun and Moon on the same degree (new moon) [Bullish]",
-     "Sun in a Saturn or Rahu nakshatra (user note) [Bearish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "U2 - waxing Moon with / aspecting the Sun [Bullish]"
-    ],
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2027-03-11T23:37:30+00:00",
-   "end": "2027-03-15T01:30:28+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 3.1,
-   "facts": {
-    "Sun nakshatra": "Purva Bhadrapada",
-    "rise": "Sun in Purva Bhadrapada (Jupiter nakshatra) [U1]; Mercury with Sun [U2]",
-    "fall": "-"
-   },
-   "verdict": "2 rise : 0 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Mars retrograde [Bullish]",
-     "Rahu in Dhanishta (market and bullion risk) [Bearish]",
-     "Sun and Moon on the same degree (new moon) [Bullish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]"
-    ],
-    "best": [
-     "U2 - Jupiter with / aspecting the Sun [Bullish]",
-     "U2 - Mercury with the Sun [Bullish]"
     ],
     "failed": [
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
+     "Sun enters Aquarius on a Friday [Bullish]"
     ]
    }
   },
@@ -568,188 +161,16 @@
     "value": "Mercury conjunct (same sign)"
    },
    "verdict": "Bullish",
-   "hist": "36/55 (65% vs base 57%), avg +0.89%, right in 4/5 yrs",
+   "hist": "176/291 (60% vs base 57%), avg +0.62%, right in 20/26 yrs",
    "conc": {
     "other": [
      "Mars retrograde [Bullish]",
      "Rahu in Dhanishta (market and bullion risk) [Bearish]",
      "Sun and Moon on the same degree (new moon) [Bullish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]"
-    ],
-    "best": [
+     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
      "U2 - Jupiter with / aspecting the Sun [Bullish]",
+     "U4 - Saturn with / aspecting the Sun [Bearish]",
      "User Sun model: net rise vs fall signals [Bullish]"
-    ],
-    "failed": [
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2027-03-15T01:30:28+00:00",
-   "end": "2027-03-18T09:50:09+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 3.3,
-   "facts": {
-    "Sun nakshatra": "Purva Bhadrapada",
-    "rise": "Sun in Purva Bhadrapada (Jupiter nakshatra) [U1]; Jupiter aspects Sun [U2]",
-    "fall": "Saturn with Sun [U4]"
-   },
-   "verdict": "2 rise : 1 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Mars retrograde [Bullish]",
-     "Rahu in Dhanishta (market and bullion risk) [Bearish]",
-     "Sun and Moon on the same degree (new moon) [Bullish]",
-     "Sun in a Saturn or Rahu nakshatra (user note) [Bearish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]"
-    ],
-    "best": [
-     "U2 - Jupiter with / aspecting the Sun [Bullish]",
-     "U2 - Mercury with the Sun [Bullish]"
-    ],
-    "failed": [
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_u2_jupiter",
-   "title": "U2 - Jupiter with / aspecting the Sun",
-   "tone": "Bullish",
-   "start": "2027-03-15T01:30:28+00:00",
-   "end": "2027-04-14T09:58:35+00:00",
-   "bodies": [
-    "Sun",
-    "Jupiter"
-   ],
-   "days": 30.4,
-   "facts": {
-    "value": "Jupiter aspects (9th from Jupiter)"
-   },
-   "verdict": "Bullish",
-   "hist": "15/21 (71% vs base 61%), avg +2.37%, right in 4/5 yrs",
-   "conc": {
-    "other": [
-     "Mars retrograde [Bullish]",
-     "Rahu in Dhanishta (market and bullion risk) [Bearish]",
-     "Sun and Moon on the same degree (new moon) [Bullish]",
-     "Sun in a Saturn or Rahu nakshatra (user note) [Bearish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "U2 - waxing Moon with / aspecting the Sun [Bullish]"
-    ],
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]",
-     "User Sun model: net rise vs fall signals [Bearish]",
-     "User Sun model: net rise vs fall signals [Bullish]"
-    ],
-    "failed": [
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bearish",
-   "start": "2027-03-18T09:50:09+00:00",
-   "end": "2027-03-31T20:44:03+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 13.5,
-   "facts": {
-    "Sun nakshatra": "Uttara Bhadrapada",
-    "rise": "Jupiter aspects Sun [U2]",
-    "fall": "Sun in Uttara Bhadrapada (Saturn nakshatra) [U3]; Saturn with Sun [U4]"
-   },
-   "verdict": "1 rise : 2 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Mars retrograde [Bullish]",
-     "Rahu in Dhanishta (market and bullion risk) [Bearish]",
-     "Sun in a Saturn or Rahu nakshatra (user note) [Bearish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "U2 - waxing Moon with / aspecting the Sun [Bullish]"
-    ],
-    "best": [
-     "U2 - Jupiter with / aspecting the Sun [Bullish]"
-    ],
-    "failed": [
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2027-03-31T20:44:03+00:00",
-   "end": "2027-04-05T10:46:52+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 4.6,
-   "facts": {
-    "Sun nakshatra": "Revati",
-    "rise": "Sun in Revati (Mercury nakshatra) [U1]; Jupiter aspects Sun [U2]",
-    "fall": "Saturn with Sun [U4]"
-   },
-   "verdict": "2 rise : 1 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Mars retrograde [Bullish]",
-     "Rahu in Dhanishta (market and bullion risk) [Bearish]",
-     "Sun in a Saturn or Rahu nakshatra (user note) [Bearish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]"
-    ],
-    "best": [
-     "U2 - Jupiter with / aspecting the Sun [Bullish]",
-     "U2 - Mercury with the Sun [Bullish]"
-    ],
-    "failed": [
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2027-04-05T10:46:52+00:00",
-   "end": "2027-04-14T09:58:35+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 9.0,
-   "facts": {
-    "Sun nakshatra": "Revati",
-    "rise": "Sun in Revati (Mercury nakshatra) [U1]; Mercury with Sun [U2]; Jupiter aspects Sun [U2]",
-    "fall": "Saturn with Sun [U4]"
-   },
-   "verdict": "3 rise : 1 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Rahu in Dhanishta (market and bullion risk) [Bearish]",
-     "Sun and Moon on the same degree (new moon) [Bullish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "U2 - waxing Moon with / aspecting the Sun [Bullish]"
-    ],
-    "best": [
-     "U2 - Jupiter with / aspecting the Sun [Bullish]",
-     "U2 - Mercury with the Sun [Bullish]"
-    ],
-    "failed": [
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
     ]
    }
   },
@@ -768,47 +189,16 @@
     "value": "Mercury conjunct (same sign)"
    },
    "verdict": "Bullish",
-   "hist": "36/55 (65% vs base 57%), avg +0.89%, right in 4/5 yrs",
+   "hist": "176/291 (60% vs base 57%), avg +0.62%, right in 20/26 yrs",
    "conc": {
     "other": [
      "Rahu in Dhanishta (market and bullion risk) [Bearish]",
      "Sun and Moon on the same degree (new moon) [Bullish]",
      "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "U2 - waxing Moon with / aspecting the Sun [Bullish]"
-    ],
-    "best": [
      "U2 - Jupiter with / aspecting the Sun [Bullish]",
+     "U2 - waxing Moon with / aspecting the Sun [Bullish]",
+     "U4 - Saturn with / aspecting the Sun [Bearish]",
      "User Sun model: net rise vs fall signals [Bullish]"
-    ],
-    "failed": [
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2027-04-22T02:42:39+00:00",
-   "end": "2027-04-28T01:52:58+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 6.0,
-   "facts": {
-    "Sun nakshatra": "Ashwini",
-    "rise": "Mercury with Sun [U2]",
-    "fall": "-"
-   },
-   "verdict": "1 rise : 0 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]"
     ]
    }
   },
@@ -827,179 +217,13 @@
     "value": "Mercury conjunct (same sign)"
    },
    "verdict": "Bullish",
-   "hist": "36/55 (65% vs base 57%), avg +0.89%, right in 4/5 yrs",
+   "hist": "176/291 (60% vs base 57%), avg +0.62%, right in 20/26 yrs",
    "conc": {
     "other": [
      "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
      "Sun on Bharani, Krittika, Punarvasu or Pushya, not aspected by benefic [Bullish]",
+     "User Sun model: net rise vs fall signals [Bullish]",
      "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "best": [
-     "User Sun model: net rise vs fall signals [Bullish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2027-04-28T01:52:58+00:00",
-   "end": "2027-05-06T07:06:33+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 8.2,
-   "facts": {
-    "Sun nakshatra": "Bharani",
-    "rise": "Sun in Bharani (Venus nakshatra) [U1]; Mercury with Sun [U2]",
-    "fall": "-"
-   },
-   "verdict": "2 rise : 0 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "Sun on Bharani, Krittika, Punarvasu or Pushya, not aspected by benefic [Bullish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2027-05-06T07:06:33+00:00",
-   "end": "2027-05-10T03:19:13+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 3.8,
-   "facts": {
-    "Sun nakshatra": "Bharani",
-    "rise": "Sun in Bharani (Venus nakshatra) [U1]",
-    "fall": "-"
-   },
-   "verdict": "1 rise : 0 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Moon darshan (first sighting) on Monday or Friday [Bullish]",
-     "Sun and Moon on the same degree (new moon) [Bullish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "Sun on Bharani, Krittika, Punarvasu or Pushya, not aspected by benefic [Bullish]",
-     "U2 - waxing Moon with / aspecting the Sun [Bullish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]",
-     "U2 - Venus with / aspecting the Sun [Bullish]"
-    ],
-    "failed": [
-     "Mercury rises in West [Bearish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2027-05-10T03:19:13+00:00",
-   "end": "2027-05-11T19:57:11+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 1.7,
-   "facts": {
-    "Sun nakshatra": "Bharani",
-    "rise": "Sun in Bharani (Venus nakshatra) [U1]; Venus with Sun [U2]",
-    "fall": "-"
-   },
-   "verdict": "2 rise : 0 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Moon darshan (first sighting) on Monday or Friday [Bullish]",
-     "Sun and Moon on the same degree (new moon) [Bullish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "Sun on Bharani, Krittika, Punarvasu or Pushya, not aspected by benefic [Bullish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "failed": [
-     "Mercury rises in West [Bearish]"
-    ],
-    "best": [
-     "U2 - Venus with / aspecting the Sun [Bullish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_u2_venus",
-   "title": "U2 - Venus with / aspecting the Sun",
-   "tone": "Bullish",
-   "start": "2027-05-10T03:19:13+00:00",
-   "end": "2027-05-15T06:50:09+00:00",
-   "bodies": [
-    "Sun",
-    "Venus"
-   ],
-   "days": 5.1,
-   "facts": {
-    "value": "Venus conjunct (same sign)"
-   },
-   "verdict": "Bullish",
-   "hist": "18/27 (67% vs base 57%), avg +1.34%, right in 4/5 yrs",
-   "conc": {
-    "other": [
-     "Moon darshan (first sighting) on Monday or Friday [Bullish]",
-     "Sun and Moon on the same degree (new moon) [Bullish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "Sun on Bharani, Krittika, Punarvasu or Pushya, not aspected by benefic [Bullish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]",
-     "User Sun model: net rise vs fall signals [Bullish]"
-    ],
-    "failed": [
-     "Mercury rises in West [Bearish]",
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2027-05-11T19:57:11+00:00",
-   "end": "2027-05-15T06:50:09+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 3.5,
-   "facts": {
-    "Sun nakshatra": "Krittika",
-    "rise": "Venus with Sun [U2]",
-    "fall": "-"
-   },
-   "verdict": "1 rise : 0 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Moon darshan (first sighting) on Monday or Friday [Bullish]",
-     "Sun and Moon on the same degree (new moon) [Bullish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "failed": [
-     "Mercury rises in West [Bearish]",
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
-    ],
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]",
-     "U2 - Venus with / aspecting the Sun [Bullish]"
     ]
    }
   },
@@ -1018,184 +242,17 @@
     "value": "Mercury conjunct (same sign)"
    },
    "verdict": "Bullish",
-   "hist": "36/55 (65% vs base 57%), avg +0.89%, right in 4/5 yrs",
+   "hist": "176/291 (60% vs base 57%), avg +0.62%, right in 20/26 yrs",
    "conc": {
     "other": [
      "Saturn or Mercury in Gemini [Bearish]",
      "Sun on Bharani, Krittika, Punarvasu or Pushya, not aspected by benefic [Bullish]",
-     "U2 - waxing Moon with / aspecting the Sun [Bullish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "best": [
      "U2 - Venus with / aspecting the Sun [Bullish]",
+     "U2 - waxing Moon with / aspecting the Sun [Bullish]",
+     "U4 - Saturn with / aspecting the Sun [Bearish]",
      "User Sun model: net rise vs fall signals [Bearish]",
-     "User Sun model: net rise vs fall signals [Bullish]"
-    ],
-    "failed": [
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bearish",
-   "start": "2027-05-23T13:02:48+00:00",
-   "end": "2027-05-25T16:15:00+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 2.1,
-   "facts": {
-    "Sun nakshatra": "Krittika",
-    "rise": "-",
-    "fall": "Saturn aspects Sun [U4]"
-   },
-   "verdict": "0 rise : 1 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Saturn or Mercury in Gemini [Bearish]",
-     "Sun on Bharani, Krittika, Punarvasu or Pushya, not aspected by benefic [Bullish]",
+     "User Sun model: net rise vs fall signals [Bullish]",
      "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]"
-    ],
-    "failed": [
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bearish",
-   "start": "2027-05-25T16:15:00+00:00",
-   "end": "2027-06-02T23:58:35+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 8.3,
-   "facts": {
-    "Sun nakshatra": "Rohini",
-    "rise": "-",
-    "fall": "Saturn aspects Sun [U4]"
-   },
-   "verdict": "0 rise : 1 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Saturn or Mercury in Gemini [Bearish]",
-     "Sun on Bharani, Krittika, Punarvasu or Pushya, not aspected by benefic [Bullish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "failed": [
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2027-06-03T19:11:15+00:00",
-   "end": "2027-06-08T14:02:20+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 4.8,
-   "facts": {
-    "Sun nakshatra": "Rohini",
-    "rise": "Venus with Sun [U2]",
-    "fall": "-"
-   },
-   "verdict": "1 rise : 0 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Saturn or Mercury in Gemini [Bearish]",
-     "Sun and Moon on the same degree (new moon) [Bullish]",
-     "U2 - waxing Moon with / aspecting the Sun [Bullish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "best": [
-     "U2 - Venus with / aspecting the Sun [Bullish]"
-    ],
-    "held": [
-     "Moon darshan on Saturday (gold) [Bearish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_u2_venus",
-   "title": "U2 - Venus with / aspecting the Sun",
-   "tone": "Bullish",
-   "start": "2027-06-03T19:11:15+00:00",
-   "end": "2027-06-15T13:26:15+00:00",
-   "bodies": [
-    "Sun",
-    "Venus"
-   ],
-   "days": 11.8,
-   "facts": {
-    "value": "Venus conjunct (same sign)"
-   },
-   "verdict": "Bullish",
-   "hist": "18/27 (67% vs base 57%), avg +1.34%, right in 4/5 yrs",
-   "conc": {
-    "other": [
-     "Saturn or Mercury in Gemini [Bearish]",
-     "Sun and Moon on the same degree (new moon) [Bullish]",
-     "U2 - waxing Moon with / aspecting the Sun [Bullish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]",
-     "Venus in Rohini [Bullish]"
-    ],
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]",
-     "User Sun model: net rise vs fall signals [Bullish]"
-    ],
-    "held": [
-     "Moon darshan on Saturday (gold) [Bearish]"
-    ],
-    "failed": [
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2027-06-08T14:02:20+00:00",
-   "end": "2027-06-15T13:26:15+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 7.0,
-   "facts": {
-    "Sun nakshatra": "Mrigashira",
-    "rise": "Venus with Sun [U2]",
-    "fall": "-"
-   },
-   "verdict": "1 rise : 0 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Saturn or Mercury in Gemini [Bearish]",
-     "Sun and Moon on the same degree (new moon) [Bullish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]",
-     "Venus in Rohini [Bullish]"
-    ],
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]",
-     "U2 - Venus with / aspecting the Sun [Bullish]"
-    ],
-    "held": [
-     "Moon darshan on Saturday (gold) [Bearish]"
-    ],
-    "failed": [
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
     ]
    }
   },
@@ -1214,7 +271,7 @@
     "value": "Mercury conjunct (same sign)"
    },
    "verdict": "Bullish",
-   "hist": "36/55 (65% vs base 57%), avg +0.89%, right in 4/5 yrs",
+   "hist": "176/291 (60% vs base 57%), avg +0.62%, right in 20/26 yrs",
    "conc": {
     "other": [
      "Saturn or Mercury in Gemini [Bearish]",
@@ -1222,297 +279,15 @@
      "Sun in a Saturn or Rahu nakshatra (user note) [Bearish]",
      "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
      "Sun on Bharani, Krittika, Punarvasu or Pushya, not aspected by benefic [Bullish]",
+     "U2 - Venus with / aspecting the Sun [Bullish]",
      "U2 - waxing Moon with / aspecting the Sun [Bullish]",
      "U4 - Rahu with / aspecting the Sun (incl. Sun with Ketu) [Bearish]",
+     "U4 - Saturn with / aspecting the Sun [Bearish]",
+     "User Sun model: net rise vs fall signals [Bearish]",
+     "User Sun model: net rise vs fall signals [Bullish]",
      "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]",
      "Venus in Punarvasu [Bearish]",
      "Venus in Rohini [Bullish]"
-    ],
-    "best": [
-     "U2 - Venus with / aspecting the Sun [Bullish]",
-     "User Sun model: net rise vs fall signals [Bearish]",
-     "User Sun model: net rise vs fall signals [Bullish]"
-    ],
-    "failed": [
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bearish",
-   "start": "2027-06-22T13:06:05+00:00",
-   "end": "2027-06-28T09:09:50+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 5.8,
-   "facts": {
-    "Sun nakshatra": "Ardra",
-    "rise": "Mercury with Sun [U2]",
-    "fall": "Sun in Ardra (Rahu nakshatra) [U3]; Saturn aspects Sun [U4]"
-   },
-   "verdict": "1 rise : 2 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Saturn or Mercury in Gemini [Bearish]",
-     "Sun in a Saturn or Rahu nakshatra (user note) [Bearish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]",
-     "Venus in Rohini [Bullish]"
-    ],
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]",
-     "U2 - Venus with / aspecting the Sun [Bullish]"
-    ],
-    "failed": [
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_u2_venus",
-   "title": "U2 - Venus with / aspecting the Sun",
-   "tone": "Bullish",
-   "start": "2027-06-28T09:09:50+00:00",
-   "end": "2027-07-17T00:19:13+00:00",
-   "bodies": [
-    "Sun",
-    "Venus"
-   ],
-   "days": 18.6,
-   "facts": {
-    "value": "Venus conjunct (same sign)"
-   },
-   "verdict": "Bullish",
-   "hist": "18/27 (67% vs base 57%), avg +1.34%, right in 4/5 yrs",
-   "conc": {
-    "other": [
-     "Saturn or Mercury in Gemini [Bearish]",
-     "Sun and Moon on the same degree (new moon) [Bullish]",
-     "Sun in a Saturn or Rahu nakshatra (user note) [Bearish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "Sun on Bharani, Krittika, Punarvasu or Pushya, not aspected by benefic [Bullish]",
-     "U2 - waxing Moon with / aspecting the Sun [Bullish]",
-     "U4 - Rahu with / aspecting the Sun (incl. Sun with Ketu) [Bearish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]",
-     "Venus in Punarvasu [Bearish]"
-    ],
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]",
-     "User Sun model: net rise vs fall signals [Bearish]",
-     "User Sun model: net rise vs fall signals [Bullish]"
-    ],
-    "failed": [
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2027-07-06T12:37:30+00:00",
-   "end": "2027-07-17T00:19:13+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 10.5,
-   "facts": {
-    "Sun nakshatra": "Punarvasu",
-    "rise": "Sun in Punarvasu (Jupiter nakshatra) [U1]; Venus with Sun [U2]; Mercury with Sun [U2]",
-    "fall": "Saturn aspects Sun [U4]"
-   },
-   "verdict": "3 rise : 1 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Saturn or Mercury in Gemini [Bearish]",
-     "Sun and Moon on the same degree (new moon) [Bullish]",
-     "Sun in a Saturn or Rahu nakshatra (user note) [Bearish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "Sun on Bharani, Krittika, Punarvasu or Pushya, not aspected by benefic [Bullish]",
-     "U2 - waxing Moon with / aspecting the Sun [Bullish]",
-     "U4 - Rahu with / aspecting the Sun (incl. Sun with Ketu) [Bearish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]",
-     "Venus in Punarvasu [Bearish]"
-    ],
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]",
-     "U2 - Venus with / aspecting the Sun [Bullish]"
-    ],
-    "failed": [
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bearish",
-   "start": "2027-07-17T00:19:13+00:00",
-   "end": "2027-07-20T12:11:43+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 3.5,
-   "facts": {
-    "Sun nakshatra": "Punarvasu",
-    "rise": "Sun in Punarvasu (Jupiter nakshatra) [U1]",
-    "fall": "Rahu aspects Sun [U4]; Sun with Ketu = Rahu's 7th aspect [U4]"
-   },
-   "verdict": "1 rise : 2 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Saturn or Mercury in Gemini [Bearish]",
-     "Sun in a Saturn or Rahu nakshatra (user note) [Bearish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "Sun on Bharani, Krittika, Punarvasu or Pushya, not aspected by benefic [Bullish]",
-     "U2 - waxing Moon with / aspecting the Sun [Bullish]",
-     "U4 - Rahu with / aspecting the Sun (incl. Sun with Ketu) [Bearish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]",
-     "Venus in Punarvasu [Bearish]"
-    ],
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]",
-     "U2 - Venus with / aspecting the Sun [Bullish]"
-    ],
-    "failed": [
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bearish",
-   "start": "2027-07-20T12:11:43+00:00",
-   "end": "2027-07-22T20:17:20+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 2.3,
-   "facts": {
-    "Sun nakshatra": "Pushya",
-    "rise": "-",
-    "fall": "Sun in Pushya (Saturn nakshatra) [U3]; Rahu aspects Sun [U4]; Sun with Ketu = Rahu's 7th aspect [U4]"
-   },
-   "verdict": "0 rise : 3 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Saturn or Mercury in Gemini [Bearish]",
-     "Sun in a Saturn or Rahu nakshatra (user note) [Bearish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "Sun on Bharani, Krittika, Punarvasu or Pushya, not aspected by benefic [Bullish]",
-     "U4 - Rahu with / aspecting the Sun (incl. Sun with Ketu) [Bearish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]",
-     "Venus in Punarvasu [Bearish]"
-    ],
-    "best": [
-     "U2 - Venus with / aspecting the Sun [Bullish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bearish",
-   "start": "2027-07-22T20:17:20+00:00",
-   "end": "2027-07-30T13:01:52+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 7.7,
-   "facts": {
-    "Sun nakshatra": "Pushya",
-    "rise": "Venus with Sun [U2]",
-    "fall": "Sun in Pushya (Saturn nakshatra) [U3]; Rahu aspects Sun [U4]; Sun with Ketu = Rahu's 7th aspect [U4]"
-   },
-   "verdict": "1 rise : 3 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Saturn or Mercury in Gemini [Bearish]",
-     "Sun in a Saturn or Rahu nakshatra (user note) [Bearish]",
-     "Sun on Bharani, Krittika, Punarvasu or Pushya, not aspected by benefic [Bullish]",
-     "U4 - Rahu with / aspecting the Sun (incl. Sun with Ketu) [Bearish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]",
-     "Venus in Punarvasu [Bearish]"
-    ],
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]",
-     "U2 - Venus with / aspecting the Sun [Bullish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_u2_venus",
-   "title": "U2 - Venus with / aspecting the Sun",
-   "tone": "Bullish",
-   "start": "2027-07-22T20:17:20+00:00",
-   "end": "2027-08-16T04:05:09+00:00",
-   "bodies": [
-    "Sun",
-    "Venus"
-   ],
-   "days": 24.3,
-   "facts": {
-    "value": "Venus conjunct (same sign)"
-   },
-   "verdict": "Bullish",
-   "hist": "18/27 (67% vs base 57%), avg +1.34%, right in 4/5 yrs",
-   "conc": {
-    "other": [
-     "Saturn or Mercury in Gemini [Bearish]",
-     "Sun and Moon on the same degree (new moon) [Bullish]",
-     "Sun in a Saturn or Rahu nakshatra (user note) [Bearish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "Sun on Bharani, Krittika, Punarvasu or Pushya, not aspected by benefic [Bullish]",
-     "U2 - waxing Moon with / aspecting the Sun [Bullish]",
-     "U4 - Rahu with / aspecting the Sun (incl. Sun with Ketu) [Bearish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]",
-     "Venus in Punarvasu [Bearish]"
-    ],
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]",
-     "User Sun model: net rise vs fall signals [Bearish]",
-     "User Sun model: net rise vs fall signals [Bullish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bearish",
-   "start": "2027-07-30T13:01:52+00:00",
-   "end": "2027-08-03T11:03:16+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 3.9,
-   "facts": {
-    "Sun nakshatra": "Pushya",
-    "rise": "Venus with Sun [U2]; Mercury with Sun [U2]",
-    "fall": "Sun in Pushya (Saturn nakshatra) [U3]; Rahu aspects Sun [U4]; Sun with Ketu = Rahu's 7th aspect [U4]"
-   },
-   "verdict": "2 rise : 3 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Saturn or Mercury in Gemini [Bearish]",
-     "Sun and Moon on the same degree (new moon) [Bullish]",
-     "Sun in a Saturn or Rahu nakshatra (user note) [Bearish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "U2 - waxing Moon with / aspecting the Sun [Bullish]",
-     "U4 - Rahu with / aspecting the Sun (incl. Sun with Ketu) [Bearish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]",
-     "U2 - Venus with / aspecting the Sun [Bullish]"
     ]
    }
   },
@@ -1531,152 +306,19 @@
     "value": "Mercury conjunct (same sign)"
    },
    "verdict": "Bullish",
-   "hist": "36/55 (65% vs base 57%), avg +0.89%, right in 4/5 yrs",
+   "hist": "176/291 (60% vs base 57%), avg +0.62%, right in 20/26 yrs",
    "conc": {
     "other": [
      "Saturn or Mercury in Gemini [Bearish]",
      "Sun and Moon on the same degree (new moon) [Bullish]",
      "Sun in a Saturn or Rahu nakshatra (user note) [Bearish]",
      "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "U2 - waxing Moon with / aspecting the Sun [Bullish]",
-     "U4 - Rahu with / aspecting the Sun (incl. Sun with Ketu) [Bearish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "best": [
      "U2 - Venus with / aspecting the Sun [Bullish]",
-     "User Sun model: net rise vs fall signals [Bearish]",
-     "User Sun model: net rise vs fall signals [Bullish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2027-08-03T11:03:16+00:00",
-   "end": "2027-08-14T06:23:26+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 10.8,
-   "facts": {
-    "Sun nakshatra": "Ashlesha",
-    "rise": "Sun in Ashlesha (Mercury nakshatra) [U1]; Venus with Sun [U2]; Mercury with Sun [U2]",
-    "fall": "Rahu aspects Sun [U4]; Sun with Ketu = Rahu's 7th aspect [U4]"
-   },
-   "verdict": "3 rise : 2 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Sun and Moon on the same degree (new moon) [Bullish]",
-     "Sun in a Saturn or Rahu nakshatra (user note) [Bearish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "U4 - Rahu with / aspecting the Sun (incl. Sun with Ketu) [Bearish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]",
-     "U2 - Venus with / aspecting the Sun [Bullish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bearish",
-   "start": "2027-08-16T04:05:09+00:00",
-   "end": "2027-08-17T08:44:03+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 1.2,
-   "facts": {
-    "Sun nakshatra": "Ashlesha",
-    "rise": "Sun in Ashlesha (Mercury nakshatra) [U1]",
-    "fall": "Rahu aspects Sun [U4]; Sun with Ketu = Rahu's 7th aspect [U4]"
-   },
-   "verdict": "1 rise : 2 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
      "U2 - waxing Moon with / aspecting the Sun [Bullish]",
      "U4 - Rahu with / aspecting the Sun (incl. Sun with Ketu) [Bearish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "best": [
-     "U2 - Jupiter with / aspecting the Sun [Bullish]",
-     "U2 - Mercury with the Sun [Bullish]",
-     "U2 - Venus with / aspecting the Sun [Bullish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2027-08-17T08:44:03+00:00",
-   "end": "2027-08-30T20:31:24+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 13.5,
-   "facts": {
-    "Sun nakshatra": "Magha",
-    "rise": "Venus with Sun [U2]; Mercury with Sun [U2]; Jupiter with Sun [U2]",
-    "fall": "-"
-   },
-   "verdict": "3 rise : 0 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "U4 - Rahu with / aspecting the Sun (incl. Sun with Ketu) [Bearish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "best": [
-     "U2 - Jupiter with / aspecting the Sun [Bullish]",
-     "U2 - Mercury with the Sun [Bullish]",
-     "U2 - Venus with / aspecting the Sun [Bullish]"
-    ],
-    "failed": [
-     "Mercury rises in West [Bearish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_u2_jupiter",
-   "title": "U2 - Jupiter with / aspecting the Sun",
-   "tone": "Bullish",
-   "start": "2027-08-17T08:44:03+00:00",
-   "end": "2027-09-17T08:40:46+00:00",
-   "bodies": [
-    "Sun",
-    "Jupiter"
-   ],
-   "days": 31.0,
-   "facts": {
-    "value": "Jupiter conjunct (same sign)"
-   },
-   "verdict": "Bullish",
-   "hist": "15/21 (71% vs base 61%), avg +2.37%, right in 4/5 yrs",
-   "conc": {
-    "other": [
-     "Rise of Jupiter [Bearish]",
-     "Sun and Moon on the same degree (new moon) [Bullish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "U2 - waxing Moon with / aspecting the Sun [Bullish]",
-     "U4 - Rahu with / aspecting the Sun (incl. Sun with Ketu) [Bearish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]",
-     "U2 - Venus with / aspecting the Sun [Bullish]",
      "User Sun model: net rise vs fall signals [Bearish]",
-     "User Sun model: net rise vs fall signals [Bullish]"
-    ],
-    "failed": [
-     "Mercury rises in West [Bearish]"
+     "User Sun model: net rise vs fall signals [Bullish]",
+     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
     ]
    }
   },
@@ -1695,210 +337,17 @@
     "value": "Mercury conjunct (same sign)"
    },
    "verdict": "Bullish",
-   "hist": "36/55 (65% vs base 57%), avg +0.89%, right in 4/5 yrs",
+   "hist": "176/291 (60% vs base 57%), avg +0.62%, right in 20/26 yrs",
    "conc": {
     "other": [
+     "Mercury rises in West [Bearish]",
+     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish]",
      "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "U4 - Rahu with / aspecting the Sun (incl. Sun with Ketu) [Bearish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "best": [
      "U2 - Jupiter with / aspecting the Sun [Bullish]",
      "U2 - Venus with / aspecting the Sun [Bullish]",
-     "User Sun model: net rise vs fall signals [Bearish]",
-     "User Sun model: net rise vs fall signals [Bullish]"
-    ],
-    "failed": [
-     "Mercury rises in West [Bearish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_u2_venus",
-   "title": "U2 - Venus with / aspecting the Sun",
-   "tone": "Bullish",
-   "start": "2027-08-17T08:44:03+00:00",
-   "end": "2027-09-09T09:11:15+00:00",
-   "bodies": [
-    "Sun",
-    "Venus"
-   ],
-   "days": 23.0,
-   "facts": {
-    "value": "Venus conjunct (same sign)"
-   },
-   "verdict": "Bullish",
-   "hist": "18/27 (67% vs base 57%), avg +1.34%, right in 4/5 yrs",
-   "conc": {
-    "other": [
-     "Sun and Moon on the same degree (new moon) [Bullish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "U2 - waxing Moon with / aspecting the Sun [Bullish]",
      "U4 - Rahu with / aspecting the Sun (incl. Sun with Ketu) [Bearish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "best": [
-     "U2 - Jupiter with / aspecting the Sun [Bullish]",
-     "U2 - Mercury with the Sun [Bullish]",
      "User Sun model: net rise vs fall signals [Bearish]",
-     "User Sun model: net rise vs fall signals [Bullish]"
-    ],
-    "failed": [
-     "Mercury rises in West [Bearish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2027-08-30T20:31:24+00:00",
-   "end": "2027-08-31T04:42:11+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 0.3,
-   "facts": {
-    "Sun nakshatra": "Magha",
-    "rise": "Venus with Sun [U2]; Jupiter with Sun [U2]",
-    "fall": "-"
-   },
-   "verdict": "2 rise : 0 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "best": [
-     "U2 - Jupiter with / aspecting the Sun [Bullish]",
-     "U2 - Mercury with the Sun [Bullish]",
-     "U2 - Venus with / aspecting the Sun [Bullish]"
-    ],
-    "failed": [
-     "Mercury rises in West [Bearish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2027-08-31T04:42:11+00:00",
-   "end": "2027-09-09T09:11:15+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 9.2,
-   "facts": {
-    "Sun nakshatra": "Purva Phalguni",
-    "rise": "Sun in Purva Phalguni (Venus nakshatra) [U1]; Venus with Sun [U2]; Jupiter with Sun [U2]",
-    "fall": "-"
-   },
-   "verdict": "3 rise : 0 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Sun and Moon on the same degree (new moon) [Bullish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "U2 - waxing Moon with / aspecting the Sun [Bullish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "best": [
-     "U2 - Jupiter with / aspecting the Sun [Bullish]",
-     "U2 - Venus with / aspecting the Sun [Bullish]"
-    ],
-    "failed": [
-     "Mercury rises in West [Bearish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2027-09-09T09:11:15+00:00",
-   "end": "2027-09-13T22:32:48+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 4.6,
-   "facts": {
-    "Sun nakshatra": "Purva Phalguni",
-    "rise": "Sun in Purva Phalguni (Venus nakshatra) [U1]; Jupiter with Sun [U2]",
-    "fall": "-"
-   },
-   "verdict": "2 rise : 0 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "best": [
-     "U2 - Jupiter with / aspecting the Sun [Bullish]",
-     "U2 - Venus with / aspecting the Sun [Bullish]"
-    ],
-    "other": [
-     "Rise of Jupiter [Bearish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "U2 - waxing Moon with / aspecting the Sun [Bullish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2027-09-13T22:32:48+00:00",
-   "end": "2027-09-17T08:40:46+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 3.4,
-   "facts": {
-    "Sun nakshatra": "Uttara Phalguni",
-    "rise": "Jupiter with Sun [U2]",
-    "fall": "-"
-   },
-   "verdict": "1 rise : 0 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "best": [
-     "U2 - Jupiter with / aspecting the Sun [Bullish]",
-     "U2 - Mercury with the Sun [Bullish]",
-     "U2 - Venus with / aspecting the Sun [Bullish]"
-    ],
-    "other": [
-     "Rise of Jupiter [Bearish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "U2 - waxing Moon with / aspecting the Sun [Bullish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2027-09-17T08:40:46+00:00",
-   "end": "2027-09-21T12:51:05+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 4.2,
-   "facts": {
-    "Sun nakshatra": "Uttara Phalguni",
-    "rise": "Venus with Sun [U2]; Mercury with Sun [U2]",
-    "fall": "-"
-   },
-   "verdict": "2 rise : 0 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "best": [
-     "U2 - Jupiter with / aspecting the Sun [Bullish]",
-     "U2 - Mercury with the Sun [Bullish]",
-     "U2 - Venus with / aspecting the Sun [Bullish]"
-    ],
-    "other": [
-     "Rise of Jupiter [Bearish]",
+     "User Sun model: net rise vs fall signals [Bullish]",
      "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
     ]
    }
@@ -1918,134 +367,17 @@
     "value": "Mercury conjunct (same sign)"
    },
    "verdict": "Bullish",
-   "hist": "36/55 (65% vs base 57%), avg +0.89%, right in 4/5 yrs",
+   "hist": "176/291 (60% vs base 57%), avg +0.62%, right in 20/26 yrs",
    "conc": {
-    "best": [
+    "other": [
+     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish]",
      "U2 - Jupiter with / aspecting the Sun [Bullish]",
      "U2 - Venus with / aspecting the Sun [Bullish]",
-     "User Sun model: net rise vs fall signals [Bullish]"
-    ],
-    "other": [
-     "Rise of Jupiter [Bearish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_u2_venus",
-   "title": "U2 - Venus with / aspecting the Sun",
-   "tone": "Bullish",
-   "start": "2027-09-17T08:40:46+00:00",
-   "end": "2027-10-03T12:54:50+00:00",
-   "bodies": [
-    "Sun",
-    "Venus"
-   ],
-   "days": 16.2,
-   "facts": {
-    "value": "Venus conjunct (same sign)"
-   },
-   "verdict": "Bullish",
-   "hist": "18/27 (67% vs base 57%), avg +1.34%, right in 4/5 yrs",
-   "conc": {
-    "best": [
-     "U2 - Jupiter with / aspecting the Sun [Bullish]",
-     "U2 - Mercury with the Sun [Bullish]",
-     "User Sun model: net rise vs fall signals [Bullish]"
-    ],
-    "other": [
-     "Moon darshan (first sighting) on Monday or Friday [Bullish]",
-     "Rise of Jupiter [Bearish]",
-     "Sun and Moon on the same degree (new moon) [Bullish]",
-     "U2 - waxing Moon with / aspecting the Sun [Bullish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2027-09-21T12:51:05+00:00",
-   "end": "2027-09-27T14:05:09+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 6.1,
-   "facts": {
-    "Sun nakshatra": "Uttara Phalguni",
-    "rise": "Venus with Sun [U2]",
-    "fall": "-"
-   },
-   "verdict": "1 rise : 0 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]",
-     "U2 - Venus with / aspecting the Sun [Bullish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2027-09-27T14:05:09+00:00",
-   "end": "2027-10-03T12:54:50+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 6.0,
-   "facts": {
-    "Sun nakshatra": "Hasta",
-    "rise": "Venus with Sun [U2]",
-    "fall": "-"
-   },
-   "verdict": "1 rise : 0 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Moon darshan (first sighting) on Monday or Friday [Bullish]",
-     "Sun and Moon on the same degree (new moon) [Bullish]",
-     "U2 - waxing Moon with / aspecting the Sun [Bullish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "best": [
-     "U2 - Venus with / aspecting the Sun [Bullish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2027-10-17T20:39:22+00:00",
-   "end": "2027-10-20T01:42:11+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 2.2,
-   "facts": {
-    "Sun nakshatra": "Chitra",
-    "rise": "Venus with Sun [U2]; Mercury with Sun [U2]",
-    "fall": "Saturn aspects Sun [U4]"
-   },
-   "verdict": "2 rise : 1 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
+     "User Sun model: net rise vs fall signals [Bullish]",
      "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
     ],
     "failed": [
-     "Sun in Libra aspected by (or with) malefics [Bullish]",
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
-    ],
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]",
-     "U2 - Venus with / aspecting the Sun [Bullish]"
+     "Rise of Jupiter [Bearish]"
     ]
    }
   },
@@ -2064,142 +396,15 @@
     "value": "Mercury conjunct (same sign)"
    },
    "verdict": "Bullish",
-   "hist": "36/55 (65% vs base 57%), avg +0.89%, right in 4/5 yrs",
+   "hist": "176/291 (60% vs base 57%), avg +0.62%, right in 20/26 yrs",
    "conc": {
     "other": [
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "failed": [
+     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish]",
      "Sun in Libra aspected by (or with) malefics [Bullish]",
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
-    ],
-    "best": [
      "U2 - Venus with / aspecting the Sun [Bullish]",
-     "User Sun model: net rise vs fall signals [Bullish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_u2_venus",
-   "title": "U2 - Venus with / aspecting the Sun",
-   "tone": "Bullish",
-   "start": "2027-10-17T20:39:22+00:00",
-   "end": "2027-10-27T16:27:39+00:00",
-   "bodies": [
-    "Sun",
-    "Venus"
-   ],
-   "days": 9.8,
-   "facts": {
-    "value": "Venus conjunct (same sign)"
-   },
-   "verdict": "Bullish",
-   "hist": "18/27 (67% vs base 57%), avg +1.34%, right in 4/5 yrs",
-   "conc": {
-    "other": [
-     "Sun in a Saturn or Rahu nakshatra (user note) [Bearish]",
+     "U4 - Saturn with / aspecting the Sun [Bearish]",
+     "User Sun model: net rise vs fall signals [Bullish]",
      "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "failed": [
-     "Sun in Libra aspected by (or with) malefics [Bullish]",
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
-    ],
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]",
-     "User Sun model: net rise vs fall signals [Bearish]",
-     "User Sun model: net rise vs fall signals [Bullish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2027-10-20T01:42:11+00:00",
-   "end": "2027-10-21T02:42:39+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 1.0,
-   "facts": {
-    "Sun nakshatra": "Chitra",
-    "rise": "Venus with Sun [U2]; Mercury with Sun [U2]",
-    "fall": "-"
-   },
-   "verdict": "2 rise : 0 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "failed": [
-     "Sun in Libra aspected by (or with) malefics [Bullish]",
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
-    ],
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]",
-     "U2 - Venus with / aspecting the Sun [Bullish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2027-10-21T02:42:39+00:00",
-   "end": "2027-10-24T13:37:30+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 3.5,
-   "facts": {
-    "Sun nakshatra": "Chitra",
-    "rise": "Venus with Sun [U2]",
-    "fall": "-"
-   },
-   "verdict": "1 rise : 0 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Sun in a Saturn or Rahu nakshatra (user note) [Bearish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]",
-     "U2 - Venus with / aspecting the Sun [Bullish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bearish",
-   "start": "2027-10-27T16:27:39+00:00",
-   "end": "2027-11-05T11:41:43+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 8.8,
-   "facts": {
-    "Sun nakshatra": "Swati",
-    "rise": "-",
-    "fall": "Sun in Swati (Rahu nakshatra) [U3]"
-   },
-   "verdict": "0 rise : 1 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Sun and Moon on the same degree (new moon) [Bullish]",
-     "Sun in a Saturn or Rahu nakshatra (user note) [Bearish]",
-     "U2 - waxing Moon with / aspecting the Sun [Bullish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]",
-     "U2 - Venus with / aspecting the Sun [Bullish]"
-    ],
-    "held": [
-     "Moon darshan on Saturday (gold) [Bearish]"
     ]
    }
   },
@@ -2218,146 +423,20 @@
     "value": "Mercury conjunct (same sign)"
    },
    "verdict": "Bullish",
-   "hist": "36/55 (65% vs base 57%), avg +0.89%, right in 4/5 yrs",
+   "hist": "176/291 (60% vs base 57%), avg +0.62%, right in 20/26 yrs",
    "conc": {
     "other": [
+     "Moon darshan on Saturday (gold) [Bearish]",
+     "New / full Moon in Aries or Capricorn with a benefic (Brihat Samhita 42.14) [Bullish]",
      "Sun and Moon on the same degree (new moon) [Bullish]",
+     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish]",
      "Sun in a Saturn or Rahu nakshatra (user note) [Bearish]",
      "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "U2 - waxing Moon with / aspecting the Sun [Bullish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "best": [
      "U2 - Venus with / aspecting the Sun [Bullish]",
-     "User Sun model: net rise vs fall signals [Bearish]",
-     "User Sun model: net rise vs fall signals [Bullish]"
-    ],
-    "held": [
-     "Moon darshan on Saturday (gold) [Bearish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2027-11-06T21:41:43+00:00",
-   "end": "2027-11-16T20:29:03+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 9.9,
-   "facts": {
-    "Sun nakshatra": "Vishakha",
-    "rise": "Sun in Vishakha (Jupiter nakshatra) [U1]; Mercury with Sun [U2]",
-    "fall": "-"
-   },
-   "verdict": "2 rise : 0 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Sun in a Saturn or Rahu nakshatra (user note) [Bearish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
      "U2 - waxing Moon with / aspecting the Sun [Bullish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]",
-     "U2 - Venus with / aspecting the Sun [Bullish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2027-11-16T20:29:03+00:00",
-   "end": "2027-11-20T03:50:09+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 3.3,
-   "facts": {
-    "Sun nakshatra": "Vishakha",
-    "rise": "Sun in Vishakha (Jupiter nakshatra) [U1]; Venus with Sun [U2]",
-    "fall": "-"
-   },
-   "verdict": "2 rise : 0 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]",
-     "U2 - Venus with / aspecting the Sun [Bullish]"
-    ],
-    "other": [
-     "Sun in a Saturn or Rahu nakshatra (user note) [Bearish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "failed": [
-     "Sun on Anuradha with or aspected by benefic [Bearish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_u2_venus",
-   "title": "U2 - Venus with / aspecting the Sun",
-   "tone": "Bullish",
-   "start": "2027-11-16T20:29:03+00:00",
-   "end": "2027-11-20T20:38:26+00:00",
-   "bodies": [
-    "Sun",
-    "Venus"
-   ],
-   "days": 4.0,
-   "facts": {
-    "value": "Venus conjunct (same sign)"
-   },
-   "verdict": "Bullish",
-   "hist": "18/27 (67% vs base 57%), avg +1.34%, right in 4/5 yrs",
-   "conc": {
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]",
      "User Sun model: net rise vs fall signals [Bearish]",
-     "User Sun model: net rise vs fall signals [Bullish]"
-    ],
-    "other": [
-     "Sun in a Saturn or Rahu nakshatra (user note) [Bearish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
+     "User Sun model: net rise vs fall signals [Bullish]",
      "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "failed": [
-     "Sun on Anuradha with or aspected by benefic [Bearish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bearish",
-   "start": "2027-11-20T20:38:26+00:00",
-   "end": "2027-11-25T18:59:31+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 4.9,
-   "facts": {
-    "Sun nakshatra": "Anuradha",
-    "rise": "-",
-    "fall": "Sun in Anuradha (Saturn nakshatra) [U3]"
-   },
-   "verdict": "0 rise : 1 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]",
-     "U2 - Venus with / aspecting the Sun [Bullish]"
-    ],
-    "failed": [
-     "Sun on Anuradha with or aspected by benefic [Bearish]"
-    ],
-    "other": [
-     "Sun in a Saturn or Rahu nakshatra (user note) [Bearish]"
     ]
    }
   },
@@ -2376,85 +455,19 @@
     "value": "Mercury conjunct (same sign)"
    },
    "verdict": "Bullish",
-   "hist": "36/55 (65% vs base 57%), avg +0.89%, right in 4/5 yrs",
+   "hist": "176/291 (60% vs base 57%), avg +0.62%, right in 20/26 yrs",
    "conc": {
     "other": [
      "Moon darshan (first sighting) on Monday or Friday [Bullish]",
      "Sun and Moon on the same degree (new moon) [Bullish]",
+     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish]",
      "Sun in a Saturn or Rahu nakshatra (user note) [Bearish]",
      "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
+     "Sun on Anuradha with or aspected by benefic [Bearish]",
      "U2 - waxing Moon with / aspecting the Sun [Bullish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "best": [
      "User Sun model: net rise vs fall signals [Bearish]",
-     "User Sun model: net rise vs fall signals [Bullish]"
-    ],
-    "failed": [
-     "Sun on Anuradha with or aspected by benefic [Bearish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2027-12-03T08:04:13+00:00",
-   "end": "2027-12-14T20:37:01+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 11.5,
-   "facts": {
-    "Sun nakshatra": "Jyeshtha",
-    "rise": "Sun in Jyeshtha (Mercury nakshatra) [U1]; Mercury with Sun [U2]",
-    "fall": "-"
-   },
-   "verdict": "2 rise : 0 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "other": [
-     "Moon darshan (first sighting) on Monday or Friday [Bullish]",
-     "Sun and Moon on the same degree (new moon) [Bullish]",
-     "Sun in a Saturn or Rahu nakshatra (user note) [Bearish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
-     "U2 - waxing Moon with / aspecting the Sun [Bullish]",
+     "User Sun model: net rise vs fall signals [Bullish]",
      "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]"
-    ],
-    "failed": [
-     "Sun on Anuradha with or aspected by benefic [Bearish]"
-    ],
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2027-12-14T20:37:01+00:00",
-   "end": "2027-12-16T11:09:22+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 1.6,
-   "facts": {
-    "Sun nakshatra": "Jyeshtha",
-    "rise": "Sun in Jyeshtha (Mercury nakshatra) [U1]",
-    "fall": "-"
-   },
-   "verdict": "1 rise : 0 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]"
-    ],
-    "other": [
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]"
-    ],
-    "failed": [
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
     ]
    }
   },
@@ -2473,53 +486,17 @@
     "value": "Mercury conjunct (same sign)"
    },
    "verdict": "Bullish",
-   "hist": "36/55 (65% vs base 57%), avg +0.89%, right in 4/5 yrs",
+   "hist": "176/291 (60% vs base 57%), avg +0.62%, right in 20/26 yrs",
    "conc": {
     "other": [
+     "Mercury rises in West [Bearish]",
      "Rahu & Mars together in any sign [Bullish]",
      "Sun and Moon on the same degree (new moon) [Bullish]",
+     "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6) [Bullish]",
      "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
      "U2 - waxing Moon with / aspecting the Sun [Bullish]",
-     "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bearish]"
-    ],
-    "best": [
-     "User Sun model: net rise vs fall signals [Bullish]"
-    ],
-    "failed": [
-     "Mercury rises in West [Bearish]",
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
-    ]
-   }
-  },
-  {
-   "rule_id": "user_sun_state_net",
-   "title": "User Sun model: net rise vs fall signals",
-   "tone": "Bullish",
-   "start": "2027-12-29T13:21:05+00:00",
-   "end": "2028-01-02T15:25:18+00:00",
-   "bodies": [
-    "Sun"
-   ],
-   "days": 4.1,
-   "facts": {
-    "Sun nakshatra": "Purva Ashadha",
-    "rise": "Sun in Purva Ashadha (Venus nakshatra) [U1]; Mercury with Sun [U2]",
-    "fall": "Saturn aspects Sun [U4]"
-   },
-   "verdict": "2 rise : 1 fall",
-   "hist": "105/179 (59% vs base 52%), avg +0.53%, right in 3/5 yrs",
-   "conc": {
-    "best": [
-     "U2 - Mercury with the Sun [Bullish]"
-    ],
-    "failed": [
-     "Mercury rises in West [Bearish]",
-     "U4 - Saturn with / aspecting the Sun [Bearish]"
-    ],
-    "other": [
-     "Rahu & Mars together in any sign [Bullish]",
-     "Sun and Moon on the same degree (new moon) [Bullish]",
-     "Sun in a Venus, Mercury or Jupiter nakshatra (user note) [Bullish]",
+     "U4 - Saturn with / aspecting the Sun [Bearish]",
+     "User Sun model: net rise vs fall signals [Bullish]",
      "Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bearish]"
     ]
    }
@@ -2530,99 +507,52 @@
    "frm": "2026-11-20",
    "to": "2026-12-01",
    "up": [],
-   "down": [
-    "User Sun model: net rise vs fall signals"
-   ]
-  },
-  {
-   "frm": "2026-12-02",
-   "to": "2026-12-02",
-   "up": [
-    "U2 - Mercury with the Sun"
-   ],
    "down": []
   },
   {
-   "frm": "2026-12-03",
+   "frm": "2026-12-02",
    "to": "2026-12-15",
    "up": [
-    "U2 - Mercury with the Sun",
-    "User Sun model: net rise vs fall signals"
+    "U2 - Mercury with the Sun"
    ],
    "down": []
   },
   {
    "frm": "2026-12-16",
    "to": "2026-12-21",
-   "up": [
-    "U2 - Jupiter with / aspecting the Sun"
-   ],
+   "up": [],
    "down": []
   },
   {
    "frm": "2026-12-22",
    "to": "2027-01-09",
    "up": [
-    "U2 - Jupiter with / aspecting the Sun",
-    "U2 - Mercury with the Sun",
-    "User Sun model: net rise vs fall signals"
+    "U2 - Mercury with the Sun"
    ],
    "down": []
   },
   {
    "frm": "2027-01-10",
-   "to": "2027-01-10",
-   "up": [
-    "U2 - Jupiter with / aspecting the Sun",
-    "User Sun model: net rise vs fall signals"
-   ],
-   "down": []
-  },
-  {
-   "frm": "2027-01-11",
    "to": "2027-01-13",
-   "up": [
-    "U2 - Jupiter with / aspecting the Sun"
-   ],
+   "up": [],
    "down": []
   },
   {
    "frm": "2027-01-14",
-   "to": "2027-01-24",
+   "to": "2027-01-27",
    "up": [
     "U2 - Mercury with the Sun"
    ],
    "down": []
   },
   {
-   "frm": "2027-01-25",
-   "to": "2027-01-27",
-   "up": [
-    "U2 - Jupiter with / aspecting the Sun",
-    "U2 - Mercury with the Sun",
-    "User Sun model: net rise vs fall signals"
-   ],
-   "down": []
-  },
-  {
    "frm": "2027-01-28",
    "to": "2027-02-12",
-   "up": [
-    "U2 - Jupiter with / aspecting the Sun"
-   ],
+   "up": [],
    "down": []
   },
   {
    "frm": "2027-02-13",
-   "to": "2027-02-19",
-   "up": [
-    "U2 - Mercury with the Sun",
-    "User Sun model: net rise vs fall signals"
-   ],
-   "down": []
-  },
-  {
-   "frm": "2027-02-20",
    "to": "2027-02-23",
    "up": [
     "U2 - Mercury with the Sun"
@@ -2631,64 +561,29 @@
   },
   {
    "frm": "2027-02-24",
-   "to": "2027-03-04",
-   "up": [],
-   "down": [
-    "User Sun model: net rise vs fall signals"
-   ]
-  },
-  {
-   "frm": "2027-03-05",
    "to": "2027-03-11",
-   "up": [
-    "User Sun model: net rise vs fall signals"
-   ],
+   "up": [],
    "down": []
   },
   {
    "frm": "2027-03-12",
    "to": "2027-03-14",
    "up": [
-    "U2 - Mercury with the Sun",
-    "User Sun model: net rise vs fall signals"
+    "U2 - Mercury with the Sun"
    ],
    "down": []
   },
   {
    "frm": "2027-03-15",
-   "to": "2027-03-17",
-   "up": [
-    "U2 - Jupiter with / aspecting the Sun",
-    "User Sun model: net rise vs fall signals"
-   ],
-   "down": []
-  },
-  {
-   "frm": "2027-03-18",
-   "to": "2027-03-31",
-   "up": [
-    "U2 - Jupiter with / aspecting the Sun"
-   ],
-   "down": [
-    "User Sun model: net rise vs fall signals"
-   ]
-  },
-  {
-   "frm": "2027-04-01",
    "to": "2027-04-04",
-   "up": [
-    "U2 - Jupiter with / aspecting the Sun",
-    "User Sun model: net rise vs fall signals"
-   ],
+   "up": [],
    "down": []
   },
   {
    "frm": "2027-04-05",
    "to": "2027-04-13",
    "up": [
-    "U2 - Jupiter with / aspecting the Sun",
-    "U2 - Mercury with the Sun",
-    "User Sun model: net rise vs fall signals"
+    "U2 - Mercury with the Sun"
    ],
    "down": []
   },
@@ -2702,26 +597,14 @@
    "frm": "2027-04-22",
    "to": "2027-05-05",
    "up": [
-    "U2 - Mercury with the Sun",
-    "User Sun model: net rise vs fall signals"
+    "U2 - Mercury with the Sun"
    ],
    "down": []
   },
   {
    "frm": "2027-05-06",
-   "to": "2027-05-09",
-   "up": [
-    "User Sun model: net rise vs fall signals"
-   ],
-   "down": []
-  },
-  {
-   "frm": "2027-05-10",
    "to": "2027-05-14",
-   "up": [
-    "U2 - Venus with / aspecting the Sun",
-    "User Sun model: net rise vs fall signals"
-   ],
+   "up": [],
    "down": []
   },
   {
@@ -2734,170 +617,62 @@
   },
   {
    "frm": "2027-05-23",
-   "to": "2027-06-02",
-   "up": [],
-   "down": [
-    "User Sun model: net rise vs fall signals"
-   ]
-  },
-  {
-   "frm": "2027-06-03",
-   "to": "2027-06-03",
-   "up": [],
-   "down": []
-  },
-  {
-   "frm": "2027-06-04",
    "to": "2027-06-14",
-   "up": [
-    "U2 - Venus with / aspecting the Sun",
-    "User Sun model: net rise vs fall signals"
-   ],
+   "up": [],
    "down": []
   },
   {
    "frm": "2027-06-15",
-   "to": "2027-06-21",
-   "up": [
-    "U2 - Mercury with the Sun"
-   ],
-   "down": []
-  },
-  {
-   "frm": "2027-06-22",
-   "to": "2027-06-27",
-   "up": [
-    "U2 - Mercury with the Sun"
-   ],
-   "down": [
-    "User Sun model: net rise vs fall signals"
-   ]
-  },
-  {
-   "frm": "2027-06-28",
-   "to": "2027-07-05",
-   "up": [
-    "U2 - Mercury with the Sun",
-    "U2 - Venus with / aspecting the Sun"
-   ],
-   "down": []
-  },
-  {
-   "frm": "2027-07-06",
    "to": "2027-07-16",
    "up": [
-    "U2 - Mercury with the Sun",
-    "U2 - Venus with / aspecting the Sun",
-    "User Sun model: net rise vs fall signals"
+    "U2 - Mercury with the Sun"
    ],
    "down": []
   },
   {
    "frm": "2027-07-17",
-   "to": "2027-07-22",
-   "up": [],
-   "down": [
-    "User Sun model: net rise vs fall signals"
-   ]
-  },
-  {
-   "frm": "2027-07-23",
    "to": "2027-07-29",
-   "up": [
-    "U2 - Venus with / aspecting the Sun"
-   ],
-   "down": [
-    "User Sun model: net rise vs fall signals"
-   ]
+   "up": [],
+   "down": []
   },
   {
    "frm": "2027-07-30",
-   "to": "2027-08-02",
-   "up": [
-    "U2 - Mercury with the Sun",
-    "U2 - Venus with / aspecting the Sun"
-   ],
-   "down": [
-    "User Sun model: net rise vs fall signals"
-   ]
-  },
-  {
-   "frm": "2027-08-03",
    "to": "2027-08-13",
    "up": [
-    "U2 - Mercury with the Sun",
-    "U2 - Venus with / aspecting the Sun",
-    "User Sun model: net rise vs fall signals"
+    "U2 - Mercury with the Sun"
    ],
    "down": []
   },
   {
    "frm": "2027-08-14",
-   "to": "2027-08-15",
-   "up": [
-    "U2 - Venus with / aspecting the Sun"
-   ],
-   "down": []
-  },
-  {
-   "frm": "2027-08-16",
    "to": "2027-08-16",
    "up": [],
-   "down": [
-    "User Sun model: net rise vs fall signals"
-   ]
+   "down": []
   },
   {
    "frm": "2027-08-17",
    "to": "2027-08-30",
    "up": [
-    "U2 - Jupiter with / aspecting the Sun",
-    "U2 - Mercury with the Sun",
-    "U2 - Venus with / aspecting the Sun",
-    "User Sun model: net rise vs fall signals"
+    "U2 - Mercury with the Sun"
    ],
    "down": []
   },
   {
    "frm": "2027-08-31",
-   "to": "2027-09-08",
-   "up": [
-    "U2 - Jupiter with / aspecting the Sun",
-    "U2 - Venus with / aspecting the Sun",
-    "User Sun model: net rise vs fall signals"
-   ],
-   "down": []
-  },
-  {
-   "frm": "2027-09-09",
    "to": "2027-09-16",
-   "up": [
-    "U2 - Jupiter with / aspecting the Sun",
-    "User Sun model: net rise vs fall signals"
-   ],
+   "up": [],
    "down": []
   },
   {
    "frm": "2027-09-17",
    "to": "2027-09-20",
    "up": [
-    "U2 - Mercury with the Sun",
-    "U2 - Venus with / aspecting the Sun",
-    "User Sun model: net rise vs fall signals"
+    "U2 - Mercury with the Sun"
    ],
    "down": []
   },
   {
    "frm": "2027-09-21",
-   "to": "2027-10-02",
-   "up": [
-    "U2 - Venus with / aspecting the Sun",
-    "User Sun model: net rise vs fall signals"
-   ],
-   "down": []
-  },
-  {
-   "frm": "2027-10-03",
    "to": "2027-10-17",
    "up": [],
    "down": []
@@ -2906,118 +681,49 @@
    "frm": "2027-10-18",
    "to": "2027-10-20",
    "up": [
-    "U2 - Mercury with the Sun",
-    "U2 - Venus with / aspecting the Sun",
-    "User Sun model: net rise vs fall signals"
+    "U2 - Mercury with the Sun"
    ],
    "down": []
   },
   {
    "frm": "2027-10-21",
-   "to": "2027-10-23",
-   "up": [
-    "U2 - Venus with / aspecting the Sun",
-    "User Sun model: net rise vs fall signals"
-   ],
-   "down": []
-  },
-  {
-   "frm": "2027-10-24",
-   "to": "2027-10-27",
-   "up": [
-    "U2 - Venus with / aspecting the Sun"
-   ],
-   "down": []
-  },
-  {
-   "frm": "2027-10-28",
    "to": "2027-11-04",
    "up": [],
-   "down": [
-    "User Sun model: net rise vs fall signals"
-   ]
+   "down": []
   },
   {
    "frm": "2027-11-05",
-   "to": "2027-11-06",
-   "up": [
-    "U2 - Mercury with the Sun"
-   ],
-   "down": []
-  },
-  {
-   "frm": "2027-11-07",
    "to": "2027-11-16",
    "up": [
-    "U2 - Mercury with the Sun",
-    "User Sun model: net rise vs fall signals"
+    "U2 - Mercury with the Sun"
    ],
    "down": []
   },
   {
    "frm": "2027-11-17",
-   "to": "2027-11-19",
-   "up": [
-    "U2 - Venus with / aspecting the Sun",
-    "User Sun model: net rise vs fall signals"
-   ],
-   "down": []
-  },
-  {
-   "frm": "2027-11-20",
-   "to": "2027-11-20",
-   "up": [
-    "U2 - Venus with / aspecting the Sun"
-   ],
-   "down": []
-  },
-  {
-   "frm": "2027-11-21",
    "to": "2027-11-25",
    "up": [],
-   "down": [
-    "User Sun model: net rise vs fall signals"
-   ]
+   "down": []
   },
   {
    "frm": "2027-11-26",
-   "to": "2027-12-02",
-   "up": [
-    "U2 - Mercury with the Sun"
-   ],
-   "down": []
-  },
-  {
-   "frm": "2027-12-03",
    "to": "2027-12-14",
    "up": [
-    "U2 - Mercury with the Sun",
-    "User Sun model: net rise vs fall signals"
+    "U2 - Mercury with the Sun"
    ],
    "down": []
   },
   {
    "frm": "2027-12-15",
    "to": "2027-12-15",
-   "up": [
-    "User Sun model: net rise vs fall signals"
-   ],
+   "up": [],
    "down": []
   },
   {
    "frm": "2027-12-16",
-   "to": "2027-12-28",
-   "up": [
-    "U2 - Mercury with the Sun"
-   ],
-   "down": []
-  },
-  {
-   "frm": "2027-12-29",
    "to": "2027-12-31",
    "up": [
-    "U2 - Mercury with the Sun",
-    "User Sun model: net rise vs fall signals"
+    "U2 - Mercury with the Sun"
    ],
    "down": []
   }
@@ -3025,37 +731,37 @@
  "rule_status": {
   "ta_s24_06_mars_retrograde": {
    "title": "Mars retrograde",
-   "status": "Too few to judge (2/2, leans right)",
+   "status": "At chance",
    "best": false,
    "upcoming": 1
   },
   "ta_s24_08_mars_retro_enters_taurus_libra": {
    "title": "Retrograde Mars entering Taurus or Libra",
-   "status": "Too few to judge (0/1, leans wrong)",
+   "status": "Too few to judge (0/2, leans wrong)",
    "best": false,
    "upcoming": 0
   },
   "ta_s34a02_mars_in_taurus": {
    "title": "Mars passes from Taurus",
-   "status": "Too few to judge (2/4, even)",
+   "status": "At chance",
    "best": false,
    "upcoming": 0
   },
   "ta_s34a03_sun_libra_with_malefic": {
    "title": "Sun in Libra with other malefic (Saturn, Mars, Rahu)",
-   "status": "Too few to judge (1/2, even)",
+   "status": "Did not hold up",
    "best": false,
    "upcoming": 0
   },
   "ta_s34a04_rahu_mars_together": {
    "title": "Rahu & Mars together in any sign",
-   "status": "Too few to judge (0/3, leans wrong)",
+   "status": "At chance",
    "best": false,
    "upcoming": 1
   },
   "ta_s34a05_jupiter_enters_scorpio": {
    "title": "Jupiter enters Scorpio",
-   "status": "Did not occur",
+   "status": "Too few to judge (3/3, leans right)",
    "best": false,
    "upcoming": 0
   },
@@ -3067,8 +773,8 @@
   },
   "ta_s34a09_mars_aspected_saturn_jupiter_retro": {
    "title": "Mars aspected by Saturn while Jupiter retrograde",
-   "status": "Too few to judge (2/2, leans right)",
-   "best": false,
+   "status": "Strongest",
+   "best": true,
    "upcoming": 0
   },
   "ta_s34a10_sun_bharani_krittika_punarvasu_pushya": {
@@ -3079,73 +785,73 @@
   },
   "ta_s34a11_saturn_jupiter_sagittarius": {
    "title": "Saturn with Jupiter in Sagittarius",
-   "status": "Did not occur",
+   "status": "Too few to judge (1/2, even)",
    "best": false,
    "upcoming": 0
   },
   "ta_s34a12_rahu_cancer_no_benefic": {
    "title": "Rahu in Cancer without any benefic",
-   "status": "Did not occur",
+   "status": "Too few to judge (1/2, even)",
    "best": false,
    "upcoming": 0
   },
   "ta_s34b01_sun_anuradha_benefic": {
    "title": "Sun on Anuradha with or aspected by benefic",
-   "status": "Did not hold up",
+   "status": "At chance",
    "best": false,
    "upcoming": 3
   },
   "ta_s34b03_saturn_or_mercury_gemini": {
    "title": "Saturn or Mercury in Gemini",
-   "status": "Too few to judge (2/3, leans right)",
+   "status": "At chance",
    "best": false,
    "upcoming": 1
   },
   "ta_s34b06_jupiter_in_aries": {
    "title": "Jupiter in Aries",
-   "status": "Too few to judge (0/1, leans wrong)",
+   "status": "Too few to judge (0/2, leans wrong)",
    "best": false,
    "upcoming": 0
   },
   "ta_s34b07_venus_jyeshtha_benefic": {
    "title": "Venus in Jyeshtha with or aspected by benefic",
-   "status": "Too few to judge (1/3, leans wrong)",
+   "status": "Did not hold up",
    "best": false,
    "upcoming": 1
   },
   "ta_s34b08_jupiter_sag_cap_aries_benefic": {
    "title": "Jupiter in Sagittarius, Capricorn or Aries alone, with benefic or aspected by benefic",
-   "status": "Too few to judge (1/2, even)",
+   "status": "At chance",
    "best": false,
    "upcoming": 0
   },
   "ta_s34b10_six_together": {
    "title": "Sun, Moon, Mars, Mercury, Jupiter & Venus together in any sign",
-   "status": "Did not occur",
+   "status": "Too few to judge (0/1, leans wrong)",
    "best": false,
    "upcoming": 0
   },
   "ta_s34a07_moon_eclipse_wednesday": {
    "title": "Moon eclipse on Wednesday",
-   "status": "Did not occur",
+   "status": "Inconclusive",
    "best": false,
    "upcoming": 0
   },
   "ta_s17_mercury_rise_west": {
    "title": "Mercury rises in West",
-   "status": "Did not hold up",
+   "status": "At chance",
    "best": false,
    "upcoming": 4
   },
   "ta_s34b02_jupiter_rise": {
    "title": "Rise of Jupiter",
-   "status": "Too few to judge (0/4, leans wrong)",
+   "status": "Did not hold up",
    "best": false,
    "upcoming": 1
   },
   "ta_s34b09_moon_darshan_saturday_gold": {
    "title": "Moon darshan on Saturday (gold)",
-   "status": "Supported",
+   "status": "At chance",
    "best": false,
    "upcoming": 3
   },
@@ -3157,9 +863,33 @@
   },
   "kd_111_rahu_in_dhanishta": {
    "title": "Rahu in Dhanishta (market and bullion risk)",
-   "status": "Too few to judge (1/1, leans right)",
+   "status": "Too few to judge (2/2, leans right)",
    "best": false,
    "upcoming": 1
+  },
+  "bs_42_14a_lunation_benefic_gold": {
+   "title": "New / full Moon in Aries or Capricorn with a benefic (Brihat Samhita 42.14)",
+   "status": "At chance",
+   "best": false,
+   "upcoming": 2
+  },
+  "bs_42_14b_sun_malefic_gold": {
+   "title": "Sun in Aries or Capricorn with or aspected by a malefic (Brihat Samhita 42.14)",
+   "status": "At chance",
+   "best": false,
+   "upcoming": 1
+  },
+  "bs_10_17_saturn_uttarabhadra_gold": {
+   "title": "Saturn in Uttara Bhadrapada (Brihat Samhita 10.17)",
+   "status": "Too few to judge (2/3, leans right)",
+   "best": false,
+   "upcoming": 1
+  },
+  "bs_42_06_sun_leo_store_gold_silver": {
+   "title": "Sun in Leo: store gold and silver, sell in the 5th month (Brihat Samhita 42.6)",
+   "status": "At chance",
+   "best": false,
+   "upcoming": 2
   },
   "user_u1_sun_in_venus_mercury_jupiter_nakshatra": {
    "title": "Sun in a Venus, Mercury or Jupiter nakshatra (user note)",
@@ -3175,31 +905,31 @@
   },
   "doc26_gold_bull_11_venus_rohini": {
    "title": "Venus in Rohini",
-   "status": "Too few to judge (1/4, leans wrong)",
+   "status": "At chance",
    "best": false,
    "upcoming": 1
   },
   "doc26_gold_bull_12_mars_pushya": {
    "title": "Mars in Pushya",
-   "status": "Too few to judge (1/4, leans wrong)",
+   "status": "Did not hold up",
    "best": false,
    "upcoming": 0
   },
   "doc26_gold_bear_06_venus_punarvasu": {
    "title": "Venus in Punarvasu",
-   "status": "Too few to judge (2/4, even)",
+   "status": "At chance",
    "best": false,
    "upcoming": 1
   },
   "doc26_gold_bull_04_jupiter_gemini": {
    "title": "Jupiter in Gemini",
-   "status": "Too few to judge (2/2, leans right)",
+   "status": "Too few to judge (3/4, leans right)",
    "best": false,
    "upcoming": 0
   },
   "doc26_gold_bull_02_sun_libra_aspected": {
    "title": "Sun in Libra aspected by (or with) malefics",
-   "status": "Did not hold up",
+   "status": "At chance",
    "best": false,
    "upcoming": 1
   },
@@ -3211,7 +941,7 @@
   },
   "doc26_gold_bull_13_aquarius_sankranti_friday": {
    "title": "Sun enters Aquarius on a Friday",
-   "status": "Did not occur",
+   "status": "Did not hold up",
    "best": false,
    "upcoming": 1
   },
@@ -3223,13 +953,13 @@
   },
   "kd114_sun_eclipse_wednesday": {
    "title": "Solar eclipse on a Wednesday",
-   "status": "Too few to judge (0/2, leans wrong)",
+   "status": "Inconclusive",
    "best": false,
    "upcoming": 0
   },
   "kd092_rahu_vedha_pushya": {
    "title": "Rahu does Vedha of Pushya",
-   "status": "Too few to judge (1/1, leans right)",
+   "status": "Too few to judge (3/4, leans right)",
    "best": false,
    "upcoming": 0
   },
@@ -3251,23 +981,23 @@
    "best": false,
    "upcoming": 1
   },
-  "user_u4_rahu": {
-   "title": "U4 - Rahu with / aspecting the Sun (incl. Sun with Ketu)",
+  "user_u2_jupiter": {
+   "title": "U2 - Jupiter with / aspecting the Sun",
    "status": "At chance",
    "best": false,
-   "upcoming": 2
+   "upcoming": 4
+  },
+  "user_u4_saturn": {
+   "title": "U4 - Saturn with / aspecting the Sun",
+   "status": "At chance",
+   "best": false,
+   "upcoming": 6
   },
   "user_sun_state_net": {
    "title": "User Sun model: net rise vs fall signals",
-   "status": "Strongest",
-   "best": true,
+   "status": "At chance",
+   "best": false,
    "upcoming": 70
-  },
-  "user_u2_mercury": {
-   "title": "U2 - Mercury with the Sun",
-   "status": "Consistent",
-   "best": true,
-   "upcoming": 16
   },
   "user_u2_waxing_moon": {
    "title": "U2 - waxing Moon with / aspecting the Sun",
@@ -3275,23 +1005,23 @@
    "best": false,
    "upcoming": 29
   },
+  "user_u2_mercury": {
+   "title": "U2 - Mercury with the Sun",
+   "status": "Consistent",
+   "best": true,
+   "upcoming": 16
+  },
+  "user_u4_rahu": {
+   "title": "U4 - Rahu with / aspecting the Sun (incl. Sun with Ketu)",
+   "status": "At chance",
+   "best": false,
+   "upcoming": 2
+  },
   "user_u2_venus": {
    "title": "U2 - Venus with / aspecting the Sun",
-   "status": "Supported",
-   "best": true,
-   "upcoming": 8
-  },
-  "user_u4_saturn": {
-   "title": "U4 - Saturn with / aspecting the Sun",
-   "status": "Did not hold up",
+   "status": "At chance",
    "best": false,
-   "upcoming": 6
-  },
-  "user_u2_jupiter": {
-   "title": "U2 - Jupiter with / aspecting the Sun",
-   "status": "Supported",
-   "best": true,
-   "upcoming": 4
+   "upcoming": 8
   }
  }
 }

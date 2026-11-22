@@ -83,7 +83,12 @@ def section_key(r):
             return (0, int(ref.split("p.")[1].split()[0].split("-")[0]))
         except ValueError:
             return (0, 999)
-    return (1, int(ref.split("p.")[1].split()[0].split("/")[0].split("-")[0]) if "p." in ref else 999)
+    if ref.startswith("Brihat Samhita"):
+        return (2, 0)
+    try:
+        return (1, int(ref.split("p.")[1].split()[0].split("/")[0].split("-")[0]) if "p." in ref else 999)
+    except ValueError:
+        return (1, 999)
 
 
 def rules_md():

@@ -1,0 +1,156 @@
+{
+ "n_days": 6572,
+ "from": "2000-08-31",
+ "to": "2026-11-06",
+ "corr_S_1d": 0.0009,
+ "corr_V_1d": -0.0114,
+ "corr_S_5d": -0.0019,
+ "corr_V_5d": -0.0156,
+ "corr_S_10d": -0.0108,
+ "corr_V_10d": -0.001,
+ "base": {
+  "1": {
+   "mean": 0.047,
+   "up": 52.5
+  },
+  "5": {
+   "mean": 0.235,
+   "up": 55.5
+  },
+  "10": {
+   "mean": 0.464,
+   "up": 55.5
+  }
+ },
+ "by_bias": {
+  "Strong bearish": {
+   "days": 13,
+   "share": 0.2,
+   "mean_1d": -0.102,
+   "mean_5d": -1.239,
+   "mean_10d": -1.06,
+   "up_1d": 30.8,
+   "up_5d": 15.4,
+   "up_10d": 38.5
+  },
+  "Bearish": {
+   "days": 129,
+   "share": 2.0,
+   "mean_1d": 0.069,
+   "mean_5d": -0.046,
+   "mean_10d": -0.015,
+   "up_1d": 55.0,
+   "up_5d": 51.9,
+   "up_10d": 49.6
+  },
+  "Mild bearish": {
+   "days": 386,
+   "share": 5.9,
+   "mean_1d": -0.011,
+   "mean_5d": 0.17,
+   "mean_10d": 0.611,
+   "up_1d": 52.1,
+   "up_5d": 53.6,
+   "up_10d": 53.6
+  },
+  "Neutral / mixed": {
+   "days": 1620,
+   "share": 24.7,
+   "mean_1d": 0.065,
+   "mean_5d": 0.308,
+   "mean_10d": 0.651,
+   "up_1d": 53.6,
+   "up_5d": 55.6,
+   "up_10d": 58.6
+  },
+  "Mild bullish": {
+   "days": 1790,
+   "share": 27.2,
+   "mean_1d": 0.039,
+   "mean_5d": 0.213,
+   "mean_10d": 0.282,
+   "up_1d": 51.7,
+   "up_5d": 54.3,
+   "up_10d": 52.3
+  },
+  "Bullish": {
+   "days": 1790,
+   "share": 27.2,
+   "mean_1d": 0.062,
+   "mean_5d": 0.326,
+   "mean_10d": 0.584,
+   "up_1d": 53.5,
+   "up_5d": 58.9,
+   "up_10d": 57.5
+  },
+  "Strong bullish": {
+   "days": 844,
+   "share": 12.8,
+   "mean_1d": 0.027,
+   "mean_5d": 0.044,
+   "mean_10d": 0.267,
+   "up_1d": 50.4,
+   "up_5d": 52.8,
+   "up_10d": 54.0
+  }
+ },
+ "by_confidence": {
+  "Very high / bullish": {
+   "days": 1673,
+   "mean_5d": 0.15,
+   "right_5d": 55.1
+  },
+  "High / bullish": {
+   "days": 2691,
+   "mean_5d": 0.279,
+   "right_5d": 56.6
+  },
+  "High / bearish": {
+   "days": 484,
+   "mean_5d": 0.07,
+   "right_5d": 48.3
+  },
+  "Moderate / bullish": {
+   "days": 60,
+   "mean_5d": 0.029,
+   "right_5d": 43.3
+  },
+  "Moderate / bearish": {
+   "days": 43,
+   "mean_5d": 0.182,
+   "right_5d": 41.9
+  }
+ },
+ "blocks": [
+  {
+   "years": "2000-2004",
+   "corr_S_5d": 0.011,
+   "bull_mean_5d": 0.219,
+   "bear_mean_5d": 0.104
+  },
+  {
+   "years": "2005-2009",
+   "corr_S_5d": -0.056,
+   "bull_mean_5d": 0.43,
+   "bear_mean_5d": 0.393
+  },
+  {
+   "years": "2010-2014",
+   "corr_S_5d": 0.025,
+   "bull_mean_5d": 0.082,
+   "bear_mean_5d": -0.199
+  },
+  {
+   "years": "2015-2019",
+   "corr_S_5d": 0.136,
+   "bull_mean_5d": 0.215,
+   "bear_mean_5d": -0.567
+  },
+  {
+   "years": "2020-2026",
+   "corr_S_5d": -0.06,
+   "bull_mean_5d": 0.178,
+   "bear_mean_5d": 0.402
+  }
+ ]
+}
