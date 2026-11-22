@@ -22,7 +22,8 @@ B = "build/pdfref/"
 X = "Reference_materials/extracted/"
 SECTIONS = [
     ("Start here", [
-        (B + "gold_signals_2026-11-22_to_2027-12-31_ET.html", "Gold bullish / bearish days to end-2027", "One simple table: dates, signal, strength (High / Moderate / Low) and why."),
+        (B + "gold_signals_2026-11-22_to_2027-12-31_ET.html", "Gold bullish / bearish days to end-2027", "One simple table: dates, signal, strength (High / Moderate / Low), why, and each label's past record."),
+        (B + "signal_table_test_2000-2026_ET.html", "Test of the table's High / Moderate / Low", "The table's scoring backtested 2000-2026: walk-forward, source rules only, in-sample."),
         ("PROJECT_KNOWLEDGE.html", "Project knowledge base", "Sources, user decisions, conventions, code map, every finding, rebuild commands."),
         (B + "GOLD_TRACKER.html", "Gold tracker", "Recent findings, every gold rule's 1 / 5 / 26-year record and status, best-rule dates to end-2027, analysis log."),
         (B + "SILVER_TRACKER.html", "Silver tracker", "The same for silver."),

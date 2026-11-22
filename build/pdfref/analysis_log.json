@@ -281,6 +281,18 @@
     "tools/gold_signal_table.py",
     "build/pdfref/gold_signals_2026-11-22_to_2027-12-31_ET.html"
    ]
+  },
+  {
+   "date": "2026-11-22",
+   "pr": "20",
+   "topic": "Backtest of the signal table's High / Moderate / Low",
+   "analysis": "Table scoring applied to every trading day 2000-2026; runs of days with the same signal and strength scored like rules (entry = last close before; 3+ sessions to last close, else 5 sessions; same-year base; binomial p). Three runs: walk-forward (leads and fast triggers re-picked on 2000-2013, scored on 2013-2026), source rules only, in-sample.",
+   "result": "Walk-forward: Bullish High 64% vs 53% (33, p 0.16), Moderate 58% vs 54%, Low 54% vs 55%; High+Moderate 60% vs 54% (102, p 0.13). Bearish Moderate 48% vs 44%, Low 44% vs 44%; Volatile big-day 11 vs 10.4. Source rules only: bullish High+Moderate 67% vs 56% (57, p 0.058). Bullish strength order holds in every run but is not significant; bearish and volatile labels have no edge. A past-record column was added to the table.",
+   "files": [
+    "tools/test_signal_table.py",
+    "build/pdfref/signal_table_test_2000-2026_ET.html",
+    "build/pdfref/gold_signals_2026-11-22_to_2027-12-31_ET.html"
+   ]
   }
  ]
 }
