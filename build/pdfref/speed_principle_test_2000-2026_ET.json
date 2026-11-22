@@ -1,0 +1,338 @@
+{
+ "A": {
+  "gold_GC_F": {
+   "Eclipse": {
+    "n": 116,
+    "abs1": 0.877,
+    "abs5": 2.012,
+    "ratio1": 1.099,
+    "ratio5": 1.075,
+    "t1": 1.06,
+    "t5": 1.03,
+    "sudden3": 15.5,
+    "sudden3_base": 15.0
+   },
+   "Jupiter / Saturn / Rahu sign ingress (slow)": {
+    "n": 77,
+    "abs1": 0.948,
+    "abs5": 1.862,
+    "ratio1": 1.188,
+    "ratio5": 0.995,
+    "t1": 1.46,
+    "t5": -0.05,
+    "sudden3": 23.4,
+    "sudden3_base": 15.0
+   },
+   "Jupiter / Saturn station (slow)": {
+    "n": 99,
+    "abs1": 0.692,
+    "abs5": 1.702,
+    "ratio1": 0.867,
+    "ratio5": 0.909,
+    "t1": -1.76,
+    "t5": -1.37,
+    "sudden3": 9.1,
+    "sudden3_base": 15.0
+   },
+   "Mars sign ingress (medium)": {
+    "n": 181,
+    "abs1": 0.923,
+    "abs5": 1.826,
+    "ratio1": 1.156,
+    "ratio5": 0.976,
+    "t1": 1.8,
+    "t5": -0.36,
+    "sudden3": 14.4,
+    "sudden3_base": 15.0
+   },
+   "Mars station (medium)": {
+    "n": 24,
+    "abs1": 0.703,
+    "abs5": 1.744,
+    "ratio1": 0.88,
+    "ratio5": 0.932,
+    "t1": -0.63,
+    "t5": -0.5,
+    "sudden3": 16.7,
+    "sudden3_base": 15.0
+   },
+   "Mercury / Venus sign ingress (fast)": {
+    "n": 714,
+    "abs1": 0.841,
+    "abs5": 1.882,
+    "ratio1": 1.053,
+    "ratio5": 1.006,
+    "t1": 1.32,
+    "t5": 0.16,
+    "sudden3": 15.7,
+    "sudden3_base": 15.0
+   },
+   "Mercury / Venus station (fast)": {
+    "n": 200,
+    "abs1": 0.755,
+    "abs5": 1.937,
+    "ratio1": 0.946,
+    "ratio5": 1.035,
+    "t1": -0.79,
+    "t5": 0.53,
+    "sudden3": 14.5,
+    "sudden3_base": 15.0
+   },
+   "Moon quarter (fast)": {
+    "n": 648,
+    "abs1": 0.804,
+    "abs5": 1.873,
+    "ratio1": 1.007,
+    "ratio5": 1.001,
+    "t1": 0.17,
+    "t5": 0.03,
+    "sudden3": 15.9,
+    "sudden3_base": 15.0
+   },
+   "New / full Moon (fast)": {
+    "n": 648,
+    "abs1": 0.835,
+    "abs5": 1.926,
+    "ratio1": 1.046,
+    "ratio5": 1.029,
+    "t1": 1.07,
+    "t5": 0.78,
+    "sudden3": 16.2,
+    "sudden3_base": 15.0
+   },
+   "Outer-planet station (slow)": {
+    "n": 156,
+    "abs1": 0.771,
+    "abs5": 1.733,
+    "ratio1": 0.965,
+    "ratio5": 0.926,
+    "t1": -0.47,
+    "t5": -1.08,
+    "sudden3": 12.2,
+    "sudden3_base": 15.0
+   },
+   "Sun sign ingress / Sankranti (fast)": {
+    "n": 315,
+    "abs1": 0.792,
+    "abs5": 2.057,
+    "ratio1": 0.991,
+    "ratio5": 1.099,
+    "t1": -0.14,
+    "t5": 1.7,
+    "sudden3": 14.3,
+    "sudden3_base": 15.0
+   },
+   "_base": {
+    "abs1": 0.798,
+    "abs5": 1.872,
+    "sudden3": 15.0
+   }
+  },
+  "silver_SI_F": {
+   "Eclipse": {
+    "n": 116,
+    "abs1": 1.315,
+    "abs5": 3.622,
+    "ratio1": 0.93,
+    "ratio5": 1.103,
+    "t1": -0.8,
+    "t5": 1.16,
+    "sudden3": 13.8,
+    "sudden3_base": 15.3
+   },
+   "Jupiter / Saturn / Rahu sign ingress (slow)": {
+    "n": 77,
+    "abs1": 1.447,
+    "abs5": 3.494,
+    "ratio1": 1.023,
+    "ratio5": 1.064,
+    "t1": 0.23,
+    "t5": 0.56,
+    "sudden3": 20.8,
+    "sudden3_base": 15.3
+   },
+   "Jupiter / Saturn station (slow)": {
+    "n": 99,
+    "abs1": 1.396,
+    "abs5": 3.03,
+    "ratio1": 0.987,
+    "ratio5": 0.923,
+    "t1": -0.12,
+    "t5": -0.88,
+    "sudden3": 17.2,
+    "sudden3_base": 15.3
+   },
+   "Mars sign ingress (medium)": {
+    "n": 181,
+    "abs1": 1.557,
+    "abs5": 3.631,
+    "ratio1": 1.101,
+    "ratio5": 1.106,
+    "t1": 1.21,
+    "t5": 1.36,
+    "sudden3": 13.3,
+    "sudden3_base": 15.3
+   },
+   "Mars station (medium)": {
+    "n": 24,
+    "abs1": 1.116,
+    "abs5": 3.014,
+    "ratio1": 0.789,
+    "ratio5": 0.918,
+    "t1": -1.46,
+    "t5": -0.59,
+    "sudden3": 16.7,
+    "sudden3_base": 15.3
+   },
+   "Mercury / Venus sign ingress (fast)": {
+    "n": 714,
+    "abs1": 1.483,
+    "abs5": 3.327,
+    "ratio1": 1.049,
+    "ratio5": 1.013,
+    "t1": 1.17,
+    "t5": 0.35,
+    "sudden3": 15.7,
+    "sudden3_base": 15.3
+   },
+   "Mercury / Venus station (fast)": {
+    "n": 200,
+    "abs1": 1.525,
+    "abs5": 3.339,
+    "ratio1": 1.079,
+    "ratio5": 1.017,
+    "t1": 0.96,
+    "t5": 0.25,
+    "sudden3": 14.0,
+    "sudden3_base": 15.3
+   },
+   "Moon quarter (fast)": {
+    "n": 648,
+    "abs1": 1.454,
+    "abs5": 3.214,
+    "ratio1": 1.028,
+    "ratio5": 0.979,
+    "t1": 0.6,
+    "t5": -0.57,
+    "sudden3": 15.3,
+    "sudden3_base": 15.3
+   },
+   "New / full Moon (fast)": {
+    "n": 648,
+    "abs1": 1.45,
+    "abs5": 3.421,
+    "ratio1": 1.025,
+    "ratio5": 1.042,
+    "t1": 0.59,
+    "t5": 1.03,
+    "sudden3": 15.9,
+    "sudden3_base": 15.3
+   },
+   "Outer-planet station (slow)": {
+    "n": 156,
+    "abs1": 1.332,
+    "abs5": 3.129,
+    "ratio1": 0.942,
+    "ratio5": 0.953,
+    "t1": -0.77,
+    "t5": -0.66,
+    "sudden3": 20.5,
+    "sudden3_base": 15.3
+   },
+   "Sun sign ingress / Sankranti (fast)": {
+    "n": 315,
+    "abs1": 1.572,
+    "abs5": 3.464,
+    "ratio1": 1.111,
+    "ratio5": 1.055,
+    "t1": 1.64,
+    "t5": 0.91,
+    "sudden3": 18.1,
+    "sudden3_base": 15.3
+   },
+   "_base": {
+    "abs1": 1.414,
+    "abs5": 3.283,
+    "sudden3": 15.3
+   }
+  }
+ },
+ "B": {
+  "gold": {
+   "fast planets only": {
+    "decided": 2104,
+    "worked": 1149,
+    "hit": 54.6,
+    "rules": 22,
+    "base": 53.1,
+    "avg_dir_move": 0.32,
+    "median_days": 5.0
+   },
+   "mixed / with Mars": {
+    "decided": 280,
+    "worked": 131,
+    "hit": 46.8,
+    "rules": 5,
+    "base": 44.4,
+    "avg_dir_move": -0.24,
+    "median_days": 20.0
+   },
+   "slow planets only": {
+    "decided": 35,
+    "worked": 20,
+    "hit": 57.1,
+    "rules": 10,
+    "base": 51.7,
+    "avg_dir_move": 0.43,
+    "median_days": 101
+   },
+   "Mars with slow planets": {
+    "decided": 73,
+    "worked": 41,
+    "hit": 56.2,
+    "rules": 6,
+    "base": 58.8,
+    "avg_dir_move": 1.26,
+    "median_days": 29
+   }
+  },
+  "silver": {
+   "fast planets only": {
+    "decided": 1677,
+    "worked": 844,
+    "hit": 50.3,
+    "rules": 32,
+    "base": 51.3,
+    "avg_dir_move": 0.12,
+    "median_days": 5
+   },
+   "Mars with slow planets": {
+    "decided": 217,
+    "worked": 107,
+    "hit": 49.3,
+    "rules": 9,
+    "base": 51.3,
+    "avg_dir_move": 0.25,
+    "median_days": 12
+   },
+   "mixed / with Mars": {
+    "decided": 57,
+    "worked": 28,
+    "hit": 49.1,
+    "rules": 3,
+    "base": 53.7,
+    "avg_dir_move": -0.57,
+    "median_days": 9
+   },
+   "slow planets only": {
+    "decided": 56,
+    "worked": 26,
+    "hit": 46.4,
+    "rules": 8,
+    "base": 52.4,
+    "avg_dir_move": 0.72,
+    "median_days": 5.0
+   }
+  }
+ }
+}

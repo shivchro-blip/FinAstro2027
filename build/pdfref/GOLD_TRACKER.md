@@ -1,6 +1,6 @@
 # Gold findings tracker
 
-Generated 21 Nov 2026 22:19 EST by `tools/gold_tracker.py` (`--refresh` re-runs both backtests). HTML version: `GOLD_TRACKER.html`.
+Generated 22 Nov 2026 09:09 EST by `tools/gold_tracker.py` (`--refresh` re-runs both backtests). HTML version: `GOLD_TRACKER.html`.
 
 ## Recent findings
 
@@ -104,6 +104,10 @@ Best (from the 26 yr data): Mars aspected by Saturn while Jupiter retrograde, U2
 
 | Date | PR | Topic | Result |
 |---|---|---|---|
+| 2026-11-22 | #15 | Gold big-move watch dates, 22 Nov 2026 - 31 Dec 2027 | 5 watch stretches: 21-27 Jan 2027 (Jupiter back into Cancer, full Moon; either), 22-25 Mar 2027 (Saturn combustion begins, full Moon; down), 22-28 Jun 2027 (Jupiter into Leo; up), 18 Oct 2027 (full Moon, Sun in Libra with malefics; down), 27-31 Dec 2027 (Mars in Capricorn with Rahu; up). Watch dates, not calls: no lead passed FDR and out-of-sample pooled lift x1.02. |
+| 2026-11-22 | #15 | Gold ±2% days 2000-2026: which planetary factors surround them (±3 days) | No factor significant after FDR (lowest q 0.36). Leads: Sun-Uranus opposition x2.13, Venus-Saturn conjunction x1.80, Saturn combustion begins x1.86, Jupiter nakshatra change x1.41, Rahu with Mars x1.44. Up: Mars in Capricorn x1.86 (62.5% up, p 0.003), Mars-Pluto conjunction x3.5. Down: Saturn combustion begins x2.3, Pluto R station x2.2, full Moon x1.24. The bullish rules Mars in Pushya (TA) and Sun in Libra with malefics (doc26) coincided with big falls. Out of sample: 14 of 23 early leads stayed above 1 but pooled x1.02 (p 0.34), no edge. |
+| 2026-11-22 | #14 | Test: slow planets set the trend, fast planets the sudden moves | Not supported: fast-planet events brought no bigger or more sudden moves (ratios x0.95-1.10, none significant); slow-planet-only rules gold 57% vs 52% base (35 cases), silver 46% vs 52%. Opposite hint: sudden gold days within 3 days of Jupiter/Saturn/Rahu sign changes 23% vs 15% (p~0.03); Jupiter/Saturn stations calmer (9% vs 15%). |
+| 2026-11-22 | #14 | Gold deep analysis, 22 Nov - 31 Dec 2026 | Three phases: 22 Nov - 2 Dec bearish lean (Sun in Anuradha, Mars on the Sun, benefic vedha, Saturn in Uttara Bhadrapada, Rahu in Dhanishta); 2-16 Dec neutral turning supportive (Mercury with the Sun, tier A; Saturn direct 10 Dec, Jupiter retrograde 13 Dec); 16-31 Dec mixed-supportive (Jupiter and Saturn both aspect the Sun, Mercury rejoins 22 Dec). Only U2-Mercury is tier A; seasonality +1.7% avg, up 16 of 26 years. |
 | 2026-11-22 | #13 | reports/ folder with ready-to-open copies | reports/index.html lists 21 reports in four groups (start here, calendars and rule reports, backtests, source research). |
 | 2026-11-22 | #13 | 26-year backtest, gold and silver (20 Nov 2000 - 20 Nov 2026) | Gold 1,598/1,400 (53%) vs 54% by chance; silver 1,083/1,050 (51%) vs 51%; no rule p<0.05. 5-year best rules faded (gold Sun model 54% vs 53%; silver Venus-Mars 51% vs 54%). Most consistent: gold TA S34 A9 Mars aspected by Saturn with Jupiter retrograde 14/17 (p=0.07), U2-Mercury 176/291 (20 of 26 years); silver TA S35 A1 retrograde Mercury or Jupiter 78/126 (p=0.052), A17b Moon-Mercury alone 49/80 (p=0.081). Silver 'Mars rising' significantly wrong (2/10). |
 | 2026-11-21 | #13 | Project knowledge base and one-command refresh | Full refresh with fresh prices passed (7/7 tests); headline totals unchanged (gold 5 yr 308/279, silver 201/219). 20 Nov 2026 gold settlement 3,515.4. |

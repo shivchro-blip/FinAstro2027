@@ -33,6 +33,9 @@ SECTIONS = [
         (B + "calendar_2027_NY_master.ics", "NY master calendar 2027 (.ics)", "Import into Google / Apple / Outlook calendar."),
         (B + "gold_bs41_model_2026-11-20_to_2027-12-31_ET.html", "Gold Model v1.0 (Brihat Samhita Ch.41)", "Daily scarcity and demand/value indices with Shadbala and Ashtakavarga; backtest 2000-2026 on the same page."),
         (B + "gold_bs41_model_2026-11-20_to_2027-12-31_ET.ics", "Gold Model v1.0 (.ics)", "One calendar entry per change of bias class, with the planetary reasoning."),
+        (B + "gold_big_move_watch_2026-11-22_to_2027-12-31_ET.html", "Gold big-move watch, 22 Nov 2026 - 31 Dec 2027", "Dates when the factors over-represented on gold's +/-2% days (2000-2026) recur: leads, windows, watch stretches. Watch dates, not calls."),
+        (B + "gold_big_move_watch_2026-11-22_to_2027-12-31_ET.ics", "Gold big-move watch (.ics)", "One calendar entry per watch stretch."),
+        (B + "gold_deep_2026-11-22_to_2026-12-31_ET.html", "Gold deep analysis, 22 Nov - 31 Dec 2026", "Every gold rule (with its 26-year record), transit and whole-sign aspect, day by day, with the written analysis and key dates."),
     ]),
     ("Backtests (COMEX closes)", [
         (B + "gold_backtest_2000-11-20_to_2026-11-20_ET.html", "Gold, 26 years (2000-2026)", "Primary evidence: per-rule scorecard, p-values, 5-year blocks, failure causes, biggest moves."),
@@ -42,6 +45,8 @@ SECTIONS = [
         (B + "silver_backtest_2021-11-20_to_2026-11-20_ET.html", "Silver, 5 years (2021-2026)", ""),
         (B + "silver_backtest_2025-11-20_to_2026-11-20_ET.html", "Silver, 1 year (2025-2026)", ""),
         (B + "source_rules_test_2000-2026_ET.html", "New-document rules test (2000-2026)", "Brihat Samhita 42.6 / 42.14 / 10.17, lunation half-cycles, the Silver guide's Moon conditions."),
+        (B + "gold_big_moves_2000-2026_ET.html", "Gold's +/-2% days (2000-2026)", "Every big gold day with the sky +/-3 days, and which planetary factors were over-represented (same-year expected counts, FDR)."),
+        (B + "speed_principle_test_2000-2026_ET.html", "Slow vs fast planets test (2000-2026)", "Do fast-planet events bring bigger / sudden moves, and do slow-planet rules get the trend right more often?"),
     ]),
     ("Source research and methodology", [
         (X + "OTHERS_FINANCIAL_REVIEW.html", "Review of Reference_materials/Others (45 files)", "Financial content of every document with page references; what was implemented and what was excluded."),
