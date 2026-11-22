@@ -1,6 +1,6 @@
 # Gold findings tracker
 
-Generated 22 Nov 2026 11:52 EST by `tools/gold_tracker.py` (`--refresh` re-runs both backtests). HTML version: `GOLD_TRACKER.html`.
+Generated 22 Nov 2026 14:59 EST by `tools/gold_tracker.py` (`--refresh` re-runs both backtests). HTML version: `GOLD_TRACKER.html`.
 
 ## Recent findings
 
@@ -104,6 +104,7 @@ Best (from the 26 yr data): Mars aspected by Saturn while Jupiter retrograde, U2
 
 | Date | PR | Topic | Result |
 |---|---|---|---|
+| 2026-11-22 | #19 | Simple gold bullish / bearish table to end-2027 | High bullish: 20 Jul and 30 Jul - 2 Sep 2027 (Venus combust in East with Mercury with the Sun). Moderate bullish: 22-28 Jun, 21-29 Jul, early Sep, 5 Nov, 27-31 Dec 2027. Moderate bearish: 22-23 Mar 2027. Low bearish: 23 Nov - 1 Dec 2026, 24-25 Mar, 7-10 May 2027. Volatile: 4-6 May, 18 Oct, 23-24 Nov 2027. Most other signal days are low bullish (U2 only). |
 | 2026-11-22 | #18 | Narrowing the outlook windows with fast planets (Moon, Mercury, Venus, Sun, Mars) | Not supported beyond chance: 3 factors passed against 2.0 expected under permutation (90th pct 4); none survives FDR. Moon opposite the Sun x1.49 (only inside windows; outside x0.74), Moon 6/8 Saturn x1.31, Moon opposite Rahu x1.34; none picks a direction. Narrowed days, best guesses: 22 Jan, 22-23 Mar, 19-20 Jul, 30 Aug, 6-7 Sep, 25-26 Nov 2027; no trigger in 4-10 May, 22-28 Jun, 18 Oct, 1-7 Nov, 27-31 Dec. |
 | 2026-11-22 | #17 | Combined gold & silver outlook, 22 Nov 2026 - 31 Dec 2027 | Gold: U2 Mercury with the Sun (small edge) on 81% of Dec 2026 days, 74% Jan, 90% Aug, 97% Dec 2027, about 13-17% Mar/Sep/Oct 2027; TA S34 A9 not before 2028. Silver: retro Mercury/Jupiter mid-Dec 2026 to mid-Apr 2027, 10 Jun - 4 Jul, 7-28 Oct 2027. Venus combust East 20 Jul - 7 Sep 2027 (bullish lead); rises West 7 Sep 2027 (qualified, no edge). Volatility watch 21-27 Jan, 22-25 Mar, 22-28 Jun, 18 Oct, 27-31 Dec 2027. None passes a strict significance test. |
 | 2026-11-22 | #16 | Venus rising in the West and the 30 Jan 2026 gold crash; TA Section 18 Venus rules 2000-2026 | Venus rose in the West on 31 Jan 2026 (Capricorn with Sun and Mars, the qualified 'sharp upturn after a small dip' case). Gold -10.8% on 30 Jan, the session before the layer's date, then +6.1% on 3 Feb and +11.9% after 20 sessions. Over 26 years, rises in West are at chance (gold 6/12, 50% vs 45%); qualified pattern 2 of 6 vs 1.8 expected. Leads: combust in East gold 12/16 (75% vs 57%, p 0.11); rises in East gold 40 sessions 13/15 (87% vs 63%, p 0.045). Combust in West did not hold up (7/16). Next: Venus rises in West 7 Sep 2027 in Leo with the Sun (qualified). |
