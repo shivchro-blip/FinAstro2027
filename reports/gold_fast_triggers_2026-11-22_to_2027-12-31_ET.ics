@@ -4,80 +4,80 @@ PRODID:-//finastro2027//gold fast triggers//EN
 CALSCALE:GREGORIAN
 X-WR-CALNAME:Gold narrowed watch days
 BEGIN:VEVENT
-UID:fast-2027-01-22-623159@finastro2027
-DTSTAMP:20261122T165148Z
+UID:fast-gold-2027-01-22-508551@finastro2027
+DTSTAMP:20261122T203430Z
 DTSTART;VALUE=DATE:20270122
 DTEND;VALUE=DATE:20270123
 SUMMARY:Gold watch day (either): Moon opposite Sun\, Moon opposite Rahu (= Moon with Ketu)
 DESCRIPTION:Window 2027-01-21 to 2027-01-27: Big-move watch: Jupiter changes nakshatra\; Jupiter changes sign\; full moon. Fast triggers tested inside windows 2000-2026\; none passes FDR.
 END:VEVENT
 BEGIN:VEVENT
-UID:fast-2027-03-22-184701@finastro2027
-DTSTAMP:20261122T165148Z
+UID:fast-gold-2027-03-22-864538@finastro2027
+DTSTAMP:20261122T203430Z
 DTSTART;VALUE=DATE:20270322
 DTEND;VALUE=DATE:20270323
 SUMMARY:Gold watch day (down): Moon opposite Sun
 DESCRIPTION:Window 2027-03-22 to 2027-03-25: Big-move watch: Saturn combustion begins\; full moon. Fast triggers tested inside windows 2000-2026\; none passes FDR.
 END:VEVENT
 BEGIN:VEVENT
-UID:fast-2027-03-23-184701@finastro2027
-DTSTAMP:20261122T165148Z
+UID:fast-gold-2027-03-23-864538@finastro2027
+DTSTAMP:20261122T203430Z
 DTSTART;VALUE=DATE:20270323
 DTEND;VALUE=DATE:20270324
 SUMMARY:Gold watch day (down): Moon opposite Sun
 DESCRIPTION:Window 2027-03-22 to 2027-03-25: Big-move watch: Saturn combustion begins\; full moon. Fast triggers tested inside windows 2000-2026\; none passes FDR.
 END:VEVENT
 BEGIN:VEVENT
-UID:fast-2027-07-19-997846@finastro2027
-DTSTAMP:20261122T165148Z
+UID:fast-gold-2027-07-19-768273@finastro2027
+DTSTAMP:20261122T203430Z
 DTSTART;VALUE=DATE:20270719
 DTEND;VALUE=DATE:20270720
 SUMMARY:Gold watch day (up): Moon opposite Sun
 DESCRIPTION:Window 2027-07-17 to 2027-07-23: Venus combust in East – Gemini / Punarvasu. Fast triggers tested inside windows 2000-2026\; none passes FDR.
 END:VEVENT
 BEGIN:VEVENT
-UID:fast-2027-07-20-997846@finastro2027
-DTSTAMP:20261122T165148Z
+UID:fast-gold-2027-07-20-768273@finastro2027
+DTSTAMP:20261122T203430Z
 DTSTART;VALUE=DATE:20270720
 DTEND;VALUE=DATE:20270721
 SUMMARY:Gold watch day (up): Moon opposite Sun
 DESCRIPTION:Window 2027-07-17 to 2027-07-23: Venus combust in East – Gemini / Punarvasu. Fast triggers tested inside windows 2000-2026\; none passes FDR.
 END:VEVENT
 BEGIN:VEVENT
-UID:fast-2027-08-30-89611@finastro2027
-DTSTAMP:20261122T165148Z
+UID:fast-gold-2027-08-30-138211@finastro2027
+DTSTAMP:20261122T203430Z
 DTSTART;VALUE=DATE:20270830
 DTEND;VALUE=DATE:20270831
 SUMMARY:Gold watch day (up): Moon opposite Rahu (= Moon with Ketu)
 DESCRIPTION:Window 2027-08-27 to 2027-09-02: Single lead: Jupiter changes nakshatra. Fast triggers tested inside windows 2000-2026\; none passes FDR.
 END:VEVENT
 BEGIN:VEVENT
-UID:fast-2027-09-06-311523@finastro2027
-DTSTAMP:20261122T165148Z
+UID:fast-gold-2027-09-06-483716@finastro2027
+DTSTAMP:20261122T203430Z
 DTSTART;VALUE=DATE:20270906
 DTEND;VALUE=DATE:20270907
 SUMMARY:Gold watch day (dip then up): Moon-Saturn 6/8 (shadashtak)
 DESCRIPTION:Window 2027-09-04 to 2027-09-10: Venus rises in West – Leo / Uttara Phalguni with Sun (qualified: sharp upturn after a small dip). Fast triggers tested inside windows 2000-2026\; none passes FDR.
 END:VEVENT
 BEGIN:VEVENT
-UID:fast-2027-09-07-311523@finastro2027
-DTSTAMP:20261122T165148Z
+UID:fast-gold-2027-09-07-483716@finastro2027
+DTSTAMP:20261122T203430Z
 DTSTART;VALUE=DATE:20270907
 DTEND;VALUE=DATE:20270908
 SUMMARY:Gold watch day (dip then up): Moon-Saturn 6/8 (shadashtak)
 DESCRIPTION:Window 2027-09-04 to 2027-09-10: Venus rises in West – Leo / Uttara Phalguni with Sun (qualified: sharp upturn after a small dip). Fast triggers tested inside windows 2000-2026\; none passes FDR.
 END:VEVENT
 BEGIN:VEVENT
-UID:fast-2027-11-25-5600@finastro2027
-DTSTAMP:20261122T165148Z
+UID:fast-gold-2027-11-25-550496@finastro2027
+DTSTAMP:20261122T203430Z
 DTSTART;VALUE=DATE:20271125
 DTEND;VALUE=DATE:20271126
 SUMMARY:Gold watch day (either): Moon-Saturn 6/8 (shadashtak)
 DESCRIPTION:Window 2027-11-23 to 2027-11-29: Single lead: Jupiter changes sign. Fast triggers tested inside windows 2000-2026\; none passes FDR.
 END:VEVENT
 BEGIN:VEVENT
-UID:fast-2027-11-26-5600@finastro2027
-DTSTAMP:20261122T165148Z
+UID:fast-gold-2027-11-26-550496@finastro2027
+DTSTAMP:20261122T203430Z
 DTSTART;VALUE=DATE:20271126
 DTEND;VALUE=DATE:20271127
 SUMMARY:Gold watch day (either): Moon-Saturn 6/8 (shadashtak)

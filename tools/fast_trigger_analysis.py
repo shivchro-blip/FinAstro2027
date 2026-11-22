@@ -1,6 +1,6 @@
 """Narrow the slow-planet watch windows to days, using fast-moving planets.
 
-    python tools/fast_trigger_analysis.py [start] [end]
+    python tools/fast_trigger_analysis.py [start] [end] [--metal silver]     # silver: ±3.5% days, silver_* inputs/outputs
 
 Idea under test (Kindle Ch.3/Ch.6; TA p.59-60; KD p.82/p.129): slow planets set the
 condition, fast planets (Moon, Mercury, Venus, Sun, and Mars as the medium mover) fire
@@ -29,6 +29,8 @@ from zoneinfo import ZoneInfo
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
+sys.path.insert(0, str(ROOT / "tools"))
+import metal_cfg as MC  # noqa: E402
 from finastro.sky import parse  # noqa: E402
 from finastro.pdfref.detect import aspects  # noqa: E402
 from finastro.pdfref.engine import snapshot  # noqa: E402
@@ -169,7 +171,7 @@ def main():
     a = dt.date.fromisoformat(sys.argv[1]) if len(sys.argv) > 1 else dt.date(2026, 11, 22)
     b = dt.date.fromisoformat(sys.argv[2]) if len(sys.argv) > 2 else dt.date(2027, 12, 31)
     M = load(ROOT / "tools" / "big_move_analysis.py", "bma")
-    watch = json.load(open(OUT / f"gold_big_move_watch_{a}_to_{b}_ET.json"))
+    watch = json.load(open(OUT / f"{MC.METAL}_big_move_watch_{a}_to_{b}_ET.json"))
     lead = {L["factor"]: L for L in watch["leads"]}
     strong = {f for f, L in lead.items() if L["both_halves"] and not L["outer"] and f != "Event: full moon"}
 
@@ -184,8 +186,8 @@ def main():
     h1 = table([x for x in win if x["date"] < SPLIT], M, 12)
     h2 = table([x for x in win if x["date"] >= SPLIT], M, 12)
     full_out = table(out, M)
-    big_in = sum(abs(x["ret"]) >= 2 for x in win)
-    big_out = sum(abs(x["ret"]) >= 2 for x in out)
+    big_in = sum(abs(x["ret"]) >= MC.TH for x in win)
+    big_out = sum(abs(x["ret"]) >= MC.TH for x in out)
     facs = []
     for f, r in full_in.items():
         o = full_out.get(f)
@@ -195,7 +197,7 @@ def main():
                          lift_h1=r1["lift"] if r1 else None, lift_h2=r2["lift"] if r2 else None, lift_out=o["lift"] if o else None, p_out=o["p"] if o else None))
     for x in facs:
         x["passed"] = bool(x["lift"] and x["lift"] > 1 and x["p"] < 0.10 and (x["lift_h1"] or 0) > 1 and (x["lift_h2"] or 0) > 1)
-        base_up = sum(1 for x in win if x["ret"] >= 2) / max(big_in, 1) * 100
+        base_up = sum(1 for x in win if x["ret"] >= MC.TH) / max(big_in, 1) * 100
         us = x["up_share"] or 0
         x["lean"] = ("up" if us >= base_up + 10 and x["p_up"] < 0.10 else "down" if us <= base_up - 10 and x["p_down"] < 0.10 else "either")
     facs.sort(key=lambda x: x["p"])
@@ -203,7 +205,7 @@ def main():
     perm = permutation_check(win, M)
 
     # forward: every day of the outlook's watch items (stretches, single leads, Venus dates +/-3 days)
-    outl = json.load(open(OUT / f"gold_outlook_{a}_to_{b}_ET.json"))
+    outl = json.load(open(OUT / f"{MC.METAL}_outlook_{a}_to_{b}_ET.json"))
     fwd_items = []
     for it in outl["items"]:
         if it["kind"] == "Best rule":
@@ -238,7 +240,7 @@ def main():
                           best=[dict(date=x["date"], triggers=x["triggers"], score=x["score"]) for x in best]))
     res = dict(start=a.isoformat(), end=b.isoformat(), perm=perm, n_win=len(win), big_win=big_in, n_out=len(out), big_out=big_out, factors=facs,
                passed=list(passed), days=days, picks=picks)
-    stem = f"gold_fast_triggers_{a}_to_{b}_ET"
+    stem = f"{MC.METAL}_fast_triggers_{a}_to_{b}_ET"
     json.dump(res, open(OUT / f"{stem}.json", "w"), indent=1, default=str)
     (OUT / f"{stem}.html").write_text(page(res), encoding="utf-8")
     (OUT / f"{stem}.ics").write_text(ics(res), encoding="utf-8")
@@ -268,9 +270,9 @@ def page(res):
         f"<tr class='{'bullish' if x['score'] > 0 else ''}'><td class='w'>{fmt(x['date'])}</td><td class='s'>{html.escape(x['item'])}</td><td class='n'>{x['score']}</td>"
         f"<td class='s'><b>{html.escape('; '.join(x['triggers']) or '-')}</b></td><td class='s'>{html.escape('; '.join(f for f in x['fast'] if f not in x['triggers']))}</td></tr>" for x in res["days"])
     n_pass = len(res["passed"])
-    return f"""<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gold Fast Triggers</title><style>{css}</style></head><body>
-<h1>Narrowing the watch windows with fast planets, {fmt(res['start'])} – {fmt(res['end'])}</h1>
-<p class="m">Slow-planet conditions set the window; does a Moon, Mercury, Venus, Sun or Mars trigger pick the day? Tested on gold 2000–2026: <b>{res['n_win']}</b> trading days fell inside a watch window
+    return f"""<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{MC.NAME} Fast Triggers</title><style>{css}</style></head><body>
+<h1>{MC.NAME}: narrowing the watch windows with fast planets, {fmt(res['start'])} – {fmt(res['end'])}</h1>
+<p class="m">Slow-planet conditions set the window; does a Moon, Mercury, Venus, Sun or Mars trigger pick the day? Tested on {MC.METAL} (±{MC.TH:g}% days) 2000–2026: <b>{res['n_win']}</b> trading days fell inside a watch window
 ({res['big_win']} big days, {res['big_win'] / res['n_win'] * 100:.1f}%) against {res['n_out']} days outside ({res['big_out']} big, {res['big_out'] / res['n_out'] * 100:.1f}%).
 For each fast factor on the day, the big days inside windows are compared with the number expected from the same years' window days; it <b>passes</b> if lift &gt; 1 with p &lt; 0.10 and lift &gt; 1 in both 2000–2013 and 2013–2026.
 <b>{n_pass}</b> of {len(res['factors'])} factors passed. With the returns shuffled within each year ({res['perm']['n']} times, so no link to the sky), {res['perm']['mean']} factors pass on average (90th percentile {res['perm']['p90']}, maximum {res['perm']['max']}); none survives the false-discovery-rate correction, so the narrowed dates are best guesses inside the windows, not calls.
@@ -281,7 +283,7 @@ The “outside” column shows the same factor's lift on days outside any window
 <div class="wrap"><table><thead><tr><th>Fast factor (on the day)</th><th>Window days</th><th>Big days / expected</th><th>Lift</th><th>p</th><th>q</th><th>Episodes</th><th>2000–13</th><th>2013–26</th><th>Outside windows</th><th>Up share</th><th>Passed</th></tr></thead><tbody>{frows}</tbody></table></div>
 <h2>Every weekday in the forward windows</h2>
 <div class="wrap"><table><thead><tr><th>Day</th><th>Window</th><th>Score</th><th>Tested triggers</th><th>Other fast factors</th></tr></thead><tbody>{drows}</tbody></table></div>
-<p class="s">Generated by tools/fast_trigger_analysis.py. Windows: tools/big_move_forward.py and tools/gold_outlook.py.</p></body></html>"""
+<p class="s">Generated by tools/fast_trigger_analysis.py. Windows: tools/big_move_forward.py and tools/gold_outlook.py (--metal {MC.METAL}).</p></body></html>"""
 
 
 def ics(res):
@@ -289,12 +291,12 @@ def ics(res):
 
     def esc(t):
         return t.replace("\\", "\\\\").replace(",", "\\,").replace(";", "\\;").replace("\n", "\\n")
-    lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//finastro2027//gold fast triggers//EN", "CALSCALE:GREGORIAN", "X-WR-CALNAME:Gold narrowed watch days"]
+    lines = ["BEGIN:VCALENDAR", "VERSION:2.0", f"PRODID:-//finastro2027//{MC.METAL} fast triggers//EN", "CALSCALE:GREGORIAN", f"X-WR-CALNAME:{MC.NAME} narrowed watch days"]
     for p in res["picks"]:
         for b in p["best"]:
             d = dt.date.fromisoformat(b["date"])
-            lines += ["BEGIN:VEVENT", f"UID:fast-{b['date']}-{abs(hash(p['item'])) % 10**6}@finastro2027", f"DTSTAMP:{now}", f"DTSTART;VALUE=DATE:{d:%Y%m%d}",
-                      f"DTEND;VALUE=DATE:{d + dt.timedelta(days=1):%Y%m%d}", f"SUMMARY:{esc('Gold watch day (' + p['window_lean'] + '): ' + ', '.join(b['triggers'])[:100])}",
+            lines += ["BEGIN:VEVENT", f"UID:fast-{MC.METAL}-{b['date']}-{abs(hash(p['item'])) % 10**6}@finastro2027", f"DTSTAMP:{now}", f"DTSTART;VALUE=DATE:{d:%Y%m%d}",
+                      f"DTEND;VALUE=DATE:{d + dt.timedelta(days=1):%Y%m%d}", f"SUMMARY:{esc(MC.NAME + ' watch day (' + p['window_lean'] + '): ' + ', '.join(b['triggers'])[:100])}",
                       f"DESCRIPTION:{esc('Window ' + p['frm'] + ' to ' + p['to'] + ': ' + p['item'] + '. Fast triggers tested inside windows 2000-2026; none passes FDR.')}", "END:VEVENT"]
     lines.append("END:VCALENDAR")
     return "\r\n".join(lines) + "\r\n"

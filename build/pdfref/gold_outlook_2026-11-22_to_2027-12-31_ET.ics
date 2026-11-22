@@ -4,312 +4,312 @@ PRODID:-//finastro2027//gold outlook//EN
 CALSCALE:GREGORIAN
 X-WR-CALNAME:Gold & silver outlook 2027
 BEGIN:VEVENT
-UID:outlook-2026-12-02-Best-gol-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2026-12-02-Best-gol-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20261202
 DTEND;VALUE=DATE:20261216
 SUMMARY:gold: U2 - Mercury with the Sun (up)
 DESCRIPTION:Best rule - small edge. 26 yrs: 176/291 (60% vs base 57%)\, avg +0.62%\, right in 20/26 yrs
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2026-12-12-Best-sil-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2026-12-12-Best-sil-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20261212
 DTEND;VALUE=DATE:20270210
 SUMMARY:silver: Retrograde Mercury or Jupiter (up)
 DESCRIPTION:Best rule - lead (p ≈ 0.05–0.07). 26 yrs: 78/126 (62% vs base 54%)\, avg +1.80%\, right in 15/26 yrs
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2026-12-21-Best-gol-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2026-12-21-Best-gol-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20261221
 DTEND;VALUE=DATE:20270110
 SUMMARY:gold: U2 - Mercury with the Sun (up)
 DESCRIPTION:Best rule - small edge. 26 yrs: 176/291 (60% vs base 57%)\, avg +0.62%\, right in 20/26 yrs
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-01-14-Best-gol-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-01-14-Best-gol-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20270114
 DTEND;VALUE=DATE:20270128
 SUMMARY:gold: U2 - Mercury with the Sun (up)
 DESCRIPTION:Best rule - small edge. 26 yrs: 176/291 (60% vs base 57%)\, avg +0.62%\, right in 20/26 yrs
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-01-21-Vola-gol-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-01-21-Vola-gol-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20270121
 DTEND;VALUE=DATE:20270128
 SUMMARY:gold: Big-move watch: Jupiter changes nakshatra\; Jupiter changes sign\; full moon (either)
 DESCRIPTION:Volatility watch - volatility only. leads over-represented on ±2% days 2000–2026 (no FDR pass\; out of sample ×1.02)
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-02-07-Best-sil-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-02-07-Best-sil-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20270207
 DTEND;VALUE=DATE:20270210
 SUMMARY:silver: Only Moon and Mercury alone in a sign (up)
 DESCRIPTION:Best rule - small edge. 26 yrs: 49/80 (61% vs base 53%)\, avg +0.80%\, right in 15/26 yrs
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-02-09-Best-sil-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-02-09-Best-sil-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20270209
 DTEND;VALUE=DATE:20270304
 SUMMARY:silver: Retrograde Mercury or Jupiter (up)
 DESCRIPTION:Best rule - lead (p ≈ 0.05–0.07). 26 yrs: 78/126 (62% vs base 54%)\, avg +1.80%\, right in 15/26 yrs
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-02-12-Best-gol-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-02-12-Best-gol-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20270212
 DTEND;VALUE=DATE:20270224
 SUMMARY:gold: U2 - Mercury with the Sun (up)
 DESCRIPTION:Best rule - small edge. 26 yrs: 176/291 (60% vs base 57%)\, avg +0.62%\, right in 20/26 yrs
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-03-03-Best-sil-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-03-03-Best-sil-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20270303
 DTEND;VALUE=DATE:20270413
 SUMMARY:silver: Retrograde Mercury or Jupiter (up)
 DESCRIPTION:Best rule - lead (p ≈ 0.05–0.07). 26 yrs: 78/126 (62% vs base 54%)\, avg +1.80%\, right in 15/26 yrs
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-03-11-Best-gol-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-03-11-Best-gol-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20270311
 DTEND;VALUE=DATE:20270315
 SUMMARY:gold: U2 - Mercury with the Sun (up)
 DESCRIPTION:Best rule - small edge. 26 yrs: 176/291 (60% vs base 57%)\, avg +0.62%\, right in 20/26 yrs
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-03-22-Vola-gol-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-03-22-Vola-gol-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20270322
 DTEND;VALUE=DATE:20270326
 SUMMARY:gold: Big-move watch: Saturn combustion begins\; full moon (down)
 DESCRIPTION:Volatility watch - volatility only. leads over-represented on ±2% days 2000–2026 (no FDR pass\; out of sample ×1.02)
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-04-05-Best-gol-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-04-05-Best-gol-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20270405
 DTEND;VALUE=DATE:20270415
 SUMMARY:gold: U2 - Mercury with the Sun (up)
 DESCRIPTION:Best rule - small edge. 26 yrs: 176/291 (60% vs base 57%)\, avg +0.62%\, right in 20/26 yrs
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-04-21-Best-gol-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-04-21-Best-gol-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20270421
 DTEND;VALUE=DATE:20270507
 SUMMARY:gold: U2 - Mercury with the Sun (up)
 DESCRIPTION:Best rule - small edge. 26 yrs: 176/291 (60% vs base 57%)\, avg +0.62%\, right in 20/26 yrs
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-05-04-Vola-gol-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-05-04-Vola-gol-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20270504
 DTEND;VALUE=DATE:20270511
 SUMMARY:gold: Single lead: Venus-Saturn conjunction (down)
 DESCRIPTION:Volatility watch - volatility only. held in both halves\; ±2% days 13.5% when present vs 7.3% normally
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-05-06-Best-sil-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-05-06-Best-sil-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20270506
 DTEND;VALUE=DATE:20270509
 SUMMARY:silver: Only Moon and Mercury alone in a sign (up)
 DESCRIPTION:Best rule - small edge. 26 yrs: 49/80 (61% vs base 53%)\, avg +0.80%\, right in 15/26 yrs
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-05-15-Best-gol-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-05-15-Best-gol-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20270515
 DTEND;VALUE=DATE:20270524
 SUMMARY:gold: U2 - Mercury with the Sun (up)
 DESCRIPTION:Best rule - small edge. 26 yrs: 176/291 (60% vs base 57%)\, avg +0.62%\, right in 20/26 yrs
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-06-05-Best-sil-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-06-05-Best-sil-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20270605
 DTEND;VALUE=DATE:20270608
 SUMMARY:silver: Only Moon and Mercury alone in a sign (up)
 DESCRIPTION:Best rule - small edge. 26 yrs: 49/80 (61% vs base 53%)\, avg +0.80%\, right in 15/26 yrs
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-06-10-Best-sil-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-06-10-Best-sil-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20270610
 DTEND;VALUE=DATE:20270705
 SUMMARY:silver: Retrograde Mercury or Jupiter (up)
 DESCRIPTION:Best rule - lead (p ≈ 0.05–0.07). 26 yrs: 78/126 (62% vs base 54%)\, avg +1.80%\, right in 15/26 yrs
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-06-15-Best-gol-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-06-15-Best-gol-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20270615
 DTEND;VALUE=DATE:20270717
 SUMMARY:gold: U2 - Mercury with the Sun (up)
 DESCRIPTION:Best rule - small edge. 26 yrs: 176/291 (60% vs base 57%)\, avg +0.62%\, right in 20/26 yrs
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-06-22-Vola-gol-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-06-22-Vola-gol-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20270622
 DTEND;VALUE=DATE:20270629
 SUMMARY:gold: Big-move watch: Jupiter changes nakshatra\; Jupiter changes sign (up)
 DESCRIPTION:Volatility watch - volatility only. leads over-represented on ±2% days 2000–2026 (no FDR pass\; out of sample ×1.02)
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-07-20-Venu-gol-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-07-20-Venu-gol-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20270720
 DTEND;VALUE=DATE:20270908
 SUMMARY:gold & silver: Venus combust in East – Gemini / Punarvasu (up)
 DESCRIPTION:Venus (TA S18) - lead (p ≈ 0.10). gold 12/16 (75% vs 57%\, p 0.113)\; 20 sessions 82% vs 58%
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-07-30-Best-gol-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-07-30-Best-gol-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20270730
 DTEND;VALUE=DATE:20270815
 SUMMARY:gold: U2 - Mercury with the Sun (up)
 DESCRIPTION:Best rule - small edge. 26 yrs: 176/291 (60% vs base 57%)\, avg +0.62%\, right in 20/26 yrs
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-07-30-Best-sil-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-07-30-Best-sil-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20270730
 DTEND;VALUE=DATE:20270731
 SUMMARY:silver: Only Moon and Mercury alone in a sign (up)
 DESCRIPTION:Best rule - small edge. 26 yrs: 49/80 (61% vs base 53%)\, avg +0.80%\, right in 15/26 yrs
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-08-17-Best-gol-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-08-17-Best-gol-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20270817
 DTEND;VALUE=DATE:20270831
 SUMMARY:gold: U2 - Mercury with the Sun (up)
 DESCRIPTION:Best rule - small edge. 26 yrs: 176/291 (60% vs base 57%)\, avg +0.62%\, right in 20/26 yrs
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-08-27-Vola-gol-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-08-27-Vola-gol-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20270827
 DTEND;VALUE=DATE:20270903
 SUMMARY:gold: Single lead: Jupiter changes nakshatra (up)
 DESCRIPTION:Volatility watch - volatility only. held in both halves\; ±2% days 10.2% when present vs 7.3% normally
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-09-01-Best-sil-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-09-01-Best-sil-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20270901
 DTEND;VALUE=DATE:20270904
 SUMMARY:silver: Only Moon and Mercury alone in a sign (up)
 DESCRIPTION:Best rule - small edge. 26 yrs: 49/80 (61% vs base 53%)\, avg +0.80%\, right in 15/26 yrs
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-09-07-Venu-gol-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-09-07-Venu-gol-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20270907
 DTEND;VALUE=DATE:20270908
 SUMMARY:gold & silver: Venus rises in West – Leo / Uttara Phalguni with Sun (qualified: sharp upturn after a smal (dip then up)
 DESCRIPTION:Venus (TA S18) - no edge – watch only. gold 6/12 (50% vs 45%)\, at chance\; qualified dip-then-upturn 2/6 vs 1.8 expected. Same configuration as 31 Jan 2026.
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-09-17-Best-gol-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-09-17-Best-gol-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20270917
 DTEND;VALUE=DATE:20270922
 SUMMARY:gold: U2 - Mercury with the Sun (up)
 DESCRIPTION:Best rule - small edge. 26 yrs: 176/291 (60% vs base 57%)\, avg +0.62%\, right in 20/26 yrs
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-10-07-Best-sil-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-10-07-Best-sil-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20271007
 DTEND;VALUE=DATE:20271029
 SUMMARY:silver: Retrograde Mercury or Jupiter (up)
 DESCRIPTION:Best rule - lead (p ≈ 0.05–0.07). 26 yrs: 78/126 (62% vs base 54%)\, avg +1.80%\, right in 15/26 yrs
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-10-17-Best-gol-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-10-17-Best-gol-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20271017
 DTEND;VALUE=DATE:20271021
 SUMMARY:gold: U2 - Mercury with the Sun (up)
 DESCRIPTION:Best rule - small edge. 26 yrs: 176/291 (60% vs base 57%)\, avg +0.62%\, right in 20/26 yrs
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-10-18-Vola-gol-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-10-18-Vola-gol-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20271018
 DTEND;VALUE=DATE:20271019
 SUMMARY:gold: Big-move watch: full moon\; Sun in Libra aspected by (or with) malefics [Bullish] (down)
 DESCRIPTION:Volatility watch - volatility only. leads over-represented on ±2% days 2000–2026 (no FDR pass\; out of sample ×1.02)
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-10-26-Best-sil-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-10-26-Best-sil-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20271026
 DTEND;VALUE=DATE:20271029
 SUMMARY:silver: Only Moon and Mercury alone in a sign (up)
 DESCRIPTION:Best rule - small edge. 26 yrs: 49/80 (61% vs base 53%)\, avg +0.80%\, right in 15/26 yrs
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-11-01-Vola-gol-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-11-01-Vola-gol-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20271101
 DTEND;VALUE=DATE:20271108
 SUMMARY:gold: Single lead: Jupiter changes nakshatra (up)
 DESCRIPTION:Volatility watch - volatility only. held in both halves\; ±2% days 10.2% when present vs 7.3% normally
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-11-05-Best-gol-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-11-05-Best-gol-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20271105
 DTEND;VALUE=DATE:20271117
 SUMMARY:gold: U2 - Mercury with the Sun (up)
 DESCRIPTION:Best rule - small edge. 26 yrs: 176/291 (60% vs base 57%)\, avg +0.62%\, right in 20/26 yrs
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-11-23-Vola-gol-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-11-23-Vola-gol-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20271123
 DTEND;VALUE=DATE:20271130
 SUMMARY:gold: Single lead: Jupiter changes sign (either)
 DESCRIPTION:Volatility watch - volatility only. held in both halves\; ±2% days 12.2% when present vs 7.3% normally
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-11-24-Best-sil-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-11-24-Best-sil-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20271124
 DTEND;VALUE=DATE:20271126
 SUMMARY:silver: Only Moon and Mercury alone in a sign (up)
 DESCRIPTION:Best rule - small edge. 26 yrs: 49/80 (61% vs base 53%)\, avg +0.80%\, right in 15/26 yrs
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-11-25-Best-gol-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-11-25-Best-gol-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20271125
 DTEND;VALUE=DATE:20271215
 SUMMARY:gold: U2 - Mercury with the Sun (up)
 DESCRIPTION:Best rule - small edge. 26 yrs: 176/291 (60% vs base 57%)\, avg +0.62%\, right in 20/26 yrs
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-12-16-Best-gol-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-12-16-Best-gol-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20271216
 DTEND;VALUE=DATE:20280101
 SUMMARY:gold: U2 - Mercury with the Sun (up)
 DESCRIPTION:Best rule - small edge. 26 yrs: 176/291 (60% vs base 57%)\, avg +0.62%\, right in 20/26 yrs
 END:VEVENT
 BEGIN:VEVENT
-UID:outlook-2027-12-27-Vola-gol-1@finastro2027
-DTSTAMP:20261122T152452Z
+UID:outlook-gold-2027-12-27-Vola-gol-1@finastro2027
+DTSTAMP:20261122T203208Z
 DTSTART;VALUE=DATE:20271227
 DTEND;VALUE=DATE:20280101
 SUMMARY:gold: Big-move watch: Rahu & Mars together in any sign [Bullish]\; Mars in Capricorn\; Mars with R (up)

@@ -1,0 +1,5827 @@
+{
+ "start": "2026-11-22",
+ "end": "2027-12-31",
+ "base_big_rate": 8.4,
+ "min_q": 0.17857333107552886,
+ "split": {
+  "split": "2013-11-20",
+  "n_leads": 17,
+  "n_held": 3,
+  "pooled_obs": 330,
+  "pooled_exp": 363.7,
+  "pooled_lift": 0.91,
+  "pooled_p": 0.965137117637765,
+  "leads": [
+   {
+    "factor": "Event: Jupiter changes sign",
+    "side": "any",
+    "h1_obs": 13,
+    "h1_exp": 7.4,
+    "h1_lift": 1.76,
+    "h1_p": 0.038101285507183835,
+    "h2_obs": 8,
+    "h2_exp": 10.9,
+    "h2_lift": 0.73,
+    "held": false
+   },
+   {
+    "factor": "Event: Jupiter stations direct",
+    "side": "down",
+    "h1_obs": 6,
+    "h1_exp": 2.6,
+    "h1_lift": 2.33,
+    "h1_p": 0.047067274906846146,
+    "h2_obs": 2,
+    "h2_exp": 2.4,
+    "h2_lift": 0.83,
+    "held": false
+   },
+   {
+    "factor": "Event: Venus-Uranus conjunction",
+    "side": "up",
+    "h1_obs": 7,
+    "h1_exp": 2.3,
+    "h1_lift": 3.08,
+    "h1_p": 0.008813603864520347,
+    "h2_obs": 4,
+    "h2_exp": 2.9,
+    "h2_lift": 1.38,
+    "held": true
+   },
+   {
+    "factor": "Rule: Jupiter turns direct from retrograde [Bullish]",
+    "side": "down",
+    "h1_obs": 6,
+    "h1_exp": 2.6,
+    "h1_lift": 2.33,
+    "h1_p": 0.047067274906846146,
+    "h2_obs": 2,
+    "h2_exp": 2.4,
+    "h2_lift": 0.83,
+    "held": false
+   },
+   {
+    "factor": "Rule: Mercury in Aries or Virgo [Bearish]",
+    "side": "any",
+    "h1_obs": 66,
+    "h1_exp": 45.8,
+    "h1_lift": 1.44,
+    "h1_p": 0.0029228139057380087,
+    "h2_obs": 44,
+    "h2_exp": 42.8,
+    "h2_lift": 1.03,
+    "held": true
+   },
+   {
+    "factor": "Rule: Mercury in Aries or Virgo [Bearish]",
+    "side": "down",
+    "h1_obs": 37,
+    "h1_exp": 24.7,
+    "h1_lift": 1.5,
+    "h1_p": 0.012337378986661984,
+    "h2_obs": 19,
+    "h2_exp": 20.2,
+    "h2_lift": 0.94,
+    "held": false
+   },
+   {
+    "factor": "Rule: Shukla Paksha of 16 days or Krishna Paksha of 14 days [Bullish]",
+    "side": "any",
+    "h1_obs": 95,
+    "h1_exp": 74.8,
+    "h1_lift": 1.27,
+    "h1_p": 0.01353244362873729,
+    "h2_obs": 61,
+    "h2_exp": 74.9,
+    "h2_lift": 0.81,
+    "held": false
+   },
+   {
+    "factor": "Rule: Shukla Paksha of 16 days or Krishna Paksha of 14 days [Bullish]",
+    "side": "up",
+    "h1_obs": 45,
+    "h1_exp": 34.1,
+    "h1_lift": 1.32,
+    "h1_p": 0.04151034890159133,
+    "h2_obs": 32,
+    "h2_exp": 39.0,
+    "h2_lift": 0.82,
+    "held": false
+   },
+   {
+    "factor": "Rule: Venus alone in Leo or Libra [Bearish]",
+    "side": "up",
+    "h1_obs": 14,
+    "h1_exp": 7.3,
+    "h1_lift": 1.92,
+    "h1_p": 0.01725064386133457,
+    "h2_obs": 6,
+    "h2_exp": 10.6,
+    "h2_lift": 0.57,
+    "held": false
+   },
+   {
+    "factor": "State: Jupiter in Aries",
+    "side": "up",
+    "h1_obs": 25,
+    "h1_exp": 16.9,
+    "h1_lift": 1.48,
+    "h1_p": 0.037464234116686757,
+    "h2_obs": 6,
+    "h2_exp": 9.8,
+    "h2_lift": 0.61,
+    "held": false
+   },
+   {
+    "factor": "State: Jupiter in Gemini",
+    "side": "any",
+    "h1_obs": 20,
+    "h1_exp": 12.9,
+    "h1_lift": 1.56,
+    "h1_p": 0.0389866028259398,
+    "h2_obs": 68,
+    "h2_exp": 54.9,
+    "h2_lift": 1.24,
+    "held": true
+   },
+   {
+    "factor": "State: Mars in Gemini",
+    "side": "up",
+    "h1_obs": 26,
+    "h1_exp": 16.9,
+    "h1_lift": 1.54,
+    "h1_p": 0.023769802241027094,
+    "h2_obs": 13,
+    "h2_exp": 15.3,
+    "h2_lift": 0.85,
+    "held": false
+   },
+   {
+    "factor": "State: Sun in Aries",
+    "side": "any",
+    "h1_obs": 42,
+    "h1_exp": 23.3,
+    "h1_lift": 1.8,
+    "h1_p": 0.0003211148382764595,
+    "h2_obs": 22,
+    "h2_exp": 25.1,
+    "h2_lift": 0.88,
+    "held": false
+   },
+   {
+    "factor": "State: Sun in Aries",
+    "side": "up",
+    "h1_obs": 17,
+    "h1_exp": 10.7,
+    "h1_lift": 1.59,
+    "h1_p": 0.04629364916604417,
+    "h2_obs": 13,
+    "h2_exp": 13.1,
+    "h2_lift": 0.99,
+    "held": false
+   },
+   {
+    "factor": "State: Sun in Aries",
+    "side": "down",
+    "h1_obs": 25,
+    "h1_exp": 12.6,
+    "h1_lift": 1.98,
+    "h1_p": 0.001363953529747719,
+    "h2_obs": 9,
+    "h2_exp": 12.0,
+    "h2_lift": 0.75,
+    "held": false
+   },
+   {
+    "factor": "State: Sun in Taurus",
+    "side": "down",
+    "h1_obs": 19,
+    "h1_exp": 12.4,
+    "h1_lift": 1.53,
+    "h1_p": 0.04820519332843276,
+    "h2_obs": 9,
+    "h2_exp": 11.1,
+    "h2_lift": 0.81,
+    "held": false
+   },
+   {
+    "factor": "State: Sun in a Rahu nakshatra",
+    "side": "up",
+    "h1_obs": 22,
+    "h1_exp": 13.5,
+    "h1_lift": 1.63,
+    "h1_p": 0.019963016650029197,
+    "h2_obs": 12,
+    "h2_exp": 16.3,
+    "h2_lift": 0.74,
+    "held": false
+   }
+  ]
+ },
+ "leads": [
+  {
+   "factor": "Event: Mercury-Mars opposition",
+   "sides": [
+    {
+     "side": "any",
+     "obs": 7,
+     "exp": 3.2,
+     "lift": 2.2,
+     "p": 0.04365926689586619,
+     "h1": 2.99,
+     "h2": 1.84,
+     "held": true
+    },
+    {
+     "side": "up",
+     "obs": 5,
+     "exp": 1.8,
+     "lift": 2.82,
+     "p": 0.03449429309464003,
+     "h1": 6.01,
+     "h2": 1.57,
+     "held": true
+    }
+   ],
+   "lean": "up",
+   "both_halves": true,
+   "outer": false,
+   "kind": "Event",
+   "big_rate": 13.2,
+   "up_share": 71.4,
+   "episodes": 5
+  },
+  {
+   "factor": "Rule: Mars in Gemini with any 2 other planets [Bearish]",
+   "sides": [
+    {
+     "side": "any",
+     "obs": 10,
+     "exp": 5.2,
+     "lift": 1.93,
+     "p": 0.038913499926327866,
+     "h1": 2.09,
+     "h2": 1.64,
+     "held": true
+    }
+   ],
+   "lean": "either",
+   "both_halves": true,
+   "outer": false,
+   "kind": "Rule",
+   "big_rate": 9.8,
+   "up_share": 40.0,
+   "episodes": 6
+  },
+  {
+   "factor": "Event: Saturn combustion begins",
+   "sides": [
+    {
+     "side": "down",
+     "obs": 10,
+     "exp": 5.3,
+     "lift": 1.88,
+     "p": 0.044687546980164194,
+     "h1": 1.73,
+     "h2": 2.09,
+     "held": true
+    }
+   ],
+   "lean": "down",
+   "both_halves": true,
+   "outer": false,
+   "kind": "Event",
+   "big_rate": 12.4,
+   "up_share": 33.3,
+   "episodes": 9
+  },
+  {
+   "factor": "State: Jupiter in Gemini",
+   "sides": [
+    {
+     "side": "any",
+     "obs": 88,
+     "exp": 67.1,
+     "lift": 1.31,
+     "p": 0.008124114612664157,
+     "h1": 1.56,
+     "h2": 1.24,
+     "held": true
+    },
+    {
+     "side": "up",
+     "obs": 50,
+     "exp": 33.0,
+     "lift": 1.52,
+     "p": 0.0033818871615290957,
+     "h1": 1.67,
+     "h2": 1.49,
+     "held": true
+    }
+   ],
+   "lean": "up",
+   "both_halves": true,
+   "outer": false,
+   "kind": "State",
+   "big_rate": 11.7,
+   "up_share": 56.8,
+   "episodes": 17
+  },
+  {
+   "factor": "Rule: Rahu does Vedha of Pushya [Bullish]",
+   "sides": [
+    {
+     "side": "any",
+     "obs": 118,
+     "exp": 93.0,
+     "lift": 1.27,
+     "p": 0.006954965734905616,
+     "h1": 1.14,
+     "h2": 1.35,
+     "held": true
+    },
+    {
+     "side": "up",
+     "obs": 64,
+     "exp": 42.8,
+     "lift": 1.49,
+     "p": 0.0014881110922960739,
+     "h1": 1.42,
+     "h2": 1.53,
+     "held": true
+    }
+   ],
+   "lean": "up",
+   "both_halves": true,
+   "outer": false,
+   "kind": "Rule",
+   "big_rate": 17.0,
+   "up_share": 54.2,
+   "episodes": 25
+  },
+  {
+   "factor": "State: Mars in Sagittarius",
+   "sides": [
+    {
+     "side": "any",
+     "obs": 39,
+     "exp": 29.3,
+     "lift": 1.33,
+     "p": 0.048946216802496556,
+     "h1": 1.25,
+     "h2": 1.38,
+     "held": true
+    }
+   ],
+   "lean": "either",
+   "both_halves": true,
+   "outer": false,
+   "kind": "State",
+   "big_rate": 8.6,
+   "up_share": 51.3,
+   "episodes": 14
+  },
+  {
+   "factor": "State: Jupiter aspects the Sun",
+   "sides": [
+    {
+     "side": "up",
+     "obs": 72,
+     "exp": 55.8,
+     "lift": 1.29,
+     "p": 0.020850913184920272,
+     "h1": 1.19,
+     "h2": 1.4,
+     "held": true
+    }
+   ],
+   "lean": "up",
+   "both_halves": true,
+   "outer": false,
+   "kind": "State",
+   "big_rate": 8.6,
+   "up_share": 58.1,
+   "episodes": 57
+  },
+  {
+   "factor": "State: Saturn aspects the Sun",
+   "sides": [
+    {
+     "side": "up",
+     "obs": 82,
+     "exp": 65.7,
+     "lift": 1.25,
+     "p": 0.028621404943476092,
+     "h1": 1.24,
+     "h2": 1.26,
+     "held": true
+    }
+   ],
+   "lean": "up",
+   "both_halves": true,
+   "outer": false,
+   "kind": "State",
+   "big_rate": 9.0,
+   "up_share": 56.9,
+   "episodes": 69
+  },
+  {
+   "factor": "Rule: Mercury in Aries or Virgo [Bearish]",
+   "sides": [
+    {
+     "side": "any",
+     "obs": 110,
+     "exp": 88.7,
+     "lift": 1.24,
+     "p": 0.015975388202196905,
+     "h1": 1.44,
+     "h2": 1.03,
+     "held": true
+    }
+   ],
+   "lean": "either",
+   "both_halves": true,
+   "outer": false,
+   "kind": "Rule",
+   "big_rate": 9.7,
+   "up_share": 49.1,
+   "episodes": 51
+  },
+  {
+   "factor": "Rule: Retrograde Mercury or Jupiter [Bullish]",
+   "sides": [
+    {
+     "side": "any",
+     "obs": 273,
+     "exp": 238.8,
+     "lift": 1.14,
+     "p": 0.016150880648341803,
+     "h1": 1.05,
+     "h2": 1.23,
+     "held": true
+    },
+    {
+     "side": "up",
+     "obs": 138,
+     "exp": 117.1,
+     "lift": 1.18,
+     "p": 0.03230381462827814,
+     "h1": 1.06,
+     "h2": 1.29,
+     "held": true
+    }
+   ],
+   "lean": "up",
+   "both_halves": true,
+   "outer": false,
+   "kind": "Rule",
+   "big_rate": 9.5,
+   "up_share": 50.5,
+   "episodes": 108
+  },
+  {
+   "factor": "Event: Venus-Uranus conjunction",
+   "sides": [
+    {
+     "side": "up",
+     "obs": 11,
+     "exp": 5.2,
+     "lift": 2.11,
+     "p": 0.01786608150803537,
+     "h1": 3.08,
+     "h2": 1.36,
+     "held": true
+    }
+   ],
+   "lean": "up",
+   "both_halves": true,
+   "outer": true,
+   "kind": "Event",
+   "big_rate": 10.4,
+   "up_share": 84.6,
+   "episodes": 8
+  },
+  {
+   "factor": "Event: Neptune stations direct",
+   "sides": [
+    {
+     "side": "up",
+     "obs": 9,
+     "exp": 4.6,
+     "lift": 1.98,
+     "p": 0.04266958954646227,
+     "h1": 1.62,
+     "h2": 2.4,
+     "held": true
+    }
+   ],
+   "lean": "up",
+   "both_halves": true,
+   "outer": true,
+   "kind": "Event",
+   "big_rate": 10.7,
+   "up_share": 69.2,
+   "episodes": 8
+  },
+  {
+   "factor": "Event: Venus-Jupiter opposition",
+   "sides": [
+    {
+     "side": "any",
+     "obs": 17,
+     "exp": 9.7,
+     "lift": 1.75,
+     "p": 0.021430563666982483,
+     "h1": 1.3,
+     "h2": 2.07,
+     "held": true
+    },
+    {
+     "side": "up",
+     "obs": 9,
+     "exp": 4.7,
+     "lift": 1.92,
+     "p": 0.049581294045534796,
+     "h1": 0.95,
+     "h2": 2.73,
+     "held": false
+    }
+   ],
+   "lean": "up",
+   "both_halves": false,
+   "outer": false,
+   "kind": "Event",
+   "big_rate": 15.7,
+   "up_share": 52.9,
+   "episodes": 11
+  },
+  {
+   "factor": "State: Mars in Capricorn",
+   "sides": [
+    {
+     "side": "any",
+     "obs": 46,
+     "exp": 34.0,
+     "lift": 1.35,
+     "p": 0.02864227668429875,
+     "h1": 0.58,
+     "h2": 1.79,
+     "held": false
+    },
+    {
+     "side": "up",
+     "obs": 25,
+     "exp": 16.5,
+     "lift": 1.52,
+     "p": 0.029902856136771017,
+     "h1": 0.19,
+     "h2": 2.15,
+     "held": false
+    }
+   ],
+   "lean": "up",
+   "both_halves": false,
+   "outer": false,
+   "kind": "State",
+   "big_rate": 9.4,
+   "up_share": 54.3,
+   "episodes": 15
+  },
+  {
+   "factor": "State: Venus with the Sun",
+   "sides": [
+    {
+     "side": "any",
+     "obs": 162,
+     "exp": 129.6,
+     "lift": 1.25,
+     "p": 0.0033469626177106138,
+     "h1": 0.98,
+     "h2": 1.55,
+     "held": false
+    },
+    {
+     "side": "up",
+     "obs": 90,
+     "exp": 64.1,
+     "lift": 1.41,
+     "p": 0.0012733504098823012,
+     "h1": 0.98,
+     "h2": 1.81,
+     "held": false
+    }
+   ],
+   "lean": "up",
+   "both_halves": false,
+   "outer": false,
+   "kind": "State",
+   "big_rate": 10.5,
+   "up_share": 55.6,
+   "episodes": 78
+  },
+  {
+   "factor": "State: Sun in Aries",
+   "sides": [
+    {
+     "side": "any",
+     "obs": 64,
+     "exp": 48.6,
+     "lift": 1.32,
+     "p": 0.019484583460413263,
+     "h1": 1.8,
+     "h2": 0.88,
+     "held": false
+    },
+    {
+     "side": "down",
+     "obs": 34,
+     "exp": 24.7,
+     "lift": 1.37,
+     "p": 0.04435423386692672,
+     "h1": 1.98,
+     "h2": 0.75,
+     "held": false
+    }
+   ],
+   "lean": "down",
+   "both_halves": false,
+   "outer": false,
+   "kind": "State",
+   "big_rate": 11.3,
+   "up_share": 46.9,
+   "episodes": 20
+  },
+  {
+   "factor": "State: Mars with the Sun",
+   "sides": [
+    {
+     "side": "up",
+     "obs": 55,
+     "exp": 41.1,
+     "lift": 1.34,
+     "p": 0.022083775440965736,
+     "h1": 0.91,
+     "h2": 1.88,
+     "held": false
+    }
+   ],
+   "lean": "up",
+   "both_halves": false,
+   "outer": false,
+   "kind": "State",
+   "big_rate": 11.7,
+   "up_share": 53.9,
+   "episodes": 40
+  },
+  {
+   "factor": "State: Jupiter retrograde",
+   "sides": [
+    {
+     "side": "any",
+     "obs": 192,
+     "exp": 159.4,
+     "lift": 1.2,
+     "p": 0.006560581094812612,
+     "h1": 1.01,
+     "h2": 1.39,
+     "held": true
+    },
+    {
+     "side": "up",
+     "obs": 104,
+     "exp": 78.1,
+     "lift": 1.33,
+     "p": 0.0029343061269553328,
+     "h1": 0.98,
+     "h2": 1.66,
+     "held": false
+    }
+   ],
+   "lean": "up",
+   "both_halves": false,
+   "outer": false,
+   "kind": "State",
+   "big_rate": 9.9,
+   "up_share": 54.2,
+   "episodes": 70
+  }
+ ],
+ "windows": [
+  {
+   "factor": "Event: Neptune stations direct",
+   "frm": "2026-12-09",
+   "to": "2026-12-15",
+   "exact": [
+    "2026-12-12"
+   ]
+  },
+  {
+   "factor": "Rule: Retrograde Mercury or Jupiter [Bullish]",
+   "frm": "2026-12-12",
+   "to": "2027-04-12",
+   "exact": []
+  },
+  {
+   "factor": "State: Jupiter retrograde",
+   "frm": "2026-12-13",
+   "to": "2027-04-12",
+   "exact": []
+  },
+  {
+   "factor": "State: Jupiter aspects the Sun",
+   "frm": "2026-12-16",
+   "to": "2027-01-13",
+   "exact": []
+  },
+  {
+   "factor": "State: Saturn aspects the Sun",
+   "frm": "2026-12-16",
+   "to": "2027-01-13",
+   "exact": []
+  },
+  {
+   "factor": "State: Jupiter aspects the Sun",
+   "frm": "2027-01-25",
+   "to": "2027-02-12",
+   "exact": []
+  },
+  {
+   "factor": "Event: Mercury-Mars opposition",
+   "frm": "2027-02-04",
+   "to": "2027-02-10",
+   "exact": [
+    "2027-02-07"
+   ]
+  },
+  {
+   "factor": "Event: Mercury-Mars opposition",
+   "frm": "2027-02-13",
+   "to": "2027-02-19",
+   "exact": [
+    "2027-02-16"
+   ]
+  },
+  {
+   "factor": "Event: Mercury-Mars opposition",
+   "frm": "2027-03-08",
+   "to": "2027-03-14",
+   "exact": [
+    "2027-03-11"
+   ]
+  },
+  {
+   "factor": "Event: Venus-Jupiter opposition",
+   "frm": "2027-03-13",
+   "to": "2027-03-19",
+   "exact": [
+    "2027-03-16"
+   ]
+  },
+  {
+   "factor": "State: Jupiter aspects the Sun",
+   "frm": "2027-03-15",
+   "to": "2027-04-13",
+   "exact": []
+  },
+  {
+   "factor": "Event: Saturn combustion begins",
+   "frm": "2027-03-20",
+   "to": "2027-03-26",
+   "exact": [
+    "2027-03-23"
+   ]
+  },
+  {
+   "factor": "State: Sun in Aries",
+   "frm": "2027-04-14",
+   "to": "2027-05-14",
+   "exact": []
+  },
+  {
+   "factor": "Rule: Mercury in Aries or Virgo [Bearish]",
+   "frm": "2027-04-21",
+   "to": "2027-05-06",
+   "exact": []
+  },
+  {
+   "factor": "State: Venus with the Sun",
+   "frm": "2027-05-10",
+   "to": "2027-05-14",
+   "exact": []
+  },
+  {
+   "factor": "State: Saturn aspects the Sun",
+   "frm": "2027-05-15",
+   "to": "2027-06-02",
+   "exact": []
+  },
+  {
+   "factor": "State: Venus with the Sun",
+   "frm": "2027-06-04",
+   "to": "2027-06-14",
+   "exact": []
+  },
+  {
+   "factor": "Event: Venus-Uranus conjunction",
+   "frm": "2027-06-10",
+   "to": "2027-06-16",
+   "exact": [
+    "2027-06-13"
+   ]
+  },
+  {
+   "factor": "Rule: Retrograde Mercury or Jupiter [Bullish]",
+   "frm": "2027-06-10",
+   "to": "2027-07-04",
+   "exact": []
+  },
+  {
+   "factor": "State: Saturn aspects the Sun",
+   "frm": "2027-06-15",
+   "to": "2027-07-16",
+   "exact": []
+  },
+  {
+   "factor": "State: Venus with the Sun",
+   "frm": "2027-06-28",
+   "to": "2027-07-16",
+   "exact": []
+  },
+  {
+   "factor": "State: Venus with the Sun",
+   "frm": "2027-07-23",
+   "to": "2027-08-15",
+   "exact": []
+  },
+  {
+   "factor": "State: Venus with the Sun",
+   "frm": "2027-08-17",
+   "to": "2027-09-08",
+   "exact": []
+  },
+  {
+   "factor": "Rule: Mercury in Aries or Virgo [Bearish]",
+   "frm": "2027-08-30",
+   "to": "2027-09-21",
+   "exact": []
+  },
+  {
+   "factor": "State: Venus with the Sun",
+   "frm": "2027-09-17",
+   "to": "2027-10-02",
+   "exact": []
+  },
+  {
+   "factor": "Rule: Retrograde Mercury or Jupiter [Bullish]",
+   "frm": "2027-10-07",
+   "to": "2027-10-28",
+   "exact": []
+  },
+  {
+   "factor": "State: Saturn aspects the Sun",
+   "frm": "2027-10-18",
+   "to": "2027-10-19",
+   "exact": []
+  },
+  {
+   "factor": "State: Venus with the Sun",
+   "frm": "2027-10-18",
+   "to": "2027-10-27",
+   "exact": []
+  },
+  {
+   "factor": "Rule: Mercury in Aries or Virgo [Bearish]",
+   "frm": "2027-10-20",
+   "to": "2027-11-05",
+   "exact": []
+  },
+  {
+   "factor": "State: Mars with the Sun",
+   "frm": "2027-11-17",
+   "to": "2027-11-17",
+   "exact": []
+  },
+  {
+   "factor": "State: Venus with the Sun",
+   "frm": "2027-11-17",
+   "to": "2027-11-20",
+   "exact": []
+  },
+  {
+   "factor": "State: Mars in Sagittarius",
+   "frm": "2027-11-18",
+   "to": "2027-12-26",
+   "exact": []
+  },
+  {
+   "factor": "Event: Neptune stations direct",
+   "frm": "2027-12-12",
+   "to": "2027-12-18",
+   "exact": [
+    "2027-12-15"
+   ]
+  },
+  {
+   "factor": "State: Mars with the Sun",
+   "frm": "2027-12-16",
+   "to": "2027-12-26",
+   "exact": []
+  },
+  {
+   "factor": "State: Saturn aspects the Sun",
+   "frm": "2027-12-16",
+   "to": "2027-12-31",
+   "exact": []
+  },
+  {
+   "factor": "State: Mars in Capricorn",
+   "frm": "2027-12-27",
+   "to": "2027-12-31",
+   "exact": []
+  }
+ ],
+ "stretches": [
+  {
+   "frm": "2026-12-14",
+   "to": "2027-01-13",
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde",
+    "State: Jupiter aspects the Sun",
+    "State: Saturn aspects the Sun",
+    "Event: Neptune stations direct"
+   ],
+   "peak": 4,
+   "peak_day": "2026-12-16",
+   "up": 5,
+   "down": 0,
+   "lean": "up"
+  },
+  {
+   "frm": "2027-01-25",
+   "to": "2027-02-19",
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde",
+    "State: Jupiter aspects the Sun",
+    "Event: Mercury-Mars opposition"
+   ],
+   "peak": 4,
+   "peak_day": "2027-02-04",
+   "up": 4,
+   "down": 0,
+   "lean": "up"
+  },
+  {
+   "frm": "2027-03-08",
+   "to": "2027-04-12",
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde",
+    "State: Jupiter aspects the Sun",
+    "Event: Mercury-Mars opposition",
+    "Event: Venus-Jupiter opposition",
+    "Event: Saturn combustion begins"
+   ],
+   "peak": 4,
+   "peak_day": "2027-03-22",
+   "up": 5,
+   "down": 1,
+   "lean": "up"
+  },
+  {
+   "frm": "2027-06-10",
+   "to": "2027-07-02",
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Saturn aspects the Sun",
+    "State: Venus with the Sun",
+    "Event: Venus-Uranus conjunction"
+   ],
+   "peak": 3,
+   "peak_day": "2027-06-15",
+   "up": 4,
+   "down": 0,
+   "lean": "up"
+  },
+  {
+   "frm": "2027-10-18",
+   "to": "2027-10-28",
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Venus with the Sun",
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "State: Saturn aspects the Sun"
+   ],
+   "peak": 3,
+   "peak_day": "2027-10-18",
+   "up": 3,
+   "down": 0,
+   "lean": "up"
+  },
+  {
+   "frm": "2027-12-16",
+   "to": "2027-12-24",
+   "leads": [
+    "State: Mars in Sagittarius",
+    "State: Mars with the Sun",
+    "State: Saturn aspects the Sun",
+    "Event: Neptune stations direct"
+   ],
+   "peak": 4,
+   "peak_day": "2027-12-16",
+   "up": 3,
+   "down": 0,
+   "lean": "up"
+  }
+ ],
+ "days": [
+  {
+   "date": "2026-11-22",
+   "weekday": false,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2026-11-23",
+   "weekday": true,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2026-11-24",
+   "weekday": true,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2026-11-25",
+   "weekday": true,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2026-11-26",
+   "weekday": true,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2026-11-27",
+   "weekday": true,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2026-11-28",
+   "weekday": false,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2026-11-29",
+   "weekday": false,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2026-11-30",
+   "weekday": true,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2026-12-01",
+   "weekday": true,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2026-12-02",
+   "weekday": true,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2026-12-03",
+   "weekday": true,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2026-12-04",
+   "weekday": true,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2026-12-05",
+   "weekday": false,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2026-12-06",
+   "weekday": false,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2026-12-07",
+   "weekday": true,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2026-12-08",
+   "weekday": true,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2026-12-09",
+   "weekday": true,
+   "leads": [
+    "Event: Neptune stations direct"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2026-12-10",
+   "weekday": true,
+   "leads": [
+    "Event: Neptune stations direct"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2026-12-11",
+   "weekday": true,
+   "leads": [
+    "Event: Neptune stations direct"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2026-12-12",
+   "weekday": false,
+   "leads": [
+    "Event: Neptune stations direct",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2026-12-13",
+   "weekday": false,
+   "leads": [
+    "Event: Neptune stations direct",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 1,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2026-12-14",
+   "weekday": true,
+   "leads": [
+    "Event: Neptune stations direct",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 1,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2026-12-15",
+   "weekday": true,
+   "leads": [
+    "Event: Neptune stations direct",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 1,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2026-12-16",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2026-12-17",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2026-12-18",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2026-12-19",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2026-12-20",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2026-12-21",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2026-12-22",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2026-12-23",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2026-12-24",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2026-12-25",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2026-12-26",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2026-12-27",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2026-12-28",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2026-12-29",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2026-12-30",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2026-12-31",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2027-01-01",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2027-01-02",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2027-01-03",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2027-01-04",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2027-01-05",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2027-01-06",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2027-01-07",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2027-01-08",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2027-01-09",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2027-01-10",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2027-01-11",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2027-01-12",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2027-01-13",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2027-01-14",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-01-15",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-01-16",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-01-17",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-01-18",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-01-19",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-01-20",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-01-21",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-01-22",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-01-23",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-01-24",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-01-25",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-01-26",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-01-27",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-01-28",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-01-29",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-01-30",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-01-31",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-02-01",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-02-02",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-02-03",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-02-04",
+   "weekday": true,
+   "leads": [
+    "Event: Mercury-Mars opposition",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2027-02-05",
+   "weekday": true,
+   "leads": [
+    "Event: Mercury-Mars opposition",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2027-02-06",
+   "weekday": false,
+   "leads": [
+    "Event: Mercury-Mars opposition",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2027-02-07",
+   "weekday": false,
+   "leads": [
+    "Event: Mercury-Mars opposition",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2027-02-08",
+   "weekday": true,
+   "leads": [
+    "Event: Mercury-Mars opposition",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2027-02-09",
+   "weekday": true,
+   "leads": [
+    "Event: Mercury-Mars opposition",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2027-02-10",
+   "weekday": true,
+   "leads": [
+    "Event: Mercury-Mars opposition",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2027-02-11",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-02-12",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-02-13",
+   "weekday": false,
+   "leads": [
+    "Event: Mercury-Mars opposition",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-02-14",
+   "weekday": false,
+   "leads": [
+    "Event: Mercury-Mars opposition",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-02-15",
+   "weekday": true,
+   "leads": [
+    "Event: Mercury-Mars opposition",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-02-16",
+   "weekday": true,
+   "leads": [
+    "Event: Mercury-Mars opposition",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-02-17",
+   "weekday": true,
+   "leads": [
+    "Event: Mercury-Mars opposition",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-02-18",
+   "weekday": true,
+   "leads": [
+    "Event: Mercury-Mars opposition",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-02-19",
+   "weekday": true,
+   "leads": [
+    "Event: Mercury-Mars opposition",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-02-20",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-02-21",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-02-22",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-02-23",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-02-24",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-02-25",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-02-26",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-02-27",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-02-28",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-03-01",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-03-02",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-03-03",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-03-04",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-03-05",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-03-06",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-03-07",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-03-08",
+   "weekday": true,
+   "leads": [
+    "Event: Mercury-Mars opposition",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-03-09",
+   "weekday": true,
+   "leads": [
+    "Event: Mercury-Mars opposition",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-03-10",
+   "weekday": true,
+   "leads": [
+    "Event: Mercury-Mars opposition",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-03-11",
+   "weekday": true,
+   "leads": [
+    "Event: Mercury-Mars opposition",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-03-12",
+   "weekday": true,
+   "leads": [
+    "Event: Mercury-Mars opposition",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-03-13",
+   "weekday": false,
+   "leads": [
+    "Event: Mercury-Mars opposition",
+    "Event: Venus-Jupiter opposition",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 4,
+   "n_strong": 2,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2027-03-14",
+   "weekday": false,
+   "leads": [
+    "Event: Mercury-Mars opposition",
+    "Event: Venus-Jupiter opposition",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter retrograde"
+   ],
+   "n": 4,
+   "n_strong": 2,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2027-03-15",
+   "weekday": true,
+   "leads": [
+    "Event: Venus-Jupiter opposition",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 4,
+   "n_strong": 2,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2027-03-16",
+   "weekday": true,
+   "leads": [
+    "Event: Venus-Jupiter opposition",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 4,
+   "n_strong": 2,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2027-03-17",
+   "weekday": true,
+   "leads": [
+    "Event: Venus-Jupiter opposition",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 4,
+   "n_strong": 2,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2027-03-18",
+   "weekday": true,
+   "leads": [
+    "Event: Venus-Jupiter opposition",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 4,
+   "n_strong": 2,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2027-03-19",
+   "weekday": true,
+   "leads": [
+    "Event: Venus-Jupiter opposition",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 4,
+   "n_strong": 2,
+   "up": 4,
+   "down": 0
+  },
+  {
+   "date": "2027-03-20",
+   "weekday": false,
+   "leads": [
+    "Event: Saturn combustion begins",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 3,
+   "down": 1
+  },
+  {
+   "date": "2027-03-21",
+   "weekday": false,
+   "leads": [
+    "Event: Saturn combustion begins",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 3,
+   "down": 1
+  },
+  {
+   "date": "2027-03-22",
+   "weekday": true,
+   "leads": [
+    "Event: Saturn combustion begins",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 3,
+   "down": 1
+  },
+  {
+   "date": "2027-03-23",
+   "weekday": true,
+   "leads": [
+    "Event: Saturn combustion begins",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 3,
+   "down": 1
+  },
+  {
+   "date": "2027-03-24",
+   "weekday": true,
+   "leads": [
+    "Event: Saturn combustion begins",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 3,
+   "down": 1
+  },
+  {
+   "date": "2027-03-25",
+   "weekday": true,
+   "leads": [
+    "Event: Saturn combustion begins",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 3,
+   "down": 1
+  },
+  {
+   "date": "2027-03-26",
+   "weekday": true,
+   "leads": [
+    "Event: Saturn combustion begins",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 4,
+   "n_strong": 3,
+   "up": 3,
+   "down": 1
+  },
+  {
+   "date": "2027-03-27",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-03-28",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-03-29",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-03-30",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-03-31",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-04-01",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-04-02",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-04-03",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-04-04",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-04-05",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-04-06",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-04-07",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-04-08",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-04-09",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-04-10",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-04-11",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-04-12",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Jupiter aspects the Sun",
+    "State: Jupiter retrograde"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-04-13",
+   "weekday": true,
+   "leads": [
+    "State: Jupiter aspects the Sun"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-04-14",
+   "weekday": true,
+   "leads": [
+    "State: Sun in Aries"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 0,
+   "down": 1
+  },
+  {
+   "date": "2027-04-15",
+   "weekday": true,
+   "leads": [
+    "State: Sun in Aries"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 0,
+   "down": 1
+  },
+  {
+   "date": "2027-04-16",
+   "weekday": true,
+   "leads": [
+    "State: Sun in Aries"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 0,
+   "down": 1
+  },
+  {
+   "date": "2027-04-17",
+   "weekday": false,
+   "leads": [
+    "State: Sun in Aries"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 0,
+   "down": 1
+  },
+  {
+   "date": "2027-04-18",
+   "weekday": false,
+   "leads": [
+    "State: Sun in Aries"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 0,
+   "down": 1
+  },
+  {
+   "date": "2027-04-19",
+   "weekday": true,
+   "leads": [
+    "State: Sun in Aries"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 0,
+   "down": 1
+  },
+  {
+   "date": "2027-04-20",
+   "weekday": true,
+   "leads": [
+    "State: Sun in Aries"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 0,
+   "down": 1
+  },
+  {
+   "date": "2027-04-21",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "State: Sun in Aries"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 0,
+   "down": 1
+  },
+  {
+   "date": "2027-04-22",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "State: Sun in Aries"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 0,
+   "down": 1
+  },
+  {
+   "date": "2027-04-23",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "State: Sun in Aries"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 0,
+   "down": 1
+  },
+  {
+   "date": "2027-04-24",
+   "weekday": false,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "State: Sun in Aries"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 0,
+   "down": 1
+  },
+  {
+   "date": "2027-04-25",
+   "weekday": false,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "State: Sun in Aries"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 0,
+   "down": 1
+  },
+  {
+   "date": "2027-04-26",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "State: Sun in Aries"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 0,
+   "down": 1
+  },
+  {
+   "date": "2027-04-27",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "State: Sun in Aries"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 0,
+   "down": 1
+  },
+  {
+   "date": "2027-04-28",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "State: Sun in Aries"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 0,
+   "down": 1
+  },
+  {
+   "date": "2027-04-29",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "State: Sun in Aries"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 0,
+   "down": 1
+  },
+  {
+   "date": "2027-04-30",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "State: Sun in Aries"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 0,
+   "down": 1
+  },
+  {
+   "date": "2027-05-01",
+   "weekday": false,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "State: Sun in Aries"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 0,
+   "down": 1
+  },
+  {
+   "date": "2027-05-02",
+   "weekday": false,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "State: Sun in Aries"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 0,
+   "down": 1
+  },
+  {
+   "date": "2027-05-03",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "State: Sun in Aries"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 0,
+   "down": 1
+  },
+  {
+   "date": "2027-05-04",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "State: Sun in Aries"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 0,
+   "down": 1
+  },
+  {
+   "date": "2027-05-05",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "State: Sun in Aries"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 0,
+   "down": 1
+  },
+  {
+   "date": "2027-05-06",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "State: Sun in Aries"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 0,
+   "down": 1
+  },
+  {
+   "date": "2027-05-07",
+   "weekday": true,
+   "leads": [
+    "State: Sun in Aries"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 0,
+   "down": 1
+  },
+  {
+   "date": "2027-05-08",
+   "weekday": false,
+   "leads": [
+    "State: Sun in Aries"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 0,
+   "down": 1
+  },
+  {
+   "date": "2027-05-09",
+   "weekday": false,
+   "leads": [
+    "State: Sun in Aries"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 0,
+   "down": 1
+  },
+  {
+   "date": "2027-05-10",
+   "weekday": true,
+   "leads": [
+    "State: Sun in Aries",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 0,
+   "up": 1,
+   "down": 1
+  },
+  {
+   "date": "2027-05-11",
+   "weekday": true,
+   "leads": [
+    "State: Sun in Aries",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 0,
+   "up": 1,
+   "down": 1
+  },
+  {
+   "date": "2027-05-12",
+   "weekday": true,
+   "leads": [
+    "State: Sun in Aries",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 0,
+   "up": 1,
+   "down": 1
+  },
+  {
+   "date": "2027-05-13",
+   "weekday": true,
+   "leads": [
+    "State: Sun in Aries",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 0,
+   "up": 1,
+   "down": 1
+  },
+  {
+   "date": "2027-05-14",
+   "weekday": true,
+   "leads": [
+    "State: Sun in Aries",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 0,
+   "up": 1,
+   "down": 1
+  },
+  {
+   "date": "2027-05-15",
+   "weekday": false,
+   "leads": [
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-05-16",
+   "weekday": false,
+   "leads": [
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-05-17",
+   "weekday": true,
+   "leads": [
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-05-18",
+   "weekday": true,
+   "leads": [
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-05-19",
+   "weekday": true,
+   "leads": [
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-05-20",
+   "weekday": true,
+   "leads": [
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-05-21",
+   "weekday": true,
+   "leads": [
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-05-22",
+   "weekday": false,
+   "leads": [
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-05-23",
+   "weekday": false,
+   "leads": [
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-05-24",
+   "weekday": true,
+   "leads": [
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-05-25",
+   "weekday": true,
+   "leads": [
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-05-26",
+   "weekday": true,
+   "leads": [
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-05-27",
+   "weekday": true,
+   "leads": [
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-05-28",
+   "weekday": true,
+   "leads": [
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-05-29",
+   "weekday": false,
+   "leads": [
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-05-30",
+   "weekday": false,
+   "leads": [
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-05-31",
+   "weekday": true,
+   "leads": [
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-06-01",
+   "weekday": true,
+   "leads": [
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-06-02",
+   "weekday": true,
+   "leads": [
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-06-03",
+   "weekday": true,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-06-04",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-06-05",
+   "weekday": false,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-06-06",
+   "weekday": false,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-06-07",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-06-08",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-06-09",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-06-10",
+   "weekday": true,
+   "leads": [
+    "Event: Venus-Uranus conjunction",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Venus with the Sun"
+   ],
+   "n": 3,
+   "n_strong": 1,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-06-11",
+   "weekday": true,
+   "leads": [
+    "Event: Venus-Uranus conjunction",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Venus with the Sun"
+   ],
+   "n": 3,
+   "n_strong": 1,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-06-12",
+   "weekday": false,
+   "leads": [
+    "Event: Venus-Uranus conjunction",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Venus with the Sun"
+   ],
+   "n": 3,
+   "n_strong": 1,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-06-13",
+   "weekday": false,
+   "leads": [
+    "Event: Venus-Uranus conjunction",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Venus with the Sun"
+   ],
+   "n": 3,
+   "n_strong": 1,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-06-14",
+   "weekday": true,
+   "leads": [
+    "Event: Venus-Uranus conjunction",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Venus with the Sun"
+   ],
+   "n": 3,
+   "n_strong": 1,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-06-15",
+   "weekday": true,
+   "leads": [
+    "Event: Venus-Uranus conjunction",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-06-16",
+   "weekday": true,
+   "leads": [
+    "Event: Venus-Uranus conjunction",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-06-17",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 2,
+   "n_strong": 2,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-06-18",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 2,
+   "n_strong": 2,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-06-19",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 2,
+   "n_strong": 2,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-06-20",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 2,
+   "n_strong": 2,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-06-21",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 2,
+   "n_strong": 2,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-06-22",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 2,
+   "n_strong": 2,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-06-23",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 2,
+   "n_strong": 2,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-06-24",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 2,
+   "n_strong": 2,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-06-25",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 2,
+   "n_strong": 2,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-06-26",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 2,
+   "n_strong": 2,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-06-27",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 2,
+   "n_strong": 2,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-06-28",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Saturn aspects the Sun",
+    "State: Venus with the Sun"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-06-29",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Saturn aspects the Sun",
+    "State: Venus with the Sun"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-06-30",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Saturn aspects the Sun",
+    "State: Venus with the Sun"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-07-01",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Saturn aspects the Sun",
+    "State: Venus with the Sun"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-07-02",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Saturn aspects the Sun",
+    "State: Venus with the Sun"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-07-03",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Saturn aspects the Sun",
+    "State: Venus with the Sun"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-07-04",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Saturn aspects the Sun",
+    "State: Venus with the Sun"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-07-05",
+   "weekday": true,
+   "leads": [
+    "State: Saturn aspects the Sun",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-07-06",
+   "weekday": true,
+   "leads": [
+    "State: Saturn aspects the Sun",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-07-07",
+   "weekday": true,
+   "leads": [
+    "State: Saturn aspects the Sun",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-07-08",
+   "weekday": true,
+   "leads": [
+    "State: Saturn aspects the Sun",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-07-09",
+   "weekday": true,
+   "leads": [
+    "State: Saturn aspects the Sun",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-07-10",
+   "weekday": false,
+   "leads": [
+    "State: Saturn aspects the Sun",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-07-11",
+   "weekday": false,
+   "leads": [
+    "State: Saturn aspects the Sun",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-07-12",
+   "weekday": true,
+   "leads": [
+    "State: Saturn aspects the Sun",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-07-13",
+   "weekday": true,
+   "leads": [
+    "State: Saturn aspects the Sun",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-07-14",
+   "weekday": true,
+   "leads": [
+    "State: Saturn aspects the Sun",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-07-15",
+   "weekday": true,
+   "leads": [
+    "State: Saturn aspects the Sun",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-07-16",
+   "weekday": true,
+   "leads": [
+    "State: Saturn aspects the Sun",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-07-17",
+   "weekday": false,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-07-18",
+   "weekday": false,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-07-19",
+   "weekday": true,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-07-20",
+   "weekday": true,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-07-21",
+   "weekday": true,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-07-22",
+   "weekday": true,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-07-23",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-07-24",
+   "weekday": false,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-07-25",
+   "weekday": false,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-07-26",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-07-27",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-07-28",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-07-29",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-07-30",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-07-31",
+   "weekday": false,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-08-01",
+   "weekday": false,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-08-02",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-08-03",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-08-04",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-08-05",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-08-06",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-08-07",
+   "weekday": false,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-08-08",
+   "weekday": false,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-08-09",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-08-10",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-08-11",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-08-12",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-08-13",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-08-14",
+   "weekday": false,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-08-15",
+   "weekday": false,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-08-16",
+   "weekday": true,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-08-17",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-08-18",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-08-19",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-08-20",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-08-21",
+   "weekday": false,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-08-22",
+   "weekday": false,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-08-23",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-08-24",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-08-25",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-08-26",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-08-27",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-08-28",
+   "weekday": false,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-08-29",
+   "weekday": false,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-08-30",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-08-31",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-09-01",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-09-02",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-09-03",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-09-04",
+   "weekday": false,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-09-05",
+   "weekday": false,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-09-06",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-09-07",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-09-08",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-09-09",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-09-10",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-09-11",
+   "weekday": false,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-09-12",
+   "weekday": false,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-09-13",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-09-14",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-09-15",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-09-16",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-09-17",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-09-18",
+   "weekday": false,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-09-19",
+   "weekday": false,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-09-20",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-09-21",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-09-22",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-09-23",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-09-24",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-09-25",
+   "weekday": false,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-09-26",
+   "weekday": false,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-09-27",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-09-28",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-09-29",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-09-30",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-10-01",
+   "weekday": true,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-10-02",
+   "weekday": false,
+   "leads": [
+    "State: Venus with the Sun"
+   ],
+   "n": 1,
+   "n_strong": 0,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-10-03",
+   "weekday": false,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-10-04",
+   "weekday": true,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-10-05",
+   "weekday": true,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-10-06",
+   "weekday": true,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-10-07",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-10-08",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-10-09",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-10-10",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-10-11",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-10-12",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-10-13",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-10-14",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-10-15",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-10-16",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-10-17",
+   "weekday": false,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-10-18",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Saturn aspects the Sun",
+    "State: Venus with the Sun"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-10-19",
+   "weekday": true,
+   "leads": [
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Saturn aspects the Sun",
+    "State: Venus with the Sun"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-10-20",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Venus with the Sun"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-10-21",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Venus with the Sun"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-10-22",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Venus with the Sun"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-10-23",
+   "weekday": false,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Venus with the Sun"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-10-24",
+   "weekday": false,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Venus with the Sun"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-10-25",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Venus with the Sun"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-10-26",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Venus with the Sun"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-10-27",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]",
+    "State: Venus with the Sun"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-10-28",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]",
+    "Rule: Retrograde Mercury or Jupiter [Bullish]"
+   ],
+   "n": 2,
+   "n_strong": 2,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-10-29",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-10-30",
+   "weekday": false,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-10-31",
+   "weekday": false,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-11-01",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-11-02",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-11-03",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-11-04",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-11-05",
+   "weekday": true,
+   "leads": [
+    "Rule: Mercury in Aries or Virgo [Bearish]"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-11-06",
+   "weekday": false,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-11-07",
+   "weekday": false,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-11-08",
+   "weekday": true,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-11-09",
+   "weekday": true,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-11-10",
+   "weekday": true,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-11-11",
+   "weekday": true,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-11-12",
+   "weekday": true,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-11-13",
+   "weekday": false,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-11-14",
+   "weekday": false,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-11-15",
+   "weekday": true,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-11-16",
+   "weekday": true,
+   "leads": [],
+   "n": 0,
+   "n_strong": 0,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-11-17",
+   "weekday": true,
+   "leads": [
+    "State: Mars with the Sun",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 0,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-11-18",
+   "weekday": true,
+   "leads": [
+    "State: Mars in Sagittarius",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-11-19",
+   "weekday": true,
+   "leads": [
+    "State: Mars in Sagittarius",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-11-20",
+   "weekday": false,
+   "leads": [
+    "State: Mars in Sagittarius",
+    "State: Venus with the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-11-21",
+   "weekday": false,
+   "leads": [
+    "State: Mars in Sagittarius"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-11-22",
+   "weekday": true,
+   "leads": [
+    "State: Mars in Sagittarius"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-11-23",
+   "weekday": true,
+   "leads": [
+    "State: Mars in Sagittarius"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-11-24",
+   "weekday": true,
+   "leads": [
+    "State: Mars in Sagittarius"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-11-25",
+   "weekday": true,
+   "leads": [
+    "State: Mars in Sagittarius"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-11-26",
+   "weekday": true,
+   "leads": [
+    "State: Mars in Sagittarius"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-11-27",
+   "weekday": false,
+   "leads": [
+    "State: Mars in Sagittarius"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-11-28",
+   "weekday": false,
+   "leads": [
+    "State: Mars in Sagittarius"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-11-29",
+   "weekday": true,
+   "leads": [
+    "State: Mars in Sagittarius"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-11-30",
+   "weekday": true,
+   "leads": [
+    "State: Mars in Sagittarius"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-12-01",
+   "weekday": true,
+   "leads": [
+    "State: Mars in Sagittarius"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-12-02",
+   "weekday": true,
+   "leads": [
+    "State: Mars in Sagittarius"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-12-03",
+   "weekday": true,
+   "leads": [
+    "State: Mars in Sagittarius"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-12-04",
+   "weekday": false,
+   "leads": [
+    "State: Mars in Sagittarius"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-12-05",
+   "weekday": false,
+   "leads": [
+    "State: Mars in Sagittarius"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-12-06",
+   "weekday": true,
+   "leads": [
+    "State: Mars in Sagittarius"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-12-07",
+   "weekday": true,
+   "leads": [
+    "State: Mars in Sagittarius"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-12-08",
+   "weekday": true,
+   "leads": [
+    "State: Mars in Sagittarius"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-12-09",
+   "weekday": true,
+   "leads": [
+    "State: Mars in Sagittarius"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-12-10",
+   "weekday": true,
+   "leads": [
+    "State: Mars in Sagittarius"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-12-11",
+   "weekday": false,
+   "leads": [
+    "State: Mars in Sagittarius"
+   ],
+   "n": 1,
+   "n_strong": 1,
+   "up": 0,
+   "down": 0
+  },
+  {
+   "date": "2027-12-12",
+   "weekday": false,
+   "leads": [
+    "Event: Neptune stations direct",
+    "State: Mars in Sagittarius"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-12-13",
+   "weekday": true,
+   "leads": [
+    "Event: Neptune stations direct",
+    "State: Mars in Sagittarius"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-12-14",
+   "weekday": true,
+   "leads": [
+    "Event: Neptune stations direct",
+    "State: Mars in Sagittarius"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-12-15",
+   "weekday": true,
+   "leads": [
+    "Event: Neptune stations direct",
+    "State: Mars in Sagittarius"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 1,
+   "down": 0
+  },
+  {
+   "date": "2027-12-16",
+   "weekday": true,
+   "leads": [
+    "Event: Neptune stations direct",
+    "State: Mars in Sagittarius",
+    "State: Mars with the Sun",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 4,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-12-17",
+   "weekday": true,
+   "leads": [
+    "Event: Neptune stations direct",
+    "State: Mars in Sagittarius",
+    "State: Mars with the Sun",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 4,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-12-18",
+   "weekday": false,
+   "leads": [
+    "Event: Neptune stations direct",
+    "State: Mars in Sagittarius",
+    "State: Mars with the Sun",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 4,
+   "n_strong": 2,
+   "up": 3,
+   "down": 0
+  },
+  {
+   "date": "2027-12-19",
+   "weekday": false,
+   "leads": [
+    "State: Mars in Sagittarius",
+    "State: Mars with the Sun",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-12-20",
+   "weekday": true,
+   "leads": [
+    "State: Mars in Sagittarius",
+    "State: Mars with the Sun",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-12-21",
+   "weekday": true,
+   "leads": [
+    "State: Mars in Sagittarius",
+    "State: Mars with the Sun",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-12-22",
+   "weekday": true,
+   "leads": [
+    "State: Mars in Sagittarius",
+    "State: Mars with the Sun",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-12-23",
+   "weekday": true,
+   "leads": [
+    "State: Mars in Sagittarius",
+    "State: Mars with the Sun",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-12-24",
+   "weekday": true,
+   "leads": [
+    "State: Mars in Sagittarius",
+    "State: Mars with the Sun",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-12-25",
+   "weekday": false,
+   "leads": [
+    "State: Mars in Sagittarius",
+    "State: Mars with the Sun",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-12-26",
+   "weekday": false,
+   "leads": [
+    "State: Mars in Sagittarius",
+    "State: Mars with the Sun",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 3,
+   "n_strong": 2,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-12-27",
+   "weekday": true,
+   "leads": [
+    "State: Mars in Capricorn",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-12-28",
+   "weekday": true,
+   "leads": [
+    "State: Mars in Capricorn",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-12-29",
+   "weekday": true,
+   "leads": [
+    "State: Mars in Capricorn",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-12-30",
+   "weekday": true,
+   "leads": [
+    "State: Mars in Capricorn",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  },
+  {
+   "date": "2027-12-31",
+   "weekday": true,
+   "leads": [
+    "State: Mars in Capricorn",
+    "State: Saturn aspects the Sun"
+   ],
+   "n": 2,
+   "n_strong": 1,
+   "up": 2,
+   "down": 0
+  }
+ ]
+}

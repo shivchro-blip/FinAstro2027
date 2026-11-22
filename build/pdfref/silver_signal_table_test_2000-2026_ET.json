@@ -1,0 +1,318 @@
+{
+ "pooled": {
+  "in_sample": {
+   "Bullish": {
+    "worked": 192,
+    "decided": 332,
+    "hit": 58,
+    "base": 54,
+    "p": 0.107
+   },
+   "Bearish": {
+    "worked": 4,
+    "decided": 8,
+    "hit": 50,
+    "base": 50,
+    "p": 0.637
+   }
+  },
+  "walk_forward": {
+   "Bullish": {
+    "worked": 67,
+    "decided": 122,
+    "hit": 55,
+    "base": 52,
+    "p": 0.29
+   }
+  },
+  "source_only": {
+   "Bullish": {
+    "worked": 87,
+    "decided": 145,
+    "hit": 60,
+    "base": 54,
+    "p": 0.075
+   }
+  }
+ },
+ "in_sample": [
+  {
+   "signal": "Bullish",
+   "strength": "High",
+   "episodes": 104,
+   "days": 2905,
+   "worked": 60,
+   "decided": 97,
+   "hit": 62,
+   "base": 55,
+   "p": 0.093,
+   "avg": 2.56,
+   "d_hit": 54,
+   "d_base": 54
+  },
+  {
+   "signal": "Bullish",
+   "strength": "Moderate",
+   "episodes": 274,
+   "days": 663,
+   "worked": 132,
+   "decided": 235,
+   "hit": 56,
+   "base": 54,
+   "p": 0.265,
+   "avg": 0.37,
+   "d_hit": 56,
+   "d_base": 54
+  },
+  {
+   "signal": "Bullish",
+   "strength": "Low",
+   "episodes": 298,
+   "days": 1245,
+   "worked": 125,
+   "decided": 253,
+   "hit": 49,
+   "base": 53,
+   "p": 0.913,
+   "avg": 0.19,
+   "d_hit": 52,
+   "d_base": 53
+  },
+  {
+   "signal": "Bearish",
+   "strength": "Moderate",
+   "episodes": 8,
+   "days": 14,
+   "worked": 4,
+   "decided": 8,
+   "hit": 50,
+   "base": 50,
+   "p": 0.629,
+   "avg": -0.91,
+   "d_hit": 50,
+   "d_base": 48
+  },
+  {
+   "signal": "Bearish",
+   "strength": "Low",
+   "episodes": 14,
+   "days": 65,
+   "worked": 6,
+   "decided": 12,
+   "hit": 50,
+   "base": 45,
+   "p": 0.48,
+   "avg": -0.61,
+   "d_hit": 53,
+   "d_base": 46
+  },
+  {
+   "signal": "Volatile",
+   "strength": "Low",
+   "episodes": 40,
+   "days": 0,
+   "big": 15,
+   "big_exp": 15.5
+  }
+ ],
+ "in_sample_2013": [
+  {
+   "signal": "Bullish",
+   "strength": "High",
+   "episodes": 54,
+   "days": 1468,
+   "worked": 30,
+   "decided": 51,
+   "hit": 59,
+   "base": 53,
+   "p": 0.232,
+   "avg": 3.39,
+   "d_hit": 54,
+   "d_base": 52
+  },
+  {
+   "signal": "Bullish",
+   "strength": "Moderate",
+   "episodes": 125,
+   "days": 313,
+   "worked": 58,
+   "decided": 108,
+   "hit": 54,
+   "base": 53,
+   "p": 0.483,
+   "avg": 0.11,
+   "d_hit": 52,
+   "d_base": 53
+  },
+  {
+   "signal": "Bullish",
+   "strength": "Low",
+   "episodes": 137,
+   "days": 570,
+   "worked": 56,
+   "decided": 118,
+   "hit": 47,
+   "base": 53,
+   "p": 0.888,
+   "avg": -0.09,
+   "d_hit": 50,
+   "d_base": 52
+  },
+  {
+   "signal": "Bearish",
+   "strength": "Moderate",
+   "episodes": 5,
+   "days": 8,
+   "worked": 3,
+   "decided": 5,
+   "hit": 60,
+   "base": 51,
+   "p": 0.51,
+   "avg": -1.51,
+   "d_hit": 71,
+   "d_base": 50
+  },
+  {
+   "signal": "Bearish",
+   "strength": "Low",
+   "episodes": 8,
+   "days": 31,
+   "worked": 4,
+   "decided": 7,
+   "hit": 57,
+   "base": 46,
+   "p": 0.403,
+   "avg": -1.76,
+   "d_hit": 50,
+   "d_base": 42
+  },
+  {
+   "signal": "Volatile",
+   "strength": "Low",
+   "episodes": 22,
+   "days": 0,
+   "big": 7,
+   "big_exp": 9.5
+  }
+ ],
+ "walk_forward": [
+  {
+   "signal": "Bullish",
+   "strength": "High",
+   "episodes": 51,
+   "days": 543,
+   "worked": 26,
+   "decided": 47,
+   "hit": 55,
+   "base": 52,
+   "p": 0.401,
+   "avg": 0.72,
+   "d_hit": 54,
+   "d_base": 53
+  },
+  {
+   "signal": "Bullish",
+   "strength": "Moderate",
+   "episodes": 81,
+   "days": 762,
+   "worked": 41,
+   "decided": 75,
+   "hit": 55,
+   "base": 52,
+   "p": 0.335,
+   "avg": 1.0,
+   "d_hit": 53,
+   "d_base": 52
+  },
+  {
+   "signal": "Bullish",
+   "strength": "Low",
+   "episodes": 109,
+   "days": 1159,
+   "worked": 56,
+   "decided": 101,
+   "hit": 55,
+   "base": 52,
+   "p": 0.291,
+   "avg": 0.63,
+   "d_hit": 53,
+   "d_base": 53
+  },
+  {
+   "signal": "Bearish",
+   "strength": "Low",
+   "episodes": 25,
+   "days": 177,
+   "worked": 12,
+   "decided": 21,
+   "hit": 57,
+   "base": 48,
+   "p": 0.27,
+   "avg": -0.06,
+   "d_hit": 47,
+   "d_base": 47
+  },
+  {
+   "signal": "Volatile",
+   "strength": "Low",
+   "episodes": 40,
+   "days": 0,
+   "big": 8,
+   "big_exp": 13.7
+  }
+ ],
+ "source_only": [
+  {
+   "signal": "Bullish",
+   "strength": "High",
+   "episodes": 48,
+   "days": 387,
+   "worked": 29,
+   "decided": 44,
+   "hit": 66,
+   "base": 53,
+   "p": 0.065,
+   "avg": 2.14,
+   "d_hit": 62,
+   "d_base": 53
+  },
+  {
+   "signal": "Bullish",
+   "strength": "Moderate",
+   "episodes": 110,
+   "days": 2504,
+   "worked": 58,
+   "decided": 101,
+   "hit": 57,
+   "base": 54,
+   "p": 0.279,
+   "avg": 1.54,
+   "d_hit": 53,
+   "d_base": 54
+  },
+  {
+   "signal": "Bullish",
+   "strength": "Low",
+   "episodes": 65,
+   "days": 348,
+   "worked": 32,
+   "decided": 55,
+   "hit": 58,
+   "base": 54,
+   "p": 0.288,
+   "avg": 0.16,
+   "d_hit": 52,
+   "d_base": 53
+  }
+ ],
+ "n_leads_h1": 13,
+ "fast_h1": [],
+ "day_share": {
+  "Bullish High": 2905,
+  "Bullish Moderate": 663,
+  "Bullish Low": 1245,
+  "Bearish Moderate": 14,
+  "Bearish Low": 65,
+  "Volatile Low": 276
+ }
+}

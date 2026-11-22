@@ -293,6 +293,20 @@
     "build/pdfref/signal_table_test_2000-2026_ET.html",
     "build/pdfref/gold_signals_2026-11-22_to_2027-12-31_ET.html"
    ]
+  },
+  {
+   "date": "2026-11-22",
+   "pr": "21",
+   "topic": "Silver: big moves (±3.5%), watch, outlook, fast triggers, signal table and its test",
+   "analysis": "The gold chain re-run for silver via tools/metal_cfg.py (--metal silver). Threshold 3.5%, as rare for silver (8.4% of days) as 2% for gold. Same methods: same-year expected counts, FDR, split halves, permutation, walk-forward test of the table's strengths.",
+   "result": "546 big days; top in-sample leads (Venus with the Sun x1.25, Jupiter retrograde x1.20, Rahu vedha of Pushya x1.27) fail out of sample: 3 of 17 early leads held, pooled x0.91. Fast triggers: 3 of 44 passed vs 2.5 by chance. Table walk-forward: High = Moderate = Low = 55% vs 52%, no strength order; volatile 8 vs 13.7. Source rules only: bullish High 66% vs 53% (p 0.065), High+Moderate 60% vs 54% (p 0.075). The value is in retrograde Mercury or Jupiter: mid-Dec 2026 - mid-Apr 2027, 10 Jun - 2 Jul, 7-28 Oct 2027.",
+   "files": [
+    "tools/metal_cfg.py",
+    "build/pdfref/silver_signals_2026-11-22_to_2027-12-31_ET.html",
+    "build/pdfref/silver_signal_table_test_2000-2026_ET.html",
+    "build/pdfref/silver_big_moves_2000-2026_ET.html",
+    "build/pdfref/silver_outlook_2026-11-22_to_2027-12-31_ET.html"
+   ]
   }
  ]
 }

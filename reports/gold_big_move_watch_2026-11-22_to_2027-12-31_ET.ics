@@ -4,40 +4,40 @@ PRODID:-//finastro2027//gold big-move watch//EN
 CALSCALE:GREGORIAN
 X-WR-CALNAME:Gold big-move watch
 BEGIN:VEVENT
-UID:bigmove-2027-01-21@finastro2027
-DTSTAMP:20261122T141044Z
+UID:bigmove-gold-2027-01-21@finastro2027
+DTSTAMP:20261122T203421Z
 DTSTART;VALUE=DATE:20270121
 DTEND;VALUE=DATE:20270128
 SUMMARY:Gold volatility watch (either)
 DESCRIPTION:Gold big-move watch (either lean\; peak 3 leads on Thu 21 Jan 2027).\nLeads: Jupiter changes nakshatra\; Jupiter changes sign\; full moon\nNormal chance of a +/-2% day 7.3%. No lead passed FDR\; out of sample x1.02. A watch date\, not a call.
 END:VEVENT
 BEGIN:VEVENT
-UID:bigmove-2027-03-22@finastro2027
-DTSTAMP:20261122T141044Z
+UID:bigmove-gold-2027-03-22@finastro2027
+DTSTAMP:20261122T203421Z
 DTSTART;VALUE=DATE:20270322
 DTEND;VALUE=DATE:20270326
 SUMMARY:Gold volatility watch (down)
 DESCRIPTION:Gold big-move watch (down lean\; peak 2 leads on Mon 22 Mar 2027).\nLeads: Saturn combustion begins\; full moon\nNormal chance of a +/-2% day 7.3%. No lead passed FDR\; out of sample x1.02. A watch date\, not a call.
 END:VEVENT
 BEGIN:VEVENT
-UID:bigmove-2027-06-22@finastro2027
-DTSTAMP:20261122T141044Z
+UID:bigmove-gold-2027-06-22@finastro2027
+DTSTAMP:20261122T203421Z
 DTSTART;VALUE=DATE:20270622
 DTEND;VALUE=DATE:20270629
 SUMMARY:Gold volatility watch (up)
 DESCRIPTION:Gold big-move watch (up lean\; peak 2 leads on Tue 22 Jun 2027).\nLeads: Jupiter changes nakshatra\; Jupiter changes sign\nNormal chance of a +/-2% day 7.3%. No lead passed FDR\; out of sample x1.02. A watch date\, not a call.
 END:VEVENT
 BEGIN:VEVENT
-UID:bigmove-2027-10-18@finastro2027
-DTSTAMP:20261122T141044Z
+UID:bigmove-gold-2027-10-18@finastro2027
+DTSTAMP:20261122T203421Z
 DTSTART;VALUE=DATE:20271018
 DTEND;VALUE=DATE:20271019
 SUMMARY:Gold volatility watch (down)
 DESCRIPTION:Gold big-move watch (down lean\; peak 2 leads on Mon 18 Oct 2027).\nLeads: full moon\; Sun in Libra aspected by (or with) malefics [Bullish]\nNormal chance of a +/-2% day 7.3%. No lead passed FDR\; out of sample x1.02. A watch date\, not a call.
 END:VEVENT
 BEGIN:VEVENT
-UID:bigmove-2027-12-27@finastro2027
-DTSTAMP:20261122T141044Z
+UID:bigmove-gold-2027-12-27@finastro2027
+DTSTAMP:20261122T203421Z
 DTSTART;VALUE=DATE:20271227
 DTEND;VALUE=DATE:20280101
 SUMMARY:Gold volatility watch (up)

@@ -1,6 +1,6 @@
 # Silver findings tracker
 
-Generated 22 Nov 2026 15:05 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
+Generated 22 Nov 2026 15:35 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
 
 ## Recent findings
 
@@ -111,6 +111,7 @@ Best (from the 26 yr data): Retrograde Mercury or Jupiter, Only Moon and Mercury
 
 | Date | PR | Topic | Result |
 |---|---|---|---|
+| 2026-11-22 | #21 | Silver: big moves (±3.5%), watch, outlook, fast triggers, signal table and its test | 546 big days; top in-sample leads (Venus with the Sun x1.25, Jupiter retrograde x1.20, Rahu vedha of Pushya x1.27) fail out of sample: 3 of 17 early leads held, pooled x0.91. Fast triggers: 3 of 44 passed vs 2.5 by chance. Table walk-forward: High = Moderate = Low = 55% vs 52%, no strength order; volatile 8 vs 13.7. Source rules only: bullish High 66% vs 53% (p 0.065), High+Moderate 60% vs 54% (p 0.075). The value is in retrograde Mercury or Jupiter: mid-Dec 2026 - mid-Apr 2027, 10 Jun - 2 Jul, 7-28 Oct 2027. |
 | 2026-11-22 | #20 | Backtest of the signal table's High / Moderate / Low | Walk-forward: Bullish High 64% vs 53% (33, p 0.16), Moderate 58% vs 54%, Low 54% vs 55%; High+Moderate 60% vs 54% (102, p 0.13). Bearish Moderate 48% vs 44%, Low 44% vs 44%; Volatile big-day 11 vs 10.4. Source rules only: bullish High+Moderate 67% vs 56% (57, p 0.058). Bullish strength order holds in every run but is not significant; bearish and volatile labels have no edge. A past-record column was added to the table. |
 | 2026-11-22 | #19 | Simple gold bullish / bearish table to end-2027 | High bullish: 20 Jul and 30 Jul - 2 Sep 2027 (Venus combust in East with Mercury with the Sun). Moderate bullish: 22-28 Jun, 21-29 Jul, early Sep, 5 Nov, 27-31 Dec 2027. Moderate bearish: 22-23 Mar 2027. Low bearish: 23 Nov - 1 Dec 2026, 24-25 Mar, 7-10 May 2027. Volatile: 4-6 May, 18 Oct, 23-24 Nov 2027. Most other signal days are low bullish (U2 only). |
 | 2026-11-22 | #18 | Narrowing the outlook windows with fast planets (Moon, Mercury, Venus, Sun, Mars) | Not supported beyond chance: 3 factors passed against 2.0 expected under permutation (90th pct 4); none survives FDR. Moon opposite the Sun x1.49 (only inside windows; outside x0.74), Moon 6/8 Saturn x1.31, Moon opposite Rahu x1.34; none picks a direction. Narrowed days, best guesses: 22 Jan, 22-23 Mar, 19-20 Jul, 30 Aug, 6-7 Sep, 25-26 Nov 2027; no trigger in 4-10 May, 22-28 Jun, 18 Oct, 1-7 Nov, 27-31 Dec. |
