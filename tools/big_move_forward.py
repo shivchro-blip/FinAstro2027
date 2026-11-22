@@ -1,6 +1,6 @@
 """Where the big-move leads (tools/big_move_analysis.py) fall from 22 Nov 2026 to 31 Dec 2027.
 
-    python tools/big_move_forward.py [start] [end]
+    python tools/big_move_forward.py [start] [end] [--metal silver]
 
 A lead is a factor that was over-represented on gold's +/-2% days in 2000-2026
 (lift > 1, p < 0.05 on a side, at least 5 separate episodes). For each lead the
@@ -27,6 +27,8 @@ from zoneinfo import ZoneInfo
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
+sys.path.insert(0, str(ROOT / "tools"))
+import metal_cfg as MC  # noqa: E402
 from finastro.sky import Sky  # noqa: E402
 from finastro.pdfref.detect import Ctx  # noqa: E402
 from finastro.pdfref.engine import Grid, utc  # noqa: E402
@@ -61,7 +63,7 @@ def as_date(x):
 def forward_rules(a, b):
     """Gold rule windows in [a, b], named and expanded exactly as in big_move_analysis.rule_days."""
     B = load(ROOT / "tools" / "backtest_gold.py", "bt")
-    B.configure_metal("gold")
+    B.configure_metal(MC.METAL)
     B.P0 = dt.datetime.combine(a - dt.timedelta(days=7), dt.time(0), ET)
     B.P1 = dt.datetime.combine(b + dt.timedelta(days=8), dt.time(0), ET)
     grid = Grid(utc(a.year - 1, 6, 1), utc(b.year + 1, 6, 30))
@@ -86,7 +88,7 @@ def main():
     a = dt.date.fromisoformat(sys.argv[1]) if len(sys.argv) > 1 else dt.date(2026, 11, 22)
     b = dt.date.fromisoformat(sys.argv[2]) if len(sys.argv) > 2 else dt.date(2027, 12, 31)
     M = load(ROOT / "tools" / "big_move_analysis.py", "bma")
-    hist = json.load(open(OUT / "gold_big_moves_2000-2026_ET.json"))
+    hist = json.load(open(OUT / f"{MC.METAL}_big_moves_2000-2026_ET.json"))
     base = hist["n_big"] / hist["n_days"] * 100
 
     lead = {}
@@ -164,7 +166,7 @@ def main():
     res = dict(start=a.isoformat(), end=b.isoformat(), base_big_rate=round(base, 1), min_q=min(min(r[k] for r in hist['factors']) for k in ('q', 'q_up', 'q_down')), split=hist["split"],
                leads=sorted(lead.values(), key=lambda L: (not L["both_halves"], L["outer"], -max(s["lift"] for s in L["sides"]))),
                windows=wins, stretches=stretches, days=days)
-    stem = f"gold_big_move_watch_{a}_to_{b}_ET"
+    stem = f"{MC.METAL}_big_move_watch_{a}_to_{b}_ET"
     json.dump(res, open(OUT / f"{stem}.json", "w"), indent=1, default=str)
     (OUT / f"{stem}.html").write_text(page(res, lead), encoding="utf-8")
     (OUT / f"{stem}.ics").write_text(ics(res, lead), encoding="utf-8")
@@ -213,37 +215,37 @@ def page(res, lead):
             m[1] += x["n"] >= 3 or x["n_strong"] >= 2
             m[2] = max(m[2], x["n"])
     mrows = "".join(f"<tr><td>{dt.date.fromisoformat(k + '-01'):%b %Y}</td><td class='n'>{v[1]} of {v[0]}</td><td class='n'>{v[2]}</td></tr>" for k, v in sorted(months.items()))
-    return f"""<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gold Big-Move Watch</title><style>{css}</style></head><body>
-<h1>Gold big-move watch, {fmt(res['start'])} – {fmt(res['end'])} (US Eastern)</h1>
-<p class="m">Dates when the factors that were over-represented on gold's ±2% days in 2000–2026 (<code>gold_big_moves_2000-2026_ET.html</code>) come round again.
-On a normal day the chance of a ±2% close was <b>{res['base_big_rate']}%</b>; the last column of the first table gives the historical rate when each lead was present (not adjusted for year, so it flatters factors active in volatile years).</p>
+    return f"""<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{MC.NAME} Big-Move Watch</title><style>{css}</style></head><body>
+<h1>{MC.NAME} big-move watch, {fmt(res['start'])} – {fmt(res['end'])} (US Eastern)</h1>
+<p class="m">Dates when the factors that were over-represented on {MC.METAL}'s ±{MC.TH:g}% days in 2000–2026 (<code>{MC.METAL}_big_moves_2000-2026_ET.html</code>) come round again.
+On a normal day the chance of a ±{MC.TH:g}% close was <b>{res['base_big_rate']}%</b>; the last column of the first table gives the historical rate when each lead was present (not adjusted for year, so it flatters factors active in volatile years).</p>
 <p class="m"><b>How much to trust it.</b> No lead passed the false-discovery-rate correction (lowest q {res['min_q']:.2f}). When leads were picked on 2000–2013 only, {sp['n_held']} of {sp['n_leads']} stayed above 1 on 2013–2026, but taken together they gave {sp['pooled_obs']} big days against {sp['pooled_exp']} expected (×{sp['pooled_lift']}): no edge out of sample.
 Read the dates below as times to expect volatility to be possible, not as calls. Green rows held in both halves and use Vedic grahas only; amber rows held in both halves but involve Uranus, Neptune or Pluto, which are outside the Vedic scope and cannot become rules.</p>
 <h2>Watch stretches</h2>
 <p class="s">Weekdays with 3 or more leads at once, or 2 or more leads that held in both halves (Vedic grahas only); stretches bridge weekends (days up to 3 apart). Lean counts the leads whose big days leaned up or down historically.</p>
 <div class="wrap"><table><thead><tr><th>Dates</th><th>Most leads on one day</th><th>Peak day</th><th>Lean</th><th>Leads in the stretch (most days first)</th></tr></thead><tbody>{srows}</tbody></table></div>
 <h2>Leads used</h2>
-<div class="wrap"><table><thead><tr><th>Lead</th><th>Lean</th><th>2000–2026 big days: observed / expected (lift, p); each half</th><th>Historical chance of a ±2% day when present</th><th>Episodes</th><th>Held in both halves</th></tr></thead><tbody>{lrows}</tbody></table></div>
+<div class="wrap"><table><thead><tr><th>Lead</th><th>Lean</th><th>2000–2026 big days: observed / expected (lift, p); each half</th><th>Historical chance of a ±{MC.TH:g}% day when present</th><th>Episodes</th><th>Held in both halves</th></tr></thead><tbody>{lrows}</tbody></table></div>
 <h2>Every lead window</h2>
 <p class="s">Events count from 3 days before to 3 days after the exact moment (exact dates in the last column); states and rules count while they hold. Where a sign boundary is also a nakshatra boundary (Cancer/Leo, Scorpio/Sagittarius, Pisces/Aries), one ingress counts as both a sign change and a nakshatra change.</p>
 <div class="wrap"><table><thead><tr><th>Dates</th><th>Lead</th><th>Lean</th><th>Held in both halves</th><th>Exact event date(s)</th></tr></thead><tbody>{wrows}</tbody></table></div>
 <h2>By month</h2>
 <div class="wrap"><table><thead><tr><th>Month</th><th>Watch weekdays</th><th>Most leads on one day</th></tr></thead><tbody>{mrows}</tbody></table></div>
-<p class="s">Generated by tools/big_move_forward.py from build/pdfref/gold_big_moves_2000-2026_ET.json; same factor definitions as tools/big_move_analysis.py.</p></body></html>"""
+<p class="s">Generated by tools/big_move_forward.py from build/pdfref/{MC.METAL}_big_moves_2000-2026_ET.json; same factor definitions as tools/big_move_analysis.py.</p></body></html>"""
 
 
 def ics(res, lead):
     def esc(t):
         return t.replace("\\", "\\\\").replace(",", "\\,").replace(";", "\\;").replace("\n", "\\n")
     now = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-    lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//finastro2027//gold big-move watch//EN", "CALSCALE:GREGORIAN", "X-WR-CALNAME:Gold big-move watch"]
+    lines = ["BEGIN:VCALENDAR", "VERSION:2.0", f"PRODID:-//finastro2027//{MC.METAL} big-move watch//EN", "CALSCALE:GREGORIAN", f"X-WR-CALNAME:{MC.NAME} big-move watch"]
     sp = res["split"]
     for s in res["stretches"]:
         f, t = dt.date.fromisoformat(s["frm"]), dt.date.fromisoformat(s["to"]) + dt.timedelta(days=1)
-        desc = (f"Gold big-move watch ({s['lean']} lean; peak {s['peak']} leads on {fmt(s['peak_day'])}).\nLeads: " + "; ".join(short(x) for x in s["leads"]) +
-                f"\nNormal chance of a +/-2% day {res['base_big_rate']}%. No lead passed FDR; out of sample x{sp['pooled_lift']}. A watch date, not a call.")
-        lines += ["BEGIN:VEVENT", f"UID:bigmove-{s['frm']}@finastro2027", f"DTSTAMP:{now}", f"DTSTART;VALUE=DATE:{f:%Y%m%d}", f"DTEND;VALUE=DATE:{t:%Y%m%d}",
-                  f"SUMMARY:{esc('Gold volatility watch (' + s['lean'] + ')')}", f"DESCRIPTION:{esc(desc)}", "END:VEVENT"]
+        desc = (f"{MC.NAME} big-move watch ({s['lean']} lean; peak {s['peak']} leads on {fmt(s['peak_day'])}).\nLeads: " + "; ".join(short(x) for x in s["leads"]) +
+                f"\nNormal chance of a +/-{MC.TH:g}% day {res['base_big_rate']}%. No lead passed FDR; out of sample x{sp['pooled_lift']}. A watch date, not a call.")
+        lines += ["BEGIN:VEVENT", f"UID:bigmove-{MC.METAL}-{s['frm']}@finastro2027", f"DTSTAMP:{now}", f"DTSTART;VALUE=DATE:{f:%Y%m%d}", f"DTEND;VALUE=DATE:{t:%Y%m%d}",
+                  f"SUMMARY:{esc(MC.NAME + ' volatility watch (' + s['lean'] + ')')}", f"DESCRIPTION:{esc(desc)}", "END:VEVENT"]
     lines.append("END:VCALENDAR")
     return "\r\n".join(lines) + "\r\n"
 

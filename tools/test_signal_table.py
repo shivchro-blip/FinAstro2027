@@ -1,6 +1,9 @@
 """Backtest of the gold signal table's High / Moderate / Low strengths, 2000-2026.
 
-    python tools/test_signal_table.py
+    python tools/test_signal_table.py [--metal silver]
+
+Silver source points: +2 retrograde Mercury or Jupiter, +1 Moon and Mercury alone in a sign
+(both from the silver 26-year backtest windows), +1 Venus combust in East; big days are ±3.5%.
 
 The scoring of tools/gold_signal_table.py is applied to every past trading day:
   bullish  +1 U2 Mercury in the Sun's sign           +2 Venus combust in East (TA S18)
@@ -37,6 +40,8 @@ from zoneinfo import ZoneInfo
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
+sys.path.insert(0, str(ROOT / "tools"))
+import metal_cfg as MC  # noqa: E402
 from finastro.pdfref.detect import aspects  # noqa: E402
 from finastro.pdfref.engine import snapshot  # noqa: E402
 
@@ -46,6 +51,7 @@ SPLIT = dt.date(2013, 11, 20)
 OUTER = ("Uranus", "Neptune", "Pluto")
 SAT_NAK = ("Pushya", "Anuradha", "Uttara Bhadrapada")
 FLAT = 0.5
+STEM = OUT / ("signal_table_test_2000-2026_ET" if MC.METAL == "gold" else f"{MC.METAL}_signal_table_test_2000-2026_ET")
 
 
 def load(path, name):
@@ -82,7 +88,7 @@ def lead_set(rows, M, both=None):
     return res
 
 
-def classify(days, leads, fast_ok, venus_days):
+def classify(days, leads, fast_ok, use_source=True):
     for x in days:
         on = [f for f in x["f"] if f in leads]
         n_strong = sum(1 for f in on if leads[f]["strong"])
@@ -90,13 +96,7 @@ def classify(days, leads, fast_ok, venus_days):
         up = sum(1 for f in on if leads[f]["lean"] == "up")
         dn = sum(1 for f in on if leads[f]["lean"] == "down")
         wlean = ("up" if up > dn else "down" if dn > up else "either") if in_win else None
-        bull = bear = 0
-        if x["u2"]:
-            bull += 1
-        if x["date"] in venus_days:
-            bull += 2
-        if x["satnak"]:
-            bear += 1
+        bull, bear = (x["src_bull"], x["src_bear"]) if use_source else (0, 0)
         vol = False
         if in_win:
             for k in (1, 1 if any(f in fast_ok for f in x["fast"]) else 0):
@@ -139,7 +139,7 @@ def evaluate(days, D, C, lo, hi):
             rs = [(C[i + n] / C[i] - 1) * 100 for i in ii]
             u, d_ = sum(r > FLAT for r in rs), sum(r < -FLAT for r in rs)
             base[y][n] = u / max(u + d_, 1)
-        bigshare[y] = sum(abs(C[i] / C[i - 1] - 1) >= 0.02 for i in ii) / len(ii)
+        bigshare[y] = sum(abs(C[i] / C[i - 1] - 1) >= MC.TH / 100 for i in ii) / len(ii)
     sel = [x for x in days if lo <= x["date"] < hi]
     eps = episodes(sel)
     res = collections.defaultdict(lambda: dict(n=0, w=0, f=0, exp=0.0, rets=[], big=0, big_exp=0.0, days=0, d_w=0, d_f=0, d_exp=0.0))
@@ -157,7 +157,7 @@ def evaluate(days, D, C, lo, hi):
             continue
         y = nov_year(d0)
         if e["sig"] == "Volatile":
-            hit = any(abs(C[i] / C[i - 1] - 1) >= 0.02 for i in range(a + 1, idx[d1] + 1))
+            hit = any(abs(C[i] / C[i - 1] - 1) >= MC.TH / 100 for i in range(a + 1, idx[d1] + 1))
             nd = idx[d1] - a
             r["big"] += hit
             r["big_exp"] += 1 - (1 - bigshare.get(y, 0.07)) ** nd
@@ -219,11 +219,6 @@ def main():
     V = load(ROOT / "tools" / "test_venus_visibility.py", "tvv")
     days = M.build_days()
     ev = F.fast_events(range(2000, 2028))
-    for x in days:
-        s = snapshot(dt.datetime(x["date"].year, x["date"].month, x["date"].day, 12, tzinfo=ET).astimezone(dt.timezone.utc))
-        x["u2"] = s["Mercury"].sign_i == s["Sun"].sign_i
-        x["satnak"] = s["Sun"].nak in SAT_NAK and (s["Mars"].sign_i == s["Sun"].sign_i or aspects(s, "Mars", "Sun"))
-        x["fast"] = F.day_fast(x["date"], ev)
     venus = set()
     for e in V.events():
         if e["rule_id"] == "ta_s18_venus_combust_east" and e["end"]:
@@ -231,13 +226,35 @@ def main():
             while d <= e["end"].date():
                 venus.add(d)
                 d += dt.timedelta(days=1)
-    D, C = V.prices("gold")
+    windows = collections.defaultdict(set)
+    if MC.METAL == "silver":
+        bt = json.load(open(OUT / "silver_backtest_2000-11-20_to_2026-11-20_ET.json"))
+        for e in bt["events"]:
+            if e["rule_id"] in ("ta_s35a01_retro_mercury_or_jupiter", "ta_s35a17b_moon_mercury_alone"):
+                d0 = dt.datetime.fromisoformat(e["start"]).astimezone(ET).date() if e["start"] else dt.date.fromisoformat(e["day"][:10])
+                d1 = dt.datetime.fromisoformat(e["end"]).astimezone(ET).date() if e["end"] else d0
+                d = d0
+                while d <= d1:
+                    windows[e["rule_id"]].add(d)
+                    d += dt.timedelta(days=1)
+    for x in days:
+        x["fast"] = F.day_fast(x["date"], ev)
+        if MC.METAL == "gold":
+            s = snapshot(dt.datetime(x["date"].year, x["date"].month, x["date"].day, 12, tzinfo=ET).astimezone(dt.timezone.utc))
+            u2 = s["Mercury"].sign_i == s["Sun"].sign_i
+            satnak = s["Sun"].nak in SAT_NAK and (s["Mars"].sign_i == s["Sun"].sign_i or aspects(s, "Mars", "Sun"))
+            x["src_bull"] = int(u2) + 2 * (x["date"] in venus)
+            x["src_bear"] = int(satnak)
+        else:
+            x["src_bull"] = 2 * (x["date"] in windows["ta_s35a01_retro_mercury_or_jupiter"]) + (x["date"] in windows["ta_s35a17b_moon_mercury_alone"]) + (x["date"] in venus)
+            x["src_bear"] = 0
+    D, C = V.prices(MC.METAL)
 
     # in-sample: the table's own leads and triggers
-    watch = json.load(open(OUT / "gold_big_move_watch_2026-11-22_to_2027-12-31_ET.json"))
-    fast = json.load(open(OUT / "gold_fast_triggers_2026-11-22_to_2027-12-31_ET.json"))
+    watch = json.load(open(OUT / f"{MC.METAL}_big_move_watch_2026-11-22_to_2027-12-31_ET.json"))
+    fast = json.load(open(OUT / f"{MC.METAL}_fast_triggers_2026-11-22_to_2027-12-31_ET.json"))
     leads_full = {L["factor"]: dict(lean=L["lean"], strong=L["both_halves"] and not L["outer"] and L["factor"] != "Event: full moon") for L in watch["leads"]}
-    classify(days, leads_full, set(fast["passed"]), venus)
+    classify(days, leads_full, set(fast["passed"]))
     ins = evaluate(days, D, C, dt.date(2000, 11, 20), dt.date(2026, 11, 20))
     ins_h2 = evaluate(days, D, C, SPLIT, dt.date(2026, 11, 20))
     share_full = collections.Counter((x["sig"], x["st"]) for x in days)
@@ -254,11 +271,11 @@ def main():
     t1 = F.table(win1, M, 12)
     fast1 = {f for f, r in t1.items() if r["lift"] and r["lift"] > 1 and r["p"] < 0.10 and r["episodes"] >= 5}
     days_wf = [dict(x) for x in days]
-    classify(days_wf, leads1, fast1, venus)
+    classify(days_wf, leads1, fast1)
     wf = evaluate(days_wf, D, C, SPLIT, dt.date(2026, 11, 20))
     # source rules only (no data-picked parts): U2, Venus, Saturn-nakshatra
     days_src = [dict(x) for x in days]
-    classify(days_src, {}, set(), venus)
+    classify(days_src, {}, set())
     src = evaluate(days_src, D, C, dt.date(2000, 11, 20), dt.date(2026, 11, 20))
 
     def pooled(rows):
@@ -273,7 +290,7 @@ def main():
         return out
     res = dict(pooled={k: pooled(v) for k, v in (("in_sample", ins), ("walk_forward", wf), ("source_only", src))}, in_sample=ins, in_sample_2013=ins_h2, walk_forward=wf, source_only=src, n_leads_h1=len(leads1), fast_h1=sorted(fast1),
                day_share={f"{k[0]} {k[1]}": v for k, v in share_full.items() if k[0]})
-    json.dump(res, open(OUT / "signal_table_test_2000-2026_ET.json", "w"), indent=1, default=str)
+    json.dump(res, open(STEM.with_suffix(".json"), "w"), indent=1, default=str)
     write(res)
     for name in ("in_sample", "in_sample_2013", "walk_forward", "source_only"):
         print(name)
@@ -293,7 +310,7 @@ def write(res):
         body = ""
         for r in rows:
             if r["signal"] == "Volatile":
-                body += (f"<tr class='mixed'><td>{r['signal']}</td><td>{r['strength']}</td><td class='n'>{r['episodes']}</td><td colspan='4'>a ±2% day inside the episode: <b>{r['big']}</b> "
+                body += (f"<tr class='mixed'><td>{r['signal']}</td><td>{r['strength']}</td><td class='n'>{r['episodes']}</td><td colspan='4'>a ±{MC.TH:g}% day inside the episode: <b>{r['big']}</b> "
                          f"vs {r['big_exp']} expected from the same years</td><td></td></tr>")
                 continue
             avg = "" if r["avg"] is None else f"{r['avg']:+.2f}%"
@@ -304,10 +321,13 @@ def write(res):
                      f"<td class='n'>{avg}</td><td class='n'>{r['d_hit']}% vs {r['d_base']}% ({r['days']} days)</td></tr>")
         return ("<div class='wrap'><table><thead><tr><th>Signal</th><th>Strength</th><th>Episodes</th><th>Worked / decided</th><th>Hit vs base</th><th>p</th><th>Average move</th>"
                 f"<th>Daily view: next 5 sessions right vs base</th></tr></thead><tbody>{body}</tbody></table></div>")
+    SRC_TEXT = ("Only U2 (+1 bullish), Venus combust in East (+2 bullish) and Sun in a Saturn nakshatra with Mars on the Sun (+1 bearish)." if MC.METAL == "gold" else
+                "Only retrograde Mercury or Jupiter (+2 bullish), Moon and Mercury alone in a sign (+1) and Venus combust in East (+1).")
+
     def pool(p):
         return "; ".join(f"{k} {v['worked']}/{v['decided']} ({v['hit']}% vs {v['base']}%, p {v['p']})" for k, v in p.items()) or "-"
     page = f"""<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Signal Table Test</title><style>{css}</style></head><body>
-<h1>Does the gold signal table's High / Moderate / Low hold up? Backtest 2000–2026</h1>
+<h1>Does the {MC.METAL} signal table's High / Moderate / Low hold up? Backtest 2000–2026</h1>
 <p class="m">The table's scoring (tools/gold_signal_table.py) applied to every past trading day; consecutive days with the same signal and strength form one episode, scored like a rule
 (entry = last close before; 3+ sessions to the last close, otherwise 5 sessions; base = same horizon, same Nov–Nov year). If the strengths mean something, High should beat Moderate and Moderate should beat Low, and all should beat their base.</p>
 <h2>1. Walk-forward, 2013–2026 (the honest test)</h2>
@@ -315,7 +335,7 @@ def write(res):
 {tbl(res['walk_forward'])}
 <p class="m">High and Moderate together: {pool(res['pooled']['walk_forward'])}</p>
 <h2>2. Source rules only, 2000–2026 (no data-picked parts)</h2>
-<p class="m">Only U2 (+1 bullish), Venus combust in East (+2 bullish) and Sun in a Saturn nakshatra with Mars on the Sun (+1 bearish).</p>
+<p class="m">{SRC_TEXT}</p>
 {tbl(res['source_only'])}
 <p class="m">High and Moderate together: {pool(res['pooled']['source_only'])}</p>
 <h2>3. In-sample, 2000–2026 (flattering)</h2>
@@ -325,7 +345,7 @@ def write(res):
 <h2>3b. In-sample, 2013–2026 only</h2>
 {tbl(res['in_sample_2013'])}
 <p class="s">Generated by tools/test_signal_table.py. p values for episodes are one-sided binomial against the same-year base; the daily view counts overlapping days and is shown for reference only.</p></body></html>"""
-    (OUT / "signal_table_test_2000-2026_ET.html").write_text(page, encoding="utf-8")
+    (STEM.with_suffix(".html")).write_text(page, encoding="utf-8")
 
 
 if __name__ == "__main__":

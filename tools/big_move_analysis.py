@@ -1,6 +1,6 @@
 """Which planetary conditions surround gold's big daily moves (|close-to-close| >= 2%), 2000-2026?
 
-    python tools/big_move_analysis.py [threshold_pct]
+    python tools/big_move_analysis.py [threshold_pct] [--metal silver]     # silver: 3.5% threshold, silver_* outputs
 
 For every COMEX gold (GC=F) trading day with a move of at least the threshold, the sky
 within +/- 3 calendar days (events) and on the day (states) is compared with all trading
@@ -36,20 +36,23 @@ from zoneinfo import ZoneInfo
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
+sys.path.insert(0, str(ROOT / "tools"))
+import metal_cfg as MC  # noqa: E402
 from finastro.sky import parse  # noqa: E402
 from finastro.pdfref.detect import NAK_LORD, aspects  # noqa: E402
 from finastro.pdfref.engine import snapshot  # noqa: E402
 
 ET = ZoneInfo("America/New_York")
 OUT = ROOT / "build" / "pdfref"
-TH = 2.0
+TH = MC.TH
+METAL = MC.METAL
 SPLIT = dt.date(2013, 11, 20)            # first half 2000-2013 picks leads, second half 2013-2026 tests them
 PL = ("Sun", "Mercury", "Venus", "Mars", "Jupiter", "Saturn", "Rahu", "Ketu")
 RETRO = ("Mercury", "Venus", "Mars", "Jupiter", "Saturn")
 
 
 def load_prices():
-    rows = list(csv.DictReader(open(OUT / "backtest" / "gold_GC_F_daily_2000.csv")))
+    rows = list(csv.DictReader(open(OUT / "backtest" / MC.PRICE)))
     D = [dt.date.fromisoformat(r["date"]) for r in rows]
     C = [float(r["close"]) for r in rows]
     return D, C
@@ -118,7 +121,7 @@ def states(day):
 
 
 def rule_days(D):
-    d = json.load(open(OUT / "gold_backtest_2000-11-20_to_2026-11-20_ET.json"))
+    d = json.load(open(OUT / f"{METAL}_backtest_2000-11-20_to_2026-11-20_ET.json"))
     act = collections.defaultdict(set)
     for e in d["events"]:
         if e.get("tone") not in ("Bullish", "Bearish", "Mixed"):
@@ -268,7 +271,7 @@ def main():
     res = dict(threshold=TH, n_days=len(days), n_big=len(big), n_up=len(up), n_down=len(big) - len(up), up_share=round(len(up) / len(big) * 100, 1),
                split=sp, factors=rows, big_days=[dict(date=x["date"].isoformat(), ret=round(x["ret"], 2), events=sorted(f for f in x["f"] if f.startswith("Event")),
                                                       rules=sorted(f for f in x["f"] if f.startswith("Rule"))) for x in big])
-    json.dump(res, open(OUT / "gold_big_moves_2000-2026_ET.json", "w"), indent=1, default=str)
+    json.dump(res, open(OUT / f"{METAL}_big_moves_2000-2026_ET.json", "w"), indent=1, default=str)
     write(res)
     print(f"{len(big)} big days ({len(up)} up, {len(big) - len(up)} down) of {len(days)}")
     for r in sorted(rows, key=lambda r: r["p"])[:15]:
@@ -300,10 +303,10 @@ def write(res):
 
     def names(lst, lk):
         return "; ".join(f"{r['factor']} (×{r[lk]:.2f})" for r in sorted(lst, key=lambda r: -r[lk])) or "none"
-    page = f"""<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gold Big Moves</title><style>{css}</style></head><body>
-<h1>Gold's big daily moves (±{res['threshold']:.0f}% or more), 2000–2026: what was in the sky ±3 days</h1>
-<p class="m">COMEX GC=F, 20 Nov 2000 – 20 Nov 2026: <b>{res['n_big']}</b> days with a close-to-close move of {res['threshold']:.0f}% or more out of {res['n_days']} ({res['n_up']} up, {res['n_down']} down; {res['up_share']}% up).
-For each factor, the number of big days on which it was present (events within ±3 calendar days; states on the day; gold rules active) is compared with the number <b>expected from the same years</b> (big moves cluster in volatile years, so a slow planet that happened to sit in one sign during 2008 or 2013 is not credited). Lift = observed ÷ expected; p = Poisson; q = false-discovery-rate correction over all {len(rows)} factors tested — only q &lt; 0.10 should be read as a finding. Big days come in bursts (e.g. March 2020, January 2026), so the episode column shows how many separate occasions stand behind each count; a lift carried by two or three episodes is weaker than the p-value suggests.</p>
+    page = f"""<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{MC.NAME} Big Moves</title><style>{css}</style></head><body>
+<h1>{MC.NAME}'s big daily moves (±{res['threshold']:g}% or more), 2000–2026: what was in the sky ±3 days</h1>
+<p class="m">COMEX {MC.TICK}, 20 Nov 2000 – 20 Nov 2026: <b>{res['n_big']}</b> days with a close-to-close move of {res['threshold']:g}% or more out of {res['n_days']} ({res['n_up']} up, {res['n_down']} down; {res['up_share']}% up).
+For each factor, the number of big days on which it was present (events within ±3 calendar days; states on the day; {METAL} rules active) is compared with the number <b>expected from the same years</b> (big moves cluster in volatile years, so a slow planet that happened to sit in one sign during 2008 or 2013 is not credited). Lift = observed ÷ expected; p = Poisson; q = false-discovery-rate correction over all {len(rows)} factors tested — only q &lt; 0.10 should be read as a finding. Big days come in bursts (e.g. March 2020, January 2026), so the episode column shows how many separate occasions stand behind each count; a lift carried by two or three episodes is weaker than the p-value suggests.</p>
 <h2>Result</h2>
 <ul class="m"><li><b>Any big move (q &lt; 0.10):</b> {html.escape(names(sig, 'lift'))}</li>
 <li><b>Big up moves (q &lt; 0.10):</b> {html.escape(names(sig_u, 'lift_up'))}</li>
@@ -316,10 +319,10 @@ For each factor, the number of big days on which it was present (events within �
 {table('p', 'lift', 'big', 'exp_big', 'q', 'Any big move (±)', 30)}
 {table('p_up', 'lift_up', 'up', 'exp_up', 'q_up', 'Big UP moves', 20)}
 {table('p_down', 'lift_down', 'down', 'exp_down', 'q_down', 'Big DOWN moves', 20)}
-<h2>Every big day (newest first) with the events of ±3 days and the gold rules active</h2>
-<div class="wrap"><table><thead><tr><th>Date</th><th>Move</th><th>Events within ±3 days</th><th>Gold rules active</th></tr></thead><tbody>{bd}</tbody></table></div>
+<h2>Every big day (newest first) with the events of ±3 days and the {METAL} rules active</h2>
+<div class="wrap"><table><thead><tr><th>Date</th><th>Move</th><th>Events within ±3 days</th><th>{MC.NAME} rules active</th></tr></thead><tbody>{bd}</tbody></table></div>
 <p class="s">Generated by tools/big_move_analysis.py.</p></body></html>"""
-    (OUT / "gold_big_moves_2000-2026_ET.html").write_text(page, encoding="utf-8")
+    (OUT / f"{METAL}_big_moves_2000-2026_ET.html").write_text(page, encoding="utf-8")
 
 
 if __name__ == "__main__":

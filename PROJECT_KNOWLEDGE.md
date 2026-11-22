@@ -73,6 +73,7 @@ Known data problems:
 | `tools/fast_trigger_analysis.py [start] [end]` | Fast-planet triggers inside the watch windows (2000–2026 test with permutation check) and the narrowed forward days |
 | `tools/gold_signal_table.py [start] [end]` | Simple gold table to end-2027: bullish / bearish / volatile, strength High / Moderate / Low, why |
 | `tools/test_signal_table.py` | Backtest of the signal table's High / Moderate / Low (walk-forward 2013–2026, source rules only, in-sample) |
+| `tools/metal_cfg.py` | `--metal silver` switch for big_move_analysis, big_move_forward, gold_outlook, fast_trigger_analysis, test_signal_table and gold_signal_table. Silver's big-move threshold is 3.5%, as rare as gold's 2%. Outputs are `silver_*` |
 | `tools/gold_tracker.py [--metal silver]` | Trackers: findings, rule status, best-rule dates, analysis log |
 | `tools/build_year.py YEAR` | Astronomy layer for any year; 2000–2024 are git-ignored and rebuilt on demand |
 | `tools/fetch_prices.py` | Downloads GC=F and SI=F (Yahoo; the host must be allowed) |
@@ -96,6 +97,7 @@ Known data problems:
 | `gold_fast_triggers_2026-11-22_to_2027-12-31_ET.*` | Watch windows narrowed to days with fast-planet triggers (html, json, ics) |
 | `gold_signals_2026-11-22_to_2027-12-31_ET.html` | Simple bullish / bearish table with strength (scoring in the script's docstring) |
 | `signal_table_test_2000-2026_ET.html` | Test of the signal table's strengths |
+| `silver_big_moves_2000-2026_ET.html`, `silver_big_move_watch_*`, `silver_outlook_*`, `silver_fast_triggers_*`, `silver_signal_table_test_2000-2026_ET.html`, `silver_signals_*` | The same chain for silver |
 | `GOLD_TRACKER.html`, `SILVER_TRACKER.html` | Current status of every rule, best-rule dates, analysis log |
 | `REFERENCE_PDF_RULES.md`, `COMPLETION_REPORT.md`, `COVERAGE_AUDIT_GOLD_SILVER.md` | Rule lists and audits |
 
@@ -321,6 +323,21 @@ There are no TA S34 A9 windows between now and 31 Dec 2027.
   - **Bullish Low:** this is U2 alone and is at chance.
   - **Bearish and Volatile:** these labels have no edge.
   - The table now shows each label's walk-forward record in its last column.
+
+**Silver: the same chain** (big moves, watch, outlook, fast triggers, signal table and its test), using ±3.5% days. That threshold is as rare for silver (8.4% of days) as 2% is for gold.
+- **Big moves:** 546 big days over 2000–2026. The top in-sample factors are Venus with the Sun (×1.25), Jupiter retrograde (×1.20), Rahu's vedha of Pushya (×1.27) and Jupiter in Gemini (×1.31). None survives FDR.
+  - **Out of sample they fail:** only 3 of the 17 leads picked on 2000–2013 held on 2013–2026, and together they gave ×0.91. Silver's big-move leads have no value, which is weaker than gold's ×1.02.
+- **Fast triggers:** 4,993 of 6,527 days fall inside silver's watch windows, because the long states make the windows broad. 3 of 44 fast factors passed, against 2.5 expected by chance. The three were Mercury stationing retrograde (×1.47), a last-quarter Moon (×1.25) and Venus changing nakshatra (×1.13).
+- **Signal table test:**
+
+| Run | Bullish High | Bullish Moderate | Bullish Low | Notes |
+|---|---|---|---|---|
+| Walk-forward 2013–2026 | 55% vs 52% | 55% vs 52% | 55% vs 52% | No strength order. Volatile runs held a ±3.5% day 8 times, against 13.7 expected. |
+| Source rules only (retrograde Mercury/Jupiter +2, Moon–Mercury alone +1, Venus combust in East +1) | 29/44, 66% vs 53%, p = 0.065 | — | — | High and Moderate together 60% vs 54%, p = 0.075. |
+
+  - For silver, the data-picked parts add nothing.
+  - The useful part is retrograde Mercury or Jupiter: mid-Dec 2026 – mid-Apr 2027, 10 Jun – 2 Jul and 7–28 Oct 2027.
+  - The silver table (`silver_signals_*`) shows these as High or Moderate bullish. Its past-record column shows the flat walk-forward result.
 
 **Model v1.0 (Ch.41 + Shadbala + Ashtakavarga), 6,572 trading days:**
 - The correlation of the scarcity index with the next 5 days is −0.002.
