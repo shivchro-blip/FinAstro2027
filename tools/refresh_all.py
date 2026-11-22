@@ -39,6 +39,7 @@ STEPS = [
     ["tools/gold_tracker.py", "--metal", "silver"],
     ["tools/gold_outlook.py", "2026-11-22", "2027-12-31"],
     ["tools/fast_trigger_analysis.py", "2026-11-22", "2027-12-31"],
+    ["tools/test_signal_table.py"],
     ["tools/gold_signal_table.py", "2026-11-22", "2027-12-31"],
     ["tools/md_to_html.py", "Reference_materials/extracted/OTHERS_FINANCIAL_REVIEW.md", "Others Financial Review"],
     ["tools/md_to_html.py", "Reference_materials/extracted/FINANCIAL_ASTROLOGY_MODEL_v1.md", "Financial Astrology Model v1"],

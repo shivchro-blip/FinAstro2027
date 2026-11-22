@@ -72,6 +72,7 @@ Known data problems:
 | `tools/gold_outlook.py [start] [end]` | One timeline to end-2027: best-rule windows, volatility watch dates, Venus dates, month by month (html, json, ics) |
 | `tools/fast_trigger_analysis.py [start] [end]` | Fast-planet triggers inside the watch windows (2000–2026 test with permutation check) and the narrowed forward days |
 | `tools/gold_signal_table.py [start] [end]` | Simple gold table to end-2027: bullish / bearish / volatile, strength High / Moderate / Low, why |
+| `tools/test_signal_table.py` | Backtest of the signal table's High / Moderate / Low (walk-forward 2013–2026, source rules only, in-sample) |
 | `tools/gold_tracker.py [--metal silver]` | Trackers: findings, rule status, best-rule dates, analysis log |
 | `tools/build_year.py YEAR` | Astronomy layer for any year; 2000–2024 are git-ignored and rebuilt on demand |
 | `tools/fetch_prices.py` | Downloads GC=F and SI=F (Yahoo; the host must be allowed) |
@@ -94,6 +95,7 @@ Known data problems:
 | `gold_outlook_2026-11-22_to_2027-12-31_ET.*` | Combined outlook to end-2027, with the evidence for each item |
 | `gold_fast_triggers_2026-11-22_to_2027-12-31_ET.*` | Watch windows narrowed to days with fast-planet triggers (html, json, ics) |
 | `gold_signals_2026-11-22_to_2027-12-31_ET.html` | Simple bullish / bearish table with strength (scoring in the script's docstring) |
+| `signal_table_test_2000-2026_ET.html` | Test of the signal table's strengths |
 | `GOLD_TRACKER.html`, `SILVER_TRACKER.html` | Current status of every rule, best-rule dates, analysis log |
 | `REFERENCE_PDF_RULES.md`, `COMPLETION_REPORT.md`, `COVERAGE_AUDIT_GOLD_SILVER.md` | Rule lists and audits |
 
@@ -299,6 +301,26 @@ There are no TA S34 A9 windows between now and 31 Dec 2027.
   - 25–26 Nov
 
   The windows of 4–10 May, 22–28 Jun, 18 Oct, 1–7 Nov and 27–31 Dec 2027 have no tested trigger.
+
+**Test of the signal table's High / Moderate / Low**, in `signal_table_test_2000-2026_ET.html`. The table's scoring was applied to every day of 2000–2026. Runs of days with the same signal and strength were scored like rules, against a same-year base.
+- **Walk-forward** (watch leads and fast triggers re-picked on 2000–2013, scored on 2013–2026):
+
+| Label | Right | By chance | Cases | p |
+|---|---|---|---|---|
+| Bullish High | 64% | 53% | 33 | 0.16 |
+| Bullish Moderate | 58% | 54% | 69 | — |
+| Bullish Low | 54% | 55% | 149 | — |
+| Bullish High and Moderate together | 60% | 54% | 102 | 0.13 |
+| Bearish Moderate | 48% | 44% | — | — |
+| Bearish Low | 44% | 44% | — | — |
+
+  Volatile runs held a ±2% day 11 times, against 10.4 expected.
+- **Source rules only** (U2, Venus combust in East, Sun in a Saturn nakshatra with Mars): bullish High and Moderate together 38/57, 67% vs 56% (p = 0.058). Venus combust in East carries most of this.
+- **Verdict:**
+  - **Bullish:** the strength order holds in every run (High > Moderate > Low) and on unseen data, but the edge is small and not significant.
+  - **Bullish Low:** this is U2 alone and is at chance.
+  - **Bearish and Volatile:** these labels have no edge.
+  - The table now shows each label's walk-forward record in its last column.
 
 **Model v1.0 (Ch.41 + Shadbala + Ashtakavarga), 6,572 trading days:**
 - The correlation of the scarcity index with the next 5 days is −0.002.
