@@ -246,6 +246,18 @@
     "tools/test_venus_visibility.py",
     "build/pdfref/venus_visibility_test_2000-2026_ET.html"
    ]
+  },
+  {
+   "date": "2026-11-22",
+   "pr": "17",
+   "topic": "Combined gold & silver outlook, 22 Nov 2026 - 31 Dec 2027",
+   "analysis": "Timeline joining the best-rule windows (trackers), big-move watch stretches and single leads, and Venus TA S18 dates, each with its 2000-2026 evidence. Month-by-month share of days under a best bullish rule. Calendar file.",
+   "result": "Gold: U2 Mercury with the Sun (small edge) on 81% of Dec 2026 days, 74% Jan, 90% Aug, 97% Dec 2027, about 13-17% Mar/Sep/Oct 2027; TA S34 A9 not before 2028. Silver: retro Mercury/Jupiter mid-Dec 2026 to mid-Apr 2027, 10 Jun - 4 Jul, 7-28 Oct 2027. Venus combust East 20 Jul - 7 Sep 2027 (bullish lead); rises West 7 Sep 2027 (qualified, no edge). Volatility watch 21-27 Jan, 22-25 Mar, 22-28 Jun, 18 Oct, 27-31 Dec 2027. None passes a strict significance test.",
+   "files": [
+    "tools/gold_outlook.py",
+    "build/pdfref/gold_outlook_2026-11-22_to_2027-12-31_ET.html",
+    "build/pdfref/gold_outlook_2026-11-22_to_2027-12-31_ET.ics"
+   ]
   }
  ]
 }

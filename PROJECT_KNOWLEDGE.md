@@ -69,6 +69,7 @@ Known data problems:
 | `tools/test_venus_visibility.py` | TA Section 18 Venus combust / rise rules on gold and silver 2000–2026, the January 2026 case and the next dates |
 | `tools/big_move_analysis.py [threshold_pct]` | Gold's ±2% days 2000–2026: events within ±3 days, states and active gold rules vs a same-year expected count (Poisson, FDR) |
 | `tools/big_move_forward.py [start] [end]` | Dates of the big-move leads from 22 Nov 2026 to 31 Dec 2027 with watch stretches (html, json, ics) |
+| `tools/gold_outlook.py [start] [end]` | One timeline to end-2027: best-rule windows, volatility watch dates, Venus dates, month by month (html, json, ics) |
 | `tools/gold_tracker.py [--metal silver]` | Trackers: findings, rule status, best-rule dates, analysis log |
 | `tools/build_year.py YEAR` | Astronomy layer for any year; 2000–2024 are git-ignored and rebuilt on demand |
 | `tools/fetch_prices.py` | Downloads GC=F and SI=F (Yahoo; the host must be allowed) |
@@ -88,6 +89,7 @@ Known data problems:
 | `gold_big_moves_2000-2026_ET.html` | Every ±2% gold day 2000–2026 with the sky ±3 days; which factors were over-represented |
 | `gold_big_move_watch_2026-11-22_to_2027-12-31_ET.*` | Forward dates of the big-move leads, watch stretches, calendar (ics) |
 | `gold_bs41_model_2026-11-20_to_2027-12-31_ET.*` | Model v1.0 daily readings, calendar (ics) and backtest |
+| `gold_outlook_2026-11-22_to_2027-12-31_ET.*` | Combined outlook to end-2027, with the evidence for each item |
 | `GOLD_TRACKER.html`, `SILVER_TRACKER.html` | Current status of every rule, best-rule dates, analysis log |
 | `REFERENCE_PDF_RULES.md`, `COMPLETION_REPORT.md`, `COVERAGE_AUDIT_GOLD_SILVER.md` | Rule lists and audits |
 
@@ -255,6 +257,16 @@ There are no TA S34 A9 windows between now and 31 Dec 2027.
 - **Next dates:**
   - Venus combust in East, 20 Jul – 7 Sep 2027 (Bullish).
   - Venus rises in West, 7 Sep 2027, in Leo with the Sun. This is the qualified case again: watch for a dip then an upturn.
+
+**Outlook, 22 Nov 2026 – 31 Dec 2027**, in `gold_outlook_2026-11-22_to_2027-12-31_ET.html` / `.ics`: every tested item in one timeline.
+- **Gold:**
+  - U2 Mercury with the Sun (small bullish edge) is active on 81% of days in Dec 2026, 74% in Jan, 90% in Aug and 97% in Dec 2027. It is active on only about 13–17% of days in Mar, Sep and Oct 2027.
+  - TA S34 A9 does not occur before 2028.
+- **Silver:** retrograde Mercury or Jupiter (bullish, p ≈ 0.05) is active from mid-Dec 2026 to mid-Apr 2027, again from 10 Jun to 4 Jul 2027, and from 7 to 28 Oct 2027.
+- **Venus:** combust in the East 20 Jul – 7 Sep 2027 (bullish lead). It rises in the West on 7 Sep 2027, in the qualified configuration seen on 31 Jan 2026 (no edge).
+- **Volatility watch:**
+  - 21–27 Jan, 22–25 Mar (down), 22–28 Jun (up), 18 Oct (down) and 27–31 Dec 2027 (up).
+  - Single leads: Venus–Saturn conjunction 7 May (down); Jupiter's nakshatra and sign changes 30 Aug, 4 Nov and 26 Nov 2027.
 
 **Model v1.0 (Ch.41 + Shadbala + Ashtakavarga), 6,572 trading days:**
 - The correlation of the scarcity index with the next 5 days is −0.002.

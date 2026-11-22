@@ -1,0 +1,534 @@
+{
+ "start": "2026-11-22",
+ "end": "2027-12-31",
+ "items": [
+  {
+   "metal": "gold",
+   "kind": "Best rule",
+   "frm": "2026-12-02",
+   "to": "2026-12-15",
+   "title": "U2 - Mercury with the Sun",
+   "lean": "up",
+   "evidence": "26 yrs: 176/291 (60% vs base 57%), avg +0.62%, right in 20/26 yrs",
+   "weight": "small edge"
+  },
+  {
+   "metal": "silver",
+   "kind": "Best rule",
+   "frm": "2026-12-12",
+   "to": "2027-02-09",
+   "title": "Retrograde Mercury or Jupiter",
+   "lean": "up",
+   "evidence": "26 yrs: 78/126 (62% vs base 54%), avg +1.80%, right in 15/26 yrs",
+   "weight": "lead (p \u2248 0.05\u20130.07)"
+  },
+  {
+   "metal": "gold",
+   "kind": "Best rule",
+   "frm": "2026-12-21",
+   "to": "2027-01-09",
+   "title": "U2 - Mercury with the Sun",
+   "lean": "up",
+   "evidence": "26 yrs: 176/291 (60% vs base 57%), avg +0.62%, right in 20/26 yrs",
+   "weight": "small edge"
+  },
+  {
+   "metal": "gold",
+   "kind": "Best rule",
+   "frm": "2027-01-14",
+   "to": "2027-01-27",
+   "title": "U2 - Mercury with the Sun",
+   "lean": "up",
+   "evidence": "26 yrs: 176/291 (60% vs base 57%), avg +0.62%, right in 20/26 yrs",
+   "weight": "small edge"
+  },
+  {
+   "metal": "gold",
+   "kind": "Volatility watch",
+   "frm": "2027-01-21",
+   "to": "2027-01-27",
+   "title": "Big-move watch: Jupiter changes nakshatra; Jupiter changes sign; full moon",
+   "lean": "either",
+   "evidence": "leads over-represented on \u00b12% days 2000\u20132026 (no FDR pass; out of sample \u00d71.02)",
+   "weight": "volatility only"
+  },
+  {
+   "metal": "silver",
+   "kind": "Best rule",
+   "frm": "2027-02-07",
+   "to": "2027-02-09",
+   "title": "Only Moon and Mercury alone in a sign",
+   "lean": "up",
+   "evidence": "26 yrs: 49/80 (61% vs base 53%), avg +0.80%, right in 15/26 yrs",
+   "weight": "small edge"
+  },
+  {
+   "metal": "silver",
+   "kind": "Best rule",
+   "frm": "2027-02-09",
+   "to": "2027-03-03",
+   "title": "Retrograde Mercury or Jupiter",
+   "lean": "up",
+   "evidence": "26 yrs: 78/126 (62% vs base 54%), avg +1.80%, right in 15/26 yrs",
+   "weight": "lead (p \u2248 0.05\u20130.07)"
+  },
+  {
+   "metal": "gold",
+   "kind": "Best rule",
+   "frm": "2027-02-12",
+   "to": "2027-02-23",
+   "title": "U2 - Mercury with the Sun",
+   "lean": "up",
+   "evidence": "26 yrs: 176/291 (60% vs base 57%), avg +0.62%, right in 20/26 yrs",
+   "weight": "small edge"
+  },
+  {
+   "metal": "silver",
+   "kind": "Best rule",
+   "frm": "2027-03-03",
+   "to": "2027-04-12",
+   "title": "Retrograde Mercury or Jupiter",
+   "lean": "up",
+   "evidence": "26 yrs: 78/126 (62% vs base 54%), avg +1.80%, right in 15/26 yrs",
+   "weight": "lead (p \u2248 0.05\u20130.07)"
+  },
+  {
+   "metal": "gold",
+   "kind": "Best rule",
+   "frm": "2027-03-11",
+   "to": "2027-03-14",
+   "title": "U2 - Mercury with the Sun",
+   "lean": "up",
+   "evidence": "26 yrs: 176/291 (60% vs base 57%), avg +0.62%, right in 20/26 yrs",
+   "weight": "small edge"
+  },
+  {
+   "metal": "gold",
+   "kind": "Volatility watch",
+   "frm": "2027-03-22",
+   "to": "2027-03-25",
+   "title": "Big-move watch: Saturn combustion begins; full moon",
+   "lean": "down",
+   "evidence": "leads over-represented on \u00b12% days 2000\u20132026 (no FDR pass; out of sample \u00d71.02)",
+   "weight": "volatility only"
+  },
+  {
+   "metal": "gold",
+   "kind": "Best rule",
+   "frm": "2027-04-05",
+   "to": "2027-04-14",
+   "title": "U2 - Mercury with the Sun",
+   "lean": "up",
+   "evidence": "26 yrs: 176/291 (60% vs base 57%), avg +0.62%, right in 20/26 yrs",
+   "weight": "small edge"
+  },
+  {
+   "metal": "gold",
+   "kind": "Best rule",
+   "frm": "2027-04-21",
+   "to": "2027-05-06",
+   "title": "U2 - Mercury with the Sun",
+   "lean": "up",
+   "evidence": "26 yrs: 176/291 (60% vs base 57%), avg +0.62%, right in 20/26 yrs",
+   "weight": "small edge"
+  },
+  {
+   "metal": "gold",
+   "kind": "Volatility watch",
+   "frm": "2027-05-04",
+   "to": "2027-05-10",
+   "title": "Single lead: Venus-Saturn conjunction",
+   "lean": "down",
+   "evidence": "held in both halves; \u00b12% days 13.5% when present vs 7.3% normally",
+   "weight": "volatility only"
+  },
+  {
+   "metal": "silver",
+   "kind": "Best rule",
+   "frm": "2027-05-06",
+   "to": "2027-05-08",
+   "title": "Only Moon and Mercury alone in a sign",
+   "lean": "up",
+   "evidence": "26 yrs: 49/80 (61% vs base 53%), avg +0.80%, right in 15/26 yrs",
+   "weight": "small edge"
+  },
+  {
+   "metal": "gold",
+   "kind": "Best rule",
+   "frm": "2027-05-15",
+   "to": "2027-05-23",
+   "title": "U2 - Mercury with the Sun",
+   "lean": "up",
+   "evidence": "26 yrs: 176/291 (60% vs base 57%), avg +0.62%, right in 20/26 yrs",
+   "weight": "small edge"
+  },
+  {
+   "metal": "silver",
+   "kind": "Best rule",
+   "frm": "2027-06-05",
+   "to": "2027-06-07",
+   "title": "Only Moon and Mercury alone in a sign",
+   "lean": "up",
+   "evidence": "26 yrs: 49/80 (61% vs base 53%), avg +0.80%, right in 15/26 yrs",
+   "weight": "small edge"
+  },
+  {
+   "metal": "silver",
+   "kind": "Best rule",
+   "frm": "2027-06-10",
+   "to": "2027-07-04",
+   "title": "Retrograde Mercury or Jupiter",
+   "lean": "up",
+   "evidence": "26 yrs: 78/126 (62% vs base 54%), avg +1.80%, right in 15/26 yrs",
+   "weight": "lead (p \u2248 0.05\u20130.07)"
+  },
+  {
+   "metal": "gold",
+   "kind": "Best rule",
+   "frm": "2027-06-15",
+   "to": "2027-07-16",
+   "title": "U2 - Mercury with the Sun",
+   "lean": "up",
+   "evidence": "26 yrs: 176/291 (60% vs base 57%), avg +0.62%, right in 20/26 yrs",
+   "weight": "small edge"
+  },
+  {
+   "metal": "gold",
+   "kind": "Volatility watch",
+   "frm": "2027-06-22",
+   "to": "2027-06-28",
+   "title": "Big-move watch: Jupiter changes nakshatra; Jupiter changes sign",
+   "lean": "up",
+   "evidence": "leads over-represented on \u00b12% days 2000\u20132026 (no FDR pass; out of sample \u00d71.02)",
+   "weight": "volatility only"
+  },
+  {
+   "metal": "gold & silver",
+   "kind": "Venus (TA S18)",
+   "frm": "2027-07-20",
+   "to": "2027-09-07",
+   "title": "Venus combust in East \u2013 Gemini / Punarvasu",
+   "lean": "up",
+   "evidence": "gold 12/16 (75% vs 57%, p 0.113); 20 sessions 82% vs 58%",
+   "weight": "lead (p \u2248 0.10)"
+  },
+  {
+   "metal": "gold",
+   "kind": "Best rule",
+   "frm": "2027-07-30",
+   "to": "2027-08-14",
+   "title": "U2 - Mercury with the Sun",
+   "lean": "up",
+   "evidence": "26 yrs: 176/291 (60% vs base 57%), avg +0.62%, right in 20/26 yrs",
+   "weight": "small edge"
+  },
+  {
+   "metal": "silver",
+   "kind": "Best rule",
+   "frm": "2027-07-30",
+   "to": "2027-07-30",
+   "title": "Only Moon and Mercury alone in a sign",
+   "lean": "up",
+   "evidence": "26 yrs: 49/80 (61% vs base 53%), avg +0.80%, right in 15/26 yrs",
+   "weight": "small edge"
+  },
+  {
+   "metal": "gold",
+   "kind": "Best rule",
+   "frm": "2027-08-17",
+   "to": "2027-08-30",
+   "title": "U2 - Mercury with the Sun",
+   "lean": "up",
+   "evidence": "26 yrs: 176/291 (60% vs base 57%), avg +0.62%, right in 20/26 yrs",
+   "weight": "small edge"
+  },
+  {
+   "metal": "gold",
+   "kind": "Volatility watch",
+   "frm": "2027-08-27",
+   "to": "2027-09-02",
+   "title": "Single lead: Jupiter changes nakshatra",
+   "lean": "up",
+   "evidence": "held in both halves; \u00b12% days 10.2% when present vs 7.3% normally",
+   "weight": "volatility only"
+  },
+  {
+   "metal": "silver",
+   "kind": "Best rule",
+   "frm": "2027-09-01",
+   "to": "2027-09-03",
+   "title": "Only Moon and Mercury alone in a sign",
+   "lean": "up",
+   "evidence": "26 yrs: 49/80 (61% vs base 53%), avg +0.80%, right in 15/26 yrs",
+   "weight": "small edge"
+  },
+  {
+   "metal": "gold & silver",
+   "kind": "Venus (TA S18)",
+   "frm": "2027-09-07",
+   "to": "2027-09-07",
+   "title": "Venus rises in West \u2013 Leo / Uttara Phalguni with Sun (qualified: sharp upturn after a small dip)",
+   "lean": "dip then up",
+   "evidence": "gold 6/12 (50% vs 45%), at chance; qualified dip-then-upturn 2/6 vs 1.8 expected. Same configuration as 31 Jan 2026.",
+   "weight": "no edge \u2013 watch only"
+  },
+  {
+   "metal": "gold",
+   "kind": "Best rule",
+   "frm": "2027-09-17",
+   "to": "2027-09-21",
+   "title": "U2 - Mercury with the Sun",
+   "lean": "up",
+   "evidence": "26 yrs: 176/291 (60% vs base 57%), avg +0.62%, right in 20/26 yrs",
+   "weight": "small edge"
+  },
+  {
+   "metal": "silver",
+   "kind": "Best rule",
+   "frm": "2027-10-07",
+   "to": "2027-10-28",
+   "title": "Retrograde Mercury or Jupiter",
+   "lean": "up",
+   "evidence": "26 yrs: 78/126 (62% vs base 54%), avg +1.80%, right in 15/26 yrs",
+   "weight": "lead (p \u2248 0.05\u20130.07)"
+  },
+  {
+   "metal": "gold",
+   "kind": "Best rule",
+   "frm": "2027-10-17",
+   "to": "2027-10-20",
+   "title": "U2 - Mercury with the Sun",
+   "lean": "up",
+   "evidence": "26 yrs: 176/291 (60% vs base 57%), avg +0.62%, right in 20/26 yrs",
+   "weight": "small edge"
+  },
+  {
+   "metal": "gold",
+   "kind": "Volatility watch",
+   "frm": "2027-10-18",
+   "to": "2027-10-18",
+   "title": "Big-move watch: full moon; Sun in Libra aspected by (or with) malefics [Bullish]",
+   "lean": "down",
+   "evidence": "leads over-represented on \u00b12% days 2000\u20132026 (no FDR pass; out of sample \u00d71.02)",
+   "weight": "volatility only"
+  },
+  {
+   "metal": "silver",
+   "kind": "Best rule",
+   "frm": "2027-10-26",
+   "to": "2027-10-28",
+   "title": "Only Moon and Mercury alone in a sign",
+   "lean": "up",
+   "evidence": "26 yrs: 49/80 (61% vs base 53%), avg +0.80%, right in 15/26 yrs",
+   "weight": "small edge"
+  },
+  {
+   "metal": "gold",
+   "kind": "Volatility watch",
+   "frm": "2027-11-01",
+   "to": "2027-11-07",
+   "title": "Single lead: Jupiter changes nakshatra",
+   "lean": "up",
+   "evidence": "held in both halves; \u00b12% days 10.2% when present vs 7.3% normally",
+   "weight": "volatility only"
+  },
+  {
+   "metal": "gold",
+   "kind": "Best rule",
+   "frm": "2027-11-05",
+   "to": "2027-11-16",
+   "title": "U2 - Mercury with the Sun",
+   "lean": "up",
+   "evidence": "26 yrs: 176/291 (60% vs base 57%), avg +0.62%, right in 20/26 yrs",
+   "weight": "small edge"
+  },
+  {
+   "metal": "gold",
+   "kind": "Volatility watch",
+   "frm": "2027-11-23",
+   "to": "2027-11-29",
+   "title": "Single lead: Jupiter changes sign",
+   "lean": "either",
+   "evidence": "held in both halves; \u00b12% days 12.2% when present vs 7.3% normally",
+   "weight": "volatility only"
+  },
+  {
+   "metal": "silver",
+   "kind": "Best rule",
+   "frm": "2027-11-24",
+   "to": "2027-11-25",
+   "title": "Only Moon and Mercury alone in a sign",
+   "lean": "up",
+   "evidence": "26 yrs: 49/80 (61% vs base 53%), avg +0.80%, right in 15/26 yrs",
+   "weight": "small edge"
+  },
+  {
+   "metal": "gold",
+   "kind": "Best rule",
+   "frm": "2027-11-25",
+   "to": "2027-12-14",
+   "title": "U2 - Mercury with the Sun",
+   "lean": "up",
+   "evidence": "26 yrs: 176/291 (60% vs base 57%), avg +0.62%, right in 20/26 yrs",
+   "weight": "small edge"
+  },
+  {
+   "metal": "gold",
+   "kind": "Best rule",
+   "frm": "2027-12-16",
+   "to": "2027-12-31",
+   "title": "U2 - Mercury with the Sun",
+   "lean": "up",
+   "evidence": "26 yrs: 176/291 (60% vs base 57%), avg +0.62%, right in 20/26 yrs",
+   "weight": "small edge"
+  },
+  {
+   "metal": "gold",
+   "kind": "Volatility watch",
+   "frm": "2027-12-27",
+   "to": "2027-12-31",
+   "title": "Big-move watch: Rahu & Mars together in any sign [Bullish]; Mars in Capricorn; Mars with Rahu",
+   "lean": "up",
+   "evidence": "leads over-represented on \u00b12% days 2000\u20132026 (no FDR pass; out of sample \u00d71.02)",
+   "weight": "volatility only"
+  }
+ ],
+ "months": [
+  {
+   "month": "Nov 2026",
+   "gold_up": 0,
+   "silver_up": 0,
+   "watch": [],
+   "singles": [],
+   "venus": []
+  },
+  {
+   "month": "Dec 2026",
+   "gold_up": 81,
+   "silver_up": 65,
+   "watch": [],
+   "singles": [],
+   "venus": []
+  },
+  {
+   "month": "Jan 2027",
+   "gold_up": 74,
+   "silver_up": 100,
+   "watch": [
+    "21 Jan\u201327 Jan (either)"
+   ],
+   "singles": [],
+   "venus": []
+  },
+  {
+   "month": "Feb 2027",
+   "gold_up": 43,
+   "silver_up": 100,
+   "watch": [],
+   "singles": [],
+   "venus": []
+  },
+  {
+   "month": "Mar 2027",
+   "gold_up": 13,
+   "silver_up": 100,
+   "watch": [
+    "22 Mar\u201325 Mar (down)"
+   ],
+   "singles": [],
+   "venus": []
+  },
+  {
+   "month": "Apr 2027",
+   "gold_up": 67,
+   "silver_up": 40,
+   "watch": [],
+   "singles": [],
+   "venus": []
+  },
+  {
+   "month": "May 2027",
+   "gold_up": 48,
+   "silver_up": 10,
+   "watch": [],
+   "singles": [
+    "04 May: Venus-Saturn conjunction (down)"
+   ],
+   "venus": []
+  },
+  {
+   "month": "Jun 2027",
+   "gold_up": 53,
+   "silver_up": 80,
+   "watch": [
+    "22 Jun\u201328 Jun (up)"
+   ],
+   "singles": [],
+   "venus": []
+  },
+  {
+   "month": "Jul 2027",
+   "gold_up": 58,
+   "silver_up": 16,
+   "watch": [],
+   "singles": [],
+   "venus": [
+    "20 Jul: Venus combust in East"
+   ]
+  },
+  {
+   "month": "Aug 2027",
+   "gold_up": 90,
+   "silver_up": 0,
+   "watch": [],
+   "singles": [
+    "27 Aug: Jupiter changes nakshatra (up)"
+   ],
+   "venus": [
+    "20 Jul: Venus combust in East"
+   ]
+  },
+  {
+   "month": "Sep 2027",
+   "gold_up": 17,
+   "silver_up": 10,
+   "watch": [],
+   "singles": [],
+   "venus": [
+    "20 Jul: Venus combust in East",
+    "07 Sep: Venus rises in West"
+   ]
+  },
+  {
+   "month": "Oct 2027",
+   "gold_up": 13,
+   "silver_up": 71,
+   "watch": [
+    "18 Oct\u201318 Oct (down)"
+   ],
+   "singles": [],
+   "venus": []
+  },
+  {
+   "month": "Nov 2027",
+   "gold_up": 60,
+   "silver_up": 7,
+   "watch": [],
+   "singles": [
+    "01 Nov: Jupiter changes nakshatra (up)",
+    "23 Nov: Jupiter changes sign (either)"
+   ],
+   "venus": []
+  },
+  {
+   "month": "Dec 2027",
+   "gold_up": 97,
+   "silver_up": 0,
+   "watch": [
+    "27 Dec\u201331 Dec (up)"
+   ],
+   "singles": [],
+   "venus": []
+  }
+ ]
+}
