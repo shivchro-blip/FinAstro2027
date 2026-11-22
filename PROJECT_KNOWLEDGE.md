@@ -171,6 +171,17 @@ There are no TA S34 A9 windows between now and 31 Dec 2027.
 - 42.6: 18 / 27 against a 70% base, no edge.
 - 10.17: 2 / 3, a single passage. The current window runs to 7 Feb 2027.
 
+**"Slow planets set the trend, fast planets the sudden moves"** (Kindle Ch.3 / Ch.6; TA p.59–60; KD p.82 / p.129), tested 2000–2026 in `speed_principle_test_2000-2026_ET.html`:
+- **Not supported at daily-to-weekly horizons.** Fast-planet events (lunations, quarters, Mercury/Venus stations and ingresses, Sankrantis) were not followed by bigger or more sudden moves in gold or silver: all ratios ×0.95–1.10, none significant.
+- **Slow-planet-only rules did not get the trend right more often:**
+
+| Metal | Slow-planet-only rules | Fast-planet-only rules |
+|---|---|---|
+| Gold | 57% vs a 52% base, only 35 cases | 55% vs 53% |
+| Silver | 46% vs 52% | 50% vs 51% |
+
+- **The only hint ran the other way.** A sudden (more than 2σ) gold day followed within 3 days of a Jupiter/Saturn/Rahu sign change in 23% of cases, against 15% for all days (p ≈ 0.03, 77 events; silver 21% vs 15%, p ≈ 0.1). Jupiter/Saturn stations were calmer than normal (9% vs 15%). With 22 classes tested, treat this as a lead, not a rule.
+
 **Model v1.0 (Ch.41 + Shadbala + Ashtakavarga), 6,572 trading days:**
 - The correlation of the scarcity index with the next 5 days is −0.002.
 - The model leans bullish on 67% of days by construction.

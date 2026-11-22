@@ -201,6 +201,17 @@
     "build/pdfref/gold_deep_2026-11-22_to_2026-12-31_ET_notes.md",
     "tools/gold_deep_analysis.py"
    ]
+  },
+  {
+   "date": "2026-11-22",
+   "pr": "14",
+   "topic": "Test: slow planets set the trend, fast planets the sudden moves",
+   "analysis": "Event study 2000-2026 on gold and silver (astronomy-layer events grouped by planet speed: move size and sudden >2-sigma days after each event) plus the 26-year rule results pooled by the speed of the planets each rule names. Sources of the idea: Kindle Ch.3/Ch.6, TA p.59-60, KD p.82/p.129.",
+   "result": "Not supported: fast-planet events brought no bigger or more sudden moves (ratios x0.95-1.10, none significant); slow-planet-only rules gold 57% vs 52% base (35 cases), silver 46% vs 52%. Opposite hint: sudden gold days within 3 days of Jupiter/Saturn/Rahu sign changes 23% vs 15% (p~0.03); Jupiter/Saturn stations calmer (9% vs 15%).",
+   "files": [
+    "tools/test_speed_principle.py",
+    "build/pdfref/speed_principle_test_2000-2026_ET.html"
+   ]
   }
  ]
 }

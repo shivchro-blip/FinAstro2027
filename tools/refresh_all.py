@@ -29,6 +29,7 @@ STEPS = [
     ["tools/backtest_gold.py", "--years", "26"],
     ["tools/backtest_gold.py", "--metal", "silver", "--years", "26"],
     ["tools/test_source_rules.py"],
+    ["tools/test_speed_principle.py"],
     ["tools/build_bs41_model.py"],
     ["tools/gold_deep_analysis.py", "2026-11-22", "2026-12-31"],
     ["tools/gold_tracker.py"],
