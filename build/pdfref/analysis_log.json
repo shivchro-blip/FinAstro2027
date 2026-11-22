@@ -270,6 +270,17 @@
     "build/pdfref/gold_fast_triggers_2026-11-22_to_2027-12-31_ET.html",
     "build/pdfref/gold_fast_triggers_2026-11-22_to_2027-12-31_ET.ics"
    ]
+  },
+  {
+   "date": "2026-11-22",
+   "pr": "19",
+   "topic": "Simple gold bullish / bearish table to end-2027",
+   "analysis": "Points per weekday from the outlook and the narrowed days. Bullish: U2 +1, Venus combust East +2, up-leaning watch window +1, trigger day in an up window +1. Bearish: down-leaning window +1, trigger day in a down window +1, 22 Nov - 2 Dec 2026 deep-analysis phase +1. Strength from the net score: 3+ High, 2 Moderate, 1 Low.",
+   "result": "High bullish: 20 Jul and 30 Jul - 2 Sep 2027 (Venus combust in East with Mercury with the Sun). Moderate bullish: 22-28 Jun, 21-29 Jul, early Sep, 5 Nov, 27-31 Dec 2027. Moderate bearish: 22-23 Mar 2027. Low bearish: 23 Nov - 1 Dec 2026, 24-25 Mar, 7-10 May 2027. Volatile: 4-6 May, 18 Oct, 23-24 Nov 2027. Most other signal days are low bullish (U2 only).",
+   "files": [
+    "tools/gold_signal_table.py",
+    "build/pdfref/gold_signals_2026-11-22_to_2027-12-31_ET.html"
+   ]
   }
  ]
 }
