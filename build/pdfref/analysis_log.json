@@ -212,6 +212,17 @@
     "tools/test_speed_principle.py",
     "build/pdfref/speed_principle_test_2000-2026_ET.html"
    ]
+  },
+  {
+   "date": "2026-11-22",
+   "pr": "15",
+   "topic": "Gold ±2% days 2000-2026: which planetary factors surround them (±3 days)",
+   "analysis": "476 GC=F days with |close-to-close| >= 2% (20 Nov 2000 - 20 Nov 2026). 234 factors were tested: lunations, eclipses, stations, sign/nakshatra ingresses, combustion, conjunctions/oppositions within ±3 days; retrogrades, signs, Sun contacts, pair relations on the day; all active gold rules. Each factor's expected count comes from the same years; Poisson p, Benjamini-Hochberg q, separate episodes counted.",
+   "result": "No factor significant after FDR (lowest q 0.35). Leads: Sun-Uranus opposition x2.13, Venus-Saturn conjunction x1.80, Jupiter nakshatra change x1.41, Saturn combustion x1.57, Rahu with Mars x1.44. Up: Mars in Capricorn x1.86 (62.5% up, p 0.003), Mars-Pluto conjunction x3.5. Down: Pluto R station x2.2, full Moon x1.24. The bullish rules Mars in Pushya (TA) and Sun in Libra with malefics (doc26) coincided with big falls.",
+   "files": [
+    "tools/big_move_analysis.py",
+    "build/pdfref/gold_big_moves_2000-2026_ET.html"
+   ]
   }
  ]
 }

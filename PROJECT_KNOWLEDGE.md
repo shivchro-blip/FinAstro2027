@@ -66,6 +66,7 @@ Known data problems:
 | `tools/test_source_rules.py` | Tests of the 'Others' rules, 2000–2026 |
 | `tools/build_bs41_model.py` | Model v1.0 calendar and 2000–2026 backtest |
 | `tools/gold_deep_analysis.py [start] [end]` | Day-by-day gold analysis for a date range: rules with their 26-year records, transits, aspects, Model v1.0 and seasonality. A hand-written `..._notes.md` beside the output is rendered at the top |
+| `tools/big_move_analysis.py [threshold_pct]` | Gold's ±2% days 2000–2026: events within ±3 days, states and active gold rules vs a same-year expected count (Poisson, FDR) |
 | `tools/gold_tracker.py [--metal silver]` | Trackers: findings, rule status, best-rule dates, analysis log |
 | `tools/build_year.py YEAR` | Astronomy layer for any year; 2000–2024 are git-ignored and rebuilt on demand |
 | `tools/fetch_prices.py` | Downloads GC=F and SI=F (Yahoo; the host must be allowed) |
@@ -81,6 +82,7 @@ Known data problems:
 | `calendar_2027_NY_master.*` | NY 2027 calendar: all PDF rules plus the existing calendar |
 | `gold_backtest_2000-11-20_to_2026-11-20_ET.html` (26 years), `…2021-11-20…` (5 years), `…2025-11-20…` (1 year); `silver_…` | Rule backtests |
 | `source_rules_test_2000-2026_ET.html` | 26-year test of the Brihat Samhita, Timing Solutions and Silver guide rules |
+| `gold_big_moves_2000-2026_ET.html` | Every ±2% gold day 2000–2026 with the sky ±3 days; which factors were over-represented |
 | `gold_bs41_model_2026-11-20_to_2027-12-31_ET.*` | Model v1.0 daily readings, calendar (ics) and backtest |
 | `GOLD_TRACKER.html`, `SILVER_TRACKER.html` | Current status of every rule, best-rule dates, analysis log |
 | `REFERENCE_PDF_RULES.md`, `COMPLETION_REPORT.md`, `COVERAGE_AUDIT_GOLD_SILVER.md` | Rule lists and audits |
@@ -181,6 +183,32 @@ There are no TA S34 A9 windows between now and 31 Dec 2027.
 | Silver | 46% vs 52% | 50% vs 51% |
 
 - **The only hint ran the other way.** A sudden (more than 2σ) gold day followed within 3 days of a Jupiter/Saturn/Rahu sign change in 23% of cases, against 15% for all days (p ≈ 0.03, 77 events; silver 21% vs 15%, p ≈ 0.1). Jupiter/Saturn stations were calmer than normal (9% vs 15%). With 22 classes tested, treat this as a lead, not a rule.
+
+**Gold's big days (±2% close to close), 2000–2026**, in `gold_big_moves_2000-2026_ET.html`:
+- 476 big days (226 up, 250 down) out of 6,526. 234 factors were tested: events within ±3 days, states on the day, and active gold rules. Each one's expected count comes from the same years.
+- **No factor survives the correction for multiple testing.** The lowest q is 0.35. Every lift below is a lead, not a rule. Big days come in bursts, so the separate episodes behind each count are shown.
+
+| Factor | Lift | Count | Episodes | p |
+|---|---|---|---|---|
+| Sun–Uranus opposition | ×2.13 | 18 | 8 | 0.003 |
+| Venus–Saturn conjunction | ×1.80 | 19 | 9 | 0.012 |
+| Jupiter changes nakshatra | ×1.41 | 48 | 35 | 0.014 |
+| Saturn combustion begins | ×1.57 | 29 | 18 | 0.015 |
+| Rahu with Mars | ×1.44 | 39 | 15 | 0.018 |
+| Mars in Capricorn | ×1.39 | 40 | 12 | 0.027 |
+| Jupiter changes sign | ×1.53 | 23 | 18 | 0.034 |
+
+- **Up moves:**
+  - Mars–Pluto conjunction ×3.5 (8 days, mostly March 2020 and January 2026).
+  - Mars in Capricorn, where Mars is exalted, ×1.86 (25 days, 62.5% of its big days up against 47.5% overall, p = 0.003, q = 0.35).
+  - Jupiter in Capricorn ×1.55.
+- **Down moves:**
+  - Pluto stations retrograde ×2.2.
+  - Venus–Saturn conjunction ×2.0.
+  - Full Moon ×1.24 (73 against 59, p = 0.04).
+- **Two bullish rules coincided with big falls, not big rises:** TA Mars in Pushya (25 of 40 big days down) and doc26 Sun in Libra with malefics (15 of 22 down).
+- **Slow-planet changes** (Jupiter's nakshatra and sign changes, Saturn's combustion) repeat the speed-test hint: big days cluster around them, in both directions.
+- **Uranus, Neptune and Pluto are not Vedic grahas.** Their lifts cannot become rules under the scope decision.
 
 **Model v1.0 (Ch.41 + Shadbala + Ashtakavarga), 6,572 trading days:**
 - The correlation of the scarcity index with the next 5 days is −0.002.

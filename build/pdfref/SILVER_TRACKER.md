@@ -1,6 +1,6 @@
 # Silver findings tracker
 
-Generated 22 Nov 2026 08:13 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
+Generated 22 Nov 2026 08:25 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
 
 ## Recent findings
 
@@ -111,6 +111,7 @@ Best (from the 26 yr data): Retrograde Mercury or Jupiter, Only Moon and Mercury
 
 | Date | PR | Topic | Result |
 |---|---|---|---|
+| 2026-11-22 | #15 | Gold ±2% days 2000-2026: which planetary factors surround them (±3 days) | No factor significant after FDR (lowest q 0.35). Leads: Sun-Uranus opposition x2.13, Venus-Saturn conjunction x1.80, Jupiter nakshatra change x1.41, Saturn combustion x1.57, Rahu with Mars x1.44. Up: Mars in Capricorn x1.86 (62.5% up, p 0.003), Mars-Pluto conjunction x3.5. Down: Pluto R station x2.2, full Moon x1.24. The bullish rules Mars in Pushya (TA) and Sun in Libra with malefics (doc26) coincided with big falls. |
 | 2026-11-22 | #14 | Test: slow planets set the trend, fast planets the sudden moves | Not supported: fast-planet events brought no bigger or more sudden moves (ratios x0.95-1.10, none significant); slow-planet-only rules gold 57% vs 52% base (35 cases), silver 46% vs 52%. Opposite hint: sudden gold days within 3 days of Jupiter/Saturn/Rahu sign changes 23% vs 15% (p~0.03); Jupiter/Saturn stations calmer (9% vs 15%). |
 | 2026-11-22 | #14 | Gold deep analysis, 22 Nov - 31 Dec 2026 | Three phases: 22 Nov - 2 Dec bearish lean (Sun in Anuradha, Mars on the Sun, benefic vedha, Saturn in Uttara Bhadrapada, Rahu in Dhanishta); 2-16 Dec neutral turning supportive (Mercury with the Sun, tier A; Saturn direct 10 Dec, Jupiter retrograde 13 Dec); 16-31 Dec mixed-supportive (Jupiter and Saturn both aspect the Sun, Mercury rejoins 22 Dec). Only U2-Mercury is tier A; seasonality +1.7% avg, up 16 of 26 years. |
 | 2026-11-22 | #13 | reports/ folder with ready-to-open copies | reports/index.html lists 21 reports in four groups (start here, calendars and rule reports, backtests, source research). |
