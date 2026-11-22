@@ -46,6 +46,7 @@ SECTIONS = [
         (B + "silver_backtest_2025-11-20_to_2026-11-20_ET.html", "Silver, 1 year (2025-2026)", ""),
         (B + "source_rules_test_2000-2026_ET.html", "New-document rules test (2000-2026)", "Brihat Samhita 42.6 / 42.14 / 10.17, lunation half-cycles, the Silver guide's Moon conditions."),
         (B + "gold_big_moves_2000-2026_ET.html", "Gold's +/-2% days (2000-2026)", "Every big gold day with the sky +/-3 days, and which planetary factors were over-represented (same-year expected counts, FDR)."),
+        (B + "venus_visibility_test_2000-2026_ET.html", "Venus combust / rising test (2000-2026) and the Jan 2026 crash", "TA Section 18 Venus rules on gold and silver; Venus rose in the West on 31 Jan 2026, the session after gold's -10.8% day."),
         (B + "speed_principle_test_2000-2026_ET.html", "Slow vs fast planets test (2000-2026)", "Do fast-planet events bring bigger / sudden moves, and do slow-planet rules get the trend right more often?"),
     ]),
     ("Source research and methodology", [

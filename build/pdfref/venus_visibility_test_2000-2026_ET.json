@@ -1,0 +1,4004 @@
+{
+ "rules": [
+  {
+   "rule_id": "ta_s18_venus_combust_west",
+   "title": "Venus combust in West",
+   "tone": "Bullish",
+   "kind": "window",
+   "metals": {
+    "gold": {
+     "main": {
+      "n": 17,
+      "worked": 7,
+      "failed": 9,
+      "hit": 44,
+      "base": 56,
+      "p": 0.893,
+      "avg": -0.39
+     },
+     "f20": {
+      "n": 17,
+      "worked": 9,
+      "failed": 4,
+      "hit": 69,
+      "base": 57,
+      "p": 0.264,
+      "avg": 0.84
+     },
+     "f40": {
+      "n": 16,
+      "worked": 11,
+      "failed": 3,
+      "hit": 79,
+      "base": 65,
+      "p": 0.211,
+      "avg": 3.89
+     },
+     "big_near": 4,
+     "big_near_exp": 4.6,
+     "pre3_avg": 0.89,
+     "pre3_down": 3
+    },
+    "silver": {
+     "main": {
+      "n": 17,
+      "worked": 5,
+      "failed": 8,
+      "hit": 38,
+      "base": 55,
+      "p": 0.933,
+      "avg": -1.32
+     },
+     "f20": {
+      "n": 17,
+      "worked": 7,
+      "failed": 8,
+      "hit": 47,
+      "base": 57,
+      "p": 0.857,
+      "avg": -1.22
+     },
+     "f40": {
+      "n": 16,
+      "worked": 11,
+      "failed": 4,
+      "hit": 73,
+      "base": 53,
+      "p": 0.095,
+      "avg": 5.86
+     },
+     "big_near": 12,
+     "big_near_exp": 10.6,
+     "pre3_avg": 0.69,
+     "pre3_down": 4
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_east",
+   "title": "Venus combust in East",
+   "tone": "Bullish",
+   "kind": "window",
+   "metals": {
+    "gold": {
+     "main": {
+      "n": 16,
+      "worked": 12,
+      "failed": 4,
+      "hit": 75,
+      "base": 57,
+      "p": 0.113,
+      "avg": 3.28
+     },
+     "f20": {
+      "n": 16,
+      "worked": 9,
+      "failed": 2,
+      "hit": 82,
+      "base": 58,
+      "p": 0.097,
+      "avg": 2.11
+     },
+     "f40": {
+      "n": 16,
+      "worked": 12,
+      "failed": 4,
+      "hit": 75,
+      "base": 57,
+      "p": 0.113,
+      "avg": 3.88
+     },
+     "big_near": 5,
+     "big_near_exp": 4.5,
+     "pre3_avg": 0.25,
+     "pre3_down": 5
+    },
+    "silver": {
+     "main": {
+      "n": 16,
+      "worked": 10,
+      "failed": 5,
+      "hit": 67,
+      "base": 51,
+      "p": 0.179,
+      "avg": 2.58
+     },
+     "f20": {
+      "n": 16,
+      "worked": 10,
+      "failed": 6,
+      "hit": 62,
+      "base": 52,
+      "p": 0.282,
+      "avg": 3.94
+     },
+     "f40": {
+      "n": 16,
+      "worked": 10,
+      "failed": 6,
+      "hit": 62,
+      "base": 52,
+      "p": 0.276,
+      "avg": 4.06
+     },
+     "big_near": 11,
+     "big_near_exp": 10.2,
+     "pre3_avg": 0.81,
+     "pre3_down": 4
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_east",
+   "title": "Venus rises in East",
+   "tone": "Bullish",
+   "kind": "instant",
+   "metals": {
+    "gold": {
+     "main": {
+      "n": 17,
+      "worked": 9,
+      "failed": 3,
+      "hit": 75,
+      "base": 58,
+      "p": 0.177,
+      "avg": 0.77
+     },
+     "f20": {
+      "n": 17,
+      "worked": 9,
+      "failed": 5,
+      "hit": 64,
+      "base": 57,
+      "p": 0.395,
+      "avg": 1.39
+     },
+     "f40": {
+      "n": 16,
+      "worked": 13,
+      "failed": 2,
+      "hit": 87,
+      "base": 63,
+      "p": 0.045,
+      "avg": 5.75
+     },
+     "big_near": 4,
+     "big_near_exp": 4.6,
+     "pre3_avg": -0.58,
+     "pre3_down": 10
+    },
+    "silver": {
+     "main": {
+      "n": 17,
+      "worked": 9,
+      "failed": 5,
+      "hit": 64,
+      "base": 56,
+      "p": 0.355,
+      "avg": 0.74
+     },
+     "f20": {
+      "n": 17,
+      "worked": 9,
+      "failed": 7,
+      "hit": 56,
+      "base": 53,
+      "p": 0.503,
+      "avg": 0.07
+     },
+     "f40": {
+      "n": 16,
+      "worked": 12,
+      "failed": 4,
+      "hit": 75,
+      "base": 55,
+      "p": 0.082,
+      "avg": 9.17
+     },
+     "big_near": 12,
+     "big_near_exp": 10.6,
+     "pre3_avg": -1.4,
+     "pre3_down": 10
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_west",
+   "title": "Venus rises in West",
+   "tone": "Bearish",
+   "kind": "instant",
+   "metals": {
+    "gold": {
+     "main": {
+      "n": 16,
+      "worked": 6,
+      "failed": 6,
+      "hit": 50,
+      "base": 45,
+      "p": 0.464,
+      "avg": 0.69
+     },
+     "f20": {
+      "n": 16,
+      "worked": 7,
+      "failed": 5,
+      "hit": 58,
+      "base": 43,
+      "p": 0.21,
+      "avg": 0.22
+     },
+     "f40": {
+      "n": 16,
+      "worked": 4,
+      "failed": 9,
+      "hit": 31,
+      "base": 44,
+      "p": 0.888,
+      "avg": 1.58
+     },
+     "big_near": 4,
+     "big_near_exp": 4.2,
+     "pre3_avg": -0.21,
+     "pre3_down": 7,
+     "qualified": {
+      "n": 6,
+      "pattern": 2,
+      "expected": 1.8,
+      "dates": [
+       "2005-04-23",
+       "2013-04-21",
+       "2018-02-03",
+       "2019-09-09",
+       "2021-04-18",
+       "2026-01-31"
+      ]
+     },
+     "unqualified": {
+      "n": 10,
+      "worked": 3,
+      "failed": 4,
+      "hit": 43,
+      "base": 43,
+      "p": 0.641,
+      "avg": 0.56
+     }
+    },
+    "silver": {
+     "main": {
+      "n": 16,
+      "worked": 6,
+      "failed": 8,
+      "hit": 43,
+      "base": 47,
+      "p": 0.722,
+      "avg": 0.97
+     },
+     "f20": {
+      "n": 16,
+      "worked": 9,
+      "failed": 7,
+      "hit": 56,
+      "base": 49,
+      "p": 0.366,
+      "avg": 0.64
+     },
+     "f40": {
+      "n": 16,
+      "worked": 6,
+      "failed": 8,
+      "hit": 43,
+      "base": 50,
+      "p": 0.794,
+      "avg": 0.46
+     },
+     "big_near": 14,
+     "big_near_exp": 10.1,
+     "pre3_avg": -2.68,
+     "pre3_down": 9,
+     "qualified": {
+      "n": 6,
+      "pattern": 2,
+      "expected": 1.7,
+      "dates": [
+       "2005-04-23",
+       "2013-04-21",
+       "2018-02-03",
+       "2019-09-09",
+       "2021-04-18",
+       "2026-01-31"
+      ]
+     },
+     "unqualified": {
+      "n": 10,
+      "worked": 2,
+      "failed": 7,
+      "hit": 22,
+      "base": 45,
+      "p": 0.962,
+      "avg": 2.64
+     }
+    }
+   }
+  }
+ ],
+ "events": [
+  {
+   "rule_id": "ta_s18_venus_combust_east",
+   "title": "Venus combust in East",
+   "tone": "Bullish",
+   "start": "2000-05-10T14:30:00-04:00",
+   "end": "2000-07-02T14:30:00-04:00",
+   "sign": "Aries",
+   "nakshatra": "Bharani",
+   "with_": [
+    "Sun",
+    "Saturn"
+   ],
+   "qualified": false,
+   "days": 53,
+   "by": {
+    "gold": {
+     "entry": "2026-11-20",
+     "entry_close": 3515.39990234375,
+     "pre3": -9.03,
+     "main": -92.21,
+     "horizon": 1,
+     "f5": -92.2,
+     "f20": -92.08,
+     "f40": -92.43,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    },
+    "silver": {
+     "entry": "2026-11-20",
+     "entry_close": 41.03499984741211,
+     "pre3": -13.22,
+     "main": -87.99,
+     "horizon": 1,
+     "f5": -87.86,
+     "f20": -87.89,
+     "f40": -88.39,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_west",
+   "title": "Venus rises in West",
+   "tone": "Bearish",
+   "start": "2000-07-02T14:30:00-04:00",
+   "end": null,
+   "sign": "Gemini",
+   "nakshatra": "Punarvasu",
+   "with_": [
+    "Sun",
+    "Mars"
+   ],
+   "qualified": false,
+   "days": 53,
+   "by": {
+    "gold": {
+     "entry": "2026-11-20",
+     "entry_close": 3515.39990234375,
+     "pre3": -9.03,
+     "main": -92.2,
+     "horizon": 5,
+     "f5": -92.2,
+     "f20": -92.08,
+     "f40": -92.43,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2026-11-20",
+     "entry_close": 41.03499984741211,
+     "pre3": -13.22,
+     "main": -87.86,
+     "horizon": 5,
+     "f5": -87.86,
+     "f20": -87.89,
+     "f40": -88.39,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_west",
+   "title": "Venus combust in West",
+   "tone": "Bullish",
+   "start": "2001-03-25T13:30:00-05:00",
+   "end": "2001-03-29T13:30:00-05:00",
+   "sign": "Pisces",
+   "nakshatra": "Revati",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 4,
+   "by": {
+    "gold": {
+     "entry": "2001-03-23",
+     "entry_close": 261.5,
+     "pre3": 0.38,
+     "main": -0.69,
+     "horizon": 3,
+     "f5": -1.38,
+     "f20": 0.84,
+     "f40": 9.14,
+     "big_near": [],
+     "dip_then_up": true,
+     "outcome": "FAILED"
+    },
+    "silver": {
+     "entry": "2001-03-23",
+     "entry_close": 4.3420000076293945,
+     "pre3": 0.32,
+     "main": 0.28,
+     "horizon": 3,
+     "f5": -1.47,
+     "f20": 2.14,
+     "f40": 4.24,
+     "big_near": [],
+     "dip_then_up": true,
+     "outcome": "FLAT"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_east",
+   "title": "Venus rises in East",
+   "tone": "Bullish",
+   "start": "2001-03-29T13:30:00-05:00",
+   "end": null,
+   "sign": "Pisces",
+   "nakshatra": "Uttara Bhadrapada",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 4,
+   "by": {
+    "gold": {
+     "entry": "2001-03-28",
+     "entry_close": 259.70001220703125,
+     "pre3": -0.69,
+     "main": -0.5,
+     "horizon": 5,
+     "f5": -0.5,
+     "f20": 1.81,
+     "f40": 7.47,
+     "big_near": [],
+     "dip_then_up": true,
+     "outcome": "FAILED"
+    },
+    "silver": {
+     "entry": "2001-03-28",
+     "entry_close": 4.354000091552734,
+     "pre3": 0.28,
+     "main": -0.71,
+     "horizon": 5,
+     "f5": -0.71,
+     "f20": 0.53,
+     "f40": 5.72,
+     "big_near": [],
+     "dip_then_up": true,
+     "outcome": "FAILED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_east",
+   "title": "Venus combust in East",
+   "tone": "Bullish",
+   "start": "2001-12-18T13:30:00-05:00",
+   "end": "2002-02-08T13:30:00-05:00",
+   "sign": "Scorpio",
+   "nakshatra": "Jyeshtha",
+   "with_": [],
+   "qualified": false,
+   "days": 52,
+   "by": {
+    "gold": {
+     "entry": "2001-12-17",
+     "entry_close": 277.70001220703125,
+     "pre3": 1.42,
+     "main": 7.92,
+     "horizon": 34,
+     "f5": 0.72,
+     "f20": 2.41,
+     "f40": 7.45,
+     "big_near": [],
+     "dip_then_up": true,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2001-12-17",
+     "entry_close": 4.360000133514404,
+     "pre3": 2.71,
+     "main": -0.41,
+     "horizon": 34,
+     "f5": 4.04,
+     "f20": 1.79,
+     "f40": 4.01,
+     "big_near": [
+      [
+       "2001-12-19",
+       -2.54
+      ],
+      [
+       "2001-12-20",
+       2.09
+      ]
+     ],
+     "dip_then_up": true,
+     "outcome": "FLAT"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_west",
+   "title": "Venus rises in West",
+   "tone": "Bearish",
+   "start": "2002-02-08T13:30:00-05:00",
+   "end": null,
+   "sign": "Aquarius",
+   "nakshatra": "Dhanishta",
+   "with_": [],
+   "qualified": false,
+   "days": 52,
+   "by": {
+    "gold": {
+     "entry": "2002-02-07",
+     "entry_close": 299.70001220703125,
+     "pre3": 3.59,
+     "main": 0.0,
+     "horizon": 5,
+     "f5": 0.0,
+     "f20": -3.2,
+     "f40": 0.27,
+     "big_near": [
+      [
+       "2002-02-05",
+       3.08
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "FLAT"
+    },
+    "silver": {
+     "entry": "2002-02-07",
+     "entry_close": 4.3420000076293945,
+     "pre3": 1.26,
+     "main": 4.26,
+     "horizon": 5,
+     "f5": 4.26,
+     "f20": 3.45,
+     "f40": 5.04,
+     "big_near": [
+      [
+       "2002-02-05",
+       2.45
+      ],
+      [
+       "2002-02-08",
+       2.53
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_west",
+   "title": "Venus combust in West",
+   "tone": "Bullish",
+   "start": "2002-10-22T14:30:00-04:00",
+   "end": "2002-11-03T13:30:00-05:00",
+   "sign": "Libra",
+   "nakshatra": "Swati",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 12,
+   "by": {
+    "gold": {
+     "entry": "2002-10-21",
+     "entry_close": 310.8999938964844,
+     "pre3": -0.99,
+     "main": 2.54,
+     "horizon": 9,
+     "f5": 1.38,
+     "f20": 2.67,
+     "f40": 10.04,
+     "big_near": [],
+     "dip_then_up": true,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2002-10-21",
+     "entry_close": 4.343999862670898,
+     "pre3": -0.32,
+     "main": 3.22,
+     "horizon": 9,
+     "f5": 1.38,
+     "f20": 4.4,
+     "f40": 7.39,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_east",
+   "title": "Venus rises in East",
+   "tone": "Bullish",
+   "start": "2002-11-03T13:30:00-05:00",
+   "end": null,
+   "sign": "Libra",
+   "nakshatra": "Swati",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 12,
+   "by": {
+    "gold": {
+     "entry": "2002-11-01",
+     "entry_close": 318.79998779296875,
+     "pre3": 0.35,
+     "main": 0.78,
+     "horizon": 5,
+     "f5": 0.78,
+     "f20": 0.44,
+     "f40": 8.56,
+     "big_near": [],
+     "dip_then_up": true,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2002-11-01",
+     "entry_close": 4.484000205993652,
+     "pre3": -0.4,
+     "main": 0.94,
+     "horizon": 5,
+     "f5": 0.94,
+     "f20": 1.07,
+     "f40": 7.31,
+     "big_near": [],
+     "dip_then_up": true,
+     "outcome": "WORKED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_east",
+   "title": "Venus combust in East",
+   "tone": "Bullish",
+   "start": "2003-07-27T14:30:00-04:00",
+   "end": "2003-09-14T14:30:00-04:00",
+   "sign": "Cancer",
+   "nakshatra": "Pushya",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 49,
+   "by": {
+    "gold": {
+     "entry": "2003-07-25",
+     "entry_close": 362.70001220703125,
+     "pre3": 3.45,
+     "main": 3.61,
+     "horizon": 34,
+     "f5": -4.58,
+     "f20": 0.11,
+     "f40": 6.75,
+     "big_near": [],
+     "dip_then_up": true,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2003-07-25",
+     "entry_close": 5.070000171661377,
+     "pre3": 5.98,
+     "main": 2.54,
+     "horizon": 34,
+     "f5": 0.45,
+     "f20": -1.52,
+     "f40": 3.85,
+     "big_near": [
+      [
+       "2003-07-28",
+       2.37
+      ],
+      [
+       "2003-07-30",
+       -2.05
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_west",
+   "title": "Venus rises in West",
+   "tone": "Bearish",
+   "start": "2003-09-14T14:30:00-04:00",
+   "end": null,
+   "sign": "Virgo",
+   "nakshatra": "Uttara Phalguni",
+   "with_": [],
+   "qualified": false,
+   "days": 49,
+   "by": {
+    "gold": {
+     "entry": "2003-09-12",
+     "entry_close": 375.79998779296875,
+     "pre3": -1.55,
+     "main": 1.6,
+     "horizon": 5,
+     "f5": 1.6,
+     "f20": -0.59,
+     "f40": 2.0,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    },
+    "silver": {
+     "entry": "2003-09-12",
+     "entry_close": 5.198999881744385,
+     "pre3": -0.91,
+     "main": 1.6,
+     "horizon": 5,
+     "f5": 1.6,
+     "f20": -5.65,
+     "f40": -2.83,
+     "big_near": [
+      [
+       "2003-09-12",
+       -2.4
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_west",
+   "title": "Venus combust in West",
+   "tone": "Bullish",
+   "start": "2004-06-04T14:30:00-04:00",
+   "end": "2004-06-11T14:30:00-04:00",
+   "sign": "Taurus",
+   "nakshatra": "Mrigashira",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 7,
+   "by": {
+    "gold": {
+     "entry": "2004-06-03",
+     "entry_close": 388.1000061035156,
+     "pre3": -1.5,
+     "main": -0.57,
+     "horizon": 5,
+     "f5": -0.57,
+     "f20": 2.63,
+     "f40": 0.93,
+     "big_near": [],
+     "dip_then_up": true,
+     "outcome": "FAILED"
+    },
+    "silver": {
+     "entry": "2004-06-03",
+     "entry_close": 5.728000164031982,
+     "pre3": -6.18,
+     "main": 0.3,
+     "horizon": 5,
+     "f5": 0.3,
+     "f20": 4.71,
+     "f40": 15.4,
+     "big_near": [
+      [
+       "2004-06-02",
+       -3.59
+      ]
+     ],
+     "dip_then_up": true,
+     "outcome": "FLAT"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_east",
+   "title": "Venus rises in East",
+   "tone": "Bullish",
+   "start": "2004-06-11T14:30:00-04:00",
+   "end": null,
+   "sign": "Taurus",
+   "nakshatra": "Rohini",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 7,
+   "by": {
+    "gold": {
+     "entry": "2004-06-10",
+     "entry_close": 385.8999938964844,
+     "pre3": -2.01,
+     "main": 2.38,
+     "horizon": 5,
+     "f5": 2.38,
+     "f20": 5.75,
+     "f40": 3.84,
+     "big_near": [],
+     "dip_then_up": true,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2004-06-10",
+     "entry_close": 5.744999885559082,
+     "pre3": -2.53,
+     "main": 4.11,
+     "horizon": 5,
+     "f5": 4.11,
+     "f20": 13.63,
+     "f40": 17.13,
+     "big_near": [
+      [
+       "2004-06-08",
+       -2.21
+      ],
+      [
+       "2004-06-09",
+       -2.36
+      ],
+      [
+       "2004-06-10",
+       2.08
+      ]
+     ],
+     "dip_then_up": true,
+     "outcome": "WORKED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_east",
+   "title": "Venus combust in East",
+   "tone": "Bullish",
+   "start": "2005-02-21T13:30:00-05:00",
+   "end": "2005-04-23T14:30:00-04:00",
+   "sign": "Capricorn",
+   "nakshatra": "Dhanishta",
+   "with_": [],
+   "qualified": false,
+   "days": 61,
+   "by": {
+    "gold": {
+     "entry": "2005-02-18",
+     "entry_close": 427.1000061035156,
+     "pre3": 0.28,
+     "main": 1.69,
+     "horizon": 42,
+     "f5": 2.2,
+     "f20": 0.94,
+     "f40": 1.92,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2005-02-18",
+     "entry_close": 7.413000106811523,
+     "pre3": 0.82,
+     "main": -1.92,
+     "horizon": 42,
+     "f5": -0.73,
+     "f20": -4.26,
+     "f40": -1.08,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_west",
+   "title": "Venus rises in West",
+   "tone": "Bearish",
+   "start": "2005-04-23T14:30:00-04:00",
+   "end": null,
+   "sign": "Aries",
+   "nakshatra": "Bharani",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": true,
+   "days": 61,
+   "by": {
+    "gold": {
+     "entry": "2005-04-22",
+     "entry_close": 434.29998779296875,
+     "pre3": 0.32,
+     "main": -1.11,
+     "horizon": 5,
+     "f5": -1.11,
+     "f20": -4.08,
+     "f40": 1.06,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2005-04-22",
+     "entry_close": 7.270999908447266,
+     "pre3": 0.35,
+     "main": -5.93,
+     "horizon": 5,
+     "f5": -5.93,
+     "f20": -4.41,
+     "f40": 0.22,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_west",
+   "title": "Venus combust in West",
+   "tone": "Bullish",
+   "start": "2006-01-10T13:30:00-05:00",
+   "end": "2006-01-14T13:30:00-05:00",
+   "sign": "Capricorn",
+   "nakshatra": "Uttara Ashadha",
+   "with_": [],
+   "qualified": false,
+   "days": 4,
+   "by": {
+    "gold": {
+     "entry": "2006-01-09",
+     "entry_close": 549.0999755859375,
+     "pre3": 2.85,
+     "main": 1.27,
+     "horizon": 4,
+     "f5": 0.78,
+     "f20": 0.35,
+     "f40": -1.2,
+     "big_near": [],
+     "dip_then_up": true,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2006-01-09",
+     "entry_close": 9.222000122070312,
+     "pre3": 1.32,
+     "main": -1.19,
+     "horizon": 4,
+     "f5": -2.19,
+     "f20": 1.71,
+     "f40": 6.02,
+     "big_near": [
+      [
+       "2006-01-10",
+       -2.87
+      ]
+     ],
+     "dip_then_up": true,
+     "outcome": "FAILED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_east",
+   "title": "Venus rises in East",
+   "tone": "Bullish",
+   "start": "2006-01-14T13:30:00-05:00",
+   "end": null,
+   "sign": "Sagittarius",
+   "nakshatra": "Uttara Ashadha",
+   "with_": [],
+   "qualified": false,
+   "days": 4,
+   "by": {
+    "gold": {
+     "entry": "2006-01-13",
+     "entry_close": 556.0999755859375,
+     "pre3": 2.17,
+     "main": 0.4,
+     "horizon": 5,
+     "f5": 0.4,
+     "f20": -3.07,
+     "f40": -0.79,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "FLAT"
+    },
+    "silver": {
+     "entry": "2006-01-13",
+     "entry_close": 9.112000465393066,
+     "pre3": 1.73,
+     "main": -0.94,
+     "horizon": 5,
+     "f5": -0.94,
+     "f20": -0.13,
+     "f40": 11.74,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_east",
+   "title": "Venus combust in East",
+   "tone": "Bullish",
+   "start": "2006-10-01T14:30:00-04:00",
+   "end": "2006-11-23T13:30:00-05:00",
+   "sign": "Virgo",
+   "nakshatra": "Uttara Phalguni",
+   "with_": [
+    "Sun",
+    "Mars"
+   ],
+   "qualified": false,
+   "days": 53,
+   "by": {
+    "gold": {
+     "entry": "2006-09-29",
+     "entry_close": 598.5999755859375,
+     "pre3": 1.25,
+     "main": 5.03,
+     "horizon": 38,
+     "f5": -4.38,
+     "f20": -0.07,
+     "f40": 6.45,
+     "big_near": [
+      [
+       "2006-10-03",
+       -3.58
+      ],
+      [
+       "2006-10-04",
+       -2.48
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2006-09-29",
+     "entry_close": 11.449999809265137,
+     "pre3": 0.48,
+     "main": 13.8,
+     "horizon": 38,
+     "f5": -3.19,
+     "f20": 4.93,
+     "f40": 18.95,
+     "big_near": [
+      [
+       "2006-10-03",
+       -5.15
+      ],
+      [
+       "2006-10-04",
+       -2.28
+      ]
+     ],
+     "dip_then_up": true,
+     "outcome": "WORKED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_west",
+   "title": "Venus rises in West",
+   "tone": "Bearish",
+   "start": "2006-11-23T13:30:00-05:00",
+   "end": null,
+   "sign": "Scorpio",
+   "nakshatra": "Anuradha",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 53,
+   "by": {
+    "gold": {
+     "entry": "2006-11-22",
+     "entry_close": 628.7000122070312,
+     "pre3": 1.16,
+     "main": 2.54,
+     "horizon": 5,
+     "f5": 2.54,
+     "f20": -1.53,
+     "f40": 3.01,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    },
+    "silver": {
+     "entry": "2006-11-22",
+     "entry_close": 13.029999732971191,
+     "pre3": 1.96,
+     "main": 7.49,
+     "horizon": 5,
+     "f5": 7.49,
+     "f20": -4.01,
+     "f40": 1.31,
+     "big_near": [
+      [
+       "2006-11-21",
+       2.76
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_west",
+   "title": "Venus combust in West",
+   "tone": "Bullish",
+   "start": "2007-08-09T14:30:00-04:00",
+   "end": "2007-08-20T14:30:00-04:00",
+   "sign": "Leo",
+   "nakshatra": "Magha",
+   "with_": [
+    "Saturn"
+   ],
+   "qualified": false,
+   "days": 11,
+   "by": {
+    "gold": {
+     "entry": "2007-08-08",
+     "entry_close": 674.5,
+     "pre3": 0.3,
+     "main": -2.61,
+     "horizon": 7,
+     "f5": -0.83,
+     "f20": 3.13,
+     "f40": 9.38,
+     "big_near": [],
+     "dip_then_up": true,
+     "outcome": "FAILED"
+    },
+    "silver": {
+     "entry": "2007-08-08",
+     "entry_close": 13.118000030517578,
+     "pre3": 0.14,
+     "main": -10.26,
+     "horizon": 7,
+     "f5": -4.57,
+     "f20": -5.74,
+     "f40": 2.07,
+     "big_near": [
+      [
+       "2007-08-09",
+       -3.53
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_east",
+   "title": "Venus rises in East",
+   "tone": "Bullish",
+   "start": "2007-08-20T14:30:00-04:00",
+   "end": null,
+   "sign": "Cancer",
+   "nakshatra": "Ashlesha",
+   "with_": [],
+   "qualified": false,
+   "days": 11,
+   "by": {
+    "gold": {
+     "entry": "2007-08-17",
+     "entry_close": 656.9000244140625,
+     "pre3": -1.75,
+     "main": 1.69,
+     "horizon": 5,
+     "f5": 1.69,
+     "f20": 8.97,
+     "f40": 15.25,
+     "big_near": [],
+     "dip_then_up": true,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2007-08-17",
+     "entry_close": 11.772000312805176,
+     "pre3": -7.36,
+     "main": 1.3,
+     "horizon": 5,
+     "f5": 1.3,
+     "f20": 8.21,
+     "f40": 16.86,
+     "big_near": [
+      [
+       "2007-08-17",
+       2.68
+      ]
+     ],
+     "dip_then_up": true,
+     "outcome": "WORKED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_east",
+   "title": "Venus combust in East",
+   "tone": "Bullish",
+   "start": "2008-05-07T14:30:00-04:00",
+   "end": "2008-06-30T14:30:00-04:00",
+   "sign": "Aries",
+   "nakshatra": "Bharani",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 54,
+   "by": {
+    "gold": {
+     "entry": "2008-05-06",
+     "entry_close": 876.0,
+     "pre3": 3.19,
+     "main": 6.08,
+     "horizon": 37,
+     "f5": -0.86,
+     "f20": 0.45,
+     "f40": 7.85,
+     "big_near": [],
+     "dip_then_up": true,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2008-05-06",
+     "entry_close": 16.780000686645508,
+     "pre3": 4.09,
+     "main": 5.01,
+     "horizon": 37,
+     "f5": -0.1,
+     "f20": 0.75,
+     "f40": 9.28,
+     "big_near": [
+      [
+       "2008-05-05",
+       2.23
+      ]
+     ],
+     "dip_then_up": true,
+     "outcome": "WORKED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_west",
+   "title": "Venus rises in West",
+   "tone": "Bearish",
+   "start": "2008-06-30T14:30:00-04:00",
+   "end": null,
+   "sign": "Gemini",
+   "nakshatra": "Punarvasu",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 54,
+   "by": {
+    "gold": {
+     "entry": "2008-06-27",
+     "entry_close": 929.2999877929688,
+     "pre3": 4.51,
+     "main": -0.22,
+     "horizon": 5,
+     "f5": -0.22,
+     "f20": -0.18,
+     "f40": -11.78,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "FLAT"
+    },
+    "silver": {
+     "entry": "2008-06-27",
+     "entry_close": 17.6200008392334,
+     "pre3": 5.97,
+     "main": 1.24,
+     "horizon": 5,
+     "f5": 1.24,
+     "f20": -1.15,
+     "f40": -24.15,
+     "big_near": [
+      [
+       "2008-06-27",
+       2.9
+      ],
+      [
+       "2008-07-01",
+       4.48
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_west",
+   "title": "Venus combust in West",
+   "tone": "Bullish",
+   "start": "2009-03-23T14:30:00-04:00",
+   "end": "2009-03-27T14:30:00-04:00",
+   "sign": "Pisces",
+   "nakshatra": "Uttara Bhadrapada",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 4,
+   "by": {
+    "gold": {
+     "entry": "2009-03-20",
+     "entry_close": 955.7999877929688,
+     "pre3": 4.3,
+     "main": -1.69,
+     "horizon": 4,
+     "f5": -3.43,
+     "f20": -7.2,
+     "f40": -3.61,
+     "big_near": [
+      [
+       "2009-03-24",
+       -3.02
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    },
+    "silver": {
+     "entry": "2009-03-20",
+     "entry_close": 13.82699966430664,
+     "pre3": 9.0,
+     "main": -1.59,
+     "horizon": 4,
+     "f5": -4.17,
+     "f20": -12.49,
+     "f40": -0.12,
+     "big_near": [
+      [
+       "2009-03-20",
+       2.42
+      ],
+      [
+       "2009-03-24",
+       -3.74
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_east",
+   "title": "Venus rises in East",
+   "tone": "Bullish",
+   "start": "2009-03-27T14:30:00-04:00",
+   "end": null,
+   "sign": "Pisces",
+   "nakshatra": "Uttara Bhadrapada",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 4,
+   "by": {
+    "gold": {
+     "entry": "2009-03-26",
+     "entry_close": 939.5999755859375,
+     "pre3": -1.31,
+     "main": -3.43,
+     "horizon": 5,
+     "f5": -3.43,
+     "f20": -2.77,
+     "f40": 2.01,
+     "big_near": [
+      [
+       "2009-03-24",
+       -3.02
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    },
+    "silver": {
+     "entry": "2009-03-26",
+     "entry_close": 13.607000350952148,
+     "pre3": -1.84,
+     "main": -4.35,
+     "horizon": 5,
+     "f5": -4.35,
+     "f20": -5.09,
+     "f40": 7.91,
+     "big_near": [
+      [
+       "2009-03-24",
+       -3.74
+      ],
+      [
+       "2009-03-27",
+       -2.62
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_east",
+   "title": "Venus combust in East",
+   "tone": "Bullish",
+   "start": "2009-12-16T13:30:00-05:00",
+   "end": "2010-02-06T13:30:00-05:00",
+   "sign": "Scorpio",
+   "nakshatra": "Jyeshtha",
+   "with_": [],
+   "qualified": false,
+   "days": 52,
+   "by": {
+    "gold": {
+     "entry": "2009-12-15",
+     "entry_close": 1122.4000244140625,
+     "pre3": -0.29,
+     "main": -6.25,
+     "horizon": 35,
+     "f5": -3.24,
+     "f20": 1.8,
+     "f40": -2.93,
+     "big_near": [
+      [
+       "2009-12-17",
+       -2.53
+      ]
+     ],
+     "dip_then_up": true,
+     "outcome": "FAILED"
+    },
+    "silver": {
+     "entry": "2009-12-15",
+     "entry_close": 17.44099998474121,
+     "pre3": 1.56,
+     "main": -15.01,
+     "horizon": 35,
+     "f5": -2.44,
+     "f20": 6.89,
+     "f40": -11.42,
+     "big_near": [
+      [
+       "2009-12-17",
+       -2.82
+      ]
+     ],
+     "dip_then_up": true,
+     "outcome": "FAILED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_west",
+   "title": "Venus rises in West",
+   "tone": "Bearish",
+   "start": "2010-02-06T13:30:00-05:00",
+   "end": null,
+   "sign": "Aquarius",
+   "nakshatra": "Dhanishta",
+   "with_": [],
+   "qualified": false,
+   "days": 52,
+   "by": {
+    "gold": {
+     "entry": "2010-02-05",
+     "entry_close": 1052.199951171875,
+     "pre3": -5.83,
+     "main": 3.54,
+     "horizon": 5,
+     "f5": 3.54,
+     "f20": 6.79,
+     "f40": 7.88,
+     "big_near": [
+      [
+       "2010-02-04",
+       -4.41
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    },
+    "silver": {
+     "entry": "2010-02-05",
+     "entry_close": 14.822999954223633,
+     "pre3": -11.43,
+     "main": 4.22,
+     "horizon": 5,
+     "f5": 4.22,
+     "f20": 16.39,
+     "f40": 20.87,
+     "big_near": [
+      [
+       "2010-02-03",
+       -2.55
+      ],
+      [
+       "2010-02-04",
+       -5.93
+      ],
+      [
+       "2010-02-05",
+       -3.39
+      ],
+      [
+       "2010-02-09",
+       2.34
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_west",
+   "title": "Venus combust in West",
+   "tone": "Bullish",
+   "start": "2010-10-20T14:30:00-04:00",
+   "end": "2010-10-31T14:30:00-04:00",
+   "sign": "Libra",
+   "nakshatra": "Swati",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 11,
+   "by": {
+    "gold": {
+     "entry": "2010-10-19",
+     "entry_close": 1335.0999755859375,
+     "pre3": -3.02,
+     "main": 1.65,
+     "horizon": 8,
+     "f5": 0.22,
+     "f20": 0.24,
+     "f40": 3.78,
+     "big_near": [
+      [
+       "2010-10-19",
+       -2.63
+      ]
+     ],
+     "dip_then_up": true,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2010-10-19",
+     "entry_close": 23.763999938964844,
+     "pre3": -2.67,
+     "main": 3.35,
+     "horizon": 8,
+     "f5": 0.25,
+     "f20": 6.16,
+     "f40": 22.98,
+     "big_near": [
+      [
+       "2010-10-19",
+       -2.59
+      ],
+      [
+       "2010-10-21",
+       -3.04
+      ]
+     ],
+     "dip_then_up": true,
+     "outcome": "WORKED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_east",
+   "title": "Venus rises in East",
+   "tone": "Bullish",
+   "start": "2010-10-31T14:30:00-04:00",
+   "end": null,
+   "sign": "Libra",
+   "nakshatra": "Swati",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 11,
+   "by": {
+    "gold": {
+     "entry": "2010-10-29",
+     "entry_close": 1357.0999755859375,
+     "pre3": 1.43,
+     "main": 2.96,
+     "horizon": 5,
+     "f5": 2.96,
+     "f20": 0.66,
+     "f40": 3.54,
+     "big_near": [],
+     "dip_then_up": true,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2010-10-29",
+     "entry_close": 24.559999465942383,
+     "pre3": 3.09,
+     "main": 8.89,
+     "horizon": 5,
+     "f5": 8.89,
+     "f20": 10.54,
+     "f40": 23.36,
+     "big_near": [
+      [
+       "2010-10-28",
+       2.02
+      ],
+      [
+       "2010-10-29",
+       2.89
+      ]
+     ],
+     "dip_then_up": true,
+     "outcome": "WORKED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_east",
+   "title": "Venus combust in East",
+   "tone": "Bullish",
+   "start": "2011-07-25T14:30:00-04:00",
+   "end": "2011-09-12T14:30:00-04:00",
+   "sign": "Cancer",
+   "nakshatra": "Punarvasu",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 49,
+   "by": {
+    "gold": {
+     "entry": "2011-07-22",
+     "entry_close": 1601.300048828125,
+     "pre3": 0.02,
+     "main": 15.93,
+     "horizon": 34,
+     "f5": 1.69,
+     "f20": 15.46,
+     "f40": 10.93,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2011-07-22",
+     "entry_close": 40.112998962402344,
+     "pre3": -0.24,
+     "main": 3.64,
+     "horizon": 34,
+     "f5": -0.05,
+     "f20": 5.77,
+     "f40": -2.5,
+     "big_near": [
+      [
+       "2011-07-22",
+       3.02
+      ]
+     ],
+     "dip_then_up": true,
+     "outcome": "WORKED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_west",
+   "title": "Venus rises in West",
+   "tone": "Bearish",
+   "start": "2011-09-12T14:30:00-04:00",
+   "end": null,
+   "sign": "Virgo",
+   "nakshatra": "Uttara Phalguni",
+   "with_": [
+    "Saturn"
+   ],
+   "qualified": false,
+   "days": 49,
+   "by": {
+    "gold": {
+     "entry": "2011-09-09",
+     "entry_close": 1856.4000244140625,
+     "pre3": -0.72,
+     "main": -2.39,
+     "horizon": 5,
+     "f5": -2.39,
+     "f20": -11.95,
+     "f40": -5.45,
+     "big_near": [
+      [
+       "2011-09-12",
+       -2.5
+      ],
+      [
+       "2011-09-15",
+       -2.47
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2011-09-09",
+     "entry_close": 41.573001861572266,
+     "pre3": -0.59,
+     "main": -1.91,
+     "horizon": 5,
+     "f5": -1.91,
+     "f20": -25.53,
+     "f40": -18.05,
+     "big_near": [
+      [
+       "2011-09-09",
+       -2.13
+      ],
+      [
+       "2011-09-12",
+       -3.39
+      ],
+      [
+       "2011-09-13",
+       2.39
+      ],
+      [
+       "2011-09-15",
+       -2.51
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_west",
+   "title": "Venus combust in West",
+   "tone": "Bullish",
+   "start": "2012-06-02T14:30:00-04:00",
+   "end": "2012-06-09T14:30:00-04:00",
+   "sign": "Taurus",
+   "nakshatra": "Mrigashira",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 7,
+   "by": {
+    "gold": {
+     "entry": "2012-06-01",
+     "entry_close": 1620.5,
+     "pre3": 4.64,
+     "main": -1.88,
+     "horizon": 5,
+     "f5": -1.88,
+     "f20": -1.05,
+     "f40": -0.05,
+     "big_near": [
+      [
+       "2012-06-01",
+       3.71
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    },
+    "silver": {
+     "entry": "2012-06-01",
+     "entry_close": 28.496999740600586,
+     "pre3": 2.63,
+     "main": -0.13,
+     "horizon": 5,
+     "f5": -0.13,
+     "f20": -3.22,
+     "f40": -1.69,
+     "big_near": [
+      [
+       "2012-06-01",
+       2.73
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "FLAT"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_east",
+   "title": "Venus rises in East",
+   "tone": "Bullish",
+   "start": "2012-06-09T14:30:00-04:00",
+   "end": null,
+   "sign": "Taurus",
+   "nakshatra": "Rohini",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 7,
+   "by": {
+    "gold": {
+     "entry": "2012-06-08",
+     "entry_close": 1590.0999755859375,
+     "pre3": -1.55,
+     "main": 2.32,
+     "horizon": 5,
+     "f5": 2.32,
+     "f20": -0.09,
+     "f40": 1.43,
+     "big_near": [
+      [
+       "2012-06-07",
+       -2.83
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2012-06-08",
+     "entry_close": 28.461000442504883,
+     "pre3": 0.25,
+     "main": 0.96,
+     "horizon": 5,
+     "f5": 0.96,
+     "f20": -3.69,
+     "f40": -2.14,
+     "big_near": [
+      [
+       "2012-06-06",
+       3.83
+      ],
+      [
+       "2012-06-07",
+       -3.25
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_east",
+   "title": "Venus combust in East",
+   "tone": "Bullish",
+   "start": "2013-02-19T13:30:00-05:00",
+   "end": "2013-04-21T14:30:00-04:00",
+   "sign": "Capricorn",
+   "nakshatra": "Dhanishta",
+   "with_": [],
+   "qualified": false,
+   "days": 61,
+   "by": {
+    "gold": {
+     "entry": "2013-02-15",
+     "entry_close": 1608.800048828125,
+     "pre3": -2.42,
+     "main": -13.27,
+     "horizon": 43,
+     "f5": -1.4,
+     "f20": -0.26,
+     "f40": -13.8,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    },
+    "silver": {
+     "entry": "2013-02-15",
+     "entry_close": 29.839000701904297,
+     "pre3": -3.76,
+     "main": -23.07,
+     "horizon": 43,
+     "f5": -2.87,
+     "f20": -3.34,
+     "f40": -20.84,
+     "big_near": [
+      [
+       "2013-02-20",
+       -2.71
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_west",
+   "title": "Venus rises in West",
+   "tone": "Bearish",
+   "start": "2013-04-21T14:30:00-04:00",
+   "end": null,
+   "sign": "Aries",
+   "nakshatra": "Bharani",
+   "with_": [
+    "Sun",
+    "Mars"
+   ],
+   "qualified": true,
+   "days": 61,
+   "by": {
+    "gold": {
+     "entry": "2013-04-19",
+     "entry_close": 1395.300048828125,
+     "pre3": 0.61,
+     "main": 4.18,
+     "horizon": 5,
+     "f5": 4.18,
+     "f20": -2.18,
+     "f40": -0.9,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    },
+    "silver": {
+     "entry": "2013-04-19",
+     "entry_close": 22.954999923706055,
+     "pre3": -2.82,
+     "main": 3.5,
+     "horizon": 5,
+     "f5": 3.5,
+     "f20": -2.68,
+     "f40": -5.22,
+     "big_near": [
+      [
+       "2013-04-23",
+       -2.17
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_west",
+   "title": "Venus combust in West",
+   "tone": "Bullish",
+   "start": "2014-01-08T13:30:00-05:00",
+   "end": "2014-01-12T13:30:00-05:00",
+   "sign": "Sagittarius",
+   "nakshatra": "Uttara Ashadha",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 4,
+   "by": {
+    "gold": {
+     "entry": "2014-01-07",
+     "entry_close": 1229.4000244140625,
+     "pre3": 0.36,
+     "main": 1.41,
+     "horizon": 3,
+     "f5": 1.29,
+     "f20": 2.27,
+     "f40": 9.95,
+     "big_near": [],
+     "dip_then_up": true,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2014-01-07",
+     "entry_close": 19.764999389648438,
+     "pre3": -1.66,
+     "main": 2.21,
+     "horizon": 3,
+     "f5": 2.46,
+     "f20": 0.1,
+     "f40": 8.99,
+     "big_near": [
+      [
+       "2014-01-10",
+       2.74
+      ]
+     ],
+     "dip_then_up": true,
+     "outcome": "WORKED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_east",
+   "title": "Venus rises in East",
+   "tone": "Bullish",
+   "start": "2014-01-12T13:30:00-05:00",
+   "end": null,
+   "sign": "Sagittarius",
+   "nakshatra": "Purva Ashadha",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 4,
+   "by": {
+    "gold": {
+     "entry": "2014-01-10",
+     "entry_close": 1246.699951171875,
+     "pre3": 1.41,
+     "main": 0.4,
+     "horizon": 5,
+     "f5": 0.4,
+     "f20": 2.25,
+     "f40": 8.01,
+     "big_near": [],
+     "dip_then_up": true,
+     "outcome": "FLAT"
+    },
+    "silver": {
+     "entry": "2014-01-10",
+     "entry_close": 20.201000213623047,
+     "pre3": 2.21,
+     "main": 0.33,
+     "horizon": 5,
+     "f5": 0.33,
+     "f20": -0.5,
+     "f40": 2.89,
+     "big_near": [
+      [
+       "2014-01-10",
+       2.74
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "FLAT"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_east",
+   "title": "Venus combust in East",
+   "tone": "Bullish",
+   "start": "2014-09-29T14:30:00-04:00",
+   "end": "2014-11-21T13:30:00-05:00",
+   "sign": "Virgo",
+   "nakshatra": "Uttara Phalguni",
+   "with_": [
+    "Sun",
+    "Rahu"
+   ],
+   "qualified": false,
+   "days": 53,
+   "by": {
+    "gold": {
+     "entry": "2014-09-26",
+     "entry_close": 1214.0999755859375,
+     "pre3": -0.57,
+     "main": -1.93,
+     "horizon": 39,
+     "f5": -1.8,
+     "f20": 1.41,
+     "f40": -1.37,
+     "big_near": [],
+     "dip_then_up": true,
+     "outcome": "FAILED"
+    },
+    "silver": {
+     "entry": "2014-09-26",
+     "entry_close": 17.476999282836914,
+     "pre3": -1.33,
+     "main": -7.69,
+     "horizon": 39,
+     "f5": -3.99,
+     "f20": -1.95,
+     "f40": -6.21,
+     "big_near": [
+      [
+       "2014-09-30",
+       -2.91
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_west",
+   "title": "Venus rises in West",
+   "tone": "Bearish",
+   "start": "2014-11-21T13:30:00-05:00",
+   "end": null,
+   "sign": "Scorpio",
+   "nakshatra": "Anuradha",
+   "with_": [
+    "Sun",
+    "Saturn"
+   ],
+   "qualified": false,
+   "days": 53,
+   "by": {
+    "gold": {
+     "entry": "2014-11-20",
+     "entry_close": 1190.699951171875,
+     "pre3": 0.65,
+     "main": -1.3,
+     "horizon": 5,
+     "f5": -1.3,
+     "f20": 0.44,
+     "f40": 8.65,
+     "big_near": [],
+     "dip_then_up": true,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2014-11-20",
+     "entry_close": 16.132999420166016,
+     "pre3": 0.5,
+     "main": -3.99,
+     "horizon": 5,
+     "f5": -3.99,
+     "f20": -0.88,
+     "f40": 12.68,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_west",
+   "title": "Venus combust in West",
+   "tone": "Bullish",
+   "start": "2015-08-07T14:30:00-04:00",
+   "end": "2015-08-18T14:30:00-04:00",
+   "sign": "Leo",
+   "nakshatra": "Magha",
+   "with_": [],
+   "qualified": false,
+   "days": 11,
+   "by": {
+    "gold": {
+     "entry": "2015-08-06",
+     "entry_close": 1090.199951171875,
+     "pre3": 0.07,
+     "main": 2.61,
+     "horizon": 7,
+     "f5": 2.34,
+     "f20": 3.07,
+     "f40": 4.3,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2015-08-06",
+     "entry_close": 14.670000076293945,
+     "pre3": 1.06,
+     "main": 4.26,
+     "horizon": 7,
+     "f5": 4.95,
+     "f20": 0.22,
+     "f40": 4.0,
+     "big_near": [
+      [
+       "2015-08-10",
+       3.19
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_east",
+   "title": "Venus rises in East",
+   "tone": "Bullish",
+   "start": "2015-08-18T14:30:00-04:00",
+   "end": null,
+   "sign": "Cancer",
+   "nakshatra": "Ashlesha",
+   "with_": [
+    "Mars"
+   ],
+   "qualified": false,
+   "days": 11,
+   "by": {
+    "gold": {
+     "entry": "2015-08-17",
+     "entry_close": 1118.5999755859375,
+     "pre3": -0.41,
+     "main": 3.11,
+     "horizon": 5,
+     "f5": 3.11,
+     "f20": -1.41,
+     "f40": 4.22,
+     "big_near": [
+      [
+       "2015-08-20",
+       2.21
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2015-08-17",
+     "entry_close": 15.295000076293945,
+     "pre3": -1.15,
+     "main": -3.48,
+     "horizon": 5,
+     "f5": -3.48,
+     "f20": -6.38,
+     "f40": 3.94,
+     "big_near": [
+      [
+       "2015-08-18",
+       -3.32
+      ],
+      [
+       "2015-08-19",
+       2.63
+      ],
+      [
+       "2015-08-20",
+       2.25
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_east",
+   "title": "Venus combust in East",
+   "tone": "Bullish",
+   "start": "2016-05-04T14:30:00-04:00",
+   "end": "2016-06-28T14:30:00-04:00",
+   "sign": "Aries",
+   "nakshatra": "Ashwini",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 55,
+   "by": {
+    "gold": {
+     "entry": "2016-05-03",
+     "entry_close": 1290.699951171875,
+     "pre3": 1.99,
+     "main": 2.46,
+     "horizon": 38,
+     "f5": -2.08,
+     "f20": -6.11,
+     "f40": 2.57,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2016-05-03",
+     "entry_close": 17.474000930786133,
+     "pre3": -0.45,
+     "main": 1.52,
+     "horizon": 38,
+     "f5": -2.28,
+     "f20": -8.97,
+     "f40": 5.08,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_west",
+   "title": "Venus rises in West",
+   "tone": "Bearish",
+   "start": "2016-06-28T14:30:00-04:00",
+   "end": null,
+   "sign": "Gemini",
+   "nakshatra": "Ardra",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 55,
+   "by": {
+    "gold": {
+     "entry": "2016-06-27",
+     "entry_close": 1322.5,
+     "pre3": 4.3,
+     "main": 2.56,
+     "horizon": 5,
+     "f5": 2.56,
+     "f20": -0.14,
+     "f40": 1.37,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    },
+    "silver": {
+     "entry": "2016-06-27",
+     "entry_close": 17.739999771118164,
+     "pre3": 2.51,
+     "main": 11.98,
+     "horizon": 5,
+     "f5": 11.98,
+     "f20": 10.79,
+     "f40": 6.6,
+     "big_near": [
+      [
+       "2016-06-29",
+       2.93
+      ],
+      [
+       "2016-07-01",
+       5.18
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_west",
+   "title": "Venus combust in West",
+   "tone": "Bullish",
+   "start": "2017-03-20T14:30:00-04:00",
+   "end": "2017-03-24T14:30:00-04:00",
+   "sign": "Pisces",
+   "nakshatra": "Uttara Bhadrapada",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 4,
+   "by": {
+    "gold": {
+     "entry": "2017-03-17",
+     "entry_close": 1229.800048828125,
+     "pre3": 2.32,
+     "main": 1.39,
+     "horizon": 4,
+     "f5": 1.5,
+     "f20": 4.85,
+     "f40": -0.1,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2017-03-17",
+     "entry_close": 17.378999710083008,
+     "pre3": 2.91,
+     "main": 1.06,
+     "horizon": 4,
+     "f5": 1.96,
+     "f20": 6.41,
+     "f40": -4.71,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_east",
+   "title": "Venus rises in East",
+   "tone": "Bullish",
+   "start": "2017-03-24T14:30:00-04:00",
+   "end": null,
+   "sign": "Pisces",
+   "nakshatra": "Uttara Bhadrapada",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 4,
+   "by": {
+    "gold": {
+     "entry": "2017-03-23",
+     "entry_close": 1246.9000244140625,
+     "pre3": 1.08,
+     "main": -0.15,
+     "horizon": 5,
+     "f5": -0.15,
+     "f20": 3.25,
+     "f40": 0.47,
+     "big_near": [],
+     "dip_then_up": true,
+     "outcome": "FLAT"
+    },
+    "silver": {
+     "entry": "2017-03-23",
+     "entry_close": 17.562999725341797,
+     "pre3": 0.92,
+     "main": 3.54,
+     "horizon": 5,
+     "f5": 3.54,
+     "f20": 1.52,
+     "f40": -4.63,
+     "big_near": [
+      [
+       "2017-03-27",
+       2.03
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_east",
+   "title": "Venus combust in East",
+   "tone": "Bullish",
+   "start": "2017-12-14T13:30:00-05:00",
+   "end": "2018-02-03T13:30:00-05:00",
+   "sign": "Scorpio",
+   "nakshatra": "Jyeshtha",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 51,
+   "by": {
+    "gold": {
+     "entry": "2017-12-13",
+     "entry_close": 1245.4000244140625,
+     "pre3": 0.02,
+     "main": 7.09,
+     "horizon": 33,
+     "f5": 1.66,
+     "f20": 7.07,
+     "f40": 6.64,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2017-12-13",
+     "entry_close": 15.784000396728516,
+     "pre3": 0.31,
+     "main": 5.65,
+     "horizon": 33,
+     "f5": 2.56,
+     "f20": 8.14,
+     "f40": 4.58,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_west",
+   "title": "Venus rises in West",
+   "tone": "Bearish",
+   "start": "2018-02-03T13:30:00-05:00",
+   "end": null,
+   "sign": "Capricorn",
+   "nakshatra": "Dhanishta",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": true,
+   "days": 51,
+   "by": {
+    "gold": {
+     "entry": "2018-02-02",
+     "entry_close": 1333.699951171875,
+     "pre3": -0.13,
+     "main": -1.54,
+     "horizon": 5,
+     "f5": -1.54,
+     "f20": -1.17,
+     "f40": -0.07,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2018-02-02",
+     "entry_close": 16.676000595092773,
+     "pre3": -1.98,
+     "main": -3.36,
+     "horizon": 5,
+     "f5": -3.36,
+     "f20": -2.03,
+     "f40": -1.97,
+     "big_near": [
+      [
+       "2018-02-02",
+       -2.58
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_west",
+   "title": "Venus combust in West",
+   "tone": "Bullish",
+   "start": "2018-10-17T14:30:00-04:00",
+   "end": "2018-10-29T14:30:00-04:00",
+   "sign": "Libra",
+   "nakshatra": "Swati",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 12,
+   "by": {
+    "gold": {
+     "entry": "2018-10-16",
+     "entry_close": 1227.300048828125,
+     "pre3": 0.31,
+     "main": 0.42,
+     "horizon": 8,
+     "f5": 0.5,
+     "f20": -2.29,
+     "f40": 1.25,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "FLAT"
+    },
+    "silver": {
+     "entry": "2018-10-16",
+     "entry_close": 14.630000114440918,
+     "pre3": 0.65,
+     "main": 0.03,
+     "horizon": 8,
+     "f5": 0.67,
+     "f20": -4.63,
+     "f40": 0.68,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "FLAT"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_east",
+   "title": "Venus rises in East",
+   "tone": "Bullish",
+   "start": "2018-10-29T14:30:00-04:00",
+   "end": null,
+   "sign": "Libra",
+   "nakshatra": "Swati",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 12,
+   "by": {
+    "gold": {
+     "entry": "2018-10-26",
+     "entry_close": 1232.5,
+     "pre3": -0.07,
+     "main": -0.13,
+     "horizon": 5,
+     "f5": -0.13,
+     "f20": -1.0,
+     "f40": 2.98,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "FLAT"
+    },
+    "silver": {
+     "entry": "2018-10-26",
+     "entry_close": 14.635000228881836,
+     "pre3": -0.63,
+     "main": 0.49,
+     "horizon": 5,
+     "f5": 0.49,
+     "f20": -3.09,
+     "f40": 2.52,
+     "big_near": [
+      [
+       "2018-11-01",
+       3.51
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "FLAT"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_east",
+   "title": "Venus combust in East",
+   "tone": "Bullish",
+   "start": "2019-07-22T14:30:00-04:00",
+   "end": "2019-09-09T14:30:00-04:00",
+   "sign": "Gemini",
+   "nakshatra": "Punarvasu",
+   "with_": [
+    "Rahu"
+   ],
+   "qualified": false,
+   "days": 49,
+   "by": {
+    "gold": {
+     "entry": "2019-07-19",
+     "entry_close": 1425.0999755859375,
+     "pre3": 1.13,
+     "main": 5.69,
+     "horizon": 34,
+     "f5": -0.46,
+     "f20": 6.13,
+     "f40": 5.47,
+     "big_near": [],
+     "dip_then_up": true,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2019-07-19",
+     "entry_close": 16.117000579833984,
+     "pre3": 3.31,
+     "main": 11.48,
+     "horizon": 34,
+     "f5": 1.29,
+     "f20": 6.07,
+     "f40": 11.07,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_west",
+   "title": "Venus rises in West",
+   "tone": "Bearish",
+   "start": "2019-09-09T14:30:00-04:00",
+   "end": null,
+   "sign": "Leo",
+   "nakshatra": "Uttara Phalguni",
+   "with_": [
+    "Sun",
+    "Mars"
+   ],
+   "qualified": true,
+   "days": 49,
+   "by": {
+    "gold": {
+     "entry": "2019-09-06",
+     "entry_close": 1506.199951171875,
+     "pre3": -2.57,
+     "main": -1.02,
+     "horizon": 5,
+     "f5": -1.02,
+     "f20": 0.0,
+     "f40": 0.12,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2019-09-06",
+     "entry_close": 17.968000411987305,
+     "pre3": -5.82,
+     "main": -2.96,
+     "horizon": 5,
+     "f5": -2.96,
+     "f20": -2.38,
+     "f40": 0.2,
+     "big_near": [
+      [
+       "2019-09-06",
+       -3.69
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_west",
+   "title": "Venus combust in West",
+   "tone": "Bullish",
+   "start": "2020-05-30T14:30:00-04:00",
+   "end": "2020-06-06T14:30:00-04:00",
+   "sign": "Taurus",
+   "nakshatra": "Rohini",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 7,
+   "by": {
+    "gold": {
+     "entry": "2020-05-29",
+     "entry_close": 1751.699951171875,
+     "pre3": 2.75,
+     "main": -3.92,
+     "horizon": 5,
+     "f5": -3.92,
+     "f20": 1.63,
+     "f40": 10.24,
+     "big_near": [
+      [
+       "2020-05-29",
+       2.24
+      ]
+     ],
+     "dip_then_up": true,
+     "outcome": "FAILED"
+    },
+    "silver": {
+     "entry": "2020-05-29",
+     "entry_close": 18.440000534057617,
+     "pre3": 4.98,
+     "main": -5.41,
+     "horizon": 5,
+     "f5": -5.41,
+     "f20": -2.26,
+     "f40": 32.73,
+     "big_near": [
+      [
+       "2020-05-29",
+       3.05
+      ],
+      [
+       "2020-06-02",
+       -2.99
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_east",
+   "title": "Venus rises in East",
+   "tone": "Bullish",
+   "start": "2020-06-06T14:30:00-04:00",
+   "end": null,
+   "sign": "Taurus",
+   "nakshatra": "Rohini",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 7,
+   "by": {
+    "gold": {
+     "entry": "2020-06-05",
+     "entry_close": 1683.0,
+     "pre3": -2.94,
+     "main": 3.23,
+     "horizon": 5,
+     "f5": 3.23,
+     "f20": 6.57,
+     "f40": 16.82,
+     "big_near": [
+      [
+       "2020-06-05",
+       -2.57
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2020-06-05",
+     "entry_close": 17.44300079345703,
+     "pre3": -4.2,
+     "main": 0.11,
+     "horizon": 5,
+     "f5": 0.11,
+     "f20": 6.08,
+     "f40": 39.83,
+     "big_near": [
+      [
+       "2020-06-05",
+       -3.22
+      ],
+      [
+       "2020-06-08",
+       2.44
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "FLAT"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_east",
+   "title": "Venus combust in East",
+   "tone": "Bullish",
+   "start": "2021-02-17T13:30:00-05:00",
+   "end": "2021-04-18T14:30:00-04:00",
+   "sign": "Capricorn",
+   "nakshatra": "Dhanishta",
+   "with_": [
+    "Saturn"
+   ],
+   "qualified": false,
+   "days": 60,
+   "by": {
+    "gold": {
+     "entry": "2021-02-16",
+     "entry_close": 1799.0,
+     "pre3": -2.37,
+     "main": -1.05,
+     "horizon": 42,
+     "f5": 0.38,
+     "f20": -3.79,
+     "f40": -3.49,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    },
+    "silver": {
+     "entry": "2021-02-16",
+     "entry_close": 27.319000244140625,
+     "pre3": 0.9,
+     "main": -4.47,
+     "horizon": 42,
+     "f5": 1.34,
+     "f20": -4.92,
+     "f40": -6.6,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_west",
+   "title": "Venus rises in West",
+   "tone": "Bearish",
+   "start": "2021-04-18T14:30:00-04:00",
+   "end": null,
+   "sign": "Aries",
+   "nakshatra": "Ashwini",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": true,
+   "days": 60,
+   "by": {
+    "gold": {
+     "entry": "2021-04-16",
+     "entry_close": 1780.199951171875,
+     "pre3": 1.87,
+     "main": -0.13,
+     "horizon": 5,
+     "f5": -0.13,
+     "f20": 3.25,
+     "f40": 4.81,
+     "big_near": [],
+     "dip_then_up": true,
+     "outcome": "FLAT"
+    },
+    "silver": {
+     "entry": "2021-04-16",
+     "entry_close": 26.099000930786133,
+     "pre3": 2.68,
+     "main": -0.08,
+     "horizon": 5,
+     "f5": -0.08,
+     "f20": 4.8,
+     "f40": 7.38,
+     "big_near": [
+      [
+       "2021-04-21",
+       2.83
+      ]
+     ],
+     "dip_then_up": true,
+     "outcome": "FLAT"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_west",
+   "title": "Venus combust in West",
+   "tone": "Bullish",
+   "start": "2022-01-05T13:30:00-05:00",
+   "end": "2022-01-10T13:30:00-05:00",
+   "sign": "Sagittarius",
+   "nakshatra": "Purva Ashadha",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 5,
+   "by": {
+    "gold": {
+     "entry": "2022-01-04",
+     "entry_close": 1814.5999755859375,
+     "pre3": 0.03,
+     "main": -0.95,
+     "horizon": 3,
+     "f5": 0.21,
+     "f20": -0.24,
+     "f40": 6.68,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    },
+    "silver": {
+     "entry": "2022-01-04",
+     "entry_close": 23.038000106811523,
+     "pre3": 0.04,
+     "main": -2.8,
+     "horizon": 3,
+     "f5": -1.01,
+     "f20": -1.42,
+     "f40": 9.41,
+     "big_near": [
+      [
+       "2022-01-03",
+       -2.31
+      ],
+      [
+       "2022-01-06",
+       -4.22
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_east",
+   "title": "Venus rises in East",
+   "tone": "Bullish",
+   "start": "2022-01-10T13:30:00-05:00",
+   "end": null,
+   "sign": "Sagittarius",
+   "nakshatra": "Purva Ashadha",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 5,
+   "by": {
+    "gold": {
+     "entry": "2022-01-07",
+     "entry_close": 1797.4000244140625,
+     "pre3": -0.95,
+     "main": 1.06,
+     "horizon": 5,
+     "f5": 1.06,
+     "f20": 1.36,
+     "f40": 13.68,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2022-01-07",
+     "entry_close": 22.393999099731445,
+     "pre3": -2.8,
+     "main": 2.31,
+     "horizon": 5,
+     "f5": 2.31,
+     "f20": 3.05,
+     "f40": 20.07,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_east",
+   "title": "Venus combust in East",
+   "tone": "Bullish",
+   "start": "2022-09-26T14:30:00-04:00",
+   "end": "2022-11-19T13:30:00-05:00",
+   "sign": "Virgo",
+   "nakshatra": "Uttara Phalguni",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 54,
+   "by": {
+    "gold": {
+     "entry": "2022-09-23",
+     "entry_close": 1655.5999755859375,
+     "pre3": -0.93,
+     "main": 5.97,
+     "horizon": 40,
+     "f5": 0.99,
+     "f20": 0.04,
+     "f40": 5.97,
+     "big_near": [
+      [
+       "2022-09-28",
+       2.07
+      ]
+     ],
+     "dip_then_up": true,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2022-09-23",
+     "entry_close": 18.840999603271484,
+     "pre3": -1.37,
+     "main": 11.33,
+     "horizon": 40,
+     "f5": 0.63,
+     "f20": 1.07,
+     "f40": 11.33,
+     "big_near": [
+      [
+       "2022-09-23",
+       -3.62
+      ],
+      [
+       "2022-09-26",
+       -2.31
+      ],
+      [
+       "2022-09-28",
+       2.95
+      ]
+     ],
+     "dip_then_up": true,
+     "outcome": "WORKED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_west",
+   "title": "Venus rises in West",
+   "tone": "Bearish",
+   "start": "2022-11-19T13:30:00-05:00",
+   "end": null,
+   "sign": "Scorpio",
+   "nakshatra": "Anuradha",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 54,
+   "by": {
+    "gold": {
+     "entry": "2022-11-18",
+     "entry_close": 1754.4000244140625,
+     "pre3": -1.26,
+     "main": -0.8,
+     "horizon": 5,
+     "f5": -0.8,
+     "f20": 2.47,
+     "f40": 9.66,
+     "big_near": [],
+     "dip_then_up": true,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2022-11-18",
+     "entry_close": 20.97599983215332,
+     "pre3": -2.43,
+     "main": -0.31,
+     "horizon": 5,
+     "f5": -0.31,
+     "f20": 9.79,
+     "f40": 13.24,
+     "big_near": [
+      [
+       "2022-11-17",
+       -2.55
+      ]
+     ],
+     "dip_then_up": true,
+     "outcome": "FLAT"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_west",
+   "title": "Venus combust in West",
+   "tone": "Bullish",
+   "start": "2023-08-05T14:30:00-04:00",
+   "end": "2023-08-16T14:30:00-04:00",
+   "sign": "Leo",
+   "nakshatra": "Magha",
+   "with_": [
+    "Mars"
+   ],
+   "qualified": false,
+   "days": 11,
+   "by": {
+    "gold": {
+     "entry": "2023-08-04",
+     "entry_close": 1976.0999755859375,
+     "pre3": -0.14,
+     "main": -2.07,
+     "horizon": 7,
+     "f5": -1.49,
+     "f20": -0.46,
+     "f40": -6.52,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    },
+    "silver": {
+     "entry": "2023-08-04",
+     "entry_close": 23.617000579833984,
+     "pre3": -2.44,
+     "main": -4.33,
+     "horizon": 7,
+     "f5": -3.99,
+     "f20": 2.6,
+     "f40": -10.16,
+     "big_near": [
+      [
+       "2023-08-07",
+       -2.01
+      ]
+     ],
+     "dip_then_up": true,
+     "outcome": "FAILED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_east",
+   "title": "Venus rises in East",
+   "tone": "Bullish",
+   "start": "2023-08-16T14:30:00-04:00",
+   "end": null,
+   "sign": "Cancer",
+   "nakshatra": "Ashlesha",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 11,
+   "by": {
+    "gold": {
+     "entry": "2023-08-15",
+     "entry_close": 1935.199951171875,
+     "pre3": -0.7,
+     "main": -0.48,
+     "horizon": 5,
+     "f5": -0.48,
+     "f20": -0.14,
+     "f40": -2.48,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "FLAT"
+    },
+    "silver": {
+     "entry": "2023-08-15",
+     "entry_close": 22.594999313354492,
+     "pre3": -0.66,
+     "main": 3.65,
+     "horizon": 5,
+     "f5": 3.65,
+     "f20": 1.4,
+     "f40": -2.82,
+     "big_near": [],
+     "dip_then_up": true,
+     "outcome": "WORKED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_east",
+   "title": "Venus combust in East",
+   "tone": "Bullish",
+   "start": "2024-05-01T14:30:00-04:00",
+   "end": "2024-06-26T14:30:00-04:00",
+   "sign": "Aries",
+   "nakshatra": "Ashwini",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 56,
+   "by": {
+    "gold": {
+     "entry": "2024-04-30",
+     "entry_close": 2302.89990234375,
+     "pre3": -1.69,
+     "main": 1.21,
+     "horizon": 38,
+     "f5": 0.92,
+     "f20": 1.66,
+     "f40": 1.46,
+     "big_near": [
+      [
+       "2024-04-30",
+       -2.32
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2024-04-30",
+     "entry_close": 26.391000747680664,
+     "pre3": -3.48,
+     "main": 9.27,
+     "horizon": 38,
+     "f5": 3.46,
+     "f20": 22.02,
+     "f40": 9.58,
+     "big_near": [
+      [
+       "2024-04-30",
+       -3.59
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_west",
+   "title": "Venus rises in West",
+   "tone": "Bearish",
+   "start": "2024-06-26T14:30:00-04:00",
+   "end": null,
+   "sign": "Gemini",
+   "nakshatra": "Ardra",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 56,
+   "by": {
+    "gold": {
+     "entry": "2024-06-25",
+     "entry_close": 2330.800048828125,
+     "pre3": -1.61,
+     "main": 0.11,
+     "horizon": 5,
+     "f5": 0.11,
+     "f20": 3.64,
+     "f40": 9.3,
+     "big_near": [],
+     "dip_then_up": true,
+     "outcome": "FLAT"
+    },
+    "silver": {
+     "entry": "2024-06-25",
+     "entry_close": 28.836999893188477,
+     "pre3": -6.3,
+     "main": 1.79,
+     "horizon": 5,
+     "f5": 1.79,
+     "f20": 0.97,
+     "f40": 2.22,
+     "big_near": [
+      [
+       "2024-06-25",
+       -2.21
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_west",
+   "title": "Venus combust in West",
+   "tone": "Bullish",
+   "start": "2025-03-18T14:30:00-04:00",
+   "end": "2025-03-22T14:30:00-04:00",
+   "sign": "Pisces",
+   "nakshatra": "Uttara Bhadrapada",
+   "with_": [
+    "Sun",
+    "Rahu"
+   ],
+   "qualified": false,
+   "days": 4,
+   "by": {
+    "gold": {
+     "entry": "2025-03-17",
+     "entry_close": 3006.10009765625,
+     "pre3": 2.01,
+     "main": 0.51,
+     "horizon": 4,
+     "f5": 0.32,
+     "f20": 7.33,
+     "f40": 8.04,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2025-03-17",
+     "entry_close": 34.07400131225586,
+     "pre3": 1.76,
+     "main": -2.3,
+     "horizon": 4,
+     "f5": -2.37,
+     "f20": -5.82,
+     "f40": -3.54,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_east",
+   "title": "Venus rises in East",
+   "tone": "Bullish",
+   "start": "2025-03-22T14:30:00-04:00",
+   "end": null,
+   "sign": "Pisces",
+   "nakshatra": "Uttara Bhadrapada",
+   "with_": [
+    "Sun",
+    "Rahu"
+   ],
+   "qualified": false,
+   "days": 4,
+   "by": {
+    "gold": {
+     "entry": "2025-03-21",
+     "entry_close": 3021.39990234375,
+     "pre3": -0.64,
+     "main": 2.15,
+     "horizon": 5,
+     "f5": 2.15,
+     "f20": 13.37,
+     "f40": 7.02,
+     "big_near": [],
+     "dip_then_up": true,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2025-03-21",
+     "entry_close": 33.290000915527344,
+     "pre3": -3.73,
+     "main": 4.07,
+     "horizon": 5,
+     "f5": 4.07,
+     "f20": -2.39,
+     "f40": -2.93,
+     "big_near": [
+      [
+       "2025-03-25",
+       2.22
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_east",
+   "title": "Venus combust in East",
+   "tone": "Bullish",
+   "start": "2025-12-11T13:30:00-05:00",
+   "end": "2026-01-31T13:30:00-05:00",
+   "sign": "Scorpio",
+   "nakshatra": "Jyeshtha",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 51,
+   "by": {
+    "gold": {
+     "entry": "2025-12-10",
+     "entry_close": 4224.7001953125,
+     "pre3": -0.43,
+     "main": 12.32,
+     "horizon": 34,
+     "f5": 3.53,
+     "f20": 6.54,
+     "f40": 20.23,
+     "big_near": [
+      [
+       "2025-12-11",
+       2.09
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    },
+    "silver": {
+     "entry": "2025-12-10",
+     "entry_close": 60.37900161743164,
+     "pre3": 3.35,
+     "main": 29.66,
+     "horizon": 34,
+     "f5": 9.7,
+     "f20": 30.65,
+     "f40": 35.92,
+     "big_near": [
+      [
+       "2025-12-09",
+       4.14
+      ],
+      [
+       "2025-12-11",
+       5.88
+      ],
+      [
+       "2025-12-12",
+       -4.02
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "WORKED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_west",
+   "title": "Venus rises in West",
+   "tone": "Bearish",
+   "start": "2026-01-31T13:30:00-05:00",
+   "end": null,
+   "sign": "Capricorn",
+   "nakshatra": "Dhanishta",
+   "with_": [
+    "Sun",
+    "Mars"
+   ],
+   "qualified": true,
+   "days": 51,
+   "by": {
+    "gold": {
+     "entry": "2026-01-30",
+     "entry_close": 4745.10009765625,
+     "pre3": -6.64,
+     "main": 4.95,
+     "horizon": 5,
+     "f5": 4.95,
+     "f20": 11.94,
+     "f40": -4.62,
+     "big_near": [
+      [
+       "2026-01-28",
+       4.35
+      ],
+      [
+       "2026-01-30",
+       -10.78
+      ],
+      [
+       "2026-02-03",
+       6.07
+      ]
+     ],
+     "dip_then_up": true,
+     "outcome": "FAILED"
+    },
+    "silver": {
+     "entry": "2026-01-30",
+     "entry_close": 78.29000091552734,
+     "pre3": -25.81,
+     "main": -1.99,
+     "horizon": 5,
+     "f5": -1.99,
+     "f20": 12.77,
+     "f40": -10.17,
+     "big_near": [
+      [
+       "2026-01-28",
+       7.19
+      ],
+      [
+       "2026-01-30",
+       -31.35
+      ],
+      [
+       "2026-02-03",
+       8.16
+      ]
+     ],
+     "dip_then_up": true,
+     "outcome": "WORKED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_west",
+   "title": "Venus combust in West",
+   "tone": "Bullish",
+   "start": "2026-10-14T14:30:00-04:00",
+   "end": "2026-10-26T14:30:00-04:00",
+   "sign": "Libra",
+   "nakshatra": "Swati",
+   "with_": [],
+   "qualified": false,
+   "days": 12,
+   "by": {
+    "gold": {
+     "entry": "2026-10-13",
+     "entry_close": 4177.2998046875,
+     "pre3": 0.49,
+     "main": -4.06,
+     "horizon": 8,
+     "f5": -0.83,
+     "f20": -3.52,
+     "f40": null,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    },
+    "silver": {
+     "entry": "2026-10-13",
+     "entry_close": 59.1609992980957,
+     "pre3": 0.16,
+     "main": -9.21,
+     "horizon": 8,
+     "f5": -2.46,
+     "f20": -13.62,
+     "f40": null,
+     "big_near": [
+      [
+       "2026-10-14",
+       -6.1
+      ],
+      [
+       "2026-10-15",
+       2.32
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_east",
+   "title": "Venus rises in East",
+   "tone": "Bullish",
+   "start": "2026-10-26T14:30:00-04:00",
+   "end": null,
+   "sign": "Libra",
+   "nakshatra": "Chitra",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": false,
+   "days": 12,
+   "by": {
+    "gold": {
+     "entry": "2026-10-23",
+     "entry_close": 4007.89990234375,
+     "pre3": -3.25,
+     "main": -2.72,
+     "horizon": 5,
+     "f5": -2.72,
+     "f20": -12.29,
+     "f40": null,
+     "big_near": [],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    },
+    "silver": {
+     "entry": "2026-10-23",
+     "entry_close": 53.71099853515625,
+     "pre3": -6.92,
+     "main": -8.59,
+     "horizon": 5,
+     "f5": -8.59,
+     "f20": -23.6,
+     "f40": null,
+     "big_near": [
+      [
+       "2026-10-29",
+       -2.37
+      ]
+     ],
+     "dip_then_up": false,
+     "outcome": "FAILED"
+    }
+   }
+  },
+  {
+   "rule_id": "ta_s18_venus_combust_east",
+   "title": "Venus combust in East",
+   "tone": "Bullish",
+   "start": "2027-07-20T14:30:00-04:00",
+   "end": "2027-09-07T14:30:00-04:00",
+   "sign": "Gemini",
+   "nakshatra": "Punarvasu",
+   "with_": [],
+   "qualified": false,
+   "days": 49,
+   "by": {}
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_west",
+   "title": "Venus rises in West",
+   "tone": "Bearish",
+   "start": "2027-09-07T14:30:00-04:00",
+   "end": null,
+   "sign": "Leo",
+   "nakshatra": "Uttara Phalguni",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": true,
+   "days": 49,
+   "by": {}
+  }
+ ],
+ "case_2026": {
+  "rise": "2026-01-31T13:30:00-05:00",
+  "sign": "Capricorn",
+  "nakshatra": "Dhanishta",
+  "with_": [
+   "Sun",
+   "Mars"
+  ],
+  "qualified": true,
+  "days": [
+   {
+    "date": "2026-01-14",
+    "gold": 4635.7001953125,
+    "gold_ret": 0.8,
+    "silver": 90.86900329589844,
+    "silver_ret": 5.81
+   },
+   {
+    "date": "2026-01-15",
+    "gold": 4623.7001953125,
+    "gold_ret": -0.26,
+    "silver": 91.8759994506836,
+    "silver_ret": 1.11
+   },
+   {
+    "date": "2026-01-16",
+    "gold": 4595.39990234375,
+    "gold_ret": -0.61,
+    "silver": 88.09100341796875,
+    "silver_ret": -4.12
+   },
+   {
+    "date": "2026-01-20",
+    "gold": 4765.7998046875,
+    "gold_ret": 3.71,
+    "silver": 94.20600128173828,
+    "silver_ret": 6.94
+   },
+   {
+    "date": "2026-01-21",
+    "gold": 4837.5,
+    "gold_ret": 1.5,
+    "silver": 92.20999908447266,
+    "silver_ret": -2.12
+   },
+   {
+    "date": "2026-01-22",
+    "gold": 4913.39990234375,
+    "gold_ret": 1.57,
+    "silver": 95.97599792480469,
+    "silver_ret": 4.08
+   },
+   {
+    "date": "2026-01-23",
+    "gold": 4979.7001953125,
+    "gold_ret": 1.35,
+    "silver": 100.92500305175781,
+    "silver_ret": 5.16
+   },
+   {
+    "date": "2026-01-26",
+    "gold": 5082.5,
+    "gold_ret": 2.06,
+    "silver": 115.08000183105469,
+    "silver_ret": 14.03
+   },
+   {
+    "date": "2026-01-27",
+    "gold": 5082.60009765625,
+    "gold_ret": 0.0,
+    "silver": 105.52300262451172,
+    "silver_ret": -8.3
+   },
+   {
+    "date": "2026-01-28",
+    "gold": 5303.60009765625,
+    "gold_ret": 4.35,
+    "silver": 113.11100006103516,
+    "silver_ret": 7.19
+   },
+   {
+    "date": "2026-01-29",
+    "gold": 5318.39990234375,
+    "gold_ret": 0.28,
+    "silver": 114.03700256347656,
+    "silver_ret": 0.82
+   },
+   {
+    "date": "2026-01-30",
+    "gold": 4745.10009765625,
+    "gold_ret": -10.78,
+    "silver": 78.29000091552734,
+    "silver_ret": -31.35
+   },
+   {
+    "date": "2026-02-02",
+    "gold": 4652.60009765625,
+    "gold_ret": -1.95,
+    "silver": 76.77799987792969,
+    "silver_ret": -1.93
+   },
+   {
+    "date": "2026-02-03",
+    "gold": 4935.0,
+    "gold_ret": 6.07,
+    "silver": 83.04199981689453,
+    "silver_ret": 8.16
+   },
+   {
+    "date": "2026-02-04",
+    "gold": 4950.7998046875,
+    "gold_ret": 0.32,
+    "silver": 84.16500091552734,
+    "silver_ret": 1.35
+   },
+   {
+    "date": "2026-02-05",
+    "gold": 4889.5,
+    "gold_ret": -1.24,
+    "silver": 76.52899932861328,
+    "silver_ret": -9.07
+   },
+   {
+    "date": "2026-02-06",
+    "gold": 4979.7998046875,
+    "gold_ret": 1.85,
+    "silver": 76.73500061035156,
+    "silver_ret": 0.27
+   },
+   {
+    "date": "2026-02-09",
+    "gold": 5079.39990234375,
+    "gold_ret": 2.0,
+    "silver": 82.06500244140625,
+    "silver_ret": 6.95
+   },
+   {
+    "date": "2026-02-10",
+    "gold": 5031.0,
+    "gold_ret": -0.95,
+    "silver": 80.21800231933594,
+    "silver_ret": -2.25
+   },
+   {
+    "date": "2026-02-11",
+    "gold": 5098.5,
+    "gold_ret": 1.34,
+    "silver": 83.75399780273438,
+    "silver_ret": 4.41
+   },
+   {
+    "date": "2026-02-12",
+    "gold": 4948.39990234375,
+    "gold_ret": -2.94,
+    "silver": 75.5459976196289,
+    "silver_ret": -9.8
+   },
+   {
+    "date": "2026-02-13",
+    "gold": 5046.2998046875,
+    "gold_ret": 1.98,
+    "silver": 77.85099792480469,
+    "silver_ret": 3.05
+   },
+   {
+    "date": "2026-02-17",
+    "gold": 4905.89990234375,
+    "gold_ret": -2.78,
+    "silver": 73.4469985961914,
+    "silver_ret": -5.66
+   },
+   {
+    "date": "2026-02-18",
+    "gold": 5009.5,
+    "gold_ret": 2.11,
+    "silver": 77.50900268554688,
+    "silver_ret": 5.53
+   },
+   {
+    "date": "2026-02-19",
+    "gold": 4997.39990234375,
+    "gold_ret": -0.24,
+    "silver": 77.56500244140625,
+    "silver_ret": 0.07
+   },
+   {
+    "date": "2026-02-20",
+    "gold": 5080.89990234375,
+    "gold_ret": 1.67,
+    "silver": 82.28299713134766,
+    "silver_ret": 6.08
+   },
+   {
+    "date": "2026-02-23",
+    "gold": 5225.60009765625,
+    "gold_ret": 2.85,
+    "silver": 86.52300262451172,
+    "silver_ret": 5.15
+   },
+   {
+    "date": "2026-02-24",
+    "gold": 5176.2998046875,
+    "gold_ret": -0.94,
+    "silver": 87.45700073242188,
+    "silver_ret": 1.08
+   },
+   {
+    "date": "2026-02-25",
+    "gold": 5226.2001953125,
+    "gold_ret": 0.96,
+    "silver": 90.93900299072266,
+    "silver_ret": 3.98
+   },
+   {
+    "date": "2026-02-26",
+    "gold": 5194.2001953125,
+    "gold_ret": -0.61,
+    "silver": 86.99800109863281,
+    "silver_ret": -4.33
+   },
+   {
+    "date": "2026-02-27",
+    "gold": 5247.89990234375,
+    "gold_ret": 1.03,
+    "silver": 92.68199920654297,
+    "silver_ret": 6.53
+   }
+  ],
+  "sky": {
+   "Sun": "Capricorn Shravana",
+   "Moon": "Cancer Punarvasu",
+   "Mercury": "Capricorn Dhanishta",
+   "Venus": "Capricorn Dhanishta",
+   "Mars": "Capricorn Shravana",
+   "Jupiter": "Gemini Punarvasu R",
+   "Saturn": "Pisces Uttara Bhadrapada",
+   "Rahu": "Aquarius Shatabhisha R",
+   "Ketu": "Leo Purva Phalguni R"
+  },
+  "gold_by": {
+   "entry": "2026-01-30",
+   "entry_close": 4745.10009765625,
+   "pre3": -6.64,
+   "main": 4.95,
+   "horizon": 5,
+   "f5": 4.95,
+   "f20": 11.94,
+   "f40": -4.62,
+   "big_near": [
+    [
+     "2026-01-28",
+     4.35
+    ],
+    [
+     "2026-01-30",
+     -10.78
+    ],
+    [
+     "2026-02-03",
+     6.07
+    ]
+   ],
+   "dip_then_up": true,
+   "outcome": "FAILED"
+  },
+  "silver_by": {
+   "entry": "2026-01-30",
+   "entry_close": 78.29000091552734,
+   "pre3": -25.81,
+   "main": -1.99,
+   "horizon": 5,
+   "f5": -1.99,
+   "f20": 12.77,
+   "f40": -10.17,
+   "big_near": [
+    [
+     "2026-01-28",
+     7.19
+    ],
+    [
+     "2026-01-30",
+     -31.35
+    ],
+    [
+     "2026-02-03",
+     8.16
+    ]
+   ],
+   "dip_then_up": true,
+   "outcome": "WORKED"
+  }
+ },
+ "forward": [
+  {
+   "rule_id": "ta_s18_venus_combust_east",
+   "title": "Venus combust in East",
+   "tone": "Bullish",
+   "start": "2027-07-20T14:30:00-04:00",
+   "end": "2027-09-07T14:30:00-04:00",
+   "sign": "Gemini",
+   "nakshatra": "Punarvasu",
+   "with_": [],
+   "qualified": false
+  },
+  {
+   "rule_id": "ta_s18_venus_rise_west",
+   "title": "Venus rises in West",
+   "tone": "Bearish",
+   "start": "2027-09-07T14:30:00-04:00",
+   "end": null,
+   "sign": "Leo",
+   "nakshatra": "Uttara Phalguni",
+   "with_": [
+    "Sun"
+   ],
+   "qualified": true
+  }
+ ]
+}

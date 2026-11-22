@@ -235,6 +235,17 @@
     "build/pdfref/gold_big_move_watch_2026-11-22_to_2027-12-31_ET.html",
     "build/pdfref/gold_big_move_watch_2026-11-22_to_2027-12-31_ET.ics"
    ]
+  },
+  {
+   "date": "2026-11-22",
+   "pr": "16",
+   "topic": "Venus rising in the West and the 30 Jan 2026 gold crash; TA Section 18 Venus rules 2000-2026",
+   "analysis": "TA p.71 S18 Venus combust West/East and rises West/East (silver S35 A15/B16; KD p.122/124) tested on gold and silver 2000-2026 with the standard method (entry = last close before; rises on 5 sessions, combustion over the window; same-year base), plus 20/40-session moves, the 3 sessions before, +/-2% days within +/-3 days, and the qualified West-rising pattern. Case study 14 Jan - 27 Feb 2026.",
+   "result": "Venus rose in the West on 31 Jan 2026 (Capricorn with Sun and Mars, the qualified 'sharp upturn after a small dip' case). Gold -10.8% on 30 Jan, the session before the layer's date, then +6.1% on 3 Feb and +11.9% after 20 sessions. Over 26 years, rises in West are at chance (gold 6/12, 50% vs 45%); qualified pattern 2 of 6 vs 1.8 expected. Leads: combust in East gold 12/16 (75% vs 57%, p 0.11); rises in East gold 40 sessions 13/15 (87% vs 63%, p 0.045). Combust in West did not hold up (7/16). Next: Venus rises in West 7 Sep 2027 in Leo with the Sun (qualified).",
+   "files": [
+    "tools/test_venus_visibility.py",
+    "build/pdfref/venus_visibility_test_2000-2026_ET.html"
+   ]
   }
  ]
 }
