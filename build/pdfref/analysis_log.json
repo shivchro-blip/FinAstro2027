@@ -334,6 +334,17 @@
     "tools/calendar_rules_backtest.py",
     "build/pdfref/calendar_rules_backtest_2000-2026_ET.html"
    ]
+  },
+  {
+   "date": "2026-11-23",
+   "pr": "24",
+   "topic": "Simple S&P 500 / Sensex bullish-bearish tables to end-2027",
+   "analysis": "Direction rules (PDF catalogue and calendar layer) admitted only if p < 0.05 on one index and above base in both halves on both indices (15+ decided each); strength High (p<0.05 both), Moderate (<0.05 and <0.15), Low (<0.05 one only); points per weekday netted; robust big-move factors shown as Volatile. Selection checked walk-forward (picked on 2000-2013, scored 2013-2026).",
+   "result": "10 rules: High - Mars-Mercury Vedha (bullish), Shukla Shashti on Friday and Three Saturdays in Shukla Paksha (bearish); Moderate - Mars-Saturn 4/10, Moon-Rahu 6/8 (bullish), Mars-Saturn 2/12, Mercury-Rahu conjunction (bearish); Low - Venus-Uranus 7th (bearish), Venus-Rahu 6/8, Mrigashira on Monday (bullish). Walk-forward of the selection: 61.8 vs 59.2% (S&P, p 0.12), 57.3 vs 56.4% (Sensex, p 0.34) - small, not significant.",
+   "files": [
+    "tools/market_signal_table.py",
+    "build/pdfref/market_signals_2026-11-23_to_2027-12-31_ET.html"
+   ]
   }
  ]
 }
