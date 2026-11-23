@@ -80,6 +80,7 @@ Known data problems:
 | `tools/calendar_rules_backtest.py` | Generates the original calendar's rule layer (`finastro/verdicts.py`; 2026 document catalogue B, configuration groups, sub-tables) for every year 2000–2026 and backtests it: SPX→S&P 500, NIFTY→Sensex, GC, SI; direction rules on direction, condition-only rules on big-day frequency. The cache in `build/pdfref/backtest/calendar_verdicts/` is git-ignored |
 | `tools/market_signal_table.py` | Simple S&P 500 / Sensex bullish-bearish tables to end-2027. Rules qualify when p < 0.05 on one index and they beat the base in both halves on both indices. Strength High / Moderate / Low by p on the two indices; robust big-move factors are shown as Volatile |
 | `tools/validate_external_model.py` | Check of an outside model's crash table and 2026–2029 roadmap: planet positions, its "signatures" on the S&P 500 1928–2026 (`spx_GSPC_daily_1928.csv`), and its windows against our tables and robust factors |
+| `tools/day_report.py [YYYY-MM-DD]` | One day: positions, panchang, every active rule (gold, silver, general, calendar) with its 26-year record, our table signals, the watch windows and the actual moves. The latest report is published |
 | `tools/gold_tracker.py [--metal silver]` | Trackers: findings, rule status, best-rule dates, analysis log |
 | `tools/build_year.py YEAR` | Astronomy layer for any year; 2000–2024 are git-ignored and rebuilt on demand |
 | `tools/fetch_prices.py` | Downloads GC=F and SI=F (Yahoo; the host must be allowed) |
@@ -425,6 +426,17 @@ There are no TA S34 A9 windows between now and 31 Dec 2027.
 | "Core signatures" | **Do not predict crashes.** Jupiter weakness, Mars trigger and eclipse/stellium appear in every 12-month window since 1928, and the S&P did no worse with them. Saturn–node / Saturn in Pisces–Aries is the only hint: 6-month falls of 15%+ 19.6% vs 14.2% of the time (z = 2.3, with overlapping windows). |
 | Forecast | **Agrees on timing of turbulence:** our robust volatility factors cluster in Feb–May 2027 and Jan–Jun 2028. **Not on direction:** our tables are mixed on the S&P and bullish-leaning on the Sensex in Aug–Dec 2027. They agree on silver strength in Dec 2026 – Jun 2027 and on gold in Aug 2027. |
 | Nov 2026 "Act I" | Matches the moves (Nasdaq −18.1%, gold $3,515, silver $41.03), but it was drawn after the fact. |
+
+**Day report, Mon 23 Nov 2026**, in `day_report_2026-11-23_ET.html`.
+- **Sky:** Sun in Scorpio/Anuradha; Moon in Aries/Bharani (Shukla Chaturdashi, full Moon on 24 Nov); Mars, Jupiter and Ketu in Leo/Magha; Saturn retrograde in Pisces/Uttara Bhadrapada; Rahu at 0°38' Aquarius (enters Capricorn on 5 Dec); Venus just into Libra.
+- **What we said:**
+  - Gold: bearish, low strength (Sun in Anuradha, Mars aspecting the Sun). That label has no edge, 44% vs 44%.
+  - S&P 500, Sensex and silver: no signal.
+  - Volatility watch: gold's Sun–Uranus opposition and full-Moon window, 22–28 Nov.
+- **What happened:** S&P +4.7%, Nasdaq +6.5%, gold +3.2%, silver +4.4%, Sensex −1.8%.
+  - The gold call was wrong.
+  - The volatility watch was right (a ±2% day).
+  - 165 catalogue rules were active. Of those with a supported record, 8 bullish vs 1 bearish for the S&P (right) and 6 vs 3 for the Sensex (wrong), but that tally is not a tested signal.
 
 **Model v1.0 (Ch.41 + Shadbala + Ashtakavarga), 6,572 trading days:**
 - The correlation of the scarcity index with the next 5 days is −0.002.
