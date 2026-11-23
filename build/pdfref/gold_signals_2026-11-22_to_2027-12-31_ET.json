@@ -1,0 +1,417 @@
+[
+ {
+  "frm": "2026-11-23",
+  "to": "2026-12-01",
+  "sig": "Bearish",
+  "st": "Low",
+  "why": [
+   "Sun in Anuradha, Mars aspects the Sun"
+  ]
+ },
+ {
+  "frm": "2026-12-02",
+  "to": "2026-12-15",
+  "sig": "Bullish",
+  "st": "Low",
+  "why": [
+   "Mercury with the Sun"
+  ]
+ },
+ {
+  "frm": "2026-12-21",
+  "to": "2027-01-08",
+  "sig": "Bullish",
+  "st": "Low",
+  "why": [
+   "Mercury with the Sun"
+  ]
+ },
+ {
+  "frm": "2027-01-14",
+  "to": "2027-01-20",
+  "sig": "Bullish",
+  "st": "Low",
+  "why": [
+   "Mercury with the Sun"
+  ]
+ },
+ {
+  "frm": "2027-01-21",
+  "to": "2027-01-21",
+  "sig": "Bullish",
+  "st": "Low",
+  "why": [
+   "Mercury with the Sun",
+   "Jupiter changes nakshatra",
+   "Jupiter changes sign",
+   "full moon"
+  ]
+ },
+ {
+  "frm": "2027-01-22",
+  "to": "2027-01-22",
+  "sig": "Bullish",
+  "st": "Low",
+  "why": [
+   "Mercury with the Sun",
+   "Jupiter changes nakshatra",
+   "Jupiter changes sign",
+   "full moon",
+   "fast-planet trigger day"
+  ]
+ },
+ {
+  "frm": "2027-01-25",
+  "to": "2027-01-27",
+  "sig": "Bullish",
+  "st": "Low",
+  "why": [
+   "Mercury with the Sun",
+   "Jupiter changes nakshatra",
+   "Jupiter changes sign",
+   "full moon"
+  ]
+ },
+ {
+  "frm": "2027-02-12",
+  "to": "2027-02-23",
+  "sig": "Bullish",
+  "st": "Low",
+  "why": [
+   "Mercury with the Sun"
+  ]
+ },
+ {
+  "frm": "2027-03-11",
+  "to": "2027-03-12",
+  "sig": "Bullish",
+  "st": "Low",
+  "why": [
+   "Mercury with the Sun"
+  ]
+ },
+ {
+  "frm": "2027-03-22",
+  "to": "2027-03-23",
+  "sig": "Bearish",
+  "st": "Moderate",
+  "why": [
+   "Saturn combustion begins",
+   "full moon",
+   "fast-planet trigger day"
+  ]
+ },
+ {
+  "frm": "2027-03-24",
+  "to": "2027-03-25",
+  "sig": "Bearish",
+  "st": "Low",
+  "why": [
+   "Saturn combustion begins",
+   "full moon"
+  ]
+ },
+ {
+  "frm": "2027-04-05",
+  "to": "2027-04-14",
+  "sig": "Bullish",
+  "st": "Low",
+  "why": [
+   "Mercury with the Sun"
+  ]
+ },
+ {
+  "frm": "2027-04-21",
+  "to": "2027-05-03",
+  "sig": "Bullish",
+  "st": "Low",
+  "why": [
+   "Mercury with the Sun"
+  ]
+ },
+ {
+  "frm": "2027-05-04",
+  "to": "2027-05-06",
+  "sig": "Volatile",
+  "st": "Low",
+  "why": [
+   "Mercury with the Sun",
+   "Venus-Saturn conjunction"
+  ]
+ },
+ {
+  "frm": "2027-05-07",
+  "to": "2027-05-10",
+  "sig": "Bearish",
+  "st": "Low",
+  "why": [
+   "Venus-Saturn conjunction"
+  ]
+ },
+ {
+  "frm": "2027-05-17",
+  "to": "2027-05-21",
+  "sig": "Bullish",
+  "st": "Low",
+  "why": [
+   "Mercury with the Sun"
+  ]
+ },
+ {
+  "frm": "2027-06-15",
+  "to": "2027-06-21",
+  "sig": "Bullish",
+  "st": "Low",
+  "why": [
+   "Mercury with the Sun"
+  ]
+ },
+ {
+  "frm": "2027-06-22",
+  "to": "2027-06-28",
+  "sig": "Bullish",
+  "st": "Moderate",
+  "why": [
+   "Mercury with the Sun",
+   "Jupiter changes nakshatra",
+   "Jupiter changes sign"
+  ]
+ },
+ {
+  "frm": "2027-06-29",
+  "to": "2027-07-16",
+  "sig": "Bullish",
+  "st": "Low",
+  "why": [
+   "Mercury with the Sun"
+  ]
+ },
+ {
+  "frm": "2027-07-19",
+  "to": "2027-07-19",
+  "sig": "Bullish",
+  "st": "Low",
+  "why": [
+   "fast-planet trigger day"
+  ]
+ },
+ {
+  "frm": "2027-07-20",
+  "to": "2027-07-20",
+  "sig": "Bullish",
+  "st": "High",
+  "why": [
+   "Venus combust in East",
+   "fast-planet trigger day"
+  ]
+ },
+ {
+  "frm": "2027-07-21",
+  "to": "2027-07-29",
+  "sig": "Bullish",
+  "st": "Moderate",
+  "why": [
+   "Venus combust in East"
+  ]
+ },
+ {
+  "frm": "2027-07-30",
+  "to": "2027-08-13",
+  "sig": "Bullish",
+  "st": "High",
+  "why": [
+   "Venus combust in East",
+   "Mercury with the Sun"
+  ]
+ },
+ {
+  "frm": "2027-08-16",
+  "to": "2027-08-16",
+  "sig": "Bullish",
+  "st": "Moderate",
+  "why": [
+   "Venus combust in East"
+  ]
+ },
+ {
+  "frm": "2027-08-17",
+  "to": "2027-08-26",
+  "sig": "Bullish",
+  "st": "High",
+  "why": [
+   "Venus combust in East",
+   "Mercury with the Sun"
+  ]
+ },
+ {
+  "frm": "2027-08-27",
+  "to": "2027-08-27",
+  "sig": "Bullish",
+  "st": "High",
+  "why": [
+   "Venus combust in East",
+   "Mercury with the Sun",
+   "Jupiter changes nakshatra"
+  ]
+ },
+ {
+  "frm": "2027-08-30",
+  "to": "2027-08-30",
+  "sig": "Bullish",
+  "st": "High",
+  "why": [
+   "Venus combust in East",
+   "Mercury with the Sun",
+   "Jupiter changes nakshatra",
+   "fast-planet trigger day"
+  ]
+ },
+ {
+  "frm": "2027-08-31",
+  "to": "2027-09-02",
+  "sig": "Bullish",
+  "st": "High",
+  "why": [
+   "Venus combust in East",
+   "Jupiter changes nakshatra"
+  ]
+ },
+ {
+  "frm": "2027-09-03",
+  "to": "2027-09-03",
+  "sig": "Bullish",
+  "st": "Moderate",
+  "why": [
+   "Venus combust in East"
+  ]
+ },
+ {
+  "frm": "2027-09-06",
+  "to": "2027-09-06",
+  "sig": "Bullish",
+  "st": "Moderate",
+  "why": [
+   "Venus combust in East",
+   "fast-planet trigger day"
+  ]
+ },
+ {
+  "frm": "2027-09-07",
+  "to": "2027-09-07",
+  "sig": "Bullish",
+  "st": "Moderate",
+  "why": [
+   "Venus combust in East",
+   "Venus rises in West (dip then upturn)",
+   "fast-planet trigger day"
+  ]
+ },
+ {
+  "frm": "2027-09-17",
+  "to": "2027-09-21",
+  "sig": "Bullish",
+  "st": "Low",
+  "why": [
+   "Mercury with the Sun"
+  ]
+ },
+ {
+  "frm": "2027-10-18",
+  "to": "2027-10-18",
+  "sig": "Volatile",
+  "st": "Low",
+  "why": [
+   "Mercury with the Sun",
+   "full moon",
+   "Sun in Libra aspected by (or with) malefics"
+  ]
+ },
+ {
+  "frm": "2027-10-19",
+  "to": "2027-10-20",
+  "sig": "Bullish",
+  "st": "Low",
+  "why": [
+   "Mercury with the Sun"
+  ]
+ },
+ {
+  "frm": "2027-11-01",
+  "to": "2027-11-04",
+  "sig": "Bullish",
+  "st": "Low",
+  "why": [
+   "Jupiter changes nakshatra"
+  ]
+ },
+ {
+  "frm": "2027-11-05",
+  "to": "2027-11-05",
+  "sig": "Bullish",
+  "st": "Moderate",
+  "why": [
+   "Jupiter changes nakshatra",
+   "Mercury with the Sun"
+  ]
+ },
+ {
+  "frm": "2027-11-08",
+  "to": "2027-11-16",
+  "sig": "Bullish",
+  "st": "Low",
+  "why": [
+   "Mercury with the Sun"
+  ]
+ },
+ {
+  "frm": "2027-11-23",
+  "to": "2027-11-24",
+  "sig": "Volatile",
+  "st": "Low",
+  "why": [
+   "Jupiter changes sign"
+  ]
+ },
+ {
+  "frm": "2027-11-25",
+  "to": "2027-11-26",
+  "sig": "Bullish",
+  "st": "Low",
+  "why": [
+   "Jupiter changes sign",
+   "Mercury with the Sun",
+   "fast-planet trigger day"
+  ]
+ },
+ {
+  "frm": "2027-11-29",
+  "to": "2027-11-29",
+  "sig": "Bullish",
+  "st": "Low",
+  "why": [
+   "Jupiter changes sign",
+   "Mercury with the Sun"
+  ]
+ },
+ {
+  "frm": "2027-11-30",
+  "to": "2027-12-24",
+  "sig": "Bullish",
+  "st": "Low",
+  "why": [
+   "Mercury with the Sun"
+  ]
+ },
+ {
+  "frm": "2027-12-27",
+  "to": "2027-12-31",
+  "sig": "Bullish",
+  "st": "Moderate",
+  "why": [
+   "Mercury with the Sun",
+   "Rahu & Mars together in any sign",
+   "Mars in Capricorn",
+   "Mars with Rahu"
+  ]
+ }
+]

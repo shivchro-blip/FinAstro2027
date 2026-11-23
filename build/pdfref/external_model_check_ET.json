@@ -1,0 +1,1269 @@
+{
+ "A": [
+  {
+   "crash": "1929 Wall Street",
+   "ref": "1929-10-29",
+   "window": "1929-09-03 \u2013 1932-07-08",
+   "claims": [
+    {
+     "claim": "Sun neecha (Libra)",
+     "on_ref": true,
+     "in_window": true,
+     "first": "1929-10-17",
+     "last": "1931-11-15",
+     "status": "holds",
+     "note": ""
+    },
+    {
+     "claim": "Venus neecha (Virgo)",
+     "on_ref": true,
+     "in_window": true,
+     "first": "1929-10-14",
+     "last": "1931-10-08",
+     "status": "holds",
+     "note": ""
+    },
+    {
+     "claim": "Mars and Ketu in Libra",
+     "on_ref": true,
+     "in_window": true,
+     "first": "1929-09-26",
+     "last": "1929-11-07",
+     "status": "holds",
+     "note": ""
+    },
+    {
+     "claim": "Saturn in Mula",
+     "on_ref": true,
+     "in_window": true,
+     "first": "1929-09-03",
+     "last": "1930-10-13",
+     "status": "holds",
+     "note": ""
+    },
+    {
+     "claim": "1 Nov 1929 solar eclipse",
+     "on_ref": null,
+     "in_window": true,
+     "first": null,
+     "last": null,
+     "status": "holds",
+     "note": "solar eclipse 1929-11-01, Sun in Libra (sidereal)"
+    }
+   ]
+  },
+  {
+   "crash": "1937-38 recession",
+   "ref": "1937-10-19",
+   "window": "1937-03-06 \u2013 1938-03-31",
+   "claims": [
+    {
+     "claim": "Saturn retrograde in Pisces",
+     "on_ref": true,
+     "in_window": true,
+     "first": "1937-07-17",
+     "last": "1937-12-01",
+     "status": "holds",
+     "note": ""
+    },
+    {
+     "claim": "Mars and Rahu in Scorpio",
+     "on_ref": false,
+     "in_window": true,
+     "first": "1937-03-06",
+     "last": "1937-09-18",
+     "status": "in window",
+     "note": ""
+    },
+    {
+     "claim": "Jupiter (in)to Capricorn",
+     "on_ref": false,
+     "in_window": true,
+     "first": "1937-03-22",
+     "last": "1938-03-30",
+     "status": "in window",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "crash": "1973-74 oil crisis",
+   "ref": "1973-10-17",
+   "window": "1973-01-11 \u2013 1974-10-03",
+   "claims": [
+    {
+     "claim": "Saturn and Ketu in Ardra",
+     "on_ref": true,
+     "in_window": true,
+     "first": "1973-08-03",
+     "last": "1973-11-19",
+     "status": "holds",
+     "note": ""
+    },
+    {
+     "claim": "Jupiter neecha",
+     "on_ref": true,
+     "in_window": true,
+     "first": "1973-01-25",
+     "last": "1974-02-08",
+     "status": "holds",
+     "note": ""
+    },
+    {
+     "claim": "Sun neecha",
+     "on_ref": true,
+     "in_window": true,
+     "first": "1973-10-17",
+     "last": "1973-11-15",
+     "status": "holds",
+     "note": ""
+    },
+    {
+     "claim": "Mars retrograde in Aries",
+     "on_ref": true,
+     "in_window": true,
+     "first": "1973-09-20",
+     "last": "1973-11-25",
+     "status": "holds",
+     "note": ""
+    },
+    {
+     "claim": "Gemini solar eclipse (30 Jun 1973, ~7 min)",
+     "on_ref": null,
+     "in_window": true,
+     "first": null,
+     "last": null,
+     "status": "holds",
+     "note": "solar eclipse 1973-06-30, Sun in Gemini (sidereal)"
+    }
+   ]
+  },
+  {
+   "crash": "1987 Black Monday",
+   "ref": "1987-10-19",
+   "window": "1987-08-25 \u2013 1987-12-04",
+   "claims": [
+    {
+     "claim": "Jupiter retrograde at 0\u00b0 Aries (gandanta)",
+     "on_ref": true,
+     "in_window": true,
+     "first": "1987-09-30",
+     "last": "1987-11-26",
+     "status": "holds",
+     "note": ""
+    },
+    {
+     "claim": "Mars and Ketu in Virgo",
+     "on_ref": true,
+     "in_window": true,
+     "first": "1987-09-29",
+     "last": "1987-11-13",
+     "status": "holds",
+     "note": ""
+    },
+    {
+     "claim": "Mercury retrograde",
+     "on_ref": true,
+     "in_window": true,
+     "first": "1987-10-17",
+     "last": "1987-11-05",
+     "status": "holds",
+     "note": ""
+    },
+    {
+     "claim": "Virgo solar eclipse 23 Sep 1987",
+     "on_ref": null,
+     "in_window": true,
+     "first": null,
+     "last": null,
+     "status": "holds",
+     "note": "solar eclipse 1987-09-23, Sun in Virgo (sidereal)"
+    }
+   ]
+  },
+  {
+   "crash": "1990 Japan bubble",
+   "ref": "1990-01-02",
+   "window": "1989-12-29 \u2013 1992-08-18",
+   "claims": [
+    {
+     "claim": "Rahu in Capricorn",
+     "on_ref": true,
+     "in_window": true,
+     "first": "1989-12-29",
+     "last": "1991-04-12",
+     "status": "holds",
+     "note": ""
+    },
+    {
+     "claim": "Ketu and Jupiter in Cancer",
+     "on_ref": false,
+     "in_window": true,
+     "first": "1990-07-21",
+     "last": "1991-04-12",
+     "status": "in window",
+     "note": ""
+    },
+    {
+     "claim": "Saturn opposite Jupiter",
+     "on_ref": true,
+     "in_window": true,
+     "first": "1989-12-29",
+     "last": "1991-08-13",
+     "status": "holds",
+     "note": ""
+    },
+    {
+     "claim": "Cancer solar eclipse 22 Jul 1990",
+     "on_ref": null,
+     "in_window": true,
+     "first": null,
+     "last": null,
+     "status": "holds",
+     "note": "solar eclipse 1990-07-22, Sun in Cancer (sidereal)"
+    }
+   ]
+  },
+  {
+   "crash": "1997 Asian crisis",
+   "ref": "1997-10-27",
+   "window": "1997-07-02 \u2013 1998-10-08",
+   "claims": [
+    {
+     "claim": "Jupiter retrograde neecha (Capricorn)",
+     "on_ref": false,
+     "in_window": true,
+     "first": "1997-07-02",
+     "last": "1997-10-07",
+     "status": "in window",
+     "note": ""
+    },
+    {
+     "claim": "Saturn Pisces to Aries",
+     "on_ref": true,
+     "in_window": true,
+     "first": "1997-07-02",
+     "last": "1998-10-08",
+     "status": "holds",
+     "note": ""
+    },
+    {
+     "claim": "Nodes at 29\u00b0",
+     "on_ref": false,
+     "in_window": true,
+     "first": "1997-07-02",
+     "last": "1997-07-31",
+     "status": "in window",
+     "note": ""
+    },
+    {
+     "claim": "Mars opposite Saturn",
+     "on_ref": false,
+     "in_window": true,
+     "first": "1997-07-02",
+     "last": "1997-08-03",
+     "status": "in window",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "crash": "2000-02 dot-com",
+   "ref": "2000-04-14",
+   "window": "2000-03-10 \u2013 2002-10-09",
+   "claims": [
+    {
+     "claim": "Saturn neecha (Aries)",
+     "on_ref": true,
+     "in_window": true,
+     "first": "2000-03-10",
+     "last": "2000-06-06",
+     "status": "holds",
+     "note": ""
+    },
+    {
+     "claim": "Jupiter in Ashwini",
+     "on_ref": false,
+     "in_window": true,
+     "first": "2000-03-10",
+     "last": "2000-03-22",
+     "status": "in window",
+     "note": ""
+    },
+    {
+     "claim": "Saturn and Rahu in Taurus",
+     "on_ref": false,
+     "in_window": true,
+     "first": "2002-02-17",
+     "last": "2002-07-22",
+     "status": "in window",
+     "note": ""
+    },
+    {
+     "claim": "7-planet Aries stellium",
+     "on_ref": null,
+     "in_window": true,
+     "first": null,
+     "last": null,
+     "status": "in window",
+     "note": "most bodies in Aries: 6 on 2000-05-03 (Sun..Saturn, Moon and nodes, sidereal)"
+    }
+   ]
+  },
+  {
+   "crash": "2008 global crisis",
+   "ref": "2008-09-15",
+   "window": "2007-10-09 \u2013 2009-03-09",
+   "claims": [
+    {
+     "claim": "Rahu Capricorn / Ketu Cancer",
+     "on_ref": true,
+     "in_window": true,
+     "first": "2008-04-30",
+     "last": "2009-03-09",
+     "status": "holds",
+     "note": ""
+    },
+    {
+     "claim": "Saturn and Sun in Leo",
+     "on_ref": true,
+     "in_window": true,
+     "first": "2008-08-16",
+     "last": "2008-09-15",
+     "status": "holds",
+     "note": ""
+    },
+    {
+     "claim": "Jupiter (in)to neecha (Capricorn)",
+     "on_ref": false,
+     "in_window": true,
+     "first": "2008-12-10",
+     "last": "2009-03-09",
+     "status": "in window",
+     "note": ""
+    },
+    {
+     "claim": "Cancer solar eclipse 1 Aug 2008",
+     "on_ref": null,
+     "in_window": true,
+     "first": null,
+     "last": null,
+     "status": "holds",
+     "note": "solar eclipse 2008-08-01, Sun in Cancer (sidereal)"
+    }
+   ]
+  },
+  {
+   "crash": "2020 COVID crash",
+   "ref": "2020-03-16",
+   "window": "2020-02-19 \u2013 2020-03-23",
+   "claims": [
+    {
+     "claim": "Saturn, Mars and Jupiter in Capricorn (Jupiter neecha) \u2013 true only from 30 Mar 2020, after the 23 Mar low",
+     "on_ref": false,
+     "in_window": false,
+     "first": null,
+     "last": null,
+     "status": "wrong",
+     "note": ""
+    },
+    {
+     "claim": "Rahu in Ardra",
+     "on_ref": true,
+     "in_window": true,
+     "first": "2020-02-19",
+     "last": "2020-03-23",
+     "status": "holds",
+     "note": ""
+    },
+    {
+     "claim": "Kala Sarpa",
+     "on_ref": false,
+     "in_window": true,
+     "first": "2020-02-24",
+     "last": "2020-03-23",
+     "status": "in window",
+     "note": ""
+    },
+    {
+     "claim": "6-planet Sagittarius solar eclipse (26 Dec 2019)",
+     "on_ref": null,
+     "in_window": true,
+     "first": null,
+     "last": null,
+     "status": "holds",
+     "note": "most bodies in Sagittarius: 6 on 2019-12-25 (Sun..Saturn, Moon and nodes, sidereal)"
+    }
+   ]
+  },
+  {
+   "crash": "2022 rates and crypto",
+   "ref": "2022-06-13",
+   "window": "2022-01-03 \u2013 2022-10-12",
+   "claims": [
+    {
+     "claim": "Saturn retrograde in Capricorn",
+     "on_ref": false,
+     "in_window": true,
+     "first": "2022-07-12",
+     "last": "2022-10-12",
+     "status": "in window",
+     "note": ""
+    },
+    {
+     "claim": "Mars and Rahu in Aries",
+     "on_ref": false,
+     "in_window": true,
+     "first": "2022-06-27",
+     "last": "2022-08-09",
+     "status": "in window",
+     "note": ""
+    },
+    {
+     "claim": "Kala Sarpa",
+     "on_ref": false,
+     "in_window": true,
+     "first": "2022-01-03",
+     "last": "2022-04-23",
+     "status": "in window",
+     "note": ""
+    },
+    {
+     "claim": "4 Aries-Libra eclipses in 2022",
+     "on_ref": null,
+     "in_window": true,
+     "first": null,
+     "last": null,
+     "status": "in window",
+     "note": "3 of the 2022 eclipses fall in sidereal Aries / Libra: 2022-04-30 solar (Sun Aries), 2022-05-16 lunar (Sun Taurus), 2022-10-25 solar (Sun Libra), 2022-11-08 lunar (Sun Libra)"
+    }
+   ]
+  },
+  {
+   "crash": "2025 tariff shock",
+   "ref": "2025-04-07",
+   "window": "2025-02-19 \u2013 2025-04-08",
+   "claims": [
+    {
+     "claim": "Saturn and Rahu in Pisces",
+     "on_ref": true,
+     "in_window": true,
+     "first": "2025-03-30",
+     "last": "2025-04-08",
+     "status": "holds",
+     "note": ""
+    },
+    {
+     "claim": "Mars neecha (Cancer)",
+     "on_ref": true,
+     "in_window": true,
+     "first": "2025-04-03",
+     "last": "2025-04-08",
+     "status": "holds",
+     "note": ""
+    },
+    {
+     "claim": "Mercury and Venus retrograde",
+     "on_ref": false,
+     "in_window": true,
+     "first": "2025-03-15",
+     "last": "2025-04-06",
+     "status": "in window",
+     "note": ""
+    },
+    {
+     "claim": "6-planet Pisces solar eclipse (29 Mar 2025)",
+     "on_ref": null,
+     "in_window": true,
+     "first": null,
+     "last": null,
+     "status": "in window",
+     "note": "most bodies in Pisces: 5 on 2025-03-28 (Sun..Saturn, Moon and nodes, sidereal)"
+    }
+   ]
+  }
+ ],
+ "F": [
+  {
+   "stage": "Nov 2026 (Act I crack)",
+   "window": "2026-11-01 \u2013 2026-12-15",
+   "claims": [
+    {
+     "claim": "Jupiter, Mars and Ketu in Magha",
+     "on_ref": null,
+     "in_window": true,
+     "first": "2026-11-12",
+     "last": "2026-12-05",
+     "status": "in window",
+     "note": ""
+    },
+    {
+     "claim": "Jupiter, Mars and Ketu together in Leo",
+     "on_ref": null,
+     "in_window": true,
+     "first": "2026-11-12",
+     "last": "2026-12-05",
+     "status": "in window",
+     "note": ""
+    },
+    {
+     "claim": "Nodes at 0\u00b0 (sandhi)",
+     "on_ref": null,
+     "in_window": true,
+     "first": "2026-11-17",
+     "last": "2026-12-15",
+     "status": "in window",
+     "note": ""
+    },
+    {
+     "claim": "Venus neecha (Virgo)",
+     "on_ref": null,
+     "in_window": true,
+     "first": "2026-11-06",
+     "last": "2026-11-21",
+     "status": "in window",
+     "note": ""
+    },
+    {
+     "claim": "Rahu enters Capricorn (in November)",
+     "on_ref": null,
+     "in_window": true,
+     "first": null,
+     "last": null,
+     "status": "in window",
+     "note": "mean node (our convention) enters Capricorn 5 Dec 2026; the true node enters about 25 Nov 2026"
+    }
+   ]
+  },
+  {
+   "stage": "Feb-Apr 2027 (Tremor)",
+   "window": "2027-02-01 \u2013 2027-04-30",
+   "claims": [
+    {
+     "claim": "Mars retrograde neecha in Cancer with Ketu",
+     "on_ref": null,
+     "in_window": true,
+     "first": "2027-03-10",
+     "last": "2027-03-31",
+     "status": "in window",
+     "note": ""
+    },
+    {
+     "claim": "Mercury retrograde in Capricorn",
+     "on_ref": null,
+     "in_window": true,
+     "first": "2027-02-24",
+     "last": "2027-03-02",
+     "status": "in window",
+     "note": ""
+    },
+    {
+     "claim": "6 Feb 2027 solar eclipse in Capricorn",
+     "on_ref": null,
+     "in_window": true,
+     "first": null,
+     "last": null,
+     "status": "holds",
+     "note": "solar eclipse 2027-02-06, Sun in Capricorn (sidereal)"
+    },
+    {
+     "claim": "Jupiter exalted in Cancer (Feb-Jun)",
+     "on_ref": null,
+     "in_window": true,
+     "first": "2027-02-01",
+     "last": "2027-04-30",
+     "status": "in window",
+     "note": ""
+    }
+   ]
+  },
+  {
+   "stage": "Aug-Oct 2027 (Fracture)",
+   "window": "2027-08-01 \u2013 2027-10-31",
+   "claims": [
+    {
+     "claim": "Saturn neecha in Aries",
+     "on_ref": null,
+     "in_window": true,
+     "first": "2027-08-01",
+     "last": "2027-10-19",
+     "status": "in window",
+     "note": ""
+    },
+    {
+     "claim": "Saturn's 10th aspect on Rahu in Capricorn",
+     "on_ref": null,
+     "in_window": true,
+     "first": "2027-08-01",
+     "last": "2027-10-19",
+     "status": "in window",
+     "note": ""
+    },
+    {
+     "claim": "Sun neecha (Libra)",
+     "on_ref": null,
+     "in_window": true,
+     "first": "2027-10-18",
+     "last": "2027-10-31",
+     "status": "in window",
+     "note": ""
+    },
+    {
+     "claim": "2 Aug 2027 total solar eclipse (on India's Moon sign, Cancer)",
+     "on_ref": null,
+     "in_window": true,
+     "first": null,
+     "last": null,
+     "status": "holds",
+     "note": "solar eclipse 2027-08-02, Sun in Cancer (sidereal)"
+    }
+   ]
+  },
+  {
+   "stage": "Jan-May 2028 (Apex)",
+   "window": "2028-01-01 \u2013 2028-05-31",
+   "claims": [
+    {
+     "claim": "Jupiter retrograde in Virgo",
+     "on_ref": null,
+     "in_window": true,
+     "first": "2028-01-12",
+     "last": "2028-02-27",
+     "status": "in window",
+     "note": ""
+    },
+    {
+     "claim": "Mars and Rahu in Capricorn",
+     "on_ref": null,
+     "in_window": true,
+     "first": "2028-01-01",
+     "last": "2028-02-02",
+     "status": "in window",
+     "note": ""
+    },
+    {
+     "claim": "Mars and Saturn in Aries",
+     "on_ref": null,
+     "in_window": true,
+     "first": "2028-04-20",
+     "last": "2028-05-30",
+     "status": "in window",
+     "note": ""
+    },
+    {
+     "claim": "26 Jan 2028 eclipse",
+     "on_ref": null,
+     "in_window": true,
+     "first": null,
+     "last": null,
+     "status": "holds",
+     "note": "solar eclipse 2028-01-26, Sun in Capricorn (sidereal)"
+    },
+    {
+     "claim": "Node sandhi in January",
+     "on_ref": null,
+     "in_window": false,
+     "first": null,
+     "last": null,
+     "status": "wrong",
+     "note": "Rahu is near 8\u00b0 Capricorn in January 2028 (mean and true node); no sign boundary"
+    }
+   ]
+  },
+  {
+   "stage": "Aug-Oct 2028 (Washout)",
+   "window": "2028-08-01 \u2013 2028-10-31",
+   "claims": [
+    {
+     "claim": "Saturn retrograde neecha in Aries",
+     "on_ref": null,
+     "in_window": true,
+     "first": "2028-08-23",
+     "last": "2028-10-31",
+     "status": "in window",
+     "note": ""
+    },
+    {
+     "claim": "Jupiter combust in Virgo",
+     "on_ref": null,
+     "in_window": true,
+     "first": "2028-09-16",
+     "last": "2028-10-14",
+     "status": "in window",
+     "note": ""
+    },
+    {
+     "claim": "Ketu in Gemini",
+     "on_ref": null,
+     "in_window": true,
+     "first": "2028-08-01",
+     "last": "2028-10-31",
+     "status": "in window",
+     "note": ""
+    },
+    {
+     "claim": "22 Jul 2028 solar eclipse",
+     "on_ref": null,
+     "in_window": true,
+     "first": null,
+     "last": null,
+     "status": "holds",
+     "note": "solar eclipse 2028-07-22, Sun in Cancer (sidereal)"
+    }
+   ]
+  },
+  {
+   "stage": "Mar 2029 onward",
+   "window": "2029-03-01 \u2013 2029-04-30",
+   "claims": [
+    {
+     "claim": "Jupiter in Libra",
+     "on_ref": null,
+     "in_window": true,
+     "first": "2029-03-01",
+     "last": "2029-03-28",
+     "status": "in window",
+     "note": ""
+    }
+   ]
+  }
+ ],
+ "dasha": {
+  "moon": "Cancer / Pushya",
+  "seq": [
+   [
+    "Venus",
+    "1989-09-10",
+    "2009-09-10"
+   ],
+   [
+    "Sun",
+    "2009-09-10",
+    "2015-09-10"
+   ],
+   [
+    "Moon",
+    "2015-09-10",
+    "2025-09-10"
+   ],
+   [
+    "Mars",
+    "2025-09-10",
+    "2032-09-09"
+   ],
+   [
+    "Rahu",
+    "2032-09-09",
+    "2050-09-10"
+   ]
+  ],
+  "mars_sub": [
+   [
+    "Mars-Mars",
+    "2025-09-10",
+    "2026-02-06"
+   ],
+   [
+    "Mars-Rahu",
+    "2026-02-06",
+    "2027-02-24"
+   ],
+   [
+    "Mars-Jupiter",
+    "2027-02-24",
+    "2028-01-31"
+   ],
+   [
+    "Mars-Saturn",
+    "2028-01-31",
+    "2029-03-11"
+   ],
+   [
+    "Mars-Mercury",
+    "2029-03-11",
+    "2030-03-08"
+   ],
+   [
+    "Mars-Ketu",
+    "2030-03-08",
+    "2030-08-04"
+   ],
+   [
+    "Mars-Venus",
+    "2030-08-04",
+    "2031-10-04"
+   ],
+   [
+    "Mars-Sun",
+    "2031-10-04",
+    "2032-02-09"
+   ],
+   [
+    "Mars-Moon",
+    "2032-02-09",
+    "2032-09-09"
+   ]
+  ]
+ },
+ "B": {
+  "Jupiter weak (neecha in Capricorn, retrograde or combust)": {
+   "share": 42.1,
+   "on": {
+    "n": 500,
+    "neg": 0.316,
+    "avg": 4.791991280501297,
+    "dd15": 0.152
+   },
+   "off": {
+    "n": 677,
+    "neg": 0.345642540620384,
+    "avg": 3.3961196015175643,
+    "dd15": 0.16100443131462333
+   },
+   "z_dd15": -0.42,
+   "crash_hits": 5,
+   "crash_window_hits": 9,
+   "random_window_share": 100.0
+  },
+  "Mars trigger (Mars with or opposite Saturn / Rahu / Ketu, retrograde, or neecha)": {
+   "share": 44.9,
+   "on": {
+    "n": 526,
+    "neg": 0.3155893536121673,
+    "avg": 4.1796454491731465,
+    "dd15": 0.16730038022813687
+   },
+   "off": {
+    "n": 651,
+    "neg": 0.34715821812596004,
+    "avg": 3.835138408929286,
+    "dd15": 0.1490015360983103
+   },
+   "z_dd15": 0.86,
+   "crash_hits": 6,
+   "crash_window_hits": 11,
+   "random_window_share": 100.0
+  },
+  "Eclipse within \u00b115 days, or a 4-planet stellium": {
+   "share": 35.1,
+   "on": {
+    "n": 421,
+    "neg": 0.33729216152019004,
+    "avg": 4.198386163231683,
+    "dd15": 0.15914489311163896
+   },
+   "off": {
+    "n": 756,
+    "neg": 0.3306878306878307,
+    "avg": 3.8725503118485465,
+    "dd15": 0.15608465608465608
+   },
+   "z_dd15": 0.14,
+   "crash_hits": 5,
+   "crash_window_hits": 11,
+   "random_window_share": 100.0
+  },
+  "Saturn with or opposite the nodes, or Saturn in Pisces / Aries": {
+   "share": 28.7,
+   "on": {
+    "n": 332,
+    "neg": 0.3644578313253012,
+    "avg": 3.1713237452247913,
+    "dd15": 0.19578313253012047
+   },
+   "off": {
+    "n": 845,
+    "neg": 0.3207100591715976,
+    "avg": 4.310401333802852,
+    "dd15": 0.14201183431952663
+   },
+   "z_dd15": 2.28,
+   "crash_hits": 5,
+   "crash_window_hits": 7,
+   "random_window_share": 49.3
+  },
+  "Rahu in Capricorn": {
+   "share": 7.9,
+   "on": {
+    "n": 93,
+    "neg": 0.3333333333333333,
+    "avg": 3.75658333328306,
+    "dd15": 0.21505376344086022
+   },
+   "off": {
+    "n": 1084,
+    "neg": 0.33302583025830257,
+    "avg": 4.009046458009885,
+    "dd15": 0.1522140221402214
+   },
+   "z_dd15": 1.6,
+   "crash_hits": 2,
+   "crash_window_hits": 2,
+   "random_window_share": 13.1
+  },
+  "Kala Sarpa": {
+   "share": 7.6,
+   "on": {
+    "n": 92,
+    "neg": 0.31521739130434784,
+    "avg": 4.196995160737595,
+    "dd15": 0.20652173913043478
+   },
+   "off": {
+    "n": 1085,
+    "neg": 0.3345622119815668,
+    "avg": 3.971470097410305,
+    "dd15": 0.15299539170506912
+   },
+   "z_dd15": 1.35,
+   "crash_hits": 0,
+   "crash_window_hits": 7,
+   "random_window_share": 54.8
+  },
+  "4 or more of the 6 at once": {
+   "share": 3.4,
+   "on": {
+    "n": 43,
+    "neg": 0.27906976744186046,
+    "avg": 4.845190599003277,
+    "dd15": 0.2558139534883721
+   },
+   "off": {
+    "n": 1134,
+    "neg": 0.3350970017636684,
+    "avg": 3.9566361681842146,
+    "dd15": 0.15343915343915343
+   },
+   "z_dd15": 1.81,
+   "crash_hits": 0,
+   "crash_window_hits": 7,
+   "random_window_share": 52.1
+  }
+ },
+ "Bmeta": {
+  "n": 24841,
+  "start": "1927-12-30",
+  "end": "2026-11-20",
+  "bear_share": 36.4
+ },
+ "stages": [
+  {
+   "stage": "Nov 2026 (Act I crack)",
+   "window": "2026-11-23 \u2013 2027-01-31",
+   "claim": "Nasdaq -16 to -20%; gold margin-call floor $3,525-3,700; silver $41-45; Nifty choppy, FII outflows",
+   "lean": "down",
+   "ours": {
+    "spx": {
+     "Bullish Moderate": 9,
+     "Bearish Low": 12,
+     "Bearish High": 9
+    },
+    "sensex": {
+     "Bullish Moderate": 9,
+     "Bearish Low": 12,
+     "Bearish High": 9
+    },
+    "gold": {
+     "Bearish Low": 7,
+     "Bullish Low": 35
+    },
+    "silver": {
+     "Bullish High": 28,
+     "Bullish Moderate": 7
+    }
+   },
+   "robust": {
+    "spx": {
+     "Mercury-Saturn 2/12": "2027-01-28 \u2013 2027-01-31 (4 days)"
+    },
+    "sensex": {}
+   }
+  },
+  {
+   "stage": "Feb-Apr 2027 (Tremor) / Feb-Jun 2027 roadmap",
+   "window": "2027-02-01 \u2013 2027-06-30",
+   "claim": "Tech -15 to -25%; gold and silver strong recovery rally; Indian markets outperform and rally",
+   "lean": "mixed",
+   "ours": {
+    "spx": {
+     "Volatile \u2013": 24,
+     "Bearish High": 6,
+     "Bearish Low": 3,
+     "Bullish Moderate": 16,
+     "Bearish Moderate": 10,
+     "Bullish Low": 6,
+     "Bullish High": 11
+    },
+    "sensex": {
+     "Bearish High": 7,
+     "Bearish Low": 7,
+     "Bullish Moderate": 10,
+     "Bearish Moderate": 10,
+     "Bullish Low": 6,
+     "Bullish High": 11,
+     "Volatile \u2013": 10
+    },
+    "gold": {
+     "Bullish Low": 39,
+     "Bearish Moderate": 2,
+     "Bearish Low": 4,
+     "Volatile Low": 3,
+     "Bullish Moderate": 5
+    },
+    "silver": {
+     "Bullish High": 48,
+     "Bullish Moderate": 13,
+     "Bullish Low": 21,
+     "Volatile Low": 11
+    }
+   },
+   "robust": {
+    "spx": {
+     "Mercury-Saturn 2/12": "2027-02-01 \u2013 2027-05-05 (61 days)"
+    },
+    "sensex": {
+     "Venus in Pisces": "2027-04-15 \u2013 2027-05-09 (25 days)"
+    }
+   }
+  },
+  {
+   "stage": "Aug-Oct 2027 (Fracture) / Aug-Dec 2027 roadmap",
+   "window": "2027-08-01 \u2013 2027-12-31",
+   "claim": "AI bubble fractures (primary pop); gold surges to $4,650+; silver volatile; India sharp reversal, FII selling",
+   "lean": "down",
+   "ours": {
+    "spx": {
+     "Bullish Moderate": 25,
+     "Bearish High": 11,
+     "Bullish Low": 16,
+     "Bullish High": 13,
+     "Bearish Low": 17,
+     "Volatile \u2013": 4
+    },
+    "sensex": {
+     "Volatile \u2013": 11,
+     "Bullish Moderate": 29,
+     "Bullish Low": 16,
+     "Bullish High": 13,
+     "Bearish Low": 14,
+     "Bearish High": 5
+    },
+    "gold": {
+     "Bullish High": 23,
+     "Bullish Moderate": 10,
+     "Bullish Low": 38,
+     "Volatile Low": 3
+    },
+    "silver": {
+     "Bullish Low": 31,
+     "Bullish Moderate": 12,
+     "Volatile Low": 10,
+     "Bullish High": 9
+    }
+   },
+   "robust": {
+    "spx": {
+     "Jupiter-Pluto 5/9": "2027-11-26 \u2013 2027-12-31 (36 days)",
+     "Jupiter-Neptune 7th": "2027-11-26 \u2013 2027-12-31 (36 days)"
+    },
+    "sensex": {
+     "Mars-Uranus 5/9": "2027-08-01 \u2013 2027-12-31 (28 days)"
+    }
+   }
+  },
+  {
+   "stage": "Jan-May 2028 (Apex)",
+   "window": "2028-01-01 \u2013 2028-05-31",
+   "claim": "AI -55 to -78%, S&P -35 to -50%; Nifty -20 to -35%; gold structural breakout",
+   "lean": "down",
+   "ours": {},
+   "robust": {
+    "spx": {
+     "Venus retrograde": "2028-05-11 \u2013 2028-05-31 (21 days)",
+     "Jupiter-Pluto 5/9": "2028-01-01 \u2013 2028-02-27 (58 days)",
+     "Jupiter-Neptune 7th": "2028-01-01 \u2013 2028-02-27 (58 days)",
+     "Mercury-Saturn 2/12": "2028-03-28 \u2013 2028-05-31 (51 days)"
+    },
+    "sensex": {
+     "Venus retrograde": "2028-05-11 \u2013 2028-05-31 (21 days)",
+     "Mars-Saturn conjunction": "2028-04-20 \u2013 2028-05-30 (41 days)",
+     "Venus in Pisces": "2028-02-02 \u2013 2028-02-27 (26 days)",
+     "Mars-Uranus 5/9": "2028-01-01 \u2013 2028-02-02 (33 days)"
+    }
+   }
+  },
+  {
+   "stage": "Aug-Oct 2028 (Washout)",
+   "window": "2028-08-01 \u2013 2028-10-31",
+   "claim": "Secular bottom",
+   "lean": "bottom",
+   "ours": {},
+   "robust": {
+    "spx": {
+     "Jupiter-Pluto 5/9": "2028-08-01 \u2013 2028-10-31 (92 days)",
+     "Jupiter-Neptune 7th": "2028-08-01 \u2013 2028-10-31 (92 days)"
+    },
+    "sensex": {}
+   }
+  }
+ ],
+ "real": [
+  {
+   "name": "Nasdaq",
+   "peak": "2026-10-06",
+   "peak_close": 27599.79,
+   "low": "2026-11-20",
+   "low_close": 22617.73,
+   "fall": -18.1,
+   "last": "2026-11-20",
+   "last_close": 22617.73
+  },
+  {
+   "name": "S&P 500",
+   "peak": "2026-10-06",
+   "peak_close": 7818.93,
+   "low": "2026-11-20",
+   "low_close": 6910.39,
+   "fall": -11.6,
+   "last": "2026-11-20",
+   "last_close": 6910.39
+  },
+  {
+   "name": "BSE Sensex",
+   "peak": "2026-11-20",
+   "peak_close": 83919.71,
+   "low": "2026-11-20",
+   "low_close": 83919.71,
+   "fall": 0.0,
+   "last": "2026-11-20",
+   "last_close": 83919.71
+  },
+  {
+   "name": "Gold",
+   "peak": "2026-08-24",
+   "peak_close": 4697.8,
+   "low": "2026-11-20",
+   "low_close": 3515.4,
+   "fall": -25.2,
+   "last": "2026-11-20",
+   "last_close": 3515.4
+  },
+  {
+   "name": "Silver",
+   "peak": "2026-06-02",
+   "peak_close": 75.31,
+   "low": "2026-11-20",
+   "low_close": 41.03,
+   "fall": -45.5,
+   "last": "2026-11-20",
+   "last_close": 41.03
+  }
+ ],
+ "eclipses": [
+  {
+   "kind": "solar",
+   "date": "2026-02-17",
+   "sun": "Aquarius"
+  },
+  {
+   "kind": "lunar",
+   "date": "2026-03-03",
+   "sun": "Aquarius"
+  },
+  {
+   "kind": "solar",
+   "date": "2026-08-12",
+   "sun": "Cancer"
+  },
+  {
+   "kind": "lunar",
+   "date": "2026-08-28",
+   "sun": "Leo"
+  },
+  {
+   "kind": "solar",
+   "date": "2027-02-06",
+   "sun": "Capricorn"
+  },
+  {
+   "kind": "lunar",
+   "date": "2027-02-20",
+   "sun": "Aquarius"
+  },
+  {
+   "kind": "lunar",
+   "date": "2027-07-18",
+   "sun": "Cancer"
+  },
+  {
+   "kind": "solar",
+   "date": "2027-08-02",
+   "sun": "Cancer"
+  },
+  {
+   "kind": "lunar",
+   "date": "2027-08-17",
+   "sun": "Leo"
+  },
+  {
+   "kind": "lunar",
+   "date": "2028-01-12",
+   "sun": "Sagittarius"
+  },
+  {
+   "kind": "solar",
+   "date": "2028-01-26",
+   "sun": "Capricorn"
+  },
+  {
+   "kind": "lunar",
+   "date": "2028-07-06",
+   "sun": "Gemini"
+  },
+  {
+   "kind": "solar",
+   "date": "2028-07-22",
+   "sun": "Cancer"
+  },
+  {
+   "kind": "lunar",
+   "date": "2028-12-31",
+   "sun": "Sagittarius"
+  },
+  {
+   "kind": "solar",
+   "date": "2029-01-14",
+   "sun": "Capricorn"
+  },
+  {
+   "kind": "solar",
+   "date": "2029-06-12",
+   "sun": "Taurus"
+  },
+  {
+   "kind": "lunar",
+   "date": "2029-06-26",
+   "sun": "Gemini"
+  },
+  {
+   "kind": "solar",
+   "date": "2029-07-11",
+   "sun": "Gemini"
+  },
+  {
+   "kind": "solar",
+   "date": "2029-12-05",
+   "sun": "Scorpio"
+  },
+  {
+   "kind": "lunar",
+   "date": "2029-12-20",
+   "sun": "Sagittarius"
+  },
+  {
+   "kind": "solar",
+   "date": "2030-06-01",
+   "sun": "Taurus"
+  }
+ ]
+}

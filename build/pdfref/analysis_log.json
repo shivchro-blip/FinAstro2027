@@ -345,6 +345,17 @@
     "tools/market_signal_table.py",
     "build/pdfref/market_signals_2026-11-23_to_2027-12-31_ET.html"
    ]
+  },
+  {
+   "date": "2026-11-23",
+   "pr": "25",
+   "topic": "Outside model check: crash table 1929-2028 and cross-asset roadmap 2026-2029 (two infographics)",
+   "analysis": "Every stated placement checked with our ephemeris at the crash date and across the crash window (45 historical, 23 forward); India 1947 Vimshottari periods computed; the 'core recurring signatures' defined objectively and tested on the S&P 500 1928-2026 (presence, crash hits, chance in a random 12-month window, 6-month 15%+ falls present vs absent); their 2026-2029 windows compared with our gold/silver/S&P/Sensex tables and robust big-move factors; prices to 20 Nov 2026.",
+   "result": "Astronomy right (44/45 historical, 22/23 forward; India dashas match). Signatures do not predict crashes: Jupiter weakness, Mars trigger and eclipse/stellium are in every 12-month window since 1928 with no effect; Saturn-node / Pisces-Aries a weak hint (19.6 vs 14.2%). Agreement on turbulence timing (our robust factors cluster Feb-May 2027 and Jan-Jun 2028), not on direction (our S&P mixed, Sensex bullish-leaning Aug-Dec 2027); agree on silver strength Dec 2026-Jun 2027 and gold Aug 2027. Nov 2026 Act I numbers match prices but were drawn after the fact.",
+   "files": [
+    "tools/validate_external_model.py",
+    "build/pdfref/external_model_check_ET.html"
+   ]
   }
  ]
 }

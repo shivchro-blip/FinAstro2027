@@ -104,6 +104,8 @@ def main():
         else:
             rows.append(dict(frm=x["d"], to=x["d"], sig=x["sig"], st=x["st"], why=x["why"]))
     (OUT / f"{MC.METAL}_signals_{a}_to_{b}_ET.html").write_text(page(rows, a, b), encoding="utf-8")
+    json.dump([dict(frm=str(r["frm"]), to=str(r["to"]), sig=r["sig"], st=r["st"], why=r["why"]) for r in rows],
+              open(OUT / f"{MC.METAL}_signals_{a}_to_{b}_ET.json", "w"), indent=1)
     for r in rows:
         print(f"{r['frm']} {r['to']} {r['sig']:8s} {r['st']:8s} {'; '.join(r['why'])}")
 

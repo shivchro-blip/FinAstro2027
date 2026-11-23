@@ -22,7 +22,8 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "build" / "pdfref" / "backtest"
 NY = ZoneInfo("America/New_York")
 SYMBOLS = {"gold_GC_F": "GC%3DF", "silver_SI_F": "SI%3DF"}
-INDICES = {"spx_GSPC": ("%5EGSPC", "America/New_York"), "sensex_BSESN": ("%5EBSESN", "Asia/Kolkata")}   # dates in each exchange's own time zone
+INDICES = {"spx_GSPC": ("%5EGSPC", "America/New_York"), "sensex_BSESN": ("%5EBSESN", "Asia/Kolkata"),
+           "nasdaq_IXIC": ("%5EIXIC", "America/New_York")}   # dates in each exchange's own time zone
 
 
 def fetch(sym, start, tz=NY):
@@ -58,6 +59,9 @@ def main():
         rows = fetch(sym, dt.datetime(1999, 1, 1, tzinfo=dt.timezone.utc), ZoneInfo(tz))
         write(OUT / f"{name}_daily_2000.csv", rows)
         print(name, len(rows), rows[0][0], "->", rows[-1][0], rows[-1][4])
+    rows = fetch("%5EGSPC", dt.datetime(1927, 1, 1, tzinfo=dt.timezone.utc), NY)      # S&P 500 back to 1928 (tools/validate_external_model.py)
+    write(OUT / "spx_GSPC_daily_1928.csv", rows)
+    print("spx_GSPC 1928", len(rows), rows[0][0], "->", rows[-1][0])
 
 
 if __name__ == "__main__":
