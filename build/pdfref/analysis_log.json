@@ -323,6 +323,17 @@
     "build/pdfref/spx_big_moves_2000-2026_ET.html",
     "build/pdfref/sensex_big_moves_2000-2026_ET.html"
    ]
+  },
+  {
+   "date": "2026-11-23",
+   "pr": "23",
+   "topic": "The 2027 calendar's own rules (2026 document catalogue B, config groups, sub-tables) backtested 2000-2026",
+   "analysis": "finastro.verdicts.build_verdicts run for every civil year 2000-2026 (year override), rows for SPX, NIFTY (Sensex proxy), GC, SI merged into episodes per rule; printed directions scored as in section 6 (same-year base, binomial p, BH q, halves); condition-only / turning / volatility rows scored on big-day frequency inside the episode vs same-year chance. Only 76 of the 162 calendar rules had a PDF-catalogue equivalent, so this closes the gap.",
+   "result": "No pooled edge (S&P 47.0 vs 46.5%, Sensex 45.5 vs 46.7%, gold 54.9 vs 54.8%, silver 49.9 vs 51.7%). Held in both indices and both halves: Three Saturdays in Shukla Paksha bearish (S&P 56 vs 39%, p 0.002, q 0.046; Sensex 50 vs 39%) and Shukla Shashti on Friday bearish (53 vs 41%, 53 vs 42%). 'Ekadashi on Friday 90%+ bearish' at chance (37 vs 40%, 42 vs 42%); Pradosh at chance; Bhadra/Panchak/Amavasya/Purnima no extra big days. 2027 dates: B101 6 Feb, 5 Jun/3 Jul, 30 Oct, 27 Nov; B100 12 Feb, 9 Jul, 6 Aug, 3 Dec.",
+   "files": [
+    "tools/calendar_rules_backtest.py",
+    "build/pdfref/calendar_rules_backtest_2000-2026_ET.html"
+   ]
   }
  ]
 }
