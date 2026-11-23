@@ -1,4 +1,4 @@
-"""Download COMEX gold (GC=F) and silver (SI=F) daily bars from Yahoo Finance.
+"""Download COMEX gold (GC=F) and silver (SI=F), S&P 500 (^GSPC) and BSE Sensex (^BSESN) daily bars from Yahoo Finance.
 
     python tools/fetch_prices.py
 
@@ -22,9 +22,10 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT = ROOT / "build" / "pdfref" / "backtest"
 NY = ZoneInfo("America/New_York")
 SYMBOLS = {"gold_GC_F": "GC%3DF", "silver_SI_F": "SI%3DF"}
+INDICES = {"spx_GSPC": ("%5EGSPC", "America/New_York"), "sensex_BSESN": ("%5EBSESN", "Asia/Kolkata")}   # dates in each exchange's own time zone
 
 
-def fetch(sym, start):
+def fetch(sym, start, tz=NY):
     url = (f"https://query1.finance.yahoo.com/v8/finance/chart/{sym}?period1={int(start.timestamp())}"
            f"&period2={int(time.time()) + 86400}&interval=1d")
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
@@ -33,7 +34,7 @@ def fetch(sym, start):
     rows = []
     for t, o, h, lo, c in zip(r["timestamp"], q["open"], q["high"], q["low"], q["close"]):
         if c is not None:
-            rows.append((dt.datetime.fromtimestamp(t, NY).date().isoformat(), o, h, lo, c))
+            rows.append((dt.datetime.fromtimestamp(t, tz).date().isoformat(), o, h, lo, c))
     dates = [x[0] for x in rows]
     assert len(dates) == len(set(dates)), "duplicate dates"
     return rows
@@ -52,6 +53,10 @@ def main():
         rows = fetch(sym, dt.datetime(2000, 1, 1, tzinfo=dt.timezone.utc))
         write(OUT / f"{name}_daily_2000.csv", rows)
         write(OUT / f"{name}_daily.csv", [x for x in rows if x[0] >= "2021-01-01"])
+        print(name, len(rows), rows[0][0], "->", rows[-1][0], rows[-1][4])
+    for name, (sym, tz) in INDICES.items():
+        rows = fetch(sym, dt.datetime(1999, 1, 1, tzinfo=dt.timezone.utc), ZoneInfo(tz))
+        write(OUT / f"{name}_daily_2000.csv", rows)
         print(name, len(rows), rows[0][0], "->", rows[-1][0], rows[-1][4])
 
 

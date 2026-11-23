@@ -58,3 +58,6 @@ build/astronomy_2020.json
 build/astronomy_2020_summary.txt
 build/astronomy_202[1-4].json
 build/astronomy_202[1-4]_summary.txt
+build/pdfref/backtest/market_events_2000-2026.json.gz
+build/astronomy_1999*
+build/astronomy_2028*
