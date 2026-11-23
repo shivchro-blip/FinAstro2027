@@ -1,0 +1,1793 @@
+{
+ "rules": {
+  "ta_s24_62_mrigashira_monday": {
+   "title": "Mrigashira on Monday",
+   "tone": "Bullish",
+   "st": "Low",
+   "src": "PDF",
+   "record": "S&P 26/40 (65% vs 58%, p 0.2516); Sensex 31/43 (72% vs 58%, p 0.0385)"
+  },
+  "ta_s25_mars_saturn_2": {
+   "title": "Mars-Saturn 2/12 (Dwidwadash)",
+   "tone": "Bearish",
+   "st": "Moderate",
+   "src": "PDF",
+   "record": "S&P 17/34 (50% vs 38%, p 0.1027); Sensex 18/31 (58% vs 38%, p 0.0213)"
+  },
+  "ta_s25_mars_saturn_4": {
+   "title": "Mars-Saturn 4/10 (Kendra)",
+   "tone": "Bullish",
+   "st": "Moderate",
+   "src": "PDF",
+   "record": "S&P 27/31 (87% vs 68%, p 0.0124); Sensex 25/33 (76% vs 63%, p 0.0973)"
+  },
+  "ta_s25_mercury_rahu_1": {
+   "title": "Mercury-Rahu conjunction (same sign)",
+   "tone": "Bearish",
+   "st": "Moderate",
+   "src": "PDF",
+   "record": "S&P 16/34 (47% vs 35%, p 0.1008); Sensex 20/35 (57% vs 40%, p 0.0289)"
+  },
+  "ta_s25_moon_rahu_6": {
+   "title": "Moon-Rahu 6/8 (Shadashtak)",
+   "tone": "Bullish",
+   "st": "Moderate",
+   "src": "PDF",
+   "record": "S&P 334/545 (61% vs 59%, p 0.1452); Sensex 359/585 (61% vs 58%, p 0.0349)"
+  },
+  "ta_s25_venus_herschel_7": {
+   "title": "Venus-Herschel 7th (opposition)",
+   "tone": "Bearish",
+   "st": "Low",
+   "src": "PDF",
+   "record": "S&P 14/24 (58% vs 37%, p 0.0307); Sensex 11/24 (46% vs 38%, p 0.2635)"
+  },
+  "ta_s25_venus_rahu_6": {
+   "title": "Venus-Rahu 6/8 (Shadashtak)",
+   "tone": "Bullish",
+   "st": "Low",
+   "src": "PDF",
+   "record": "S&P 40/52 (77% vs 64%, p 0.0382); Sensex 33/50 (66% vs 61%, p 0.287)"
+  },
+  "ta_s32e_mars_mercury": {
+   "title": "Mars-Mercury Vedha",
+   "tone": "Bullish",
+   "st": "High",
+   "src": "PDF",
+   "record": "S&P 29/40 (72% vs 58%, p 0.0449); Sensex 32/41 (78% vs 58%, p 0.0057)"
+  },
+  "b100_shukla_shasthi_on_friday": {
+   "title": "Shukla Shasthi on a Friday",
+   "tone": "Bearish",
+   "st": "High",
+   "src": "calendar",
+   "record": "S&P 41/77 (53% vs 41%, p 0.0244); Sensex 40/76 (53% vs 42%, p 0.0446)"
+  },
+  "b101_three_saturdays_in_shukla_paksha": {
+   "title": "Three Saturday in Shukla Paksh",
+   "tone": "Bearish",
+   "st": "High",
+   "src": "calendar",
+   "record": "S&P 41/73 (56% vs 39%, p 0.0023); Sensex 33/66 (50% vs 39%, p 0.0395)"
+  }
+ },
+ "tables": {
+  "spx": [
+   {
+    "frm": "2026-11-27",
+    "to": "2026-11-27",
+    "sig": "Bullish",
+    "st": "Moderate",
+    "why": [
+     "Moon-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2026-12-02",
+    "to": "2026-12-04",
+    "sig": "Bullish",
+    "st": "Moderate",
+    "why": [
+     "Moon-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2026-12-23",
+    "to": "2026-12-29",
+    "sig": "Bullish",
+    "st": "Moderate",
+    "why": [
+     "Moon-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-01-01",
+    "to": "2027-01-08",
+    "sig": "Bearish",
+    "st": "Low",
+    "why": [
+     "Venus-Herschel 7th (opposition)"
+    ],
+    "ids": [
+     "ta_s25_venus_herschel_7"
+    ]
+   },
+   {
+    "frm": "2027-01-11",
+    "to": "2027-01-18",
+    "sig": "Bearish",
+    "st": "High",
+    "why": [
+     "Venus-Herschel 7th (opposition)",
+     "Mercury-Rahu conjunction (same sign)"
+    ],
+    "ids": [
+     "ta_s25_venus_herschel_7",
+     "ta_s25_mercury_rahu_1"
+    ]
+   },
+   {
+    "frm": "2027-01-19",
+    "to": "2027-01-21",
+    "sig": "Bearish",
+    "st": "Low",
+    "why": [
+     "Venus-Herschel 7th (opposition)",
+     "Mercury-Rahu conjunction (same sign)",
+     "Moon-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_venus_herschel_7",
+     "ta_s25_mercury_rahu_1",
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-01-22",
+    "to": "2027-01-22",
+    "sig": "Bearish",
+    "st": "High",
+    "why": [
+     "Venus-Herschel 7th (opposition)",
+     "Mercury-Rahu conjunction (same sign)"
+    ],
+    "ids": [
+     "ta_s25_venus_herschel_7",
+     "ta_s25_mercury_rahu_1"
+    ]
+   },
+   {
+    "frm": "2027-01-25",
+    "to": "2027-01-25",
+    "sig": "Bearish",
+    "st": "Low",
+    "why": [
+     "Venus-Herschel 7th (opposition)",
+     "Mercury-Rahu conjunction (same sign)",
+     "Moon-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_venus_herschel_7",
+     "ta_s25_mercury_rahu_1",
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-01-26",
+    "to": "2027-01-26",
+    "sig": "Bearish",
+    "st": "High",
+    "why": [
+     "Venus-Herschel 7th (opposition)",
+     "Mercury-Rahu conjunction (same sign)"
+    ],
+    "ids": [
+     "ta_s25_venus_herschel_7",
+     "ta_s25_mercury_rahu_1"
+    ]
+   },
+   {
+    "frm": "2027-01-27",
+    "to": "2027-01-27",
+    "sig": "Bearish",
+    "st": "High",
+    "why": [
+     "Venus-Herschel 7th (opposition)",
+     "Mercury-Rahu conjunction (same sign)",
+     "big-move factor: Mercury-Saturn 2/12 (Dwidwadash)"
+    ],
+    "ids": [
+     "ta_s25_venus_herschel_7",
+     "ta_s25_mercury_rahu_1"
+    ]
+   },
+   {
+    "frm": "2027-01-28",
+    "to": "2027-01-29",
+    "sig": "Bearish",
+    "st": "Low",
+    "why": [
+     "Venus-Herschel 7th (opposition)",
+     "big-move factor: Mercury-Saturn 2/12 (Dwidwadash)"
+    ],
+    "ids": [
+     "ta_s25_venus_herschel_7"
+    ]
+   },
+   {
+    "frm": "2027-02-01",
+    "to": "2027-02-05",
+    "sig": "Volatile",
+    "st": "\u2013",
+    "why": [
+     "big-move factor: Mercury-Saturn 2/12 (Dwidwadash)"
+    ],
+    "ids": []
+   },
+   {
+    "frm": "2027-02-08",
+    "to": "2027-02-11",
+    "sig": "Bearish",
+    "st": "High",
+    "why": [
+     "Three Saturday in Shukla Paksh",
+     "big-move factor: Mercury-Saturn 2/12 (Dwidwadash)"
+    ],
+    "ids": [
+     "b101_three_saturdays_in_shukla_paksha"
+    ]
+   },
+   {
+    "frm": "2027-02-12",
+    "to": "2027-02-12",
+    "sig": "Bearish",
+    "st": "High",
+    "why": [
+     "Shukla Shasthi on a Friday",
+     "Three Saturday in Shukla Paksh",
+     "big-move factor: Mercury-Saturn 2/12 (Dwidwadash)"
+    ],
+    "ids": [
+     "b100_shukla_shasthi_on_friday",
+     "b101_three_saturdays_in_shukla_paksha"
+    ]
+   },
+   {
+    "frm": "2027-02-15",
+    "to": "2027-02-15",
+    "sig": "Bearish",
+    "st": "High",
+    "why": [
+     "Shukla Shasthi on a Friday",
+     "big-move factor: Mercury-Saturn 2/12 (Dwidwadash)"
+    ],
+    "ids": [
+     "b100_shukla_shasthi_on_friday"
+    ]
+   },
+   {
+    "frm": "2027-02-16",
+    "to": "2027-02-18",
+    "sig": "Bearish",
+    "st": "Low",
+    "why": [
+     "Moon-Rahu 6/8 (Shadashtak)",
+     "Shukla Shasthi on a Friday",
+     "big-move factor: Mercury-Saturn 2/12 (Dwidwadash)"
+    ],
+    "ids": [
+     "ta_s25_moon_rahu_6",
+     "b100_shukla_shasthi_on_friday"
+    ]
+   },
+   {
+    "frm": "2027-02-19",
+    "to": "2027-02-19",
+    "sig": "Volatile",
+    "st": "\u2013",
+    "why": [
+     "big-move factor: Mercury-Saturn 2/12 (Dwidwadash)"
+    ],
+    "ids": []
+   },
+   {
+    "frm": "2027-02-22",
+    "to": "2027-02-22",
+    "sig": "Bullish",
+    "st": "Moderate",
+    "why": [
+     "Moon-Rahu 6/8 (Shadashtak)",
+     "big-move factor: Mercury-Saturn 2/12 (Dwidwadash)"
+    ],
+    "ids": [
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-02-23",
+    "to": "2027-02-23",
+    "sig": "Bearish",
+    "st": "Moderate",
+    "why": [
+     "Mercury-Rahu conjunction (same sign)",
+     "big-move factor: Mercury-Saturn 2/12 (Dwidwadash)"
+    ],
+    "ids": [
+     "ta_s25_mercury_rahu_1"
+    ]
+   },
+   {
+    "frm": "2027-02-24",
+    "to": "2027-03-08",
+    "sig": "Bearish",
+    "st": "Moderate",
+    "why": [
+     "Mercury-Rahu conjunction (same sign)"
+    ],
+    "ids": [
+     "ta_s25_mercury_rahu_1"
+    ]
+   },
+   {
+    "frm": "2027-03-09",
+    "to": "2027-03-10",
+    "sig": "Bullish",
+    "st": "Low",
+    "why": [
+     "Mercury-Rahu conjunction (same sign)",
+     "Mars-Mercury Vedha"
+    ],
+    "ids": [
+     "ta_s25_mercury_rahu_1",
+     "ta_s32e_mars_mercury"
+    ]
+   },
+   {
+    "frm": "2027-03-11",
+    "to": "2027-03-11",
+    "sig": "Bullish",
+    "st": "Low",
+    "why": [
+     "Mercury-Rahu conjunction (same sign)",
+     "Mars-Mercury Vedha",
+     "big-move factor: Mercury-Saturn 2/12 (Dwidwadash)"
+    ],
+    "ids": [
+     "ta_s25_mercury_rahu_1",
+     "ta_s32e_mars_mercury"
+    ]
+   },
+   {
+    "frm": "2027-03-12",
+    "to": "2027-03-12",
+    "sig": "Bullish",
+    "st": "High",
+    "why": [
+     "Mars-Mercury Vedha",
+     "big-move factor: Mercury-Saturn 2/12 (Dwidwadash)"
+    ],
+    "ids": [
+     "ta_s32e_mars_mercury"
+    ]
+   },
+   {
+    "frm": "2027-03-15",
+    "to": "2027-03-17",
+    "sig": "Bullish",
+    "st": "High",
+    "why": [
+     "Mars-Mercury Vedha",
+     "Moon-Rahu 6/8 (Shadashtak)",
+     "Mrigashira on Monday",
+     "big-move factor: Mercury-Saturn 2/12 (Dwidwadash)"
+    ],
+    "ids": [
+     "ta_s32e_mars_mercury",
+     "ta_s25_moon_rahu_6",
+     "ta_s24_62_mrigashira_monday"
+    ]
+   },
+   {
+    "frm": "2027-03-18",
+    "to": "2027-03-18",
+    "sig": "Bullish",
+    "st": "High",
+    "why": [
+     "Mars-Mercury Vedha",
+     "Mrigashira on Monday",
+     "big-move factor: Mercury-Saturn 2/12 (Dwidwadash)"
+    ],
+    "ids": [
+     "ta_s32e_mars_mercury",
+     "ta_s24_62_mrigashira_monday"
+    ]
+   },
+   {
+    "frm": "2027-03-19",
+    "to": "2027-03-19",
+    "sig": "Bullish",
+    "st": "High",
+    "why": [
+     "Mars-Mercury Vedha",
+     "Mrigashira on Monday",
+     "Moon-Rahu 6/8 (Shadashtak)",
+     "big-move factor: Mercury-Saturn 2/12 (Dwidwadash)"
+    ],
+    "ids": [
+     "ta_s32e_mars_mercury",
+     "ta_s24_62_mrigashira_monday",
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-03-22",
+    "to": "2027-04-05",
+    "sig": "Volatile",
+    "st": "\u2013",
+    "why": [
+     "big-move factor: Mercury-Saturn 2/12 (Dwidwadash)"
+    ],
+    "ids": []
+   },
+   {
+    "frm": "2027-04-12",
+    "to": "2027-04-16",
+    "sig": "Bullish",
+    "st": "Moderate",
+    "why": [
+     "Moon-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-04-21",
+    "to": "2027-04-27",
+    "sig": "Volatile",
+    "st": "\u2013",
+    "why": [
+     "big-move factor: Mercury-Saturn 2/12 (Dwidwadash)"
+    ],
+    "ids": []
+   },
+   {
+    "frm": "2027-04-28",
+    "to": "2027-05-04",
+    "sig": "Bullish",
+    "st": "High",
+    "why": [
+     "Mars-Mercury Vedha",
+     "big-move factor: Mercury-Saturn 2/12 (Dwidwadash)"
+    ],
+    "ids": [
+     "ta_s32e_mars_mercury"
+    ]
+   },
+   {
+    "frm": "2027-05-05",
+    "to": "2027-05-06",
+    "sig": "Volatile",
+    "st": "\u2013",
+    "why": [
+     "big-move factor: Mercury-Saturn 2/12 (Dwidwadash)"
+    ],
+    "ids": []
+   },
+   {
+    "frm": "2027-05-10",
+    "to": "2027-05-14",
+    "sig": "Bullish",
+    "st": "Moderate",
+    "why": [
+     "Moon-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-06-07",
+    "to": "2027-06-11",
+    "sig": "Bullish",
+    "st": "Moderate",
+    "why": [
+     "Moon-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-06-28",
+    "to": "2027-07-01",
+    "sig": "Bullish",
+    "st": "Low",
+    "why": [
+     "Venus-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_venus_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-07-02",
+    "to": "2027-07-02",
+    "sig": "Bullish",
+    "st": "High",
+    "why": [
+     "Venus-Rahu 6/8 (Shadashtak)",
+     "Moon-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_venus_rahu_6",
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-07-05",
+    "to": "2027-07-05",
+    "sig": "Bearish",
+    "st": "Moderate",
+    "why": [
+     "Venus-Rahu 6/8 (Shadashtak)",
+     "Three Saturday in Shukla Paksh"
+    ],
+    "ids": [
+     "ta_s25_venus_rahu_6",
+     "b101_three_saturdays_in_shukla_paksha"
+    ]
+   },
+   {
+    "frm": "2027-07-06",
+    "to": "2027-07-08",
+    "sig": "Volatile",
+    "st": "\u2013",
+    "why": [
+     "Venus-Rahu 6/8 (Shadashtak)",
+     "Moon-Rahu 6/8 (Shadashtak)",
+     "Three Saturday in Shukla Paksh"
+    ],
+    "ids": [
+     "ta_s25_venus_rahu_6",
+     "ta_s25_moon_rahu_6",
+     "b101_three_saturdays_in_shukla_paksha"
+    ]
+   },
+   {
+    "frm": "2027-07-09",
+    "to": "2027-07-09",
+    "sig": "Bearish",
+    "st": "High",
+    "why": [
+     "Venus-Rahu 6/8 (Shadashtak)",
+     "Shukla Shasthi on a Friday",
+     "Three Saturday in Shukla Paksh"
+    ],
+    "ids": [
+     "ta_s25_venus_rahu_6",
+     "b100_shukla_shasthi_on_friday",
+     "b101_three_saturdays_in_shukla_paksha"
+    ]
+   },
+   {
+    "frm": "2027-07-12",
+    "to": "2027-07-15",
+    "sig": "Bearish",
+    "st": "Moderate",
+    "why": [
+     "Venus-Rahu 6/8 (Shadashtak)",
+     "Shukla Shasthi on a Friday"
+    ],
+    "ids": [
+     "ta_s25_venus_rahu_6",
+     "b100_shukla_shasthi_on_friday"
+    ]
+   },
+   {
+    "frm": "2027-07-16",
+    "to": "2027-07-22",
+    "sig": "Bullish",
+    "st": "Low",
+    "why": [
+     "Venus-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_venus_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-07-30",
+    "to": "2027-07-30",
+    "sig": "Bullish",
+    "st": "Moderate",
+    "why": [
+     "Moon-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-08-03",
+    "to": "2027-08-05",
+    "sig": "Bullish",
+    "st": "Moderate",
+    "why": [
+     "Moon-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-08-06",
+    "to": "2027-08-12",
+    "sig": "Bearish",
+    "st": "High",
+    "why": [
+     "Shukla Shasthi on a Friday"
+    ],
+    "ids": [
+     "b100_shukla_shasthi_on_friday"
+    ]
+   },
+   {
+    "frm": "2027-08-16",
+    "to": "2027-08-25",
+    "sig": "Bullish",
+    "st": "Low",
+    "why": [
+     "Venus-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_venus_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-08-26",
+    "to": "2027-09-01",
+    "sig": "Bullish",
+    "st": "High",
+    "why": [
+     "Venus-Rahu 6/8 (Shadashtak)",
+     "Moon-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_venus_rahu_6",
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-09-02",
+    "to": "2027-09-09",
+    "sig": "Bullish",
+    "st": "Low",
+    "why": [
+     "Venus-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_venus_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-09-22",
+    "to": "2027-09-29",
+    "sig": "Bullish",
+    "st": "Moderate",
+    "why": [
+     "Moon-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-10-20",
+    "to": "2027-10-26",
+    "sig": "Bullish",
+    "st": "Moderate",
+    "why": [
+     "Moon-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-10-27",
+    "to": "2027-10-29",
+    "sig": "Bearish",
+    "st": "Low",
+    "why": [
+     "Venus-Herschel 7th (opposition)"
+    ],
+    "ids": [
+     "ta_s25_venus_herschel_7"
+    ]
+   },
+   {
+    "frm": "2027-11-01",
+    "to": "2027-11-05",
+    "sig": "Bearish",
+    "st": "High",
+    "why": [
+     "Venus-Herschel 7th (opposition)",
+     "Three Saturday in Shukla Paksh"
+    ],
+    "ids": [
+     "ta_s25_venus_herschel_7",
+     "b101_three_saturdays_in_shukla_paksha"
+    ]
+   },
+   {
+    "frm": "2027-11-08",
+    "to": "2027-11-15",
+    "sig": "Bearish",
+    "st": "Low",
+    "why": [
+     "Venus-Herschel 7th (opposition)"
+    ],
+    "ids": [
+     "ta_s25_venus_herschel_7"
+    ]
+   },
+   {
+    "frm": "2027-11-16",
+    "to": "2027-11-16",
+    "sig": "Bullish",
+    "st": "Low",
+    "why": [
+     "Venus-Herschel 7th (opposition)",
+     "Moon-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_venus_herschel_7",
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-11-17",
+    "to": "2027-11-18",
+    "sig": "Bullish",
+    "st": "High",
+    "why": [
+     "Venus-Herschel 7th (opposition)",
+     "Moon-Rahu 6/8 (Shadashtak)",
+     "Mars-Saturn 4/10 (Kendra)"
+    ],
+    "ids": [
+     "ta_s25_venus_herschel_7",
+     "ta_s25_moon_rahu_6",
+     "ta_s25_mars_saturn_4"
+    ]
+   },
+   {
+    "frm": "2027-11-19",
+    "to": "2027-11-19",
+    "sig": "Bullish",
+    "st": "Low",
+    "why": [
+     "Venus-Herschel 7th (opposition)",
+     "Mars-Saturn 4/10 (Kendra)"
+    ],
+    "ids": [
+     "ta_s25_venus_herschel_7",
+     "ta_s25_mars_saturn_4"
+    ]
+   },
+   {
+    "frm": "2027-11-22",
+    "to": "2027-11-22",
+    "sig": "Bullish",
+    "st": "High",
+    "why": [
+     "Mars-Saturn 4/10 (Kendra)",
+     "Moon-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_mars_saturn_4",
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-11-23",
+    "to": "2027-11-25",
+    "sig": "Bullish",
+    "st": "Moderate",
+    "why": [
+     "Mars-Saturn 4/10 (Kendra)"
+    ],
+    "ids": [
+     "ta_s25_mars_saturn_4"
+    ]
+   },
+   {
+    "frm": "2027-11-26",
+    "to": "2027-11-26",
+    "sig": "Bullish",
+    "st": "Moderate",
+    "why": [
+     "Mars-Saturn 4/10 (Kendra)",
+     "big-move factor: Jupiter-Neptune 7th (opposition)",
+     "big-move factor: Jupiter-Pluto 5/9 (Trine)"
+    ],
+    "ids": [
+     "ta_s25_mars_saturn_4"
+    ]
+   },
+   {
+    "frm": "2027-11-29",
+    "to": "2027-12-02",
+    "sig": "Bearish",
+    "st": "Low",
+    "why": [
+     "Mars-Saturn 4/10 (Kendra)",
+     "Three Saturday in Shukla Paksh",
+     "big-move factor: Jupiter-Neptune 7th (opposition)",
+     "big-move factor: Jupiter-Pluto 5/9 (Trine)"
+    ],
+    "ids": [
+     "ta_s25_mars_saturn_4",
+     "b101_three_saturdays_in_shukla_paksha"
+    ]
+   },
+   {
+    "frm": "2027-12-03",
+    "to": "2027-12-03",
+    "sig": "Bearish",
+    "st": "High",
+    "why": [
+     "Mars-Saturn 4/10 (Kendra)",
+     "Shukla Shasthi on a Friday",
+     "Three Saturday in Shukla Paksh",
+     "big-move factor: Jupiter-Neptune 7th (opposition)",
+     "big-move factor: Jupiter-Pluto 5/9 (Trine)"
+    ],
+    "ids": [
+     "ta_s25_mars_saturn_4",
+     "b100_shukla_shasthi_on_friday",
+     "b101_three_saturdays_in_shukla_paksha"
+    ]
+   },
+   {
+    "frm": "2027-12-06",
+    "to": "2027-12-09",
+    "sig": "Bearish",
+    "st": "Low",
+    "why": [
+     "Mars-Saturn 4/10 (Kendra)",
+     "Shukla Shasthi on a Friday",
+     "big-move factor: Jupiter-Neptune 7th (opposition)",
+     "big-move factor: Jupiter-Pluto 5/9 (Trine)"
+    ],
+    "ids": [
+     "ta_s25_mars_saturn_4",
+     "b100_shukla_shasthi_on_friday"
+    ]
+   },
+   {
+    "frm": "2027-12-10",
+    "to": "2027-12-10",
+    "sig": "Bullish",
+    "st": "Moderate",
+    "why": [
+     "Mars-Saturn 4/10 (Kendra)",
+     "big-move factor: Jupiter-Neptune 7th (opposition)",
+     "big-move factor: Jupiter-Pluto 5/9 (Trine)"
+    ],
+    "ids": [
+     "ta_s25_mars_saturn_4"
+    ]
+   },
+   {
+    "frm": "2027-12-13",
+    "to": "2027-12-15",
+    "sig": "Bullish",
+    "st": "High",
+    "why": [
+     "Mars-Saturn 4/10 (Kendra)",
+     "Moon-Rahu 6/8 (Shadashtak)",
+     "Mrigashira on Monday",
+     "big-move factor: Jupiter-Neptune 7th (opposition)",
+     "big-move factor: Jupiter-Pluto 5/9 (Trine)"
+    ],
+    "ids": [
+     "ta_s25_mars_saturn_4",
+     "ta_s25_moon_rahu_6",
+     "ta_s24_62_mrigashira_monday"
+    ]
+   },
+   {
+    "frm": "2027-12-16",
+    "to": "2027-12-16",
+    "sig": "Bullish",
+    "st": "High",
+    "why": [
+     "Mars-Saturn 4/10 (Kendra)",
+     "Mrigashira on Monday",
+     "big-move factor: Jupiter-Neptune 7th (opposition)",
+     "big-move factor: Jupiter-Pluto 5/9 (Trine)"
+    ],
+    "ids": [
+     "ta_s25_mars_saturn_4",
+     "ta_s24_62_mrigashira_monday"
+    ]
+   },
+   {
+    "frm": "2027-12-17",
+    "to": "2027-12-17",
+    "sig": "Bullish",
+    "st": "High",
+    "why": [
+     "Mars-Saturn 4/10 (Kendra)",
+     "Mrigashira on Monday",
+     "Moon-Rahu 6/8 (Shadashtak)",
+     "big-move factor: Jupiter-Neptune 7th (opposition)",
+     "big-move factor: Jupiter-Pluto 5/9 (Trine)"
+    ],
+    "ids": [
+     "ta_s25_mars_saturn_4",
+     "ta_s24_62_mrigashira_monday",
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-12-20",
+    "to": "2027-12-27",
+    "sig": "Bullish",
+    "st": "Moderate",
+    "why": [
+     "Mars-Saturn 4/10 (Kendra)",
+     "big-move factor: Jupiter-Neptune 7th (opposition)",
+     "big-move factor: Jupiter-Pluto 5/9 (Trine)"
+    ],
+    "ids": [
+     "ta_s25_mars_saturn_4"
+    ]
+   },
+   {
+    "frm": "2027-12-28",
+    "to": "2027-12-31",
+    "sig": "Volatile",
+    "st": "\u2013",
+    "why": [
+     "big-move factor: Jupiter-Neptune 7th (opposition)",
+     "big-move factor: Jupiter-Pluto 5/9 (Trine)"
+    ],
+    "ids": []
+   }
+  ],
+  "sensex": [
+   {
+    "frm": "2026-11-27",
+    "to": "2026-11-27",
+    "sig": "Bullish",
+    "st": "Moderate",
+    "why": [
+     "Moon-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2026-12-02",
+    "to": "2026-12-04",
+    "sig": "Bullish",
+    "st": "Moderate",
+    "why": [
+     "Moon-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2026-12-23",
+    "to": "2026-12-29",
+    "sig": "Bullish",
+    "st": "Moderate",
+    "why": [
+     "Moon-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-01-01",
+    "to": "2027-01-08",
+    "sig": "Bearish",
+    "st": "Low",
+    "why": [
+     "Venus-Herschel 7th (opposition)"
+    ],
+    "ids": [
+     "ta_s25_venus_herschel_7"
+    ]
+   },
+   {
+    "frm": "2027-01-11",
+    "to": "2027-01-18",
+    "sig": "Bearish",
+    "st": "High",
+    "why": [
+     "Venus-Herschel 7th (opposition)",
+     "Mercury-Rahu conjunction (same sign)"
+    ],
+    "ids": [
+     "ta_s25_venus_herschel_7",
+     "ta_s25_mercury_rahu_1"
+    ]
+   },
+   {
+    "frm": "2027-01-19",
+    "to": "2027-01-21",
+    "sig": "Bearish",
+    "st": "Low",
+    "why": [
+     "Venus-Herschel 7th (opposition)",
+     "Mercury-Rahu conjunction (same sign)",
+     "Moon-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_venus_herschel_7",
+     "ta_s25_mercury_rahu_1",
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-01-22",
+    "to": "2027-01-22",
+    "sig": "Bearish",
+    "st": "High",
+    "why": [
+     "Venus-Herschel 7th (opposition)",
+     "Mercury-Rahu conjunction (same sign)"
+    ],
+    "ids": [
+     "ta_s25_venus_herschel_7",
+     "ta_s25_mercury_rahu_1"
+    ]
+   },
+   {
+    "frm": "2027-01-25",
+    "to": "2027-01-25",
+    "sig": "Bearish",
+    "st": "Low",
+    "why": [
+     "Venus-Herschel 7th (opposition)",
+     "Mercury-Rahu conjunction (same sign)",
+     "Moon-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_venus_herschel_7",
+     "ta_s25_mercury_rahu_1",
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-01-26",
+    "to": "2027-01-27",
+    "sig": "Bearish",
+    "st": "High",
+    "why": [
+     "Venus-Herschel 7th (opposition)",
+     "Mercury-Rahu conjunction (same sign)"
+    ],
+    "ids": [
+     "ta_s25_venus_herschel_7",
+     "ta_s25_mercury_rahu_1"
+    ]
+   },
+   {
+    "frm": "2027-01-28",
+    "to": "2027-01-29",
+    "sig": "Bearish",
+    "st": "Low",
+    "why": [
+     "Venus-Herschel 7th (opposition)"
+    ],
+    "ids": [
+     "ta_s25_venus_herschel_7"
+    ]
+   },
+   {
+    "frm": "2027-02-08",
+    "to": "2027-02-11",
+    "sig": "Bearish",
+    "st": "High",
+    "why": [
+     "Three Saturday in Shukla Paksh"
+    ],
+    "ids": [
+     "b101_three_saturdays_in_shukla_paksha"
+    ]
+   },
+   {
+    "frm": "2027-02-12",
+    "to": "2027-02-12",
+    "sig": "Bearish",
+    "st": "High",
+    "why": [
+     "Shukla Shasthi on a Friday",
+     "Three Saturday in Shukla Paksh"
+    ],
+    "ids": [
+     "b100_shukla_shasthi_on_friday",
+     "b101_three_saturdays_in_shukla_paksha"
+    ]
+   },
+   {
+    "frm": "2027-02-15",
+    "to": "2027-02-15",
+    "sig": "Bearish",
+    "st": "High",
+    "why": [
+     "Shukla Shasthi on a Friday"
+    ],
+    "ids": [
+     "b100_shukla_shasthi_on_friday"
+    ]
+   },
+   {
+    "frm": "2027-02-16",
+    "to": "2027-02-18",
+    "sig": "Bearish",
+    "st": "Low",
+    "why": [
+     "Moon-Rahu 6/8 (Shadashtak)",
+     "Shukla Shasthi on a Friday"
+    ],
+    "ids": [
+     "ta_s25_moon_rahu_6",
+     "b100_shukla_shasthi_on_friday"
+    ]
+   },
+   {
+    "frm": "2027-02-22",
+    "to": "2027-02-22",
+    "sig": "Bullish",
+    "st": "Moderate",
+    "why": [
+     "Moon-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-02-23",
+    "to": "2027-03-08",
+    "sig": "Bearish",
+    "st": "Moderate",
+    "why": [
+     "Mercury-Rahu conjunction (same sign)"
+    ],
+    "ids": [
+     "ta_s25_mercury_rahu_1"
+    ]
+   },
+   {
+    "frm": "2027-03-09",
+    "to": "2027-03-11",
+    "sig": "Bullish",
+    "st": "Low",
+    "why": [
+     "Mercury-Rahu conjunction (same sign)",
+     "Mars-Mercury Vedha"
+    ],
+    "ids": [
+     "ta_s25_mercury_rahu_1",
+     "ta_s32e_mars_mercury"
+    ]
+   },
+   {
+    "frm": "2027-03-12",
+    "to": "2027-03-12",
+    "sig": "Bullish",
+    "st": "High",
+    "why": [
+     "Mars-Mercury Vedha"
+    ],
+    "ids": [
+     "ta_s32e_mars_mercury"
+    ]
+   },
+   {
+    "frm": "2027-03-15",
+    "to": "2027-03-17",
+    "sig": "Bullish",
+    "st": "High",
+    "why": [
+     "Mars-Mercury Vedha",
+     "Moon-Rahu 6/8 (Shadashtak)",
+     "Mrigashira on Monday"
+    ],
+    "ids": [
+     "ta_s32e_mars_mercury",
+     "ta_s25_moon_rahu_6",
+     "ta_s24_62_mrigashira_monday"
+    ]
+   },
+   {
+    "frm": "2027-03-18",
+    "to": "2027-03-18",
+    "sig": "Bullish",
+    "st": "High",
+    "why": [
+     "Mars-Mercury Vedha",
+     "Mrigashira on Monday"
+    ],
+    "ids": [
+     "ta_s32e_mars_mercury",
+     "ta_s24_62_mrigashira_monday"
+    ]
+   },
+   {
+    "frm": "2027-03-19",
+    "to": "2027-03-19",
+    "sig": "Bullish",
+    "st": "High",
+    "why": [
+     "Mars-Mercury Vedha",
+     "Mrigashira on Monday",
+     "Moon-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s32e_mars_mercury",
+     "ta_s24_62_mrigashira_monday",
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-04-12",
+    "to": "2027-04-13",
+    "sig": "Bullish",
+    "st": "Moderate",
+    "why": [
+     "Moon-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-04-15",
+    "to": "2027-04-16",
+    "sig": "Bullish",
+    "st": "Moderate",
+    "why": [
+     "Moon-Rahu 6/8 (Shadashtak)",
+     "big-move factor: Venus in Pisces"
+    ],
+    "ids": [
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-04-19",
+    "to": "2027-04-27",
+    "sig": "Volatile",
+    "st": "\u2013",
+    "why": [
+     "big-move factor: Venus in Pisces"
+    ],
+    "ids": []
+   },
+   {
+    "frm": "2027-04-28",
+    "to": "2027-05-04",
+    "sig": "Bullish",
+    "st": "High",
+    "why": [
+     "Mars-Mercury Vedha",
+     "big-move factor: Venus in Pisces"
+    ],
+    "ids": [
+     "ta_s32e_mars_mercury"
+    ]
+   },
+   {
+    "frm": "2027-05-05",
+    "to": "2027-05-07",
+    "sig": "Volatile",
+    "st": "\u2013",
+    "why": [
+     "big-move factor: Venus in Pisces"
+    ],
+    "ids": []
+   },
+   {
+    "frm": "2027-05-10",
+    "to": "2027-05-14",
+    "sig": "Bullish",
+    "st": "Moderate",
+    "why": [
+     "Moon-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-06-07",
+    "to": "2027-06-07",
+    "sig": "Bearish",
+    "st": "Low",
+    "why": [
+     "Moon-Rahu 6/8 (Shadashtak)",
+     "Three Saturday in Shukla Paksh"
+    ],
+    "ids": [
+     "ta_s25_moon_rahu_6",
+     "b101_three_saturdays_in_shukla_paksha"
+    ]
+   },
+   {
+    "frm": "2027-06-08",
+    "to": "2027-06-08",
+    "sig": "Bearish",
+    "st": "High",
+    "why": [
+     "Three Saturday in Shukla Paksh"
+    ],
+    "ids": [
+     "b101_three_saturdays_in_shukla_paksha"
+    ]
+   },
+   {
+    "frm": "2027-06-09",
+    "to": "2027-06-11",
+    "sig": "Bearish",
+    "st": "Low",
+    "why": [
+     "Moon-Rahu 6/8 (Shadashtak)",
+     "Three Saturday in Shukla Paksh"
+    ],
+    "ids": [
+     "ta_s25_moon_rahu_6",
+     "b101_three_saturdays_in_shukla_paksha"
+    ]
+   },
+   {
+    "frm": "2027-06-28",
+    "to": "2027-07-01",
+    "sig": "Bullish",
+    "st": "Low",
+    "why": [
+     "Venus-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_venus_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-07-02",
+    "to": "2027-07-02",
+    "sig": "Bullish",
+    "st": "High",
+    "why": [
+     "Venus-Rahu 6/8 (Shadashtak)",
+     "Moon-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_venus_rahu_6",
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-07-05",
+    "to": "2027-07-05",
+    "sig": "Bullish",
+    "st": "Low",
+    "why": [
+     "Venus-Rahu 6/8 (Shadashtak)",
+     "big-move factor: Mars-Herschel 5/9 (Trine)"
+    ],
+    "ids": [
+     "ta_s25_venus_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-07-06",
+    "to": "2027-07-08",
+    "sig": "Bullish",
+    "st": "High",
+    "why": [
+     "Venus-Rahu 6/8 (Shadashtak)",
+     "Moon-Rahu 6/8 (Shadashtak)",
+     "big-move factor: Mars-Herschel 5/9 (Trine)"
+    ],
+    "ids": [
+     "ta_s25_venus_rahu_6",
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-07-09",
+    "to": "2027-07-15",
+    "sig": "Bearish",
+    "st": "Moderate",
+    "why": [
+     "Venus-Rahu 6/8 (Shadashtak)",
+     "Shukla Shasthi on a Friday",
+     "big-move factor: Mars-Herschel 5/9 (Trine)"
+    ],
+    "ids": [
+     "ta_s25_venus_rahu_6",
+     "b100_shukla_shasthi_on_friday"
+    ]
+   },
+   {
+    "frm": "2027-07-16",
+    "to": "2027-07-22",
+    "sig": "Bullish",
+    "st": "Low",
+    "why": [
+     "Venus-Rahu 6/8 (Shadashtak)",
+     "big-move factor: Mars-Herschel 5/9 (Trine)"
+    ],
+    "ids": [
+     "ta_s25_venus_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-07-23",
+    "to": "2027-07-29",
+    "sig": "Volatile",
+    "st": "\u2013",
+    "why": [
+     "big-move factor: Mars-Herschel 5/9 (Trine)"
+    ],
+    "ids": []
+   },
+   {
+    "frm": "2027-07-30",
+    "to": "2027-07-30",
+    "sig": "Bullish",
+    "st": "Moderate",
+    "why": [
+     "Moon-Rahu 6/8 (Shadashtak)",
+     "big-move factor: Mars-Herschel 5/9 (Trine)"
+    ],
+    "ids": [
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-08-02",
+    "to": "2027-08-02",
+    "sig": "Volatile",
+    "st": "\u2013",
+    "why": [
+     "big-move factor: Mars-Herschel 5/9 (Trine)"
+    ],
+    "ids": []
+   },
+   {
+    "frm": "2027-08-03",
+    "to": "2027-08-05",
+    "sig": "Bullish",
+    "st": "Moderate",
+    "why": [
+     "Moon-Rahu 6/8 (Shadashtak)",
+     "big-move factor: Mars-Herschel 5/9 (Trine)"
+    ],
+    "ids": [
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-08-06",
+    "to": "2027-08-13",
+    "sig": "Volatile",
+    "st": "\u2013",
+    "why": [
+     "big-move factor: Mars-Herschel 5/9 (Trine)"
+    ],
+    "ids": []
+   },
+   {
+    "frm": "2027-08-16",
+    "to": "2027-08-24",
+    "sig": "Bullish",
+    "st": "Low",
+    "why": [
+     "Venus-Rahu 6/8 (Shadashtak)",
+     "big-move factor: Mars-Herschel 5/9 (Trine)"
+    ],
+    "ids": [
+     "ta_s25_venus_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-08-25",
+    "to": "2027-08-25",
+    "sig": "Bullish",
+    "st": "Low",
+    "why": [
+     "Venus-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_venus_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-08-26",
+    "to": "2027-09-01",
+    "sig": "Bullish",
+    "st": "High",
+    "why": [
+     "Venus-Rahu 6/8 (Shadashtak)",
+     "Moon-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_venus_rahu_6",
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-09-02",
+    "to": "2027-09-09",
+    "sig": "Bullish",
+    "st": "Low",
+    "why": [
+     "Venus-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_venus_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-09-22",
+    "to": "2027-09-29",
+    "sig": "Bullish",
+    "st": "Moderate",
+    "why": [
+     "Moon-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-10-20",
+    "to": "2027-10-26",
+    "sig": "Bullish",
+    "st": "Moderate",
+    "why": [
+     "Moon-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-10-27",
+    "to": "2027-10-29",
+    "sig": "Bearish",
+    "st": "Low",
+    "why": [
+     "Venus-Herschel 7th (opposition)"
+    ],
+    "ids": [
+     "ta_s25_venus_herschel_7"
+    ]
+   },
+   {
+    "frm": "2027-11-01",
+    "to": "2027-11-05",
+    "sig": "Bearish",
+    "st": "High",
+    "why": [
+     "Venus-Herschel 7th (opposition)",
+     "Three Saturday in Shukla Paksh"
+    ],
+    "ids": [
+     "ta_s25_venus_herschel_7",
+     "b101_three_saturdays_in_shukla_paksha"
+    ]
+   },
+   {
+    "frm": "2027-11-08",
+    "to": "2027-11-15",
+    "sig": "Bearish",
+    "st": "Low",
+    "why": [
+     "Venus-Herschel 7th (opposition)"
+    ],
+    "ids": [
+     "ta_s25_venus_herschel_7"
+    ]
+   },
+   {
+    "frm": "2027-11-16",
+    "to": "2027-11-16",
+    "sig": "Bullish",
+    "st": "Low",
+    "why": [
+     "Venus-Herschel 7th (opposition)",
+     "Moon-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_venus_herschel_7",
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-11-17",
+    "to": "2027-11-18",
+    "sig": "Bullish",
+    "st": "High",
+    "why": [
+     "Venus-Herschel 7th (opposition)",
+     "Moon-Rahu 6/8 (Shadashtak)",
+     "Mars-Saturn 4/10 (Kendra)"
+    ],
+    "ids": [
+     "ta_s25_venus_herschel_7",
+     "ta_s25_moon_rahu_6",
+     "ta_s25_mars_saturn_4"
+    ]
+   },
+   {
+    "frm": "2027-11-19",
+    "to": "2027-11-19",
+    "sig": "Bullish",
+    "st": "Low",
+    "why": [
+     "Venus-Herschel 7th (opposition)",
+     "Mars-Saturn 4/10 (Kendra)"
+    ],
+    "ids": [
+     "ta_s25_venus_herschel_7",
+     "ta_s25_mars_saturn_4"
+    ]
+   },
+   {
+    "frm": "2027-11-22",
+    "to": "2027-11-22",
+    "sig": "Bullish",
+    "st": "High",
+    "why": [
+     "Mars-Saturn 4/10 (Kendra)",
+     "Moon-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_mars_saturn_4",
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-11-23",
+    "to": "2027-12-02",
+    "sig": "Bullish",
+    "st": "Moderate",
+    "why": [
+     "Mars-Saturn 4/10 (Kendra)"
+    ],
+    "ids": [
+     "ta_s25_mars_saturn_4"
+    ]
+   },
+   {
+    "frm": "2027-12-03",
+    "to": "2027-12-09",
+    "sig": "Bearish",
+    "st": "Low",
+    "why": [
+     "Mars-Saturn 4/10 (Kendra)",
+     "Shukla Shasthi on a Friday"
+    ],
+    "ids": [
+     "ta_s25_mars_saturn_4",
+     "b100_shukla_shasthi_on_friday"
+    ]
+   },
+   {
+    "frm": "2027-12-10",
+    "to": "2027-12-10",
+    "sig": "Bullish",
+    "st": "Moderate",
+    "why": [
+     "Mars-Saturn 4/10 (Kendra)"
+    ],
+    "ids": [
+     "ta_s25_mars_saturn_4"
+    ]
+   },
+   {
+    "frm": "2027-12-13",
+    "to": "2027-12-15",
+    "sig": "Bullish",
+    "st": "High",
+    "why": [
+     "Mars-Saturn 4/10 (Kendra)",
+     "Moon-Rahu 6/8 (Shadashtak)",
+     "Mrigashira on Monday"
+    ],
+    "ids": [
+     "ta_s25_mars_saturn_4",
+     "ta_s25_moon_rahu_6",
+     "ta_s24_62_mrigashira_monday"
+    ]
+   },
+   {
+    "frm": "2027-12-16",
+    "to": "2027-12-16",
+    "sig": "Bullish",
+    "st": "High",
+    "why": [
+     "Mars-Saturn 4/10 (Kendra)",
+     "Mrigashira on Monday"
+    ],
+    "ids": [
+     "ta_s25_mars_saturn_4",
+     "ta_s24_62_mrigashira_monday"
+    ]
+   },
+   {
+    "frm": "2027-12-17",
+    "to": "2027-12-17",
+    "sig": "Bullish",
+    "st": "High",
+    "why": [
+     "Mars-Saturn 4/10 (Kendra)",
+     "Mrigashira on Monday",
+     "Moon-Rahu 6/8 (Shadashtak)"
+    ],
+    "ids": [
+     "ta_s25_mars_saturn_4",
+     "ta_s24_62_mrigashira_monday",
+     "ta_s25_moon_rahu_6"
+    ]
+   },
+   {
+    "frm": "2027-12-20",
+    "to": "2027-12-24",
+    "sig": "Bullish",
+    "st": "Moderate",
+    "why": [
+     "Mars-Saturn 4/10 (Kendra)"
+    ],
+    "ids": [
+     "ta_s25_mars_saturn_4"
+    ]
+   },
+   {
+    "frm": "2027-12-27",
+    "to": "2027-12-27",
+    "sig": "Bullish",
+    "st": "Moderate",
+    "why": [
+     "Mars-Saturn 4/10 (Kendra)",
+     "big-move factor: Mars-Herschel 5/9 (Trine)"
+    ],
+    "ids": [
+     "ta_s25_mars_saturn_4"
+    ]
+   },
+   {
+    "frm": "2027-12-28",
+    "to": "2027-12-31",
+    "sig": "Volatile",
+    "st": "\u2013",
+    "why": [
+     "big-move factor: Mars-Herschel 5/9 (Trine)"
+    ],
+    "ids": []
+   }
+  ]
+ }
+}

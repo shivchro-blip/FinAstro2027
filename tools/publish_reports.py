@@ -62,6 +62,7 @@ SECTIONS = [
         (B + "speed_principle_test_2000-2026_ET.html", "Slow vs fast planets test (2000-2026)", "Do fast-planet events bring bigger / sudden moves, and do slow-planet rules get the trend right more often?"),
     ]),
     ("Stock market: S&P 500 and BSE Sensex, 2000-2026", [
+        (B + "market_signals_2026-11-23_to_2027-12-31_ET.html", "S&P 500 and Sensex bullish / bearish days to end-2027", "Two simple tables: dates, signal, strength, why, and each rule's 26-year record on both indices."),
         (B + "market_summary_2000-2026_ET.html", "Market findings (start here)", "Direction rules vs big days for both indices, the robust factors and their dates to end-2027."),
         (B + "calendar_rules_backtest_2000-2026_ET.html", "The 2027 calendar's own rules, backtested 2000-2026", "All 162 calendar rules (2026 document: catalogue B, configuration groups, sub-tables) on the S&P 500, Sensex, gold and silver; 2027 dates of those that held."),
         (B + "market_backtest_2000-2026_ET.html", "Market rules backtest, 26 years", "Every computable general-market rule (TA, KD, 2026 document) scored on the S&P 500 and the Sensex; walk-forward; best rules' dates."),

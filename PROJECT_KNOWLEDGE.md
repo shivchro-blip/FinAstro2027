@@ -78,6 +78,7 @@ Known data problems:
 | `tools/backtest_market.py` | 26-year direction backtest of those rules on the S&P 500 and the Sensex, each in its own exchange time (16:00 ET; 15:30 IST); FDR; walk-forward; best rules' dates to end-2027 |
 | `tools/market_summary.py` | Market findings page: robust big-move factors (q < 0.10, both halves, p < 0.01 without the 2008–09 and 2020 crashes) and their dates |
 | `tools/calendar_rules_backtest.py` | Generates the original calendar's rule layer (`finastro/verdicts.py`; 2026 document catalogue B, configuration groups, sub-tables) for every year 2000–2026 and backtests it: SPX→S&P 500, NIFTY→Sensex, GC, SI; direction rules on direction, condition-only rules on big-day frequency. The cache in `build/pdfref/backtest/calendar_verdicts/` is git-ignored |
+| `tools/market_signal_table.py` | Simple S&P 500 / Sensex bullish-bearish tables to end-2027. Rules qualify when p < 0.05 on one index and they beat the base in both halves on both indices. Strength High / Moderate / Low by p on the two indices; robust big-move factors are shown as Volatile |
 | `tools/gold_tracker.py [--metal silver]` | Trackers: findings, rule status, best-rule dates, analysis log |
 | `tools/build_year.py YEAR` | Astronomy layer for any year; 2000–2024 are git-ignored and rebuilt on demand |
 | `tools/fetch_prices.py` | Downloads GC=F and SI=F (Yahoo; the host must be allowed) |
@@ -103,6 +104,7 @@ Known data problems:
 | `signal_table_test_2000-2026_ET.html` | Test of the signal table's strengths |
 | `silver_big_moves_2000-2026_ET.html`, `silver_big_move_watch_*`, `silver_outlook_*`, `silver_fast_triggers_*`, `silver_signal_table_test_2000-2026_ET.html`, `silver_signals_*` | The same chain for silver |
 | `market_summary_2000-2026_ET.html`, `market_backtest_2000-2026_ET.html`, `{spx,sensex}_big_moves_2000-2026_ET.html`, `{spx,sensex}_big_move_watch_*` | Stock-market work (S&P 500, BSE Sensex) |
+| `market_signals_2026-11-23_to_2027-12-31_ET.html` | S&P 500 and Sensex signal tables |
 | `GOLD_TRACKER.html`, `SILVER_TRACKER.html` | Current status of every rule, best-rule dates, analysis log |
 | `REFERENCE_PDF_RULES.md`, `COMPLETION_REPORT.md`, `COVERAGE_AUDIT_GOLD_SILVER.md` | Rule lists and audits |
 
@@ -401,6 +403,17 @@ There are no TA S34 A9 windows between now and 31 Dec 2027.
   - Shani–Chandra dwidwadash: at chance.
 - **Volatility:** Bhadra, Panchak, Pradosh, Amavasya/Purnima and the other condition-only rows bring no extra big days. For example, Bhadra episodes held a big day 183 times against 191 expected (S&P) and 248 against 234 (Sensex).
 - **Gold and silver:** no calendar rule passes p < 0.05.
+
+**S&P 500 / Sensex signal tables to end-2027**, in `market_signals_2026-11-23_to_2027-12-31_ET.html`. A rule qualifies when it reached p < 0.05 on one index and beat the base in both halves on both indices.
+- **10 rules qualify:**
+
+| Strength | Rules |
+|---|---|
+| High | Mars–Mercury Vedha (bullish); Shukla Shashti on Friday and Three Saturdays in Shukla Paksha (bearish, calendar) |
+| Moderate | Mars–Saturn 4/10 (bullish); Moon–Rahu 6/8 (bullish); Mars–Saturn 2/12 (bearish); Mercury–Rahu conjunction (bearish) |
+| Low | Venus–Uranus 7th (bearish); Venus–Rahu 6/8 (bullish); Mrigashira on Monday (bullish) |
+
+- **Walk-forward check of the selection:** picked the same way on 2000–2013, these rules gave 61.8% vs 59.2% (S&P, p = 0.12) and 57.3% vs 56.4% (Sensex, p = 0.34) on 2013–2026. That is a small edge, not proven.
 
 **Model v1.0 (Ch.41 + Shadbala + Ashtakavarga), 6,572 trading days:**
 - The correlation of the scarcity index with the next 5 days is −0.002.
