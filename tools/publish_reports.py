@@ -71,6 +71,9 @@ SECTIONS = [
         (B + "spx_big_move_watch_2026-11-22_to_2027-12-31_ET.html", "S&P 500 big-move watch to end-2027", "All lead windows (broad); the robust ones are in the findings page."),
         (B + "sensex_big_move_watch_2026-11-22_to_2027-12-31_ET.html", "Sensex big-move watch to end-2027", ""),
     ]),
+    ("Checks of outside models", [
+        (B + "external_model_check_ET.html", "Outside crash table and 2026-2029 roadmap vs ours (23 Nov 2026)", "Planet positions, the 'core recurring signatures' tested on the S&P 500 since 1928, and their 2026-2029 windows against our tables and robust factors."),
+    ]),
     ("Source research and methodology", [
         (X + "OTHERS_FINANCIAL_REVIEW.html", "Review of Reference_materials/Others (45 files)", "Financial content of every document with page references; what was implemented and what was excluded."),
         (X + "FINANCIAL_ASTROLOGY_MODEL_v1.html", "Financial Astrology Model v1.0 - methodology", "Locked method for Brihat Samhita 41.9-13 with Shadbala and Ashtakavarga."),

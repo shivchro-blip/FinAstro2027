@@ -56,6 +56,7 @@ STEPS = [
     ["tools/market_summary.py"],
     ["tools/calendar_rules_backtest.py"],
     ["tools/market_signal_table.py"],
+    ["tools/validate_external_model.py"],
     ["tools/md_to_html.py", "Reference_materials/extracted/OTHERS_FINANCIAL_REVIEW.md", "Others Financial Review"],
     ["tools/md_to_html.py", "Reference_materials/extracted/FINANCIAL_ASTROLOGY_MODEL_v1.md", "Financial Astrology Model v1"],
     ["tools/md_to_html.py", "PROJECT_KNOWLEDGE.md", "FinAstro Project Knowledge"],
