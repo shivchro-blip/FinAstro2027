@@ -77,6 +77,7 @@ Known data problems:
 | `tools/market_events.py` | Detects every general-market rule event 2000–2026 (about 628 rules), takes about 30 min; writes the git-ignored cache `build/pdfref/backtest/market_events_2000-2026.json.gz` |
 | `tools/backtest_market.py` | 26-year direction backtest of those rules on the S&P 500 and the Sensex, each in its own exchange time (16:00 ET; 15:30 IST); FDR; walk-forward; best rules' dates to end-2027 |
 | `tools/market_summary.py` | Market findings page: robust big-move factors (q < 0.10, both halves, p < 0.01 without the 2008–09 and 2020 crashes) and their dates |
+| `tools/calendar_rules_backtest.py` | Generates the original calendar's rule layer (`finastro/verdicts.py`; 2026 document catalogue B, configuration groups, sub-tables) for every year 2000–2026 and backtests it: SPX→S&P 500, NIFTY→Sensex, GC, SI; direction rules on direction, condition-only rules on big-day frequency. The cache in `build/pdfref/backtest/calendar_verdicts/` is git-ignored |
 | `tools/gold_tracker.py [--metal silver]` | Trackers: findings, rule status, best-rule dates, analysis log |
 | `tools/build_year.py YEAR` | Astronomy layer for any year; 2000–2024 are git-ignored and rebuilt on demand |
 | `tools/fetch_prices.py` | Downloads GC=F and SI=F (Yahoo; the host must be allowed) |
@@ -373,6 +374,33 @@ There are no TA S34 A9 windows between now and 31 Dec 2027.
   - **Venus retrograde does not occur before 2028.**
   - S&P: Mercury–Saturn 2/12 on 27 Jan – 23 Feb, 11 Mar – 5 Apr and 21 Apr – 6 May 2027. Jupiter–Neptune opposition and Jupiter–Pluto trine from 26 Nov 2027 (Jupiter in Virgo).
   - Sensex: Venus in Pisces 15 Apr – 9 May 2027. Mars–Uranus trine 4 Jul – 24 Aug and from 27 Dec 2027.
+
+**The 2027 calendar's own rule layer (162 rules from the 2026 document), backtested 2000–2026**, in `calendar_rules_backtest_2000-2026_ET.html`.
+- **Why this test:** only 76 of the 162 calendar rules have an equivalent in the PDF catalogue. Generating the layer per year (about 1 s each) tests all of them on the instruments the calendar names.
+- **Pooled direction:** no edge anywhere.
+
+| Market | Right | By chance |
+|---|---|---|
+| S&P 500 | 47.0% | 46.5% |
+| Sensex | 45.5% | 46.7% |
+| Gold | 54.9% | 54.8% |
+| Silver | 49.9% | 51.7% |
+
+- **Two rules held in both indices and in both halves** (bearish 5-session moves):
+
+| Rule | S&P 500 | Sensex |
+|---|---|---|
+| **Three Saturdays in Shukla Paksha** (B101) | 41/73, 56% vs 39%, p = 0.002, q = 0.046 | 33/66, 50% vs 39%, p = 0.04 |
+| **Shukla Shashti on Friday** (B100) | 41/77, 53% vs 41%, p = 0.02 | 40/76, 53% vs 42%, p = 0.045 |
+
+  - 2027 dates for B101: 6 Feb, 5 Jun (Sensex) / 3 Jul (S&P), 30 Oct and 27 Nov (S&P).
+  - 2027 dates for B100: 12 Feb, 9 Jul, 6 Aug (S&P) and 3 Dec.
+- **Rules printed as strong that did not hold:**
+  - "Ekadashi on Friday – High Bearish, reliability 90%+": 37% vs 40% (S&P) and 42% vs 42% (Sensex).
+  - Pradosh (negative day): 39% vs 41% and 43% vs 42%.
+  - Shani–Chandra dwidwadash: at chance.
+- **Volatility:** Bhadra, Panchak, Pradosh, Amavasya/Purnima and the other condition-only rows bring no extra big days. For example, Bhadra episodes held a big day 183 times against 191 expected (S&P) and 248 against 234 (Sensex).
+- **Gold and silver:** no calendar rule passes p < 0.05.
 
 **Model v1.0 (Ch.41 + Shadbala + Ashtakavarga), 6,572 trading days:**
 - The correlation of the scarcity index with the next 5 days is −0.002.

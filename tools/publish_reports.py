@@ -63,6 +63,7 @@ SECTIONS = [
     ]),
     ("Stock market: S&P 500 and BSE Sensex, 2000-2026", [
         (B + "market_summary_2000-2026_ET.html", "Market findings (start here)", "Direction rules vs big days for both indices, the robust factors and their dates to end-2027."),
+        (B + "calendar_rules_backtest_2000-2026_ET.html", "The 2027 calendar's own rules, backtested 2000-2026", "All 162 calendar rules (2026 document: catalogue B, configuration groups, sub-tables) on the S&P 500, Sensex, gold and silver; 2027 dates of those that held."),
         (B + "market_backtest_2000-2026_ET.html", "Market rules backtest, 26 years", "Every computable general-market rule (TA, KD, 2026 document) scored on the S&P 500 and the Sensex; walk-forward; best rules' dates."),
         (B + "spx_big_moves_2000-2026_ET.html", "S&P 500 +/-2% days", "Every big S&P day with the sky +/-3 days; over-represented factors; out-of-sample check."),
         (B + "sensex_big_moves_2000-2026_ET.html", "Sensex +/-2% days", "The same for the BSE Sensex."),
