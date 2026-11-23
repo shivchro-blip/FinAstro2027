@@ -61,6 +61,14 @@ SECTIONS = [
         (B + "venus_visibility_test_2000-2026_ET.html", "Venus combust / rising test (2000-2026) and the Jan 2026 crash", "TA Section 18 Venus rules on gold and silver; Venus rose in the West on 31 Jan 2026, the session after gold's -10.8% day."),
         (B + "speed_principle_test_2000-2026_ET.html", "Slow vs fast planets test (2000-2026)", "Do fast-planet events bring bigger / sudden moves, and do slow-planet rules get the trend right more often?"),
     ]),
+    ("Stock market: S&P 500 and BSE Sensex, 2000-2026", [
+        (B + "market_summary_2000-2026_ET.html", "Market findings (start here)", "Direction rules vs big days for both indices, the robust factors and their dates to end-2027."),
+        (B + "market_backtest_2000-2026_ET.html", "Market rules backtest, 26 years", "Every computable general-market rule (TA, KD, 2026 document) scored on the S&P 500 and the Sensex; walk-forward; best rules' dates."),
+        (B + "spx_big_moves_2000-2026_ET.html", "S&P 500 +/-2% days", "Every big S&P day with the sky +/-3 days; over-represented factors; out-of-sample check."),
+        (B + "sensex_big_moves_2000-2026_ET.html", "Sensex +/-2% days", "The same for the BSE Sensex."),
+        (B + "spx_big_move_watch_2026-11-22_to_2027-12-31_ET.html", "S&P 500 big-move watch to end-2027", "All lead windows (broad); the robust ones are in the findings page."),
+        (B + "sensex_big_move_watch_2026-11-22_to_2027-12-31_ET.html", "Sensex big-move watch to end-2027", ""),
+    ]),
     ("Source research and methodology", [
         (X + "OTHERS_FINANCIAL_REVIEW.html", "Review of Reference_materials/Others (45 files)", "Financial content of every document with page references; what was implemented and what was excluded."),
         (X + "FINANCIAL_ASTROLOGY_MODEL_v1.html", "Financial Astrology Model v1.0 - methodology", "Locked method for Brihat Samhita 41.9-13 with Shadbala and Ashtakavarga."),

@@ -47,6 +47,13 @@ STEPS = [
     ["tools/fast_trigger_analysis.py", "2026-11-22", "2027-12-31", "--metal", "silver"],
     ["tools/test_signal_table.py", "--metal", "silver"],
     ["tools/gold_signal_table.py", "2026-11-22", "2027-12-31", "--metal", "silver"],
+    # stock market (S&P 500, BSE Sensex): market_events.py runs first only if its cache is missing (about 30 min)
+    ["tools/backtest_market.py"],
+    ["tools/big_move_analysis.py", "--metal", "spx"],
+    ["tools/big_move_analysis.py", "--metal", "sensex"],
+    ["tools/big_move_forward.py", "2026-11-22", "2027-12-31", "--metal", "spx"],
+    ["tools/big_move_forward.py", "2026-11-22", "2027-12-31", "--metal", "sensex"],
+    ["tools/market_summary.py"],
     ["tools/md_to_html.py", "Reference_materials/extracted/OTHERS_FINANCIAL_REVIEW.md", "Others Financial Review"],
     ["tools/md_to_html.py", "Reference_materials/extracted/FINANCIAL_ASTROLOGY_MODEL_v1.md", "Financial Astrology Model v1"],
     ["tools/md_to_html.py", "PROJECT_KNOWLEDGE.md", "FinAstro Project Knowledge"],
@@ -68,6 +75,8 @@ def main():
     if "--prices" in sys.argv:
         run(["tools/fetch_prices.py"])
     for s in STEPS:
+        if s == ["tools/backtest_market.py"] and not (ROOT / "build/pdfref/backtest/market_events_2000-2026.json.gz").exists():
+            run(["tools/market_events.py"])
         run(s)
     run(["-m", "pytest", "-q", "tests/test_pdfref.py", "tests/test_shadbala.py"])
     run(["tools/publish_reports.py"])

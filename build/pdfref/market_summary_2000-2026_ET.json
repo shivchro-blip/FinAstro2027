@@ -1,0 +1,490 @@
+{
+ "markets": {
+  "spx": {
+   "name": "S&P 500",
+   "n_big": 489,
+   "n_days": 6539,
+   "base_rate": 7.5,
+   "split": {
+    "split": "2013-11-20",
+    "n_leads": 87,
+    "n_held": 39,
+    "pooled_obs": 1275,
+    "pooled_exp": 1234.1,
+    "pooled_lift": 1.03,
+    "pooled_p": 0.12506738304561305
+   },
+   "fdr": [
+    {
+     "factor": "Rule: Jupiter-Pluto 5/9 (Trine) (Strong Bullish Permutation Combination) [Bullish]",
+     "lift": 1.56,
+     "big": 122,
+     "exp": 78.3,
+     "q": 0.002,
+     "episodes": 30,
+     "up_share": 45.1,
+     "h1": 1.49,
+     "h2": 1.77,
+     "xc_lift": 1.56,
+     "xc_p": 0.0,
+     "robust": true,
+     "big_rate": 11.8
+    },
+    {
+     "factor": "State: Mars with Jupiter",
+     "lift": 1.68,
+     "big": 78,
+     "exp": 46.4,
+     "q": 0.005,
+     "episodes": 12,
+     "up_share": 39.7,
+     "h1": 1.29,
+     "h2": 2.23,
+     "xc_lift": 1.2,
+     "xc_p": 0.1455,
+     "robust": false,
+     "big_rate": 16.1
+    },
+    {
+     "factor": "State: Venus retrograde",
+     "lift": 1.75,
+     "big": 64,
+     "exp": 36.6,
+     "q": 0.006,
+     "episodes": 19,
+     "up_share": 46.9,
+     "h1": 1.88,
+     "h2": 1.58,
+     "xc_lift": 1.92,
+     "xc_p": 0.0,
+     "robust": true,
+     "big_rate": 13.0
+    },
+    {
+     "factor": "Rule: Mars-Jupiter conjunction (same sign) [Mixed]",
+     "lift": 1.63,
+     "big": 78,
+     "exp": 47.8,
+     "q": 0.007,
+     "episodes": 12,
+     "up_share": 39.7,
+     "h1": 1.26,
+     "h2": 2.14,
+     "xc_lift": 1.17,
+     "xc_p": 0.187,
+     "robust": false,
+     "big_rate": 15.6
+    },
+    {
+     "factor": "Rule: Jupiter-Neptune 7th (opposition) [Bearish]",
+     "lift": 1.63,
+     "big": 71,
+     "exp": 43.7,
+     "q": 0.012,
+     "episodes": 17,
+     "up_share": 47.9,
+     "h1": 1.6,
+     "h2": 1.73,
+     "xc_lift": 1.63,
+     "xc_p": 0.0001,
+     "robust": true,
+     "big_rate": 13.8
+    },
+    {
+     "factor": "Rule: Mercury-Saturn 2/12 (Dwidwadash) [Bullish]",
+     "lift": 1.38,
+     "big": 137,
+     "exp": 99.4,
+     "q": 0.024,
+     "episodes": 41,
+     "up_share": 47.4,
+     "h1": 1.29,
+     "h2": 1.54,
+     "xc_lift": 1.31,
+     "xc_p": 0.0076,
+     "robust": true,
+     "big_rate": 11.0
+    },
+    {
+     "factor": "Rule: Jupiter-Herschel 6/8 (Shadashtak) (Strong Bullish Permutation Combination) [Bullish]",
+     "lift": 1.42,
+     "big": 98,
+     "exp": 68.9,
+     "q": 0.048,
+     "episodes": 28,
+     "up_share": 45.9,
+     "h1": 1.3,
+     "h2": 1.74,
+     "xc_lift": 1.42,
+     "xc_p": 0.0006,
+     "robust": true,
+     "big_rate": 7.6
+    },
+    {
+     "factor": "Rule: Jupiter-Herschel 6/8 (Shadashtak) [Bullish]",
+     "lift": 1.42,
+     "big": 98,
+     "exp": 68.9,
+     "q": 0.048,
+     "episodes": 28,
+     "up_share": 45.9,
+     "h1": 1.3,
+     "h2": 1.74,
+     "xc_lift": 1.42,
+     "xc_p": 0.0006,
+     "robust": true,
+     "big_rate": 7.6
+    }
+   ],
+   "forward": [
+    {
+     "factor": "Rule: Mercury-Saturn 2/12 (Dwidwadash) [Bullish]",
+     "frm": "2027-01-27",
+     "to": "2027-02-23",
+     "exact": []
+    },
+    {
+     "factor": "Rule: Mercury-Saturn 2/12 (Dwidwadash) [Bullish]",
+     "frm": "2027-03-11",
+     "to": "2027-04-05",
+     "exact": []
+    },
+    {
+     "factor": "Rule: Mercury-Saturn 2/12 (Dwidwadash) [Bullish]",
+     "frm": "2027-04-21",
+     "to": "2027-05-06",
+     "exact": []
+    },
+    {
+     "factor": "Rule: Jupiter-Neptune 7th (opposition) [Bearish]",
+     "frm": "2027-11-26",
+     "to": "2027-12-31",
+     "exact": []
+    },
+    {
+     "factor": "Rule: Jupiter-Pluto 5/9 (Trine) (Strong Bullish Permutation Combination) [Bullish]",
+     "frm": "2027-11-26",
+     "to": "2027-12-31",
+     "exact": []
+    }
+   ],
+   "rules": {
+    "n_scored": 358,
+    "pooled": {
+     "worked": 41071,
+     "decided": 80205,
+     "hit": 51.2,
+     "base": 51.1
+    },
+    "p05": 9,
+    "expected_p05": 17.9,
+    "q10": 0,
+    "walk_forward": {
+     "n_rules": 11,
+     "held": 8,
+     "worked": 622,
+     "decided": 996,
+     "hit": 62,
+     "base": 61,
+     "p": 0.1727
+    }
+   },
+   "xc": {
+    "big": 361,
+    "days": 6258
+   }
+  },
+  "sensex": {
+   "name": "BSE Sensex",
+   "n_big": 605,
+   "n_days": 6407,
+   "base_rate": 9.4,
+   "split": {
+    "split": "2013-11-20",
+    "n_leads": 95,
+    "n_held": 52,
+    "pooled_obs": 1231,
+    "pooled_exp": 1124.7,
+    "pooled_lift": 1.09,
+    "pooled_p": 0.000803131026361845
+   },
+   "fdr": [
+    {
+     "factor": "Rule: Venus-Rahu 3/11 (Trikadash) [Bullish]",
+     "lift": 1.38,
+     "big": 162,
+     "exp": 117.5,
+     "q": 0.022,
+     "episodes": 50,
+     "up_share": 50.6,
+     "h1": 1.26,
+     "h2": 2.02,
+     "xc_lift": 1.23,
+     "xc_p": 0.028,
+     "robust": false,
+     "big_rate": 13.8
+    },
+    {
+     "factor": "State: Venus retrograde",
+     "lift": 1.61,
+     "big": 68,
+     "exp": 42.3,
+     "q": 0.022,
+     "episodes": 22,
+     "up_share": 55.9,
+     "h1": 1.5,
+     "h2": 1.95,
+     "xc_lift": 1.68,
+     "xc_p": 0.0003,
+     "robust": true,
+     "big_rate": 14.2
+    },
+    {
+     "factor": "Rule: Mars-Saturn conjunction (same sign) (Strong Bullish Permutation Combination) [Bullish]",
+     "lift": 1.56,
+     "big": 77,
+     "exp": 49.5,
+     "q": 0.022,
+     "episodes": 15,
+     "up_share": 50.6,
+     "h1": 1.51,
+     "h2": 1.65,
+     "xc_lift": 1.48,
+     "xc_p": 0.0022,
+     "robust": true,
+     "big_rate": 13.2
+    },
+    {
+     "factor": "Rule: Mars-Saturn conjunction (same sign) [Bullish]",
+     "lift": 1.56,
+     "big": 77,
+     "exp": 49.5,
+     "q": 0.022,
+     "episodes": 15,
+     "up_share": 50.6,
+     "h1": 1.51,
+     "h2": 1.65,
+     "xc_lift": 1.48,
+     "xc_p": 0.0022,
+     "robust": true,
+     "big_rate": 13.2
+    },
+    {
+     "factor": "Rule: Venus-Herschel conjunction (same sign) (Strong Bullish Short Term Yoga'S) [Bullish]",
+     "lift": 1.53,
+     "big": 81,
+     "exp": 52.8,
+     "q": 0.022,
+     "episodes": 21,
+     "up_share": 49.4,
+     "h1": 1.3,
+     "h2": 2.51,
+     "xc_lift": 1.34,
+     "xc_p": 0.038,
+     "robust": false,
+     "big_rate": 14.5
+    },
+    {
+     "factor": "Rule: Venus-Herschel conjunction (same sign) [Mixed]",
+     "lift": 1.53,
+     "big": 81,
+     "exp": 52.8,
+     "q": 0.022,
+     "episodes": 21,
+     "up_share": 49.4,
+     "h1": 1.3,
+     "h2": 2.51,
+     "xc_lift": 1.34,
+     "xc_p": 0.038,
+     "robust": false,
+     "big_rate": 14.5
+    },
+    {
+     "factor": "Rule: Mars With Saturn Rahu in Bullish signs [Bullish]",
+     "lift": 1.64,
+     "big": 60,
+     "exp": 36.6,
+     "q": 0.022,
+     "episodes": 15,
+     "up_share": 50.0,
+     "h1": 1.31,
+     "h2": 2.02,
+     "xc_lift": 1.36,
+     "xc_p": 0.0519,
+     "robust": false,
+     "big_rate": 13.4
+    },
+    {
+     "factor": "Rule: Venus in Pisces [Bearish]",
+     "lift": 1.44,
+     "big": 106,
+     "exp": 73.8,
+     "q": 0.022,
+     "episodes": 27,
+     "up_share": 49.1,
+     "h1": 1.38,
+     "h2": 1.79,
+     "xc_lift": 1.54,
+     "xc_p": 0.0004,
+     "robust": true,
+     "big_rate": 15.1
+    },
+    {
+     "factor": "State: Mars with Saturn",
+     "lift": 1.51,
+     "big": 73,
+     "exp": 48.3,
+     "q": 0.041,
+     "episodes": 14,
+     "up_share": 52.1,
+     "h1": 1.49,
+     "h2": 1.56,
+     "xc_lift": 1.44,
+     "xc_p": 0.0044,
+     "robust": true,
+     "big_rate": 12.9
+    },
+    {
+     "factor": "Rule: Mars-Herschel 5/9 (Trine) [Bullish]",
+     "lift": 1.31,
+     "big": 157,
+     "exp": 119.5,
+     "q": 0.041,
+     "episodes": 31,
+     "up_share": 48.4,
+     "h1": 1.26,
+     "h2": 1.58,
+     "xc_lift": 1.29,
+     "xc_p": 0.0036,
+     "robust": true,
+     "big_rate": 14.8
+    }
+   ],
+   "forward": [
+    {
+     "factor": "Rule: Venus in Pisces [Bearish]",
+     "frm": "2027-04-15",
+     "to": "2027-05-09",
+     "exact": []
+    },
+    {
+     "factor": "Rule: Mars-Herschel 5/9 (Trine) [Bullish]",
+     "frm": "2027-07-04",
+     "to": "2027-08-24",
+     "exact": []
+    },
+    {
+     "factor": "Rule: Mars-Herschel 5/9 (Trine) [Bullish]",
+     "frm": "2027-12-27",
+     "to": "2027-12-31",
+     "exact": []
+    }
+   ],
+   "rules": {
+    "n_scored": 360,
+    "pooled": {
+     "worked": 44013,
+     "decided": 86390,
+     "hit": 50.9,
+     "base": 50.9
+    },
+    "p05": 9,
+    "expected_p05": 18.0,
+    "q10": 0,
+    "walk_forward": {
+     "n_rules": 15,
+     "held": 9,
+     "worked": 611,
+     "decided": 1062,
+     "hit": 58,
+     "base": 57,
+     "p": 0.3184
+    }
+   },
+   "xc": {
+    "big": 477,
+    "days": 6144
+   }
+  }
+ },
+ "both_best": [
+  {
+   "title": "Mercury-Rahu conjunction in Navamsh (D9)",
+   "tone": "Bullish",
+   "spx": "153/245 (62% vs 59%, p 0.1419)",
+   "sensex": "163/268 (61% vs 58%, p 0.1785)"
+  },
+  {
+   "title": "Sun-Saturn conjunction in Navamsh (D9)",
+   "tone": "Bearish",
+   "spx": "95/187 (51% vs 43%, p 0.0138)",
+   "sensex": "100/202 (50% vs 43%, p 0.0353)"
+  },
+  {
+   "title": "Mars-Jupiter 5/9 (Trine) (Strong Bearish Permutation & Combination)",
+   "tone": "Bearish",
+   "spx": "13/29 (45% vs 31%, p 0.089)",
+   "sensex": "13/25 (52% vs 36%, p 0.0676)"
+  },
+  {
+   "title": "Venus in Pisces",
+   "tone": "Bearish",
+   "spx": "13/26 (50% vs 35%, p 0.0767)",
+   "sensex": "16/25 (64% vs 38%, p 0.0084)"
+  },
+  {
+   "title": "Shukla Shashti on Friday",
+   "tone": "Bearish",
+   "spx": "19/35 (54% vs 40%, p 0.0671)",
+   "sensex": "22/41 (54% vs 41%, p 0.0759)"
+  },
+  {
+   "title": "Mars-Jupiter 5/9 (Trine)",
+   "tone": "Bearish",
+   "spx": "13/29 (45% vs 31%, p 0.089)",
+   "sensex": "13/25 (52% vs 36%, p 0.0676)"
+  },
+  {
+   "title": "Mars-Saturn 4/10 (Kendra)",
+   "tone": "Bullish",
+   "spx": "27/31 (87% vs 68%, p 0.0124)",
+   "sensex": "25/33 (76% vs 63%, p 0.0973)"
+  },
+  {
+   "title": "Mercury-Saturn 4/10 (Kendra)",
+   "tone": "Bearish",
+   "spx": "27/57 (47% vs 38%, p 0.0848)",
+   "sensex": "28/56 (50% vs 40%, p 0.0866)"
+  },
+  {
+   "title": "Moon-Rahu 5/9 (Trine)",
+   "tone": "Bullish",
+   "spx": "327/534 (61% vs 59%, p 0.1822)",
+   "sensex": "337/574 (59% vs 58%, p 0.2968)"
+  },
+  {
+   "title": "Moon-Rahu 6/8 (Shadashtak)",
+   "tone": "Bullish",
+   "spx": "334/545 (61% vs 59%, p 0.1452)",
+   "sensex": "359/585 (61% vs 58%, p 0.0349)"
+  },
+  {
+   "title": "Moon-Saturn 4/10 (Kendra)",
+   "tone": "Bullish",
+   "spx": "328/550 (60% vs 59%, p 0.4394)",
+   "sensex": "351/590 (59% vs 58%, p 0.2033)"
+  },
+  {
+   "title": "Mars-Mercury Vedha",
+   "tone": "Bullish",
+   "spx": "29/40 (72% vs 58%, p 0.0449)",
+   "sensex": "32/41 (78% vs 58%, p 0.0057)"
+  },
+  {
+   "title": "Day lord and Nakshatra lord the same",
+   "tone": "Bullish",
+   "spx": "624/1034 (60% vs 59%, p 0.168)",
+   "sensex": "673/1146 (59% vs 58%, p 0.2126)"
+  }
+ ]
+}

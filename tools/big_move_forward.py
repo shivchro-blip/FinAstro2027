@@ -63,7 +63,13 @@ def as_date(x):
 def forward_rules(a, b):
     """Gold rule windows in [a, b], named and expanded exactly as in big_move_analysis.rule_days."""
     B = load(ROOT / "tools" / "backtest_gold.py", "bt")
-    B.configure_metal(MC.METAL)
+    if MC.MARKET:                                   # stock indices: the general-market rule set, as tools/market_events.py
+        B.M.METAL = "general"
+        B.M.EXCLUDE["general"] = set()
+        B.M.EXTRA["general"] = []
+        B.METAL = "general"
+    else:
+        B.configure_metal(MC.METAL)
     B.P0 = dt.datetime.combine(a - dt.timedelta(days=7), dt.time(0), ET)
     B.P1 = dt.datetime.combine(b + dt.timedelta(days=8), dt.time(0), ET)
     grid = Grid(utc(a.year - 1, 6, 1), utc(b.year + 1, 6, 30))

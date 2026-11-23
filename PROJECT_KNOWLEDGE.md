@@ -74,6 +74,9 @@ Known data problems:
 | `tools/gold_signal_table.py [start] [end]` | Simple gold table to end-2027: bullish / bearish / volatile, strength High / Moderate / Low, why |
 | `tools/test_signal_table.py` | Backtest of the signal table's High / Moderate / Low (walk-forward 2013–2026, source rules only, in-sample) |
 | `tools/metal_cfg.py` | `--metal silver` switch for big_move_analysis, big_move_forward, gold_outlook, fast_trigger_analysis, test_signal_table and gold_signal_table. Silver's big-move threshold is 3.5%, as rare as gold's 2%. Outputs are `silver_*` |
+| `tools/market_events.py` | Detects every general-market rule event 2000–2026 (about 628 rules), takes about 30 min; writes the git-ignored cache `build/pdfref/backtest/market_events_2000-2026.json.gz` |
+| `tools/backtest_market.py` | 26-year direction backtest of those rules on the S&P 500 and the Sensex, each in its own exchange time (16:00 ET; 15:30 IST); FDR; walk-forward; best rules' dates to end-2027 |
+| `tools/market_summary.py` | Market findings page: robust big-move factors (q < 0.10, both halves, p < 0.01 without the 2008–09 and 2020 crashes) and their dates |
 | `tools/gold_tracker.py [--metal silver]` | Trackers: findings, rule status, best-rule dates, analysis log |
 | `tools/build_year.py YEAR` | Astronomy layer for any year; 2000–2024 are git-ignored and rebuilt on demand |
 | `tools/fetch_prices.py` | Downloads GC=F and SI=F (Yahoo; the host must be allowed) |
@@ -98,6 +101,7 @@ Known data problems:
 | `gold_signals_2026-11-22_to_2027-12-31_ET.html` | Simple bullish / bearish table with strength (scoring in the script's docstring) |
 | `signal_table_test_2000-2026_ET.html` | Test of the signal table's strengths |
 | `silver_big_moves_2000-2026_ET.html`, `silver_big_move_watch_*`, `silver_outlook_*`, `silver_fast_triggers_*`, `silver_signal_table_test_2000-2026_ET.html`, `silver_signals_*` | The same chain for silver |
+| `market_summary_2000-2026_ET.html`, `market_backtest_2000-2026_ET.html`, `{spx,sensex}_big_moves_2000-2026_ET.html`, `{spx,sensex}_big_move_watch_*` | Stock-market work (S&P 500, BSE Sensex) |
 | `GOLD_TRACKER.html`, `SILVER_TRACKER.html` | Current status of every rule, best-rule dates, analysis log |
 | `REFERENCE_PDF_RULES.md`, `COMPLETION_REPORT.md`, `COVERAGE_AUDIT_GOLD_SILVER.md` | Rule lists and audits |
 
@@ -338,6 +342,37 @@ There are no TA S34 A9 windows between now and 31 Dec 2027.
   - For silver, the data-picked parts add nothing.
   - The useful part is retrograde Mercury or Jupiter: mid-Dec 2026 – mid-Apr 2027, 10 Jun – 2 Jul and 7–28 Oct 2027.
   - The silver table (`silver_signals_*`) shows these as High or Moderate bullish. Its past-record column shows the flat walk-forward result.
+
+**Stock market: S&P 500 (^GSPC) and BSE Sensex (^BSESN), 20 Nov 2000 – 20 Nov 2026.** The user chose both markets on 23 Nov 2026. Prices come from `tools/fetch_prices.py`, with dates in each exchange's own time zone. Details are in `market_summary_2000-2026_ET.html`.
+
+*Direction rules.* All computable general-market rules from TA, KD and the 2026 document were scored like the gold rules, 464 per market.
+- **The rules do not call direction on either index.** Pooled hit rates are 51.2% vs 51.1% (S&P) and 50.9% vs 50.9% (Sensex). Only 9 rules per market reach p < 0.05, where luck alone would give about 18, and none passes FDR.
+- **Walk-forward:** rules picked on 2000–2013 gave 62% vs 61% on 2013–2026 (S&P, 11 rules) and 58% vs 57% (Sensex, 15 rules).
+
+*Big days (±2%; 7.5% of S&P sessions and 9.4% of Sensex sessions).* Several factors pass FDR here, unlike for gold.
+- **Out of sample:** leads picked on 2000–2013 gave ×1.03 on 2013–2026 for the S&P (p = 0.13) and **×1.09 for the Sensex (p = 0.0008)**.
+- **Robust factors** pass FDR, are above 1 in both halves, and still have p < 0.01 without the 2008–09 and 2020 crashes:
+
+| Index | Factor | Lift | Without the crashes | q |
+|---|---|---|---|---|
+| S&P 500 | **Venus retrograde** | ×1.75 | ×1.92 | — |
+| S&P 500 | Jupiter–Pluto 5/9 | ×1.56 | — | 0.002 |
+| S&P 500 | Jupiter–Neptune opposition | ×1.63 | — | — |
+| S&P 500 | Jupiter–Uranus 6/8 | ×1.42 | — | — |
+| S&P 500 | Mercury–Saturn 2/12 | ×1.38 | — | — |
+| Sensex | **Venus retrograde** | ×1.61 | ×1.68 | — |
+| Sensex | Mars–Saturn conjunction | ×1.56 | — | — |
+| Sensex | Mars with Saturn | ×1.51 | — | — |
+| Sensex | Venus in Pisces | ×1.44 | — | — |
+| Sensex | Mars–Uranus 5/9 | ×1.31 | — | — |
+
+  - **Venus retrograde** is the one factor robust in both markets.
+  - Mars with Jupiter and the Mars–Jupiter conjunction (S&P) were driven by March 2020 and drop out without it.
+  - All these factors mark **volatility in both directions**: up share is 40–56% against 45–50% overall. Several are TA "Bullish" rules that actually mark big moves.
+- **Dates to end-2027:**
+  - **Venus retrograde does not occur before 2028.**
+  - S&P: Mercury–Saturn 2/12 on 27 Jan – 23 Feb, 11 Mar – 5 Apr and 21 Apr – 6 May 2027. Jupiter–Neptune opposition and Jupiter–Pluto trine from 26 Nov 2027 (Jupiter in Virgo).
+  - Sensex: Venus in Pisces 15 Apr – 9 May 2027. Mars–Uranus trine 4 Jul – 24 Aug and from 27 Dec 2027.
 
 **Model v1.0 (Ch.41 + Shadbala + Ashtakavarga), 6,572 trading days:**
 - The correlation of the scarcity index with the next 5 days is −0.002.

@@ -121,9 +121,14 @@ def states(day):
 
 
 def rule_days(D):
-    d = json.load(open(OUT / f"{METAL}_backtest_2000-11-20_to_2026-11-20_ET.json"))
+    if MC.MARKET:
+        import gzip
+        with gzip.open(OUT / "backtest" / "market_events_2000-2026.json.gz", "rt", encoding="utf-8") as fh:
+            evs = json.load(fh)
+    else:
+        evs = json.load(open(OUT / f"{METAL}_backtest_2000-11-20_to_2026-11-20_ET.json"))["events"]
     act = collections.defaultdict(set)
-    for e in d["events"]:
+    for e in evs:
         if e.get("tone") not in ("Bullish", "Bearish", "Mixed"):
             continue
         s = dt.date.fromisoformat((e["day"] or e["start"])[:10])
@@ -142,6 +147,8 @@ def poisson_sf(k, lam):
     """P(X >= k) for X ~ Poisson(lam)."""
     if k <= 0:
         return 1.0
+    if lam > 300:                                   # exp(-lam) underflows; normal approximation with continuity correction
+        return 0.5 * math.erfc((k - 0.5 - lam) / math.sqrt(lam) / math.sqrt(2))
     term = math.exp(-lam)
     cdf = term
     for i in range(1, k):

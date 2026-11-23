@@ -1,6 +1,6 @@
 # Silver findings tracker
 
-Generated 22 Nov 2026 15:35 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
+Generated 22 Nov 2026 22:31 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
 
 ## Recent findings
 
@@ -111,6 +111,7 @@ Best (from the 26 yr data): Retrograde Mercury or Jupiter, Only Moon and Mercury
 
 | Date | PR | Topic | Result |
 |---|---|---|---|
+| 2026-11-23 | #22 | Stock market: S&P 500 and BSE Sensex, 26 years - document rules and ±2% days | Direction: no edge (pooled 51.2 vs 51.1% S&P, 50.9 vs 50.9% Sensex; 9 rules p<0.05 vs ~18 by chance; none passes FDR; walk-forward 62 vs 61%, 58 vs 57%). Big days: robust volatility factors pass FDR - Venus retrograde in both markets (S&P x1.75, x1.92 without crashes; Sensex x1.61), S&P Jupiter-Pluto 5/9 x1.56, Jupiter-Neptune opposition x1.63, Jupiter-Uranus 6/8 x1.42, Mercury-Saturn 2/12 x1.38; Sensex Mars-Saturn conjunction x1.56, Venus in Pisces x1.44, Mars-Uranus 5/9 x1.31. Both directions. Out of sample Sensex x1.09 (p 0.0008), S&P x1.03. Venus retrograde does not occur before 2028. |
 | 2026-11-22 | #21 | Silver: big moves (±3.5%), watch, outlook, fast triggers, signal table and its test | 546 big days; top in-sample leads (Venus with the Sun x1.25, Jupiter retrograde x1.20, Rahu vedha of Pushya x1.27) fail out of sample: 3 of 17 early leads held, pooled x0.91. Fast triggers: 3 of 44 passed vs 2.5 by chance. Table walk-forward: High = Moderate = Low = 55% vs 52%, no strength order; volatile 8 vs 13.7. Source rules only: bullish High 66% vs 53% (p 0.065), High+Moderate 60% vs 54% (p 0.075). The value is in retrograde Mercury or Jupiter: mid-Dec 2026 - mid-Apr 2027, 10 Jun - 2 Jul, 7-28 Oct 2027. |
 | 2026-11-22 | #20 | Backtest of the signal table's High / Moderate / Low | Walk-forward: Bullish High 64% vs 53% (33, p 0.16), Moderate 58% vs 54%, Low 54% vs 55%; High+Moderate 60% vs 54% (102, p 0.13). Bearish Moderate 48% vs 44%, Low 44% vs 44%; Volatile big-day 11 vs 10.4. Source rules only: bullish High+Moderate 67% vs 56% (57, p 0.058). Bullish strength order holds in every run but is not significant; bearish and volatile labels have no edge. A past-record column was added to the table. |
 | 2026-11-22 | #19 | Simple gold bullish / bearish table to end-2027 | High bullish: 20 Jul and 30 Jul - 2 Sep 2027 (Venus combust in East with Mercury with the Sun). Moderate bullish: 22-28 Jun, 21-29 Jul, early Sep, 5 Nov, 27-31 Dec 2027. Moderate bearish: 22-23 Mar 2027. Low bearish: 23 Nov - 1 Dec 2026, 24-25 Mar, 7-10 May 2027. Volatile: 4-6 May, 18 Oct, 23-24 Nov 2027. Most other signal days are low bullish (U2 only). |

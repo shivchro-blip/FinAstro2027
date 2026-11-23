@@ -307,6 +307,22 @@
     "build/pdfref/silver_big_moves_2000-2026_ET.html",
     "build/pdfref/silver_outlook_2026-11-22_to_2027-12-31_ET.html"
    ]
+  },
+  {
+   "date": "2026-11-23",
+   "pr": "22",
+   "topic": "Stock market: S&P 500 and BSE Sensex, 26 years - document rules and ±2% days",
+   "analysis": "All ~628 computable general-market rules (TA, KD, 2026 document) detected 2000-2026 (161,252 events) and scored on the S&P 500 and the Sensex in each exchange's own time (same method as gold; FDR; walk-forward). The ±2% days of each index compared with the sky ±3 days (239+ factors incl. every rule; same-year expected counts; FDR; split halves; robustness without the 2008-09 and 2020 crashes). Robust factors' dates to end-2027.",
+   "result": "Direction: no edge (pooled 51.2 vs 51.1% S&P, 50.9 vs 50.9% Sensex; 9 rules p<0.05 vs ~18 by chance; none passes FDR; walk-forward 62 vs 61%, 58 vs 57%). Big days: robust volatility factors pass FDR - Venus retrograde in both markets (S&P x1.75, x1.92 without crashes; Sensex x1.61), S&P Jupiter-Pluto 5/9 x1.56, Jupiter-Neptune opposition x1.63, Jupiter-Uranus 6/8 x1.42, Mercury-Saturn 2/12 x1.38; Sensex Mars-Saturn conjunction x1.56, Venus in Pisces x1.44, Mars-Uranus 5/9 x1.31. Both directions. Out of sample Sensex x1.09 (p 0.0008), S&P x1.03. Venus retrograde does not occur before 2028.",
+   "files": [
+    "tools/market_events.py",
+    "tools/backtest_market.py",
+    "tools/market_summary.py",
+    "build/pdfref/market_summary_2000-2026_ET.html",
+    "build/pdfref/market_backtest_2000-2026_ET.html",
+    "build/pdfref/spx_big_moves_2000-2026_ET.html",
+    "build/pdfref/sensex_big_moves_2000-2026_ET.html"
+   ]
   }
  ]
 }
