@@ -158,7 +158,7 @@ def aggregate(rows, mk, lo=P0, hi=P1):
         verdict = "Worked"
     elif dec and hit <= base - 10 and avg < 0:
         verdict = "Failed"
-    return dict(worked=w, failed=f, flat=fl, hit_rate=hit, base_rate=base, exp=exp, avg_dir_ret=avg, verdict=verdict,
+    return dict(n=w + f + fl, worked=w, failed=f, flat=fl, hit_rate=hit, base_rate=base, exp=exp, avg_dir_ret=avg, verdict=verdict,
                 p_value=round(binom_p(w, dec, exp / dec), 4) if dec else None,
                 years_active=len(yrs), years_right=sum(1 for v in yrs.values() if v[1] * 2 > v[0]))
 

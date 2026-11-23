@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//finastro2027//sensex big-move watch//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:BSE Sensex big-move watch
+BEGIN:VEVENT
+UID:bigmove-sensex-2026-11-23@finastro2027
+DTSTAMP:20261123T032921Z
+DTSTART;VALUE=DATE:20261123
+DTEND;VALUE=DATE:20270914
+SUMMARY:BSE Sensex volatility watch (down)
+DESCRIPTION:BSE Sensex big-move watch (down lean\; peak 13 leads on Fri 15 Jan 2027).\nLeads: Saturn (malefic) faster than normal speed [Bearish]\; Neptune With Sun\, Mars\, Venus\, Saturn & Rahu [Bullish]\; Jupiter in Leo\; Mars-Jupiter conjunction (same sign) [Mixed]\; Mercury-Herschel 2/12 (Dwidwadash) (Strong Bullish Short Term Yoga'S) [Bullish]\; Mercury-Herschel 2/12 (Dwidwadash) [Bullish]\; Mercury-Venus 3/11 (Trikadash) [Bullish]\; Moon-Mars 4/10 (Kendra) [Bearish]\; Sun-Moon 3/11 (Trikadash) [Bearish]\; Mercury-Saturn 2/12 (Dwidwadash) [Bullish]\; Moon-Herschel 2/12 (Dwidwadash) [Bearish]\; Moon-Mercury 4/10 (Kendra) [Bullish]\; Sun-Jupiter 4/10 (Kendra) [Bearish]\; Venus-Rahu 3/11 (Trikadash) [Bullish]\; Venus-Neptune 2/12 (Dwidwadash) [Bearish]\; Mars-Herschel 5/9 (Trine) [Bullish]\; Sun-Mars conjunction in Navamsh (D9) [Bullish]\; Mercury-Rahu conjunction (same sign) (Strong Bullish Short Term Yoga'S) [Bullish]\; Mercury-Rahu conjunction (same sign) [Bearish]\; Moon-Saturn 7th (opposition) [Bullish]\; Mercury-Rahu 3/11 (Trikadash) [Bullish]\; Sun-Saturn conjunction in Navamsh (D9) [Bearish]\; Sun-Rahu conjunction (same sign) [Bearish]\; Sun in Pisces\; Ekadashi on Friday [Bearish]\; Sun in Taurus\; Ashtami on Saturday [Bullish]\; Sun in Aquarius\; Saturn-Mars mutual Vedha [Bullish]\; Venus-Herschel conjunction (same sign) (Strong Bullish Short Term Yoga'S) [Bullish]\; Venus-Herschel conjunction (same sign) [Mixed]\; Venus in Pisces [Bearish]\; Mars-Mercury Vedha [Bullish]\; Neptune With Mercury\, Jupiter\, Ketu\, Moon [Bearish]\; Venus-Ketu Vedha [Bearish]\; Moon rise in Ardra\, Purva Phalguni (or Uttara Phalguni / Chitra) [Bullish]\; Venus-Herschel conjunction within 7 degrees [Bullish]\; Venus-Uranus conjunction\; Venus leaves combustion\; Venus rises in West [Mixed]\; Sun enters Ashwini [Bullish]\nNormal chance of a +/-2% day 9.4%. No lead passed FDR\; out of sample x1.09. A watch date\, not a call.
+END:VEVENT
+BEGIN:VEVENT
+UID:bigmove-sensex-2027-09-20@finastro2027
+DTSTAMP:20261123T032921Z
+DTSTART;VALUE=DATE:20270920
+DTEND;VALUE=DATE:20271016
+SUMMARY:BSE Sensex volatility watch (either)
+DESCRIPTION:BSE Sensex big-move watch (either lean\; peak 6 leads on Mon 27 Sep 2027).\nLeads: Jupiter in Leo\; Sun-Mars conjunction in Navamsh (D9) [Bullish]\; Moon-Herschel 2/12 (Dwidwadash) [Bearish]\; Moon-Mars 4/10 (Kendra) [Bearish]\; Sun-Moon 3/11 (Trikadash) [Bearish]\; Sun-Saturn conjunction in Navamsh (D9) [Bearish]\; Moon-Mercury 4/10 (Kendra) [Bullish]\; Moon-Saturn 7th (opposition) [Bullish]\nNormal chance of a +/-2% day 9.4%. No lead passed FDR\; out of sample x1.09. A watch date\, not a call.
+END:VEVENT
+BEGIN:VEVENT
+UID:bigmove-sensex-2027-10-19@finastro2027
+DTSTAMP:20261123T032921Z
+DTSTART;VALUE=DATE:20271019
+DTEND;VALUE=DATE:20280101
+SUMMARY:BSE Sensex volatility watch (down)
+DESCRIPTION:BSE Sensex big-move watch (down lean\; peak 9 leads on Fri 31 Dec 2027).\nLeads: Neptune With Sun\, Mars\, Venus\, Saturn & Rahu [Bullish]\; Jupiter in Leo\; Mars in Sagittarius\; Jupiter-Rahu 5/9 (Trine) (Strong Bullish Permutation Combination) [Bullish]\; Jupiter-Rahu 5/9 (Trine) [Bullish]\; Sun-Jupiter 4/10 (Kendra) [Bearish]\; Venus-Rahu 3/11 (Trikadash) [Bullish]\; Sun-Moon 3/11 (Trikadash) [Bearish]\; Moon-Mars 4/10 (Kendra) [Bearish]\; Mercury-Rahu 3/11 (Trikadash) [Bullish]\; Moon-Herschel 2/12 (Dwidwadash) [Bearish]\; Moon-Mercury 4/10 (Kendra) [Bullish]\; Saturn-Mars mutual Vedha [Bullish]\; Mercury-Venus 3/11 (Trikadash) [Bullish]\; Moon-Saturn 7th (opposition) [Bullish]\; Sun-Saturn conjunction in Navamsh (D9) [Bearish]\; Ashtami on Saturday [Bullish]\; Atichari (very fast) Mars in Capricorn [Bearish]\; Mars With Saturn Rahu in Bullish signs [Bullish]\; Mars-Herschel 5/9 (Trine) [Bullish]\; Mars in Capricorn\; Sun-Mars conjunction in Navamsh (D9) [Bullish]\nNormal chance of a +/-2% day 9.4%. No lead passed FDR\; out of sample x1.09. A watch date\, not a call.
+END:VEVENT
+END:VCALENDAR

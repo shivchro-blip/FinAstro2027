@@ -147,6 +147,8 @@ def poisson_sf(k, lam):
     """P(X >= k) for X ~ Poisson(lam)."""
     if k <= 0:
         return 1.0
+    if lam > 300:                                   # exp(-lam) underflows; normal approximation with continuity correction
+        return 0.5 * math.erfc((k - 0.5 - lam) / math.sqrt(lam) / math.sqrt(2))
     term = math.exp(-lam)
     cdf = term
     for i in range(1, k):
