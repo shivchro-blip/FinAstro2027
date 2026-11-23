@@ -85,6 +85,9 @@ SECTIONS = [
 
 def main():
     DEST.mkdir(exist_ok=True)
+    days = sorted((ROOT / B).glob("day_report_*_ET.html"))
+    if days:                                       # the most recent day report (tools/day_report.py)
+        SECTIONS[0][1].insert(1, (B + days[-1].name, f"Day report {days[-1].name[11:21]}", "Planet positions, every active rule with its 26-year record, our signals and what markets did."))
     now = dt.datetime.now(ZoneInfo("America/New_York"))
     log = json.load(open(ROOT / B / "analysis_log.json"))["entries"]
     blocks = []

@@ -356,6 +356,17 @@
     "tools/validate_external_model.py",
     "build/pdfref/external_model_check_ET.html"
    ]
+  },
+  {
+   "date": "2026-11-23",
+   "pr": "26",
+   "topic": "Day report for Mon 23 Nov 2026: what we said vs what happened",
+   "analysis": "New tools/day_report.py: positions and panchang at 12:00 ET, every catalogue rule active (gold, silver, general; windows and instants within their 5-session horizon), calendar rows, each with its 26-year record; our table signals and watch windows; Yahoo closes for the day.",
+   "result": "Said: gold bearish low (no-edge label), no signal for S&P, Sensex, silver; gold volatility watch (Sun-Uranus opposition, full Moon 24 Nov). Happened: S&P +4.7%, Nasdaq +6.5%, gold +3.2%, silver +4.4%, Sensex -1.8%. Gold direction wrong, volatility watch right. Supported active rules leaned bullish (S&P 8:1 right, Sensex 6:3 wrong) - not a tested signal.",
+   "files": [
+    "tools/day_report.py",
+    "build/pdfref/day_report_2026-11-23_ET.html"
+   ]
   }
  ]
 }
