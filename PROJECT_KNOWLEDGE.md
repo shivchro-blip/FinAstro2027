@@ -93,6 +93,7 @@ Known data problems:
 | `tools/dasha_transits.py [DATE]` | Vimshottari dashas of the USA and NYSE charts at all five levels (Maha, Antar, Pratyantar, Sookshma, Prana); the transit of each running lord; Pratyantar and Sookshma timelines with S&P moves; birth-time sensitivity; 1928–2026 S&P test of the lords |
 | `tools/model_check_60d.py [END]` | Our tables' labels rebuilt for each of the last 60 days (gold, silver, S&P, Sensex), against the actual moves |
 | `tools/combined_probability.py [END]` | Every layer joined into one probability per day (up today, up over 5 sessions, big day) by naive Bayes on log-odds; scored on the last 60 days and walk-forward 2013–2026. Caches `backtest/market_label_history.json.gz`; reads `backtest/{gold,silver}_label_history.json.gz` from `test_signal_table.py` |
+| `tools/forward_daybyday.py [START] [END]` | Day-by-day forward page. For each day it shows:<br>• all transits and changes (from `sky_changes.py`)<br>• every active catalogue rule with its record, and the calendar-layer rows<br>• the four tables, watch windows, outlook, agreement and fast triggers, robust factors and Model v1.0<br>• USA/NYSE dashas (5 levels) and lord transits, gochara, Chandra and Tara bala<br>• the author's forecasts and rules, and the Mars–Jupiter–node lead<br>• combined probabilities |
 | `tools/gold_tracker.py [--metal silver]` | Trackers: findings, rule status, best-rule dates, analysis log |
 | `tools/build_year.py YEAR` | Astronomy layer for any year; 2000–2024 are git-ignored and rebuilt on demand |
 | `tools/fetch_prices.py` | Downloads GC=F and SI=F (Yahoo; the host must be allowed) |
@@ -122,6 +123,7 @@ Known data problems:
 | `external_model_check_ET.html` | Outside-model check (23 Nov 2026) |
 | `nyse_usa_charts_ET.html` | NYSE / USA charts and the solar-return test. The shared chart image is kept in `Reference_materials/extracted/nyse_solar_return_charts_2026-10_2026-11.png` |
 | `author_forecasts_ET.html` | The author's forecast scorecard and rule tests |
+| `daybyday_<start>_to_<end>_ET.html` | Day-by-day forward page (currently 24 Nov – 31 Dec 2026) |
 | `combined_probability_60d_ET.html` | All layers joined into daily probabilities, scored |
 | `dasha_transits_ET.html`, `model_check_60d_ET.html` | Dashas with transits; the 60-day model check |
 | `GOLD_TRACKER.html`, `SILVER_TRACKER.html` | Current status of every rule, best-rule dates, analysis log |
@@ -623,6 +625,34 @@ Results, as the share of calls right:
   - USA dasha, USA gochara, Chandra bala and Tara bala did not help.
   - For big days, no Vedic layer helped, and the S&P model gave 19–20 Nov a big-day probability of only 2.7–3.2%.
 - **Reading:** combined, our astrology gives probabilities that are honest but close to a coin with the market's natural upward lean. The good 60-day hit rates come mostly from bearish tables in falling markets.
+
+**Day by day, 24 Nov – 31 Dec 2026** (`daybyday_2026-11-24_to_2026-12-31_ET.html`)
+
+- **Active rules:** 131–171 catalogue rules are active each day, plus 4–22 calendar rows.
+- **Key sky events (ET):**
+  - Full Moon in Taurus, 24 Nov.
+  - Sun–Uranus opposition, 25 Nov.
+  - Mercury enters Scorpio, 2 Dec.
+  - Rahu enters Capricorn and Ketu enters Cancer, 5 Dec. This ends Mars–Jupiter–Ketu in Leo, our crash lead, active 24 Nov – 5 Dec.
+  - New Moon in Scorpio and Mercury–Uranus opposition, 8 Dec.
+  - Saturn turns direct, 10 Dec.
+  - Jupiter turns retrograde and Neptune turns direct, 12 Dec.
+  - Mercury becomes combust, 13 Dec.
+  - Sun enters Sagittarius, 15 Dec.
+  - Mercury enters Sagittarius, 21 Dec.
+  - Full Moon in Gemini, 23 Dec.
+  - No eclipse.
+- **Author's rules:**
+  - Jupiter sextile Venus (within 2°), 24 Nov – 1 Dec. Bullish over 5 sessions: 63.6% vs 55.8%, p 0.03.
+  - Mars square Uranus, 27 Nov – 12 Dec. It showed no effect in its test.
+- **Combined probabilities for the S&P (base: 57% up over 5 sessions):**
+  - Over 5 sessions they range from 55% to 63%.
+  - The highest, 62–63%, fall on 27 Nov and 2–4 Dec, when the table is Bullish Moderate.
+  - Big-day probabilities are 2–6%. The model has no volatility-regime input.
+- **Other markets:**
+  - Gold's table is Bearish Low 24 Nov – 1 Dec, then Bullish Low (U2, Mercury with the Sun) from 2 Dec.
+  - Silver is Bullish from 14 Dec.
+  - Every probability stays within a few points of its base rate.
 
 **Model v1.0 (Ch.41 + Shadbala + Ashtakavarga), 6,572 trading days:**
 - The correlation of the scarcity index with the next 5 days is −0.002.

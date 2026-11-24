@@ -222,7 +222,12 @@ def main():
     layer_pairs = {x["text"] for x in ev if x["kind"] == "exact aspect"}
     comp = [x for x in comp if not (x["kind"] == "exact degree aspect" and any(x["text"].startswith(lp.split(" exact")[0]) for lp in layer_pairs))]
     rules = rule_changes(a, b)
-    allev = sorted(ev + comp + rules, key=lambda x: (x["t"], x["kind"]))
+    allev, seen = [], set()
+    for x in sorted(ev + comp + rules, key=lambda x: (x["t"], x["kind"])):   # the astronomy layers of adjacent years overlap
+        k = (x["kind"], x["text"], x["t"].replace(second=0, microsecond=0))
+        if k not in seen:
+            seen.add(k)
+            allev.append(x)
     for x in allev:
         x["et"], x["ist"] = stamp(x["t"])
     rows = daily(G, a_day, b_day)

@@ -459,6 +459,17 @@
     "tools/combined_probability.py",
     "build/pdfref/combined_probability_60d_ET.html"
    ]
+  },
+  {
+   "date": "2026-11-24",
+   "pr": "35",
+   "topic": "Day by day, 24 Nov - 31 Dec 2026: transits, every rule and every analysis",
+   "analysis": "tools/forward_daybyday.py: for each day, positions and panchang, all planetary changes (sky_changes), every active catalogue rule (gold, silver, general) with 26-year record and status, calendar-layer rows with records, the four signal tables, big-move watch, outlook, agreement and fast-trigger items, robust volatility factors, Model v1.0, USA/NYSE dashas (5 levels, changes, lord transits and condition), gochara, Chandra and Tara bala, author's forecasts and transit rules, the Mars-Jupiter-node lead, and combined probabilities (fitted 2000 - 23 Nov 2026). Fixed duplicated events in sky_changes (overlapping astronomy layers).",
+   "result": "131-171 catalogue rules a day. Mars-Jupiter-Ketu in Leo (crash lead) to 5 Dec, when the nodes change sign. Jupiter sextile Venus 24 Nov - 1 Dec (author's bullish, tested p 0.03). S&P 5-session probabilities 55-63% vs base 57% (highest 27 Nov and 2-4 Dec, Bullish Moderate table); big-day probabilities 2-6%. Gold Bearish Low to 1 Dec, Bullish Low from 2 Dec; silver Bullish from 14 Dec. All probabilities within a few points of base.",
+   "files": [
+    "tools/forward_daybyday.py",
+    "build/pdfref/daybyday_2026-11-24_to_2026-12-31_ET.html"
+   ]
   }
  ]
 }
