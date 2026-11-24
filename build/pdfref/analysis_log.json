@@ -412,6 +412,18 @@
     "tools/rule_tally.py",
     "build/pdfref/rule_tally_ET.html"
    ]
+  },
+  {
+   "date": "2026-11-24",
+   "pr": "31",
+   "topic": "NYSE and USA foundation charts; NYSE monthly solar-return technique tested 1928-2026",
+   "analysis": "Technique reconstructed from the shared charts (tropical NYSE natal Sun 27°18' Taurus; monthly returns at tropical 27°18' of each sign, New York; tropical signs read). Backtested on 1,186 S&P solar months 1928-2026 in the author's tropical version and our sidereal Lahiri version: ascendant lord debilitated, Mars with Ketu in the 8th, malefic in the 8th, Sun / Venus / Jupiter in the 10th, both bearish indications. NYSE (1792) and USA (1776 Sibly) natal charts, transits, next returns, the author's open forecast.",
+   "result": "Author's version: debilitated ascendant lord months up 68% vs 60.5% (avg +1.21% vs +0.60%); both bearish indications 27 months avg +3.67% vs +0.58% (t +2.1, wrong way); Mars with Ketu in the 8th only 8 months, inconclusive; Venus/Jupiter in the 10th no moderating effect. Sidereal version: nothing significant. The technique's monthly indications do not hold up. The author reads tropical signs (Saturn 'debilitated' is tropical Aries; sidereal Pisces). Transits: Mars-Jupiter-Ketu in the USA 10th opposite its Moon; Rahu in the NYSE 8th (descriptive). Open forecast: smaller S&P net decline 19 Nov - 18 Dec than -4.8% (check 19 Dec 2026).",
+   "files": [
+    "tools/nyse_charts.py",
+    "build/pdfref/nyse_usa_charts_ET.html",
+    "Reference_materials/extracted/nyse_solar_return_charts_2026-10_2026-11.png"
+   ]
   }
  ]
 }

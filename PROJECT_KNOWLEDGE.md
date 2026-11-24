@@ -20,6 +20,8 @@ The work is logged entry by entry in `build/pdfref/analysis_log.json`, which is 
 
 ## 2. User decisions (respect these in future work)
 
+- **NYSE and USA foundation charts and the NYSE monthly solar-return technique are in scope** (24 Nov 2026). The user shared an astrologer's charts and forecast. The technique is reconstructed in `tools/nyse_charts.py` and is tested both the author's way (tropical) and ours (sidereal Lahiri). The user will keep sending updates; add them to the same tool and report.
+
 - **Market prices and astrology only** (24 Nov 2026): news and fundamentals are not used or recorded. Explanations of market moves are astrological, and the market event log keeps prices, sky and conditions only.
 
 1. **Implement rules only when a source states them.** The user declined extrapolations "without having the full picture", for example a Moon-based mirror of the gold Sun rules for silver.
@@ -86,6 +88,7 @@ Known data problems:
 | `tools/sky_changes.py START END` | Every planetary change in a date range, in ET and IST: sign, nakshatra, pada and navamsa changes; tithi, karana (Bhadra) and yoga; aspects beginning and ending; exact degree aspects; rule starts and ends with their 26-year status; a daily position table |
 | `tools/rule_tally.py [DATES]` | Net of active general-market rules with a good record per day, with a walk-forward test of the tally |
 | `tools/trigger_study.py [--log DATE]` | Tests candidate fall and rise conditions day by day 2000–2026 on the S&P 500, Nasdaq, Sensex, gold and silver (same-day move, same-year base); checks Mars–Jupiter-with-a-node episodes on the S&P since 1928; keeps the market event log `build/pdfref/market_event_log.json` (big days with prices, sky and conditions) |
+| `tools/nyse_charts.py` | NYSE (17 May 1792) and USA (4 Jul 1776, Sibly) natal charts, sidereal and tropical; transits to them; NYSE monthly solar returns (the author's tropical version and our sidereal one) with a 1928–2026 S&P backtest of the author's indications; the author's open forecasts |
 | `tools/gold_tracker.py [--metal silver]` | Trackers: findings, rule status, best-rule dates, analysis log |
 | `tools/build_year.py YEAR` | Astronomy layer for any year; 2000–2024 are git-ignored and rebuilt on demand |
 | `tools/fetch_prices.py` | Downloads GC=F and SI=F (Yahoo; the host must be allowed) |
@@ -113,6 +116,7 @@ Known data problems:
 | `market_summary_2000-2026_ET.html`, `market_backtest_2000-2026_ET.html`, `{spx,sensex}_big_moves_2000-2026_ET.html`, `{spx,sensex}_big_move_watch_*` | Stock-market work (S&P 500, BSE Sensex) |
 | `market_signals_2026-11-23_to_2027-12-31_ET.html` | S&P 500 and Sensex signal tables |
 | `external_model_check_ET.html` | Outside-model check (23 Nov 2026) |
+| `nyse_usa_charts_ET.html` | NYSE / USA charts and the solar-return test. The shared chart image is kept in `Reference_materials/extracted/nyse_solar_return_charts_2026-10_2026-11.png` |
 | `GOLD_TRACKER.html`, `SILVER_TRACKER.html` | Current status of every rule, best-rule dates, analysis log |
 | `REFERENCE_PDF_RULES.md`, `COMPLETION_REPORT.md`, `COVERAGE_AUDIT_GOLD_SILVER.md` | Rule lists and audits |
 
@@ -475,12 +479,40 @@ There are no TA S34 A9 windows between now and 31 Dec 2027.
   - It was picked after the fact: a lead, not a rule.
 - **Reading:** the sky marked a turbulent period, with big moves both ways, but did not say which day would fall or rise.
 
+**NYSE monthly solar returns** (an astrologer's technique, shared 24 Nov 2026), in `nyse_usa_charts_ET.html`.
+- **The technique, reconstructed from the charts:**
+  - The NYSE natal Sun is 27°18' Taurus **tropical** (Buttonwood Agreement, 17 May 1792, morning).
+  - Each solar month starts when the tropical Sun reaches 27°18' of the next sign. The charts are cast for New York: 20 Oct 2026 12:28 EDT and 19 Nov 2026 10:10 EST, both Capricorn rising.
+  - The author reads **tropical signs**: "debilitated ascendant lord Saturn" is Saturn in tropical Aries. In our sidereal Lahiri convention Saturn is in Pisces (not debilitated), the rising sign is Sagittarius, and Mars–Ketu fall in the 9th.
+- **The author's claims:**
+  - 20 Oct – 18 Nov: two bearish indications (debilitated ascendant lord, Mars with Ketu in the 8th). The S&P went 7,690 → 7,320 (−4.8%).
+  - 19 Nov – 18 Dec: both persist, but Venus in the 10th moderates. Forecast: further weakness, but a smaller net decline than −4.8%.
+- **98-year backtest (1,186 solar months, S&P 1928–2026), the author's version:**
+
+| Indication | Months | S&P up | Average month vs other months |
+|---|---|---|---|
+| Debilitated ascendant lord | — | 68% (all months 60.5%) | +1.21% vs +0.60% |
+| Mars with Ketu in the 8th | 8 | — | −0.08% vs +0.66% (inconclusive) |
+| A malefic in the 8th | — | — | slightly *better* (t = +1.9) |
+| Both bearish indications together | 27 | 70% | **+3.67%** vs +0.58% (t = +2.1, the wrong way) |
+| Venus or Jupiter in the 10th | — | — | no moderating effect |
+
+  - Sidereal version: nothing significant. Mars with Ketu in the 8th fell 5%+ in 3 of 11 months (27% vs 9.5%), but the sample is far too small to judge.
+  - **Verdict:** the author's monthly indications do not hold up over 98 years. Their bearish pair has, if anything, come before better months.
+- **Natal charts (sidereal):**
+  - NYSE, 10:00 LMT: Cancer rising, Sun Taurus 6°, Saturn debilitated in Aries in the 10th.
+  - USA, Sibly 17:10 LMT: Scorpio rising, Sun Gemini 22°, Moon Aquarius 6°.
+- **Transits now:** Mars, Jupiter and Ketu in Leo fall in the USA's 10th house, with Mars and Jupiter opposite the USA Moon. Transit Rahu is in the NYSE's 8th house. These are descriptive; no rule has been tested.
+- **Open forecast** (check on 19 Dec 2026): S&P net decline from 7,320 smaller than 4.8% over 19 Nov – 18 Dec.
+
 **Model v1.0 (Ch.41 + Shadbala + Ashtakavarga), 6,572 trading days:**
 - The correlation of the scarcity index with the next 5 days is −0.002.
 - The model leans bullish on 67% of days by construction.
 - Use it as classical context, not as a timing tool.
 
 ## 8. Open items
+
+- **External forecast to check on 19 Dec 2026:** the NYSE solar-return author expects a smaller net S&P decline over 19 Nov – 18 Dec 2026 than the previous month's −4.8% (from 7,320).
 
 - Brihat Samhita 41.12 has a translation ambiguity: Sastri reads "fetch good price and have great demand", another translation reads moderate prices and easy availability. Kept visible; V is not a stand-alone signal.
 - A rule for a stellium on the Sun (the January 2026 gap) has no source yet.

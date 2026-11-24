@@ -1,0 +1,4457 @@
+{
+ "versions": {
+  "A": {
+   "n": 1186,
+   "up_all": 60.5,
+   "mean_all": 0.65,
+   "target": 27.3,
+   "features": {
+    "Ascendant lord debilitated": {
+     "n": 103,
+     "up": 68.0,
+     "mean": 1.21,
+     "mean_off": 0.6,
+     "p_up": 0.1233,
+     "t": 0.82,
+     "fall5": 10.7,
+     "fall5_all": 10.4
+    },
+    "Mars with Ketu in the 8th": {
+     "n": 8,
+     "up": 62.5,
+     "mean": -0.08,
+     "mean_off": 0.66,
+     "p_up": 0.9097,
+     "t": -0.41,
+     "fall5": 12.5,
+     "fall5_all": 10.4
+    },
+    "Mars, Saturn, Rahu or Ketu in the 8th": {
+     "n": 346,
+     "up": 62.4,
+     "mean": 1.08,
+     "mean_off": 0.48,
+     "p_up": 0.4724,
+     "t": 1.86,
+     "fall5": 9.2,
+     "fall5_all": 10.4
+    },
+    "Sun in the 10th": {
+     "n": 97,
+     "up": 54.6,
+     "mean": 0.13,
+     "mean_off": 0.7,
+     "p_up": 0.2345,
+     "t": -1.1,
+     "fall5": 11.3,
+     "fall5_all": 10.4
+    },
+    "Venus or Jupiter in the 10th": {
+     "n": 187,
+     "up": 59.9,
+     "mean": 0.5,
+     "mean_off": 0.68,
+     "p_up": 0.8564,
+     "t": -0.43,
+     "fall5": 14.4,
+     "fall5_all": 10.4
+    },
+    "Both bearish indications (debilitated ascendant lord and a malefic in the 8th)": {
+     "n": 27,
+     "up": 70.4,
+     "mean": 3.67,
+     "mean_off": 0.58,
+     "p_up": 0.296,
+     "t": 2.07,
+     "fall5": 7.4,
+     "fall5_all": 10.4
+    }
+   }
+  },
+  "B": {
+   "n": 1185,
+   "up_all": 60.8,
+   "mean_all": 0.66,
+   "target": 6.33,
+   "features": {
+    "Ascendant lord debilitated": {
+     "n": 87,
+     "up": 64.4,
+     "mean": 0.7,
+     "mean_off": 0.65,
+     "p_up": 0.4907,
+     "t": 0.07,
+     "fall5": 10.3,
+     "fall5_all": 9.5
+    },
+    "Mars with Ketu in the 8th": {
+     "n": 11,
+     "up": 45.5,
+     "mean": -1.8,
+     "mean_off": 0.68,
+     "p_up": 0.2985,
+     "t": -0.77,
+     "fall5": 27.3,
+     "fall5_all": 9.5
+    },
+    "Mars, Saturn, Rahu or Ketu in the 8th": {
+     "n": 334,
+     "up": 61.7,
+     "mean": 0.81,
+     "mean_off": 0.6,
+     "p_up": 0.7314,
+     "t": 0.59,
+     "fall5": 10.2,
+     "fall5_all": 9.5
+    },
+    "Sun in the 10th": {
+     "n": 91,
+     "up": 60.4,
+     "mean": 0.5,
+     "mean_off": 0.67,
+     "p_up": 0.9502,
+     "t": -0.26,
+     "fall5": 11.0,
+     "fall5_all": 9.5
+    },
+    "Venus or Jupiter in the 10th": {
+     "n": 185,
+     "up": 56.8,
+     "mean": 0.44,
+     "mean_off": 0.7,
+     "p_up": 0.2649,
+     "t": -0.56,
+     "fall5": 11.9,
+     "fall5_all": 9.5
+    },
+    "Both bearish indications (debilitated ascendant lord and a malefic in the 8th)": {
+     "n": 20,
+     "up": 75.0,
+     "mean": 1.12,
+     "mean_off": 0.65,
+     "p_up": 0.1921,
+     "t": 0.48,
+     "fall5": 5.0,
+     "fall5_all": 9.5
+    }
+   }
+  }
+ },
+ "charts": {
+  "NYSE (17 May 1792, 10:00 LMT, New York)": {
+   "tropical": {
+    "asc": "Leo 9\u00b037'",
+    "lagna_lord": "Sun",
+    "rows": [
+     {
+      "body": "Sun",
+      "sign": "Taurus",
+      "deg": "27\u00b017'",
+      "house": 10,
+      "nak": "Krittika",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Moon",
+      "sign": "Aries",
+      "deg": "19\u00b046'",
+      "house": 9,
+      "nak": "Revati",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Mercury",
+      "sign": "Taurus",
+      "deg": "23\u00b047'",
+      "house": 10,
+      "nak": "Krittika",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Venus",
+      "sign": "Taurus",
+      "deg": "5\u00b029'",
+      "house": 10,
+      "nak": "Bharani",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Mars",
+      "sign": "Virgo",
+      "deg": "18\u00b044'",
+      "house": 2,
+      "nak": "Uttara Phalguni",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Jupiter",
+      "sign": "Libra",
+      "deg": "22\u00b057'",
+      "house": 3,
+      "nak": "Chitra",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Saturn",
+      "sign": "Aries",
+      "deg": "26\u00b022'",
+      "house": 9,
+      "nak": "Ashwini",
+      "retro": false,
+      "neecha": true
+     },
+     {
+      "body": "Rahu",
+      "sign": "Libra",
+      "deg": "0\u00b041'",
+      "house": 3,
+      "nak": "Uttara Phalguni",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Ketu",
+      "sign": "Aries",
+      "deg": "0\u00b041'",
+      "house": 9,
+      "nak": "Uttara Bhadrapada",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Uranus",
+      "sign": "Leo",
+      "deg": "15\u00b009'",
+      "house": 1,
+      "nak": "Ashlesha",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Neptune",
+      "sign": "Libra",
+      "deg": "27\u00b042'",
+      "house": 3,
+      "nak": "Swati",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Pluto",
+      "sign": "Aquarius",
+      "deg": "23\u00b031'",
+      "house": 7,
+      "nak": "Dhanishta",
+      "retro": false,
+      "neecha": false
+     }
+    ]
+   },
+   "sidereal": {
+    "asc": "Cancer 18\u00b039'",
+    "lagna_lord": "Moon",
+    "rows": [
+     {
+      "body": "Sun",
+      "sign": "Taurus",
+      "deg": "6\u00b019'",
+      "house": 11,
+      "nak": "Krittika",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Moon",
+      "sign": "Pisces",
+      "deg": "28\u00b048'",
+      "house": 9,
+      "nak": "Revati",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Mercury",
+      "sign": "Taurus",
+      "deg": "2\u00b049'",
+      "house": 11,
+      "nak": "Krittika",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Venus",
+      "sign": "Aries",
+      "deg": "14\u00b032'",
+      "house": 10,
+      "nak": "Bharani",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Mars",
+      "sign": "Leo",
+      "deg": "27\u00b047'",
+      "house": 2,
+      "nak": "Uttara Phalguni",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Jupiter",
+      "sign": "Libra",
+      "deg": "1\u00b059'",
+      "house": 4,
+      "nak": "Chitra",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Saturn",
+      "sign": "Aries",
+      "deg": "5\u00b025'",
+      "house": 10,
+      "nak": "Ashwini",
+      "retro": false,
+      "neecha": true
+     },
+     {
+      "body": "Rahu",
+      "sign": "Virgo",
+      "deg": "9\u00b043'",
+      "house": 3,
+      "nak": "Uttara Phalguni",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Ketu",
+      "sign": "Pisces",
+      "deg": "9\u00b043'",
+      "house": 9,
+      "nak": "Uttara Bhadrapada",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Uranus",
+      "sign": "Cancer",
+      "deg": "24\u00b011'",
+      "house": 1,
+      "nak": "Ashlesha",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Neptune",
+      "sign": "Libra",
+      "deg": "6\u00b044'",
+      "house": 4,
+      "nak": "Swati",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Pluto",
+      "sign": "Aquarius",
+      "deg": "2\u00b033'",
+      "house": 8,
+      "nak": "Dhanishta",
+      "retro": false,
+      "neecha": false
+     }
+    ]
+   }
+  },
+  "USA (4 Jul 1776, 17:10 LMT, Philadelphia - Sibly)": {
+   "tropical": {
+    "asc": "Sagittarius 12\u00b025'",
+    "lagna_lord": "Jupiter",
+    "rows": [
+     {
+      "body": "Sun",
+      "sign": "Cancer",
+      "deg": "13\u00b019'",
+      "house": 8,
+      "nak": "Punarvasu",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Moon",
+      "sign": "Aquarius",
+      "deg": "27\u00b010'",
+      "house": 3,
+      "nak": "Dhanishta",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Mercury",
+      "sign": "Cancer",
+      "deg": "24\u00b011'",
+      "house": 8,
+      "nak": "Pushya",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Venus",
+      "sign": "Cancer",
+      "deg": "3\u00b006'",
+      "house": 8,
+      "nak": "Ardra",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Mars",
+      "sign": "Gemini",
+      "deg": "21\u00b022'",
+      "house": 7,
+      "nak": "Mrigashira",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Jupiter",
+      "sign": "Cancer",
+      "deg": "5\u00b056'",
+      "house": 8,
+      "nak": "Ardra",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Saturn",
+      "sign": "Libra",
+      "deg": "14\u00b048'",
+      "house": 11,
+      "nak": "Chitra",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Rahu",
+      "sign": "Leo",
+      "deg": "7\u00b035'",
+      "house": 9,
+      "nak": "Ashlesha",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Ketu",
+      "sign": "Aquarius",
+      "deg": "7\u00b035'",
+      "house": 3,
+      "nak": "Shravana",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Uranus",
+      "sign": "Gemini",
+      "deg": "8\u00b055'",
+      "house": 7,
+      "nak": "Rohini",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Neptune",
+      "sign": "Virgo",
+      "deg": "22\u00b025'",
+      "house": 10,
+      "nak": "Uttara Phalguni",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Pluto",
+      "sign": "Capricorn",
+      "deg": "27\u00b033'",
+      "house": 2,
+      "nak": "Uttara Ashadha",
+      "retro": false,
+      "neecha": false
+     }
+    ]
+   },
+   "sidereal": {
+    "asc": "Scorpio 21\u00b041'",
+    "lagna_lord": "Mars",
+    "rows": [
+     {
+      "body": "Sun",
+      "sign": "Gemini",
+      "deg": "22\u00b035'",
+      "house": 8,
+      "nak": "Punarvasu",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Moon",
+      "sign": "Aquarius",
+      "deg": "6\u00b026'",
+      "house": 4,
+      "nak": "Dhanishta",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Mercury",
+      "sign": "Cancer",
+      "deg": "3\u00b027'",
+      "house": 9,
+      "nak": "Pushya",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Venus",
+      "sign": "Gemini",
+      "deg": "12\u00b022'",
+      "house": 8,
+      "nak": "Ardra",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Mars",
+      "sign": "Gemini",
+      "deg": "0\u00b038'",
+      "house": 8,
+      "nak": "Mrigashira",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Jupiter",
+      "sign": "Gemini",
+      "deg": "15\u00b012'",
+      "house": 8,
+      "nak": "Ardra",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Saturn",
+      "sign": "Virgo",
+      "deg": "24\u00b004'",
+      "house": 11,
+      "nak": "Chitra",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Rahu",
+      "sign": "Cancer",
+      "deg": "16\u00b051'",
+      "house": 9,
+      "nak": "Ashlesha",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Ketu",
+      "sign": "Capricorn",
+      "deg": "16\u00b051'",
+      "house": 3,
+      "nak": "Shravana",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Uranus",
+      "sign": "Taurus",
+      "deg": "18\u00b011'",
+      "house": 7,
+      "nak": "Rohini",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Neptune",
+      "sign": "Virgo",
+      "deg": "1\u00b041'",
+      "house": 11,
+      "nak": "Uttara Phalguni",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Pluto",
+      "sign": "Capricorn",
+      "deg": "6\u00b049'",
+      "house": 3,
+      "nak": "Uttara Ashadha",
+      "retro": false,
+      "neecha": false
+     }
+    ]
+   }
+  }
+ },
+ "transits": {
+  "NYSE": [
+   "transit Saturn in natal house 9",
+   "transit Jupiter in natal house 2",
+   "transit Rahu in natal house 8",
+   "transit Ketu in natal house 2",
+   "transit Mars in natal house 2"
+  ],
+  "USA": [
+   "transit Saturn in natal house 5",
+   "transit Jupiter opposite natal Moon (4.2\u00b0)",
+   "transit Jupiter in natal house 10",
+   "transit Rahu in natal house 4",
+   "transit Ketu in natal house 10",
+   "transit Mars opposite natal Moon (1.2\u00b0)",
+   "transit Mars in natal house 10"
+  ]
+ },
+ "returns": {
+  "A": [
+   {
+    "start": "Sun 20 Sep 2026 01:47 EDT",
+    "chart": {
+     "asc": "Cancer 28\u00b038'",
+     "lagna_lord": "Moon",
+     "rows": [
+      {
+       "body": "Sun",
+       "sign": "Virgo",
+       "deg": "27\u00b017'",
+       "house": 3,
+       "nak": "Uttara Phalguni",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Moon",
+       "sign": "Capricorn",
+       "deg": "12\u00b018'",
+       "house": 7,
+       "nak": "Purva Ashadha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mercury",
+       "sign": "Libra",
+       "deg": "15\u00b020'",
+       "house": 4,
+       "nak": "Hasta",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Venus",
+       "sign": "Scorpio",
+       "deg": "5\u00b028'",
+       "house": 5,
+       "nak": "Swati",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mars",
+       "sign": "Cancer",
+       "deg": "25\u00b018'",
+       "house": 1,
+       "nak": "Punarvasu",
+       "retro": false,
+       "neecha": true
+      },
+      {
+       "body": "Jupiter",
+       "sign": "Leo",
+       "deg": "17\u00b035'",
+       "house": 2,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Saturn",
+       "sign": "Aries",
+       "deg": "12\u00b024'",
+       "house": 10,
+       "nak": "Revati",
+       "retro": false,
+       "neecha": true
+      },
+      {
+       "body": "Rahu",
+       "sign": "Aquarius",
+       "deg": "28\u00b017'",
+       "house": 8,
+       "nak": "Dhanishta",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Ketu",
+       "sign": "Leo",
+       "deg": "28\u00b017'",
+       "house": 2,
+       "nak": "Magha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Uranus",
+       "sign": "Gemini",
+       "deg": "5\u00b039'",
+       "house": 12,
+       "nak": "Rohini",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Neptune",
+       "sign": "Aries",
+       "deg": "3\u00b009'",
+       "house": 10,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Pluto",
+       "sign": "Aquarius",
+       "deg": "3\u00b013'",
+       "house": 8,
+       "nak": "Uttara Ashadha",
+       "retro": false,
+       "neecha": false
+      }
+     ]
+    },
+    "flags": [
+     "Mars, Saturn, Rahu or Ketu in the 8th"
+    ]
+   },
+   {
+    "start": "Tue 20 Oct 2026 12:28 EDT",
+    "chart": {
+     "asc": "Capricorn 0\u00b015'",
+     "lagna_lord": "Saturn",
+     "rows": [
+      {
+       "body": "Sun",
+       "sign": "Libra",
+       "deg": "27\u00b018'",
+       "house": 10,
+       "nak": "Chitra",
+       "retro": false,
+       "neecha": true
+      },
+      {
+       "body": "Moon",
+       "sign": "Aquarius",
+       "deg": "19\u00b034'",
+       "house": 2,
+       "nak": "Dhanishta",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mercury",
+       "sign": "Scorpio",
+       "deg": "20\u00b011'",
+       "house": 11,
+       "nak": "Vishakha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Venus",
+       "sign": "Scorpio",
+       "deg": "2\u00b050'",
+       "house": 11,
+       "nak": "Swati",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mars",
+       "sign": "Leo",
+       "deg": "12\u00b043'",
+       "house": 8,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Jupiter",
+       "sign": "Leo",
+       "deg": "22\u00b048'",
+       "house": 8,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Saturn",
+       "sign": "Aries",
+       "deg": "10\u00b003'",
+       "house": 4,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": true
+      },
+      {
+       "body": "Rahu",
+       "sign": "Aquarius",
+       "deg": "26\u00b040'",
+       "house": 2,
+       "nak": "Dhanishta",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Ketu",
+       "sign": "Leo",
+       "deg": "26\u00b040'",
+       "house": 8,
+       "nak": "Magha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Uranus",
+       "sign": "Gemini",
+       "deg": "5\u00b003'",
+       "house": 6,
+       "nak": "Rohini",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Neptune",
+       "sign": "Aries",
+       "deg": "2\u00b020'",
+       "house": 4,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Pluto",
+       "sign": "Aquarius",
+       "deg": "3\u00b004'",
+       "house": 2,
+       "nak": "Uttara Ashadha",
+       "retro": false,
+       "neecha": false
+      }
+     ]
+    },
+    "flags": [
+     "Ascendant lord debilitated",
+     "Mars with Ketu in the 8th",
+     "Mars, Saturn, Rahu or Ketu in the 8th",
+     "Sun in the 10th",
+     "Both bearish indications (debilitated ascendant lord and a malefic in the 8th)"
+    ]
+   },
+   {
+    "start": "Thu 19 Nov 2026 10:10 EST",
+    "chart": {
+     "asc": "Capricorn 10\u00b001'",
+     "lagna_lord": "Saturn",
+     "rows": [
+      {
+       "body": "Sun",
+       "sign": "Scorpio",
+       "deg": "27\u00b018'",
+       "house": 11,
+       "nak": "Vishakha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Moon",
+       "sign": "Pisces",
+       "deg": "21\u00b059'",
+       "house": 3,
+       "nak": "Purva Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mercury",
+       "sign": "Scorpio",
+       "deg": "7\u00b054'",
+       "house": 11,
+       "nak": "Swati",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Venus",
+       "sign": "Libra",
+       "deg": "23\u00b028'",
+       "house": 10,
+       "nak": "Chitra",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mars",
+       "sign": "Leo",
+       "deg": "27\u00b021'",
+       "house": 8,
+       "nak": "Magha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Jupiter",
+       "sign": "Leo",
+       "deg": "26\u00b009'",
+       "house": 8,
+       "nak": "Magha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Saturn",
+       "sign": "Aries",
+       "deg": "8\u00b020'",
+       "house": 4,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": true
+      },
+      {
+       "body": "Rahu",
+       "sign": "Aquarius",
+       "deg": "25\u00b005'",
+       "house": 2,
+       "nak": "Dhanishta",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Ketu",
+       "sign": "Leo",
+       "deg": "25\u00b005'",
+       "house": 8,
+       "nak": "Magha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Uranus",
+       "sign": "Gemini",
+       "deg": "3\u00b056'",
+       "house": 6,
+       "nak": "Krittika",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Neptune",
+       "sign": "Aries",
+       "deg": "1\u00b045'",
+       "house": 4,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Pluto",
+       "sign": "Aquarius",
+       "deg": "3\u00b020'",
+       "house": 2,
+       "nak": "Uttara Ashadha",
+       "retro": false,
+       "neecha": false
+      }
+     ]
+    },
+    "flags": [
+     "Ascendant lord debilitated",
+     "Mars with Ketu in the 8th",
+     "Mars, Saturn, Rahu or Ketu in the 8th",
+     "Venus or Jupiter in the 10th",
+     "Both bearish indications (debilitated ascendant lord and a malefic in the 8th)"
+    ]
+   },
+   {
+    "start": "Sat 19 Dec 2026 00:10 EST",
+    "chart": {
+     "asc": "Libra 1\u00b008'",
+     "lagna_lord": "Venus",
+     "rows": [
+      {
+       "body": "Sun",
+       "sign": "Sagittarius",
+       "deg": "27\u00b017'",
+       "house": 3,
+       "nak": "Mula",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Moon",
+       "sign": "Aries",
+       "deg": "21\u00b013'",
+       "house": 7,
+       "nak": "Revati",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mercury",
+       "sign": "Sagittarius",
+       "deg": "19\u00b045'",
+       "house": 3,
+       "nak": "Jyeshtha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Venus",
+       "sign": "Scorpio",
+       "deg": "11\u00b025'",
+       "house": 2,
+       "nak": "Swati",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mars",
+       "sign": "Virgo",
+       "deg": "7\u00b034'",
+       "house": 12,
+       "nak": "Purva Phalguni",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Jupiter",
+       "sign": "Leo",
+       "deg": "26\u00b057'",
+       "house": 11,
+       "nak": "Magha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Saturn",
+       "sign": "Aries",
+       "deg": "7\u00b059'",
+       "house": 7,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": true
+      },
+      {
+       "body": "Rahu",
+       "sign": "Aquarius",
+       "deg": "23\u00b031'",
+       "house": 5,
+       "nak": "Dhanishta",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Ketu",
+       "sign": "Leo",
+       "deg": "23\u00b031'",
+       "house": 11,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Uranus",
+       "sign": "Gemini",
+       "deg": "2\u00b044'",
+       "house": 9,
+       "nak": "Krittika",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Neptune",
+       "sign": "Aries",
+       "deg": "1\u00b037'",
+       "house": 7,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Pluto",
+       "sign": "Aquarius",
+       "deg": "3\u00b059'",
+       "house": 5,
+       "nak": "Uttara Ashadha",
+       "retro": false,
+       "neecha": false
+      }
+     ]
+    },
+    "flags": []
+   },
+   {
+    "start": "Sun 17 Jan 2027 10:50 EST",
+    "chart": {
+     "asc": "Aries 17\u00b046'",
+     "lagna_lord": "Mars",
+     "rows": [
+      {
+       "body": "Sun",
+       "sign": "Capricorn",
+       "deg": "27\u00b017'",
+       "house": 10,
+       "nak": "Uttara Ashadha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Moon",
+       "sign": "Taurus",
+       "deg": "20\u00b005'",
+       "house": 2,
+       "nak": "Bharani",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mercury",
+       "sign": "Aquarius",
+       "deg": "7\u00b025'",
+       "house": 11,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Venus",
+       "sign": "Sagittarius",
+       "deg": "10\u00b059'",
+       "house": 9,
+       "nak": "Jyeshtha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mars",
+       "sign": "Virgo",
+       "deg": "10\u00b006'",
+       "house": 6,
+       "nak": "Purva Phalguni",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Jupiter",
+       "sign": "Leo",
+       "deg": "25\u00b002'",
+       "house": 5,
+       "nak": "Magha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Saturn",
+       "sign": "Aries",
+       "deg": "9\u00b011'",
+       "house": 1,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": true
+      },
+      {
+       "body": "Rahu",
+       "sign": "Aquarius",
+       "deg": "21\u00b057'",
+       "house": 11,
+       "nak": "Dhanishta",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Ketu",
+       "sign": "Leo",
+       "deg": "21\u00b057'",
+       "house": 5,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Uranus",
+       "sign": "Gemini",
+       "deg": "1\u00b053'",
+       "house": 3,
+       "nak": "Krittika",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Neptune",
+       "sign": "Aries",
+       "deg": "1\u00b058'",
+       "house": 1,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Pluto",
+       "sign": "Aquarius",
+       "deg": "4\u00b051'",
+       "house": 11,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      }
+     ]
+    },
+    "flags": [
+     "Sun in the 10th"
+    ]
+   },
+   {
+    "start": "Tue 16 Feb 2027 00:20 EST",
+    "chart": {
+     "asc": "Scorpio 18\u00b055'",
+     "lagna_lord": "Mars",
+     "rows": [
+      {
+       "body": "Sun",
+       "sign": "Aquarius",
+       "deg": "27\u00b017'",
+       "house": 4,
+       "nak": "Dhanishta",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Moon",
+       "sign": "Gemini",
+       "deg": "21\u00b059'",
+       "house": 8,
+       "nak": "Mrigashira",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mercury",
+       "sign": "Pisces",
+       "deg": "2\u00b027'",
+       "house": 5,
+       "nak": "Shatabhisha",
+       "retro": false,
+       "neecha": true
+      },
+      {
+       "body": "Venus",
+       "sign": "Capricorn",
+       "deg": "14\u00b037'",
+       "house": 3,
+       "nak": "Purva Ashadha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mars",
+       "sign": "Virgo",
+       "deg": "2\u00b007'",
+       "house": 11,
+       "nak": "Magha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Jupiter",
+       "sign": "Leo",
+       "deg": "21\u00b021'",
+       "house": 10,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Saturn",
+       "sign": "Aries",
+       "deg": "11\u00b042'",
+       "house": 6,
+       "nak": "Revati",
+       "retro": false,
+       "neecha": true
+      },
+      {
+       "body": "Rahu",
+       "sign": "Aquarius",
+       "deg": "20\u00b023'",
+       "house": 4,
+       "nak": "Dhanishta",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Ketu",
+       "sign": "Leo",
+       "deg": "20\u00b023'",
+       "house": 10,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Uranus",
+       "sign": "Gemini",
+       "deg": "1\u00b042'",
+       "house": 8,
+       "nak": "Krittika",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Neptune",
+       "sign": "Aries",
+       "deg": "2\u00b045'",
+       "house": 6,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Pluto",
+       "sign": "Aquarius",
+       "deg": "5\u00b047'",
+       "house": 4,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      }
+     ]
+    },
+    "flags": [
+     "Venus or Jupiter in the 10th"
+    ]
+   },
+   {
+    "start": "Wed 17 Mar 2027 23:13 EDT",
+    "chart": {
+     "asc": "Scorpio 17\u00b010'",
+     "lagna_lord": "Mars",
+     "rows": [
+      {
+       "body": "Sun",
+       "sign": "Pisces",
+       "deg": "27\u00b018'",
+       "house": 5,
+       "nak": "Purva Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Moon",
+       "sign": "Cancer",
+       "deg": "29\u00b043'",
+       "house": 9,
+       "nak": "Pushya",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mercury",
+       "sign": "Aquarius",
+       "deg": "29\u00b042'",
+       "house": 4,
+       "nak": "Dhanishta",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Venus",
+       "sign": "Aquarius",
+       "deg": "20\u00b007'",
+       "house": 4,
+       "nak": "Dhanishta",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mars",
+       "sign": "Leo",
+       "deg": "22\u00b015'",
+       "house": 10,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Jupiter",
+       "sign": "Leo",
+       "deg": "18\u00b002'",
+       "house": 10,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Saturn",
+       "sign": "Aries",
+       "deg": "15\u00b005'",
+       "house": 6,
+       "nak": "Revati",
+       "retro": false,
+       "neecha": true
+      },
+      {
+       "body": "Rahu",
+       "sign": "Aquarius",
+       "deg": "18\u00b048'",
+       "house": 4,
+       "nak": "Dhanishta",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Ketu",
+       "sign": "Leo",
+       "deg": "18\u00b048'",
+       "house": 10,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Uranus",
+       "sign": "Gemini",
+       "deg": "2\u00b017'",
+       "house": 8,
+       "nak": "Krittika",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Neptune",
+       "sign": "Aries",
+       "deg": "3\u00b049'",
+       "house": 6,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Pluto",
+       "sign": "Aquarius",
+       "deg": "6\u00b035'",
+       "house": 4,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      }
+     ]
+    },
+    "flags": [
+     "Venus or Jupiter in the 10th"
+    ]
+   },
+   {
+    "start": "Sat 17 Apr 2027 08:58 EDT",
+    "chart": {
+     "asc": "Gemini 18\u00b020'",
+     "lagna_lord": "Mercury",
+     "rows": [
+      {
+       "body": "Sun",
+       "sign": "Aries",
+       "deg": "27\u00b018'",
+       "house": 11,
+       "nak": "Ashwini",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Moon",
+       "sign": "Virgo",
+       "deg": "14\u00b009'",
+       "house": 4,
+       "nak": "Purva Phalguni",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mercury",
+       "sign": "Aries",
+       "deg": "15\u00b018'",
+       "house": 11,
+       "nak": "Revati",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Venus",
+       "sign": "Pisces",
+       "deg": "26\u00b049'",
+       "house": 10,
+       "nak": "Purva Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mars",
+       "sign": "Leo",
+       "deg": "22\u00b022'",
+       "house": 3,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Jupiter",
+       "sign": "Leo",
+       "deg": "17\u00b001'",
+       "house": 3,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Saturn",
+       "sign": "Aries",
+       "deg": "18\u00b054'",
+       "house": 11,
+       "nak": "Revati",
+       "retro": false,
+       "neecha": true
+      },
+      {
+       "body": "Rahu",
+       "sign": "Aquarius",
+       "deg": "17\u00b012'",
+       "house": 9,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Ketu",
+       "sign": "Leo",
+       "deg": "17\u00b012'",
+       "house": 3,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Uranus",
+       "sign": "Gemini",
+       "deg": "3\u00b033'",
+       "house": 1,
+       "nak": "Krittika",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Neptune",
+       "sign": "Aries",
+       "deg": "4\u00b057'",
+       "house": 11,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Pluto",
+       "sign": "Aquarius",
+       "deg": "7\u00b004'",
+       "house": 9,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      }
+     ]
+    },
+    "flags": [
+     "Venus or Jupiter in the 10th"
+    ]
+   },
+   {
+    "start": "Tue 18 May 2027 06:58 EDT",
+    "chart": {
+     "asc": "Gemini 18\u00b053'",
+     "lagna_lord": "Mercury",
+     "rows": [
+      {
+       "body": "Sun",
+       "sign": "Taurus",
+       "deg": "27\u00b018'",
+       "house": 12,
+       "nak": "Krittika",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Moon",
+       "sign": "Scorpio",
+       "deg": "3\u00b030'",
+       "house": 6,
+       "nak": "Swati",
+       "retro": false,
+       "neecha": true
+      },
+      {
+       "body": "Mercury",
+       "sign": "Gemini",
+       "deg": "17\u00b000'",
+       "house": 1,
+       "nak": "Rohini",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Venus",
+       "sign": "Taurus",
+       "deg": "4\u00b021'",
+       "house": 12,
+       "nak": "Ashwini",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mars",
+       "sign": "Virgo",
+       "deg": "1\u00b027'",
+       "house": 4,
+       "nak": "Magha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Jupiter",
+       "sign": "Leo",
+       "deg": "18\u00b050'",
+       "house": 3,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Saturn",
+       "sign": "Aries",
+       "deg": "22\u00b036'",
+       "house": 11,
+       "nak": "Revati",
+       "retro": false,
+       "neecha": true
+      },
+      {
+       "body": "Rahu",
+       "sign": "Aquarius",
+       "deg": "15\u00b033'",
+       "house": 9,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Ketu",
+       "sign": "Leo",
+       "deg": "15\u00b033'",
+       "house": 3,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Uranus",
+       "sign": "Gemini",
+       "deg": "5\u00b014'",
+       "house": 1,
+       "nak": "Rohini",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Neptune",
+       "sign": "Aries",
+       "deg": "5\u00b056'",
+       "house": 11,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Pluto",
+       "sign": "Aquarius",
+       "deg": "7\u00b009'",
+       "house": 9,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      }
+     ]
+    },
+    "flags": []
+   },
+   {
+    "start": "Fri 18 Jun 2027 14:16 EDT",
+    "chart": {
+     "asc": "Libra 13\u00b017'",
+     "lagna_lord": "Venus",
+     "rows": [
+      {
+       "body": "Sun",
+       "sign": "Gemini",
+       "deg": "27\u00b018'",
+       "house": 9,
+       "nak": "Mrigashira",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Moon",
+       "sign": "Sagittarius",
+       "deg": "24\u00b017'",
+       "house": 3,
+       "nak": "Mula",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mercury",
+       "sign": "Cancer",
+       "deg": "4\u00b011'",
+       "house": 10,
+       "nak": "Ardra",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Venus",
+       "sign": "Gemini",
+       "deg": "12\u00b029'",
+       "house": 9,
+       "nak": "Rohini",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mars",
+       "sign": "Virgo",
+       "deg": "15\u00b040'",
+       "house": 12,
+       "nak": "Purva Phalguni",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Jupiter",
+       "sign": "Leo",
+       "deg": "23\u00b001'",
+       "house": 11,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Saturn",
+       "sign": "Aries",
+       "deg": "25\u00b039'",
+       "house": 7,
+       "nak": "Ashwini",
+       "retro": false,
+       "neecha": true
+      },
+      {
+       "body": "Rahu",
+       "sign": "Aquarius",
+       "deg": "13\u00b054'",
+       "house": 5,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Ketu",
+       "sign": "Leo",
+       "deg": "13\u00b054'",
+       "house": 11,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Uranus",
+       "sign": "Gemini",
+       "deg": "7\u00b003'",
+       "house": 9,
+       "nak": "Rohini",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Neptune",
+       "sign": "Aries",
+       "deg": "6\u00b032'",
+       "house": 7,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Pluto",
+       "sign": "Aquarius",
+       "deg": "6\u00b048'",
+       "house": 5,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      }
+     ]
+    },
+    "flags": []
+   },
+   {
+    "start": "Tue 20 Jul 2027 01:10 EDT",
+    "chart": {
+     "asc": "Taurus 19\u00b038'",
+     "lagna_lord": "Venus",
+     "rows": [
+      {
+       "body": "Sun",
+       "sign": "Cancer",
+       "deg": "27\u00b017'",
+       "house": 3,
+       "nak": "Punarvasu",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Moon",
+       "sign": "Aquarius",
+       "deg": "14\u00b012'",
+       "house": 10,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mercury",
+       "sign": "Cancer",
+       "deg": "7\u00b025'",
+       "house": 3,
+       "nak": "Ardra",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Venus",
+       "sign": "Cancer",
+       "deg": "21\u00b000'",
+       "house": 3,
+       "nak": "Punarvasu",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mars",
+       "sign": "Libra",
+       "deg": "2\u00b051'",
+       "house": 6,
+       "nak": "Uttara Phalguni",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Jupiter",
+       "sign": "Leo",
+       "deg": "28\u00b047'",
+       "house": 4,
+       "nak": "Magha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Saturn",
+       "sign": "Aries",
+       "deg": "27\u00b030'",
+       "house": 12,
+       "nak": "Ashwini",
+       "retro": false,
+       "neecha": true
+      },
+      {
+       "body": "Rahu",
+       "sign": "Aquarius",
+       "deg": "12\u00b014'",
+       "house": 10,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Ketu",
+       "sign": "Leo",
+       "deg": "12\u00b014'",
+       "house": 4,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Uranus",
+       "sign": "Gemini",
+       "deg": "8\u00b038'",
+       "house": 2,
+       "nak": "Rohini",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Neptune",
+       "sign": "Aries",
+       "deg": "6\u00b037'",
+       "house": 12,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Pluto",
+       "sign": "Aquarius",
+       "deg": "6\u00b010'",
+       "house": 10,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      }
+     ]
+    },
+    "flags": []
+   },
+   {
+    "start": "Fri 20 Aug 2027 08:56 EDT",
+    "chart": {
+     "asc": "Virgo 28\u00b055'",
+     "lagna_lord": "Mercury",
+     "rows": [
+      {
+       "body": "Sun",
+       "sign": "Leo",
+       "deg": "27\u00b018'",
+       "house": 12,
+       "nak": "Magha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Moon",
+       "sign": "Aries",
+       "deg": "3\u00b004'",
+       "house": 8,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mercury",
+       "sign": "Virgo",
+       "deg": "6\u00b019'",
+       "house": 1,
+       "nak": "Magha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Venus",
+       "sign": "Leo",
+       "deg": "29\u00b039'",
+       "house": 12,
+       "nak": "Magha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mars",
+       "sign": "Libra",
+       "deg": "21\u00b055'",
+       "house": 2,
+       "nak": "Chitra",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Jupiter",
+       "sign": "Virgo",
+       "deg": "5\u00b021'",
+       "house": 1,
+       "nak": "Magha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Saturn",
+       "sign": "Aries",
+       "deg": "27\u00b046'",
+       "house": 8,
+       "nak": "Ashwini",
+       "retro": false,
+       "neecha": true
+      },
+      {
+       "body": "Rahu",
+       "sign": "Aquarius",
+       "deg": "10\u00b035'",
+       "house": 6,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Ketu",
+       "sign": "Leo",
+       "deg": "10\u00b035'",
+       "house": 12,
+       "nak": "Pushya",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Uranus",
+       "sign": "Gemini",
+       "deg": "9\u00b040'",
+       "house": 10,
+       "nak": "Rohini",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Neptune",
+       "sign": "Aries",
+       "deg": "6\u00b013'",
+       "house": 8,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Pluto",
+       "sign": "Aquarius",
+       "deg": "5\u00b027'",
+       "house": 6,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      }
+     ]
+    },
+    "flags": [
+     "Mars, Saturn, Rahu or Ketu in the 8th"
+    ]
+   },
+   {
+    "start": "Mon 20 Sep 2027 07:44 EDT",
+    "chart": {
+     "asc": "Libra 8\u00b058'",
+     "lagna_lord": "Venus",
+     "rows": [
+      {
+       "body": "Sun",
+       "sign": "Virgo",
+       "deg": "27\u00b018'",
+       "house": 12,
+       "nak": "Uttara Phalguni",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Moon",
+       "sign": "Taurus",
+       "deg": "20\u00b024'",
+       "house": 8,
+       "nak": "Bharani",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mercury",
+       "sign": "Libra",
+       "deg": "23\u00b004'",
+       "house": 1,
+       "nak": "Chitra",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Venus",
+       "sign": "Libra",
+       "deg": "8\u00b002'",
+       "house": 1,
+       "nak": "Hasta",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mars",
+       "sign": "Scorpio",
+       "deg": "12\u00b016'",
+       "house": 2,
+       "nak": "Swati",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Jupiter",
+       "sign": "Virgo",
+       "deg": "12\u00b003'",
+       "house": 12,
+       "nak": "Purva Phalguni",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Saturn",
+       "sign": "Aries",
+       "deg": "26\u00b027'",
+       "house": 7,
+       "nak": "Ashwini",
+       "retro": false,
+       "neecha": true
+      },
+      {
+       "body": "Rahu",
+       "sign": "Aquarius",
+       "deg": "8\u00b056'",
+       "house": 5,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Ketu",
+       "sign": "Leo",
+       "deg": "8\u00b056'",
+       "house": 11,
+       "nak": "Pushya",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Uranus",
+       "sign": "Gemini",
+       "deg": "9\u00b056'",
+       "house": 9,
+       "nak": "Rohini",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Neptune",
+       "sign": "Aries",
+       "deg": "5\u00b027'",
+       "house": 7,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Pluto",
+       "sign": "Aquarius",
+       "deg": "4\u00b055'",
+       "house": 5,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      }
+     ]
+    },
+    "flags": []
+   },
+   {
+    "start": "Wed 20 Oct 2027 18:24 EDT",
+    "chart": {
+     "asc": "Taurus 5\u00b010'",
+     "lagna_lord": "Venus",
+     "rows": [
+      {
+       "body": "Sun",
+       "sign": "Libra",
+       "deg": "27\u00b018'",
+       "house": 6,
+       "nak": "Chitra",
+       "retro": false,
+       "neecha": true
+      },
+      {
+       "body": "Moon",
+       "sign": "Cancer",
+       "deg": "4\u00b001'",
+       "house": 3,
+       "nak": "Ardra",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mercury",
+       "sign": "Libra",
+       "deg": "24\u00b027'",
+       "house": 6,
+       "nak": "Chitra",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Venus",
+       "sign": "Scorpio",
+       "deg": "15\u00b051'",
+       "house": 7,
+       "nak": "Vishakha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mars",
+       "sign": "Sagittarius",
+       "deg": "3\u00b032'",
+       "house": 8,
+       "nak": "Anuradha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Jupiter",
+       "sign": "Virgo",
+       "deg": "18\u00b015'",
+       "house": 5,
+       "nak": "Purva Phalguni",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Saturn",
+       "sign": "Aries",
+       "deg": "24\u00b010'",
+       "house": 12,
+       "nak": "Revati",
+       "retro": false,
+       "neecha": true
+      },
+      {
+       "body": "Rahu",
+       "sign": "Aquarius",
+       "deg": "7\u00b019'",
+       "house": 10,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Ketu",
+       "sign": "Leo",
+       "deg": "7\u00b019'",
+       "house": 4,
+       "nak": "Pushya",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Uranus",
+       "sign": "Gemini",
+       "deg": "9\u00b026'",
+       "house": 2,
+       "nak": "Rohini",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Neptune",
+       "sign": "Aries",
+       "deg": "4\u00b038'",
+       "house": 12,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Pluto",
+       "sign": "Aquarius",
+       "deg": "4\u00b045'",
+       "house": 10,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      }
+     ]
+    },
+    "flags": [
+     "Mars, Saturn, Rahu or Ketu in the 8th"
+    ]
+   },
+   {
+    "start": "Fri 19 Nov 2027 16:05 EST",
+    "chart": {
+     "asc": "Taurus 19\u00b007'",
+     "lagna_lord": "Venus",
+     "rows": [
+      {
+       "body": "Sun",
+       "sign": "Scorpio",
+       "deg": "27\u00b018'",
+       "house": 7,
+       "nak": "Vishakha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Moon",
+       "sign": "Leo",
+       "deg": "12\u00b010'",
+       "house": 4,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mercury",
+       "sign": "Scorpio",
+       "deg": "14\u00b054'",
+       "house": 7,
+       "nak": "Vishakha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Venus",
+       "sign": "Sagittarius",
+       "deg": "23\u00b002'",
+       "house": 8,
+       "nak": "Jyeshtha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mars",
+       "sign": "Sagittarius",
+       "deg": "25\u00b033'",
+       "house": 8,
+       "nak": "Mula",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Jupiter",
+       "sign": "Virgo",
+       "deg": "23\u00b019'",
+       "house": 5,
+       "nak": "Uttara Phalguni",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Saturn",
+       "sign": "Aries",
+       "deg": "22\u00b002'",
+       "house": 12,
+       "nak": "Revati",
+       "retro": false,
+       "neecha": true
+      },
+      {
+       "body": "Rahu",
+       "sign": "Aquarius",
+       "deg": "5\u00b044'",
+       "house": 10,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Ketu",
+       "sign": "Leo",
+       "deg": "5\u00b044'",
+       "house": 4,
+       "nak": "Pushya",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Uranus",
+       "sign": "Gemini",
+       "deg": "8\u00b022'",
+       "house": 2,
+       "nak": "Rohini",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Neptune",
+       "sign": "Aries",
+       "deg": "4\u00b002'",
+       "house": 12,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Pluto",
+       "sign": "Aquarius",
+       "deg": "5\u00b000'",
+       "house": 10,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      }
+     ]
+    },
+    "flags": [
+     "Mars, Saturn, Rahu or Ketu in the 8th"
+    ]
+   },
+   {
+    "start": "Sun 19 Dec 2027 06:03 EST",
+    "chart": {
+     "asc": "Sagittarius 10\u00b050'",
+     "lagna_lord": "Jupiter",
+     "rows": [
+      {
+       "body": "Sun",
+       "sign": "Sagittarius",
+       "deg": "27\u00b018'",
+       "house": 1,
+       "nak": "Mula",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Moon",
+       "sign": "Virgo",
+       "deg": "15\u00b018'",
+       "house": 10,
+       "nak": "Purva Phalguni",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mercury",
+       "sign": "Capricorn",
+       "deg": "1\u00b031'",
+       "house": 2,
+       "nak": "Mula",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Venus",
+       "sign": "Capricorn",
+       "deg": "29\u00b036'",
+       "house": 2,
+       "nak": "Uttara Ashadha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mars",
+       "sign": "Capricorn",
+       "deg": "18\u00b008'",
+       "house": 2,
+       "nak": "Purva Ashadha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Jupiter",
+       "sign": "Virgo",
+       "deg": "26\u00b037'",
+       "house": 10,
+       "nak": "Uttara Phalguni",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Saturn",
+       "sign": "Aries",
+       "deg": "21\u00b002'",
+       "house": 5,
+       "nak": "Revati",
+       "retro": false,
+       "neecha": true
+      },
+      {
+       "body": "Rahu",
+       "sign": "Aquarius",
+       "deg": "4\u00b010'",
+       "house": 3,
+       "nak": "Uttara Ashadha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Ketu",
+       "sign": "Leo",
+       "deg": "4\u00b010'",
+       "house": 9,
+       "nak": "Pushya",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Uranus",
+       "sign": "Gemini",
+       "deg": "7\u00b008'",
+       "house": 7,
+       "nak": "Rohini",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Neptune",
+       "sign": "Aries",
+       "deg": "3\u00b051'",
+       "house": 5,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Pluto",
+       "sign": "Aquarius",
+       "deg": "5\u00b037'",
+       "house": 3,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      }
+     ]
+    },
+    "flags": [
+     "Venus or Jupiter in the 10th"
+    ]
+   }
+  ],
+  "B": [
+   {
+    "start": "Wed 23 Sep 2026 09:53 EDT",
+    "chart": {
+     "asc": "Libra 12\u00b038'",
+     "lagna_lord": "Venus",
+     "rows": [
+      {
+       "body": "Sun",
+       "sign": "Virgo",
+       "deg": "6\u00b019'",
+       "house": 12,
+       "nak": "Uttara Phalguni",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Moon",
+       "sign": "Capricorn",
+       "deg": "28\u00b039'",
+       "house": 4,
+       "nak": "Dhanishta",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mercury",
+       "sign": "Virgo",
+       "deg": "26\u00b005'",
+       "house": 12,
+       "nak": "Chitra",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Venus",
+       "sign": "Libra",
+       "deg": "12\u00b032'",
+       "house": 1,
+       "nak": "Swati",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mars",
+       "sign": "Cancer",
+       "deg": "3\u00b004'",
+       "house": 10,
+       "nak": "Punarvasu",
+       "retro": false,
+       "neecha": true
+      },
+      {
+       "body": "Jupiter",
+       "sign": "Cancer",
+       "deg": "23\u00b059'",
+       "house": 10,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Saturn",
+       "sign": "Pisces",
+       "deg": "17\u00b055'",
+       "house": 6,
+       "nak": "Revati",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Rahu",
+       "sign": "Aquarius",
+       "deg": "3\u00b052'",
+       "house": 5,
+       "nak": "Dhanishta",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Ketu",
+       "sign": "Leo",
+       "deg": "3\u00b052'",
+       "house": 11,
+       "nak": "Magha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Uranus",
+       "sign": "Taurus",
+       "deg": "11\u00b023'",
+       "house": 8,
+       "nak": "Rohini",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Neptune",
+       "sign": "Pisces",
+       "deg": "8\u00b050'",
+       "house": 6,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Pluto",
+       "sign": "Capricorn",
+       "deg": "8\u00b057'",
+       "house": 4,
+       "nak": "Uttara Ashadha",
+       "retro": false,
+       "neecha": false
+      }
+     ]
+    },
+    "flags": [
+     "Venus or Jupiter in the 10th"
+    ]
+   },
+   {
+    "start": "Fri 23 Oct 2026 19:13 EDT",
+    "chart": {
+     "asc": "Taurus 2\u00b021'",
+     "lagna_lord": "Venus",
+     "rows": [
+      {
+       "body": "Sun",
+       "sign": "Libra",
+       "deg": "6\u00b019'",
+       "house": 6,
+       "nak": "Chitra",
+       "retro": false,
+       "neecha": true
+      },
+      {
+       "body": "Moon",
+       "sign": "Pisces",
+       "deg": "7\u00b038'",
+       "house": 11,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mercury",
+       "sign": "Libra",
+       "deg": "26\u00b044'",
+       "house": 6,
+       "nak": "Vishakha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Venus",
+       "sign": "Libra",
+       "deg": "6\u00b037'",
+       "house": 6,
+       "nak": "Chitra",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mars",
+       "sign": "Cancer",
+       "deg": "20\u00b014'",
+       "house": 3,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": true
+      },
+      {
+       "body": "Jupiter",
+       "sign": "Cancer",
+       "deg": "29\u00b002'",
+       "house": 3,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Saturn",
+       "sign": "Pisces",
+       "deg": "15\u00b035'",
+       "house": 11,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Rahu",
+       "sign": "Aquarius",
+       "deg": "2\u00b015'",
+       "house": 10,
+       "nak": "Dhanishta",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Ketu",
+       "sign": "Leo",
+       "deg": "2\u00b015'",
+       "house": 4,
+       "nak": "Magha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Uranus",
+       "sign": "Taurus",
+       "deg": "10\u00b043'",
+       "house": 1,
+       "nak": "Rohini",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Neptune",
+       "sign": "Pisces",
+       "deg": "8\u00b001'",
+       "house": 11,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Pluto",
+       "sign": "Capricorn",
+       "deg": "8\u00b050'",
+       "house": 9,
+       "nak": "Uttara Ashadha",
+       "retro": false,
+       "neecha": false
+      }
+     ]
+    },
+    "flags": []
+   },
+   {
+    "start": "Sun 22 Nov 2026 15:48 EST",
+    "chart": {
+     "asc": "Aries 23\u00b035'",
+     "lagna_lord": "Mars",
+     "rows": [
+      {
+       "body": "Sun",
+       "sign": "Scorpio",
+       "deg": "6\u00b019'",
+       "house": 8,
+       "nak": "Anuradha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Moon",
+       "sign": "Aries",
+       "deg": "12\u00b009'",
+       "house": 1,
+       "nak": "Ashwini",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mercury",
+       "sign": "Libra",
+       "deg": "16\u00b058'",
+       "house": 7,
+       "nak": "Swati",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Venus",
+       "sign": "Libra",
+       "deg": "0\u00b007'",
+       "house": 7,
+       "nak": "Chitra",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mars",
+       "sign": "Leo",
+       "deg": "4\u00b029'",
+       "house": 5,
+       "nak": "Magha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Jupiter",
+       "sign": "Leo",
+       "deg": "2\u00b008'",
+       "house": 5,
+       "nak": "Magha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Saturn",
+       "sign": "Pisces",
+       "deg": "13\u00b059'",
+       "house": 12,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Rahu",
+       "sign": "Aquarius",
+       "deg": "0\u00b040'",
+       "house": 11,
+       "nak": "Dhanishta",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Ketu",
+       "sign": "Leo",
+       "deg": "0\u00b040'",
+       "house": 5,
+       "nak": "Magha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Uranus",
+       "sign": "Taurus",
+       "deg": "9\u00b034'",
+       "house": 2,
+       "nak": "Krittika",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Neptune",
+       "sign": "Pisces",
+       "deg": "7\u00b029'",
+       "house": 12,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Pluto",
+       "sign": "Capricorn",
+       "deg": "9\u00b010'",
+       "house": 10,
+       "nak": "Uttara Ashadha",
+       "retro": false,
+       "neecha": false
+      }
+     ]
+    },
+    "flags": []
+   },
+   {
+    "start": "Tue 22 Dec 2026 05:11 EST",
+    "chart": {
+     "asc": "Scorpio 8\u00b035'",
+     "lagna_lord": "Mars",
+     "rows": [
+      {
+       "body": "Sun",
+       "sign": "Sagittarius",
+       "deg": "6\u00b019'",
+       "house": 2,
+       "nak": "Mula",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Moon",
+       "sign": "Taurus",
+       "deg": "13\u00b004'",
+       "house": 7,
+       "nak": "Rohini",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mercury",
+       "sign": "Sagittarius",
+       "deg": "0\u00b031'",
+       "house": 2,
+       "nak": "Mula",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Venus",
+       "sign": "Libra",
+       "deg": "20\u00b004'",
+       "house": 12,
+       "nak": "Vishakha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mars",
+       "sign": "Leo",
+       "deg": "14\u00b003'",
+       "house": 10,
+       "nak": "Purva Phalguni",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Jupiter",
+       "sign": "Leo",
+       "deg": "2\u00b038'",
+       "house": 10,
+       "nak": "Magha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Saturn",
+       "sign": "Pisces",
+       "deg": "13\u00b048'",
+       "house": 5,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Rahu",
+       "sign": "Capricorn",
+       "deg": "29\u00b006'",
+       "house": 3,
+       "nak": "Dhanishta",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Ketu",
+       "sign": "Cancer",
+       "deg": "29\u00b006'",
+       "house": 9,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Uranus",
+       "sign": "Taurus",
+       "deg": "8\u00b022'",
+       "house": 7,
+       "nak": "Krittika",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Neptune",
+       "sign": "Pisces",
+       "deg": "7\u00b024'",
+       "house": 5,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Pluto",
+       "sign": "Capricorn",
+       "deg": "9\u00b050'",
+       "house": 3,
+       "nak": "Uttara Ashadha",
+       "retro": false,
+       "neecha": false
+      }
+     ]
+    },
+    "flags": [
+     "Venus or Jupiter in the 10th"
+    ]
+   },
+   {
+    "start": "Wed 20 Jan 2027 15:53 EST",
+    "chart": {
+     "asc": "Gemini 24\u00b009'",
+     "lagna_lord": "Mercury",
+     "rows": [
+      {
+       "body": "Sun",
+       "sign": "Capricorn",
+       "deg": "6\u00b019'",
+       "house": 8,
+       "nak": "Uttara Ashadha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Moon",
+       "sign": "Gemini",
+       "deg": "13\u00b001'",
+       "house": 1,
+       "nak": "Ardra",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mercury",
+       "sign": "Capricorn",
+       "deg": "18\u00b035'",
+       "house": 8,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Venus",
+       "sign": "Scorpio",
+       "deg": "20\u00b016'",
+       "house": 6,
+       "nak": "Jyeshtha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mars",
+       "sign": "Leo",
+       "deg": "15\u00b029'",
+       "house": 3,
+       "nak": "Purva Phalguni",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Jupiter",
+       "sign": "Leo",
+       "deg": "0\u00b027'",
+       "house": 3,
+       "nak": "Magha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Saturn",
+       "sign": "Pisces",
+       "deg": "15\u00b010'",
+       "house": 10,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Rahu",
+       "sign": "Capricorn",
+       "deg": "27\u00b033'",
+       "house": 8,
+       "nak": "Dhanishta",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Ketu",
+       "sign": "Cancer",
+       "deg": "27\u00b033'",
+       "house": 2,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Uranus",
+       "sign": "Taurus",
+       "deg": "7\u00b035'",
+       "house": 12,
+       "nak": "Krittika",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Neptune",
+       "sign": "Pisces",
+       "deg": "7\u00b048'",
+       "house": 10,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Pluto",
+       "sign": "Capricorn",
+       "deg": "10\u00b043'",
+       "house": 8,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      }
+     ]
+    },
+    "flags": [
+     "Mars, Saturn, Rahu or Ketu in the 8th"
+    ]
+   },
+   {
+    "start": "Fri 19 Feb 2027 06:06 EST",
+    "chart": {
+     "asc": "Capricorn 20\u00b019'",
+     "lagna_lord": "Saturn",
+     "rows": [
+      {
+       "body": "Sun",
+       "sign": "Aquarius",
+       "deg": "6\u00b019'",
+       "house": 2,
+       "nak": "Dhanishta",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Moon",
+       "sign": "Cancer",
+       "deg": "15\u00b025'",
+       "house": 7,
+       "nak": "Pushya",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mercury",
+       "sign": "Aquarius",
+       "deg": "4\u00b040'",
+       "house": 2,
+       "nak": "Dhanishta",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Venus",
+       "sign": "Sagittarius",
+       "deg": "24\u00b010'",
+       "house": 12,
+       "nak": "Purva Ashadha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mars",
+       "sign": "Leo",
+       "deg": "6\u00b036'",
+       "house": 8,
+       "nak": "Magha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Jupiter",
+       "sign": "Cancer",
+       "deg": "26\u00b041'",
+       "house": 7,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Saturn",
+       "sign": "Pisces",
+       "deg": "17\u00b047'",
+       "house": 3,
+       "nak": "Revati",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Rahu",
+       "sign": "Capricorn",
+       "deg": "25\u00b059'",
+       "house": 1,
+       "nak": "Dhanishta",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Ketu",
+       "sign": "Cancer",
+       "deg": "25\u00b059'",
+       "house": 7,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Uranus",
+       "sign": "Taurus",
+       "deg": "7\u00b029'",
+       "house": 5,
+       "nak": "Krittika",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Neptune",
+       "sign": "Pisces",
+       "deg": "8\u00b037'",
+       "house": 3,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Pluto",
+       "sign": "Capricorn",
+       "deg": "11\u00b038'",
+       "house": 1,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      }
+     ]
+    },
+    "flags": [
+     "Mars, Saturn, Rahu or Ketu in the 8th"
+    ]
+   },
+   {
+    "start": "Sun 21 Mar 2027 06:11 EDT",
+    "chart": {
+     "asc": "Aquarius 14\u00b027'",
+     "lagna_lord": "Saturn",
+     "rows": [
+      {
+       "body": "Sun",
+       "sign": "Pisces",
+       "deg": "6\u00b019'",
+       "house": 2,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Moon",
+       "sign": "Leo",
+       "deg": "22\u00b050'",
+       "house": 7,
+       "nak": "Purva Phalguni",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mercury",
+       "sign": "Aquarius",
+       "deg": "9\u00b005'",
+       "house": 1,
+       "nak": "Shatabhisha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Venus",
+       "sign": "Capricorn",
+       "deg": "29\u00b050'",
+       "house": 12,
+       "nak": "Dhanishta",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mars",
+       "sign": "Cancer",
+       "deg": "27\u00b028'",
+       "house": 6,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": true
+      },
+      {
+       "body": "Jupiter",
+       "sign": "Cancer",
+       "deg": "23\u00b033'",
+       "house": 6,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Saturn",
+       "sign": "Pisces",
+       "deg": "21\u00b015'",
+       "house": 2,
+       "nak": "Revati",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Rahu",
+       "sign": "Capricorn",
+       "deg": "24\u00b023'",
+       "house": 12,
+       "nak": "Dhanishta",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Ketu",
+       "sign": "Cancer",
+       "deg": "24\u00b023'",
+       "house": 6,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Uranus",
+       "sign": "Taurus",
+       "deg": "8\u00b009'",
+       "house": 4,
+       "nak": "Krittika",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Neptune",
+       "sign": "Pisces",
+       "deg": "9\u00b042'",
+       "house": 2,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Pluto",
+       "sign": "Capricorn",
+       "deg": "12\u00b024'",
+       "house": 12,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      }
+     ]
+    },
+    "flags": []
+   },
+   {
+    "start": "Tue 20 Apr 2027 17:19 EDT",
+    "chart": {
+     "asc": "Virgo 9\u00b029'",
+     "lagna_lord": "Mercury",
+     "rows": [
+      {
+       "body": "Sun",
+       "sign": "Aries",
+       "deg": "6\u00b019'",
+       "house": 8,
+       "nak": "Ashwini",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Moon",
+       "sign": "Libra",
+       "deg": "5\u00b045'",
+       "house": 2,
+       "nak": "Chitra",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mercury",
+       "sign": "Pisces",
+       "deg": "27\u00b033'",
+       "house": 7,
+       "nak": "Revati",
+       "retro": false,
+       "neecha": true
+      },
+      {
+       "body": "Venus",
+       "sign": "Pisces",
+       "deg": "6\u00b038'",
+       "house": 7,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mars",
+       "sign": "Cancer",
+       "deg": "28\u00b046'",
+       "house": 11,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": true
+      },
+      {
+       "body": "Jupiter",
+       "sign": "Cancer",
+       "deg": "22\u00b050'",
+       "house": 11,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Saturn",
+       "sign": "Pisces",
+       "deg": "25\u00b004'",
+       "house": 7,
+       "nak": "Revati",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Rahu",
+       "sign": "Capricorn",
+       "deg": "22\u00b047'",
+       "house": 5,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Ketu",
+       "sign": "Cancer",
+       "deg": "22\u00b047'",
+       "house": 11,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Uranus",
+       "sign": "Taurus",
+       "deg": "9\u00b028'",
+       "house": 9,
+       "nak": "Krittika",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Neptune",
+       "sign": "Pisces",
+       "deg": "10\u00b050'",
+       "house": 7,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Pluto",
+       "sign": "Capricorn",
+       "deg": "12\u00b051'",
+       "house": 5,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      }
+     ]
+    },
+    "flags": [
+     "Ascendant lord debilitated"
+    ]
+   },
+   {
+    "start": "Fri 21 May 2027 16:35 EDT",
+    "chart": {
+     "asc": "Virgo 24\u00b046'",
+     "lagna_lord": "Mercury",
+     "rows": [
+      {
+       "body": "Sun",
+       "sign": "Taurus",
+       "deg": "6\u00b019'",
+       "house": 9,
+       "nak": "Krittika",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Moon",
+       "sign": "Scorpio",
+       "deg": "22\u00b027'",
+       "house": 3,
+       "nak": "Jyeshtha",
+       "retro": false,
+       "neecha": true
+      },
+      {
+       "body": "Mercury",
+       "sign": "Taurus",
+       "deg": "27\u00b046'",
+       "house": 9,
+       "nak": "Mrigashira",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Venus",
+       "sign": "Aries",
+       "deg": "14\u00b014'",
+       "house": 8,
+       "nak": "Bharani",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mars",
+       "sign": "Leo",
+       "deg": "8\u00b034'",
+       "house": 12,
+       "nak": "Magha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Jupiter",
+       "sign": "Cancer",
+       "deg": "24\u00b057'",
+       "house": 11,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Saturn",
+       "sign": "Pisces",
+       "deg": "28\u00b044'",
+       "house": 7,
+       "nak": "Revati",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Rahu",
+       "sign": "Capricorn",
+       "deg": "21\u00b008'",
+       "house": 5,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Ketu",
+       "sign": "Cancer",
+       "deg": "21\u00b008'",
+       "house": 11,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Uranus",
+       "sign": "Taurus",
+       "deg": "11\u00b012'",
+       "house": 9,
+       "nak": "Rohini",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Neptune",
+       "sign": "Pisces",
+       "deg": "11\u00b046'",
+       "house": 7,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Pluto",
+       "sign": "Capricorn",
+       "deg": "12\u00b053'",
+       "house": 5,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      }
+     ]
+    },
+    "flags": []
+   },
+   {
+    "start": "Tue 22 Jun 2027 00:37 EDT",
+    "chart": {
+     "asc": "Aquarius 27\u00b050'",
+     "lagna_lord": "Saturn",
+     "rows": [
+      {
+       "body": "Sun",
+       "sign": "Gemini",
+       "deg": "6\u00b019'",
+       "house": 5,
+       "nak": "Mrigashira",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Moon",
+       "sign": "Capricorn",
+       "deg": "10\u00b058'",
+       "house": 12,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mercury",
+       "sign": "Gemini",
+       "deg": "8\u00b004'",
+       "house": 5,
+       "nak": "Ardra",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Venus",
+       "sign": "Taurus",
+       "deg": "22\u00b026'",
+       "house": 4,
+       "nak": "Rohini",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mars",
+       "sign": "Leo",
+       "deg": "23\u00b011'",
+       "house": 7,
+       "nak": "Purva Phalguni",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Jupiter",
+       "sign": "Cancer",
+       "deg": "29\u00b021'",
+       "house": 6,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Saturn",
+       "sign": "Aries",
+       "deg": "1\u00b041'",
+       "house": 3,
+       "nak": "Ashwini",
+       "retro": false,
+       "neecha": true
+      },
+      {
+       "body": "Rahu",
+       "sign": "Capricorn",
+       "deg": "19\u00b028'",
+       "house": 12,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Ketu",
+       "sign": "Cancer",
+       "deg": "19\u00b028'",
+       "house": 6,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Uranus",
+       "sign": "Taurus",
+       "deg": "13\u00b000'",
+       "house": 4,
+       "nak": "Rohini",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Neptune",
+       "sign": "Pisces",
+       "deg": "12\u00b019'",
+       "house": 2,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Pluto",
+       "sign": "Capricorn",
+       "deg": "12\u00b030'",
+       "house": 12,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      }
+     ]
+    },
+    "flags": [
+     "Ascendant lord debilitated"
+    ]
+   },
+   {
+    "start": "Fri 23 Jul 2027 11:32 EDT",
+    "chart": {
+     "asc": "Virgo 13\u00b057'",
+     "lagna_lord": "Mercury",
+     "rows": [
+      {
+       "body": "Sun",
+       "sign": "Cancer",
+       "deg": "6\u00b019'",
+       "house": 11,
+       "nak": "Pushya",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Moon",
+       "sign": "Pisces",
+       "deg": "0\u00b052'",
+       "house": 7,
+       "nak": "Purva Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mercury",
+       "sign": "Gemini",
+       "deg": "17\u00b059'",
+       "house": 10,
+       "nak": "Ardra",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Venus",
+       "sign": "Cancer",
+       "deg": "0\u00b059'",
+       "house": 11,
+       "nak": "Punarvasu",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mars",
+       "sign": "Virgo",
+       "deg": "10\u00b037'",
+       "house": 1,
+       "nak": "Hasta",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Jupiter",
+       "sign": "Leo",
+       "deg": "5\u00b014'",
+       "house": 12,
+       "nak": "Magha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Saturn",
+       "sign": "Aries",
+       "deg": "3\u00b022'",
+       "house": 8,
+       "nak": "Ashwini",
+       "retro": false,
+       "neecha": true
+      },
+      {
+       "body": "Rahu",
+       "sign": "Capricorn",
+       "deg": "17\u00b048'",
+       "house": 5,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Ketu",
+       "sign": "Cancer",
+       "deg": "17\u00b048'",
+       "house": 11,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Uranus",
+       "sign": "Taurus",
+       "deg": "14\u00b032'",
+       "house": 9,
+       "nak": "Rohini",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Neptune",
+       "sign": "Pisces",
+       "deg": "12\u00b021'",
+       "house": 7,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Pluto",
+       "sign": "Capricorn",
+       "deg": "11\u00b050'",
+       "house": 5,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      }
+     ]
+    },
+    "flags": [
+     "Mars, Saturn, Rahu or Ketu in the 8th"
+    ]
+   },
+   {
+    "start": "Mon 23 Aug 2027 18:36 EDT",
+    "chart": {
+     "asc": "Capricorn 13\u00b051'",
+     "lagna_lord": "Saturn",
+     "rows": [
+      {
+       "body": "Sun",
+       "sign": "Leo",
+       "deg": "6\u00b019'",
+       "house": 8,
+       "nak": "Magha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Moon",
+       "sign": "Aries",
+       "deg": "21\u00b058'",
+       "house": 4,
+       "nak": "Bharani",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mercury",
+       "sign": "Leo",
+       "deg": "18\u00b015'",
+       "house": 8,
+       "nak": "Purva Phalguni",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Venus",
+       "sign": "Leo",
+       "deg": "9\u00b036'",
+       "house": 8,
+       "nak": "Magha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mars",
+       "sign": "Virgo",
+       "deg": "29\u00b050'",
+       "house": 9,
+       "nak": "Chitra",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Jupiter",
+       "sign": "Leo",
+       "deg": "11\u00b050'",
+       "house": 8,
+       "nak": "Magha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Saturn",
+       "sign": "Aries",
+       "deg": "3\u00b027'",
+       "house": 4,
+       "nak": "Ashwini",
+       "retro": false,
+       "neecha": true
+      },
+      {
+       "body": "Rahu",
+       "sign": "Capricorn",
+       "deg": "16\u00b009'",
+       "house": 1,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Ketu",
+       "sign": "Cancer",
+       "deg": "16\u00b009'",
+       "house": 7,
+       "nak": "Pushya",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Uranus",
+       "sign": "Taurus",
+       "deg": "15\u00b029'",
+       "house": 5,
+       "nak": "Rohini",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Neptune",
+       "sign": "Pisces",
+       "deg": "11\u00b054'",
+       "house": 3,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Pluto",
+       "sign": "Capricorn",
+       "deg": "11\u00b008'",
+       "house": 1,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      }
+     ]
+    },
+    "flags": [
+     "Ascendant lord debilitated"
+    ]
+   },
+   {
+    "start": "Thu 23 Sep 2027 16:11 EDT",
+    "chart": {
+     "asc": "Capricorn 6\u00b042'",
+     "lagna_lord": "Saturn",
+     "rows": [
+      {
+       "body": "Sun",
+       "sign": "Virgo",
+       "deg": "6\u00b019'",
+       "house": 9,
+       "nak": "Uttara Phalguni",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Moon",
+       "sign": "Gemini",
+       "deg": "11\u00b038'",
+       "house": 6,
+       "nak": "Ardra",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mercury",
+       "sign": "Libra",
+       "deg": "2\u00b026'",
+       "house": 10,
+       "nak": "Chitra",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Venus",
+       "sign": "Virgo",
+       "deg": "17\u00b057'",
+       "house": 9,
+       "nak": "Hasta",
+       "retro": false,
+       "neecha": true
+      },
+      {
+       "body": "Mars",
+       "sign": "Libra",
+       "deg": "20\u00b018'",
+       "house": 10,
+       "nak": "Vishakha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Jupiter",
+       "sign": "Leo",
+       "deg": "18\u00b030'",
+       "house": 8,
+       "nak": "Purva Phalguni",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Saturn",
+       "sign": "Aries",
+       "deg": "1\u00b059'",
+       "house": 4,
+       "nak": "Ashwini",
+       "retro": false,
+       "neecha": true
+      },
+      {
+       "body": "Rahu",
+       "sign": "Capricorn",
+       "deg": "14\u00b031'",
+       "house": 1,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Ketu",
+       "sign": "Cancer",
+       "deg": "14\u00b031'",
+       "house": 7,
+       "nak": "Pushya",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Uranus",
+       "sign": "Taurus",
+       "deg": "15\u00b040'",
+       "house": 5,
+       "nak": "Rohini",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Neptune",
+       "sign": "Pisces",
+       "deg": "11\u00b007'",
+       "house": 3,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Pluto",
+       "sign": "Capricorn",
+       "deg": "10\u00b038'",
+       "house": 1,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      }
+     ]
+    },
+    "flags": [
+     "Ascendant lord debilitated"
+    ]
+   },
+   {
+    "start": "Sun 24 Oct 2027 01:29 EDT",
+    "chart": {
+     "asc": "Cancer 26\u00b058'",
+     "lagna_lord": "Moon",
+     "rows": [
+      {
+       "body": "Sun",
+       "sign": "Libra",
+       "deg": "6\u00b019'",
+       "house": 4,
+       "nak": "Chitra",
+       "retro": false,
+       "neecha": true
+      },
+      {
+       "body": "Moon",
+       "sign": "Cancer",
+       "deg": "26\u00b001'",
+       "house": 1,
+       "nak": "Ashlesha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mercury",
+       "sign": "Virgo",
+       "deg": "26\u00b051'",
+       "house": 3,
+       "nak": "Chitra",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Venus",
+       "sign": "Libra",
+       "deg": "25\u00b042'",
+       "house": 4,
+       "nak": "Vishakha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mars",
+       "sign": "Scorpio",
+       "deg": "11\u00b040'",
+       "house": 5,
+       "nak": "Anuradha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Jupiter",
+       "sign": "Leo",
+       "deg": "24\u00b037'",
+       "house": 2,
+       "nak": "Purva Phalguni",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Saturn",
+       "sign": "Pisces",
+       "deg": "29\u00b040'",
+       "house": 9,
+       "nak": "Revati",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Rahu",
+       "sign": "Capricorn",
+       "deg": "12\u00b054'",
+       "house": 7,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Ketu",
+       "sign": "Cancer",
+       "deg": "12\u00b054'",
+       "house": 1,
+       "nak": "Pushya",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Uranus",
+       "sign": "Taurus",
+       "deg": "15\u00b005'",
+       "house": 11,
+       "nak": "Rohini",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Neptune",
+       "sign": "Pisces",
+       "deg": "10\u00b018'",
+       "house": 9,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Pluto",
+       "sign": "Capricorn",
+       "deg": "10\u00b030'",
+       "house": 7,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      }
+     ]
+    },
+    "flags": []
+   },
+   {
+    "start": "Mon 22 Nov 2027 22:02 EST",
+    "chart": {
+     "asc": "Cancer 21\u00b016'",
+     "lagna_lord": "Moon",
+     "rows": [
+      {
+       "body": "Sun",
+       "sign": "Scorpio",
+       "deg": "6\u00b019'",
+       "house": 5,
+       "nak": "Anuradha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Moon",
+       "sign": "Virgo",
+       "deg": "3\u00b031'",
+       "house": 3,
+       "nak": "Uttara Phalguni",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mercury",
+       "sign": "Libra",
+       "deg": "25\u00b047'",
+       "house": 4,
+       "nak": "Vishakha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Venus",
+       "sign": "Sagittarius",
+       "deg": "2\u00b048'",
+       "house": 6,
+       "nak": "Mula",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mars",
+       "sign": "Sagittarius",
+       "deg": "3\u00b044'",
+       "house": 6,
+       "nak": "Mula",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Jupiter",
+       "sign": "Leo",
+       "deg": "29\u00b032'",
+       "house": 2,
+       "nak": "Uttara Phalguni",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Saturn",
+       "sign": "Pisces",
+       "deg": "27\u00b037'",
+       "house": 9,
+       "nak": "Revati",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Rahu",
+       "sign": "Capricorn",
+       "deg": "11\u00b019'",
+       "house": 7,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Ketu",
+       "sign": "Cancer",
+       "deg": "11\u00b019'",
+       "house": 1,
+       "nak": "Pushya",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Uranus",
+       "sign": "Taurus",
+       "deg": "13\u00b059'",
+       "house": 11,
+       "nak": "Rohini",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Neptune",
+       "sign": "Pisces",
+       "deg": "9\u00b044'",
+       "house": 9,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Pluto",
+       "sign": "Capricorn",
+       "deg": "10\u00b048'",
+       "house": 7,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      }
+     ]
+    },
+    "flags": []
+   },
+   {
+    "start": "Wed 22 Dec 2027 11:24 EST",
+    "chart": {
+     "asc": "Aquarius 23\u00b039'",
+     "lagna_lord": "Saturn",
+     "rows": [
+      {
+       "body": "Sun",
+       "sign": "Sagittarius",
+       "deg": "6\u00b019'",
+       "house": 11,
+       "nak": "Mula",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Moon",
+       "sign": "Libra",
+       "deg": "5\u00b024'",
+       "house": 9,
+       "nak": "Chitra",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mercury",
+       "sign": "Sagittarius",
+       "deg": "12\u00b023'",
+       "house": 11,
+       "nak": "Mula",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Venus",
+       "sign": "Capricorn",
+       "deg": "9\u00b019'",
+       "house": 12,
+       "nak": "Uttara Ashadha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Mars",
+       "sign": "Sagittarius",
+       "deg": "26\u00b023'",
+       "house": 11,
+       "nak": "Purva Ashadha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Jupiter",
+       "sign": "Virgo",
+       "deg": "2\u00b035'",
+       "house": 8,
+       "nak": "Uttara Phalguni",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Saturn",
+       "sign": "Pisces",
+       "deg": "26\u00b046'",
+       "house": 2,
+       "nak": "Revati",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Rahu",
+       "sign": "Capricorn",
+       "deg": "9\u00b045'",
+       "house": 12,
+       "nak": "Uttara Ashadha",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Ketu",
+       "sign": "Cancer",
+       "deg": "9\u00b045'",
+       "house": 6,
+       "nak": "Pushya",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Uranus",
+       "sign": "Taurus",
+       "deg": "12\u00b046'",
+       "house": 4,
+       "nak": "Rohini",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Neptune",
+       "sign": "Pisces",
+       "deg": "9\u00b036'",
+       "house": 2,
+       "nak": "Uttara Bhadrapada",
+       "retro": false,
+       "neecha": false
+      },
+      {
+       "body": "Pluto",
+       "sign": "Capricorn",
+       "deg": "11\u00b027'",
+       "house": 12,
+       "nak": "Shravana",
+       "retro": false,
+       "neecha": false
+      }
+     ]
+    },
+    "flags": []
+   }
+  ]
+ },
+ "forecast": {
+  "source": "astrologer's NYSE solar return, shared 24 Nov 2026",
+  "month": "19 Nov - 18 Dec 2026",
+  "start_level": 7320,
+  "text": "Further weakness, but a smaller net monthly decline than the preceding month (-4.8%)",
+  "status": "open; check on 19 Dec 2026"
+ }
+}

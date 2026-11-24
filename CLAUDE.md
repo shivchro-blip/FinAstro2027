@@ -5,7 +5,7 @@ Read `PROJECT_KNOWLEDGE.md` first. It holds the sources, conventions, user decis
 ## Decisions to respect
 
 - Implement a rule only when a source states it. Do not extrapolate; for example, there is no Moon mirror of the gold Sun rules for silver.
-- **Vedic sources are in scope:** TA, KD, the 2026 document, the user's notes, Brihat Samhita, and BPHS for Shadbala.
+- **Vedic sources are in scope:** TA, KD, the 2026 document, the user's notes, Brihat Samhita, BPHS for Shadbala, and the NYSE monthly solar-return technique ("Investing in Stock Market with Vedic Astrology", Vol. II; shared 24 Nov 2026). Reference charts: NYSE (17 May 1792, New York) and USA (4 Jul 1776, Sibly time) in `tools/nyse_charts.py`.
 - **Bayer and the Western sources are out of scope:** McWhirter, Williams, Weingarten, Timing Solutions, and the 'Moon and Silver' guide.
 - Reports use US Eastern time (America/New_York). Calculations use sidereal Lahiri, mean node and whole-sign drishti.
 - Stock market work uses the S&P 500 and the BSE Sensex (user's choice, 23 Nov 2026), each scored in its own exchange time; the rule set is every catalogue rule tagged "general".
