@@ -46,10 +46,10 @@ UTC = dt.timezone.utc
 FIT_END = dt.date(2026, 11, 23)
 MKS = ("spx", "sensex", "gold", "silver")
 NAME = {"spx": "S&P 500", "sensex": "BSE Sensex", "gold": "Gold", "silver": "Silver"}
-CLOSED = {"spx": {dt.date(2026, 11, 26): "Thanksgiving", dt.date(2026, 12, 25): "Christmas"},
+CLOSED = {"spx": {dt.date(2026, 11, 26): "Thanksgiving", dt.date(2026, 12, 25): "Christmas"},   # COMEX: no settlement on either day
           "gold": {dt.date(2026, 11, 26): "Thanksgiving", dt.date(2026, 12, 25): "Christmas"},
           "silver": {dt.date(2026, 11, 26): "Thanksgiving", dt.date(2026, 12, 25): "Christmas"},
-          "sensex": {dt.date(2026, 12, 25): "Christmas"}}
+          "sensex": {dt.date(2026, 11, 24): "Guru Nanak Jayanti", dt.date(2026, 12, 25): "Christmas"}}
 EARLY = {dt.date(2026, 11, 27): "US early close (13:00 ET)", dt.date(2026, 12, 24): "US early close (13:00 ET)"}
 GOOD = ("Strongest", "Supported", "Consistent")
 USE_DASHA = False            # dashas parked (user, 24 Nov 2026): tested in dasha_transits.py / dasha_combinations.py, no S&P edge
@@ -210,6 +210,15 @@ def mars_jupiter_node(p):
 def main():
     a = dt.date.fromisoformat(sys.argv[1]) if len(sys.argv) > 1 else dt.date(2026, 11, 24)
     b = dt.date.fromisoformat(sys.argv[2]) if len(sys.argv) > 2 else dt.date(2026, 12, 31)
+    res = build(a, b)
+    stem = f"daybyday_{a}_to_{b}_ET"
+    json.dump(res, open(OUT / f"{stem}.json", "w"), indent=1, default=str)
+    (OUT / f"{stem}.html").write_text(page(res), encoding="utf-8")
+    print("wrote", stem)
+
+
+def build(a, b):
+    """Every layer for every day a..b (also used by tools/calendar_2026.py)."""
     fit_end = min(FIT_END, a - dt.timedelta(days=1))           # past ranges: weights from before the range only
     CP = load(ROOT / "tools" / "combined_probability.py", "cpm")
     DT = CP.DT
@@ -366,10 +375,7 @@ def main():
                skill={mk: {t: cj["markets"][mk]["walk_forward"][t] for t in CP.TARGETS} for mk in MKS})
     if any("actual" in pr for x in days for pr in x["prob"].values()):
         res["score"] = score(days, AF)
-    stem = f"daybyday_{a}_to_{b}_ET"
-    json.dump(res, open(OUT / f"{stem}.json", "w"), indent=1, default=str)
-    (OUT / f"{stem}.html").write_text(page(res), encoding="utf-8")
-    print("wrote", stem)
+    return res
 
 
 # ------------------------------------------------------------------ scoring a past range
