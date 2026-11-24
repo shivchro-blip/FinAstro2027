@@ -59,6 +59,7 @@ STEPS = [
     ["tools/validate_external_model.py"],
     ["tools/trigger_study.py"],
     ["tools/nyse_charts.py"],
+    ["tools/author_forecasts.py"],
     ["tools/rule_tally.py", "2026-11-20", "2026-11-23"],
     ["tools/md_to_html.py", "Reference_materials/extracted/OTHERS_FINANCIAL_REVIEW.md", "Others Financial Review"],
     ["tools/md_to_html.py", "Reference_materials/extracted/FINANCIAL_ASTROLOGY_MODEL_v1.md", "Financial Astrology Model v1"],
