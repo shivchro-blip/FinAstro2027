@@ -99,8 +99,10 @@ def main():
     days = sorted((ROOT / B).glob("day_report_*_ET.html"))
     if days:                                       # the most recent day report (tools/day_report.py)
         SECTIONS[0][1].insert(1, (B + days[-1].name, f"Day report {days[-1].name[11:21]}", "Planet positions, every active rule with its 26-year record, our signals and what markets did."))
+    for f in sorted((ROOT / B).glob("calendar_2026-*_ET.html"))[-1:]:        # THE calendar to 31 Dec 2026 (tools/calendar_2026.py)
+        SECTIONS[0][1].insert(0, (B + f.name, "Calendar 24 Nov – 31 Dec 2026 (the complete, current calendar)", "Every day: the sky, the four markets (labels and probabilities), Solar return, every rule with its record, the track record, why the Sensex scored higher, and verification checks."))
     for f in sorted((ROOT / B).glob("daybyday_*_ET.html")):            # the latest day-by-day forward page (tools/forward_daybyday.py)
-        SECTIONS[0][1].insert(0, (B + f.name, f"Day by day {f.name[9:19]} to {f.name[23:33]}", "Every transit, every active rule with its record, the tables, dashas, Solar return view and the combined probability, for each day."))
+        SECTIONS[0][1].insert(1, (B + f.name, f"Day-by-day check {f.name[9:19]} to {f.name[23:33]}", "The same layers for past days, scored against what the markets did."))
     now = dt.datetime.now(ZoneInfo("America/New_York"))
     log = json.load(open(ROOT / B / "analysis_log.json"))["entries"]
     blocks = []

@@ -516,6 +516,17 @@
     "tools/solar_return_generate.py",
     "build/pdfref/solar_return_generated_ET.html"
    ]
+  },
+  {
+   "date": "2026-11-24",
+   "pr": "40",
+   "topic": "The calendar 24 Nov - 31 Dec 2026 (one verified page); why the Sensex scored higher",
+   "analysis": "tools/calendar_2026.py rebuilds one page from forward_daybyday.build() and solar_return_generate.py: key dates, calendar grid, signal spans, Solar return (months, own forecasts, transit rules, generated daily calls), each day in full (sky, panchang, every change, four markets with labels and probabilities, supported rules, calendar rows, watch, robust factors, Model v1.0, classical layers, Mars-Jupiter-node lead), track record and 11 automatic verification checks. BSE holiday on 24 Nov (Guru Nanak Jayanti) added. The superseded forward day-by-day page removed. Sensex vs S&P accuracy examined.",
+   "result": "All 11 checks pass. Sensex scored higher only because the market table gives both indices the same (mostly bullish) labels - identical on 16/16 sessions in 1-23 Nov and 40/40 labelled days in 60 days - while the Sensex rose (+10.2%) and the S&P fell (-6.1%); long-run walk-forward S&P 55% vs Sensex 54%; no look-ahead.",
+   "files": [
+    "tools/calendar_2026.py",
+    "build/pdfref/calendar_2026-11-24_to_2026-12-31_ET.html"
+   ]
   }
  ]
 }

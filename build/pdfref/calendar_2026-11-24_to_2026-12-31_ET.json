@@ -1,12 +1,71 @@
 {
  "start": "2026-11-24",
  "end": "2026-12-31",
- "fit_end": "2026-11-23",
+ "generated": "23 Nov 2026 23:30 ET",
+ "checks": [
+  {
+   "name": "Every day present",
+   "ok": true,
+   "detail": "38 days, 2026-11-24 \u2013 2026-12-31"
+  },
+  {
+   "name": "Market days and holidays consistent",
+   "ok": true,
+   "detail": "US: 26 Nov, 25 Dec closed; Sensex: 24 Nov, 25 Dec closed; early US closes 27 Nov, 24 Dec"
+  },
+  {
+   "name": "Probabilities valid and near their base rates",
+   "ok": true,
+   "detail": "104 market-days; none outside 0\u2013100% or more than 15 points from base"
+  },
+  {
+   "name": "Signal labels equal the published tables",
+   "ok": true,
+   "detail": "all days, all four markets"
+  },
+  {
+   "name": "No duplicated planetary changes",
+   "ok": true,
+   "detail": "1629 changes listed"
+  },
+  {
+   "name": "Positions re-computed independently (Sun, Moon, Saturn, sidereal Lahiri, 12:00 ET)",
+   "ok": true,
+   "detail": "largest difference 0.99 arc-minutes (display rounds down to whole minutes)"
+  },
+  {
+   "name": "Solar return months start at tropical Sun 27\u00b018'",
+   "ok": true,
+   "detail": "19 Nov 2026 10:10, 19 Dec 2026 00:10"
+  },
+  {
+   "name": "A Solar return daily call for every S&P session",
+   "ok": true,
+   "detail": "26 sessions"
+  },
+  {
+   "name": "Every active rule shown with its record (or marked as having none)",
+   "ok": true,
+   "detail": "5486 rule-days; 1594 have no scored record and are labelled so"
+  },
+  {
+   "name": "Naming: \u201cSolar return\u201d, never \u201cauthor\u201d",
+   "ok": true,
+   "detail": "whole page scanned"
+  },
+  {
+   "name": "Dashas parked: no dasha blocks",
+   "ok": true,
+   "detail": "whole page scanned"
+  }
+ ],
  "days": [
   {
    "date": "2026-11-24",
    "weekday": "Tue",
-   "closed": {},
+   "closed": {
+    "sensex": "Guru Nanak Jayanti"
+   },
    "early": null,
    "positions": [
     {
@@ -3118,27 +3177,6 @@
       "up1": 53.6,
       "up5": 57.1,
       "big": 7.7
-     }
-    },
-    "sensex": {
-     "st": {
-      "table": "no signal",
-      "bigmove": "off"
-     },
-     "all": {
-      "up1": 53.2,
-      "up5": 57.9,
-      "big": 9.2
-     },
-     "kept": {
-      "up1": 53.5,
-      "up5": 57.9,
-      "big": 7.7
-     },
-     "base": {
-      "up1": 53.3,
-      "up5": 56.6,
-      "big": 10.4
      }
     },
     "gold": {
@@ -128206,832 +128244,637 @@
    }
   }
  ],
- "sr_scores": [
-  {
-   "period": "NYSE solar month 20 Oct - 18 Nov 2026",
-   "status": "right",
-   "detail": "7,691 \u2192 7,324 (-4.8%)"
-  },
-  {
-   "period": "Mon 16 - Fri 20 Nov 2026",
-   "status": "partly right (4/5)",
-   "detail": "Mon 16 Nov: said down, -1.92% \u2713; Tue 17 Nov: said down, -1.03% \u2713; Wed 18 Nov: said down, -0.23% \u2713; Thu 19 Nov: said down, -2.02% \u2713; Fri 20 Nov: said up, -3.70% \u2717"
-  },
-  {
-   "period": "NYSE solar month 19 Nov - 18 Dec 2026",
-   "status": "open",
-   "detail": "so far 7,324 \u2192 7,237 (-1.2%) to 2026-11-23"
-  },
-  {
-   "period": "Mon 23 - Fri 27 Nov 2026",
-   "status": "open (0/1)",
-   "detail": "Mon 23 Nov: said down, +4.73% \u2717; Tue 24 Nov: pending; Wed 25 Nov: pending; Fri 27 Nov: pending"
-  },
-  {
-   "period": "Oct 2026 - Oct 2027",
-   "status": "open",
-   "detail": "weak late 2026 to Feb 2027: open; bottom around Mar-May 2027 (the year's low falls in this window): open; advance from June through December 2027: open"
-  }
- ],
- "dctest": {},
- "atests": {
-  "Sun square Mars (within 3\u00b0) \u2013 Solar return: bearish": {
-   "n": 813,
-   "up1": 52.4,
-   "exp1": 52.5,
-   "p1": 0.9622,
-   "up5": 56.2,
-   "exp5": 56.3,
-   "p5": 0.9786,
-   "big": 67,
-   "exp_big": 50.6,
-   "p_big": 0.0157,
-   "mean1": 0.017,
-   "eps": 92,
-   "eps_up5": 53.3,
-   "eps_exp5": 56.5,
-   "eps_p": 0.5355
-  },
-  "Sun square Mars with Mars-Ketu within 8\u00b0 \u2013 Solar return: bearish": {
-   "n": 35,
-   "up1": 57.1,
-   "exp1": 52.5,
-   "p1": 0.5823,
-   "up5": 57.1,
-   "exp5": 56.9,
-   "p5": 0.981,
-   "big": 5,
-   "exp_big": 2.8,
-   "p_big": 0.152,
-   "mean1": -0.257,
-   "eps": 5,
-   "eps_up5": 40.0,
-   "eps_exp5": 57.8,
-   "eps_p": 0.4192
-  },
-  "Mars conjunct Ketu (within 5\u00b0) \u2013 Solar return: disruption": {
-   "n": 739,
-   "up1": 51.0,
-   "exp1": 52.1,
-   "p1": 0.5677,
-   "up5": 53.6,
-   "exp5": 56.7,
-   "p5": 0.0855,
-   "big": 72,
-   "exp_big": 70.8,
-   "p_big": 0.4589,
-   "mean1": -0.031,
-   "eps": 62,
-   "eps_up5": 50.0,
-   "eps_exp5": 56.2,
-   "eps_p": 0.3266
-  },
-  "Jupiter sextile Venus (within 2\u00b0) \u2013 Solar return: bullish": {
-   "n": 587,
-   "up1": 55.7,
-   "exp1": 52.5,
-   "p1": 0.1192,
-   "up5": 63.9,
-   "exp5": 56.1,
-   "p5": 0.0002,
-   "big": 42,
-   "exp_big": 41.4,
-   "p_big": 0.4864,
-   "mean1": 0.075,
-   "eps": 198,
-   "eps_up5": 63.6,
-   "eps_exp5": 55.8,
-   "eps_p": 0.0272
-  },
-  "Mars square Uranus (within 3\u00b0) \u2013 Solar return: volatility": {
-   "n": 837,
-   "up1": 50.3,
-   "exp1": 53.2,
-   "p1": 0.0975,
-   "up5": 55.6,
-   "exp5": 57.3,
-   "p5": 0.3138,
-   "big": 52,
-   "exp_big": 52.9,
-   "p_big": 0.5702,
-   "mean1": 0.024,
-   "eps": 114,
-   "eps_up5": 56.1,
-   "eps_exp5": 56.8,
-   "eps_p": 0.8828
-  },
-  "Mars retrograde": {
-   "n": 2327,
-   "up1": 52.3,
-   "exp1": 52.7,
-   "p1": 0.697,
-   "up5": 55.6,
-   "exp5": 56.5,
-   "p5": 0.4007,
-   "big": 127,
-   "exp_big": 156.3,
-   "p_big": 0.993,
-   "mean1": 0.03,
-   "eps": 46,
-   "eps_up5": 47.8,
-   "eps_exp5": 56.6,
-   "eps_p": 0.2279
-  },
-  "Mercury in Pisces, tropical \u2013 Solar return: unfavourable": {
-   "n": 2059,
-   "up1": 51.5,
-   "exp1": 52.5,
-   "p1": 0.3904,
-   "up5": 55.4,
-   "exp5": 56.3,
-   "p5": 0.4349,
-   "big": 139,
-   "exp_big": 133.1,
-   "p_big": 0.3151,
-   "mean1": 0.027,
-   "eps": 124,
-   "eps_up5": 51.6,
-   "eps_exp5": 56.1,
-   "eps_p": 0.3147
-  },
-  "Mercury in Pisces, sidereal": {
-   "n": 1975,
-   "up1": 51.7,
-   "exp1": 52.7,
-   "p1": 0.3826,
-   "up5": 54.1,
-   "exp5": 56.7,
-   "p5": 0.0177,
-   "big": 133,
-   "exp_big": 134.5,
-   "p_big": 0.5617,
-   "mean1": 0.043,
-   "eps": 120,
-   "eps_up5": 60.8,
-   "eps_exp5": 56.3,
-   "eps_p": 0.3148
-  }
- },
- "solar_month": {
-  "source": "astrologer's NYSE solar return, shared 24 Nov 2026",
-  "month": "19 Nov - 18 Dec 2026",
-  "start_level": 7320,
-  "text": "Further weakness, but a smaller net monthly decline than the preceding month (-4.8%)",
-  "status": "open; check on 19 Dec 2026"
- },
- "mjn": {
-  "episodes": 13,
-  "falls15": 3,
-  "base": {
-   "sessions": 29,
-   "worst15": 3.5,
-   "worst8": 11.8
-  }
- },
- "kept": {
-  "spx": {
-   "up1": [
-    "table",
-    "bigmove",
-    "NYSE gochara"
-   ],
-   "up5": [
-    "table",
-    "NYSE gochara",
-    "jup-ven"
-   ],
-   "big": [
-    "bigmove",
-    "USA tara",
-    "NYSE tara",
-    "jup-ven"
-   ]
-  },
-  "sensex": {
-   "up1": [
-    "table"
-   ],
-   "up5": [
-    "table"
-   ],
-   "big": [
-    "bigmove"
-   ]
-  },
-  "gold": {
-   "up1": [],
-   "up5": [
-    "v1"
-   ],
-   "big": []
-  },
-  "silver": {
-   "up1": [
-    "table"
-   ],
-   "up5": [],
-   "big": [
-    "table"
-   ]
-  }
- },
- "skill": {
-  "spx": {
-   "up1": {
-    "all": {
-     "n": 3452,
-     "actual": 54.5,
-     "base": 52.8,
-     "brier": 0.2491,
-     "brier_base": 0.2483,
-     "skill": -0.34,
-     "avg_p": 53.1,
-     "calls_up": 1195,
-     "right_up": 55,
-     "calls_down": 962,
-     "right_down": 46,
-     "hit": 51,
-     "bands": {
-      "40-45%": {
-       "n": 91,
-       "actual": 47
-      },
-      "45-50%": {
-       "n": 663,
-       "actual": 53
-      },
-      "50-55%": {
-       "n": 1543,
-       "actual": 55
-      },
-      "55-60%": {
-       "n": 1035,
-       "actual": 54
-      },
-      "60-100%": {
-       "n": 120,
-       "actual": 58
-      }
+ "solar_return": {
+  "months": [
+   {
+    "start": "2026-11-19 10:10:55.948806-05:00",
+    "end": "2026-12-19 00:10:29.049589-05:00",
+    "asc": "Capricorn 10\u00b001'",
+    "lord": "Saturn",
+    "lord_pos": "Aries 8\u00b020', house 4 (debilitated)",
+    "h8": [
+     "Mars",
+     "Jupiter",
+     "Ketu"
+    ],
+    "h10": [
+     "Venus"
+    ],
+    "flags": [
+     "Ascendant lord debilitated",
+     "Mars with Ketu in the 8th",
+     "Mars, Saturn, Rahu or Ketu in the 8th",
+     "Venus or Jupiter in the 10th",
+     "Both bearish indications (debilitated ascendant lord and a malefic in the 8th)"
+    ],
+    "reading": "Weak, moderated",
+    "rows": [
+     {
+      "body": "Sun",
+      "sign": "Scorpio",
+      "deg": "27\u00b018'",
+      "house": 11,
+      "nak": "Vishakha",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Moon",
+      "sign": "Pisces",
+      "deg": "21\u00b059'",
+      "house": 3,
+      "nak": "Purva Bhadrapada",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Mercury",
+      "sign": "Scorpio",
+      "deg": "7\u00b054'",
+      "house": 11,
+      "nak": "Swati",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Venus",
+      "sign": "Libra",
+      "deg": "23\u00b028'",
+      "house": 10,
+      "nak": "Chitra",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Mars",
+      "sign": "Leo",
+      "deg": "27\u00b021'",
+      "house": 8,
+      "nak": "Magha",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Jupiter",
+      "sign": "Leo",
+      "deg": "26\u00b009'",
+      "house": 8,
+      "nak": "Magha",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Saturn",
+      "sign": "Aries",
+      "deg": "8\u00b020'",
+      "house": 4,
+      "nak": "Uttara Bhadrapada",
+      "retro": false,
+      "neecha": true
+     },
+     {
+      "body": "Rahu",
+      "sign": "Aquarius",
+      "deg": "25\u00b005'",
+      "house": 2,
+      "nak": "Dhanishta",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Ketu",
+      "sign": "Leo",
+      "deg": "25\u00b005'",
+      "house": 8,
+      "nak": "Magha",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Uranus",
+      "sign": "Gemini",
+      "deg": "3\u00b056'",
+      "house": 6,
+      "nak": "Krittika",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Neptune",
+      "sign": "Aries",
+      "deg": "1\u00b045'",
+      "house": 4,
+      "nak": "Uttara Bhadrapada",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Pluto",
+      "sign": "Aquarius",
+      "deg": "3\u00b020'",
+      "house": 2,
+      "nak": "Uttara Ashadha",
+      "retro": false,
+      "neecha": false
      }
-    },
-    "kept": {
-     "n": 3452,
-     "actual": 54.5,
-     "base": 52.8,
-     "brier": 0.2477,
-     "brier_base": 0.2483,
-     "skill": 0.24,
-     "avg_p": 53.2,
-     "calls_up": 858,
-     "right_up": 58,
-     "calls_down": 495,
-     "right_down": 49,
-     "hit": 55,
-     "bands": {
-      "45-50%": {
-       "n": 225,
-       "actual": 52
-      },
-      "50-55%": {
-       "n": 2452,
-       "actual": 54
-      },
-      "55-60%": {
-       "n": 775,
-       "actual": 58
-      }
-     }
-    }
+    ]
    },
-   "up5": {
-    "all": {
-     "n": 3452,
-     "actual": 60.7,
-     "base": 53.6,
-     "brier": 0.2441,
-     "brier_base": 0.2436,
-     "skill": -0.21,
-     "avg_p": 53.9,
-     "calls_up": 1327,
-     "right_up": 62,
-     "calls_down": 1258,
-     "right_down": 41,
-     "hit": 52,
-     "bands": {
-      "0-40%": {
-       "n": 3,
-       "actual": 33
-      },
-      "40-45%": {
-       "n": 146,
-       "actual": 58
-      },
-      "45-50%": {
-       "n": 669,
-       "actual": 59
-      },
-      "50-55%": {
-       "n": 1186,
-       "actual": 61
-      },
-      "55-60%": {
-       "n": 944,
-       "actual": 61
-      },
-      "60-100%": {
-       "n": 504,
-       "actual": 64
-      }
+   {
+    "start": "2026-12-19 00:10:29.049589-05:00",
+    "end": "2027-01-17 10:50:03.523198-05:00",
+    "asc": "Libra 1\u00b008'",
+    "lord": "Venus",
+    "lord_pos": "Scorpio 11\u00b025', house 2",
+    "h8": [],
+    "h10": [],
+    "flags": [],
+    "reading": "No stated indication",
+    "rows": [
+     {
+      "body": "Sun",
+      "sign": "Sagittarius",
+      "deg": "27\u00b018'",
+      "house": 3,
+      "nak": "Mula",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Moon",
+      "sign": "Aries",
+      "deg": "21\u00b013'",
+      "house": 7,
+      "nak": "Revati",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Mercury",
+      "sign": "Sagittarius",
+      "deg": "19\u00b045'",
+      "house": 3,
+      "nak": "Jyeshtha",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Venus",
+      "sign": "Scorpio",
+      "deg": "11\u00b025'",
+      "house": 2,
+      "nak": "Swati",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Mars",
+      "sign": "Virgo",
+      "deg": "7\u00b034'",
+      "house": 12,
+      "nak": "Purva Phalguni",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Jupiter",
+      "sign": "Leo",
+      "deg": "26\u00b057'",
+      "house": 11,
+      "nak": "Magha",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Saturn",
+      "sign": "Aries",
+      "deg": "7\u00b059'",
+      "house": 7,
+      "nak": "Uttara Bhadrapada",
+      "retro": false,
+      "neecha": true
+     },
+     {
+      "body": "Rahu",
+      "sign": "Aquarius",
+      "deg": "23\u00b031'",
+      "house": 5,
+      "nak": "Dhanishta",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Ketu",
+      "sign": "Leo",
+      "deg": "23\u00b031'",
+      "house": 11,
+      "nak": "Ashlesha",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Uranus",
+      "sign": "Gemini",
+      "deg": "2\u00b044'",
+      "house": 9,
+      "nak": "Krittika",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Neptune",
+      "sign": "Aries",
+      "deg": "1\u00b037'",
+      "house": 7,
+      "nak": "Uttara Bhadrapada",
+      "retro": false,
+      "neecha": false
+     },
+     {
+      "body": "Pluto",
+      "sign": "Aquarius",
+      "deg": "3\u00b059'",
+      "house": 5,
+      "nak": "Uttara Ashadha",
+      "retro": false,
+      "neecha": false
      }
-    },
-    "kept": {
-     "n": 3452,
-     "actual": 60.7,
-     "base": 53.6,
-     "brier": 0.2425,
-     "brier_base": 0.2436,
-     "skill": 0.46,
-     "avg_p": 54.5,
-     "calls_up": 1429,
-     "right_up": 63,
-     "calls_down": 806,
-     "right_down": 42,
-     "hit": 55,
-     "bands": {
-      "40-45%": {
-       "n": 86,
-       "actual": 55
-      },
-      "45-50%": {
-       "n": 588,
-       "actual": 57
-      },
-      "50-55%": {
-       "n": 1143,
-       "actual": 58
-      },
-      "55-60%": {
-       "n": 1345,
-       "actual": 65
-      },
-      "60-100%": {
-       "n": 290,
-       "actual": 65
-      }
-     }
-    }
+    ]
+   }
+  ],
+  "daily": {
+   "2026-11-24": {
+    "d": "2026-11-24",
+    "call": "Bearish",
+    "why": "Sun square Mars (within 3\u00b0), Mars conjunct Ketu (within 5\u00b0)",
+    "month": "Weak, moderated",
+    "active": [
+     "Sun square Mars (within 3\u00b0)",
+     "Sun square Mars with Mars-Ketu within 8\u00b0",
+     "Mars conjunct Ketu (within 5\u00b0)",
+     "Jupiter sextile Venus (within 2\u00b0)"
+    ],
+    "detail": "Sun\u2013Mars 93.0\u00b0, Mars\u2013Ketu 4.7\u00b0, Jupiter\u2013Venus 58.6\u00b0, Mars\u2013Uranus 85.8\u00b0"
    },
-   "big": {
-    "all": {
-     "n": 3452,
-     "actual": 5.2,
-     "base": 10.3,
-     "brier": 0.0576,
-     "brier_base": 0.0518,
-     "skill": -11.1,
-     "avg_p": 9.9,
-     "p_on_big": 9.6,
-     "p_on_other": 9.9,
-     "bands": {
-      "0-3%": {
-       "n": 503,
-       "actual": 5
-      },
-      "3-6%": {
-       "n": 903,
-       "actual": 7
-      },
-      "6-10%": {
-       "n": 854,
-       "actual": 5
-      },
-      "10-20%": {
-       "n": 680,
-       "actual": 3
-      },
-      "20-100%": {
-       "n": 512,
-       "actual": 6
-      }
-     }
-    },
-    "kept": {
-     "n": 3452,
-     "actual": 5.2,
-     "base": 10.3,
-     "brier": 0.0516,
-     "brier_base": 0.0518,
-     "skill": 0.46,
-     "avg_p": 10.1,
-     "p_on_big": 10.5,
-     "p_on_other": 10.1,
-     "bands": {
-      "6-10%": {
-       "n": 1716,
-       "actual": 4
-      },
-      "10-20%": {
-       "n": 1736,
-       "actual": 6
-      }
-     }
-    }
+   "2026-11-25": {
+    "d": "2026-11-25",
+    "call": "Bearish",
+    "why": "month reading: Weak, moderated",
+    "month": "Weak, moderated",
+    "active": [
+     "Jupiter sextile Venus (within 2\u00b0)"
+    ],
+    "detail": "Sun\u2013Mars 93.6\u00b0, Mars\u2013Ketu 5.2\u00b0, Jupiter\u2013Venus 58.9\u00b0, Mars\u2013Uranus 86.2\u00b0"
+   },
+   "2026-11-27": {
+    "d": "2026-11-27",
+    "call": "Bullish",
+    "why": "Jupiter sextile Venus (within 1\u00b0)",
+    "month": "Weak, moderated",
+    "active": [
+     "Jupiter sextile Venus (within 2\u00b0)",
+     "Mars square Uranus (within 3\u00b0)"
+    ],
+    "detail": "Sun\u2013Mars 94.8\u00b0, Mars\u2013Ketu 6.1\u00b0, Jupiter\u2013Venus 59.7\u00b0, Mars\u2013Uranus 87.1\u00b0"
+   },
+   "2026-11-30": {
+    "d": "2026-11-30",
+    "call": "Volatile",
+    "why": "Mars square Uranus",
+    "month": "Weak, moderated",
+    "active": [
+     "Jupiter sextile Venus (within 2\u00b0)",
+     "Mars square Uranus (within 3\u00b0)"
+    ],
+    "detail": "Sun\u2013Mars 96.7\u00b0, Mars\u2013Ketu 7.4\u00b0, Jupiter\u2013Venus 61.1\u00b0, Mars\u2013Uranus 88.4\u00b0"
+   },
+   "2026-12-01": {
+    "d": "2026-12-01",
+    "call": "Volatile",
+    "why": "Mars square Uranus",
+    "month": "Weak, moderated",
+    "active": [
+     "Jupiter sextile Venus (within 2\u00b0)",
+     "Mars square Uranus (within 3\u00b0)"
+    ],
+    "detail": "Sun\u2013Mars 97.4\u00b0, Mars\u2013Ketu 7.8\u00b0, Jupiter\u2013Venus 61.6\u00b0, Mars\u2013Uranus 88.8\u00b0"
+   },
+   "2026-12-02": {
+    "d": "2026-12-02",
+    "call": "Volatile",
+    "why": "Mars square Uranus",
+    "month": "Weak, moderated",
+    "active": [
+     "Mars square Uranus (within 3\u00b0)"
+    ],
+    "detail": "Sun\u2013Mars 98.0\u00b0, Mars\u2013Ketu 8.2\u00b0, Jupiter\u2013Venus 62.2\u00b0, Mars\u2013Uranus 89.2\u00b0"
+   },
+   "2026-12-03": {
+    "d": "2026-12-03",
+    "call": "Volatile",
+    "why": "Mars square Uranus",
+    "month": "Weak, moderated",
+    "active": [
+     "Mars square Uranus (within 3\u00b0)"
+    ],
+    "detail": "Sun\u2013Mars 98.7\u00b0, Mars\u2013Ketu 8.6\u00b0, Jupiter\u2013Venus 62.8\u00b0, Mars\u2013Uranus 89.6\u00b0"
+   },
+   "2026-12-04": {
+    "d": "2026-12-04",
+    "call": "Volatile",
+    "why": "Mars square Uranus",
+    "month": "Weak, moderated",
+    "active": [
+     "Mars square Uranus (within 3\u00b0)"
+    ],
+    "detail": "Sun\u2013Mars 99.3\u00b0, Mars\u2013Ketu 9.0\u00b0, Jupiter\u2013Venus 63.4\u00b0, Mars\u2013Uranus 90.0\u00b0"
+   },
+   "2026-12-07": {
+    "d": "2026-12-07",
+    "call": "Volatile",
+    "why": "Mars square Uranus",
+    "month": "Weak, moderated",
+    "active": [
+     "Mars square Uranus (within 3\u00b0)"
+    ],
+    "detail": "Sun\u2013Mars 101.4\u00b0, Mars\u2013Ketu 10.2\u00b0, Jupiter\u2013Venus 65.3\u00b0, Mars\u2013Uranus 91.1\u00b0"
+   },
+   "2026-12-08": {
+    "d": "2026-12-08",
+    "call": "Volatile",
+    "why": "Mars square Uranus",
+    "month": "Weak, moderated",
+    "active": [
+     "Mars square Uranus (within 3\u00b0)"
+    ],
+    "detail": "Sun\u2013Mars 102.1\u00b0, Mars\u2013Ketu 10.6\u00b0, Jupiter\u2013Venus 66.0\u00b0, Mars\u2013Uranus 91.5\u00b0"
+   },
+   "2026-12-09": {
+    "d": "2026-12-09",
+    "call": "Volatile",
+    "why": "Mars square Uranus",
+    "month": "Weak, moderated",
+    "active": [
+     "Mars square Uranus (within 3\u00b0)"
+    ],
+    "detail": "Sun\u2013Mars 102.8\u00b0, Mars\u2013Ketu 10.9\u00b0, Jupiter\u2013Venus 66.8\u00b0, Mars\u2013Uranus 91.9\u00b0"
+   },
+   "2026-12-10": {
+    "d": "2026-12-10",
+    "call": "Volatile",
+    "why": "Mars square Uranus",
+    "month": "Weak, moderated",
+    "active": [
+     "Mars square Uranus (within 3\u00b0)"
+    ],
+    "detail": "Sun\u2013Mars 103.5\u00b0, Mars\u2013Ketu 11.3\u00b0, Jupiter\u2013Venus 67.5\u00b0, Mars\u2013Uranus 92.2\u00b0"
+   },
+   "2026-12-11": {
+    "d": "2026-12-11",
+    "call": "Volatile",
+    "why": "Mars square Uranus",
+    "month": "Weak, moderated",
+    "active": [
+     "Mars square Uranus (within 3\u00b0)"
+    ],
+    "detail": "Sun\u2013Mars 104.2\u00b0, Mars\u2013Ketu 11.7\u00b0, Jupiter\u2013Venus 68.3\u00b0, Mars\u2013Uranus 92.5\u00b0"
+   },
+   "2026-12-14": {
+    "d": "2026-12-14",
+    "call": "Bearish",
+    "why": "month reading: Weak, moderated",
+    "month": "Weak, moderated",
+    "active": [],
+    "detail": "Sun\u2013Mars 106.4\u00b0, Mars\u2013Ketu 12.7\u00b0, Jupiter\u2013Venus 70.7\u00b0, Mars\u2013Uranus 93.5\u00b0"
+   },
+   "2026-12-15": {
+    "d": "2026-12-15",
+    "call": "Bearish",
+    "why": "month reading: Weak, moderated",
+    "month": "Weak, moderated",
+    "active": [],
+    "detail": "Sun\u2013Mars 107.1\u00b0, Mars\u2013Ketu 13.0\u00b0, Jupiter\u2013Venus 71.5\u00b0, Mars\u2013Uranus 93.8\u00b0"
+   },
+   "2026-12-16": {
+    "d": "2026-12-16",
+    "call": "Bearish",
+    "why": "month reading: Weak, moderated",
+    "month": "Weak, moderated",
+    "active": [],
+    "detail": "Sun\u2013Mars 107.9\u00b0, Mars\u2013Ketu 13.3\u00b0, Jupiter\u2013Venus 72.3\u00b0, Mars\u2013Uranus 94.1\u00b0"
+   },
+   "2026-12-17": {
+    "d": "2026-12-17",
+    "call": "Bearish",
+    "why": "month reading: Weak, moderated",
+    "month": "Weak, moderated",
+    "active": [],
+    "detail": "Sun\u2013Mars 108.6\u00b0, Mars\u2013Ketu 13.6\u00b0, Jupiter\u2013Venus 73.2\u00b0, Mars\u2013Uranus 94.4\u00b0"
+   },
+   "2026-12-18": {
+    "d": "2026-12-18",
+    "call": "Bearish",
+    "why": "month reading: Weak, moderated",
+    "month": "Weak, moderated",
+    "active": [],
+    "detail": "Sun\u2013Mars 109.4\u00b0, Mars\u2013Ketu 13.9\u00b0, Jupiter\u2013Venus 74.1\u00b0, Mars\u2013Uranus 94.7\u00b0"
+   },
+   "2026-12-21": {
+    "d": "2026-12-21",
+    "call": "No call",
+    "why": "month reading: No stated indication",
+    "month": "No stated indication",
+    "active": [],
+    "detail": "Sun\u2013Mars 111.8\u00b0, Mars\u2013Ketu 14.8\u00b0, Jupiter\u2013Venus 76.8\u00b0, Mars\u2013Uranus 95.5\u00b0"
+   },
+   "2026-12-22": {
+    "d": "2026-12-22",
+    "call": "No call",
+    "why": "month reading: No stated indication",
+    "month": "No stated indication",
+    "active": [],
+    "detail": "Sun\u2013Mars 112.6\u00b0, Mars\u2013Ketu 15.0\u00b0, Jupiter\u2013Venus 77.8\u00b0, Mars\u2013Uranus 95.8\u00b0"
+   },
+   "2026-12-23": {
+    "d": "2026-12-23",
+    "call": "No call",
+    "why": "month reading: No stated indication",
+    "month": "No stated indication",
+    "active": [],
+    "detail": "Sun\u2013Mars 113.4\u00b0, Mars\u2013Ketu 15.3\u00b0, Jupiter\u2013Venus 78.7\u00b0, Mars\u2013Uranus 96.0\u00b0"
+   },
+   "2026-12-24": {
+    "d": "2026-12-24",
+    "call": "No call",
+    "why": "month reading: No stated indication",
+    "month": "No stated indication",
+    "active": [],
+    "detail": "Sun\u2013Mars 114.2\u00b0, Mars\u2013Ketu 15.5\u00b0, Jupiter\u2013Venus 79.7\u00b0, Mars\u2013Uranus 96.2\u00b0"
+   },
+   "2026-12-28": {
+    "d": "2026-12-28",
+    "call": "No call",
+    "why": "month reading: No stated indication",
+    "month": "No stated indication",
+    "active": [],
+    "detail": "Sun\u2013Mars 117.6\u00b0, Mars\u2013Ketu 16.4\u00b0, Jupiter\u2013Venus 83.7\u00b0, Mars\u2013Uranus 97.0\u00b0"
+   },
+   "2026-12-29": {
+    "d": "2026-12-29",
+    "call": "No call",
+    "why": "month reading: No stated indication",
+    "month": "No stated indication",
+    "active": [],
+    "detail": "Sun\u2013Mars 118.5\u00b0, Mars\u2013Ketu 16.6\u00b0, Jupiter\u2013Venus 84.7\u00b0, Mars\u2013Uranus 97.2\u00b0"
+   },
+   "2026-12-30": {
+    "d": "2026-12-30",
+    "call": "No call",
+    "why": "month reading: No stated indication",
+    "month": "No stated indication",
+    "active": [],
+    "detail": "Sun\u2013Mars 119.4\u00b0, Mars\u2013Ketu 16.8\u00b0, Jupiter\u2013Venus 85.8\u00b0, Mars\u2013Uranus 97.4\u00b0"
+   },
+   "2026-12-31": {
+    "d": "2026-12-31",
+    "call": "No call",
+    "why": "month reading: No stated indication",
+    "month": "No stated indication",
+    "active": [],
+    "detail": "Sun\u2013Mars 120.3\u00b0, Mars\u2013Ketu 17.0\u00b0, Jupiter\u2013Venus 86.8\u00b0, Mars\u2013Uranus 97.5\u00b0"
    }
   },
-  "sensex": {
-   "up1": {
-    "all": {
-     "n": 3373,
-     "actual": 53.2,
-     "base": 53.5,
-     "brier": 0.2488,
-     "brier_base": 0.249,
-     "skill": 0.09,
-     "avg_p": 53.5,
-     "calls_up": 839,
-     "right_up": 55,
-     "calls_down": 1067,
-     "right_down": 49,
-     "hit": 52,
-     "bands": {
-      "50-55%": {
-       "n": 2534,
-       "actual": 52
-      },
-      "55-60%": {
-       "n": 839,
-       "actual": 55
-      }
-     }
-    },
-    "kept": {
-     "n": 3373,
-     "actual": 53.2,
-     "base": 53.5,
-     "brier": 0.2488,
-     "brier_base": 0.249,
-     "skill": 0.09,
-     "avg_p": 53.4,
-     "calls_up": 839,
-     "right_up": 55,
-     "calls_down": 986,
-     "right_down": 50,
-     "hit": 52,
-     "bands": {
-      "50-55%": {
-       "n": 2534,
-       "actual": 52
-      },
-      "55-60%": {
-       "n": 839,
-       "actual": 55
-      }
-     }
+  "episodes": [
+   {
+    "rule": "Sun square Mars (within 3\u00b0)",
+    "frm": "2026-11-24",
+    "to": "2026-11-24",
+    "record": {
+     "n": 813,
+     "up1": 52.4,
+     "exp1": 52.5,
+     "p1": 0.9622,
+     "up5": 56.2,
+     "exp5": 56.3,
+     "p5": 0.9786,
+     "big": 67,
+     "exp_big": 50.6,
+     "p_big": 0.0157,
+     "mean1": 0.017,
+     "eps": 92,
+     "eps_up5": 53.3,
+     "eps_exp5": 56.5,
+     "eps_p": 0.5355
     }
    },
-   "up5": {
-    "all": {
-     "n": 3373,
-     "actual": 56.4,
-     "base": 56.6,
-     "brier": 0.2455,
-     "brier_base": 0.2459,
-     "skill": 0.18,
-     "avg_p": 56.5,
-     "calls_up": 1639,
-     "right_up": 57,
-     "calls_down": 1110,
-     "right_down": 48,
-     "hit": 53,
-     "bands": {
-      "45-50%": {
-       "n": 323,
-       "actual": 50
-      },
-      "50-55%": {
-       "n": 787,
-       "actual": 53
-      },
-      "55-60%": {
-       "n": 1564,
-       "actual": 58
-      },
-      "60-100%": {
-       "n": 699,
-       "actual": 61
-      }
-     }
-    },
-    "kept": {
-     "n": 3373,
-     "actual": 56.4,
-     "base": 56.6,
-     "brier": 0.2453,
-     "brier_base": 0.2459,
-     "skill": 0.26,
-     "avg_p": 56.4,
-     "calls_up": 839,
-     "right_up": 59,
-     "calls_down": 986,
-     "right_down": 49,
-     "hit": 54,
-     "bands": {
-      "45-50%": {
-       "n": 477,
-       "actual": 49
-      },
-      "50-55%": {
-       "n": 831,
-       "actual": 57
-      },
-      "55-60%": {
-       "n": 1226,
-       "actual": 57
-      },
-      "60-100%": {
-       "n": 839,
-       "actual": 59
-      }
-     }
+   {
+    "rule": "Sun square Mars with Mars-Ketu within 8\u00b0",
+    "frm": "2026-11-24",
+    "to": "2026-11-24",
+    "record": {
+     "n": 35,
+     "up1": 57.1,
+     "exp1": 52.5,
+     "p1": 0.5823,
+     "up5": 57.1,
+     "exp5": 56.9,
+     "p5": 0.981,
+     "big": 5,
+     "exp_big": 2.8,
+     "p_big": 0.152,
+     "mean1": -0.257,
+     "eps": 5,
+     "eps_up5": 40.0,
+     "eps_exp5": 57.8,
+     "eps_p": 0.4192
     }
    },
-   "big": {
-    "all": {
-     "n": 3373,
-     "actual": 4.2,
-     "base": 16.9,
-     "brier": 0.0555,
-     "brier_base": 0.0564,
-     "skill": 1.54,
-     "avg_p": 16.5,
-     "p_on_big": 18.6,
-     "p_on_other": 16.4,
-     "bands": {
-      "6-10%": {
-       "n": 198,
-       "actual": 1
-      },
-      "10-20%": {
-       "n": 2286,
-       "actual": 3
-      },
-      "20-100%": {
-       "n": 889,
-       "actual": 7
-      }
-     }
-    },
-    "kept": {
-     "n": 3373,
-     "actual": 4.2,
-     "base": 16.9,
-     "brier": 0.0549,
-     "brier_base": 0.0564,
-     "skill": 2.73,
-     "avg_p": 16.3,
-     "p_on_big": 18.4,
-     "p_on_other": 16.3,
-     "bands": {
-      "10-20%": {
-       "n": 2259,
-       "actual": 3
-      },
-      "20-100%": {
-       "n": 1114,
-       "actual": 7
-      }
-     }
+   {
+    "rule": "Mars conjunct Ketu (within 5\u00b0)",
+    "frm": "2026-11-24",
+    "to": "2026-11-24",
+    "record": {
+     "n": 739,
+     "up1": 51.0,
+     "exp1": 52.1,
+     "p1": 0.5677,
+     "up5": 53.6,
+     "exp5": 56.7,
+     "p5": 0.0855,
+     "big": 72,
+     "exp_big": 70.8,
+     "p_big": 0.4589,
+     "mean1": -0.031,
+     "eps": 62,
+     "eps_up5": 50.0,
+     "eps_exp5": 56.2,
+     "eps_p": 0.3266
+    }
+   },
+   {
+    "rule": "Jupiter sextile Venus (within 2\u00b0)",
+    "frm": "2026-11-24",
+    "to": "2026-12-01",
+    "record": {
+     "n": 587,
+     "up1": 55.7,
+     "exp1": 52.5,
+     "p1": 0.1192,
+     "up5": 63.9,
+     "exp5": 56.1,
+     "p5": 0.0002,
+     "big": 42,
+     "exp_big": 41.4,
+     "p_big": 0.4864,
+     "mean1": 0.075,
+     "eps": 198,
+     "eps_up5": 63.6,
+     "eps_exp5": 55.8,
+     "eps_p": 0.0272
+    }
+   },
+   {
+    "rule": "Mars square Uranus (within 3\u00b0)",
+    "frm": "2026-11-27",
+    "to": "2026-12-12",
+    "record": {
+     "n": 837,
+     "up1": 50.3,
+     "exp1": 53.2,
+     "p1": 0.0975,
+     "up5": 55.6,
+     "exp5": 57.3,
+     "p5": 0.3138,
+     "big": 52,
+     "exp_big": 52.9,
+     "p_big": 0.5702,
+     "mean1": 0.024,
+     "eps": 114,
+     "eps_up5": 56.1,
+     "eps_exp5": 56.8,
+     "eps_p": 0.8828
     }
    }
-  },
-  "gold": {
-   "up1": {
-    "all": {
-     "n": 3452,
-     "actual": 51.8,
-     "base": 53.8,
-     "brier": 0.251,
-     "brier_base": 0.2501,
-     "skill": -0.35,
-     "avg_p": 53.8,
-     "calls_up": 389,
-     "right_up": 51,
-     "calls_down": 429,
-     "right_down": 41,
-     "hit": 46,
-     "bands": {
-      "50-55%": {
-       "n": 2361,
-       "actual": 53
-      },
-      "55-60%": {
-       "n": 1091,
-       "actual": 50
-      }
-     }
-    },
-    "kept": null
+  ],
+  "backtest": {
+   "Bearish": {
+    "d1": 47.0,
+    "d5": 42.9,
+    "n": 9485
    },
-   "up5": {
-    "all": {
-     "n": 3452,
-     "actual": 54.5,
-     "base": 57.2,
-     "brier": 0.25,
-     "brier_base": 0.2486,
-     "skill": -0.55,
-     "avg_p": 57.5,
-     "calls_up": 1153,
-     "right_up": 54,
-     "calls_down": 820,
-     "right_down": 45,
-     "hit": 50,
-     "bands": {
-      "50-55%": {
-       "n": 723,
-       "actual": 55
-      },
-      "55-60%": {
-       "n": 1874,
-       "actual": 55
-      },
-      "60-100%": {
-       "n": 855,
-       "actual": 54
-      }
-     }
-    },
-    "kept": {
-     "n": 3452,
-     "actual": 54.5,
-     "base": 57.2,
-     "brier": 0.2483,
-     "brier_base": 0.2486,
-     "skill": 0.13,
-     "avg_p": 57.5,
-     "calls_up": 974,
-     "right_up": 59,
-     "calls_down": 660,
-     "right_down": 48,
-     "hit": 54,
-     "bands": {
-      "50-55%": {
-       "n": 660,
-       "actual": 52
-      },
-      "55-60%": {
-       "n": 2792,
-       "actual": 55
-      }
-     }
-    }
+   "Bullish": {
+    "d1": 53.4,
+    "d5": 56.8,
+    "n": 2429
    },
-   "big": {
-    "all": {
-     "n": 3452,
-     "actual": 6.2,
-     "base": 8.3,
-     "brier": 0.0594,
-     "brier_base": 0.0589,
-     "skill": -0.87,
-     "avg_p": 8.2,
-     "p_on_big": 7.9,
-     "p_on_other": 8.2,
-     "bands": {
-      "6-10%": {
-       "n": 3134,
-       "actual": 6
-      },
-      "10-20%": {
-       "n": 318,
-       "actual": 4
-      }
-     }
-    },
-    "kept": null
-   }
-  },
-  "silver": {
-   "up1": {
-    "all": {
-     "n": 3451,
-     "actual": 51.4,
-     "base": 54.6,
-     "brier": 0.2508,
-     "brier_base": 0.2508,
-     "skill": 0.02,
-     "avg_p": 54.5,
-     "calls_up": 374,
-     "right_up": 51,
-     "calls_down": 215,
-     "right_down": 53,
-     "hit": 51,
-     "bands": {
-      "50-55%": {
-       "n": 3077,
-       "actual": 52
-      },
-      "55-60%": {
-       "n": 374,
-       "actual": 51
-      }
-     }
-    },
-    "kept": {
-     "n": 3451,
-     "actual": 51.4,
-     "base": 54.6,
-     "brier": 0.2508,
-     "brier_base": 0.2508,
-     "skill": 0.02,
-     "avg_p": 54.5,
-     "calls_up": 374,
-     "right_up": 51,
-     "calls_down": 215,
-     "right_down": 53,
-     "hit": 51,
-     "bands": {
-      "50-55%": {
-       "n": 3077,
-       "actual": 52
-      },
-      "55-60%": {
-       "n": 374,
-       "actual": 51
-      }
-     }
-    }
+   "_base": {
+    "up1": 52.4,
+    "up5": 56.2,
+    "n": 24814
    },
-   "up5": {
-    "all": {
-     "n": 3451,
-     "actual": 51.3,
-     "base": 56.1,
-     "brier": 0.2526,
-     "brier_base": 0.2521,
-     "skill": -0.18,
-     "avg_p": 56.0,
-     "calls_up": 1567,
-     "right_up": 52,
-     "calls_down": 811,
-     "right_down": 48,
-     "hit": 51,
-     "bands": {
-      "50-55%": {
-       "n": 1313,
-       "actual": 50
-      },
-      "55-60%": {
-       "n": 2138,
-       "actual": 52
-      }
-     }
-    },
-    "kept": null
-   },
-   "big": {
-    "all": {
-     "n": 3451,
-     "actual": 8.3,
-     "base": 8.2,
-     "brier": 0.0765,
-     "brier_base": 0.0765,
-     "skill": 0.04,
-     "avg_p": 8.3,
-     "p_on_big": 8.4,
-     "p_on_other": 8.3,
-     "bands": {
-      "3-6%": {
-       "n": 374,
-       "actual": 7
-      },
-      "6-10%": {
-       "n": 3077,
-       "actual": 8
-      }
-     }
-    },
-    "kept": {
-     "n": 3451,
-     "actual": 8.3,
-     "base": 8.2,
-     "brier": 0.0765,
-     "brier_base": 0.0765,
-     "skill": 0.04,
-     "avg_p": 8.3,
-     "p_on_big": 8.4,
-     "p_on_other": 8.3,
-     "bands": {
-      "3-6%": {
-       "n": 374,
-       "actual": 7
-      },
-      "6-10%": {
-       "n": 3077,
-       "actual": 8
-      }
-     }
-    }
+   "_all": {
+    "d1": 48.3,
+    "d5": 45.7,
+    "n": 11914
    }
   }
  }
