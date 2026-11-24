@@ -3158,13 +3158,139 @@
      "tara": "good"
     }
    },
+   "chain": {
+    "USA": {
+     "score": 4,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Saturn",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "09 Dec 19:08",
+       "why": [
+        "Venus is 10th from Saturn (kendra) (+)",
+        "Venus regards Saturn as friend (+)",
+        "rules 7, 12 (\u2212)",
+        "natal house 8 (\u2212)",
+        "debilitated (\u2212)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Rahu",
+       "parent": "Venus",
+       "total": 2,
+       "verdict": "helps",
+       "to": "27 Nov 17:07",
+       "why": [
+        "Rahu is 2nd from Venus (2/12) (\u2212)",
+        "via dispositor Moon: rules 9 (+)",
+        "natal house 9 (+)",
+        "transit Aquarius, house 4 (+)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": 0,
+     "reading": "mixed",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Mercury",
+       "parent": "Jupiter",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "02 Dec 11:06",
+       "why": [
+        "Mercury is 8th from Jupiter (6/8) (\u2212)",
+        "rules 3, 12 (\u2212)",
+        "transit Libra, house 4 (+)",
+        "Saturn aspects natal Mercury (Taurus) (\u2212)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Mars",
+       "parent": "Mercury",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "24 Nov 16:37",
+       "why": [
+        "Mars is 4th from Mercury (kendra) (+)",
+        "Mars regards Mercury as enemy (\u2212)",
+        "rules 5, 10 (+)",
+        "Ketu on natal Mars (Leo) (\u2212)",
+        "Jupiter on natal Mars (+)"
+       ]
+      }
+     ]
+    }
+   },
    "jupven": "on",
    "author": {
     "rules": [
-     "Sun square Mars (within 3\u00b0) \u2013 his bearish",
-     "Sun square Mars with Mars-Ketu within 8\u00b0 \u2013 his bearish",
-     "Mars conjunct Ketu (within 5\u00b0) \u2013 his disruption",
-     "Jupiter sextile Venus (within 2\u00b0) \u2013 his bullish"
+     "Sun square Mars (within 3\u00b0) \u2013 Solar return: bearish",
+     "Sun square Mars with Mars-Ketu within 8\u00b0 \u2013 Solar return: bearish",
+     "Mars conjunct Ketu (within 5\u00b0) \u2013 Solar return: disruption",
+     "Jupiter sextile Venus (within 2\u00b0) \u2013 Solar return: bullish"
     ],
     "detail": "Sun\u2013Mars 93.0\u00b0, Mars\u2013Ketu 4.7\u00b0, Jupiter\u2013Venus 58.6\u00b0, Mars\u2013Uranus 85.8\u00b0",
     "forecasts": [
@@ -6745,10 +6871,135 @@
      "tara": "good"
     }
    },
+   "chain": {
+    "USA": {
+     "score": 4,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Saturn",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "09 Dec 19:08",
+       "why": [
+        "Venus is 10th from Saturn (kendra) (+)",
+        "Venus regards Saturn as friend (+)",
+        "rules 7, 12 (\u2212)",
+        "natal house 8 (\u2212)",
+        "debilitated (\u2212)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Rahu",
+       "parent": "Venus",
+       "total": 2,
+       "verdict": "helps",
+       "to": "27 Nov 17:07",
+       "why": [
+        "Rahu is 2nd from Venus (2/12) (\u2212)",
+        "via dispositor Moon: rules 9 (+)",
+        "natal house 9 (+)",
+        "transit Aquarius, house 4 (+)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": -3,
+     "reading": "hurts",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Mercury",
+       "parent": "Jupiter",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "02 Dec 11:06",
+       "why": [
+        "Mercury is 8th from Jupiter (6/8) (\u2212)",
+        "rules 3, 12 (\u2212)",
+        "transit Libra, house 4 (+)",
+        "Saturn aspects natal Mercury (Taurus) (\u2212)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "27 Nov 07:57",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      }
+     ]
+    }
+   },
    "jupven": "on",
    "author": {
     "rules": [
-     "Jupiter sextile Venus (within 2\u00b0) \u2013 his bullish"
+     "Jupiter sextile Venus (within 2\u00b0) \u2013 Solar return: bullish"
     ],
     "detail": "Sun\u2013Mars 93.6\u00b0, Mars\u2013Ketu 5.2\u00b0, Jupiter\u2013Venus 58.9\u00b0, Mars\u2013Uranus 86.2\u00b0",
     "forecasts": [
@@ -10039,10 +10290,135 @@
      "tara": "bad"
     }
    },
+   "chain": {
+    "USA": {
+     "score": 4,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Saturn",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "09 Dec 19:08",
+       "why": [
+        "Venus is 10th from Saturn (kendra) (+)",
+        "Venus regards Saturn as friend (+)",
+        "rules 7, 12 (\u2212)",
+        "natal house 8 (\u2212)",
+        "debilitated (\u2212)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Rahu",
+       "parent": "Venus",
+       "total": 2,
+       "verdict": "helps",
+       "to": "27 Nov 17:07",
+       "why": [
+        "Rahu is 2nd from Venus (2/12) (\u2212)",
+        "via dispositor Moon: rules 9 (+)",
+        "natal house 9 (+)",
+        "transit Aquarius, house 4 (+)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": -3,
+     "reading": "hurts",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Mercury",
+       "parent": "Jupiter",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "02 Dec 11:06",
+       "why": [
+        "Mercury is 8th from Jupiter (6/8) (\u2212)",
+        "rules 3, 12 (\u2212)",
+        "transit Libra, house 4 (+)",
+        "Saturn aspects natal Mercury (Taurus) (\u2212)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "27 Nov 07:57",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      }
+     ]
+    }
+   },
    "jupven": "on",
    "author": {
     "rules": [
-     "Jupiter sextile Venus (within 2\u00b0) \u2013 his bullish"
+     "Jupiter sextile Venus (within 2\u00b0) \u2013 Solar return: bullish"
     ],
     "detail": "Sun\u2013Mars 94.2\u00b0, Mars\u2013Ketu 5.6\u00b0, Jupiter\u2013Venus 59.3\u00b0, Mars\u2013Uranus 86.7\u00b0",
     "forecasts": [
@@ -13502,11 +13878,135 @@
      "tara": "good"
     }
    },
+   "chain": {
+    "USA": {
+     "score": 4,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Saturn",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "09 Dec 19:08",
+       "why": [
+        "Venus is 10th from Saturn (kendra) (+)",
+        "Venus regards Saturn as friend (+)",
+        "rules 7, 12 (\u2212)",
+        "natal house 8 (\u2212)",
+        "debilitated (\u2212)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Rahu",
+       "parent": "Venus",
+       "total": 2,
+       "verdict": "helps",
+       "to": "27 Nov 17:07",
+       "why": [
+        "Rahu is 2nd from Venus (2/12) (\u2212)",
+        "via dispositor Moon: rules 9 (+)",
+        "natal house 9 (+)",
+        "transit Aquarius, house 4 (+)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": -2,
+     "reading": "mixed",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Mercury",
+       "parent": "Jupiter",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "02 Dec 11:06",
+       "why": [
+        "Mercury is 8th from Jupiter (6/8) (\u2212)",
+        "rules 3, 12 (\u2212)",
+        "transit Libra, house 4 (+)",
+        "Saturn aspects natal Mercury (Taurus) (\u2212)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Jupiter",
+       "parent": "Mercury",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "29 Nov 16:15",
+       "why": [
+        "Jupiter is 6th from Mercury (6/8) (\u2212)",
+        "Jupiter regards Mercury as enemy (\u2212)",
+        "natal house 4 (+)"
+       ]
+      }
+     ]
+    }
+   },
    "jupven": "on",
    "author": {
     "rules": [
-     "Jupiter sextile Venus (within 2\u00b0) \u2013 his bullish",
-     "Mars square Uranus (within 3\u00b0) \u2013 his volatility"
+     "Jupiter sextile Venus (within 2\u00b0) \u2013 Solar return: bullish",
+     "Mars square Uranus (within 3\u00b0) \u2013 Solar return: volatility"
     ],
     "detail": "Sun\u2013Mars 94.8\u00b0, Mars\u2013Ketu 6.1\u00b0, Jupiter\u2013Venus 59.7\u00b0, Mars\u2013Uranus 87.1\u00b0",
     "forecasts": [
@@ -16606,11 +17106,135 @@
      "tara": "good"
     }
    },
+   "chain": {
+    "USA": {
+     "score": 2,
+     "reading": "mixed",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Saturn",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "09 Dec 19:08",
+       "why": [
+        "Venus is 10th from Saturn (kendra) (+)",
+        "Venus regards Saturn as friend (+)",
+        "rules 7, 12 (\u2212)",
+        "natal house 8 (\u2212)",
+        "debilitated (\u2212)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Jupiter",
+       "parent": "Venus",
+       "total": 0,
+       "verdict": "mixed",
+       "to": "30 Nov 23:46",
+       "why": [
+        "Jupiter regards Venus as enemy (\u2212)",
+        "rules 2, 5 (+)",
+        "natal house 8 (\u2212)",
+        "transit Leo, house 10 (+)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": -2,
+     "reading": "mixed",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Mercury",
+       "parent": "Jupiter",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "02 Dec 11:06",
+       "why": [
+        "Mercury is 8th from Jupiter (6/8) (\u2212)",
+        "rules 3, 12 (\u2212)",
+        "transit Libra, house 4 (+)",
+        "Saturn aspects natal Mercury (Taurus) (\u2212)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Jupiter",
+       "parent": "Mercury",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "29 Nov 16:15",
+       "why": [
+        "Jupiter is 6th from Mercury (6/8) (\u2212)",
+        "Jupiter regards Mercury as enemy (\u2212)",
+        "natal house 4 (+)"
+       ]
+      }
+     ]
+    }
+   },
    "jupven": "on",
    "author": {
     "rules": [
-     "Jupiter sextile Venus (within 2\u00b0) \u2013 his bullish",
-     "Mars square Uranus (within 3\u00b0) \u2013 his volatility"
+     "Jupiter sextile Venus (within 2\u00b0) \u2013 Solar return: bullish",
+     "Mars square Uranus (within 3\u00b0) \u2013 Solar return: volatility"
     ],
     "detail": "Sun\u2013Mars 95.5\u00b0, Mars\u2013Ketu 6.5\u00b0, Jupiter\u2013Venus 60.1\u00b0, Mars\u2013Uranus 87.5\u00b0",
     "forecasts": [
@@ -20188,11 +20812,135 @@
      "tara": "janma"
     }
    },
+   "chain": {
+    "USA": {
+     "score": 2,
+     "reading": "mixed",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Saturn",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "09 Dec 19:08",
+       "why": [
+        "Venus is 10th from Saturn (kendra) (+)",
+        "Venus regards Saturn as friend (+)",
+        "rules 7, 12 (\u2212)",
+        "natal house 8 (\u2212)",
+        "debilitated (\u2212)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Jupiter",
+       "parent": "Venus",
+       "total": 0,
+       "verdict": "mixed",
+       "to": "30 Nov 23:46",
+       "why": [
+        "Jupiter regards Venus as enemy (\u2212)",
+        "rules 2, 5 (+)",
+        "natal house 8 (\u2212)",
+        "transit Leo, house 10 (+)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": -2,
+     "reading": "mixed",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Mercury",
+       "parent": "Jupiter",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "02 Dec 11:06",
+       "why": [
+        "Mercury is 8th from Jupiter (6/8) (\u2212)",
+        "rules 3, 12 (\u2212)",
+        "transit Libra, house 4 (+)",
+        "Saturn aspects natal Mercury (Taurus) (\u2212)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Jupiter",
+       "parent": "Mercury",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "29 Nov 16:15",
+       "why": [
+        "Jupiter is 6th from Mercury (6/8) (\u2212)",
+        "Jupiter regards Mercury as enemy (\u2212)",
+        "natal house 4 (+)"
+       ]
+      }
+     ]
+    }
+   },
    "jupven": "on",
    "author": {
     "rules": [
-     "Jupiter sextile Venus (within 2\u00b0) \u2013 his bullish",
-     "Mars square Uranus (within 3\u00b0) \u2013 his volatility"
+     "Jupiter sextile Venus (within 2\u00b0) \u2013 Solar return: bullish",
+     "Mars square Uranus (within 3\u00b0) \u2013 Solar return: volatility"
     ],
     "detail": "Sun\u2013Mars 96.1\u00b0, Mars\u2013Ketu 6.9\u00b0, Jupiter\u2013Venus 60.6\u00b0, Mars\u2013Uranus 88.0\u00b0",
     "forecasts": [
@@ -23321,11 +24069,139 @@
      "tara": "good"
     }
    },
+   "chain": {
+    "USA": {
+     "score": 2,
+     "reading": "mixed",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Saturn",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "09 Dec 19:08",
+       "why": [
+        "Venus is 10th from Saturn (kendra) (+)",
+        "Venus regards Saturn as friend (+)",
+        "rules 7, 12 (\u2212)",
+        "natal house 8 (\u2212)",
+        "debilitated (\u2212)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Jupiter",
+       "parent": "Venus",
+       "total": 0,
+       "verdict": "mixed",
+       "to": "30 Nov 23:46",
+       "why": [
+        "Jupiter regards Venus as enemy (\u2212)",
+        "rules 2, 5 (+)",
+        "natal house 8 (\u2212)",
+        "transit Leo, house 10 (+)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": 0,
+     "reading": "mixed",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Mercury",
+       "parent": "Jupiter",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "02 Dec 11:06",
+       "why": [
+        "Mercury is 8th from Jupiter (6/8) (\u2212)",
+        "rules 3, 12 (\u2212)",
+        "transit Libra, house 4 (+)",
+        "Saturn aspects natal Mercury (Taurus) (\u2212)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "02 Dec 11:06",
+       "why": [
+        "Saturn is 12th from Mercury (2/12) (\u2212)",
+        "Saturn regards Mercury as friend (+)",
+        "rules 7, 8 (\u2212)",
+        "natal house 10 (+)",
+        "natal Aries (debilitated) (\u2212)",
+        "transit Pisces, house 9 (+)",
+        "Jupiter aspects natal Saturn (+)"
+       ]
+      }
+     ]
+    }
+   },
    "jupven": "on",
    "author": {
     "rules": [
-     "Jupiter sextile Venus (within 2\u00b0) \u2013 his bullish",
-     "Mars square Uranus (within 3\u00b0) \u2013 his volatility"
+     "Jupiter sextile Venus (within 2\u00b0) \u2013 Solar return: bullish",
+     "Mars square Uranus (within 3\u00b0) \u2013 Solar return: volatility"
     ],
     "detail": "Sun\u2013Mars 96.7\u00b0, Mars\u2013Ketu 7.4\u00b0, Jupiter\u2013Venus 61.1\u00b0, Mars\u2013Uranus 88.4\u00b0",
     "forecasts": [
@@ -26461,11 +27337,138 @@
      "tara": "bad"
     }
    },
+   "chain": {
+    "USA": {
+     "score": 5,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Saturn",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "09 Dec 19:08",
+       "why": [
+        "Venus is 10th from Saturn (kendra) (+)",
+        "Venus regards Saturn as friend (+)",
+        "rules 7, 12 (\u2212)",
+        "natal house 8 (\u2212)",
+        "debilitated (\u2212)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Saturn",
+       "parent": "Venus",
+       "total": 3,
+       "verdict": "helps",
+       "to": "04 Dec 21:10",
+       "why": [
+        "Saturn is 4th from Venus (kendra) (+)",
+        "Saturn regards Venus as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": 0,
+     "reading": "mixed",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Mercury",
+       "parent": "Jupiter",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "02 Dec 11:06",
+       "why": [
+        "Mercury is 8th from Jupiter (6/8) (\u2212)",
+        "rules 3, 12 (\u2212)",
+        "transit Libra, house 4 (+)",
+        "Saturn aspects natal Mercury (Taurus) (\u2212)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "02 Dec 11:06",
+       "why": [
+        "Saturn is 12th from Mercury (2/12) (\u2212)",
+        "Saturn regards Mercury as friend (+)",
+        "rules 7, 8 (\u2212)",
+        "natal house 10 (+)",
+        "natal Aries (debilitated) (\u2212)",
+        "transit Pisces, house 9 (+)",
+        "Jupiter aspects natal Saturn (+)"
+       ]
+      }
+     ]
+    }
+   },
    "jupven": "on",
    "author": {
     "rules": [
-     "Jupiter sextile Venus (within 2\u00b0) \u2013 his bullish",
-     "Mars square Uranus (within 3\u00b0) \u2013 his volatility"
+     "Jupiter sextile Venus (within 2\u00b0) \u2013 Solar return: bullish",
+     "Mars square Uranus (within 3\u00b0) \u2013 Solar return: volatility"
     ],
     "detail": "Sun\u2013Mars 97.4\u00b0, Mars\u2013Ketu 7.8\u00b0, Jupiter\u2013Venus 61.6\u00b0, Mars\u2013Uranus 88.8\u00b0",
     "forecasts": [
@@ -30763,10 +31766,131 @@
      "tara": "good"
     }
    },
+   "chain": {
+    "USA": {
+     "score": 5,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Saturn",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "09 Dec 19:08",
+       "why": [
+        "Venus is 10th from Saturn (kendra) (+)",
+        "Venus regards Saturn as friend (+)",
+        "rules 7, 12 (\u2212)",
+        "natal house 8 (\u2212)",
+        "debilitated (\u2212)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Saturn",
+       "parent": "Venus",
+       "total": 3,
+       "verdict": "helps",
+       "to": "04 Dec 21:10",
+       "why": [
+        "Saturn is 4th from Venus (kendra) (+)",
+        "Saturn regards Venus as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": 0,
+     "reading": "mixed",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Ketu",
+       "parent": "Jupiter",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "09 Dec 16:57",
+       "why": [
+        "Ketu is 6th from Jupiter (6/8) (\u2212)",
+        "natal house 9 (+)",
+        "Saturn on natal Ketu (Pisces); Mars aspects natal Ketu (Pisces) (\u2212)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Ketu",
+       "parent": "Ketu",
+       "total": 0,
+       "verdict": "mixed",
+       "to": "02 Dec 21:14",
+       "why": [
+        "natal house 9 (+)",
+        "Saturn on natal Ketu (Pisces); Mars aspects natal Ketu (Pisces) (\u2212)"
+       ]
+      }
+     ]
+    }
+   },
    "jupven": "off",
    "author": {
     "rules": [
-     "Mars square Uranus (within 3\u00b0) \u2013 his volatility"
+     "Mars square Uranus (within 3\u00b0) \u2013 Solar return: volatility"
     ],
     "detail": "Sun\u2013Mars 98.0\u00b0, Mars\u2013Ketu 8.2\u00b0, Jupiter\u2013Venus 62.2\u00b0, Mars\u2013Uranus 89.2\u00b0",
     "forecasts": [
@@ -33809,10 +34933,135 @@
      "tara": "bad"
     }
    },
+   "chain": {
+    "USA": {
+     "score": 5,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Saturn",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "09 Dec 19:08",
+       "why": [
+        "Venus is 10th from Saturn (kendra) (+)",
+        "Venus regards Saturn as friend (+)",
+        "rules 7, 12 (\u2212)",
+        "natal house 8 (\u2212)",
+        "debilitated (\u2212)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Saturn",
+       "parent": "Venus",
+       "total": 3,
+       "verdict": "helps",
+       "to": "04 Dec 21:10",
+       "why": [
+        "Saturn is 4th from Venus (kendra) (+)",
+        "Saturn regards Venus as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": 4,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Ketu",
+       "parent": "Jupiter",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "09 Dec 16:57",
+       "why": [
+        "Ketu is 6th from Jupiter (6/8) (\u2212)",
+        "natal house 9 (+)",
+        "Saturn on natal Ketu (Pisces); Mars aspects natal Ketu (Pisces) (\u2212)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Venus",
+       "parent": "Ketu",
+       "total": 4,
+       "verdict": "helps",
+       "to": "04 Dec 02:13",
+       "why": [
+        "Venus is 2nd from Ketu (2/12) (\u2212)",
+        "rules 4, 11 (+)",
+        "natal house 10 (+)",
+        "transit Libra, house 4 (+)",
+        "Jupiter aspects natal Venus (+)",
+        "exalted / own sign (+)"
+       ]
+      }
+     ]
+    }
+   },
    "jupven": "off",
    "author": {
     "rules": [
-     "Mars square Uranus (within 3\u00b0) \u2013 his volatility"
+     "Mars square Uranus (within 3\u00b0) \u2013 Solar return: volatility"
     ],
     "detail": "Sun\u2013Mars 98.7\u00b0, Mars\u2013Ketu 8.6\u00b0, Jupiter\u2013Venus 62.8\u00b0, Mars\u2013Uranus 89.6\u00b0",
     "forecasts": [
@@ -37229,10 +38478,132 @@
      "tara": "good"
     }
    },
+   "chain": {
+    "USA": {
+     "score": 5,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Saturn",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "09 Dec 19:08",
+       "why": [
+        "Venus is 10th from Saturn (kendra) (+)",
+        "Venus regards Saturn as friend (+)",
+        "rules 7, 12 (\u2212)",
+        "natal house 8 (\u2212)",
+        "debilitated (\u2212)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Saturn",
+       "parent": "Venus",
+       "total": 3,
+       "verdict": "helps",
+       "to": "04 Dec 21:10",
+       "why": [
+        "Saturn is 4th from Venus (kendra) (+)",
+        "Saturn regards Venus as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": 1,
+     "reading": "mixed",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Ketu",
+       "parent": "Jupiter",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "09 Dec 16:57",
+       "why": [
+        "Ketu is 6th from Jupiter (6/8) (\u2212)",
+        "natal house 9 (+)",
+        "Saturn on natal Ketu (Pisces); Mars aspects natal Ketu (Pisces) (\u2212)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Moon",
+       "parent": "Ketu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "05 Dec 01:24",
+       "why": [
+        "rules 1 (+)",
+        "natal house 9 (+)",
+        "Saturn on natal Moon (Pisces); Mars aspects natal Moon (Pisces) (\u2212)"
+       ]
+      }
+     ]
+    }
+   },
    "jupven": "off",
    "author": {
     "rules": [
-     "Mars square Uranus (within 3\u00b0) \u2013 his volatility"
+     "Mars square Uranus (within 3\u00b0) \u2013 Solar return: volatility"
     ],
     "detail": "Sun\u2013Mars 99.3\u00b0, Mars\u2013Ketu 9.0\u00b0, Jupiter\u2013Venus 63.4\u00b0, Mars\u2013Uranus 90.0\u00b0",
     "forecasts": [
@@ -40840,10 +42211,135 @@
      "tara": "bad"
     }
    },
+   "chain": {
+    "USA": {
+     "score": 3,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Saturn",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "09 Dec 19:08",
+       "why": [
+        "Venus is 10th from Saturn (kendra) (+)",
+        "Venus regards Saturn as friend (+)",
+        "rules 7, 12 (\u2212)",
+        "natal house 8 (\u2212)",
+        "debilitated (\u2212)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Mercury",
+       "parent": "Venus",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "08 Dec 08:44",
+       "why": [
+        "Mercury is 2nd from Venus (2/12) (\u2212)",
+        "Mercury regards Venus as friend (+)",
+        "natal house 9 (+)",
+        "transit Scorpio, house 1 (+)",
+        "Ketu on natal Mercury (Cancer) (\u2212)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": 0,
+     "reading": "mixed",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Ketu",
+       "parent": "Jupiter",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "09 Dec 16:57",
+       "why": [
+        "Ketu is 6th from Jupiter (6/8) (\u2212)",
+        "natal house 9 (+)",
+        "Saturn on natal Ketu (Pisces); Mars aspects natal Ketu (Pisces) (\u2212)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Rahu",
+       "parent": "Ketu",
+       "total": 0,
+       "verdict": "mixed",
+       "to": "06 Dec 13:37",
+       "why": [
+        "Rahu is 7th from Ketu (kendra) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Capricorn, house 7 (+)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      }
+     ]
+    }
+   },
    "jupven": "off",
    "author": {
     "rules": [
-     "Mars square Uranus (within 3\u00b0) \u2013 his volatility"
+     "Mars square Uranus (within 3\u00b0) \u2013 Solar return: volatility"
     ],
     "detail": "Sun\u2013Mars 100.0\u00b0, Mars\u2013Ketu 9.4\u00b0, Jupiter\u2013Venus 64.0\u00b0, Mars\u2013Uranus 90.4\u00b0",
     "forecasts": [
@@ -44280,10 +45776,135 @@
      "tara": "good"
     }
    },
+   "chain": {
+    "USA": {
+     "score": 3,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Saturn",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "09 Dec 19:08",
+       "why": [
+        "Venus is 10th from Saturn (kendra) (+)",
+        "Venus regards Saturn as friend (+)",
+        "rules 7, 12 (\u2212)",
+        "natal house 8 (\u2212)",
+        "debilitated (\u2212)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Mercury",
+       "parent": "Venus",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "08 Dec 08:44",
+       "why": [
+        "Mercury is 2nd from Venus (2/12) (\u2212)",
+        "Mercury regards Venus as friend (+)",
+        "natal house 9 (+)",
+        "transit Scorpio, house 1 (+)",
+        "Ketu on natal Mercury (Cancer) (\u2212)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": 0,
+     "reading": "mixed",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Ketu",
+       "parent": "Jupiter",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "09 Dec 16:57",
+       "why": [
+        "Ketu is 6th from Jupiter (6/8) (\u2212)",
+        "natal house 9 (+)",
+        "Saturn on natal Ketu (Pisces); Mars aspects natal Ketu (Pisces) (\u2212)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Rahu",
+       "parent": "Ketu",
+       "total": 0,
+       "verdict": "mixed",
+       "to": "06 Dec 13:37",
+       "why": [
+        "Rahu is 7th from Ketu (kendra) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Capricorn, house 7 (+)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      }
+     ]
+    }
+   },
    "jupven": "off",
    "author": {
     "rules": [
-     "Mars square Uranus (within 3\u00b0) \u2013 his volatility"
+     "Mars square Uranus (within 3\u00b0) \u2013 Solar return: volatility"
     ],
     "detail": "Sun\u2013Mars 100.7\u00b0, Mars\u2013Ketu 9.8\u00b0, Jupiter\u2013Venus 64.7\u00b0, Mars\u2013Uranus 90.8\u00b0",
     "forecasts": [
@@ -47320,10 +48941,134 @@
      "tara": "good"
     }
    },
+   "chain": {
+    "USA": {
+     "score": 2,
+     "reading": "mixed",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Saturn",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "09 Dec 19:08",
+       "why": [
+        "Venus is 10th from Saturn (kendra) (+)",
+        "Venus regards Saturn as friend (+)",
+        "rules 7, 12 (\u2212)",
+        "natal house 8 (\u2212)",
+        "debilitated (\u2212)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Mercury",
+       "parent": "Venus",
+       "total": 0,
+       "verdict": "mixed",
+       "to": "08 Dec 08:44",
+       "why": [
+        "Mercury is 2nd from Venus (2/12) (\u2212)",
+        "Mercury regards Venus as friend (+)",
+        "natal house 9 (+)",
+        "transit Scorpio, house 1 (+)",
+        "Ketu on natal Mercury (Cancer) (\u2212)",
+        "combust (\u2212)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": 0,
+     "reading": "mixed",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Ketu",
+       "parent": "Jupiter",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "09 Dec 16:57",
+       "why": [
+        "Ketu is 6th from Jupiter (6/8) (\u2212)",
+        "natal house 9 (+)",
+        "Saturn on natal Ketu (Pisces); Mars aspects natal Ketu (Pisces) (\u2212)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Jupiter",
+       "parent": "Ketu",
+       "total": 0,
+       "verdict": "mixed",
+       "to": "07 Dec 12:48",
+       "why": [
+        "Jupiter is 8th from Ketu (6/8) (\u2212)",
+        "natal house 4 (+)"
+       ]
+      }
+     ]
+    }
+   },
    "jupven": "off",
    "author": {
     "rules": [
-     "Mars square Uranus (within 3\u00b0) \u2013 his volatility"
+     "Mars square Uranus (within 3\u00b0) \u2013 Solar return: volatility"
     ],
     "detail": "Sun\u2013Mars 101.4\u00b0, Mars\u2013Ketu 10.2\u00b0, Jupiter\u2013Venus 65.3\u00b0, Mars\u2013Uranus 91.1\u00b0",
     "forecasts": [
@@ -50521,10 +52266,135 @@
      "tara": "janma"
     }
    },
+   "chain": {
+    "USA": {
+     "score": 1,
+     "reading": "mixed",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Saturn",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "09 Dec 19:08",
+       "why": [
+        "Venus is 10th from Saturn (kendra) (+)",
+        "Venus regards Saturn as friend (+)",
+        "rules 7, 12 (\u2212)",
+        "natal house 8 (\u2212)",
+        "debilitated (\u2212)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Ketu",
+       "parent": "Venus",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "09 Dec 19:08",
+       "why": [
+        "Ketu is 8th from Venus (6/8) (\u2212)",
+        "transit Cancer, house 9 (+)",
+        "Rahu on natal Ketu (Capricorn) (\u2212)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": 0,
+     "reading": "mixed",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Ketu",
+       "parent": "Jupiter",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "09 Dec 16:57",
+       "why": [
+        "Ketu is 6th from Jupiter (6/8) (\u2212)",
+        "natal house 9 (+)",
+        "Saturn on natal Ketu (Pisces); Mars aspects natal Ketu (Pisces) (\u2212)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Saturn",
+       "parent": "Ketu",
+       "total": 0,
+       "verdict": "mixed",
+       "to": "08 Dec 16:20",
+       "why": [
+        "Saturn is 2nd from Ketu (2/12) (\u2212)",
+        "rules 7, 8 (\u2212)",
+        "natal house 10 (+)",
+        "natal Aries (debilitated) (\u2212)",
+        "transit Pisces, house 9 (+)",
+        "Jupiter aspects natal Saturn (+)"
+       ]
+      }
+     ]
+    }
+   },
    "jupven": "off",
    "author": {
     "rules": [
-     "Mars square Uranus (within 3\u00b0) \u2013 his volatility"
+     "Mars square Uranus (within 3\u00b0) \u2013 Solar return: volatility"
     ],
     "detail": "Sun\u2013Mars 102.1\u00b0, Mars\u2013Ketu 10.6\u00b0, Jupiter\u2013Venus 66.0\u00b0, Mars\u2013Uranus 91.5\u00b0",
     "forecasts": [
@@ -53933,10 +55803,134 @@
      "tara": "good"
     }
    },
+   "chain": {
+    "USA": {
+     "score": 1,
+     "reading": "mixed",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Saturn",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "09 Dec 19:08",
+       "why": [
+        "Venus is 10th from Saturn (kendra) (+)",
+        "Venus regards Saturn as friend (+)",
+        "rules 7, 12 (\u2212)",
+        "natal house 8 (\u2212)",
+        "debilitated (\u2212)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Ketu",
+       "parent": "Venus",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "09 Dec 19:08",
+       "why": [
+        "Ketu is 8th from Venus (6/8) (\u2212)",
+        "transit Cancer, house 9 (+)",
+        "Rahu on natal Ketu (Capricorn) (\u2212)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": -1,
+     "reading": "mixed",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Ketu",
+       "parent": "Jupiter",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "09 Dec 16:57",
+       "why": [
+        "Ketu is 6th from Jupiter (6/8) (\u2212)",
+        "natal house 9 (+)",
+        "Saturn on natal Ketu (Pisces); Mars aspects natal Ketu (Pisces) (\u2212)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Mercury",
+       "parent": "Ketu",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "09 Dec 16:57",
+       "why": [
+        "Mercury is 3rd from Ketu (3/11) (+)",
+        "rules 3, 12 (\u2212)",
+        "transit Scorpio, house 5 (+)",
+        "Saturn aspects natal Mercury (Taurus) (\u2212)",
+        "combust (\u2212)"
+       ]
+      }
+     ]
+    }
+   },
    "jupven": "off",
    "author": {
     "rules": [
-     "Mars square Uranus (within 3\u00b0) \u2013 his volatility"
+     "Mars square Uranus (within 3\u00b0) \u2013 Solar return: volatility"
     ],
     "detail": "Sun\u2013Mars 102.8\u00b0, Mars\u2013Ketu 10.9\u00b0, Jupiter\u2013Venus 66.8\u00b0, Mars\u2013Uranus 91.9\u00b0",
     "forecasts": [
@@ -57014,10 +59008,139 @@
      "tara": "good"
     }
    },
+   "chain": {
+    "USA": {
+     "score": 7,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Sun",
+       "parent": "Saturn",
+       "total": 0,
+       "verdict": "mixed",
+       "to": "17 Dec 04:06",
+       "why": [
+        "Sun is 10th from Saturn (kendra) (+)",
+        "Sun regards Saturn as enemy (\u2212)",
+        "natal house 8 (\u2212)",
+        "transit Scorpio, house 1 (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Moon",
+       "parent": "Sun",
+       "total": 4,
+       "verdict": "helps",
+       "to": "10 Dec 18:44",
+       "why": [
+        "Moon is 9th from Sun (trine) (+)",
+        "Moon regards Sun as friend (+)",
+        "rules 9 (+)",
+        "natal house 4 (+)",
+        "Mars aspects natal Moon (Aquarius) (\u2212)",
+        "Jupiter aspects natal Moon (+)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": 12,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Jupiter",
+       "total": 6,
+       "verdict": "helps",
+       "to": "30 Dec 09:42",
+       "why": [
+        "Venus is 7th from Jupiter (kendra) (+)",
+        "rules 4, 11 (+)",
+        "natal house 10 (+)",
+        "transit Libra, house 4 (+)",
+        "Jupiter aspects natal Venus (+)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Venus",
+       "parent": "Venus",
+       "total": 5,
+       "verdict": "helps",
+       "to": "13 Dec 03:45",
+       "why": [
+        "rules 4, 11 (+)",
+        "natal house 10 (+)",
+        "transit Libra, house 4 (+)",
+        "Jupiter aspects natal Venus (+)",
+        "exalted / own sign (+)"
+       ]
+      }
+     ]
+    }
+   },
    "jupven": "off",
    "author": {
     "rules": [
-     "Mars square Uranus (within 3\u00b0) \u2013 his volatility"
+     "Mars square Uranus (within 3\u00b0) \u2013 Solar return: volatility"
     ],
     "detail": "Sun\u2013Mars 103.5\u00b0, Mars\u2013Ketu 11.3\u00b0, Jupiter\u2013Venus 67.5\u00b0, Mars\u2013Uranus 92.2\u00b0",
     "forecasts": [
@@ -60422,10 +62545,137 @@
      "tara": "bad"
     }
    },
+   "chain": {
+    "USA": {
+     "score": 3,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Sun",
+       "parent": "Saturn",
+       "total": 0,
+       "verdict": "mixed",
+       "to": "17 Dec 04:06",
+       "why": [
+        "Sun is 10th from Saturn (kendra) (+)",
+        "Sun regards Saturn as enemy (\u2212)",
+        "natal house 8 (\u2212)",
+        "transit Scorpio, house 1 (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Rahu",
+       "parent": "Sun",
+       "total": 0,
+       "verdict": "mixed",
+       "to": "12 Dec 07:36",
+       "why": [
+        "Rahu is 2nd from Sun (2/12) (\u2212)",
+        "via dispositor Moon: rules 9 (+)",
+        "natal house 9 (+)",
+        "Ketu on natal Rahu (Cancer) (\u2212)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": 12,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Jupiter",
+       "total": 6,
+       "verdict": "helps",
+       "to": "30 Dec 09:42",
+       "why": [
+        "Venus is 7th from Jupiter (kendra) (+)",
+        "rules 4, 11 (+)",
+        "natal house 10 (+)",
+        "transit Libra, house 4 (+)",
+        "Jupiter aspects natal Venus (+)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Venus",
+       "parent": "Venus",
+       "total": 5,
+       "verdict": "helps",
+       "to": "13 Dec 03:45",
+       "why": [
+        "rules 4, 11 (+)",
+        "natal house 10 (+)",
+        "transit Libra, house 4 (+)",
+        "Jupiter aspects natal Venus (+)",
+        "exalted / own sign (+)"
+       ]
+      }
+     ]
+    }
+   },
    "jupven": "off",
    "author": {
     "rules": [
-     "Mars square Uranus (within 3\u00b0) \u2013 his volatility"
+     "Mars square Uranus (within 3\u00b0) \u2013 Solar return: volatility"
     ],
     "detail": "Sun\u2013Mars 104.2\u00b0, Mars\u2013Ketu 11.7\u00b0, Jupiter\u2013Venus 68.3\u00b0, Mars\u2013Uranus 92.5\u00b0",
     "forecasts": [
@@ -63660,10 +65910,137 @@
      "tara": "good"
     }
    },
+   "chain": {
+    "USA": {
+     "score": 5,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Sun",
+       "parent": "Saturn",
+       "total": 0,
+       "verdict": "mixed",
+       "to": "17 Dec 04:06",
+       "why": [
+        "Sun is 10th from Saturn (kendra) (+)",
+        "Sun regards Saturn as enemy (\u2212)",
+        "natal house 8 (\u2212)",
+        "transit Scorpio, house 1 (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Jupiter",
+       "parent": "Sun",
+       "total": 2,
+       "verdict": "helps",
+       "to": "13 Dec 07:12",
+       "why": [
+        "Jupiter regards Sun as friend (+)",
+        "rules 2, 5 (+)",
+        "natal house 8 (\u2212)",
+        "transit Leo, house 10 (+)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": 12,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Jupiter",
+       "total": 6,
+       "verdict": "helps",
+       "to": "30 Dec 09:42",
+       "why": [
+        "Venus is 7th from Jupiter (kendra) (+)",
+        "rules 4, 11 (+)",
+        "natal house 10 (+)",
+        "transit Libra, house 4 (+)",
+        "Jupiter aspects natal Venus (+)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Venus",
+       "parent": "Venus",
+       "total": 5,
+       "verdict": "helps",
+       "to": "13 Dec 03:45",
+       "why": [
+        "rules 4, 11 (+)",
+        "natal house 10 (+)",
+        "transit Libra, house 4 (+)",
+        "Jupiter aspects natal Venus (+)",
+        "exalted / own sign (+)"
+       ]
+      }
+     ]
+    }
+   },
    "jupven": "off",
    "author": {
     "rules": [
-     "Mars square Uranus (within 3\u00b0) \u2013 his volatility"
+     "Mars square Uranus (within 3\u00b0) \u2013 Solar return: volatility"
     ],
     "detail": "Sun\u2013Mars 104.9\u00b0, Mars\u2013Ketu 12.0\u00b0, Jupiter\u2013Venus 69.0\u00b0, Mars\u2013Uranus 92.9\u00b0",
     "forecasts": [
@@ -66757,6 +69134,132 @@
      "gochara": "mixed",
      "chandra": "good",
      "tara": "bad"
+    }
+   },
+   "chain": {
+    "USA": {
+     "score": 4,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Sun",
+       "parent": "Saturn",
+       "total": 0,
+       "verdict": "mixed",
+       "to": "17 Dec 04:06",
+       "why": [
+        "Sun is 10th from Saturn (kendra) (+)",
+        "Sun regards Saturn as enemy (\u2212)",
+        "natal house 8 (\u2212)",
+        "transit Scorpio, house 1 (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Saturn",
+       "parent": "Sun",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "14 Dec 11:13",
+       "why": [
+        "Saturn is 4th from Sun (kendra) (+)",
+        "Saturn regards Sun as enemy (\u2212)",
+        "transit Pisces, house 5 (+)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": 6,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Jupiter",
+       "total": 6,
+       "verdict": "helps",
+       "to": "30 Dec 09:42",
+       "why": [
+        "Venus is 7th from Jupiter (kendra) (+)",
+        "rules 4, 11 (+)",
+        "natal house 10 (+)",
+        "transit Libra, house 4 (+)",
+        "Jupiter aspects natal Venus (+)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Sun",
+       "parent": "Venus",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "14 Dec 04:35",
+       "why": [
+        "Sun is 2nd from Venus (2/12) (\u2212)",
+        "Sun regards Venus as enemy (\u2212)",
+        "rules 2 (+)",
+        "transit Scorpio, house 5 (+)",
+        "Saturn aspects natal Sun (Taurus) (\u2212)"
+       ]
+      }
+     ]
     }
    },
    "jupven": "off",
@@ -70232,6 +72735,135 @@
      "gochara": "mixed",
      "chandra": "good",
      "tara": "good"
+    }
+   },
+   "chain": {
+    "USA": {
+     "score": 3,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Sun",
+       "parent": "Saturn",
+       "total": 0,
+       "verdict": "mixed",
+       "to": "17 Dec 04:06",
+       "why": [
+        "Sun is 10th from Saturn (kendra) (+)",
+        "Sun regards Saturn as enemy (\u2212)",
+        "natal house 8 (\u2212)",
+        "transit Scorpio, house 1 (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Mercury",
+       "parent": "Sun",
+       "total": 0,
+       "verdict": "mixed",
+       "to": "15 Dec 12:17",
+       "why": [
+        "Mercury is 2nd from Sun (2/12) (\u2212)",
+        "Mercury regards Sun as friend (+)",
+        "natal house 9 (+)",
+        "transit Scorpio, house 1 (+)",
+        "Ketu on natal Mercury (Cancer) (\u2212)",
+        "combust (\u2212)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": 6,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Jupiter",
+       "total": 6,
+       "verdict": "helps",
+       "to": "30 Dec 09:42",
+       "why": [
+        "Venus is 7th from Jupiter (kendra) (+)",
+        "rules 4, 11 (+)",
+        "natal house 10 (+)",
+        "transit Libra, house 4 (+)",
+        "Jupiter aspects natal Venus (+)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Moon",
+       "parent": "Venus",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "15 Dec 21:59",
+       "why": [
+        "Moon is 12th from Venus (2/12) (\u2212)",
+        "rules 1 (+)",
+        "natal house 9 (+)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn on natal Moon (Pisces); Mars aspects natal Moon (Pisces) (\u2212)"
+       ]
+      }
+     ]
     }
    },
    "jupven": "off",
@@ -74173,6 +76805,132 @@
      "tara": "bad"
     }
    },
+   "chain": {
+    "USA": {
+     "score": 2,
+     "reading": "mixed",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Sun",
+       "parent": "Saturn",
+       "total": 0,
+       "verdict": "mixed",
+       "to": "17 Dec 04:06",
+       "why": [
+        "Sun is 10th from Saturn (kendra) (+)",
+        "Sun regards Saturn as enemy (\u2212)",
+        "natal house 8 (\u2212)",
+        "transit Scorpio, house 1 (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Ketu",
+       "parent": "Sun",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "15 Dec 22:37",
+       "why": [
+        "Ketu is 8th from Sun (6/8) (\u2212)",
+        "transit Cancer, house 9 (+)",
+        "Rahu on natal Ketu (Capricorn) (\u2212)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": 6,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Jupiter",
+       "total": 6,
+       "verdict": "helps",
+       "to": "30 Dec 09:42",
+       "why": [
+        "Venus is 7th from Jupiter (kendra) (+)",
+        "rules 4, 11 (+)",
+        "natal house 10 (+)",
+        "transit Libra, house 4 (+)",
+        "Jupiter aspects natal Venus (+)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Moon",
+       "parent": "Venus",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "15 Dec 21:59",
+       "why": [
+        "Moon is 12th from Venus (2/12) (\u2212)",
+        "rules 1 (+)",
+        "natal house 9 (+)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn on natal Moon (Pisces); Mars aspects natal Moon (Pisces) (\u2212)"
+       ]
+      }
+     ]
+    }
+   },
    "jupven": "off",
    "author": {
     "rules": [],
@@ -77781,6 +80539,132 @@
      "tara": "good"
     }
    },
+   "chain": {
+    "USA": {
+     "score": 0,
+     "reading": "mixed",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Sun",
+       "parent": "Saturn",
+       "total": 0,
+       "verdict": "mixed",
+       "to": "17 Dec 04:06",
+       "why": [
+        "Sun is 10th from Saturn (kendra) (+)",
+        "Sun regards Saturn as enemy (\u2212)",
+        "natal house 8 (\u2212)",
+        "transit Scorpio, house 1 (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Venus",
+       "parent": "Sun",
+       "total": -3,
+       "verdict": "hurts",
+       "to": "17 Dec 04:06",
+       "why": [
+        "Venus regards Sun as enemy (\u2212)",
+        "rules 7, 12 (\u2212)",
+        "natal house 8 (\u2212)",
+        "transit Libra, house 12 (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": 10,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Jupiter",
+       "total": 6,
+       "verdict": "helps",
+       "to": "30 Dec 09:42",
+       "why": [
+        "Venus is 7th from Jupiter (kendra) (+)",
+        "rules 4, 11 (+)",
+        "natal house 10 (+)",
+        "transit Libra, house 4 (+)",
+        "Jupiter aspects natal Venus (+)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Mars",
+       "parent": "Venus",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Dec 02:57",
+       "why": [
+        "Mars is 5th from Venus (trine) (+)",
+        "rules 5, 10 (+)",
+        "Jupiter on natal Mars (+)"
+       ]
+      }
+     ]
+    }
+   },
    "jupven": "off",
    "author": {
     "rules": [],
@@ -81000,6 +83884,135 @@
      "gochara": "mixed",
      "chandra": "good",
      "tara": "good"
+    }
+   },
+   "chain": {
+    "USA": {
+     "score": 8,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Moon",
+       "parent": "Saturn",
+       "total": 2,
+       "verdict": "helps",
+       "to": "29 Dec 11:03",
+       "why": [
+        "Moon is 6th from Saturn (6/8) (\u2212)",
+        "rules 9 (+)",
+        "natal house 4 (+)",
+        "transit Pisces, house 5 (+)",
+        "Mars aspects natal Moon (Aquarius) (\u2212)",
+        "Jupiter aspects natal Moon (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Moon",
+       "parent": "Moon",
+       "total": 3,
+       "verdict": "helps",
+       "to": "18 Dec 04:41",
+       "why": [
+        "rules 9 (+)",
+        "natal house 4 (+)",
+        "transit Pisces, house 5 (+)",
+        "Mars aspects natal Moon (Aquarius) (\u2212)",
+        "Jupiter aspects natal Moon (+)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": 5,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Jupiter",
+       "total": 6,
+       "verdict": "helps",
+       "to": "30 Dec 09:42",
+       "why": [
+        "Venus is 7th from Jupiter (kendra) (+)",
+        "rules 4, 11 (+)",
+        "natal house 10 (+)",
+        "transit Libra, house 4 (+)",
+        "Jupiter aspects natal Venus (+)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Rahu",
+       "parent": "Venus",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "20 Dec 05:28",
+       "why": [
+        "Rahu is 6th from Venus (6/8) (\u2212)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Capricorn, house 7 (+)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      }
+     ]
     }
    },
    "jupven": "off",
@@ -84304,6 +87317,134 @@
      "gochara": "mixed",
      "chandra": "good",
      "tara": "janma"
+    }
+   },
+   "chain": {
+    "USA": {
+     "score": 7,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Moon",
+       "parent": "Saturn",
+       "total": 2,
+       "verdict": "helps",
+       "to": "29 Dec 11:03",
+       "why": [
+        "Moon is 6th from Saturn (6/8) (\u2212)",
+        "rules 9 (+)",
+        "natal house 4 (+)",
+        "transit Pisces, house 5 (+)",
+        "Mars aspects natal Moon (Aquarius) (\u2212)",
+        "Jupiter aspects natal Moon (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Mars",
+       "parent": "Moon",
+       "total": 2,
+       "verdict": "helps",
+       "to": "18 Dec 21:53",
+       "why": [
+        "Mars is 5th from Moon (trine) (+)",
+        "Mars regards Moon as friend (+)",
+        "natal house 8 (\u2212)",
+        "transit Leo, house 10 (+)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": 5,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Jupiter",
+       "total": 6,
+       "verdict": "helps",
+       "to": "30 Dec 09:42",
+       "why": [
+        "Venus is 7th from Jupiter (kendra) (+)",
+        "rules 4, 11 (+)",
+        "natal house 10 (+)",
+        "transit Libra, house 4 (+)",
+        "Jupiter aspects natal Venus (+)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Rahu",
+       "parent": "Venus",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "20 Dec 05:28",
+       "why": [
+        "Rahu is 6th from Venus (6/8) (\u2212)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Capricorn, house 7 (+)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      }
+     ]
     }
    },
    "jupven": "off",
@@ -88077,6 +91218,134 @@
      "tara": "good"
     }
    },
+   "chain": {
+    "USA": {
+     "score": 5,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Moon",
+       "parent": "Saturn",
+       "total": 2,
+       "verdict": "helps",
+       "to": "29 Dec 11:03",
+       "why": [
+        "Moon is 6th from Saturn (6/8) (\u2212)",
+        "rules 9 (+)",
+        "natal house 4 (+)",
+        "transit Pisces, house 5 (+)",
+        "Mars aspects natal Moon (Aquarius) (\u2212)",
+        "Jupiter aspects natal Moon (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Rahu",
+       "parent": "Moon",
+       "total": 0,
+       "verdict": "mixed",
+       "to": "20 Dec 18:08",
+       "why": [
+        "Rahu is 6th from Moon (6/8) (\u2212)",
+        "via dispositor Moon: rules 9 (+)",
+        "natal house 9 (+)",
+        "Ketu on natal Rahu (Cancer) (\u2212)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": 5,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Jupiter",
+       "total": 6,
+       "verdict": "helps",
+       "to": "30 Dec 09:42",
+       "why": [
+        "Venus is 7th from Jupiter (kendra) (+)",
+        "rules 4, 11 (+)",
+        "natal house 10 (+)",
+        "transit Libra, house 4 (+)",
+        "Jupiter aspects natal Venus (+)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Rahu",
+       "parent": "Venus",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "20 Dec 05:28",
+       "why": [
+        "Rahu is 6th from Venus (6/8) (\u2212)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Capricorn, house 7 (+)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      }
+     ]
+    }
+   },
    "jupven": "off",
    "author": {
     "rules": [],
@@ -91193,6 +94462,133 @@
      "gochara": "mixed",
      "chandra": "weak",
      "tara": "bad"
+    }
+   },
+   "chain": {
+    "USA": {
+     "score": 5,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Moon",
+       "parent": "Saturn",
+       "total": 2,
+       "verdict": "helps",
+       "to": "29 Dec 11:03",
+       "why": [
+        "Moon is 6th from Saturn (6/8) (\u2212)",
+        "rules 9 (+)",
+        "natal house 4 (+)",
+        "transit Pisces, house 5 (+)",
+        "Mars aspects natal Moon (Aquarius) (\u2212)",
+        "Jupiter aspects natal Moon (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Rahu",
+       "parent": "Moon",
+       "total": 0,
+       "verdict": "mixed",
+       "to": "20 Dec 18:08",
+       "why": [
+        "Rahu is 6th from Moon (6/8) (\u2212)",
+        "via dispositor Moon: rules 9 (+)",
+        "natal house 9 (+)",
+        "Ketu on natal Rahu (Cancer) (\u2212)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": 8,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Jupiter",
+       "total": 6,
+       "verdict": "helps",
+       "to": "30 Dec 09:42",
+       "why": [
+        "Venus is 7th from Jupiter (kendra) (+)",
+        "rules 4, 11 (+)",
+        "natal house 10 (+)",
+        "transit Libra, house 4 (+)",
+        "Jupiter aspects natal Venus (+)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Jupiter",
+       "parent": "Venus",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "22 Dec 23:42",
+       "why": [
+        "Jupiter is 7th from Venus (kendra) (+)",
+        "Jupiter regards Venus as enemy (\u2212)",
+        "natal house 4 (+)"
+       ]
+      }
+     ]
     }
    },
    "jupven": "off",
@@ -95470,6 +98866,134 @@
      "tara": "good"
     }
    },
+   "chain": {
+    "USA": {
+     "score": 8,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Moon",
+       "parent": "Saturn",
+       "total": 2,
+       "verdict": "helps",
+       "to": "29 Dec 11:03",
+       "why": [
+        "Moon is 6th from Saturn (6/8) (\u2212)",
+        "rules 9 (+)",
+        "natal house 4 (+)",
+        "transit Pisces, house 5 (+)",
+        "Mars aspects natal Moon (Aquarius) (\u2212)",
+        "Jupiter aspects natal Moon (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Jupiter",
+       "parent": "Moon",
+       "total": 3,
+       "verdict": "helps",
+       "to": "22 Dec 09:27",
+       "why": [
+        "Jupiter is 5th from Moon (trine) (+)",
+        "Jupiter regards Moon as friend (+)",
+        "rules 2, 5 (+)",
+        "natal house 8 (\u2212)",
+        "transit Leo, house 10 (+)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": 8,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Jupiter",
+       "total": 6,
+       "verdict": "helps",
+       "to": "30 Dec 09:42",
+       "why": [
+        "Venus is 7th from Jupiter (kendra) (+)",
+        "rules 4, 11 (+)",
+        "natal house 10 (+)",
+        "transit Libra, house 4 (+)",
+        "Jupiter aspects natal Venus (+)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Jupiter",
+       "parent": "Venus",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "22 Dec 23:42",
+       "why": [
+        "Jupiter is 7th from Venus (kendra) (+)",
+        "Jupiter regards Venus as enemy (\u2212)",
+        "natal house 4 (+)"
+       ]
+      }
+     ]
+    }
+   },
    "jupven": "off",
    "author": {
     "rules": [],
@@ -98991,6 +102515,132 @@
      "gochara": "mixed",
      "chandra": "good",
      "tara": "bad"
+    }
+   },
+   "chain": {
+    "USA": {
+     "score": 4,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Moon",
+       "parent": "Saturn",
+       "total": 2,
+       "verdict": "helps",
+       "to": "29 Dec 11:03",
+       "why": [
+        "Moon is 6th from Saturn (6/8) (\u2212)",
+        "rules 9 (+)",
+        "natal house 4 (+)",
+        "transit Pisces, house 5 (+)",
+        "Mars aspects natal Moon (Aquarius) (\u2212)",
+        "Jupiter aspects natal Moon (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Saturn",
+       "parent": "Moon",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "24 Dec 08:09",
+       "why": [
+        "Saturn is 8th from Moon (6/8) (\u2212)",
+        "Saturn regards Moon as enemy (\u2212)",
+        "transit Pisces, house 5 (+)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": 8,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Jupiter",
+       "total": 6,
+       "verdict": "helps",
+       "to": "30 Dec 09:42",
+       "why": [
+        "Venus is 7th from Jupiter (kendra) (+)",
+        "rules 4, 11 (+)",
+        "natal house 10 (+)",
+        "transit Libra, house 4 (+)",
+        "Jupiter aspects natal Venus (+)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Jupiter",
+       "parent": "Venus",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "22 Dec 23:42",
+       "why": [
+        "Jupiter is 7th from Venus (kendra) (+)",
+        "Jupiter regards Venus as enemy (\u2212)",
+        "natal house 4 (+)"
+       ]
+      }
+     ]
     }
    },
    "jupven": "off",
@@ -102805,6 +106455,135 @@
      "tara": "good"
     }
    },
+   "chain": {
+    "USA": {
+     "score": 4,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Moon",
+       "parent": "Saturn",
+       "total": 2,
+       "verdict": "helps",
+       "to": "29 Dec 11:03",
+       "why": [
+        "Moon is 6th from Saturn (6/8) (\u2212)",
+        "rules 9 (+)",
+        "natal house 4 (+)",
+        "transit Pisces, house 5 (+)",
+        "Mars aspects natal Moon (Aquarius) (\u2212)",
+        "Jupiter aspects natal Moon (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Saturn",
+       "parent": "Moon",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "24 Dec 08:09",
+       "why": [
+        "Saturn is 8th from Moon (6/8) (\u2212)",
+        "Saturn regards Moon as enemy (\u2212)",
+        "transit Pisces, house 5 (+)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": 9,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Jupiter",
+       "total": 6,
+       "verdict": "helps",
+       "to": "30 Dec 09:42",
+       "why": [
+        "Venus is 7th from Jupiter (kendra) (+)",
+        "rules 4, 11 (+)",
+        "natal house 10 (+)",
+        "transit Libra, house 4 (+)",
+        "Jupiter aspects natal Venus (+)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Saturn",
+       "parent": "Venus",
+       "total": 2,
+       "verdict": "helps",
+       "to": "26 Dec 06:21",
+       "why": [
+        "Saturn regards Venus as friend (+)",
+        "rules 7, 8 (\u2212)",
+        "natal house 10 (+)",
+        "natal Aries (debilitated) (\u2212)",
+        "transit Pisces, house 9 (+)",
+        "Jupiter aspects natal Saturn (+)"
+       ]
+      }
+     ]
+    }
+   },
    "jupven": "off",
    "author": {
     "rules": [],
@@ -106225,6 +110004,137 @@
      "gochara": "mixed",
      "chandra": "weak",
      "tara": "bad"
+    }
+   },
+   "chain": {
+    "USA": {
+     "score": 2,
+     "reading": "mixed",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Moon",
+       "parent": "Saturn",
+       "total": 2,
+       "verdict": "helps",
+       "to": "29 Dec 11:03",
+       "why": [
+        "Moon is 6th from Saturn (6/8) (\u2212)",
+        "rules 9 (+)",
+        "natal house 4 (+)",
+        "transit Pisces, house 5 (+)",
+        "Mars aspects natal Moon (Aquarius) (\u2212)",
+        "Jupiter aspects natal Moon (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Mercury",
+       "parent": "Moon",
+       "total": -3,
+       "verdict": "hurts",
+       "to": "26 Dec 01:56",
+       "why": [
+        "Mercury is 6th from Moon (6/8) (\u2212)",
+        "Mercury regards Moon as enemy (\u2212)",
+        "natal house 9 (+)",
+        "Ketu on natal Mercury (Cancer) (\u2212)",
+        "combust (\u2212)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": 9,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Jupiter",
+       "total": 6,
+       "verdict": "helps",
+       "to": "30 Dec 09:42",
+       "why": [
+        "Venus is 7th from Jupiter (kendra) (+)",
+        "rules 4, 11 (+)",
+        "natal house 10 (+)",
+        "transit Libra, house 4 (+)",
+        "Jupiter aspects natal Venus (+)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Saturn",
+       "parent": "Venus",
+       "total": 2,
+       "verdict": "helps",
+       "to": "26 Dec 06:21",
+       "why": [
+        "Saturn regards Venus as friend (+)",
+        "rules 7, 8 (\u2212)",
+        "natal house 10 (+)",
+        "natal Aries (debilitated) (\u2212)",
+        "transit Pisces, house 9 (+)",
+        "Jupiter aspects natal Saturn (+)"
+       ]
+      }
+     ]
     }
    },
    "jupven": "off",
@@ -110063,6 +113973,137 @@
      "tara": "good"
     }
    },
+   "chain": {
+    "USA": {
+     "score": 2,
+     "reading": "mixed",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Moon",
+       "parent": "Saturn",
+       "total": 2,
+       "verdict": "helps",
+       "to": "29 Dec 11:03",
+       "why": [
+        "Moon is 6th from Saturn (6/8) (\u2212)",
+        "rules 9 (+)",
+        "natal house 4 (+)",
+        "transit Pisces, house 5 (+)",
+        "Mars aspects natal Moon (Aquarius) (\u2212)",
+        "Jupiter aspects natal Moon (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Mercury",
+       "parent": "Moon",
+       "total": -3,
+       "verdict": "hurts",
+       "to": "26 Dec 01:56",
+       "why": [
+        "Mercury is 6th from Moon (6/8) (\u2212)",
+        "Mercury regards Moon as enemy (\u2212)",
+        "natal house 9 (+)",
+        "Ketu on natal Mercury (Cancer) (\u2212)",
+        "combust (\u2212)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": 9,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Jupiter",
+       "total": 6,
+       "verdict": "helps",
+       "to": "30 Dec 09:42",
+       "why": [
+        "Venus is 7th from Jupiter (kendra) (+)",
+        "rules 4, 11 (+)",
+        "natal house 10 (+)",
+        "transit Libra, house 4 (+)",
+        "Jupiter aspects natal Venus (+)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Saturn",
+       "parent": "Venus",
+       "total": 2,
+       "verdict": "helps",
+       "to": "26 Dec 06:21",
+       "why": [
+        "Saturn regards Venus as friend (+)",
+        "rules 7, 8 (\u2212)",
+        "natal house 10 (+)",
+        "natal Aries (debilitated) (\u2212)",
+        "transit Pisces, house 9 (+)",
+        "Jupiter aspects natal Saturn (+)"
+       ]
+      }
+     ]
+    }
+   },
    "jupven": "off",
    "author": {
     "rules": [],
@@ -113267,6 +117308,135 @@
      "gochara": "mixed",
      "chandra": "weak",
      "tara": "janma"
+    }
+   },
+   "chain": {
+    "USA": {
+     "score": 4,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Moon",
+       "parent": "Saturn",
+       "total": 2,
+       "verdict": "helps",
+       "to": "29 Dec 11:03",
+       "why": [
+        "Moon is 6th from Saturn (6/8) (\u2212)",
+        "rules 9 (+)",
+        "natal house 4 (+)",
+        "transit Pisces, house 5 (+)",
+        "Mars aspects natal Moon (Aquarius) (\u2212)",
+        "Jupiter aspects natal Moon (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Ketu",
+       "parent": "Moon",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "26 Dec 19:08",
+       "why": [
+        "Ketu is 12th from Moon (2/12) (\u2212)",
+        "transit Cancer, house 9 (+)",
+        "Rahu on natal Ketu (Capricorn) (\u2212)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": 3,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Jupiter",
+       "total": 6,
+       "verdict": "helps",
+       "to": "30 Dec 09:42",
+       "why": [
+        "Venus is 7th from Jupiter (kendra) (+)",
+        "rules 4, 11 (+)",
+        "natal house 10 (+)",
+        "transit Libra, house 4 (+)",
+        "Jupiter aspects natal Venus (+)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Mercury",
+       "parent": "Venus",
+       "total": -4,
+       "verdict": "hurts",
+       "to": "29 Dec 04:43",
+       "why": [
+        "Mercury is 2nd from Venus (2/12) (\u2212)",
+        "Mercury regards Venus as friend (+)",
+        "rules 3, 12 (\u2212)",
+        "transit Sagittarius, house 6 (\u2212)",
+        "Saturn aspects natal Mercury (Taurus) (\u2212)",
+        "combust (\u2212)"
+       ]
+      }
+     ]
     }
    },
    "jupven": "off",
@@ -117037,6 +121207,138 @@
      "tara": "good"
     }
    },
+   "chain": {
+    "USA": {
+     "score": 3,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Moon",
+       "parent": "Saturn",
+       "total": 2,
+       "verdict": "helps",
+       "to": "29 Dec 11:03",
+       "why": [
+        "Moon is 6th from Saturn (6/8) (\u2212)",
+        "rules 9 (+)",
+        "natal house 4 (+)",
+        "transit Pisces, house 5 (+)",
+        "Mars aspects natal Moon (Aquarius) (\u2212)",
+        "Jupiter aspects natal Moon (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Venus",
+       "parent": "Moon",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "28 Dec 20:18",
+       "why": [
+        "Venus is 5th from Moon (trine) (+)",
+        "Venus regards Moon as enemy (\u2212)",
+        "rules 7, 12 (\u2212)",
+        "natal house 8 (\u2212)",
+        "transit Libra, house 12 (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": 3,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Jupiter",
+       "total": 6,
+       "verdict": "helps",
+       "to": "30 Dec 09:42",
+       "why": [
+        "Venus is 7th from Jupiter (kendra) (+)",
+        "rules 4, 11 (+)",
+        "natal house 10 (+)",
+        "transit Libra, house 4 (+)",
+        "Jupiter aspects natal Venus (+)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Mercury",
+       "parent": "Venus",
+       "total": -4,
+       "verdict": "hurts",
+       "to": "29 Dec 04:43",
+       "why": [
+        "Mercury is 2nd from Venus (2/12) (\u2212)",
+        "Mercury regards Venus as friend (+)",
+        "rules 3, 12 (\u2212)",
+        "transit Sagittarius, house 6 (\u2212)",
+        "Saturn aspects natal Mercury (Taurus) (\u2212)",
+        "combust (\u2212)"
+       ]
+      }
+     ]
+    }
+   },
    "jupven": "off",
    "author": {
     "rules": [],
@@ -120316,6 +124618,138 @@
      "gochara": "mixed",
      "chandra": "good",
      "tara": "bad"
+    }
+   },
+   "chain": {
+    "USA": {
+     "score": 3,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Moon",
+       "parent": "Saturn",
+       "total": 2,
+       "verdict": "helps",
+       "to": "29 Dec 11:03",
+       "why": [
+        "Moon is 6th from Saturn (6/8) (\u2212)",
+        "rules 9 (+)",
+        "natal house 4 (+)",
+        "transit Pisces, house 5 (+)",
+        "Mars aspects natal Moon (Aquarius) (\u2212)",
+        "Jupiter aspects natal Moon (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Venus",
+       "parent": "Moon",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "28 Dec 20:18",
+       "why": [
+        "Venus is 5th from Moon (trine) (+)",
+        "Venus regards Moon as enemy (\u2212)",
+        "rules 7, 12 (\u2212)",
+        "natal house 8 (\u2212)",
+        "transit Libra, house 12 (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": 3,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Jupiter",
+       "total": 6,
+       "verdict": "helps",
+       "to": "30 Dec 09:42",
+       "why": [
+        "Venus is 7th from Jupiter (kendra) (+)",
+        "rules 4, 11 (+)",
+        "natal house 10 (+)",
+        "transit Libra, house 4 (+)",
+        "Jupiter aspects natal Venus (+)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Mercury",
+       "parent": "Venus",
+       "total": -4,
+       "verdict": "hurts",
+       "to": "29 Dec 04:43",
+       "why": [
+        "Mercury is 2nd from Venus (2/12) (\u2212)",
+        "Mercury regards Venus as friend (+)",
+        "rules 3, 12 (\u2212)",
+        "transit Sagittarius, house 6 (\u2212)",
+        "Saturn aspects natal Mercury (Taurus) (\u2212)",
+        "combust (\u2212)"
+       ]
+      }
+     ]
     }
    },
    "jupven": "off",
@@ -124191,6 +128625,129 @@
      "tara": "good"
     }
    },
+   "chain": {
+    "USA": {
+     "score": 4,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Mars",
+       "parent": "Saturn",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "07 Jan 01:30",
+       "why": [
+        "Mars is 10th from Saturn (kendra) (+)",
+        "natal house 8 (\u2212)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Mars",
+       "parent": "Mars",
+       "total": 0,
+       "verdict": "mixed",
+       "to": "29 Dec 23:05",
+       "why": [
+        "natal house 8 (\u2212)",
+        "transit Leo, house 10 (+)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": 7,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Venus",
+       "parent": "Jupiter",
+       "total": 6,
+       "verdict": "helps",
+       "to": "30 Dec 09:42",
+       "why": [
+        "Venus is 7th from Jupiter (kendra) (+)",
+        "rules 4, 11 (+)",
+        "natal house 10 (+)",
+        "transit Libra, house 4 (+)",
+        "Jupiter aspects natal Venus (+)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Ketu",
+       "parent": "Venus",
+       "total": 0,
+       "verdict": "mixed",
+       "to": "30 Dec 09:42",
+       "why": [
+        "Ketu is 12th from Venus (2/12) (\u2212)",
+        "natal house 9 (+)",
+        "transit Cancer, house 1 (+)",
+        "Saturn on natal Ketu (Pisces); Mars aspects natal Ketu (Pisces) (\u2212)"
+       ]
+      }
+     ]
+    }
+   },
    "jupven": "off",
    "author": {
     "rules": [],
@@ -127641,6 +132198,129 @@
      "gochara": "mixed",
      "chandra": "good",
      "tara": "bad"
+    }
+   },
+   "chain": {
+    "USA": {
+     "score": 4,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Mars",
+       "parent": "Saturn",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "07 Jan 01:30",
+       "why": [
+        "Mars is 10th from Saturn (kendra) (+)",
+        "natal house 8 (\u2212)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Rahu",
+       "parent": "Mars",
+       "total": 0,
+       "verdict": "mixed",
+       "to": "31 Dec 06:03",
+       "why": [
+        "Rahu is 2nd from Mars (2/12) (\u2212)",
+        "via dispositor Moon: rules 9 (+)",
+        "natal house 9 (+)",
+        "Ketu on natal Rahu (Cancer) (\u2212)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": -1,
+     "reading": "mixed",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Sun",
+       "parent": "Jupiter",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "05 Jan 14:43",
+       "why": [
+        "Sun is 8th from Jupiter (6/8) (\u2212)",
+        "Sun regards Jupiter as friend (+)",
+        "rules 2 (+)",
+        "transit Sagittarius, house 6 (\u2212)",
+        "Saturn aspects natal Sun (Taurus) (\u2212)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Sun",
+       "parent": "Sun",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "30 Dec 17:09",
+       "why": [
+        "rules 2 (+)",
+        "transit Sagittarius, house 6 (\u2212)",
+        "Saturn aspects natal Sun (Taurus) (\u2212)"
+       ]
+      }
+     ]
     }
    },
    "jupven": "off",
@@ -131277,6 +135957,130 @@
      "tara": "good"
     }
    },
+   "chain": {
+    "USA": {
+     "score": 6,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Mercury",
+       "parent": "Rahu",
+       "total": 2,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "natal house 9 (+)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Saturn",
+       "parent": "Mercury",
+       "total": 3,
+       "verdict": "helps",
+       "to": "17 Feb 20:18",
+       "why": [
+        "Saturn is 3rd from Mercury (3/11) (+)",
+        "Saturn regards Mercury as friend (+)",
+        "transit Pisces, house 5 (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Mars",
+       "parent": "Saturn",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "07 Jan 01:30",
+       "why": [
+        "Mars is 10th from Saturn (kendra) (+)",
+        "natal house 8 (\u2212)",
+        "transit Leo, house 10 (+)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Jupiter",
+       "parent": "Mars",
+       "total": 2,
+       "verdict": "helps",
+       "to": "01 Jan 09:35",
+       "why": [
+        "Jupiter regards Mars as friend (+)",
+        "rules 2, 5 (+)",
+        "natal house 8 (\u2212)",
+        "transit Leo, house 10 (+)"
+       ]
+      }
+     ]
+    },
+    "NYSE": {
+     "score": 4,
+     "reading": "helps",
+     "levels": [
+      {
+       "level": "Antardasha",
+       "lord": "Rahu",
+       "parent": "Mercury",
+       "total": -2,
+       "verdict": "hurts",
+       "to": "09 Dec 07:53",
+       "why": [
+        "Rahu is 5th from Mercury (trine) (+)",
+        "via dispositor Mercury: rules 3, 12 (\u2212)",
+        "transit Aquarius, house 8 (\u2212)",
+        "Saturn aspects natal Rahu (Virgo) (\u2212)"
+       ]
+      },
+      {
+       "level": "Pratyantar",
+       "lord": "Jupiter",
+       "parent": "Rahu",
+       "total": 1,
+       "verdict": "mixed",
+       "to": "10 Feb 20:01",
+       "why": [
+        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
+        "natal house 4 (+)",
+        "transit Cancer, house 1 (+)",
+        "Mars aspects natal Jupiter (Libra) (\u2212)",
+        "exalted / own sign (+)"
+       ]
+      },
+      {
+       "level": "Sookshma",
+       "lord": "Sun",
+       "parent": "Jupiter",
+       "total": -1,
+       "verdict": "mixed",
+       "to": "05 Jan 14:43",
+       "why": [
+        "Sun is 8th from Jupiter (6/8) (\u2212)",
+        "Sun regards Jupiter as friend (+)",
+        "rules 2 (+)",
+        "transit Sagittarius, house 6 (\u2212)",
+        "Saturn aspects natal Sun (Taurus) (\u2212)"
+       ]
+      },
+      {
+       "level": "Prana",
+       "lord": "Mars",
+       "parent": "Sun",
+       "total": 4,
+       "verdict": "helps",
+       "to": "31 Dec 14:16",
+       "why": [
+        "Mars is 4th from Sun (kendra) (+)",
+        "Mars regards Sun as friend (+)",
+        "rules 5, 10 (+)",
+        "Jupiter on natal Mars (+)"
+       ]
+      }
+     ]
+    }
+   },
    "jupven": "off",
    "author": {
     "rules": [],
@@ -131382,8 +136186,82 @@
    }
   }
  ],
+ "dctest": {
+  "USA hurts": {
+   "chart": "USA",
+   "level": "Prana",
+   "group": "daily chain (Pratyantar + Sookshma + Prana): hurts (\u2264 \u22123)",
+   "units": 5037,
+   "of": 24840,
+   "mean": 6.3,
+   "base": 7.8,
+   "down": 46.1,
+   "base_down": 46.3,
+   "t": -0.39,
+   "p": 0.6972,
+   "h1": -6.4,
+   "h2": 4.6,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  "USA helps": {
+   "chart": "USA",
+   "level": "Prana",
+   "group": "daily chain: helps (\u2265 +3)",
+   "units": 7636,
+   "of": 24840,
+   "mean": 5.5,
+   "base": 7.8,
+   "down": 46.9,
+   "base_down": 46.3,
+   "t": -0.83,
+   "p": 0.4071,
+   "h1": -1.9,
+   "h2": -2.9,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  "NYSE hurts": {
+   "chart": "NYSE",
+   "level": "Prana",
+   "group": "daily chain (Pratyantar + Sookshma + Prana): hurts (\u2264 \u22123)",
+   "units": 4757,
+   "of": 24840,
+   "mean": 12.1,
+   "base": 7.8,
+   "down": 44.4,
+   "base_down": 46.3,
+   "t": 1.12,
+   "p": 0.2628,
+   "h1": 2.1,
+   "h2": 6.9,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  "NYSE helps": {
+   "chart": "NYSE",
+   "level": "Prana",
+   "group": "daily chain: helps (\u2265 +3)",
+   "units": 7459,
+   "of": 24840,
+   "mean": 6.7,
+   "base": 7.8,
+   "down": 46.5,
+   "base_down": 46.3,
+   "t": -0.4,
+   "p": 0.6861,
+   "h1": 1.1,
+   "h2": -3.4,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  }
+ },
  "atests": {
-  "Sun square Mars (within 3\u00b0) \u2013 his bearish": {
+  "Sun square Mars (within 3\u00b0) \u2013 Solar return: bearish": {
    "n": 813,
    "up1": 52.4,
    "exp1": 52.5,
@@ -131400,7 +136278,7 @@
    "eps_exp5": 56.5,
    "eps_p": 0.5355
   },
-  "Sun square Mars with Mars-Ketu within 8\u00b0 \u2013 his bearish": {
+  "Sun square Mars with Mars-Ketu within 8\u00b0 \u2013 Solar return: bearish": {
    "n": 35,
    "up1": 57.1,
    "exp1": 52.5,
@@ -131417,7 +136295,7 @@
    "eps_exp5": 57.8,
    "eps_p": 0.4192
   },
-  "Mars conjunct Ketu (within 5\u00b0) \u2013 his disruption": {
+  "Mars conjunct Ketu (within 5\u00b0) \u2013 Solar return: disruption": {
    "n": 739,
    "up1": 51.0,
    "exp1": 52.1,
@@ -131434,7 +136312,7 @@
    "eps_exp5": 56.2,
    "eps_p": 0.3266
   },
-  "Jupiter sextile Venus (within 2\u00b0) \u2013 his bullish": {
+  "Jupiter sextile Venus (within 2\u00b0) \u2013 Solar return: bullish": {
    "n": 587,
    "up1": 55.7,
    "exp1": 52.5,
@@ -131451,7 +136329,7 @@
    "eps_exp5": 55.8,
    "eps_p": 0.0272
   },
-  "Mars square Uranus (within 3\u00b0) \u2013 his volatility": {
+  "Mars square Uranus (within 3\u00b0) \u2013 Solar return: volatility": {
    "n": 837,
    "up1": 50.3,
    "exp1": 53.2,
@@ -131485,7 +136363,7 @@
    "eps_exp5": 56.6,
    "eps_p": 0.2279
   },
-  "Mercury in Pisces, tropical \u2013 his unfavourable": {
+  "Mercury in Pisces, tropical \u2013 Solar return: unfavourable": {
    "n": 2059,
    "up1": 51.5,
    "exp1": 52.5,

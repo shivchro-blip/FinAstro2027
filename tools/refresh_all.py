@@ -63,6 +63,7 @@ STEPS = [
     ["tools/dasha_transits.py"],
     ["tools/model_check_60d.py"],
     ["tools/combined_probability.py"],
+    ["tools/dasha_combinations.py"],
     ["tools/forward_daybyday.py"],
     ["tools/forward_daybyday.py", "2026-11-01", "2026-11-23"],
     ["tools/rule_tally.py", "2026-11-20", "2026-11-23"],

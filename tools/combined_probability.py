@@ -17,7 +17,7 @@ Layers (each day is in one state per layer):
                           good, adverse if none is
                  chandra  Chandra bala: transit Moon in 1/3/6/7/10/11 from the natal Moon
                  tara     Tara bala: transit Moon's nakshatra counted from the natal one (good 2/4/6/8/9, bad 3/5/7, janma 1)
-           and   jup-ven  the NYSE author's Jupiter sextile Venus (within 2 degrees)
+           and   jup-ven  Solar return's Jupiter sextile Venus (within 2 degrees)
   Gochara, Chandra bala and Tara bala are classical practice that our listed sources do not state; they are used here
   because the user asked for a pro Vedic reading (24 Nov 2026), and each is tested on its own like the rest.
 Weights: for each state, how often the market rose in it before the scoring period, shrunk toward the base rate
@@ -66,7 +66,7 @@ LAYERS = {"gold": ["table", "v1"], "silver": ["table"], "sensex": ["table", "big
 CLASSICAL = {"USA gochara", "NYSE gochara", "USA chandra", "NYSE chandra", "USA tara", "NYSE tara"}
 DESC = {"table": "our signal table's label", "v1": "Model v1.0 bias (Ch.41 + Shadbala)", "bigmove": "robust big-move factor",
         "dasha": "dasha lords' condition (Antar + Pratyantar + Sookshma)", "gochara": "Jupiter, Saturn, Rahu from the natal Moon",
-        "chandra": "Chandra bala", "tara": "Tara bala", "jup-ven": "author's Jupiter sextile Venus"}
+        "chandra": "Chandra bala", "tara": "Tara bala", "jup-ven": "Solar return: Jupiter sextile Venus"}
 TARA = ["Janma", "Sampat", "Vipat", "Kshema", "Pratyak", "Sadhaka", "Naidhana", "Mitra", "Param Mitra"]
 GOOD_FROM_MOON = {"Jupiter": (2, 5, 7, 9, 11), "Saturn": (3, 6, 11), "Rahu": (3, 6, 11)}
 TARGETS = ("up1", "up5", "big")

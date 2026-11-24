@@ -135,11 +135,11 @@
   {
    "claim": "(our note) Mars, Jupiter and Ketu together again in Cancer",
    "status": "holds",
-   "note": "9 Mar \u2013 26 Apr 2027: our Mars-Jupiter-node lead (bottoms in 2009 and 2020 came within 3 sessions of such an episode ending); its end on 26 Apr falls inside his Mar-May bottom window"
+   "note": "9 Mar \u2013 26 Apr 2027: our Mars-Jupiter-node lead (bottoms in 2009 and 2020 came within 3 sessions of such an episode ending); its end on 26 Apr falls inside the Solar return Mar-May bottom window"
   }
  ],
  "tests": {
-  "Sun square Mars (within 3\u00b0) \u2013 his bearish": {
+  "Sun square Mars (within 3\u00b0) \u2013 Solar return: bearish": {
    "n": 813,
    "up1": 52.4,
    "exp1": 52.5,
@@ -156,7 +156,7 @@
    "eps_exp5": 56.5,
    "eps_p": 0.5355
   },
-  "Sun square Mars with Mars-Ketu within 8\u00b0 \u2013 his bearish": {
+  "Sun square Mars with Mars-Ketu within 8\u00b0 \u2013 Solar return: bearish": {
    "n": 35,
    "up1": 57.1,
    "exp1": 52.5,
@@ -173,7 +173,7 @@
    "eps_exp5": 57.8,
    "eps_p": 0.4192
   },
-  "Mars conjunct Ketu (within 5\u00b0) \u2013 his disruption": {
+  "Mars conjunct Ketu (within 5\u00b0) \u2013 Solar return: disruption": {
    "n": 739,
    "up1": 51.0,
    "exp1": 52.1,
@@ -190,7 +190,7 @@
    "eps_exp5": 56.2,
    "eps_p": 0.3266
   },
-  "Jupiter sextile Venus (within 2\u00b0) \u2013 his bullish": {
+  "Jupiter sextile Venus (within 2\u00b0) \u2013 Solar return: bullish": {
    "n": 587,
    "up1": 55.7,
    "exp1": 52.5,
@@ -207,7 +207,7 @@
    "eps_exp5": 55.8,
    "eps_p": 0.0272
   },
-  "Mars square Uranus (within 3\u00b0) \u2013 his volatility": {
+  "Mars square Uranus (within 3\u00b0) \u2013 Solar return: volatility": {
    "n": 837,
    "up1": 50.3,
    "exp1": 53.2,
@@ -241,7 +241,7 @@
    "eps_exp5": 56.6,
    "eps_p": 0.2279
   },
-  "Mercury in Pisces, tropical \u2013 his unfavourable": {
+  "Mercury in Pisces, tropical \u2013 Solar return: unfavourable": {
    "n": 2059,
    "up1": 51.5,
    "exp1": 52.5,

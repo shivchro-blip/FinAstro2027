@@ -1,9 +1,9 @@
-"""The NYSE solar-return author's transit claims and forecasts: astronomy check, 1928-2026 S&P tests of
-his aspect rules, and a running scorecard of his forecasts (market prices and astrology only).
+"""Solar return (the NYSE monthly solar-return astrologer the user follows): transit claims and forecasts, astronomy check,
+1928-2026 S&P tests of the aspect rules, and a running scorecard of the forecasts (market prices and astrology only).
 
     python tools/author_forecasts.py
 
-His method (shared by the user, 24 Nov 2026): NYSE monthly solar returns (months start on the 18th / 19th,
+Method (shared by the user, 24 Nov 2026): NYSE monthly solar returns (months start on the 18th / 19th,
 see tools/nyse_charts.py) plus planetary transits read with degree aspects (square, sextile, conjunction).
 Aspects between two planets are the same in either zodiac; sign claims (Mercury in Pisces) are checked
 in both. Tests on the S&P 500 1928-2026 (daily closes): for each condition, the same-day move and the next
@@ -32,7 +32,7 @@ B = {"Sun": swe.SUN, "Mercury": swe.MERCURY, "Venus": swe.VENUS, "Mars": swe.MAR
 
 # --------------------------------------------------------------------------- forecasts
 # kind: "range" = net S&P move between two dates (last close before `start` to close on `end`) with an expected sign / bound;
-#       "days"  = the listed sessions' sign; "path" = several checkpoints. Levels and dates are his.
+#       "days"  = the listed sessions' sign; "path" = several checkpoints. Levels and dates are as given in Solar return.
 FORECASTS = [
     dict(id="m2026-10", made="before 20 Oct 2026", period="NYSE solar month 20 Oct - 18 Nov 2026", text="Bearish: debilitated ascendant lord Saturn and Mars with Ketu in the 8th.",
          kind="range", start="2026-10-20", end="2026-11-18", expect="down"),
@@ -166,7 +166,7 @@ def astro_checks():
     out.append(dict(claim="Jupiter-Venus sextile on Fri 27 Nov 2026", status="holds" if near(d27) else "wrong",
                     note=f"within 1°: {a:%d} – {b:%d %b}, exact about 28 Nov" if near(d27) else ""))
     out.append(dict(claim="(our note) Mars, Jupiter and Ketu together again in Cancer", status="holds",
-                    note="9 Mar – 26 Apr 2027: our Mars-Jupiter-node lead (bottoms in 2009 and 2020 came within 3 sessions of such an episode ending); its end on 26 Apr falls inside his Mar-May bottom window"))
+                    note="9 Mar – 26 Apr 2027: our Mars-Jupiter-node lead (bottoms in 2009 and 2020 came within 3 sessions of such an episode ending); its end on 26 Apr falls inside the Solar return Mar-May bottom window"))
     return out
 
 
@@ -180,13 +180,13 @@ def tests():
     D = list(P)
     C = [P[d] for d in D]
     conds = {
-        "Sun square Mars (within 3°) – his bearish": lambda x: abs(sep(x["Sun"], x["Mars"]) - 90) < 3,
-        "Sun square Mars with Mars-Ketu within 8° – his bearish": lambda x: abs(sep(x["Sun"], x["Mars"]) - 90) < 3 and sep(x["Mars"], x["Ketu"]) < 8,
-        "Mars conjunct Ketu (within 5°) – his disruption": lambda x: sep(x["Mars"], x["Ketu"]) < 5,
-        "Jupiter sextile Venus (within 2°) – his bullish": lambda x: abs(sep(x["Jupiter"], x["Venus"]) - 60) < 2,
-        "Mars square Uranus (within 3°) – his volatility": lambda x: abs(sep(x["Mars"], x["Uranus"]) - 90) < 3,
+        "Sun square Mars (within 3°) – Solar return: bearish": lambda x: abs(sep(x["Sun"], x["Mars"]) - 90) < 3,
+        "Sun square Mars with Mars-Ketu within 8° – Solar return: bearish": lambda x: abs(sep(x["Sun"], x["Mars"]) - 90) < 3 and sep(x["Mars"], x["Ketu"]) < 8,
+        "Mars conjunct Ketu (within 5°) – Solar return: disruption": lambda x: sep(x["Mars"], x["Ketu"]) < 5,
+        "Jupiter sextile Venus (within 2°) – Solar return: bullish": lambda x: abs(sep(x["Jupiter"], x["Venus"]) - 60) < 2,
+        "Mars square Uranus (within 3°) – Solar return: volatility": lambda x: abs(sep(x["Mars"], x["Uranus"]) - 90) < 3,
         "Mars retrograde": lambda x: x["mars_spd"] < 0,
-        "Mercury in Pisces, tropical – his unfavourable": lambda x: SG[int(x["mer_t"] // 30)] == "Pisces",
+        "Mercury in Pisces, tropical – Solar return: unfavourable": lambda x: SG[int(x["mer_t"] // 30)] == "Pisces",
         "Mercury in Pisces, sidereal": lambda x: SG[int(x["Mercury"] // 30)] == "Pisces",
     }
     rows = []
@@ -268,14 +268,14 @@ def write(out):
     arows = "".join(f"<tr class='{acls.get(a['status'], 'mixed')}'><td>{html.escape(a['claim'])}</td><td><b>{a['status']}</b></td><td class='s'>{html.escape(a['note'])}</td></tr>" for a in out["astronomy"])
     trows = "".join(f"<tr><td><b>{html.escape(k)}</b></td><td class='n'>{r['n']}</td><td class='n'>{r['up1']}% vs {r['exp1']}% (p {r['p1']})</td><td class='n'>{r['up5']}% vs {r['exp5']}% (p {r['p5']})</td>"
                     f"<td class='n'>{r['eps']} episodes: {r['eps_up5']}% vs {r['eps_exp5']}% (p {r['eps_p']})</td><td class='n'>{r['big']} vs {r['exp_big']} (p {r['p_big']})</td></tr>" for k, r in out["tests"].items())
-    page = f"""<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Author Forecasts</title><style>{css}</style></head><body>
-<h1>The NYSE solar-return author: forecasts, transit claims and his aspect rules tested</h1>
-<p class="m">His method: NYSE monthly solar returns (months start on the 18th / 19th; tools/nyse_charts.py) plus transits read with degree aspects. Market prices and astrology only. S&amp;P prices to {out['last_price']}.</p>
+    page = f"""<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Solar Return Forecasts</title><style>{css}</style></head><body>
+<h1>Solar return: forecasts, transit claims and aspect rules tested</h1>
+<p class="m">Solar return is the NYSE monthly solar-return astrologer whose material the user shares. Method: NYSE monthly solar returns (months start on the 18th / 19th; tools/nyse_charts.py) plus transits read with degree aspects. Market prices and astrology only. S&amp;P prices to {out['last_price']}.</p>
 <h2>Forecast scorecard</h2>
-<div class="wrap"><table><thead><tr><th>Period</th><th>His forecast</th><th>Score</th><th>S&amp;P 500</th></tr></thead><tbody>{frows}</tbody></table></div>
-<h2>Are his transit statements astronomically right? (sidereal Lahiri unless stated)</h2>
+<div class="wrap"><table><thead><tr><th>Period</th><th>Forecast</th><th>Score</th><th>S&amp;P 500</th></tr></thead><tbody>{frows}</tbody></table></div>
+<h2>Are the transit statements astronomically right? (sidereal Lahiri unless stated)</h2>
 <div class="wrap"><table><thead><tr><th>Claim</th><th>Check</th><th>Detail</th></tr></thead><tbody>{arows}</tbody></table></div>
-<h2>His aspect rules on the S&amp;P 500, 1928–2026 (daily)</h2>
+<h2>Solar return aspect rules on the S&amp;P 500, 1928–2026 (daily)</h2>
 <p class="s">Same-day move and next 5 sessions: share up on days with the condition, against the same years; big days (±2%) against the same years. Consecutive days overlap, so the episode column (each run of days counted once) is the fair test of direction.</p>
 <div class="wrap"><table><thead><tr><th>Condition</th><th>Days</th><th>Same day up</th><th>Next 5 sessions up (all days)</th><th>Each episode once: next 5 sessions up</th><th>Big days vs expected</th></tr></thead><tbody>{trows}</tbody></table></div>
 <p class="s">Generated by tools/author_forecasts.py. New forecasts go into FORECASTS in the script.</p></body></html>"""
