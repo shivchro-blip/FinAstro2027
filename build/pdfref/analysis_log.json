@@ -215,7 +215,7 @@
   },
   {
    "date": "2026-11-22",
-   "pr": "15",
+   "pr": "14",
    "topic": "Gold ±2% days 2000-2026: which planetary factors surround them (±3 days)",
    "analysis": "476 GC=F days with |close-to-close| >= 2% (20 Nov 2000 - 20 Nov 2026). 239 factors were tested: lunations, eclipses, stations, sign/nakshatra ingresses, combustion, conjunctions/oppositions within ±3 days; retrogrades, signs, Sun contacts, pair relations on the day; all active gold rules. Each factor's expected count comes from the same years; Poisson p, Benjamini-Hochberg q, separate episodes counted. Out-of-sample: leads picked on 2000-2013 re-measured on 2013-2026.",
    "result": "No factor significant after FDR (lowest q 0.36). Leads: Sun-Uranus opposition x2.13, Venus-Saturn conjunction x1.80, Saturn combustion begins x1.86, Jupiter nakshatra change x1.41, Rahu with Mars x1.44. Up: Mars in Capricorn x1.86 (62.5% up, p 0.003), Mars-Pluto conjunction x3.5. Down: Saturn combustion begins x2.3, Pluto R station x2.2, full Moon x1.24. The bullish rules Mars in Pushya (TA) and Sun in Libra with malefics (doc26) coincided with big falls. Out of sample: 14 of 23 early leads stayed above 1 but pooled x1.02 (p 0.34), no edge.",
@@ -226,7 +226,7 @@
   },
   {
    "date": "2026-11-22",
-   "pr": "15",
+   "pr": "14",
    "topic": "Gold big-move watch dates, 22 Nov 2026 - 31 Dec 2027",
    "analysis": "The 19 full-sample big-move leads (lift > 1, p < 0.05, 5+ episodes) located forward with the same definitions. Marked whether each held in both halves and whether it uses an outer planet. Watch stretches are weekdays with 3+ leads or 2+ both-halves Vedic leads.",
    "result": "5 watch stretches: 21-27 Jan 2027 (Jupiter back into Cancer, full Moon; either), 22-25 Mar 2027 (Saturn combustion begins, full Moon; down), 22-28 Jun 2027 (Jupiter into Leo; up), 18 Oct 2027 (full Moon, Sun in Libra with malefics; down), 27-31 Dec 2027 (Mars in Capricorn with Rahu; up). Watch dates, not calls: no lead passed FDR and out-of-sample pooled lift x1.02.",
@@ -238,7 +238,7 @@
   },
   {
    "date": "2026-11-22",
-   "pr": "16",
+   "pr": "15",
    "topic": "Venus rising in the West and the 30 Jan 2026 gold crash; TA Section 18 Venus rules 2000-2026",
    "analysis": "TA p.71 S18 Venus combust West/East and rises West/East (silver S35 A15/B16; KD p.122/124) tested on gold and silver 2000-2026 with the standard method (entry = last close before; rises on 5 sessions, combustion over the window; same-year base), plus 20/40-session moves, the 3 sessions before, +/-2% days within +/-3 days, and the qualified West-rising pattern. Case study 14 Jan - 27 Feb 2026.",
    "result": "Venus rose in the West on 31 Jan 2026 (Capricorn with Sun and Mars, the qualified 'sharp upturn after a small dip' case). Gold -10.8% on 30 Jan, the session before the layer's date, then +6.1% on 3 Feb and +11.9% after 20 sessions. Over 26 years, rises in West are at chance (gold 6/12, 50% vs 45%); qualified pattern 2 of 6 vs 1.8 expected. Leads: combust in East gold 12/16 (75% vs 57%, p 0.11); rises in East gold 40 sessions 13/15 (87% vs 63%, p 0.045). Combust in West did not hold up (7/16). Next: Venus rises in West 7 Sep 2027 in Leo with the Sun (qualified).",
@@ -249,7 +249,7 @@
   },
   {
    "date": "2026-11-22",
-   "pr": "17",
+   "pr": "16",
    "topic": "Combined gold & silver outlook, 22 Nov 2026 - 31 Dec 2027",
    "analysis": "Timeline joining the best-rule windows (trackers), big-move watch stretches and single leads, and Venus TA S18 dates, each with its 2000-2026 evidence. Month-by-month share of days under a best bullish rule. Calendar file.",
    "result": "Gold: U2 Mercury with the Sun (small edge) on 81% of Dec 2026 days, 74% Jan, 90% Aug, 97% Dec 2027, about 13-17% Mar/Sep/Oct 2027; TA S34 A9 not before 2028. Silver: retro Mercury/Jupiter mid-Dec 2026 to mid-Apr 2027, 10 Jun - 4 Jul, 7-28 Oct 2027. Venus combust East 20 Jul - 7 Sep 2027 (bullish lead); rises West 7 Sep 2027 (qualified, no edge). Volatility watch 21-27 Jan, 22-25 Mar, 22-28 Jun, 18 Oct, 27-31 Dec 2027. None passes a strict significance test.",
@@ -261,7 +261,7 @@
   },
   {
    "date": "2026-11-22",
-   "pr": "18",
+   "pr": "17",
    "topic": "Narrowing the outlook windows with fast planets (Moon, Mercury, Venus, Sun, Mars)",
    "analysis": "44 fast factors on the day (Moon relations to slow planets, Saturn 12th/2nd/6-8, malefic Moon, Moon sign change, lunation days, Mercury/Venus/Sun/Mars ingresses, stations, combustion ±1 day, KD Sun-Mercury conjunction and Mercury manifestation) tested on 2,498 historical watch-window days 2000-2026: same-year expected counts, Poisson p, BH q, both halves, lift outside windows, and a 100-run permutation (returns shuffled within year). Applied to every weekday of the forward watch items.",
    "result": "Not supported beyond chance: 3 factors passed against 2.0 expected under permutation (90th pct 4); none survives FDR. Moon opposite the Sun x1.49 (only inside windows; outside x0.74), Moon 6/8 Saturn x1.31, Moon opposite Rahu x1.34; none picks a direction. Narrowed days, best guesses: 22 Jan, 22-23 Mar, 19-20 Jul, 30 Aug, 6-7 Sep, 25-26 Nov 2027; no trigger in 4-10 May, 22-28 Jun, 18 Oct, 1-7 Nov, 27-31 Dec.",
@@ -273,7 +273,7 @@
   },
   {
    "date": "2026-11-22",
-   "pr": "19",
+   "pr": "18",
    "topic": "Simple gold bullish / bearish table to end-2027",
    "analysis": "Points per weekday from the outlook and the narrowed days. Bullish: U2 +1, Venus combust East +2, up-leaning watch window +1, trigger day in an up window +1. Bearish: down-leaning window +1, trigger day in a down window +1, 22 Nov - 2 Dec 2026 deep-analysis phase +1. Strength from the net score: 3+ High, 2 Moderate, 1 Low.",
    "result": "High bullish: 20 Jul and 30 Jul - 2 Sep 2027 (Venus combust in East with Mercury with the Sun). Moderate bullish: 22-28 Jun, 21-29 Jul, early Sep, 5 Nov, 27-31 Dec 2027. Moderate bearish: 22-23 Mar 2027. Low bearish: 23 Nov - 1 Dec 2026, 24-25 Mar, 7-10 May 2027. Volatile: 4-6 May, 18 Oct, 23-24 Nov 2027. Most other signal days are low bullish (U2 only).",
@@ -284,7 +284,7 @@
   },
   {
    "date": "2026-11-22",
-   "pr": "20",
+   "pr": "19",
    "topic": "Backtest of the signal table's High / Moderate / Low",
    "analysis": "Table scoring applied to every trading day 2000-2026; runs of days with the same signal and strength scored like rules (entry = last close before; 3+ sessions to last close, else 5 sessions; same-year base; binomial p). Three runs: walk-forward (leads and fast triggers re-picked on 2000-2013, scored on 2013-2026), source rules only, in-sample.",
    "result": "Walk-forward: Bullish High 64% vs 53% (33, p 0.16), Moderate 58% vs 54%, Low 54% vs 55%; High+Moderate 60% vs 54% (102, p 0.13). Bearish Moderate 48% vs 44%, Low 44% vs 44%; Volatile big-day 11 vs 10.4. Source rules only: bullish High+Moderate 67% vs 56% (57, p 0.058). Bullish strength order holds in every run but is not significant; bearish and volatile labels have no edge. A past-record column was added to the table.",
@@ -296,7 +296,7 @@
   },
   {
    "date": "2026-11-22",
-   "pr": "21",
+   "pr": "20",
    "topic": "Silver: big moves (±3.5%), watch, outlook, fast triggers, signal table and its test",
    "analysis": "The gold chain re-run for silver via tools/metal_cfg.py (--metal silver). Threshold 3.5%, as rare for silver (8.4% of days) as 2% for gold. Same methods: same-year expected counts, FDR, split halves, permutation, walk-forward test of the table's strengths.",
    "result": "546 big days; top in-sample leads (Venus with the Sun x1.25, Jupiter retrograde x1.20, Rahu vedha of Pushya x1.27) fail out of sample: 3 of 17 early leads held, pooled x0.91. Fast triggers: 3 of 44 passed vs 2.5 by chance. Table walk-forward: High = Moderate = Low = 55% vs 52%, no strength order; volatile 8 vs 13.7. Source rules only: bullish High 66% vs 53% (p 0.065), High+Moderate 60% vs 54% (p 0.075). The value is in retrograde Mercury or Jupiter: mid-Dec 2026 - mid-Apr 2027, 10 Jun - 2 Jul, 7-28 Oct 2027.",
@@ -310,7 +310,7 @@
   },
   {
    "date": "2026-11-23",
-   "pr": "22",
+   "pr": "21",
    "topic": "Stock market: S&P 500 and BSE Sensex, 26 years - document rules and ±2% days",
    "analysis": "All ~628 computable general-market rules (TA, KD, 2026 document) detected 2000-2026 (161,252 events) and scored on the S&P 500 and the Sensex in each exchange's own time (same method as gold; FDR; walk-forward). The ±2% days of each index compared with the sky ±3 days (239+ factors incl. every rule; same-year expected counts; FDR; split halves; robustness without the 2008-09 and 2020 crashes). Robust factors' dates to end-2027.",
    "result": "Direction: no edge (pooled 51.2 vs 51.1% S&P, 50.9 vs 50.9% Sensex; 9 rules p<0.05 vs ~18 by chance; none passes FDR; walk-forward 62 vs 61%, 58 vs 57%). Big days: robust volatility factors pass FDR - Venus retrograde in both markets (S&P x1.75, x1.92 without crashes; Sensex x1.61), S&P Jupiter-Pluto 5/9 x1.56, Jupiter-Neptune opposition x1.63, Jupiter-Uranus 6/8 x1.42, Mercury-Saturn 2/12 x1.38; Sensex Mars-Saturn conjunction x1.56, Venus in Pisces x1.44, Mars-Uranus 5/9 x1.31. Both directions. Out of sample Sensex x1.09 (p 0.0008), S&P x1.03. Venus retrograde does not occur before 2028.",
@@ -326,7 +326,7 @@
   },
   {
    "date": "2026-11-23",
-   "pr": "23",
+   "pr": "22",
    "topic": "The 2027 calendar's own rules (2026 document catalogue B, config groups, sub-tables) backtested 2000-2026",
    "analysis": "finastro.verdicts.build_verdicts run for every civil year 2000-2026 (year override), rows for SPX, NIFTY (Sensex proxy), GC, SI merged into episodes per rule; printed directions scored as in section 6 (same-year base, binomial p, BH q, halves); condition-only / turning / volatility rows scored on big-day frequency inside the episode vs same-year chance. Only 76 of the 162 calendar rules had a PDF-catalogue equivalent, so this closes the gap.",
    "result": "No pooled edge (S&P 47.0 vs 46.5%, Sensex 45.5 vs 46.7%, gold 54.9 vs 54.8%, silver 49.9 vs 51.7%). Held in both indices and both halves: Three Saturdays in Shukla Paksha bearish (S&P 56 vs 39%, p 0.002, q 0.046; Sensex 50 vs 39%) and Shukla Shashti on Friday bearish (53 vs 41%, 53 vs 42%). 'Ekadashi on Friday 90%+ bearish' at chance (37 vs 40%, 42 vs 42%); Pradosh at chance; Bhadra/Panchak/Amavasya/Purnima no extra big days. 2027 dates: B101 6 Feb, 5 Jun/3 Jul, 30 Oct, 27 Nov; B100 12 Feb, 9 Jul, 6 Aug, 3 Dec.",
@@ -337,7 +337,7 @@
   },
   {
    "date": "2026-11-23",
-   "pr": "24",
+   "pr": "23",
    "topic": "Simple S&P 500 / Sensex bullish-bearish tables to end-2027",
    "analysis": "Direction rules (PDF catalogue and calendar layer) admitted only if p < 0.05 on one index and above base in both halves on both indices (15+ decided each); strength High (p<0.05 both), Moderate (<0.05 and <0.15), Low (<0.05 one only); points per weekday netted; robust big-move factors shown as Volatile. Selection checked walk-forward (picked on 2000-2013, scored 2013-2026).",
    "result": "10 rules: High - Mars-Mercury Vedha (bullish), Shukla Shashti on Friday and Three Saturdays in Shukla Paksha (bearish); Moderate - Mars-Saturn 4/10, Moon-Rahu 6/8 (bullish), Mars-Saturn 2/12, Mercury-Rahu conjunction (bearish); Low - Venus-Uranus 7th (bearish), Venus-Rahu 6/8, Mrigashira on Monday (bullish). Walk-forward of the selection: 61.8 vs 59.2% (S&P, p 0.12), 57.3 vs 56.4% (Sensex, p 0.34) - small, not significant.",
@@ -348,7 +348,7 @@
   },
   {
    "date": "2026-11-23",
-   "pr": "25",
+   "pr": "24",
    "topic": "Outside model check: crash table 1929-2028 and cross-asset roadmap 2026-2029 (two infographics)",
    "analysis": "Every stated placement checked with our ephemeris at the crash date and across the crash window (45 historical, 23 forward); India 1947 Vimshottari periods computed; the 'core recurring signatures' defined objectively and tested on the S&P 500 1928-2026 (presence, crash hits, chance in a random 12-month window, 6-month 15%+ falls present vs absent); their 2026-2029 windows compared with our gold/silver/S&P/Sensex tables and robust big-move factors; prices to 20 Nov 2026.",
    "result": "Astronomy right (44/45 historical, 22/23 forward; India dashas match). Signatures do not predict crashes: Jupiter weakness, Mars trigger and eclipse/stellium are in every 12-month window since 1928 with no effect; Saturn-node / Pisces-Aries a weak hint (19.6 vs 14.2%). Agreement on turbulence timing (our robust factors cluster Feb-May 2027 and Jan-Jun 2028), not on direction (our S&P mixed, Sensex bullish-leaning Aug-Dec 2027); agree on silver strength Dec 2026-Jun 2027 and gold Aug 2027. Nov 2026 Act I numbers match prices but were drawn after the fact.",
@@ -359,7 +359,7 @@
   },
   {
    "date": "2026-11-23",
-   "pr": "26",
+   "pr": "25",
    "topic": "Day report for Mon 23 Nov 2026: what we said vs what happened",
    "analysis": "New tools/day_report.py: positions and panchang at 12:00 ET, every catalogue rule active (gold, silver, general; windows and instants within their 5-session horizon), calendar rows, each with its 26-year record; our table signals and watch windows; Yahoo closes for the day.",
    "result": "Said: gold bearish low (no-edge label), no signal for S&P, Sensex, silver; gold volatility watch (Sun-Uranus opposition, full Moon 24 Nov). Happened: S&P +4.7%, Nasdaq +6.5%, gold +3.2%, silver +4.4%, Sensex -1.8%. Gold direction wrong, volatility watch right. Supported active rules leaned bullish (S&P 8:1 right, Sensex 6:3 wrong) - not a tested signal.",
@@ -370,7 +370,7 @@
   },
   {
    "date": "2026-11-24",
-   "pr": "27",
+   "pr": "26",
    "topic": "Day report for Tue 24 Nov 2026 (full Moon in Taurus)",
    "analysis": "tools/day_report.py for 24 Nov 2026 (duplicate rule rows now merged by kind).",
    "result": "Full Moon in Taurus/Krittika 09:53 ET, Sun-Uranus opposition exact 25 Nov; gold bearish-low (no-edge label) with its volatility watch on; no signal for S&P, Sensex, silver; supported active rules lean bullish (S&P 5:1, Sensex 6:2, not a tested signal); calendar full-Moon and Kshay Tithi rows have no edge.",
@@ -380,7 +380,7 @@
   },
   {
    "date": "2026-11-24",
-   "pr": "28",
+   "pr": "27",
    "topic": "Planetary changes Fri 20 - Mon 23 Nov and Tue 24 Nov 2026",
    "analysis": "New tools/sky_changes.py: astronomy-layer events (sign / nakshatra / navamsa ingresses, tithi, karana, yoga, lunations, stations, combustion, exact conjunctions) plus pada changes, whole-sign aspects beginning / ending and exact degree aspects on a 10-minute grid, and catalogue rule starts / ends with their 26-year status; daily position table.",
    "result": "Fri-Mon: Venus enters Libra Sun 22 Nov 06:51 ET (own sign; leaves Saturn opposition); Moon Pisces -> Aries Sat 19:25 ET -> Taurus Mon 20:54 ET; Moon nakshatras Revati, Ashwini, Bharani, Krittika; Bhadra Fri 08:30-20:02 and Mon 13:12-23:35 ET; Purnima tithi from Mon 13:12 ET; Sun-Neptune exact trine Mon 19:10 ET; pada changes Venus Chitra 3, Mercury Swati 4, Sun Anuradha 2. Tue 24 Nov: full Moon in Taurus/Krittika 09:53 ET (exalted Moon), Moon-Uranus conjunction 12:10 ET, Moon into Rohini 12:55 ET, Venus-Rahu exact trine 01:30 ET; no planet changes sign; Sun-Uranus opposition exact Wed 25 Nov. Only Moon rules change status; none of the changing rules is in the tested signal tables.",
@@ -392,7 +392,7 @@
   },
   {
    "date": "2026-11-24",
-   "pr": "29",
+   "pr": "28",
    "topic": "Astrological triggers of the 20 Nov 2026 fall and the 23 Nov rise (trigger study and market event log)",
    "analysis": "Twenty sky conditions present on the two days tested on the same-day move for every trading day 2000-2026 on S&P 500, Nasdaq, Sensex, gold and silver (up share vs same-year share, big days vs same-year expectation). Mars-Jupiter conjunctions with a node checked on the S&P since 1928. New market event log (prices, sky, conditions).",
    "result": "No day-level condition leans the way the market moved: Ekadashi on Friday up 64% vs 53% on the S&P (the 2026 doc calls it 90%+ bearish); Bhadra, Moon-Saturn, Moon in Pisces, Panchak at chance; Venus debilitated and Mercury alone slightly more big S&P falls (p~0.04 of 100 tests); Monday's conditions show no bullish lean. Background lead: Mars, Jupiter and Ketu together (also Feb-Mar 2020); Mars-Jupiter with a node since 1928: 3/13 episodes with 15%+ falls vs 3.5% of random windows, 5/13 with 8%+ vs 11.8%; bottoms in 2009 and 2020 within 3 sessions of the episode ending; this one loses Ketu on 5 Dec 2026. Chosen after the fact - a lead, not a rule.",
@@ -404,7 +404,7 @@
   },
   {
    "date": "2026-11-24",
-   "pr": "30",
+   "pr": "29",
    "topic": "Astrology only: rule tally of 20 and 23 Nov; news removed from the project",
    "analysis": "User decision: market prices and astrology only, no news. New tools/rule_tally.py: net of active general-market rules with a good 26-year record per day, plus a walk-forward test of the tally (rules chosen on 2000-2013, scored on 2013-2026, same-day and next-5-session moves). News removed from the event log and findings.",
    "result": "Net tally +5 for the S&P on both Fri 20 Nov (-3.7%) and Mon 23 Nov (+4.7%): the tally did not separate the fall from the rise. Walk-forward: no same-day edge; next 5 sessions bearish net 45% vs 40% (p 0.02), bullish 61% vs 60%. The only astrological distinction is the background Mars-Jupiter-Ketu turbulence.",
@@ -415,7 +415,7 @@
   },
   {
    "date": "2026-11-24",
-   "pr": "31",
+   "pr": "30",
    "topic": "NYSE and USA foundation charts; NYSE monthly solar-return technique tested 1928-2026",
    "analysis": "Technique reconstructed from the shared charts (tropical NYSE natal Sun 27°18' Taurus; monthly returns at tropical 27°18' of each sign, New York; tropical signs read). Backtested on 1,186 S&P solar months 1928-2026 in the author's tropical version and our sidereal Lahiri version: ascendant lord debilitated, Mars with Ketu in the 8th, malefic in the 8th, Sun / Venus / Jupiter in the 10th, both bearish indications. NYSE (1792) and USA (1776 Sibly) natal charts, transits, next returns, the author's open forecast.",
    "result": "Author's version: debilitated ascendant lord months up 68% vs 60.5% (avg +1.21% vs +0.60%); both bearish indications 27 months avg +3.67% vs +0.58% (t +2.1, wrong way); Mars with Ketu in the 8th only 8 months, inconclusive; Venus/Jupiter in the 10th no moderating effect. Sidereal version: nothing significant. The technique's monthly indications do not hold up. The author reads tropical signs (Saturn 'debilitated' is tropical Aries; sidereal Pisces). Transits: Mars-Jupiter-Ketu in the USA 10th opposite its Moon; Rahu in the NYSE 8th (descriptive). Open forecast: smaller S&P net decline 19 Nov - 18 Dec than -4.8% (check 19 Dec 2026).",
@@ -427,7 +427,7 @@
   },
   {
    "date": "2026-11-24",
-   "pr": "32",
+   "pr": "31",
    "topic": "NYSE solar-return author: forecast scorecard, transit claims checked, his aspect rules tested 1928-2026",
    "analysis": "Forecasts recorded and scored from S&P closes (monthly, weekly, annual path). His transit statements checked with the ephemeris (sidereal; signs also tropical). His degree-aspect rules tested on the S&P 1928-2026: same day, next 5 sessions (all days and each episode once), big days. His annual path compared with our S&P signal table and the Mars-Jupiter-node lead.",
    "result": "Scorecard: Oct 20-Nov 18 bearish right (-4.8%); week of 16 Nov 4/5 days right (Friday wrong); week of 23 Nov Monday wrong (+4.7%), rest open; month to 18 Dec and annual path open. Transits: Mars-Ketu, Sun square Mars-Ketu, Jupiter-Venus sextile, Mars-Uranus square (16-17 Feb 2027) right; Mars retrograde is 10 Jan 2027 not February; Mercury in Pisces in Feb is tropical only; Mars-Ketu 1.6° (true node) at the 1 Apr 2027 direct station. Rules: Jupiter sextile Venus bullish next 5 sessions 63.6% vs 55.8% of 198 episodes (p 0.03); Sun square Mars more big days (67 vs 51, p 0.016) but no direction; Mars-Ketu, Mars-Uranus square, Mercury in Pisces at chance; Mars retrograde fewer big days. His annual shape agrees with our S&P table (Nov-Feb bearish 34:10, Mar-May bullish 24:6, Jun-Dec bullish 70:34) and with the Mars-Jupiter-Ketu episode in Cancer 9 Mar - 26 Apr 2027.",
@@ -438,7 +438,7 @@
   },
   {
    "date": "2026-11-24",
-   "pr": "33",
+   "pr": "32",
    "topic": "60-day check of our model; USA and NYSE dashas (five levels) with transits",
    "analysis": "Model check: every label of the gold, silver, S&P and Sensex tables rebuilt for each day 24 Sep - 23 Nov 2026 (table definitions), against the day's move and the next 5 sessions; robust volatility factors vs big days. Fix: calendar windows (Three Saturdays in Shukla Paksha = whole fortnight) now used as windows in the market table and the check, as in the backtest. Dashas: Vimshottari from the natal Moon, all five levels, for the USA (Sibly) and NYSE (10:00 LMT); transit of each running lord; Pratyantar / Sookshma timelines with S&P moves; birth-time sensitivity; S&P daily returns by lord 1928-2026.",
    "result": "60 days: gold -15.3% (bearish labels right 62-100% over 5 sessions; bullish low wrong), silver -32.6% (only bullish labels, wrong), S&P -6.1% (bearish high right 58% same day / 75% over 5; bullish low wrong), Sensex +10.2% (bullish labels right 78-100%); volatility factors no help. Dashas now: USA Rahu MD (2016-34) / Mercury AD (to 17 Feb 2027) / Saturn PD (23 Sep 2026 - 17 Feb 2027) / Venus SD; NYSE Mercury MD (2016-33) / Rahu AD (May 2026 - Dec 2028) / Jupiter PD (9 Oct 2026 - 10 Feb 2027, Jupiter with Mars and Ketu in Leo, NYSE 2nd house) / Mercury SD; S&P -11% in both current Pratyantars. Mahadashas hold within +/-3 h of birth time, smaller levels need minutes. No dasha lord shows an S&P effect 1928-2026 (all |t| < 2).",
