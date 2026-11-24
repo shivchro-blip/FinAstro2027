@@ -20,6 +20,8 @@ The work is logged entry by entry in `build/pdfref/analysis_log.json`, which is 
 
 ## 2. User decisions (respect these in future work)
 
+- **Market prices and astrology only** (24 Nov 2026): news and fundamentals are not used or recorded. Explanations of market moves are astrological, and the market event log keeps prices, sky and conditions only.
+
 1. **Implement rules only when a source states them.** The user declined extrapolations "without having the full picture", for example a Moon-based mirror of the gold Sun rules for silver.
 2. **Bayer and the Western sources are excluded:** McWhirter, Williams, Weingarten, Timing Solutions, and the 'Moon and Silver' guide, which is built on the Timing Solutions / RBS lunar method. They are reviewed in `OTHERS_FINANCIAL_REVIEW.md` but not implemented.
 3. **Vedic sources are implemented:** TA, KD, the 2026 document, the user's Sun notes U1–U4, and Brihat Samhita Ch.41–42 and 10.17.
@@ -82,7 +84,8 @@ Known data problems:
 | `tools/validate_external_model.py` | Check of an outside model's crash table and 2026–2029 roadmap: planet positions, its "signatures" on the S&P 500 1928–2026 (`spx_GSPC_daily_1928.csv`), and its windows against our tables and robust factors |
 | `tools/day_report.py [YYYY-MM-DD]` | One day: positions, panchang, every active rule (gold, silver, general, calendar) with its 26-year record, our table signals, the watch windows and the actual moves. The latest report is published |
 | `tools/sky_changes.py START END` | Every planetary change in a date range, in ET and IST: sign, nakshatra, pada and navamsa changes; tithi, karana (Bhadra) and yoga; aspects beginning and ending; exact degree aspects; rule starts and ends with their 26-year status; a daily position table |
-| `tools/trigger_study.py [--log DATE "news" "urls"]` | Tests candidate fall and rise conditions day by day 2000–2026 on the S&P 500, Nasdaq, Sensex, gold and silver (same-day move, same-year base); checks Mars–Jupiter-with-a-node episodes on the S&P since 1928; keeps the market event log `build/pdfref/market_event_log.json` (big days with news, sky and conditions) |
+| `tools/rule_tally.py [DATES]` | Net of active general-market rules with a good record per day, with a walk-forward test of the tally |
+| `tools/trigger_study.py [--log DATE]` | Tests candidate fall and rise conditions day by day 2000–2026 on the S&P 500, Nasdaq, Sensex, gold and silver (same-day move, same-year base); checks Mars–Jupiter-with-a-node episodes on the S&P since 1928; keeps the market event log `build/pdfref/market_event_log.json` (big days with prices, sky and conditions) |
 | `tools/gold_tracker.py [--metal silver]` | Trackers: findings, rule status, best-rule dates, analysis log |
 | `tools/build_year.py YEAR` | Astronomy layer for any year; 2000–2024 are git-ignored and rebuilt on demand |
 | `tools/fetch_prices.py` | Downloads GC=F and SI=F (Yahoo; the host must be allowed) |
@@ -451,24 +454,26 @@ There are no TA S34 A9 windows between now and 31 Dec 2027.
   - 136 catalogue rules are active. Those with a supported record lean bullish: S&P 5:1, Sensex 6:2 (not a tested signal).
   - Calendar: full Moon "top or bottom" for silver, which has no edge (14 big days against 18 expected); Kshay Tithi bullish for the S&P, at chance.
 
-**What triggered the 20 Nov fall and the 23 Nov rise?** (`trigger_study_2000-2026_ET.html`, `market_event_log.json`)
+**What triggered the 20 Nov fall and the 23 Nov rise? (astrology only)** Sources: `trigger_study_2000-2026_ET.html`, `rule_tally_ET.html` and `market_event_log.json`.
 
-| Day | Moves | News |
-|---|---|---|
-| Fri 20 Nov | S&P −3.7%, Nasdaq −5.3%, gold −4.6%, silver −7.4% | Nvidia −14% on a reported SEC accounting probe; Anthropic's post-IPO slide; correction territory |
-| Mon 23 Nov | S&P +4.7%, Nasdaq +6.5%, gold +3.4%, silver +5.3% | Nvidia +30% after its board reinstated Jensen Huang as CEO |
+| Day | Moves |
+|---|---|
+| Fri 20 Nov | S&P −3.7%, Nasdaq −5.3%, gold −4.6%, silver −7.4%, Sensex +1.1% |
+| Mon 23 Nov | S&P +4.7%, Nasdaq +6.5%, gold +3.4%, silver +5.3%, Sensex −1.8% |
 
-- **Day-by-day test, 2000–2026:** none of the 20 sky conditions present on those days reliably leans the way the market moved. Each was tested on the same-day move in five markets.
-  - "Ekadashi on Friday" (printed as 90%+ bearish): the S&P closed up on 64% of such days against 53% in the same years.
+- **No day-level condition leans the way the market moved.** Each of the 20 conditions present on those days was tested on the same-day move, 2000–2026, in five markets.
+  - "Ekadashi on Friday" (printed as 90%+ bearish): the S&P closed up on 64% of such days against 53%.
   - Bhadra, Moon with Saturn, Moon in Pisces and Panchak: at chance.
   - Venus debilitated and Mercury alone in a sign: slightly more big S&P falls (p ≈ 0.04 each, out of 100 tests).
-  - Monday's conditions (Moon in Aries, Moon trine Jupiter and Mars, Venus in own sign, the days before the full Moon): no bullish lean. Moon opposite Mercury leaned down.
-- **The one stand-out is the background, not the day: Mars, Jupiter and Ketu together** (Leo, since 12 Nov 2026).
+  - Monday's conditions (Moon in Aries, Moon trine Jupiter and Mars, Venus in own sign, the days before the full Moon): no bullish lean.
+- **The net tally of active rules with a good record was the same on both days: +5 for the S&P.** On Friday, Mercury alone in a sign and Jupiter with Ketu and the Moon (bearish) were outweighed by Moon contacts and Venus–Rahu 6/8. On Monday, Mercury alone and Venus–Rahu had ended.
+  - Walk-forward (rules chosen on 2000–2013, scored on 2013–2026): the tally does not call the same-day move. A bearish net was right on the next 5 sessions 45% of the time against 40% (p = 0.02), a bullish net 61% against 60%.
+- **The stand-out is the background: Mars, Jupiter and Ketu together** (Leo, since 12 Nov 2026).
   - The same triple ran from 10 Feb to 20 Mar 2020.
   - Mars–Jupiter with a node, S&P 1928–2026: 3 of 13 episodes had falls of 15%+ (1933, 2009, 2020), against 3.5% of random 29-session windows; 5 of 13 fell 8%+, against 11.8%.
   - In 2009 and 2020 the bottom came within 3 sessions of the episode ending. Ketu leaves on 5 Dec 2026, and Mars–Jupiter lasts until 24 Jan 2027.
-  - It was picked after the fact: a lead to track, not a rule.
-- **Conclusion:** the news set the day and the direction. The only planetary signal is a turbulent background, consistent with the big-move findings.
+  - It was picked after the fact: a lead, not a rule.
+- **Reading:** the sky marked a turbulent period, with big moves both ways, but did not say which day would fall or rise.
 
 **Model v1.0 (Ch.41 + Shadbala + Ashtakavarga), 6,572 trading days:**
 - The correlation of the scarcity index with the next 5 days is −0.002.

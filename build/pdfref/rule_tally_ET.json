@@ -1,0 +1,298 @@
+{
+ "days": {
+  "2026-11-20": {
+   "spx": {
+    "market": "S&P 500",
+    "net": 5,
+    "bull": 7,
+    "bear": 2,
+    "rules": [
+     [
+      "Jupiter With Mercury, Neptune, Ketu, Moon",
+      "Bearish",
+      "Strongest",
+      "29/61 (48% vs 36%)"
+     ],
+     [
+      "Mercury alone in a sign",
+      "Bearish",
+      "Strongest",
+      "73/154 (47% vs 40%)"
+     ],
+     [
+      "Moon-Mars 7th (opposition)",
+      "Bullish",
+      "Consistent",
+      "166/273 (61% vs 59%)"
+     ],
+     [
+      "Moon-Mercury 4/10 (Kendra)",
+      "Bullish",
+      "Consistent",
+      "351/587 (60% vs 59%)"
+     ],
+     [
+      "Moon-Mercury 5/9 (Trine)",
+      "Bullish",
+      "Consistent",
+      "348/584 (60% vs 59%)"
+     ],
+     [
+      "Moon-Neptune 3/11 (Trikadash)",
+      "Bullish",
+      "Strongest",
+      "331/533 (62% vs 59%)"
+     ],
+     [
+      "Sun-Moon 4/10 (Kendra)",
+      "Bullish",
+      "Consistent",
+      "350/582 (60% vs 59%)"
+     ],
+     [
+      "Sun-Moon conjunction in Navamsh (D9)",
+      "Bullish",
+      "Consistent",
+      "1528/2564 (60% vs 59%)"
+     ],
+     [
+      "Venus-Rahu 6/8 (Shadashtak)",
+      "Bullish",
+      "Strongest",
+      "40/52 (77% vs 64%)"
+     ]
+    ],
+    "move": -3.7
+   },
+   "sensex": {
+    "market": "BSE Sensex",
+    "net": 5,
+    "bull": 7,
+    "bear": 2,
+    "rules": [
+     [
+      "Herschel-Pluto conjunction in Navamsh (D9)",
+      "Bullish",
+      "Supported",
+      "9/13 (69% vs 58%)"
+     ],
+     [
+      "Mars-Herschel 4/10 (Kendra)",
+      "Bearish",
+      "Supported",
+      "15/29 (52% vs 41%)"
+     ],
+     [
+      "Mars-Mercury 3/11 (Trikadash)",
+      "Bullish",
+      "Consistent",
+      "70/108 (65% vs 60%)"
+     ],
+     [
+      "Mars-Rahu 7th (opposition)",
+      "Bearish",
+      "Supported",
+      "9/17 (53% vs 43%)"
+     ],
+     [
+      "Mercury-Venus 2/12 (Dwidwadash)",
+      "Bullish",
+      "Consistent",
+      "169/284 (60% vs 59%)"
+     ],
+     [
+      "Moon-Herschel 5/9 (Trine)",
+      "Bullish",
+      "Strongest",
+      "348/570 (61% vs 58%)"
+     ],
+     [
+      "Moon-Mercury 6/8 (Shadashtak)",
+      "Bullish",
+      "Consistent",
+      "379/638 (59% vs 58%)"
+     ],
+     [
+      "Moon-Saturn 3/11 (Trikadash)",
+      "Bullish",
+      "Consistent",
+      "345/583 (59% vs 58%)"
+     ],
+     [
+      "Saturn-Moon Vedha",
+      "Bullish",
+      "Consistent",
+      "179/293 (61% vs 58%)"
+     ]
+    ],
+    "move": 1.08
+   }
+  },
+  "2026-11-23": {
+   "spx": {
+    "market": "S&P 500",
+    "net": 5,
+    "bull": 6,
+    "bear": 1,
+    "rules": [
+     [
+      "Jupiter With Mercury, Neptune, Ketu, Moon",
+      "Bearish",
+      "Strongest",
+      "29/61 (48% vs 36%)"
+     ],
+     [
+      "Mercury-Pluto conjunction in Navamsh (D9)",
+      "Bullish",
+      "Strongest",
+      "138/217 (64% vs 59%)"
+     ],
+     [
+      "Moon-Mars 7th (opposition)",
+      "Bullish",
+      "Consistent",
+      "166/273 (61% vs 59%)"
+     ],
+     [
+      "Moon-Mercury 5/9 (Trine)",
+      "Bullish",
+      "Consistent",
+      "348/584 (60% vs 59%)"
+     ],
+     [
+      "Sun-Moon 4/10 (Kendra)",
+      "Bullish",
+      "Consistent",
+      "350/582 (60% vs 59%)"
+     ],
+     [
+      "Sun-Moon 6/8 (Shadashtak)",
+      "Bullish",
+      "Consistent",
+      "335/563 (60% vs 59%)"
+     ],
+     [
+      "Sun-Moon conjunction in Navamsh (D9)",
+      "Bullish",
+      "Consistent",
+      "1528/2564 (60% vs 59%)"
+     ]
+    ],
+    "move": 4.73
+   },
+   "sensex": {
+    "market": "BSE Sensex",
+    "net": 1,
+    "bull": 4,
+    "bear": 3,
+    "rules": [
+     [
+      "Herschel-Pluto conjunction in Navamsh (D9)",
+      "Bullish",
+      "Supported",
+      "9/13 (69% vs 58%)"
+     ],
+     [
+      "Mars-Herschel 4/10 (Kendra)",
+      "Bearish",
+      "Supported",
+      "15/29 (52% vs 41%)"
+     ],
+     [
+      "Mars-Mercury 3/11 (Trikadash)",
+      "Bullish",
+      "Consistent",
+      "70/108 (65% vs 60%)"
+     ],
+     [
+      "Mars-Rahu 7th (opposition)",
+      "Bearish",
+      "Supported",
+      "9/17 (53% vs 43%)"
+     ],
+     [
+      "Mercury-Herschel conjunction in Navamsh (D9)",
+      "Bullish",
+      "Strongest",
+      "150/239 (63% vs 58%)"
+     ],
+     [
+      "Moon-Herschel 2/12 (Dwidwadash)",
+      "Bearish",
+      "Strongest",
+      "269/597 (45% vs 42%)"
+     ],
+     [
+      "Moon-Mercury 6/8 (Shadashtak)",
+      "Bullish",
+      "Consistent",
+      "379/638 (59% vs 58%)"
+     ]
+    ],
+    "move": -1.77
+   }
+  }
+ },
+ "test": {
+  "spx": {
+   "market": "S&P 500",
+   "n_rules_h1": 34,
+   "results": {
+    "same day, bullish net": {
+     "n": 2232,
+     "right": 54.6,
+     "base": 54.2,
+     "p": 0.6934
+    },
+    "same day, bearish net": {
+     "n": 582,
+     "right": 46.4,
+     "base": 46.2,
+     "p": 0.916
+    },
+    "next 5 sessions, bullish net": {
+     "n": 2232,
+     "right": 61.2,
+     "base": 60.0,
+     "p": 0.2705
+    },
+    "next 5 sessions, bearish net": {
+     "n": 582,
+     "right": 45.0,
+     "base": 40.4,
+     "p": 0.0233
+    }
+   }
+  },
+  "sensex": {
+   "market": "BSE Sensex",
+   "n_rules_h1": 46,
+   "results": {
+    "same day, bullish net": {
+     "n": 3046,
+     "right": 53.3,
+     "base": 53.2,
+     "p": 0.9568
+    },
+    "same day, bearish net": {
+     "n": 79,
+     "right": 43.0,
+     "base": 46.5,
+     "p": 0.537
+    },
+    "next 5 sessions, bullish net": {
+     "n": 3046,
+     "right": 56.8,
+     "base": 56.8,
+     "p": 0.955
+    },
+    "next 5 sessions, bearish net": {
+     "n": 79,
+     "right": 43.0,
+     "base": 43.3,
+     "p": 0.963
+    }
+   }
+  }
+ }
+}
