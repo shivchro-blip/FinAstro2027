@@ -1,0 +1,3101 @@
+{
+ "hist": {
+  "by": {
+   "No stated indication": {
+    "n": 650,
+    "up": 59.4,
+    "mean": 0.56,
+    "fall5": 10.0
+   },
+   "Pressure": {
+    "n": 395,
+    "up": 62.8,
+    "mean": 0.76,
+    "fall5": 9.9
+   },
+   "Supported": {
+    "n": 114,
+    "up": 57.0,
+    "mean": 0.11,
+    "fall5": 14.9
+   },
+   "Bearish": {
+    "n": 23,
+    "up": 69.6,
+    "mean": 3.9,
+    "fall5": 4.3
+   },
+   "Weak, moderated": {
+    "n": 4,
+    "up": 75.0,
+    "mean": 2.38,
+    "fall5": 25.0
+   }
+  },
+  "all": {
+   "n": 1186,
+   "up": 60.5,
+   "mean": 0.65,
+   "fall5": 10.4
+  },
+  "calls": {
+   "n": 536,
+   "right": 220,
+   "bear_n": 422,
+   "bear_up": 63.3,
+   "bull_n": 114,
+   "bull_up": 57.0
+  }
+ },
+ "bt_daily": {
+  "Bearish": {
+   "d1": 47.0,
+   "d5": 42.9,
+   "n": 9485
+  },
+  "Bullish": {
+   "d1": 53.4,
+   "d5": 56.8,
+   "n": 2429
+  },
+  "_base": {
+   "up1": 52.4,
+   "up5": 56.2,
+   "n": 24814
+  },
+  "_all": {
+   "d1": 48.3,
+   "d5": 45.7,
+   "n": 11914
+  }
+ },
+ "months": [
+  {
+   "start": "2026-09-20 01:47:48.364781-04:00",
+   "end": "2026-10-20 12:28:09.148781-04:00",
+   "asc": "Cancer 28\u00b038'",
+   "lord": "Moon",
+   "lord_pos": "Capricorn 12\u00b018', house 7",
+   "h8": [
+    "Rahu",
+    "Pluto"
+   ],
+   "h10": [
+    "Saturn",
+    "Neptune"
+   ],
+   "flags": [
+    "Mars, Saturn, Rahu or Ketu in the 8th"
+   ],
+   "reading": "Pressure",
+   "rows": [
+    {
+     "body": "Sun",
+     "sign": "Virgo",
+     "deg": "27\u00b017'",
+     "house": 3,
+     "nak": "Uttara Phalguni",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Moon",
+     "sign": "Capricorn",
+     "deg": "12\u00b018'",
+     "house": 7,
+     "nak": "Purva Ashadha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Mercury",
+     "sign": "Libra",
+     "deg": "15\u00b020'",
+     "house": 4,
+     "nak": "Hasta",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Venus",
+     "sign": "Scorpio",
+     "deg": "5\u00b028'",
+     "house": 5,
+     "nak": "Swati",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Mars",
+     "sign": "Cancer",
+     "deg": "25\u00b018'",
+     "house": 1,
+     "nak": "Punarvasu",
+     "retro": false,
+     "neecha": true
+    },
+    {
+     "body": "Jupiter",
+     "sign": "Leo",
+     "deg": "17\u00b035'",
+     "house": 2,
+     "nak": "Ashlesha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Saturn",
+     "sign": "Aries",
+     "deg": "12\u00b024'",
+     "house": 10,
+     "nak": "Revati",
+     "retro": false,
+     "neecha": true
+    },
+    {
+     "body": "Rahu",
+     "sign": "Aquarius",
+     "deg": "28\u00b017'",
+     "house": 8,
+     "nak": "Dhanishta",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Ketu",
+     "sign": "Leo",
+     "deg": "28\u00b017'",
+     "house": 2,
+     "nak": "Magha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Uranus",
+     "sign": "Gemini",
+     "deg": "5\u00b039'",
+     "house": 12,
+     "nak": "Rohini",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Neptune",
+     "sign": "Aries",
+     "deg": "3\u00b009'",
+     "house": 10,
+     "nak": "Uttara Bhadrapada",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Pluto",
+     "sign": "Aquarius",
+     "deg": "3\u00b013'",
+     "house": 8,
+     "nak": "Uttara Ashadha",
+     "retro": false,
+     "neecha": false
+    }
+   ]
+  },
+  {
+   "start": "2026-10-20 12:28:09.148781-04:00",
+   "end": "2026-11-19 10:10:56.121607-05:00",
+   "asc": "Capricorn 0\u00b015'",
+   "lord": "Saturn",
+   "lord_pos": "Aries 10\u00b003', house 4 (debilitated)",
+   "h8": [
+    "Mars",
+    "Jupiter",
+    "Ketu"
+   ],
+   "h10": [
+    "Sun"
+   ],
+   "flags": [
+    "Ascendant lord debilitated",
+    "Mars with Ketu in the 8th",
+    "Mars, Saturn, Rahu or Ketu in the 8th",
+    "Sun in the 10th",
+    "Both bearish indications (debilitated ascendant lord and a malefic in the 8th)"
+   ],
+   "reading": "Bearish",
+   "rows": [
+    {
+     "body": "Sun",
+     "sign": "Libra",
+     "deg": "27\u00b018'",
+     "house": 10,
+     "nak": "Chitra",
+     "retro": false,
+     "neecha": true
+    },
+    {
+     "body": "Moon",
+     "sign": "Aquarius",
+     "deg": "19\u00b034'",
+     "house": 2,
+     "nak": "Dhanishta",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Mercury",
+     "sign": "Scorpio",
+     "deg": "20\u00b011'",
+     "house": 11,
+     "nak": "Vishakha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Venus",
+     "sign": "Scorpio",
+     "deg": "2\u00b050'",
+     "house": 11,
+     "nak": "Swati",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Mars",
+     "sign": "Leo",
+     "deg": "12\u00b043'",
+     "house": 8,
+     "nak": "Ashlesha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Jupiter",
+     "sign": "Leo",
+     "deg": "22\u00b048'",
+     "house": 8,
+     "nak": "Ashlesha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Saturn",
+     "sign": "Aries",
+     "deg": "10\u00b003'",
+     "house": 4,
+     "nak": "Uttara Bhadrapada",
+     "retro": false,
+     "neecha": true
+    },
+    {
+     "body": "Rahu",
+     "sign": "Aquarius",
+     "deg": "26\u00b040'",
+     "house": 2,
+     "nak": "Dhanishta",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Ketu",
+     "sign": "Leo",
+     "deg": "26\u00b040'",
+     "house": 8,
+     "nak": "Magha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Uranus",
+     "sign": "Gemini",
+     "deg": "5\u00b003'",
+     "house": 6,
+     "nak": "Rohini",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Neptune",
+     "sign": "Aries",
+     "deg": "2\u00b020'",
+     "house": 4,
+     "nak": "Uttara Bhadrapada",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Pluto",
+     "sign": "Aquarius",
+     "deg": "3\u00b004'",
+     "house": 2,
+     "nak": "Uttara Ashadha",
+     "retro": false,
+     "neecha": false
+    }
+   ]
+  },
+  {
+   "start": "2026-11-19 10:10:56.121607-05:00",
+   "end": "2026-12-19 00:10:29.136010-05:00",
+   "asc": "Capricorn 10\u00b001'",
+   "lord": "Saturn",
+   "lord_pos": "Aries 8\u00b020', house 4 (debilitated)",
+   "h8": [
+    "Mars",
+    "Jupiter",
+    "Ketu"
+   ],
+   "h10": [
+    "Venus"
+   ],
+   "flags": [
+    "Ascendant lord debilitated",
+    "Mars with Ketu in the 8th",
+    "Mars, Saturn, Rahu or Ketu in the 8th",
+    "Venus or Jupiter in the 10th",
+    "Both bearish indications (debilitated ascendant lord and a malefic in the 8th)"
+   ],
+   "reading": "Weak, moderated",
+   "rows": [
+    {
+     "body": "Sun",
+     "sign": "Scorpio",
+     "deg": "27\u00b018'",
+     "house": 11,
+     "nak": "Vishakha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Moon",
+     "sign": "Pisces",
+     "deg": "21\u00b059'",
+     "house": 3,
+     "nak": "Purva Bhadrapada",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Mercury",
+     "sign": "Scorpio",
+     "deg": "7\u00b054'",
+     "house": 11,
+     "nak": "Swati",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Venus",
+     "sign": "Libra",
+     "deg": "23\u00b028'",
+     "house": 10,
+     "nak": "Chitra",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Mars",
+     "sign": "Leo",
+     "deg": "27\u00b021'",
+     "house": 8,
+     "nak": "Magha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Jupiter",
+     "sign": "Leo",
+     "deg": "26\u00b009'",
+     "house": 8,
+     "nak": "Magha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Saturn",
+     "sign": "Aries",
+     "deg": "8\u00b020'",
+     "house": 4,
+     "nak": "Uttara Bhadrapada",
+     "retro": false,
+     "neecha": true
+    },
+    {
+     "body": "Rahu",
+     "sign": "Aquarius",
+     "deg": "25\u00b005'",
+     "house": 2,
+     "nak": "Dhanishta",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Ketu",
+     "sign": "Leo",
+     "deg": "25\u00b005'",
+     "house": 8,
+     "nak": "Magha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Uranus",
+     "sign": "Gemini",
+     "deg": "3\u00b056'",
+     "house": 6,
+     "nak": "Krittika",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Neptune",
+     "sign": "Aries",
+     "deg": "1\u00b045'",
+     "house": 4,
+     "nak": "Uttara Bhadrapada",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Pluto",
+     "sign": "Aquarius",
+     "deg": "3\u00b020'",
+     "house": 2,
+     "nak": "Uttara Ashadha",
+     "retro": false,
+     "neecha": false
+    }
+   ]
+  },
+  {
+   "start": "2026-12-19 00:10:29.136010-05:00",
+   "end": "2027-01-17 10:50:03.350396-05:00",
+   "asc": "Libra 1\u00b008'",
+   "lord": "Venus",
+   "lord_pos": "Scorpio 11\u00b025', house 2",
+   "h8": [],
+   "h10": [],
+   "flags": [],
+   "reading": "No stated indication",
+   "rows": [
+    {
+     "body": "Sun",
+     "sign": "Sagittarius",
+     "deg": "27\u00b017'",
+     "house": 3,
+     "nak": "Mula",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Moon",
+     "sign": "Aries",
+     "deg": "21\u00b013'",
+     "house": 7,
+     "nak": "Revati",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Mercury",
+     "sign": "Sagittarius",
+     "deg": "19\u00b045'",
+     "house": 3,
+     "nak": "Jyeshtha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Venus",
+     "sign": "Scorpio",
+     "deg": "11\u00b025'",
+     "house": 2,
+     "nak": "Swati",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Mars",
+     "sign": "Virgo",
+     "deg": "7\u00b034'",
+     "house": 12,
+     "nak": "Purva Phalguni",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Jupiter",
+     "sign": "Leo",
+     "deg": "26\u00b057'",
+     "house": 11,
+     "nak": "Magha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Saturn",
+     "sign": "Aries",
+     "deg": "7\u00b059'",
+     "house": 7,
+     "nak": "Uttara Bhadrapada",
+     "retro": false,
+     "neecha": true
+    },
+    {
+     "body": "Rahu",
+     "sign": "Aquarius",
+     "deg": "23\u00b031'",
+     "house": 5,
+     "nak": "Dhanishta",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Ketu",
+     "sign": "Leo",
+     "deg": "23\u00b031'",
+     "house": 11,
+     "nak": "Ashlesha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Uranus",
+     "sign": "Gemini",
+     "deg": "2\u00b044'",
+     "house": 9,
+     "nak": "Krittika",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Neptune",
+     "sign": "Aries",
+     "deg": "1\u00b037'",
+     "house": 7,
+     "nak": "Uttara Bhadrapada",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Pluto",
+     "sign": "Aquarius",
+     "deg": "3\u00b059'",
+     "house": 5,
+     "nak": "Uttara Ashadha",
+     "retro": false,
+     "neecha": false
+    }
+   ]
+  },
+  {
+   "start": "2027-01-17 10:50:03.350396-05:00",
+   "end": "2027-02-16 00:20:45.340794-05:00",
+   "asc": "Aries 17\u00b046'",
+   "lord": "Mars",
+   "lord_pos": "Virgo 10\u00b006', house 6",
+   "h8": [],
+   "h10": [
+    "Sun"
+   ],
+   "flags": [
+    "Sun in the 10th"
+   ],
+   "reading": "No stated indication",
+   "rows": [
+    {
+     "body": "Sun",
+     "sign": "Capricorn",
+     "deg": "27\u00b017'",
+     "house": 10,
+     "nak": "Uttara Ashadha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Moon",
+     "sign": "Taurus",
+     "deg": "20\u00b005'",
+     "house": 2,
+     "nak": "Bharani",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Mercury",
+     "sign": "Aquarius",
+     "deg": "7\u00b025'",
+     "house": 11,
+     "nak": "Shravana",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Venus",
+     "sign": "Sagittarius",
+     "deg": "10\u00b059'",
+     "house": 9,
+     "nak": "Jyeshtha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Mars",
+     "sign": "Virgo",
+     "deg": "10\u00b006'",
+     "house": 6,
+     "nak": "Purva Phalguni",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Jupiter",
+     "sign": "Leo",
+     "deg": "25\u00b002'",
+     "house": 5,
+     "nak": "Magha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Saturn",
+     "sign": "Aries",
+     "deg": "9\u00b011'",
+     "house": 1,
+     "nak": "Uttara Bhadrapada",
+     "retro": false,
+     "neecha": true
+    },
+    {
+     "body": "Rahu",
+     "sign": "Aquarius",
+     "deg": "21\u00b057'",
+     "house": 11,
+     "nak": "Dhanishta",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Ketu",
+     "sign": "Leo",
+     "deg": "21\u00b057'",
+     "house": 5,
+     "nak": "Ashlesha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Uranus",
+     "sign": "Gemini",
+     "deg": "1\u00b053'",
+     "house": 3,
+     "nak": "Krittika",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Neptune",
+     "sign": "Aries",
+     "deg": "1\u00b058'",
+     "house": 1,
+     "nak": "Uttara Bhadrapada",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Pluto",
+     "sign": "Aquarius",
+     "deg": "4\u00b051'",
+     "house": 11,
+     "nak": "Shravana",
+     "retro": false,
+     "neecha": false
+    }
+   ]
+  },
+  {
+   "start": "2027-02-16 00:20:45.340794-05:00",
+   "end": "2027-03-17 23:13:51.168012-04:00",
+   "asc": "Scorpio 18\u00b055'",
+   "lord": "Mars",
+   "lord_pos": "Virgo 2\u00b007', house 11",
+   "h8": [
+    "Moon",
+    "Uranus"
+   ],
+   "h10": [
+    "Jupiter",
+    "Ketu"
+   ],
+   "flags": [
+    "Venus or Jupiter in the 10th"
+   ],
+   "reading": "Supported",
+   "rows": [
+    {
+     "body": "Sun",
+     "sign": "Aquarius",
+     "deg": "27\u00b017'",
+     "house": 4,
+     "nak": "Dhanishta",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Moon",
+     "sign": "Gemini",
+     "deg": "21\u00b059'",
+     "house": 8,
+     "nak": "Mrigashira",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Mercury",
+     "sign": "Pisces",
+     "deg": "2\u00b027'",
+     "house": 5,
+     "nak": "Shatabhisha",
+     "retro": false,
+     "neecha": true
+    },
+    {
+     "body": "Venus",
+     "sign": "Capricorn",
+     "deg": "14\u00b037'",
+     "house": 3,
+     "nak": "Purva Ashadha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Mars",
+     "sign": "Virgo",
+     "deg": "2\u00b007'",
+     "house": 11,
+     "nak": "Magha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Jupiter",
+     "sign": "Leo",
+     "deg": "21\u00b021'",
+     "house": 10,
+     "nak": "Ashlesha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Saturn",
+     "sign": "Aries",
+     "deg": "11\u00b042'",
+     "house": 6,
+     "nak": "Revati",
+     "retro": false,
+     "neecha": true
+    },
+    {
+     "body": "Rahu",
+     "sign": "Aquarius",
+     "deg": "20\u00b023'",
+     "house": 4,
+     "nak": "Dhanishta",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Ketu",
+     "sign": "Leo",
+     "deg": "20\u00b023'",
+     "house": 10,
+     "nak": "Ashlesha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Uranus",
+     "sign": "Gemini",
+     "deg": "1\u00b042'",
+     "house": 8,
+     "nak": "Krittika",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Neptune",
+     "sign": "Aries",
+     "deg": "2\u00b045'",
+     "house": 6,
+     "nak": "Uttara Bhadrapada",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Pluto",
+     "sign": "Aquarius",
+     "deg": "5\u00b047'",
+     "house": 4,
+     "nak": "Shravana",
+     "retro": false,
+     "neecha": false
+    }
+   ]
+  },
+  {
+   "start": "2027-03-17 23:13:51.168012-04:00",
+   "end": "2027-04-17 08:58:15.312001-04:00",
+   "asc": "Scorpio 17\u00b010'",
+   "lord": "Mars",
+   "lord_pos": "Leo 22\u00b015', house 10",
+   "h8": [
+    "Uranus"
+   ],
+   "h10": [
+    "Mars",
+    "Jupiter",
+    "Ketu"
+   ],
+   "flags": [
+    "Venus or Jupiter in the 10th"
+   ],
+   "reading": "Supported",
+   "rows": [
+    {
+     "body": "Sun",
+     "sign": "Pisces",
+     "deg": "27\u00b018'",
+     "house": 5,
+     "nak": "Purva Bhadrapada",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Moon",
+     "sign": "Cancer",
+     "deg": "29\u00b043'",
+     "house": 9,
+     "nak": "Pushya",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Mercury",
+     "sign": "Aquarius",
+     "deg": "29\u00b042'",
+     "house": 4,
+     "nak": "Dhanishta",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Venus",
+     "sign": "Aquarius",
+     "deg": "20\u00b007'",
+     "house": 4,
+     "nak": "Dhanishta",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Mars",
+     "sign": "Leo",
+     "deg": "22\u00b015'",
+     "house": 10,
+     "nak": "Ashlesha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Jupiter",
+     "sign": "Leo",
+     "deg": "18\u00b002'",
+     "house": 10,
+     "nak": "Ashlesha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Saturn",
+     "sign": "Aries",
+     "deg": "15\u00b005'",
+     "house": 6,
+     "nak": "Revati",
+     "retro": false,
+     "neecha": true
+    },
+    {
+     "body": "Rahu",
+     "sign": "Aquarius",
+     "deg": "18\u00b048'",
+     "house": 4,
+     "nak": "Dhanishta",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Ketu",
+     "sign": "Leo",
+     "deg": "18\u00b048'",
+     "house": 10,
+     "nak": "Ashlesha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Uranus",
+     "sign": "Gemini",
+     "deg": "2\u00b017'",
+     "house": 8,
+     "nak": "Krittika",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Neptune",
+     "sign": "Aries",
+     "deg": "3\u00b049'",
+     "house": 6,
+     "nak": "Uttara Bhadrapada",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Pluto",
+     "sign": "Aquarius",
+     "deg": "6\u00b035'",
+     "house": 4,
+     "nak": "Shravana",
+     "retro": false,
+     "neecha": false
+    }
+   ]
+  },
+  {
+   "start": "2027-04-17 08:58:15.312001-04:00",
+   "end": "2027-05-18 06:58:33.139209-04:00",
+   "asc": "Gemini 18\u00b020'",
+   "lord": "Mercury",
+   "lord_pos": "Aries 15\u00b018', house 11",
+   "h8": [],
+   "h10": [
+    "Venus"
+   ],
+   "flags": [
+    "Venus or Jupiter in the 10th"
+   ],
+   "reading": "Supported",
+   "rows": [
+    {
+     "body": "Sun",
+     "sign": "Aries",
+     "deg": "27\u00b018'",
+     "house": 11,
+     "nak": "Ashwini",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Moon",
+     "sign": "Virgo",
+     "deg": "14\u00b009'",
+     "house": 4,
+     "nak": "Purva Phalguni",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Mercury",
+     "sign": "Aries",
+     "deg": "15\u00b018'",
+     "house": 11,
+     "nak": "Revati",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Venus",
+     "sign": "Pisces",
+     "deg": "26\u00b049'",
+     "house": 10,
+     "nak": "Purva Bhadrapada",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Mars",
+     "sign": "Leo",
+     "deg": "22\u00b022'",
+     "house": 3,
+     "nak": "Ashlesha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Jupiter",
+     "sign": "Leo",
+     "deg": "17\u00b001'",
+     "house": 3,
+     "nak": "Ashlesha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Saturn",
+     "sign": "Aries",
+     "deg": "18\u00b054'",
+     "house": 11,
+     "nak": "Revati",
+     "retro": false,
+     "neecha": true
+    },
+    {
+     "body": "Rahu",
+     "sign": "Aquarius",
+     "deg": "17\u00b012'",
+     "house": 9,
+     "nak": "Shravana",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Ketu",
+     "sign": "Leo",
+     "deg": "17\u00b012'",
+     "house": 3,
+     "nak": "Ashlesha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Uranus",
+     "sign": "Gemini",
+     "deg": "3\u00b033'",
+     "house": 1,
+     "nak": "Krittika",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Neptune",
+     "sign": "Aries",
+     "deg": "4\u00b057'",
+     "house": 11,
+     "nak": "Uttara Bhadrapada",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Pluto",
+     "sign": "Aquarius",
+     "deg": "7\u00b004'",
+     "house": 9,
+     "nak": "Shravana",
+     "retro": false,
+     "neecha": false
+    }
+   ]
+  },
+  {
+   "start": "2027-05-18 06:58:33.139209-04:00",
+   "end": "2027-06-18 14:16:00.249589-04:00",
+   "asc": "Gemini 18\u00b053'",
+   "lord": "Mercury",
+   "lord_pos": "Gemini 17\u00b000', house 1",
+   "h8": [],
+   "h10": [],
+   "flags": [],
+   "reading": "No stated indication",
+   "rows": [
+    {
+     "body": "Sun",
+     "sign": "Taurus",
+     "deg": "27\u00b018'",
+     "house": 12,
+     "nak": "Krittika",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Moon",
+     "sign": "Scorpio",
+     "deg": "3\u00b030'",
+     "house": 6,
+     "nak": "Swati",
+     "retro": false,
+     "neecha": true
+    },
+    {
+     "body": "Mercury",
+     "sign": "Gemini",
+     "deg": "17\u00b000'",
+     "house": 1,
+     "nak": "Rohini",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Venus",
+     "sign": "Taurus",
+     "deg": "4\u00b021'",
+     "house": 12,
+     "nak": "Ashwini",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Mars",
+     "sign": "Virgo",
+     "deg": "1\u00b027'",
+     "house": 4,
+     "nak": "Magha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Jupiter",
+     "sign": "Leo",
+     "deg": "18\u00b050'",
+     "house": 3,
+     "nak": "Ashlesha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Saturn",
+     "sign": "Aries",
+     "deg": "22\u00b036'",
+     "house": 11,
+     "nak": "Revati",
+     "retro": false,
+     "neecha": true
+    },
+    {
+     "body": "Rahu",
+     "sign": "Aquarius",
+     "deg": "15\u00b033'",
+     "house": 9,
+     "nak": "Shravana",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Ketu",
+     "sign": "Leo",
+     "deg": "15\u00b033'",
+     "house": 3,
+     "nak": "Ashlesha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Uranus",
+     "sign": "Gemini",
+     "deg": "5\u00b014'",
+     "house": 1,
+     "nak": "Rohini",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Neptune",
+     "sign": "Aries",
+     "deg": "5\u00b056'",
+     "house": 11,
+     "nak": "Uttara Bhadrapada",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Pluto",
+     "sign": "Aquarius",
+     "deg": "7\u00b009'",
+     "house": 9,
+     "nak": "Shravana",
+     "retro": false,
+     "neecha": false
+    }
+   ]
+  },
+  {
+   "start": "2027-06-18 14:16:00.249589-04:00",
+   "end": "2027-07-20 01:10:14.707200-04:00",
+   "asc": "Libra 13\u00b017'",
+   "lord": "Venus",
+   "lord_pos": "Gemini 12\u00b029', house 9",
+   "h8": [],
+   "h10": [
+    "Mercury"
+   ],
+   "flags": [],
+   "reading": "No stated indication",
+   "rows": [
+    {
+     "body": "Sun",
+     "sign": "Gemini",
+     "deg": "27\u00b018'",
+     "house": 9,
+     "nak": "Mrigashira",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Moon",
+     "sign": "Sagittarius",
+     "deg": "24\u00b017'",
+     "house": 3,
+     "nak": "Mula",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Mercury",
+     "sign": "Cancer",
+     "deg": "4\u00b011'",
+     "house": 10,
+     "nak": "Ardra",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Venus",
+     "sign": "Gemini",
+     "deg": "12\u00b029'",
+     "house": 9,
+     "nak": "Rohini",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Mars",
+     "sign": "Virgo",
+     "deg": "15\u00b040'",
+     "house": 12,
+     "nak": "Purva Phalguni",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Jupiter",
+     "sign": "Leo",
+     "deg": "23\u00b001'",
+     "house": 11,
+     "nak": "Ashlesha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Saturn",
+     "sign": "Aries",
+     "deg": "25\u00b039'",
+     "house": 7,
+     "nak": "Ashwini",
+     "retro": false,
+     "neecha": true
+    },
+    {
+     "body": "Rahu",
+     "sign": "Aquarius",
+     "deg": "13\u00b054'",
+     "house": 5,
+     "nak": "Shravana",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Ketu",
+     "sign": "Leo",
+     "deg": "13\u00b054'",
+     "house": 11,
+     "nak": "Ashlesha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Uranus",
+     "sign": "Gemini",
+     "deg": "7\u00b003'",
+     "house": 9,
+     "nak": "Rohini",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Neptune",
+     "sign": "Aries",
+     "deg": "6\u00b032'",
+     "house": 7,
+     "nak": "Uttara Bhadrapada",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Pluto",
+     "sign": "Aquarius",
+     "deg": "6\u00b048'",
+     "house": 5,
+     "nak": "Shravana",
+     "retro": false,
+     "neecha": false
+    }
+   ]
+  },
+  {
+   "start": "2027-07-20 01:10:14.707200-04:00",
+   "end": "2027-08-20 08:56:04.243189-04:00",
+   "asc": "Taurus 19\u00b038'",
+   "lord": "Venus",
+   "lord_pos": "Cancer 21\u00b000', house 3",
+   "h8": [],
+   "h10": [
+    "Moon",
+    "Rahu",
+    "Pluto"
+   ],
+   "flags": [],
+   "reading": "No stated indication",
+   "rows": [
+    {
+     "body": "Sun",
+     "sign": "Cancer",
+     "deg": "27\u00b017'",
+     "house": 3,
+     "nak": "Punarvasu",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Moon",
+     "sign": "Aquarius",
+     "deg": "14\u00b012'",
+     "house": 10,
+     "nak": "Shravana",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Mercury",
+     "sign": "Cancer",
+     "deg": "7\u00b025'",
+     "house": 3,
+     "nak": "Ardra",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Venus",
+     "sign": "Cancer",
+     "deg": "21\u00b000'",
+     "house": 3,
+     "nak": "Punarvasu",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Mars",
+     "sign": "Libra",
+     "deg": "2\u00b051'",
+     "house": 6,
+     "nak": "Uttara Phalguni",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Jupiter",
+     "sign": "Leo",
+     "deg": "28\u00b047'",
+     "house": 4,
+     "nak": "Magha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Saturn",
+     "sign": "Aries",
+     "deg": "27\u00b030'",
+     "house": 12,
+     "nak": "Ashwini",
+     "retro": false,
+     "neecha": true
+    },
+    {
+     "body": "Rahu",
+     "sign": "Aquarius",
+     "deg": "12\u00b014'",
+     "house": 10,
+     "nak": "Shravana",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Ketu",
+     "sign": "Leo",
+     "deg": "12\u00b014'",
+     "house": 4,
+     "nak": "Ashlesha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Uranus",
+     "sign": "Gemini",
+     "deg": "8\u00b038'",
+     "house": 2,
+     "nak": "Rohini",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Neptune",
+     "sign": "Aries",
+     "deg": "6\u00b037'",
+     "house": 12,
+     "nak": "Uttara Bhadrapada",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Pluto",
+     "sign": "Aquarius",
+     "deg": "6\u00b010'",
+     "house": 10,
+     "nak": "Shravana",
+     "retro": false,
+     "neecha": false
+    }
+   ]
+  },
+  {
+   "start": "2027-08-20 08:56:04.243189-04:00",
+   "end": "2027-09-20 07:44:39.926415-04:00",
+   "asc": "Virgo 28\u00b055'",
+   "lord": "Mercury",
+   "lord_pos": "Virgo 6\u00b019', house 1",
+   "h8": [
+    "Moon",
+    "Saturn",
+    "Neptune"
+   ],
+   "h10": [
+    "Uranus"
+   ],
+   "flags": [
+    "Mars, Saturn, Rahu or Ketu in the 8th"
+   ],
+   "reading": "Pressure",
+   "rows": [
+    {
+     "body": "Sun",
+     "sign": "Leo",
+     "deg": "27\u00b018'",
+     "house": 12,
+     "nak": "Magha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Moon",
+     "sign": "Aries",
+     "deg": "3\u00b004'",
+     "house": 8,
+     "nak": "Uttara Bhadrapada",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Mercury",
+     "sign": "Virgo",
+     "deg": "6\u00b019'",
+     "house": 1,
+     "nak": "Magha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Venus",
+     "sign": "Leo",
+     "deg": "29\u00b039'",
+     "house": 12,
+     "nak": "Magha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Mars",
+     "sign": "Libra",
+     "deg": "21\u00b055'",
+     "house": 2,
+     "nak": "Chitra",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Jupiter",
+     "sign": "Virgo",
+     "deg": "5\u00b021'",
+     "house": 1,
+     "nak": "Magha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Saturn",
+     "sign": "Aries",
+     "deg": "27\u00b046'",
+     "house": 8,
+     "nak": "Ashwini",
+     "retro": false,
+     "neecha": true
+    },
+    {
+     "body": "Rahu",
+     "sign": "Aquarius",
+     "deg": "10\u00b035'",
+     "house": 6,
+     "nak": "Shravana",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Ketu",
+     "sign": "Leo",
+     "deg": "10\u00b035'",
+     "house": 12,
+     "nak": "Pushya",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Uranus",
+     "sign": "Gemini",
+     "deg": "9\u00b040'",
+     "house": 10,
+     "nak": "Rohini",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Neptune",
+     "sign": "Aries",
+     "deg": "6\u00b013'",
+     "house": 8,
+     "nak": "Uttara Bhadrapada",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Pluto",
+     "sign": "Aquarius",
+     "deg": "5\u00b027'",
+     "house": 6,
+     "nak": "Shravana",
+     "retro": false,
+     "neecha": false
+    }
+   ]
+  },
+  {
+   "start": "2027-09-20 07:44:39.926415-04:00",
+   "end": "2027-10-20 18:24:15.263990-04:00",
+   "asc": "Libra 8\u00b058'",
+   "lord": "Venus",
+   "lord_pos": "Libra 8\u00b002', house 1",
+   "h8": [
+    "Moon"
+   ],
+   "h10": [],
+   "flags": [],
+   "reading": "No stated indication",
+   "rows": [
+    {
+     "body": "Sun",
+     "sign": "Virgo",
+     "deg": "27\u00b018'",
+     "house": 12,
+     "nak": "Uttara Phalguni",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Moon",
+     "sign": "Taurus",
+     "deg": "20\u00b024'",
+     "house": 8,
+     "nak": "Bharani",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Mercury",
+     "sign": "Libra",
+     "deg": "23\u00b004'",
+     "house": 1,
+     "nak": "Chitra",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Venus",
+     "sign": "Libra",
+     "deg": "8\u00b002'",
+     "house": 1,
+     "nak": "Hasta",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Mars",
+     "sign": "Scorpio",
+     "deg": "12\u00b016'",
+     "house": 2,
+     "nak": "Swati",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Jupiter",
+     "sign": "Virgo",
+     "deg": "12\u00b003'",
+     "house": 12,
+     "nak": "Purva Phalguni",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Saturn",
+     "sign": "Aries",
+     "deg": "26\u00b027'",
+     "house": 7,
+     "nak": "Ashwini",
+     "retro": false,
+     "neecha": true
+    },
+    {
+     "body": "Rahu",
+     "sign": "Aquarius",
+     "deg": "8\u00b056'",
+     "house": 5,
+     "nak": "Shravana",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Ketu",
+     "sign": "Leo",
+     "deg": "8\u00b056'",
+     "house": 11,
+     "nak": "Pushya",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Uranus",
+     "sign": "Gemini",
+     "deg": "9\u00b056'",
+     "house": 9,
+     "nak": "Rohini",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Neptune",
+     "sign": "Aries",
+     "deg": "5\u00b027'",
+     "house": 7,
+     "nak": "Uttara Bhadrapada",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Pluto",
+     "sign": "Aquarius",
+     "deg": "4\u00b055'",
+     "house": 5,
+     "nak": "Shravana",
+     "retro": false,
+     "neecha": false
+    }
+   ]
+  },
+  {
+   "start": "2027-10-20 18:24:15.263990-04:00",
+   "end": "2027-11-19 16:05:05.164790-05:00",
+   "asc": "Taurus 5\u00b010'",
+   "lord": "Venus",
+   "lord_pos": "Scorpio 15\u00b051', house 7",
+   "h8": [
+    "Mars"
+   ],
+   "h10": [
+    "Rahu",
+    "Pluto"
+   ],
+   "flags": [
+    "Mars, Saturn, Rahu or Ketu in the 8th"
+   ],
+   "reading": "Pressure",
+   "rows": [
+    {
+     "body": "Sun",
+     "sign": "Libra",
+     "deg": "27\u00b018'",
+     "house": 6,
+     "nak": "Chitra",
+     "retro": false,
+     "neecha": true
+    },
+    {
+     "body": "Moon",
+     "sign": "Cancer",
+     "deg": "4\u00b001'",
+     "house": 3,
+     "nak": "Ardra",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Mercury",
+     "sign": "Libra",
+     "deg": "24\u00b027'",
+     "house": 6,
+     "nak": "Chitra",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Venus",
+     "sign": "Scorpio",
+     "deg": "15\u00b051'",
+     "house": 7,
+     "nak": "Vishakha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Mars",
+     "sign": "Sagittarius",
+     "deg": "3\u00b032'",
+     "house": 8,
+     "nak": "Anuradha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Jupiter",
+     "sign": "Virgo",
+     "deg": "18\u00b015'",
+     "house": 5,
+     "nak": "Purva Phalguni",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Saturn",
+     "sign": "Aries",
+     "deg": "24\u00b010'",
+     "house": 12,
+     "nak": "Revati",
+     "retro": false,
+     "neecha": true
+    },
+    {
+     "body": "Rahu",
+     "sign": "Aquarius",
+     "deg": "7\u00b019'",
+     "house": 10,
+     "nak": "Shravana",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Ketu",
+     "sign": "Leo",
+     "deg": "7\u00b019'",
+     "house": 4,
+     "nak": "Pushya",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Uranus",
+     "sign": "Gemini",
+     "deg": "9\u00b026'",
+     "house": 2,
+     "nak": "Rohini",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Neptune",
+     "sign": "Aries",
+     "deg": "4\u00b038'",
+     "house": 12,
+     "nak": "Uttara Bhadrapada",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Pluto",
+     "sign": "Aquarius",
+     "deg": "4\u00b045'",
+     "house": 10,
+     "nak": "Shravana",
+     "retro": false,
+     "neecha": false
+    }
+   ]
+  },
+  {
+   "start": "2027-11-19 16:05:05.164790-05:00",
+   "end": "2027-12-19 06:03:27.504018-05:00",
+   "asc": "Taurus 19\u00b007'",
+   "lord": "Venus",
+   "lord_pos": "Sagittarius 23\u00b002', house 8",
+   "h8": [
+    "Venus",
+    "Mars"
+   ],
+   "h10": [
+    "Rahu",
+    "Pluto"
+   ],
+   "flags": [
+    "Mars, Saturn, Rahu or Ketu in the 8th"
+   ],
+   "reading": "Pressure",
+   "rows": [
+    {
+     "body": "Sun",
+     "sign": "Scorpio",
+     "deg": "27\u00b018'",
+     "house": 7,
+     "nak": "Vishakha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Moon",
+     "sign": "Leo",
+     "deg": "12\u00b010'",
+     "house": 4,
+     "nak": "Ashlesha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Mercury",
+     "sign": "Scorpio",
+     "deg": "14\u00b054'",
+     "house": 7,
+     "nak": "Vishakha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Venus",
+     "sign": "Sagittarius",
+     "deg": "23\u00b002'",
+     "house": 8,
+     "nak": "Jyeshtha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Mars",
+     "sign": "Sagittarius",
+     "deg": "25\u00b033'",
+     "house": 8,
+     "nak": "Mula",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Jupiter",
+     "sign": "Virgo",
+     "deg": "23\u00b019'",
+     "house": 5,
+     "nak": "Uttara Phalguni",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Saturn",
+     "sign": "Aries",
+     "deg": "22\u00b002'",
+     "house": 12,
+     "nak": "Revati",
+     "retro": false,
+     "neecha": true
+    },
+    {
+     "body": "Rahu",
+     "sign": "Aquarius",
+     "deg": "5\u00b044'",
+     "house": 10,
+     "nak": "Shravana",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Ketu",
+     "sign": "Leo",
+     "deg": "5\u00b044'",
+     "house": 4,
+     "nak": "Pushya",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Uranus",
+     "sign": "Gemini",
+     "deg": "8\u00b022'",
+     "house": 2,
+     "nak": "Rohini",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Neptune",
+     "sign": "Aries",
+     "deg": "4\u00b002'",
+     "house": 12,
+     "nak": "Uttara Bhadrapada",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Pluto",
+     "sign": "Aquarius",
+     "deg": "5\u00b000'",
+     "house": 10,
+     "nak": "Shravana",
+     "retro": false,
+     "neecha": false
+    }
+   ]
+  },
+  {
+   "start": "2027-12-19 06:03:27.504018-05:00",
+   "end": null,
+   "asc": "Sagittarius 10\u00b050'",
+   "lord": "Jupiter",
+   "lord_pos": "Virgo 26\u00b037', house 10",
+   "h8": [],
+   "h10": [
+    "Moon",
+    "Jupiter"
+   ],
+   "flags": [
+    "Venus or Jupiter in the 10th"
+   ],
+   "reading": "Supported",
+   "rows": [
+    {
+     "body": "Sun",
+     "sign": "Sagittarius",
+     "deg": "27\u00b018'",
+     "house": 1,
+     "nak": "Mula",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Moon",
+     "sign": "Virgo",
+     "deg": "15\u00b018'",
+     "house": 10,
+     "nak": "Purva Phalguni",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Mercury",
+     "sign": "Capricorn",
+     "deg": "1\u00b031'",
+     "house": 2,
+     "nak": "Mula",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Venus",
+     "sign": "Capricorn",
+     "deg": "29\u00b036'",
+     "house": 2,
+     "nak": "Uttara Ashadha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Mars",
+     "sign": "Capricorn",
+     "deg": "18\u00b008'",
+     "house": 2,
+     "nak": "Purva Ashadha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Jupiter",
+     "sign": "Virgo",
+     "deg": "26\u00b037'",
+     "house": 10,
+     "nak": "Uttara Phalguni",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Saturn",
+     "sign": "Aries",
+     "deg": "21\u00b002'",
+     "house": 5,
+     "nak": "Revati",
+     "retro": false,
+     "neecha": true
+    },
+    {
+     "body": "Rahu",
+     "sign": "Aquarius",
+     "deg": "4\u00b010'",
+     "house": 3,
+     "nak": "Uttara Ashadha",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Ketu",
+     "sign": "Leo",
+     "deg": "4\u00b010'",
+     "house": 9,
+     "nak": "Pushya",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Uranus",
+     "sign": "Gemini",
+     "deg": "7\u00b008'",
+     "house": 7,
+     "nak": "Rohini",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Neptune",
+     "sign": "Aries",
+     "deg": "3\u00b051'",
+     "house": 5,
+     "nak": "Uttara Bhadrapada",
+     "retro": false,
+     "neecha": false
+    },
+    {
+     "body": "Pluto",
+     "sign": "Aquarius",
+     "deg": "5\u00b037'",
+     "house": 3,
+     "nak": "Shravana",
+     "retro": false,
+     "neecha": false
+    }
+   ]
+  }
+ ],
+ "episodes": [
+  {
+   "rule": "Sun square Mars (within 3\u00b0)",
+   "frm": "2026-11-24",
+   "to": "2026-11-24",
+   "record": {
+    "n": 813,
+    "up1": 52.4,
+    "exp1": 52.5,
+    "p1": 0.9622,
+    "up5": 56.2,
+    "exp5": 56.3,
+    "p5": 0.9786,
+    "big": 67,
+    "exp_big": 50.6,
+    "p_big": 0.0157,
+    "mean1": 0.017,
+    "eps": 92,
+    "eps_up5": 53.3,
+    "eps_exp5": 56.5,
+    "eps_p": 0.5355
+   }
+  },
+  {
+   "rule": "Sun square Mars with Mars-Ketu within 8\u00b0",
+   "frm": "2026-11-24",
+   "to": "2026-11-24",
+   "record": {
+    "n": 35,
+    "up1": 57.1,
+    "exp1": 52.5,
+    "p1": 0.5823,
+    "up5": 57.1,
+    "exp5": 56.9,
+    "p5": 0.981,
+    "big": 5,
+    "exp_big": 2.8,
+    "p_big": 0.152,
+    "mean1": -0.257,
+    "eps": 5,
+    "eps_up5": 40.0,
+    "eps_exp5": 57.8,
+    "eps_p": 0.4192
+   }
+  },
+  {
+   "rule": "Mars conjunct Ketu (within 5\u00b0)",
+   "frm": "2026-11-24",
+   "to": "2026-11-24",
+   "record": {
+    "n": 739,
+    "up1": 51.0,
+    "exp1": 52.1,
+    "p1": 0.5677,
+    "up5": 53.6,
+    "exp5": 56.7,
+    "p5": 0.0855,
+    "big": 72,
+    "exp_big": 70.8,
+    "p_big": 0.4589,
+    "mean1": -0.031,
+    "eps": 62,
+    "eps_up5": 50.0,
+    "eps_exp5": 56.2,
+    "eps_p": 0.3266
+   }
+  },
+  {
+   "rule": "Jupiter sextile Venus (within 2\u00b0)",
+   "frm": "2026-11-24",
+   "to": "2026-12-01",
+   "record": {
+    "n": 587,
+    "up1": 55.7,
+    "exp1": 52.5,
+    "p1": 0.1192,
+    "up5": 63.9,
+    "exp5": 56.1,
+    "p5": 0.0002,
+    "big": 42,
+    "exp_big": 41.4,
+    "p_big": 0.4864,
+    "mean1": 0.075,
+    "eps": 198,
+    "eps_up5": 63.6,
+    "eps_exp5": 55.8,
+    "eps_p": 0.0272
+   }
+  },
+  {
+   "rule": "Mars square Uranus (within 3\u00b0)",
+   "frm": "2026-11-27",
+   "to": "2026-12-12",
+   "record": {
+    "n": 837,
+    "up1": 50.3,
+    "exp1": 53.2,
+    "p1": 0.0975,
+    "up5": 55.6,
+    "exp5": 57.3,
+    "p5": 0.3138,
+    "big": 52,
+    "exp_big": 52.9,
+    "p_big": 0.5702,
+    "mean1": 0.024,
+    "eps": 114,
+    "eps_up5": 56.1,
+    "eps_exp5": 56.8,
+    "eps_p": 0.8828
+   }
+  },
+  {
+   "rule": "Mars retrograde",
+   "frm": "2027-01-10",
+   "to": "2027-03-31",
+   "record": {
+    "n": 2327,
+    "up1": 52.3,
+    "exp1": 52.7,
+    "p1": 0.697,
+    "up5": 55.6,
+    "exp5": 56.5,
+    "p5": 0.4007,
+    "big": 127,
+    "exp_big": 156.3,
+    "p_big": 0.993,
+    "mean1": 0.03,
+    "eps": 46,
+    "eps_up5": 47.8,
+    "eps_exp5": 56.6,
+    "eps_p": 0.2279
+   }
+  },
+  {
+   "rule": "Mercury in Pisces, tropical",
+   "frm": "2027-02-01",
+   "to": "2027-02-17",
+   "record": {
+    "n": 2059,
+    "up1": 51.5,
+    "exp1": 52.5,
+    "p1": 0.3904,
+    "up5": 55.4,
+    "exp5": 56.3,
+    "p5": 0.4349,
+    "big": 139,
+    "exp_big": 133.1,
+    "p_big": 0.3151,
+    "mean1": 0.027,
+    "eps": 124,
+    "eps_up5": 51.6,
+    "eps_exp5": 56.1,
+    "eps_p": 0.3147
+   }
+  },
+  {
+   "rule": "Mars square Uranus (within 3\u00b0)",
+   "frm": "2027-02-09",
+   "to": "2027-02-23",
+   "record": {
+    "n": 837,
+    "up1": 50.3,
+    "exp1": 53.2,
+    "p1": 0.0975,
+    "up5": 55.6,
+    "exp5": 57.3,
+    "p5": 0.3138,
+    "big": 52,
+    "exp_big": 52.9,
+    "p_big": 0.5702,
+    "mean1": 0.024,
+    "eps": 114,
+    "eps_up5": 56.1,
+    "eps_exp5": 56.8,
+    "eps_p": 0.8828
+   }
+  },
+  {
+   "rule": "Mars conjunct Ketu (within 5\u00b0)",
+   "frm": "2027-03-09",
+   "to": "2027-04-15",
+   "record": {
+    "n": 739,
+    "up1": 51.0,
+    "exp1": 52.1,
+    "p1": 0.5677,
+    "up5": 53.6,
+    "exp5": 56.7,
+    "p5": 0.0855,
+    "big": 72,
+    "exp_big": 70.8,
+    "p_big": 0.4589,
+    "mean1": -0.031,
+    "eps": 62,
+    "eps_up5": 50.0,
+    "eps_exp5": 56.2,
+    "eps_p": 0.3266
+   }
+  },
+  {
+   "rule": "Mercury in Pisces, tropical",
+   "frm": "2027-03-18",
+   "to": "2027-04-08",
+   "record": {
+    "n": 2059,
+    "up1": 51.5,
+    "exp1": 52.5,
+    "p1": 0.3904,
+    "up5": 55.4,
+    "exp5": 56.3,
+    "p5": 0.4349,
+    "big": 139,
+    "exp_big": 133.1,
+    "p_big": 0.3151,
+    "mean1": 0.027,
+    "eps": 124,
+    "eps_up5": 51.6,
+    "eps_exp5": 56.1,
+    "eps_p": 0.3147
+   }
+  },
+  {
+   "rule": "Mercury in Pisces, sidereal",
+   "frm": "2027-04-05",
+   "to": "2027-04-21",
+   "record": {
+    "n": 1975,
+    "up1": 51.7,
+    "exp1": 52.7,
+    "p1": 0.3826,
+    "up5": 54.1,
+    "exp5": 56.7,
+    "p5": 0.0177,
+    "big": 133,
+    "exp_big": 134.5,
+    "p_big": 0.5617,
+    "mean1": 0.043,
+    "eps": 120,
+    "eps_up5": 60.8,
+    "eps_exp5": 56.3,
+    "eps_p": 0.3148
+   }
+  },
+  {
+   "rule": "Sun square Mars (within 3\u00b0)",
+   "frm": "2027-05-20",
+   "to": "2027-05-30",
+   "record": {
+    "n": 813,
+    "up1": 52.4,
+    "exp1": 52.5,
+    "p1": 0.9622,
+    "up5": 56.2,
+    "exp5": 56.3,
+    "p5": 0.9786,
+    "big": 67,
+    "exp_big": 50.6,
+    "p_big": 0.0157,
+    "mean1": 0.017,
+    "eps": 92,
+    "eps_up5": 53.3,
+    "eps_exp5": 56.5,
+    "eps_p": 0.5355
+   }
+  },
+  {
+   "rule": "Mars square Uranus (within 3\u00b0)",
+   "frm": "2027-05-20",
+   "to": "2027-06-04",
+   "record": {
+    "n": 837,
+    "up1": 50.3,
+    "exp1": 53.2,
+    "p1": 0.0975,
+    "up5": 55.6,
+    "exp5": 57.3,
+    "p5": 0.3138,
+    "big": 52,
+    "exp_big": 52.9,
+    "p_big": 0.5702,
+    "mean1": 0.024,
+    "eps": 114,
+    "eps_up5": 56.1,
+    "eps_exp5": 56.8,
+    "eps_p": 0.8828
+   }
+  },
+  {
+   "rule": "Jupiter sextile Venus (within 2\u00b0)",
+   "frm": "2027-06-27",
+   "to": "2027-06-29",
+   "record": {
+    "n": 587,
+    "up1": 55.7,
+    "exp1": 52.5,
+    "p1": 0.1192,
+    "up5": 63.9,
+    "exp5": 56.1,
+    "p5": 0.0002,
+    "big": 42,
+    "exp_big": 41.4,
+    "p_big": 0.4864,
+    "mean1": 0.075,
+    "eps": 198,
+    "eps_up5": 63.6,
+    "eps_exp5": 55.8,
+    "eps_p": 0.0272
+   }
+  },
+  {
+   "rule": "Jupiter sextile Venus (within 2\u00b0)",
+   "frm": "2027-10-21",
+   "to": "2027-10-24",
+   "record": {
+    "n": 587,
+    "up1": 55.7,
+    "exp1": 52.5,
+    "p1": 0.1192,
+    "up5": 63.9,
+    "exp5": 56.1,
+    "p5": 0.0002,
+    "big": 42,
+    "exp_big": 41.4,
+    "p_big": 0.4864,
+    "mean1": 0.075,
+    "eps": 198,
+    "eps_up5": 63.6,
+    "eps_exp5": 55.8,
+    "eps_p": 0.0272
+   }
+  }
+ ],
+ "days": [
+  {
+   "d": "2026-11-24",
+   "call": "Bearish",
+   "why": "Sun square Mars (within 3\u00b0), Mars conjunct Ketu (within 5\u00b0)",
+   "month": "Weak, moderated",
+   "active": [
+    "Sun square Mars (within 3\u00b0)",
+    "Sun square Mars with Mars-Ketu within 8\u00b0",
+    "Mars conjunct Ketu (within 5\u00b0)",
+    "Jupiter sextile Venus (within 2\u00b0)"
+   ],
+   "detail": "Sun\u2013Mars 93.0\u00b0, Mars\u2013Ketu 4.7\u00b0, Jupiter\u2013Venus 58.6\u00b0, Mars\u2013Uranus 85.8\u00b0"
+  },
+  {
+   "d": "2026-11-25",
+   "call": "Bearish",
+   "why": "month reading: Weak, moderated",
+   "month": "Weak, moderated",
+   "active": [
+    "Jupiter sextile Venus (within 2\u00b0)"
+   ],
+   "detail": "Sun\u2013Mars 93.6\u00b0, Mars\u2013Ketu 5.2\u00b0, Jupiter\u2013Venus 58.9\u00b0, Mars\u2013Uranus 86.2\u00b0"
+  },
+  {
+   "d": "2026-11-27",
+   "call": "Bullish",
+   "why": "Jupiter sextile Venus (within 1\u00b0)",
+   "month": "Weak, moderated",
+   "active": [
+    "Jupiter sextile Venus (within 2\u00b0)",
+    "Mars square Uranus (within 3\u00b0)"
+   ],
+   "detail": "Sun\u2013Mars 94.8\u00b0, Mars\u2013Ketu 6.1\u00b0, Jupiter\u2013Venus 59.7\u00b0, Mars\u2013Uranus 87.1\u00b0"
+  },
+  {
+   "d": "2026-11-30",
+   "call": "Volatile",
+   "why": "Mars square Uranus",
+   "month": "Weak, moderated",
+   "active": [
+    "Jupiter sextile Venus (within 2\u00b0)",
+    "Mars square Uranus (within 3\u00b0)"
+   ],
+   "detail": "Sun\u2013Mars 96.7\u00b0, Mars\u2013Ketu 7.4\u00b0, Jupiter\u2013Venus 61.1\u00b0, Mars\u2013Uranus 88.4\u00b0"
+  },
+  {
+   "d": "2026-12-01",
+   "call": "Volatile",
+   "why": "Mars square Uranus",
+   "month": "Weak, moderated",
+   "active": [
+    "Jupiter sextile Venus (within 2\u00b0)",
+    "Mars square Uranus (within 3\u00b0)"
+   ],
+   "detail": "Sun\u2013Mars 97.4\u00b0, Mars\u2013Ketu 7.8\u00b0, Jupiter\u2013Venus 61.6\u00b0, Mars\u2013Uranus 88.8\u00b0"
+  },
+  {
+   "d": "2026-12-02",
+   "call": "Volatile",
+   "why": "Mars square Uranus",
+   "month": "Weak, moderated",
+   "active": [
+    "Mars square Uranus (within 3\u00b0)"
+   ],
+   "detail": "Sun\u2013Mars 98.0\u00b0, Mars\u2013Ketu 8.2\u00b0, Jupiter\u2013Venus 62.2\u00b0, Mars\u2013Uranus 89.2\u00b0"
+  },
+  {
+   "d": "2026-12-03",
+   "call": "Volatile",
+   "why": "Mars square Uranus",
+   "month": "Weak, moderated",
+   "active": [
+    "Mars square Uranus (within 3\u00b0)"
+   ],
+   "detail": "Sun\u2013Mars 98.7\u00b0, Mars\u2013Ketu 8.6\u00b0, Jupiter\u2013Venus 62.8\u00b0, Mars\u2013Uranus 89.6\u00b0"
+  },
+  {
+   "d": "2026-12-04",
+   "call": "Volatile",
+   "why": "Mars square Uranus",
+   "month": "Weak, moderated",
+   "active": [
+    "Mars square Uranus (within 3\u00b0)"
+   ],
+   "detail": "Sun\u2013Mars 99.3\u00b0, Mars\u2013Ketu 9.0\u00b0, Jupiter\u2013Venus 63.4\u00b0, Mars\u2013Uranus 90.0\u00b0"
+  },
+  {
+   "d": "2026-12-07",
+   "call": "Volatile",
+   "why": "Mars square Uranus",
+   "month": "Weak, moderated",
+   "active": [
+    "Mars square Uranus (within 3\u00b0)"
+   ],
+   "detail": "Sun\u2013Mars 101.4\u00b0, Mars\u2013Ketu 10.2\u00b0, Jupiter\u2013Venus 65.3\u00b0, Mars\u2013Uranus 91.1\u00b0"
+  },
+  {
+   "d": "2026-12-08",
+   "call": "Volatile",
+   "why": "Mars square Uranus",
+   "month": "Weak, moderated",
+   "active": [
+    "Mars square Uranus (within 3\u00b0)"
+   ],
+   "detail": "Sun\u2013Mars 102.1\u00b0, Mars\u2013Ketu 10.6\u00b0, Jupiter\u2013Venus 66.0\u00b0, Mars\u2013Uranus 91.5\u00b0"
+  },
+  {
+   "d": "2026-12-09",
+   "call": "Volatile",
+   "why": "Mars square Uranus",
+   "month": "Weak, moderated",
+   "active": [
+    "Mars square Uranus (within 3\u00b0)"
+   ],
+   "detail": "Sun\u2013Mars 102.8\u00b0, Mars\u2013Ketu 10.9\u00b0, Jupiter\u2013Venus 66.8\u00b0, Mars\u2013Uranus 91.9\u00b0"
+  },
+  {
+   "d": "2026-12-10",
+   "call": "Volatile",
+   "why": "Mars square Uranus",
+   "month": "Weak, moderated",
+   "active": [
+    "Mars square Uranus (within 3\u00b0)"
+   ],
+   "detail": "Sun\u2013Mars 103.5\u00b0, Mars\u2013Ketu 11.3\u00b0, Jupiter\u2013Venus 67.5\u00b0, Mars\u2013Uranus 92.2\u00b0"
+  },
+  {
+   "d": "2026-12-11",
+   "call": "Volatile",
+   "why": "Mars square Uranus",
+   "month": "Weak, moderated",
+   "active": [
+    "Mars square Uranus (within 3\u00b0)"
+   ],
+   "detail": "Sun\u2013Mars 104.2\u00b0, Mars\u2013Ketu 11.7\u00b0, Jupiter\u2013Venus 68.3\u00b0, Mars\u2013Uranus 92.5\u00b0"
+  },
+  {
+   "d": "2026-12-14",
+   "call": "Bearish",
+   "why": "month reading: Weak, moderated",
+   "month": "Weak, moderated",
+   "active": [],
+   "detail": "Sun\u2013Mars 106.4\u00b0, Mars\u2013Ketu 12.7\u00b0, Jupiter\u2013Venus 70.7\u00b0, Mars\u2013Uranus 93.5\u00b0"
+  },
+  {
+   "d": "2026-12-15",
+   "call": "Bearish",
+   "why": "month reading: Weak, moderated",
+   "month": "Weak, moderated",
+   "active": [],
+   "detail": "Sun\u2013Mars 107.1\u00b0, Mars\u2013Ketu 13.0\u00b0, Jupiter\u2013Venus 71.5\u00b0, Mars\u2013Uranus 93.8\u00b0"
+  },
+  {
+   "d": "2026-12-16",
+   "call": "Bearish",
+   "why": "month reading: Weak, moderated",
+   "month": "Weak, moderated",
+   "active": [],
+   "detail": "Sun\u2013Mars 107.9\u00b0, Mars\u2013Ketu 13.3\u00b0, Jupiter\u2013Venus 72.3\u00b0, Mars\u2013Uranus 94.1\u00b0"
+  },
+  {
+   "d": "2026-12-17",
+   "call": "Bearish",
+   "why": "month reading: Weak, moderated",
+   "month": "Weak, moderated",
+   "active": [],
+   "detail": "Sun\u2013Mars 108.6\u00b0, Mars\u2013Ketu 13.6\u00b0, Jupiter\u2013Venus 73.2\u00b0, Mars\u2013Uranus 94.4\u00b0"
+  },
+  {
+   "d": "2026-12-18",
+   "call": "Bearish",
+   "why": "month reading: Weak, moderated",
+   "month": "Weak, moderated",
+   "active": [],
+   "detail": "Sun\u2013Mars 109.4\u00b0, Mars\u2013Ketu 13.9\u00b0, Jupiter\u2013Venus 74.1\u00b0, Mars\u2013Uranus 94.7\u00b0"
+  },
+  {
+   "d": "2026-12-21",
+   "call": "No call",
+   "why": "month reading: No stated indication",
+   "month": "No stated indication",
+   "active": [],
+   "detail": "Sun\u2013Mars 111.8\u00b0, Mars\u2013Ketu 14.8\u00b0, Jupiter\u2013Venus 76.8\u00b0, Mars\u2013Uranus 95.5\u00b0"
+  },
+  {
+   "d": "2026-12-22",
+   "call": "No call",
+   "why": "month reading: No stated indication",
+   "month": "No stated indication",
+   "active": [],
+   "detail": "Sun\u2013Mars 112.6\u00b0, Mars\u2013Ketu 15.0\u00b0, Jupiter\u2013Venus 77.8\u00b0, Mars\u2013Uranus 95.8\u00b0"
+  },
+  {
+   "d": "2026-12-23",
+   "call": "No call",
+   "why": "month reading: No stated indication",
+   "month": "No stated indication",
+   "active": [],
+   "detail": "Sun\u2013Mars 113.4\u00b0, Mars\u2013Ketu 15.3\u00b0, Jupiter\u2013Venus 78.7\u00b0, Mars\u2013Uranus 96.0\u00b0"
+  },
+  {
+   "d": "2026-12-24",
+   "call": "No call",
+   "why": "month reading: No stated indication",
+   "month": "No stated indication",
+   "active": [],
+   "detail": "Sun\u2013Mars 114.2\u00b0, Mars\u2013Ketu 15.5\u00b0, Jupiter\u2013Venus 79.7\u00b0, Mars\u2013Uranus 96.2\u00b0"
+  },
+  {
+   "d": "2026-12-28",
+   "call": "No call",
+   "why": "month reading: No stated indication",
+   "month": "No stated indication",
+   "active": [],
+   "detail": "Sun\u2013Mars 117.6\u00b0, Mars\u2013Ketu 16.4\u00b0, Jupiter\u2013Venus 83.7\u00b0, Mars\u2013Uranus 97.0\u00b0"
+  },
+  {
+   "d": "2026-12-29",
+   "call": "No call",
+   "why": "month reading: No stated indication",
+   "month": "No stated indication",
+   "active": [],
+   "detail": "Sun\u2013Mars 118.5\u00b0, Mars\u2013Ketu 16.6\u00b0, Jupiter\u2013Venus 84.7\u00b0, Mars\u2013Uranus 97.2\u00b0"
+  },
+  {
+   "d": "2026-12-30",
+   "call": "No call",
+   "why": "month reading: No stated indication",
+   "month": "No stated indication",
+   "active": [],
+   "detail": "Sun\u2013Mars 119.4\u00b0, Mars\u2013Ketu 16.8\u00b0, Jupiter\u2013Venus 85.8\u00b0, Mars\u2013Uranus 97.4\u00b0"
+  },
+  {
+   "d": "2026-12-31",
+   "call": "No call",
+   "why": "month reading: No stated indication",
+   "month": "No stated indication",
+   "active": [],
+   "detail": "Sun\u2013Mars 120.3\u00b0, Mars\u2013Ketu 17.0\u00b0, Jupiter\u2013Venus 86.8\u00b0, Mars\u2013Uranus 97.5\u00b0"
+  },
+  {
+   "d": "2027-01-01",
+   "call": "No call",
+   "why": "month reading: No stated indication",
+   "month": "No stated indication",
+   "active": [],
+   "detail": "Sun\u2013Mars 121.2\u00b0, Mars\u2013Ketu 17.2\u00b0, Jupiter\u2013Venus 87.9\u00b0, Mars\u2013Uranus 97.7\u00b0"
+  },
+  {
+   "d": "2027-01-04",
+   "call": "No call",
+   "why": "month reading: No stated indication",
+   "month": "No stated indication",
+   "active": [],
+   "detail": "Sun\u2013Mars 124.0\u00b0, Mars\u2013Ketu 17.6\u00b0, Jupiter\u2013Venus 91.1\u00b0, Mars\u2013Uranus 98.0\u00b0"
+  },
+  {
+   "d": "2027-01-05",
+   "call": "No call",
+   "why": "month reading: No stated indication",
+   "month": "No stated indication",
+   "active": [],
+   "detail": "Sun\u2013Mars 124.9\u00b0, Mars\u2013Ketu 17.7\u00b0, Jupiter\u2013Venus 92.2\u00b0, Mars\u2013Uranus 98.1\u00b0"
+  },
+  {
+   "d": "2027-01-06",
+   "call": "No call",
+   "why": "month reading: No stated indication",
+   "month": "No stated indication",
+   "active": [],
+   "detail": "Sun\u2013Mars 125.9\u00b0, Mars\u2013Ketu 17.8\u00b0, Jupiter\u2013Venus 93.4\u00b0, Mars\u2013Uranus 98.2\u00b0"
+  },
+  {
+   "d": "2027-01-07",
+   "call": "No call",
+   "why": "month reading: No stated indication",
+   "month": "No stated indication",
+   "active": [],
+   "detail": "Sun\u2013Mars 126.9\u00b0, Mars\u2013Ketu 17.9\u00b0, Jupiter\u2013Venus 94.5\u00b0, Mars\u2013Uranus 98.3\u00b0"
+  },
+  {
+   "d": "2027-01-08",
+   "call": "No call",
+   "why": "month reading: No stated indication",
+   "month": "No stated indication",
+   "active": [],
+   "detail": "Sun\u2013Mars 127.9\u00b0, Mars\u2013Ketu 18.0\u00b0, Jupiter\u2013Venus 95.6\u00b0, Mars\u2013Uranus 98.3\u00b0"
+  },
+  {
+   "d": "2027-01-11",
+   "call": "No call",
+   "why": "month reading: No stated indication",
+   "month": "No stated indication",
+   "active": [
+    "Mars retrograde"
+   ],
+   "detail": "Sun\u2013Mars 130.9\u00b0, Mars\u2013Ketu 18.1\u00b0, Jupiter\u2013Venus 99.0\u00b0, Mars\u2013Uranus 98.4\u00b0"
+  },
+  {
+   "d": "2027-01-12",
+   "call": "No call",
+   "why": "month reading: No stated indication",
+   "month": "No stated indication",
+   "active": [
+    "Mars retrograde"
+   ],
+   "detail": "Sun\u2013Mars 131.9\u00b0, Mars\u2013Ketu 18.2\u00b0, Jupiter\u2013Venus 100.2\u00b0, Mars\u2013Uranus 98.4\u00b0"
+  },
+  {
+   "d": "2027-01-13",
+   "call": "No call",
+   "why": "month reading: No stated indication",
+   "month": "No stated indication",
+   "active": [
+    "Mars retrograde"
+   ],
+   "detail": "Sun\u2013Mars 133.0\u00b0, Mars\u2013Ketu 18.2\u00b0, Jupiter\u2013Venus 101.4\u00b0, Mars\u2013Uranus 98.4\u00b0"
+  },
+  {
+   "d": "2027-01-14",
+   "call": "No call",
+   "why": "month reading: No stated indication",
+   "month": "No stated indication",
+   "active": [
+    "Mars retrograde"
+   ],
+   "detail": "Sun\u2013Mars 134.1\u00b0, Mars\u2013Ketu 18.2\u00b0, Jupiter\u2013Venus 102.5\u00b0, Mars\u2013Uranus 98.4\u00b0"
+  },
+  {
+   "d": "2027-01-15",
+   "call": "No call",
+   "why": "month reading: No stated indication",
+   "month": "No stated indication",
+   "active": [
+    "Mars retrograde"
+   ],
+   "detail": "Sun\u2013Mars 135.1\u00b0, Mars\u2013Ketu 18.2\u00b0, Jupiter\u2013Venus 103.7\u00b0, Mars\u2013Uranus 98.3\u00b0"
+  },
+  {
+   "d": "2027-01-18",
+   "call": "No call",
+   "why": "month reading: No stated indication",
+   "month": "No stated indication",
+   "active": [
+    "Mars retrograde"
+   ],
+   "detail": "Sun\u2013Mars 138.5\u00b0, Mars\u2013Ketu 18.1\u00b0, Jupiter\u2013Venus 107.3\u00b0, Mars\u2013Uranus 98.1\u00b0"
+  }
+ ],
+ "validation": [
+  {
+   "month": "2026-10-20",
+   "generated": "Bearish",
+   "flags": [
+    "Ascendant lord debilitated",
+    "Mars with Ketu in the 8th",
+    "Mars, Saturn, Rahu or Ketu in the 8th",
+    "Sun in the 10th",
+    "Both bearish indications (debilitated ascendant lord and a malefic in the 8th)"
+   ],
+   "said": "Bearish: debilitated ascendant lord Saturn and Mars with Ketu in the 8th"
+  },
+  {
+   "month": "2026-11-19",
+   "generated": "Weak, moderated",
+   "flags": [
+    "Ascendant lord debilitated",
+    "Mars with Ketu in the 8th",
+    "Mars, Saturn, Rahu or Ketu in the 8th",
+    "Venus or Jupiter in the 10th",
+    "Both bearish indications (debilitated ascendant lord and a malefic in the 8th)"
+   ],
+   "said": "Both persist, Venus in the 10th moderates: further weakness, smaller decline than -4.8%"
+  }
+ ],
+ "week_validation": [
+  {
+   "d": "2026-11-16",
+   "generated": "Bearish",
+   "why": "Sun square Mars (within 3\u00b0), Mars conjunct Ketu (within 5\u00b0)",
+   "said": "down"
+  },
+  {
+   "d": "2026-11-17",
+   "generated": "Bearish",
+   "why": "Sun square Mars (within 3\u00b0), Mars conjunct Ketu (within 5\u00b0)",
+   "said": "down"
+  },
+  {
+   "d": "2026-11-18",
+   "generated": "Bearish",
+   "why": "Sun square Mars (within 3\u00b0), Mars conjunct Ketu (within 5\u00b0)",
+   "said": "down"
+  },
+  {
+   "d": "2026-11-19",
+   "generated": "Bearish",
+   "why": "Sun square Mars (within 3\u00b0), Mars conjunct Ketu (within 5\u00b0)",
+   "said": "down"
+  },
+  {
+   "d": "2026-11-20",
+   "generated": "Bearish",
+   "why": "Sun square Mars (within 3\u00b0), Mars conjunct Ketu (within 5\u00b0)",
+   "said": "up"
+  },
+  {
+   "d": "2026-11-23",
+   "generated": "Bearish",
+   "why": "Sun square Mars (within 3\u00b0), Mars conjunct Ketu (within 5\u00b0)",
+   "said": "down"
+  },
+  {
+   "d": "2026-11-24",
+   "generated": "Bearish",
+   "why": "Sun square Mars (within 3\u00b0), Mars conjunct Ketu (within 5\u00b0)",
+   "said": "down"
+  },
+  {
+   "d": "2026-11-25",
+   "generated": "Bearish",
+   "why": "month reading: Weak, moderated",
+   "said": "down"
+  },
+  {
+   "d": "2026-11-27",
+   "generated": "Bullish",
+   "why": "Jupiter sextile Venus (within 1\u00b0)",
+   "said": "up"
+  }
+ ],
+ "scorecard": [
+  {
+   "id": "m2026-10",
+   "made": "before 20 Oct 2026",
+   "period": "NYSE solar month 20 Oct - 18 Nov 2026",
+   "text": "Bearish: debilitated ascendant lord Saturn and Mars with Ketu in the 8th.",
+   "kind": "range",
+   "start": "2026-10-20",
+   "end": "2026-11-18",
+   "expect": "down",
+   "score": {
+    "status": "right",
+    "detail": "7,691 \u2192 7,324 (-4.8%)"
+   }
+  },
+  {
+   "id": "w2026-11-16",
+   "made": "week of 16 Nov 2026",
+   "period": "Mon 16 - Fri 20 Nov 2026",
+   "text": "Lower Monday to Thursday, recovery on Friday.",
+   "kind": "days",
+   "days": {
+    "2026-11-16": "down",
+    "2026-11-17": "down",
+    "2026-11-18": "down",
+    "2026-11-19": "down",
+    "2026-11-20": "up"
+   },
+   "score": {
+    "status": "partly right (4/5)",
+    "detail": "Mon 16 Nov: said down, -1.92% \u2713; Tue 17 Nov: said down, -1.03% \u2713; Wed 18 Nov: said down, -0.23% \u2713; Thu 19 Nov: said down, -2.02% \u2713; Fri 20 Nov: said up, -3.70% \u2717"
+   }
+  },
+  {
+   "id": "m2026-11",
+   "made": "about 21 Nov 2026",
+   "period": "NYSE solar month 19 Nov - 18 Dec 2026",
+   "text": "Further weakness, but a smaller net decline than the previous month's -4.8% (from 7,320).",
+   "kind": "range",
+   "start": "2026-11-19",
+   "end": "2026-12-18",
+   "expect": "down_smaller",
+   "bound": -4.8,
+   "score": {
+    "status": "open",
+    "detail": "so far 7,324 \u2192 7,237 (-1.2%) to 2026-11-23"
+   }
+  },
+  {
+   "id": "w2026-11-23",
+   "made": "about 22 Nov 2026",
+   "period": "Mon 23 - Fri 27 Nov 2026",
+   "text": "Pressure in the first half of the week (Mon-Wed); Friday recovery (Jupiter-Venus sextile); volatile, rebound toward the end.",
+   "kind": "days",
+   "days": {
+    "2026-11-23": "down",
+    "2026-11-24": "down",
+    "2026-11-25": "down",
+    "2026-11-27": "up"
+   },
+   "score": {
+    "status": "open (0/1)",
+    "detail": "Mon 23 Nov: said down, +4.73% \u2717; Tue 24 Nov: pending; Wed 25 Nov: pending; Fri 27 Nov: pending"
+   }
+  },
+  {
+   "id": "y2026-27",
+   "made": "early Nov 2026",
+   "period": "Oct 2026 - Oct 2027",
+   "text": "Weak from late 2026 through spring 2027, bottom around Mar-May 2027, recovery from May-June, strong second half with a sustained advance through Dec 2027.",
+   "kind": "path",
+   "checkpoints": [
+    [
+     "2026-11-01",
+     "2027-03-01",
+     "down",
+     "weak late 2026 to Feb 2027"
+    ],
+    [
+     "2027-03-01",
+     "2027-05-31",
+     "low",
+     "bottom around Mar-May 2027 (the year's low falls in this window)"
+    ],
+    [
+     "2027-06-01",
+     "2027-12-31",
+     "up",
+     "advance from June through December 2027"
+    ]
+   ],
+   "score": {
+    "status": "open",
+    "detail": "weak late 2026 to Feb 2027: open; bottom around Mar-May 2027 (the year's low falls in this window): open; advance from June through December 2027: open"
+   }
+  }
+ ],
+ "atests": {
+  "Sun square Mars (within 3\u00b0) \u2013 Solar return: bearish": {
+   "n": 813,
+   "up1": 52.4,
+   "exp1": 52.5,
+   "p1": 0.9622,
+   "up5": 56.2,
+   "exp5": 56.3,
+   "p5": 0.9786,
+   "big": 67,
+   "exp_big": 50.6,
+   "p_big": 0.0157,
+   "mean1": 0.017,
+   "eps": 92,
+   "eps_up5": 53.3,
+   "eps_exp5": 56.5,
+   "eps_p": 0.5355
+  },
+  "Sun square Mars with Mars-Ketu within 8\u00b0 \u2013 Solar return: bearish": {
+   "n": 35,
+   "up1": 57.1,
+   "exp1": 52.5,
+   "p1": 0.5823,
+   "up5": 57.1,
+   "exp5": 56.9,
+   "p5": 0.981,
+   "big": 5,
+   "exp_big": 2.8,
+   "p_big": 0.152,
+   "mean1": -0.257,
+   "eps": 5,
+   "eps_up5": 40.0,
+   "eps_exp5": 57.8,
+   "eps_p": 0.4192
+  },
+  "Mars conjunct Ketu (within 5\u00b0) \u2013 Solar return: disruption": {
+   "n": 739,
+   "up1": 51.0,
+   "exp1": 52.1,
+   "p1": 0.5677,
+   "up5": 53.6,
+   "exp5": 56.7,
+   "p5": 0.0855,
+   "big": 72,
+   "exp_big": 70.8,
+   "p_big": 0.4589,
+   "mean1": -0.031,
+   "eps": 62,
+   "eps_up5": 50.0,
+   "eps_exp5": 56.2,
+   "eps_p": 0.3266
+  },
+  "Jupiter sextile Venus (within 2\u00b0) \u2013 Solar return: bullish": {
+   "n": 587,
+   "up1": 55.7,
+   "exp1": 52.5,
+   "p1": 0.1192,
+   "up5": 63.9,
+   "exp5": 56.1,
+   "p5": 0.0002,
+   "big": 42,
+   "exp_big": 41.4,
+   "p_big": 0.4864,
+   "mean1": 0.075,
+   "eps": 198,
+   "eps_up5": 63.6,
+   "eps_exp5": 55.8,
+   "eps_p": 0.0272
+  },
+  "Mars square Uranus (within 3\u00b0) \u2013 Solar return: volatility": {
+   "n": 837,
+   "up1": 50.3,
+   "exp1": 53.2,
+   "p1": 0.0975,
+   "up5": 55.6,
+   "exp5": 57.3,
+   "p5": 0.3138,
+   "big": 52,
+   "exp_big": 52.9,
+   "p_big": 0.5702,
+   "mean1": 0.024,
+   "eps": 114,
+   "eps_up5": 56.1,
+   "eps_exp5": 56.8,
+   "eps_p": 0.8828
+  },
+  "Mars retrograde": {
+   "n": 2327,
+   "up1": 52.3,
+   "exp1": 52.7,
+   "p1": 0.697,
+   "up5": 55.6,
+   "exp5": 56.5,
+   "p5": 0.4007,
+   "big": 127,
+   "exp_big": 156.3,
+   "p_big": 0.993,
+   "mean1": 0.03,
+   "eps": 46,
+   "eps_up5": 47.8,
+   "eps_exp5": 56.6,
+   "eps_p": 0.2279
+  },
+  "Mercury in Pisces, tropical \u2013 Solar return: unfavourable": {
+   "n": 2059,
+   "up1": 51.5,
+   "exp1": 52.5,
+   "p1": 0.3904,
+   "up5": 55.4,
+   "exp5": 56.3,
+   "p5": 0.4349,
+   "big": 139,
+   "exp_big": 133.1,
+   "p_big": 0.3151,
+   "mean1": 0.027,
+   "eps": 124,
+   "eps_up5": 51.6,
+   "eps_exp5": 56.1,
+   "eps_p": 0.3147
+  },
+  "Mercury in Pisces, sidereal": {
+   "n": 1975,
+   "up1": 51.7,
+   "exp1": 52.7,
+   "p1": 0.3826,
+   "up5": 54.1,
+   "exp5": 56.7,
+   "p5": 0.0177,
+   "big": 133,
+   "exp_big": 134.5,
+   "p_big": 0.5617,
+   "mean1": 0.043,
+   "eps": 120,
+   "eps_up5": 60.8,
+   "eps_exp5": 56.3,
+   "eps_p": 0.3148
+  }
+ }
+}
