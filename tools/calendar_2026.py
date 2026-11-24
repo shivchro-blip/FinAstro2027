@@ -59,6 +59,7 @@ def gather(a, b):
               episodes=[e for e in SRG.episodes(a, b, atests)], bt=SRG.backtest_daily(),
               scorecard=json.load(open(OUT / "author_forecasts_ET.json"))["forecasts"], atests=atests, month_of=SRG.month_of, all_months=mons)
     kart = json.load(open(OUT / "kartari_test_ET.json"))
+    sr["jan"] = json.load(open(OUT / "kartari_jan2027_ET.json"))
     sr["kartari"] = [dict(key=r["key"], title=r["title"], tone=r["tone"], basis=r["basis"], record=r["record"],
                           spans=[(dt.datetime.fromisoformat(u["frm_iso"]), dt.datetime.fromisoformat(u["to_iso"]), u["pair"]) for u in r["upcoming"]])
                      for r in kart["rules"] if r["key"] in ("b116", "b117")]
@@ -319,7 +320,7 @@ def page(res, sr, track, checks, a, b, generated):
     o = [f"<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>"
          f"<title>FinAstro Calendar 2026</title><style>{CSS}</style></head><body>"]
     o.append("<div class='top'><nav><b>FinAstro calendar</b><a href='#read'>Read first</a><a href='#keys'>Key dates</a><a href='#grid'>Calendar</a>"
-             "<a href='#spans'>Signal spans</a><a href='#sr'>Solar return</a><a href='#days'>Day by day</a><a href='#trust'>Track record</a><a href='#checks'>Checks</a>"
+             "<a href='#spans'>Signal spans</a><a href='#sr'>Solar return</a><a href='#jan'>January 2027</a><a href='#days'>Day by day</a><a href='#trust'>Track record</a><a href='#checks'>Checks</a>"
              "<span style='flex:1'></span><button onclick='theme()'>Light / dark</button></nav></div><main>")
     o.append(f"<h1>Market astrology calendar, {a:%d %b} – {b:%d %b %Y}</h1>"
              f"<p class='mut'>S&amp;P 500, BSE Sensex, gold and silver. Dates and times US Eastern (IST also shown for changes). Sidereal Lahiri, mean node, whole-sign drishti; "
@@ -341,7 +342,7 @@ def page(res, sr, track, checks, a, b, generated):
              "<li><b>What has shown some edge:</b> Jupiter sextile Venus (bullish over 5 sessions), the bearish calendar fortnight rule “Three Saturdays in Shukla Paksha”, "
              "robust volatility factors (more big days, no direction) and the Mars–Jupiter–node lead (a lead, not proven).</li>"
              "<li><b>Paap Kartari:</b> Jupiter is hemmed by Ketu and Mars (2026 document B117) from 16 Nov to 31 Jan 2027, and Mercury enters Paap Kartari "
-             "(B116) on 1 Jan 2027. Their 2000–2026 records are in each day's notes: Mercury's version held up as bearish on the Sensex only; Jupiter's showed more big days, "
+             "(B116) on 1 Jan 2027. Their 2000–2026 records are in each day's notes, and January is checked market by market in the January 2027 section: Mercury's version held up as bearish on the Sensex only; Jupiter's showed more big days, "
              "not significant. Shubh Kartari is in none of our sources; tested anyway, it did not work and is not used.</li>"
              "<li><b>Not used:</b> dashas (tested, no edge; parked at your request), news and fundamentals.</li></ul></div>")
     # key dates
@@ -455,6 +456,7 @@ def page(res, sr, track, checks, a, b, generated):
     o.append(f"</tbody></table></div><p class='s'>Daily call rule: the bearish aspects (Sun square Mars within 3°, Mars–Ketu within 5°) come first; Jupiter sextile Venus within 1° is bullish; "
              f"Mars square Uranus alone is volatile; otherwise the month's reading. Over 1928–2026: bullish calls right {bt['Bullish']['d1']}% same day / {bt['Bullish']['d5']}% over 5 sessions; "
              f"bearish calls right {bt['Bearish']['d1']}% / {bt['Bearish']['d5']}%; the S&amp;P rose on {bt['_base']['up1']}% of days and over {bt['_base']['up5']}% of 5-session spans.</p>")
+    o.append(jan_html(sr["jan"]))
     # day by day
     o.append("<h2 id='days'>Day by day</h2><div class='tool' style='display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:8px'>"
              "<button onclick='setAll(true)'>Open all</button><button onclick='setAll(false)'>Close all</button>"
@@ -592,6 +594,37 @@ def day_html(x, sr, res):
         other.append(f"<li><b>Mars and Jupiter with {E(x['mjn'])}:</b> the crash lead is active (3 of 13 episodes since 1928 fell 15%+; a lead, not proven).</li>")
     o.append("<details class='sub'><summary>Other analyses</summary><ul>" + "".join(other) + "</ul></details>")
     o.append("</div></details>")
+    return "".join(o)
+
+
+def jan_html(j):
+    """January 2027 preview: Mercury in Paap Kartari (B116) on the S&P and the Sensex (tools/kartari_jan2027.py)."""
+    o = ["<h2 id='jan'>January 2027: Mercury in Paap Kartari</h2>",
+         "<p class='s'>2026 document B116: “negative event for financial markets”; with a benefic aspect, “very volatile and both side movement”. Past windows 2000–2026, "
+         "each market in its own exchange time; a bearish call is right when the market fell more than 0.5% over the scored horizon. Full lists in kartari_jan2027_ET.html.</p>"]
+    for mk, m in j["markets"].items():
+        o.append(f"<h3>{E(m['name'])}</h3><div class='wrap'><table><thead><tr><th>Window</th><th>Hemmed by</th><th>Mercury</th><th>Benefic aspect</th><th>Sessions</th></tr></thead><tbody>")
+        for w in m["jan"]:
+            ss = [dt.date.fromisoformat(x) if isinstance(x, str) else x for x in w["sessions"]]
+            a = dt.datetime.fromisoformat(w["start_local"]) if isinstance(w["start_local"], str) else w["start_local"]
+            b = dt.datetime.fromisoformat(w["end_local"]) if isinstance(w["end_local"], str) else w["end_local"]
+            o.append(f"<tr><td class='n'>{a:%a %d %b %H:%M} → {b:%a %d %b %H:%M} {w['tz']}</td><td>{E(w['pair'])}</td><td>{w['sign']}{', combust' if w['combust'] else ''}</td>"
+                     f"<td>{E(', '.join(w['benefic']) or 'none')}</td><td class='s'>{len(ss)}: {ss[0]:%d %b}{' – ' + format(ss[-1], '%d %b') if len(ss) > 1 else ''}"
+                     f"{'; ' + E('; '.join(w['holidays'])) if w['holidays'] else ''}</td></tr>")
+        o.append("</tbody></table></div><div class='wrap'><table><thead><tr><th>Past windows</th><th class='n'>Windows</th><th class='n'>Bearish call right</th><th class='n'>Normal</th><th class='n'>p</th></tr></thead><tbody>")
+        for k, v in m["groups"].items():  # green: above normal with p < 0.10; red: below normal
+            if not (k.startswith(("All", "Sun is", "A benefic", "No benefic", "Like"))):
+                continue
+            ok = v["hit_rate"] is not None and v["base_rate"] is not None
+            cls = "t-up" if ok and v["hit_rate"] > v["base_rate"] and (v["p_value"] or 1) < 0.10 else "t-dn" if ok and v["hit_rate"] < v["base_rate"] else ""
+            o.append(f"<tr><td>{'<b>' if k.startswith('Like') else ''}{E(k)}{'</b>' if k.startswith('Like') else ''}</td><td class='n'>{v['windows']}</td>"
+                     f"<td class='n {cls}'>{v['hit_rate']}%</td><td class='n'>{v['base_rate']}%</td><td class='n'>{v['p_value']}</td></tr>")
+        tb = "; ".join(f"{t['frm'][5:]}–{t['to'][5:]} {t['sig']} {t['st']}" for t in m["table"])
+        o.append(f"</tbody></table></div><p class='s'>Our {E(m['name'])} table in January: {E(tb)}.</p>")
+    o.append("<div class='callout'><b>Reading:</b> on the S&amp;P, Mercury Paap Kartari has no edge at all (41% vs 39% over 2000–2026), and the windows like January's are at or below normal. "
+             "On the Sensex the rule works overall (48% vs 41%, p 0.027), but mostly when no benefic aspects Mercury; in January Jupiter aspects Mercury in both windows, and the "
+             "past windows like 1–15 Jan were right 42% vs 41%. The 25 Jan Sensex match (63% vs 43%) was picked from about 13 groups and is not reliable. "
+             "Both of our market tables are bearish all January for other reasons (Venus–Uranus opposition, Mercury–Rahu conjunction).</div>")
     return "".join(o)
 
 

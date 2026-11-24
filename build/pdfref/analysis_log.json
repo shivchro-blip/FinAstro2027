@@ -550,6 +550,19 @@
     "tools/kartari_sensex_jan2027.py",
     "build/pdfref/kartari_sensex_jan2027_ET.html"
    ]
+  },
+  {
+   "date": "2026-11-24",
+   "pr": "43",
+   "topic": "Mercury Paap Kartari in January 2027 on the S&P; January section merged into the 2026 calendar",
+   "analysis": "tools/kartari_sensex_jan2027.py generalised to tools/kartari_jan2027.py (S&P in ET with NYSE holidays 1 and 18 Jan; Sensex in IST with Republic Day 26 Jan); last close inside a window now taken from the window's end in exchange time. The 2026 calendar (master page) gains a 'January 2027: Mercury in Paap Kartari' section with both markets; the Sensex-only report is replaced by the combined one.",
+   "result": "S&P: no edge - all B116 windows 41% bearish-right vs 39% (p 0.28); like 1-15 Jan 36% vs 40% (70); 7+ days 43% vs 38% (28, p 0.40); like 25 Jan 42% vs 41% (32). Sensex unchanged (overall 48% vs 41%; like 1-15 Jan 42% vs 41%; 25 Jan match 63% vs 43% not reliable). Both market tables bearish all January for other reasons.",
+   "files": [
+    "tools/kartari_jan2027.py",
+    "build/pdfref/kartari_jan2027_ET.html",
+    "tools/calendar_2026.py",
+    "build/pdfref/calendar_2026-11-24_to_2026-12-31_ET.html"
+   ]
   }
  ]
 }

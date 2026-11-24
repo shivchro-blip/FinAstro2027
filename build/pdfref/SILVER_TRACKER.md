@@ -1,6 +1,6 @@
 # Silver findings tracker
 
-Generated 24 Nov 2026 05:36 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
+Generated 24 Nov 2026 07:14 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
 
 ## Recent findings
 
@@ -111,6 +111,7 @@ Best (from the 26 yr data): Retrograde Mercury or Jupiter, Only Moon and Mercury
 
 | Date | PR | Topic | Result |
 |---|---|---|---|
+| 2026-11-24 | #43 | Mercury Paap Kartari in January 2027 on the S&P; January section merged into the 2026 calendar | S&P: no edge - all B116 windows 41% bearish-right vs 39% (p 0.28); like 1-15 Jan 36% vs 40% (70); 7+ days 43% vs 38% (28, p 0.40); like 25 Jan 42% vs 41% (32). Sensex unchanged (overall 48% vs 41%; like 1-15 Jan 42% vs 41%; 25 Jan match 63% vs 43% not reliable). Both market tables bearish all January for other reasons. |
 | 2026-11-24 | #42 | Mercury Paap Kartari (B116) and the Sensex in January 2027 | 1-15 Jan (Sun|Pluto, Mercury combust in Sagittarius, Jupiter aspect; 10 sessions 4-15 Jan): matched past windows 42% bearish-right vs 41% (70), 43% vs 38% if 7+ days (28) - no reliable tilt; benefic aspect removes most of B116's edge (46% vs 41%, p 0.21; without it 50% vs 40%, p 0.03). 25 Jan (Sun|Rahu; one session, 26 Jan Republic Day): matched 63% vs 43% (32, p 0.019) but picked from ~13 groups, average and median disagree - not reliable. Our Sensex table is bearish all January (Venus-Uranus opposition, Mercury-Rahu conjunction). |
 | 2026-11-24 | #41 | Paap Kartari and Shubh Kartari tested; Jupiter in Paap Kartari added to the 2026 calendar | B116 bearish: S&P at chance (41% vs 39%), Sensex holds (48% vs 41%, p 0.027, both halves). B117 (bearish inferred): S&P 48% vs 37% p 0.12, first half only; more big days pooled (11.6% vs 7.5% S&P, 14.4% vs 9.4% Sensex) but only 14/42 and 18/42 windows above their year, permutation p 0.075/0.052 - a lead at most. TA s31: S&P 49% vs 39% p 0.065. Shubh Kartari fails (bullish calls below base). Jupiter in Paap Kartari active 16 Nov 2026 - 31 Jan 2027; Mercury in Paap Kartari next 1-15 Jan 2027. |
 | 2026-11-24 | #40 | The calendar 24 Nov - 31 Dec 2026 (one verified page); why the Sensex scored higher | All 11 checks pass. Sensex scored higher only because the market table gives both indices the same (mostly bullish) labels - identical on 16/16 sessions in 1-23 Nov and 40/40 labelled days in 60 days - while the Sensex rose (+10.2%) and the S&P fell (-6.1%); long-run walk-forward S&P 55% vs Sensex 54%; no look-ahead. |
