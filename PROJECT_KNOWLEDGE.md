@@ -438,6 +438,17 @@ There are no TA S34 A9 windows between now and 31 Dec 2027.
   - The volatility watch was right (a ±2% day).
   - 165 catalogue rules were active. Of those with a supported record, 8 bullish vs 1 bearish for the S&P (right) and 6 vs 3 for the Sensex (wrong), but that tally is not a tested signal.
 
+**Day report, Tue 24 Nov 2026**, in `day_report_2026-11-24_ET.html`.
+- **Sky:**
+  - Full Moon in Taurus/Krittika (exalted Moon) at 09:53 ET; Krishna Pratipada by noon.
+  - Sun–Uranus opposition exact on 25 Nov.
+  - Otherwise the same as 23 Nov: Mars, Jupiter and Ketu in Leo/Magha; Saturn retrograde in Pisces; Rahu at 0°34' Aquarius.
+- **What we said:**
+  - Gold: bearish, low strength (no-edge label), and its volatility watch is on (full Moon, Sun–Uranus opposition).
+  - S&P 500, Sensex and silver: no signal.
+  - 136 catalogue rules are active. Those with a supported record lean bullish: S&P 5:1, Sensex 6:2 (not a tested signal).
+  - Calendar: full Moon "top or bottom" for silver, which has no edge (14 big days against 18 expected); Kshay Tithi bullish for the S&P, at chance.
+
 **Model v1.0 (Ch.41 + Shadbala + Ashtakavarga), 6,572 trading days:**
 - The correlation of the scarcity index with the next 5 days is −0.002.
 - The model leans bullish on 67% of days by construction.
