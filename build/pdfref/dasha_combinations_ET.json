@@ -1,0 +1,5965 @@
+{
+ "start": "2026-11-24",
+ "end": "2026-12-31",
+ "tests": [
+  {
+   "chart": "USA",
+   "level": "Antardasha",
+   "group": "relation to the parent lord: hurts",
+   "units": 26,
+   "of": 69,
+   "mean": 11.0,
+   "base": 9.2,
+   "down": 15.4,
+   "base_down": 18.8,
+   "t": 0.79,
+   "p": 0.4322,
+   "h1": 3.1,
+   "h2": 0.7,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Antardasha",
+   "group": "relation to the parent lord: helps",
+   "units": 23,
+   "of": 69,
+   "mean": 6.4,
+   "base": 9.2,
+   "down": 26.1,
+   "base_down": 18.8,
+   "t": -1.08,
+   "p": 0.2783,
+   "h1": -3.4,
+   "h2": -1.4,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Antardasha",
+   "group": "natural friendship with the parent: hurts",
+   "units": 11,
+   "of": 69,
+   "mean": 8.6,
+   "base": 9.2,
+   "down": 18.2,
+   "base_down": 18.8,
+   "t": -0.14,
+   "p": 0.8907,
+   "h1": -0.3,
+   "h2": -1.4,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Antardasha",
+   "group": "natural friendship with the parent: helps",
+   "units": 16,
+   "of": 69,
+   "mean": 8.7,
+   "base": 9.2,
+   "down": 31.2,
+   "base_down": 18.8,
+   "t": -0.14,
+   "p": 0.8889,
+   "h1": -0.3,
+   "h2": -1.5,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Antardasha",
+   "group": "houses ruled: hurts",
+   "units": 7,
+   "of": 69,
+   "mean": 1.2,
+   "base": 9.2,
+   "down": 28.6,
+   "base_down": 18.8,
+   "t": -1.27,
+   "p": 0.2037,
+   "h1": -2.5,
+   "h2": -14.1,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Antardasha",
+   "group": "houses ruled: helps",
+   "units": 24,
+   "of": 69,
+   "mean": 7.9,
+   "base": 9.2,
+   "down": 16.7,
+   "base_down": 18.8,
+   "t": -0.59,
+   "p": 0.5573,
+   "h1": -3.0,
+   "h2": -0.4,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Antardasha",
+   "group": "natal house: hurts",
+   "units": 30,
+   "of": 69,
+   "mean": 9.5,
+   "base": 9.2,
+   "down": 20.0,
+   "base_down": 18.8,
+   "t": 0.15,
+   "p": 0.8809,
+   "h1": 2.7,
+   "h2": -1.6,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Antardasha",
+   "group": "natal house: helps",
+   "units": 24,
+   "of": 69,
+   "mean": 8.0,
+   "base": 9.2,
+   "down": 20.8,
+   "base_down": 18.8,
+   "t": -0.54,
+   "p": 0.5862,
+   "h1": -3.9,
+   "h2": 0.4,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Antardasha",
+   "group": "transit house: hurts",
+   "units": 20,
+   "of": 69,
+   "mean": 9.7,
+   "base": 9.2,
+   "down": 15.0,
+   "base_down": 18.8,
+   "t": 0.16,
+   "p": 0.8707,
+   "h1": 1.4,
+   "h2": -0.7,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Antardasha",
+   "group": "transit house: helps",
+   "units": 38,
+   "of": 69,
+   "mean": 9.9,
+   "base": 9.2,
+   "down": 21.1,
+   "base_down": 18.8,
+   "t": 0.46,
+   "p": 0.646,
+   "h1": 0.6,
+   "h2": 0.4,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Antardasha",
+   "group": "malefic on its natal sign: hurts",
+   "units": 31,
+   "of": 69,
+   "mean": 9.7,
+   "base": 9.2,
+   "down": 19.4,
+   "base_down": 18.8,
+   "t": 0.27,
+   "p": 0.7846,
+   "h1": 1.3,
+   "h2": 0.1,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Antardasha",
+   "group": "Jupiter on its natal sign: helps",
+   "units": 15,
+   "of": 69,
+   "mean": 11.0,
+   "base": 9.2,
+   "down": 13.3,
+   "base_down": 18.8,
+   "t": 0.61,
+   "p": 0.5431,
+   "h1": 2.4,
+   "h2": 2.3,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Antardasha",
+   "group": "transit dignity / combustion: hurts",
+   "units": 5,
+   "of": 69,
+   "mean": 2.1,
+   "base": 9.2,
+   "down": 20.0,
+   "base_down": 18.8,
+   "t": -1.51,
+   "p": 0.1309,
+   "h1": -2.8,
+   "h2": null,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Antardasha",
+   "group": "transit dignity / combustion: helps",
+   "units": 11,
+   "of": 69,
+   "mean": 5.6,
+   "base": 9.2,
+   "down": 18.2,
+   "base_down": 18.8,
+   "t": -1.08,
+   "p": 0.2786,
+   "h1": -0.5,
+   "h2": -6.0,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Antardasha",
+   "group": "combination score: hurts (\u2264 \u22122)",
+   "units": 17,
+   "of": 69,
+   "mean": 14.4,
+   "base": 9.2,
+   "down": 5.9,
+   "base_down": 18.8,
+   "t": 1.79,
+   "p": 0.0738,
+   "h1": 6.1,
+   "h2": 4.8,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Antardasha",
+   "group": "combination score: helps (\u2265 +2)",
+   "units": 28,
+   "of": 69,
+   "mean": 9.8,
+   "base": 9.2,
+   "down": 17.9,
+   "base_down": 18.8,
+   "t": 0.31,
+   "p": 0.7598,
+   "h1": -1.2,
+   "h2": 1.9,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Pratyantar",
+   "group": "relation to the parent lord: hurts",
+   "units": 243,
+   "of": 615,
+   "mean": 10.8,
+   "base": 8.7,
+   "down": 32.5,
+   "base_down": 37.2,
+   "t": 0.81,
+   "p": 0.4151,
+   "h1": -0.2,
+   "h2": 3.8,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Pratyantar",
+   "group": "relation to the parent lord: helps",
+   "units": 198,
+   "of": 615,
+   "mean": 7.6,
+   "base": 8.7,
+   "down": 40.4,
+   "base_down": 37.2,
+   "t": -0.39,
+   "p": 0.6993,
+   "h1": -0.2,
+   "h2": -1.9,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Pratyantar",
+   "group": "natural friendship with the parent: hurts",
+   "units": 80,
+   "of": 615,
+   "mean": 3.6,
+   "base": 8.7,
+   "down": 33.8,
+   "base_down": 37.2,
+   "t": -0.98,
+   "p": 0.3264,
+   "h1": -9.1,
+   "h2": -2.0,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Pratyantar",
+   "group": "natural friendship with the parent: helps",
+   "units": 126,
+   "of": 615,
+   "mean": 6.3,
+   "base": 8.7,
+   "down": 43.7,
+   "base_down": 37.2,
+   "t": -0.5,
+   "p": 0.6149,
+   "h1": 6.1,
+   "h2": -8.8,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Pratyantar",
+   "group": "houses ruled: hurts",
+   "units": 69,
+   "of": 615,
+   "mean": 5.7,
+   "base": 8.7,
+   "down": 34.8,
+   "base_down": 37.2,
+   "t": -0.62,
+   "p": 0.5335,
+   "h1": -1.4,
+   "h2": -4.2,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Pratyantar",
+   "group": "houses ruled: helps",
+   "units": 205,
+   "of": 615,
+   "mean": 15.0,
+   "base": 8.7,
+   "down": 28.8,
+   "base_down": 37.2,
+   "t": 2.28,
+   "p": 0.0224,
+   "h1": 6.7,
+   "h2": 5.9,
+   "expect": 1,
+   "q": 0.909,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Pratyantar",
+   "group": "natal house: hurts",
+   "units": 274,
+   "of": 615,
+   "mean": 9.4,
+   "base": 8.7,
+   "down": 36.9,
+   "base_down": 37.2,
+   "t": 0.3,
+   "p": 0.7679,
+   "h1": 1.5,
+   "h2": 0.2,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Pratyantar",
+   "group": "natal house: helps",
+   "units": 205,
+   "of": 615,
+   "mean": 9.4,
+   "base": 8.7,
+   "down": 35.1,
+   "base_down": 37.2,
+   "t": 0.25,
+   "p": 0.8048,
+   "h1": 1.5,
+   "h2": 0.1,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Pratyantar",
+   "group": "transit house: hurts",
+   "units": 146,
+   "of": 615,
+   "mean": 10.0,
+   "base": 8.7,
+   "down": 33.6,
+   "base_down": 37.2,
+   "t": 0.35,
+   "p": 0.7297,
+   "h1": 1.7,
+   "h2": 1.0,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Pratyantar",
+   "group": "transit house: helps",
+   "units": 313,
+   "of": 615,
+   "mean": 11.1,
+   "base": 8.7,
+   "down": 37.1,
+   "base_down": 37.2,
+   "t": 1.14,
+   "p": 0.2534,
+   "h1": 3.0,
+   "h2": 1.8,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Pratyantar",
+   "group": "malefic on its natal sign: hurts",
+   "units": 330,
+   "of": 615,
+   "mean": 7.4,
+   "base": 8.7,
+   "down": 40.0,
+   "base_down": 37.2,
+   "t": -0.64,
+   "p": 0.5219,
+   "h1": -2.0,
+   "h2": -0.5,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Pratyantar",
+   "group": "Jupiter on its natal sign: helps",
+   "units": 172,
+   "of": 615,
+   "mean": 7.3,
+   "base": 8.7,
+   "down": 34.3,
+   "base_down": 37.2,
+   "t": -0.43,
+   "p": 0.6704,
+   "h1": 4.8,
+   "h2": -6.3,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Pratyantar",
+   "group": "transit dignity / combustion: hurts",
+   "units": 104,
+   "of": 615,
+   "mean": 9.4,
+   "base": 8.7,
+   "down": 32.7,
+   "base_down": 37.2,
+   "t": 0.16,
+   "p": 0.8737,
+   "h1": 7.2,
+   "h2": -4.2,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Pratyantar",
+   "group": "transit dignity / combustion: helps",
+   "units": 81,
+   "of": 615,
+   "mean": 6.5,
+   "base": 8.7,
+   "down": 35.8,
+   "base_down": 37.2,
+   "t": -0.49,
+   "p": 0.6272,
+   "h1": -2.4,
+   "h2": -2.6,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Pratyantar",
+   "group": "combination score: hurts (\u2264 \u22122)",
+   "units": 138,
+   "of": 615,
+   "mean": 9.0,
+   "base": 8.7,
+   "down": 35.5,
+   "base_down": 37.2,
+   "t": 0.08,
+   "p": 0.9398,
+   "h1": 1.9,
+   "h2": -0.7,
+   "expect": -1,
+   "q": 0.985,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Pratyantar",
+   "group": "combination score: helps (\u2265 +2)",
+   "units": 141,
+   "of": 615,
+   "mean": 9.7,
+   "base": 8.7,
+   "down": 36.2,
+   "base_down": 37.2,
+   "t": 0.26,
+   "p": 0.7916,
+   "h1": 7.1,
+   "h2": -3.8,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Sookshma",
+   "group": "relation to the parent lord: hurts",
+   "units": 1992,
+   "of": 5053,
+   "mean": 10.0,
+   "base": 8.0,
+   "down": 43.4,
+   "base_down": 44.0,
+   "t": 0.72,
+   "p": 0.4745,
+   "h1": -2.0,
+   "h2": 5.1,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Sookshma",
+   "group": "relation to the parent lord: helps",
+   "units": 1657,
+   "of": 5053,
+   "mean": 11.4,
+   "base": 8.0,
+   "down": 44.8,
+   "base_down": 44.0,
+   "t": 1.03,
+   "p": 0.3035,
+   "h1": 1.6,
+   "h2": 4.7,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Sookshma",
+   "group": "natural friendship with the parent: hurts",
+   "units": 716,
+   "of": 5053,
+   "mean": 6.2,
+   "base": 8.0,
+   "down": 46.9,
+   "base_down": 44.0,
+   "t": -0.32,
+   "p": 0.7467,
+   "h1": 0.7,
+   "h2": -3.9,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Sookshma",
+   "group": "natural friendship with the parent: helps",
+   "units": 1043,
+   "of": 5053,
+   "mean": 6.2,
+   "base": 8.0,
+   "down": 44.6,
+   "base_down": 44.0,
+   "t": -0.4,
+   "p": 0.6912,
+   "h1": 12.1,
+   "h2": -12.6,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Sookshma",
+   "group": "houses ruled: hurts",
+   "units": 600,
+   "of": 5053,
+   "mean": 10.7,
+   "base": 8.0,
+   "down": 42.3,
+   "base_down": 44.0,
+   "t": 0.5,
+   "p": 0.6138,
+   "h1": 9.6,
+   "h2": -2.6,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Sookshma",
+   "group": "houses ruled: helps",
+   "units": 1744,
+   "of": 5053,
+   "mean": 8.6,
+   "base": 8.0,
+   "down": 42.5,
+   "base_down": 44.0,
+   "t": 0.17,
+   "p": 0.8617,
+   "h1": 1.2,
+   "h2": 0.0,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Sookshma",
+   "group": "natal house: hurts",
+   "units": 2200,
+   "of": 5053,
+   "mean": 4.5,
+   "base": 8.0,
+   "down": 44.2,
+   "base_down": 44.0,
+   "t": -1.34,
+   "p": 0.179,
+   "h1": 5.6,
+   "h2": -10.6,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Sookshma",
+   "group": "natal house: helps",
+   "units": 1741,
+   "of": 5053,
+   "mean": 9.0,
+   "base": 8.0,
+   "down": 43.3,
+   "base_down": 44.0,
+   "t": 0.32,
+   "p": 0.7485,
+   "h1": -1.5,
+   "h2": 2.9,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Sookshma",
+   "group": "transit house: hurts",
+   "units": 1266,
+   "of": 5053,
+   "mean": 8.1,
+   "base": 8.0,
+   "down": 43.2,
+   "base_down": 44.0,
+   "t": 0.02,
+   "p": 0.9851,
+   "h1": 5.0,
+   "h2": -3.8,
+   "expect": -1,
+   "q": 0.988,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Sookshma",
+   "group": "transit house: helps",
+   "units": 2589,
+   "of": 5053,
+   "mean": 8.6,
+   "base": 8.0,
+   "down": 44.4,
+   "base_down": 44.0,
+   "t": 0.27,
+   "p": 0.7864,
+   "h1": 1.0,
+   "h2": 0.2,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Sookshma",
+   "group": "malefic on its natal sign: hurts",
+   "units": 2786,
+   "of": 5053,
+   "mean": 5.9,
+   "base": 8.0,
+   "down": 45.1,
+   "base_down": 44.0,
+   "t": -1.04,
+   "p": 0.2991,
+   "h1": 2.5,
+   "h2": -5.7,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Sookshma",
+   "group": "Jupiter on its natal sign: helps",
+   "units": 1442,
+   "of": 5053,
+   "mean": 9.2,
+   "base": 8.0,
+   "down": 43.8,
+   "base_down": 44.0,
+   "t": 0.34,
+   "p": 0.7321,
+   "h1": -3.7,
+   "h2": 4.8,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Sookshma",
+   "group": "transit dignity / combustion: hurts",
+   "units": 843,
+   "of": 5053,
+   "mean": 6.0,
+   "base": 8.0,
+   "down": 44.7,
+   "base_down": 44.0,
+   "t": -0.43,
+   "p": 0.669,
+   "h1": -1.6,
+   "h2": -2.3,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Sookshma",
+   "group": "transit dignity / combustion: helps",
+   "units": 777,
+   "of": 5053,
+   "mean": 10.6,
+   "base": 8.0,
+   "down": 40.2,
+   "base_down": 44.0,
+   "t": 0.51,
+   "p": 0.6095,
+   "h1": -0.9,
+   "h2": 4.9,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Sookshma",
+   "group": "combination score: hurts (\u2264 \u22122)",
+   "units": 1114,
+   "of": 5053,
+   "mean": 4.3,
+   "base": 8.0,
+   "down": 44.8,
+   "base_down": 44.0,
+   "t": -0.89,
+   "p": 0.3748,
+   "h1": 0.3,
+   "h2": -6.9,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Sookshma",
+   "group": "combination score: helps (\u2265 +2)",
+   "units": 1312,
+   "of": 5053,
+   "mean": 8.1,
+   "base": 8.0,
+   "down": 43.5,
+   "base_down": 44.0,
+   "t": 0.02,
+   "p": 0.985,
+   "h1": -6.6,
+   "h2": 4.9,
+   "expect": 1,
+   "q": 0.988,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Prana",
+   "group": "relation to the parent lord: hurts",
+   "units": 9172,
+   "of": 24840,
+   "mean": 6.1,
+   "base": 7.8,
+   "down": 46.6,
+   "base_down": 46.3,
+   "t": -0.72,
+   "p": 0.47,
+   "h1": -1.0,
+   "h2": -2.5,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Prana",
+   "group": "relation to the parent lord: helps",
+   "units": 8496,
+   "of": 24840,
+   "mean": 10.2,
+   "base": 7.8,
+   "down": 45.6,
+   "base_down": 46.3,
+   "t": 0.89,
+   "p": 0.3734,
+   "h1": 3.3,
+   "h2": 1.4,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Prana",
+   "group": "natural friendship with the parent: hurts",
+   "units": 3258,
+   "of": 24840,
+   "mean": 17.3,
+   "base": 7.8,
+   "down": 43.5,
+   "base_down": 46.3,
+   "t": 1.92,
+   "p": 0.0547,
+   "h1": 13.2,
+   "h2": 5.9,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Prana",
+   "group": "natural friendship with the parent: helps",
+   "units": 4957,
+   "of": 24840,
+   "mean": 6.8,
+   "base": 7.8,
+   "down": 46.3,
+   "base_down": 46.3,
+   "t": -0.26,
+   "p": 0.7942,
+   "h1": 2.4,
+   "h2": -4.4,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Prana",
+   "group": "houses ruled: hurts",
+   "units": 4102,
+   "of": 24840,
+   "mean": -3.9,
+   "base": 7.8,
+   "down": 46.8,
+   "base_down": 46.3,
+   "t": -2.74,
+   "p": 0.0061,
+   "h1": -16.8,
+   "h2": -6.9,
+   "expect": -1,
+   "q": 0.805,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Prana",
+   "group": "houses ruled: helps",
+   "units": 9016,
+   "of": 24840,
+   "mean": 6.7,
+   "base": 7.8,
+   "down": 46.5,
+   "base_down": 46.3,
+   "t": -0.46,
+   "p": 0.6483,
+   "h1": -3.8,
+   "h2": 1.5,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Prana",
+   "group": "natal house: hurts",
+   "units": 10108,
+   "of": 24840,
+   "mean": 6.4,
+   "base": 7.8,
+   "down": 46.2,
+   "base_down": 46.3,
+   "t": -0.65,
+   "p": 0.5181,
+   "h1": -5.1,
+   "h2": 2.0,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Prana",
+   "group": "natal house: helps",
+   "units": 9277,
+   "of": 24840,
+   "mean": 7.5,
+   "base": 7.8,
+   "down": 46.8,
+   "base_down": 46.3,
+   "t": -0.13,
+   "p": 0.8943,
+   "h1": 0.8,
+   "h2": -1.4,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Prana",
+   "group": "transit house: hurts",
+   "units": 6091,
+   "of": 24840,
+   "mean": 10.6,
+   "base": 7.8,
+   "down": 46.1,
+   "base_down": 46.3,
+   "t": 0.85,
+   "p": 0.3938,
+   "h1": -0.9,
+   "h2": 6.6,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Prana",
+   "group": "transit house: helps",
+   "units": 12573,
+   "of": 24840,
+   "mean": 5.2,
+   "base": 7.8,
+   "down": 46.5,
+   "base_down": 46.3,
+   "t": -1.42,
+   "p": 0.157,
+   "h1": -4.7,
+   "h2": -0.7,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Prana",
+   "group": "malefic on its natal sign: hurts",
+   "units": 14113,
+   "of": 24840,
+   "mean": 9.4,
+   "base": 7.8,
+   "down": 45.9,
+   "base_down": 46.3,
+   "t": 0.94,
+   "p": 0.3457,
+   "h1": 2.2,
+   "h2": 0.9,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Prana",
+   "group": "Jupiter on its natal sign: helps",
+   "units": 7102,
+   "of": 24840,
+   "mean": 9.8,
+   "base": 7.8,
+   "down": 46.6,
+   "base_down": 46.3,
+   "t": 0.67,
+   "p": 0.5023,
+   "h1": 3.5,
+   "h2": 0.5,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Prana",
+   "group": "transit dignity / combustion: hurts",
+   "units": 4203,
+   "of": 24840,
+   "mean": 7.2,
+   "base": 7.8,
+   "down": 46.7,
+   "base_down": 46.3,
+   "t": -0.15,
+   "p": 0.8803,
+   "h1": -6.1,
+   "h2": 5.7,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Prana",
+   "group": "transit dignity / combustion: helps",
+   "units": 4459,
+   "of": 24840,
+   "mean": 9.9,
+   "base": 7.8,
+   "down": 47.1,
+   "base_down": 46.3,
+   "t": 0.48,
+   "p": 0.6307,
+   "h1": 9.3,
+   "h2": -4.6,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Prana",
+   "group": "combination score: hurts (\u2264 \u22122)",
+   "units": 5367,
+   "of": 24840,
+   "mean": 5.0,
+   "base": 7.8,
+   "down": 46.1,
+   "base_down": 46.3,
+   "t": -0.81,
+   "p": 0.4196,
+   "h1": -8.8,
+   "h2": 3.0,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Prana",
+   "group": "combination score: helps (\u2265 +2)",
+   "units": 6935,
+   "of": 24840,
+   "mean": 7.1,
+   "base": 7.8,
+   "down": 46.4,
+   "base_down": 46.3,
+   "t": -0.23,
+   "p": 0.8176,
+   "h1": -0.3,
+   "h2": -1.1,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Prana",
+   "group": "daily chain (Pratyantar + Sookshma + Prana): hurts (\u2264 \u22123)",
+   "units": 5037,
+   "of": 24840,
+   "mean": 6.3,
+   "base": 7.8,
+   "down": 46.1,
+   "base_down": 46.3,
+   "t": -0.39,
+   "p": 0.6972,
+   "h1": -6.4,
+   "h2": 4.6,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "USA",
+   "level": "Prana",
+   "group": "daily chain: helps (\u2265 +3)",
+   "units": 7636,
+   "of": 24840,
+   "mean": 5.5,
+   "base": 7.8,
+   "down": 46.9,
+   "base_down": 46.3,
+   "t": -0.83,
+   "p": 0.4071,
+   "h1": -1.9,
+   "h2": -2.9,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Antardasha",
+   "group": "relation to the parent lord: hurts",
+   "units": 28,
+   "of": 67,
+   "mean": 5.5,
+   "base": 7.5,
+   "down": 28.6,
+   "base_down": 23.9,
+   "t": -0.9,
+   "p": 0.37,
+   "h1": -1.2,
+   "h2": -3.3,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Antardasha",
+   "group": "relation to the parent lord: helps",
+   "units": 27,
+   "of": 67,
+   "mean": 7.8,
+   "base": 7.5,
+   "down": 25.9,
+   "base_down": 23.9,
+   "t": 0.14,
+   "p": 0.8858,
+   "h1": -0.4,
+   "h2": 1.5,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Antardasha",
+   "group": "natural friendship with the parent: hurts",
+   "units": 9,
+   "of": 67,
+   "mean": -1.1,
+   "base": 7.5,
+   "down": 44.4,
+   "base_down": 23.9,
+   "t": -1.31,
+   "p": 0.1914,
+   "h1": -4.3,
+   "h2": null,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Antardasha",
+   "group": "natural friendship with the parent: helps",
+   "units": 16,
+   "of": 67,
+   "mean": 12.6,
+   "base": 7.5,
+   "down": 12.5,
+   "base_down": 23.9,
+   "t": 1.41,
+   "p": 0.1575,
+   "h1": 5.8,
+   "h2": 4.6,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Antardasha",
+   "group": "houses ruled: hurts",
+   "units": 23,
+   "of": 67,
+   "mean": 6.2,
+   "base": 7.5,
+   "down": 30.4,
+   "base_down": 23.9,
+   "t": -0.58,
+   "p": 0.5605,
+   "h1": -1.1,
+   "h2": -1.1,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Antardasha",
+   "group": "houses ruled: helps",
+   "units": 29,
+   "of": 67,
+   "mean": 4.4,
+   "base": 7.5,
+   "down": 24.1,
+   "base_down": 23.9,
+   "t": -1.39,
+   "p": 0.1643,
+   "h1": -6.2,
+   "h2": -0.9,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Antardasha",
+   "group": "natal house: helps",
+   "units": 36,
+   "of": 67,
+   "mean": 10.8,
+   "base": 7.5,
+   "down": 16.7,
+   "base_down": 23.9,
+   "t": 1.85,
+   "p": 0.0639,
+   "h1": 3.2,
+   "h2": 3.6,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Antardasha",
+   "group": "natal dignity: hurts",
+   "units": 7,
+   "of": 67,
+   "mean": 7.8,
+   "base": 7.5,
+   "down": 28.6,
+   "base_down": 23.9,
+   "t": 0.09,
+   "p": 0.9293,
+   "h1": -0.8,
+   "h2": null,
+   "expect": -1,
+   "q": 0.981,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Antardasha",
+   "group": "transit house: hurts",
+   "units": 13,
+   "of": 67,
+   "mean": 11.2,
+   "base": 7.5,
+   "down": 23.1,
+   "base_down": 23.9,
+   "t": 0.88,
+   "p": 0.3774,
+   "h1": 8.2,
+   "h2": -5.3,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Antardasha",
+   "group": "transit house: helps",
+   "units": 34,
+   "of": 67,
+   "mean": 4.4,
+   "base": 7.5,
+   "down": 35.3,
+   "base_down": 23.9,
+   "t": -1.7,
+   "p": 0.0891,
+   "h1": -3.7,
+   "h2": -2.7,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Antardasha",
+   "group": "malefic on its natal sign: hurts",
+   "units": 41,
+   "of": 67,
+   "mean": 5.8,
+   "base": 7.5,
+   "down": 26.8,
+   "base_down": 23.9,
+   "t": -1.22,
+   "p": 0.2223,
+   "h1": -2.8,
+   "h2": -0.8,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Antardasha",
+   "group": "Jupiter on its natal sign: helps",
+   "units": 14,
+   "of": 67,
+   "mean": 2.6,
+   "base": 7.5,
+   "down": 28.6,
+   "base_down": 23.9,
+   "t": -1.08,
+   "p": 0.2812,
+   "h1": 0.1,
+   "h2": -10.4,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Antardasha",
+   "group": "transit dignity / combustion: hurts",
+   "units": 13,
+   "of": 67,
+   "mean": 7.3,
+   "base": 7.5,
+   "down": 23.1,
+   "base_down": 23.9,
+   "t": -0.05,
+   "p": 0.9621,
+   "h1": 3.2,
+   "h2": -5.4,
+   "expect": -1,
+   "q": 0.988,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Antardasha",
+   "group": "transit dignity / combustion: helps",
+   "units": 13,
+   "of": 67,
+   "mean": 5.8,
+   "base": 7.5,
+   "down": 30.8,
+   "base_down": 23.9,
+   "t": -0.39,
+   "p": 0.6947,
+   "h1": -3.7,
+   "h2": 1.7,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Antardasha",
+   "group": "combination score: hurts (\u2264 \u22122)",
+   "units": 11,
+   "of": 67,
+   "mean": 5.4,
+   "base": 7.5,
+   "down": 27.3,
+   "base_down": 23.9,
+   "t": -0.68,
+   "p": 0.4953,
+   "h1": -2.8,
+   "h2": -0.6,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Antardasha",
+   "group": "combination score: helps (\u2265 +2)",
+   "units": 23,
+   "of": 67,
+   "mean": 8.6,
+   "base": 7.5,
+   "down": 17.4,
+   "base_down": 23.9,
+   "t": 0.4,
+   "p": 0.6893,
+   "h1": -0.7,
+   "h2": 2.0,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Pratyantar",
+   "group": "relation to the parent lord: hurts",
+   "units": 261,
+   "of": 588,
+   "mean": 9.9,
+   "base": 9.6,
+   "down": 33.3,
+   "base_down": 35.5,
+   "t": 0.15,
+   "p": 0.8769,
+   "h1": -1.0,
+   "h2": 2.3,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Pratyantar",
+   "group": "relation to the parent lord: helps",
+   "units": 217,
+   "of": 588,
+   "mean": 9.8,
+   "base": 9.6,
+   "down": 36.4,
+   "base_down": 35.5,
+   "t": 0.07,
+   "p": 0.9477,
+   "h1": 0.6,
+   "h2": -0.4,
+   "expect": 1,
+   "q": 0.985,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Pratyantar",
+   "group": "natural friendship with the parent: hurts",
+   "units": 79,
+   "of": 588,
+   "mean": 2.6,
+   "base": 9.6,
+   "down": 41.8,
+   "base_down": 35.5,
+   "t": -1.24,
+   "p": 0.2132,
+   "h1": -3.3,
+   "h2": -11.2,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Pratyantar",
+   "group": "natural friendship with the parent: helps",
+   "units": 122,
+   "of": 588,
+   "mean": 13.6,
+   "base": 9.6,
+   "down": 35.2,
+   "base_down": 35.5,
+   "t": 0.83,
+   "p": 0.4064,
+   "h1": 7.7,
+   "h2": -0.2,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Pratyantar",
+   "group": "houses ruled: hurts",
+   "units": 196,
+   "of": 588,
+   "mean": 6.5,
+   "base": 9.6,
+   "down": 35.2,
+   "base_down": 35.5,
+   "t": -1.12,
+   "p": 0.2606,
+   "h1": -3.9,
+   "h2": -1.9,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Pratyantar",
+   "group": "houses ruled: helps",
+   "units": 261,
+   "of": 588,
+   "mean": 15.7,
+   "base": 9.6,
+   "down": 33.0,
+   "base_down": 35.5,
+   "t": 2.49,
+   "p": 0.0126,
+   "h1": 10.2,
+   "h2": 0.5,
+   "expect": 1,
+   "q": 0.834,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Pratyantar",
+   "group": "natal house: helps",
+   "units": 327,
+   "of": 588,
+   "mean": 5.3,
+   "base": 9.6,
+   "down": 39.4,
+   "base_down": 35.5,
+   "t": -2.2,
+   "p": 0.0275,
+   "h1": -7.7,
+   "h2": 0.4,
+   "expect": 1,
+   "q": 0.909,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Pratyantar",
+   "group": "natal dignity: hurts",
+   "units": 65,
+   "of": 588,
+   "mean": 1.4,
+   "base": 9.6,
+   "down": 41.5,
+   "base_down": 35.5,
+   "t": -1.63,
+   "p": 0.1026,
+   "h1": -12.1,
+   "h2": -3.1,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Pratyantar",
+   "group": "transit house: hurts",
+   "units": 155,
+   "of": 588,
+   "mean": 13.3,
+   "base": 9.6,
+   "down": 31.6,
+   "base_down": 35.5,
+   "t": 0.93,
+   "p": 0.353,
+   "h1": 3.6,
+   "h2": 4.5,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Pratyantar",
+   "group": "transit house: helps",
+   "units": 278,
+   "of": 588,
+   "mean": 9.7,
+   "base": 9.6,
+   "down": 35.6,
+   "base_down": 35.5,
+   "t": 0.04,
+   "p": 0.9711,
+   "h1": 0.2,
+   "h2": -0.1,
+   "expect": 1,
+   "q": 0.988,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Pratyantar",
+   "group": "malefic on its natal sign: hurts",
+   "units": 328,
+   "of": 588,
+   "mean": 10.5,
+   "base": 9.6,
+   "down": 33.8,
+   "base_down": 35.5,
+   "t": 0.5,
+   "p": 0.6142,
+   "h1": -0.0,
+   "h2": 2.1,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Pratyantar",
+   "group": "Jupiter on its natal sign: helps",
+   "units": 165,
+   "of": 588,
+   "mean": 7.4,
+   "base": 9.6,
+   "down": 38.8,
+   "base_down": 35.5,
+   "t": -0.56,
+   "p": 0.5761,
+   "h1": 1.1,
+   "h2": -6.5,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Pratyantar",
+   "group": "transit dignity / combustion: hurts",
+   "units": 103,
+   "of": 588,
+   "mean": 7.5,
+   "base": 9.6,
+   "down": 37.9,
+   "base_down": 35.5,
+   "t": -0.42,
+   "p": 0.6744,
+   "h1": 3.1,
+   "h2": -10.3,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Pratyantar",
+   "group": "transit dignity / combustion: helps",
+   "units": 95,
+   "of": 588,
+   "mean": 10.2,
+   "base": 9.6,
+   "down": 27.4,
+   "base_down": 35.5,
+   "t": 0.14,
+   "p": 0.8896,
+   "h1": 2.5,
+   "h2": -1.7,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Pratyantar",
+   "group": "combination score: hurts (\u2264 \u22122)",
+   "units": 100,
+   "of": 588,
+   "mean": 8.6,
+   "base": 9.6,
+   "down": 30.0,
+   "base_down": 35.5,
+   "t": -0.21,
+   "p": 0.8328,
+   "h1": -4.4,
+   "h2": 3.6,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Pratyantar",
+   "group": "combination score: helps (\u2265 +2)",
+   "units": 181,
+   "of": 588,
+   "mean": 10.6,
+   "base": 9.6,
+   "down": 36.5,
+   "base_down": 35.5,
+   "t": 0.31,
+   "p": 0.7563,
+   "h1": 1.6,
+   "h2": 0.3,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Sookshma",
+   "group": "relation to the parent lord: hurts",
+   "units": 2235,
+   "of": 4907,
+   "mean": 8.9,
+   "base": 7.4,
+   "down": 41.5,
+   "base_down": 42.8,
+   "t": 0.65,
+   "p": 0.5144,
+   "h1": 0.3,
+   "h2": 3.3,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Sookshma",
+   "group": "relation to the parent lord: helps",
+   "units": 1788,
+   "of": 4907,
+   "mean": 5.7,
+   "base": 7.4,
+   "down": 44.1,
+   "base_down": 42.8,
+   "t": -0.55,
+   "p": 0.585,
+   "h1": 2.2,
+   "h2": -6.5,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Sookshma",
+   "group": "natural friendship with the parent: hurts",
+   "units": 689,
+   "of": 4907,
+   "mean": 15.6,
+   "base": 7.4,
+   "down": 42.5,
+   "base_down": 42.8,
+   "t": 1.6,
+   "p": 0.1101,
+   "h1": 3.1,
+   "h2": 15.0,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Sookshma",
+   "group": "natural friendship with the parent: helps",
+   "units": 998,
+   "of": 4907,
+   "mean": 2.8,
+   "base": 7.4,
+   "down": 42.1,
+   "base_down": 42.8,
+   "t": -0.97,
+   "p": 0.3333,
+   "h1": 2.1,
+   "h2": -13.1,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Sookshma",
+   "group": "houses ruled: hurts",
+   "units": 1716,
+   "of": 4907,
+   "mean": 10.4,
+   "base": 7.4,
+   "down": 42.1,
+   "base_down": 42.8,
+   "t": 1.04,
+   "p": 0.2994,
+   "h1": 3.1,
+   "h2": 2.9,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Sookshma",
+   "group": "houses ruled: helps",
+   "units": 2105,
+   "of": 4907,
+   "mean": 7.4,
+   "base": 7.4,
+   "down": 42.0,
+   "base_down": 42.8,
+   "t": 0.01,
+   "p": 0.9882,
+   "h1": 1.7,
+   "h2": -2.1,
+   "expect": 1,
+   "q": 0.988,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Sookshma",
+   "group": "natal house: helps",
+   "units": 2769,
+   "of": 4907,
+   "mean": 6.3,
+   "base": 7.4,
+   "down": 42.1,
+   "base_down": 42.8,
+   "t": -0.56,
+   "p": 0.5734,
+   "h1": -3.2,
+   "h2": 1.6,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Sookshma",
+   "group": "natal dignity: hurts",
+   "units": 577,
+   "of": 4907,
+   "mean": 8.0,
+   "base": 7.4,
+   "down": 41.2,
+   "base_down": 42.8,
+   "t": 0.12,
+   "p": 0.907,
+   "h1": -5.2,
+   "h2": 8.4,
+   "expect": -1,
+   "q": 0.966,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Sookshma",
+   "group": "transit house: hurts",
+   "units": 1218,
+   "of": 4907,
+   "mean": 14.1,
+   "base": 7.4,
+   "down": 40.7,
+   "base_down": 42.8,
+   "t": 1.74,
+   "p": 0.081,
+   "h1": 13.4,
+   "h2": -1.6,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Sookshma",
+   "group": "transit house: helps",
+   "units": 2432,
+   "of": 4907,
+   "mean": 6.1,
+   "base": 7.4,
+   "down": 42.6,
+   "base_down": 42.8,
+   "t": -0.58,
+   "p": 0.5652,
+   "h1": -0.6,
+   "h2": -2.2,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Sookshma",
+   "group": "malefic on its natal sign: hurts",
+   "units": 2799,
+   "of": 4907,
+   "mean": 6.3,
+   "base": 7.4,
+   "down": 41.9,
+   "base_down": 42.8,
+   "t": -0.56,
+   "p": 0.5735,
+   "h1": -4.3,
+   "h2": 2.7,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Sookshma",
+   "group": "Jupiter on its natal sign: helps",
+   "units": 1463,
+   "of": 4907,
+   "mean": 5.4,
+   "base": 7.4,
+   "down": 43.7,
+   "base_down": 42.8,
+   "t": -0.6,
+   "p": 0.5489,
+   "h1": -2.7,
+   "h2": -1.0,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Sookshma",
+   "group": "transit dignity / combustion: hurts",
+   "units": 823,
+   "of": 4907,
+   "mean": 3.3,
+   "base": 7.4,
+   "down": 45.6,
+   "base_down": 42.8,
+   "t": -0.74,
+   "p": 0.4615,
+   "h1": -8.9,
+   "h2": 3.0,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Sookshma",
+   "group": "transit dignity / combustion: helps",
+   "units": 795,
+   "of": 4907,
+   "mean": 9.3,
+   "base": 7.4,
+   "down": 41.0,
+   "base_down": 42.8,
+   "t": 0.39,
+   "p": 0.6935,
+   "h1": 2.0,
+   "h2": 1.8,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Sookshma",
+   "group": "combination score: hurts (\u2264 \u22122)",
+   "units": 827,
+   "of": 4907,
+   "mean": 8.1,
+   "base": 7.4,
+   "down": 42.8,
+   "base_down": 42.8,
+   "t": 0.15,
+   "p": 0.8804,
+   "h1": -3.8,
+   "h2": 6.5,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Sookshma",
+   "group": "combination score: helps (\u2265 +2)",
+   "units": 1494,
+   "of": 4907,
+   "mean": 1.8,
+   "base": 7.4,
+   "down": 43.0,
+   "base_down": 42.8,
+   "t": -1.58,
+   "p": 0.1152,
+   "h1": -4.6,
+   "h2": -6.7,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Prana",
+   "group": "relation to the parent lord: hurts",
+   "units": 11899,
+   "of": 24840,
+   "mean": 6.5,
+   "base": 7.8,
+   "down": 46.7,
+   "base_down": 46.3,
+   "t": -0.66,
+   "p": 0.5068,
+   "h1": -0.6,
+   "h2": -2.0,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Prana",
+   "group": "relation to the parent lord: helps",
+   "units": 7857,
+   "of": 24840,
+   "mean": 8.9,
+   "base": 7.8,
+   "down": 45.9,
+   "base_down": 46.3,
+   "t": 0.35,
+   "p": 0.7231,
+   "h1": -3.7,
+   "h2": 5.5,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Prana",
+   "group": "natural friendship with the parent: hurts",
+   "units": 3261,
+   "of": 24840,
+   "mean": 18.0,
+   "base": 7.8,
+   "down": 45.2,
+   "base_down": 46.3,
+   "t": 2.06,
+   "p": 0.0393,
+   "h1": 2.2,
+   "h2": 17.5,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Prana",
+   "group": "natural friendship with the parent: helps",
+   "units": 4965,
+   "of": 24840,
+   "mean": 5.2,
+   "base": 7.8,
+   "down": 46.4,
+   "base_down": 46.3,
+   "t": -0.7,
+   "p": 0.4854,
+   "h1": 0.5,
+   "h2": -5.7,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Prana",
+   "group": "houses ruled: hurts",
+   "units": 11210,
+   "of": 24840,
+   "mean": 8.4,
+   "base": 7.8,
+   "down": 46.2,
+   "base_down": 46.3,
+   "t": 0.25,
+   "p": 0.8017,
+   "h1": 2.3,
+   "h2": -1.2,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Prana",
+   "group": "houses ruled: helps",
+   "units": 8902,
+   "of": 24840,
+   "mean": 5.0,
+   "base": 7.8,
+   "down": 46.7,
+   "base_down": 46.3,
+   "t": -1.11,
+   "p": 0.2658,
+   "h1": -5.2,
+   "h2": -0.5,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Prana",
+   "group": "natal house: helps",
+   "units": 14862,
+   "of": 24840,
+   "mean": 8.5,
+   "base": 7.8,
+   "down": 46.1,
+   "base_down": 46.3,
+   "t": 0.39,
+   "p": 0.6947,
+   "h1": 2.2,
+   "h2": -0.9,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Prana",
+   "group": "natal dignity: hurts",
+   "units": 3944,
+   "of": 24840,
+   "mean": 11.8,
+   "base": 7.8,
+   "down": 45.1,
+   "base_down": 46.3,
+   "t": 0.94,
+   "p": 0.3463,
+   "h1": 9.9,
+   "h2": -1.8,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Prana",
+   "group": "transit house: hurts",
+   "units": 6185,
+   "of": 24840,
+   "mean": 9.1,
+   "base": 7.8,
+   "down": 45.8,
+   "base_down": 46.3,
+   "t": 0.38,
+   "p": 0.7015,
+   "h1": 0.3,
+   "h2": 2.2,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Prana",
+   "group": "transit house: helps",
+   "units": 12521,
+   "of": 24840,
+   "mean": 8.4,
+   "base": 7.8,
+   "down": 46.7,
+   "base_down": 46.3,
+   "t": 0.3,
+   "p": 0.7666,
+   "h1": -2.7,
+   "h2": 3.8,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Prana",
+   "group": "malefic on its natal sign: hurts",
+   "units": 14371,
+   "of": 24840,
+   "mean": 9.2,
+   "base": 7.8,
+   "down": 46.1,
+   "base_down": 46.3,
+   "t": 0.82,
+   "p": 0.412,
+   "h1": -1.1,
+   "h2": 3.6,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Prana",
+   "group": "Jupiter on its natal sign: helps",
+   "units": 7248,
+   "of": 24840,
+   "mean": 11.0,
+   "base": 7.8,
+   "down": 45.9,
+   "base_down": 46.3,
+   "t": 1.06,
+   "p": 0.287,
+   "h1": 8.0,
+   "h2": -1.6,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Prana",
+   "group": "transit dignity / combustion: hurts",
+   "units": 4192,
+   "of": 24840,
+   "mean": 9.4,
+   "base": 7.8,
+   "down": 47.5,
+   "base_down": 46.3,
+   "t": 0.35,
+   "p": 0.7293,
+   "h1": -0.3,
+   "h2": 3.6,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Prana",
+   "group": "transit dignity / combustion: helps",
+   "units": 4389,
+   "of": 24840,
+   "mean": 12.0,
+   "base": 7.8,
+   "down": 45.7,
+   "base_down": 46.3,
+   "t": 0.98,
+   "p": 0.3269,
+   "h1": 8.6,
+   "h2": -0.0,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Prana",
+   "group": "combination score: hurts (\u2264 \u22122)",
+   "units": 5260,
+   "of": 24840,
+   "mean": 5.4,
+   "base": 7.8,
+   "down": 46.7,
+   "base_down": 46.3,
+   "t": -0.66,
+   "p": 0.5093,
+   "h1": 0.6,
+   "h2": -5.4,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Prana",
+   "group": "combination score: helps (\u2265 +2)",
+   "units": 6688,
+   "of": 24840,
+   "mean": 4.8,
+   "base": 7.8,
+   "down": 46.7,
+   "base_down": 46.3,
+   "t": -0.93,
+   "p": 0.3525,
+   "h1": -2.5,
+   "h2": -3.5,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Prana",
+   "group": "daily chain (Pratyantar + Sookshma + Prana): hurts (\u2264 \u22123)",
+   "units": 4757,
+   "of": 24840,
+   "mean": 12.1,
+   "base": 7.8,
+   "down": 44.4,
+   "base_down": 46.3,
+   "t": 1.12,
+   "p": 0.2628,
+   "h1": 2.1,
+   "h2": 6.9,
+   "expect": -1,
+   "q": 0.96,
+   "holds": false
+  },
+  {
+   "chart": "NYSE",
+   "level": "Prana",
+   "group": "daily chain: helps (\u2265 +3)",
+   "units": 7459,
+   "of": 24840,
+   "mean": 6.7,
+   "base": 7.8,
+   "down": 46.5,
+   "base_down": 46.3,
+   "t": -0.4,
+   "p": 0.6861,
+   "h1": 1.1,
+   "h2": -3.4,
+   "expect": 1,
+   "q": 0.96,
+   "holds": false
+  }
+ ],
+ "forward": {
+  "USA": {
+   "Pratyantar": [
+    {
+     "path": "Rahu/Mercury/Saturn",
+     "lord": "Saturn",
+     "parent": "Mercury",
+     "frm": "Wed 23 Sep 2026 10:01",
+     "to": "Wed 17 Feb 2027 20:18",
+     "total": 3,
+     "static": 2,
+     "transit": 1,
+     "verdict": "helps",
+     "factors": {
+      "relation": [
+       "Saturn is 3rd from Mercury (3/11)",
+       1
+      ],
+      "friendship": [
+       "Saturn regards Mercury as friend",
+       1
+      ],
+      "lordship": [
+       "rules 3, 4",
+       0
+      ],
+      "placement": [
+       "natal house 11",
+       0
+      ],
+      "dignity": [
+       "natal Virgo",
+       0
+      ],
+      "t_house": [
+       "transit Pisces, house 5",
+       1
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Ketu/Ketu",
+     "lord": "Ketu",
+     "parent": "Ketu",
+     "frm": "Wed 17 Feb 2027 20:18",
+     "to": "Fri 12 Mar 2027 05:13",
+     "total": 1,
+     "static": 0,
+     "transit": 1,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Ketu is with Ketu",
+       0
+      ],
+      "friendship": [
+       "Ketu: node, neutral",
+       0
+      ],
+      "lordship": [
+       "via dispositor Saturn: rules 3, 4",
+       0
+      ],
+      "placement": [
+       "natal house 3",
+       0
+      ],
+      "dignity": [
+       "natal Capricorn",
+       0
+      ],
+      "t_house": [
+       "transit Cancer, house 9",
+       1
+      ],
+      "t_malefic": [
+       "Rahu on natal Ketu (Capricorn)",
+       -1
+      ],
+      "t_jupiter": [
+       "Jupiter aspects natal Ketu",
+       1
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Ketu/Venus",
+     "lord": "Venus",
+     "parent": "Ketu",
+     "frm": "Fri 12 Mar 2027 05:13",
+     "to": "Sat 15 May 2027 04:16",
+     "total": -3,
+     "static": -3,
+     "transit": 0,
+     "verdict": "hurts",
+     "factors": {
+      "relation": [
+       "Venus is 6th from Ketu (6/8)",
+       -1
+      ],
+      "friendship": [
+       "Venus regards Ketu as neutral",
+       0
+      ],
+      "lordship": [
+       "rules 7, 12",
+       -1
+      ],
+      "placement": [
+       "natal house 8",
+       -1
+      ],
+      "dignity": [
+       "natal Gemini",
+       0
+      ],
+      "t_house": [
+       "transit Capricorn, house 3",
+       0
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Ketu/Sun",
+     "lord": "Sun",
+     "parent": "Ketu",
+     "frm": "Sat 15 May 2027 04:16",
+     "to": "Thu 03 Jun 2027 08:29",
+     "total": -1,
+     "static": -2,
+     "transit": 1,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Sun is 6th from Ketu (6/8)",
+       -1
+      ],
+      "friendship": [
+       "Sun regards Ketu as neutral",
+       0
+      ],
+      "lordship": [
+       "rules 10",
+       0
+      ],
+      "placement": [
+       "natal house 8",
+       -1
+      ],
+      "dignity": [
+       "natal Gemini",
+       0
+      ],
+      "t_house": [
+       "transit Taurus, house 7",
+       1
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Ketu/Moon",
+     "lord": "Moon",
+     "parent": "Ketu",
+     "frm": "Thu 03 Jun 2027 08:29",
+     "to": "Mon 05 Jul 2027 07:30",
+     "total": 2,
+     "static": 1,
+     "transit": 1,
+     "verdict": "helps",
+     "factors": {
+      "relation": [
+       "Moon is 2nd from Ketu (2/12)",
+       -1
+      ],
+      "friendship": [
+       "Moon regards Ketu as neutral",
+       0
+      ],
+      "lordship": [
+       "rules 9",
+       1
+      ],
+      "placement": [
+       "natal house 4",
+       1
+      ],
+      "dignity": [
+       "natal Aquarius",
+       0
+      ],
+      "t_house": [
+       "transit Taurus, house 7",
+       1
+      ],
+      "t_malefic": [
+       "Mars aspects natal Moon (Aquarius)",
+       -1
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "exalted / own sign",
+       1
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Ketu/Mars",
+     "lord": "Mars",
+     "parent": "Ketu",
+     "frm": "Mon 05 Jul 2027 07:30",
+     "to": "Tue 27 Jul 2027 16:25",
+     "total": -3,
+     "static": -2,
+     "transit": -1,
+     "verdict": "hurts",
+     "factors": {
+      "relation": [
+       "Mars is 6th from Ketu (6/8)",
+       -1
+      ],
+      "friendship": [
+       "Mars regards Ketu as neutral",
+       0
+      ],
+      "lordship": [
+       "rules 1, 6",
+       0
+      ],
+      "placement": [
+       "natal house 8",
+       -1
+      ],
+      "dignity": [
+       "natal Gemini",
+       0
+      ],
+      "t_house": [
+       "transit Virgo, house 11",
+       0
+      ],
+      "t_malefic": [
+       "Saturn aspects natal Mars (Gemini)",
+       -1
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Ketu/Rahu",
+     "lord": "Rahu",
+     "parent": "Ketu",
+     "frm": "Tue 27 Jul 2027 16:25",
+     "to": "Thu 23 Sep 2027 05:04",
+     "total": 2,
+     "static": 3,
+     "transit": -1,
+     "verdict": "helps",
+     "factors": {
+      "relation": [
+       "Rahu is 7th from Ketu (kendra)",
+       1
+      ],
+      "friendship": [
+       "Rahu: node, neutral",
+       0
+      ],
+      "lordship": [
+       "via dispositor Moon: rules 9",
+       1
+      ],
+      "placement": [
+       "natal house 9",
+       1
+      ],
+      "dignity": [
+       "natal Cancer",
+       0
+      ],
+      "t_house": [
+       "transit Capricorn, house 3",
+       0
+      ],
+      "t_malefic": [
+       "Ketu on natal Rahu (Cancer)",
+       -1
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    }
+   ],
+   "Sookshma": [
+    {
+     "path": "Rahu/Mercury/Saturn/Venus",
+     "lord": "Venus",
+     "parent": "Saturn",
+     "frm": "Sun 15 Nov 2026 05:16",
+     "to": "Wed 09 Dec 2026 19:08",
+     "total": -1,
+     "static": 0,
+     "transit": -1,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Venus is 10th from Saturn (kendra)",
+       1
+      ],
+      "friendship": [
+       "Venus regards Saturn as friend",
+       1
+      ],
+      "lordship": [
+       "rules 7, 12",
+       -1
+      ],
+      "placement": [
+       "natal house 8",
+       -1
+      ],
+      "dignity": [
+       "natal Gemini",
+       0
+      ],
+      "t_house": [
+       "transit Virgo, house 11",
+       0
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "debilitated",
+       -1
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Mercury/Saturn/Sun",
+     "lord": "Sun",
+     "parent": "Saturn",
+     "frm": "Wed 09 Dec 2026 19:08",
+     "to": "Thu 17 Dec 2026 04:06",
+     "total": 0,
+     "static": -1,
+     "transit": 1,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Sun is 10th from Saturn (kendra)",
+       1
+      ],
+      "friendship": [
+       "Sun regards Saturn as enemy",
+       -1
+      ],
+      "lordship": [
+       "rules 10",
+       0
+      ],
+      "placement": [
+       "natal house 8",
+       -1
+      ],
+      "dignity": [
+       "natal Gemini",
+       0
+      ],
+      "t_house": [
+       "transit Scorpio, house 1",
+       1
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Mercury/Saturn/Moon",
+     "lord": "Moon",
+     "parent": "Saturn",
+     "frm": "Thu 17 Dec 2026 04:06",
+     "to": "Tue 29 Dec 2026 11:03",
+     "total": 2,
+     "static": 1,
+     "transit": 1,
+     "verdict": "helps",
+     "factors": {
+      "relation": [
+       "Moon is 6th from Saturn (6/8)",
+       -1
+      ],
+      "friendship": [
+       "Moon regards Saturn as neutral",
+       0
+      ],
+      "lordship": [
+       "rules 9",
+       1
+      ],
+      "placement": [
+       "natal house 4",
+       1
+      ],
+      "dignity": [
+       "natal Aquarius",
+       0
+      ],
+      "t_house": [
+       "transit Pisces, house 5",
+       1
+      ],
+      "t_malefic": [
+       "Mars aspects natal Moon (Aquarius)",
+       -1
+      ],
+      "t_jupiter": [
+       "Jupiter aspects natal Moon",
+       1
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Mercury/Saturn/Mars",
+     "lord": "Mars",
+     "parent": "Saturn",
+     "frm": "Tue 29 Dec 2026 11:03",
+     "to": "Thu 07 Jan 2027 01:30",
+     "total": 1,
+     "static": 0,
+     "transit": 1,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Mars is 10th from Saturn (kendra)",
+       1
+      ],
+      "friendship": [
+       "Mars regards Saturn as neutral",
+       0
+      ],
+      "lordship": [
+       "rules 1, 6",
+       0
+      ],
+      "placement": [
+       "natal house 8",
+       -1
+      ],
+      "dignity": [
+       "natal Gemini",
+       0
+      ],
+      "t_house": [
+       "transit Leo, house 10",
+       1
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    }
+   ],
+   "Prana": [
+    {
+     "path": "Rahu/Mercury/Saturn/Venus/Mars",
+     "lord": "Mars",
+     "parent": "Venus",
+     "frm": "Sun 22 Nov 2026 14:13",
+     "to": "Tue 24 Nov 2026 00:38",
+     "total": 0,
+     "static": -1,
+     "transit": 1,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Mars is with Venus",
+       0
+      ],
+      "friendship": [
+       "Mars regards Venus as neutral",
+       0
+      ],
+      "lordship": [
+       "rules 1, 6",
+       0
+      ],
+      "placement": [
+       "natal house 8",
+       -1
+      ],
+      "dignity": [
+       "natal Gemini",
+       0
+      ],
+      "t_house": [
+       "transit Leo, house 10",
+       1
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Mercury/Saturn/Venus/Rahu",
+     "lord": "Rahu",
+     "parent": "Venus",
+     "frm": "Tue 24 Nov 2026 00:38",
+     "to": "Fri 27 Nov 2026 17:07",
+     "total": 2,
+     "static": 1,
+     "transit": 1,
+     "verdict": "helps",
+     "factors": {
+      "relation": [
+       "Rahu is 2nd from Venus (2/12)",
+       -1
+      ],
+      "friendship": [
+       "Rahu: node, neutral",
+       0
+      ],
+      "lordship": [
+       "via dispositor Moon: rules 9",
+       1
+      ],
+      "placement": [
+       "natal house 9",
+       1
+      ],
+      "dignity": [
+       "natal Cancer",
+       0
+      ],
+      "t_house": [
+       "transit Aquarius, house 4",
+       1
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Mercury/Saturn/Venus/Jupiter",
+     "lord": "Jupiter",
+     "parent": "Venus",
+     "frm": "Fri 27 Nov 2026 17:07",
+     "to": "Mon 30 Nov 2026 23:46",
+     "total": 0,
+     "static": -1,
+     "transit": 1,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Jupiter is with Venus",
+       0
+      ],
+      "friendship": [
+       "Jupiter regards Venus as enemy",
+       -1
+      ],
+      "lordship": [
+       "rules 2, 5",
+       1
+      ],
+      "placement": [
+       "natal house 8",
+       -1
+      ],
+      "dignity": [
+       "natal Gemini",
+       0
+      ],
+      "t_house": [
+       "transit Leo, house 10",
+       1
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Mercury/Saturn/Venus/Saturn",
+     "lord": "Saturn",
+     "parent": "Venus",
+     "frm": "Mon 30 Nov 2026 23:46",
+     "to": "Fri 04 Dec 2026 21:10",
+     "total": 3,
+     "static": 2,
+     "transit": 1,
+     "verdict": "helps",
+     "factors": {
+      "relation": [
+       "Saturn is 4th from Venus (kendra)",
+       1
+      ],
+      "friendship": [
+       "Saturn regards Venus as friend",
+       1
+      ],
+      "lordship": [
+       "rules 3, 4",
+       0
+      ],
+      "placement": [
+       "natal house 11",
+       0
+      ],
+      "dignity": [
+       "natal Virgo",
+       0
+      ],
+      "t_house": [
+       "transit Pisces, house 5",
+       1
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Mercury/Saturn/Venus/Mercury",
+     "lord": "Mercury",
+     "parent": "Venus",
+     "frm": "Fri 04 Dec 2026 21:10",
+     "to": "Tue 08 Dec 2026 08:44",
+     "total": 2,
+     "static": 1,
+     "transit": 1,
+     "verdict": "helps",
+     "factors": {
+      "relation": [
+       "Mercury is 2nd from Venus (2/12)",
+       -1
+      ],
+      "friendship": [
+       "Mercury regards Venus as friend",
+       1
+      ],
+      "lordship": [
+       "rules 8, 11",
+       0
+      ],
+      "placement": [
+       "natal house 9",
+       1
+      ],
+      "dignity": [
+       "natal Cancer",
+       0
+      ],
+      "t_house": [
+       "transit Scorpio, house 1",
+       1
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Mercury/Saturn/Venus/Ketu",
+     "lord": "Ketu",
+     "parent": "Venus",
+     "frm": "Tue 08 Dec 2026 08:44",
+     "to": "Wed 09 Dec 2026 19:08",
+     "total": -1,
+     "static": -1,
+     "transit": 0,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Ketu is 8th from Venus (6/8)",
+       -1
+      ],
+      "friendship": [
+       "Ketu: node, neutral",
+       0
+      ],
+      "lordship": [
+       "via dispositor Saturn: rules 3, 4",
+       0
+      ],
+      "placement": [
+       "natal house 3",
+       0
+      ],
+      "dignity": [
+       "natal Capricorn",
+       0
+      ],
+      "t_house": [
+       "transit Cancer, house 9",
+       1
+      ],
+      "t_malefic": [
+       "Rahu on natal Ketu (Capricorn)",
+       -1
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Mercury/Saturn/Sun/Sun",
+     "lord": "Sun",
+     "parent": "Sun",
+     "frm": "Wed 09 Dec 2026 19:08",
+     "to": "Thu 10 Dec 2026 03:59",
+     "total": 0,
+     "static": -1,
+     "transit": 1,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Sun is with Sun",
+       0
+      ],
+      "friendship": [
+       "Sun regards Sun as neutral",
+       0
+      ],
+      "lordship": [
+       "rules 10",
+       0
+      ],
+      "placement": [
+       "natal house 8",
+       -1
+      ],
+      "dignity": [
+       "natal Gemini",
+       0
+      ],
+      "t_house": [
+       "transit Scorpio, house 1",
+       1
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Mercury/Saturn/Sun/Moon",
+     "lord": "Moon",
+     "parent": "Sun",
+     "frm": "Thu 10 Dec 2026 03:59",
+     "to": "Thu 10 Dec 2026 18:44",
+     "total": 4,
+     "static": 4,
+     "transit": 0,
+     "verdict": "helps",
+     "factors": {
+      "relation": [
+       "Moon is 9th from Sun (trine)",
+       1
+      ],
+      "friendship": [
+       "Moon regards Sun as friend",
+       1
+      ],
+      "lordship": [
+       "rules 9",
+       1
+      ],
+      "placement": [
+       "natal house 4",
+       1
+      ],
+      "dignity": [
+       "natal Aquarius",
+       0
+      ],
+      "t_house": [
+       "transit Sagittarius, house 2",
+       0
+      ],
+      "t_malefic": [
+       "Mars aspects natal Moon (Aquarius)",
+       -1
+      ],
+      "t_jupiter": [
+       "Jupiter aspects natal Moon",
+       1
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Mercury/Saturn/Sun/Mars",
+     "lord": "Mars",
+     "parent": "Sun",
+     "frm": "Thu 10 Dec 2026 18:44",
+     "to": "Fri 11 Dec 2026 05:03",
+     "total": 1,
+     "static": 0,
+     "transit": 1,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Mars is with Sun",
+       0
+      ],
+      "friendship": [
+       "Mars regards Sun as friend",
+       1
+      ],
+      "lordship": [
+       "rules 1, 6",
+       0
+      ],
+      "placement": [
+       "natal house 8",
+       -1
+      ],
+      "dignity": [
+       "natal Gemini",
+       0
+      ],
+      "t_house": [
+       "transit Leo, house 10",
+       1
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Mercury/Saturn/Sun/Rahu",
+     "lord": "Rahu",
+     "parent": "Sun",
+     "frm": "Fri 11 Dec 2026 05:03",
+     "to": "Sat 12 Dec 2026 07:36",
+     "total": 0,
+     "static": 1,
+     "transit": -1,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Rahu is 2nd from Sun (2/12)",
+       -1
+      ],
+      "friendship": [
+       "Rahu: node, neutral",
+       0
+      ],
+      "lordship": [
+       "via dispositor Moon: rules 9",
+       1
+      ],
+      "placement": [
+       "natal house 9",
+       1
+      ],
+      "dignity": [
+       "natal Cancer",
+       0
+      ],
+      "t_house": [
+       "transit Capricorn, house 3",
+       0
+      ],
+      "t_malefic": [
+       "Ketu on natal Rahu (Cancer)",
+       -1
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Mercury/Saturn/Sun/Jupiter",
+     "lord": "Jupiter",
+     "parent": "Sun",
+     "frm": "Sat 12 Dec 2026 07:36",
+     "to": "Sun 13 Dec 2026 07:12",
+     "total": 2,
+     "static": 1,
+     "transit": 1,
+     "verdict": "helps",
+     "factors": {
+      "relation": [
+       "Jupiter is with Sun",
+       0
+      ],
+      "friendship": [
+       "Jupiter regards Sun as friend",
+       1
+      ],
+      "lordship": [
+       "rules 2, 5",
+       1
+      ],
+      "placement": [
+       "natal house 8",
+       -1
+      ],
+      "dignity": [
+       "natal Gemini",
+       0
+      ],
+      "t_house": [
+       "transit Leo, house 10",
+       1
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Mercury/Saturn/Sun/Saturn",
+     "lord": "Saturn",
+     "parent": "Sun",
+     "frm": "Sun 13 Dec 2026 07:12",
+     "to": "Mon 14 Dec 2026 11:13",
+     "total": 1,
+     "static": 0,
+     "transit": 1,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Saturn is 4th from Sun (kendra)",
+       1
+      ],
+      "friendship": [
+       "Saturn regards Sun as enemy",
+       -1
+      ],
+      "lordship": [
+       "rules 3, 4",
+       0
+      ],
+      "placement": [
+       "natal house 11",
+       0
+      ],
+      "dignity": [
+       "natal Virgo",
+       0
+      ],
+      "t_house": [
+       "transit Pisces, house 5",
+       1
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Mercury/Saturn/Sun/Mercury",
+     "lord": "Mercury",
+     "parent": "Sun",
+     "frm": "Mon 14 Dec 2026 11:13",
+     "to": "Tue 15 Dec 2026 12:17",
+     "total": 0,
+     "static": 1,
+     "transit": -1,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Mercury is 2nd from Sun (2/12)",
+       -1
+      ],
+      "friendship": [
+       "Mercury regards Sun as friend",
+       1
+      ],
+      "lordship": [
+       "rules 8, 11",
+       0
+      ],
+      "placement": [
+       "natal house 9",
+       1
+      ],
+      "dignity": [
+       "natal Cancer",
+       0
+      ],
+      "t_house": [
+       "transit Scorpio, house 1",
+       1
+      ],
+      "t_malefic": [
+       "Ketu on natal Mercury (Cancer)",
+       -1
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "combust",
+       -1
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Mercury/Saturn/Sun/Ketu",
+     "lord": "Ketu",
+     "parent": "Sun",
+     "frm": "Tue 15 Dec 2026 12:17",
+     "to": "Tue 15 Dec 2026 22:37",
+     "total": -1,
+     "static": -1,
+     "transit": 0,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Ketu is 8th from Sun (6/8)",
+       -1
+      ],
+      "friendship": [
+       "Ketu: node, neutral",
+       0
+      ],
+      "lordship": [
+       "via dispositor Saturn: rules 3, 4",
+       0
+      ],
+      "placement": [
+       "natal house 3",
+       0
+      ],
+      "dignity": [
+       "natal Capricorn",
+       0
+      ],
+      "t_house": [
+       "transit Cancer, house 9",
+       1
+      ],
+      "t_malefic": [
+       "Rahu on natal Ketu (Capricorn)",
+       -1
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Mercury/Saturn/Sun/Venus",
+     "lord": "Venus",
+     "parent": "Sun",
+     "frm": "Tue 15 Dec 2026 22:37",
+     "to": "Thu 17 Dec 2026 04:06",
+     "total": -3,
+     "static": -3,
+     "transit": 0,
+     "verdict": "hurts",
+     "factors": {
+      "relation": [
+       "Venus is with Sun",
+       0
+      ],
+      "friendship": [
+       "Venus regards Sun as enemy",
+       -1
+      ],
+      "lordship": [
+       "rules 7, 12",
+       -1
+      ],
+      "placement": [
+       "natal house 8",
+       -1
+      ],
+      "dignity": [
+       "natal Gemini",
+       0
+      ],
+      "t_house": [
+       "transit Libra, house 12",
+       -1
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "exalted / own sign",
+       1
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Mercury/Saturn/Moon/Moon",
+     "lord": "Moon",
+     "parent": "Moon",
+     "frm": "Thu 17 Dec 2026 04:06",
+     "to": "Fri 18 Dec 2026 04:41",
+     "total": 3,
+     "static": 2,
+     "transit": 1,
+     "verdict": "helps",
+     "factors": {
+      "relation": [
+       "Moon is with Moon",
+       0
+      ],
+      "friendship": [
+       "Moon regards Moon as neutral",
+       0
+      ],
+      "lordship": [
+       "rules 9",
+       1
+      ],
+      "placement": [
+       "natal house 4",
+       1
+      ],
+      "dignity": [
+       "natal Aquarius",
+       0
+      ],
+      "t_house": [
+       "transit Pisces, house 5",
+       1
+      ],
+      "t_malefic": [
+       "Mars aspects natal Moon (Aquarius)",
+       -1
+      ],
+      "t_jupiter": [
+       "Jupiter aspects natal Moon",
+       1
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Mercury/Saturn/Moon/Mars",
+     "lord": "Mars",
+     "parent": "Moon",
+     "frm": "Fri 18 Dec 2026 04:41",
+     "to": "Fri 18 Dec 2026 21:53",
+     "total": 2,
+     "static": 1,
+     "transit": 1,
+     "verdict": "helps",
+     "factors": {
+      "relation": [
+       "Mars is 5th from Moon (trine)",
+       1
+      ],
+      "friendship": [
+       "Mars regards Moon as friend",
+       1
+      ],
+      "lordship": [
+       "rules 1, 6",
+       0
+      ],
+      "placement": [
+       "natal house 8",
+       -1
+      ],
+      "dignity": [
+       "natal Gemini",
+       0
+      ],
+      "t_house": [
+       "transit Leo, house 10",
+       1
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Mercury/Saturn/Moon/Rahu",
+     "lord": "Rahu",
+     "parent": "Moon",
+     "frm": "Fri 18 Dec 2026 21:53",
+     "to": "Sun 20 Dec 2026 18:08",
+     "total": 0,
+     "static": 1,
+     "transit": -1,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Rahu is 6th from Moon (6/8)",
+       -1
+      ],
+      "friendship": [
+       "Rahu: node, neutral",
+       0
+      ],
+      "lordship": [
+       "via dispositor Moon: rules 9",
+       1
+      ],
+      "placement": [
+       "natal house 9",
+       1
+      ],
+      "dignity": [
+       "natal Cancer",
+       0
+      ],
+      "t_house": [
+       "transit Capricorn, house 3",
+       0
+      ],
+      "t_malefic": [
+       "Ketu on natal Rahu (Cancer)",
+       -1
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Mercury/Saturn/Moon/Jupiter",
+     "lord": "Jupiter",
+     "parent": "Moon",
+     "frm": "Sun 20 Dec 2026 18:08",
+     "to": "Tue 22 Dec 2026 09:27",
+     "total": 3,
+     "static": 2,
+     "transit": 1,
+     "verdict": "helps",
+     "factors": {
+      "relation": [
+       "Jupiter is 5th from Moon (trine)",
+       1
+      ],
+      "friendship": [
+       "Jupiter regards Moon as friend",
+       1
+      ],
+      "lordship": [
+       "rules 2, 5",
+       1
+      ],
+      "placement": [
+       "natal house 8",
+       -1
+      ],
+      "dignity": [
+       "natal Gemini",
+       0
+      ],
+      "t_house": [
+       "transit Leo, house 10",
+       1
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Mercury/Saturn/Moon/Saturn",
+     "lord": "Saturn",
+     "parent": "Moon",
+     "frm": "Tue 22 Dec 2026 09:27",
+     "to": "Thu 24 Dec 2026 08:09",
+     "total": -1,
+     "static": -2,
+     "transit": 1,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Saturn is 8th from Moon (6/8)",
+       -1
+      ],
+      "friendship": [
+       "Saturn regards Moon as enemy",
+       -1
+      ],
+      "lordship": [
+       "rules 3, 4",
+       0
+      ],
+      "placement": [
+       "natal house 11",
+       0
+      ],
+      "dignity": [
+       "natal Virgo",
+       0
+      ],
+      "t_house": [
+       "transit Pisces, house 5",
+       1
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Mercury/Saturn/Moon/Mercury",
+     "lord": "Mercury",
+     "parent": "Moon",
+     "frm": "Thu 24 Dec 2026 08:09",
+     "to": "Sat 26 Dec 2026 01:56",
+     "total": -3,
+     "static": -1,
+     "transit": -2,
+     "verdict": "hurts",
+     "factors": {
+      "relation": [
+       "Mercury is 6th from Moon (6/8)",
+       -1
+      ],
+      "friendship": [
+       "Mercury regards Moon as enemy",
+       -1
+      ],
+      "lordship": [
+       "rules 8, 11",
+       0
+      ],
+      "placement": [
+       "natal house 9",
+       1
+      ],
+      "dignity": [
+       "natal Cancer",
+       0
+      ],
+      "t_house": [
+       "transit Sagittarius, house 2",
+       0
+      ],
+      "t_malefic": [
+       "Ketu on natal Mercury (Cancer)",
+       -1
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "combust",
+       -1
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Mercury/Saturn/Moon/Ketu",
+     "lord": "Ketu",
+     "parent": "Moon",
+     "frm": "Sat 26 Dec 2026 01:56",
+     "to": "Sat 26 Dec 2026 19:08",
+     "total": -1,
+     "static": -1,
+     "transit": 0,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Ketu is 12th from Moon (2/12)",
+       -1
+      ],
+      "friendship": [
+       "Ketu: node, neutral",
+       0
+      ],
+      "lordship": [
+       "via dispositor Saturn: rules 3, 4",
+       0
+      ],
+      "placement": [
+       "natal house 3",
+       0
+      ],
+      "dignity": [
+       "natal Capricorn",
+       0
+      ],
+      "t_house": [
+       "transit Cancer, house 9",
+       1
+      ],
+      "t_malefic": [
+       "Rahu on natal Ketu (Capricorn)",
+       -1
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Mercury/Saturn/Moon/Venus",
+     "lord": "Venus",
+     "parent": "Moon",
+     "frm": "Sat 26 Dec 2026 19:08",
+     "to": "Mon 28 Dec 2026 20:18",
+     "total": -2,
+     "static": -2,
+     "transit": 0,
+     "verdict": "hurts",
+     "factors": {
+      "relation": [
+       "Venus is 5th from Moon (trine)",
+       1
+      ],
+      "friendship": [
+       "Venus regards Moon as enemy",
+       -1
+      ],
+      "lordship": [
+       "rules 7, 12",
+       -1
+      ],
+      "placement": [
+       "natal house 8",
+       -1
+      ],
+      "dignity": [
+       "natal Gemini",
+       0
+      ],
+      "t_house": [
+       "transit Libra, house 12",
+       -1
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "exalted / own sign",
+       1
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Mercury/Saturn/Moon/Sun",
+     "lord": "Sun",
+     "parent": "Moon",
+     "frm": "Mon 28 Dec 2026 20:18",
+     "to": "Tue 29 Dec 2026 11:03",
+     "total": 1,
+     "static": 1,
+     "transit": 0,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Sun is 5th from Moon (trine)",
+       1
+      ],
+      "friendship": [
+       "Sun regards Moon as friend",
+       1
+      ],
+      "lordship": [
+       "rules 10",
+       0
+      ],
+      "placement": [
+       "natal house 8",
+       -1
+      ],
+      "dignity": [
+       "natal Gemini",
+       0
+      ],
+      "t_house": [
+       "transit Sagittarius, house 2",
+       0
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Mercury/Saturn/Mars/Mars",
+     "lord": "Mars",
+     "parent": "Mars",
+     "frm": "Tue 29 Dec 2026 11:03",
+     "to": "Tue 29 Dec 2026 23:05",
+     "total": 0,
+     "static": -1,
+     "transit": 1,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Mars is with Mars",
+       0
+      ],
+      "friendship": [
+       "Mars regards Mars as neutral",
+       0
+      ],
+      "lordship": [
+       "rules 1, 6",
+       0
+      ],
+      "placement": [
+       "natal house 8",
+       -1
+      ],
+      "dignity": [
+       "natal Gemini",
+       0
+      ],
+      "t_house": [
+       "transit Leo, house 10",
+       1
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Mercury/Saturn/Mars/Rahu",
+     "lord": "Rahu",
+     "parent": "Mars",
+     "frm": "Tue 29 Dec 2026 23:05",
+     "to": "Thu 31 Dec 2026 06:03",
+     "total": 0,
+     "static": 1,
+     "transit": -1,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Rahu is 2nd from Mars (2/12)",
+       -1
+      ],
+      "friendship": [
+       "Rahu: node, neutral",
+       0
+      ],
+      "lordship": [
+       "via dispositor Moon: rules 9",
+       1
+      ],
+      "placement": [
+       "natal house 9",
+       1
+      ],
+      "dignity": [
+       "natal Cancer",
+       0
+      ],
+      "t_house": [
+       "transit Capricorn, house 3",
+       0
+      ],
+      "t_malefic": [
+       "Ketu on natal Rahu (Cancer)",
+       -1
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Rahu/Mercury/Saturn/Mars/Jupiter",
+     "lord": "Jupiter",
+     "parent": "Mars",
+     "frm": "Thu 31 Dec 2026 06:03",
+     "to": "Fri 01 Jan 2027 09:35",
+     "total": 2,
+     "static": 1,
+     "transit": 1,
+     "verdict": "helps",
+     "factors": {
+      "relation": [
+       "Jupiter is with Mars",
+       0
+      ],
+      "friendship": [
+       "Jupiter regards Mars as friend",
+       1
+      ],
+      "lordship": [
+       "rules 2, 5",
+       1
+      ],
+      "placement": [
+       "natal house 8",
+       -1
+      ],
+      "dignity": [
+       "natal Gemini",
+       0
+      ],
+      "t_house": [
+       "transit Leo, house 10",
+       1
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    }
+   ]
+  },
+  "NYSE": {
+   "Pratyantar": [
+    {
+     "path": "Mercury/Rahu/Jupiter",
+     "lord": "Jupiter",
+     "parent": "Rahu",
+     "frm": "Fri 09 Oct 2026 16:34",
+     "to": "Wed 10 Feb 2027 20:01",
+     "total": 1,
+     "static": 0,
+     "transit": 1,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Jupiter is 2nd from Rahu (2/12)",
+       -1
+      ],
+      "friendship": [
+       "Jupiter regards Rahu as neutral",
+       0
+      ],
+      "lordship": [
+       "rules 6, 9",
+       0
+      ],
+      "placement": [
+       "natal house 4",
+       1
+      ],
+      "dignity": [
+       "natal Libra",
+       0
+      ],
+      "t_house": [
+       "transit Cancer, house 1",
+       1
+      ],
+      "t_malefic": [
+       "Mars aspects natal Jupiter (Libra)",
+       -1
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "exalted / own sign",
+       1
+      ]
+     }
+    },
+    {
+     "path": "Mercury/Rahu/Saturn",
+     "lord": "Saturn",
+     "parent": "Rahu",
+     "frm": "Wed 10 Feb 2027 20:01",
+     "to": "Thu 08 Jul 2027 08:17",
+     "total": -1,
+     "static": -2,
+     "transit": 1,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Saturn is 8th from Rahu (6/8)",
+       -1
+      ],
+      "friendship": [
+       "Saturn regards Rahu as neutral",
+       0
+      ],
+      "lordship": [
+       "rules 7, 8",
+       -1
+      ],
+      "placement": [
+       "natal house 10",
+       1
+      ],
+      "dignity": [
+       "natal Aries (debilitated)",
+       -1
+      ],
+      "t_house": [
+       "transit Pisces, house 9",
+       1
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Mercury/Rahu/Mercury",
+     "lord": "Mercury",
+     "parent": "Rahu",
+     "frm": "Thu 08 Jul 2027 08:17",
+     "to": "Wed 17 Nov 2027 06:00",
+     "total": 0,
+     "static": 0,
+     "transit": 0,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Mercury is 9th from Rahu (trine)",
+       1
+      ],
+      "friendship": [
+       "Mercury regards Rahu as neutral",
+       0
+      ],
+      "lordship": [
+       "rules 3, 12",
+       -1
+      ],
+      "placement": [
+       "natal house 11",
+       0
+      ],
+      "dignity": [
+       "natal Taurus",
+       0
+      ],
+      "t_house": [
+       "transit Gemini, house 12",
+       -1
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "exalted / own sign",
+       1
+      ]
+     }
+    }
+   ],
+   "Sookshma": [
+    {
+     "path": "Mercury/Rahu/Jupiter/Mercury",
+     "lord": "Mercury",
+     "parent": "Jupiter",
+     "frm": "Sat 14 Nov 2026 20:52",
+     "to": "Wed 02 Dec 2026 11:06",
+     "total": -2,
+     "static": -2,
+     "transit": 0,
+     "verdict": "hurts",
+     "factors": {
+      "relation": [
+       "Mercury is 8th from Jupiter (6/8)",
+       -1
+      ],
+      "friendship": [
+       "Mercury regards Jupiter as neutral",
+       0
+      ],
+      "lordship": [
+       "rules 3, 12",
+       -1
+      ],
+      "placement": [
+       "natal house 11",
+       0
+      ],
+      "dignity": [
+       "natal Taurus",
+       0
+      ],
+      "t_house": [
+       "transit Libra, house 4",
+       1
+      ],
+      "t_malefic": [
+       "Saturn aspects natal Mercury (Taurus)",
+       -1
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Mercury/Rahu/Jupiter/Ketu",
+     "lord": "Ketu",
+     "parent": "Jupiter",
+     "frm": "Wed 02 Dec 2026 11:06",
+     "to": "Wed 09 Dec 2026 16:57",
+     "total": -1,
+     "static": 0,
+     "transit": -1,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Ketu is 6th from Jupiter (6/8)",
+       -1
+      ],
+      "friendship": [
+       "Ketu: node, neutral",
+       0
+      ],
+      "lordship": [
+       "via dispositor Jupiter: rules 6, 9",
+       0
+      ],
+      "placement": [
+       "natal house 9",
+       1
+      ],
+      "dignity": [
+       "natal Pisces",
+       0
+      ],
+      "t_house": [
+       "transit Leo, house 2",
+       0
+      ],
+      "t_malefic": [
+       "Saturn on natal Ketu (Pisces); Mars aspects natal Ketu (Pisces)",
+       -1
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Mercury/Rahu/Jupiter/Venus",
+     "lord": "Venus",
+     "parent": "Jupiter",
+     "frm": "Wed 09 Dec 2026 16:57",
+     "to": "Wed 30 Dec 2026 09:42",
+     "total": 6,
+     "static": 3,
+     "transit": 3,
+     "verdict": "helps",
+     "factors": {
+      "relation": [
+       "Venus is 7th from Jupiter (kendra)",
+       1
+      ],
+      "friendship": [
+       "Venus regards Jupiter as neutral",
+       0
+      ],
+      "lordship": [
+       "rules 4, 11",
+       1
+      ],
+      "placement": [
+       "natal house 10",
+       1
+      ],
+      "dignity": [
+       "natal Aries",
+       0
+      ],
+      "t_house": [
+       "transit Libra, house 4",
+       1
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "Jupiter aspects natal Venus",
+       1
+      ],
+      "t_condition": [
+       "exalted / own sign",
+       1
+      ]
+     }
+    },
+    {
+     "path": "Mercury/Rahu/Jupiter/Sun",
+     "lord": "Sun",
+     "parent": "Jupiter",
+     "frm": "Wed 30 Dec 2026 09:42",
+     "to": "Tue 05 Jan 2027 14:43",
+     "total": -1,
+     "static": 1,
+     "transit": -2,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Sun is 8th from Jupiter (6/8)",
+       -1
+      ],
+      "friendship": [
+       "Sun regards Jupiter as friend",
+       1
+      ],
+      "lordship": [
+       "rules 2",
+       1
+      ],
+      "placement": [
+       "natal house 11",
+       0
+      ],
+      "dignity": [
+       "natal Taurus",
+       0
+      ],
+      "t_house": [
+       "transit Sagittarius, house 6",
+       -1
+      ],
+      "t_malefic": [
+       "Saturn aspects natal Sun (Taurus)",
+       -1
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    }
+   ],
+   "Prana": [
+    {
+     "path": "Mercury/Rahu/Jupiter/Mercury/Mars",
+     "lord": "Mars",
+     "parent": "Mercury",
+     "frm": "Mon 23 Nov 2026 15:59",
+     "to": "Tue 24 Nov 2026 16:37",
+     "total": 1,
+     "static": 1,
+     "transit": 0,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Mars is 4th from Mercury (kendra)",
+       1
+      ],
+      "friendship": [
+       "Mars regards Mercury as enemy",
+       -1
+      ],
+      "lordship": [
+       "rules 5, 10",
+       1
+      ],
+      "placement": [
+       "natal house 2",
+       0
+      ],
+      "dignity": [
+       "natal Leo",
+       0
+      ],
+      "t_house": [
+       "transit Leo, house 2",
+       0
+      ],
+      "t_malefic": [
+       "Ketu on natal Mars (Leo)",
+       -1
+      ],
+      "t_jupiter": [
+       "Jupiter on natal Mars",
+       1
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Mercury/Rahu/Jupiter/Mercury/Rahu",
+     "lord": "Rahu",
+     "parent": "Mercury",
+     "frm": "Tue 24 Nov 2026 16:37",
+     "to": "Fri 27 Nov 2026 07:57",
+     "total": -2,
+     "static": 0,
+     "transit": -2,
+     "verdict": "hurts",
+     "factors": {
+      "relation": [
+       "Rahu is 5th from Mercury (trine)",
+       1
+      ],
+      "friendship": [
+       "Rahu: node, neutral",
+       0
+      ],
+      "lordship": [
+       "via dispositor Mercury: rules 3, 12",
+       -1
+      ],
+      "placement": [
+       "natal house 3",
+       0
+      ],
+      "dignity": [
+       "natal Virgo",
+       0
+      ],
+      "t_house": [
+       "transit Aquarius, house 8",
+       -1
+      ],
+      "t_malefic": [
+       "Saturn aspects natal Rahu (Virgo)",
+       -1
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Mercury/Rahu/Jupiter/Mercury/Jupiter",
+     "lord": "Jupiter",
+     "parent": "Mercury",
+     "frm": "Fri 27 Nov 2026 07:57",
+     "to": "Sun 29 Nov 2026 16:15",
+     "total": -1,
+     "static": -1,
+     "transit": 0,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Jupiter is 6th from Mercury (6/8)",
+       -1
+      ],
+      "friendship": [
+       "Jupiter regards Mercury as enemy",
+       -1
+      ],
+      "lordship": [
+       "rules 6, 9",
+       0
+      ],
+      "placement": [
+       "natal house 4",
+       1
+      ],
+      "dignity": [
+       "natal Libra",
+       0
+      ],
+      "t_house": [
+       "transit Leo, house 2",
+       0
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Mercury/Rahu/Jupiter/Mercury/Saturn",
+     "lord": "Saturn",
+     "parent": "Mercury",
+     "frm": "Sun 29 Nov 2026 16:15",
+     "to": "Wed 02 Dec 2026 11:06",
+     "total": 1,
+     "static": -1,
+     "transit": 2,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Saturn is 12th from Mercury (2/12)",
+       -1
+      ],
+      "friendship": [
+       "Saturn regards Mercury as friend",
+       1
+      ],
+      "lordship": [
+       "rules 7, 8",
+       -1
+      ],
+      "placement": [
+       "natal house 10",
+       1
+      ],
+      "dignity": [
+       "natal Aries (debilitated)",
+       -1
+      ],
+      "t_house": [
+       "transit Pisces, house 9",
+       1
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "Jupiter aspects natal Saturn",
+       1
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Mercury/Rahu/Jupiter/Ketu/Ketu",
+     "lord": "Ketu",
+     "parent": "Ketu",
+     "frm": "Wed 02 Dec 2026 11:06",
+     "to": "Wed 02 Dec 2026 21:14",
+     "total": 0,
+     "static": 1,
+     "transit": -1,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Ketu is with Ketu",
+       0
+      ],
+      "friendship": [
+       "Ketu: node, neutral",
+       0
+      ],
+      "lordship": [
+       "via dispositor Jupiter: rules 6, 9",
+       0
+      ],
+      "placement": [
+       "natal house 9",
+       1
+      ],
+      "dignity": [
+       "natal Pisces",
+       0
+      ],
+      "t_house": [
+       "transit Leo, house 2",
+       0
+      ],
+      "t_malefic": [
+       "Saturn on natal Ketu (Pisces); Mars aspects natal Ketu (Pisces)",
+       -1
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Mercury/Rahu/Jupiter/Ketu/Venus",
+     "lord": "Venus",
+     "parent": "Ketu",
+     "frm": "Wed 02 Dec 2026 21:14",
+     "to": "Fri 04 Dec 2026 02:13",
+     "total": 4,
+     "static": 1,
+     "transit": 3,
+     "verdict": "helps",
+     "factors": {
+      "relation": [
+       "Venus is 2nd from Ketu (2/12)",
+       -1
+      ],
+      "friendship": [
+       "Venus regards Ketu as neutral",
+       0
+      ],
+      "lordship": [
+       "rules 4, 11",
+       1
+      ],
+      "placement": [
+       "natal house 10",
+       1
+      ],
+      "dignity": [
+       "natal Aries",
+       0
+      ],
+      "t_house": [
+       "transit Libra, house 4",
+       1
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "Jupiter aspects natal Venus",
+       1
+      ],
+      "t_condition": [
+       "exalted / own sign",
+       1
+      ]
+     }
+    },
+    {
+     "path": "Mercury/Rahu/Jupiter/Ketu/Sun",
+     "lord": "Sun",
+     "parent": "Ketu",
+     "frm": "Fri 04 Dec 2026 02:13",
+     "to": "Fri 04 Dec 2026 10:55",
+     "total": 2,
+     "static": 2,
+     "transit": 0,
+     "verdict": "helps",
+     "factors": {
+      "relation": [
+       "Sun is 3rd from Ketu (3/11)",
+       1
+      ],
+      "friendship": [
+       "Sun regards Ketu as neutral",
+       0
+      ],
+      "lordship": [
+       "rules 2",
+       1
+      ],
+      "placement": [
+       "natal house 11",
+       0
+      ],
+      "dignity": [
+       "natal Taurus",
+       0
+      ],
+      "t_house": [
+       "transit Scorpio, house 5",
+       1
+      ],
+      "t_malefic": [
+       "Saturn aspects natal Sun (Taurus)",
+       -1
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Mercury/Rahu/Jupiter/Ketu/Moon",
+     "lord": "Moon",
+     "parent": "Ketu",
+     "frm": "Fri 04 Dec 2026 10:55",
+     "to": "Sat 05 Dec 2026 01:24",
+     "total": 1,
+     "static": 2,
+     "transit": -1,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Moon is with Ketu",
+       0
+      ],
+      "friendship": [
+       "Moon regards Ketu as neutral",
+       0
+      ],
+      "lordship": [
+       "rules 1",
+       1
+      ],
+      "placement": [
+       "natal house 9",
+       1
+      ],
+      "dignity": [
+       "natal Pisces",
+       0
+      ],
+      "t_house": [
+       "transit Virgo, house 3",
+       0
+      ],
+      "t_malefic": [
+       "Saturn on natal Moon (Pisces); Mars aspects natal Moon (Pisces)",
+       -1
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Mercury/Rahu/Jupiter/Ketu/Mars",
+     "lord": "Mars",
+     "parent": "Ketu",
+     "frm": "Sat 05 Dec 2026 01:24",
+     "to": "Sat 05 Dec 2026 11:32",
+     "total": 0,
+     "static": 0,
+     "transit": 0,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Mars is 6th from Ketu (6/8)",
+       -1
+      ],
+      "friendship": [
+       "Mars regards Ketu as neutral",
+       0
+      ],
+      "lordship": [
+       "rules 5, 10",
+       1
+      ],
+      "placement": [
+       "natal house 2",
+       0
+      ],
+      "dignity": [
+       "natal Leo",
+       0
+      ],
+      "t_house": [
+       "transit Leo, house 2",
+       0
+      ],
+      "t_malefic": [
+       "Ketu on natal Mars (Leo)",
+       -1
+      ],
+      "t_jupiter": [
+       "Jupiter on natal Mars",
+       1
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Mercury/Rahu/Jupiter/Ketu/Rahu",
+     "lord": "Rahu",
+     "parent": "Ketu",
+     "frm": "Sat 05 Dec 2026 11:32",
+     "to": "Sun 06 Dec 2026 13:37",
+     "total": -2,
+     "static": 0,
+     "transit": -2,
+     "verdict": "hurts",
+     "factors": {
+      "relation": [
+       "Rahu is 7th from Ketu (kendra)",
+       1
+      ],
+      "friendship": [
+       "Rahu: node, neutral",
+       0
+      ],
+      "lordship": [
+       "via dispositor Mercury: rules 3, 12",
+       -1
+      ],
+      "placement": [
+       "natal house 3",
+       0
+      ],
+      "dignity": [
+       "natal Virgo",
+       0
+      ],
+      "t_house": [
+       "transit Aquarius, house 8",
+       -1
+      ],
+      "t_malefic": [
+       "Saturn aspects natal Rahu (Virgo)",
+       -1
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Mercury/Rahu/Jupiter/Ketu/Jupiter",
+     "lord": "Jupiter",
+     "parent": "Ketu",
+     "frm": "Sun 06 Dec 2026 13:37",
+     "to": "Mon 07 Dec 2026 12:48",
+     "total": 0,
+     "static": 0,
+     "transit": 0,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Jupiter is 8th from Ketu (6/8)",
+       -1
+      ],
+      "friendship": [
+       "Jupiter regards Ketu as neutral",
+       0
+      ],
+      "lordship": [
+       "rules 6, 9",
+       0
+      ],
+      "placement": [
+       "natal house 4",
+       1
+      ],
+      "dignity": [
+       "natal Libra",
+       0
+      ],
+      "t_house": [
+       "transit Leo, house 2",
+       0
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Mercury/Rahu/Jupiter/Ketu/Saturn",
+     "lord": "Saturn",
+     "parent": "Ketu",
+     "frm": "Mon 07 Dec 2026 12:48",
+     "to": "Tue 08 Dec 2026 16:20",
+     "total": 0,
+     "static": -2,
+     "transit": 2,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Saturn is 2nd from Ketu (2/12)",
+       -1
+      ],
+      "friendship": [
+       "Saturn regards Ketu as neutral",
+       0
+      ],
+      "lordship": [
+       "rules 7, 8",
+       -1
+      ],
+      "placement": [
+       "natal house 10",
+       1
+      ],
+      "dignity": [
+       "natal Aries (debilitated)",
+       -1
+      ],
+      "t_house": [
+       "transit Pisces, house 9",
+       1
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "Jupiter aspects natal Saturn",
+       1
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Mercury/Rahu/Jupiter/Ketu/Mercury",
+     "lord": "Mercury",
+     "parent": "Ketu",
+     "frm": "Tue 08 Dec 2026 16:20",
+     "to": "Wed 09 Dec 2026 16:57",
+     "total": -1,
+     "static": 0,
+     "transit": -1,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Mercury is 3rd from Ketu (3/11)",
+       1
+      ],
+      "friendship": [
+       "Mercury regards Ketu as neutral",
+       0
+      ],
+      "lordship": [
+       "rules 3, 12",
+       -1
+      ],
+      "placement": [
+       "natal house 11",
+       0
+      ],
+      "dignity": [
+       "natal Taurus",
+       0
+      ],
+      "t_house": [
+       "transit Scorpio, house 5",
+       1
+      ],
+      "t_malefic": [
+       "Saturn aspects natal Mercury (Taurus)",
+       -1
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "combust",
+       -1
+      ]
+     }
+    },
+    {
+     "path": "Mercury/Rahu/Jupiter/Venus/Venus",
+     "lord": "Venus",
+     "parent": "Venus",
+     "frm": "Wed 09 Dec 2026 16:57",
+     "to": "Sun 13 Dec 2026 03:45",
+     "total": 5,
+     "static": 2,
+     "transit": 3,
+     "verdict": "helps",
+     "factors": {
+      "relation": [
+       "Venus is with Venus",
+       0
+      ],
+      "friendship": [
+       "Venus regards Venus as neutral",
+       0
+      ],
+      "lordship": [
+       "rules 4, 11",
+       1
+      ],
+      "placement": [
+       "natal house 10",
+       1
+      ],
+      "dignity": [
+       "natal Aries",
+       0
+      ],
+      "t_house": [
+       "transit Libra, house 4",
+       1
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "Jupiter aspects natal Venus",
+       1
+      ],
+      "t_condition": [
+       "exalted / own sign",
+       1
+      ]
+     }
+    },
+    {
+     "path": "Mercury/Rahu/Jupiter/Venus/Sun",
+     "lord": "Sun",
+     "parent": "Venus",
+     "frm": "Sun 13 Dec 2026 03:45",
+     "to": "Mon 14 Dec 2026 04:35",
+     "total": -1,
+     "static": -1,
+     "transit": 0,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Sun is 2nd from Venus (2/12)",
+       -1
+      ],
+      "friendship": [
+       "Sun regards Venus as enemy",
+       -1
+      ],
+      "lordship": [
+       "rules 2",
+       1
+      ],
+      "placement": [
+       "natal house 11",
+       0
+      ],
+      "dignity": [
+       "natal Taurus",
+       0
+      ],
+      "t_house": [
+       "transit Scorpio, house 5",
+       1
+      ],
+      "t_malefic": [
+       "Saturn aspects natal Sun (Taurus)",
+       -1
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Mercury/Rahu/Jupiter/Venus/Moon",
+     "lord": "Moon",
+     "parent": "Venus",
+     "frm": "Mon 14 Dec 2026 04:35",
+     "to": "Tue 15 Dec 2026 21:59",
+     "total": 1,
+     "static": 1,
+     "transit": 0,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Moon is 12th from Venus (2/12)",
+       -1
+      ],
+      "friendship": [
+       "Moon regards Venus as neutral",
+       0
+      ],
+      "lordship": [
+       "rules 1",
+       1
+      ],
+      "placement": [
+       "natal house 9",
+       1
+      ],
+      "dignity": [
+       "natal Pisces",
+       0
+      ],
+      "t_house": [
+       "transit Capricorn, house 7",
+       1
+      ],
+      "t_malefic": [
+       "Saturn on natal Moon (Pisces); Mars aspects natal Moon (Pisces)",
+       -1
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Mercury/Rahu/Jupiter/Venus/Mars",
+     "lord": "Mars",
+     "parent": "Venus",
+     "frm": "Tue 15 Dec 2026 21:59",
+     "to": "Thu 17 Dec 2026 02:57",
+     "total": 3,
+     "static": 2,
+     "transit": 1,
+     "verdict": "helps",
+     "factors": {
+      "relation": [
+       "Mars is 5th from Venus (trine)",
+       1
+      ],
+      "friendship": [
+       "Mars regards Venus as neutral",
+       0
+      ],
+      "lordship": [
+       "rules 5, 10",
+       1
+      ],
+      "placement": [
+       "natal house 2",
+       0
+      ],
+      "dignity": [
+       "natal Leo",
+       0
+      ],
+      "t_house": [
+       "transit Leo, house 2",
+       0
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "Jupiter on natal Mars",
+       1
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Mercury/Rahu/Jupiter/Venus/Rahu",
+     "lord": "Rahu",
+     "parent": "Venus",
+     "frm": "Thu 17 Dec 2026 02:57",
+     "to": "Sun 20 Dec 2026 05:28",
+     "total": -2,
+     "static": -2,
+     "transit": 0,
+     "verdict": "hurts",
+     "factors": {
+      "relation": [
+       "Rahu is 6th from Venus (6/8)",
+       -1
+      ],
+      "friendship": [
+       "Rahu: node, neutral",
+       0
+      ],
+      "lordship": [
+       "via dispositor Mercury: rules 3, 12",
+       -1
+      ],
+      "placement": [
+       "natal house 3",
+       0
+      ],
+      "dignity": [
+       "natal Virgo",
+       0
+      ],
+      "t_house": [
+       "transit Capricorn, house 7",
+       1
+      ],
+      "t_malefic": [
+       "Saturn aspects natal Rahu (Virgo)",
+       -1
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Mercury/Rahu/Jupiter/Venus/Jupiter",
+     "lord": "Jupiter",
+     "parent": "Venus",
+     "frm": "Sun 20 Dec 2026 05:28",
+     "to": "Tue 22 Dec 2026 23:42",
+     "total": 1,
+     "static": 1,
+     "transit": 0,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Jupiter is 7th from Venus (kendra)",
+       1
+      ],
+      "friendship": [
+       "Jupiter regards Venus as enemy",
+       -1
+      ],
+      "lordship": [
+       "rules 6, 9",
+       0
+      ],
+      "placement": [
+       "natal house 4",
+       1
+      ],
+      "dignity": [
+       "natal Libra",
+       0
+      ],
+      "t_house": [
+       "transit Leo, house 2",
+       0
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Mercury/Rahu/Jupiter/Venus/Saturn",
+     "lord": "Saturn",
+     "parent": "Venus",
+     "frm": "Tue 22 Dec 2026 23:42",
+     "to": "Sat 26 Dec 2026 06:21",
+     "total": 2,
+     "static": 0,
+     "transit": 2,
+     "verdict": "helps",
+     "factors": {
+      "relation": [
+       "Saturn is with Venus",
+       0
+      ],
+      "friendship": [
+       "Saturn regards Venus as friend",
+       1
+      ],
+      "lordship": [
+       "rules 7, 8",
+       -1
+      ],
+      "placement": [
+       "natal house 10",
+       1
+      ],
+      "dignity": [
+       "natal Aries (debilitated)",
+       -1
+      ],
+      "t_house": [
+       "transit Pisces, house 9",
+       1
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "Jupiter aspects natal Saturn",
+       1
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Mercury/Rahu/Jupiter/Venus/Mercury",
+     "lord": "Mercury",
+     "parent": "Venus",
+     "frm": "Sat 26 Dec 2026 06:21",
+     "to": "Tue 29 Dec 2026 04:43",
+     "total": -4,
+     "static": -1,
+     "transit": -3,
+     "verdict": "hurts",
+     "factors": {
+      "relation": [
+       "Mercury is 2nd from Venus (2/12)",
+       -1
+      ],
+      "friendship": [
+       "Mercury regards Venus as friend",
+       1
+      ],
+      "lordship": [
+       "rules 3, 12",
+       -1
+      ],
+      "placement": [
+       "natal house 11",
+       0
+      ],
+      "dignity": [
+       "natal Taurus",
+       0
+      ],
+      "t_house": [
+       "transit Sagittarius, house 6",
+       -1
+      ],
+      "t_malefic": [
+       "Saturn aspects natal Mercury (Taurus)",
+       -1
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "combust",
+       -1
+      ]
+     }
+    },
+    {
+     "path": "Mercury/Rahu/Jupiter/Venus/Ketu",
+     "lord": "Ketu",
+     "parent": "Venus",
+     "frm": "Tue 29 Dec 2026 04:43",
+     "to": "Wed 30 Dec 2026 09:42",
+     "total": 0,
+     "static": 0,
+     "transit": 0,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Ketu is 12th from Venus (2/12)",
+       -1
+      ],
+      "friendship": [
+       "Ketu: node, neutral",
+       0
+      ],
+      "lordship": [
+       "via dispositor Jupiter: rules 6, 9",
+       0
+      ],
+      "placement": [
+       "natal house 9",
+       1
+      ],
+      "dignity": [
+       "natal Pisces",
+       0
+      ],
+      "t_house": [
+       "transit Cancer, house 1",
+       1
+      ],
+      "t_malefic": [
+       "Saturn on natal Ketu (Pisces); Mars aspects natal Ketu (Pisces)",
+       -1
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Mercury/Rahu/Jupiter/Sun/Sun",
+     "lord": "Sun",
+     "parent": "Sun",
+     "frm": "Wed 30 Dec 2026 09:42",
+     "to": "Wed 30 Dec 2026 17:09",
+     "total": -1,
+     "static": 1,
+     "transit": -2,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Sun is with Sun",
+       0
+      ],
+      "friendship": [
+       "Sun regards Sun as neutral",
+       0
+      ],
+      "lordship": [
+       "rules 2",
+       1
+      ],
+      "placement": [
+       "natal house 11",
+       0
+      ],
+      "dignity": [
+       "natal Taurus",
+       0
+      ],
+      "t_house": [
+       "transit Sagittarius, house 6",
+       -1
+      ],
+      "t_malefic": [
+       "Saturn aspects natal Sun (Taurus)",
+       -1
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Mercury/Rahu/Jupiter/Sun/Moon",
+     "lord": "Moon",
+     "parent": "Sun",
+     "frm": "Wed 30 Dec 2026 17:09",
+     "to": "Thu 31 Dec 2026 05:34",
+     "total": 3,
+     "static": 4,
+     "transit": -1,
+     "verdict": "helps",
+     "factors": {
+      "relation": [
+       "Moon is 11th from Sun (3/11)",
+       1
+      ],
+      "friendship": [
+       "Moon regards Sun as friend",
+       1
+      ],
+      "lordship": [
+       "rules 1",
+       1
+      ],
+      "placement": [
+       "natal house 9",
+       1
+      ],
+      "dignity": [
+       "natal Pisces",
+       0
+      ],
+      "t_house": [
+       "transit Virgo, house 3",
+       0
+      ],
+      "t_malefic": [
+       "Saturn on natal Moon (Pisces); Mars aspects natal Moon (Pisces)",
+       -1
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Mercury/Rahu/Jupiter/Sun/Mars",
+     "lord": "Mars",
+     "parent": "Sun",
+     "frm": "Thu 31 Dec 2026 05:34",
+     "to": "Thu 31 Dec 2026 14:16",
+     "total": 4,
+     "static": 3,
+     "transit": 1,
+     "verdict": "helps",
+     "factors": {
+      "relation": [
+       "Mars is 4th from Sun (kendra)",
+       1
+      ],
+      "friendship": [
+       "Mars regards Sun as friend",
+       1
+      ],
+      "lordship": [
+       "rules 5, 10",
+       1
+      ],
+      "placement": [
+       "natal house 2",
+       0
+      ],
+      "dignity": [
+       "natal Leo",
+       0
+      ],
+      "t_house": [
+       "transit Leo, house 2",
+       0
+      ],
+      "t_malefic": [
+       "none",
+       0
+      ],
+      "t_jupiter": [
+       "Jupiter on natal Mars",
+       1
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    },
+    {
+     "path": "Mercury/Rahu/Jupiter/Sun/Rahu",
+     "lord": "Rahu",
+     "parent": "Sun",
+     "frm": "Thu 31 Dec 2026 14:16",
+     "to": "Fri 01 Jan 2027 12:37",
+     "total": 0,
+     "static": 0,
+     "transit": 0,
+     "verdict": "mixed",
+     "factors": {
+      "relation": [
+       "Rahu is 5th from Sun (trine)",
+       1
+      ],
+      "friendship": [
+       "Rahu: node, neutral",
+       0
+      ],
+      "lordship": [
+       "via dispositor Mercury: rules 3, 12",
+       -1
+      ],
+      "placement": [
+       "natal house 3",
+       0
+      ],
+      "dignity": [
+       "natal Virgo",
+       0
+      ],
+      "t_house": [
+       "transit Capricorn, house 7",
+       1
+      ],
+      "t_malefic": [
+       "Saturn aspects natal Rahu (Virgo)",
+       -1
+      ],
+      "t_jupiter": [
+       "none",
+       0
+      ],
+      "t_condition": [
+       "plain",
+       0
+      ]
+     }
+    }
+   ]
+  }
+ },
+ "natal": {
+  "USA": {
+   "asc": "Scorpio",
+   "planets": {
+    "Sun": "Gemini (house 8)",
+    "Moon": "Aquarius (house 4)",
+    "Mercury": "Cancer (house 9)",
+    "Venus": "Gemini (house 8)",
+    "Mars": "Gemini (house 8)",
+    "Jupiter": "Gemini (house 8)",
+    "Saturn": "Virgo (house 11)",
+    "Rahu": "Cancer (house 9)",
+    "Ketu": "Capricorn (house 3)"
+   },
+   "owns": {
+    "Mars": [
+     1,
+     6
+    ],
+    "Venus": [
+     7,
+     12
+    ],
+    "Mercury": [
+     8,
+     11
+    ],
+    "Moon": [
+     9
+    ],
+    "Sun": [
+     10
+    ],
+    "Jupiter": [
+     2,
+     5
+    ],
+    "Saturn": [
+     3,
+     4
+    ]
+   }
+  },
+  "NYSE": {
+   "asc": "Cancer",
+   "planets": {
+    "Sun": "Taurus (house 11)",
+    "Moon": "Pisces (house 9)",
+    "Mercury": "Taurus (house 11)",
+    "Venus": "Aries (house 10)",
+    "Mars": "Leo (house 2)",
+    "Jupiter": "Libra (house 4)",
+    "Saturn": "Aries (house 10)",
+    "Rahu": "Virgo (house 3)",
+    "Ketu": "Pisces (house 9)"
+   },
+   "owns": {
+    "Mars": [
+     5,
+     10
+    ],
+    "Venus": [
+     4,
+     11
+    ],
+    "Mercury": [
+     3,
+     12
+    ],
+    "Moon": [
+     1
+    ],
+    "Sun": [
+     2
+    ],
+    "Jupiter": [
+     6,
+     9
+    ],
+    "Saturn": [
+     7,
+     8
+    ]
+   }
+  }
+ }
+}

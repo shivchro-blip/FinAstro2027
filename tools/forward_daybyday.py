@@ -16,7 +16,7 @@ For each day:
     picks, the robust volatility factors and Model v1.0 (gold);
   * USA and NYSE dashas at all five levels (and any change that day), the condition of each running lord,
     gochara, Chandra bala and Tara bala;
-  * the NYSE author's forecasts that cover the day, his transit rules active, and the Mars-Jupiter-node lead;
+  * Solar return (the NYSE monthly solar-return astrologer): forecasts covering the day, transit rules active, and the Mars-Jupiter-node lead;
   * the combined probability (tools/combined_probability.py) for each market: up that day, up over the next
     5 sessions, a big day - from all layers and from the kept layers, fitted on 2000 - 23 Nov 2026.
 Writes build/pdfref/daybyday_<start>_to_<end>_ET.{html,json}. Market prices and astrology only.
@@ -175,7 +175,7 @@ def windows_on(d):
 
 
 def author_rules(d):
-    """The NYSE author's transit rules, evaluated as tools/author_forecasts.py tests them (19:00 UT)."""
+    """Solar return transit rules, evaluated as tools/author_forecasts.py tests them (19:00 UT)."""
     fl_s = swe.FLG_SWIEPH | swe.FLG_SIDEREAL | swe.FLG_SPEED
     jd = swe.julday(d.year, d.month, d.day, 19)
     B = {"Sun": swe.SUN, "Mercury": swe.MERCURY, "Venus": swe.VENUS, "Mars": swe.MARS, "Jupiter": swe.JUPITER, "Rahu": swe.MEAN_NODE, "Uranus": swe.URANUS}
@@ -186,13 +186,13 @@ def author_rules(d):
 
     def sep(a, b):
         return abs((a - b + 180) % 360 - 180)
-    conds = {"Sun square Mars (within 3°) – his bearish": abs(sep(x["Sun"], x["Mars"]) - 90) < 3,
-             "Sun square Mars with Mars-Ketu within 8° – his bearish": abs(sep(x["Sun"], x["Mars"]) - 90) < 3 and sep(x["Mars"], x["Ketu"]) < 8,
-             "Mars conjunct Ketu (within 5°) – his disruption": sep(x["Mars"], x["Ketu"]) < 5,
-             "Jupiter sextile Venus (within 2°) – his bullish": abs(sep(x["Jupiter"], x["Venus"]) - 60) < 2,
-             "Mars square Uranus (within 3°) – his volatility": abs(sep(x["Mars"], x["Uranus"]) - 90) < 3,
+    conds = {"Sun square Mars (within 3°) – Solar return: bearish": abs(sep(x["Sun"], x["Mars"]) - 90) < 3,
+             "Sun square Mars with Mars-Ketu within 8° – Solar return: bearish": abs(sep(x["Sun"], x["Mars"]) - 90) < 3 and sep(x["Mars"], x["Ketu"]) < 8,
+             "Mars conjunct Ketu (within 5°) – Solar return: disruption": sep(x["Mars"], x["Ketu"]) < 5,
+             "Jupiter sextile Venus (within 2°) – Solar return: bullish": abs(sep(x["Jupiter"], x["Venus"]) - 60) < 2,
+             "Mars square Uranus (within 3°) – Solar return: volatility": abs(sep(x["Mars"], x["Uranus"]) - 90) < 3,
              "Mars retrograde": mars_spd < 0,
-             "Mercury in Pisces, tropical – his unfavourable": int(mer_t // 30) == 11,
+             "Mercury in Pisces, tropical – Solar return: unfavourable": int(mer_t // 30) == 11,
              "Mercury in Pisces, sidereal": int(x["Mercury"] // 30) == 11}
     detail = f"Sun–Mars {sep(x['Sun'], x['Mars']):.1f}°, Mars–Ketu {sep(x['Mars'], x['Ketu']):.1f}°, Jupiter–Venus {sep(x['Jupiter'], x['Venus']):.1f}°, Mars–Uranus {sep(x['Mars'], x['Uranus']):.1f}°"
     return [k for k, v in conds.items() if v], detail
@@ -266,6 +266,13 @@ def main():
     seq = {n: {lv: DT.sequence(DT.CHARTS[n], lv, dt.datetime.combine(a, dt.time(0), ET), dt.datetime.combine(b + dt.timedelta(days=1), dt.time(0), ET))
                for lv in (1, 2, 3, 4)} for n in charts}
     AF = load(ROOT / "tools" / "author_forecasts.py", "afm")
+    DC = load(ROOT / "tools" / "dasha_combinations.py", "dcm")
+    dnat = {n: DC.natal(n) for n in charts}
+    dctest = {}
+    if (OUT / "dasha_combinations_ET.json").exists():
+        for t in json.load(open(OUT / "dasha_combinations_ET.json"))["tests"]:
+            if t["level"] == "Prana" and "chain" in t["group"]:
+                dctest[(t["chart"], "hurts" if "hurts" in t["group"] else "helps")] = t
     atests = json.load(open(OUT / "author_forecasts_ET.json"))["tests"]
     nyse = json.load(open(OUT / "nyse_usa_charts_ET.json"))
     ts = json.load(open(OUT / "trigger_study_2000-2026_ET.json"))
@@ -294,6 +301,14 @@ def main():
             changes = [f"{DT.LEVELS[lv]} → {path} at {s.astimezone(ET):%H:%M ET}" for lv in (1, 2, 3, 4) for path, s, e in seq[n][lv]
                        if s.astimezone(ET).date() == d]
             dash[n] = dict(lords=lords, changes=changes, state=ved[f"{n} dasha"], gochara=ved[f"{n} gochara"], chandra=ved[f"{n} chandra"], tara=ved[f"{n} tara"])
+        dch = {}
+        for n in charts:
+            cc = DC.chain(n, dt.datetime(d.year, d.month, d.day, 12, 30, tzinfo=ET).astimezone(UTC), dnat[n])
+            sc_ = DC.chain_score(cc)
+            dch[n] = dict(score=sc_, reading="hurts" if sc_ <= -3 else "helps" if sc_ >= 3 else "mixed",
+                          levels=[dict(level=c["level"], lord=c["lord"], parent=c["parent"], total=c["total"], verdict=c["verdict"],
+                                       to=c["to"].astimezone(ET).strftime("%d %b %H:%M"),
+                                       why=[f"{t} ({'+' if v > 0 else '−'})" for k, (t, v) in c["factors"].items() if v]) for c in cc])
         arules, adetail = author_rules(d)
         aforecasts = []
         for f in AF.FORECASTS:
@@ -341,10 +356,10 @@ def main():
                          positions=pos, panchang=pan, changes=sky_ev.get(d, []), rules=rules, tally=tally, calendar=cal.get(d, []),
                          signals=sig, watch=watch, windows=windows_on(d), vol={mk: vol_names[mk][d] for mk in vol_names},
                          v1=dict(S=r1["S"], V=r1["V"], bias=r1["bias"], confidence=r1["confidence"], agree=r1["agree"], against=r1["against"]),
-                         shadbala=sb, dasha=dash, jupven=ved["jup-ven"], author=dict(rules=arules, detail=adetail, forecasts=aforecasts),
+                         shadbala=sb, dasha=dash, chain=dch, jupven=ved["jup-ven"], author=dict(rules=arules, detail=adetail, forecasts=aforecasts),
                          mjn=mjn, prob=prob))
         d += dt.timedelta(days=1)
-    res = dict(start=str(a), end=str(b), fit_end=str(fit_end), days=days, atests=atests, solar_month=nyse["forecast"],
+    res = dict(start=str(a), end=str(b), fit_end=str(fit_end), days=days, dctest={f"{k[0]} {k[1]}": v for k, v in dctest.items()}, atests=atests, solar_month=nyse["forecast"],
                mjn=dict(episodes=len(mjn_hist), falls15=falls15, base=ts["mjn_base"]), kept={mk: cj["markets"][mk]["kept"] for mk in MKS},
                skill={mk: {t: cj["markets"][mk]["walk_forward"][t] for t in CP.TARGETS} for mk in MKS})
     if any("actual" in pr for x in days for pr in x["prob"].values()):
@@ -402,12 +417,14 @@ def score(days, AF):
                     both(f"{n} gochara", mk, {"favourable": 1, "adverse": -1}.get(st[f"{n} gochara"], 0), ac)
                     both(f"{n} Chandra bala", mk, 1 if st[f"{n} chandra"] == "good" else -1, ac)
                     both(f"{n} Tara bala", mk, {"good": 1, "bad": -1}.get(st[f"{n} tara"], 0), ac)
-                both("Author: day-by-day forecasts", mk, {"up": 1, "down": -1}.get(fdays.get(d), 0), ac)
-                both("Author: solar-month view (bearish)", mk, -1, ac)
+                both("Solar return: day-by-day forecasts", mk, {"up": 1, "down": -1}.get(fdays.get(d), 0), ac)
+                both("Solar return: month view (bearish)", mk, -1, ac)
                 ar = x["author"]["rules"]
-                both("Author: Jupiter sextile Venus (bullish)", mk, 1 if any(r.startswith("Jupiter sextile Venus") for r in ar) else 0, ac)
-                both("Author: Sun square Mars (bearish)", mk, -1 if any(r.startswith("Sun square Mars (") for r in ar) else 0, ac)
+                both("Solar return: Jupiter sextile Venus (bullish)", mk, 1 if any(r.startswith("Jupiter sextile Venus") for r in ar) else 0, ac)
+                both("Solar return: Sun square Mars (bearish)", mk, -1 if any(r.startswith("Sun square Mars (") for r in ar) else 0, ac)
                 both("Mars-Jupiter-node lead (bearish)", mk, -1 if x["mjn"] else 0, ac)
+                for n in ("USA", "NYSE"):
+                    both(f"{n} dasha chain, classical reading (Pratyantar + Sookshma + Prana)", mk, {"hurts": -1, "helps": 1}.get(x["chain"][n]["reading"], 0), ac)
             B = big[mk]
             (B["pbig"] if ac["big"] else B["poth"]).append(pr["all"]["big"])
             w = any(v["market"] == mk for v in x["watch"])
@@ -536,7 +553,7 @@ details details{margin:4px 0} details details>summary{cursor:pointer;color:#0969
     # standing items
     sm = res["solar_month"]
     o.append("<h2>Standing through the period</h2><ul>")
-    o.append(f"<li><b>NYSE author, solar month {E(sm['month'])}:</b> {E(sm['text'])} (from {sm['start_level']}).</li>")
+    o.append(f"<li><b>Solar return, NYSE month {E(sm['month'])}:</b> {E(sm['text'])} (from {sm['start_level']}).</li>")
     m = res["mjn"]
     mj = [x["date"] for x in res["days"] if x["mjn"]]
     if mj:
@@ -559,7 +576,7 @@ details details{margin:4px 0} details details>summary{cursor:pointer;color:#0969
     o.append("<h2>Overview</h2><div class='wrap'><table class='ov'><thead><tr><th>Date</th><th>Moon / tithi</th><th>Main sky changes</th>")
     for mk in MKS:
         o.append(f"<th>{NAME[mk]}<br><span class='s'>table · P(up) · P(5d up) · P(big)</span></th>")
-    o.append("<th>Dashas, author, watch</th></tr></thead><tbody>")
+    o.append("<th>Dashas, Solar return, watch</th></tr></thead><tbody>")
     for x in res["days"]:
         we = x["weekday"] in ("Sat", "Sun")
         cls = "w" if we else "x" if x["closed"] or x["early"] else ""
@@ -580,8 +597,9 @@ details details{margin:4px 0} details details>summary{cursor:pointer;color:#0969
         notes = []
         for n in ("USA", "NYSE"):
             notes += [f"{n}: {c}" for c in x["dasha"][n]["changes"] if not c.startswith("Prana")]
-        notes += [f"Author: {f.split(': ', 1)[1]}" for f in x["author"]["forecasts"] if "this day" in f]
-        notes += [f"Author rule: {r.split(' – ')[0]}" for r in x["author"]["rules"] if "retrograde" not in r and "Pisces" not in r]
+        notes += [f"{n} dasha chain {x['chain'][n]['score']:+d} ({x['chain'][n]['reading']})" for n in ("USA", "NYSE") if x["chain"][n]["reading"] != "mixed"]
+        notes += [f"Solar return: {f.split(': ', 1)[1]}" for f in x["author"]["forecasts"] if "this day" in f]
+        notes += [f"Solar return rule: {r.split(' – ')[0]}" for r in x["author"]["rules"] if "retrograde" not in r and "Pisces" not in r]
         for w in x["watch"]:
             t = f"Watch ({w['market']}): " + w["factor"].replace("Rule: ", "").replace("Event: ", "").split(" [")[0]
             if t not in notes:
@@ -637,6 +655,17 @@ details details{margin:4px 0} details details>summary{cursor:pointer;color:#0969
                          f"<td class='n'>{'' if L['score'] is None else format(L['score'], '+d')}</td></tr>")
         dsum = "; ".join(f"{n}: dasha {dd['state']}, gochara {dd['gochara']}, Chandra bala {dd['chandra']}, Tara bala {dd['tara']}" + (f"; changes: {', '.join(dd['changes'])}" if dd["changes"] else "")
                          for n, dd in x["dasha"].items())
+        crow = ""
+        for n, cdat in x["chain"].items():
+            for L in cdat["levels"]:
+                cl = "r" if L["verdict"] == "hurts" else "g" if L["verdict"] == "helps" else ""
+                crow += (f"<tr><td>{n}</td><td>{L['level']}</td><td><b>{L['lord']}</b> under {L['parent']} <span class='s'>(to {L['to']})</span></td>"
+                         f"<td class='n {cl}'>{L['total']:+d}</td><td class='{cl}'>{L['verdict']}</td><td class='s'>{E('; '.join(L['why']))}</td></tr>")
+        hist = "; ".join(f"{k}: S&P {v['mean']:+.1f}%/yr vs {v['base']:+.1f}% on all days (t {v['t']})" for k, v in res.get("dctest", {}).items())
+        csum = "; ".join(f"{n}: chain score {c['score']:+d} → {c['reading']}" for n, c in x["chain"].items())
+        o.append(f"<details><summary>Dasha chain read classically: {E(csum)}</summary><p class='s'>Each lord judged against its parent lord, the natal chart and its transit "
+                 f"(tools/dasha_combinations.py); the chain score adds the Pratyantar, Sookshma and Prana scores (hurts ≤ −3, helps ≥ +3). Since 1928: {E(hist) or 'run tools/dasha_combinations.py'}.</p>"
+                 f"<div class='wrap'><table><thead><tr><th>Chart</th><th>Level</th><th>Lord</th><th>Score</th><th>Reading</th><th>Factors that count</th></tr></thead><tbody>{crow}</tbody></table></div></details>")
         o.append(f"<details><summary>USA and NYSE dashas and the transits of their lords</summary><p class='s'>{E(dsum)}</p><div class='wrap'><table><thead><tr><th>Chart</th><th>Level</th>"
                  f"<th>Lord</th><th>Period</th><th>Transit (house from ascendant / Moon)</th><th>Condition score</th></tr></thead><tbody>{drow}</tbody></table></div></details>")
         # rules
@@ -674,15 +703,15 @@ details details{margin:4px 0} details details>summary{cursor:pointer;color:#0969
         if x["mjn"]:
             other.append(f"<li><b>Mars and Jupiter with {x['mjn']}:</b> the crash lead is active.</li>")
         if x["author"]["forecasts"]:
-            other.append("<li><b>NYSE author's forecasts covering the day:</b> " + E(" | ".join(x["author"]["forecasts"])) + "</li>")
+            other.append("<li><b>Solar return forecasts covering the day:</b> " + E(" | ".join(x["author"]["forecasts"])) + "</li>")
         ar = []
         for r in x["author"]["rules"]:
             t = res["atests"].get(r)
             ar.append(r + (f" (since 1928: next 5 sessions up {t['up5']}% vs {t['exp5']}%, p {t['p5']}; big days {t['big']} vs {t['exp_big']})" if t else ""))
-        other.append(f"<li><b>Author's transit rules active:</b> {E('; '.join(ar) or 'none')}. <span class='s'>{E(x['author']['detail'])}</span></li>")
+        other.append(f"<li><b>Solar return transit rules active:</b> {E('; '.join(ar) or 'none')}. <span class='s'>{E(x['author']['detail'])}</span></li>")
         o.append("<h3>Other analyses</h3><ul>" + "".join(other) + "</ul></details>")
     o.append("<p class='s'>Sources: catalogue rules (TA, KD, the 2026 document, the user's notes, Brihat Samhita), the 2027/2026 calendar layer, the backtests and tables "
-             "in PROJECT_KNOWLEDGE.md, Model v1.0, the USA/NYSE charts and dashas, the NYSE author's material, and classical gochara / Chandra bala / Tara bala "
+             "in PROJECT_KNOWLEDGE.md, Model v1.0, the USA/NYSE charts and dashas, the Solar return material (NYSE monthly solar returns), and classical gochara / Chandra bala / Tara bala "
              "(included at the user's request). Dasha levels below Antardasha depend on birth times known to the hour or not at all.</p></body></html>")
     return "".join(o)
 

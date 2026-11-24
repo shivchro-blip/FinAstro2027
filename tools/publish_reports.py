@@ -64,10 +64,11 @@ SECTIONS = [
     ("Stock market: S&P 500 and BSE Sensex, 2000-2026", [
         (B + "market_signals_2026-11-23_to_2027-12-31_ET.html", "S&P 500 and Sensex bullish / bearish days to end-2027", "Two simple tables: dates, signal, strength, why, and each rule's 26-year record on both indices."),
         (B + "model_check_60d_ET.html", "Our model over the last 60 days", "Every label of the gold, silver, S&P and Sensex tables rebuilt for each past day, against the actual moves."),
-        (B + "combined_probability_60d_ET.html", "All layers together: daily probabilities, last 60 days", "Tables, Model v1.0, dashas, gochara, Chandra and Tara bala and the author's aspect joined into one probability per day (up today, up over 5 sessions, big day), scored on the last 60 days and on 2013-2026."),
+        (B + "combined_probability_60d_ET.html", "All layers together: daily probabilities, last 60 days", "Tables, Model v1.0, dashas, gochara, Chandra and Tara bala and the Solar return aspect joined into one probability per day (up today, up over 5 sessions, big day), scored on the last 60 days and on 2013-2026."),
+        (B + "dasha_combinations_ET.html", "Dasha combinations (Antar → Pratyantar → Sookshma → Prana) read against the USA and NYSE charts", "Each lord judged against its parent, the natal chart and its transit; which combinations hurt or help, tested on the S&P since 1928, and the coming combinations."),
         (B + "dasha_transits_ET.html", "USA and NYSE dashas (five levels) with transits", "Maha / Antar / Pratyantar / Sookshma / Prana now, the transits of each dasha lord, Pratyantar and Sookshma timelines with S&P moves, and a 1928-2026 test of the lords."),
-        (B + "author_forecasts_ET.html", "NYSE solar-return author: forecast scorecard and his rules tested", "Every forecast he made, scored against the S&P; his transit statements checked; his aspect rules tested 1928-2026."),
-        (B + "nyse_usa_charts_ET.html", "NYSE and USA charts; NYSE monthly solar-return technique tested", "NYSE (1792) and USA (1776) natal charts, transits now, monthly solar-return charts (author's tropical and our sidereal) and a 98-year S&P backtest of the technique."),
+        (B + "author_forecasts_ET.html", "Solar return: forecast scorecard and rules tested", "Every Solar return forecast scored against the S&P; the transit statements checked; the aspect rules tested 1928-2026."),
+        (B + "nyse_usa_charts_ET.html", "NYSE and USA charts; NYSE monthly solar-return technique tested", "NYSE (1792) and USA (1776) natal charts, transits now, monthly solar-return charts (Solar return's tropical version and our sidereal one) and a 98-year S&P backtest of the technique."),
         (B + "rule_tally_ET.html", "What the planets said on 20 and 23 Nov (rule tally)", "Net of active rules with a good record per day, and a walk-forward test of the tally."),
         (B + "trigger_study_2000-2026_ET.html", "Fall / rise triggers and the market event log", "The conditions of 20 and 23 Nov 2026 tested day by day 2000-2026 on five markets; Mars-Jupiter-node episodes since 1928; a running log of big days with prices and sky."),
         (B + "market_summary_2000-2026_ET.html", "Market findings (start here)", "Direction rules vs big days for both indices, the robust factors and their dates to end-2027."),
@@ -98,7 +99,7 @@ def main():
     if days:                                       # the most recent day report (tools/day_report.py)
         SECTIONS[0][1].insert(1, (B + days[-1].name, f"Day report {days[-1].name[11:21]}", "Planet positions, every active rule with its 26-year record, our signals and what markets did."))
     for f in sorted((ROOT / B).glob("daybyday_*_ET.html")):            # the latest day-by-day forward page (tools/forward_daybyday.py)
-        SECTIONS[0][1].insert(0, (B + f.name, f"Day by day {f.name[9:19]} to {f.name[23:33]}", "Every transit, every active rule with its record, the tables, dashas, author's view and the combined probability, for each day."))
+        SECTIONS[0][1].insert(0, (B + f.name, f"Day by day {f.name[9:19]} to {f.name[23:33]}", "Every transit, every active rule with its record, the tables, dashas, Solar return view and the combined probability, for each day."))
     now = dt.datetime.now(ZoneInfo("America/New_York"))
     log = json.load(open(ROOT / B / "analysis_log.json"))["entries"]
     blocks = []

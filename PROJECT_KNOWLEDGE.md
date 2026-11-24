@@ -20,7 +20,7 @@ The work is logged entry by entry in `build/pdfref/analysis_log.json`, which is 
 
 ## 2. User decisions (respect these in future work)
 
-- **NYSE and USA foundation charts and the NYSE monthly solar-return technique are in scope** (24 Nov 2026). The user shared an astrologer's charts and forecast. The technique is reconstructed in `tools/nyse_charts.py` and is tested both the author's way (tropical) and ours (sidereal Lahiri). The user will keep sending updates; add them to the same tool and report.
+- **NYSE and USA foundation charts and the NYSE monthly solar-return technique are in scope** (24 Nov 2026). The user shared an astrologer's charts and forecast; reports call this material **Solar return**. The technique is reconstructed in `tools/nyse_charts.py` and is tested both the Solar return way (tropical) and ours (sidereal Lahiri). The user will keep sending updates; add them to the same tool and report.
 
 - **Market prices and astrology only** (24 Nov 2026): news and fundamentals are not used or recorded. Explanations of market moves are astrological, and the market event log keeps prices, sky and conditions only.
 
@@ -88,12 +88,13 @@ Known data problems:
 | `tools/sky_changes.py START END` | Every planetary change in a date range, in ET and IST: sign, nakshatra, pada and navamsa changes; tithi, karana (Bhadra) and yoga; aspects beginning and ending; exact degree aspects; rule starts and ends with their 26-year status; a daily position table |
 | `tools/rule_tally.py [DATES]` | Net of active general-market rules with a good record per day, with a walk-forward test of the tally |
 | `tools/trigger_study.py [--log DATE]` | Tests candidate fall and rise conditions day by day 2000–2026 on the S&P 500, Nasdaq, Sensex, gold and silver (same-day move, same-year base); checks Mars–Jupiter-with-a-node episodes on the S&P since 1928; keeps the market event log `build/pdfref/market_event_log.json` (big days with prices, sky and conditions) |
-| `tools/nyse_charts.py` | NYSE (17 May 1792) and USA (4 Jul 1776, Sibly) natal charts, sidereal and tropical; transits to them; NYSE monthly solar returns (the author's tropical version and our sidereal one) with a 1928–2026 S&P backtest of the author's indications; the author's open forecasts |
-| `tools/author_forecasts.py` | Scorecard of the NYSE solar-return author's forecasts (kept in its FORECASTS list), astronomy check of his transit statements, and 1928–2026 S&P tests of his degree-aspect rules (all days and each episode once) |
+| `tools/nyse_charts.py` | NYSE (17 May 1792) and USA (4 Jul 1776, Sibly) natal charts, sidereal and tropical; transits to them; NYSE monthly solar returns (the Solar return tropical version and our sidereal one) with a 1928–2026 S&P backtest of the Solar return indications; the Solar return open forecasts |
+| `tools/author_forecasts.py` | Scorecard of the Solar return forecasts (kept in its FORECASTS list), astronomy check of the transit statements, and 1928–2026 S&P tests of the degree-aspect rules (all days and each episode once) |
 | `tools/dasha_transits.py [DATE]` | Vimshottari dashas of the USA and NYSE charts at all five levels (Maha, Antar, Pratyantar, Sookshma, Prana); the transit of each running lord; Pratyantar and Sookshma timelines with S&P moves; birth-time sensitivity; 1928–2026 S&P test of the lords |
 | `tools/model_check_60d.py [END]` | Our tables' labels rebuilt for each of the last 60 days (gold, silver, S&P, Sensex), against the actual moves |
 | `tools/combined_probability.py [END]` | Every layer joined into one probability per day (up today, up over 5 sessions, big day) by naive Bayes on log-odds; scored on the last 60 days and walk-forward 2013–2026. Caches `backtest/market_label_history.json.gz`; reads `backtest/{gold,silver}_label_history.json.gz` from `test_signal_table.py` |
-| `tools/forward_daybyday.py [START] [END]` | Day-by-day forward page. For each day it shows:<br>• all transits and changes (from `sky_changes.py`)<br>• every active catalogue rule with its record, and the calendar-layer rows<br>• the four tables, watch windows, outlook, agreement and fast triggers, robust factors and Model v1.0<br>• USA/NYSE dashas (5 levels) and lord transits, gochara, Chandra and Tara bala<br>• the author's forecasts and rules, and the Mars–Jupiter–node lead<br>• combined probabilities |
+| `tools/forward_daybyday.py [START] [END]` | Day-by-day forward page. For each day it shows:<br>• all transits and changes (from `sky_changes.py`)<br>• every active catalogue rule with its record, and the calendar-layer rows<br>• the four tables, watch windows, outlook, agreement and fast triggers, robust factors and Model v1.0<br>• USA/NYSE dashas (5 levels) and lord transits, gochara, Chandra and Tara bala<br>• the Solar return forecasts and rules, and the Mars–Jupiter–node lead<br>• combined probabilities |
+| `tools/dasha_combinations.py [START] [END]` | Classical reading of the USA and NYSE dasha chains. Each Antar, Pratyantar, Sookshma and Prana lord is judged on:<br>• its relation to the parent lord (6/8, 2/12 vs kendra, trine, 3/11)<br>• natural friendship<br>• the houses it rules and its natal house<br>• its dignity<br>• its transit (house, malefics or Jupiter on its natal sign, transit dignity)<br>Tested on the S&P 1928–2026, and lists the coming combinations. `chain()` and `chain_score()` are used by `forward_daybyday.py` |
 | `tools/gold_tracker.py [--metal silver]` | Trackers: findings, rule status, best-rule dates, analysis log |
 | `tools/build_year.py YEAR` | Astronomy layer for any year; 2000–2024 are git-ignored and rebuilt on demand |
 | `tools/fetch_prices.py` | Downloads GC=F and SI=F (Yahoo; the host must be allowed) |
@@ -122,7 +123,8 @@ Known data problems:
 | `market_signals_2026-11-23_to_2027-12-31_ET.html` | S&P 500 and Sensex signal tables |
 | `external_model_check_ET.html` | Outside-model check (23 Nov 2026) |
 | `nyse_usa_charts_ET.html` | NYSE / USA charts and the solar-return test. The shared chart image is kept in `Reference_materials/extracted/nyse_solar_return_charts_2026-10_2026-11.png` |
-| `author_forecasts_ET.html` | The author's forecast scorecard and rule tests |
+| `author_forecasts_ET.html` | The Solar return forecast scorecard and rule tests |
+| `dasha_combinations_ET.html` | Dasha combinations: classical reading, S&P test, coming periods |
 | `daybyday_<start>_to_<end>_ET.html` | Day-by-day forward page (currently 24 Nov – 31 Dec 2026) |
 | `combined_probability_60d_ET.html` | All layers joined into daily probabilities, scored |
 | `dasha_transits_ET.html`, `model_check_60d_ET.html` | Dashas with transits; the 60-day model check |
@@ -492,11 +494,11 @@ There are no TA S34 A9 windows between now and 31 Dec 2027.
 - **The technique, reconstructed from the charts:**
   - The NYSE natal Sun is 27°18' Taurus **tropical** (Buttonwood Agreement, 17 May 1792, morning).
   - Each solar month starts when the tropical Sun reaches 27°18' of the next sign. The charts are cast for New York: 20 Oct 2026 12:28 EDT and 19 Nov 2026 10:10 EST, both Capricorn rising.
-  - The author reads **tropical signs**: "debilitated ascendant lord Saturn" is Saturn in tropical Aries. In our sidereal Lahiri convention Saturn is in Pisces (not debilitated), the rising sign is Sagittarius, and Mars–Ketu fall in the 9th.
-- **The author's claims:**
+  - Solar return reads **tropical signs**: "debilitated ascendant lord Saturn" is Saturn in tropical Aries. In our sidereal Lahiri convention Saturn is in Pisces (not debilitated), the rising sign is Sagittarius, and Mars–Ketu fall in the 9th.
+- **The Solar return claims:**
   - 20 Oct – 18 Nov: two bearish indications (debilitated ascendant lord, Mars with Ketu in the 8th). The S&P went 7,690 → 7,320 (−4.8%).
   - 19 Nov – 18 Dec: both persist, but Venus in the 10th moderates. Forecast: further weakness, but a smaller net decline than −4.8%.
-- **98-year backtest (1,186 solar months, S&P 1928–2026), the author's version:**
+- **98-year backtest (1,186 solar months, S&P 1928–2026), the Solar return version:**
 
 | Indication | Months | S&P up | Average month vs other months |
 |---|---|---|---|
@@ -507,17 +509,17 @@ There are no TA S34 A9 windows between now and 31 Dec 2027.
 | Venus or Jupiter in the 10th | — | — | no moderating effect |
 
   - Sidereal version: nothing significant. Mars with Ketu in the 8th fell 5%+ in 3 of 11 months (27% vs 9.5%), but the sample is far too small to judge.
-  - **Verdict:** the author's monthly indications do not hold up over 98 years. Their bearish pair has, if anything, come before better months.
+  - **Verdict:** the Solar return monthly indications do not hold up over 98 years. Their bearish pair has, if anything, come before better months.
 - **Natal charts (sidereal):**
   - NYSE, 10:00 LMT: Cancer rising, Sun Taurus 6°, Saturn debilitated in Aries in the 10th.
   - USA, Sibly 17:10 LMT: Scorpio rising, Sun Gemini 22°, Moon Aquarius 6°.
 - **Transits now:** Mars, Jupiter and Ketu in Leo fall in the USA's 10th house, with Mars and Jupiter opposite the USA Moon. Transit Rahu is in the NYSE's 8th house. These are descriptive; no rule has been tested.
 - **Open forecast** (check on 19 Dec 2026): S&P net decline from 7,320 smaller than 4.8% over 19 Nov – 18 Dec.
 
-**The NYSE solar-return author's transit method and forecasts** (shared 24 Nov 2026), in `author_forecasts_ET.html`. His months start on the 18th or 19th (monthly NYSE solar returns), and he reads transits with degree aspects (square, sextile, conjunction).
+**Solar return: transit method and forecasts** (shared 24 Nov 2026), in `author_forecasts_ET.html`. Its months start on the 18th or 19th (monthly NYSE solar returns), and it reads transits with degree aspects (square, sextile, conjunction).
 - **Forecast scorecard, as of 23 Nov 2026:**
 
-| Period | His call | Result |
+| Period | Solar return call | Result |
 |---|---|---|
 | 20 Oct – 18 Nov | Bearish | **Right** (−4.8%) |
 | Week of 16 Nov | Lower Mon–Thu, Friday recovery | **4 of 5 days right** (Friday fell 3.7%) |
@@ -525,7 +527,7 @@ There are no TA S34 A9 windows between now and 31 Dec 2027.
 | 19 Nov – 18 Dec | Smaller decline than −4.8% | Open (−1.2% so far) |
 | Oct 2026 – Oct 2027 | Weak to spring 2027, bottom Mar–May, strong second half | Open |
 
-- **His transit statements, checked:**
+- **The Solar return transit statements, checked:**
   - Right:
     - Mars–Ketu conjunction (within 1° on 14–16 Nov 2026).
     - Sun square Mars–Ketu (exact about 19 Nov).
@@ -534,21 +536,21 @@ There are no TA S34 A9 windows between now and 31 Dec 2027.
   - Wrong date: Mars turns retrograde on **10 Jan 2027**, not in February.
   - Tropical only: Mercury in Pisces in February. Sidereally, Mercury is in Pisces only 5–21 Apr 2027.
   - Close, not within 1°: Mars is 1.6° from Ketu (true node; 2.9° by the mean node) when it stations direct on 1 Apr 2027.
-- **His aspect rules on the S&P, 1928–2026:**
-  - **Jupiter sextile Venus (his bullish):** next 5 sessions up 63.6% of 198 episodes, against 55.8% (p = 0.03). It works, modestly; it is the best of his rules.
+- **Solar return aspect rules on the S&P, 1928–2026:**
+  - **Jupiter sextile Venus (Solar return bullish):** next 5 sessions up 63.6% of 198 episodes, against 55.8% (p = 0.03). It works, modestly; it is the best of the Solar return rules.
   - **Sun square Mars:** no direction, but more big days (67 vs 51, p = 0.016). That fits volatility, not a fall.
   - **At chance:** Mars–Ketu conjunction, Mars square Uranus, Mercury in Pisces (either zodiac).
   - **Mars retrograde:** *fewer* big days than usual.
-- **His annual path against our S&P table:**
+- **The Solar return annual path against our S&P table:**
 
-| Period | His call | Our table (weekdays) |
+| Period | Solar return call | Our table (weekdays) |
 |---|---|---|
 | Nov 2026 – Feb 2027 | Weak | Bearish 34 vs bullish 10 |
 | Mar – May 2027 | Bottom | Turns bullish 24 vs 6, plus 18 volatile days |
 | Jun – Dec 2027 | Advance | Bullish 70 vs bearish 34 |
 
   - Independent agreement on the shape of the year, though our table's edge is small and unproven.
-  - Also independent: **Mars, Jupiter and Ketu meet again in Cancer, 9 Mar – 26 Apr 2027.** That is our Mars–Jupiter-node lead, and in 2009 and 2020 the bottom came within 3 sessions of such an episode ending. This one ends on 26 Apr, inside his Mar–May bottom window.
+  - Also independent: **Mars, Jupiter and Ketu meet again in Cancer, 9 Mar – 26 Apr 2027.** That is our Mars–Jupiter-node lead, and in 2009 and 2020 the bottom came within 3 sessions of such an episode ending. This one ends on 26 Apr, inside the Solar return Mar–May bottom window.
 
 **Our model over the last 60 days** (24 Sep – 23 Nov 2026), in `model_check_60d_ET.html`. Each table's label was rebuilt for every past day. A calendar-window fix was found and applied: "Three Saturdays in Shukla Paksha" is a whole-fortnight window, as it was backtested, not 5 sessions from its first day.
 
@@ -601,7 +603,7 @@ There are no TA S34 A9 windows between now and 31 Dec 2027.
     - Gochara of Jupiter, Saturn and Rahu from the natal Moon.
     - Chandra bala.
     - Tara bala.
-  - The author's Jupiter sextile Venus (S&P).
+  - The Solar return Jupiter sextile Venus (S&P).
 - **Classical layers:** gochara, Chandra bala and Tara bala are classical practice that our sources do not state. They are included at the user's request and flagged.
 - **Method:** naive Bayes on log-odds with 200-day shrinkage.
 
@@ -642,7 +644,7 @@ Results, as the share of calls right:
   - Mercury enters Sagittarius, 21 Dec.
   - Full Moon in Gemini, 23 Dec.
   - No eclipse.
-- **Author's rules:**
+- **Solar return rules:**
   - Jupiter sextile Venus (within 2°), 24 Nov – 1 Dec. Bullish over 5 sessions: 63.6% vs 55.8%, p 0.03.
   - Mars square Uranus, 27 Nov – 12 Dec. It showed no effect in its test.
 - **Combined probabilities for the S&P (base: 57% up over 5 sessions):**
@@ -678,11 +680,11 @@ Results, as the share of calls right:
 - **Why it splits this way:** our readings leaned bullish. Sensex rose, so they were right there; S&P, gold and silver fell, so they were wrong there.
 - **Right on the S&P:** the bearish readings.
   - Mars–Jupiter–node lead: 88% same day, 100% over 5 sessions.
-  - Author's Sun square Mars: 83%.
-  - Author's day forecasts: 67% (4 of 6).
+  - Solar return Sun square Mars: 83%.
+  - Solar return day forecasts: 67% (4 of 6).
   - USA dasha condition: 70% / 71%.
   - NYSE gochara: 62% / 75%.
-  - Author's bearish month view: 62% / 75%.
+  - Solar return bearish month view: 62% / 75%.
 - **Wrong on the S&P:**
   - Signal table: 29% / 18%.
   - Supported-rule tally: 40% / 25%.
@@ -691,7 +693,25 @@ Results, as the share of calls right:
   - Model v1.0 (gold): 46% / 18%.
   - Tara bala and Chandra bala: 33–55%.
 - **Big days:** the model's average big-day probability was no higher on the 5 big S&P days (3.3% vs 3.9%).
-- **Reading:** a few bearish signals hit in a falling month. Their success matches the market's down share, and some (the author's month view) were bearish on every day, so this is no evidence of skill. Over 16 sessions none of it is significant.
+- **Reading:** a few bearish signals hit in a falling month. Their success matches the market's down share, and some (the Solar return month view) were bearish on every day, so this is no evidence of skill. Over 16 sessions none of it is significant.
+
+**Dasha combinations read classically** (user request, 24 Nov 2026: "Antardasha → Pratyantar → Sookshma → Prana compared with the charts"; `dasha_combinations_ET.html`)
+
+- **Natal charts (sidereal, whole sign):**
+  - **USA:** Scorpio rising. Sun, Venus, Mars and Jupiter are in the 8th (Gemini); Mercury and Rahu in the 9th; Saturn in the 11th; Moon in the 4th.
+  - **NYSE:** Cancer rising. Sun and Mercury are in the 11th; Venus and Saturn in the 10th; Mars in the 2nd; Jupiter in the 4th; Moon and Ketu in the 9th.
+- **Method:** BPHS dasha principles. Each lord scores +1 or −1 on nine factors, and the factors and thresholds were fixed in advance.
+- **S&P test, 1928–2026:** 132 tests (2 charts × 4 levels × each factor, plus the combination and the daily chain).
+  - **None holds:** none points the classical way, passes q < 0.10 and agrees in both halves.
+  - **Direction is a coin toss:** 66 of 132 point the classical way.
+  - **The strongest results (|t| ≈ 2.5) point against the classical reading.** For example, USA Prana lords ruling dusthanas ran −3.9% a year against +7.8%, but in neither half was it significant.
+- **On 1–23 Nov:** the classical chain called "helps" through most of the fall.
+  - USA chain right 50% of days the same day, 30% over 5 sessions.
+  - NYSE chain right 43% / 17%.
+- **Coming:**
+  - USA: Saturn Pratyantar scores +3, "helps", which is the opposite of the −11% so far. Venus Sookshma −1 (to 9 Dec); Sun 0; Moon +2 (17–29 Dec).
+  - NYSE: Mercury Sookshma −2, "hurts" (14 Nov – 2 Dec; S&P −8.6% so far); Ketu −1; Venus +6, "helps" (9–30 Dec).
+  - Shown as illustrations: the test gives them no weight.
 
 **Model v1.0 (Ch.41 + Shadbala + Ashtakavarga), 6,572 trading days:**
 - The correlation of the scarcity index with the next 5 days is −0.002.
@@ -701,7 +721,7 @@ Results, as the share of calls right:
 ## 8. Open items
 
 - **External forecasts are tracked in `tools/author_forecasts.py`**: the week of 23–27 Nov (check 28 Nov), the solar month to 18 Dec (check 19 Dec), and the Oct 2026 – Oct 2027 path.
-- **External forecast to check on 19 Dec 2026:** the NYSE solar-return author expects a smaller net S&P decline over 19 Nov – 18 Dec 2026 than the previous month's −4.8% (from 7,320).
+- **External forecast to check on 19 Dec 2026:** Solar return expects a smaller net S&P decline over 19 Nov – 18 Dec 2026 than the previous month's −4.8% (from 7,320).
 
 - Brihat Samhita 41.12 has a translation ambiguity: Sastri reads "fetch good price and have great demand", another translation reads moderate prices and easy availability. Kept visible; V is not a stand-alone signal.
 - A rule for a stellium on the Sun (the January 2026 gap) has no source yet.

@@ -7,17 +7,17 @@ charts (book: "Investing in Stock Market with Vedic Astrology", Vol. II). Each s
 the Sun returns to the NYSE's natal Sun degree in the next sign; the chart is cast for New York.
 Reconstruction from the shared charts: the natal Sun is 27°18' Taurus TROPICAL (Buttonwood Agreement,
 17 May 1792, morning, New York), the returns fall when the tropical Sun is at 27°18' of each sign
-(20 Oct and 19 Nov 2026 confirmed), and the author reads tropical signs and houses (Capricorn rising,
+(20 Oct and 19 Nov 2026 confirmed), and Solar return reads tropical signs and houses (Capricorn rising,
 Saturn "debilitated" in Aries). Our convention is sidereal Lahiri, under which Saturn is in Pisces.
 Both versions are tested:
-  A  author's: returns at tropical 27°18' of each sign, tropical whole-sign houses from the New York ascendant;
+  A  Solar return's: returns at tropical 27°18' of each sign, tropical whole-sign houses from the New York ascendant;
   B  ours:     returns at the natal sidereal Sun degree (Lahiri) of each sign, sidereal whole-sign houses.
-Features read in each monthly chart (the author's stated indications): ascendant lord debilitated;
+Features read in each monthly chart (the indications Solar return states): ascendant lord debilitated;
 Mars with Ketu in the 8th; any of Mars / Saturn / Rahu / Ketu in the 8th; Sun in the 10th; Venus or
 Jupiter in the 10th; both bearish indications together. Outcome: S&P 500 from the last close before one
 return to the last close before the next, 1928-2026 (about 1,190 months), against all months.
 Also: the NYSE and USA (4 Jul 1776, 17:10 LMT Philadelphia, the Sibly time) natal charts, transits to them
-now, the next returns, and the author's open forecast for 19 Nov - 18 Dec 2026.
+now, the next returns, and the Solar return open forecast for 19 Nov - 18 Dec 2026.
 Writes build/pdfref/nyse_usa_charts_ET.{html,json}.
 """
 from __future__ import annotations
@@ -184,7 +184,7 @@ def main():
     for name, t, loc in (("NYSE (17 May 1792, 10:00 LMT, New York)", NATAL_NYSE, NY), ("USA (4 Jul 1776, 17:10 LMT, Philadelphia - Sibly)", NATAL_USA, PHILA)):
         x = jd(t)
         out["charts"][name] = dict(tropical=describe(chart(x, loc[0], loc[1], False), False), sidereal=describe(chart(x, loc[0], loc[1], True), True))
-    # this month's and the next returns (author's version and ours)
+    # this month's and the next returns (Solar return's version and ours)
     rets = {}
     for v, sid in (("A", False), ("B", True)):
         target = 27.3 if not sid else lon(jd(NATAL_NYSE), "Sun", True)[0] % 30
@@ -244,7 +244,7 @@ def write(out):
     for v, lst in out["returns"].items():
         for r in lst[:6]:
             p = {x["body"]: x for x in r["chart"]["rows"]}
-            rrows += (f"<tr><td>{'A (author, tropical)' if v == 'A' else 'B (ours, sidereal)'}</td><td class='w'>{r['start']}</td><td>{r['chart']['asc']} (lord {r['chart']['lagna_lord']})</td>"
+            rrows += (f"<tr><td>{'A (Solar return, tropical)' if v == 'A' else 'B (ours, sidereal)'}</td><td class='w'>{r['start']}</td><td>{r['chart']['asc']} (lord {r['chart']['lagna_lord']})</td>"
                       f"<td class='s'>8th: {', '.join(b for b in p if p[b]['house'] == 8) or '-'}; 10th: {', '.join(b for b in p if p[b]['house'] == 10) or '-'}</td><td class='s'>{html.escape('; '.join(r['flags']) or 'none')}</td></tr>")
     trows = "".join(f"<tr><td><b>{k}</b></td><td class='s'>{html.escape('; '.join(v))}</td></tr>" for k, v in out["transits"].items())
     A, B = out["versions"]["A"], out["versions"]["B"]
@@ -255,10 +255,10 @@ def write(out):
 From the shared charts: the natal Sun is 27°18' Taurus <b>tropical</b>, the returns fall when the tropical Sun is at 27°18' of each sign (20 Oct and 19 Nov 2026 confirmed), and the readings use tropical signs —
 Capricorn rising and Saturn "debilitated" in Aries. In our sidereal Lahiri convention Saturn is in Pisces (not debilitated), the rising sign is Sagittarius and Mars–Ketu fall in the 9th, so the two readings differ.</p>
 <h2>Backtest: does the monthly chart call the S&amp;P month? ({A['n']} months, 1928–2026)</h2>
-<h3>A. The author's version (tropical returns and houses)</h3>{ftable(A)}
+<h3>A. The Solar return version (tropical returns and houses)</h3>{ftable(A)}
 <h3>B. Our convention (sidereal Lahiri returns at the natal sidereal Sun, {B['target']}°, sidereal houses)</h3>{ftable(B)}
 <p class="s">Green / red: average month differs from the other months with |t| ≥ 2. All months together: up {A['up_all']}% of the time, average {A['mean_all']:+.2f}%.</p>
-<h2>The author's open forecast</h2>
+<h2>The Solar return open forecast</h2>
 <p class="m">{html.escape(fc['month'])}: “{html.escape(fc['text'])}”, from 7,320. Status: {html.escape(fc['status'])}.</p>
 <h2>This month's and the next return charts</h2>
 <div class="wrap"><table><thead><tr><th>Version</th><th>Return (ET)</th><th>Ascendant</th><th>8th and 10th houses</th><th>Indications present</th></tr></thead><tbody>{rrows}</tbody></table></div>

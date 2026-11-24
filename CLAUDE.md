@@ -10,6 +10,7 @@ Read `PROJECT_KNOWLEDGE.md` first. It holds the sources, conventions, user decis
 - Reports use US Eastern time (America/New_York). Calculations use sidereal Lahiri, mean node and whole-sign drishti.
 - Stock market work uses the S&P 500 and the BSE Sensex (user's choice, 23 Nov 2026), each scored in its own exchange time; the rule set is every catalogue rule tagged "general".
 - Analysis uses market prices and astrology only; news and fundamentals are not used or recorded (user, 24 Nov 2026).
+- Call the NYSE solar-return astrologer's material **Solar return** in reports, never "the author" (user, 24 Nov 2026).
 - Silver has no sign in Brihat Samhita Ch.41. Model v1.0 reports "Insufficient data" for silver.
 - Back every new rule or claim with a backtest using the method in `PROJECT_KNOWLEDGE.md` §6, and state results plainly, including when nothing works.
 - Log every analysis in `build/pdfref/analysis_log.json` and regenerate the trackers.
