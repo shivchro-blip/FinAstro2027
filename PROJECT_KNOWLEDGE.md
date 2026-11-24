@@ -92,6 +92,7 @@ Known data problems:
 | `tools/author_forecasts.py` | Scorecard of the NYSE solar-return author's forecasts (kept in its FORECASTS list), astronomy check of his transit statements, and 1928–2026 S&P tests of his degree-aspect rules (all days and each episode once) |
 | `tools/dasha_transits.py [DATE]` | Vimshottari dashas of the USA and NYSE charts at all five levels (Maha, Antar, Pratyantar, Sookshma, Prana); the transit of each running lord; Pratyantar and Sookshma timelines with S&P moves; birth-time sensitivity; 1928–2026 S&P test of the lords |
 | `tools/model_check_60d.py [END]` | Our tables' labels rebuilt for each of the last 60 days (gold, silver, S&P, Sensex), against the actual moves |
+| `tools/combined_probability.py [END]` | Every layer joined into one probability per day (up today, up over 5 sessions, big day) by naive Bayes on log-odds; scored on the last 60 days and walk-forward 2013–2026. Caches `backtest/market_label_history.json.gz`; reads `backtest/{gold,silver}_label_history.json.gz` from `test_signal_table.py` |
 | `tools/gold_tracker.py [--metal silver]` | Trackers: findings, rule status, best-rule dates, analysis log |
 | `tools/build_year.py YEAR` | Astronomy layer for any year; 2000–2024 are git-ignored and rebuilt on demand |
 | `tools/fetch_prices.py` | Downloads GC=F and SI=F (Yahoo; the host must be allowed) |
@@ -121,6 +122,7 @@ Known data problems:
 | `external_model_check_ET.html` | Outside-model check (23 Nov 2026) |
 | `nyse_usa_charts_ET.html` | NYSE / USA charts and the solar-return test. The shared chart image is kept in `Reference_materials/extracted/nyse_solar_return_charts_2026-10_2026-11.png` |
 | `author_forecasts_ET.html` | The author's forecast scorecard and rule tests |
+| `combined_probability_60d_ET.html` | All layers joined into daily probabilities, scored |
 | `dasha_transits_ET.html`, `model_check_60d_ET.html` | Dashas with transits; the 60-day model check |
 | `GOLD_TRACKER.html`, `SILVER_TRACKER.html` | Current status of every rule, best-rule dates, analysis log |
 | `REFERENCE_PDF_RULES.md`, `COMPLETION_REPORT.md`, `COVERAGE_AUDIT_GOLD_SILVER.md` | Rule lists and audits |
@@ -585,6 +587,42 @@ There are no TA S34 A9 windows between now and 31 Dec 2027.
   - The Antardashas need the hour.
   - Pratyantar, Sookshma and Prana need the minute, which neither chart has. Treat the smaller levels as illustrations.
 - **S&P test, 1928–2026:** no dasha lord at any level (Antar, Pratyantar, Sookshma) shows an S&P effect in either chart (all |t| < 2). Benefic and malefic periods do not differ.
+
+**All layers together as one probability** (`combined_probability_60d_ET.html`, user request 24 Nov 2026: "think like a pro Vedic astrologer").
+
+- **Layers used:**
+  - Our signal tables (all four markets).
+  - Model v1.0 (gold).
+  - Robust big-move factors (S&P, Sensex).
+  - For the S&P, on both the USA and NYSE charts:
+    - Dasha-lord condition (Antar + Pratyantar + Sookshma): dignity, house from the ascendant, combustion, Saturn/Mars/Jupiter influence, Shadbala.
+    - Gochara of Jupiter, Saturn and Rahu from the natal Moon.
+    - Chandra bala.
+    - Tara bala.
+  - The author's Jupiter sextile Venus (S&P).
+- **Classical layers:** gochara, Chandra bala and Tara bala are classical practice that our sources do not state. They are included at the user's request and flagged.
+- **Method:** naive Bayes on log-odds with 200-day shrinkage.
+
+Results, as the share of calls right:
+
+| Market | Last 60 days, all layers | 2013–2026, kept layers |
+|---|---|---|
+| S&P, 5 sessions | 64% of 25 calls (down calls 76% right in a market up only 31% of the time) | 55% |
+| S&P, today | 48% | 55% |
+| Sensex, today | 74% | 52% |
+| Sensex, 5 sessions | 68% | 54% |
+| Gold, 5 sessions | 55% of 11 calls (market up only 26% of the time) | 54% |
+| Silver | No calls: the weights for its table's bullish labels are near zero | 51% |
+
+- **What the 13-year walk-forward shows:**
+  - All layers together score *worse* than the base rate on every market (skill −0.2% to −0.6%). That is noise adding up.
+  - Layers kept because they helped on their own: +0.1% to +0.5% skill.
+  - The probabilities stay within a few points of the base rate (about 47–62%).
+- **Each Vedic layer on its own, 2013–2026:**
+  - Only the NYSE dasha condition (+0.02%) and NYSE gochara (+0.18%) helped the 5-session forecast, and only by tiny margins.
+  - USA dasha, USA gochara, Chandra bala and Tara bala did not help.
+  - For big days, no Vedic layer helped, and the S&P model gave 19–20 Nov a big-day probability of only 2.7–3.2%.
+- **Reading:** combined, our astrology gives probabilities that are honest but close to a coin with the market's natural upward lean. The good 60-day hit rates come mostly from bearish tables in falling markets.
 
 **Model v1.0 (Ch.41 + Shadbala + Ashtakavarga), 6,572 trading days:**
 - The correlation of the scarcity index with the next 5 days is −0.002.

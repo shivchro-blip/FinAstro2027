@@ -30,6 +30,7 @@ from __future__ import annotations
 
 import collections
 import datetime as dt
+import gzip
 import importlib.util
 import json
 import math
@@ -274,6 +275,10 @@ def main():
     days_wf = [dict(x) for x in days]
     classify(days_wf, leads1, fast1)
     wf = evaluate(days_wf, D, C, SPLIT, dt.date(2026, 11, 20))
+    # full daily label history (in-sample definitions and walk-forward re-pick) for tools/combined_probability.py
+    with gzip.open(OUT / "backtest" / f"{MC.METAL}_label_history.json.gz", "wt", encoding="utf-8") as fh:
+        json.dump(dict(in_sample={str(x["date"]): [x["sig"], x["st"]] for x in days if x["sig"]},
+                       walk_forward={str(x["date"]): [x["sig"], x["st"]] for x in days_wf if x["sig"]}), fh)
     # source rules only (no data-picked parts): U2, Venus, Saturn-nakshatra
     days_src = [dict(x) for x in days]
     classify(days_src, {}, set())

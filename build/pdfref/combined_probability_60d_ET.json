@@ -1,0 +1,7144 @@
+{
+ "start": "2026-09-24",
+ "end": "2026-11-23",
+ "shrink": 200,
+ "markets": {
+  "gold": {
+   "name": "Gold",
+   "layers": [
+    "table",
+    "v1"
+   ],
+   "walk_forward": {
+    "up1": {
+     "all": {
+      "n": 3452,
+      "actual": 51.8,
+      "base": 53.8,
+      "brier": 0.251,
+      "brier_base": 0.2501,
+      "skill": -0.35,
+      "avg_p": 53.8,
+      "calls_up": 389,
+      "right_up": 51,
+      "calls_down": 429,
+      "right_down": 41,
+      "hit": 46,
+      "bands": {
+       "50-55%": {
+        "n": 2361,
+        "actual": 53
+       },
+       "55-60%": {
+        "n": 1091,
+        "actual": 50
+       }
+      }
+     },
+     "kept": null
+    },
+    "up5": {
+     "all": {
+      "n": 3452,
+      "actual": 54.5,
+      "base": 57.2,
+      "brier": 0.25,
+      "brier_base": 0.2486,
+      "skill": -0.55,
+      "avg_p": 57.5,
+      "calls_up": 1153,
+      "right_up": 54,
+      "calls_down": 820,
+      "right_down": 45,
+      "hit": 50,
+      "bands": {
+       "50-55%": {
+        "n": 723,
+        "actual": 55
+       },
+       "55-60%": {
+        "n": 1874,
+        "actual": 55
+       },
+       "60-100%": {
+        "n": 855,
+        "actual": 54
+       }
+      }
+     },
+     "kept": {
+      "n": 3452,
+      "actual": 54.5,
+      "base": 57.2,
+      "brier": 0.2483,
+      "brier_base": 0.2486,
+      "skill": 0.13,
+      "avg_p": 57.5,
+      "calls_up": 974,
+      "right_up": 59,
+      "calls_down": 660,
+      "right_down": 48,
+      "hit": 54,
+      "bands": {
+       "50-55%": {
+        "n": 660,
+        "actual": 52
+       },
+       "55-60%": {
+        "n": 2792,
+        "actual": 55
+       }
+      }
+     }
+    },
+    "big": {
+     "all": {
+      "n": 3452,
+      "actual": 6.2,
+      "base": 8.3,
+      "brier": 0.0594,
+      "brier_base": 0.0589,
+      "skill": -0.87,
+      "avg_p": 8.2,
+      "p_on_big": 7.9,
+      "p_on_other": 8.2,
+      "bands": {
+       "6-10%": {
+        "n": 3134,
+        "actual": 6
+       },
+       "10-20%": {
+        "n": 318,
+        "actual": 4
+       }
+      }
+     },
+     "kept": null
+    }
+   },
+   "window": {
+    "up1": {
+     "all": {
+      "n": 43,
+      "actual": 44.2,
+      "base": 52.7,
+      "brier": 0.2523,
+      "brier_base": 0.2539,
+      "skill": 0.65,
+      "avg_p": 52.6,
+      "calls_up": 1,
+      "right_up": 100,
+      "calls_down": 3,
+      "right_down": 67,
+      "hit": 75,
+      "bands": {
+       "45-50%": {
+        "n": 1,
+        "actual": 0
+       },
+       "50-55%": {
+        "n": 42,
+        "actual": 45
+       }
+      }
+     },
+     "kept": null
+    },
+    "up5": {
+     "all": {
+      "n": 39,
+      "actual": 25.6,
+      "base": 55.8,
+      "brier": 0.2755,
+      "brier_base": 0.2817,
+      "skill": 2.22,
+      "avg_p": 55.8,
+      "calls_up": 10,
+      "right_up": 50,
+      "calls_down": 1,
+      "right_down": 100,
+      "hit": 55,
+      "bands": {
+       "50-55%": {
+        "n": 26,
+        "actual": 15
+       },
+       "55-60%": {
+        "n": 12,
+        "actual": 42
+       },
+       "60-100%": {
+        "n": 1,
+        "actual": 100
+       }
+      }
+     },
+     "kept": {
+      "n": 39,
+      "actual": 25.6,
+      "base": 55.8,
+      "brier": 0.2795,
+      "brier_base": 0.2817,
+      "skill": 0.78,
+      "avg_p": 56.0,
+      "calls_up": 9,
+      "right_up": 44,
+      "calls_down": 0,
+      "right_down": null,
+      "hit": 44,
+      "bands": {
+       "55-60%": {
+        "n": 39,
+        "actual": 26
+       }
+      }
+     }
+    },
+    "big": {
+     "all": {
+      "n": 43,
+      "actual": 20.9,
+      "base": 7.2,
+      "brier": 0.1823,
+      "brier_base": 0.1843,
+      "skill": 1.09,
+      "avg_p": 8.3,
+      "p_on_big": 8.2,
+      "p_on_other": 8.3,
+      "bands": {
+       "6-10%": {
+        "n": 33,
+        "actual": 21
+       },
+       "10-20%": {
+        "n": 10,
+        "actual": 20
+       }
+      }
+     },
+     "kept": null
+    }
+   },
+   "kept": {
+    "up1": [],
+    "up5": [
+     "v1"
+    ],
+    "big": []
+   },
+   "layer_test": {
+    "up1": {
+     "table": {
+      "n": 3452,
+      "actual": 51.8,
+      "base": 53.8,
+      "brier": 0.2507,
+      "brier_base": 0.2501,
+      "skill": -0.25,
+      "avg_p": 53.7,
+      "calls_up": 0,
+      "right_up": null,
+      "calls_down": 800,
+      "right_down": 45,
+      "hit": 45,
+      "bands": {
+       "50-55%": {
+        "n": 3165,
+        "actual": 52
+       },
+       "55-60%": {
+        "n": 287,
+        "actual": 53
+       }
+      }
+     },
+     "v1": {
+      "n": 3452,
+      "actual": 51.8,
+      "base": 53.8,
+      "brier": 0.2503,
+      "brier_base": 0.2501,
+      "skill": -0.1,
+      "avg_p": 53.9,
+      "calls_up": 0,
+      "right_up": null,
+      "calls_down": 0,
+      "right_down": null,
+      "hit": null,
+      "bands": {
+       "50-55%": {
+        "n": 3452,
+        "actual": 52
+       }
+      }
+     }
+    },
+    "up5": {
+     "table": {
+      "n": 3452,
+      "actual": 54.5,
+      "base": 57.2,
+      "brier": 0.2504,
+      "brier_base": 0.2486,
+      "skill": -0.7,
+      "avg_p": 57.2,
+      "calls_up": 1086,
+      "right_up": 53,
+      "calls_down": 954,
+      "right_down": 41,
+      "hit": 48,
+      "bands": {
+       "50-55%": {
+        "n": 800,
+        "actual": 57
+       },
+       "55-60%": {
+        "n": 1566,
+        "actual": 54
+       },
+       "60-100%": {
+        "n": 1086,
+        "actual": 53
+       }
+      }
+     },
+     "v1": {
+      "n": 3452,
+      "actual": 54.5,
+      "base": 57.2,
+      "brier": 0.2483,
+      "brier_base": 0.2486,
+      "skill": 0.13,
+      "avg_p": 57.5,
+      "calls_up": 974,
+      "right_up": 59,
+      "calls_down": 660,
+      "right_down": 48,
+      "hit": 54,
+      "bands": {
+       "50-55%": {
+        "n": 660,
+        "actual": 52
+       },
+       "55-60%": {
+        "n": 2792,
+        "actual": 55
+       }
+      }
+     }
+    },
+    "big": {
+     "table": {
+      "n": 3452,
+      "actual": 6.2,
+      "base": 8.3,
+      "brier": 0.0591,
+      "brier_base": 0.0589,
+      "skill": -0.38,
+      "avg_p": 8.2,
+      "p_on_big": 8.1,
+      "p_on_other": 8.2,
+      "bands": {
+       "6-10%": {
+        "n": 3165,
+        "actual": 6
+       },
+       "10-20%": {
+        "n": 287,
+        "actual": 3
+       }
+      }
+     },
+     "v1": {
+      "n": 3452,
+      "actual": 6.2,
+      "base": 8.3,
+      "brier": 0.0591,
+      "brier_base": 0.0589,
+      "skill": -0.48,
+      "avg_p": 8.3,
+      "p_on_big": 8.1,
+      "p_on_other": 8.3,
+      "bands": {
+       "6-10%": {
+        "n": 3452,
+        "actual": 6
+       }
+      }
+     }
+    }
+   },
+   "weights": {
+    "up1": {
+     "base": 52.7,
+     "w": {
+      "table": {
+       "Bearish High": {
+        "n": 1,
+        "rate": 100.0,
+        "shift": 0.009
+       },
+       "Bearish Low": {
+        "n": 389,
+        "rate": 53.7,
+        "shift": 0.027
+       },
+       "Bearish Moderate": {
+        "n": 105,
+        "rate": 43.8,
+        "shift": -0.123
+       },
+       "Bullish High": {
+        "n": 404,
+        "rate": 52.2,
+        "shift": -0.013
+       },
+       "Bullish Low": {
+        "n": 2567,
+        "rate": 52.8,
+        "shift": 0.004
+       },
+       "Bullish Moderate": {
+        "n": 697,
+        "rate": 54.2,
+        "shift": 0.047
+       },
+       "Volatile": {
+        "n": 326,
+        "rate": 52.8,
+        "shift": 0.001
+       },
+       "no signal": {
+        "n": 1995,
+        "rate": 52.4,
+        "shift": -0.012
+       }
+      },
+      "v1": {
+       "bearish": {
+        "n": 528,
+        "rate": 52.3,
+        "shift": -0.013
+       },
+       "bullish": {
+        "n": 1757,
+        "rate": 53.8,
+        "shift": 0.039
+       },
+       "mild bullish": {
+        "n": 1747,
+        "rate": 52.1,
+        "shift": -0.022
+       },
+       "neutral": {
+        "n": 1614,
+        "rate": 53.5,
+        "shift": 0.029
+       },
+       "strong bullish": {
+        "n": 838,
+        "rate": 50.5,
+        "shift": -0.072
+       }
+      }
+     }
+    },
+    "up5": {
+     "base": 55.8,
+     "w": {
+      "table": {
+       "Bearish High": {
+        "n": 1,
+        "rate": 100.0,
+        "shift": 0.009
+       },
+       "Bearish Low": {
+        "n": 389,
+        "rate": 55.3,
+        "shift": -0.015
+       },
+       "Bearish Moderate": {
+        "n": 105,
+        "rate": 56.2,
+        "shift": 0.005
+       },
+       "Bullish High": {
+        "n": 404,
+        "rate": 57.9,
+        "shift": 0.057
+       },
+       "Bullish Low": {
+        "n": 2564,
+        "rate": 55.5,
+        "shift": -0.011
+       },
+       "Bullish Moderate": {
+        "n": 697,
+        "rate": 59.5,
+        "shift": 0.118
+       },
+       "Volatile": {
+        "n": 326,
+        "rate": 50.0,
+        "shift": -0.145
+       },
+       "no signal": {
+        "n": 1994,
+        "rate": 55.5,
+        "shift": -0.013
+       }
+      },
+      "v1": {
+       "bearish": {
+        "n": 527,
+        "rate": 52.4,
+        "shift": -0.101
+       },
+       "bullish": {
+        "n": 1757,
+        "rate": 59.2,
+        "shift": 0.126
+       },
+       "mild bullish": {
+        "n": 1744,
+        "rate": 55.0,
+        "shift": -0.03
+       },
+       "neutral": {
+        "n": 1614,
+        "rate": 55.5,
+        "shift": -0.011
+       },
+       "strong bullish": {
+        "n": 838,
+        "rate": 53.1,
+        "shift": -0.088
+       }
+      }
+     }
+    },
+    "big": {
+     "base": 7.2,
+     "w": {
+      "table": {
+       "Bearish High": {
+        "n": 1,
+        "rate": 0.0,
+        "shift": -0.005
+       },
+       "Bearish Low": {
+        "n": 389,
+        "rate": 11.8,
+        "shift": 0.385
+       },
+       "Bearish Moderate": {
+        "n": 105,
+        "rate": 14.3,
+        "shift": 0.317
+       },
+       "Bullish High": {
+        "n": 404,
+        "rate": 10.4,
+        "shift": 0.281
+       },
+       "Bullish Low": {
+        "n": 2567,
+        "rate": 6.4,
+        "shift": -0.115
+       },
+       "Bullish Moderate": {
+        "n": 697,
+        "rate": 8.5,
+        "shift": 0.136
+       },
+       "Volatile": {
+        "n": 326,
+        "rate": 8.0,
+        "shift": 0.068
+       },
+       "no signal": {
+        "n": 1995,
+        "rate": 5.8,
+        "shift": -0.216
+       }
+      },
+      "v1": {
+       "bearish": {
+        "n": 528,
+        "rate": 7.6,
+        "shift": 0.038
+       },
+       "bullish": {
+        "n": 1757,
+        "rate": 6.4,
+        "shift": -0.119
+       },
+       "mild bullish": {
+        "n": 1747,
+        "rate": 7.8,
+        "shift": 0.074
+       },
+       "neutral": {
+        "n": 1614,
+        "rate": 7.6,
+        "shift": 0.044
+       },
+       "strong bullish": {
+        "n": 838,
+        "rate": 6.9,
+        "shift": -0.036
+       }
+      }
+     }
+    }
+   },
+   "days": [
+    {
+     "date": "2026-09-24",
+     "r1": -0.47,
+     "r5": -3.05,
+     "big": false,
+     "p": {
+      "up1": 51.9,
+      "up5": 54.8,
+      "big": 6.3
+     },
+     "pk": {
+      "up1": null,
+      "up5": 55.1,
+      "big": null
+     },
+     "st": {
+      "table": "no signal",
+      "v1": "mild bullish"
+     }
+    },
+    {
+     "date": "2026-09-25",
+     "r1": 0.54,
+     "r5": -2.23,
+     "big": false,
+     "p": {
+      "up1": 51.9,
+      "up5": 54.8,
+      "big": 6.3
+     },
+     "pk": {
+      "up1": null,
+      "up5": 55.1,
+      "big": null
+     },
+     "st": {
+      "table": "no signal",
+      "v1": "mild bullish"
+     }
+    },
+    {
+     "date": "2026-09-28",
+     "r1": -3.54,
+     "r5": -3.68,
+     "big": true,
+     "p": {
+      "up1": 54.3,
+      "up5": 58.5,
+      "big": 9.2
+     },
+     "pk": {
+      "up1": null,
+      "up5": 58.9,
+      "big": null
+     },
+     "st": {
+      "table": "Bearish Low",
+      "v1": "bullish"
+     }
+    },
+    {
+     "date": "2026-09-29",
+     "r1": 0.27,
+     "r5": -0.28,
+     "big": false,
+     "p": {
+      "up1": 54.3,
+      "up5": 58.5,
+      "big": 9.2
+     },
+     "pk": {
+      "up1": null,
+      "up5": 58.9,
+      "big": null
+     },
+     "st": {
+      "table": "Bearish Low",
+      "v1": "bullish"
+     }
+    },
+    {
+     "date": "2026-09-30",
+     "r1": 0.17,
+     "r5": 0.18,
+     "big": false,
+     "p": {
+      "up1": 54.3,
+      "up5": 58.5,
+      "big": 9.2
+     },
+     "pk": {
+      "up1": null,
+      "up5": 58.9,
+      "big": null
+     },
+     "st": {
+      "table": "Bearish Low",
+      "v1": "bullish"
+     }
+    },
+    {
+     "date": "2026-10-01",
+     "r1": 0.37,
+     "r5": -1.1,
+     "big": false,
+     "p": {
+      "up1": 54.3,
+      "up5": 58.5,
+      "big": 9.2
+     },
+     "pk": {
+      "up1": null,
+      "up5": 58.9,
+      "big": null
+     },
+     "st": {
+      "table": "Bearish Low",
+      "v1": "bullish"
+     }
+    },
+    {
+     "date": "2026-10-02",
+     "r1": -0.95,
+     "r5": -1.08,
+     "big": false,
+     "p": {
+      "up1": 54.1,
+      "up5": 55.2,
+      "big": 10.7
+     },
+     "pk": {
+      "up1": null,
+      "up5": 55.5,
+      "big": null
+     },
+     "st": {
+      "table": "Bearish Low",
+      "v1": "neutral"
+     }
+    },
+    {
+     "date": "2026-10-05",
+     "r1": -0.13,
+     "r5": 1.3,
+     "big": false,
+     "p": {
+      "up1": 54.3,
+      "up5": 58.5,
+      "big": 9.2
+     },
+     "pk": {
+      "up1": null,
+      "up5": 58.9,
+      "big": null
+     },
+     "st": {
+      "table": "Bearish Low",
+      "v1": "bullish"
+     }
+    },
+    {
+     "date": "2026-10-06",
+     "r1": 0.73,
+     "r5": 0.81,
+     "big": false,
+     "p": {
+      "up1": 54.3,
+      "up5": 58.5,
+      "big": 9.2
+     },
+     "pk": {
+      "up1": null,
+      "up5": 58.9,
+      "big": null
+     },
+     "st": {
+      "table": "Bearish Low",
+      "v1": "bullish"
+     }
+    },
+    {
+     "date": "2026-10-07",
+     "r1": -1.11,
+     "r5": -0.23,
+     "big": false,
+     "p": {
+      "up1": 50.6,
+      "up5": 59.0,
+      "big": 8.7
+     },
+     "pk": {
+      "up1": null,
+      "up5": 58.9,
+      "big": null
+     },
+     "st": {
+      "table": "Bearish Moderate",
+      "v1": "bullish"
+     }
+    },
+    {
+     "date": "2026-10-08",
+     "r1": 0.39,
+     "r5": -0.79,
+     "big": false,
+     "p": {
+      "up1": 50.6,
+      "up5": 59.0,
+      "big": 8.7
+     },
+     "pk": {
+      "up1": null,
+      "up5": 58.9,
+      "big": null
+     },
+     "st": {
+      "table": "Bearish Moderate",
+      "v1": "bullish"
+     }
+    },
+    {
+     "date": "2026-10-09",
+     "r1": 1.43,
+     "r5": 0.32,
+     "big": false,
+     "p": {
+      "up1": 52.8,
+      "up5": 54.7,
+      "big": 11.0
+     },
+     "pk": {
+      "up1": null,
+      "up5": 55.1,
+      "big": null
+     },
+     "st": {
+      "table": "Bearish Low",
+      "v1": "mild bullish"
+     }
+    },
+    {
+     "date": "2026-10-12",
+     "r1": -0.61,
+     "r5": -0.83,
+     "big": false,
+     "p": {
+      "up1": 49.1,
+      "up5": 55.2,
+      "big": 10.3
+     },
+     "pk": {
+      "up1": null,
+      "up5": 55.1,
+      "big": null
+     },
+     "st": {
+      "table": "Bearish Moderate",
+      "v1": "mild bullish"
+     }
+    },
+    {
+     "date": "2026-10-13",
+     "r1": -0.32,
+     "r5": -0.73,
+     "big": false,
+     "p": {
+      "up1": 52.8,
+      "up5": 54.7,
+      "big": 11.0
+     },
+     "pk": {
+      "up1": null,
+      "up5": 55.1,
+      "big": null
+     },
+     "st": {
+      "table": "Bearish Low",
+      "v1": "mild bullish"
+     }
+    },
+    {
+     "date": "2026-10-14",
+     "r1": -1.66,
+     "r5": -0.83,
+     "big": false,
+     "p": {
+      "up1": 52.8,
+      "up5": 54.7,
+      "big": 11.0
+     },
+     "pk": {
+      "up1": null,
+      "up5": 55.1,
+      "big": null
+     },
+     "st": {
+      "table": "Bearish Low",
+      "v1": "mild bullish"
+     }
+    },
+    {
+     "date": "2026-10-15",
+     "r1": 1.51,
+     "r5": 1.02,
+     "big": false,
+     "p": {
+      "up1": 52.8,
+      "up5": 54.7,
+      "big": 11.0
+     },
+     "pk": {
+      "up1": null,
+      "up5": 55.1,
+      "big": null
+     },
+     "st": {
+      "table": "Bearish Low",
+      "v1": "mild bullish"
+     }
+    },
+    {
+     "date": "2026-10-16",
+     "r1": 0.26,
+     "r5": -2.63,
+     "big": false,
+     "p": {
+      "up1": 52.8,
+      "up5": 54.7,
+      "big": 11.0
+     },
+     "pk": {
+      "up1": null,
+      "up5": 55.1,
+      "big": null
+     },
+     "st": {
+      "table": "Bearish Low",
+      "v1": "mild bullish"
+     }
+    },
+    {
+     "date": "2026-10-19",
+     "r1": -0.5,
+     "r5": -4.14,
+     "big": false,
+     "p": {
+      "up1": 52.3,
+      "up5": 54.8,
+      "big": 6.9
+     },
+     "pk": {
+      "up1": null,
+      "up5": 55.1,
+      "big": null
+     },
+     "st": {
+      "table": "Bullish Low",
+      "v1": "mild bullish"
+     }
+    },
+    {
+     "date": "2026-10-20",
+     "r1": -0.42,
+     "r5": -2.93,
+     "big": false,
+     "p": {
+      "up1": 52.3,
+      "up5": 54.8,
+      "big": 6.9
+     },
+     "pk": {
+      "up1": null,
+      "up5": 55.1,
+      "big": null
+     },
+     "st": {
+      "table": "Bullish Low",
+      "v1": "mild bullish"
+     }
+    },
+    {
+     "date": "2026-10-21",
+     "r1": 0.18,
+     "r5": -1.64,
+     "big": false,
+     "p": {
+      "up1": 52.3,
+      "up5": 54.8,
+      "big": 6.9
+     },
+     "pk": {
+      "up1": null,
+      "up5": 55.1,
+      "big": null
+     },
+     "st": {
+      "table": "Bullish Low",
+      "v1": "mild bullish"
+     }
+    },
+    {
+     "date": "2026-10-22",
+     "r1": -2.16,
+     "r5": -2.37,
+     "big": true,
+     "p": {
+      "up1": 52.3,
+      "up5": 54.8,
+      "big": 6.9
+     },
+     "pk": {
+      "up1": null,
+      "up5": 55.1,
+      "big": null
+     },
+     "st": {
+      "table": "Bullish Low",
+      "v1": "mild bullish"
+     }
+    },
+    {
+     "date": "2026-10-23",
+     "r1": -1.29,
+     "r5": -0.71,
+     "big": false,
+     "p": {
+      "up1": 51.9,
+      "up5": 54.8,
+      "big": 6.3
+     },
+     "pk": {
+      "up1": null,
+      "up5": 55.1,
+      "big": null
+     },
+     "st": {
+      "table": "no signal",
+      "v1": "mild bullish"
+     }
+    },
+    {
+     "date": "2026-10-26",
+     "r1": 0.76,
+     "r5": -2.72,
+     "big": false,
+     "p": {
+      "up1": 52.8,
+      "up5": 54.7,
+      "big": 11.0
+     },
+     "pk": {
+      "up1": null,
+      "up5": 55.1,
+      "big": null
+     },
+     "st": {
+      "table": "Bearish Low",
+      "v1": "mild bullish"
+     }
+    },
+    {
+     "date": "2026-10-27",
+     "r1": 0.9,
+     "r5": -1.7,
+     "big": false,
+     "p": {
+      "up1": 51.9,
+      "up5": 54.8,
+      "big": 6.3
+     },
+     "pk": {
+      "up1": null,
+      "up5": 55.1,
+      "big": null
+     },
+     "st": {
+      "table": "no signal",
+      "v1": "mild bullish"
+     }
+    },
+    {
+     "date": "2026-10-28",
+     "r1": -0.56,
+     "r5": -3.29,
+     "big": false,
+     "p": {
+      "up1": 52.3,
+      "up5": 54.8,
+      "big": 6.9
+     },
+     "pk": {
+      "up1": null,
+      "up5": 55.1,
+      "big": null
+     },
+     "st": {
+      "table": "Bullish Low",
+      "v1": "mild bullish"
+     }
+    },
+    {
+     "date": "2026-10-29",
+     "r1": -0.5,
+     "r5": 0.53,
+     "big": false,
+     "p": {
+      "up1": 52.3,
+      "up5": 54.8,
+      "big": 6.9
+     },
+     "pk": {
+      "up1": null,
+      "up5": 55.1,
+      "big": null
+     },
+     "st": {
+      "table": "Bullish Low",
+      "v1": "mild bullish"
+     }
+    },
+    {
+     "date": "2026-10-30",
+     "r1": -3.29,
+     "r5": 2.04,
+     "big": true,
+     "p": {
+      "up1": 54.6,
+      "up5": 58.4,
+      "big": 8.5
+     },
+     "pk": {
+      "up1": null,
+      "up5": 55.5,
+      "big": null
+     },
+     "st": {
+      "table": "Bullish Moderate",
+      "v1": "neutral"
+     }
+    },
+    {
+     "date": "2026-11-02",
+     "r1": 1.81,
+     "r5": 4.51,
+     "big": false,
+     "p": {
+      "up1": 54.9,
+      "up5": 61.7,
+      "big": 7.3
+     },
+     "pk": {
+      "up1": null,
+      "up5": 58.9,
+      "big": null
+     },
+     "st": {
+      "table": "Bullish Moderate",
+      "v1": "bullish"
+     }
+    },
+    {
+     "date": "2026-11-03",
+     "r1": -0.74,
+     "r5": 3.65,
+     "big": false,
+     "p": {
+      "up1": 51.8,
+      "up5": 56.5,
+      "big": 10.0
+     },
+     "pk": {
+      "up1": null,
+      "up5": 55.1,
+      "big": null
+     },
+     "st": {
+      "table": "Bullish High",
+      "v1": "mild bullish"
+     }
+    },
+    {
+     "date": "2026-11-04",
+     "r1": 3.37,
+     "r5": 2.28,
+     "big": true,
+     "p": {
+      "up1": 52.3,
+      "up5": 54.8,
+      "big": 6.9
+     },
+     "pk": {
+      "up1": null,
+      "up5": 55.1,
+      "big": null
+     },
+     "st": {
+      "table": "Bullish Low",
+      "v1": "mild bullish"
+     }
+    },
+    {
+     "date": "2026-11-05",
+     "r1": 0.99,
+     "r5": -1.78,
+     "big": false,
+     "p": {
+      "up1": 52.3,
+      "up5": 54.8,
+      "big": 6.9
+     },
+     "pk": {
+      "up1": null,
+      "up5": 55.1,
+      "big": null
+     },
+     "st": {
+      "table": "Bullish Low",
+      "v1": "mild bullish"
+     }
+    },
+    {
+     "date": "2026-11-06",
+     "r1": -0.94,
+     "r5": -5.55,
+     "big": false,
+     "p": {
+      "up1": 52.3,
+      "up5": 54.8,
+      "big": 6.9
+     },
+     "pk": {
+      "up1": null,
+      "up5": 55.1,
+      "big": null
+     },
+     "st": {
+      "table": "Bullish Low",
+      "v1": "mild bullish"
+     }
+    },
+    {
+     "date": "2026-11-09",
+     "r1": 0.97,
+     "r5": -4.63,
+     "big": false,
+     "p": {
+      "up1": 52.3,
+      "up5": 54.8,
+      "big": 6.9
+     },
+     "pk": {
+      "up1": null,
+      "up5": 55.1,
+      "big": null
+     },
+     "st": {
+      "table": "Bullish Low",
+      "v1": "mild bullish"
+     }
+    },
+    {
+     "date": "2026-11-10",
+     "r1": -2.05,
+     "r5": -6.36,
+     "big": true,
+     "p": {
+      "up1": 52.3,
+      "up5": 54.8,
+      "big": 6.9
+     },
+     "pk": {
+      "up1": null,
+      "up5": 55.1,
+      "big": null
+     },
+     "st": {
+      "table": "Bullish Low",
+      "v1": "mild bullish"
+     }
+    },
+    {
+     "date": "2026-11-11",
+     "r1": -0.74,
+     "r5": -4.12,
+     "big": false,
+     "p": {
+      "up1": 52.3,
+      "up5": 54.8,
+      "big": 6.9
+     },
+     "pk": {
+      "up1": null,
+      "up5": 55.1,
+      "big": null
+     },
+     "st": {
+      "table": "Bullish Low",
+      "v1": "mild bullish"
+     }
+    },
+    {
+     "date": "2026-11-12",
+     "r1": -2.88,
+     "r5": -6.46,
+     "big": true,
+     "p": {
+      "up1": 52.3,
+      "up5": 54.8,
+      "big": 6.9
+     },
+     "pk": {
+      "up1": null,
+      "up5": 55.1,
+      "big": null
+     },
+     "st": {
+      "table": "Bullish Low",
+      "v1": "mild bullish"
+     }
+    },
+    {
+     "date": "2026-11-13",
+     "r1": 0.03,
+     "r5": -5.14,
+     "big": false,
+     "p": {
+      "up1": 52.3,
+      "up5": 54.8,
+      "big": 6.9
+     },
+     "pk": {
+      "up1": null,
+      "up5": 55.1,
+      "big": null
+     },
+     "st": {
+      "table": "Bullish Low",
+      "v1": "mild bullish"
+     }
+    },
+    {
+     "date": "2026-11-16",
+     "r1": -0.86,
+     "r5": -9.54,
+     "big": false,
+     "p": {
+      "up1": 52.2,
+      "up5": 51.5,
+      "big": 8.2
+     },
+     "pk": {
+      "up1": null,
+      "up5": 55.1,
+      "big": null
+     },
+     "st": {
+      "table": "Volatile",
+      "v1": "mild bullish"
+     }
+    },
+    {
+     "date": "2026-11-17",
+     "r1": 0.29,
+     "r5": -4.85,
+     "big": false,
+     "p": {
+      "up1": 51.9,
+      "up5": 54.8,
+      "big": 6.3
+     },
+     "pk": {
+      "up1": null,
+      "up5": 55.1,
+      "big": null
+     },
+     "st": {
+      "table": "no signal",
+      "v1": "mild bullish"
+     }
+    },
+    {
+     "date": "2026-11-18",
+     "r1": -3.16,
+     "r5": null,
+     "big": true,
+     "p": {
+      "up1": 51.9,
+      "up5": 54.8,
+      "big": 6.3
+     },
+     "pk": {
+      "up1": null,
+      "up5": 55.1,
+      "big": null
+     },
+     "st": {
+      "table": "no signal",
+      "v1": "mild bullish"
+     }
+    },
+    {
+     "date": "2026-11-19",
+     "r1": -1.51,
+     "r5": null,
+     "big": false,
+     "p": {
+      "up1": 53.1,
+      "up5": 55.2,
+      "big": 6.1
+     },
+     "pk": {
+      "up1": null,
+      "up5": 55.5,
+      "big": null
+     },
+     "st": {
+      "table": "no signal",
+      "v1": "neutral"
+     }
+    },
+    {
+     "date": "2026-11-20",
+     "r1": -4.62,
+     "r5": null,
+     "big": true,
+     "p": {
+      "up1": 54.1,
+      "up5": 55.2,
+      "big": 10.7
+     },
+     "pk": {
+      "up1": null,
+      "up5": 55.5,
+      "big": null
+     },
+     "st": {
+      "table": "Bearish Low",
+      "v1": "neutral"
+     }
+    },
+    {
+     "date": "2026-11-23",
+     "r1": 4.28,
+     "r5": null,
+     "big": true,
+     "p": {
+      "up1": 52.8,
+      "up5": 54.7,
+      "big": 11.0
+     },
+     "pk": {
+      "up1": null,
+      "up5": 55.1,
+      "big": null
+     },
+     "st": {
+      "table": "Bearish Low",
+      "v1": "mild bullish"
+     }
+    }
+   ]
+  },
+  "silver": {
+   "name": "Silver",
+   "layers": [
+    "table"
+   ],
+   "walk_forward": {
+    "up1": {
+     "all": {
+      "n": 3451,
+      "actual": 51.4,
+      "base": 54.6,
+      "brier": 0.2508,
+      "brier_base": 0.2508,
+      "skill": 0.02,
+      "avg_p": 54.5,
+      "calls_up": 374,
+      "right_up": 51,
+      "calls_down": 215,
+      "right_down": 53,
+      "hit": 51,
+      "bands": {
+       "50-55%": {
+        "n": 3077,
+        "actual": 52
+       },
+       "55-60%": {
+        "n": 374,
+        "actual": 51
+       }
+      }
+     },
+     "kept": {
+      "n": 3451,
+      "actual": 51.4,
+      "base": 54.6,
+      "brier": 0.2508,
+      "brier_base": 0.2508,
+      "skill": 0.02,
+      "avg_p": 54.5,
+      "calls_up": 374,
+      "right_up": 51,
+      "calls_down": 215,
+      "right_down": 53,
+      "hit": 51,
+      "bands": {
+       "50-55%": {
+        "n": 3077,
+        "actual": 52
+       },
+       "55-60%": {
+        "n": 374,
+        "actual": 51
+       }
+      }
+     }
+    },
+    "up5": {
+     "all": {
+      "n": 3451,
+      "actual": 51.3,
+      "base": 56.1,
+      "brier": 0.2526,
+      "brier_base": 0.2521,
+      "skill": -0.18,
+      "avg_p": 56.0,
+      "calls_up": 1567,
+      "right_up": 52,
+      "calls_down": 811,
+      "right_down": 48,
+      "hit": 51,
+      "bands": {
+       "50-55%": {
+        "n": 1313,
+        "actual": 50
+       },
+       "55-60%": {
+        "n": 2138,
+        "actual": 52
+       }
+      }
+     },
+     "kept": null
+    },
+    "big": {
+     "all": {
+      "n": 3451,
+      "actual": 8.3,
+      "base": 8.2,
+      "brier": 0.0765,
+      "brier_base": 0.0765,
+      "skill": 0.04,
+      "avg_p": 8.3,
+      "p_on_big": 8.4,
+      "p_on_other": 8.3,
+      "bands": {
+       "3-6%": {
+        "n": 374,
+        "actual": 7
+       },
+       "6-10%": {
+        "n": 3077,
+        "actual": 8
+       }
+      }
+     },
+     "kept": {
+      "n": 3451,
+      "actual": 8.3,
+      "base": 8.2,
+      "brier": 0.0765,
+      "brier_base": 0.0765,
+      "skill": 0.04,
+      "avg_p": 8.3,
+      "p_on_big": 8.4,
+      "p_on_other": 8.3,
+      "bands": {
+       "3-6%": {
+        "n": 374,
+        "actual": 7
+       },
+       "6-10%": {
+        "n": 3077,
+        "actual": 8
+       }
+      }
+     }
+    }
+   },
+   "window": {
+    "up1": {
+     "all": {
+      "n": 43,
+      "actual": 39.5,
+      "base": 52.9,
+      "brier": 0.256,
+      "brier_base": 0.2569,
+      "skill": 0.36,
+      "avg_p": 52.8,
+      "calls_up": 0,
+      "right_up": null,
+      "calls_down": 0,
+      "right_down": null,
+      "hit": null,
+      "bands": {
+       "50-55%": {
+        "n": 43,
+        "actual": 40
+       }
+      }
+     },
+     "kept": {
+      "n": 43,
+      "actual": 39.5,
+      "base": 52.9,
+      "brier": 0.256,
+      "brier_base": 0.2569,
+      "skill": 0.36,
+      "avg_p": 52.8,
+      "calls_up": 0,
+      "right_up": null,
+      "calls_down": 0,
+      "right_down": null,
+      "hit": null,
+      "bands": {
+       "50-55%": {
+        "n": 43,
+        "actual": 40
+       }
+      }
+     }
+    },
+    "up5": {
+     "all": {
+      "n": 39,
+      "actual": 17.9,
+      "base": 53.6,
+      "brier": 0.2705,
+      "brier_base": 0.2741,
+      "skill": 1.3,
+      "avg_p": 53.1,
+      "calls_up": 0,
+      "right_up": null,
+      "calls_down": 0,
+      "right_down": null,
+      "hit": null,
+      "bands": {
+       "50-55%": {
+        "n": 38,
+        "actual": 18
+       },
+       "55-60%": {
+        "n": 1,
+        "actual": 0
+       }
+      }
+     },
+     "kept": null
+    },
+    "big": {
+     "all": {
+      "n": 43,
+      "actual": 23.3,
+      "base": 8.3,
+      "brier": 0.2043,
+      "brier_base": 0.2009,
+      "skill": -1.7,
+      "avg_p": 8.1,
+      "p_on_big": 7.5,
+      "p_on_other": 8.2,
+      "bands": {
+       "6-10%": {
+        "n": 43,
+        "actual": 23
+       }
+      }
+     },
+     "kept": {
+      "n": 43,
+      "actual": 23.3,
+      "base": 8.3,
+      "brier": 0.2043,
+      "brier_base": 0.2009,
+      "skill": -1.7,
+      "avg_p": 8.1,
+      "p_on_big": 7.5,
+      "p_on_other": 8.2,
+      "bands": {
+       "6-10%": {
+        "n": 43,
+        "actual": 23
+       }
+      }
+     }
+    }
+   },
+   "kept": {
+    "up1": [
+     "table"
+    ],
+    "up5": [],
+    "big": [
+     "table"
+    ]
+   },
+   "layer_test": {
+    "up1": {
+     "table": {
+      "n": 3451,
+      "actual": 51.4,
+      "base": 54.6,
+      "brier": 0.2508,
+      "brier_base": 0.2508,
+      "skill": 0.02,
+      "avg_p": 54.5,
+      "calls_up": 374,
+      "right_up": 51,
+      "calls_down": 215,
+      "right_down": 53,
+      "hit": 51,
+      "bands": {
+       "50-55%": {
+        "n": 3077,
+        "actual": 52
+       },
+       "55-60%": {
+        "n": 374,
+        "actual": 51
+       }
+      }
+     }
+    },
+    "up5": {
+     "table": {
+      "n": 3451,
+      "actual": 51.3,
+      "base": 56.1,
+      "brier": 0.2526,
+      "brier_base": 0.2521,
+      "skill": -0.18,
+      "avg_p": 56.0,
+      "calls_up": 1567,
+      "right_up": 52,
+      "calls_down": 811,
+      "right_down": 48,
+      "hit": 51,
+      "bands": {
+       "50-55%": {
+        "n": 1313,
+        "actual": 50
+       },
+       "55-60%": {
+        "n": 2138,
+        "actual": 52
+       }
+      }
+     }
+    },
+    "big": {
+     "table": {
+      "n": 3451,
+      "actual": 8.3,
+      "base": 8.2,
+      "brier": 0.0765,
+      "brier_base": 0.0765,
+      "skill": 0.04,
+      "avg_p": 8.3,
+      "p_on_big": 8.4,
+      "p_on_other": 8.3,
+      "bands": {
+       "3-6%": {
+        "n": 374,
+        "actual": 7
+       },
+       "6-10%": {
+        "n": 3077,
+        "actual": 8
+       }
+      }
+     }
+    }
+   },
+   "weights": {
+    "up1": {
+     "base": 52.9,
+     "w": {
+      "table": {
+       "Bearish Low": {
+        "n": 65,
+        "rate": 46.2,
+        "shift": -0.066
+       },
+       "Bearish Moderate": {
+        "n": 14,
+        "rate": 50.0,
+        "shift": -0.008
+       },
+       "Bullish High": {
+        "n": 2890,
+        "rate": 53.9,
+        "shift": 0.04
+       },
+       "Bullish Low": {
+        "n": 1229,
+        "rate": 52.3,
+        "shift": -0.02
+       },
+       "Bullish Moderate": {
+        "n": 662,
+        "rate": 53.2,
+        "shift": 0.009
+       },
+       "Volatile": {
+        "n": 276,
+        "rate": 50.4,
+        "shift": -0.059
+       },
+       "no signal": {
+        "n": 1349,
+        "rate": 51.9,
+        "shift": -0.035
+       }
+      }
+     }
+    },
+    "up5": {
+     "base": 53.6,
+     "w": {
+      "table": {
+       "Bearish Low": {
+        "n": 65,
+        "rate": 47.7,
+        "shift": -0.058
+       },
+       "Bearish Moderate": {
+        "n": 14,
+        "rate": 57.1,
+        "shift": 0.009
+       },
+       "Bullish High": {
+        "n": 2890,
+        "rate": 54.3,
+        "shift": 0.028
+       },
+       "Bullish Low": {
+        "n": 1225,
+        "rate": 51.8,
+        "shift": -0.059
+       },
+       "Bullish Moderate": {
+        "n": 662,
+        "rate": 56.0,
+        "shift": 0.077
+       },
+       "Volatile": {
+        "n": 276,
+        "rate": 52.9,
+        "shift": -0.015
+       },
+       "no signal": {
+        "n": 1349,
+        "rate": 52.7,
+        "shift": -0.03
+       }
+      }
+     }
+    },
+    "big": {
+     "base": 8.3,
+     "w": {
+      "table": {
+       "Bearish Low": {
+        "n": 65,
+        "rate": 6.2,
+        "shift": -0.071
+       },
+       "Bearish Moderate": {
+        "n": 14,
+        "rate": 14.3,
+        "shift": 0.051
+       },
+       "Bullish High": {
+        "n": 2890,
+        "rate": 9.3,
+        "shift": 0.124
+       },
+       "Bullish Low": {
+        "n": 1229,
+        "rate": 8.1,
+        "shift": -0.016
+       },
+       "Bullish Moderate": {
+        "n": 662,
+        "rate": 9.2,
+        "shift": 0.091
+       },
+       "Volatile": {
+        "n": 276,
+        "rate": 7.6,
+        "shift": -0.052
+       },
+       "no signal": {
+        "n": 1349,
+        "rate": 5.9,
+        "shift": -0.317
+       }
+      }
+     }
+    }
+   },
+   "days": [
+    {
+     "date": "2026-09-24",
+     "r1": -1.44,
+     "r5": -6.65,
+     "big": false,
+     "p": {
+      "up1": 52.4,
+      "up5": 52.1,
+      "big": 8.2
+     },
+     "pk": {
+      "up1": 52.4,
+      "up5": null,
+      "big": 8.2
+     },
+     "st": {
+      "table": "Bullish Low"
+     }
+    },
+    {
+     "date": "2026-09-25",
+     "r1": 1.24,
+     "r5": -4.31,
+     "big": false,
+     "p": {
+      "up1": 52.4,
+      "up5": 52.1,
+      "big": 8.2
+     },
+     "pk": {
+      "up1": 52.4,
+      "up5": null,
+      "big": 8.2
+     },
+     "st": {
+      "table": "Bullish Low"
+     }
+    },
+    {
+     "date": "2026-09-28",
+     "r1": -4.71,
+     "r5": -6.64,
+     "big": true,
+     "p": {
+      "up1": 52.4,
+      "up5": 52.1,
+      "big": 8.2
+     },
+     "pk": {
+      "up1": 52.4,
+      "up5": null,
+      "big": 8.2
+     },
+     "st": {
+      "table": "Bullish Low"
+     }
+    },
+    {
+     "date": "2026-09-29",
+     "r1": -0.9,
+     "r5": -0.57,
+     "big": false,
+     "p": {
+      "up1": 52.4,
+      "up5": 52.1,
+      "big": 8.2
+     },
+     "pk": {
+      "up1": 52.4,
+      "up5": null,
+      "big": 8.2
+     },
+     "st": {
+      "table": "Bullish Low"
+     }
+    },
+    {
+     "date": "2026-09-30",
+     "r1": -0.94,
+     "r5": 0.82,
+     "big": false,
+     "p": {
+      "up1": 52.4,
+      "up5": 52.1,
+      "big": 8.2
+     },
+     "pk": {
+      "up1": 52.4,
+      "up5": null,
+      "big": 8.2
+     },
+     "st": {
+      "table": "Bullish Low"
+     }
+    },
+    {
+     "date": "2026-10-01",
+     "r1": 1.04,
+     "r5": -0.33,
+     "big": false,
+     "p": {
+      "up1": 52.4,
+      "up5": 52.1,
+      "big": 8.2
+     },
+     "pk": {
+      "up1": 52.4,
+      "up5": null,
+      "big": 8.2
+     },
+     "st": {
+      "table": "Bullish Low"
+     }
+    },
+    {
+     "date": "2026-10-02",
+     "r1": -1.23,
+     "r5": -2.74,
+     "big": false,
+     "p": {
+      "up1": 53.1,
+      "up5": 55.5,
+      "big": 9.0
+     },
+     "pk": {
+      "up1": 53.1,
+      "up5": null,
+      "big": 9.0
+     },
+     "st": {
+      "table": "Bullish Moderate"
+     }
+    },
+    {
+     "date": "2026-10-05",
+     "r1": 1.49,
+     "r5": 1.16,
+     "big": false,
+     "p": {
+      "up1": 52.4,
+      "up5": 52.1,
+      "big": 8.2
+     },
+     "pk": {
+      "up1": 52.4,
+      "up5": null,
+      "big": 8.2
+     },
+     "st": {
+      "table": "Bullish Low"
+     }
+    },
+    {
+     "date": "2026-10-06",
+     "r1": 0.49,
+     "r5": -1.2,
+     "big": false,
+     "p": {
+      "up1": 52.4,
+      "up5": 52.1,
+      "big": 8.2
+     },
+     "pk": {
+      "up1": 52.4,
+      "up5": null,
+      "big": 8.2
+     },
+     "st": {
+      "table": "Bullish Low"
+     }
+    },
+    {
+     "date": "2026-10-07",
+     "r1": -2.07,
+     "r5": -3.28,
+     "big": false,
+     "p": {
+      "up1": 52.4,
+      "up5": 52.1,
+      "big": 8.2
+     },
+     "pk": {
+      "up1": 52.4,
+      "up5": null,
+      "big": 8.2
+     },
+     "st": {
+      "table": "Bullish Low"
+     }
+    },
+    {
+     "date": "2026-10-08",
+     "r1": -1.39,
+     "r5": -7.26,
+     "big": false,
+     "p": {
+      "up1": 52.4,
+      "up5": 52.1,
+      "big": 8.2
+     },
+     "pk": {
+      "up1": 52.4,
+      "up5": null,
+      "big": 8.2
+     },
+     "st": {
+      "table": "Bullish Low"
+     }
+    },
+    {
+     "date": "2026-10-09",
+     "r1": 2.72,
+     "r5": -3.77,
+     "big": false,
+     "p": {
+      "up1": 52.4,
+      "up5": 52.1,
+      "big": 8.2
+     },
+     "pk": {
+      "up1": 52.4,
+      "up5": null,
+      "big": 8.2
+     },
+     "st": {
+      "table": "Bullish Low"
+     }
+    },
+    {
+     "date": "2026-10-12",
+     "r1": -0.87,
+     "r5": -6.06,
+     "big": false,
+     "p": {
+      "up1": 52.4,
+      "up5": 52.1,
+      "big": 8.2
+     },
+     "pk": {
+      "up1": 52.4,
+      "up5": null,
+      "big": 8.2
+     },
+     "st": {
+      "table": "Bullish Low"
+     }
+    },
+    {
+     "date": "2026-10-13",
+     "r1": -1.63,
+     "r5": -5.27,
+     "big": false,
+     "p": {
+      "up1": 52.4,
+      "up5": 52.1,
+      "big": 8.2
+     },
+     "pk": {
+      "up1": 52.4,
+      "up5": null,
+      "big": 8.2
+     },
+     "st": {
+      "table": "Bullish Low"
+     }
+    },
+    {
+     "date": "2026-10-14",
+     "r1": -6.1,
+     "r5": -2.46,
+     "big": true,
+     "p": {
+      "up1": 52.4,
+      "up5": 52.1,
+      "big": 8.2
+     },
+     "pk": {
+      "up1": 52.4,
+      "up5": null,
+      "big": 8.2
+     },
+     "st": {
+      "table": "Bullish Low"
+     }
+    },
+    {
+     "date": "2026-10-15",
+     "r1": 2.32,
+     "r5": 3.37,
+     "big": false,
+     "p": {
+      "up1": 52.4,
+      "up5": 52.1,
+      "big": 8.2
+     },
+     "pk": {
+      "up1": 52.4,
+      "up5": null,
+      "big": 8.2
+     },
+     "st": {
+      "table": "Bullish Low"
+     }
+    },
+    {
+     "date": "2026-10-16",
+     "r1": 0.28,
+     "r5": -3.65,
+     "big": false,
+     "p": {
+      "up1": 52.4,
+      "up5": 52.1,
+      "big": 8.2
+     },
+     "pk": {
+      "up1": 52.4,
+      "up5": null,
+      "big": 8.2
+     },
+     "st": {
+      "table": "Bullish Low"
+     }
+    },
+    {
+     "date": "2026-10-19",
+     "r1": -0.04,
+     "r5": -5.76,
+     "big": false,
+     "p": {
+      "up1": 52.0,
+      "up5": 52.8,
+      "big": 6.2
+     },
+     "pk": {
+      "up1": 52.0,
+      "up5": null,
+      "big": 6.2
+     },
+     "st": {
+      "table": "no signal"
+     }
+    },
+    {
+     "date": "2026-10-20",
+     "r1": 1.28,
+     "r5": -5.03,
+     "big": false,
+     "p": {
+      "up1": 52.0,
+      "up5": 52.8,
+      "big": 6.2
+     },
+     "pk": {
+      "up1": 52.0,
+      "up5": null,
+      "big": 6.2
+     },
+     "st": {
+      "table": "no signal"
+     }
+    },
+    {
+     "date": "2026-10-21",
+     "r1": -0.49,
+     "r5": -5.91,
+     "big": false,
+     "p": {
+      "up1": 52.0,
+      "up5": 52.8,
+      "big": 6.2
+     },
+     "pk": {
+      "up1": 52.0,
+      "up5": null,
+      "big": 6.2
+     },
+     "st": {
+      "table": "no signal"
+     }
+    },
+    {
+     "date": "2026-10-22",
+     "r1": -4.63,
+     "r5": -6.91,
+     "big": true,
+     "p": {
+      "up1": 52.0,
+      "up5": 52.8,
+      "big": 6.2
+     },
+     "pk": {
+      "up1": 52.0,
+      "up5": null,
+      "big": 6.2
+     },
+     "st": {
+      "table": "no signal"
+     }
+    },
+    {
+     "date": "2026-10-23",
+     "r1": -1.92,
+     "r5": -4.7,
+     "big": false,
+     "p": {
+      "up1": 52.0,
+      "up5": 52.8,
+      "big": 6.2
+     },
+     "pk": {
+      "up1": 52.0,
+      "up5": null,
+      "big": 6.2
+     },
+     "st": {
+      "table": "no signal"
+     }
+    },
+    {
+     "date": "2026-10-26",
+     "r1": 0.74,
+     "r5": -8.59,
+     "big": false,
+     "p": {
+      "up1": 53.9,
+      "up5": 54.2,
+      "big": 9.3
+     },
+     "pk": {
+      "up1": 53.9,
+      "up5": null,
+      "big": 9.3
+     },
+     "st": {
+      "table": "Bullish High"
+     }
+    },
+    {
+     "date": "2026-10-27",
+     "r1": 0.34,
+     "r5": -6.26,
+     "big": false,
+     "p": {
+      "up1": 53.9,
+      "up5": 54.2,
+      "big": 9.3
+     },
+     "pk": {
+      "up1": 53.9,
+      "up5": null,
+      "big": 9.3
+     },
+     "st": {
+      "table": "Bullish High"
+     }
+    },
+    {
+     "date": "2026-10-28",
+     "r1": -1.54,
+     "r5": -8.67,
+     "big": false,
+     "p": {
+      "up1": 53.9,
+      "up5": 54.2,
+      "big": 9.3
+     },
+     "pk": {
+      "up1": 53.9,
+      "up5": null,
+      "big": 9.3
+     },
+     "st": {
+      "table": "Bullish High"
+     }
+    },
+    {
+     "date": "2026-10-29",
+     "r1": -2.37,
+     "r5": -2.5,
+     "big": false,
+     "p": {
+      "up1": 53.9,
+      "up5": 54.2,
+      "big": 9.3
+     },
+     "pk": {
+      "up1": 53.9,
+      "up5": null,
+      "big": 9.3
+     },
+     "st": {
+      "table": "Bullish High"
+     }
+    },
+    {
+     "date": "2026-10-30",
+     "r1": -5.93,
+     "r5": 0.08,
+     "big": true,
+     "p": {
+      "up1": 53.9,
+      "up5": 54.2,
+      "big": 9.3
+     },
+     "pk": {
+      "up1": 53.9,
+      "up5": null,
+      "big": 9.3
+     },
+     "st": {
+      "table": "Bullish High"
+     }
+    },
+    {
+     "date": "2026-11-02",
+     "r1": 3.31,
+     "r5": 5.51,
+     "big": false,
+     "p": {
+      "up1": 53.9,
+      "up5": 54.2,
+      "big": 9.3
+     },
+     "pk": {
+      "up1": 53.9,
+      "up5": null,
+      "big": 9.3
+     },
+     "st": {
+      "table": "Bullish High"
+     }
+    },
+    {
+     "date": "2026-11-03",
+     "r1": -2.23,
+     "r5": 3.64,
+     "big": false,
+     "p": {
+      "up1": 53.9,
+      "up5": 54.2,
+      "big": 9.3
+     },
+     "pk": {
+      "up1": 53.9,
+      "up5": null,
+      "big": 9.3
+     },
+     "st": {
+      "table": "Bullish High"
+     }
+    },
+    {
+     "date": "2026-11-04",
+     "r1": 5.11,
+     "r5": 3.05,
+     "big": true,
+     "p": {
+      "up1": 53.9,
+      "up5": 54.2,
+      "big": 9.3
+     },
+     "pk": {
+      "up1": 53.9,
+      "up5": null,
+      "big": 9.3
+     },
+     "st": {
+      "table": "Bullish High"
+     }
+    },
+    {
+     "date": "2026-11-05",
+     "r1": 0.22,
+     "r5": -0.46,
+     "big": false,
+     "p": {
+      "up1": 53.9,
+      "up5": 54.2,
+      "big": 9.3
+     },
+     "pk": {
+      "up1": 53.9,
+      "up5": null,
+      "big": 9.3
+     },
+     "st": {
+      "table": "Bullish High"
+     }
+    },
+    {
+     "date": "2026-11-06",
+     "r1": -0.82,
+     "r5": -4.33,
+     "big": false,
+     "p": {
+      "up1": 53.9,
+      "up5": 54.2,
+      "big": 9.3
+     },
+     "pk": {
+      "up1": 53.9,
+      "up5": null,
+      "big": 9.3
+     },
+     "st": {
+      "table": "Bullish High"
+     }
+    },
+    {
+     "date": "2026-11-09",
+     "r1": 1.47,
+     "r5": -5.35,
+     "big": false,
+     "p": {
+      "up1": 53.9,
+      "up5": 54.2,
+      "big": 9.3
+     },
+     "pk": {
+      "up1": 53.9,
+      "up5": null,
+      "big": 9.3
+     },
+     "st": {
+      "table": "Bullish High"
+     }
+    },
+    {
+     "date": "2026-11-10",
+     "r1": -2.78,
+     "r5": -10.99,
+     "big": false,
+     "p": {
+      "up1": 53.9,
+      "up5": 54.2,
+      "big": 9.3
+     },
+     "pk": {
+      "up1": 53.9,
+      "up5": null,
+      "big": 9.3
+     },
+     "st": {
+      "table": "Bullish High"
+     }
+    },
+    {
+     "date": "2026-11-11",
+     "r1": 1.53,
+     "r5": -7.46,
+     "big": false,
+     "p": {
+      "up1": 53.9,
+      "up5": 54.2,
+      "big": 9.3
+     },
+     "pk": {
+      "up1": 53.9,
+      "up5": null,
+      "big": 9.3
+     },
+     "st": {
+      "table": "Bullish High"
+     }
+    },
+    {
+     "date": "2026-11-12",
+     "r1": -3.68,
+     "r5": -13.26,
+     "big": true,
+     "p": {
+      "up1": 53.9,
+      "up5": 54.2,
+      "big": 9.3
+     },
+     "pk": {
+      "up1": 53.9,
+      "up5": null,
+      "big": 9.3
+     },
+     "st": {
+      "table": "Bullish High"
+     }
+    },
+    {
+     "date": "2026-11-13",
+     "r1": -1.88,
+     "r5": -11.31,
+     "big": false,
+     "p": {
+      "up1": 53.9,
+      "up5": 54.2,
+      "big": 9.3
+     },
+     "pk": {
+      "up1": 53.9,
+      "up5": null,
+      "big": 9.3
+     },
+     "st": {
+      "table": "Bullish High"
+     }
+    },
+    {
+     "date": "2026-11-16",
+     "r1": -4.58,
+     "r5": -16.31,
+     "big": true,
+     "p": {
+      "up1": 52.0,
+      "up5": 52.8,
+      "big": 6.2
+     },
+     "pk": {
+      "up1": 52.0,
+      "up5": null,
+      "big": 6.2
+     },
+     "st": {
+      "table": "no signal"
+     }
+    },
+    {
+     "date": "2026-11-17",
+     "r1": 1.08,
+     "r5": -7.09,
+     "big": false,
+     "p": {
+      "up1": 52.0,
+      "up5": 52.8,
+      "big": 6.2
+     },
+     "pk": {
+      "up1": 52.0,
+      "up5": null,
+      "big": 6.2
+     },
+     "st": {
+      "table": "no signal"
+     }
+    },
+    {
+     "date": "2026-11-18",
+     "r1": -4.84,
+     "r5": null,
+     "big": true,
+     "p": {
+      "up1": 52.0,
+      "up5": 52.8,
+      "big": 6.2
+     },
+     "pk": {
+      "up1": 52.0,
+      "up5": null,
+      "big": 6.2
+     },
+     "st": {
+      "table": "no signal"
+     }
+    },
+    {
+     "date": "2026-11-19",
+     "r1": -1.51,
+     "r5": null,
+     "big": false,
+     "p": {
+      "up1": 52.0,
+      "up5": 52.8,
+      "big": 6.2
+     },
+     "pk": {
+      "up1": 52.0,
+      "up5": null,
+      "big": 6.2
+     },
+     "st": {
+      "table": "no signal"
+     }
+    },
+    {
+     "date": "2026-11-20",
+     "r1": -7.41,
+     "r5": null,
+     "big": true,
+     "p": {
+      "up1": 52.0,
+      "up5": 52.8,
+      "big": 6.2
+     },
+     "pk": {
+      "up1": 52.0,
+      "up5": null,
+      "big": 6.2
+     },
+     "st": {
+      "table": "no signal"
+     }
+    },
+    {
+     "date": "2026-11-23",
+     "r1": 5.93,
+     "r5": null,
+     "big": true,
+     "p": {
+      "up1": 52.0,
+      "up5": 52.8,
+      "big": 6.2
+     },
+     "pk": {
+      "up1": 52.0,
+      "up5": null,
+      "big": 6.2
+     },
+     "st": {
+      "table": "no signal"
+     }
+    }
+   ]
+  },
+  "spx": {
+   "name": "S&P 500",
+   "layers": [
+    "table",
+    "bigmove",
+    "USA dasha",
+    "NYSE dasha",
+    "USA gochara",
+    "NYSE gochara",
+    "USA chandra",
+    "NYSE chandra",
+    "USA tara",
+    "NYSE tara",
+    "jup-ven"
+   ],
+   "walk_forward": {
+    "up1": {
+     "all": {
+      "n": 3452,
+      "actual": 54.5,
+      "base": 52.8,
+      "brier": 0.2493,
+      "brier_base": 0.2483,
+      "skill": -0.42,
+      "avg_p": 53.0,
+      "calls_up": 1155,
+      "right_up": 54,
+      "calls_down": 1010,
+      "right_down": 47,
+      "hit": 51,
+      "bands": {
+       "40-45%": {
+        "n": 98,
+        "actual": 49
+       },
+       "45-50%": {
+        "n": 681,
+        "actual": 52
+       },
+       "50-55%": {
+        "n": 1570,
+        "actual": 56
+       },
+       "55-60%": {
+        "n": 976,
+        "actual": 53
+       },
+       "60-100%": {
+        "n": 127,
+        "actual": 59
+       }
+      }
+     },
+     "kept": {
+      "n": 3452,
+      "actual": 54.5,
+      "base": 52.8,
+      "brier": 0.2477,
+      "brier_base": 0.2483,
+      "skill": 0.24,
+      "avg_p": 53.2,
+      "calls_up": 858,
+      "right_up": 58,
+      "calls_down": 495,
+      "right_down": 49,
+      "hit": 55,
+      "bands": {
+       "45-50%": {
+        "n": 225,
+        "actual": 52
+       },
+       "50-55%": {
+        "n": 2452,
+        "actual": 54
+       },
+       "55-60%": {
+        "n": 775,
+        "actual": 58
+       }
+      }
+     }
+    },
+    "up5": {
+     "all": {
+      "n": 3452,
+      "actual": 60.7,
+      "base": 53.6,
+      "brier": 0.2441,
+      "brier_base": 0.2436,
+      "skill": -0.22,
+      "avg_p": 54.1,
+      "calls_up": 1368,
+      "right_up": 62,
+      "calls_down": 1217,
+      "right_down": 41,
+      "hit": 52,
+      "bands": {
+       "0-40%": {
+        "n": 5,
+        "actual": 40
+       },
+       "40-45%": {
+        "n": 141,
+        "actual": 57
+       },
+       "45-50%": {
+        "n": 693,
+        "actual": 59
+       },
+       "50-55%": {
+        "n": 1130,
+        "actual": 61
+       },
+       "55-60%": {
+        "n": 947,
+        "actual": 59
+       },
+       "60-100%": {
+        "n": 536,
+        "actual": 66
+       }
+      }
+     },
+     "kept": {
+      "n": 3452,
+      "actual": 60.7,
+      "base": 53.6,
+      "brier": 0.2425,
+      "brier_base": 0.2436,
+      "skill": 0.46,
+      "avg_p": 54.6,
+      "calls_up": 1453,
+      "right_up": 63,
+      "calls_down": 894,
+      "right_down": 41,
+      "hit": 55,
+      "bands": {
+       "40-45%": {
+        "n": 86,
+        "actual": 55
+       },
+       "45-50%": {
+        "n": 489,
+        "actual": 58
+       },
+       "50-55%": {
+        "n": 1345,
+        "actual": 58
+       },
+       "55-60%": {
+        "n": 1247,
+        "actual": 64
+       },
+       "60-100%": {
+        "n": 285,
+        "actual": 63
+       }
+      }
+     }
+    },
+    "big": {
+     "all": {
+      "n": 3452,
+      "actual": 5.2,
+      "base": 10.3,
+      "brier": 0.0583,
+      "brier_base": 0.0518,
+      "skill": -12.57,
+      "avg_p": 10.1,
+      "p_on_big": 9.7,
+      "p_on_other": 10.2,
+      "bands": {
+       "0-3%": {
+        "n": 529,
+        "actual": 5
+       },
+       "3-6%": {
+        "n": 822,
+        "actual": 6
+       },
+       "6-10%": {
+        "n": 786,
+        "actual": 5
+       },
+       "10-20%": {
+        "n": 825,
+        "actual": 5
+       },
+       "20-100%": {
+        "n": 490,
+        "actual": 5
+       }
+      }
+     },
+     "kept": {
+      "n": 3452,
+      "actual": 5.2,
+      "base": 10.3,
+      "brier": 0.0515,
+      "brier_base": 0.0518,
+      "skill": 0.57,
+      "avg_p": 10.0,
+      "p_on_big": 10.3,
+      "p_on_other": 10.0,
+      "bands": {
+       "6-10%": {
+        "n": 1624,
+        "actual": 4
+       },
+       "10-20%": {
+        "n": 1828,
+        "actual": 6
+       }
+      }
+     }
+    }
+   },
+   "window": {
+    "up1": {
+     "all": {
+      "n": 43,
+      "actual": 44.2,
+      "base": 53.7,
+      "brier": 0.2566,
+      "brier_base": 0.2557,
+      "skill": -0.38,
+      "avg_p": 53.1,
+      "calls_up": 12,
+      "right_up": 33,
+      "calls_down": 19,
+      "right_down": 58,
+      "hit": 48,
+      "bands": {
+       "45-50%": {
+        "n": 12,
+        "actual": 42
+       },
+       "50-55%": {
+        "n": 16,
+        "actual": 44
+       },
+       "55-60%": {
+        "n": 13,
+        "actual": 46
+       },
+       "60-100%": {
+        "n": 2,
+        "actual": 50
+       }
+      }
+     },
+     "kept": {
+      "n": 43,
+      "actual": 44.2,
+      "base": 53.7,
+      "brier": 0.2578,
+      "brier_base": 0.2557,
+      "skill": -0.85,
+      "avg_p": 53.3,
+      "calls_up": 16,
+      "right_up": 38,
+      "calls_down": 12,
+      "right_down": 58,
+      "hit": 46,
+      "bands": {
+       "45-50%": {
+        "n": 12,
+        "actual": 42
+       },
+       "50-55%": {
+        "n": 15,
+        "actual": 53
+       },
+       "55-60%": {
+        "n": 16,
+        "actual": 38
+       }
+      }
+     }
+    },
+    "up5": {
+     "all": {
+      "n": 39,
+      "actual": 30.8,
+      "base": 57.3,
+      "brier": 0.2713,
+      "brier_base": 0.2831,
+      "skill": 4.18,
+      "avg_p": 55.6,
+      "calls_up": 8,
+      "right_up": 38,
+      "calls_down": 17,
+      "right_down": 76,
+      "hit": 64,
+      "bands": {
+       "45-50%": {
+        "n": 4,
+        "actual": 0
+       },
+       "50-55%": {
+        "n": 12,
+        "actual": 33
+       },
+       "55-60%": {
+        "n": 18,
+        "actual": 33
+       },
+       "60-100%": {
+        "n": 5,
+        "actual": 40
+       }
+      }
+     },
+     "kept": {
+      "n": 39,
+      "actual": 30.8,
+      "base": 57.3,
+      "brier": 0.279,
+      "brier_base": 0.2831,
+      "skill": 1.46,
+      "avg_p": 56.7,
+      "calls_up": 15,
+      "right_up": 27,
+      "calls_down": 12,
+      "right_down": 75,
+      "hit": 48,
+      "bands": {
+       "50-55%": {
+        "n": 12,
+        "actual": 25
+       },
+       "55-60%": {
+        "n": 12,
+        "actual": 42
+       },
+       "60-100%": {
+        "n": 15,
+        "actual": 27
+       }
+      }
+     }
+    },
+    "big": {
+     "all": {
+      "n": 43,
+      "actual": 11.6,
+      "base": 7.7,
+      "brier": 0.1162,
+      "brier_base": 0.1043,
+      "skill": -11.36,
+      "avg_p": 7.8,
+      "p_on_big": 3.2,
+      "p_on_other": 8.4,
+      "bands": {
+       "0-3%": {
+        "n": 5,
+        "actual": 40
+       },
+       "3-6%": {
+        "n": 11,
+        "actual": 27
+       },
+       "6-10%": {
+        "n": 14,
+        "actual": 0
+       },
+       "10-20%": {
+        "n": 13,
+        "actual": 0
+       }
+      }
+     },
+     "kept": {
+      "n": 43,
+      "actual": 11.6,
+      "base": 7.7,
+      "brier": 0.1068,
+      "brier_base": 0.1043,
+      "skill": -2.41,
+      "avg_p": 8.6,
+      "p_on_big": 7.3,
+      "p_on_other": 8.7,
+      "bands": {
+       "3-6%": {
+        "n": 4,
+        "actual": 25
+       },
+       "6-10%": {
+        "n": 30,
+        "actual": 13
+       },
+       "10-20%": {
+        "n": 9,
+        "actual": 0
+       }
+      }
+     }
+    }
+   },
+   "kept": {
+    "up1": [
+     "table",
+     "bigmove",
+     "NYSE gochara"
+    ],
+    "up5": [
+     "table",
+     "NYSE dasha",
+     "NYSE gochara",
+     "jup-ven"
+    ],
+    "big": [
+     "bigmove",
+     "NYSE dasha",
+     "USA tara",
+     "NYSE tara",
+     "jup-ven"
+    ]
+   },
+   "layer_test": {
+    "up1": {
+     "table": {
+      "n": 3452,
+      "actual": 54.5,
+      "base": 52.8,
+      "brier": 0.2481,
+      "brier_base": 0.2483,
+      "skill": 0.06,
+      "avg_p": 52.8,
+      "calls_up": 379,
+      "right_up": 56,
+      "calls_down": 520,
+      "right_down": 46,
+      "hit": 50,
+      "bands": {
+       "50-55%": {
+        "n": 3073,
+        "actual": 54
+       },
+       "55-60%": {
+        "n": 379,
+        "actual": 56
+       }
+      }
+     },
+     "bigmove": {
+      "n": 3452,
+      "actual": 54.5,
+      "base": 52.8,
+      "brier": 0.2482,
+      "brier_base": 0.2483,
+      "skill": 0.02,
+      "avg_p": 52.9,
+      "calls_up": 0,
+      "right_up": null,
+      "calls_down": 0,
+      "right_down": null,
+      "hit": null,
+      "bands": {
+       "50-55%": {
+        "n": 3452,
+        "actual": 54
+       }
+      }
+     },
+     "USA dasha": {
+      "n": 3452,
+      "actual": 54.5,
+      "base": 52.8,
+      "brier": 0.2485,
+      "brier_base": 0.2483,
+      "skill": -0.09,
+      "avg_p": 52.6,
+      "calls_up": 0,
+      "right_up": null,
+      "calls_down": 0,
+      "right_down": null,
+      "hit": null,
+      "bands": {
+       "50-55%": {
+        "n": 3452,
+        "actual": 54
+       }
+      }
+     },
+     "NYSE dasha": {
+      "n": 3452,
+      "actual": 54.5,
+      "base": 52.8,
+      "brier": 0.2482,
+      "brier_base": 0.2483,
+      "skill": 0.0,
+      "avg_p": 52.9,
+      "calls_up": 0,
+      "right_up": null,
+      "calls_down": 0,
+      "right_down": null,
+      "hit": null,
+      "bands": {
+       "50-55%": {
+        "n": 3452,
+        "actual": 54
+       }
+      }
+     },
+     "USA gochara": {
+      "n": 3452,
+      "actual": 54.5,
+      "base": 52.8,
+      "brier": 0.2486,
+      "brier_base": 0.2483,
+      "skill": -0.13,
+      "avg_p": 52.7,
+      "calls_up": 0,
+      "right_up": null,
+      "calls_down": 0,
+      "right_down": null,
+      "hit": null,
+      "bands": {
+       "50-55%": {
+        "n": 3452,
+        "actual": 54
+       }
+      }
+     },
+     "NYSE gochara": {
+      "n": 3452,
+      "actual": 54.5,
+      "base": 52.8,
+      "brier": 0.2479,
+      "brier_base": 0.2483,
+      "skill": 0.13,
+      "avg_p": 53.3,
+      "calls_up": 1455,
+      "right_up": 57,
+      "calls_down": 712,
+      "right_down": 46,
+      "hit": 53,
+      "bands": {
+       "50-55%": {
+        "n": 1997,
+        "actual": 53
+       },
+       "55-60%": {
+        "n": 1455,
+        "actual": 57
+       }
+      }
+     },
+     "USA chandra": {
+      "n": 3452,
+      "actual": 54.5,
+      "base": 52.8,
+      "brier": 0.2484,
+      "brier_base": 0.2483,
+      "skill": -0.05,
+      "avg_p": 52.8,
+      "calls_up": 0,
+      "right_up": null,
+      "calls_down": 0,
+      "right_down": null,
+      "hit": null,
+      "bands": {
+       "50-55%": {
+        "n": 3452,
+        "actual": 54
+       }
+      }
+     },
+     "NYSE chandra": {
+      "n": 3452,
+      "actual": 54.5,
+      "base": 52.8,
+      "brier": 0.2486,
+      "brier_base": 0.2483,
+      "skill": -0.13,
+      "avg_p": 52.8,
+      "calls_up": 0,
+      "right_up": null,
+      "calls_down": 0,
+      "right_down": null,
+      "hit": null,
+      "bands": {
+       "50-55%": {
+        "n": 3452,
+        "actual": 54
+       }
+      }
+     },
+     "USA tara": {
+      "n": 3452,
+      "actual": 54.5,
+      "base": 52.8,
+      "brier": 0.2485,
+      "brier_base": 0.2483,
+      "skill": -0.1,
+      "avg_p": 53.0,
+      "calls_up": 0,
+      "right_up": null,
+      "calls_down": 0,
+      "right_down": null,
+      "hit": null,
+      "bands": {
+       "50-55%": {
+        "n": 3452,
+        "actual": 54
+       }
+      }
+     },
+     "NYSE tara": {
+      "n": 3452,
+      "actual": 54.5,
+      "base": 52.8,
+      "brier": 0.2483,
+      "brier_base": 0.2483,
+      "skill": -0.0,
+      "avg_p": 52.9,
+      "calls_up": 0,
+      "right_up": null,
+      "calls_down": 0,
+      "right_down": null,
+      "hit": null,
+      "bands": {
+       "50-55%": {
+        "n": 3452,
+        "actual": 54
+       }
+      }
+     },
+     "jup-ven": {
+      "n": 3452,
+      "actual": 54.5,
+      "base": 52.8,
+      "brier": 0.2483,
+      "brier_base": 0.2483,
+      "skill": -0.03,
+      "avg_p": 52.8,
+      "calls_up": 0,
+      "right_up": null,
+      "calls_down": 0,
+      "right_down": null,
+      "hit": null,
+      "bands": {
+       "50-55%": {
+        "n": 3452,
+        "actual": 54
+       }
+      }
+     }
+    },
+    "up5": {
+     "table": {
+      "n": 3452,
+      "actual": 60.7,
+      "base": 53.6,
+      "brier": 0.2431,
+      "brier_base": 0.2436,
+      "skill": 0.19,
+      "avg_p": 53.6,
+      "calls_up": 839,
+      "right_up": 66,
+      "calls_down": 819,
+      "right_down": 41,
+      "hit": 53,
+      "bands": {
+       "45-50%": {
+        "n": 483,
+        "actual": 54
+       },
+       "50-55%": {
+        "n": 2130,
+        "actual": 60
+       },
+       "55-60%": {
+        "n": 839,
+        "actual": 66
+       }
+      }
+     },
+     "bigmove": {
+      "n": 3452,
+      "actual": 60.7,
+      "base": 53.6,
+      "brier": 0.2436,
+      "brier_base": 0.2436,
+      "skill": -0.02,
+      "avg_p": 53.6,
+      "calls_up": 0,
+      "right_up": null,
+      "calls_down": 0,
+      "right_down": null,
+      "hit": null,
+      "bands": {
+       "50-55%": {
+        "n": 3452,
+        "actual": 61
+       }
+      }
+     },
+     "USA dasha": {
+      "n": 3452,
+      "actual": 60.7,
+      "base": 53.6,
+      "brier": 0.2436,
+      "brier_base": 0.2436,
+      "skill": -0.0,
+      "avg_p": 53.6,
+      "calls_up": 0,
+      "right_up": null,
+      "calls_down": 0,
+      "right_down": null,
+      "hit": null,
+      "bands": {
+       "50-55%": {
+        "n": 2355,
+        "actual": 60
+       },
+       "55-60%": {
+        "n": 1097,
+        "actual": 62
+       }
+      }
+     },
+     "NYSE dasha": {
+      "n": 3452,
+      "actual": 60.7,
+      "base": 53.6,
+      "brier": 0.2435,
+      "brier_base": 0.2436,
+      "skill": 0.02,
+      "avg_p": 53.8,
+      "calls_up": 0,
+      "right_up": null,
+      "calls_down": 0,
+      "right_down": null,
+      "hit": null,
+      "bands": {
+       "50-55%": {
+        "n": 3452,
+        "actual": 61
+       }
+      }
+     },
+     "USA gochara": {
+      "n": 3452,
+      "actual": 60.7,
+      "base": 53.6,
+      "brier": 0.2447,
+      "brier_base": 0.2436,
+      "skill": -0.46,
+      "avg_p": 53.1,
+      "calls_up": 699,
+      "right_up": 61,
+      "calls_down": 1315,
+      "right_down": 40,
+      "hit": 47,
+      "bands": {
+       "50-55%": {
+        "n": 2753,
+        "actual": 61
+       },
+       "55-60%": {
+        "n": 699,
+        "actual": 61
+       }
+      }
+     },
+     "NYSE gochara": {
+      "n": 3452,
+      "actual": 60.7,
+      "base": 53.6,
+      "brier": 0.2432,
+      "brier_base": 0.2436,
+      "skill": 0.18,
+      "avg_p": 54.4,
+      "calls_up": 1455,
+      "right_up": 62,
+      "calls_down": 712,
+      "right_down": 39,
+      "hit": 54,
+      "bands": {
+       "45-50%": {
+        "n": 712,
+        "actual": 61
+       },
+       "50-55%": {
+        "n": 1285,
+        "actual": 59
+       },
+       "55-60%": {
+        "n": 1455,
+        "actual": 62
+       }
+      }
+     },
+     "USA chandra": {
+      "n": 3452,
+      "actual": 60.7,
+      "base": 53.6,
+      "brier": 0.2439,
+      "brier_base": 0.2436,
+      "skill": -0.12,
+      "avg_p": 53.6,
+      "calls_up": 0,
+      "right_up": null,
+      "calls_down": 0,
+      "right_down": null,
+      "hit": null,
+      "bands": {
+       "50-55%": {
+        "n": 3452,
+        "actual": 61
+       }
+      }
+     },
+     "NYSE chandra": {
+      "n": 3452,
+      "actual": 60.7,
+      "base": 53.6,
+      "brier": 0.2436,
+      "brier_base": 0.2436,
+      "skill": 0.0,
+      "avg_p": 53.6,
+      "calls_up": 0,
+      "right_up": null,
+      "calls_down": 0,
+      "right_down": null,
+      "hit": null,
+      "bands": {
+       "50-55%": {
+        "n": 3452,
+        "actual": 61
+       }
+      }
+     },
+     "USA tara": {
+      "n": 3452,
+      "actual": 60.7,
+      "base": 53.6,
+      "brier": 0.2437,
+      "brier_base": 0.2436,
+      "skill": -0.04,
+      "avg_p": 53.6,
+      "calls_up": 0,
+      "right_up": null,
+      "calls_down": 0,
+      "right_down": null,
+      "hit": null,
+      "bands": {
+       "50-55%": {
+        "n": 3452,
+        "actual": 61
+       }
+      }
+     },
+     "NYSE tara": {
+      "n": 3452,
+      "actual": 60.7,
+      "base": 53.6,
+      "brier": 0.2436,
+      "brier_base": 0.2436,
+      "skill": -0.01,
+      "avg_p": 53.6,
+      "calls_up": 0,
+      "right_up": null,
+      "calls_down": 0,
+      "right_down": null,
+      "hit": null,
+      "bands": {
+       "50-55%": {
+        "n": 3452,
+        "actual": 61
+       }
+      }
+     },
+     "jup-ven": {
+      "n": 3452,
+      "actual": 60.7,
+      "base": 53.6,
+      "brier": 0.2435,
+      "brier_base": 0.2436,
+      "skill": 0.04,
+      "avg_p": 53.7,
+      "calls_up": 0,
+      "right_up": null,
+      "calls_down": 0,
+      "right_down": null,
+      "hit": null,
+      "bands": {
+       "50-55%": {
+        "n": 3452,
+        "actual": 61
+       }
+      }
+     }
+    },
+    "big": {
+     "table": {
+      "n": 3452,
+      "actual": 5.2,
+      "base": 10.3,
+      "brier": 0.052,
+      "brier_base": 0.0518,
+      "skill": -0.37,
+      "avg_p": 10.3,
+      "p_on_big": 10.2,
+      "p_on_other": 10.3,
+      "bands": {
+       "6-10%": {
+        "n": 899,
+        "actual": 6
+       },
+       "10-20%": {
+        "n": 2553,
+        "actual": 5
+       }
+      }
+     },
+     "bigmove": {
+      "n": 3452,
+      "actual": 5.2,
+      "base": 10.3,
+      "brier": 0.0516,
+      "brier_base": 0.0518,
+      "skill": 0.39,
+      "avg_p": 10.3,
+      "p_on_big": 10.6,
+      "p_on_other": 10.2,
+      "bands": {
+       "6-10%": {
+        "n": 1929,
+        "actual": 4
+       },
+       "10-20%": {
+        "n": 1523,
+        "actual": 6
+       }
+      }
+     },
+     "USA dasha": {
+      "n": 3452,
+      "actual": 5.2,
+      "base": 10.3,
+      "brier": 0.0526,
+      "brier_base": 0.0518,
+      "skill": -1.51,
+      "avg_p": 10.9,
+      "p_on_big": 10.9,
+      "p_on_other": 10.9,
+      "bands": {
+       "6-10%": {
+        "n": 1387,
+        "actual": 5
+       },
+       "10-20%": {
+        "n": 2065,
+        "actual": 5
+       }
+      }
+     },
+     "NYSE dasha": {
+      "n": 3452,
+      "actual": 5.2,
+      "base": 10.3,
+      "brier": 0.0517,
+      "brier_base": 0.0518,
+      "skill": 0.17,
+      "avg_p": 10.2,
+      "p_on_big": 10.2,
+      "p_on_other": 10.2,
+      "bands": {
+       "6-10%": {
+        "n": 1843,
+        "actual": 5
+       },
+       "10-20%": {
+        "n": 1609,
+        "actual": 5
+       }
+      }
+     },
+     "USA gochara": {
+      "n": 3452,
+      "actual": 5.2,
+      "base": 10.3,
+      "brier": 0.0544,
+      "brier_base": 0.0518,
+      "skill": -4.96,
+      "avg_p": 10.9,
+      "p_on_big": 9.9,
+      "p_on_other": 10.9,
+      "bands": {
+       "3-6%": {
+        "n": 699,
+        "actual": 9
+       },
+       "10-20%": {
+        "n": 2753,
+        "actual": 4
+       }
+      }
+     },
+     "NYSE gochara": {
+      "n": 3452,
+      "actual": 5.2,
+      "base": 10.3,
+      "brier": 0.0534,
+      "brier_base": 0.0518,
+      "skill": -3.12,
+      "avg_p": 9.1,
+      "p_on_big": 9.3,
+      "p_on_other": 9.1,
+      "bands": {
+       "3-6%": {
+        "n": 1455,
+        "actual": 5
+       },
+       "6-10%": {
+        "n": 1285,
+        "actual": 6
+       },
+       "10-20%": {
+        "n": 712,
+        "actual": 5
+       }
+      }
+     },
+     "USA chandra": {
+      "n": 3452,
+      "actual": 5.2,
+      "base": 10.3,
+      "brier": 0.0519,
+      "brier_base": 0.0518,
+      "skill": -0.1,
+      "avg_p": 10.3,
+      "p_on_big": 10.3,
+      "p_on_other": 10.3,
+      "bands": {
+       "6-10%": {
+        "n": 1716,
+        "actual": 6
+       },
+       "10-20%": {
+        "n": 1736,
+        "actual": 5
+       }
+      }
+     },
+     "NYSE chandra": {
+      "n": 3452,
+      "actual": 5.2,
+      "base": 10.3,
+      "brier": 0.0519,
+      "brier_base": 0.0518,
+      "skill": -0.11,
+      "avg_p": 10.3,
+      "p_on_big": 10.3,
+      "p_on_other": 10.3,
+      "bands": {
+       "6-10%": {
+        "n": 1716,
+        "actual": 5
+       },
+       "10-20%": {
+        "n": 1736,
+        "actual": 5
+       }
+      }
+     },
+     "USA tara": {
+      "n": 3452,
+      "actual": 5.2,
+      "base": 10.3,
+      "brier": 0.0518,
+      "brier_base": 0.0518,
+      "skill": 0.02,
+      "avg_p": 10.3,
+      "p_on_big": 10.4,
+      "p_on_other": 10.3,
+      "bands": {
+       "6-10%": {
+        "n": 1924,
+        "actual": 5
+       },
+       "10-20%": {
+        "n": 1528,
+        "actual": 5
+       }
+      }
+     },
+     "NYSE tara": {
+      "n": 3452,
+      "actual": 5.2,
+      "base": 10.3,
+      "brier": 0.0518,
+      "brier_base": 0.0518,
+      "skill": 0.07,
+      "avg_p": 10.3,
+      "p_on_big": 10.3,
+      "p_on_other": 10.3,
+      "bands": {
+       "6-10%": {
+        "n": 1902,
+        "actual": 5
+       },
+       "10-20%": {
+        "n": 1550,
+        "actual": 5
+       }
+      }
+     },
+     "jup-ven": {
+      "n": 3452,
+      "actual": 5.2,
+      "base": 10.3,
+      "brier": 0.0518,
+      "brier_base": 0.0518,
+      "skill": 0.08,
+      "avg_p": 10.3,
+      "p_on_big": 10.3,
+      "p_on_other": 10.3,
+      "bands": {
+       "10-20%": {
+        "n": 3452,
+        "actual": 5
+       }
+      }
+     }
+    }
+   },
+   "weights": {
+    "up1": {
+     "base": 53.7,
+     "w": {
+      "table": {
+       "Bearish High": {
+        "n": 921,
+        "rate": 49.6,
+        "shift": -0.134
+       },
+       "Bearish Low": {
+        "n": 423,
+        "rate": 52.2,
+        "shift": -0.039
+       },
+       "Bearish Moderate": {
+        "n": 947,
+        "rate": 52.4,
+        "shift": -0.044
+       },
+       "Bullish High": {
+        "n": 748,
+        "rate": 57.1,
+        "shift": 0.108
+       },
+       "Bullish Low": {
+        "n": 634,
+        "rate": 54.6,
+        "shift": 0.027
+       },
+       "Bullish Moderate": {
+        "n": 880,
+        "rate": 54.7,
+        "shift": 0.032
+       },
+       "no signal": {
+        "n": 2167,
+        "rate": 54.5,
+        "shift": 0.028
+       }
+      },
+      "bigmove": {
+       "off": {
+        "n": 3665,
+        "rate": 54.3,
+        "shift": 0.024
+       },
+       "on": {
+        "n": 3055,
+        "rate": 52.9,
+        "shift": -0.029
+       }
+      },
+      "USA dasha": {
+       "afflicted": {
+        "n": 770,
+        "rate": 54.8,
+        "shift": 0.036
+       },
+       "mixed": {
+        "n": 2357,
+        "rate": 54.0,
+        "shift": 0.012
+       },
+       "strong": {
+        "n": 3593,
+        "rate": 53.2,
+        "shift": -0.017
+       }
+      },
+      "NYSE dasha": {
+       "afflicted": {
+        "n": 910,
+        "rate": 53.3,
+        "shift": -0.013
+       },
+       "mixed": {
+        "n": 2437,
+        "rate": 53.4,
+        "shift": -0.01
+       },
+       "strong": {
+        "n": 3373,
+        "rate": 54.0,
+        "shift": 0.011
+       }
+      },
+      "USA gochara": {
+       "adverse": {
+        "n": 2742,
+        "rate": 53.2,
+        "shift": -0.018
+       },
+       "favourable": {
+        "n": 1649,
+        "rate": 54.2,
+        "shift": 0.017
+       },
+       "mixed": {
+        "n": 2329,
+        "rate": 53.9,
+        "shift": 0.009
+       }
+      },
+      "NYSE gochara": {
+       "adverse": {
+        "n": 2481,
+        "rate": 56.2,
+        "shift": 0.093
+       },
+       "favourable": {
+        "n": 1606,
+        "rate": 51.6,
+        "shift": -0.074
+       },
+       "mixed": {
+        "n": 2633,
+        "rate": 52.6,
+        "shift": -0.041
+       }
+      },
+      "USA chandra": {
+       "good": {
+        "n": 3369,
+        "rate": 53.4,
+        "shift": -0.011
+       },
+       "weak": {
+        "n": 3351,
+        "rate": 54.0,
+        "shift": 0.011
+       }
+      },
+      "NYSE chandra": {
+       "good": {
+        "n": 3356,
+        "rate": 54.4,
+        "shift": 0.027
+       },
+       "weak": {
+        "n": 3364,
+        "rate": 53.0,
+        "shift": -0.027
+       }
+      },
+      "USA tara": {
+       "bad": {
+        "n": 2239,
+        "rate": 53.5,
+        "shift": -0.008
+       },
+       "good": {
+        "n": 3736,
+        "rate": 54.3,
+        "shift": 0.022
+       },
+       "janma": {
+        "n": 745,
+        "rate": 51.5,
+        "shift": -0.068
+       }
+      },
+      "NYSE tara": {
+       "bad": {
+        "n": 2258,
+        "rate": 55.0,
+        "shift": 0.05
+       },
+       "good": {
+        "n": 3709,
+        "rate": 52.7,
+        "shift": -0.037
+       },
+       "janma": {
+        "n": 753,
+        "rate": 54.4,
+        "shift": 0.024
+       }
+      },
+      "jup-ven": {
+       "off": {
+        "n": 6531,
+        "rate": 53.7,
+        "shift": -0.0
+       },
+       "on": {
+        "n": 189,
+        "rate": 54.0,
+        "shift": 0.005
+       }
+      }
+     }
+    },
+    "up5": {
+     "base": 57.3,
+     "w": {
+      "table": {
+       "Bearish High": {
+        "n": 918,
+        "rate": 49.9,
+        "shift": -0.244
+       },
+       "Bearish Low": {
+        "n": 422,
+        "rate": 53.6,
+        "shift": -0.102
+       },
+       "Bearish Moderate": {
+        "n": 947,
+        "rate": 54.2,
+        "shift": -0.103
+       },
+       "Bullish High": {
+        "n": 748,
+        "rate": 63.5,
+        "shift": 0.205
+       },
+       "Bullish Low": {
+        "n": 634,
+        "rate": 59.1,
+        "shift": 0.059
+       },
+       "Bullish Moderate": {
+        "n": 880,
+        "rate": 62.2,
+        "shift": 0.166
+       },
+       "no signal": {
+        "n": 2167,
+        "rate": 57.7,
+        "shift": 0.018
+       }
+      },
+      "bigmove": {
+       "off": {
+        "n": 3661,
+        "rate": 58.3,
+        "shift": 0.039
+       },
+       "on": {
+        "n": 3055,
+        "rate": 56.0,
+        "shift": -0.046
+       }
+      },
+      "USA dasha": {
+       "afflicted": {
+        "n": 770,
+        "rate": 55.8,
+        "shift": -0.045
+       },
+       "mixed": {
+        "n": 2357,
+        "rate": 58.4,
+        "shift": 0.043
+       },
+       "strong": {
+        "n": 3589,
+        "rate": 56.8,
+        "shift": -0.017
+       }
+      },
+      "NYSE dasha": {
+       "afflicted": {
+        "n": 906,
+        "rate": 58.5,
+        "shift": 0.042
+       },
+       "mixed": {
+        "n": 2437,
+        "rate": 56.0,
+        "shift": -0.047
+       },
+       "strong": {
+        "n": 3373,
+        "rate": 57.8,
+        "shift": 0.022
+       }
+      },
+      "USA gochara": {
+       "adverse": {
+        "n": 2738,
+        "rate": 57.5,
+        "shift": 0.008
+       },
+       "favourable": {
+        "n": 1649,
+        "rate": 59.2,
+        "shift": 0.071
+       },
+       "mixed": {
+        "n": 2329,
+        "rate": 55.6,
+        "shift": -0.06
+       }
+      },
+      "NYSE gochara": {
+       "adverse": {
+        "n": 2481,
+        "rate": 60.7,
+        "shift": 0.132
+       },
+       "favourable": {
+        "n": 1606,
+        "rate": 54.0,
+        "shift": -0.118
+       },
+       "mixed": {
+        "n": 2629,
+        "rate": 56.0,
+        "shift": -0.048
+       }
+      },
+      "USA chandra": {
+       "good": {
+        "n": 3368,
+        "rate": 57.4,
+        "shift": 0.004
+       },
+       "weak": {
+        "n": 3348,
+        "rate": 57.1,
+        "shift": -0.004
+       }
+      },
+      "NYSE chandra": {
+       "good": {
+        "n": 3353,
+        "rate": 56.7,
+        "shift": -0.021
+       },
+       "weak": {
+        "n": 3363,
+        "rate": 57.8,
+        "shift": 0.021
+       }
+      },
+      "USA tara": {
+       "bad": {
+        "n": 2238,
+        "rate": 57.3,
+        "shift": 0.003
+       },
+       "good": {
+        "n": 3734,
+        "rate": 57.3,
+        "shift": 0.001
+       },
+       "janma": {
+        "n": 744,
+        "rate": 56.9,
+        "shift": -0.013
+       }
+      },
+      "NYSE tara": {
+       "bad": {
+        "n": 2257,
+        "rate": 56.8,
+        "shift": -0.015
+       },
+       "good": {
+        "n": 3707,
+        "rate": 57.4,
+        "shift": 0.004
+       },
+       "janma": {
+        "n": 752,
+        "rate": 58.0,
+        "shift": 0.024
+       }
+      },
+      "jup-ven": {
+       "off": {
+        "n": 6527,
+        "rate": 57.4,
+        "shift": 0.006
+       },
+       "on": {
+        "n": 189,
+        "rate": 52.4,
+        "shift": -0.096
+       }
+      }
+     }
+    },
+    "big": {
+     "base": 7.7,
+     "w": {
+      "table": {
+       "Bearish High": {
+        "n": 921,
+        "rate": 8.8,
+        "shift": 0.121
+       },
+       "Bearish Low": {
+        "n": 423,
+        "rate": 10.2,
+        "shift": 0.216
+       },
+       "Bearish Moderate": {
+        "n": 947,
+        "rate": 7.7,
+        "shift": 0.002
+       },
+       "Bullish High": {
+        "n": 748,
+        "rate": 6.6,
+        "shift": -0.134
+       },
+       "Bullish Low": {
+        "n": 634,
+        "rate": 7.6,
+        "shift": -0.013
+       },
+       "Bullish Moderate": {
+        "n": 880,
+        "rate": 7.3,
+        "shift": -0.049
+       },
+       "no signal": {
+        "n": 2167,
+        "rate": 7.3,
+        "shift": -0.047
+       }
+      },
+      "bigmove": {
+       "off": {
+        "n": 3665,
+        "rate": 6.4,
+        "shift": -0.185
+       },
+       "on": {
+        "n": 3055,
+        "rate": 9.2,
+        "shift": 0.188
+       }
+      },
+      "USA dasha": {
+       "afflicted": {
+        "n": 770,
+        "rate": 7.4,
+        "shift": -0.033
+       },
+       "mixed": {
+        "n": 2357,
+        "rate": 6.7,
+        "shift": -0.13
+       },
+       "strong": {
+        "n": 3593,
+        "rate": 8.4,
+        "shift": 0.088
+       }
+      },
+      "NYSE dasha": {
+       "afflicted": {
+        "n": 910,
+        "rate": 9.6,
+        "shift": 0.198
+       },
+       "mixed": {
+        "n": 2437,
+        "rate": 7.4,
+        "shift": -0.035
+       },
+       "strong": {
+        "n": 3373,
+        "rate": 7.4,
+        "shift": -0.042
+       }
+      },
+      "USA gochara": {
+       "adverse": {
+        "n": 2742,
+        "rate": 9.2,
+        "shift": 0.182
+       },
+       "favourable": {
+        "n": 1649,
+        "rate": 6.5,
+        "shift": -0.162
+       },
+       "mixed": {
+        "n": 2329,
+        "rate": 6.8,
+        "shift": -0.124
+       }
+      },
+      "NYSE gochara": {
+       "adverse": {
+        "n": 2481,
+        "rate": 4.0,
+        "shift": -0.617
+       },
+       "favourable": {
+        "n": 1606,
+        "rate": 14.1,
+        "shift": 0.616
+       },
+       "mixed": {
+        "n": 2633,
+        "rate": 7.3,
+        "shift": -0.059
+       }
+      },
+      "USA chandra": {
+       "good": {
+        "n": 3369,
+        "rate": 7.7,
+        "shift": 0.007
+       },
+       "weak": {
+        "n": 3351,
+        "rate": 7.6,
+        "shift": -0.007
+       }
+      },
+      "NYSE chandra": {
+       "good": {
+        "n": 3356,
+        "rate": 7.5,
+        "shift": -0.021
+       },
+       "weak": {
+        "n": 3364,
+        "rate": 7.8,
+        "shift": 0.02
+       }
+      },
+      "USA tara": {
+       "bad": {
+        "n": 2239,
+        "rate": 8.3,
+        "shift": 0.077
+       },
+       "good": {
+        "n": 3736,
+        "rate": 7.4,
+        "shift": -0.045
+       },
+       "janma": {
+        "n": 745,
+        "rate": 7.5,
+        "shift": -0.02
+       }
+      },
+      "NYSE tara": {
+       "bad": {
+        "n": 2258,
+        "rate": 7.6,
+        "shift": -0.016
+       },
+       "good": {
+        "n": 3709,
+        "rate": 7.4,
+        "shift": -0.034
+       },
+       "janma": {
+        "n": 753,
+        "rate": 9.3,
+        "shift": 0.166
+       }
+      },
+      "jup-ven": {
+       "off": {
+        "n": 6531,
+        "rate": 7.7,
+        "shift": -0.001
+       },
+       "on": {
+        "n": 189,
+        "rate": 7.9,
+        "shift": 0.017
+       }
+      }
+     }
+    }
+   },
+   "days": [
+    {
+     "date": "2026-09-24",
+     "r1": -0.02,
+     "r5": -0.71,
+     "big": false,
+     "p": {
+      "up1": 49.6,
+      "up5": 52.2,
+      "big": 10.2
+     },
+     "pk": {
+      "up1": 49.9,
+      "up5": 51.2,
+      "big": 7.4
+     },
+     "st": {
+      "table": "Bearish High",
+      "bigmove": "off",
+      "USA dasha": "strong",
+      "USA gochara": "adverse",
+      "USA chandra": "good",
+      "USA tara": "good",
+      "NYSE dasha": "afflicted",
+      "NYSE gochara": "mixed",
+      "NYSE chandra": "weak",
+      "NYSE tara": "bad",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-09-25",
+     "r1": 0.51,
+     "r5": -0.49,
+     "big": false,
+     "p": {
+      "up1": 46.6,
+      "up5": 52.8,
+      "big": 11.2
+     },
+     "pk": {
+      "up1": 49.9,
+      "up5": 51.2,
+      "big": 8.1
+     },
+     "st": {
+      "table": "Bearish High",
+      "bigmove": "off",
+      "USA dasha": "strong",
+      "USA gochara": "adverse",
+      "USA chandra": "good",
+      "USA tara": "bad",
+      "NYSE dasha": "afflicted",
+      "NYSE gochara": "mixed",
+      "NYSE chandra": "weak",
+      "NYSE tara": "good",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-09-28",
+     "r1": -0.77,
+     "r5": -0.27,
+     "big": false,
+     "p": {
+      "up1": 51.4,
+      "up5": 59.2,
+      "big": 8.6
+     },
+     "pk": {
+      "up1": 54.0,
+      "up5": 57.7,
+      "big": 7.2
+     },
+     "st": {
+      "table": "no signal",
+      "bigmove": "off",
+      "USA dasha": "strong",
+      "USA gochara": "adverse",
+      "USA chandra": "good",
+      "USA tara": "good",
+      "NYSE dasha": "afflicted",
+      "NYSE gochara": "mixed",
+      "NYSE chandra": "weak",
+      "NYSE tara": "good",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-09-29",
+     "r1": -0.17,
+     "r5": 1.17,
+     "big": false,
+     "p": {
+      "up1": 52.9,
+      "up5": 58.7,
+      "big": 9.8
+     },
+     "pk": {
+      "up1": 54.0,
+      "up5": 57.7,
+      "big": 8.2
+     },
+     "st": {
+      "table": "no signal",
+      "bigmove": "off",
+      "USA dasha": "strong",
+      "USA gochara": "adverse",
+      "USA chandra": "good",
+      "USA tara": "bad",
+      "NYSE dasha": "afflicted",
+      "NYSE gochara": "mixed",
+      "NYSE chandra": "weak",
+      "NYSE tara": "bad",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-09-30",
+     "r1": -0.25,
+     "r5": 1.93,
+     "big": false,
+     "p": {
+      "up1": 53.3,
+      "up5": 57.9,
+      "big": 8.2
+     },
+     "pk": {
+      "up1": 54.0,
+      "up5": 57.7,
+      "big": 7.2
+     },
+     "st": {
+      "table": "no signal",
+      "bigmove": "off",
+      "USA dasha": "strong",
+      "USA gochara": "adverse",
+      "USA chandra": "weak",
+      "USA tara": "good",
+      "NYSE dasha": "afflicted",
+      "NYSE gochara": "mixed",
+      "NYSE chandra": "good",
+      "NYSE tara": "good",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-10-01",
+     "r1": 0.19,
+     "r5": 1.96,
+     "big": false,
+     "p": {
+      "up1": 55.5,
+      "up5": 57.4,
+      "big": 8.3
+     },
+     "pk": {
+      "up1": 54.0,
+      "up5": 57.7,
+      "big": 7.4
+     },
+     "st": {
+      "table": "no signal",
+      "bigmove": "off",
+      "USA dasha": "strong",
+      "USA gochara": "adverse",
+      "USA chandra": "weak",
+      "USA tara": "good",
+      "NYSE dasha": "afflicted",
+      "NYSE gochara": "mixed",
+      "NYSE chandra": "good",
+      "NYSE tara": "bad",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-10-02",
+     "r1": 0.73,
+     "r5": 1.29,
+     "big": false,
+     "p": {
+      "up1": 49.7,
+      "up5": 58.6,
+      "big": 8.7
+     },
+     "pk": {
+      "up1": 54.0,
+      "up5": 57.7,
+      "big": 7.4
+     },
+     "st": {
+      "table": "no signal",
+      "bigmove": "off",
+      "USA dasha": "strong",
+      "USA gochara": "adverse",
+      "USA chandra": "weak",
+      "USA tara": "janma",
+      "NYSE dasha": "afflicted",
+      "NYSE gochara": "mixed",
+      "NYSE chandra": "weak",
+      "NYSE tara": "good",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-10-05",
+     "r1": 0.66,
+     "r5": 1.15,
+     "big": false,
+     "p": {
+      "up1": 50.2,
+      "up5": 60.7,
+      "big": 12.0
+     },
+     "pk": {
+      "up1": 52.8,
+      "up5": 61.2,
+      "big": 10.2
+     },
+     "st": {
+      "table": "Bullish Moderate",
+      "bigmove": "on",
+      "USA dasha": "strong",
+      "USA gochara": "adverse",
+      "USA chandra": "good",
+      "USA tara": "good",
+      "NYSE dasha": "afflicted",
+      "NYSE gochara": "mixed",
+      "NYSE chandra": "weak",
+      "NYSE tara": "good",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-10-06",
+     "r1": 0.58,
+     "r5": 0.43,
+     "big": false,
+     "p": {
+      "up1": 51.0,
+      "up5": 61.2,
+      "big": 15.9
+     },
+     "pk": {
+      "up1": 52.8,
+      "up5": 61.2,
+      "big": 13.5
+     },
+     "st": {
+      "table": "Bullish Moderate",
+      "bigmove": "on",
+      "USA dasha": "strong",
+      "USA gochara": "adverse",
+      "USA chandra": "good",
+      "USA tara": "bad",
+      "NYSE dasha": "afflicted",
+      "NYSE gochara": "mixed",
+      "NYSE chandra": "weak",
+      "NYSE tara": "janma",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-10-07",
+     "r1": -0.22,
+     "r5": -0.17,
+     "big": false,
+     "p": {
+      "up1": 51.5,
+      "up5": 56.0,
+      "big": 11.6
+     },
+     "pk": {
+      "up1": 52.7,
+      "up5": 57.7,
+      "big": 10.2
+     },
+     "st": {
+      "table": "no signal",
+      "bigmove": "on",
+      "USA dasha": "strong",
+      "USA gochara": "adverse",
+      "USA chandra": "good",
+      "USA tara": "good",
+      "NYSE dasha": "afflicted",
+      "NYSE gochara": "mixed",
+      "NYSE chandra": "good",
+      "NYSE tara": "good",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-10-08",
+     "r1": -0.47,
+     "r5": -1.06,
+     "big": false,
+     "p": {
+      "up1": 51.6,
+      "up5": 59.6,
+      "big": 11.6
+     },
+     "pk": {
+      "up1": 52.8,
+      "up5": 61.2,
+      "big": 10.2
+     },
+     "st": {
+      "table": "Bullish Moderate",
+      "bigmove": "on",
+      "USA dasha": "strong",
+      "USA gochara": "adverse",
+      "USA chandra": "good",
+      "USA tara": "good",
+      "NYSE dasha": "afflicted",
+      "NYSE gochara": "mixed",
+      "NYSE chandra": "good",
+      "NYSE tara": "good",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-10-09",
+     "r1": 0.59,
+     "r5": -0.27,
+     "big": false,
+     "p": {
+      "up1": 54.3,
+      "up5": 59.0,
+      "big": 11.6
+     },
+     "pk": {
+      "up1": 52.8,
+      "up5": 61.2,
+      "big": 10.3
+     },
+     "st": {
+      "table": "Bullish Moderate",
+      "bigmove": "on",
+      "USA dasha": "strong",
+      "USA gochara": "adverse",
+      "USA chandra": "weak",
+      "USA tara": "good",
+      "NYSE dasha": "afflicted",
+      "NYSE gochara": "mixed",
+      "NYSE chandra": "good",
+      "NYSE tara": "bad",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-10-12",
+     "r1": -0.06,
+     "r5": -1.95,
+     "big": false,
+     "p": {
+      "up1": 49.4,
+      "up5": 49.4,
+      "big": 11.3
+     },
+     "pk": {
+      "up1": 48.6,
+      "up5": 50.7,
+      "big": 8.3
+     },
+     "st": {
+      "table": "Bearish High",
+      "bigmove": "on",
+      "USA dasha": "strong",
+      "USA gochara": "adverse",
+      "USA chandra": "weak",
+      "USA tara": "good",
+      "NYSE dasha": "strong",
+      "NYSE gochara": "mixed",
+      "NYSE chandra": "weak",
+      "NYSE tara": "bad",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-10-13",
+     "r1": -0.02,
+     "r5": -1.49,
+     "big": false,
+     "p": {
+      "up1": 45.9,
+      "up5": 50.1,
+      "big": 12.6
+     },
+     "pk": {
+      "up1": 48.6,
+      "up5": 50.7,
+      "big": 9.1
+     },
+     "st": {
+      "table": "Bearish High",
+      "bigmove": "on",
+      "USA dasha": "strong",
+      "USA gochara": "adverse",
+      "USA chandra": "good",
+      "USA tara": "bad",
+      "NYSE dasha": "strong",
+      "NYSE gochara": "mixed",
+      "NYSE chandra": "weak",
+      "NYSE tara": "good",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-10-14",
+     "r1": -1.11,
+     "r5": -1.19,
+     "big": false,
+     "p": {
+      "up1": 46.7,
+      "up5": 50.1,
+      "big": 11.3
+     },
+     "pk": {
+      "up1": 48.6,
+      "up5": 50.7,
+      "big": 8.2
+     },
+     "st": {
+      "table": "Bearish High",
+      "bigmove": "on",
+      "USA dasha": "strong",
+      "USA gochara": "adverse",
+      "USA chandra": "good",
+      "USA tara": "good",
+      "NYSE dasha": "strong",
+      "NYSE gochara": "mixed",
+      "NYSE chandra": "weak",
+      "NYSE tara": "good",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-10-15",
+     "r1": 0.33,
+     "r5": 0.5,
+     "big": false,
+     "p": {
+      "up1": 47.4,
+      "up5": 50.6,
+      "big": 15.0
+     },
+     "pk": {
+      "up1": 48.6,
+      "up5": 50.7,
+      "big": 10.9
+     },
+     "st": {
+      "table": "Bearish High",
+      "bigmove": "on",
+      "USA dasha": "strong",
+      "USA gochara": "adverse",
+      "USA chandra": "good",
+      "USA tara": "bad",
+      "NYSE dasha": "strong",
+      "NYSE gochara": "mixed",
+      "NYSE chandra": "weak",
+      "NYSE tara": "janma",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-10-16",
+     "r1": -1.09,
+     "r5": -1.04,
+     "big": false,
+     "p": {
+      "up1": 48.0,
+      "up5": 49.0,
+      "big": 10.9
+     },
+     "pk": {
+      "up1": 48.6,
+      "up5": 50.7,
+      "big": 8.2
+     },
+     "st": {
+      "table": "Bearish High",
+      "bigmove": "on",
+      "USA dasha": "strong",
+      "USA gochara": "adverse",
+      "USA chandra": "good",
+      "USA tara": "good",
+      "NYSE dasha": "strong",
+      "NYSE gochara": "mixed",
+      "NYSE chandra": "good",
+      "NYSE tara": "good",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-10-19",
+     "r1": 0.41,
+     "r5": -0.47,
+     "big": false,
+     "p": {
+      "up1": 51.5,
+      "up5": 49.8,
+      "big": 9.0
+     },
+     "pk": {
+      "up1": 48.6,
+      "up5": 50.7,
+      "big": 8.3
+     },
+     "st": {
+      "table": "Bearish High",
+      "bigmove": "on",
+      "USA dasha": "mixed",
+      "USA gochara": "adverse",
+      "USA chandra": "weak",
+      "USA tara": "good",
+      "NYSE dasha": "strong",
+      "NYSE gochara": "mixed",
+      "NYSE chandra": "good",
+      "NYSE tara": "bad",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-10-20",
+     "r1": 0.28,
+     "r5": -0.18,
+     "big": false,
+     "p": {
+      "up1": 47.1,
+      "up5": 49.9,
+      "big": 9.0
+     },
+     "pk": {
+      "up1": 48.6,
+      "up5": 50.7,
+      "big": 8.4
+     },
+     "st": {
+      "table": "Bearish High",
+      "bigmove": "on",
+      "USA dasha": "mixed",
+      "USA gochara": "adverse",
+      "USA chandra": "weak",
+      "USA tara": "janma",
+      "NYSE dasha": "strong",
+      "NYSE gochara": "mixed",
+      "NYSE chandra": "good",
+      "NYSE tara": "good",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-10-21",
+     "r1": 0.58,
+     "r5": 0.13,
+     "big": false,
+     "p": {
+      "up1": 49.6,
+      "up5": 51.1,
+      "big": 9.5
+     },
+     "pk": {
+      "up1": 48.6,
+      "up5": 50.7,
+      "big": 8.3
+     },
+     "st": {
+      "table": "Bearish High",
+      "bigmove": "on",
+      "USA dasha": "mixed",
+      "USA gochara": "adverse",
+      "USA chandra": "good",
+      "USA tara": "good",
+      "NYSE dasha": "strong",
+      "NYSE gochara": "mixed",
+      "NYSE chandra": "weak",
+      "NYSE tara": "bad",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-10-22",
+     "r1": -1.21,
+     "r5": -0.17,
+     "big": false,
+     "p": {
+      "up1": 46.6,
+      "up5": 51.6,
+      "big": 10.4
+     },
+     "pk": {
+      "up1": 48.6,
+      "up5": 50.7,
+      "big": 9.1
+     },
+     "st": {
+      "table": "Bearish High",
+      "bigmove": "on",
+      "USA dasha": "mixed",
+      "USA gochara": "adverse",
+      "USA chandra": "good",
+      "USA tara": "bad",
+      "NYSE dasha": "strong",
+      "NYSE gochara": "mixed",
+      "NYSE chandra": "weak",
+      "NYSE tara": "good",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-10-23",
+     "r1": -0.52,
+     "r5": 0.74,
+     "big": false,
+     "p": {
+      "up1": 49.3,
+      "up5": 50.3,
+      "big": 8.8
+     },
+     "pk": {
+      "up1": 48.6,
+      "up5": 50.7,
+      "big": 8.2
+     },
+     "st": {
+      "table": "Bearish High",
+      "bigmove": "on",
+      "USA dasha": "mixed",
+      "USA gochara": "adverse",
+      "USA chandra": "weak",
+      "USA tara": "good",
+      "NYSE dasha": "strong",
+      "NYSE gochara": "mixed",
+      "NYSE chandra": "good",
+      "NYSE tara": "good",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-10-26",
+     "r1": 0.7,
+     "r5": -0.57,
+     "big": false,
+     "p": {
+      "up1": 52.3,
+      "up5": 55.9,
+      "big": 9.1
+     },
+     "pk": {
+      "up1": 52.7,
+      "up5": 55.5,
+      "big": 9.3
+     },
+     "st": {
+      "table": "no signal",
+      "bigmove": "on",
+      "USA dasha": "mixed",
+      "USA gochara": "adverse",
+      "USA chandra": "good",
+      "USA tara": "bad",
+      "NYSE dasha": "mixed",
+      "NYSE gochara": "mixed",
+      "NYSE chandra": "weak",
+      "NYSE tara": "bad",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-10-27",
+     "r1": 0.6,
+     "r5": -1.76,
+     "big": false,
+     "p": {
+      "up1": 52.8,
+      "up5": 55.1,
+      "big": 7.6
+     },
+     "pk": {
+      "up1": 52.7,
+      "up5": 55.5,
+      "big": 8.2
+     },
+     "st": {
+      "table": "no signal",
+      "bigmove": "on",
+      "USA dasha": "mixed",
+      "USA gochara": "adverse",
+      "USA chandra": "weak",
+      "USA tara": "good",
+      "NYSE dasha": "mixed",
+      "NYSE gochara": "mixed",
+      "NYSE chandra": "good",
+      "NYSE tara": "good",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-10-28",
+     "r1": 0.28,
+     "r5": -1.99,
+     "big": false,
+     "p": {
+      "up1": 55.0,
+      "up5": 54.6,
+      "big": 7.8
+     },
+     "pk": {
+      "up1": 52.7,
+      "up5": 55.5,
+      "big": 8.4
+     },
+     "st": {
+      "table": "no signal",
+      "bigmove": "on",
+      "USA dasha": "mixed",
+      "USA gochara": "adverse",
+      "USA chandra": "weak",
+      "USA tara": "good",
+      "NYSE dasha": "mixed",
+      "NYSE gochara": "mixed",
+      "NYSE chandra": "good",
+      "NYSE tara": "bad",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-10-29",
+     "r1": -0.3,
+     "r5": -0.71,
+     "big": false,
+     "p": {
+      "up1": 51.2,
+      "up5": 52.6,
+      "big": 8.5
+     },
+     "pk": {
+      "up1": 52.7,
+      "up5": 55.5,
+      "big": 8.4
+     },
+     "st": {
+      "table": "no signal",
+      "bigmove": "on",
+      "USA dasha": "afflicted",
+      "USA gochara": "adverse",
+      "USA chandra": "weak",
+      "USA tara": "janma",
+      "NYSE dasha": "mixed",
+      "NYSE gochara": "mixed",
+      "NYSE chandra": "good",
+      "NYSE tara": "good",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-10-30",
+     "r1": -1.82,
+     "r5": -4.75,
+     "big": false,
+     "p": {
+      "up1": 54.2,
+      "up5": 53.5,
+      "big": 8.8
+     },
+     "pk": {
+      "up1": 52.7,
+      "up5": 55.5,
+      "big": 8.4
+     },
+     "st": {
+      "table": "no signal",
+      "bigmove": "on",
+      "USA dasha": "afflicted",
+      "USA gochara": "adverse",
+      "USA chandra": "weak",
+      "USA tara": "good",
+      "NYSE dasha": "mixed",
+      "NYSE gochara": "mixed",
+      "NYSE chandra": "weak",
+      "NYSE tara": "bad",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-11-02",
+     "r1": -0.51,
+     "r5": -2.68,
+     "big": false,
+     "p": {
+      "up1": 56.5,
+      "up5": 58.6,
+      "big": 5.4
+     },
+     "pk": {
+      "up1": 56.1,
+      "up5": 61.0,
+      "big": 11.2
+     },
+     "st": {
+      "table": "Bullish Moderate",
+      "bigmove": "on",
+      "USA dasha": "afflicted",
+      "USA gochara": "mixed",
+      "USA chandra": "good",
+      "USA tara": "bad",
+      "NYSE dasha": "mixed",
+      "NYSE gochara": "adverse",
+      "NYSE chandra": "weak",
+      "NYSE tara": "janma",
+      "jup-ven": "on"
+     }
+    },
+    {
+     "date": "2026-11-03",
+     "r1": 0.36,
+     "r5": 0.11,
+     "big": false,
+     "p": {
+      "up1": 57.0,
+      "up5": 53.4,
+      "big": 3.8
+     },
+     "pk": {
+      "up1": 56.0,
+      "up5": 57.4,
+      "big": 8.4
+     },
+     "st": {
+      "table": "no signal",
+      "bigmove": "on",
+      "USA dasha": "afflicted",
+      "USA gochara": "mixed",
+      "USA chandra": "good",
+      "USA tara": "good",
+      "NYSE dasha": "mixed",
+      "NYSE gochara": "adverse",
+      "NYSE chandra": "good",
+      "NYSE tara": "good",
+      "jup-ven": "on"
+     }
+    },
+    {
+     "date": "2026-11-04",
+     "r1": 1.58,
+     "r5": -0.63,
+     "big": false,
+     "p": {
+      "up1": 58.5,
+      "up5": 56.6,
+      "big": 4.3
+     },
+     "pk": {
+      "up1": 56.1,
+      "up5": 61.0,
+      "big": 9.5
+     },
+     "st": {
+      "table": "Bullish Moderate",
+      "bigmove": "on",
+      "USA dasha": "afflicted",
+      "USA gochara": "mixed",
+      "USA chandra": "good",
+      "USA tara": "bad",
+      "NYSE dasha": "mixed",
+      "NYSE gochara": "adverse",
+      "NYSE chandra": "good",
+      "NYSE tara": "bad",
+      "jup-ven": "on"
+     }
+    },
+    {
+     "date": "2026-11-05",
+     "r1": -4.36,
+     "r5": -0.9,
+     "big": true,
+     "p": {
+      "up1": 59.5,
+      "up5": 57.8,
+      "big": 3.4
+     },
+     "pk": {
+      "up1": 58.0,
+      "up5": 61.9,
+      "big": 8.4
+     },
+     "st": {
+      "table": "Bullish High",
+      "bigmove": "on",
+      "USA dasha": "afflicted",
+      "USA gochara": "mixed",
+      "USA chandra": "weak",
+      "USA tara": "good",
+      "NYSE dasha": "mixed",
+      "NYSE gochara": "adverse",
+      "NYSE chandra": "good",
+      "NYSE tara": "good",
+      "jup-ven": "on"
+     }
+    },
+    {
+     "date": "2026-11-06",
+     "r1": 0.31,
+     "r5": 3.25,
+     "big": false,
+     "p": {
+      "up1": 61.6,
+      "up5": 57.3,
+      "big": 3.5
+     },
+     "pk": {
+      "up1": 58.0,
+      "up5": 61.9,
+      "big": 8.5
+     },
+     "st": {
+      "table": "Bullish High",
+      "bigmove": "on",
+      "USA dasha": "afflicted",
+      "USA gochara": "mixed",
+      "USA chandra": "weak",
+      "USA tara": "good",
+      "NYSE dasha": "mixed",
+      "NYSE gochara": "adverse",
+      "NYSE chandra": "good",
+      "NYSE tara": "bad",
+      "jup-ven": "on"
+     }
+    },
+    {
+     "date": "2026-11-09",
+     "r1": 2.35,
+     "r5": 2.51,
+     "big": true,
+     "p": {
+      "up1": 54.7,
+      "up5": 59.9,
+      "big": 4.1
+     },
+     "pk": {
+      "up1": 56.0,
+      "up5": 60.9,
+      "big": 9.2
+     },
+     "st": {
+      "table": "Bullish Low",
+      "bigmove": "on",
+      "USA dasha": "mixed",
+      "USA gochara": "mixed",
+      "USA chandra": "weak",
+      "USA tara": "bad",
+      "NYSE dasha": "mixed",
+      "NYSE gochara": "adverse",
+      "NYSE chandra": "weak",
+      "NYSE tara": "good",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-11-10",
+     "r1": -0.38,
+     "r5": -1.77,
+     "big": false,
+     "p": {
+      "up1": 54.9,
+      "up5": 60.1,
+      "big": 3.7
+     },
+     "pk": {
+      "up1": 56.0,
+      "up5": 60.9,
+      "big": 8.2
+     },
+     "st": {
+      "table": "Bullish Low",
+      "bigmove": "on",
+      "USA dasha": "mixed",
+      "USA gochara": "mixed",
+      "USA chandra": "good",
+      "USA tara": "good",
+      "NYSE dasha": "mixed",
+      "NYSE gochara": "adverse",
+      "NYSE chandra": "weak",
+      "NYSE tara": "good",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-11-11",
+     "r1": 1.31,
+     "r5": -2.4,
+     "big": false,
+     "p": {
+      "up1": 55.7,
+      "up5": 60.6,
+      "big": 5.0
+     },
+     "pk": {
+      "up1": 56.0,
+      "up5": 60.9,
+      "big": 11.0
+     },
+     "st": {
+      "table": "Bullish Low",
+      "bigmove": "on",
+      "USA dasha": "mixed",
+      "USA gochara": "mixed",
+      "USA chandra": "good",
+      "USA tara": "bad",
+      "NYSE dasha": "mixed",
+      "NYSE gochara": "adverse",
+      "NYSE chandra": "weak",
+      "NYSE tara": "janma",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-11-12",
+     "r1": -0.35,
+     "r5": -3.88,
+     "big": false,
+     "p": {
+      "up1": 56.2,
+      "up5": 59.1,
+      "big": 3.5
+     },
+     "pk": {
+      "up1": 56.0,
+      "up5": 60.9,
+      "big": 8.2
+     },
+     "st": {
+      "table": "Bullish Low",
+      "bigmove": "on",
+      "USA dasha": "mixed",
+      "USA gochara": "mixed",
+      "USA chandra": "good",
+      "USA tara": "good",
+      "NYSE dasha": "mixed",
+      "NYSE gochara": "adverse",
+      "NYSE chandra": "good",
+      "NYSE tara": "good",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-11-13",
+     "r1": -0.4,
+     "r5": -5.49,
+     "big": false,
+     "p": {
+      "up1": 57.6,
+      "up5": 60.8,
+      "big": 5.0
+     },
+     "pk": {
+      "up1": 56.0,
+      "up5": 63.0,
+      "big": 11.5
+     },
+     "st": {
+      "table": "Bullish Low",
+      "bigmove": "on",
+      "USA dasha": "mixed",
+      "USA gochara": "mixed",
+      "USA chandra": "good",
+      "USA tara": "bad",
+      "NYSE dasha": "afflicted",
+      "NYSE gochara": "adverse",
+      "NYSE chandra": "good",
+      "NYSE tara": "bad",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-11-16",
+     "r1": -1.92,
+     "r5": -8.61,
+     "big": false,
+     "p": {
+      "up1": 60.8,
+      "up5": 58.3,
+      "big": 2.7
+     },
+     "pk": {
+      "up1": 57.3,
+      "up5": 60.9,
+      "big": 5.9
+     },
+     "st": {
+      "table": "Bullish Low",
+      "bigmove": "off",
+      "USA dasha": "afflicted",
+      "USA gochara": "mixed",
+      "USA chandra": "weak",
+      "USA tara": "good",
+      "NYSE dasha": "mixed",
+      "NYSE gochara": "adverse",
+      "NYSE chandra": "good",
+      "NYSE tara": "bad",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-11-17",
+     "r1": -1.03,
+     "r5": -2.42,
+     "big": false,
+     "p": {
+      "up1": 54.6,
+      "up5": 59.7,
+      "big": 2.9
+     },
+     "pk": {
+      "up1": 57.3,
+      "up5": 60.9,
+      "big": 6.0
+     },
+     "st": {
+      "table": "Bullish Low",
+      "bigmove": "off",
+      "USA dasha": "afflicted",
+      "USA gochara": "mixed",
+      "USA chandra": "good",
+      "USA tara": "janma",
+      "NYSE dasha": "mixed",
+      "NYSE gochara": "adverse",
+      "NYSE chandra": "weak",
+      "NYSE tara": "good",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-11-18",
+     "r1": -0.23,
+     "r5": null,
+     "big": false,
+     "p": {
+      "up1": 58.9,
+      "up5": 59.6,
+      "big": 2.9
+     },
+     "pk": {
+      "up1": 57.3,
+      "up5": 60.9,
+      "big": 5.9
+     },
+     "st": {
+      "table": "Bullish Low",
+      "bigmove": "off",
+      "USA dasha": "afflicted",
+      "USA gochara": "mixed",
+      "USA chandra": "good",
+      "USA tara": "good",
+      "NYSE dasha": "mixed",
+      "NYSE gochara": "adverse",
+      "NYSE chandra": "weak",
+      "NYSE tara": "bad",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-11-19",
+     "r1": -2.02,
+     "r5": null,
+     "big": true,
+     "p": {
+      "up1": 56.0,
+      "up5": 60.1,
+      "big": 3.2
+     },
+     "pk": {
+      "up1": 57.3,
+      "up5": 60.9,
+      "big": 6.5
+     },
+     "st": {
+      "table": "Bullish Low",
+      "bigmove": "off",
+      "USA dasha": "afflicted",
+      "USA gochara": "mixed",
+      "USA chandra": "good",
+      "USA tara": "bad",
+      "NYSE dasha": "mixed",
+      "NYSE gochara": "adverse",
+      "NYSE chandra": "weak",
+      "NYSE tara": "good",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-11-20",
+     "r1": -3.7,
+     "r5": null,
+     "big": true,
+     "p": {
+      "up1": 58.6,
+      "up5": 58.8,
+      "big": 2.7
+     },
+     "pk": {
+      "up1": 57.3,
+      "up5": 60.9,
+      "big": 5.8
+     },
+     "st": {
+      "table": "Bullish Low",
+      "bigmove": "off",
+      "USA dasha": "afflicted",
+      "USA gochara": "mixed",
+      "USA chandra": "weak",
+      "USA tara": "good",
+      "NYSE dasha": "mixed",
+      "NYSE gochara": "adverse",
+      "NYSE chandra": "good",
+      "NYSE tara": "good",
+      "jup-ven": "off"
+     }
+    },
+    {
+     "date": "2026-11-23",
+     "r1": 4.73,
+     "r5": null,
+     "big": true,
+     "p": {
+      "up1": 57.8,
+      "up5": 58.3,
+      "big": 2.9
+     },
+     "pk": {
+      "up1": 57.3,
+      "up5": 57.4,
+      "big": 6.7
+     },
+     "st": {
+      "table": "no signal",
+      "bigmove": "off",
+      "USA dasha": "mixed",
+      "USA gochara": "mixed",
+      "USA chandra": "good",
+      "USA tara": "bad",
+      "NYSE dasha": "mixed",
+      "NYSE gochara": "adverse",
+      "NYSE chandra": "weak",
+      "NYSE tara": "bad",
+      "jup-ven": "on"
+     }
+    }
+   ]
+  },
+  "sensex": {
+   "name": "BSE Sensex",
+   "layers": [
+    "table",
+    "bigmove"
+   ],
+   "walk_forward": {
+    "up1": {
+     "all": {
+      "n": 3373,
+      "actual": 53.2,
+      "base": 53.5,
+      "brier": 0.2488,
+      "brier_base": 0.249,
+      "skill": 0.09,
+      "avg_p": 53.5,
+      "calls_up": 839,
+      "right_up": 55,
+      "calls_down": 1067,
+      "right_down": 49,
+      "hit": 52,
+      "bands": {
+       "50-55%": {
+        "n": 2534,
+        "actual": 52
+       },
+       "55-60%": {
+        "n": 839,
+        "actual": 55
+       }
+      }
+     },
+     "kept": {
+      "n": 3373,
+      "actual": 53.2,
+      "base": 53.5,
+      "brier": 0.2488,
+      "brier_base": 0.249,
+      "skill": 0.09,
+      "avg_p": 53.4,
+      "calls_up": 839,
+      "right_up": 55,
+      "calls_down": 986,
+      "right_down": 50,
+      "hit": 52,
+      "bands": {
+       "50-55%": {
+        "n": 2534,
+        "actual": 52
+       },
+       "55-60%": {
+        "n": 839,
+        "actual": 55
+       }
+      }
+     }
+    },
+    "up5": {
+     "all": {
+      "n": 3373,
+      "actual": 56.4,
+      "base": 56.6,
+      "brier": 0.2455,
+      "brier_base": 0.2459,
+      "skill": 0.18,
+      "avg_p": 56.5,
+      "calls_up": 1639,
+      "right_up": 57,
+      "calls_down": 1110,
+      "right_down": 48,
+      "hit": 53,
+      "bands": {
+       "45-50%": {
+        "n": 323,
+        "actual": 50
+       },
+       "50-55%": {
+        "n": 787,
+        "actual": 53
+       },
+       "55-60%": {
+        "n": 1564,
+        "actual": 58
+       },
+       "60-100%": {
+        "n": 699,
+        "actual": 61
+       }
+      }
+     },
+     "kept": {
+      "n": 3373,
+      "actual": 56.4,
+      "base": 56.6,
+      "brier": 0.2453,
+      "brier_base": 0.2459,
+      "skill": 0.26,
+      "avg_p": 56.4,
+      "calls_up": 839,
+      "right_up": 59,
+      "calls_down": 986,
+      "right_down": 49,
+      "hit": 54,
+      "bands": {
+       "45-50%": {
+        "n": 477,
+        "actual": 49
+       },
+       "50-55%": {
+        "n": 831,
+        "actual": 57
+       },
+       "55-60%": {
+        "n": 1226,
+        "actual": 57
+       },
+       "60-100%": {
+        "n": 839,
+        "actual": 59
+       }
+      }
+     }
+    },
+    "big": {
+     "all": {
+      "n": 3373,
+      "actual": 4.2,
+      "base": 16.9,
+      "brier": 0.0555,
+      "brier_base": 0.0564,
+      "skill": 1.54,
+      "avg_p": 16.5,
+      "p_on_big": 18.6,
+      "p_on_other": 16.4,
+      "bands": {
+       "6-10%": {
+        "n": 198,
+        "actual": 1
+       },
+       "10-20%": {
+        "n": 2286,
+        "actual": 3
+       },
+       "20-100%": {
+        "n": 889,
+        "actual": 7
+       }
+      }
+     },
+     "kept": {
+      "n": 3373,
+      "actual": 4.2,
+      "base": 16.9,
+      "brier": 0.0549,
+      "brier_base": 0.0564,
+      "skill": 2.73,
+      "avg_p": 16.3,
+      "p_on_big": 18.4,
+      "p_on_other": 16.3,
+      "bands": {
+       "10-20%": {
+        "n": 2259,
+        "actual": 3
+       },
+       "20-100%": {
+        "n": 1114,
+        "actual": 7
+       }
+      }
+     }
+    }
+   },
+   "window": {
+    "up1": {
+     "all": {
+      "n": 40,
+      "actual": 55.0,
+      "base": 53.3,
+      "brier": 0.2389,
+      "brier_base": 0.2478,
+      "skill": 3.58,
+      "avg_p": 53.3,
+      "calls_up": 12,
+      "right_up": 83,
+      "calls_down": 11,
+      "right_down": 64,
+      "hit": 74,
+      "bands": {
+       "45-50%": {
+        "n": 11,
+        "actual": 36
+       },
+       "50-55%": {
+        "n": 17,
+        "actual": 47
+       },
+       "55-60%": {
+        "n": 12,
+        "actual": 83
+       }
+      }
+     },
+     "kept": {
+      "n": 40,
+      "actual": 55.0,
+      "base": 53.3,
+      "brier": 0.2395,
+      "brier_base": 0.2478,
+      "skill": 3.33,
+      "avg_p": 53.1,
+      "calls_up": 8,
+      "right_up": 88,
+      "calls_down": 11,
+      "right_down": 64,
+      "hit": 74,
+      "bands": {
+       "45-50%": {
+        "n": 11,
+        "actual": 36
+       },
+       "50-55%": {
+        "n": 12,
+        "actual": 33
+       },
+       "55-60%": {
+        "n": 17,
+        "actual": 82
+       }
+      }
+     }
+    },
+    "up5": {
+     "all": {
+      "n": 36,
+      "actual": 72.2,
+      "base": 56.5,
+      "brier": 0.2145,
+      "brier_base": 0.2252,
+      "skill": 4.76,
+      "avg_p": 55.6,
+      "calls_up": 8,
+      "right_up": 88,
+      "calls_down": 11,
+      "right_down": 55,
+      "hit": 68,
+      "bands": {
+       "45-50%": {
+        "n": 11,
+        "actual": 45
+       },
+       "55-60%": {
+        "n": 23,
+        "actual": 83
+       },
+       "60-100%": {
+        "n": 2,
+        "actual": 100
+       }
+      }
+     },
+     "kept": {
+      "n": 36,
+      "actual": 72.2,
+      "base": 56.5,
+      "brier": 0.2138,
+      "brier_base": 0.2252,
+      "skill": 5.04,
+      "avg_p": 55.7,
+      "calls_up": 8,
+      "right_up": 88,
+      "calls_down": 11,
+      "right_down": 55,
+      "hit": 68,
+      "bands": {
+       "45-50%": {
+        "n": 11,
+        "actual": 45
+       },
+       "55-60%": {
+        "n": 23,
+        "actual": 83
+       },
+       "60-100%": {
+        "n": 2,
+        "actual": 100
+       }
+      }
+     }
+    },
+    "big": {
+     "all": {
+      "n": 40,
+      "actual": 7.5,
+      "base": 10.4,
+      "brier": 0.0711,
+      "brier_base": 0.0702,
+      "skill": -1.23,
+      "avg_p": 12.6,
+      "p_on_big": 14.3,
+      "p_on_other": 12.4,
+      "bands": {
+       "3-6%": {
+        "n": 5,
+        "actual": 0
+       },
+       "6-10%": {
+        "n": 7,
+        "actual": 0
+       },
+       "10-20%": {
+        "n": 28,
+        "actual": 11
+       }
+      }
+     },
+     "kept": {
+      "n": 40,
+      "actual": 7.5,
+      "base": 10.4,
+      "brier": 0.0701,
+      "brier_base": 0.0702,
+      "skill": 0.19,
+      "avg_p": 12.9,
+      "p_on_big": 15.1,
+      "p_on_other": 12.7,
+      "bands": {
+       "6-10%": {
+        "n": 12,
+        "actual": 0
+       },
+       "10-20%": {
+        "n": 28,
+        "actual": 11
+       }
+      }
+     }
+    }
+   },
+   "kept": {
+    "up1": [
+     "table"
+    ],
+    "up5": [
+     "table"
+    ],
+    "big": [
+     "bigmove"
+    ]
+   },
+   "layer_test": {
+    "up1": {
+     "table": {
+      "n": 3373,
+      "actual": 53.2,
+      "base": 53.5,
+      "brier": 0.2488,
+      "brier_base": 0.249,
+      "skill": 0.09,
+      "avg_p": 53.4,
+      "calls_up": 839,
+      "right_up": 55,
+      "calls_down": 986,
+      "right_down": 50,
+      "hit": 52,
+      "bands": {
+       "50-55%": {
+        "n": 2534,
+        "actual": 52
+       },
+       "55-60%": {
+        "n": 839,
+        "actual": 55
+       }
+      }
+     },
+     "bigmove": {
+      "n": 3373,
+      "actual": 53.2,
+      "base": 53.5,
+      "brier": 0.249,
+      "brier_base": 0.249,
+      "skill": -0.0,
+      "avg_p": 53.5,
+      "calls_up": 0,
+      "right_up": null,
+      "calls_down": 0,
+      "right_down": null,
+      "hit": null,
+      "bands": {
+       "50-55%": {
+        "n": 3373,
+        "actual": 53
+       }
+      }
+     }
+    },
+    "up5": {
+     "table": {
+      "n": 3373,
+      "actual": 56.4,
+      "base": 56.6,
+      "brier": 0.2453,
+      "brier_base": 0.2459,
+      "skill": 0.26,
+      "avg_p": 56.4,
+      "calls_up": 839,
+      "right_up": 59,
+      "calls_down": 986,
+      "right_down": 49,
+      "hit": 54,
+      "bands": {
+       "45-50%": {
+        "n": 477,
+        "actual": 49
+       },
+       "50-55%": {
+        "n": 831,
+        "actual": 57
+       },
+       "55-60%": {
+        "n": 1226,
+        "actual": 57
+       },
+       "60-100%": {
+        "n": 839,
+        "actual": 59
+       }
+      }
+     },
+     "bigmove": {
+      "n": 3373,
+      "actual": 56.4,
+      "base": 56.6,
+      "brier": 0.2461,
+      "brier_base": 0.2459,
+      "skill": -0.07,
+      "avg_p": 56.7,
+      "calls_up": 0,
+      "right_up": null,
+      "calls_down": 0,
+      "right_down": null,
+      "hit": null,
+      "bands": {
+       "55-60%": {
+        "n": 3373,
+        "actual": 56
+       }
+      }
+     }
+    },
+    "big": {
+     "table": {
+      "n": 3373,
+      "actual": 4.2,
+      "base": 16.9,
+      "brier": 0.0571,
+      "brier_base": 0.0564,
+      "skill": -1.24,
+      "avg_p": 17.0,
+      "p_on_big": 17.1,
+      "p_on_other": 17.0,
+      "bands": {
+       "10-20%": {
+        "n": 3373,
+        "actual": 4
+       }
+      }
+     },
+     "bigmove": {
+      "n": 3373,
+      "actual": 4.2,
+      "base": 16.9,
+      "brier": 0.0549,
+      "brier_base": 0.0564,
+      "skill": 2.73,
+      "avg_p": 16.3,
+      "p_on_big": 18.4,
+      "p_on_other": 16.3,
+      "bands": {
+       "10-20%": {
+        "n": 2259,
+        "actual": 3
+       },
+       "20-100%": {
+        "n": 1114,
+        "actual": 7
+       }
+      }
+     }
+    }
+   },
+   "weights": {
+    "up1": {
+     "base": 53.3,
+     "w": {
+      "table": {
+       "Bearish High": {
+        "n": 873,
+        "rate": 48.1,
+        "shift": -0.17
+       },
+       "Bearish Low": {
+        "n": 389,
+        "rate": 52.4,
+        "shift": -0.024
+       },
+       "Bearish Moderate": {
+        "n": 935,
+        "rate": 51.2,
+        "shift": -0.07
+       },
+       "Bullish High": {
+        "n": 738,
+        "rate": 56.5,
+        "shift": 0.1
+       },
+       "Bullish Low": {
+        "n": 629,
+        "rate": 55.8,
+        "shift": 0.075
+       },
+       "Bullish Moderate": {
+        "n": 893,
+        "rate": 56.1,
+        "shift": 0.091
+       },
+       "no signal": {
+        "n": 2131,
+        "rate": 53.6,
+        "shift": 0.009
+       }
+      },
+      "bigmove": {
+       "off": {
+        "n": 4246,
+        "rate": 53.1,
+        "shift": -0.01
+       },
+       "on": {
+        "n": 2342,
+        "rate": 53.8,
+        "shift": 0.017
+       }
+      }
+     }
+    },
+    "up5": {
+     "base": 56.5,
+     "w": {
+      "table": {
+       "Bearish High": {
+        "n": 870,
+        "rate": 47.7,
+        "shift": -0.289
+       },
+       "Bearish Low": {
+        "n": 388,
+        "rate": 57.2,
+        "shift": 0.018
+       },
+       "Bearish Moderate": {
+        "n": 935,
+        "rate": 51.1,
+        "shift": -0.18
+       },
+       "Bullish High": {
+        "n": 738,
+        "rate": 64.0,
+        "shift": 0.242
+       },
+       "Bullish Low": {
+        "n": 629,
+        "rate": 58.3,
+        "shift": 0.056
+       },
+       "Bullish Moderate": {
+        "n": 893,
+        "rate": 59.8,
+        "shift": 0.109
+       },
+       "no signal": {
+        "n": 2131,
+        "rate": 58.0,
+        "shift": 0.053
+       }
+      },
+      "bigmove": {
+       "off": {
+        "n": 4242,
+        "rate": 56.6,
+        "shift": 0.004
+       },
+       "on": {
+        "n": 2342,
+        "rate": 56.4,
+        "shift": -0.007
+       }
+      }
+     }
+    },
+    "big": {
+     "base": 10.4,
+     "w": {
+      "table": {
+       "Bearish High": {
+        "n": 873,
+        "rate": 10.2,
+        "shift": -0.018
+       },
+       "Bearish Low": {
+        "n": 389,
+        "rate": 9.0,
+        "shift": -0.103
+       },
+       "Bearish Moderate": {
+        "n": 935,
+        "rate": 10.1,
+        "shift": -0.031
+       },
+       "Bullish High": {
+        "n": 738,
+        "rate": 9.5,
+        "shift": -0.08
+       },
+       "Bullish Low": {
+        "n": 629,
+        "rate": 5.7,
+        "shift": -0.456
+       },
+       "Bullish Moderate": {
+        "n": 893,
+        "rate": 10.3,
+        "shift": -0.008
+       },
+       "no signal": {
+        "n": 2131,
+        "rate": 12.6,
+        "shift": 0.202
+       }
+      },
+      "bigmove": {
+       "off": {
+        "n": 4246,
+        "rate": 7.6,
+        "shift": -0.325
+       },
+       "on": {
+        "n": 2342,
+        "rate": 15.5,
+        "shift": 0.424
+       }
+      }
+     }
+    }
+   },
+   "days": [
+    {
+     "date": "2026-09-24",
+     "r1": -1.67,
+     "r5": -3.14,
+     "big": false,
+     "p": {
+      "up1": 48.8,
+      "up5": 49.5,
+      "big": 7.6
+     },
+     "pk": {
+      "up1": 49.1,
+      "up5": 49.4,
+      "big": 7.7
+     },
+     "st": {
+      "table": "Bearish High",
+      "bigmove": "off"
+     }
+    },
+    {
+     "date": "2026-09-25",
+     "r1": 0.43,
+     "r5": -2.27,
+     "big": false,
+     "p": {
+      "up1": 48.8,
+      "up5": 49.5,
+      "big": 7.6
+     },
+     "pk": {
+      "up1": 49.1,
+      "up5": 49.4,
+      "big": 7.7
+     },
+     "st": {
+      "table": "Bearish High",
+      "bigmove": "off"
+     }
+    },
+    {
+     "date": "2026-09-28",
+     "r1": -1.52,
+     "r5": -2.05,
+     "big": false,
+     "p": {
+      "up1": 53.3,
+      "up5": 57.9,
+      "big": 9.3
+     },
+     "pk": {
+      "up1": 53.6,
+      "up5": 57.8,
+      "big": 7.7
+     },
+     "st": {
+      "table": "no signal",
+      "bigmove": "off"
+     }
+    },
+    {
+     "date": "2026-09-29",
+     "r1": -0.33,
+     "r5": 0.41,
+     "big": false,
+     "p": {
+      "up1": 53.3,
+      "up5": 57.9,
+      "big": 9.3
+     },
+     "pk": {
+      "up1": 53.6,
+      "up5": 57.8,
+      "big": 7.7
+     },
+     "st": {
+      "table": "no signal",
+      "bigmove": "off"
+     }
+    },
+    {
+     "date": "2026-09-30",
+     "r1": -0.07,
+     "r5": 0.15,
+     "big": false,
+     "p": {
+      "up1": 53.3,
+      "up5": 57.9,
+      "big": 9.3
+     },
+     "pk": {
+      "up1": 53.6,
+      "up5": 57.8,
+      "big": 7.7
+     },
+     "st": {
+      "table": "no signal",
+      "bigmove": "off"
+     }
+    },
+    {
+     "date": "2026-10-01",
+     "r1": -0.79,
+     "r5": -1.22,
+     "big": false,
+     "p": {
+      "up1": 53.3,
+      "up5": 57.9,
+      "big": 9.3
+     },
+     "pk": {
+      "up1": 53.6,
+      "up5": 57.8,
+      "big": 7.7
+     },
+     "st": {
+      "table": "no signal",
+      "bigmove": "off"
+     }
+    },
+    {
+     "date": "2026-10-05",
+     "r1": 0.66,
+     "r5": 0.78,
+     "big": false,
+     "p": {
+      "up1": 56.0,
+      "up5": 59.0,
+      "big": 15.0
+     },
+     "pk": {
+      "up1": 55.6,
+      "up5": 59.2,
+      "big": 15.1
+     },
+     "st": {
+      "table": "Bullish Moderate",
+      "bigmove": "on"
+     }
+    },
+    {
+     "date": "2026-10-06",
+     "r1": 0.95,
+     "r5": -0.63,
+     "big": false,
+     "p": {
+      "up1": 56.0,
+      "up5": 59.0,
+      "big": 15.0
+     },
+     "pk": {
+      "up1": 55.6,
+      "up5": 59.2,
+      "big": 15.1
+     },
+     "st": {
+      "table": "Bullish Moderate",
+      "bigmove": "on"
+     }
+    },
+    {
+     "date": "2026-10-07",
+     "r1": -0.59,
+     "r5": -0.05,
+     "big": false,
+     "p": {
+      "up1": 54.0,
+      "up5": 57.7,
+      "big": 17.8
+     },
+     "pk": {
+      "up1": 53.6,
+      "up5": 57.8,
+      "big": 15.1
+     },
+     "st": {
+      "table": "no signal",
+      "bigmove": "on"
+     }
+    },
+    {
+     "date": "2026-10-08",
+     "r1": -1.44,
+     "r5": 0.2,
+     "big": false,
+     "p": {
+      "up1": 56.0,
+      "up5": 59.0,
+      "big": 15.0
+     },
+     "pk": {
+      "up1": 55.6,
+      "up5": 59.2,
+      "big": 15.1
+     },
+     "st": {
+      "table": "Bullish Moderate",
+      "bigmove": "on"
+     }
+    },
+    {
+     "date": "2026-10-09",
+     "r1": 1.23,
+     "r5": 3.8,
+     "big": false,
+     "p": {
+      "up1": 56.0,
+      "up5": 59.0,
+      "big": 15.0
+     },
+     "pk": {
+      "up1": 55.6,
+      "up5": 59.2,
+      "big": 15.1
+     },
+     "st": {
+      "table": "Bullish Moderate",
+      "bigmove": "on"
+     }
+    },
+    {
+     "date": "2026-10-12",
+     "r1": -0.76,
+     "r5": 3.11,
+     "big": false,
+     "p": {
+      "up1": 49.5,
+      "up5": 49.2,
+      "big": 14.8
+     },
+     "pk": {
+      "up1": 49.1,
+      "up5": 49.4,
+      "big": 15.1
+     },
+     "st": {
+      "table": "Bearish High",
+      "bigmove": "on"
+     }
+    },
+    {
+     "date": "2026-10-13",
+     "r1": 1.54,
+     "r5": 2.68,
+     "big": false,
+     "p": {
+      "up1": 49.5,
+      "up5": 49.2,
+      "big": 14.8
+     },
+     "pk": {
+      "up1": 49.1,
+      "up5": 49.4,
+      "big": 15.1
+     },
+     "st": {
+      "table": "Bearish High",
+      "bigmove": "on"
+     }
+    },
+    {
+     "date": "2026-10-14",
+     "r1": -0.34,
+     "r5": 0.93,
+     "big": false,
+     "p": {
+      "up1": 49.5,
+      "up5": 49.2,
+      "big": 14.8
+     },
+     "pk": {
+      "up1": 49.1,
+      "up5": 49.4,
+      "big": 15.1
+     },
+     "st": {
+      "table": "Bearish High",
+      "bigmove": "on"
+     }
+    },
+    {
+     "date": "2026-10-15",
+     "r1": 2.11,
+     "r5": 0.64,
+     "big": true,
+     "p": {
+      "up1": 49.5,
+      "up5": 49.2,
+      "big": 14.8
+     },
+     "pk": {
+      "up1": 49.1,
+      "up5": 49.4,
+      "big": 15.1
+     },
+     "st": {
+      "table": "Bearish High",
+      "bigmove": "on"
+     }
+    },
+    {
+     "date": "2026-10-16",
+     "r1": 0.56,
+     "r5": -1.6,
+     "big": false,
+     "p": {
+      "up1": 49.5,
+      "up5": 49.2,
+      "big": 14.8
+     },
+     "pk": {
+      "up1": 49.1,
+      "up5": 49.4,
+      "big": 15.1
+     },
+     "st": {
+      "table": "Bearish High",
+      "bigmove": "on"
+     }
+    },
+    {
+     "date": "2026-10-19",
+     "r1": -1.17,
+     "r5": -1.5,
+     "big": false,
+     "p": {
+      "up1": 49.5,
+      "up5": 49.2,
+      "big": 14.8
+     },
+     "pk": {
+      "up1": 49.1,
+      "up5": 49.4,
+      "big": 15.1
+     },
+     "st": {
+      "table": "Bearish High",
+      "bigmove": "on"
+     }
+    },
+    {
+     "date": "2026-10-21",
+     "r1": -0.19,
+     "r5": -0.34,
+     "big": false,
+     "p": {
+      "up1": 49.5,
+      "up5": 49.2,
+      "big": 14.8
+     },
+     "pk": {
+      "up1": 49.1,
+      "up5": 49.4,
+      "big": 15.1
+     },
+     "st": {
+      "table": "Bearish High",
+      "bigmove": "on"
+     }
+    },
+    {
+     "date": "2026-10-22",
+     "r1": -0.62,
+     "r5": -0.63,
+     "big": false,
+     "p": {
+      "up1": 49.5,
+      "up5": 49.2,
+      "big": 14.8
+     },
+     "pk": {
+      "up1": 49.1,
+      "up5": 49.4,
+      "big": 15.1
+     },
+     "st": {
+      "table": "Bearish High",
+      "bigmove": "on"
+     }
+    },
+    {
+     "date": "2026-10-23",
+     "r1": -0.17,
+     "r5": 1.23,
+     "big": false,
+     "p": {
+      "up1": 49.5,
+      "up5": 49.2,
+      "big": 14.8
+     },
+     "pk": {
+      "up1": 49.1,
+      "up5": 49.4,
+      "big": 15.1
+     },
+     "st": {
+      "table": "Bearish High",
+      "bigmove": "on"
+     }
+    },
+    {
+     "date": "2026-10-26",
+     "r1": 0.66,
+     "r5": 1.83,
+     "big": false,
+     "p": {
+      "up1": 54.0,
+      "up5": 57.7,
+      "big": 17.8
+     },
+     "pk": {
+      "up1": 53.6,
+      "up5": 57.8,
+      "big": 15.1
+     },
+     "st": {
+      "table": "no signal",
+      "bigmove": "on"
+     }
+    },
+    {
+     "date": "2026-10-27",
+     "r1": -0.01,
+     "r5": 2.83,
+     "big": false,
+     "p": {
+      "up1": 54.0,
+      "up5": 57.7,
+      "big": 17.8
+     },
+     "pk": {
+      "up1": 53.6,
+      "up5": 57.8,
+      "big": 15.1
+     },
+     "st": {
+      "table": "no signal",
+      "bigmove": "on"
+     }
+    },
+    {
+     "date": "2026-10-28",
+     "r1": -0.48,
+     "r5": 4.51,
+     "big": false,
+     "p": {
+      "up1": 54.0,
+      "up5": 57.7,
+      "big": 17.8
+     },
+     "pk": {
+      "up1": 53.6,
+      "up5": 57.8,
+      "big": 15.1
+     },
+     "st": {
+      "table": "no signal",
+      "bigmove": "on"
+     }
+    },
+    {
+     "date": "2026-10-29",
+     "r1": 1.24,
+     "r5": 5.54,
+     "big": false,
+     "p": {
+      "up1": 54.0,
+      "up5": 57.7,
+      "big": 17.8
+     },
+     "pk": {
+      "up1": 53.6,
+      "up5": 57.8,
+      "big": 15.1
+     },
+     "st": {
+      "table": "no signal",
+      "bigmove": "on"
+     }
+    },
+    {
+     "date": "2026-10-30",
+     "r1": 0.42,
+     "r5": 6.96,
+     "big": false,
+     "p": {
+      "up1": 54.0,
+      "up5": 57.7,
+      "big": 17.8
+     },
+     "pk": {
+      "up1": 53.6,
+      "up5": 57.8,
+      "big": 15.1
+     },
+     "st": {
+      "table": "no signal",
+      "bigmove": "on"
+     }
+    },
+    {
+     "date": "2026-11-02",
+     "r1": 1.66,
+     "r5": 8.82,
+     "big": false,
+     "p": {
+      "up1": 56.0,
+      "up5": 59.0,
+      "big": 15.0
+     },
+     "pk": {
+      "up1": 55.6,
+      "up5": 59.2,
+      "big": 15.1
+     },
+     "st": {
+      "table": "Bullish Moderate",
+      "bigmove": "on"
+     }
+    },
+    {
+     "date": "2026-11-03",
+     "r1": 1.62,
+     "r5": 7.15,
+     "big": false,
+     "p": {
+      "up1": 54.0,
+      "up5": 57.7,
+      "big": 17.8
+     },
+     "pk": {
+      "up1": 53.6,
+      "up5": 57.8,
+      "big": 15.1
+     },
+     "st": {
+      "table": "no signal",
+      "bigmove": "on"
+     }
+    },
+    {
+     "date": "2026-11-04",
+     "r1": 0.5,
+     "r5": 6.45,
+     "big": false,
+     "p": {
+      "up1": 56.0,
+      "up5": 59.0,
+      "big": 15.0
+     },
+     "pk": {
+      "up1": 55.6,
+      "up5": 59.2,
+      "big": 15.1
+     },
+     "st": {
+      "table": "Bullish Moderate",
+      "bigmove": "on"
+     }
+    },
+    {
+     "date": "2026-11-05",
+     "r1": 2.6,
+     "r5": 5.96,
+     "big": true,
+     "p": {
+      "up1": 56.2,
+      "up5": 62.2,
+      "big": 14.1
+     },
+     "pk": {
+      "up1": 55.8,
+      "up5": 62.4,
+      "big": 15.1
+     },
+     "st": {
+      "table": "Bullish High",
+      "bigmove": "on"
+     }
+    },
+    {
+     "date": "2026-11-06",
+     "r1": 2.17,
+     "r5": 2.88,
+     "big": true,
+     "p": {
+      "up1": 56.2,
+      "up5": 62.2,
+      "big": 14.1
+     },
+     "pk": {
+      "up1": 55.8,
+      "up5": 62.4,
+      "big": 15.1
+     },
+     "st": {
+      "table": "Bullish High",
+      "bigmove": "on"
+     }
+    },
+    {
+     "date": "2026-11-09",
+     "r1": 0.1,
+     "r5": 1.33,
+     "big": false,
+     "p": {
+      "up1": 55.6,
+      "up5": 57.7,
+      "big": 10.1
+     },
+     "pk": {
+      "up1": 55.2,
+      "up5": 57.9,
+      "big": 15.1
+     },
+     "st": {
+      "table": "Bullish Low",
+      "bigmove": "on"
+     }
+    },
+    {
+     "date": "2026-11-11",
+     "r1": 0.95,
+     "r5": 1.76,
+     "big": false,
+     "p": {
+      "up1": 55.6,
+      "up5": 57.7,
+      "big": 10.1
+     },
+     "pk": {
+      "up1": 55.2,
+      "up5": 57.9,
+      "big": 15.1
+     },
+     "st": {
+      "table": "Bullish Low",
+      "bigmove": "on"
+     }
+    },
+    {
+     "date": "2026-11-12",
+     "r1": 0.04,
+     "r5": 0.19,
+     "big": false,
+     "p": {
+      "up1": 55.6,
+      "up5": 57.7,
+      "big": 10.1
+     },
+     "pk": {
+      "up1": 55.2,
+      "up5": 57.9,
+      "big": 15.1
+     },
+     "st": {
+      "table": "Bullish Low",
+      "bigmove": "on"
+     }
+    },
+    {
+     "date": "2026-11-13",
+     "r1": -0.39,
+     "r5": 1.36,
+     "big": false,
+     "p": {
+      "up1": 55.6,
+      "up5": 57.7,
+      "big": 10.1
+     },
+     "pk": {
+      "up1": 55.2,
+      "up5": 57.9,
+      "big": 15.1
+     },
+     "st": {
+      "table": "Bullish Low",
+      "bigmove": "on"
+     }
+    },
+    {
+     "date": "2026-11-16",
+     "r1": 0.63,
+     "r5": 2.85,
+     "big": false,
+     "p": {
+      "up1": 55.0,
+      "up5": 58.0,
+      "big": 5.0
+     },
+     "pk": {
+      "up1": 55.2,
+      "up5": 57.9,
+      "big": 7.7
+     },
+     "st": {
+      "table": "Bullish Low",
+      "bigmove": "off"
+     }
+    },
+    {
+     "date": "2026-11-17",
+     "r1": 0.52,
+     "r5": 0.4,
+     "big": false,
+     "p": {
+      "up1": 55.0,
+      "up5": 58.0,
+      "big": 5.0
+     },
+     "pk": {
+      "up1": 55.2,
+      "up5": 57.9,
+      "big": 7.7
+     },
+     "st": {
+      "table": "Bullish Low",
+      "bigmove": "off"
+     }
+    },
+    {
+     "date": "2026-11-18",
+     "r1": -0.61,
+     "r5": null,
+     "big": false,
+     "p": {
+      "up1": 55.0,
+      "up5": 58.0,
+      "big": 5.0
+     },
+     "pk": {
+      "up1": 55.2,
+      "up5": 57.9,
+      "big": 7.7
+     },
+     "st": {
+      "table": "Bullish Low",
+      "bigmove": "off"
+     }
+    },
+    {
+     "date": "2026-11-19",
+     "r1": 1.21,
+     "r5": null,
+     "big": false,
+     "p": {
+      "up1": 55.0,
+      "up5": 58.0,
+      "big": 5.0
+     },
+     "pk": {
+      "up1": 55.2,
+      "up5": 57.9,
+      "big": 7.7
+     },
+     "st": {
+      "table": "Bullish Low",
+      "bigmove": "off"
+     }
+    },
+    {
+     "date": "2026-11-20",
+     "r1": 1.08,
+     "r5": null,
+     "big": false,
+     "p": {
+      "up1": 55.0,
+      "up5": 58.0,
+      "big": 5.0
+     },
+     "pk": {
+      "up1": 55.2,
+      "up5": 57.9,
+      "big": 7.7
+     },
+     "st": {
+      "table": "Bullish Low",
+      "bigmove": "off"
+     }
+    },
+    {
+     "date": "2026-11-23",
+     "r1": -1.77,
+     "r5": null,
+     "big": false,
+     "p": {
+      "up1": 53.3,
+      "up5": 57.9,
+      "big": 9.3
+     },
+     "pk": {
+      "up1": 53.6,
+      "up5": 57.8,
+      "big": 7.7
+     },
+     "st": {
+      "table": "no signal",
+      "bigmove": "off"
+     }
+    }
+   ]
+  }
+ }
+}
