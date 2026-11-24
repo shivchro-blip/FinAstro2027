@@ -1,6 +1,6 @@
 # Silver findings tracker
 
-Generated 23 Nov 2026 19:14 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
+Generated 23 Nov 2026 19:28 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
 
 ## Recent findings
 
@@ -111,6 +111,7 @@ Best (from the 26 yr data): Retrograde Mercury or Jupiter, Only Moon and Mercury
 
 | Date | PR | Topic | Result |
 |---|---|---|---|
+| 2026-11-24 | #29 | What triggered the 20 Nov 2026 fall and the 23 Nov rise (trigger study and market event log) | No day-level condition leans the way the market moved: Ekadashi on Friday up 64% vs 53% on the S&P (the 2026 doc calls it 90%+ bearish); Bhadra, Moon-Saturn, Moon in Pisces, Panchak at chance; Venus debilitated and Mercury alone slightly more big S&P falls (p~0.04 of 100 tests); Monday's conditions show no bullish lean. Background lead: Mars, Jupiter and Ketu together (also Feb-Mar 2020); Mars-Jupiter with a node since 1928: 3/13 episodes with 15%+ falls vs 3.5% of random windows, 5/13 with 8%+ vs 11.8%; bottoms in 2009 and 2020 within 3 sessions of the episode ending; this one loses Ketu on 5 Dec 2026. Chosen after the fact - a lead, not a rule. The news set the day. |
 | 2026-11-24 | #28 | Planetary changes Fri 20 - Mon 23 Nov and Tue 24 Nov 2026 | Fri-Mon: Venus enters Libra Sun 22 Nov 06:51 ET (own sign; leaves Saturn opposition); Moon Pisces -> Aries Sat 19:25 ET -> Taurus Mon 20:54 ET; Moon nakshatras Revati, Ashwini, Bharani, Krittika; Bhadra Fri 08:30-20:02 and Mon 13:12-23:35 ET; Purnima tithi from Mon 13:12 ET; Sun-Neptune exact trine Mon 19:10 ET; pada changes Venus Chitra 3, Mercury Swati 4, Sun Anuradha 2. Tue 24 Nov: full Moon in Taurus/Krittika 09:53 ET (exalted Moon), Moon-Uranus conjunction 12:10 ET, Moon into Rohini 12:55 ET, Venus-Rahu exact trine 01:30 ET; no planet changes sign; Sun-Uranus opposition exact Wed 25 Nov. Only Moon rules change status; none of the changing rules is in the tested signal tables. |
 | 2026-11-24 | #27 | Day report for Tue 24 Nov 2026 (full Moon in Taurus) | Full Moon in Taurus/Krittika 09:53 ET, Sun-Uranus opposition exact 25 Nov; gold bearish-low (no-edge label) with its volatility watch on; no signal for S&P, Sensex, silver; supported active rules lean bullish (S&P 5:1, Sensex 6:2, not a tested signal); calendar full-Moon and Kshay Tithi rows have no edge. |
 | 2026-11-23 | #26 | Day report for Mon 23 Nov 2026: what we said vs what happened | Said: gold bearish low (no-edge label), no signal for S&P, Sensex, silver; gold volatility watch (Sun-Uranus opposition, full Moon 24 Nov). Happened: S&P +4.7%, Nasdaq +6.5%, gold +3.2%, silver +4.4%, Sensex -1.8%. Gold direction wrong, volatility watch right. Supported active rules leaned bullish (S&P 8:1 right, Sensex 6:3 wrong) - not a tested signal. |
