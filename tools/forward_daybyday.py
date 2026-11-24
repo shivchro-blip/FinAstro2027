@@ -14,8 +14,8 @@ For each day:
   * every calendar-layer row (S&P, Nifty/Sensex, gold, silver) with the calendar rule's record;
   * the four signal tables, the big-move watch windows, the outlook items, the agreement windows, the fast-trigger
     picks, the robust volatility factors and Model v1.0 (gold);
-  * USA and NYSE dashas at all five levels (and any change that day), the condition of each running lord,
-    gochara, Chandra bala and Tara bala;
+  * gochara, Chandra bala and Tara bala for the USA and NYSE charts (the dasha blocks are switched off by USE_DASHA:
+    dashas were tested and parked, user 24 Nov 2026);
   * Solar return (the NYSE monthly solar-return astrologer): forecasts covering the day, transit rules active, and the Mars-Jupiter-node lead;
   * the combined probability (tools/combined_probability.py) for each market: up that day, up over the next
     5 sessions, a big day - from all layers and from the kept layers, fitted on 2000 - 23 Nov 2026.
@@ -52,6 +52,7 @@ CLOSED = {"spx": {dt.date(2026, 11, 26): "Thanksgiving", dt.date(2026, 12, 25): 
           "sensex": {dt.date(2026, 12, 25): "Christmas"}}
 EARLY = {dt.date(2026, 11, 27): "US early close (13:00 ET)", dt.date(2026, 12, 24): "US early close (13:00 ET)"}
 GOOD = ("Strongest", "Supported", "Consistent")
+USE_DASHA = False            # dashas parked (user, 24 Nov 2026): tested in dasha_transits.py / dasha_combinations.py, no S&P edge
 MINOR = ("pada change", "navamsa change", "tithi", "karana", "yoga")
 
 
@@ -266,10 +267,10 @@ def main():
     seq = {n: {lv: DT.sequence(DT.CHARTS[n], lv, dt.datetime.combine(a, dt.time(0), ET), dt.datetime.combine(b + dt.timedelta(days=1), dt.time(0), ET))
                for lv in (1, 2, 3, 4)} for n in charts}
     AF = load(ROOT / "tools" / "author_forecasts.py", "afm")
-    DC = load(ROOT / "tools" / "dasha_combinations.py", "dcm")
-    dnat = {n: DC.natal(n) for n in charts}
+    DC = load(ROOT / "tools" / "dasha_combinations.py", "dcm") if USE_DASHA else None
+    dnat = {n: DC.natal(n) for n in charts} if USE_DASHA else {}
     dctest = {}
-    if (OUT / "dasha_combinations_ET.json").exists():
+    if USE_DASHA and (OUT / "dasha_combinations_ET.json").exists():
         for t in json.load(open(OUT / "dasha_combinations_ET.json"))["tests"]:
             if t["level"] == "Prana" and "chain" in t["group"]:
                 dctest[(t["chart"], "hurts" if "hurts" in t["group"] else "helps")] = t
@@ -289,8 +290,8 @@ def main():
         r1 = M.evaluate(d)
         sb = {k: v["ratio"] for k, v in r1["shadbala"].items()}
         ved = CP.vedic_states(d, p, sb, charts)
-        dash = {}
-        for n, (ch, nat) in charts.items():
+        dash = {n: dict(lords=[], changes=[], state=None, gochara=ved[f"{n} gochara"], chandra=ved[f"{n} chandra"], tara=ved[f"{n} tara"]) for n in charts}
+        for n, (ch, nat) in (charts.items() if USE_DASHA else ()):
             run = DT.dasha_at(ch, noon, 5)
             lords = []
             for lvl, (lo, s, e) in zip(DT.LEVELS, run):
@@ -302,7 +303,7 @@ def main():
                        if s.astimezone(ET).date() == d]
             dash[n] = dict(lords=lords, changes=changes, state=ved[f"{n} dasha"], gochara=ved[f"{n} gochara"], chandra=ved[f"{n} chandra"], tara=ved[f"{n} tara"])
         dch = {}
-        for n in charts:
+        for n in (charts if USE_DASHA else ()):
             cc = DC.chain(n, dt.datetime(d.year, d.month, d.day, 12, 30, tzinfo=ET).astimezone(UTC), dnat[n])
             sc_ = DC.chain_score(cc)
             dch[n] = dict(score=sc_, reading="hurts" if sc_ <= -3 else "helps" if sc_ >= 3 else "mixed",
@@ -359,7 +360,8 @@ def main():
                          shadbala=sb, dasha=dash, chain=dch, jupven=ved["jup-ven"], author=dict(rules=arules, detail=adetail, forecasts=aforecasts),
                          mjn=mjn, prob=prob))
         d += dt.timedelta(days=1)
-    res = dict(start=str(a), end=str(b), fit_end=str(fit_end), days=days, dctest={f"{k[0]} {k[1]}": v for k, v in dctest.items()}, atests=atests, solar_month=nyse["forecast"],
+    sr = [dict(period=f["period"], status=f["score"]["status"], detail=f["score"].get("detail", "")) for f in json.load(open(OUT / "author_forecasts_ET.json"))["forecasts"]]
+    res = dict(start=str(a), end=str(b), fit_end=str(fit_end), days=days, sr_scores=sr, dctest={f"{k[0]} {k[1]}": v for k, v in dctest.items()}, atests=atests, solar_month=nyse["forecast"],
                mjn=dict(episodes=len(mjn_hist), falls15=falls15, base=ts["mjn_base"]), kept={mk: cj["markets"][mk]["kept"] for mk in MKS},
                skill={mk: {t: cj["markets"][mk]["walk_forward"][t] for t in CP.TARGETS} for mk in MKS})
     if any("actual" in pr for x in days for pr in x["prob"].values()):
@@ -413,7 +415,8 @@ def score(days, AF):
             if mk == "spx":
                 st = pr["st"]
                 for n in ("USA", "NYSE"):
-                    both(f"{n} dasha condition", mk, {"strong": 1, "afflicted": -1}.get(st[f"{n} dasha"], 0), ac)
+                    if USE_DASHA:
+                        both(f"{n} dasha condition", mk, {"strong": 1, "afflicted": -1}.get(st[f"{n} dasha"], 0), ac)
                     both(f"{n} gochara", mk, {"favourable": 1, "adverse": -1}.get(st[f"{n} gochara"], 0), ac)
                     both(f"{n} Chandra bala", mk, 1 if st[f"{n} chandra"] == "good" else -1, ac)
                     both(f"{n} Tara bala", mk, {"good": 1, "bad": -1}.get(st[f"{n} tara"], 0), ac)
@@ -423,7 +426,7 @@ def score(days, AF):
                 both("Solar return: Jupiter sextile Venus (bullish)", mk, 1 if any(r.startswith("Jupiter sextile Venus") for r in ar) else 0, ac)
                 both("Solar return: Sun square Mars (bearish)", mk, -1 if any(r.startswith("Sun square Mars (") for r in ar) else 0, ac)
                 both("Mars-Jupiter-node lead (bearish)", mk, -1 if x["mjn"] else 0, ac)
-                for n in ("USA", "NYSE"):
+                for n in (("USA", "NYSE") if USE_DASHA else ()):
                     both(f"{n} dasha chain, classical reading (Pratyantar + Sookshma + Prana)", mk, {"hurts": -1, "helps": 1}.get(x["chain"][n]["reading"], 0), ac)
             B = big[mk]
             (B["pbig"] if ac["big"] else B["poth"]).append(pr["all"]["big"])
@@ -554,13 +557,15 @@ details details{margin:4px 0} details details>summary{cursor:pointer;color:#0969
     sm = res["solar_month"]
     o.append("<h2>Standing through the period</h2><ul>")
     o.append(f"<li><b>Solar return, NYSE month {E(sm['month'])}:</b> {E(sm['text'])} (from {sm['start_level']}).</li>")
+    if res.get("sr_scores"):
+        o.append("<li><b>Solar return scorecard so far:</b> " + "; ".join(f"{E(f['period'])}: {E(f['status'])}" + (f" ({E(f['detail'])})" if f['detail'] else "") for f in res["sr_scores"]) + "</li>")
     m = res["mjn"]
     mj = [x["date"] for x in res["days"] if x["mjn"]]
     if mj:
         o.append(f"<li><b>Mars and Jupiter with a node</b> (our lead from the trigger study): active {mj[0]} – {mj[-1]}. Since 1928, {m['falls15']} of {m['episodes']} "
                  f"such episodes saw a fall of 15% or more, against {m['base']['worst15']}% of random stretches of the same length. A lead, not proven.</li>")
     d0 = res["days"][0]["dasha"]
-    for n in ("USA", "NYSE"):
+    for n in (("USA", "NYSE") if USE_DASHA else ()):
         L = d0[n]["lords"]
         o.append(f"<li><b>{n} dashas at the start:</b> " + " / ".join(f"{x['lord']} ({x['level']}, to {x['to']})" for x in L[:3]) + ".</li>")
     long_rules = collections.Counter()
@@ -595,9 +600,10 @@ details details{margin:4px 0} details details>summary{cursor:pointer;color:#0969
             else:
                 cells += f"<td class='s'>{'closed: ' + x['closed'][mk] if mk in x['closed'] else 'weekend'}<br>{sg}</td>"
         notes = []
-        for n in ("USA", "NYSE"):
+        for n in (("USA", "NYSE") if USE_DASHA else ()):
             notes += [f"{n}: {c}" for c in x["dasha"][n]["changes"] if not c.startswith("Prana")]
-        notes += [f"{n} dasha chain {x['chain'][n]['score']:+d} ({x['chain'][n]['reading']})" for n in ("USA", "NYSE") if x["chain"][n]["reading"] != "mixed"]
+            if x["chain"][n]["reading"] != "mixed":
+                notes.append(f"{n} dasha chain {x['chain'][n]['score']:+d} ({x['chain'][n]['reading']})")
         notes += [f"Solar return: {f.split(': ', 1)[1]}" for f in x["author"]["forecasts"] if "this day" in f]
         notes += [f"Solar return rule: {r.split(' – ')[0]}" for r in x["author"]["rules"] if "retrograde" not in r and "Pisces" not in r]
         for w in x["watch"]:
@@ -647,7 +653,9 @@ details details{margin:4px 0} details details>summary{cursor:pointer;color:#0969
                      for c in x["changes"])
         o.append(f"<details><summary>All planetary changes during the day ({len(x['changes'])})</summary><div class='wrap'><table><thead><tr><th>ET</th><th>IST</th><th>Kind</th>"
                  f"<th>Change</th><th>Position / status</th></tr></thead><tbody>{ch}</tbody></table></div></details>")
-        # dashas
+        if not USE_DASHA:
+            o.append("<p class='s'><b>Classical layers (S&amp;P):</b> " + E("; ".join(f"{n}: gochara {dd['gochara']}, Chandra bala {dd['chandra']}, Tara bala {dd['tara']}" for n, dd in x["dasha"].items())) + "</p>")
+        # dashas (parked)
         drow = ""
         for n, dd in x["dasha"].items():
             for L in dd["lords"]:
@@ -663,10 +671,12 @@ details details{margin:4px 0} details details>summary{cursor:pointer;color:#0969
                          f"<td class='n {cl}'>{L['total']:+d}</td><td class='{cl}'>{L['verdict']}</td><td class='s'>{E('; '.join(L['why']))}</td></tr>")
         hist = "; ".join(f"{k}: S&P {v['mean']:+.1f}%/yr vs {v['base']:+.1f}% on all days (t {v['t']})" for k, v in res.get("dctest", {}).items())
         csum = "; ".join(f"{n}: chain score {c['score']:+d} → {c['reading']}" for n, c in x["chain"].items())
-        o.append(f"<details><summary>Dasha chain read classically: {E(csum)}</summary><p class='s'>Each lord judged against its parent lord, the natal chart and its transit "
+        if USE_DASHA:
+            o.append(f"<details><summary>Dasha chain read classically: {E(csum)}</summary><p class='s'>Each lord judged against its parent lord, the natal chart and its transit "
                  f"(tools/dasha_combinations.py); the chain score adds the Pratyantar, Sookshma and Prana scores (hurts ≤ −3, helps ≥ +3). Since 1928: {E(hist) or 'run tools/dasha_combinations.py'}.</p>"
                  f"<div class='wrap'><table><thead><tr><th>Chart</th><th>Level</th><th>Lord</th><th>Score</th><th>Reading</th><th>Factors that count</th></tr></thead><tbody>{crow}</tbody></table></div></details>")
-        o.append(f"<details><summary>USA and NYSE dashas and the transits of their lords</summary><p class='s'>{E(dsum)}</p><div class='wrap'><table><thead><tr><th>Chart</th><th>Level</th>"
+        if USE_DASHA:
+            o.append(f"<details><summary>USA and NYSE dashas and the transits of their lords</summary><p class='s'>{E(dsum)}</p><div class='wrap'><table><thead><tr><th>Chart</th><th>Level</th>"
                  f"<th>Lord</th><th>Period</th><th>Transit (house from ascendant / Moon)</th><th>Condition score</th></tr></thead><tbody>{drow}</tbody></table></div></details>")
         # rules
         for setname, label in (("general", "General-market rules (S&P, Sensex)"), ("gold", "Gold rules"), ("silver", "Silver rules")):
@@ -711,7 +721,7 @@ details details{margin:4px 0} details details>summary{cursor:pointer;color:#0969
         other.append(f"<li><b>Solar return transit rules active:</b> {E('; '.join(ar) or 'none')}. <span class='s'>{E(x['author']['detail'])}</span></li>")
         o.append("<h3>Other analyses</h3><ul>" + "".join(other) + "</ul></details>")
     o.append("<p class='s'>Sources: catalogue rules (TA, KD, the 2026 document, the user's notes, Brihat Samhita), the 2027/2026 calendar layer, the backtests and tables "
-             "in PROJECT_KNOWLEDGE.md, Model v1.0, the USA/NYSE charts and dashas, the Solar return material (NYSE monthly solar returns), and classical gochara / Chandra bala / Tara bala "
+             "in PROJECT_KNOWLEDGE.md, Model v1.0, the USA/NYSE charts, the Solar return material (NYSE monthly solar returns), and classical gochara / Chandra bala / Tara bala "
              "(included at the user's request). Dasha levels below Antardasha depend on birth times known to the hour or not at all.</p></body></html>")
     return "".join(o)
 

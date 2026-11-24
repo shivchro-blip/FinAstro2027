@@ -1,6 +1,6 @@
 # Silver findings tracker
 
-Generated 23 Nov 2026 21:21 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
+Generated 23 Nov 2026 21:46 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
 
 ## Recent findings
 
@@ -111,6 +111,7 @@ Best (from the 26 yr data): Retrograde Mercury or Jupiter, Only Moon and Mercury
 
 | Date | PR | Topic | Result |
 |---|---|---|---|
+| 2026-11-24 | #38 | Dashas parked; back to the Solar return method | Combined model without dashas: S&P walk-forward skill unchanged in sign (all layers -0.2 to -0.3%, kept +0.2 to +0.5%); last 60 days S&P 5-session calls 64% right (all layers). 1-23 Nov, all methods pooled: 53% same day (163/307), 48% over 5 sessions (112/235). Solar return scorecard: Oct-Nov month right; week of 16 Nov 4 of 5; month to 18 Dec open (-1.2% so far); week of 23 Nov 0 of 1 so far. |
 | 2026-11-24 | #37 | Dasha combinations read classically against the USA and NYSE charts; 'author' renamed Solar return | 0 of 132 tests hold; 66 point the classical way (chance); the strongest (|t| about 2.5) point against the classical reading and are not significant. On 1-23 Nov the classical chain was right 50%/30% (USA) and 43%/17% (NYSE). Coming: USA Saturn Pratyantar +3 'helps' (S&P -11% so far), NYSE Mercury Sookshma -2 'hurts' to 2 Dec, NYSE Venus Sookshma +6 'helps' 9-30 Dec - illustrations only. |
 | 2026-11-24 | #36 | The day-by-day set checked on 1-23 Nov 2026 | All methods pooled: 54% same day (171/319), 49% over 5 sessions (117/241). S&P 51%/48% (fell: up 6 of 16 days), Sensex 80%/97% (rose), gold 48%/32%, silver 42%/24%. Bearish readings were right on the S&P (Mars-Jupiter-node 88%/100%, Solar return Sun square Mars 83%, Solar return days 4/6, USA dasha 70%/71%, NYSE gochara 62%/75%); bullish tables and the combined probability were wrong (S&P table 29%/18%). Big days not anticipated (S&P P(big) 3.3% on big days vs 3.9% others). 16 sessions: no significance. |
 | 2026-11-24 | #35 | Day by day, 24 Nov - 31 Dec 2026: transits, every rule and every analysis | 131-171 catalogue rules a day. Mars-Jupiter-Ketu in Leo (crash lead) to 5 Dec, when the nodes change sign. Jupiter sextile Venus 24 Nov - 1 Dec (Solar return bullish, tested p 0.03). S&P 5-session probabilities 55-63% vs base 57% (highest 27 Nov and 2-4 Dec, Bullish Moderate table); big-day probabilities 2-6%. Gold Bearish Low to 1 Dec, Bullish Low from 2 Dec; silver Bullish from 14 Dec. All probabilities within a few points of base. |
