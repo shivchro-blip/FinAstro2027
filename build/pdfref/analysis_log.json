@@ -575,6 +575,19 @@
     "build/pdfref/doc_dec2026_check_ET.json",
     "tools/calendar_2026.py"
    ]
+  },
+  {
+   "date": "2026-11-24",
+   "pr": "45",
+   "topic": "Global Predictions (outside forecast): US market 24 Nov - 5 Dec 2026",
+   "analysis": "tools/global_predictions.py: the shared calls recorded (volatility 24-27 Nov; optimism then instability 30 Nov - 5 Dec; rally then equally sharp selling), astronomy checked, S&P scoring with a trailing 250-session default rate for volatility windows, and the configurations tested 1928-2026 via author_forecasts.tests(conds) (now reusable, with Moon positions and sharp-reversal counts). Added to the 2026 calendar (section, day lines, key dates). News in the messages not used. Scoring scheduled for 28 Nov and 5 Dec.",
+   "result": "Astronomy right (Full Moon conjunct Uranus 1.4 deg, Mars square, Sun-Uranus opposition 25 Nov 17:41 ET, Mars-Uranus square exact 4 Dec) except Venus-Mercury (no aspect, 24-28 deg apart). History: Full Moon near Uranus 14 sharp reversals vs 6.5 (p 0.007) but all in 1977-2026, big days normal - a lead; Sun opposite Uranus reversals 23 vs 17 (p 0.10); Mars square Uranus nothing; Venus conjunct Mercury more big days (p 0.01), no bullish tilt. Calls open; default rate for a 3-session volatility window 15%.",
+   "files": [
+    "tools/global_predictions.py",
+    "build/pdfref/global_predictions_ET.html",
+    "tools/author_forecasts.py",
+    "tools/calendar_2026.py"
+   ]
   }
  ]
 }

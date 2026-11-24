@@ -12,6 +12,7 @@ Read `PROJECT_KNOWLEDGE.md` first. It holds the sources, conventions, user decis
 - Analysis uses market prices and astrology only; news and fundamentals are not used or recorded (user, 24 Nov 2026).
 - **Dashas are parked** (user, 24 Nov 2026): tested at every level and as classical combinations, no S&P edge. They are kept as reference reports but not used in the combined model or the day-by-day pages (`USE_DASHA = False` in `tools/forward_daybyday.py`). Work continues with the Solar return method.
 - Call the NYSE solar-return astrologer's material **Solar return** in reports, never "the author" (user, 24 Nov 2026).
+- **Outside forecasts** (Western-style or unsourced) are checked and scored, never added to the rules: the earlier infographics model, and **Global Predictions** (a WhatsApp forecaster the user follows; tracked in `tools/global_predictions.py`).
 - Silver has no sign in Brihat Samhita Ch.41. Model v1.0 reports "Insufficient data" for silver.
 - Back every new rule or claim with a backtest using the method in `PROJECT_KNOWLEDGE.md` §6, and state results plainly, including when nothing works.
 - Log every analysis in `build/pdfref/analysis_log.json` and regenerate the trackers.

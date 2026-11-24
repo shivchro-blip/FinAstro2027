@@ -60,6 +60,7 @@ STEPS = [
     ["tools/trigger_study.py"],
     ["tools/nyse_charts.py"],
     ["tools/author_forecasts.py"],
+    ["tools/global_predictions.py"],
     ["tools/solar_return_generate.py"],
     ["tools/dasha_transits.py"],
     ["tools/model_check_60d.py"],

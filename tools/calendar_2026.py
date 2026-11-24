@@ -61,6 +61,7 @@ def gather(a, b):
               scorecard=json.load(open(OUT / "author_forecasts_ET.json"))["forecasts"], atests=atests, month_of=SRG.month_of, all_months=mons)
     kart = json.load(open(OUT / "kartari_test_ET.json"))
     sr["jan"] = json.load(open(OUT / "kartari_jan2027_ET.json"))
+    sr["gp"] = json.load(open(OUT / "global_predictions_ET.json"))
     sr["doc"] = doc_rows(json.load(open(OUT / "doc_dec2026_check_ET.json")), res)
     sr["kartari"] = [dict(key=r["key"], title=r["title"], tone=r["tone"], basis=r["basis"], record=r["record"],
                           spans=[(dt.datetime.fromisoformat(u["frm_iso"]), dt.datetime.fromisoformat(u["to_iso"]), u["pair"]) for u in r["upcoming"]])
@@ -507,6 +508,9 @@ def page(res, sr, track, checks, a, b, generated):
         for r in doc_on(sr["doc"], d):
             if any(v["ok"] for v in r["rec"].values()) and dt.date.fromisoformat(r["start"]) == d:
                 extra.append(f"2026 document: {r['event']} ({r['inference']}) — held up on the " + ", ".join(SHORT[k] for k, v in r["rec"].items() if v["ok"]) + " since 2000")
+        for f in sr["gp"]["forecasts"]:
+            if f["start"] == x["date"] and f["kind"] != "fade":
+                extra.append(f"Global Predictions window begins ({f['period']}): {f['text'][:90]}…")
         prev = days[days.index(x) - 1] if days.index(x) else None
         if prev and prev["mjn"] and not x["mjn"]:
             extra.append("Mars–Jupiter–Ketu conjunction in Leo ends (crash lead off)")
@@ -601,6 +605,7 @@ def page(res, sr, track, checks, a, b, generated):
     o.append(f"</tbody></table></div><p class='s'>Daily call rule: the bearish aspects (Sun square Mars within 3°, Mars–Ketu within 5°) come first; Jupiter sextile Venus within 1° is bullish; "
              f"Mars square Uranus alone is volatile; otherwise the month's reading. Over 1928–2026: bullish calls right {bt['Bullish']['d1']}% same day / {bt['Bullish']['d5']}% over 5 sessions; "
              f"bearish calls right {bt['Bearish']['d1']}% / {bt['Bearish']['d5']}%; the S&amp;P rose on {bt['_base']['up1']}% of days and over {bt['_base']['up5']}% of 5-session spans.</p>")
+    o.append(gp_html(sr["gp"]))
     o.append(doc_html(sr["doc"]))
     o.append(jan_html(sr["jan"]))
     # day by day
@@ -701,7 +706,9 @@ def day_html(x, sr, res):
                   f"{(' — tone by its rule: ' + E(r['bhadra'])) if r['bhadra'] else ''} <span class='s'>{E(tm)}{' · ' if tm else ''}record 2000–2026: {E(recs)}</span></li>")
     if dl:
         o.append("<h3>2026 document, December table</h3><ul>" + "".join(dl) + "</ul>")
-    o.append("<h3>Solar return</h3><ul>" + "".join(f"<li>{s}</li>" for s in sr_lines) + "</ul>")
+    for f in gp_on(sr["gp"], d):
+        sr_lines.append(f"<b>Global Predictions</b> (outside forecast, {E(f['period'])}): {E(f['text'])} <span class='s'>status: {E(f['score']['status'])}</span>")
+    o.append("<h3>Solar return and outside forecasts</h3><ul>" + "".join(f"<li>{s}</li>" for s in sr_lines) + "</ul>")
     # sky
     rows = "".join(f"<tr><td>{E(p['planet'])}</td><td>{E(p['sign'])} {E(p['deg'])}</td><td>{E(p['nakshatra'])}</td><td>{'R' if p['retro'] else ''}</td>"
                    f"<td>{E(p['dignity'])}{' combust' if p['combust'] else ''}</td><td class='n'>{p['speed']}</td></tr>" for p in x["positions"])
@@ -780,6 +787,35 @@ def jan_html(j):
              "past windows like 1–15 Jan were right 42% vs 41%. The 25 Jan Sensex match (63% vs 43%) was picked from about 13 groups and is not reliable. "
              "Both of our market tables are bearish all January for other reasons (Venus–Uranus opposition, Mercury–Rahu conjunction).</div>")
     return "".join(o)
+
+
+def gp_html(g):
+    o = ["<h2 id='gp'>Global Predictions (outside forecast)</h2>",
+         "<p class='s'>A forecaster in a WhatsApp group you follow (shared 24 Nov 2026). Western-style degree aspects, so it is tracked as an outside forecast and not added "
+         "to our rules. News quoted in the messages is not used. Full detail in global_predictions_ET.html.</p>",
+         "<div class='wrap'><table><thead><tr><th>Period</th><th>Call</th><th>Status</th><th>S&amp;P so far</th></tr></thead><tbody>"]
+    for f in g["forecasts"]:
+        o.append(f"<tr><td class='n'>{E(f['period'])}</td><td>{E(f['text'])}</td><td><b>{E(f['score']['status'])}</b></td><td class='s'>{E(f['score']['detail'])}</td></tr>")
+    o.append("</tbody></table></div><div class='wrap'><table><thead><tr><th>Astronomy claim</th><th>Check</th><th>Detail</th></tr></thead><tbody>")
+    for a in g["astronomy"]:
+        o.append(f"<tr><td>{E(a['claim'])}</td><td><b>{E(a['status'])}</b></td><td class='s'>{E(a['detail'])}</td></tr>")
+    o.append("</tbody></table></div><div class='wrap'><table><thead><tr><th>Same configuration on the S&amp;P, 1928–2026</th><th class='n'>Days</th><th class='n'>Big days</th>"
+             "<th class='n'>Sharp reversals</th></tr></thead><tbody>")
+    for k, r in g["tests"].items():
+        o.append(f"<tr><td>{E(k)}</td><td class='n'>{r['n']}</td><td class='n'>{r['big']} vs {r['exp_big']} (p {r['p_big']})</td><td class='n'>{r['rev']} vs {r['exp_rev']} (p {r.get('p_rev')})</td></tr>")
+    o.append("</tbody></table></div><div class='callout'><b>Reading:</b> the astronomy is right except Venus–Mercury, which form no aspect in 30 Nov – 5 Dec (24–28° apart). "
+             "Since 1928 the Full Moon near Uranus came with twice the usual number of sharp reversals (14 vs 6.5, p 0.007), but all of the excess is in 1977–2026 "
+             "(none in 1928–1976) and big days were normal: a lead, not a rule. Sun opposite Uranus and Mars square Uranus showed no reliable effect. In the last 250 sessions "
+             "a short window had a big day or a sharp reversal about 15% of the time, so “volatility” calls in the current market are often right by default.</div>")
+    return "".join(o)
+
+
+def gp_on(g, d):
+    out = []
+    for f in g["forecasts"]:
+        if dt.date.fromisoformat(f["start"]) <= d <= dt.date.fromisoformat(f["end"]) + dt.timedelta(days=1) and f["kind"] != "fade":
+            out.append(f)
+    return out
 
 
 def trust_html(track, sx):

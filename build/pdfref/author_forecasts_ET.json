@@ -140,6 +140,9 @@
  ],
  "tests": {
   "Sun square Mars (within 3\u00b0) \u2013 Solar return: bearish": {
+   "rev": 45,
+   "exp_rev": 33.9,
+   "p_rev": 0.0394,
    "n": 813,
    "up1": 52.4,
    "exp1": 52.5,
@@ -157,6 +160,9 @@
    "eps_p": 0.5355
   },
   "Sun square Mars with Mars-Ketu within 8\u00b0 \u2013 Solar return: bearish": {
+   "rev": 5,
+   "exp_rev": 1.9,
+   "p_rev": 0.0476,
    "n": 35,
    "up1": 57.1,
    "exp1": 52.5,
@@ -174,6 +180,9 @@
    "eps_p": 0.4192
   },
   "Mars conjunct Ketu (within 5\u00b0) \u2013 Solar return: disruption": {
+   "rev": 49,
+   "exp_rev": 47.7,
+   "p_rev": 0.4428,
    "n": 739,
    "up1": 51.0,
    "exp1": 52.1,
@@ -191,6 +200,9 @@
    "eps_p": 0.3266
   },
   "Jupiter sextile Venus (within 2\u00b0) \u2013 Solar return: bullish": {
+   "rev": 30,
+   "exp_rev": 26.9,
+   "p_rev": 0.2994,
    "n": 587,
    "up1": 55.7,
    "exp1": 52.5,
@@ -208,6 +220,9 @@
    "eps_p": 0.0272
   },
   "Mars square Uranus (within 3\u00b0) \u2013 Solar return: volatility": {
+   "rev": 41,
+   "exp_rev": 35.1,
+   "p_rev": 0.1816,
    "n": 837,
    "up1": 50.3,
    "exp1": 53.2,
@@ -225,6 +240,9 @@
    "eps_p": 0.8828
   },
   "Mars retrograde": {
+   "rev": 102,
+   "exp_rev": 108.4,
+   "p_rev": 0.7441,
    "n": 2327,
    "up1": 52.3,
    "exp1": 52.7,
@@ -242,6 +260,9 @@
    "eps_p": 0.2279
   },
   "Mercury in Pisces, tropical \u2013 Solar return: unfavourable": {
+   "rev": 95,
+   "exp_rev": 85.7,
+   "p_rev": 0.1708,
    "n": 2059,
    "up1": 51.5,
    "exp1": 52.5,
@@ -259,6 +280,9 @@
    "eps_p": 0.3147
   },
   "Mercury in Pisces, sidereal": {
+   "rev": 106,
+   "exp_rev": 85.7,
+   "p_rev": 0.0189,
    "n": 1975,
    "up1": 51.7,
    "exp1": 52.7,

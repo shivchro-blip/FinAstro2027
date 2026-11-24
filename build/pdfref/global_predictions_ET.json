@@ -1,0 +1,180 @@
+{
+ "forecasts": [
+  {
+   "id": "gp-a",
+   "made": "22 Nov 2026",
+   "period": "24 \u2013 27 Nov 2026",
+   "kind": "vol",
+   "start": "2026-11-24",
+   "end": "2026-11-27",
+   "text": "Full Moon\u2013Uranus alignment, challenged by Mars: sudden volatility, unexpected reversals, sharp market reversals.",
+   "score": {
+    "status": "open",
+    "detail": "no session closed yet. Big days: none; reversals of 1%+: none. In the last 250 sessions, 15% of windows this long had a big day or such a reversal.",
+    "base": 15
+   }
+  },
+  {
+   "id": "gp-b",
+   "made": "22 Nov 2026",
+   "period": "30 Nov \u2013 5 Dec 2026",
+   "kind": "opt_then_vol",
+   "start": "2026-11-30",
+   "end": "2026-12-04",
+   "text": "Venus\u2013Mercury may support temporary optimism, but the approaching Mars\u2013Uranus square suggests a risk of renewed instability.",
+   "score": {
+    "status": "open",
+    "detail": "no session closed yet"
+   }
+  },
+  {
+   "id": "gp-c",
+   "made": "22 Nov 2026",
+   "period": "24 Nov \u2013 5 Dec 2026",
+   "kind": "fade",
+   "start": "2026-11-24",
+   "end": "2026-12-04",
+   "text": "A sudden rally followed by equally sharp selling pressure is one possible scenario; a recovery may be only a temporary relief rally (the 23 Nov rally of +4.7% is the test).",
+   "score": {
+    "status": "open",
+    "detail": "23 Nov rally 6,910 \u2192 7,237; latest close 7,237 (0% of the rally given back), window still open."
+   }
+  }
+ ],
+ "astronomy": [
+  {
+   "claim": "Full Moon conjunct Uranus",
+   "when": "2026-11-24 14:54:59.983351+00:00",
+   "detail": "Full Moon Tue 24 Nov 09:54 ET; Moon\u2013Uranus 1.4\u00b0 apart at that moment",
+   "status": "holds"
+  },
+  {
+   "claim": "\u2026 challenged by Mars (Mars square the Full Moon / Uranus)",
+   "when": "2026-11-24 14:54:59.983351+00:00",
+   "detail": "at the Full Moon, Mars is 2.9\u00b0 from a square to the Moon and 4.3\u00b0 from a square to Uranus",
+   "status": "holds"
+  },
+  {
+   "claim": "Sun opposite Uranus",
+   "when": "2026-11-25 22:41:59.988162+00:00",
+   "detail": "exact Wed 25 Nov 17:41 ET (orb 0.00\u00b0)",
+   "status": "holds"
+  },
+  {
+   "claim": "Venus\u2013Mercury (30 Nov \u2013 5 Dec)",
+   "when": "2026-11-21 23:00:59.986460+00:00",
+   "note": "no conjunction or major aspect: 24\u201328\u00b0 apart is not one",
+   "detail": "closest Sat 21 Nov 18:00 ET, 16.1\u00b0 apart; on 30 Nov 23.8\u00b0, on 5 Dec 28.1\u00b0",
+   "status": "no aspect"
+  },
+  {
+   "claim": "Approaching Mars\u2013Uranus square",
+   "when": "2026-12-04 19:28:59.992907+00:00",
+   "detail": "exact Fri 04 Dec 14:28 ET (orb 0.00\u00b0); within 3\u00b0 from about 27 Nov to 12 Dec",
+   "status": "holds"
+  }
+ ],
+ "tests": {
+  "Full Moon conjunct Uranus (\u00b12 days; Uranus within 10\u00b0 of the full-Moon point)": {
+   "rev": 14,
+   "exp_rev": 6.5,
+   "p_rev": 0.0074,
+   "n": 163,
+   "up1": 48.5,
+   "exp1": 52.6,
+   "p1": 0.2961,
+   "up5": 55.8,
+   "exp5": 56.5,
+   "p5": 0.8623,
+   "big": 12,
+   "exp_big": 10.1,
+   "p_big": 0.309,
+   "mean1": -0.023,
+   "eps": 65,
+   "eps_up5": 58.5,
+   "eps_exp5": 56.1,
+   "eps_p": 0.7021
+  },
+  "Full Moon conjunct Uranus with Mars square Uranus (within 8\u00b0)": {
+   "rev": 1,
+   "exp_rev": 0.3,
+   "p_rev": 0.2321,
+   "n": 7,
+   "up1": 57.1,
+   "exp1": 55.0,
+   "p1": 0.9093,
+   "up5": 42.9,
+   "exp5": 58.6,
+   "p5": 0.3962,
+   "big": 0,
+   "exp_big": 0.5,
+   "p_big": 0.3736,
+   "mean1": -0.282,
+   "eps": 4,
+   "eps_up5": 50.0,
+   "eps_exp5": 58.2,
+   "eps_p": 0.74
+  },
+  "Sun opposite Uranus (within 3\u00b0)": {
+   "rev": 23,
+   "exp_rev": 17.1,
+   "p_rev": 0.0975,
+   "n": 387,
+   "up1": 53.5,
+   "exp1": 52.7,
+   "p1": 0.7423,
+   "up5": 56.6,
+   "exp5": 56.6,
+   "p5": 0.9885,
+   "big": 29,
+   "exp_big": 26.1,
+   "p_big": 0.3131,
+   "mean1": -0.033,
+   "eps": 97,
+   "eps_up5": 59.8,
+   "eps_exp5": 56.3,
+   "eps_p": 0.49
+  },
+  "Mars square Uranus (within 3\u00b0)": {
+   "rev": 41,
+   "exp_rev": 35.1,
+   "p_rev": 0.1816,
+   "n": 837,
+   "up1": 50.3,
+   "exp1": 53.2,
+   "p1": 0.0975,
+   "up5": 55.6,
+   "exp5": 57.3,
+   "p5": 0.3138,
+   "big": 52,
+   "exp_big": 52.9,
+   "p_big": 0.5702,
+   "mean1": 0.024,
+   "eps": 114,
+   "eps_up5": 56.1,
+   "eps_exp5": 56.8,
+   "eps_p": 0.8828
+  },
+  "Venus conjunct Mercury (within 3\u00b0) \u2013 Global Predictions: optimism": {
+   "rev": 61,
+   "exp_rev": 57.0,
+   "p_rev": 0.317,
+   "n": 1303,
+   "up1": 50.8,
+   "exp1": 53.0,
+   "p1": 0.11,
+   "up5": 56.6,
+   "exp5": 56.8,
+   "p5": 0.8649,
+   "big": 109,
+   "exp_big": 86.2,
+   "p_big": 0.0099,
+   "mean1": 0.022,
+   "eps": 231,
+   "eps_up5": 59.7,
+   "eps_exp5": 56.1,
+   "eps_p": 0.2617
+  }
+ },
+ "last_price": "2026-11-23"
+}

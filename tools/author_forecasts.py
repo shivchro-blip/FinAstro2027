@@ -175,11 +175,13 @@ def nov_year(d):
     return d.year if d >= dt.date(d.year, 11, 20) else d.year - 1
 
 
-def tests():
+def tests(conds=None):
+    """S&P 1928-2026 for each condition (a function of the day's positions). Used for Solar return here and by
+    tools/global_predictions.py with its own conditions."""
     P = {d: c for d, c in prices().items() if d <= dt.date(2026, 11, 20)}
     D = list(P)
     C = [P[d] for d in D]
-    conds = {
+    conds = conds or {
         "Sun square Mars (within 3°) – Solar return: bearish": lambda x: abs(sep(x["Sun"], x["Mars"]) - 90) < 3,
         "Sun square Mars with Mars-Ketu within 8° – Solar return: bearish": lambda x: abs(sep(x["Sun"], x["Mars"]) - 90) < 3 and sep(x["Mars"], x["Ketu"]) < 8,
         "Mars conjunct Ketu (within 5°) – Solar return: disruption": lambda x: sep(x["Mars"], x["Ketu"]) < 5,
@@ -198,14 +200,18 @@ def tests():
         x["Ketu"] = (x["Rahu"] + 180) % 360
         x["mars_spd"] = swe.calc_ut(jd, swe.MARS, FL_S)[0][3]
         x["mer_t"] = swe.calc_ut(jd, swe.MERCURY, FL_T)[0][0] % 360
-        rows.append(dict(d=d, r=(C[i] / C[i - 1] - 1) * 100, r5=(C[i + 4] / C[i - 1] - 1) * 100, x=x))
+        x["Moon"] = swe.calc_ut(jd, swe.MOON, FL_S)[0][0] % 360
+        x["Uranus_spd"] = swe.calc_ut(jd, swe.URANUS, FL_S)[0][3]
+        rows.append(dict(d=d, r=(C[i] / C[i - 1] - 1) * 100, r5=(C[i + 4] / C[i - 1] - 1) * 100,
+                         rev=abs((C[i] / C[i - 1] - 1) * 100) >= 1 and abs((C[i - 1] / C[i - 2] - 1) * 100) >= 1 and (C[i] - C[i - 1]) * (C[i - 1] - C[i - 2]) < 0 if i >= 2 else False, x=x))
     yr = {}
     for r in rows:
-        y = yr.setdefault(nov_year(r["d"]), [0, 0, 0, 0])
+        y = yr.setdefault(nov_year(r["d"]), [0, 0, 0, 0, 0])
         y[0] += 1
         y[1] += r["r"] > 0
         y[2] += r["r5"] > 0
         y[3] += abs(r["r"]) >= 2
+        y[4] += r["rev"]
     res = {}
     for k, f in conds.items():
         sel = [r for r in rows if f(r["x"])]
@@ -236,7 +242,13 @@ def tests():
         for i_ in range(1, kk):
             term *= lam / i_
             cdf += term
-        res[k] = dict(n=n, up1=round(u1 / n * 100, 1), exp1=round(e1 / n * 100, 1), p1=p2(u1, e1), up5=round(u5 / n * 100, 1), exp5=round(e5 / n * 100, 1), p5=p2(u5, e5),
+        rv, erv = sum(r["rev"] for r in sel), sum(yr[nov_year(r["d"])][4] / yr[nov_year(r["d"])][0] for r in sel)
+        tr = math.exp(-erv) if erv < 700 else 0.0
+        cr = tr
+        for i_ in range(1, rv):
+            tr *= erv / i_
+            cr += tr
+        res[k] = dict(rev=rv, exp_rev=round(erv, 1), p_rev=round(max(0.0, 1 - cr), 4), n=n, up1=round(u1 / n * 100, 1), exp1=round(e1 / n * 100, 1), p1=p2(u1, e1), up5=round(u5 / n * 100, 1), exp5=round(e5 / n * 100, 1), p5=p2(u5, e5),
                       big=bg, exp_big=round(eb, 1), p_big=round(max(0.0, 1 - cdf), 4), mean1=round(sum(r["r"] for r in sel) / n, 3),
                       eps=len(eps), eps_up5=round(eu / len(eps) * 100, 1), eps_exp5=round(ee / len(eps) * 100, 1),
                       eps_p=round(math.erfc(abs((eu - ee) / (math.sqrt(ee * (1 - ee / len(eps))) or 1)) / math.sqrt(2)), 4))
