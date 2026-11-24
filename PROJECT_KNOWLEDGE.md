@@ -728,6 +728,18 @@ Results, as the share of calls right:
 - **Next:** Mercury in Paap Kartari (B116) 1–15 Jan 2027 (Sun | Pluto), 25 Jan and 18 Feb – 16 Mar 2027.
 - **In the calendar:** shown in the 2026 calendar's key dates, read-first notes and each day's notes.
 
+**24 Nov 2026: what we said and what happened** (`day_report_2026-11-24_ET.html`, closes; the BSE was shut for Guru Nanak Jayanti)
+
+| Market | What we said | What happened |
+|---|---|---|
+| Gold | Bearish Low; big-move watch on (full Moon exact) | −2.64%, a big day. Both right |
+| Silver | No signal | −5.65%, a big day by silver's 3.5% threshold. Not called |
+| S&P 500 | No signal (combined model 58% up) | −0.50% (Nasdaq −1.48%). Model leaning wrong, by a hair |
+| Sensex | — | Closed |
+
+- **Solar return:** its day call ("down") was right, and so was our generated Solar return call ("bearish"). Its week of 23–27 Nov now stands at 1 of 2.
+- **Global Predictions:** −0.50% after +4.73% is not a sharp reversal by our 1% definition. Its 24–27 Nov window is open; 11% of the 23 Nov rally has been given back.
+
 **Global Predictions** (outside forecast, a WhatsApp forecaster, shared 24 Nov 2026; `global_predictions_ET.html` and the 2026 calendar). Western-style aspects, so the calls are tracked and scored but not added as rules. News in the messages is ignored.
 
 - **The calls:**

@@ -588,6 +588,16 @@
     "tools/author_forecasts.py",
     "tools/calendar_2026.py"
    ]
+  },
+  {
+   "date": "2026-11-24",
+   "pr": "46",
+   "topic": "Day report for Tue 24 Nov 2026 updated with the actual moves",
+   "analysis": "tools/day_report.py 2026-11-24 rerun after the close; compared with the day's calls (gold Bearish Low and big-move watch; no signal for S&P, Sensex, silver); Solar return and Global Predictions rescored (tools/author_forecasts.py, tools/global_predictions.py); 2026 calendar rebuilt.",
+   "result": "Gold -2.64% (bearish right; big day inside the full-Moon watch); silver -5.65% (big day, no call); S&P -0.50%, Nasdaq -1.48% (no signal; combined model 58% up - wrong by a hair); Sensex closed (Guru Nanak Jayanti). Solar return day call 'down' right (week 1 of 2); Global Predictions 24-27 Nov window open, no sharp reversal yet, 11% of the 23 Nov rally given back.",
+   "files": [
+    "build/pdfref/day_report_2026-11-24_ET.html"
+   ]
   }
  ]
 }

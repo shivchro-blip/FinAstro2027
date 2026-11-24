@@ -44,7 +44,7 @@
    "bound": -4.8,
    "score": {
     "status": "open",
-    "detail": "so far 7,324 \u2192 7,237 (-1.2%) to 2026-11-23"
+    "detail": "so far 7,324 \u2192 7,201 (-1.7%) to 2026-11-24"
    }
   },
   {
@@ -60,8 +60,8 @@
     "2026-11-27": "up"
    },
    "score": {
-    "status": "open (0/1)",
-    "detail": "Mon 23 Nov: said down, +4.73% \u2717; Tue 24 Nov: pending; Wed 25 Nov: pending; Fri 27 Nov: pending"
+    "status": "open (1/2)",
+    "detail": "Mon 23 Nov: said down, +4.73% \u2717; Tue 24 Nov: said down, -0.50% \u2713; Wed 25 Nov: pending; Fri 27 Nov: pending"
    }
   },
   {
@@ -300,5 +300,5 @@
    "eps_p": 0.3148
   }
  },
- "last_price": "2026-11-23"
+ "last_price": "2026-11-24"
 }
