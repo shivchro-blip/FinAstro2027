@@ -81,6 +81,7 @@ Known data problems:
 | `tools/market_signal_table.py` | Simple S&P 500 / Sensex bullish-bearish tables to end-2027. Rules qualify when p < 0.05 on one index and they beat the base in both halves on both indices. Strength High / Moderate / Low by p on the two indices; robust big-move factors are shown as Volatile |
 | `tools/validate_external_model.py` | Check of an outside model's crash table and 2026–2029 roadmap: planet positions, its "signatures" on the S&P 500 1928–2026 (`spx_GSPC_daily_1928.csv`), and its windows against our tables and robust factors |
 | `tools/day_report.py [YYYY-MM-DD]` | One day: positions, panchang, every active rule (gold, silver, general, calendar) with its 26-year record, our table signals, the watch windows and the actual moves. The latest report is published |
+| `tools/sky_changes.py START END` | Every planetary change in a date range, in ET and IST: sign, nakshatra, pada and navamsa changes; tithi, karana (Bhadra) and yoga; aspects beginning and ending; exact degree aspects; rule starts and ends with their 26-year status; a daily position table |
 | `tools/gold_tracker.py [--metal silver]` | Trackers: findings, rule status, best-rule dates, analysis log |
 | `tools/build_year.py YEAR` | Astronomy layer for any year; 2000–2024 are git-ignored and rebuilt on demand |
 | `tools/fetch_prices.py` | Downloads GC=F and SI=F (Yahoo; the host must be allowed) |

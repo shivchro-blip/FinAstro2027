@@ -377,6 +377,18 @@
    "files": [
     "build/pdfref/day_report_2026-11-24_ET.html"
    ]
+  },
+  {
+   "date": "2026-11-24",
+   "pr": "28",
+   "topic": "Planetary changes Fri 20 - Mon 23 Nov and Tue 24 Nov 2026",
+   "analysis": "New tools/sky_changes.py: astronomy-layer events (sign / nakshatra / navamsa ingresses, tithi, karana, yoga, lunations, stations, combustion, exact conjunctions) plus pada changes, whole-sign aspects beginning / ending and exact degree aspects on a 10-minute grid, and catalogue rule starts / ends with their 26-year status; daily position table.",
+   "result": "Fri-Mon: Venus enters Libra Sun 22 Nov 06:51 ET (own sign; leaves Saturn opposition); Moon Pisces -> Aries Sat 19:25 ET -> Taurus Mon 20:54 ET; Moon nakshatras Revati, Ashwini, Bharani, Krittika; Bhadra Fri 08:30-20:02 and Mon 13:12-23:35 ET; Purnima tithi from Mon 13:12 ET; Sun-Neptune exact trine Mon 19:10 ET; pada changes Venus Chitra 3, Mercury Swati 4, Sun Anuradha 2. Tue 24 Nov: full Moon in Taurus/Krittika 09:53 ET (exalted Moon), Moon-Uranus conjunction 12:10 ET, Moon into Rohini 12:55 ET, Venus-Rahu exact trine 01:30 ET; no planet changes sign; Sun-Uranus opposition exact Wed 25 Nov. Only Moon rules change status; none of the changing rules is in the tested signal tables.",
+   "files": [
+    "tools/sky_changes.py",
+    "build/pdfref/sky_changes_2026-11-20_to_2026-11-23_ET.html",
+    "build/pdfref/sky_changes_2026-11-24_to_2026-11-24_ET.html"
+   ]
   }
  ]
 }
