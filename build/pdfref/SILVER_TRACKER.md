@@ -1,6 +1,6 @@
 # Silver findings tracker
 
-Generated 24 Nov 2026 08:18 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
+Generated 24 Nov 2026 12:26 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
 
 ## Recent findings
 
@@ -111,6 +111,7 @@ Best (from the 26 yr data): Retrograde Mercury or Jupiter, Only Moon and Mercury
 
 | Date | PR | Topic | Result |
 |---|---|---|---|
+| 2026-11-24 | #45 | Global Predictions (outside forecast): US market 24 Nov - 5 Dec 2026 | Astronomy right (Full Moon conjunct Uranus 1.4 deg, Mars square, Sun-Uranus opposition 25 Nov 17:41 ET, Mars-Uranus square exact 4 Dec) except Venus-Mercury (no aspect, 24-28 deg apart). History: Full Moon near Uranus 14 sharp reversals vs 6.5 (p 0.007) but all in 1977-2026, big days normal - a lead; Sun opposite Uranus reversals 23 vs 17 (p 0.10); Mars square Uranus nothing; Venus conjunct Mercury more big days (p 0.01), no bullish tilt. Calls open; default rate for a 3-session volatility window 15%. |
 | 2026-11-24 | #44 | 2026 document December table checked against our computation and calendar | 24 of 26 timed rows within 2 minutes; the two exceptions are a document misprint (Saturn vedha change 11 Dec 20:54 vs its own Saturn table 05:02, our 05:01). Nov table's 'Mercury and Venus both retrograde to 11 Dec' contradicts the document's station tables. Bhadra tone rule reproduces the document's 2026 table 99/99. Day-level: 26/30 reproduced (4 blocked in the rule layer). Directions: only negative Bhadra holds on the Sensex (47% vs 42%, p 0.039, both halves) - one of ~18 tests; all others at chance or wrong (Mercury in Mula 23% vs 39% S&P). |
 | 2026-11-24 | #43 | Mercury Paap Kartari in January 2027 on the S&P; January section merged into the 2026 calendar | S&P: no edge - all B116 windows 41% bearish-right vs 39% (p 0.28); like 1-15 Jan 36% vs 40% (70); 7+ days 43% vs 38% (28, p 0.40); like 25 Jan 42% vs 41% (32). Sensex unchanged (overall 48% vs 41%; like 1-15 Jan 42% vs 41%; 25 Jan match 63% vs 43% not reliable). Both market tables bearish all January for other reasons. |
 | 2026-11-24 | #42 | Mercury Paap Kartari (B116) and the Sensex in January 2027 | 1-15 Jan (Sun|Pluto, Mercury combust in Sagittarius, Jupiter aspect; 10 sessions 4-15 Jan): matched past windows 42% bearish-right vs 41% (70), 43% vs 38% if 7+ days (28) - no reliable tilt; benefic aspect removes most of B116's edge (46% vs 41%, p 0.21; without it 50% vs 40%, p 0.03). 25 Jan (Sun|Rahu; one session, 26 Jan Republic Day): matched 63% vs 43% (32, p 0.019) but picked from ~13 groups, average and median disagree - not reliable. Our Sensex table is bearish all January (Venus-Uranus opposition, Mercury-Rahu conjunction). |
