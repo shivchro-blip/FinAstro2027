@@ -470,6 +470,17 @@
     "tools/forward_daybyday.py",
     "build/pdfref/daybyday_2026-11-24_to_2026-12-31_ET.html"
    ]
+  },
+  {
+   "date": "2026-11-24",
+   "pr": "36",
+   "topic": "The day-by-day set checked on 1-23 Nov 2026",
+   "analysis": "forward_daybyday.py run on a past range: combined model fitted to 31 Oct only; table labels before publication rebuilt with the same rules; every method scored on the same-day move and the next 5 sessions (S&P, Sensex, gold, silver): signal tables, combined probability (all / kept / lean), supported catalogue rules, calendar verdicts, Model v1.0, USA/NYSE dasha condition, gochara, Chandra and Tara bala, the author's day forecasts, month view and transit rules, the Mars-Jupiter-node lead; big days against P(big), watch windows and robust factors.",
+   "result": "All methods pooled: 54% same day (171/319), 49% over 5 sessions (117/241). S&P 51%/48% (fell: up 6 of 16 days), Sensex 80%/97% (rose), gold 48%/32%, silver 42%/24%. Bearish readings were right on the S&P (Mars-Jupiter-node 88%/100%, author Sun square Mars 83%, author days 4/6, USA dasha 70%/71%, NYSE gochara 62%/75%); bullish tables and the combined probability were wrong (S&P table 29%/18%). Big days not anticipated (S&P P(big) 3.3% on big days vs 3.9% others). 16 sessions: no significance.",
+   "files": [
+    "build/pdfref/daybyday_2026-11-01_to_2026-11-23_ET.html",
+    "tools/forward_daybyday.py"
+   ]
   }
  ]
 }
