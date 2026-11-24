@@ -539,6 +539,17 @@
     "build/pdfref/kartari_test_ET.html",
     "tools/calendar_2026.py"
    ]
+  },
+  {
+   "date": "2026-11-24",
+   "pr": "42",
+   "topic": "Mercury Paap Kartari (B116) and the Sensex in January 2027",
+   "analysis": "tools/kartari_sensex_jan2027.py: the January 2027 B116 windows in IST with their Sensex sessions; every past Sensex window 2000-2026 described by B116's own conditions (Sun among the hemming malefics, Mercury combust, benefic aspect on Mercury), length and month; section 6 scoring by group and for past windows matched to each January window; our Sensex table for January.",
+   "result": "1-15 Jan (Sun|Pluto, Mercury combust in Sagittarius, Jupiter aspect; 10 sessions 4-15 Jan): matched past windows 42% bearish-right vs 41% (70), 43% vs 38% if 7+ days (28) - no reliable tilt; benefic aspect removes most of B116's edge (46% vs 41%, p 0.21; without it 50% vs 40%, p 0.03). 25 Jan (Sun|Rahu; one session, 26 Jan Republic Day): matched 63% vs 43% (32, p 0.019) but picked from ~13 groups, average and median disagree - not reliable. Our Sensex table is bearish all January (Venus-Uranus opposition, Mercury-Rahu conjunction).",
+   "files": [
+    "tools/kartari_sensex_jan2027.py",
+    "build/pdfref/kartari_sensex_jan2027_ET.html"
+   ]
   }
  ]
 }
