@@ -1,7 +1,7 @@
 {
  "start": "2026-11-24",
  "end": "2026-12-31",
- "generated": "24 Nov 2026 07:14 ET",
+ "generated": "24 Nov 2026 08:17 ET",
  "checks": [
   {
    "name": "Every day present",
@@ -42,6 +42,16 @@
    "name": "A Solar return daily call for every S&P session",
    "ok": true,
    "detail": "26 sessions"
+  },
+  {
+   "name": "2026 document, December: printed times against our ephemeris",
+   "ok": true,
+   "detail": "24 of 26 timed rows within 2 minutes; the 2 Saturn vedha rows carry the document's own 20:54 misprint (its Saturn table says 05:02)"
+  },
+  {
+   "name": "Bhadra tone rule reproduces the document's 2026 Bhadra table",
+   "ok": true,
+   "detail": "99 of 99 rows"
   },
   {
    "name": "Every active rule shown with its record (or marked as having none)",

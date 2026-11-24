@@ -99,6 +99,7 @@ Known data problems:
 | `tools/calendar_2026.py [START] [END]` | **The calendar** to 31 Dec 2026, one page. It shows:<br>• key dates and a calendar grid<br>• signal spans and the Solar return section<br>• each day in full: sky, the four markets, Solar return, every rule and calendar row with records, other analyses<br>• the track record and why the Sensex scored higher<br>• automatic verification checks<br>It uses `forward_daybyday.build()` and `solar_return_generate.py`, and replaces the forward day-by-day page |
 | `tools/kartari_test.py` | Paap Kartari (B116 Mercury, B117 Jupiter; hemming as in config `valence.kartari`) and Shubh Kartari (exploratory). Shows when each occurs and tests it on the S&P and Sensex, 2000–2026: §6 method, both halves, big days, and a permutation check for B117 |
 | `tools/kartari_jan2027.py` | B116 Mercury Paap Kartari in Jan 2027, S&P (ET) and Sensex (IST). Lists the windows and their sessions, describes every past window by B116's own conditions (Sun among the malefics, combustion, benefic aspect), and scores past windows matched to the January ones. Shown in the 2026 calendar's January 2027 section |
+| `tools/doc_dec2026_check.py` | The 2026 document's December table checked: printed IST times against our ephemeris, presence in our calendar, and 2000–2026 S&P/Sensex records. It also tests the stated directions the calendar layer had not scored: Bhadra by the document's sec-142 tone rule, Moon–Mercury same D9, Rahu/Ketu nakshatra on Thursday, apogee/perigee, Mercury in Mula, Vargottam Mars, Mars ahead of Jupiter. Shown in the 2026 calendar |
 | `tools/gold_tracker.py [--metal silver]` | Trackers: findings, rule status, best-rule dates, analysis log |
 | `tools/build_year.py YEAR` | Astronomy layer for any year; 2000–2024 are git-ignored and rebuilt on demand |
 | `tools/fetch_prices.py` | Downloads GC=F and SI=F (Yahoo; the host must be allowed) |
@@ -724,6 +725,35 @@ Results, as the share of calls right:
 - **Active now:** Jupiter in Paap Kartari (Ketu | Mars), 16 Nov 2026 – 31 Jan 2027.
 - **Next:** Mercury in Paap Kartari (B116) 1–15 Jan 2027 (Sun | Pluto), 25 Jan and 18 Feb – 16 Mar 2027.
 - **In the calendar:** shown in the 2026 calendar's key dates, read-first notes and each day's notes.
+
+**The 2026 document's December table, checked** (user request 24 Nov 2026; in the 2026 calendar's "Check against the 2026 document" section and on each December day)
+
+- **Rows:** 30 printed rows (pp.292–293, IST). 26 carry computable times, and 24 agree with our ephemeris within 2 minutes.
+- **Misprints, according to the document's own tables:**
+  - The Saturn vedha change is printed at 11 Dec 20:54, but the document's Saturn table gives 05:02, Saturn's station (we compute 05:01, by the tropical speed, as the document does).
+  - The November table's "Mercury and Venus both retrograde 24 Oct – 11 Dec" contradicts its own station tables (Mercury direct 13 Nov, Venus 14 Nov).
+- **Printed only within Indian market hours:** Bhadra on 13, 20 and 26 Dec and the Moon–Mercury D9 windows outside 09:15–15:30 IST are omitted.
+- **Mercury "alone" in Mula:** the Sun is also in Mula from 15 Dec. Tested without the "alone" condition.
+- **Bhadra tone:** our implementation of the document's sec-142 rule matches its 2026 Bhadra table on 99 of 99 rows.
+- **Day-level coverage (monthly fixture):** 26 of 30 rows are reproduced. The rule layer still blocks the two Saturn vedha rows, the Rahu vedh row and Vargottam Mars.
+- **Stated directions, 2000–2026** (newly tested here, or quoted from the calendar backtest):
+  - Only negative Bhadra holds, on the Sensex: 47% vs 42%, p 0.039, both halves. That is 1 of about 18 tests, so a chance pass is expected.
+  - Everything else is at chance or the wrong way:
+    - Ekadashi on Friday: 37% vs 40% (S&P).
+    - Shukla Pratipada vriddhi.
+    - Shani–Chandra dwidwadash.
+    - Shatabhisha on Tuesday.
+    - Vyatipata in Panchak.
+    - Shukla Trayodashi on Tuesday.
+    - Kshay Purnima.
+    - Positive Bhadra.
+    - Moon–Mercury D9.
+    - Rahu/Ketu nakshatra on Thursday.
+    - Apogee and perigee.
+    - Mercury in Mula: 23% vs 39% (S&P), the wrong way.
+    - Vargottam Mars.
+    - Mars ahead of Jupiter.
+- **This December:** the only nominal pass is the negative Bhadra on 29 Dec (13:25 IST – 00:55), a bearish lean for the Sensex.
 
 **Mercury Paap Kartari in January 2027, S&P and Sensex** (`kartari_jan2027_ET.html`; merged into the 2026 calendar as its "January 2027" section; user request 24 Nov 2026)
 

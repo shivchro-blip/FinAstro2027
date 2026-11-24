@@ -23,6 +23,7 @@ import datetime as dt
 import html
 import json
 import pathlib
+import re
 import sys
 from zoneinfo import ZoneInfo
 
@@ -60,6 +61,7 @@ def gather(a, b):
               scorecard=json.load(open(OUT / "author_forecasts_ET.json"))["forecasts"], atests=atests, month_of=SRG.month_of, all_months=mons)
     kart = json.load(open(OUT / "kartari_test_ET.json"))
     sr["jan"] = json.load(open(OUT / "kartari_jan2027_ET.json"))
+    sr["doc"] = doc_rows(json.load(open(OUT / "doc_dec2026_check_ET.json")), res)
     sr["kartari"] = [dict(key=r["key"], title=r["title"], tone=r["tone"], basis=r["basis"], record=r["record"],
                           spans=[(dt.datetime.fromisoformat(u["frm_iso"]), dt.datetime.fromisoformat(u["to_iso"]), u["pair"]) for u in r["upcoming"]])
                      for r in kart["rules"] if r["key"] in ("b116", "b117")]
@@ -150,6 +152,15 @@ def verify(res, sr, a, b):
     add("Solar return months start at tropical Sun 27°18'", not off, "; ".join(off) or ", ".join(f"{m['start']:%d %b %Y %H:%M}" for m in sr["months"]))
     miss = [x["date"] for x in days if dt.date.fromisoformat(x["date"]).weekday() < 5 and "spx" in x["prob"] and dt.date.fromisoformat(x["date"]) not in sr["daily"]]
     add("A Solar return daily call for every S&P session", not miss, ", ".join(miss) or f"{len(sr['daily'])} sessions")
+    if sr.get("doc"):
+        timed = [r for r in sr["doc"]["rows"] if r["diffs"]]
+        known = [r for r in timed if "Saturn Vehda" in r["event"]]
+        off = [f"{r['event']} {r['start']}" for r in timed if r not in known and any(abs(z) > 2 for z in r["diffs"])]
+        add("2026 document, December: printed times against our ephemeris", not off,
+            f"{len(timed) - len(known)} of {len(timed)} timed rows within 2 minutes; the 2 Saturn vedha rows carry the document's own 20:54 misprint (its Saturn table says 05:02)"
+            + (f"; off: {', '.join(off)}" if off else ""))
+        v = sr["doc"]["validation"]
+        add("Bhadra tone rule reproduces the document's 2026 Bhadra table", v["agree"] == v["matched"] and v["matched"] > 0, f"{v['agree']} of {v['matched']} rows")
     norec = sum(1 for x in days for r in x["rules"] if not any(r["record"].values()))
     add("Every active rule shown with its record (or marked as having none)", True, f"{sum(len(x['rules']) for x in days)} rule-days; {norec} have no scored record and are labelled so")
     return checks
@@ -158,6 +169,137 @@ def verify(res, sr, a, b):
 def scan_text(page_html):
     low = page_html.lower()
     return dict(author="author" not in low.replace("author_forecasts", ""), dasha_blocks="dasha chain" not in low and "pratyantar" not in low)
+
+
+DOC_RULES = {"Uttra Falguni Nakshtra": ("b071_moon_in_uttara_phalguni", None), "Bhadra": ("sub_bhadra", "bhadra"),
+             "Ekadashi on Friday": ("b065_ekadashi_on_friday", "cb"), "Moon Mercury in the same D9": ("sub_moon_mercury_in_the_same_navamsh", "Moon and Mercury in the same D9 (market hours)"),
+             "Shukla Pratipada Vriddhi Tithi": ("b068_vriddhi_tithi_shukla_paksha", "cb"), "Rahu/Ketu Nakshtra on Thursday": ("sub_rahu_or_ketu_nakshatra_on_a_thursday", "Rahu or Ketu nakshatra on Thursday (market hours)"),
+             "Apogee": ("b057_moon_apogee", "Apogee"), "Perigee": ("b058_moon_perigee", "Perigee"),
+             "Shani Chandra Dwidwadash Yog along negative axis": ("b094_shani_chandra_dwidwadash_yog", "cb"), "Total Day": ("sub_total_days_in_year", None),
+             "Shatbisha on Tuesday": ("b103_shatabhisha_on_tuesday", "cb"), "Vyatipath Yog in Panchak": ("b056_aindra_vaidhriti_or_vyatipata_yoga_in_panchak", "cb"),
+             "Vargottam Mars": ("b006_not_an_ingress_view", "Vargottam Mars"), "Mercury alone in Mool Nakshtra": ("b098_mercury_in_mula", "Mercury in Mula"),
+             "Shukla Trayodashi on Tuesday": ("b109_shukla_trayodashi_on_tuesday_or_saturday", "cb"), "Shukla Purnima Kshay Tithi": ("b066_kshay_tithi_shukla_paksha", "cb"),
+             "Jupiter in Magha Nakshtra": ("b099_jupiter_in_magha_purva_phalguni_uttara_phalguni_or_hasta", None),
+             "Mars ahead of Jupiter in the same sign": ("b086_mars_ahead_of_jupiter_same_sign", "Mars ahead of Jupiter in the same sign"),
+             "Saturn Vehda of Purva Shada": ("b136_saturn_nakshatra_vedh", None), "Saturn Vehda of Hast": ("b136_saturn_nakshatra_vedh", None),
+             "Rahu does Vedh of Ashlesha, Vishaka and Shravan": ("b137_rahu_vedha_unreached", None)}
+DOC_NOTES = {"Saturn Vehda of Hast": "printed 20:54 repeats the 9 Oct time; the document's own Saturn table (p.33) gives 11 Dec 05:02, the station, which we compute at 05:01",
+             "Saturn Vehda of Purva Shada": "ends at Saturn's station (11 Dec 05:01 IST), not 20:54 as printed (see above)",
+             "Mercury alone in Mool Nakshtra": "the Sun is also in Mula (Sagittarius 0°–13°20′) from 15 Dec, so Mercury is not literally alone; tested without the 'alone' condition",
+             "Bhadra": "tone by the document's own sec-142 rule (karana parity, day/night opening at Mumbai, Moon's loka); our implementation agrees with the document's 2026 Bhadra table on all 99 rows",
+             "Moon Mercury in the same D9": "printed only within Indian market hours (09:15–15:30 IST); windows outside those hours (8, 11–12, 19 and 25 Dec) are not printed",
+             "Uttra Falguni Nakshtra": "the inference refers to the document's Uttara Phalguni sub-table (row number and signs) and names no market direction we can test; scored as a volatility marker",
+             "Total Day": "a turning-date marker with no direction; not testable as a call",
+             "Jupiter in Magha Nakshtra": "'1st 15 days bearish' applied to 31 Oct – 15 Nov; nothing left in December",
+             "Rahu does Vedh of Ashlesha, Vishaka and Shravan": "'explained separately'; our catalogue's Rahu Nakshatra Vedha and Rahu-in-Dhanishta rules cover it and run all December"}
+
+
+def _ist(day_s, t_s):
+    if not t_s:
+        return None
+    return dt.datetime.strptime(f"{day_s} {t_s}", "%Y-%m-%d %H:%M").replace(tzinfo=ZoneInfo("Asia/Kolkata"))
+
+
+def _parse_ours(x):
+    if not x or not isinstance(x, dict):
+        return None
+    return dt.datetime.strptime("2026 " + x["ist"], "%Y %d %b %H:%M").replace(tzinfo=ZoneInfo("Asia/Kolkata"))
+
+
+def doc_rows(j, res):
+    cb = {x["rule_id"]: x for x in json.load(open(OUT / "calendar_rules_backtest_2000-2026_ET.json"))["rules"]}
+    present = collections.defaultdict(set)
+    for x in res["days"]:
+        for r in x["calendar"]:
+            present[r["rule_id"]].add((r["market"], "condition only" if r["verdict"] == "condition only" else "with its verdict"))
+    tests = j["tests"]
+    out = []
+    for p in j["printed"]:
+        rid, src = DOC_RULES.get(p["event"], (None, None))
+        key = f"{p['event']}|{p['start']}"
+        ours = j["timings"].get(key)
+        diffs = []
+        if ours:
+            pairs = [(_ist(p["start"], p["start_time"]), _parse_ours(ours[0]) if len(ours) > 0 else None)]
+            end_day = p["end"] if p["end"] and re.match(r"\d{4}-\d\d-\d\d", p["end"]) else p["start"]
+            pairs.append((_ist(end_day, p["end_time"]), _parse_ours(ours[1]) if len(ours) > 1 else None))
+            for a, b in pairs:
+                if a and b:
+                    diffs.append(round((b - a).total_seconds() / 60))
+        tone = None
+        rec = {}
+        if src == "cb" and rid in cb:
+            for mk in ("spx", "sensex"):
+                r = cb[rid].get(mk)
+                if r and r.get("kind") == "direction" and r["worked"] is not None:
+                    rec[mk] = dict(text=f"{r['worked']}/{r['worked'] + r['failed']} ({r['hit_rate']}% vs {r['base_rate']}%), p {r['p_value']}", ok=bool(r["p_value"] is not None and r["p_value"] < 0.05 and r["hit_rate"] > r["base_rate"]))
+        elif src == "bhadra":
+            k = {"positive": "Bhadra, positive by the document's rule", "negative": "Bhadra, negative by the document's rule"}.get(p["tone"] or "")
+            if k:
+                src = k
+        if src in tests:
+            t = tests[src]
+            for mk in ("spx", "sensex"):
+                a = t[mk]["all"]
+                dec = a["worked"] + a["failed"]
+                if dec:
+                    h1, h2 = t[mk]["h1"], t[mk]["h2"]
+                    ok = bool(a["p_value"] is not None and a["p_value"] < 0.05 and h1["hit_rate"] and h2["hit_rate"] and h1["hit_rate"] > h1["base_rate"] and h2["hit_rate"] > h2["base_rate"])
+                    rec[mk] = dict(text=f"{a['worked']}/{dec} ({a['hit_rate']}% vs {a['base_rate']}%), p {a['p_value']}", ok=ok)
+        pres = sorted(present.get(rid, set()))
+        out.append(dict(p, rid=rid, ours=ours, diffs=diffs, rec=rec, present=pres, note=DOC_NOTES.get(p["event"], ""),
+                        bhadra=(ours[2] if p["event"] == "Bhadra" and ours and len(ours) > 2 else None)))
+    return dict(rows=out, validation=j["bhadra_validation"], bhadra_dec=j["bhadra_dec"], tests=tests, sunrise=j["timings"].get("_sunrise", {}))
+
+
+def doc_html(doc):
+    rows = doc["rows"]
+    timed = [r for r in rows if r["diffs"]]
+    worst = max((abs(x) for r in timed for x in r["diffs"]), key=lambda v: v, default=0)
+    big = [r for r in timed if any(abs(x) > 5 for x in r["diffs"])]
+    o = ["<h2 id='doc'>Check against the 2026 document: December (pp.292–293)</h2>",
+         "<div class='callout'><ul>"
+         f"<li><b>{len(rows)} printed rows.</b> {len(timed)} carry times we can compute; {len(timed) - len(big)} of them agree with our ephemeris within "
+         f"{max((abs(x) for r in timed if r not in big for x in r['diffs']), default=0)} minutes (the printed times are IST, truncated to the minute).</li>"
+         "<li><b>Printed-time errors in the document:</b> the Saturn vedha change is printed at 11 Dec 20:54, but the document's own Saturn table gives 05:02 (Saturn's station; "
+         "ours 05:01). The November table's “Mercury and Venus both retrograde, 24 Oct – 11 Dec” also contradicts the document's own station tables (Mercury direct 13 Nov 21:25, "
+         "Venus 14 Nov 05:59), which is why December does not reprint it.</li>"
+         "<li><b>Printed only when markets are open in India:</b> Bhadra on 13, 20 and 26 Dec and Moon–Mercury D9 outside 09:15–15:30 IST are computed by us but not printed.</li>"
+         f"<li><b>Bhadra tone:</b> our implementation of the document's own rule agrees with its 2026 Bhadra table on {doc['validation']['agree']} of {doc['validation']['matched']} rows.</li>"
+         "<li><b>Do the stated directions work?</b> Of the December rows with a testable direction, only negative Bhadra held on the Sensex (bearish, both halves); "
+         "with about 18 tests run, one such pass is expected by chance. Everything else is at chance or the wrong way.</li>"
+         "<li><b>How our calendar shows them:</b> rows the calendar layer scores as a direction appear in each day's calendar rows; the rest appeared only as “condition only”. "
+         "Each December day below now lists the document's rows with their check.</li></ul></div>"]
+    o.append("<div class='wrap'><table><thead><tr><th>Printed (IST)</th><th>Event</th><th>Document says</th><th>Our time (IST / ET)</th><th class='n'>Diff</th>"
+             "<th>In our calendar</th><th>S&amp;P record</th><th>Sensex record</th></tr></thead><tbody>")
+    for r in rows:
+        pr = f"{r['start'][8:]}-{r['start'][5:7]} {r['start_time']}" + (f" → {r['end'][8:] + '-' + r['end'][5:7] if re.match(r'\d{4}', r['end'] or '') else r['end']} {r['end_time']}" if r["end"] or r["end_time"] else "")
+        ours = ""
+        if r["ours"]:
+            ours = " → ".join(f"{x['ist']} / {x['et']} ET" for x in r["ours"][:2] if isinstance(x, dict))
+            if r["bhadra"]:
+                ours += f" · tone {r['bhadra']}"
+        diff = ", ".join(f"{x:+d} min" for x in r["diffs"]) or "–"
+        pres = ", ".join(f"{SHORT.get(m, m)} ({k})" for m, k in r["present"]) or "not shown"
+
+        def rc(mk, r=r):
+            x = r["rec"].get(mk)
+            return f"<span class='{'t-up' if x['ok'] else ''}'>{E(x['text'])}</span>{' ✓ holds' if x['ok'] else ''}" if x else "<span class='s'>–</span>"
+        o.append(f"<tr><td class='n'>{E(pr)}</td><td>{E(r['event'])}{'<div class=s>' + E(r['note']) + '</div>' if r['note'] else ''}</td><td>{chip(r['inference'][:40], tone(r['tone'] or r['inference']))}</td>"
+                 f"<td class='s'>{E(ours) or '–'}</td><td class='n'>{diff}</td><td class='s'>{E(pres)}</td><td class='s'>{rc('spx')}</td><td class='s'>{rc('sensex')}</td></tr>")
+    o.append("</tbody></table></div><p class='s'>Records: 2000–2026, standard method; a bearish row is right when the market fell, a bullish (Positive) row when it rose. "
+             "“Holds” = p &lt; 0.05 and better than normal in both halves. Rows the document marks Neutral, sector-only or “explained separately” have no market direction to test.</p>")
+    return "".join(o)
+
+
+def doc_on(doc, d):
+    out = []
+    for r in doc["rows"]:
+        s0 = dt.date.fromisoformat(r["start"])
+        e0 = dt.date.fromisoformat(r["end"]) if re.match(r"\d{4}-\d\d-\d\d", r["end"] or "") else s0
+        if s0.month == 12 and s0 <= d <= e0 or (s0 == d):
+            out.append(r)
+    return out
 
 
 # ------------------------------------------------------------------ helpers
@@ -362,6 +504,9 @@ def page(res, sr, track, checks, a, b, generated):
             if e["frm"] == d and e["rule"] not in ("Mars retrograde",) and "with Mars-Ketu" not in e["rule"]:
                 verb = "active" if d == a else "begins"
                 extra.append(f"Solar return rule {verb}: {e['rule']}" + (f" (to {e['to']:%d %b})" if e["to"] != e["frm"] else " (last day)" if d == a else ""))
+        for r in doc_on(sr["doc"], d):
+            if any(v["ok"] for v in r["rec"].values()) and dt.date.fromisoformat(r["start"]) == d:
+                extra.append(f"2026 document: {r['event']} ({r['inference']}) — held up on the " + ", ".join(SHORT[k] for k, v in r["rec"].items() if v["ok"]) + " since 2000")
         prev = days[days.index(x) - 1] if days.index(x) else None
         if prev and prev["mjn"] and not x["mjn"]:
             extra.append("Mars–Jupiter–Ketu conjunction in Leo ends (crash lead off)")
@@ -456,6 +601,7 @@ def page(res, sr, track, checks, a, b, generated):
     o.append(f"</tbody></table></div><p class='s'>Daily call rule: the bearish aspects (Sun square Mars within 3°, Mars–Ketu within 5°) come first; Jupiter sextile Venus within 1° is bullish; "
              f"Mars square Uranus alone is volatile; otherwise the month's reading. Over 1928–2026: bullish calls right {bt['Bullish']['d1']}% same day / {bt['Bullish']['d5']}% over 5 sessions; "
              f"bearish calls right {bt['Bearish']['d1']}% / {bt['Bearish']['d5']}%; the S&amp;P rose on {bt['_base']['up1']}% of days and over {bt['_base']['up5']}% of 5-session spans.</p>")
+    o.append(doc_html(sr["doc"]))
     o.append(jan_html(sr["jan"]))
     # day by day
     o.append("<h2 id='days'>Day by day</h2><div class='tool' style='display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:8px'>"
@@ -547,6 +693,14 @@ def day_html(x, sr, res):
         name = r.split(" – ")[0]
         rules.append(name + (f" (since 1928: up {t['eps_up5']}% vs {t['eps_exp5']}% over 5 sessions)" if t else ""))
     sr_lines.append(f"<b>Transit rules active:</b> {E('; '.join(rules) or 'none')} <span class='s'>{E(x['author']['detail'])}</span>")
+    dl = []
+    for r in doc_on(sr["doc"], d):
+        recs = "; ".join(f"{SHORT[mk]} {v['text']}{' — holds' if v['ok'] else ''}" for mk, v in r["rec"].items()) or "no testable market direction"
+        tm = ("time " + ", ".join(f"{z:+d} min" for z in r["diffs"]) + " vs ours") if r["diffs"] else ""
+        dl.append(f"<li>{chip(r['inference'][:30], tone(r['tone'] or r['inference']))} <b>{E(r['event'])}</b>"
+                  f"{(' — tone by its rule: ' + E(r['bhadra'])) if r['bhadra'] else ''} <span class='s'>{E(tm)}{' · ' if tm else ''}record 2000–2026: {E(recs)}</span></li>")
+    if dl:
+        o.append("<h3>2026 document, December table</h3><ul>" + "".join(dl) + "</ul>")
     o.append("<h3>Solar return</h3><ul>" + "".join(f"<li>{s}</li>" for s in sr_lines) + "</ul>")
     # sky
     rows = "".join(f"<tr><td>{E(p['planet'])}</td><td>{E(p['sign'])} {E(p['deg'])}</td><td>{E(p['nakshatra'])}</td><td>{'R' if p['retro'] else ''}</td>"
