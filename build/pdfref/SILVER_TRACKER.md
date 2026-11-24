@@ -1,6 +1,6 @@
 # Silver findings tracker
 
-Generated 23 Nov 2026 20:51 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
+Generated 23 Nov 2026 21:00 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
 
 ## Recent findings
 
@@ -111,6 +111,7 @@ Best (from the 26 yr data): Retrograde Mercury or Jupiter, Only Moon and Mercury
 
 | Date | PR | Topic | Result |
 |---|---|---|---|
+| 2026-11-24 | #36 | The day-by-day set checked on 1-23 Nov 2026 | All methods pooled: 54% same day (171/319), 49% over 5 sessions (117/241). S&P 51%/48% (fell: up 6 of 16 days), Sensex 80%/97% (rose), gold 48%/32%, silver 42%/24%. Bearish readings were right on the S&P (Mars-Jupiter-node 88%/100%, author Sun square Mars 83%, author days 4/6, USA dasha 70%/71%, NYSE gochara 62%/75%); bullish tables and the combined probability were wrong (S&P table 29%/18%). Big days not anticipated (S&P P(big) 3.3% on big days vs 3.9% others). 16 sessions: no significance. |
 | 2026-11-24 | #35 | Day by day, 24 Nov - 31 Dec 2026: transits, every rule and every analysis | 131-171 catalogue rules a day. Mars-Jupiter-Ketu in Leo (crash lead) to 5 Dec, when the nodes change sign. Jupiter sextile Venus 24 Nov - 1 Dec (author's bullish, tested p 0.03). S&P 5-session probabilities 55-63% vs base 57% (highest 27 Nov and 2-4 Dec, Bullish Moderate table); big-day probabilities 2-6%. Gold Bearish Low to 1 Dec, Bullish Low from 2 Dec; silver Bullish from 14 Dec. All probabilities within a few points of base. |
 | 2026-11-24 | #34 | All layers together: a probability for every day, scored on the last 60 days | 60 days: S&P 5-session calls 64% right (down calls 76% in a falling market), Sensex 68-74%, gold 55%, silver no calls. Walk-forward 2013-2026: all layers together slightly worse than the base rate everywhere (skill -0.2 to -0.6%); kept layers +0.1 to +0.5%, hit rates 51-55%. Among Vedic layers only NYSE dasha and NYSE gochara helped the 5-session forecast, both tiny; none helped big days (S&P big-day probability 2.7-3.2% on 19-20 Nov). Probabilities stay near the base rate. |
 | 2026-11-24 | #32 | 60-day check of our model; USA and NYSE dashas (five levels) with transits | 60 days: gold -15.3% (bearish labels right 62-100% over 5 sessions; bullish low wrong), silver -32.6% (only bullish labels, wrong), S&P -6.1% (bearish high right 58% same day / 75% over 5; bullish low wrong), Sensex +10.2% (bullish labels right 78-100%); volatility factors no help. Dashas now: USA Rahu MD (2016-34) / Mercury AD (to 17 Feb 2027) / Saturn PD (23 Sep 2026 - 17 Feb 2027) / Venus SD; NYSE Mercury MD (2016-33) / Rahu AD (May 2026 - Dec 2028) / Jupiter PD (9 Oct 2026 - 10 Feb 2027, Jupiter with Mars and Ketu in Leo, NYSE 2nd house) / Mercury SD; S&P -11% in both current Pratyantars. Mahadashas hold within +/-3 h of birth time, smaller levels need minutes. No dasha lord shows an S&P effect 1928-2026 (all |t| < 2). |

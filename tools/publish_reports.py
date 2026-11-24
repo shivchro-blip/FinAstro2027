@@ -97,7 +97,7 @@ def main():
     days = sorted((ROOT / B).glob("day_report_*_ET.html"))
     if days:                                       # the most recent day report (tools/day_report.py)
         SECTIONS[0][1].insert(1, (B + days[-1].name, f"Day report {days[-1].name[11:21]}", "Planet positions, every active rule with its 26-year record, our signals and what markets did."))
-    for f in sorted((ROOT / B).glob("daybyday_*_ET.html"))[-1:]:            # the latest day-by-day forward page (tools/forward_daybyday.py)
+    for f in sorted((ROOT / B).glob("daybyday_*_ET.html")):            # the latest day-by-day forward page (tools/forward_daybyday.py)
         SECTIONS[0][1].insert(0, (B + f.name, f"Day by day {f.name[9:19]} to {f.name[23:33]}", "Every transit, every active rule with its record, the tables, dashas, author's view and the combined probability, for each day."))
     now = dt.datetime.now(ZoneInfo("America/New_York"))
     log = json.load(open(ROOT / B / "analysis_log.json"))["entries"]

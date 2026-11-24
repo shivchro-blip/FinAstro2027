@@ -2,6 +2,10 @@
 
     python tools/forward_daybyday.py [START] [END]        # default: 2026-11-24 to 2026-12-31 (US Eastern dates)
 
+For a past range (e.g. 2026-11-01 2026-11-23) the combined model is fitted only on data before START, the tables'
+labels before they were published are rebuilt with the same rules, and every method is scored against the markets
+(share of bullish / bearish readings matched by the same-day move and by the next 5 sessions; big days).
+
 For each day:
   * the sky: positions of all twelve bodies (sign, degree, nakshatra-pada, retrograde, dignity, combustion), the
     panchang, and every change during the day (tools/sky_changes.py: ingresses, nakshatra / pada / navamsa changes,
@@ -205,6 +209,7 @@ def mars_jupiter_node(p):
 def main():
     a = dt.date.fromisoformat(sys.argv[1]) if len(sys.argv) > 1 else dt.date(2026, 11, 24)
     b = dt.date.fromisoformat(sys.argv[2]) if len(sys.argv) > 2 else dt.date(2026, 12, 31)
+    fit_end = min(FIT_END, a - dt.timedelta(days=1))           # past ranges: weights from before the range only
     CP = load(ROOT / "tools" / "combined_probability.py", "cpm")
     DT = CP.DT
     DR = load(ROOT / "tools" / "day_report.py", "drp2")
@@ -234,16 +239,29 @@ def main():
             d += dt.timedelta(days=1)
 
     print("combined probability model ...")
-    data = CP.build(FIT_END)
+    data = CP.build(min(b, FIT_END))
     cj = json.load(open(OUT / "combined_probability_60d_ET.json"))
     models = {}
     for mk in MKS:
         layers = CP.LAYERS[mk]
-        models[mk] = {t: (CP.fit(data[mk], layers, t), CP.fit(data[mk], cj["markets"][mk]["kept"][t], t) if cj["markets"][mk]["kept"][t] else None)
-                      for t in CP.TARGETS}
+        models[mk] = {}
+        for t in CP.TARGETS:
+            tr = [r for r in data[mk] if r["d"] <= fit_end and (t != "up5" or (r["end5"] and r["end5"] <= fit_end))]
+            kept = cj["markets"][mk]["kept"][t]
+            models[mk][t] = (CP.fit(tr, layers, t), CP.fit(tr, kept, t) if kept else None)
+    actual = {mk: {r["d"]: r for r in data[mk]} for mk in MKS}
     pub = {mk: table_rows(OUT / f"{mk}_signals_2026-11-22_to_2027-12-31_ET.json") for mk in ("gold", "silver")}
     for mk in ("spx", "sensex"):
         pub[mk] = table_rows(OUT / "market_signals_2026-11-23_to_2027-12-31_ET.json", mk)
+    pub_from = {"gold": dt.date(2026, 11, 22), "silver": dt.date(2026, 11, 22), "spx": dt.date(2026, 11, 23), "sensex": dt.date(2026, 11, 23)}
+    lab = {}                                                   # before the tables were published: the same rules, rebuilt
+    for mk in ("gold", "silver"):
+        h = json.load(gzip.open(OUT / "backtest" / f"{mk}_label_history.json.gz", "rt", encoding="utf-8"))
+        lab[mk] = {dt.date.fromisoformat(k): tuple(v) for k, v in h["in_sample"].items()}
+    mh = CP.market_history(min(b, dt.date(2026, 11, 22)))
+    lab.update(mh)
+    for mk in MKS:
+        lab[mk] = {**{d: v for d, v in lab[mk].items() if d < pub_from[mk]}, **pub[mk]}
     charts = {n: (DT.CHARTS[n], CP.natal(DT.CHARTS[n])) for n in ("USA", "NYSE")}
     seq = {n: {lv: DT.sequence(DT.CHARTS[n], lv, dt.datetime.combine(a, dt.time(0), ET), dt.datetime.combine(b + dt.timedelta(days=1), dt.time(0), ET))
                for lv in (1, 2, 3, 4)} for n in charts}
@@ -289,12 +307,17 @@ def main():
                         aforecasts.append(f"{f['period']}: {txt}")
         mjn = mars_jupiter_node(p)
         sig, watch = DR.table_signals(d)
+        for mk in MKS:
+            if d < pub_from[mk]:
+                L = lab[mk].get(d)
+                sig[NAME[mk]] = [dict(sig=L[0] if L and L[0] else "No signal", st=(L[1] or "") if L and L[0] else "",
+                                      why="rebuilt with the table's rules (the table was published on " + f"{pub_from[mk]:%d %b})")]
         weekday = d.weekday() < 5
         prob = {}
         for mk in MKS:
             if not weekday or d in CLOSED[mk]:
                 continue
-            st = {"table": CP.tbl_state(pub[mk].get(d))}
+            st = {"table": CP.tbl_state(lab[mk].get(d))}
             if mk == "gold":
                 st["v1"] = CP.v1_state(r1["bias"])
             if mk in ("spx", "sensex"):
@@ -305,6 +328,9 @@ def main():
             prob[mk] = dict(st=st, all={t: round(CP.predict(models[mk][t][0], r) * 100, 1) for t in CP.TARGETS},
                             kept={t: round(CP.predict(models[mk][t][1], r) * 100, 1) if models[mk][t][1] else None for t in CP.TARGETS},
                             base={t: round(models[mk][t][0]["base"] * 100, 1) for t in CP.TARGETS})
+            ac = actual[mk].get(d)
+            if ac:
+                prob[mk]["actual"] = dict(r1=round(ac["r1"], 2), r5=None if ac["r5"] is None or (ac["end5"] and ac["end5"] > FIT_END) else round(ac["r5"], 2), big=ac["big"])
         rules = cat.get(d, [])
         tally = {}
         for mk in MKS:
@@ -318,13 +344,105 @@ def main():
                          shadbala=sb, dasha=dash, jupven=ved["jup-ven"], author=dict(rules=arules, detail=adetail, forecasts=aforecasts),
                          mjn=mjn, prob=prob))
         d += dt.timedelta(days=1)
-    res = dict(start=str(a), end=str(b), fit_end=str(FIT_END), days=days, atests=atests, solar_month=nyse["forecast"],
+    res = dict(start=str(a), end=str(b), fit_end=str(fit_end), days=days, atests=atests, solar_month=nyse["forecast"],
                mjn=dict(episodes=len(mjn_hist), falls15=falls15, base=ts["mjn_base"]), kept={mk: cj["markets"][mk]["kept"] for mk in MKS},
                skill={mk: {t: cj["markets"][mk]["walk_forward"][t] for t in CP.TARGETS} for mk in MKS})
+    if any("actual" in pr for x in days for pr in x["prob"].values()):
+        res["score"] = score(days, AF)
     stem = f"daybyday_{a}_to_{b}_ET"
     json.dump(res, open(OUT / f"{stem}.json", "w"), indent=1, default=str)
     (OUT / f"{stem}.html").write_text(page(res), encoding="utf-8")
     print("wrote", stem)
+
+
+# ------------------------------------------------------------------ scoring a past range
+def score(days, AF):
+    """Share of directional calls that matched the move (same day; next 5 sessions from the previous close)."""
+    tally = collections.defaultdict(lambda: {"d1": [0, 0], "d5": [0, 0]})
+    fdays = {d: v for f in AF.FORECASTS if f["kind"] == "days" for d, v in f["days"].items()}
+
+    def add(m, mk, h, call, ac):
+        r = ac["r1"] if h == "d1" else ac["r5"]
+        if not call or r is None or r == 0:
+            return
+        c = tally[(m, mk)][h]
+        c[1] += 1
+        c[0] += (r > 0) == (call > 0)
+
+    def both(m, mk, call, ac):
+        add(m, mk, "d1", call, ac)
+        add(m, mk, "d5", call, ac)
+    big = collections.defaultdict(lambda: dict(pbig=[], poth=[], watch=[0, 0], other=[0, 0], vol=[0, 0], novol=[0, 0]))
+    for x in days:
+        d = x["date"]
+        for mk, pr in x["prob"].items():
+            ac = pr.get("actual")
+            if not ac:
+                continue
+            sg = x["signals"][NAME[mk]][0]["sig"]
+            both("Signal table", mk, 1 if sg == "Bullish" else -1 if sg == "Bearish" else 0, ac)
+            for name, key in (("Combined probability, all layers", "all"), ("Combined probability, kept layers", "kept")):
+                for h, t in (("d1", "up1"), ("d5", "up5")):
+                    v, b = pr[key][t], pr["base"][t]
+                    if v is not None:
+                        add(name, mk, h, 1 if v >= b + 2 else -1 if v <= b - 2 else 0, ac)
+            for h, t in (("d1", "up1"), ("d5", "up5")):
+                add("Combined lean, every day (above / below base)", mk, h, 1 if pr["all"][t] > pr["base"][t] else -1, ac)
+            tl = x["tally"][mk]
+            both("Supported catalogue rules (net bullish - bearish)", mk, len(tl["bull"]) - len(tl["bear"]), ac)
+            cal = sum(1 if c["verdict"].startswith("Bullish") else -1 if c["verdict"].startswith("Bearish") else 0 for c in x["calendar"] if c["market"] == mk)
+            both("Calendar-layer verdicts (net)", mk, cal, ac)
+            if mk == "gold":
+                bias = x["v1"]["bias"]
+                both("Model v1.0 (Ch.41 + Shadbala)", mk, 1 if "bullish" in bias else -1 if "bearish" in bias else 0, ac)
+            if mk == "spx":
+                st = pr["st"]
+                for n in ("USA", "NYSE"):
+                    both(f"{n} dasha condition", mk, {"strong": 1, "afflicted": -1}.get(st[f"{n} dasha"], 0), ac)
+                    both(f"{n} gochara", mk, {"favourable": 1, "adverse": -1}.get(st[f"{n} gochara"], 0), ac)
+                    both(f"{n} Chandra bala", mk, 1 if st[f"{n} chandra"] == "good" else -1, ac)
+                    both(f"{n} Tara bala", mk, {"good": 1, "bad": -1}.get(st[f"{n} tara"], 0), ac)
+                both("Author: day-by-day forecasts", mk, {"up": 1, "down": -1}.get(fdays.get(d), 0), ac)
+                both("Author: solar-month view (bearish)", mk, -1, ac)
+                ar = x["author"]["rules"]
+                both("Author: Jupiter sextile Venus (bullish)", mk, 1 if any(r.startswith("Jupiter sextile Venus") for r in ar) else 0, ac)
+                both("Author: Sun square Mars (bearish)", mk, -1 if any(r.startswith("Sun square Mars (") for r in ar) else 0, ac)
+                both("Mars-Jupiter-node lead (bearish)", mk, -1 if x["mjn"] else 0, ac)
+            B = big[mk]
+            (B["pbig"] if ac["big"] else B["poth"]).append(pr["all"]["big"])
+            w = any(v["market"] == mk for v in x["watch"])
+            B["watch" if w else "other"][0] += ac["big"]
+            B["watch" if w else "other"][1] += 1
+            vv = bool(x["vol"].get(mk))
+            B["vol" if vv else "novol"][0] += ac["big"]
+            B["vol" if vv else "novol"][1] += 1
+    rows = []
+    for (m, mk), v in tally.items():
+        rows.append(dict(method=m, market=mk, d1_right=v["d1"][0], d1_calls=v["d1"][1], d5_right=v["d5"][0], d5_calls=v["d5"][1]))
+    pooled = collections.defaultdict(lambda: [0, 0, 0, 0])
+    for r in rows:
+        if r["method"].startswith("Combined lean"):
+            continue
+        for k in (r["market"], "all"):
+            q = pooled[k]
+            q[0] += r["d1_right"]
+            q[1] += r["d1_calls"]
+            q[2] += r["d5_right"]
+            q[3] += r["d5_calls"]
+    ups = {}
+    for x in days:
+        for mk, pr in x["prob"].items():
+            ac = pr.get("actual")
+            if ac:
+                u = ups.setdefault(mk, [0, 0, 0, 0])
+                u[0] += ac["r1"] > 0
+                u[1] += 1
+                if ac["r5"] is not None:
+                    u[2] += ac["r5"] > 0
+                    u[3] += 1
+    bigs = {mk: dict(p_big=round(sum(B["pbig"]) / len(B["pbig"]), 1) if B["pbig"] else None, p_other=round(sum(B["poth"]) / len(B["poth"]), 1) if B["poth"] else None,
+                     n_big=len(B["pbig"]), watch=B["watch"], other=B["other"], vol=B["vol"], novol=B["novol"]) for mk, B in big.items()}
+    return dict(rows=rows, pooled={k: dict(d1_right=v[0], d1_calls=v[1], d5_right=v[2], d5_calls=v[3]) for k, v in pooled.items()}, ups=ups, big=bigs)
 
 
 # ------------------------------------------------------------------ page
@@ -359,6 +477,45 @@ def key_changes(ch):
     return out
 
 
+def score_html(res):
+    sc = res["score"]
+
+    def pc(r, n):
+        return "–" if not n else f"{round(r / n * 100)}% <span class='s'>({r}/{n})</span>"
+    o = ["<h2>How it did: share of calls that matched the market</h2>",
+         "<p class='s'>A call is a bullish or bearish reading; it is right when the market moved that way the same day (close to close) or over the next "
+         "5 sessions (from the previous close). Days with no reading are not counted. Compare each figure with how often the market rose in the period: "
+         f"a method that always says 'down' scores the down share. The combined model's weights were fitted on data up to {res['fit_end']} only.</p>",
+         "<div class='wrap'><table><thead><tr><th>Market</th><th>Up days</th><th>Up over 5 sessions</th><th>All methods pooled: same day</th><th>All methods pooled: 5 sessions</th></tr></thead><tbody>"]
+    for mk in MKS + ("all",):
+        u = sc["ups"].get(mk)
+        p = sc["pooled"].get(mk)
+        if not p:
+            continue
+        o.append(f"<tr><td><b>{NAME.get(mk, 'All markets')}</b></td><td class='n'>{pc(u[0], u[1]) if u else ''}</td><td class='n'>{pc(u[2], u[3]) if u else ''}</td>"
+                 f"<td class='n'>{pc(p['d1_right'], p['d1_calls'])}</td><td class='n'>{pc(p['d5_right'], p['d5_calls'])}</td></tr>")
+    o.append("</tbody></table></div><div class='wrap'><table><thead><tr><th>Method</th>" + "".join(f"<th>{NAME[mk]}<br><span class='s'>same day · 5 sessions</span></th>" for mk in MKS) + "</tr></thead><tbody>")
+    methods = list(dict.fromkeys(r["method"] for r in sc["rows"]))
+    by = {(r["method"], r["market"]): r for r in sc["rows"]}
+    for m in methods:
+        cells = ""
+        for mk in MKS:
+            r = by.get((m, mk))
+            cells += f"<td class='n'>{pc(r['d1_right'], r['d1_calls'])} · {pc(r['d5_right'], r['d5_calls'])}</td>" if r and (r["d1_calls"] or r["d5_calls"]) else "<td class='n s'>–</td>"
+        o.append(f"<tr><td>{E(m)}</td>{cells}</tr>")
+    o.append("</tbody></table></div><h3>Big days</h3><div class='wrap'><table><thead><tr><th>Market</th><th>Big days</th><th>Avg P(big) on big days</th><th>Avg P(big) other days</th>"
+             "<th>Big days in watch windows</th><th>Big days outside</th><th>On robust-factor days</th><th>Other days</th></tr></thead><tbody>")
+    for mk, B in sc["big"].items():
+        o.append(f"<tr><td>{NAME[mk]}</td><td class='n'>{B['n_big']}</td><td class='n'>{pct(B['p_big'])}</td><td class='n'>{pct(B['p_other'])}</td>"
+                 f"<td class='n'>{B['watch'][0]} of {B['watch'][1]}</td><td class='n'>{B['other'][0]} of {B['other'][1]}</td><td class='n'>{B['vol'][0]} of {B['vol'][1]}</td><td class='n'>{B['novol'][0]} of {B['novol'][1]}</td></tr>")
+    o.append("</tbody></table></div>")
+    return "".join(o)
+
+
+def pct(x):
+    return "–" if x is None else f"{x}%"
+
+
 def page(res):
     css = """:root{color-scheme:light} body{margin:0;padding:16px;background:#fff;color:#1f2328;font:13.5px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
 h1{font-size:20px;margin:0 0 6px} h2{font-size:17px;margin:24px 0 8px;border-bottom:1px solid #d0d7de;padding-bottom:4px} h3{font-size:14px;margin:14px 0 4px}
@@ -369,11 +526,13 @@ details.day{border:1px solid #d0d7de;border-radius:6px;margin:8px 0;padding:4px 
 details details{margin:4px 0} details details>summary{cursor:pointer;color:#0969da} .pill{display:inline-block;padding:0 6px;border-radius:9px;background:#eef1f4;margin:1px 2px;font-size:12px}
 .ov td{font-size:12.5px}"""
     o = [f"<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Day by Day</title><style>{css}</style></head><body>",
-         f"<h1>Day by day, {res['start']} – {res['end']}: transits, every rule and every analysis</h1>",
+         f"<h1>Day by day, {res['start']} – {res['end']}: transits, every rule and every analysis{' – checked against the markets' if res.get('score') else ''}</h1>",
          "<p class='s'>US Eastern dates; sidereal Lahiri, mean node, whole-sign drishti. Probabilities come from the combined model "
          f"(all layers, fitted on 2000 – {res['fit_end']}); green / red = 2+ points above / below the market's base rate. Over 2013–2026 that model "
          "was right 51–55% of the time: read the probabilities as leanings, not certainties. Rules count as <b>supported</b> when their 26-year status "
          "is Strongest, Supported or Consistent. Market prices and astrology only.</p>"]
+    if res.get("score"):
+        o.append(score_html(res))
     # standing items
     sm = res["solar_month"]
     o.append("<h2>Standing through the period</h2><ul>")
@@ -411,7 +570,11 @@ details details{margin:4px 0} details details>summary{cursor:pointer;color:#0969
             tl = x["tally"][mk]
             sg = sigcell(x["signals"][NAME[mk]]) if NAME[mk] in x["signals"] else ""
             if pr:
-                cells += f"<td>{sg}<br>{pcell(pr, 'up1')} · {pcell(pr, 'up5')} · {pcell(pr, 'big')}<br><span class='s'>rules +{len(tl['bull'])} / −{len(tl['bear'])}</span></td>"
+                ac = pr.get("actual")
+                act = ""
+                if ac:
+                    act = f"<br><b>actual</b> <span class='{'g' if ac['r1'] > 0 else 'r'}'>{ac['r1']:+.2f}%</span>" + (f" · 5d <span class='{'g' if ac['r5'] > 0 else 'r'}'>{ac['r5']:+.2f}%</span>" if ac["r5"] is not None else "")
+                cells += f"<td>{sg}<br>{pcell(pr, 'up1')} · {pcell(pr, 'up5')} · {pcell(pr, 'big')}<br><span class='s'>rules +{len(tl['bull'])} / −{len(tl['bear'])}</span>{act}</td>"
             else:
                 cells += f"<td class='s'>{'closed: ' + x['closed'][mk] if mk in x['closed'] else 'weekend'}<br>{sg}</td>"
         notes = []

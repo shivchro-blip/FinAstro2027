@@ -654,6 +654,45 @@ Results, as the share of calls right:
   - Silver is Bullish from 14 Dec.
   - Every probability stays within a few points of its base rate.
 
+**The day-by-day set checked on 1–23 Nov 2026** (`daybyday_2026-11-01_to_2026-11-23_ET.html`; combined model fitted to 31 Oct only; 16 sessions)
+
+**How the markets moved:**
+
+| Market | Up days | Up over 5 sessions |
+|---|---|---|
+| S&P 500 | 6 of 16 | 3 of 12 |
+| Sensex | 12 of 15 | 11 of 11 |
+| Gold | 7 of 16 | 3 of 12 |
+| Silver | 7 of 16 | 3 of 12 |
+
+**All methods pooled, share of calls right:**
+
+| Market | Same day | Next 5 sessions |
+|---|---|---|
+| All markets | 54% (171/319) | 49% (117/241) |
+| S&P 500 | 51% | 48% |
+| Sensex | 80% | 97% |
+| Gold | 48% | 32% |
+| Silver | 42% | 24% |
+
+- **Why it splits this way:** our readings leaned bullish. Sensex rose, so they were right there; S&P, gold and silver fell, so they were wrong there.
+- **Right on the S&P:** the bearish readings.
+  - Mars–Jupiter–node lead: 88% same day, 100% over 5 sessions.
+  - Author's Sun square Mars: 83%.
+  - Author's day forecasts: 67% (4 of 6).
+  - USA dasha condition: 70% / 71%.
+  - NYSE gochara: 62% / 75%.
+  - Author's bearish month view: 62% / 75%.
+- **Wrong on the S&P:**
+  - Signal table: 29% / 18%.
+  - Supported-rule tally: 40% / 25%.
+  - Combined probability: 38% / 17%.
+- **Gold and silver:**
+  - Model v1.0 (gold): 46% / 18%.
+  - Tara bala and Chandra bala: 33–55%.
+- **Big days:** the model's average big-day probability was no higher on the 5 big S&P days (3.3% vs 3.9%).
+- **Reading:** a few bearish signals hit in a falling month. Their success matches the market's down share, and some (the author's month view) were bearish on every day, so this is no evidence of skill. Over 16 sessions none of it is significant.
+
 **Model v1.0 (Ch.41 + Shadbala + Ashtakavarga), 6,572 trading days:**
 - The correlation of the scarcity index with the next 5 days is −0.002.
 - The model leans bullish on 67% of days by construction.
