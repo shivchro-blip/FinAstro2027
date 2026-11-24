@@ -367,6 +367,16 @@
     "tools/day_report.py",
     "build/pdfref/day_report_2026-11-23_ET.html"
    ]
+  },
+  {
+   "date": "2026-11-24",
+   "pr": "27",
+   "topic": "Day report for Tue 24 Nov 2026 (full Moon in Taurus)",
+   "analysis": "tools/day_report.py for 24 Nov 2026 (duplicate rule rows now merged by kind).",
+   "result": "Full Moon in Taurus/Krittika 09:53 ET, Sun-Uranus opposition exact 25 Nov; gold bearish-low (no-edge label) with its volatility watch on; no signal for S&P, Sensex, silver; supported active rules lean bullish (S&P 5:1, Sensex 6:2, not a tested signal); calendar full-Moon and Kshay Tithi rows have no edge.",
+   "files": [
+    "build/pdfref/day_report_2026-11-24_ET.html"
+   ]
   }
  ]
 }

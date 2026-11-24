@@ -1,6 +1,6 @@
 # Silver findings tracker
 
-Generated 23 Nov 2026 18:55 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
+Generated 23 Nov 2026 19:01 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
 
 ## Recent findings
 
@@ -111,6 +111,7 @@ Best (from the 26 yr data): Retrograde Mercury or Jupiter, Only Moon and Mercury
 
 | Date | PR | Topic | Result |
 |---|---|---|---|
+| 2026-11-24 | #27 | Day report for Tue 24 Nov 2026 (full Moon in Taurus) | Full Moon in Taurus/Krittika 09:53 ET, Sun-Uranus opposition exact 25 Nov; gold bearish-low (no-edge label) with its volatility watch on; no signal for S&P, Sensex, silver; supported active rules lean bullish (S&P 5:1, Sensex 6:2, not a tested signal); calendar full-Moon and Kshay Tithi rows have no edge. |
 | 2026-11-23 | #26 | Day report for Mon 23 Nov 2026: what we said vs what happened | Said: gold bearish low (no-edge label), no signal for S&P, Sensex, silver; gold volatility watch (Sun-Uranus opposition, full Moon 24 Nov). Happened: S&P +4.7%, Nasdaq +6.5%, gold +3.2%, silver +4.4%, Sensex -1.8%. Gold direction wrong, volatility watch right. Supported active rules leaned bullish (S&P 8:1 right, Sensex 6:3 wrong) - not a tested signal. |
 | 2026-11-23 | #25 | Outside model check: crash table 1929-2028 and cross-asset roadmap 2026-2029 (two infographics) | Astronomy right (44/45 historical, 22/23 forward; India dashas match). Signatures do not predict crashes: Jupiter weakness, Mars trigger and eclipse/stellium are in every 12-month window since 1928 with no effect; Saturn-node / Pisces-Aries a weak hint (19.6 vs 14.2%). Agreement on turbulence timing (our robust factors cluster Feb-May 2027 and Jan-Jun 2028), not on direction (our S&P mixed, Sensex bullish-leaning Aug-Dec 2027); agree on silver strength Dec 2026-Jun 2027 and gold Aug 2027. Nov 2026 Act I numbers match prices but were drawn after the fact. |
 | 2026-11-23 | #24 | Simple S&P 500 / Sensex bullish-bearish tables to end-2027 | 10 rules: High - Mars-Mercury Vedha (bullish), Shukla Shashti on Friday and Three Saturdays in Shukla Paksha (bearish); Moderate - Mars-Saturn 4/10, Moon-Rahu 6/8 (bullish), Mars-Saturn 2/12, Mercury-Rahu conjunction (bearish); Low - Venus-Uranus 7th (bearish), Venus-Rahu 6/8, Mrigashira on Monday (bullish). Walk-forward of the selection: 61.8 vs 59.2% (S&P, p 0.12), 57.3 vs 56.4% (Sensex, p 0.34) - small, not significant. |

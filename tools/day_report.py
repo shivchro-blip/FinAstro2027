@@ -104,7 +104,7 @@ def active_rules(day):
                                 end=e["end"].astimezone(ET).strftime("%d %b %H:%M") if e["end"] else ""))
     seen, uniq = set(), []
     for x in out:
-        k = (x["set"], x["rule_id"], x["tone"], x["start"])
+        k = (x["set"], x["rule_id"], x["tone"], x["kind"])
         if k not in seen:
             seen.add(k)
             uniq.append(x)
