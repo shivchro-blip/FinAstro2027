@@ -1,0 +1,673 @@
+{
+ "rules": [
+  {
+   "key": "b116",
+   "title": "Mercury in Paap Kartari (2026 document B116)",
+   "tone": "Bearish",
+   "basis": "source: \u201cnegative event for financial markets\u201d",
+   "n": 236,
+   "record": {
+    "spx": {
+     "all": {
+      "n": 236,
+      "worked": 78,
+      "failed": 112,
+      "flat": 46,
+      "hit_rate": 41,
+      "base_rate": 39,
+      "exp": 73.54236460262247,
+      "avg_dir_ret": -0.25,
+      "verdict": "Mixed",
+      "p_value": 0.2766,
+      "years_active": 26,
+      "years_right": 7
+     },
+     "h1": {
+      "n": 126,
+      "worked": 46,
+      "failed": 56,
+      "flat": 24,
+      "hit_rate": 45,
+      "base_rate": 41,
+      "exp": 41.96257266497288,
+      "avg_dir_ret": -0.14,
+      "verdict": "Mixed",
+      "p_value": 0.2375,
+      "years_active": 13,
+      "years_right": 4
+     },
+     "h2": {
+      "n": 110,
+      "worked": 32,
+      "failed": 56,
+      "flat": 22,
+      "hit_rate": 36,
+      "base_rate": 36,
+      "exp": 31.57979193764959,
+      "avg_dir_ret": -0.37,
+      "verdict": "Mixed",
+      "p_value": 0.5029,
+      "years_active": 13,
+      "years_right": 3
+     },
+     "big_in": 7.1,
+     "big_all": 7.5,
+     "sessions_in": 1926
+    },
+    "sensex": {
+     "all": {
+      "n": 236,
+      "worked": 94,
+      "failed": 103,
+      "flat": 39,
+      "hit_rate": 48,
+      "base_rate": 41,
+      "exp": 80.12193992210155,
+      "avg_dir_ret": -0.12,
+      "verdict": "Mixed",
+      "p_value": 0.0268,
+      "years_active": 26,
+      "years_right": 11
+     },
+     "h1": {
+      "n": 126,
+      "worked": 54,
+      "failed": 54,
+      "flat": 18,
+      "hit_rate": 50,
+      "base_rate": 42,
+      "exp": 45.04874332074516,
+      "avg_dir_ret": -0.04,
+      "verdict": "Mixed",
+      "p_value": 0.0503,
+      "years_active": 13,
+      "years_right": 8
+     },
+     "h2": {
+      "n": 110,
+      "worked": 40,
+      "failed": 49,
+      "flat": 21,
+      "hit_rate": 45,
+      "base_rate": 39,
+      "exp": 35.07319660135633,
+      "avg_dir_ret": -0.21,
+      "verdict": "Mixed",
+      "p_value": 0.1683,
+      "years_active": 13,
+      "years_right": 3
+     },
+     "big_in": 10.4,
+     "big_all": 9.4,
+     "sessions_in": 1886
+    }
+   },
+   "combust_subset": {
+    "n": 12,
+    "rec": {
+     "spx": {
+      "all": {
+       "n": 12,
+       "worked": 4,
+       "failed": 7,
+       "flat": 1,
+       "hit_rate": 36,
+       "base_rate": 35,
+       "exp": 3.8875480600801753,
+       "avg_dir_ret": -0.31,
+       "verdict": "Mixed",
+       "p_value": 0.5839,
+       "years_active": 10,
+       "years_right": 4
+      },
+      "h1": {
+       "n": 7,
+       "worked": 3,
+       "failed": 4,
+       "flat": 0,
+       "hit_rate": 43,
+       "base_rate": 38,
+       "exp": 2.680364353298086,
+       "avg_dir_ret": -0.5,
+       "verdict": "Mixed",
+       "p_value": 0.5424,
+       "years_active": 6,
+       "years_right": 3
+      },
+      "h2": {
+       "n": 5,
+       "worked": 1,
+       "failed": 3,
+       "flat": 1,
+       "hit_rate": 25,
+       "base_rate": 30,
+       "exp": 1.2071837067820894,
+       "avg_dir_ret": -0.06,
+       "verdict": "Mixed",
+       "p_value": 0.7624,
+       "years_active": 4,
+       "years_right": 1
+      },
+      "big_in": 8.8,
+      "big_all": 7.5,
+      "sessions_in": 57
+     },
+     "sensex": {
+      "all": {
+       "n": 12,
+       "worked": 3,
+       "failed": 8,
+       "flat": 1,
+       "hit_rate": 27,
+       "base_rate": 36,
+       "exp": 4.009560174730734,
+       "avg_dir_ret": -1.12,
+       "verdict": "Mixed",
+       "p_value": 0.8266,
+       "years_active": 9,
+       "years_right": 2
+      },
+      "h1": {
+       "n": 7,
+       "worked": 2,
+       "failed": 4,
+       "flat": 1,
+       "hit_rate": 33,
+       "base_rate": 40,
+       "exp": 2.424908291214222,
+       "avg_dir_ret": -1.39,
+       "verdict": "Mixed",
+       "p_value": 0.7731,
+       "years_active": 5,
+       "years_right": 1
+      },
+      "h2": {
+       "n": 5,
+       "worked": 1,
+       "failed": 4,
+       "flat": 0,
+       "hit_rate": 20,
+       "base_rate": 32,
+       "exp": 1.5846518835165126,
+       "avg_dir_ret": -0.73,
+       "verdict": "Failed",
+       "p_value": 0.8513,
+       "years_active": 4,
+       "years_right": 1
+      },
+      "big_in": 8.6,
+      "big_all": 9.4,
+      "sessions_in": 58
+     }
+    }
+   },
+   "upcoming": [
+    {
+     "frm": "Fri 01 Jan 2027 12:07",
+     "to": "Fri 15 Jan 2027 21:48",
+     "pair": "Sun | Pluto",
+     "frm_iso": "2027-01-01T12:07:32-05:00",
+     "to_iso": "2027-01-15T21:48:43-05:00"
+    },
+    {
+     "frm": "Mon 25 Jan 2027 03:01",
+     "to": "Mon 25 Jan 2027 22:51",
+     "pair": "Sun | Rahu",
+     "frm_iso": "2027-01-25T03:01:24-05:00",
+     "to_iso": "2027-01-25T22:51:30-05:00"
+    },
+    {
+     "frm": "Thu 18 Feb 2027 11:39",
+     "to": "Tue 16 Mar 2027 21:57",
+     "pair": "Rahu | Sun",
+     "frm_iso": "2027-02-18T11:39:02-05:00",
+     "to_iso": "2027-03-16T21:57:04-04:00"
+    }
+   ],
+   "days": 10.9
+  },
+  {
+   "key": "b117",
+   "title": "Jupiter in Paap Kartari (2026 document B117)",
+   "tone": "Bearish",
+   "basis": "source prints no direction; tested as bearish (inferred from B116)",
+   "n": 42,
+   "record": {
+    "spx": {
+     "all": {
+      "n": 42,
+      "worked": 19,
+      "failed": 21,
+      "flat": 2,
+      "hit_rate": 48,
+      "base_rate": 37,
+      "exp": 14.9185050485081,
+      "avg_dir_ret": 0.83,
+      "verdict": "Worked",
+      "p_value": 0.1216,
+      "years_active": 19,
+      "years_right": 6
+     },
+     "h1": {
+      "n": 21,
+      "worked": 13,
+      "failed": 7,
+      "flat": 1,
+      "hit_rate": 65,
+      "base_rate": 46,
+      "exp": 9.179237112625037,
+      "avg_dir_ret": 2.44,
+      "verdict": "Worked",
+      "p_value": 0.0681,
+      "years_active": 10,
+      "years_right": 4
+     },
+     "h2": {
+      "n": 21,
+      "worked": 6,
+      "failed": 14,
+      "flat": 1,
+      "hit_rate": 30,
+      "base_rate": 29,
+      "exp": 5.73926793588306,
+      "avg_dir_ret": -0.79,
+      "verdict": "Mixed",
+      "p_value": 0.5327,
+      "years_active": 9,
+      "years_right": 2
+     },
+     "big_in": 11.6,
+     "big_all": 7.5,
+     "sessions_in": 965
+    },
+    "sensex": {
+     "all": {
+      "n": 42,
+      "worked": 19,
+      "failed": 21,
+      "flat": 2,
+      "hit_rate": 48,
+      "base_rate": 42,
+      "exp": 16.723441543596476,
+      "avg_dir_ret": 0.94,
+      "verdict": "Mixed",
+      "p_value": 0.2828,
+      "years_active": 19,
+      "years_right": 7
+     },
+     "h1": {
+      "n": 21,
+      "worked": 12,
+      "failed": 8,
+      "flat": 1,
+      "hit_rate": 60,
+      "base_rate": 45,
+      "exp": 8.961899164678474,
+      "avg_dir_ret": 2.38,
+      "verdict": "Worked",
+      "p_value": 0.1271,
+      "years_active": 10,
+      "years_right": 4
+     },
+     "h2": {
+      "n": 21,
+      "worked": 7,
+      "failed": 13,
+      "flat": 1,
+      "hit_rate": 35,
+      "base_rate": 39,
+      "exp": 7.761542378918001,
+      "avg_dir_ret": -0.5,
+      "verdict": "Mixed",
+      "p_value": 0.714,
+      "years_active": 9,
+      "years_right": 3
+     },
+     "big_in": 14.4,
+     "big_all": 9.4,
+     "sessions_in": 949
+    },
+    "episode_big": {
+     "spx": {
+      "windows": 42,
+      "above": 14,
+      "perm_p": 0.075
+     },
+     "sensex": {
+      "windows": 42,
+      "above": 18,
+      "perm_p": 0.052
+     }
+    }
+   },
+   "combust_subset": null,
+   "upcoming": [
+    {
+     "frm": "Mon 16 Nov 2026 01:23",
+     "to": "Sun 31 Jan 2027 13:30",
+     "pair": "Ketu | Mars",
+     "frm_iso": "2026-11-16T01:23:39-05:00",
+     "to_iso": "2027-01-31T13:30:00-05:00"
+    }
+   ],
+   "days": 33.9
+  },
+  {
+   "key": "sk_mercury",
+   "title": "Mercury in Shubh Kartari (not in our sources)",
+   "tone": "Bullish",
+   "basis": "exploratory: no source states it",
+   "n": 18,
+   "record": {
+    "spx": {
+     "all": {
+      "n": 18,
+      "worked": 5,
+      "failed": 10,
+      "flat": 3,
+      "hit_rate": 33,
+      "base_rate": 63,
+      "exp": 9.439359747849673,
+      "avg_dir_ret": -0.67,
+      "verdict": "Failed",
+      "p_value": 0.9952,
+      "years_active": 11,
+      "years_right": 2
+     },
+     "h1": {
+      "n": 7,
+      "worked": 1,
+      "failed": 5,
+      "flat": 1,
+      "hit_rate": 17,
+      "base_rate": 57,
+      "exp": 3.421886936427871,
+      "avg_dir_ret": -1.0,
+      "verdict": "Failed",
+      "p_value": 0.9937,
+      "years_active": 5,
+      "years_right": 1
+     },
+     "h2": {
+      "n": 11,
+      "worked": 4,
+      "failed": 5,
+      "flat": 2,
+      "hit_rate": 44,
+      "base_rate": 67,
+      "exp": 6.017472811421803,
+      "avg_dir_ret": -0.45,
+      "verdict": "Failed",
+      "p_value": 0.9588,
+      "years_active": 6,
+      "years_right": 1
+     },
+     "big_in": 7.5,
+     "big_all": 7.5,
+     "sessions_in": 120
+    },
+    "sensex": {
+     "all": {
+      "n": 18,
+      "worked": 7,
+      "failed": 7,
+      "flat": 4,
+      "hit_rate": 50,
+      "base_rate": 60,
+      "exp": 8.442212629477815,
+      "avg_dir_ret": -0.48,
+      "verdict": "Failed",
+      "p_value": 0.8553,
+      "years_active": 12,
+      "years_right": 5
+     },
+     "h1": {
+      "n": 7,
+      "worked": 2,
+      "failed": 3,
+      "flat": 2,
+      "hit_rate": 40,
+      "base_rate": 59,
+      "exp": 2.9670697944873767,
+      "avg_dir_ret": -1.62,
+      "verdict": "Failed",
+      "p_value": 0.9078,
+      "years_active": 5,
+      "years_right": 2
+     },
+     "h2": {
+      "n": 11,
+      "worked": 5,
+      "failed": 4,
+      "flat": 2,
+      "hit_rate": 56,
+      "base_rate": 61,
+      "exp": 5.475142834990438,
+      "avg_dir_ret": 0.24,
+      "verdict": "Mixed",
+      "p_value": 0.7506,
+      "years_active": 7,
+      "years_right": 3
+     },
+     "big_in": 7.2,
+     "big_all": 9.4,
+     "sessions_in": 111
+    }
+   },
+   "combust_subset": null,
+   "upcoming": [],
+   "days": 8.7
+  },
+  {
+   "key": "sk_jupiter",
+   "title": "Jupiter in Shubh Kartari (not in our sources)",
+   "tone": "Bullish",
+   "basis": "exploratory: no source states it",
+   "n": 23,
+   "record": {
+    "spx": {
+     "all": {
+      "n": 23,
+      "worked": 10,
+      "failed": 10,
+      "flat": 3,
+      "hit_rate": 50,
+      "base_rate": 61,
+      "exp": 12.234595283116551,
+      "avg_dir_ret": 0.32,
+      "verdict": "Mixed",
+      "p_value": 0.894,
+      "years_active": 17,
+      "years_right": 8
+     },
+     "h1": {
+      "n": 10,
+      "worked": 3,
+      "failed": 5,
+      "flat": 2,
+      "hit_rate": 38,
+      "base_rate": 58,
+      "exp": 4.660856596558938,
+      "avg_dir_ret": -0.09,
+      "verdict": "Failed",
+      "p_value": 0.9385,
+      "years_active": 8,
+      "years_right": 3
+     },
+     "h2": {
+      "n": 13,
+      "worked": 7,
+      "failed": 5,
+      "flat": 1,
+      "hit_rate": 58,
+      "base_rate": 63,
+      "exp": 7.573738686557612,
+      "avg_dir_ret": 0.63,
+      "verdict": "Mixed",
+      "p_value": 0.744,
+      "years_active": 9,
+      "years_right": 5
+     },
+     "big_in": 8.3,
+     "big_all": 7.5,
+     "sessions_in": 132
+    },
+    "sensex": {
+     "all": {
+      "n": 23,
+      "worked": 7,
+      "failed": 11,
+      "flat": 5,
+      "hit_rate": 39,
+      "base_rate": 57,
+      "exp": 10.243796040037758,
+      "avg_dir_ret": 0.07,
+      "verdict": "Mixed",
+      "p_value": 0.9621,
+      "years_active": 15,
+      "years_right": 6
+     },
+     "h1": {
+      "n": 10,
+      "worked": 4,
+      "failed": 3,
+      "flat": 3,
+      "hit_rate": 57,
+      "base_rate": 59,
+      "exp": 4.1585283592365565,
+      "avg_dir_ret": 0.16,
+      "verdict": "Mixed",
+      "p_value": 0.6987,
+      "years_active": 7,
+      "years_right": 4
+     },
+     "h2": {
+      "n": 13,
+      "worked": 3,
+      "failed": 8,
+      "flat": 2,
+      "hit_rate": 27,
+      "base_rate": 55,
+      "exp": 6.085267680801203,
+      "avg_dir_ret": 0.0,
+      "verdict": "Mixed",
+      "p_value": 0.986,
+      "years_active": 8,
+      "years_right": 2
+     },
+     "big_in": 9.2,
+     "big_all": 9.4,
+     "sessions_in": 131
+    }
+   },
+   "combust_subset": null,
+   "upcoming": [],
+   "days": 7.2
+  }
+ ],
+ "ta_s31": {
+  "spx": {
+   "n": 80,
+   "worked": 31,
+   "failed": 32,
+   "flat": 17,
+   "hit_rate": 49,
+   "base_rate": 39,
+   "avg_dir_ret": 0.01,
+   "verdict": "Worked",
+   "p_value": 0.0654,
+   "years_active": 25,
+   "years_right": 10,
+   "rule_id": "ta_s31_mercury_paap_kartari",
+   "title": "Mercury Paap Kartari Yog (TA definition)",
+   "refs": [
+    "TA p.128 [printed 98] Section 31 'Mercury Paap Kartari Yog'",
+    "TA p.22 (2011 example)"
+   ],
+   "tone": "Bearish",
+   "h1": {
+    "n": 50,
+    "worked": 21,
+    "failed": 21,
+    "flat": 8,
+    "hit_rate": 50,
+    "base_rate": 39,
+    "avg_dir_ret": -0.1,
+    "verdict": "Mixed",
+    "p_value": 0.1017,
+    "years_active": 13,
+    "years_right": 5
+   },
+   "h2": {
+    "n": 30,
+    "worked": 10,
+    "failed": 11,
+    "flat": 9,
+    "hit_rate": 48,
+    "base_rate": 39,
+    "avg_dir_ret": 0.18,
+    "verdict": "Mixed",
+    "p_value": 0.2702,
+    "years_active": 12,
+    "years_right": 5
+   },
+   "status": "Strongest",
+   "best": true,
+   "q_value": 0.984
+  },
+  "sensex": {
+   "n": 80,
+   "worked": 36,
+   "failed": 39,
+   "flat": 5,
+   "hit_rate": 48,
+   "base_rate": 41,
+   "avg_dir_ret": -1.02,
+   "verdict": "Mixed",
+   "p_value": 0.1292,
+   "years_active": 25,
+   "years_right": 9,
+   "rule_id": "ta_s31_mercury_paap_kartari",
+   "title": "Mercury Paap Kartari Yog (TA definition)",
+   "refs": [
+    "TA p.128 [printed 98] Section 31 'Mercury Paap Kartari Yog'",
+    "TA p.22 (2011 example)"
+   ],
+   "tone": "Bearish",
+   "h1": {
+    "n": 50,
+    "worked": 24,
+    "failed": 24,
+    "flat": 2,
+    "hit_rate": 50,
+    "base_rate": 41,
+    "avg_dir_ret": -1.37,
+    "verdict": "Mixed",
+    "p_value": 0.1404,
+    "years_active": 13,
+    "years_right": 7
+   },
+   "h2": {
+    "n": 30,
+    "worked": 12,
+    "failed": 15,
+    "flat": 3,
+    "hit_rate": 44,
+    "base_rate": 40,
+    "avg_dir_ret": -0.43,
+    "verdict": "Mixed",
+    "p_value": 0.3968,
+    "years_active": 12,
+    "years_right": 2
+   },
+   "status": "At chance",
+   "best": false,
+   "q_value": 0.991
+  }
+ },
+ "ta_s31_last": [
+  "2025-07-22",
+  "2025-10-20",
+  "2026-10-24"
+ ]
+}

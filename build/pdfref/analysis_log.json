@@ -527,6 +527,18 @@
     "tools/calendar_2026.py",
     "build/pdfref/calendar_2026-11-24_to_2026-12-31_ET.html"
    ]
+  },
+  {
+   "date": "2026-11-24",
+   "pr": "41",
+   "topic": "Paap Kartari and Shubh Kartari tested; Jupiter in Paap Kartari added to the 2026 calendar",
+   "analysis": "tools/kartari_test.py: B116 (Mercury) and B117 (Jupiter) Paap Kartari windows from the calendar layer's hemming definition, 2000-2028; scored on the S&P and Sensex 2000-2026 by the section 6 method, both halves, big days, permutation check (B117); TA s31 quoted from the market backtest; Shubh Kartari (benefic hemming) tested as exploratory. Gap found: B116/B117 were condition-only in the calendar layer, never scored and missing from the 2026 calendar; now shown there.",
+   "result": "B116 bearish: S&P at chance (41% vs 39%), Sensex holds (48% vs 41%, p 0.027, both halves). B117 (bearish inferred): S&P 48% vs 37% p 0.12, first half only; more big days pooled (11.6% vs 7.5% S&P, 14.4% vs 9.4% Sensex) but only 14/42 and 18/42 windows above their year, permutation p 0.075/0.052 - a lead at most. TA s31: S&P 49% vs 39% p 0.065. Shubh Kartari fails (bullish calls below base). Jupiter in Paap Kartari active 16 Nov 2026 - 31 Jan 2027; Mercury in Paap Kartari next 1-15 Jan 2027.",
+   "files": [
+    "tools/kartari_test.py",
+    "build/pdfref/kartari_test_ET.html",
+    "tools/calendar_2026.py"
+   ]
   }
  ]
 }
