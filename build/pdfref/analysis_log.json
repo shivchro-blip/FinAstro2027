@@ -563,6 +563,18 @@
     "tools/calendar_2026.py",
     "build/pdfref/calendar_2026-11-24_to_2026-12-31_ET.html"
    ]
+  },
+  {
+   "date": "2026-11-24",
+   "pr": "44",
+   "topic": "2026 document December table checked against our computation and calendar",
+   "analysis": "tools/doc_dec2026_check.py and tools/monthly_match.py: every December row (pp.292-293) - printed IST times against our ephemeris (astronomy-layer events; Moon-Mercury navamsa and stations to the minute); day-level reproduction by the rule layer; presence in the 2026 calendar; S&P/Sensex records 2000-2026 from the calendar backtest, plus new tests of stated directions not yet scored (Bhadra by the document's sec-142 tone rule, Moon-Mercury same D9 in market hours, Rahu/Ketu nakshatra on Thursday, apogee, perigee, Mercury in Mula, Vargottam Mars, Mars ahead of Jupiter). Section and per-day lines added to the 2026 calendar; two new verification checks.",
+   "result": "24 of 26 timed rows within 2 minutes; the two exceptions are a document misprint (Saturn vedha change 11 Dec 20:54 vs its own Saturn table 05:02, our 05:01). Nov table's 'Mercury and Venus both retrograde to 11 Dec' contradicts the document's station tables. Bhadra tone rule reproduces the document's 2026 table 99/99. Day-level: 26/30 reproduced (4 blocked in the rule layer). Directions: only negative Bhadra holds on the Sensex (47% vs 42%, p 0.039, both halves) - one of ~18 tests; all others at chance or wrong (Mercury in Mula 23% vs 39% S&P).",
+   "files": [
+    "tools/doc_dec2026_check.py",
+    "build/pdfref/doc_dec2026_check_ET.json",
+    "tools/calendar_2026.py"
+   ]
   }
  ]
 }

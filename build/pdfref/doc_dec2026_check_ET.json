@@ -1,0 +1,1505 @@
+{
+ "tests": {
+  "Mercury in Mula": {
+   "tone": "Bearish",
+   "n": 34,
+   "spx": {
+    "all": {
+     "n": 34,
+     "worked": 7,
+     "failed": 23,
+     "flat": 4,
+     "hit_rate": 23,
+     "base_rate": 39,
+     "exp": 11.604433027595215,
+     "avg_dir_ret": -1.05,
+     "verdict": "Failed",
+     "p_value": 0.9757,
+     "years_active": 24,
+     "years_right": 6
+    },
+    "h1": {
+     "n": 17,
+     "worked": 3,
+     "failed": 13,
+     "flat": 1,
+     "hit_rate": 19,
+     "base_rate": 42,
+     "exp": 6.737291482920201,
+     "avg_dir_ret": -1.53,
+     "verdict": "Failed",
+     "p_value": 0.9879,
+     "years_active": 13,
+     "years_right": 2
+    },
+    "h2": {
+     "n": 17,
+     "worked": 4,
+     "failed": 10,
+     "flat": 3,
+     "hit_rate": 29,
+     "base_rate": 35,
+     "exp": 4.867141544675011,
+     "avg_dir_ret": -0.57,
+     "verdict": "Mixed",
+     "p_value": 0.774,
+     "years_active": 11,
+     "years_right": 4
+    },
+    "n": 34
+   },
+   "sensex": {
+    "all": {
+     "n": 34,
+     "worked": 10,
+     "failed": 17,
+     "flat": 7,
+     "hit_rate": 37,
+     "base_rate": 39,
+     "exp": 10.629705064858356,
+     "avg_dir_ret": -0.51,
+     "verdict": "Mixed",
+     "p_value": 0.6672,
+     "years_active": 21,
+     "years_right": 7
+    },
+    "h1": {
+     "n": 17,
+     "worked": 5,
+     "failed": 10,
+     "flat": 2,
+     "hit_rate": 33,
+     "base_rate": 42,
+     "exp": 6.312775845914114,
+     "avg_dir_ret": -0.8,
+     "verdict": "Mixed",
+     "p_value": 0.8278,
+     "years_active": 12,
+     "years_right": 3
+    },
+    "h2": {
+     "n": 17,
+     "worked": 5,
+     "failed": 7,
+     "flat": 5,
+     "hit_rate": 42,
+     "base_rate": 36,
+     "exp": 4.316929218944242,
+     "avg_dir_ret": -0.22,
+     "verdict": "Mixed",
+     "p_value": 0.4451,
+     "years_active": 9,
+     "years_right": 4
+    },
+    "n": 34
+   }
+  },
+  "Vargottam Mars": {
+   "tone": "Bullish",
+   "n": 122,
+   "spx": {
+    "all": {
+     "n": 122,
+     "worked": 64,
+     "failed": 35,
+     "flat": 23,
+     "hit_rate": 65,
+     "base_rate": 60,
+     "exp": 59.623966478406025,
+     "avg_dir_ret": 0.46,
+     "verdict": "Mixed",
+     "p_value": 0.2139,
+     "years_active": 26,
+     "years_right": 19
+    },
+    "h1": {
+     "n": 59,
+     "worked": 25,
+     "failed": 22,
+     "flat": 12,
+     "hit_rate": 53,
+     "base_rate": 57,
+     "exp": 26.715250167833343,
+     "avg_dir_ret": 0.05,
+     "verdict": "Mixed",
+     "p_value": 0.744,
+     "years_active": 13,
+     "years_right": 7
+    },
+    "h2": {
+     "n": 63,
+     "worked": 39,
+     "failed": 13,
+     "flat": 11,
+     "hit_rate": 75,
+     "base_rate": 63,
+     "exp": 32.90871631057268,
+     "avg_dir_ret": 0.85,
+     "verdict": "Worked",
+     "p_value": 0.051,
+     "years_active": 13,
+     "years_right": 12
+    },
+    "n": 122
+   },
+   "sensex": {
+    "all": {
+     "n": 122,
+     "worked": 57,
+     "failed": 41,
+     "flat": 24,
+     "hit_rate": 58,
+     "base_rate": 59,
+     "exp": 57.59321720303372,
+     "avg_dir_ret": 0.31,
+     "verdict": "Mixed",
+     "p_value": 0.5909,
+     "years_active": 26,
+     "years_right": 14
+    },
+    "h1": {
+     "n": 59,
+     "worked": 26,
+     "failed": 21,
+     "flat": 12,
+     "hit_rate": 55,
+     "base_rate": 58,
+     "exp": 27.40956503939855,
+     "avg_dir_ret": 0.34,
+     "verdict": "Mixed",
+     "p_value": 0.7156,
+     "years_active": 13,
+     "years_right": 6
+    },
+    "h2": {
+     "n": 63,
+     "worked": 31,
+     "failed": 20,
+     "flat": 12,
+     "hit_rate": 61,
+     "base_rate": 59,
+     "exp": 30.183652163635177,
+     "avg_dir_ret": 0.27,
+     "verdict": "Mixed",
+     "p_value": 0.4676,
+     "years_active": 13,
+     "years_right": 8
+    },
+    "n": 122
+   }
+  },
+  "Mars ahead of Jupiter in the same sign": {
+   "tone": "Bullish",
+   "n": 15,
+   "spx": {
+    "all": {
+     "n": 15,
+     "worked": 6,
+     "failed": 7,
+     "flat": 2,
+     "hit_rate": 46,
+     "base_rate": 61,
+     "exp": 7.992474953929171,
+     "avg_dir_ret": -0.66,
+     "verdict": "Failed",
+     "p_value": 0.9205,
+     "years_active": 11,
+     "years_right": 5
+    },
+    "h1": {
+     "n": 8,
+     "worked": 1,
+     "failed": 5,
+     "flat": 2,
+     "hit_rate": 17,
+     "base_rate": 62,
+     "exp": 3.7071463543583265,
+     "avg_dir_ret": -3.48,
+     "verdict": "Failed",
+     "p_value": 0.9969,
+     "years_active": 5,
+     "years_right": 1
+    },
+    "h2": {
+     "n": 7,
+     "worked": 5,
+     "failed": 2,
+     "flat": 0,
+     "hit_rate": 71,
+     "base_rate": 61,
+     "exp": 4.285328599570845,
+     "avg_dir_ret": 2.56,
+     "verdict": "Worked",
+     "p_value": 0.4467,
+     "years_active": 6,
+     "years_right": 4
+    },
+    "n": 15
+   },
+   "sensex": {
+    "all": {
+     "n": 15,
+     "worked": 7,
+     "failed": 7,
+     "flat": 1,
+     "hit_rate": 50,
+     "base_rate": 56,
+     "exp": 7.788163546691256,
+     "avg_dir_ret": -1.03,
+     "verdict": "Mixed",
+     "p_value": 0.7568,
+     "years_active": 12,
+     "years_right": 6
+    },
+    "h1": {
+     "n": 8,
+     "worked": 3,
+     "failed": 5,
+     "flat": 0,
+     "hit_rate": 38,
+     "base_rate": 54,
+     "exp": 4.308375394253655,
+     "avg_dir_ret": -2.75,
+     "verdict": "Failed",
+     "p_value": 0.9003,
+     "years_active": 6,
+     "years_right": 2
+    },
+    "h2": {
+     "n": 7,
+     "worked": 4,
+     "failed": 2,
+     "flat": 1,
+     "hit_rate": 67,
+     "base_rate": 58,
+     "exp": 3.4797881524376004,
+     "avg_dir_ret": 0.93,
+     "verdict": "Mixed",
+     "p_value": 0.5028,
+     "years_active": 6,
+     "years_right": 4
+    },
+    "n": 15
+   }
+  },
+  "Apogee": {
+   "tone": "Bullish",
+   "n": 346,
+   "spx": {
+    "all": {
+     "n": 345,
+     "worked": 164,
+     "failed": 116,
+     "flat": 65,
+     "hit_rate": 59,
+     "base_rate": 59,
+     "exp": 165.81734671967595,
+     "avg_dir_ret": 0.11,
+     "verdict": "Mixed",
+     "p_value": 0.6122,
+     "years_active": 26,
+     "years_right": 17
+    },
+    "h1": {
+     "n": 172,
+     "worked": 82,
+     "failed": 59,
+     "flat": 31,
+     "hit_rate": 58,
+     "base_rate": 57,
+     "exp": 79.84955748128671,
+     "avg_dir_ret": 0.05,
+     "verdict": "Mixed",
+     "p_value": 0.391,
+     "years_active": 13,
+     "years_right": 8
+    },
+    "h2": {
+     "n": 173,
+     "worked": 82,
+     "failed": 57,
+     "flat": 34,
+     "hit_rate": 59,
+     "base_rate": 62,
+     "exp": 85.96778923838919,
+     "avg_dir_ret": 0.17,
+     "verdict": "Mixed",
+     "p_value": 0.7831,
+     "years_active": 13,
+     "years_right": 9
+    },
+    "n": 345
+   },
+   "sensex": {
+    "all": {
+     "n": 345,
+     "worked": 164,
+     "failed": 126,
+     "flat": 55,
+     "hit_rate": 57,
+     "base_rate": 58,
+     "exp": 167.72587996979127,
+     "avg_dir_ret": 0.42,
+     "verdict": "Mixed",
+     "p_value": 0.6931,
+     "years_active": 26,
+     "years_right": 16
+    },
+    "h1": {
+     "n": 172,
+     "worked": 90,
+     "failed": 62,
+     "flat": 20,
+     "hit_rate": 59,
+     "base_rate": 58,
+     "exp": 87.57573882027485,
+     "avg_dir_ret": 0.6,
+     "verdict": "Mixed",
+     "p_value": 0.3776,
+     "years_active": 13,
+     "years_right": 9
+    },
+    "h2": {
+     "n": 173,
+     "worked": 74,
+     "failed": 64,
+     "flat": 35,
+     "hit_rate": 54,
+     "base_rate": 58,
+     "exp": 80.15014114951614,
+     "avg_dir_ret": 0.25,
+     "verdict": "Mixed",
+     "p_value": 0.8741,
+     "years_active": 13,
+     "years_right": 7
+    },
+    "n": 345
+   }
+  },
+  "Perigee": {
+   "tone": "Bearish",
+   "n": 345,
+   "spx": {
+    "all": {
+     "n": 344,
+     "worked": 114,
+     "failed": 158,
+     "flat": 72,
+     "hit_rate": 42,
+     "base_rate": 41,
+     "exp": 112.01012080213373,
+     "avg_dir_ret": -0.12,
+     "verdict": "Mixed",
+     "p_value": 0.4258,
+     "years_active": 26,
+     "years_right": 6
+    },
+    "h1": {
+     "n": 172,
+     "worked": 62,
+     "failed": 81,
+     "flat": 29,
+     "hit_rate": 43,
+     "base_rate": 44,
+     "exp": 62.341951180399754,
+     "avg_dir_ret": -0.07,
+     "verdict": "Mixed",
+     "p_value": 0.555,
+     "years_active": 13,
+     "years_right": 4
+    },
+    "h2": {
+     "n": 172,
+     "worked": 52,
+     "failed": 77,
+     "flat": 43,
+     "hit_rate": 40,
+     "base_rate": 39,
+     "exp": 49.66816962173384,
+     "avg_dir_ret": -0.17,
+     "verdict": "Mixed",
+     "p_value": 0.3679,
+     "years_active": 13,
+     "years_right": 2
+    },
+    "n": 345
+   },
+   "sensex": {
+    "all": {
+     "n": 344,
+     "worked": 123,
+     "failed": 176,
+     "flat": 45,
+     "hit_rate": 41,
+     "base_rate": 42,
+     "exp": 126.66942719308462,
+     "avg_dir_ret": -0.36,
+     "verdict": "Mixed",
+     "p_value": 0.6864,
+     "years_active": 26,
+     "years_right": 8
+    },
+    "h1": {
+     "n": 172,
+     "worked": 60,
+     "failed": 95,
+     "flat": 17,
+     "hit_rate": 39,
+     "base_rate": 43,
+     "exp": 65.9247893516374,
+     "avg_dir_ret": -0.58,
+     "verdict": "Mixed",
+     "p_value": 0.8518,
+     "years_active": 13,
+     "years_right": 4
+    },
+    "h2": {
+     "n": 172,
+     "worked": 63,
+     "failed": 81,
+     "flat": 28,
+     "hit_rate": 44,
+     "base_rate": 42,
+     "exp": 60.74463784144754,
+     "avg_dir_ret": -0.13,
+     "verdict": "Mixed",
+     "p_value": 0.3821,
+     "years_active": 13,
+     "years_right": 4
+    },
+    "n": 345
+   }
+  },
+  "Bhadra, positive by the document's rule": {
+   "tone": "Bullish",
+   "n": 858,
+   "spx": {
+    "all": {
+     "n": 854,
+     "worked": 385,
+     "failed": 281,
+     "flat": 188,
+     "hit_rate": 58,
+     "base_rate": 59,
+     "exp": 390.69597021699707,
+     "avg_dir_ret": 0.16,
+     "verdict": "Mixed",
+     "p_value": 0.6877,
+     "years_active": 26,
+     "years_right": 20
+    },
+    "h1": {
+     "n": 432,
+     "worked": 184,
+     "failed": 158,
+     "flat": 90,
+     "hit_rate": 54,
+     "base_rate": 56,
+     "exp": 191.0712999942051,
+     "avg_dir_ret": 0.07,
+     "verdict": "Mixed",
+     "p_value": 0.7954,
+     "years_active": 14,
+     "years_right": 10
+    },
+    "h2": {
+     "n": 422,
+     "worked": 201,
+     "failed": 123,
+     "flat": 98,
+     "hit_rate": 62,
+     "base_rate": 62,
+     "exp": 199.62467022279367,
+     "avg_dir_ret": 0.26,
+     "verdict": "Mixed",
+     "p_value": 0.4619,
+     "years_active": 13,
+     "years_right": 11
+    },
+    "n": 855
+   },
+   "sensex": {
+    "all": {
+     "n": 854,
+     "worked": 418,
+     "failed": 308,
+     "flat": 128,
+     "hit_rate": 58,
+     "base_rate": 58,
+     "exp": 417.6572564160617,
+     "avg_dir_ret": 0.35,
+     "verdict": "Mixed",
+     "p_value": 0.5055,
+     "years_active": 26,
+     "years_right": 18
+    },
+    "h1": {
+     "n": 432,
+     "worked": 209,
+     "failed": 168,
+     "flat": 55,
+     "hit_rate": 55,
+     "base_rate": 58,
+     "exp": 217.26040564798774,
+     "avg_dir_ret": 0.34,
+     "verdict": "Mixed",
+     "p_value": 0.8195,
+     "years_active": 14,
+     "years_right": 9
+    },
+    "h2": {
+     "n": 422,
+     "worked": 209,
+     "failed": 140,
+     "flat": 73,
+     "hit_rate": 60,
+     "base_rate": 57,
+     "exp": 200.39685076807433,
+     "avg_dir_ret": 0.37,
+     "verdict": "Mixed",
+     "p_value": 0.1904,
+     "years_active": 13,
+     "years_right": 9
+    },
+    "n": 855
+   }
+  },
+  "Bhadra, negative by the document's rule": {
+   "tone": "Bearish",
+   "n": 440,
+   "spx": {
+    "all": {
+     "n": 437,
+     "worked": 137,
+     "failed": 191,
+     "flat": 109,
+     "hit_rate": 42,
+     "base_rate": 41,
+     "exp": 133.0296183730522,
+     "avg_dir_ret": -0.13,
+     "verdict": "Mixed",
+     "p_value": 0.3471,
+     "years_active": 26,
+     "years_right": 6
+    },
+    "h1": {
+     "n": 214,
+     "worked": 72,
+     "failed": 90,
+     "flat": 52,
+     "hit_rate": 44,
+     "base_rate": 43,
+     "exp": 69.84716270942432,
+     "avg_dir_ret": -0.02,
+     "verdict": "Mixed",
+     "p_value": 0.3953,
+     "years_active": 13,
+     "years_right": 5
+    },
+    "h2": {
+     "n": 223,
+     "worked": 65,
+     "failed": 101,
+     "flat": 57,
+     "hit_rate": 39,
+     "base_rate": 38,
+     "exp": 63.18245566362787,
+     "avg_dir_ret": -0.23,
+     "verdict": "Mixed",
+     "p_value": 0.4143,
+     "years_active": 13,
+     "years_right": 1
+    },
+    "n": 438
+   },
+   "sensex": {
+    "all": {
+     "n": 437,
+     "worked": 170,
+     "failed": 193,
+     "flat": 74,
+     "hit_rate": 47,
+     "base_rate": 42,
+     "exp": 152.88456312760002,
+     "avg_dir_ret": -0.07,
+     "verdict": "Mixed",
+     "p_value": 0.0391,
+     "years_active": 26,
+     "years_right": 9
+    },
+    "h1": {
+     "n": 214,
+     "worked": 89,
+     "failed": 99,
+     "flat": 26,
+     "hit_rate": 47,
+     "base_rate": 42,
+     "exp": 78.81406467049018,
+     "avg_dir_ret": -0.08,
+     "verdict": "Mixed",
+     "p_value": 0.0766,
+     "years_active": 13,
+     "years_right": 6
+    },
+    "h2": {
+     "n": 223,
+     "worked": 81,
+     "failed": 94,
+     "flat": 48,
+     "hit_rate": 46,
+     "base_rate": 42,
+     "exp": 74.07049845710992,
+     "avg_dir_ret": -0.07,
+     "verdict": "Mixed",
+     "p_value": 0.1626,
+     "years_active": 13,
+     "years_right": 3
+    },
+    "n": 438
+   }
+  },
+  "Moon and Mercury in the same D9 (market hours)": {
+   "tone": "Bullish",
+   "spx": {
+    "all": {
+     "n": 1101,
+     "worked": 496,
+     "failed": 342,
+     "flat": 263,
+     "hit_rate": 59,
+     "base_rate": 59,
+     "exp": 493.70435932703003,
+     "avg_dir_ret": 0.16,
+     "verdict": "Mixed",
+     "p_value": 0.4507,
+     "years_active": 26,
+     "years_right": 21
+    },
+    "h1": {
+     "n": 555,
+     "worked": 242,
+     "failed": 186,
+     "flat": 127,
+     "hit_rate": 57,
+     "base_rate": 56,
+     "exp": 240.69271394640325,
+     "avg_dir_ret": 0.01,
+     "verdict": "Mixed",
+     "p_value": 0.4695,
+     "years_active": 13,
+     "years_right": 10
+    },
+    "h2": {
+     "n": 546,
+     "worked": 254,
+     "failed": 156,
+     "flat": 136,
+     "hit_rate": 62,
+     "base_rate": 62,
+     "exp": 253.01164538062903,
+     "avg_dir_ret": 0.31,
+     "verdict": "Mixed",
+     "p_value": 0.4818,
+     "years_active": 13,
+     "years_right": 11
+    },
+    "n": 1101
+   },
+   "n_spx": 1101,
+   "sensex": {
+    "all": {
+     "n": 1134,
+     "worked": 565,
+     "failed": 392,
+     "flat": 177,
+     "hit_rate": 59,
+     "base_rate": 58,
+     "exp": 553.8581492825285,
+     "avg_dir_ret": 0.34,
+     "verdict": "Mixed",
+     "p_value": 0.2433,
+     "years_active": 26,
+     "years_right": 20
+    },
+    "h1": {
+     "n": 591,
+     "worked": 305,
+     "failed": 213,
+     "flat": 73,
+     "hit_rate": 59,
+     "base_rate": 57,
+     "exp": 296.78411565451864,
+     "avg_dir_ret": 0.4,
+     "verdict": "Mixed",
+     "p_value": 0.2469,
+     "years_active": 13,
+     "years_right": 10
+    },
+    "h2": {
+     "n": 543,
+     "worked": 260,
+     "failed": 179,
+     "flat": 104,
+     "hit_rate": 59,
+     "base_rate": 59,
+     "exp": 257.07403362801034,
+     "avg_dir_ret": 0.27,
+     "verdict": "Mixed",
+     "p_value": 0.4081,
+     "years_active": 13,
+     "years_right": 10
+    },
+    "n": 1134
+   },
+   "n_sensex": 1135,
+   "n": 1101
+  },
+  "Rahu or Ketu nakshatra on Thursday (market hours)": {
+   "tone": "Bullish",
+   "spx": {
+    "all": {
+     "n": 368,
+     "worked": 174,
+     "failed": 119,
+     "flat": 75,
+     "hit_rate": 59,
+     "base_rate": 59,
+     "exp": 172.42919215677264,
+     "avg_dir_ret": 0.05,
+     "verdict": "Mixed",
+     "p_value": 0.4508,
+     "years_active": 26,
+     "years_right": 16
+    },
+    "h1": {
+     "n": 185,
+     "worked": 80,
+     "failed": 72,
+     "flat": 33,
+     "hit_rate": 53,
+     "base_rate": 56,
+     "exp": 85.1346031834609,
+     "avg_dir_ret": -0.16,
+     "verdict": "Mixed",
+     "p_value": 0.8215,
+     "years_active": 13,
+     "years_right": 5
+    },
+    "h2": {
+     "n": 183,
+     "worked": 94,
+     "failed": 47,
+     "flat": 42,
+     "hit_rate": 67,
+     "base_rate": 62,
+     "exp": 87.2945889733117,
+     "avg_dir_ret": 0.25,
+     "verdict": "Mixed",
+     "p_value": 0.1406,
+     "years_active": 13,
+     "years_right": 11
+    },
+    "n": 368
+   },
+   "n_spx": 368,
+   "sensex": {
+    "all": {
+     "n": 361,
+     "worked": 176,
+     "failed": 112,
+     "flat": 73,
+     "hit_rate": 61,
+     "base_rate": 58,
+     "exp": 166.40930947797355,
+     "avg_dir_ret": 0.27,
+     "verdict": "Mixed",
+     "p_value": 0.1389,
+     "years_active": 26,
+     "years_right": 19
+    },
+    "h1": {
+     "n": 180,
+     "worked": 91,
+     "failed": 58,
+     "flat": 31,
+     "hit_rate": 61,
+     "base_rate": 57,
+     "exp": 85.59867409798419,
+     "avg_dir_ret": 0.27,
+     "verdict": "Mixed",
+     "p_value": 0.2088,
+     "years_active": 13,
+     "years_right": 9
+    },
+    "h2": {
+     "n": 181,
+     "worked": 85,
+     "failed": 54,
+     "flat": 42,
+     "hit_rate": 61,
+     "base_rate": 58,
+     "exp": 80.8106353799891,
+     "avg_dir_ret": 0.27,
+     "verdict": "Mixed",
+     "p_value": 0.2639,
+     "years_active": 13,
+     "years_right": 10
+    },
+    "n": 361
+   },
+   "n_sensex": 361,
+   "n": 368
+  }
+ },
+ "timings": {
+  "Uttra Falguni Nakshtra|2026-12-02": [
+   {
+    "ist": "02 Dec 08:55",
+    "et": "01 Dec 22:25"
+   },
+   {
+    "ist": "03 Dec 09:23",
+    "et": "02 Dec 22:53"
+   }
+  ],
+  "Uttra Falguni Nakshtra|2026-12-29": [
+   {
+    "ist": "29 Dec 15:43",
+    "et": "29 Dec 05:13"
+   },
+   {
+    "ist": "30 Dec 15:37",
+    "et": "30 Dec 05:07"
+   }
+  ],
+  "Bhadra|2026-12-03": [
+   {
+    "ist": "03 Dec 10:54",
+    "et": "03 Dec 00:24"
+   },
+   {
+    "ist": "03 Dec 23:04",
+    "et": "03 Dec 12:34"
+   },
+   "Positive"
+  ],
+  "Bhadra|2026-12-07": [
+   {
+    "ist": "07 Dec 02:22",
+    "et": "06 Dec 15:52"
+   },
+   {
+    "ist": "07 Dec 15:15",
+    "et": "07 Dec 04:45"
+   },
+   "Positive"
+  ],
+  "Bhadra|2026-12-13": [
+   {
+    "ist": "13 Dec 03:28",
+    "et": "12 Dec 16:58"
+   },
+   {
+    "ist": "13 Dec 16:48",
+    "et": "13 Dec 06:18"
+   },
+   "Neutral"
+  ],
+  "Bhadra|2026-12-16": [
+   {
+    "ist": "16 Dec 22:46",
+    "et": "16 Dec 12:16"
+   },
+   {
+    "ist": "17 Dec 11:12",
+    "et": "17 Dec 00:42"
+   },
+   "Neutral"
+  ],
+  "Bhadra|2026-12-20": [
+   {
+    "ist": "20 Dec 09:18",
+    "et": "19 Dec 22:48"
+   },
+   {
+    "ist": "20 Dec 20:15",
+    "et": "20 Dec 09:45"
+   },
+   "Positive"
+  ],
+  "Bhadra|2026-12-23": [
+   {
+    "ist": "23 Dec 10:47",
+    "et": "23 Dec 00:17"
+   },
+   {
+    "ist": "23 Dec 20:53",
+    "et": "23 Dec 10:23"
+   },
+   "Neutral"
+  ],
+  "Bhadra|2026-12-26": [
+   {
+    "ist": "26 Dec 09:42",
+    "et": "25 Dec 23:12"
+   },
+   {
+    "ist": "26 Dec 20:05",
+    "et": "26 Dec 09:35"
+   },
+   "Neutral"
+  ],
+  "Bhadra|2026-12-29": [
+   {
+    "ist": "29 Dec 13:25",
+    "et": "29 Dec 02:55"
+   },
+   {
+    "ist": "30 Dec 00:55",
+    "et": "29 Dec 14:25"
+   },
+   "Negative"
+  ],
+  "Ekadashi on Friday|2026-12-04": [
+   null,
+   {
+    "ist": "04 Dec 23:45",
+    "et": "04 Dec 13:15"
+   }
+  ],
+  "Moon Mercury in the same D9|2026-12-04": [
+   {
+    "ist": "04 Dec 09:15",
+    "et": "03 Dec 22:45"
+   },
+   {
+    "ist": "04 Dec 10:24",
+    "et": "03 Dec 23:54"
+   }
+  ],
+  "Moon Mercury in the same D9|2026-12-15": [
+   {
+    "ist": "15 Dec 11:54",
+    "et": "15 Dec 01:24"
+   },
+   {
+    "ist": "15 Dec 15:30",
+    "et": "15 Dec 05:00"
+   }
+  ],
+  "Moon Mercury in the same D9|2026-12-22": [
+   {
+    "ist": "22 Dec 10:46",
+    "et": "22 Dec 00:16"
+   },
+   {
+    "ist": "22 Dec 15:30",
+    "et": "22 Dec 05:00"
+   }
+  ],
+  "Moon Mercury in the same D9|2026-12-28": [
+   {
+    "ist": "28 Dec 09:15",
+    "et": "27 Dec 22:45"
+   },
+   {
+    "ist": "28 Dec 10:53",
+    "et": "28 Dec 00:23"
+   }
+  ],
+  "Shukla Pratipada Vriddhi Tithi|2026-12-09": [
+   {
+    "ist": "09 Dec 06:21",
+    "et": "08 Dec 19:51"
+   },
+   {
+    "ist": "10 Dec 08:46",
+    "et": "09 Dec 22:16"
+   }
+  ],
+  "Apogee|2026-12-11": [
+   {
+    "ist": "11 Dec 12:15",
+    "et": "11 Dec 01:45"
+   },
+   null
+  ],
+  "Perigee|2026-12-24": [
+   {
+    "ist": "24 Dec 14:01",
+    "et": "24 Dec 03:31"
+   },
+   null
+  ],
+  "Saturn Vehda of Purva Shada|2026-10-09": [
+   {
+    "ist": "09 Oct 20:51",
+    "et": "09 Oct 11:21"
+   },
+   {
+    "ist": "11 Dec 05:01",
+    "et": "10 Dec 18:31"
+   }
+  ],
+  "Saturn Vehda of Hast|2026-12-11": [
+   {
+    "ist": "11 Dec 05:01",
+    "et": "10 Dec 18:31"
+   },
+   null
+  ],
+  "Shani Chandra Dwidwadash Yog along negative axis|2026-12-14": [
+   {
+    "ist": "14 Dec 22:36",
+    "et": "14 Dec 12:06"
+   },
+   {
+    "ist": "17 Dec 09:13",
+    "et": "16 Dec 22:43"
+   }
+  ],
+  "Shatbisha on Tuesday|2026-12-15": [
+   {
+    "ist": "15 Dec 11:53",
+    "et": "15 Dec 01:23"
+   },
+   null
+  ],
+  "Vyatipath Yog in Panchak|2026-12-17": [
+   {
+    "ist": "17 Dec 13:21",
+    "et": "17 Dec 02:51"
+   },
+   {
+    "ist": "18 Dec 12:19",
+    "et": "18 Dec 01:49"
+   }
+  ],
+  "Vargottam Mars|2026-12-19": [
+   {
+    "ist": "19 Dec 10:20",
+    "et": "18 Dec 23:50"
+   },
+   null
+  ],
+  "Mercury alone in Mool Nakshtra|2026-12-22": [
+   {
+    "ist": "22 Dec 07:39",
+    "et": "21 Dec 21:09"
+   },
+   {
+    "ist": "30 Dec 18:31",
+    "et": "30 Dec 08:01"
+   }
+  ],
+  "Shukla Trayodashi on Tuesday|2026-12-22": [
+   null,
+   {
+    "ist": "22 Dec 14:24",
+    "et": "22 Dec 03:54"
+   }
+  ],
+  "Shukla Purnima Kshay Tithi|2026-12-23": [
+   {
+    "ist": "23 Dec 10:47",
+    "et": "23 Dec 00:17"
+   },
+   {
+    "ist": "24 Dec 06:58",
+    "et": "23 Dec 20:28"
+   }
+  ],
+  "Jupiter in Magha Nakshtra|2026-10-31": [
+   {
+    "ist": "31 Oct 12:02",
+    "et": "31 Oct 02:32"
+   },
+   null
+  ],
+  "Mars ahead of Jupiter in the same sign|2026-11-16": [
+   {
+    "ist": "16 Nov 11:53",
+    "et": "16 Nov 01:23"
+   },
+   null
+  ],
+  "Rahu/Ketu Nakshtra on Thursday|2026-12-10": [
+   {
+    "ist": "10 Dec 09:15",
+    "et": "09 Dec 22:45"
+   },
+   {
+    "ist": "10 Dec 15:30",
+    "et": "10 Dec 05:00"
+   }
+  ],
+  "Rahu/Ketu Nakshtra on Thursday|2026-12-24": [
+   {
+    "ist": "24 Dec 09:15",
+    "et": "23 Dec 22:45"
+   },
+   {
+    "ist": "24 Dec 15:30",
+    "et": "24 Dec 05:00"
+   }
+  ],
+  "_sunrise": {
+   "9": "07:01",
+   "10": "07:01",
+   "23": "07:08",
+   "24": "07:09"
+  }
+ },
+ "bhadra_validation": {
+  "rows": 99,
+  "matched": 99,
+  "agree": 99,
+  "mismatches": []
+ },
+ "bhadra_dec": [
+  {
+   "start": "03 Dec 10:54",
+   "end": "03 Dec 23:04",
+   "kind": "Night",
+   "opens": "day",
+   "sign": "Virgo",
+   "loka": "Patal",
+   "overall": "Positive"
+  },
+  {
+   "start": "07 Dec 02:22",
+   "end": "07 Dec 15:15",
+   "kind": "Day",
+   "opens": "night",
+   "sign": "Libra",
+   "loka": "Patal",
+   "overall": "Positive"
+  },
+  {
+   "start": "13 Dec 03:28",
+   "end": "13 Dec 16:48",
+   "kind": "Night",
+   "opens": "night",
+   "sign": "Capricorn",
+   "loka": "Patal",
+   "overall": "Neutral"
+  },
+  {
+   "start": "16 Dec 22:46",
+   "end": "17 Dec 11:12",
+   "kind": "Day",
+   "opens": "night",
+   "sign": "Aquarius",
+   "loka": "Earth",
+   "overall": "Neutral"
+  },
+  {
+   "start": "20 Dec 09:18",
+   "end": "20 Dec 20:15",
+   "kind": "Night",
+   "opens": "day",
+   "sign": "Aries",
+   "loka": "Swarg",
+   "overall": "Positive"
+  },
+  {
+   "start": "23 Dec 10:47",
+   "end": "23 Dec 20:53",
+   "kind": "Day",
+   "opens": "day",
+   "sign": "Taurus",
+   "loka": "Swarg",
+   "overall": "Neutral"
+  },
+  {
+   "start": "26 Dec 09:42",
+   "end": "26 Dec 20:05",
+   "kind": "Night",
+   "opens": "day",
+   "sign": "Cancer",
+   "loka": "Earth",
+   "overall": "Neutral"
+  },
+  {
+   "start": "29 Dec 13:25",
+   "end": "30 Dec 00:55",
+   "kind": "Day",
+   "opens": "day",
+   "sign": "Leo",
+   "loka": "Earth",
+   "overall": "Negative"
+  }
+ ],
+ "printed": [
+  {
+   "event": "Rahu does Vedh of Ashlesha, Vishaka and Shravan",
+   "start": "2026-08-02",
+   "start_time": "",
+   "end": "2026-12-31",
+   "end_time": "",
+   "inference": "Explained separately",
+   "tone": null
+  },
+  {
+   "event": "Saturn Vehda of Purva Shada",
+   "start": "2026-10-09",
+   "start_time": "20:54",
+   "end": "2026-12-11",
+   "end_time": "20:54",
+   "inference": "Positive for sectors ruled by Venus",
+   "tone": "positive"
+  },
+  {
+   "event": "Jupiter in Magha Nakshtra",
+   "start": "2026-10-31",
+   "start_time": "12:02",
+   "end": "2026-12-31",
+   "end_time": "",
+   "inference": "1st 15 days Bearish",
+   "tone": null
+  },
+  {
+   "event": "Mars ahead of Jupiter in the same sign",
+   "start": "2026-11-16",
+   "start_time": "11:55",
+   "end": "2026-12-31",
+   "end_time": "",
+   "inference": "Positive, explained separately",
+   "tone": "positive"
+  },
+  {
+   "event": "Uttra Falguni Nakshtra",
+   "start": "2026-12-02",
+   "start_time": "8:56",
+   "end": "2026-12-03",
+   "end_time": "9:24",
+   "inference": "2 - Bullish (Sagittarius & Capricorn)",
+   "tone": null
+  },
+  {
+   "event": "Bhadra",
+   "start": "2026-12-03",
+   "start_time": "10:54",
+   "end": "2026-12-03",
+   "end_time": "23:04",
+   "inference": "Positive",
+   "tone": "positive"
+  },
+  {
+   "event": "Ekadashi on Friday",
+   "start": "2026-12-04",
+   "start_time": "",
+   "end": "",
+   "end_time": "23:45",
+   "inference": "Negative",
+   "tone": "negative"
+  },
+  {
+   "event": "Moon Mercury in the same D9",
+   "start": "2026-12-04",
+   "start_time": "9:15",
+   "end": "2026-12-04",
+   "end_time": "10:23",
+   "inference": "Positive",
+   "tone": "positive"
+  },
+  {
+   "event": "Bhadra",
+   "start": "2026-12-07",
+   "start_time": "2:23",
+   "end": "2026-12-07",
+   "end_time": "15:16",
+   "inference": "Positive",
+   "tone": "positive"
+  },
+  {
+   "event": "Shukla Pratipada Vriddhi Tithi",
+   "start": "2026-12-09",
+   "start_time": "",
+   "end": "",
+   "end_time": "",
+   "inference": "Positive",
+   "tone": "positive"
+  },
+  {
+   "event": "Rahu/Ketu Nakshtra on Thursday",
+   "start": "2026-12-10",
+   "start_time": "9:15",
+   "end": "2026-12-10",
+   "end_time": "15:30",
+   "inference": "Positive",
+   "tone": "positive"
+  },
+  {
+   "event": "Apogee",
+   "start": "2026-12-11",
+   "start_time": "12:15",
+   "end": "",
+   "end_time": "",
+   "inference": "Positive",
+   "tone": "positive"
+  },
+  {
+   "event": "Saturn Vehda of Hast",
+   "start": "2026-12-11",
+   "start_time": "20:54",
+   "end": "Till year end",
+   "end_time": "",
+   "inference": "Positive for sectors ruled by Moon",
+   "tone": "positive"
+  },
+  {
+   "event": "Shani Chandra Dwidwadash Yog along negative axis",
+   "start": "2026-12-14",
+   "start_time": "22:36",
+   "end": "2026-12-17",
+   "end_time": "9:13",
+   "inference": "Negative",
+   "tone": "negative"
+  },
+  {
+   "event": "Total Day",
+   "start": "2026-12-14",
+   "start_time": "",
+   "end": "",
+   "end_time": "",
+   "inference": "Turning Date",
+   "tone": null
+  },
+  {
+   "event": "Shatbisha on Tuesday",
+   "start": "2026-12-15",
+   "start_time": "11:53",
+   "end": "",
+   "end_time": "",
+   "inference": "Negative",
+   "tone": "negative"
+  },
+  {
+   "event": "Moon Mercury in the same D9",
+   "start": "2026-12-15",
+   "start_time": "11:53",
+   "end": "2026-12-15",
+   "end_time": "15:30",
+   "inference": "Positive",
+   "tone": "positive"
+  },
+  {
+   "event": "Bhadra",
+   "start": "2026-12-16",
+   "start_time": "22:46",
+   "end": "2026-12-17",
+   "end_time": "11:13",
+   "inference": "Neutral",
+   "tone": "neutral"
+  },
+  {
+   "event": "Vyatipath Yog in Panchak",
+   "start": "2026-12-17",
+   "start_time": "13:22",
+   "end": "2026-12-18",
+   "end_time": "12:19",
+   "inference": "Positive",
+   "tone": "positive"
+  },
+  {
+   "event": "Vargottam Mars",
+   "start": "2026-12-19",
+   "start_time": "10:21",
+   "end": "Till year end",
+   "end_time": "",
+   "inference": "Positive",
+   "tone": "positive"
+  },
+  {
+   "event": "Mercury alone in Mool Nakshtra",
+   "start": "2026-12-22",
+   "start_time": "7:40",
+   "end": "2026-12-30",
+   "end_time": "",
+   "inference": "Negative",
+   "tone": "negative"
+  },
+  {
+   "event": "Shukla Trayodashi on Tuesday",
+   "start": "2026-12-22",
+   "start_time": "",
+   "end": "",
+   "end_time": "14:25",
+   "inference": "Negative",
+   "tone": "negative"
+  },
+  {
+   "event": "Moon Mercury in the same D9",
+   "start": "2026-12-22",
+   "start_time": "10:47",
+   "end": "2026-12-22",
+   "end_time": "15:30",
+   "inference": "Positive",
+   "tone": "positive"
+  },
+  {
+   "event": "Shukla Purnima Kshay Tithi",
+   "start": "2026-12-23",
+   "start_time": "",
+   "end": "",
+   "end_time": "",
+   "inference": "Negative",
+   "tone": "negative"
+  },
+  {
+   "event": "Bhadra",
+   "start": "2026-12-23",
+   "start_time": "10:49",
+   "end": "2026-12-23",
+   "end_time": "20:55",
+   "inference": "Neutral",
+   "tone": "neutral"
+  },
+  {
+   "event": "Perigee",
+   "start": "2026-12-24",
+   "start_time": "13:59",
+   "end": "",
+   "end_time": "",
+   "inference": "Negative",
+   "tone": "negative"
+  },
+  {
+   "event": "Rahu/Ketu Nakshtra on Thursday",
+   "start": "2026-12-24",
+   "start_time": "9:15",
+   "end": "2026-12-24",
+   "end_time": "15:30",
+   "inference": "Positive",
+   "tone": "positive"
+  },
+  {
+   "event": "Moon Mercury in the same D9",
+   "start": "2026-12-28",
+   "start_time": "9:15",
+   "end": "2026-12-28",
+   "end_time": "10:54",
+   "inference": "Positive",
+   "tone": "positive"
+  },
+  {
+   "event": "Uttra Falguni Nakshtra",
+   "start": "2026-12-29",
+   "start_time": "15:43",
+   "end": "2026-12-30",
+   "end_time": "15:37",
+   "inference": "30 - Bearish (Aquarius & Pisces)",
+   "tone": null
+  },
+  {
+   "event": "Bhadra",
+   "start": "2026-12-29",
+   "start_time": "13:26",
+   "end": "2026-12-30",
+   "end_time": "00:56",
+   "inference": "Negative",
+   "tone": "negative"
+  }
+ ]
+}
