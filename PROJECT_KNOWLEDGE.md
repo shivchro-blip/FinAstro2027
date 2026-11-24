@@ -90,6 +90,8 @@ Known data problems:
 | `tools/trigger_study.py [--log DATE]` | Tests candidate fall and rise conditions day by day 2000–2026 on the S&P 500, Nasdaq, Sensex, gold and silver (same-day move, same-year base); checks Mars–Jupiter-with-a-node episodes on the S&P since 1928; keeps the market event log `build/pdfref/market_event_log.json` (big days with prices, sky and conditions) |
 | `tools/nyse_charts.py` | NYSE (17 May 1792) and USA (4 Jul 1776, Sibly) natal charts, sidereal and tropical; transits to them; NYSE monthly solar returns (the author's tropical version and our sidereal one) with a 1928–2026 S&P backtest of the author's indications; the author's open forecasts |
 | `tools/author_forecasts.py` | Scorecard of the NYSE solar-return author's forecasts (kept in its FORECASTS list), astronomy check of his transit statements, and 1928–2026 S&P tests of his degree-aspect rules (all days and each episode once) |
+| `tools/dasha_transits.py [DATE]` | Vimshottari dashas of the USA and NYSE charts at all five levels (Maha, Antar, Pratyantar, Sookshma, Prana); the transit of each running lord; Pratyantar and Sookshma timelines with S&P moves; birth-time sensitivity; 1928–2026 S&P test of the lords |
+| `tools/model_check_60d.py [END]` | Our tables' labels rebuilt for each of the last 60 days (gold, silver, S&P, Sensex), against the actual moves |
 | `tools/gold_tracker.py [--metal silver]` | Trackers: findings, rule status, best-rule dates, analysis log |
 | `tools/build_year.py YEAR` | Astronomy layer for any year; 2000–2024 are git-ignored and rebuilt on demand |
 | `tools/fetch_prices.py` | Downloads GC=F and SI=F (Yahoo; the host must be allowed) |
@@ -119,6 +121,7 @@ Known data problems:
 | `external_model_check_ET.html` | Outside-model check (23 Nov 2026) |
 | `nyse_usa_charts_ET.html` | NYSE / USA charts and the solar-return test. The shared chart image is kept in `Reference_materials/extracted/nyse_solar_return_charts_2026-10_2026-11.png` |
 | `author_forecasts_ET.html` | The author's forecast scorecard and rule tests |
+| `dasha_transits_ET.html`, `model_check_60d_ET.html` | Dashas with transits; the 60-day model check |
 | `GOLD_TRACKER.html`, `SILVER_TRACKER.html` | Current status of every rule, best-rule dates, analysis log |
 | `REFERENCE_PDF_RULES.md`, `COMPLETION_REPORT.md`, `COVERAGE_AUDIT_GOLD_SILVER.md` | Rule lists and audits |
 
@@ -542,6 +545,46 @@ There are no TA S34 A9 windows between now and 31 Dec 2027.
 
   - Independent agreement on the shape of the year, though our table's edge is small and unproven.
   - Also independent: **Mars, Jupiter and Ketu meet again in Cancer, 9 Mar – 26 Apr 2027.** That is our Mars–Jupiter-node lead, and in 2009 and 2020 the bottom came within 3 sessions of such an episode ending. This one ends on 26 Apr, inside his Mar–May bottom window.
+
+**Our model over the last 60 days** (24 Sep – 23 Nov 2026), in `model_check_60d_ET.html`. Each table's label was rebuilt for every past day. A calendar-window fix was found and applied: "Three Saturdays in Shukla Paksha" is a whole-fortnight window, as it was backtested, not 5 sessions from its first day.
+
+| Market | Window move | Bearish labels | Bullish labels |
+|---|---|---|---|
+| Gold | −15.3% | Next 5 sessions right 62% (low, 15 days) and 100% (moderate, 3 days) | Bullish low (U2) wrong: 14% over 5 sessions |
+| Silver | −32.6% | Silver has no bearish rules | Bullish high (retrograde Mercury/Jupiter) wrong: 27% over 5 sessions, 15 days |
+| S&P 500 | −6.1% | Bearish high (Three Saturdays) right 58% same day, 75% over 5 sessions (12 days) | Bullish low wrong: 20% / 14% |
+| Sensex | +10.2% | Bearish high right 64% same day, 55% over 5 sessions | Bullish labels right 78–100% (17 days) |
+
+- **Robust volatility factors:** no help here. Big days came on 2 of 30 factor days against 3 of 13 others (S&P), and 3 of 28 against 0 of 12 (Sensex).
+- **Reading:** the bearish calls fitted the falls in gold and the S&P. The bullish metal calls failed in a falling market; that is the weak "low" label and silver's one-sided rules. Sixty days is a health check, not a test.
+
+**USA and NYSE dashas** (Vimshottari, five levels; `dasha_transits_ET.html`)
+
+- **USA** (Sibly 17:10 LMT; Moon Aquarius 6°26', end of Dhanishta). Running now:
+
+| Level | Lord | Period | Transit of the lord |
+|---|---|---|---|
+| Mahadasha | Rahu | 2016–2034 | Aquarius 0°34' (4th house, on the natal Moon sign, aspected by Mars); enters Capricorn 5 Dec |
+| Antardasha | Mercury | Jul 2024 – 17 Feb 2027 | Libra, 12th house |
+| Pratyantar | Saturn | 23 Sep 2026 – 17 Feb 2027 | Retrograde in Pisces, 5th house; S&P −11% from its start to 20 Nov |
+| Sookshma | Venus | 15 Nov – 9 Dec | Libra, own sign |
+
+  Next: Rahu/Ketu from 17 Feb 2027; its Ketu Pratyantar runs to 12 Mar, then Venus.
+- **NYSE** (10:00 LMT; Moon Pisces 28°48', Revati). Running now:
+
+| Level | Lord | Period | Transit of the lord |
+|---|---|---|---|
+| Mahadasha | Mercury | 2016–2033 | — |
+| Antardasha | Rahu | 22 May 2026 – 9 Dec 2028 | In the NYSE's 8th house, aspected by Mars |
+| Pratyantar | Jupiter | 9 Oct 2026 – 10 Feb 2027 | With Mars and Ketu in Leo, the NYSE 2nd house, aspected by Rahu; S&P −11% since 9 Oct |
+| Sookshma | Mercury | 15 Nov – 2 Dec | — |
+
+  Next: Saturn Pratyantar from 10 Feb 2027.
+- **Birth-time precision:** a birth-time error shifts the whole timeline, about 0.3–0.7 years per hour here.
+  - The Mahadashas hold within ±3 hours.
+  - The Antardashas need the hour.
+  - Pratyantar, Sookshma and Prana need the minute, which neither chart has. Treat the smaller levels as illustrations.
+- **S&P test, 1928–2026:** no dasha lord at any level (Antar, Pratyantar, Sookshma) shows an S&P effect in either chart (all |t| < 2). Benefic and malefic periods do not differ.
 
 **Model v1.0 (Ch.41 + Shadbala + Ashtakavarga), 6,572 trading days:**
 - The correlation of the scarcity index with the next 5 days is −0.002.

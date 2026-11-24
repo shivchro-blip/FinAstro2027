@@ -1,4 +1,480 @@
 {
+ "recent": [
+  {
+   "date": "2026-08-03",
+   "sig": null,
+   "st": null,
+   "ret": -0.402
+  },
+  {
+   "date": "2026-08-04",
+   "sig": null,
+   "st": null,
+   "ret": 1.518
+  },
+  {
+   "date": "2026-08-05",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": 3.675
+  },
+  {
+   "date": "2026-08-06",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": -0.13
+  },
+  {
+   "date": "2026-08-07",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": 2.328
+  },
+  {
+   "date": "2026-08-10",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": 0.455
+  },
+  {
+   "date": "2026-08-11",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": 0.484
+  },
+  {
+   "date": "2026-08-12",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": 0.594
+  },
+  {
+   "date": "2026-08-13",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": -1.054
+  },
+  {
+   "date": "2026-08-14",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": 0.382
+  },
+  {
+   "date": "2026-08-17",
+   "sig": "Bullish",
+   "st": "Moderate",
+   "ret": 0.82
+  },
+  {
+   "date": "2026-08-18",
+   "sig": "Bullish",
+   "st": "Moderate",
+   "ret": -1.187
+  },
+  {
+   "date": "2026-08-19",
+   "sig": "Bullish",
+   "st": "Moderate",
+   "ret": 2.821
+  },
+  {
+   "date": "2026-08-20",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": 0.574
+  },
+  {
+   "date": "2026-08-21",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": 2.389
+  },
+  {
+   "date": "2026-08-24",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": 0.367
+  },
+  {
+   "date": "2026-08-25",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": -0.07
+  },
+  {
+   "date": "2026-08-26",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": -0.878
+  },
+  {
+   "date": "2026-08-27",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": 0.23
+  },
+  {
+   "date": "2026-08-28",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": -2.875
+  },
+  {
+   "date": "2026-08-31",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": -1.068
+  },
+  {
+   "date": "2026-09-01",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": -1.899
+  },
+  {
+   "date": "2026-09-02",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": 0.414
+  },
+  {
+   "date": "2026-09-03",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": 2.838
+  },
+  {
+   "date": "2026-09-04",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": -1.394
+  },
+  {
+   "date": "2026-09-08",
+   "sig": null,
+   "st": null,
+   "ret": -0.84
+  },
+  {
+   "date": "2026-09-09",
+   "sig": null,
+   "st": null,
+   "ret": 0.489
+  },
+  {
+   "date": "2026-09-10",
+   "sig": null,
+   "st": null,
+   "ret": -1.197
+  },
+  {
+   "date": "2026-09-11",
+   "sig": null,
+   "st": null,
+   "ret": 0.036
+  },
+  {
+   "date": "2026-09-14",
+   "sig": null,
+   "st": null,
+   "ret": -1.293
+  },
+  {
+   "date": "2026-09-15",
+   "sig": null,
+   "st": null,
+   "ret": -0.439
+  },
+  {
+   "date": "2026-09-16",
+   "sig": null,
+   "st": null,
+   "ret": 1.262
+  },
+  {
+   "date": "2026-09-17",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": 0.278
+  },
+  {
+   "date": "2026-09-18",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": 0.573
+  },
+  {
+   "date": "2026-09-21",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": -0.927
+  },
+  {
+   "date": "2026-09-22",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": -0.171
+  },
+  {
+   "date": "2026-09-23",
+   "sig": null,
+   "st": null,
+   "ret": -1.325
+  },
+  {
+   "date": "2026-09-24",
+   "sig": null,
+   "st": null,
+   "ret": -0.472
+  },
+  {
+   "date": "2026-09-25",
+   "sig": null,
+   "st": null,
+   "ret": 0.54
+  },
+  {
+   "date": "2026-09-28",
+   "sig": "Bearish",
+   "st": "Low",
+   "ret": -3.536
+  },
+  {
+   "date": "2026-09-29",
+   "sig": "Bearish",
+   "st": "Low",
+   "ret": 0.271
+  },
+  {
+   "date": "2026-09-30",
+   "sig": "Bearish",
+   "st": "Low",
+   "ret": 0.167
+  },
+  {
+   "date": "2026-10-01",
+   "sig": "Bearish",
+   "st": "Low",
+   "ret": 0.373
+  },
+  {
+   "date": "2026-10-02",
+   "sig": "Bearish",
+   "st": "Low",
+   "ret": -0.952
+  },
+  {
+   "date": "2026-10-05",
+   "sig": "Bearish",
+   "st": "Low",
+   "ret": -0.132
+  },
+  {
+   "date": "2026-10-06",
+   "sig": "Bearish",
+   "st": "Low",
+   "ret": 0.729
+  },
+  {
+   "date": "2026-10-07",
+   "sig": "Bearish",
+   "st": "Moderate",
+   "ret": -1.108
+  },
+  {
+   "date": "2026-10-08",
+   "sig": "Bearish",
+   "st": "Moderate",
+   "ret": 0.394
+  },
+  {
+   "date": "2026-10-09",
+   "sig": "Bearish",
+   "st": "Low",
+   "ret": 1.427
+  },
+  {
+   "date": "2026-10-12",
+   "sig": "Bearish",
+   "st": "Moderate",
+   "ret": -0.61
+  },
+  {
+   "date": "2026-10-13",
+   "sig": "Bearish",
+   "st": "Low",
+   "ret": -0.317
+  },
+  {
+   "date": "2026-10-14",
+   "sig": "Bearish",
+   "st": "Low",
+   "ret": -1.661
+  },
+  {
+   "date": "2026-10-15",
+   "sig": "Bearish",
+   "st": "Low",
+   "ret": 1.514
+  },
+  {
+   "date": "2026-10-16",
+   "sig": "Bearish",
+   "st": "Low",
+   "ret": 0.264
+  },
+  {
+   "date": "2026-10-19",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": -0.502
+  },
+  {
+   "date": "2026-10-20",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": -0.421
+  },
+  {
+   "date": "2026-10-21",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": 0.179
+  },
+  {
+   "date": "2026-10-22",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": -2.159
+  },
+  {
+   "date": "2026-10-23",
+   "sig": null,
+   "st": null,
+   "ret": -1.293
+  },
+  {
+   "date": "2026-10-26",
+   "sig": "Bearish",
+   "st": "Low",
+   "ret": 0.761
+  },
+  {
+   "date": "2026-10-27",
+   "sig": null,
+   "st": null,
+   "ret": 0.896
+  },
+  {
+   "date": "2026-10-28",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": -0.564
+  },
+  {
+   "date": "2026-10-29",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": -0.499
+  },
+  {
+   "date": "2026-10-30",
+   "sig": "Bullish",
+   "st": "Moderate",
+   "ret": -3.287
+  },
+  {
+   "date": "2026-11-02",
+   "sig": "Bullish",
+   "st": "Moderate",
+   "ret": 1.813
+  },
+  {
+   "date": "2026-11-03",
+   "sig": "Bullish",
+   "st": "High",
+   "ret": -0.736
+  },
+  {
+   "date": "2026-11-04",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": 3.365
+  },
+  {
+   "date": "2026-11-05",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": 0.994
+  },
+  {
+   "date": "2026-11-06",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": -0.938
+  },
+  {
+   "date": "2026-11-09",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": 0.972
+  },
+  {
+   "date": "2026-11-10",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": -2.049
+  },
+  {
+   "date": "2026-11-11",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": -0.737
+  },
+  {
+   "date": "2026-11-12",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": -2.88
+  },
+  {
+   "date": "2026-11-13",
+   "sig": "Bullish",
+   "st": "Low",
+   "ret": 0.026
+  },
+  {
+   "date": "2026-11-16",
+   "sig": "Volatile",
+   "st": "Low",
+   "ret": -0.857
+  },
+  {
+   "date": "2026-11-17",
+   "sig": null,
+   "st": null,
+   "ret": 0.291
+  },
+  {
+   "date": "2026-11-18",
+   "sig": null,
+   "st": null,
+   "ret": -3.165
+  },
+  {
+   "date": "2026-11-19",
+   "sig": null,
+   "st": null,
+   "ret": -1.507
+  },
+  {
+   "date": "2026-11-20",
+   "sig": "Bearish",
+   "st": "Low",
+   "ret": -4.615
+  }
+ ],
  "pooled": {
   "in_sample": {
    "Bullish": {

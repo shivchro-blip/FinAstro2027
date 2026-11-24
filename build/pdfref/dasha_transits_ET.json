@@ -1,0 +1,1295 @@
+{
+ "day": "2026-11-24",
+ "charts": {
+  "USA": {
+   "label": "USA \u2013 4 Jul 1776, 17:10 LMT, Philadelphia (Sibly)",
+   "moon": "Aquarius 6.44\u00b0 (Dhanishta, 98.3% through)",
+   "asc": "Scorpio",
+   "levels": [
+    {
+     "level": "Mahadasha",
+     "lord": "Rahu",
+     "start": "18 Aug 2016 18:18",
+     "end": "19 Aug 2034 06:18",
+     "transit": {
+      "lord": "Rahu",
+      "sign": "Aquarius",
+      "deg": 0.58,
+      "nak": "Dhanishta",
+      "house_asc": 4,
+      "house_moon": 1,
+      "notes": [
+       "aspected by Mars"
+      ]
+     }
+    },
+    {
+     "level": "Antardasha",
+     "lord": "Mercury",
+     "start": "31 Jul 2024 12:00",
+     "end": "17 Feb 2027 20:18",
+     "transit": {
+      "lord": "Mercury",
+      "sign": "Libra",
+      "deg": 19.2,
+      "nak": "Swati",
+      "house_asc": 12,
+      "house_moon": 9,
+      "notes": []
+     }
+    },
+    {
+     "level": "Pratyantar",
+     "lord": "Saturn",
+     "start": "23 Sep 2026 10:01",
+     "end": "17 Feb 2027 20:18",
+     "transit": {
+      "lord": "Saturn",
+      "sign": "Pisces",
+      "deg": 13.93,
+      "nak": "Uttara Bhadrapada",
+      "house_asc": 5,
+      "house_moon": 2,
+      "notes": [
+       "retrograde",
+       "aspected by Mars"
+      ]
+     }
+    },
+    {
+     "level": "Sookshma",
+     "lord": "Venus",
+     "start": "15 Nov 2026 05:16",
+     "end": "09 Dec 2026 19:08",
+     "transit": {
+      "lord": "Venus",
+      "sign": "Libra",
+      "deg": 0.77,
+      "nak": "Chitra",
+      "house_asc": 12,
+      "house_moon": 9,
+      "notes": [
+       "own sign"
+      ]
+     }
+    },
+    {
+     "level": "Prana",
+     "lord": "Rahu",
+     "start": "24 Nov 2026 00:38",
+     "end": "27 Nov 2026 17:07",
+     "transit": {
+      "lord": "Rahu",
+      "sign": "Aquarius",
+      "deg": 0.58,
+      "nak": "Dhanishta",
+      "house_asc": 4,
+      "house_moon": 1,
+      "notes": [
+       "aspected by Mars"
+      ]
+     }
+    }
+   ],
+   "maha": [
+    {
+     "lord": "Mercury",
+     "start": "1949-08-19",
+     "end": "1966-08-19"
+    },
+    {
+     "lord": "Ketu",
+     "start": "1966-08-19",
+     "end": "1973-08-19"
+    },
+    {
+     "lord": "Venus",
+     "start": "1973-08-19",
+     "end": "1993-08-19"
+    },
+    {
+     "lord": "Sun",
+     "start": "1993-08-19",
+     "end": "1999-08-19"
+    },
+    {
+     "lord": "Moon",
+     "start": "1999-08-19",
+     "end": "2009-08-19"
+    },
+    {
+     "lord": "Mars",
+     "start": "2009-08-19",
+     "end": "2016-08-18"
+    },
+    {
+     "lord": "Rahu",
+     "start": "2016-08-18",
+     "end": "2034-08-19"
+    },
+    {
+     "lord": "Jupiter",
+     "start": "2034-08-19",
+     "end": "2050-08-19"
+    },
+    {
+     "lord": "Saturn",
+     "start": "2050-08-19",
+     "end": "2069-08-19"
+    }
+   ],
+   "antar": [
+    {
+     "lord": "Rahu/Mercury",
+     "start": "2024-07-31",
+     "end": "2027-02-18"
+    },
+    {
+     "lord": "Rahu/Ketu",
+     "start": "2027-02-18",
+     "end": "2028-03-07"
+    },
+    {
+     "lord": "Rahu/Venus",
+     "start": "2028-03-07",
+     "end": "2031-03-08"
+    }
+   ],
+   "pratyantar": [
+    {
+     "lord": "Rahu/Mercury/Saturn",
+     "start": "2026-09-23",
+     "end": "2027-02-17",
+     "spx": -11.0,
+     "transit": {
+      "lord": "Saturn",
+      "sign": "Pisces",
+      "deg": 17.76,
+      "nak": "Revati",
+      "house_asc": 5,
+      "house_moon": 2,
+      "notes": [
+       "retrograde"
+      ]
+     }
+    },
+    {
+     "lord": "Rahu/Ketu/Ketu",
+     "start": "2027-02-17",
+     "end": "2027-03-12",
+     "spx": null,
+     "transit": {
+      "lord": "Ketu",
+      "sign": "Cancer",
+      "deg": 26.06,
+      "nak": "Ashlesha",
+      "house_asc": 9,
+      "house_moon": 6,
+      "notes": [
+       "with Jupiter",
+       "aspected by Rahu"
+      ]
+     }
+    },
+    {
+     "lord": "Rahu/Ketu/Venus",
+     "start": "2027-03-12",
+     "end": "2027-05-15",
+     "spx": null,
+     "transit": {
+      "lord": "Venus",
+      "sign": "Capricorn",
+      "deg": 19.05,
+      "nak": "Shravana",
+      "house_asc": 3,
+      "house_moon": 12,
+      "notes": [
+       "with Rahu",
+       "aspected by Mars"
+      ]
+     }
+    }
+   ],
+   "sookshma": [
+    {
+     "lord": "Rahu/Mercury/Saturn/Saturn",
+     "start": "2026-09-23 10:01",
+     "end": "2026-10-16 18:24",
+     "spx": -0.27
+    },
+    {
+     "lord": "Rahu/Mercury/Saturn/Mercury",
+     "start": "2026-10-16 18:24",
+     "end": "2026-11-06 14:48",
+     "spx": -5.04
+    },
+    {
+     "lord": "Rahu/Mercury/Saturn/Ketu",
+     "start": "2026-11-06 14:48",
+     "end": "2026-11-15 05:16",
+     "spx": 2.83
+    },
+    {
+     "lord": "Rahu/Mercury/Saturn/Venus",
+     "start": "2026-11-15 05:16",
+     "end": "2026-12-09 19:08",
+     "spx": -8.61
+    },
+    {
+     "lord": "Rahu/Mercury/Saturn/Sun",
+     "start": "2026-12-09 19:08",
+     "end": "2026-12-17 04:06",
+     "spx": null
+    },
+    {
+     "lord": "Rahu/Mercury/Saturn/Moon",
+     "start": "2026-12-17 04:06",
+     "end": "2026-12-29 11:03",
+     "spx": null
+    },
+    {
+     "lord": "Rahu/Mercury/Saturn/Mars",
+     "start": "2026-12-29 11:03",
+     "end": "2027-01-07 01:30",
+     "spx": null
+    },
+    {
+     "lord": "Rahu/Mercury/Saturn/Rahu",
+     "start": "2027-01-07 01:30",
+     "end": "2027-01-29 04:23",
+     "spx": null
+    },
+    {
+     "lord": "Rahu/Mercury/Saturn/Jupiter",
+     "start": "2027-01-29 04:23",
+     "end": "2027-02-17 20:18",
+     "spx": null
+    },
+    {
+     "lord": "Rahu/Ketu/Ketu/Ketu",
+     "start": "2027-02-17 20:18",
+     "end": "2027-02-19 03:37",
+     "spx": null
+    },
+    {
+     "lord": "Rahu/Ketu/Ketu/Venus",
+     "start": "2027-02-19 03:37",
+     "end": "2027-02-22 21:06",
+     "spx": null
+    },
+    {
+     "lord": "Rahu/Ketu/Ketu/Sun",
+     "start": "2027-02-22 21:06",
+     "end": "2027-02-23 23:57",
+     "spx": null
+    },
+    {
+     "lord": "Rahu/Ketu/Ketu/Moon",
+     "start": "2027-02-23 23:57",
+     "end": "2027-02-25 20:41",
+     "spx": null
+    },
+    {
+     "lord": "Rahu/Ketu/Ketu/Mars",
+     "start": "2027-02-25 20:41",
+     "end": "2027-02-27 04:01",
+     "spx": null
+    },
+    {
+     "lord": "Rahu/Ketu/Ketu/Rahu",
+     "start": "2027-02-27 04:01",
+     "end": "2027-03-02 12:33",
+     "spx": null
+    },
+    {
+     "lord": "Rahu/Ketu/Ketu/Jupiter",
+     "start": "2027-03-02 12:33",
+     "end": "2027-03-05 12:08",
+     "spx": null
+    },
+    {
+     "lord": "Rahu/Ketu/Ketu/Saturn",
+     "start": "2027-03-05 12:08",
+     "end": "2027-03-09 01:09",
+     "spx": null
+    },
+    {
+     "lord": "Rahu/Ketu/Ketu/Mercury",
+     "start": "2027-03-09 01:09",
+     "end": "2027-03-12 05:13",
+     "spx": null
+    },
+    {
+     "lord": "Rahu/Ketu/Venus/Venus",
+     "start": "2027-03-12 05:13",
+     "end": "2027-03-22 21:53",
+     "spx": null
+    },
+    {
+     "lord": "Rahu/Ketu/Venus/Sun",
+     "start": "2027-03-22 21:53",
+     "end": "2027-03-26 02:35",
+     "spx": null
+    }
+   ],
+   "sensitivity": [
+    {
+     "shift": -180,
+     "moon": "Aquarius 4.63\u00b0",
+     "nak": "Dhanishta",
+     "now": "Rahu / Mercury / Mars"
+    },
+    {
+     "shift": -150,
+     "moon": "Aquarius 4.94\u00b0",
+     "nak": "Dhanishta",
+     "now": "Rahu / Mercury / Rahu"
+    },
+    {
+     "shift": -120,
+     "moon": "Aquarius 5.24\u00b0",
+     "nak": "Dhanishta",
+     "now": "Rahu / Mercury / Rahu"
+    },
+    {
+     "shift": -90,
+     "moon": "Aquarius 5.54\u00b0",
+     "nak": "Dhanishta",
+     "now": "Rahu / Mercury / Jupiter"
+    },
+    {
+     "shift": -60,
+     "moon": "Aquarius 5.84\u00b0",
+     "nak": "Dhanishta",
+     "now": "Rahu / Mercury / Jupiter"
+    },
+    {
+     "shift": -30,
+     "moon": "Aquarius 6.14\u00b0",
+     "nak": "Dhanishta",
+     "now": "Rahu / Mercury / Saturn"
+    },
+    {
+     "shift": 0,
+     "moon": "Aquarius 6.44\u00b0",
+     "nak": "Dhanishta",
+     "now": "Rahu / Mercury / Saturn"
+    },
+    {
+     "shift": 30,
+     "moon": "Aquarius 6.74\u00b0",
+     "nak": "Shatabhisha",
+     "now": "Rahu / Mercury / Saturn"
+    },
+    {
+     "shift": 60,
+     "moon": "Aquarius 7.05\u00b0",
+     "nak": "Shatabhisha",
+     "now": "Rahu / Ketu / Mars"
+    },
+    {
+     "shift": 90,
+     "moon": "Aquarius 7.35\u00b0",
+     "nak": "Shatabhisha",
+     "now": "Rahu / Ketu / Saturn"
+    },
+    {
+     "shift": 120,
+     "moon": "Aquarius 7.65\u00b0",
+     "nak": "Shatabhisha",
+     "now": "Rahu / Venus / Venus"
+    },
+    {
+     "shift": 150,
+     "moon": "Aquarius 7.95\u00b0",
+     "nak": "Shatabhisha",
+     "now": "Rahu / Venus / Sun"
+    },
+    {
+     "shift": 180,
+     "moon": "Aquarius 8.25\u00b0",
+     "nak": "Shatabhisha",
+     "now": "Rahu / Venus / Mars"
+    }
+   ],
+   "test": {
+    "Antardasha": {
+     "Ketu": {
+      "days": 1257,
+      "mean": 0.0479,
+      "up": 53.4,
+      "t": 0.5,
+      "ann": 12.1
+     },
+     "Venus": {
+      "days": 3612,
+      "mean": 0.0026,
+      "up": 51.5,
+      "t": -1.44,
+      "ann": 0.7
+     },
+     "Sun": {
+      "days": 1072,
+      "mean": 0.0271,
+      "up": 49.0,
+      "t": -0.11,
+      "ann": 6.8
+     },
+     "Moon": {
+      "days": 1784,
+      "mean": 0.0187,
+      "up": 50.2,
+      "t": -0.44,
+      "ann": 4.7
+     },
+     "Mars": {
+      "days": 1324,
+      "mean": 0.0535,
+      "up": 54.5,
+      "t": 0.68,
+      "ann": 13.5
+     },
+     "Rahu": {
+      "days": 4519,
+      "mean": 0.0248,
+      "up": 52.7,
+      "t": -0.36,
+      "ann": 6.3
+     },
+     "Jupiter": {
+      "days": 3493,
+      "mean": 0.0466,
+      "up": 53.3,
+      "t": 0.77,
+      "ann": 11.8
+     },
+     "Saturn": {
+      "days": 4143,
+      "mean": 0.0274,
+      "up": 52.5,
+      "t": -0.2,
+      "ann": 6.9
+     },
+     "Mercury": {
+      "days": 3636,
+      "mean": 0.0501,
+      "up": 53.1,
+      "t": 0.96,
+      "ann": 12.6
+     },
+     "benefic": {
+      "days": 12525,
+      "mean": 0.031,
+      "up": 52.3,
+      "t": -0.02,
+      "ann": 7.8
+     },
+     "malefic": {
+      "days": 12315,
+      "mean": 0.0313,
+      "up": 52.6,
+      "t": 0.02,
+      "ann": 7.9
+     },
+     "_all": {
+      "mean": 0.0311,
+      "up": 52.4,
+      "ann": 7.8
+     }
+    },
+    "Pratyantar": {
+     "Ketu": {
+      "days": 1449,
+      "mean": 0.0521,
+      "up": 52.7,
+      "t": 0.67,
+      "ann": 13.1
+     },
+     "Venus": {
+      "days": 4179,
+      "mean": 0.0152,
+      "up": 52.1,
+      "t": -0.86,
+      "ann": 3.8
+     },
+     "Sun": {
+      "days": 1254,
+      "mean": -0.0149,
+      "up": 50.6,
+      "t": -1.37,
+      "ann": -3.8
+     },
+     "Moon": {
+      "days": 2096,
+      "mean": 0.034,
+      "up": 51.7,
+      "t": 0.11,
+      "ann": 8.6
+     },
+     "Mars": {
+      "days": 1457,
+      "mean": 0.0416,
+      "up": 52.2,
+      "t": 0.33,
+      "ann": 10.5
+     },
+     "Rahu": {
+      "days": 3700,
+      "mean": 0.0625,
+      "up": 53.3,
+      "t": 1.6,
+      "ann": 15.7
+     },
+     "Jupiter": {
+      "days": 3316,
+      "mean": 0.0675,
+      "up": 53.3,
+      "t": 1.76,
+      "ann": 17.0
+     },
+     "Saturn": {
+      "days": 3887,
+      "mean": 0.0084,
+      "up": 52.7,
+      "t": -1.19,
+      "ann": 2.1
+     },
+     "Mercury": {
+      "days": 3502,
+      "mean": 0.0096,
+      "up": 51.8,
+      "t": -1.07,
+      "ann": 2.4
+     },
+     "benefic": {
+      "days": 13093,
+      "mean": 0.03,
+      "up": 52.3,
+      "t": -0.11,
+      "ann": 7.6
+     },
+     "malefic": {
+      "days": 11747,
+      "mean": 0.0324,
+      "up": 52.6,
+      "t": 0.12,
+      "ann": 8.2
+     },
+     "_all": {
+      "mean": 0.0311,
+      "up": 52.4,
+      "ann": 7.8
+     }
+    },
+    "Sookshma": {
+     "Ketu": {
+      "days": 1464,
+      "mean": 0.0376,
+      "up": 51.7,
+      "t": 0.21,
+      "ann": 9.5
+     },
+     "Venus": {
+      "days": 4134,
+      "mean": 0.0378,
+      "up": 52.7,
+      "t": 0.36,
+      "ann": 9.5
+     },
+     "Sun": {
+      "days": 1237,
+      "mean": -0.0006,
+      "up": 50.8,
+      "t": -0.94,
+      "ann": -0.2
+     },
+     "Moon": {
+      "days": 2082,
+      "mean": 0.0301,
+      "up": 53.9,
+      "t": -0.04,
+      "ann": 7.6
+     },
+     "Mars": {
+      "days": 1428,
+      "mean": 0.0195,
+      "up": 51.8,
+      "t": -0.37,
+      "ann": 4.9
+     },
+     "Rahu": {
+      "days": 3706,
+      "mean": 0.0183,
+      "up": 51.4,
+      "t": -0.66,
+      "ann": 4.6
+     },
+     "Jupiter": {
+      "days": 3341,
+      "mean": 0.0244,
+      "up": 52.3,
+      "t": -0.33,
+      "ann": 6.1
+     },
+     "Saturn": {
+      "days": 3901,
+      "mean": 0.0559,
+      "up": 53.4,
+      "t": 1.3,
+      "ann": 14.1
+     },
+     "Mercury": {
+      "days": 3547,
+      "mean": 0.0297,
+      "up": 52.4,
+      "t": -0.07,
+      "ann": 7.5
+     },
+     "benefic": {
+      "days": 13104,
+      "mean": 0.0309,
+      "up": 52.7,
+      "t": -0.02,
+      "ann": 7.8
+     },
+     "malefic": {
+      "days": 11736,
+      "mean": 0.0314,
+      "up": 52.1,
+      "t": 0.02,
+      "ann": 7.9
+     },
+     "_all": {
+      "mean": 0.0311,
+      "up": 52.4,
+      "ann": 7.8
+     }
+    }
+   }
+  },
+  "NYSE": {
+   "label": "NYSE \u2013 17 May 1792, 10:00 LMT, New York",
+   "moon": "Pisces 28.81\u00b0 (Revati, 91.1% through)",
+   "asc": "Cancer",
+   "levels": [
+    {
+     "level": "Mahadasha",
+     "lord": "Mercury",
+     "start": "24 Nov 2016 02:38",
+     "end": "24 Nov 2033 08:38",
+     "transit": {
+      "lord": "Mercury",
+      "sign": "Libra",
+      "deg": 19.2,
+      "nak": "Swati",
+      "house_asc": 4,
+      "house_moon": 8,
+      "notes": []
+     }
+    },
+    {
+     "level": "Antardasha",
+     "lord": "Rahu",
+     "start": "22 May 2026 23:35",
+     "end": "09 Dec 2028 07:53",
+     "transit": {
+      "lord": "Rahu",
+      "sign": "Aquarius",
+      "deg": 0.58,
+      "nak": "Dhanishta",
+      "house_asc": 8,
+      "house_moon": 12,
+      "notes": [
+       "aspected by Mars"
+      ]
+     }
+    },
+    {
+     "level": "Pratyantar",
+     "lord": "Jupiter",
+     "start": "09 Oct 2026 16:34",
+     "end": "10 Feb 2027 20:01",
+     "transit": {
+      "lord": "Jupiter",
+      "sign": "Leo",
+      "deg": 2.25,
+      "nak": "Magha",
+      "house_asc": 2,
+      "house_moon": 6,
+      "notes": [
+       "with Mars",
+       "with Ketu",
+       "aspected by Rahu"
+      ]
+     }
+    },
+    {
+     "level": "Sookshma",
+     "lord": "Mercury",
+     "start": "14 Nov 2026 20:52",
+     "end": "02 Dec 2026 11:06",
+     "transit": {
+      "lord": "Mercury",
+      "sign": "Libra",
+      "deg": 19.2,
+      "nak": "Swati",
+      "house_asc": 4,
+      "house_moon": 8,
+      "notes": []
+     }
+    },
+    {
+     "level": "Prana",
+     "lord": "Mars",
+     "start": "23 Nov 2026 15:59",
+     "end": "24 Nov 2026 16:37",
+     "transit": {
+      "lord": "Mars",
+      "sign": "Leo",
+      "deg": 5.25,
+      "nak": "Magha",
+      "house_asc": 2,
+      "house_moon": 6,
+      "notes": [
+       "with Ketu",
+       "with Jupiter",
+       "aspected by Rahu"
+      ]
+     }
+    }
+   ],
+   "maha": [
+    {
+     "lord": "Moon",
+     "start": "1946-11-24",
+     "end": "1956-11-24"
+    },
+    {
+     "lord": "Mars",
+     "start": "1956-11-24",
+     "end": "1963-11-25"
+    },
+    {
+     "lord": "Rahu",
+     "start": "1963-11-25",
+     "end": "1981-11-24"
+    },
+    {
+     "lord": "Jupiter",
+     "start": "1981-11-24",
+     "end": "1997-11-24"
+    },
+    {
+     "lord": "Saturn",
+     "start": "1997-11-24",
+     "end": "2016-11-24"
+    },
+    {
+     "lord": "Mercury",
+     "start": "2016-11-24",
+     "end": "2033-11-24"
+    },
+    {
+     "lord": "Ketu",
+     "start": "2033-11-24",
+     "end": "2040-11-24"
+    },
+    {
+     "lord": "Venus",
+     "start": "2040-11-24",
+     "end": "2060-11-24"
+    }
+   ],
+   "antar": [
+    {
+     "lord": "Mercury/Moon",
+     "start": "2023-12-25",
+     "end": "2025-05-25"
+    },
+    {
+     "lord": "Mercury/Mars",
+     "start": "2025-05-25",
+     "end": "2026-05-23"
+    },
+    {
+     "lord": "Mercury/Rahu",
+     "start": "2026-05-23",
+     "end": "2028-12-09"
+    },
+    {
+     "lord": "Mercury/Jupiter",
+     "start": "2028-12-09",
+     "end": "2031-03-17"
+    }
+   ],
+   "pratyantar": [
+    {
+     "lord": "Mercury/Rahu/Rahu",
+     "start": "2026-05-22",
+     "end": "2026-10-09",
+     "spx": 4.29,
+     "transit": {
+      "lord": "Rahu",
+      "sign": "Aquarius",
+      "deg": 3.76,
+      "nak": "Dhanishta",
+      "house_asc": 8,
+      "house_moon": 12,
+      "notes": [
+       "aspected by Mars"
+      ]
+     }
+    },
+    {
+     "lord": "Mercury/Rahu/Jupiter",
+     "start": "2026-10-09",
+     "end": "2027-02-10",
+     "spx": -11.01,
+     "transit": {
+      "lord": "Jupiter",
+      "sign": "Cancer",
+      "deg": 26.89,
+      "nak": "Ashlesha",
+      "house_asc": 1,
+      "house_moon": 5,
+      "notes": [
+       "exalted",
+       "with Mars"
+      ]
+     }
+    },
+    {
+     "lord": "Mercury/Rahu/Saturn",
+     "start": "2027-02-10",
+     "end": "2027-07-08",
+     "spx": null,
+     "transit": {
+      "lord": "Saturn",
+      "sign": "Pisces",
+      "deg": 16.95,
+      "nak": "Revati",
+      "house_asc": 9,
+      "house_moon": 1,
+      "notes": [
+       "aspected by Mars"
+      ]
+     }
+    }
+   ],
+   "sookshma": [
+    {
+     "lord": "Mercury/Rahu/Rahu/Moon",
+     "start": "2026-09-19 21:34",
+     "end": "2026-10-01 12:59",
+     "spx": 0.01
+    },
+    {
+     "lord": "Mercury/Rahu/Rahu/Mars",
+     "start": "2026-10-01 12:59",
+     "end": "2026-10-09 16:34",
+     "spx": 1.49
+    },
+    {
+     "lord": "Mercury/Rahu/Jupiter/Jupiter",
+     "start": "2026-10-09 16:34",
+     "end": "2026-10-26 05:58",
+     "spx": -1.82
+    },
+    {
+     "lord": "Mercury/Rahu/Jupiter/Saturn",
+     "start": "2026-10-26 05:58",
+     "end": "2026-11-14 20:52",
+     "spx": -0.81
+    },
+    {
+     "lord": "Mercury/Rahu/Jupiter/Mercury",
+     "start": "2026-11-14 20:52",
+     "end": "2026-12-02 11:06",
+     "spx": -8.61
+    },
+    {
+     "lord": "Mercury/Rahu/Jupiter/Ketu",
+     "start": "2026-12-02 11:06",
+     "end": "2026-12-09 16:57",
+     "spx": null
+    },
+    {
+     "lord": "Mercury/Rahu/Jupiter/Venus",
+     "start": "2026-12-09 16:57",
+     "end": "2026-12-30 09:42",
+     "spx": null
+    },
+    {
+     "lord": "Mercury/Rahu/Jupiter/Sun",
+     "start": "2026-12-30 09:42",
+     "end": "2027-01-05 14:43",
+     "spx": null
+    },
+    {
+     "lord": "Mercury/Rahu/Jupiter/Moon",
+     "start": "2027-01-05 14:43",
+     "end": "2027-01-15 23:05",
+     "spx": null
+    },
+    {
+     "lord": "Mercury/Rahu/Jupiter/Mars",
+     "start": "2027-01-15 23:05",
+     "end": "2027-01-23 04:57",
+     "spx": null
+    },
+    {
+     "lord": "Mercury/Rahu/Jupiter/Rahu",
+     "start": "2027-01-23 04:57",
+     "end": "2027-02-10 20:01",
+     "spx": null
+    },
+    {
+     "lord": "Mercury/Rahu/Saturn/Saturn",
+     "start": "2027-02-10 20:01",
+     "end": "2027-03-06 04:24",
+     "spx": null
+    },
+    {
+     "lord": "Mercury/Rahu/Saturn/Mercury",
+     "start": "2027-03-06 04:24",
+     "end": "2027-03-27 02:48",
+     "spx": null
+    }
+   ],
+   "sensitivity": [
+    {
+     "shift": -180,
+     "moon": "Pisces 27.23\u00b0",
+     "nak": "Revati",
+     "now": "Mercury / Moon / Mercury"
+    },
+    {
+     "shift": -150,
+     "moon": "Pisces 27.49\u00b0",
+     "nak": "Revati",
+     "now": "Mercury / Moon / Venus"
+    },
+    {
+     "shift": -120,
+     "moon": "Pisces 27.76\u00b0",
+     "nak": "Revati",
+     "now": "Mercury / Mars / Rahu"
+    },
+    {
+     "shift": -90,
+     "moon": "Pisces 28.02\u00b0",
+     "nak": "Revati",
+     "now": "Mercury / Mars / Saturn"
+    },
+    {
+     "shift": -60,
+     "moon": "Pisces 28.28\u00b0",
+     "nak": "Revati",
+     "now": "Mercury / Mars / Venus"
+    },
+    {
+     "shift": -30,
+     "moon": "Pisces 28.55\u00b0",
+     "nak": "Revati",
+     "now": "Mercury / Rahu / Rahu"
+    },
+    {
+     "shift": 0,
+     "moon": "Pisces 28.81\u00b0",
+     "nak": "Revati",
+     "now": "Mercury / Rahu / Jupiter"
+    },
+    {
+     "shift": 30,
+     "moon": "Pisces 29.07\u00b0",
+     "nak": "Revati",
+     "now": "Mercury / Rahu / Saturn"
+    },
+    {
+     "shift": 60,
+     "moon": "Pisces 29.34\u00b0",
+     "nak": "Revati",
+     "now": "Mercury / Rahu / Mercury"
+    },
+    {
+     "shift": 90,
+     "moon": "Pisces 29.60\u00b0",
+     "nak": "Revati",
+     "now": "Mercury / Rahu / Ketu"
+    },
+    {
+     "shift": 120,
+     "moon": "Pisces 29.86\u00b0",
+     "nak": "Revati",
+     "now": "Mercury / Rahu / Venus"
+    },
+    {
+     "shift": 150,
+     "moon": "Aries 0.13\u00b0",
+     "nak": "Ashwini",
+     "now": "Mercury / Rahu / Sun"
+    },
+    {
+     "shift": 180,
+     "moon": "Aries 0.39\u00b0",
+     "nak": "Ashwini",
+     "now": "Mercury / Rahu / Moon"
+    }
+   ],
+   "test": {
+    "Antardasha": {
+     "Ketu": {
+      "days": 1658,
+      "mean": 0.0436,
+      "up": 54.6,
+      "t": 0.43,
+      "ann": 11.0
+     },
+     "Venus": {
+      "days": 3907,
+      "mean": 0.0284,
+      "up": 52.1,
+      "t": -0.14,
+      "ann": 7.2
+     },
+     "Sun": {
+      "days": 1171,
+      "mean": -0.014,
+      "up": 52.3,
+      "t": -1.3,
+      "ann": -3.5
+     },
+     "Moon": {
+      "days": 1954,
+      "mean": 0.0465,
+      "up": 54.0,
+      "t": 0.57,
+      "ann": 11.7
+     },
+     "Mars": {
+      "days": 1374,
+      "mean": 0.0402,
+      "up": 52.8,
+      "t": 0.28,
+      "ann": 10.1
+     },
+     "Rahu": {
+      "days": 3752,
+      "mean": 0.0323,
+      "up": 53.8,
+      "t": 0.06,
+      "ann": 8.1
+     },
+     "Jupiter": {
+      "days": 3183,
+      "mean": 0.0457,
+      "up": 51.4,
+      "t": 0.69,
+      "ann": 11.5
+     },
+     "Saturn": {
+      "days": 3827,
+      "mean": 0.0376,
+      "up": 50.8,
+      "t": 0.33,
+      "ann": 9.5
+     },
+     "Mercury": {
+      "days": 4014,
+      "mean": 0.0125,
+      "up": 52.0,
+      "t": -0.99,
+      "ann": 3.2
+     },
+     "benefic": {
+      "days": 13058,
+      "mean": 0.0304,
+      "up": 52.2,
+      "t": -0.07,
+      "ann": 7.7
+     },
+     "malefic": {
+      "days": 11782,
+      "mean": 0.0319,
+      "up": 52.7,
+      "t": 0.07,
+      "ann": 8.0
+     },
+     "_all": {
+      "mean": 0.0311,
+      "up": 52.4,
+      "ann": 7.8
+     }
+    },
+    "Pratyantar": {
+     "Ketu": {
+      "days": 1438,
+      "mean": -0.0044,
+      "up": 50.8,
+      "t": -1.13,
+      "ann": -1.1
+     },
+     "Venus": {
+      "days": 4127,
+      "mean": 0.0189,
+      "up": 52.0,
+      "t": -0.66,
+      "ann": 4.8
+     },
+     "Sun": {
+      "days": 1228,
+      "mean": 0.0822,
+      "up": 53.7,
+      "t": 1.5,
+      "ann": 20.7
+     },
+     "Moon": {
+      "days": 2068,
+      "mean": 0.0366,
+      "up": 53.2,
+      "t": 0.21,
+      "ann": 9.2
+     },
+     "Mars": {
+      "days": 1426,
+      "mean": 0.0656,
+      "up": 53.6,
+      "t": 1.09,
+      "ann": 16.5
+     },
+     "Rahu": {
+      "days": 3805,
+      "mean": 0.0448,
+      "up": 53.2,
+      "t": 0.71,
+      "ann": 11.3
+     },
+     "Jupiter": {
+      "days": 3327,
+      "mean": 0.0132,
+      "up": 51.7,
+      "t": -0.87,
+      "ann": 3.3
+     },
+     "Saturn": {
+      "days": 3915,
+      "mean": 0.0195,
+      "up": 52.0,
+      "t": -0.61,
+      "ann": 4.9
+     },
+     "Mercury": {
+      "days": 3506,
+      "mean": 0.0402,
+      "up": 52.5,
+      "t": 0.45,
+      "ann": 10.1
+     },
+     "benefic": {
+      "days": 13028,
+      "mean": 0.026,
+      "up": 52.3,
+      "t": -0.49,
+      "ann": 6.5
+     },
+     "malefic": {
+      "days": 11812,
+      "mean": 0.0368,
+      "up": 52.6,
+      "t": 0.52,
+      "ann": 9.3
+     },
+     "_all": {
+      "mean": 0.0311,
+      "up": 52.4,
+      "ann": 7.8
+     }
+    },
+    "Sookshma": {
+     "Ketu": {
+      "days": 1467,
+      "mean": 0.0188,
+      "up": 52.4,
+      "t": -0.4,
+      "ann": 4.7
+     },
+     "Venus": {
+      "days": 4165,
+      "mean": 0.0289,
+      "up": 52.8,
+      "t": -0.12,
+      "ann": 7.3
+     },
+     "Sun": {
+      "days": 1224,
+      "mean": 0.0466,
+      "up": 51.9,
+      "t": 0.45,
+      "ann": 11.7
+     },
+     "Moon": {
+      "days": 2057,
+      "mean": 0.0673,
+      "up": 52.9,
+      "t": 1.38,
+      "ann": 17.0
+     },
+     "Mars": {
+      "days": 1441,
+      "mean": -0.0011,
+      "up": 50.2,
+      "t": -1.03,
+      "ann": -0.3
+     },
+     "Rahu": {
+      "days": 3709,
+      "mean": 0.0408,
+      "up": 51.3,
+      "t": 0.49,
+      "ann": 10.3
+     },
+     "Jupiter": {
+      "days": 3317,
+      "mean": 0.0172,
+      "up": 52.3,
+      "t": -0.68,
+      "ann": 4.3
+     },
+     "Saturn": {
+      "days": 3978,
+      "mean": 0.0287,
+      "up": 53.3,
+      "t": -0.13,
+      "ann": 7.2
+     },
+     "Mercury": {
+      "days": 3482,
+      "mean": 0.0314,
+      "up": 53.1,
+      "t": 0.01,
+      "ann": 7.9
+     },
+     "benefic": {
+      "days": 13021,
+      "mean": 0.0327,
+      "up": 52.8,
+      "t": 0.15,
+      "ann": 8.2
+     },
+     "malefic": {
+      "days": 11819,
+      "mean": 0.0295,
+      "up": 52.1,
+      "t": -0.15,
+      "ann": 7.4
+     },
+     "_all": {
+      "mean": 0.0311,
+      "up": 52.4,
+      "ann": 7.8
+     }
+    }
+   }
+  }
+ }
+}

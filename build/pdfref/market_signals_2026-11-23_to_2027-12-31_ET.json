@@ -248,7 +248,7 @@
    },
    {
     "frm": "2027-02-12",
-    "to": "2027-02-12",
+    "to": "2027-02-15",
     "sig": "Bearish",
     "st": "High",
     "why": [
@@ -262,42 +262,34 @@
     ]
    },
    {
-    "frm": "2027-02-15",
-    "to": "2027-02-15",
-    "sig": "Bearish",
-    "st": "High",
-    "why": [
-     "Shukla Shasthi on a Friday",
-     "big-move factor: Mercury-Saturn 2/12 (Dwidwadash)"
-    ],
-    "ids": [
-     "b100_shukla_shasthi_on_friday"
-    ]
-   },
-   {
     "frm": "2027-02-16",
     "to": "2027-02-18",
     "sig": "Bearish",
-    "st": "Low",
+    "st": "High",
     "why": [
      "Moon-Rahu 6/8 (Shadashtak)",
      "Shukla Shasthi on a Friday",
+     "Three Saturday in Shukla Paksh",
      "big-move factor: Mercury-Saturn 2/12 (Dwidwadash)"
     ],
     "ids": [
      "ta_s25_moon_rahu_6",
-     "b100_shukla_shasthi_on_friday"
+     "b100_shukla_shasthi_on_friday",
+     "b101_three_saturdays_in_shukla_paksha"
     ]
    },
    {
     "frm": "2027-02-19",
     "to": "2027-02-19",
-    "sig": "Volatile",
-    "st": "\u2013",
+    "sig": "Bearish",
+    "st": "High",
     "why": [
+     "Three Saturday in Shukla Paksh",
      "big-move factor: Mercury-Saturn 2/12 (Dwidwadash)"
     ],
-    "ids": []
+    "ids": [
+     "b101_three_saturdays_in_shukla_paksha"
+    ]
    },
    {
     "frm": "2027-02-22",
@@ -565,7 +557,7 @@
    },
    {
     "frm": "2027-07-09",
-    "to": "2027-07-09",
+    "to": "2027-07-15",
     "sig": "Bearish",
     "st": "High",
     "why": [
@@ -580,21 +572,21 @@
     ]
    },
    {
-    "frm": "2027-07-12",
-    "to": "2027-07-15",
+    "frm": "2027-07-16",
+    "to": "2027-07-16",
     "sig": "Bearish",
     "st": "Moderate",
     "why": [
      "Venus-Rahu 6/8 (Shadashtak)",
-     "Shukla Shasthi on a Friday"
+     "Three Saturday in Shukla Paksh"
     ],
     "ids": [
      "ta_s25_venus_rahu_6",
-     "b100_shukla_shasthi_on_friday"
+     "b101_three_saturdays_in_shukla_paksha"
     ]
    },
    {
-    "frm": "2027-07-16",
+    "frm": "2027-07-19",
     "to": "2027-07-22",
     "sig": "Bullish",
     "st": "Low",
@@ -717,7 +709,7 @@
    },
    {
     "frm": "2027-11-01",
-    "to": "2027-11-05",
+    "to": "2027-11-12",
     "sig": "Bearish",
     "st": "High",
     "why": [
@@ -730,7 +722,7 @@
     ]
    },
    {
-    "frm": "2027-11-08",
+    "frm": "2027-11-15",
     "to": "2027-11-15",
     "sig": "Bearish",
     "st": "Low",
@@ -843,7 +835,7 @@
    },
    {
     "frm": "2027-12-03",
-    "to": "2027-12-03",
+    "to": "2027-12-09",
     "sig": "Bearish",
     "st": "High",
     "why": [
@@ -860,33 +852,19 @@
     ]
    },
    {
-    "frm": "2027-12-06",
-    "to": "2027-12-09",
+    "frm": "2027-12-10",
+    "to": "2027-12-10",
     "sig": "Bearish",
     "st": "Low",
     "why": [
      "Mars-Saturn 4/10 (Kendra)",
-     "Shukla Shasthi on a Friday",
+     "Three Saturday in Shukla Paksh",
      "big-move factor: Jupiter-Neptune 7th (opposition)",
      "big-move factor: Jupiter-Pluto 5/9 (Trine)"
     ],
     "ids": [
      "ta_s25_mars_saturn_4",
-     "b100_shukla_shasthi_on_friday"
-    ]
-   },
-   {
-    "frm": "2027-12-10",
-    "to": "2027-12-10",
-    "sig": "Bullish",
-    "st": "Moderate",
-    "why": [
-     "Mars-Saturn 4/10 (Kendra)",
-     "big-move factor: Jupiter-Neptune 7th (opposition)",
-     "big-move factor: Jupiter-Pluto 5/9 (Trine)"
-    ],
-    "ids": [
-     "ta_s25_mars_saturn_4"
+     "b101_three_saturdays_in_shukla_paksha"
     ]
    },
    {
@@ -1116,7 +1094,7 @@
    },
    {
     "frm": "2027-02-12",
-    "to": "2027-02-12",
+    "to": "2027-02-15",
     "sig": "Bearish",
     "st": "High",
     "why": [
@@ -1129,29 +1107,31 @@
     ]
    },
    {
-    "frm": "2027-02-15",
-    "to": "2027-02-15",
-    "sig": "Bearish",
-    "st": "High",
-    "why": [
-     "Shukla Shasthi on a Friday"
-    ],
-    "ids": [
-     "b100_shukla_shasthi_on_friday"
-    ]
-   },
-   {
     "frm": "2027-02-16",
     "to": "2027-02-18",
     "sig": "Bearish",
-    "st": "Low",
+    "st": "High",
     "why": [
      "Moon-Rahu 6/8 (Shadashtak)",
-     "Shukla Shasthi on a Friday"
+     "Shukla Shasthi on a Friday",
+     "Three Saturday in Shukla Paksh"
     ],
     "ids": [
      "ta_s25_moon_rahu_6",
-     "b100_shukla_shasthi_on_friday"
+     "b100_shukla_shasthi_on_friday",
+     "b101_three_saturdays_in_shukla_paksha"
+    ]
+   },
+   {
+    "frm": "2027-02-19",
+    "to": "2027-02-19",
+    "sig": "Bearish",
+    "st": "High",
+    "why": [
+     "Three Saturday in Shukla Paksh"
+    ],
+    "ids": [
+     "b101_three_saturdays_in_shukla_paksha"
     ]
    },
    {
@@ -1357,6 +1337,18 @@
     ],
     "ids": [
      "ta_s25_moon_rahu_6",
+     "b101_three_saturdays_in_shukla_paksha"
+    ]
+   },
+   {
+    "frm": "2027-06-14",
+    "to": "2027-06-18",
+    "sig": "Bearish",
+    "st": "High",
+    "why": [
+     "Three Saturday in Shukla Paksh"
+    ],
+    "ids": [
      "b101_three_saturdays_in_shukla_paksha"
     ]
    },
@@ -1587,7 +1579,7 @@
    },
    {
     "frm": "2027-11-01",
-    "to": "2027-11-05",
+    "to": "2027-11-12",
     "sig": "Bearish",
     "st": "High",
     "why": [
@@ -1600,7 +1592,7 @@
     ]
    },
    {
-    "frm": "2027-11-08",
+    "frm": "2027-11-15",
     "to": "2027-11-15",
     "sig": "Bearish",
     "st": "Low",

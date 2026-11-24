@@ -986,22 +986,21 @@
    "lean": "mixed",
    "ours": {
     "spx": {
-     "Volatile \u2013": 24,
-     "Bearish High": 6,
-     "Bearish Low": 3,
+     "Volatile \u2013": 23,
+     "Bearish High": 10,
      "Bullish Moderate": 16,
      "Bearish Moderate": 10,
      "Bullish Low": 6,
      "Bullish High": 11
     },
     "sensex": {
-     "Bearish High": 7,
-     "Bearish Low": 7,
+     "Bearish High": 16,
      "Bullish Moderate": 10,
      "Bearish Moderate": 10,
      "Bullish Low": 6,
      "Bullish High": 11,
-     "Volatile \u2013": 10
+     "Volatile \u2013": 10,
+     "Bearish Low": 4
     },
     "gold": {
      "Bullish Low": 39,
@@ -1033,11 +1032,11 @@
    "lean": "down",
    "ours": {
     "spx": {
-     "Bullish Moderate": 25,
-     "Bearish High": 11,
+     "Bullish Moderate": 24,
+     "Bearish High": 20,
      "Bullish Low": 16,
      "Bullish High": 13,
-     "Bearish Low": 17,
+     "Bearish Low": 9,
      "Volatile \u2013": 4
     },
     "sensex": {
@@ -1045,8 +1044,8 @@
      "Bullish Moderate": 29,
      "Bullish Low": 16,
      "Bullish High": 13,
-     "Bearish Low": 14,
-     "Bearish High": 5
+     "Bearish Low": 9,
+     "Bearish High": 10
     },
     "gold": {
      "Bullish High": 23,
