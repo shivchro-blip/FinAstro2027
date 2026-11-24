@@ -3148,232 +3148,23 @@
    },
    "dasha": {
     "USA": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Rahu",
-       "frm": "18 Aug 2016",
-       "to": "19 Aug 2034",
-       "transit": "Aquarius 1.8\u00b0, Dhanishta, house 4/1; aspected by Mars",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "frm": "31 Jul 2024",
-       "to": "17 Feb 2027",
-       "transit": "Libra 21.62\u00b0, Vishakha, house 12/9; retrograde, combust, aspected by Mars",
-       "score": -2
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "frm": "23 Sep 2026",
-       "to": "17 Feb 2027",
-       "transit": "Pisces 15.01\u00b0, Uttara Bhadrapada, house 5/2; retrograde",
-       "score": 0
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Mercury",
-       "frm": "16 Oct 2026",
-       "to": "06 Nov 2026",
-       "transit": "Libra 21.62\u00b0, Vishakha, house 12/9; retrograde, combust, aspected by Mars",
-       "score": -2
-      },
-      {
-       "level": "Prana",
-       "lord": "Jupiter",
-       "frm": "31 Oct 2026",
-       "to": "03 Nov 2026",
-       "transit": "Leo 0.17\u00b0, Magha, house 10/7; with Ketu, aspected by Rahu",
-       "score": null
-      }
-     ],
+     "lords": [],
      "changes": [],
-     "state": "afflicted",
+     "state": null,
      "gochara": "mixed",
      "chandra": "good",
      "tara": "good"
     },
     "NYSE": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Mercury",
-       "frm": "24 Nov 2016",
-       "to": "24 Nov 2033",
-       "transit": "Libra 21.62\u00b0, Vishakha, house 4/8; retrograde, combust, aspected by Mars",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "frm": "22 May 2026",
-       "to": "09 Dec 2028",
-       "transit": "Aquarius 1.8\u00b0, Dhanishta, house 8/12; aspected by Mars",
-       "score": -1
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "frm": "09 Oct 2026",
-       "to": "10 Feb 2027",
-       "transit": "Leo 0.17\u00b0, Magha, house 2/6; with Ketu, aspected by Rahu",
-       "score": 1
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Saturn",
-       "frm": "26 Oct 2026",
-       "to": "14 Nov 2026",
-       "transit": "Pisces 15.01\u00b0, Uttara Bhadrapada, house 9/1; retrograde",
-       "score": 0
-      },
-      {
-       "level": "Prana",
-       "lord": "Ketu",
-       "frm": "01 Nov 2026",
-       "to": "02 Nov 2026",
-       "transit": "Leo 1.8\u00b0, Magha, house 2/6; with Jupiter, aspected by Rahu",
-       "score": null
-      }
-     ],
-     "changes": [
-      "Prana \u2192 Mercury/Rahu/Jupiter/Saturn/Ketu at 02:32 ET"
-     ],
-     "state": "mixed",
+     "lords": [],
+     "changes": [],
+     "state": null,
      "gochara": "adverse",
      "chandra": "weak",
      "tara": "good"
     }
    },
-   "chain": {
-    "USA": {
-     "score": 3,
-     "reading": "helps",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "parent": "Rahu",
-       "total": 2,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "natal house 9 (+)",
-        "transit Leo, house 10 (+)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "parent": "Mercury",
-       "total": 3,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "Saturn is 3rd from Mercury (3/11) (+)",
-        "Saturn regards Mercury as friend (+)",
-        "transit Pisces, house 5 (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Mercury",
-       "parent": "Saturn",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "06 Nov 14:48",
-       "why": [
-        "Mercury is 11th from Saturn (3/11) (+)",
-        "natal house 9 (+)",
-        "transit Libra, house 12 (\u2212)",
-        "Mars on natal Mercury (Cancer) (\u2212)",
-        "Jupiter on natal Mercury (+)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Jupiter",
-       "parent": "Mercury",
-       "total": -1,
-       "verdict": "mixed",
-       "to": "03 Nov 07:25",
-       "why": [
-        "Jupiter is 12th from Mercury (2/12) (\u2212)",
-        "Jupiter regards Mercury as enemy (\u2212)",
-        "rules 2, 5 (+)",
-        "natal house 8 (\u2212)",
-        "transit Leo, house 10 (+)"
-       ]
-      }
-     ]
-    },
-    "NYSE": {
-     "score": 1,
-     "reading": "mixed",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "parent": "Mercury",
-       "total": -2,
-       "verdict": "hurts",
-       "to": "09 Dec 07:53",
-       "why": [
-        "Rahu is 5th from Mercury (trine) (+)",
-        "via dispositor Mercury: rules 3, 12 (\u2212)",
-        "transit Aquarius, house 8 (\u2212)",
-        "Saturn aspects natal Rahu (Virgo) (\u2212)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "parent": "Rahu",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "10 Feb 20:01",
-       "why": [
-        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
-        "natal house 4 (+)",
-        "transit Cancer, house 1 (+)",
-        "Mars aspects natal Jupiter (Libra) (\u2212)",
-        "exalted / own sign (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Saturn",
-       "parent": "Jupiter",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "14 Nov 20:52",
-       "why": [
-        "Saturn is 7th from Jupiter (kendra) (+)",
-        "rules 7, 8 (\u2212)",
-        "natal house 10 (+)",
-        "natal Aries (debilitated) (\u2212)",
-        "transit Pisces, house 9 (+)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Ketu",
-       "parent": "Saturn",
-       "total": -1,
-       "verdict": "mixed",
-       "to": "02 Nov 06:04",
-       "why": [
-        "Ketu is 12th from Saturn (2/12) (\u2212)",
-        "natal house 9 (+)",
-        "Saturn on natal Ketu (Pisces) (\u2212)"
-       ]
-      }
-     ]
-    }
-   },
+   "chain": {},
    "jupven": "on",
    "author": {
     "rules": [
@@ -7150,235 +6941,23 @@
    },
    "dasha": {
     "USA": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Rahu",
-       "frm": "18 Aug 2016",
-       "to": "19 Aug 2034",
-       "transit": "Aquarius 1.75\u00b0, Dhanishta, house 4/1; aspected by Mars",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "frm": "31 Jul 2024",
-       "to": "17 Feb 2027",
-       "transit": "Libra 20.4\u00b0, Vishakha, house 12/9; retrograde, combust, aspected by Mars",
-       "score": -2
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "frm": "23 Sep 2026",
-       "to": "17 Feb 2027",
-       "transit": "Pisces 14.95\u00b0, Uttara Bhadrapada, house 5/2; retrograde",
-       "score": 0
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Mercury",
-       "frm": "16 Oct 2026",
-       "to": "06 Nov 2026",
-       "transit": "Libra 20.4\u00b0, Vishakha, house 12/9; retrograde, combust, aspected by Mars",
-       "score": -2
-      },
-      {
-       "level": "Prana",
-       "lord": "Jupiter",
-       "frm": "31 Oct 2026",
-       "to": "03 Nov 2026",
-       "transit": "Leo 0.29\u00b0, Magha, house 10/7; with Ketu, aspected by Rahu",
-       "score": null
-      }
-     ],
+     "lords": [],
      "changes": [],
-     "state": "afflicted",
+     "state": null,
      "gochara": "mixed",
      "chandra": "good",
      "tara": "bad"
     },
     "NYSE": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Mercury",
-       "frm": "24 Nov 2016",
-       "to": "24 Nov 2033",
-       "transit": "Libra 20.4\u00b0, Vishakha, house 4/8; retrograde, combust, aspected by Mars",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "frm": "22 May 2026",
-       "to": "09 Dec 2028",
-       "transit": "Aquarius 1.75\u00b0, Dhanishta, house 8/12; aspected by Mars",
-       "score": -1
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "frm": "09 Oct 2026",
-       "to": "10 Feb 2027",
-       "transit": "Leo 0.29\u00b0, Magha, house 2/6; with Ketu, aspected by Rahu",
-       "score": 1
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Saturn",
-       "frm": "26 Oct 2026",
-       "to": "14 Nov 2026",
-       "transit": "Pisces 14.95\u00b0, Uttara Bhadrapada, house 9/1; retrograde",
-       "score": 0
-      },
-      {
-       "level": "Prana",
-       "lord": "Venus",
-       "frm": "02 Nov 2026",
-       "to": "05 Nov 2026",
-       "transit": "Libra 1.21\u00b0, Chitra, house 4/8; own sign, retrograde, aspected by Mars",
-       "score": null
-      }
-     ],
-     "changes": [
-      "Prana \u2192 Mercury/Rahu/Jupiter/Saturn/Venus at 06:04 ET"
-     ],
-     "state": "mixed",
+     "lords": [],
+     "changes": [],
+     "state": null,
      "gochara": "adverse",
      "chandra": "weak",
      "tara": "janma"
     }
    },
-   "chain": {
-    "USA": {
-     "score": 3,
-     "reading": "helps",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "parent": "Rahu",
-       "total": 2,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "natal house 9 (+)",
-        "transit Leo, house 10 (+)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "parent": "Mercury",
-       "total": 3,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "Saturn is 3rd from Mercury (3/11) (+)",
-        "Saturn regards Mercury as friend (+)",
-        "transit Pisces, house 5 (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Mercury",
-       "parent": "Saturn",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "06 Nov 14:48",
-       "why": [
-        "Mercury is 11th from Saturn (3/11) (+)",
-        "natal house 9 (+)",
-        "transit Libra, house 12 (\u2212)",
-        "Mars on natal Mercury (Cancer) (\u2212)",
-        "Jupiter on natal Mercury (+)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Jupiter",
-       "parent": "Mercury",
-       "total": -1,
-       "verdict": "mixed",
-       "to": "03 Nov 07:25",
-       "why": [
-        "Jupiter is 12th from Mercury (2/12) (\u2212)",
-        "Jupiter regards Mercury as enemy (\u2212)",
-        "rules 2, 5 (+)",
-        "natal house 8 (\u2212)",
-        "transit Leo, house 10 (+)"
-       ]
-      }
-     ]
-    },
-    "NYSE": {
-     "score": 8,
-     "reading": "helps",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "parent": "Mercury",
-       "total": -2,
-       "verdict": "hurts",
-       "to": "09 Dec 07:53",
-       "why": [
-        "Rahu is 5th from Mercury (trine) (+)",
-        "via dispositor Mercury: rules 3, 12 (\u2212)",
-        "transit Aquarius, house 8 (\u2212)",
-        "Saturn aspects natal Rahu (Virgo) (\u2212)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "parent": "Rahu",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "10 Feb 20:01",
-       "why": [
-        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
-        "natal house 4 (+)",
-        "transit Cancer, house 1 (+)",
-        "Mars aspects natal Jupiter (Libra) (\u2212)",
-        "exalted / own sign (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Saturn",
-       "parent": "Jupiter",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "14 Nov 20:52",
-       "why": [
-        "Saturn is 7th from Jupiter (kendra) (+)",
-        "rules 7, 8 (\u2212)",
-        "natal house 10 (+)",
-        "natal Aries (debilitated) (\u2212)",
-        "transit Pisces, house 9 (+)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Venus",
-       "parent": "Saturn",
-       "total": 6,
-       "verdict": "helps",
-       "to": "05 Nov 12:43",
-       "why": [
-        "Venus regards Saturn as friend (+)",
-        "rules 4, 11 (+)",
-        "natal house 10 (+)",
-        "transit Libra, house 4 (+)",
-        "Jupiter aspects natal Venus (+)",
-        "exalted / own sign (+)"
-       ]
-      }
-     ]
-    }
-   },
+   "chain": {},
    "jupven": "on",
    "author": {
     "rules": [
@@ -7407,14 +6986,14 @@
       "jup-ven": "on"
      },
      "all": {
-      "up1": 56.7,
-      "up5": 58.9,
-      "big": 5.4
+      "up1": 56.1,
+      "up5": 61.1,
+      "big": 5.7
      },
      "kept": {
       "up1": 56.2,
-      "up5": 61.1,
-      "big": 11.2
+      "up5": 62.1,
+      "big": 11.5
      },
      "base": {
       "up1": 53.7,
@@ -10506,233 +10085,23 @@
    },
    "dasha": {
     "USA": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Rahu",
-       "frm": "18 Aug 2016",
-       "to": "19 Aug 2034",
-       "transit": "Aquarius 1.7\u00b0, Dhanishta, house 4/1; aspected by Mars",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "frm": "31 Jul 2024",
-       "to": "17 Feb 2027",
-       "transit": "Libra 19.11\u00b0, Swati, house 12/9; retrograde, combust, aspected by Mars",
-       "score": -2
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "frm": "23 Sep 2026",
-       "to": "17 Feb 2027",
-       "transit": "Pisces 14.89\u00b0, Uttara Bhadrapada, house 5/2; retrograde",
-       "score": 0
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Mercury",
-       "frm": "16 Oct 2026",
-       "to": "06 Nov 2026",
-       "transit": "Libra 19.11\u00b0, Swati, house 12/9; retrograde, combust, aspected by Mars",
-       "score": -2
-      },
-      {
-       "level": "Prana",
-       "lord": "Saturn",
-       "frm": "03 Nov 2026",
-       "to": "06 Nov 2026",
-       "transit": "Pisces 14.89\u00b0, Uttara Bhadrapada, house 5/2; retrograde",
-       "score": null
-      }
-     ],
-     "changes": [
-      "Prana \u2192 Rahu/Mercury/Saturn/Mercury/Saturn at 07:25 ET"
-     ],
-     "state": "afflicted",
+     "lords": [],
+     "changes": [],
+     "state": null,
      "gochara": "mixed",
      "chandra": "good",
      "tara": "good"
     },
     "NYSE": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Mercury",
-       "frm": "24 Nov 2016",
-       "to": "24 Nov 2033",
-       "transit": "Libra 19.11\u00b0, Swati, house 4/8; retrograde, combust, aspected by Mars",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "frm": "22 May 2026",
-       "to": "09 Dec 2028",
-       "transit": "Aquarius 1.7\u00b0, Dhanishta, house 8/12; aspected by Mars",
-       "score": -1
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "frm": "09 Oct 2026",
-       "to": "10 Feb 2027",
-       "transit": "Leo 0.41\u00b0, Magha, house 2/6; with Ketu, aspected by Rahu",
-       "score": 1
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Saturn",
-       "frm": "26 Oct 2026",
-       "to": "14 Nov 2026",
-       "transit": "Pisces 14.89\u00b0, Uttara Bhadrapada, house 9/1; retrograde",
-       "score": 0
-      },
-      {
-       "level": "Prana",
-       "lord": "Venus",
-       "frm": "02 Nov 2026",
-       "to": "05 Nov 2026",
-       "transit": "Libra 0.78\u00b0, Chitra, house 4/8; own sign, retrograde, aspected by Mars",
-       "score": null
-      }
-     ],
+     "lords": [],
      "changes": [],
-     "state": "mixed",
+     "state": null,
      "gochara": "adverse",
      "chandra": "good",
      "tara": "good"
     }
    },
-   "chain": {
-    "USA": {
-     "score": 7,
-     "reading": "helps",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "parent": "Rahu",
-       "total": 2,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "natal house 9 (+)",
-        "transit Leo, house 10 (+)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "parent": "Mercury",
-       "total": 3,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "Saturn is 3rd from Mercury (3/11) (+)",
-        "Saturn regards Mercury as friend (+)",
-        "transit Pisces, house 5 (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Mercury",
-       "parent": "Saturn",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "06 Nov 14:48",
-       "why": [
-        "Mercury is 11th from Saturn (3/11) (+)",
-        "natal house 9 (+)",
-        "transit Libra, house 12 (\u2212)",
-        "Mars on natal Mercury (Cancer) (\u2212)",
-        "Jupiter on natal Mercury (+)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Saturn",
-       "parent": "Mercury",
-       "total": 3,
-       "verdict": "helps",
-       "to": "06 Nov 14:48",
-       "why": [
-        "Saturn is 3rd from Mercury (3/11) (+)",
-        "Saturn regards Mercury as friend (+)",
-        "transit Pisces, house 5 (+)"
-       ]
-      }
-     ]
-    },
-    "NYSE": {
-     "score": 8,
-     "reading": "helps",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "parent": "Mercury",
-       "total": -2,
-       "verdict": "hurts",
-       "to": "09 Dec 07:53",
-       "why": [
-        "Rahu is 5th from Mercury (trine) (+)",
-        "via dispositor Mercury: rules 3, 12 (\u2212)",
-        "transit Aquarius, house 8 (\u2212)",
-        "Saturn aspects natal Rahu (Virgo) (\u2212)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "parent": "Rahu",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "10 Feb 20:01",
-       "why": [
-        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
-        "natal house 4 (+)",
-        "transit Cancer, house 1 (+)",
-        "Mars aspects natal Jupiter (Libra) (\u2212)",
-        "exalted / own sign (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Saturn",
-       "parent": "Jupiter",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "14 Nov 20:52",
-       "why": [
-        "Saturn is 7th from Jupiter (kendra) (+)",
-        "rules 7, 8 (\u2212)",
-        "natal house 10 (+)",
-        "natal Aries (debilitated) (\u2212)",
-        "transit Pisces, house 9 (+)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Venus",
-       "parent": "Saturn",
-       "total": 6,
-       "verdict": "helps",
-       "to": "05 Nov 12:43",
-       "why": [
-        "Venus regards Saturn as friend (+)",
-        "rules 4, 11 (+)",
-        "natal house 10 (+)",
-        "transit Libra, house 4 (+)",
-        "Jupiter aspects natal Venus (+)",
-        "exalted / own sign (+)"
-       ]
-      }
-     ]
-    }
-   },
+   "chain": {},
    "jupven": "on",
    "author": {
     "rules": [
@@ -10761,14 +10130,14 @@
       "jup-ven": "on"
      },
      "all": {
-      "up1": 56.8,
-      "up5": 53.5,
-      "big": 3.8
+      "up1": 56.2,
+      "up5": 55.7,
+      "big": 4.1
      },
      "kept": {
       "up1": 56.0,
-      "up5": 57.5,
-      "big": 8.3
+      "up5": 58.6,
+      "big": 8.6
      },
      "base": {
       "up1": 53.7,
@@ -14310,231 +13679,23 @@
    },
    "dasha": {
     "USA": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Rahu",
-       "frm": "18 Aug 2016",
-       "to": "19 Aug 2034",
-       "transit": "Aquarius 1.64\u00b0, Dhanishta, house 4/1; aspected by Mars",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "frm": "31 Jul 2024",
-       "to": "17 Feb 2027",
-       "transit": "Libra 17.81\u00b0, Swati, house 12/9; retrograde, combust, aspected by Mars",
-       "score": -2
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "frm": "23 Sep 2026",
-       "to": "17 Feb 2027",
-       "transit": "Pisces 14.83\u00b0, Uttara Bhadrapada, house 5/2; retrograde",
-       "score": 0
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Mercury",
-       "frm": "16 Oct 2026",
-       "to": "06 Nov 2026",
-       "transit": "Libra 17.81\u00b0, Swati, house 12/9; retrograde, combust, aspected by Mars",
-       "score": -2
-      },
-      {
-       "level": "Prana",
-       "lord": "Saturn",
-       "frm": "03 Nov 2026",
-       "to": "06 Nov 2026",
-       "transit": "Pisces 14.83\u00b0, Uttara Bhadrapada, house 5/2; retrograde",
-       "score": null
-      }
-     ],
+     "lords": [],
      "changes": [],
-     "state": "afflicted",
+     "state": null,
      "gochara": "mixed",
      "chandra": "good",
      "tara": "bad"
     },
     "NYSE": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Mercury",
-       "frm": "24 Nov 2016",
-       "to": "24 Nov 2033",
-       "transit": "Libra 17.81\u00b0, Swati, house 4/8; retrograde, combust, aspected by Mars",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "frm": "22 May 2026",
-       "to": "09 Dec 2028",
-       "transit": "Aquarius 1.64\u00b0, Dhanishta, house 8/12; aspected by Mars",
-       "score": -1
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "frm": "09 Oct 2026",
-       "to": "10 Feb 2027",
-       "transit": "Leo 0.52\u00b0, Magha, house 2/6; with Ketu, aspected by Rahu",
-       "score": 1
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Saturn",
-       "frm": "26 Oct 2026",
-       "to": "14 Nov 2026",
-       "transit": "Pisces 14.83\u00b0, Uttara Bhadrapada, house 9/1; retrograde",
-       "score": 0
-      },
-      {
-       "level": "Prana",
-       "lord": "Venus",
-       "frm": "02 Nov 2026",
-       "to": "05 Nov 2026",
-       "transit": "Libra 0.39\u00b0, Chitra, house 4/8; own sign, retrograde, aspected by Mars",
-       "score": null
-      }
-     ],
+     "lords": [],
      "changes": [],
-     "state": "mixed",
+     "state": null,
      "gochara": "adverse",
      "chandra": "good",
      "tara": "bad"
     }
    },
-   "chain": {
-    "USA": {
-     "score": 7,
-     "reading": "helps",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "parent": "Rahu",
-       "total": 2,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "natal house 9 (+)",
-        "transit Leo, house 10 (+)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "parent": "Mercury",
-       "total": 3,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "Saturn is 3rd from Mercury (3/11) (+)",
-        "Saturn regards Mercury as friend (+)",
-        "transit Pisces, house 5 (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Mercury",
-       "parent": "Saturn",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "06 Nov 14:48",
-       "why": [
-        "Mercury is 11th from Saturn (3/11) (+)",
-        "natal house 9 (+)",
-        "transit Libra, house 12 (\u2212)",
-        "Mars on natal Mercury (Cancer) (\u2212)",
-        "Jupiter on natal Mercury (+)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Saturn",
-       "parent": "Mercury",
-       "total": 3,
-       "verdict": "helps",
-       "to": "06 Nov 14:48",
-       "why": [
-        "Saturn is 3rd from Mercury (3/11) (+)",
-        "Saturn regards Mercury as friend (+)",
-        "transit Pisces, house 5 (+)"
-       ]
-      }
-     ]
-    },
-    "NYSE": {
-     "score": 8,
-     "reading": "helps",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "parent": "Mercury",
-       "total": -2,
-       "verdict": "hurts",
-       "to": "09 Dec 07:53",
-       "why": [
-        "Rahu is 5th from Mercury (trine) (+)",
-        "via dispositor Mercury: rules 3, 12 (\u2212)",
-        "transit Aquarius, house 8 (\u2212)",
-        "Saturn aspects natal Rahu (Virgo) (\u2212)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "parent": "Rahu",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "10 Feb 20:01",
-       "why": [
-        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
-        "natal house 4 (+)",
-        "transit Cancer, house 1 (+)",
-        "Mars aspects natal Jupiter (Libra) (\u2212)",
-        "exalted / own sign (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Saturn",
-       "parent": "Jupiter",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "14 Nov 20:52",
-       "why": [
-        "Saturn is 7th from Jupiter (kendra) (+)",
-        "rules 7, 8 (\u2212)",
-        "natal house 10 (+)",
-        "natal Aries (debilitated) (\u2212)",
-        "transit Pisces, house 9 (+)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Venus",
-       "parent": "Saturn",
-       "total": 6,
-       "verdict": "helps",
-       "to": "05 Nov 12:43",
-       "why": [
-        "Venus regards Saturn as friend (+)",
-        "rules 4, 11 (+)",
-        "natal house 10 (+)",
-        "transit Libra, house 4 (+)",
-        "Jupiter aspects natal Venus (+)",
-        "exalted / own sign (+)"
-       ]
-      }
-     ]
-    }
-   },
+   "chain": {},
    "jupven": "on",
    "author": {
     "rules": [
@@ -14563,14 +13724,14 @@
       "jup-ven": "on"
      },
      "all": {
-      "up1": 58.6,
-      "up5": 56.7,
-      "big": 4.4
+      "up1": 58.0,
+      "up5": 58.9,
+      "big": 4.7
      },
      "kept": {
       "up1": 56.2,
-      "up5": 61.1,
-      "big": 9.5
+      "up5": 62.1,
+      "big": 9.8
      },
      "base": {
       "up1": 53.7,
@@ -18564,233 +17725,23 @@
    },
    "dasha": {
     "USA": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Rahu",
-       "frm": "18 Aug 2016",
-       "to": "19 Aug 2034",
-       "transit": "Aquarius 1.59\u00b0, Dhanishta, house 4/1; aspected by Mars",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "frm": "31 Jul 2024",
-       "to": "17 Feb 2027",
-       "transit": "Libra 16.52\u00b0, Swati, house 12/9; retrograde, combust, aspected by Mars",
-       "score": -2
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "frm": "23 Sep 2026",
-       "to": "17 Feb 2027",
-       "transit": "Pisces 14.77\u00b0, Uttara Bhadrapada, house 5/2; retrograde",
-       "score": 0
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Mercury",
-       "frm": "16 Oct 2026",
-       "to": "06 Nov 2026",
-       "transit": "Libra 16.52\u00b0, Swati, house 12/9; retrograde, combust, aspected by Mars",
-       "score": -2
-      },
-      {
-       "level": "Prana",
-       "lord": "Saturn",
-       "frm": "03 Nov 2026",
-       "to": "06 Nov 2026",
-       "transit": "Pisces 14.77\u00b0, Uttara Bhadrapada, house 5/2; retrograde",
-       "score": null
-      }
-     ],
+     "lords": [],
      "changes": [],
-     "state": "afflicted",
+     "state": null,
      "gochara": "mixed",
      "chandra": "weak",
      "tara": "good"
     },
     "NYSE": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Mercury",
-       "frm": "24 Nov 2016",
-       "to": "24 Nov 2033",
-       "transit": "Libra 16.52\u00b0, Swati, house 4/8; retrograde, combust, aspected by Mars",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "frm": "22 May 2026",
-       "to": "09 Dec 2028",
-       "transit": "Aquarius 1.59\u00b0, Dhanishta, house 8/12; aspected by Mars",
-       "score": -1
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "frm": "09 Oct 2026",
-       "to": "10 Feb 2027",
-       "transit": "Leo 0.63\u00b0, Magha, house 2/6; with Ketu, aspected by Rahu",
-       "score": 1
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Saturn",
-       "frm": "26 Oct 2026",
-       "to": "14 Nov 2026",
-       "transit": "Pisces 14.77\u00b0, Uttara Bhadrapada, house 9/1; retrograde",
-       "score": 0
-      },
-      {
-       "level": "Prana",
-       "lord": "Venus",
-       "frm": "02 Nov 2026",
-       "to": "05 Nov 2026",
-       "transit": "Libra 0.04\u00b0, Chitra, house 4/8; own sign, retrograde, aspected by Mars",
-       "score": null
-      }
-     ],
-     "changes": [
-      "Prana \u2192 Mercury/Rahu/Jupiter/Saturn/Sun at 12:43 ET"
-     ],
-     "state": "mixed",
+     "lords": [],
+     "changes": [],
+     "state": null,
      "gochara": "adverse",
      "chandra": "good",
      "tara": "good"
     }
    },
-   "chain": {
-    "USA": {
-     "score": 7,
-     "reading": "helps",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "parent": "Rahu",
-       "total": 2,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "natal house 9 (+)",
-        "transit Leo, house 10 (+)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "parent": "Mercury",
-       "total": 3,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "Saturn is 3rd from Mercury (3/11) (+)",
-        "Saturn regards Mercury as friend (+)",
-        "transit Pisces, house 5 (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Mercury",
-       "parent": "Saturn",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "06 Nov 14:48",
-       "why": [
-        "Mercury is 11th from Saturn (3/11) (+)",
-        "natal house 9 (+)",
-        "transit Libra, house 12 (\u2212)",
-        "Mars on natal Mercury (Cancer) (\u2212)",
-        "Jupiter on natal Mercury (+)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Saturn",
-       "parent": "Mercury",
-       "total": 3,
-       "verdict": "helps",
-       "to": "06 Nov 14:48",
-       "why": [
-        "Saturn is 3rd from Mercury (3/11) (+)",
-        "Saturn regards Mercury as friend (+)",
-        "transit Pisces, house 5 (+)"
-       ]
-      }
-     ]
-    },
-    "NYSE": {
-     "score": 8,
-     "reading": "helps",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "parent": "Mercury",
-       "total": -2,
-       "verdict": "hurts",
-       "to": "09 Dec 07:53",
-       "why": [
-        "Rahu is 5th from Mercury (trine) (+)",
-        "via dispositor Mercury: rules 3, 12 (\u2212)",
-        "transit Aquarius, house 8 (\u2212)",
-        "Saturn aspects natal Rahu (Virgo) (\u2212)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "parent": "Rahu",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "10 Feb 20:01",
-       "why": [
-        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
-        "natal house 4 (+)",
-        "transit Cancer, house 1 (+)",
-        "Mars aspects natal Jupiter (Libra) (\u2212)",
-        "exalted / own sign (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Saturn",
-       "parent": "Jupiter",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "14 Nov 20:52",
-       "why": [
-        "Saturn is 7th from Jupiter (kendra) (+)",
-        "rules 7, 8 (\u2212)",
-        "natal house 10 (+)",
-        "natal Aries (debilitated) (\u2212)",
-        "transit Pisces, house 9 (+)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Venus",
-       "parent": "Saturn",
-       "total": 6,
-       "verdict": "helps",
-       "to": "05 Nov 12:43",
-       "why": [
-        "Venus regards Saturn as friend (+)",
-        "rules 4, 11 (+)",
-        "natal house 10 (+)",
-        "transit Libra, house 4 (+)",
-        "Jupiter aspects natal Venus (+)",
-        "exalted / own sign (+)"
-       ]
-      }
-     ]
-    }
-   },
+   "chain": {},
    "jupven": "on",
    "author": {
     "rules": [
@@ -18820,14 +17771,14 @@
       "jup-ven": "on"
      },
      "all": {
-      "up1": 59.4,
-      "up5": 57.9,
-      "big": 3.5
+      "up1": 58.9,
+      "up5": 60.1,
+      "big": 3.7
      },
      "kept": {
       "up1": 58.0,
-      "up5": 62.0,
-      "big": 8.3
+      "up5": 63.1,
+      "big": 8.6
      },
      "base": {
       "up1": 53.7,
@@ -22011,234 +20962,23 @@
    },
    "dasha": {
     "USA": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Rahu",
-       "frm": "18 Aug 2016",
-       "to": "19 Aug 2034",
-       "transit": "Aquarius 1.54\u00b0, Dhanishta, house 4/1; aspected by Mars",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "frm": "31 Jul 2024",
-       "to": "17 Feb 2027",
-       "transit": "Libra 15.28\u00b0, Swati, house 12/9; retrograde, combust, aspected by Mars",
-       "score": -2
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "frm": "23 Sep 2026",
-       "to": "17 Feb 2027",
-       "transit": "Pisces 14.71\u00b0, Uttara Bhadrapada, house 5/2; retrograde",
-       "score": 0
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Mercury",
-       "frm": "16 Oct 2026",
-       "to": "06 Nov 2026",
-       "transit": "Libra 15.28\u00b0, Swati, house 12/9; retrograde, combust, aspected by Mars",
-       "score": -2
-      },
-      {
-       "level": "Prana",
-       "lord": "Saturn",
-       "frm": "03 Nov 2026",
-       "to": "06 Nov 2026",
-       "transit": "Pisces 14.71\u00b0, Uttara Bhadrapada, house 5/2; retrograde",
-       "score": null
-      }
-     ],
-     "changes": [
-      "Sookshma \u2192 Rahu/Mercury/Saturn/Ketu at 14:48 ET",
-      "Prana \u2192 Rahu/Mercury/Saturn/Ketu/Ketu at 14:48 ET"
-     ],
-     "state": "afflicted",
+     "lords": [],
+     "changes": [],
+     "state": null,
      "gochara": "mixed",
      "chandra": "weak",
      "tara": "good"
     },
     "NYSE": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Mercury",
-       "frm": "24 Nov 2016",
-       "to": "24 Nov 2033",
-       "transit": "Libra 15.28\u00b0, Swati, house 4/8; retrograde, combust, aspected by Mars",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "frm": "22 May 2026",
-       "to": "09 Dec 2028",
-       "transit": "Aquarius 1.54\u00b0, Dhanishta, house 8/12; aspected by Mars",
-       "score": -1
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "frm": "09 Oct 2026",
-       "to": "10 Feb 2027",
-       "transit": "Leo 0.74\u00b0, Magha, house 2/6; with Ketu, aspected by Rahu",
-       "score": 1
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Saturn",
-       "frm": "26 Oct 2026",
-       "to": "14 Nov 2026",
-       "transit": "Pisces 14.71\u00b0, Uttara Bhadrapada, house 9/1; retrograde",
-       "score": 0
-      },
-      {
-       "level": "Prana",
-       "lord": "Sun",
-       "frm": "05 Nov 2026",
-       "to": "06 Nov 2026",
-       "transit": "Libra 20.06\u00b0, Vishakha, house 4/8; debilitated, aspected by Mars",
-       "score": null
-      }
-     ],
-     "changes": [
-      "Prana \u2192 Mercury/Rahu/Jupiter/Saturn/Moon at 12:19 ET"
-     ],
-     "state": "mixed",
+     "lords": [],
+     "changes": [],
+     "state": null,
      "gochara": "adverse",
      "chandra": "good",
      "tara": "bad"
     }
    },
-   "chain": {
-    "USA": {
-     "score": 7,
-     "reading": "helps",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "parent": "Rahu",
-       "total": 2,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "natal house 9 (+)",
-        "transit Leo, house 10 (+)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "parent": "Mercury",
-       "total": 3,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "Saturn is 3rd from Mercury (3/11) (+)",
-        "Saturn regards Mercury as friend (+)",
-        "transit Pisces, house 5 (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Mercury",
-       "parent": "Saturn",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "06 Nov 14:48",
-       "why": [
-        "Mercury is 11th from Saturn (3/11) (+)",
-        "natal house 9 (+)",
-        "transit Libra, house 12 (\u2212)",
-        "Mars on natal Mercury (Cancer) (\u2212)",
-        "Jupiter on natal Mercury (+)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Saturn",
-       "parent": "Mercury",
-       "total": 3,
-       "verdict": "helps",
-       "to": "06 Nov 14:48",
-       "why": [
-        "Saturn is 3rd from Mercury (3/11) (+)",
-        "Saturn regards Mercury as friend (+)",
-        "transit Pisces, house 5 (+)"
-       ]
-      }
-     ]
-    },
-    "NYSE": {
-     "score": 2,
-     "reading": "mixed",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "parent": "Mercury",
-       "total": -2,
-       "verdict": "hurts",
-       "to": "09 Dec 07:53",
-       "why": [
-        "Rahu is 5th from Mercury (trine) (+)",
-        "via dispositor Mercury: rules 3, 12 (\u2212)",
-        "transit Aquarius, house 8 (\u2212)",
-        "Saturn aspects natal Rahu (Virgo) (\u2212)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "parent": "Rahu",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "10 Feb 20:01",
-       "why": [
-        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
-        "natal house 4 (+)",
-        "transit Cancer, house 1 (+)",
-        "Mars aspects natal Jupiter (Libra) (\u2212)",
-        "exalted / own sign (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Saturn",
-       "parent": "Jupiter",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "14 Nov 20:52",
-       "why": [
-        "Saturn is 7th from Jupiter (kendra) (+)",
-        "rules 7, 8 (\u2212)",
-        "natal house 10 (+)",
-        "natal Aries (debilitated) (\u2212)",
-        "transit Pisces, house 9 (+)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Moon",
-       "parent": "Saturn",
-       "total": 0,
-       "verdict": "mixed",
-       "to": "08 Nov 03:38",
-       "why": [
-        "Moon is 12th from Saturn (2/12) (\u2212)",
-        "rules 1 (+)",
-        "natal house 9 (+)",
-        "Saturn on natal Moon (Pisces) (\u2212)"
-       ]
-      }
-     ]
-    }
-   },
+   "chain": {},
    "jupven": "on",
    "author": {
     "rules": [
@@ -22268,14 +21008,14 @@
       "jup-ven": "on"
      },
      "all": {
-      "up1": 61.6,
-      "up5": 57.5,
-      "big": 3.5
+      "up1": 61.0,
+      "up5": 59.6,
+      "big": 3.8
      },
      "kept": {
       "up1": 58.0,
-      "up5": 62.0,
-      "big": 8.5
+      "up5": 63.1,
+      "big": 8.7
      },
      "base": {
       "up1": 53.7,
@@ -25813,231 +24553,23 @@
    },
    "dasha": {
     "USA": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Rahu",
-       "frm": "18 Aug 2016",
-       "to": "19 Aug 2034",
-       "transit": "Aquarius 1.48\u00b0, Dhanishta, house 4/1; aspected by Mars",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "frm": "31 Jul 2024",
-       "to": "17 Feb 2027",
-       "transit": "Libra 14.15\u00b0, Swati, house 12/9; retrograde, combust, aspected by Mars",
-       "score": -2
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "frm": "23 Sep 2026",
-       "to": "17 Feb 2027",
-       "transit": "Pisces 14.66\u00b0, Uttara Bhadrapada, house 5/2; retrograde",
-       "score": 2
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Ketu",
-       "frm": "06 Nov 2026",
-       "to": "15 Nov 2026",
-       "transit": "Leo 1.48\u00b0, Magha, house 10/7; with Jupiter, aspected by Rahu",
-       "score": 2
-      },
-      {
-       "level": "Prana",
-       "lord": "Venus",
-       "frm": "07 Nov 2026",
-       "to": "08 Nov 2026",
-       "transit": "Virgo 29.44\u00b0, Chitra, house 11/8; debilitated, retrograde, aspected by Saturn",
-       "score": null
-      }
-     ],
-     "changes": [
-      "Prana \u2192 Rahu/Mercury/Saturn/Ketu/Venus at 02:51 ET"
-     ],
-     "state": "strong",
+     "lords": [],
+     "changes": [],
+     "state": null,
      "gochara": "mixed",
      "chandra": "weak",
      "tara": "janma"
     },
     "NYSE": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Mercury",
-       "frm": "24 Nov 2016",
-       "to": "24 Nov 2033",
-       "transit": "Libra 14.15\u00b0, Swati, house 4/8; retrograde, combust, aspected by Mars",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "frm": "22 May 2026",
-       "to": "09 Dec 2028",
-       "transit": "Aquarius 1.48\u00b0, Dhanishta, house 8/12; aspected by Mars",
-       "score": -1
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "frm": "09 Oct 2026",
-       "to": "10 Feb 2027",
-       "transit": "Leo 0.85\u00b0, Magha, house 2/6; with Ketu, aspected by Rahu",
-       "score": 1
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Saturn",
-       "frm": "26 Oct 2026",
-       "to": "14 Nov 2026",
-       "transit": "Pisces 14.66\u00b0, Uttara Bhadrapada, house 9/1; retrograde",
-       "score": 2
-      },
-      {
-       "level": "Prana",
-       "lord": "Moon",
-       "frm": "06 Nov 2026",
-       "to": "08 Nov 2026",
-       "transit": "Libra 2.78\u00b0, Chitra, house 4/8; aspected by Mars",
-       "score": null
-      }
-     ],
+     "lords": [],
      "changes": [],
-     "state": "strong",
+     "state": null,
      "gochara": "adverse",
      "chandra": "weak",
      "tara": "good"
     }
    },
-   "chain": {
-    "USA": {
-     "score": 0,
-     "reading": "mixed",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "parent": "Rahu",
-       "total": 2,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "natal house 9 (+)",
-        "transit Leo, house 10 (+)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "parent": "Mercury",
-       "total": 3,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "Saturn is 3rd from Mercury (3/11) (+)",
-        "Saturn regards Mercury as friend (+)",
-        "transit Pisces, house 5 (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Ketu",
-       "parent": "Saturn",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "15 Nov 05:16",
-       "why": [
-        "Ketu is 5th from Saturn (trine) (+)",
-        "transit Leo, house 10 (+)",
-        "Mars aspects natal Ketu (Capricorn) (\u2212)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Venus",
-       "parent": "Ketu",
-       "total": -4,
-       "verdict": "hurts",
-       "to": "08 Nov 13:15",
-       "why": [
-        "Venus is 6th from Ketu (6/8) (\u2212)",
-        "rules 7, 12 (\u2212)",
-        "natal house 8 (\u2212)",
-        "debilitated (\u2212)"
-       ]
-      }
-     ]
-    },
-    "NYSE": {
-     "score": 3,
-     "reading": "helps",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "parent": "Mercury",
-       "total": -2,
-       "verdict": "hurts",
-       "to": "09 Dec 07:53",
-       "why": [
-        "Rahu is 5th from Mercury (trine) (+)",
-        "via dispositor Mercury: rules 3, 12 (\u2212)",
-        "transit Aquarius, house 8 (\u2212)",
-        "Saturn aspects natal Rahu (Virgo) (\u2212)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "parent": "Rahu",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "10 Feb 20:01",
-       "why": [
-        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
-        "natal house 4 (+)",
-        "transit Cancer, house 1 (+)",
-        "Mars aspects natal Jupiter (Libra) (\u2212)",
-        "exalted / own sign (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Saturn",
-       "parent": "Jupiter",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "14 Nov 20:52",
-       "why": [
-        "Saturn is 7th from Jupiter (kendra) (+)",
-        "rules 7, 8 (\u2212)",
-        "natal house 10 (+)",
-        "natal Aries (debilitated) (\u2212)",
-        "transit Pisces, house 9 (+)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Moon",
-       "parent": "Saturn",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "08 Nov 03:38",
-       "why": [
-        "Moon is 12th from Saturn (2/12) (\u2212)",
-        "rules 1 (+)",
-        "natal house 9 (+)",
-        "transit Libra, house 4 (+)",
-        "Saturn on natal Moon (Pisces) (\u2212)"
-       ]
-      }
-     ]
-    }
-   },
+   "chain": {},
    "jupven": "on",
    "author": {
     "rules": [
@@ -29175,235 +27707,23 @@
    },
    "dasha": {
     "USA": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Rahu",
-       "frm": "18 Aug 2016",
-       "to": "19 Aug 2034",
-       "transit": "Aquarius 1.43\u00b0, Dhanishta, house 4/1; aspected by Mars",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "frm": "31 Jul 2024",
-       "to": "17 Feb 2027",
-       "transit": "Libra 13.15\u00b0, Swati, house 12/9; retrograde, combust, aspected by Mars",
-       "score": -2
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "frm": "23 Sep 2026",
-       "to": "17 Feb 2027",
-       "transit": "Pisces 14.6\u00b0, Uttara Bhadrapada, house 5/2; retrograde",
-       "score": 0
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Ketu",
-       "frm": "06 Nov 2026",
-       "to": "15 Nov 2026",
-       "transit": "Leo 1.43\u00b0, Magha, house 10/7; with Jupiter, aspected by Rahu",
-       "score": 2
-      },
-      {
-       "level": "Prana",
-       "lord": "Venus",
-       "frm": "07 Nov 2026",
-       "to": "08 Nov 2026",
-       "transit": "Virgo 29.2\u00b0, Chitra, house 11/8; debilitated, retrograde, aspected by Saturn",
-       "score": null
-      }
-     ],
-     "changes": [
-      "Prana \u2192 Rahu/Mercury/Saturn/Ketu/Sun at 13:15 ET",
-      "Prana \u2192 Rahu/Mercury/Saturn/Ketu/Moon at 23:35 ET"
-     ],
-     "state": "mixed",
+     "lords": [],
+     "changes": [],
+     "state": null,
      "gochara": "mixed",
      "chandra": "weak",
      "tara": "good"
     },
     "NYSE": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Mercury",
-       "frm": "24 Nov 2016",
-       "to": "24 Nov 2033",
-       "transit": "Libra 13.15\u00b0, Swati, house 4/8; retrograde, combust, aspected by Mars",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "frm": "22 May 2026",
-       "to": "09 Dec 2028",
-       "transit": "Aquarius 1.43\u00b0, Dhanishta, house 8/12; aspected by Mars",
-       "score": -1
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "frm": "09 Oct 2026",
-       "to": "10 Feb 2027",
-       "transit": "Leo 0.95\u00b0, Magha, house 2/6; with Ketu, aspected by Rahu",
-       "score": 1
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Saturn",
-       "frm": "26 Oct 2026",
-       "to": "14 Nov 2026",
-       "transit": "Pisces 14.6\u00b0, Uttara Bhadrapada, house 9/1; retrograde",
-       "score": 0
-      },
-      {
-       "level": "Prana",
-       "lord": "Mars",
-       "frm": "08 Nov 2026",
-       "to": "09 Nov 2026",
-       "transit": "Cancer 28.17\u00b0, Ashlesha, house 1/5; debilitated",
-       "score": null
-      }
-     ],
-     "changes": [
-      "Prana \u2192 Mercury/Rahu/Jupiter/Saturn/Mars at 03:38 ET"
-     ],
-     "state": "mixed",
+     "lords": [],
+     "changes": [],
+     "state": null,
      "gochara": "adverse",
      "chandra": "weak",
      "tara": "bad"
     }
    },
-   "chain": {
-    "USA": {
-     "score": 0,
-     "reading": "mixed",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "parent": "Rahu",
-       "total": 2,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "natal house 9 (+)",
-        "transit Leo, house 10 (+)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "parent": "Mercury",
-       "total": 3,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "Saturn is 3rd from Mercury (3/11) (+)",
-        "Saturn regards Mercury as friend (+)",
-        "transit Pisces, house 5 (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Ketu",
-       "parent": "Saturn",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "15 Nov 05:16",
-       "why": [
-        "Ketu is 5th from Saturn (trine) (+)",
-        "transit Leo, house 10 (+)",
-        "Mars aspects natal Ketu (Capricorn) (\u2212)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Venus",
-       "parent": "Ketu",
-       "total": -4,
-       "verdict": "hurts",
-       "to": "08 Nov 13:15",
-       "why": [
-        "Venus is 6th from Ketu (6/8) (\u2212)",
-        "rules 7, 12 (\u2212)",
-        "natal house 8 (\u2212)",
-        "debilitated (\u2212)"
-       ]
-      }
-     ]
-    },
-    "NYSE": {
-     "score": 4,
-     "reading": "helps",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "parent": "Mercury",
-       "total": -2,
-       "verdict": "hurts",
-       "to": "09 Dec 07:53",
-       "why": [
-        "Rahu is 5th from Mercury (trine) (+)",
-        "via dispositor Mercury: rules 3, 12 (\u2212)",
-        "transit Aquarius, house 8 (\u2212)",
-        "Saturn aspects natal Rahu (Virgo) (\u2212)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "parent": "Rahu",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "10 Feb 20:01",
-       "why": [
-        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
-        "natal house 4 (+)",
-        "transit Cancer, house 1 (+)",
-        "Mars aspects natal Jupiter (Libra) (\u2212)",
-        "exalted / own sign (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Saturn",
-       "parent": "Jupiter",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "14 Nov 20:52",
-       "why": [
-        "Saturn is 7th from Jupiter (kendra) (+)",
-        "rules 7, 8 (\u2212)",
-        "natal house 10 (+)",
-        "natal Aries (debilitated) (\u2212)",
-        "transit Pisces, house 9 (+)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Mars",
-       "parent": "Saturn",
-       "total": 2,
-       "verdict": "helps",
-       "to": "09 Nov 07:10",
-       "why": [
-        "Mars is 5th from Saturn (trine) (+)",
-        "rules 5, 10 (+)",
-        "transit Cancer, house 1 (+)",
-        "Ketu on natal Mars (Leo) (\u2212)",
-        "Jupiter on natal Mars (+)",
-        "debilitated (\u2212)"
-       ]
-      }
-     ]
-    }
-   },
+   "chain": {},
    "jupven": "on",
    "author": {
     "rules": [
@@ -32906,235 +31226,23 @@
    },
    "dasha": {
     "USA": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Rahu",
-       "frm": "18 Aug 2016",
-       "to": "19 Aug 2034",
-       "transit": "Aquarius 1.38\u00b0, Dhanishta, house 4/1; aspected by Mars",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "frm": "31 Jul 2024",
-       "to": "17 Feb 2027",
-       "transit": "Libra 12.3\u00b0, Swati, house 12/9; retrograde, combust, aspected by Mars",
-       "score": -2
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "frm": "23 Sep 2026",
-       "to": "17 Feb 2027",
-       "transit": "Pisces 14.55\u00b0, Uttara Bhadrapada, house 5/2; retrograde",
-       "score": 0
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Ketu",
-       "frm": "06 Nov 2026",
-       "to": "15 Nov 2026",
-       "transit": "Leo 1.38\u00b0, Magha, house 10/7; with Jupiter, aspected by Rahu",
-       "score": 2
-      },
-      {
-       "level": "Prana",
-       "lord": "Moon",
-       "frm": "08 Nov 2026",
-       "to": "09 Nov 2026",
-       "transit": "Libra 27.79\u00b0, Vishakha, house 12/9; combust, aspected by Mars",
-       "score": null
-      }
-     ],
-     "changes": [
-      "Prana \u2192 Rahu/Mercury/Saturn/Ketu/Mars at 16:47 ET"
-     ],
-     "state": "mixed",
+     "lords": [],
+     "changes": [],
+     "state": null,
      "gochara": "mixed",
      "chandra": "weak",
      "tara": "bad"
     },
     "NYSE": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Mercury",
-       "frm": "24 Nov 2016",
-       "to": "24 Nov 2033",
-       "transit": "Libra 12.3\u00b0, Swati, house 4/8; retrograde, combust, aspected by Mars",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "frm": "22 May 2026",
-       "to": "09 Dec 2028",
-       "transit": "Aquarius 1.38\u00b0, Dhanishta, house 8/12; aspected by Mars",
-       "score": -1
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "frm": "09 Oct 2026",
-       "to": "10 Feb 2027",
-       "transit": "Leo 1.06\u00b0, Magha, house 2/6; with Ketu, aspected by Rahu",
-       "score": 1
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Saturn",
-       "frm": "26 Oct 2026",
-       "to": "14 Nov 2026",
-       "transit": "Pisces 14.55\u00b0, Uttara Bhadrapada, house 9/1; retrograde",
-       "score": 0
-      },
-      {
-       "level": "Prana",
-       "lord": "Rahu",
-       "frm": "09 Nov 2026",
-       "to": "12 Nov 2026",
-       "transit": "Aquarius 1.38\u00b0, Dhanishta, house 8/12; aspected by Mars",
-       "score": null
-      }
-     ],
-     "changes": [
-      "Prana \u2192 Mercury/Rahu/Jupiter/Saturn/Rahu at 07:10 ET"
-     ],
-     "state": "mixed",
+     "lords": [],
+     "changes": [],
+     "state": null,
      "gochara": "adverse",
      "chandra": "weak",
      "tara": "good"
     }
    },
-   "chain": {
-    "USA": {
-     "score": 3,
-     "reading": "helps",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "parent": "Rahu",
-       "total": 2,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "natal house 9 (+)",
-        "transit Leo, house 10 (+)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "parent": "Mercury",
-       "total": 3,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "Saturn is 3rd from Mercury (3/11) (+)",
-        "Saturn regards Mercury as friend (+)",
-        "transit Pisces, house 5 (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Ketu",
-       "parent": "Saturn",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "15 Nov 05:16",
-       "why": [
-        "Ketu is 5th from Saturn (trine) (+)",
-        "transit Leo, house 10 (+)",
-        "Mars aspects natal Ketu (Capricorn) (\u2212)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Moon",
-       "parent": "Ketu",
-       "total": -1,
-       "verdict": "mixed",
-       "to": "09 Nov 16:47",
-       "why": [
-        "Moon is 2nd from Ketu (2/12) (\u2212)",
-        "rules 9 (+)",
-        "natal house 4 (+)",
-        "transit Libra, house 12 (\u2212)",
-        "Mars aspects natal Moon (Aquarius); Rahu on natal Moon (Aquarius) (\u2212)",
-        "Jupiter aspects natal Moon (+)",
-        "combust (\u2212)"
-       ]
-      }
-     ]
-    },
-    "NYSE": {
-     "score": -2,
-     "reading": "mixed",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "parent": "Mercury",
-       "total": -2,
-       "verdict": "hurts",
-       "to": "09 Dec 07:53",
-       "why": [
-        "Rahu is 5th from Mercury (trine) (+)",
-        "via dispositor Mercury: rules 3, 12 (\u2212)",
-        "transit Aquarius, house 8 (\u2212)",
-        "Saturn aspects natal Rahu (Virgo) (\u2212)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "parent": "Rahu",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "10 Feb 20:01",
-       "why": [
-        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
-        "natal house 4 (+)",
-        "transit Cancer, house 1 (+)",
-        "Mars aspects natal Jupiter (Libra) (\u2212)",
-        "exalted / own sign (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Saturn",
-       "parent": "Jupiter",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "14 Nov 20:52",
-       "why": [
-        "Saturn is 7th from Jupiter (kendra) (+)",
-        "rules 7, 8 (\u2212)",
-        "natal house 10 (+)",
-        "natal Aries (debilitated) (\u2212)",
-        "transit Pisces, house 9 (+)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Rahu",
-       "parent": "Saturn",
-       "total": -4,
-       "verdict": "hurts",
-       "to": "12 Nov 05:57",
-       "why": [
-        "Rahu is 6th from Saturn (6/8) (\u2212)",
-        "via dispositor Mercury: rules 3, 12 (\u2212)",
-        "transit Aquarius, house 8 (\u2212)",
-        "Saturn aspects natal Rahu (Virgo) (\u2212)"
-       ]
-      }
-     ]
-    }
-   },
+   "chain": {},
    "jupven": "off",
    "author": {
     "rules": [
@@ -33163,14 +31271,14 @@
       "jup-ven": "off"
      },
      "all": {
-      "up1": 54.9,
+      "up1": 54.7,
       "up5": 60.1,
-      "big": 4.1
+      "big": 4.8
      },
      "kept": {
       "up1": 56.0,
-      "up5": 61.0,
-      "big": 9.2
+      "up5": 62.0,
+      "big": 9.4
      },
      "base": {
       "up1": 53.7,
@@ -36193,231 +34301,23 @@
    },
    "dasha": {
     "USA": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Rahu",
-       "frm": "18 Aug 2016",
-       "to": "19 Aug 2034",
-       "transit": "Aquarius 1.32\u00b0, Dhanishta, house 4/1; aspected by Mars",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "frm": "31 Jul 2024",
-       "to": "17 Feb 2027",
-       "transit": "Libra 11.64\u00b0, Swati, house 12/9; retrograde, combust, aspected by Mars",
-       "score": -2
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "frm": "23 Sep 2026",
-       "to": "17 Feb 2027",
-       "transit": "Pisces 14.5\u00b0, Uttara Bhadrapada, house 5/2; retrograde",
-       "score": 0
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Ketu",
-       "frm": "06 Nov 2026",
-       "to": "15 Nov 2026",
-       "transit": "Leo 1.32\u00b0, Magha, house 10/7; with Jupiter, aspected by Rahu",
-       "score": 2
-      },
-      {
-       "level": "Prana",
-       "lord": "Rahu",
-       "frm": "10 Nov 2026",
-       "to": "11 Nov 2026",
-       "transit": "Aquarius 1.32\u00b0, Dhanishta, house 4/1; aspected by Mars",
-       "score": null
-      }
-     ],
-     "changes": [
-      "Prana \u2192 Rahu/Mercury/Saturn/Ketu/Rahu at 04:50 ET"
-     ],
-     "state": "mixed",
+     "lords": [],
+     "changes": [],
+     "state": null,
      "gochara": "mixed",
      "chandra": "good",
      "tara": "good"
     },
     "NYSE": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Mercury",
-       "frm": "24 Nov 2016",
-       "to": "24 Nov 2033",
-       "transit": "Libra 11.64\u00b0, Swati, house 4/8; retrograde, combust, aspected by Mars",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "frm": "22 May 2026",
-       "to": "09 Dec 2028",
-       "transit": "Aquarius 1.32\u00b0, Dhanishta, house 8/12; aspected by Mars",
-       "score": -1
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "frm": "09 Oct 2026",
-       "to": "10 Feb 2027",
-       "transit": "Leo 1.15\u00b0, Magha, house 2/6; with Ketu, aspected by Rahu",
-       "score": 1
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Saturn",
-       "frm": "26 Oct 2026",
-       "to": "14 Nov 2026",
-       "transit": "Pisces 14.5\u00b0, Uttara Bhadrapada, house 9/1; retrograde",
-       "score": 0
-      },
-      {
-       "level": "Prana",
-       "lord": "Rahu",
-       "frm": "09 Nov 2026",
-       "to": "12 Nov 2026",
-       "transit": "Aquarius 1.32\u00b0, Dhanishta, house 8/12; aspected by Mars",
-       "score": null
-      }
-     ],
+     "lords": [],
      "changes": [],
-     "state": "mixed",
+     "state": null,
      "gochara": "adverse",
      "chandra": "weak",
      "tara": "good"
     }
    },
-   "chain": {
-    "USA": {
-     "score": 7,
-     "reading": "helps",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "parent": "Rahu",
-       "total": 2,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "natal house 9 (+)",
-        "transit Leo, house 10 (+)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "parent": "Mercury",
-       "total": 3,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "Saturn is 3rd from Mercury (3/11) (+)",
-        "Saturn regards Mercury as friend (+)",
-        "transit Pisces, house 5 (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Ketu",
-       "parent": "Saturn",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "15 Nov 05:16",
-       "why": [
-        "Ketu is 5th from Saturn (trine) (+)",
-        "transit Leo, house 10 (+)",
-        "Mars aspects natal Ketu (Capricorn) (\u2212)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Rahu",
-       "parent": "Ketu",
-       "total": 3,
-       "verdict": "helps",
-       "to": "11 Nov 11:48",
-       "why": [
-        "Rahu is 7th from Ketu (kendra) (+)",
-        "via dispositor Moon: rules 9 (+)",
-        "natal house 9 (+)",
-        "transit Aquarius, house 4 (+)",
-        "Mars on natal Rahu (Cancer) (\u2212)"
-       ]
-      }
-     ]
-    },
-    "NYSE": {
-     "score": -2,
-     "reading": "mixed",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "parent": "Mercury",
-       "total": -2,
-       "verdict": "hurts",
-       "to": "09 Dec 07:53",
-       "why": [
-        "Rahu is 5th from Mercury (trine) (+)",
-        "via dispositor Mercury: rules 3, 12 (\u2212)",
-        "transit Aquarius, house 8 (\u2212)",
-        "Saturn aspects natal Rahu (Virgo) (\u2212)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "parent": "Rahu",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "10 Feb 20:01",
-       "why": [
-        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
-        "natal house 4 (+)",
-        "transit Cancer, house 1 (+)",
-        "Mars aspects natal Jupiter (Libra) (\u2212)",
-        "exalted / own sign (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Saturn",
-       "parent": "Jupiter",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "14 Nov 20:52",
-       "why": [
-        "Saturn is 7th from Jupiter (kendra) (+)",
-        "rules 7, 8 (\u2212)",
-        "natal house 10 (+)",
-        "natal Aries (debilitated) (\u2212)",
-        "transit Pisces, house 9 (+)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Rahu",
-       "parent": "Saturn",
-       "total": -4,
-       "verdict": "hurts",
-       "to": "12 Nov 05:57",
-       "why": [
-        "Rahu is 6th from Saturn (6/8) (\u2212)",
-        "via dispositor Mercury: rules 3, 12 (\u2212)",
-        "transit Aquarius, house 8 (\u2212)",
-        "Saturn aspects natal Rahu (Virgo) (\u2212)"
-       ]
-      }
-     ]
-    }
-   },
+   "chain": {},
    "jupven": "off",
    "author": {
     "rules": [
@@ -36446,14 +34346,14 @@
       "jup-ven": "off"
      },
      "all": {
-      "up1": 54.9,
-      "up5": 60.1,
-      "big": 3.7
+      "up1": 54.7,
+      "up5": 60.2,
+      "big": 4.3
      },
      "kept": {
       "up1": 56.0,
-      "up5": 61.0,
-      "big": 8.2
+      "up5": 62.0,
+      "big": 8.4
      },
      "base": {
       "up1": 53.7,
@@ -39413,230 +37313,23 @@
    },
    "dasha": {
     "USA": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Rahu",
-       "frm": "18 Aug 2016",
-       "to": "19 Aug 2034",
-       "transit": "Aquarius 1.27\u00b0, Dhanishta, house 4/1; aspected by Mars",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "frm": "31 Jul 2024",
-       "to": "17 Feb 2027",
-       "transit": "Libra 11.16\u00b0, Swati, house 12/9; retrograde, combust, aspected by Mars",
-       "score": -2
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "frm": "23 Sep 2026",
-       "to": "17 Feb 2027",
-       "transit": "Pisces 14.45\u00b0, Uttara Bhadrapada, house 5/2; retrograde",
-       "score": 0
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Ketu",
-       "frm": "06 Nov 2026",
-       "to": "15 Nov 2026",
-       "transit": "Leo 1.27\u00b0, Magha, house 10/7; with Jupiter, aspected by Rahu",
-       "score": 2
-      },
-      {
-       "level": "Prana",
-       "lord": "Jupiter",
-       "frm": "11 Nov 2026",
-       "to": "12 Nov 2026",
-       "transit": "Leo 1.25\u00b0, Magha, house 10/7; with Ketu, aspected by Rahu",
-       "score": null
-      }
-     ],
-     "changes": [
-      "Prana \u2192 Rahu/Mercury/Saturn/Ketu/Jupiter at 11:48 ET"
-     ],
-     "state": "mixed",
+     "lords": [],
+     "changes": [],
+     "state": null,
      "gochara": "mixed",
      "chandra": "good",
      "tara": "bad"
     },
     "NYSE": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Mercury",
-       "frm": "24 Nov 2016",
-       "to": "24 Nov 2033",
-       "transit": "Libra 11.16\u00b0, Swati, house 4/8; retrograde, combust, aspected by Mars",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "frm": "22 May 2026",
-       "to": "09 Dec 2028",
-       "transit": "Aquarius 1.27\u00b0, Dhanishta, house 8/12; aspected by Mars",
-       "score": -1
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "frm": "09 Oct 2026",
-       "to": "10 Feb 2027",
-       "transit": "Leo 1.25\u00b0, Magha, house 2/6; with Ketu, aspected by Rahu",
-       "score": 1
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Saturn",
-       "frm": "26 Oct 2026",
-       "to": "14 Nov 2026",
-       "transit": "Pisces 14.45\u00b0, Uttara Bhadrapada, house 9/1; retrograde",
-       "score": 0
-      },
-      {
-       "level": "Prana",
-       "lord": "Rahu",
-       "frm": "09 Nov 2026",
-       "to": "12 Nov 2026",
-       "transit": "Aquarius 1.27\u00b0, Dhanishta, house 8/12; aspected by Mars",
-       "score": null
-      }
-     ],
+     "lords": [],
      "changes": [],
-     "state": "mixed",
+     "state": null,
      "gochara": "adverse",
      "chandra": "weak",
      "tara": "janma"
     }
    },
-   "chain": {
-    "USA": {
-     "score": 4,
-     "reading": "helps",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "parent": "Rahu",
-       "total": 2,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "natal house 9 (+)",
-        "transit Leo, house 10 (+)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "parent": "Mercury",
-       "total": 3,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "Saturn is 3rd from Mercury (3/11) (+)",
-        "Saturn regards Mercury as friend (+)",
-        "transit Pisces, house 5 (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Ketu",
-       "parent": "Saturn",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "15 Nov 05:16",
-       "why": [
-        "Ketu is 5th from Saturn (trine) (+)",
-        "transit Leo, house 10 (+)",
-        "Mars aspects natal Ketu (Capricorn) (\u2212)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Jupiter",
-       "parent": "Ketu",
-       "total": 0,
-       "verdict": "mixed",
-       "to": "12 Nov 15:19",
-       "why": [
-        "Jupiter is 6th from Ketu (6/8) (\u2212)",
-        "rules 2, 5 (+)",
-        "natal house 8 (\u2212)",
-        "transit Leo, house 10 (+)"
-       ]
-      }
-     ]
-    },
-    "NYSE": {
-     "score": -2,
-     "reading": "mixed",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "parent": "Mercury",
-       "total": -2,
-       "verdict": "hurts",
-       "to": "09 Dec 07:53",
-       "why": [
-        "Rahu is 5th from Mercury (trine) (+)",
-        "via dispositor Mercury: rules 3, 12 (\u2212)",
-        "transit Aquarius, house 8 (\u2212)",
-        "Saturn aspects natal Rahu (Virgo) (\u2212)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "parent": "Rahu",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "10 Feb 20:01",
-       "why": [
-        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
-        "natal house 4 (+)",
-        "transit Cancer, house 1 (+)",
-        "Mars aspects natal Jupiter (Libra) (\u2212)",
-        "exalted / own sign (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Saturn",
-       "parent": "Jupiter",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "14 Nov 20:52",
-       "why": [
-        "Saturn is 7th from Jupiter (kendra) (+)",
-        "rules 7, 8 (\u2212)",
-        "natal house 10 (+)",
-        "natal Aries (debilitated) (\u2212)",
-        "transit Pisces, house 9 (+)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Rahu",
-       "parent": "Saturn",
-       "total": -4,
-       "verdict": "hurts",
-       "to": "12 Nov 05:57",
-       "why": [
-        "Rahu is 6th from Saturn (6/8) (\u2212)",
-        "via dispositor Mercury: rules 3, 12 (\u2212)",
-        "transit Aquarius, house 8 (\u2212)",
-        "Saturn aspects natal Rahu (Virgo) (\u2212)"
-       ]
-      }
-     ]
-    }
-   },
+   "chain": {},
    "jupven": "off",
    "author": {
     "rules": [
@@ -39665,14 +37358,14 @@
       "jup-ven": "off"
      },
      "all": {
-      "up1": 55.9,
+      "up1": 55.8,
       "up5": 60.9,
-      "big": 5.0
+      "big": 5.9
      },
      "kept": {
       "up1": 56.0,
-      "up5": 61.0,
-      "big": 11.0
+      "up5": 62.0,
+      "big": 11.3
      },
      "base": {
       "up1": 53.7,
@@ -43600,230 +41293,23 @@
    },
    "dasha": {
     "USA": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Rahu",
-       "frm": "18 Aug 2016",
-       "to": "19 Aug 2034",
-       "transit": "Aquarius 1.22\u00b0, Dhanishta, house 4/1; aspected by Mars",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "frm": "31 Jul 2024",
-       "to": "17 Feb 2027",
-       "transit": "Libra 10.88\u00b0, Swati, house 12/9; retrograde",
-       "score": 0
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "frm": "23 Sep 2026",
-       "to": "17 Feb 2027",
-       "transit": "Pisces 14.4\u00b0, Uttara Bhadrapada, house 5/2; retrograde, aspected by Mars",
-       "score": 0
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Ketu",
-       "frm": "06 Nov 2026",
-       "to": "15 Nov 2026",
-       "transit": "Leo 1.22\u00b0, Magha, house 10/7; with Mars, with Jupiter, aspected by Rahu",
-       "score": 1
-      },
-      {
-       "level": "Prana",
-       "lord": "Jupiter",
-       "frm": "11 Nov 2026",
-       "to": "12 Nov 2026",
-       "transit": "Leo 1.34\u00b0, Magha, house 10/7; with Mars, with Ketu, aspected by Rahu",
-       "score": null
-      }
-     ],
-     "changes": [
-      "Prana \u2192 Rahu/Mercury/Saturn/Ketu/Saturn at 15:19 ET"
-     ],
-     "state": "mixed",
+     "lords": [],
+     "changes": [],
+     "state": null,
      "gochara": "mixed",
      "chandra": "good",
      "tara": "good"
     },
     "NYSE": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Mercury",
-       "frm": "24 Nov 2016",
-       "to": "24 Nov 2033",
-       "transit": "Libra 10.88\u00b0, Swati, house 4/8; retrograde",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "frm": "22 May 2026",
-       "to": "09 Dec 2028",
-       "transit": "Aquarius 1.22\u00b0, Dhanishta, house 8/12; aspected by Mars",
-       "score": -1
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "frm": "09 Oct 2026",
-       "to": "10 Feb 2027",
-       "transit": "Leo 1.34\u00b0, Magha, house 2/6; with Mars, with Ketu, aspected by Rahu",
-       "score": 0
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Saturn",
-       "frm": "26 Oct 2026",
-       "to": "14 Nov 2026",
-       "transit": "Pisces 14.4\u00b0, Uttara Bhadrapada, house 9/1; retrograde, aspected by Mars",
-       "score": 0
-      },
-      {
-       "level": "Prana",
-       "lord": "Jupiter",
-       "frm": "12 Nov 2026",
-       "to": "14 Nov 2026",
-       "transit": "Leo 1.34\u00b0, Magha, house 2/6; with Mars, with Ketu, aspected by Rahu",
-       "score": null
-      }
-     ],
-     "changes": [
-      "Prana \u2192 Mercury/Rahu/Jupiter/Saturn/Jupiter at 05:57 ET"
-     ],
-     "state": "mixed",
+     "lords": [],
+     "changes": [],
+     "state": null,
      "gochara": "adverse",
      "chandra": "good",
      "tara": "good"
     }
    },
-   "chain": {
-    "USA": {
-     "score": 4,
-     "reading": "helps",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "parent": "Rahu",
-       "total": 2,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "natal house 9 (+)",
-        "transit Leo, house 10 (+)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "parent": "Mercury",
-       "total": 3,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "Saturn is 3rd from Mercury (3/11) (+)",
-        "Saturn regards Mercury as friend (+)",
-        "transit Pisces, house 5 (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Ketu",
-       "parent": "Saturn",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "15 Nov 05:16",
-       "why": [
-        "Ketu is 5th from Saturn (trine) (+)",
-        "transit Leo, house 10 (+)",
-        "Mars aspects natal Ketu (Capricorn) (\u2212)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Jupiter",
-       "parent": "Ketu",
-       "total": 0,
-       "verdict": "mixed",
-       "to": "12 Nov 15:19",
-       "why": [
-        "Jupiter is 6th from Ketu (6/8) (\u2212)",
-        "rules 2, 5 (+)",
-        "natal house 8 (\u2212)",
-        "transit Leo, house 10 (+)"
-       ]
-      }
-     ]
-    },
-    "NYSE": {
-     "score": 4,
-     "reading": "helps",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "parent": "Mercury",
-       "total": -2,
-       "verdict": "hurts",
-       "to": "09 Dec 07:53",
-       "why": [
-        "Rahu is 5th from Mercury (trine) (+)",
-        "via dispositor Mercury: rules 3, 12 (\u2212)",
-        "transit Aquarius, house 8 (\u2212)",
-        "Saturn aspects natal Rahu (Virgo) (\u2212)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "parent": "Rahu",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "10 Feb 20:01",
-       "why": [
-        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
-        "natal house 4 (+)",
-        "transit Cancer, house 1 (+)",
-        "Mars aspects natal Jupiter (Libra) (\u2212)",
-        "exalted / own sign (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Saturn",
-       "parent": "Jupiter",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "14 Nov 20:52",
-       "why": [
-        "Saturn is 7th from Jupiter (kendra) (+)",
-        "rules 7, 8 (\u2212)",
-        "natal house 10 (+)",
-        "natal Aries (debilitated) (\u2212)",
-        "transit Pisces, house 9 (+)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Jupiter",
-       "parent": "Saturn",
-       "total": 2,
-       "verdict": "helps",
-       "to": "14 Nov 20:52",
-       "why": [
-        "Jupiter is 7th from Saturn (kendra) (+)",
-        "natal house 4 (+)"
-       ]
-      }
-     ]
-    }
-   },
+   "chain": {},
    "jupven": "off",
    "author": {
     "rules": [
@@ -43852,14 +41338,14 @@
       "jup-ven": "off"
      },
      "all": {
-      "up1": 56.3,
+      "up1": 56.1,
       "up5": 59.1,
-      "big": 3.5
+      "big": 4.1
      },
      "kept": {
       "up1": 56.0,
-      "up5": 61.0,
-      "big": 8.2
+      "up5": 62.0,
+      "big": 8.4
      },
      "base": {
       "up1": 53.7,
@@ -47021,224 +44507,23 @@
    },
    "dasha": {
     "USA": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Rahu",
-       "frm": "18 Aug 2016",
-       "to": "19 Aug 2034",
-       "transit": "Aquarius 1.17\u00b0, Dhanishta, house 4/1; aspected by Mars",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "frm": "31 Jul 2024",
-       "to": "17 Feb 2027",
-       "transit": "Libra 10.8\u00b0, Swati, house 12/9",
-       "score": 0
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "frm": "23 Sep 2026",
-       "to": "17 Feb 2027",
-       "transit": "Pisces 14.35\u00b0, Uttara Bhadrapada, house 5/2; retrograde, aspected by Mars",
-       "score": -1
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Ketu",
-       "frm": "06 Nov 2026",
-       "to": "15 Nov 2026",
-       "transit": "Leo 1.17\u00b0, Magha, house 10/7; with Mars, with Jupiter, aspected by Rahu",
-       "score": 1
-      },
-      {
-       "level": "Prana",
-       "lord": "Saturn",
-       "frm": "12 Nov 2026",
-       "to": "14 Nov 2026",
-       "transit": "Pisces 14.35\u00b0, Uttara Bhadrapada, house 5/2; retrograde, aspected by Mars",
-       "score": null
-      }
-     ],
+     "lords": [],
      "changes": [],
-     "state": "mixed",
+     "state": null,
      "gochara": "mixed",
      "chandra": "good",
      "tara": "bad"
     },
     "NYSE": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Mercury",
-       "frm": "24 Nov 2016",
-       "to": "24 Nov 2033",
-       "transit": "Libra 10.8\u00b0, Swati, house 4/8",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "frm": "22 May 2026",
-       "to": "09 Dec 2028",
-       "transit": "Aquarius 1.17\u00b0, Dhanishta, house 8/12; aspected by Mars",
-       "score": -1
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "frm": "09 Oct 2026",
-       "to": "10 Feb 2027",
-       "transit": "Leo 1.43\u00b0, Magha, house 2/6; with Mars, with Ketu, aspected by Rahu",
-       "score": 0
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Saturn",
-       "frm": "26 Oct 2026",
-       "to": "14 Nov 2026",
-       "transit": "Pisces 14.35\u00b0, Uttara Bhadrapada, house 9/1; retrograde, aspected by Mars",
-       "score": -1
-      },
-      {
-       "level": "Prana",
-       "lord": "Jupiter",
-       "frm": "12 Nov 2026",
-       "to": "14 Nov 2026",
-       "transit": "Leo 1.43\u00b0, Magha, house 2/6; with Mars, with Ketu, aspected by Rahu",
-       "score": null
-      }
-     ],
+     "lords": [],
      "changes": [],
-     "state": "afflicted",
+     "state": null,
      "gochara": "adverse",
      "chandra": "good",
      "tara": "bad"
     }
    },
-   "chain": {
-    "USA": {
-     "score": 6,
-     "reading": "helps",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "parent": "Rahu",
-       "total": 2,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "natal house 9 (+)",
-        "transit Leo, house 10 (+)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "parent": "Mercury",
-       "total": 3,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "Saturn is 3rd from Mercury (3/11) (+)",
-        "Saturn regards Mercury as friend (+)",
-        "transit Pisces, house 5 (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Ketu",
-       "parent": "Saturn",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "15 Nov 05:16",
-       "why": [
-        "Ketu is 5th from Saturn (trine) (+)",
-        "transit Leo, house 10 (+)",
-        "Mars aspects natal Ketu (Capricorn) (\u2212)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Saturn",
-       "parent": "Ketu",
-       "total": 2,
-       "verdict": "helps",
-       "to": "14 Nov 00:01",
-       "why": [
-        "Saturn is 9th from Ketu (trine) (+)",
-        "transit Pisces, house 5 (+)"
-       ]
-      }
-     ]
-    },
-    "NYSE": {
-     "score": 4,
-     "reading": "helps",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "parent": "Mercury",
-       "total": -2,
-       "verdict": "hurts",
-       "to": "09 Dec 07:53",
-       "why": [
-        "Rahu is 5th from Mercury (trine) (+)",
-        "via dispositor Mercury: rules 3, 12 (\u2212)",
-        "transit Aquarius, house 8 (\u2212)",
-        "Saturn aspects natal Rahu (Virgo) (\u2212)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "parent": "Rahu",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "10 Feb 20:01",
-       "why": [
-        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
-        "natal house 4 (+)",
-        "transit Cancer, house 1 (+)",
-        "Mars aspects natal Jupiter (Libra) (\u2212)",
-        "exalted / own sign (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Saturn",
-       "parent": "Jupiter",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "14 Nov 20:52",
-       "why": [
-        "Saturn is 7th from Jupiter (kendra) (+)",
-        "rules 7, 8 (\u2212)",
-        "natal house 10 (+)",
-        "natal Aries (debilitated) (\u2212)",
-        "transit Pisces, house 9 (+)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Jupiter",
-       "parent": "Saturn",
-       "total": 2,
-       "verdict": "helps",
-       "to": "14 Nov 20:52",
-       "why": [
-        "Jupiter is 7th from Saturn (kendra) (+)",
-        "natal house 4 (+)"
-       ]
-      }
-     ]
-    }
-   },
+   "chain": {},
    "jupven": "off",
    "author": {
     "rules": [
@@ -47268,13 +44553,13 @@
      },
      "all": {
       "up1": 57.7,
-      "up5": 60.7,
-      "big": 5.0
+      "up5": 58.7,
+      "big": 4.7
      },
      "kept": {
       "up1": 56.0,
-      "up5": 62.9,
-      "big": 11.4
+      "up5": 62.0,
+      "big": 9.6
      },
      "base": {
       "up1": 53.7,
@@ -50482,230 +47767,23 @@
    },
    "dasha": {
     "USA": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Rahu",
-       "frm": "18 Aug 2016",
-       "to": "19 Aug 2034",
-       "transit": "Aquarius 1.11\u00b0, Dhanishta, house 4/1; aspected by Mars",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "frm": "31 Jul 2024",
-       "to": "17 Feb 2027",
-       "transit": "Libra 10.9\u00b0, Swati, house 12/9",
-       "score": 0
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "frm": "23 Sep 2026",
-       "to": "17 Feb 2027",
-       "transit": "Pisces 14.31\u00b0, Uttara Bhadrapada, house 5/2; retrograde, aspected by Mars",
-       "score": 1
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Ketu",
-       "frm": "06 Nov 2026",
-       "to": "15 Nov 2026",
-       "transit": "Leo 1.11\u00b0, Magha, house 10/7; with Mars, with Jupiter, aspected by Rahu",
-       "score": 1
-      },
-      {
-       "level": "Prana",
-       "lord": "Mercury",
-       "frm": "14 Nov 2026",
-       "to": "15 Nov 2026",
-       "transit": "Libra 10.9\u00b0, Swati, house 12/9",
-       "score": null
-      }
-     ],
-     "changes": [
-      "Prana \u2192 Rahu/Mercury/Saturn/Ketu/Mercury at 00:01 ET"
-     ],
-     "state": "strong",
+     "lords": [],
+     "changes": [],
+     "state": null,
      "gochara": "mixed",
      "chandra": "good",
      "tara": "good"
     },
     "NYSE": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Mercury",
-       "frm": "24 Nov 2016",
-       "to": "24 Nov 2033",
-       "transit": "Libra 10.9\u00b0, Swati, house 4/8",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "frm": "22 May 2026",
-       "to": "09 Dec 2028",
-       "transit": "Aquarius 1.11\u00b0, Dhanishta, house 8/12; aspected by Mars",
-       "score": -1
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "frm": "09 Oct 2026",
-       "to": "10 Feb 2027",
-       "transit": "Leo 1.52\u00b0, Magha, house 2/6; with Mars, with Ketu, aspected by Rahu",
-       "score": 0
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Saturn",
-       "frm": "26 Oct 2026",
-       "to": "14 Nov 2026",
-       "transit": "Pisces 14.31\u00b0, Uttara Bhadrapada, house 9/1; retrograde, aspected by Mars",
-       "score": 1
-      },
-      {
-       "level": "Prana",
-       "lord": "Jupiter",
-       "frm": "12 Nov 2026",
-       "to": "14 Nov 2026",
-       "transit": "Leo 1.52\u00b0, Magha, house 2/6; with Mars, with Ketu, aspected by Rahu",
-       "score": null
-      }
-     ],
-     "changes": [
-      "Sookshma \u2192 Mercury/Rahu/Jupiter/Mercury at 20:52 ET",
-      "Prana \u2192 Mercury/Rahu/Jupiter/Mercury/Mercury at 20:52 ET"
-     ],
-     "state": "mixed",
+     "lords": [],
+     "changes": [],
+     "state": null,
      "gochara": "adverse",
      "chandra": "good",
      "tara": "good"
     }
    },
-   "chain": {
-    "USA": {
-     "score": 5,
-     "reading": "helps",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "parent": "Rahu",
-       "total": 2,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "natal house 9 (+)",
-        "transit Leo, house 10 (+)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "parent": "Mercury",
-       "total": 3,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "Saturn is 3rd from Mercury (3/11) (+)",
-        "Saturn regards Mercury as friend (+)",
-        "transit Pisces, house 5 (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Ketu",
-       "parent": "Saturn",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "15 Nov 05:16",
-       "why": [
-        "Ketu is 5th from Saturn (trine) (+)",
-        "transit Leo, house 10 (+)",
-        "Mars aspects natal Ketu (Capricorn) (\u2212)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Mercury",
-       "parent": "Ketu",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "15 Nov 05:16",
-       "why": [
-        "Mercury is 7th from Ketu (kendra) (+)",
-        "natal house 9 (+)",
-        "transit Libra, house 12 (\u2212)"
-       ]
-      }
-     ]
-    },
-    "NYSE": {
-     "score": 4,
-     "reading": "helps",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "parent": "Mercury",
-       "total": -2,
-       "verdict": "hurts",
-       "to": "09 Dec 07:53",
-       "why": [
-        "Rahu is 5th from Mercury (trine) (+)",
-        "via dispositor Mercury: rules 3, 12 (\u2212)",
-        "transit Aquarius, house 8 (\u2212)",
-        "Saturn aspects natal Rahu (Virgo) (\u2212)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "parent": "Rahu",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "10 Feb 20:01",
-       "why": [
-        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
-        "natal house 4 (+)",
-        "transit Cancer, house 1 (+)",
-        "Mars aspects natal Jupiter (Libra) (\u2212)",
-        "exalted / own sign (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Saturn",
-       "parent": "Jupiter",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "14 Nov 20:52",
-       "why": [
-        "Saturn is 7th from Jupiter (kendra) (+)",
-        "rules 7, 8 (\u2212)",
-        "natal house 10 (+)",
-        "natal Aries (debilitated) (\u2212)",
-        "transit Pisces, house 9 (+)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Jupiter",
-       "parent": "Saturn",
-       "total": 2,
-       "verdict": "helps",
-       "to": "14 Nov 20:52",
-       "why": [
-        "Jupiter is 7th from Saturn (kendra) (+)",
-        "natal house 4 (+)"
-       ]
-      }
-     ]
-    }
-   },
+   "chain": {},
    "jupven": "off",
    "author": {
     "rules": [
@@ -53496,230 +50574,23 @@
    },
    "dasha": {
     "USA": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Rahu",
-       "frm": "18 Aug 2016",
-       "to": "19 Aug 2034",
-       "transit": "Aquarius 1.06\u00b0, Dhanishta, house 4/1; aspected by Mars",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "frm": "31 Jul 2024",
-       "to": "17 Feb 2027",
-       "transit": "Libra 11.17\u00b0, Swati, house 12/9",
-       "score": 0
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "frm": "23 Sep 2026",
-       "to": "17 Feb 2027",
-       "transit": "Pisces 14.26\u00b0, Uttara Bhadrapada, house 5/2; retrograde, aspected by Mars",
-       "score": -1
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Venus",
-       "frm": "15 Nov 2026",
-       "to": "09 Dec 2026",
-       "transit": "Virgo 28.69\u00b0, Chitra, house 11/8; debilitated, aspected by Saturn",
-       "score": -2
-      },
-      {
-       "level": "Prana",
-       "lord": "Venus",
-       "frm": "15 Nov 2026",
-       "to": "19 Nov 2026",
-       "transit": "Virgo 28.69\u00b0, Chitra, house 11/8; debilitated, aspected by Saturn",
-       "score": null
-      }
-     ],
-     "changes": [
-      "Sookshma \u2192 Rahu/Mercury/Saturn/Venus at 05:16 ET",
-      "Prana \u2192 Rahu/Mercury/Saturn/Venus/Venus at 05:16 ET"
-     ],
-     "state": "afflicted",
+     "lords": [],
+     "changes": [],
+     "state": null,
      "gochara": "mixed",
      "chandra": "weak",
      "tara": "good"
     },
     "NYSE": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Mercury",
-       "frm": "24 Nov 2016",
-       "to": "24 Nov 2033",
-       "transit": "Libra 11.17\u00b0, Swati, house 4/8",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "frm": "22 May 2026",
-       "to": "09 Dec 2028",
-       "transit": "Aquarius 1.06\u00b0, Dhanishta, house 8/12; aspected by Mars",
-       "score": -1
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "frm": "09 Oct 2026",
-       "to": "10 Feb 2027",
-       "transit": "Leo 1.61\u00b0, Magha, house 2/6; with Mars, with Ketu, aspected by Rahu",
-       "score": 0
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Mercury",
-       "frm": "14 Nov 2026",
-       "to": "02 Dec 2026",
-       "transit": "Libra 11.17\u00b0, Swati, house 4/8",
-       "score": 2
-      },
-      {
-       "level": "Prana",
-       "lord": "Mercury",
-       "frm": "14 Nov 2026",
-       "to": "17 Nov 2026",
-       "transit": "Libra 11.17\u00b0, Swati, house 4/8",
-       "score": null
-      }
-     ],
+     "lords": [],
      "changes": [],
-     "state": "mixed",
+     "state": null,
      "gochara": "adverse",
      "chandra": "good",
      "tara": "good"
     }
    },
-   "chain": {
-    "USA": {
-     "score": -1,
-     "reading": "mixed",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "parent": "Rahu",
-       "total": 2,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "natal house 9 (+)",
-        "transit Leo, house 10 (+)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "parent": "Mercury",
-       "total": 3,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "Saturn is 3rd from Mercury (3/11) (+)",
-        "Saturn regards Mercury as friend (+)",
-        "transit Pisces, house 5 (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Venus",
-       "parent": "Saturn",
-       "total": -1,
-       "verdict": "mixed",
-       "to": "09 Dec 19:08",
-       "why": [
-        "Venus is 10th from Saturn (kendra) (+)",
-        "Venus regards Saturn as friend (+)",
-        "rules 7, 12 (\u2212)",
-        "natal house 8 (\u2212)",
-        "debilitated (\u2212)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Venus",
-       "parent": "Venus",
-       "total": -3,
-       "verdict": "hurts",
-       "to": "19 Nov 07:34",
-       "why": [
-        "rules 7, 12 (\u2212)",
-        "natal house 8 (\u2212)",
-        "debilitated (\u2212)"
-       ]
-      }
-     ]
-    },
-    "NYSE": {
-     "score": -2,
-     "reading": "mixed",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "parent": "Mercury",
-       "total": -2,
-       "verdict": "hurts",
-       "to": "09 Dec 07:53",
-       "why": [
-        "Rahu is 5th from Mercury (trine) (+)",
-        "via dispositor Mercury: rules 3, 12 (\u2212)",
-        "transit Aquarius, house 8 (\u2212)",
-        "Saturn aspects natal Rahu (Virgo) (\u2212)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "parent": "Rahu",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "10 Feb 20:01",
-       "why": [
-        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
-        "natal house 4 (+)",
-        "transit Cancer, house 1 (+)",
-        "Mars aspects natal Jupiter (Libra) (\u2212)",
-        "exalted / own sign (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Mercury",
-       "parent": "Jupiter",
-       "total": -2,
-       "verdict": "hurts",
-       "to": "02 Dec 11:06",
-       "why": [
-        "Mercury is 8th from Jupiter (6/8) (\u2212)",
-        "rules 3, 12 (\u2212)",
-        "transit Libra, house 4 (+)",
-        "Saturn aspects natal Mercury (Taurus) (\u2212)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Mercury",
-       "parent": "Mercury",
-       "total": -1,
-       "verdict": "mixed",
-       "to": "17 Nov 08:41",
-       "why": [
-        "rules 3, 12 (\u2212)",
-        "transit Libra, house 4 (+)",
-        "Saturn aspects natal Mercury (Taurus) (\u2212)"
-       ]
-      }
-     ]
-    }
-   },
+   "chain": {},
    "jupven": "off",
    "author": {
     "rules": [
@@ -56925,227 +53796,23 @@
    },
    "dasha": {
     "USA": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Rahu",
-       "frm": "18 Aug 2016",
-       "to": "19 Aug 2034",
-       "transit": "Aquarius 1.01\u00b0, Dhanishta, house 4/1; aspected by Mars",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "frm": "31 Jul 2024",
-       "to": "17 Feb 2027",
-       "transit": "Libra 11.61\u00b0, Swati, house 12/9",
-       "score": 0
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "frm": "23 Sep 2026",
-       "to": "17 Feb 2027",
-       "transit": "Pisces 14.22\u00b0, Uttara Bhadrapada, house 5/2; retrograde, aspected by Mars",
-       "score": -1
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Venus",
-       "frm": "15 Nov 2026",
-       "to": "09 Dec 2026",
-       "transit": "Virgo 28.77\u00b0, Chitra, house 11/8; debilitated, aspected by Saturn",
-       "score": -2
-      },
-      {
-       "level": "Prana",
-       "lord": "Venus",
-       "frm": "15 Nov 2026",
-       "to": "19 Nov 2026",
-       "transit": "Virgo 28.77\u00b0, Chitra, house 11/8; debilitated, aspected by Saturn",
-       "score": null
-      }
-     ],
+     "lords": [],
      "changes": [],
-     "state": "afflicted",
+     "state": null,
      "gochara": "mixed",
      "chandra": "weak",
      "tara": "good"
     },
     "NYSE": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Mercury",
-       "frm": "24 Nov 2016",
-       "to": "24 Nov 2033",
-       "transit": "Libra 11.61\u00b0, Swati, house 4/8",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "frm": "22 May 2026",
-       "to": "09 Dec 2028",
-       "transit": "Aquarius 1.01\u00b0, Dhanishta, house 8/12; aspected by Mars",
-       "score": -1
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "frm": "09 Oct 2026",
-       "to": "10 Feb 2027",
-       "transit": "Leo 1.69\u00b0, Magha, house 2/6; with Mars, with Ketu, aspected by Rahu",
-       "score": 0
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Mercury",
-       "frm": "14 Nov 2026",
-       "to": "02 Dec 2026",
-       "transit": "Libra 11.61\u00b0, Swati, house 4/8",
-       "score": 2
-      },
-      {
-       "level": "Prana",
-       "lord": "Mercury",
-       "frm": "14 Nov 2026",
-       "to": "17 Nov 2026",
-       "transit": "Libra 11.61\u00b0, Swati, house 4/8",
-       "score": null
-      }
-     ],
+     "lords": [],
      "changes": [],
-     "state": "mixed",
+     "state": null,
      "gochara": "adverse",
      "chandra": "good",
      "tara": "bad"
     }
    },
-   "chain": {
-    "USA": {
-     "score": -1,
-     "reading": "mixed",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "parent": "Rahu",
-       "total": 2,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "natal house 9 (+)",
-        "transit Leo, house 10 (+)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "parent": "Mercury",
-       "total": 3,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "Saturn is 3rd from Mercury (3/11) (+)",
-        "Saturn regards Mercury as friend (+)",
-        "transit Pisces, house 5 (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Venus",
-       "parent": "Saturn",
-       "total": -1,
-       "verdict": "mixed",
-       "to": "09 Dec 19:08",
-       "why": [
-        "Venus is 10th from Saturn (kendra) (+)",
-        "Venus regards Saturn as friend (+)",
-        "rules 7, 12 (\u2212)",
-        "natal house 8 (\u2212)",
-        "debilitated (\u2212)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Venus",
-       "parent": "Venus",
-       "total": -3,
-       "verdict": "hurts",
-       "to": "19 Nov 07:34",
-       "why": [
-        "rules 7, 12 (\u2212)",
-        "natal house 8 (\u2212)",
-        "debilitated (\u2212)"
-       ]
-      }
-     ]
-    },
-    "NYSE": {
-     "score": -2,
-     "reading": "mixed",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "parent": "Mercury",
-       "total": -2,
-       "verdict": "hurts",
-       "to": "09 Dec 07:53",
-       "why": [
-        "Rahu is 5th from Mercury (trine) (+)",
-        "via dispositor Mercury: rules 3, 12 (\u2212)",
-        "transit Aquarius, house 8 (\u2212)",
-        "Saturn aspects natal Rahu (Virgo) (\u2212)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "parent": "Rahu",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "10 Feb 20:01",
-       "why": [
-        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
-        "natal house 4 (+)",
-        "transit Cancer, house 1 (+)",
-        "Mars aspects natal Jupiter (Libra) (\u2212)",
-        "exalted / own sign (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Mercury",
-       "parent": "Jupiter",
-       "total": -2,
-       "verdict": "hurts",
-       "to": "02 Dec 11:06",
-       "why": [
-        "Mercury is 8th from Jupiter (6/8) (\u2212)",
-        "rules 3, 12 (\u2212)",
-        "transit Libra, house 4 (+)",
-        "Saturn aspects natal Mercury (Taurus) (\u2212)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Mercury",
-       "parent": "Mercury",
-       "total": -1,
-       "verdict": "mixed",
-       "to": "17 Nov 08:41",
-       "why": [
-        "rules 3, 12 (\u2212)",
-        "transit Libra, house 4 (+)",
-        "Saturn aspects natal Mercury (Taurus) (\u2212)"
-       ]
-      }
-     ]
-    }
-   },
+   "chain": {},
    "jupven": "off",
    "author": {
     "rules": [
@@ -57177,14 +53844,14 @@
       "jup-ven": "off"
      },
      "all": {
-      "up1": 60.8,
-      "up5": 58.5,
-      "big": 2.7
+      "up1": 60.2,
+      "up5": 60.7,
+      "big": 2.9
      },
      "kept": {
       "up1": 57.3,
-      "up5": 61.0,
-      "big": 5.9
+      "up5": 62.0,
+      "big": 6.1
      },
      "base": {
       "up1": 53.7,
@@ -60554,229 +57221,23 @@
    },
    "dasha": {
     "USA": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Rahu",
-       "frm": "18 Aug 2016",
-       "to": "19 Aug 2034",
-       "transit": "Aquarius 0.95\u00b0, Dhanishta, house 4/1; aspected by Mars",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "frm": "31 Jul 2024",
-       "to": "17 Feb 2027",
-       "transit": "Libra 12.19\u00b0, Swati, house 12/9",
-       "score": 0
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "frm": "23 Sep 2026",
-       "to": "17 Feb 2027",
-       "transit": "Pisces 14.18\u00b0, Uttara Bhadrapada, house 5/2; retrograde, aspected by Mars",
-       "score": -1
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Venus",
-       "frm": "15 Nov 2026",
-       "to": "09 Dec 2026",
-       "transit": "Virgo 28.9\u00b0, Chitra, house 11/8; debilitated, aspected by Saturn",
-       "score": -1
-      },
-      {
-       "level": "Prana",
-       "lord": "Venus",
-       "frm": "15 Nov 2026",
-       "to": "19 Nov 2026",
-       "transit": "Virgo 28.9\u00b0, Chitra, house 11/8; debilitated, aspected by Saturn",
-       "score": null
-      }
-     ],
+     "lords": [],
      "changes": [],
-     "state": "afflicted",
+     "state": null,
      "gochara": "mixed",
      "chandra": "good",
      "tara": "janma"
     },
     "NYSE": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Mercury",
-       "frm": "24 Nov 2016",
-       "to": "24 Nov 2033",
-       "transit": "Libra 12.19\u00b0, Swati, house 4/8",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "frm": "22 May 2026",
-       "to": "09 Dec 2028",
-       "transit": "Aquarius 0.95\u00b0, Dhanishta, house 8/12; aspected by Mars",
-       "score": -1
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "frm": "09 Oct 2026",
-       "to": "10 Feb 2027",
-       "transit": "Leo 1.77\u00b0, Magha, house 2/6; with Mars, with Ketu, aspected by Rahu",
-       "score": 0
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Mercury",
-       "frm": "14 Nov 2026",
-       "to": "02 Dec 2026",
-       "transit": "Libra 12.19\u00b0, Swati, house 4/8",
-       "score": 2
-      },
-      {
-       "level": "Prana",
-       "lord": "Ketu",
-       "frm": "17 Nov 2026",
-       "to": "18 Nov 2026",
-       "transit": "Leo 0.95\u00b0, Magha, house 2/6; with Mars, with Jupiter, aspected by Rahu",
-       "score": null
-      }
-     ],
-     "changes": [
-      "Prana \u2192 Mercury/Rahu/Jupiter/Mercury/Ketu at 08:41 ET"
-     ],
-     "state": "mixed",
+     "lords": [],
+     "changes": [],
+     "state": null,
      "gochara": "adverse",
      "chandra": "weak",
      "tara": "good"
     }
    },
-   "chain": {
-    "USA": {
-     "score": -1,
-     "reading": "mixed",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "parent": "Rahu",
-       "total": 2,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "natal house 9 (+)",
-        "transit Leo, house 10 (+)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "parent": "Mercury",
-       "total": 3,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "Saturn is 3rd from Mercury (3/11) (+)",
-        "Saturn regards Mercury as friend (+)",
-        "transit Pisces, house 5 (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Venus",
-       "parent": "Saturn",
-       "total": -1,
-       "verdict": "mixed",
-       "to": "09 Dec 19:08",
-       "why": [
-        "Venus is 10th from Saturn (kendra) (+)",
-        "Venus regards Saturn as friend (+)",
-        "rules 7, 12 (\u2212)",
-        "natal house 8 (\u2212)",
-        "debilitated (\u2212)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Venus",
-       "parent": "Venus",
-       "total": -3,
-       "verdict": "hurts",
-       "to": "19 Nov 07:34",
-       "why": [
-        "rules 7, 12 (\u2212)",
-        "natal house 8 (\u2212)",
-        "debilitated (\u2212)"
-       ]
-      }
-     ]
-    },
-    "NYSE": {
-     "score": 0,
-     "reading": "mixed",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "parent": "Mercury",
-       "total": -2,
-       "verdict": "hurts",
-       "to": "09 Dec 07:53",
-       "why": [
-        "Rahu is 5th from Mercury (trine) (+)",
-        "via dispositor Mercury: rules 3, 12 (\u2212)",
-        "transit Aquarius, house 8 (\u2212)",
-        "Saturn aspects natal Rahu (Virgo) (\u2212)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "parent": "Rahu",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "10 Feb 20:01",
-       "why": [
-        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
-        "natal house 4 (+)",
-        "transit Cancer, house 1 (+)",
-        "Mars aspects natal Jupiter (Libra) (\u2212)",
-        "exalted / own sign (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Mercury",
-       "parent": "Jupiter",
-       "total": -2,
-       "verdict": "hurts",
-       "to": "02 Dec 11:06",
-       "why": [
-        "Mercury is 8th from Jupiter (6/8) (\u2212)",
-        "rules 3, 12 (\u2212)",
-        "transit Libra, house 4 (+)",
-        "Saturn aspects natal Mercury (Taurus) (\u2212)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Ketu",
-       "parent": "Mercury",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "18 Nov 09:19",
-       "why": [
-        "Ketu is 11th from Mercury (3/11) (+)",
-        "natal house 9 (+)",
-        "Saturn on natal Ketu (Pisces); Mars aspects natal Ketu (Pisces) (\u2212)"
-       ]
-      }
-     ]
-    }
-   },
+   "chain": {},
    "jupven": "off",
    "author": {
     "rules": [
@@ -60808,14 +57269,14 @@
       "jup-ven": "off"
      },
      "all": {
-      "up1": 54.5,
-      "up5": 59.9,
-      "big": 2.9
+      "up1": 53.9,
+      "up5": 62.0,
+      "big": 3.1
      },
      "kept": {
       "up1": 57.3,
-      "up5": 61.0,
-      "big": 6.0
+      "up5": 62.0,
+      "big": 6.1
      },
      "base": {
       "up1": 53.7,
@@ -63805,232 +60266,23 @@
    },
    "dasha": {
     "USA": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Rahu",
-       "frm": "18 Aug 2016",
-       "to": "19 Aug 2034",
-       "transit": "Aquarius 0.9\u00b0, Dhanishta, house 4/1; aspected by Mars",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "frm": "31 Jul 2024",
-       "to": "17 Feb 2027",
-       "transit": "Libra 12.91\u00b0, Swati, house 12/9",
-       "score": 0
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "frm": "23 Sep 2026",
-       "to": "17 Feb 2027",
-       "transit": "Pisces 14.14\u00b0, Uttara Bhadrapada, house 5/2; retrograde, aspected by Mars",
-       "score": -1
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Venus",
-       "frm": "15 Nov 2026",
-       "to": "09 Dec 2026",
-       "transit": "Virgo 29.06\u00b0, Chitra, house 11/8; debilitated, aspected by Saturn",
-       "score": -1
-      },
-      {
-       "level": "Prana",
-       "lord": "Venus",
-       "frm": "15 Nov 2026",
-       "to": "19 Nov 2026",
-       "transit": "Virgo 29.06\u00b0, Chitra, house 11/8; debilitated, aspected by Saturn",
-       "score": null
-      }
-     ],
+     "lords": [],
      "changes": [],
-     "state": "afflicted",
+     "state": null,
      "gochara": "mixed",
      "chandra": "good",
      "tara": "good"
     },
     "NYSE": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Mercury",
-       "frm": "24 Nov 2016",
-       "to": "24 Nov 2033",
-       "transit": "Libra 12.91\u00b0, Swati, house 4/8",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "frm": "22 May 2026",
-       "to": "09 Dec 2028",
-       "transit": "Aquarius 0.9\u00b0, Dhanishta, house 8/12; aspected by Mars",
-       "score": -1
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "frm": "09 Oct 2026",
-       "to": "10 Feb 2027",
-       "transit": "Leo 1.85\u00b0, Magha, house 2/6; with Mars, with Ketu, aspected by Rahu",
-       "score": 0
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Mercury",
-       "frm": "14 Nov 2026",
-       "to": "02 Dec 2026",
-       "transit": "Libra 12.91\u00b0, Swati, house 4/8",
-       "score": 2
-      },
-      {
-       "level": "Prana",
-       "lord": "Venus",
-       "frm": "18 Nov 2026",
-       "to": "21 Nov 2026",
-       "transit": "Virgo 29.06\u00b0, Chitra, house 3/7; debilitated, aspected by Saturn",
-       "score": null
-      }
-     ],
-     "changes": [
-      "Prana \u2192 Mercury/Rahu/Jupiter/Mercury/Venus at 09:19 ET"
-     ],
-     "state": "mixed",
+     "lords": [],
+     "changes": [],
+     "state": null,
      "gochara": "adverse",
      "chandra": "weak",
      "tara": "bad"
     }
    },
-   "chain": {
-    "USA": {
-     "score": -1,
-     "reading": "mixed",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "parent": "Rahu",
-       "total": 2,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "natal house 9 (+)",
-        "transit Leo, house 10 (+)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "parent": "Mercury",
-       "total": 3,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "Saturn is 3rd from Mercury (3/11) (+)",
-        "Saturn regards Mercury as friend (+)",
-        "transit Pisces, house 5 (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Venus",
-       "parent": "Saturn",
-       "total": -1,
-       "verdict": "mixed",
-       "to": "09 Dec 19:08",
-       "why": [
-        "Venus is 10th from Saturn (kendra) (+)",
-        "Venus regards Saturn as friend (+)",
-        "rules 7, 12 (\u2212)",
-        "natal house 8 (\u2212)",
-        "debilitated (\u2212)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Venus",
-       "parent": "Venus",
-       "total": -3,
-       "verdict": "hurts",
-       "to": "19 Nov 07:34",
-       "why": [
-        "rules 7, 12 (\u2212)",
-        "natal house 8 (\u2212)",
-        "debilitated (\u2212)"
-       ]
-      }
-     ]
-    },
-    "NYSE": {
-     "score": 1,
-     "reading": "mixed",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "parent": "Mercury",
-       "total": -2,
-       "verdict": "hurts",
-       "to": "09 Dec 07:53",
-       "why": [
-        "Rahu is 5th from Mercury (trine) (+)",
-        "via dispositor Mercury: rules 3, 12 (\u2212)",
-        "transit Aquarius, house 8 (\u2212)",
-        "Saturn aspects natal Rahu (Virgo) (\u2212)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "parent": "Rahu",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "10 Feb 20:01",
-       "why": [
-        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
-        "natal house 4 (+)",
-        "transit Cancer, house 1 (+)",
-        "Mars aspects natal Jupiter (Libra) (\u2212)",
-        "exalted / own sign (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Mercury",
-       "parent": "Jupiter",
-       "total": -2,
-       "verdict": "hurts",
-       "to": "02 Dec 11:06",
-       "why": [
-        "Mercury is 8th from Jupiter (6/8) (\u2212)",
-        "rules 3, 12 (\u2212)",
-        "transit Libra, house 4 (+)",
-        "Saturn aspects natal Mercury (Taurus) (\u2212)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Venus",
-       "parent": "Mercury",
-       "total": 2,
-       "verdict": "helps",
-       "to": "21 Nov 07:41",
-       "why": [
-        "Venus is 12th from Mercury (2/12) (\u2212)",
-        "Venus regards Mercury as friend (+)",
-        "rules 4, 11 (+)",
-        "natal house 10 (+)",
-        "Jupiter aspects natal Venus (+)",
-        "debilitated (\u2212)"
-       ]
-      }
-     ]
-    }
-   },
+   "chain": {},
    "jupven": "off",
    "author": {
     "rules": [
@@ -64062,14 +60314,14 @@
       "jup-ven": "off"
      },
      "all": {
-      "up1": 58.9,
-      "up5": 59.8,
-      "big": 2.9
+      "up1": 58.3,
+      "up5": 61.9,
+      "big": 3.1
      },
      "kept": {
       "up1": 57.3,
-      "up5": 61.0,
-      "big": 5.9
+      "up5": 62.0,
+      "big": 6.1
      },
      "base": {
       "up1": 53.7,
@@ -67509,232 +63761,23 @@
    },
    "dasha": {
     "USA": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Rahu",
-       "frm": "18 Aug 2016",
-       "to": "19 Aug 2034",
-       "transit": "Aquarius 0.85\u00b0, Dhanishta, house 4/1; aspected by Mars",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "frm": "31 Jul 2024",
-       "to": "17 Feb 2027",
-       "transit": "Libra 13.74\u00b0, Swati, house 12/9",
-       "score": 0
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "frm": "23 Sep 2026",
-       "to": "17 Feb 2027",
-       "transit": "Pisces 14.1\u00b0, Uttara Bhadrapada, house 5/2; retrograde, aspected by Mars",
-       "score": -1
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Venus",
-       "frm": "15 Nov 2026",
-       "to": "09 Dec 2026",
-       "transit": "Virgo 29.26\u00b0, Chitra, house 11/8; debilitated, aspected by Saturn",
-       "score": -1
-      },
-      {
-       "level": "Prana",
-       "lord": "Sun",
-       "frm": "19 Nov 2026",
-       "to": "20 Nov 2026",
-       "transit": "Scorpio 3.14\u00b0, Vishakha, house 1/10; aspected by Mars",
-       "score": null
-      }
-     ],
-     "changes": [
-      "Prana \u2192 Rahu/Mercury/Saturn/Venus/Sun at 07:34 ET"
-     ],
-     "state": "afflicted",
+     "lords": [],
+     "changes": [],
+     "state": null,
      "gochara": "mixed",
      "chandra": "good",
      "tara": "bad"
     },
     "NYSE": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Mercury",
-       "frm": "24 Nov 2016",
-       "to": "24 Nov 2033",
-       "transit": "Libra 13.74\u00b0, Swati, house 4/8",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "frm": "22 May 2026",
-       "to": "09 Dec 2028",
-       "transit": "Aquarius 0.85\u00b0, Dhanishta, house 8/12; aspected by Mars",
-       "score": -1
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "frm": "09 Oct 2026",
-       "to": "10 Feb 2027",
-       "transit": "Leo 1.92\u00b0, Magha, house 2/6; with Mars, with Ketu, aspected by Rahu",
-       "score": 0
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Mercury",
-       "frm": "14 Nov 2026",
-       "to": "02 Dec 2026",
-       "transit": "Libra 13.74\u00b0, Swati, house 4/8",
-       "score": 2
-      },
-      {
-       "level": "Prana",
-       "lord": "Venus",
-       "frm": "18 Nov 2026",
-       "to": "21 Nov 2026",
-       "transit": "Virgo 29.26\u00b0, Chitra, house 3/7; debilitated, aspected by Saturn",
-       "score": null
-      }
-     ],
+     "lords": [],
      "changes": [],
-     "state": "mixed",
+     "state": null,
      "gochara": "adverse",
      "chandra": "weak",
      "tara": "good"
     }
    },
-   "chain": {
-    "USA": {
-     "score": 1,
-     "reading": "mixed",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "parent": "Rahu",
-       "total": 2,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "natal house 9 (+)",
-        "transit Leo, house 10 (+)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "parent": "Mercury",
-       "total": 3,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "Saturn is 3rd from Mercury (3/11) (+)",
-        "Saturn regards Mercury as friend (+)",
-        "transit Pisces, house 5 (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Venus",
-       "parent": "Saturn",
-       "total": -1,
-       "verdict": "mixed",
-       "to": "09 Dec 19:08",
-       "why": [
-        "Venus is 10th from Saturn (kendra) (+)",
-        "Venus regards Saturn as friend (+)",
-        "rules 7, 12 (\u2212)",
-        "natal house 8 (\u2212)",
-        "debilitated (\u2212)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Sun",
-       "parent": "Venus",
-       "total": -1,
-       "verdict": "mixed",
-       "to": "20 Nov 13:04",
-       "why": [
-        "Sun regards Venus as enemy (\u2212)",
-        "natal house 8 (\u2212)",
-        "transit Scorpio, house 1 (+)"
-       ]
-      }
-     ]
-    },
-    "NYSE": {
-     "score": 1,
-     "reading": "mixed",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "parent": "Mercury",
-       "total": -2,
-       "verdict": "hurts",
-       "to": "09 Dec 07:53",
-       "why": [
-        "Rahu is 5th from Mercury (trine) (+)",
-        "via dispositor Mercury: rules 3, 12 (\u2212)",
-        "transit Aquarius, house 8 (\u2212)",
-        "Saturn aspects natal Rahu (Virgo) (\u2212)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "parent": "Rahu",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "10 Feb 20:01",
-       "why": [
-        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
-        "natal house 4 (+)",
-        "transit Cancer, house 1 (+)",
-        "Mars aspects natal Jupiter (Libra) (\u2212)",
-        "exalted / own sign (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Mercury",
-       "parent": "Jupiter",
-       "total": -2,
-       "verdict": "hurts",
-       "to": "02 Dec 11:06",
-       "why": [
-        "Mercury is 8th from Jupiter (6/8) (\u2212)",
-        "rules 3, 12 (\u2212)",
-        "transit Libra, house 4 (+)",
-        "Saturn aspects natal Mercury (Taurus) (\u2212)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Venus",
-       "parent": "Mercury",
-       "total": 2,
-       "verdict": "helps",
-       "to": "21 Nov 07:41",
-       "why": [
-        "Venus is 12th from Mercury (2/12) (\u2212)",
-        "Venus regards Mercury as friend (+)",
-        "rules 4, 11 (+)",
-        "natal house 10 (+)",
-        "Jupiter aspects natal Venus (+)",
-        "debilitated (\u2212)"
-       ]
-      }
-     ]
-    }
-   },
+   "chain": {},
    "jupven": "off",
    "author": {
     "rules": [
@@ -67766,14 +63809,14 @@
       "jup-ven": "off"
      },
      "all": {
-      "up1": 55.9,
-      "up5": 60.3,
-      "big": 3.2
+      "up1": 55.4,
+      "up5": 62.4,
+      "big": 3.4
      },
      "kept": {
       "up1": 57.3,
-      "up5": 61.0,
-      "big": 6.5
+      "up5": 62.0,
+      "big": 6.7
      },
      "base": {
       "up1": 53.7,
@@ -70591,232 +66634,23 @@
    },
    "dasha": {
     "USA": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Rahu",
-       "frm": "18 Aug 2016",
-       "to": "19 Aug 2034",
-       "transit": "Aquarius 0.79\u00b0, Dhanishta, house 4/1; aspected by Mars",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "frm": "31 Jul 2024",
-       "to": "17 Feb 2027",
-       "transit": "Libra 14.67\u00b0, Swati, house 12/9",
-       "score": 0
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "frm": "23 Sep 2026",
-       "to": "17 Feb 2027",
-       "transit": "Pisces 14.06\u00b0, Uttara Bhadrapada, house 5/2; retrograde, aspected by Mars",
-       "score": -1
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Venus",
-       "frm": "15 Nov 2026",
-       "to": "09 Dec 2026",
-       "transit": "Virgo 29.49\u00b0, Chitra, house 11/8; debilitated, aspected by Saturn",
-       "score": -1
-      },
-      {
-       "level": "Prana",
-       "lord": "Sun",
-       "frm": "19 Nov 2026",
-       "to": "20 Nov 2026",
-       "transit": "Scorpio 4.15\u00b0, Anuradha, house 1/10; aspected by Mars",
-       "score": null
-      }
-     ],
-     "changes": [
-      "Prana \u2192 Rahu/Mercury/Saturn/Venus/Moon at 13:04 ET"
-     ],
-     "state": "afflicted",
+     "lords": [],
+     "changes": [],
+     "state": null,
      "gochara": "mixed",
      "chandra": "weak",
      "tara": "good"
     },
     "NYSE": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Mercury",
-       "frm": "24 Nov 2016",
-       "to": "24 Nov 2033",
-       "transit": "Libra 14.67\u00b0, Swati, house 4/8",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "frm": "22 May 2026",
-       "to": "09 Dec 2028",
-       "transit": "Aquarius 0.79\u00b0, Dhanishta, house 8/12; aspected by Mars",
-       "score": -1
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "frm": "09 Oct 2026",
-       "to": "10 Feb 2027",
-       "transit": "Leo 1.99\u00b0, Magha, house 2/6; with Mars, with Ketu, aspected by Rahu",
-       "score": 0
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Mercury",
-       "frm": "14 Nov 2026",
-       "to": "02 Dec 2026",
-       "transit": "Libra 14.67\u00b0, Swati, house 4/8",
-       "score": 2
-      },
-      {
-       "level": "Prana",
-       "lord": "Venus",
-       "frm": "18 Nov 2026",
-       "to": "21 Nov 2026",
-       "transit": "Virgo 29.49\u00b0, Chitra, house 3/7; debilitated, aspected by Saturn",
-       "score": null
-      }
-     ],
+     "lords": [],
      "changes": [],
-     "state": "mixed",
+     "state": null,
      "gochara": "adverse",
      "chandra": "good",
      "tara": "good"
     }
    },
-   "chain": {
-    "USA": {
-     "score": 1,
-     "reading": "mixed",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "parent": "Rahu",
-       "total": 2,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "natal house 9 (+)",
-        "transit Leo, house 10 (+)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "parent": "Mercury",
-       "total": 3,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "Saturn is 3rd from Mercury (3/11) (+)",
-        "Saturn regards Mercury as friend (+)",
-        "transit Pisces, house 5 (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Venus",
-       "parent": "Saturn",
-       "total": -1,
-       "verdict": "mixed",
-       "to": "09 Dec 19:08",
-       "why": [
-        "Venus is 10th from Saturn (kendra) (+)",
-        "Venus regards Saturn as friend (+)",
-        "rules 7, 12 (\u2212)",
-        "natal house 8 (\u2212)",
-        "debilitated (\u2212)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Sun",
-       "parent": "Venus",
-       "total": -1,
-       "verdict": "mixed",
-       "to": "20 Nov 13:04",
-       "why": [
-        "Sun regards Venus as enemy (\u2212)",
-        "natal house 8 (\u2212)",
-        "transit Scorpio, house 1 (+)"
-       ]
-      }
-     ]
-    },
-    "NYSE": {
-     "score": 1,
-     "reading": "mixed",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "parent": "Mercury",
-       "total": -2,
-       "verdict": "hurts",
-       "to": "09 Dec 07:53",
-       "why": [
-        "Rahu is 5th from Mercury (trine) (+)",
-        "via dispositor Mercury: rules 3, 12 (\u2212)",
-        "transit Aquarius, house 8 (\u2212)",
-        "Saturn aspects natal Rahu (Virgo) (\u2212)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "parent": "Rahu",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "10 Feb 20:01",
-       "why": [
-        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
-        "natal house 4 (+)",
-        "transit Cancer, house 1 (+)",
-        "Mars aspects natal Jupiter (Libra) (\u2212)",
-        "exalted / own sign (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Mercury",
-       "parent": "Jupiter",
-       "total": -2,
-       "verdict": "hurts",
-       "to": "02 Dec 11:06",
-       "why": [
-        "Mercury is 8th from Jupiter (6/8) (\u2212)",
-        "rules 3, 12 (\u2212)",
-        "transit Libra, house 4 (+)",
-        "Saturn aspects natal Mercury (Taurus) (\u2212)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Venus",
-       "parent": "Mercury",
-       "total": 2,
-       "verdict": "helps",
-       "to": "21 Nov 07:41",
-       "why": [
-        "Venus is 12th from Mercury (2/12) (\u2212)",
-        "Venus regards Mercury as friend (+)",
-        "rules 4, 11 (+)",
-        "natal house 10 (+)",
-        "Jupiter aspects natal Venus (+)",
-        "debilitated (\u2212)"
-       ]
-      }
-     ]
-    }
-   },
+   "chain": {},
    "jupven": "off",
    "author": {
     "rules": [
@@ -70848,14 +66682,14 @@
       "jup-ven": "off"
      },
      "all": {
-      "up1": 58.6,
-      "up5": 59.0,
-      "big": 2.7
+      "up1": 58.0,
+      "up5": 61.1,
+      "big": 2.9
      },
      "kept": {
       "up1": 57.3,
-      "up5": 61.0,
-      "big": 5.8
+      "up5": 62.0,
+      "big": 6.0
      },
      "base": {
       "up1": 53.7,
@@ -74085,232 +69919,23 @@
    },
    "dasha": {
     "USA": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Rahu",
-       "frm": "18 Aug 2016",
-       "to": "19 Aug 2034",
-       "transit": "Aquarius 0.74\u00b0, Dhanishta, house 4/1; aspected by Mars",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "frm": "31 Jul 2024",
-       "to": "17 Feb 2027",
-       "transit": "Libra 15.7\u00b0, Swati, house 12/9",
-       "score": 0
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "frm": "23 Sep 2026",
-       "to": "17 Feb 2027",
-       "transit": "Pisces 14.03\u00b0, Uttara Bhadrapada, house 5/2; retrograde, aspected by Mars",
-       "score": 0
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Venus",
-       "frm": "15 Nov 2026",
-       "to": "09 Dec 2026",
-       "transit": "Virgo 29.76\u00b0, Chitra, house 11/8; debilitated, aspected by Saturn",
-       "score": -1
-      },
-      {
-       "level": "Prana",
-       "lord": "Moon",
-       "frm": "20 Nov 2026",
-       "to": "22 Nov 2026",
-       "transit": "Pisces 25.66\u00b0, Revati, house 5/2; with Saturn, aspected by Mars",
-       "score": null
-      }
-     ],
+     "lords": [],
      "changes": [],
-     "state": "mixed",
+     "state": null,
      "gochara": "mixed",
      "chandra": "weak",
      "tara": "bad"
     },
     "NYSE": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Mercury",
-       "frm": "24 Nov 2016",
-       "to": "24 Nov 2033",
-       "transit": "Libra 15.7\u00b0, Swati, house 4/8",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "frm": "22 May 2026",
-       "to": "09 Dec 2028",
-       "transit": "Aquarius 0.74\u00b0, Dhanishta, house 8/12; aspected by Mars",
-       "score": -1
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "frm": "09 Oct 2026",
-       "to": "10 Feb 2027",
-       "transit": "Leo 2.06\u00b0, Magha, house 2/6; with Mars, with Ketu, aspected by Rahu",
-       "score": 0
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Mercury",
-       "frm": "14 Nov 2026",
-       "to": "02 Dec 2026",
-       "transit": "Libra 15.7\u00b0, Swati, house 4/8",
-       "score": 2
-      },
-      {
-       "level": "Prana",
-       "lord": "Sun",
-       "frm": "21 Nov 2026",
-       "to": "22 Nov 2026",
-       "transit": "Scorpio 5.16\u00b0, Anuradha, house 5/9; aspected by Mars",
-       "score": null
-      }
-     ],
-     "changes": [
-      "Prana \u2192 Mercury/Rahu/Jupiter/Mercury/Sun at 07:41 ET"
-     ],
-     "state": "mixed",
+     "lords": [],
+     "changes": [],
+     "state": null,
      "gochara": "adverse",
      "chandra": "good",
      "tara": "janma"
     }
    },
-   "chain": {
-    "USA": {
-     "score": 6,
-     "reading": "helps",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "parent": "Rahu",
-       "total": 2,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "natal house 9 (+)",
-        "transit Leo, house 10 (+)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "parent": "Mercury",
-       "total": 3,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "Saturn is 3rd from Mercury (3/11) (+)",
-        "Saturn regards Mercury as friend (+)",
-        "transit Pisces, house 5 (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Venus",
-       "parent": "Saturn",
-       "total": -1,
-       "verdict": "mixed",
-       "to": "09 Dec 19:08",
-       "why": [
-        "Venus is 10th from Saturn (kendra) (+)",
-        "Venus regards Saturn as friend (+)",
-        "rules 7, 12 (\u2212)",
-        "natal house 8 (\u2212)",
-        "debilitated (\u2212)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Moon",
-       "parent": "Venus",
-       "total": 4,
-       "verdict": "helps",
-       "to": "22 Nov 14:13",
-       "why": [
-        "Moon is 9th from Venus (trine) (+)",
-        "rules 9 (+)",
-        "natal house 4 (+)",
-        "transit Pisces, house 5 (+)",
-        "Mars aspects natal Moon (Aquarius); Rahu on natal Moon (Aquarius) (\u2212)",
-        "Jupiter aspects natal Moon (+)"
-       ]
-      }
-     ]
-    },
-    "NYSE": {
-     "score": 0,
-     "reading": "mixed",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "parent": "Mercury",
-       "total": -2,
-       "verdict": "hurts",
-       "to": "09 Dec 07:53",
-       "why": [
-        "Rahu is 5th from Mercury (trine) (+)",
-        "via dispositor Mercury: rules 3, 12 (\u2212)",
-        "transit Aquarius, house 8 (\u2212)",
-        "Saturn aspects natal Rahu (Virgo) (\u2212)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "parent": "Rahu",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "10 Feb 20:01",
-       "why": [
-        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
-        "natal house 4 (+)",
-        "transit Cancer, house 1 (+)",
-        "Mars aspects natal Jupiter (Libra) (\u2212)",
-        "exalted / own sign (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Mercury",
-       "parent": "Jupiter",
-       "total": -2,
-       "verdict": "hurts",
-       "to": "02 Dec 11:06",
-       "why": [
-        "Mercury is 8th from Jupiter (6/8) (\u2212)",
-        "rules 3, 12 (\u2212)",
-        "transit Libra, house 4 (+)",
-        "Saturn aspects natal Mercury (Taurus) (\u2212)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Sun",
-       "parent": "Mercury",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "22 Nov 04:48",
-       "why": [
-        "rules 2 (+)",
-        "transit Scorpio, house 5 (+)",
-        "Saturn aspects natal Sun (Taurus) (\u2212)"
-       ]
-      }
-     ]
-    }
-   },
+   "chain": {},
    "jupven": "off",
    "author": {
     "rules": [
@@ -77779,237 +73404,23 @@
    },
    "dasha": {
     "USA": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Rahu",
-       "frm": "18 Aug 2016",
-       "to": "19 Aug 2034",
-       "transit": "Aquarius 0.69\u00b0, Dhanishta, house 4/1; aspected by Mars",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "frm": "31 Jul 2024",
-       "to": "17 Feb 2027",
-       "transit": "Libra 16.8\u00b0, Swati, house 12/9",
-       "score": 0
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "frm": "23 Sep 2026",
-       "to": "17 Feb 2027",
-       "transit": "Pisces 14.0\u00b0, Uttara Bhadrapada, house 5/2; retrograde, aspected by Mars",
-       "score": -1
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Venus",
-       "frm": "15 Nov 2026",
-       "to": "09 Dec 2026",
-       "transit": "Libra 0.07\u00b0, Chitra, house 12/9; own sign",
-       "score": 1
-      },
-      {
-       "level": "Prana",
-       "lord": "Moon",
-       "frm": "20 Nov 2026",
-       "to": "22 Nov 2026",
-       "transit": "Aries 9.86\u00b0, Ashwini, house 6/3",
-       "score": null
-      }
-     ],
-     "changes": [
-      "Prana \u2192 Rahu/Mercury/Saturn/Venus/Mars at 14:13 ET"
-     ],
-     "state": "mixed",
+     "lords": [],
+     "changes": [],
+     "state": null,
      "gochara": "mixed",
      "chandra": "good",
      "tara": "good"
     },
     "NYSE": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Mercury",
-       "frm": "24 Nov 2016",
-       "to": "24 Nov 2033",
-       "transit": "Libra 16.8\u00b0, Swati, house 4/8",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "frm": "22 May 2026",
-       "to": "09 Dec 2028",
-       "transit": "Aquarius 0.69\u00b0, Dhanishta, house 8/12; aspected by Mars",
-       "score": -1
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "frm": "09 Oct 2026",
-       "to": "10 Feb 2027",
-       "transit": "Leo 2.13\u00b0, Magha, house 2/6; with Mars, with Ketu, aspected by Rahu",
-       "score": 0
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Mercury",
-       "frm": "14 Nov 2026",
-       "to": "02 Dec 2026",
-       "transit": "Libra 16.8\u00b0, Swati, house 4/8",
-       "score": 2
-      },
-      {
-       "level": "Prana",
-       "lord": "Moon",
-       "frm": "22 Nov 2026",
-       "to": "23 Nov 2026",
-       "transit": "Aries 9.86\u00b0, Ashwini, house 10/2",
-       "score": null
-      }
-     ],
-     "changes": [
-      "Prana \u2192 Mercury/Rahu/Jupiter/Mercury/Moon at 04:48 ET"
-     ],
-     "state": "mixed",
+     "lords": [],
+     "changes": [],
+     "state": null,
      "gochara": "adverse",
      "chandra": "weak",
      "tara": "good"
     }
    },
-   "chain": {
-    "USA": {
-     "score": 4,
-     "reading": "helps",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "parent": "Rahu",
-       "total": 2,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "natal house 9 (+)",
-        "transit Leo, house 10 (+)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "parent": "Mercury",
-       "total": 3,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "Saturn is 3rd from Mercury (3/11) (+)",
-        "Saturn regards Mercury as friend (+)",
-        "transit Pisces, house 5 (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Venus",
-       "parent": "Saturn",
-       "total": -1,
-       "verdict": "mixed",
-       "to": "09 Dec 19:08",
-       "why": [
-        "Venus is 10th from Saturn (kendra) (+)",
-        "Venus regards Saturn as friend (+)",
-        "rules 7, 12 (\u2212)",
-        "natal house 8 (\u2212)",
-        "debilitated (\u2212)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Moon",
-       "parent": "Venus",
-       "total": 2,
-       "verdict": "helps",
-       "to": "22 Nov 14:13",
-       "why": [
-        "Moon is 9th from Venus (trine) (+)",
-        "rules 9 (+)",
-        "natal house 4 (+)",
-        "transit Aries, house 6 (\u2212)",
-        "Mars aspects natal Moon (Aquarius); Rahu on natal Moon (Aquarius) (\u2212)",
-        "Jupiter aspects natal Moon (+)"
-       ]
-      }
-     ]
-    },
-    "NYSE": {
-     "score": 3,
-     "reading": "helps",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "parent": "Mercury",
-       "total": -2,
-       "verdict": "hurts",
-       "to": "09 Dec 07:53",
-       "why": [
-        "Rahu is 5th from Mercury (trine) (+)",
-        "via dispositor Mercury: rules 3, 12 (\u2212)",
-        "transit Aquarius, house 8 (\u2212)",
-        "Saturn aspects natal Rahu (Virgo) (\u2212)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "parent": "Rahu",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "10 Feb 20:01",
-       "why": [
-        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
-        "natal house 4 (+)",
-        "transit Cancer, house 1 (+)",
-        "Mars aspects natal Jupiter (Libra) (\u2212)",
-        "exalted / own sign (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Mercury",
-       "parent": "Jupiter",
-       "total": -2,
-       "verdict": "hurts",
-       "to": "02 Dec 11:06",
-       "why": [
-        "Mercury is 8th from Jupiter (6/8) (\u2212)",
-        "rules 3, 12 (\u2212)",
-        "transit Libra, house 4 (+)",
-        "Saturn aspects natal Mercury (Taurus) (\u2212)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Moon",
-       "parent": "Mercury",
-       "total": 4,
-       "verdict": "helps",
-       "to": "23 Nov 15:59",
-       "why": [
-        "Moon is 11th from Mercury (3/11) (+)",
-        "Moon regards Mercury as friend (+)",
-        "rules 1 (+)",
-        "natal house 9 (+)",
-        "transit Aries, house 10 (+)",
-        "Saturn on natal Moon (Pisces); Mars aspects natal Moon (Pisces) (\u2212)"
-       ]
-      }
-     ]
-    }
-   },
+   "chain": {},
    "jupven": "off",
    "author": {
     "rules": [
@@ -81309,231 +76720,23 @@
    },
    "dasha": {
     "USA": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Rahu",
-       "frm": "18 Aug 2016",
-       "to": "19 Aug 2034",
-       "transit": "Aquarius 0.64\u00b0, Dhanishta, house 4/1; aspected by Mars",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "frm": "31 Jul 2024",
-       "to": "17 Feb 2027",
-       "transit": "Libra 17.97\u00b0, Swati, house 12/9",
-       "score": 0
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "frm": "23 Sep 2026",
-       "to": "17 Feb 2027",
-       "transit": "Pisces 13.96\u00b0, Uttara Bhadrapada, house 5/2; retrograde, aspected by Mars",
-       "score": -1
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Venus",
-       "frm": "15 Nov 2026",
-       "to": "09 Dec 2026",
-       "transit": "Libra 0.4\u00b0, Chitra, house 12/9; own sign",
-       "score": 1
-      },
-      {
-       "level": "Prana",
-       "lord": "Mars",
-       "frm": "22 Nov 2026",
-       "to": "24 Nov 2026",
-       "transit": "Leo 4.84\u00b0, Magha, house 10/7; with Ketu, with Jupiter, aspected by Rahu",
-       "score": null
-      }
-     ],
+     "lords": [],
      "changes": [],
-     "state": "mixed",
+     "state": null,
      "gochara": "mixed",
      "chandra": "good",
      "tara": "bad"
     },
     "NYSE": {
-     "lords": [
-      {
-       "level": "Mahadasha",
-       "lord": "Mercury",
-       "frm": "24 Nov 2016",
-       "to": "24 Nov 2033",
-       "transit": "Libra 17.97\u00b0, Swati, house 4/8",
-       "score": null
-      },
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "frm": "22 May 2026",
-       "to": "09 Dec 2028",
-       "transit": "Aquarius 0.64\u00b0, Dhanishta, house 8/12; aspected by Mars",
-       "score": -1
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "frm": "09 Oct 2026",
-       "to": "10 Feb 2027",
-       "transit": "Leo 2.19\u00b0, Magha, house 2/6; with Mars, with Ketu, aspected by Rahu",
-       "score": 0
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Mercury",
-       "frm": "14 Nov 2026",
-       "to": "02 Dec 2026",
-       "transit": "Libra 17.97\u00b0, Swati, house 4/8",
-       "score": 2
-      },
-      {
-       "level": "Prana",
-       "lord": "Moon",
-       "frm": "22 Nov 2026",
-       "to": "23 Nov 2026",
-       "transit": "Aries 24.48\u00b0, Bharani, house 10/2",
-       "score": null
-      }
-     ],
-     "changes": [
-      "Prana \u2192 Mercury/Rahu/Jupiter/Mercury/Mars at 15:59 ET"
-     ],
-     "state": "mixed",
+     "lords": [],
+     "changes": [],
+     "state": null,
      "gochara": "adverse",
      "chandra": "weak",
      "tara": "bad"
     }
    },
-   "chain": {
-    "USA": {
-     "score": 2,
-     "reading": "mixed",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Mercury",
-       "parent": "Rahu",
-       "total": 2,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "natal house 9 (+)",
-        "transit Leo, house 10 (+)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Saturn",
-       "parent": "Mercury",
-       "total": 3,
-       "verdict": "helps",
-       "to": "17 Feb 20:18",
-       "why": [
-        "Saturn is 3rd from Mercury (3/11) (+)",
-        "Saturn regards Mercury as friend (+)",
-        "transit Pisces, house 5 (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Venus",
-       "parent": "Saturn",
-       "total": -1,
-       "verdict": "mixed",
-       "to": "09 Dec 19:08",
-       "why": [
-        "Venus is 10th from Saturn (kendra) (+)",
-        "Venus regards Saturn as friend (+)",
-        "rules 7, 12 (\u2212)",
-        "natal house 8 (\u2212)",
-        "debilitated (\u2212)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Mars",
-       "parent": "Venus",
-       "total": 0,
-       "verdict": "mixed",
-       "to": "24 Nov 00:38",
-       "why": [
-        "natal house 8 (\u2212)",
-        "transit Leo, house 10 (+)"
-       ]
-      }
-     ]
-    },
-    "NYSE": {
-     "score": 3,
-     "reading": "helps",
-     "levels": [
-      {
-       "level": "Antardasha",
-       "lord": "Rahu",
-       "parent": "Mercury",
-       "total": -2,
-       "verdict": "hurts",
-       "to": "09 Dec 07:53",
-       "why": [
-        "Rahu is 5th from Mercury (trine) (+)",
-        "via dispositor Mercury: rules 3, 12 (\u2212)",
-        "transit Aquarius, house 8 (\u2212)",
-        "Saturn aspects natal Rahu (Virgo) (\u2212)"
-       ]
-      },
-      {
-       "level": "Pratyantar",
-       "lord": "Jupiter",
-       "parent": "Rahu",
-       "total": 1,
-       "verdict": "mixed",
-       "to": "10 Feb 20:01",
-       "why": [
-        "Jupiter is 2nd from Rahu (2/12) (\u2212)",
-        "natal house 4 (+)",
-        "transit Cancer, house 1 (+)",
-        "Mars aspects natal Jupiter (Libra) (\u2212)",
-        "exalted / own sign (+)"
-       ]
-      },
-      {
-       "level": "Sookshma",
-       "lord": "Mercury",
-       "parent": "Jupiter",
-       "total": -2,
-       "verdict": "hurts",
-       "to": "02 Dec 11:06",
-       "why": [
-        "Mercury is 8th from Jupiter (6/8) (\u2212)",
-        "rules 3, 12 (\u2212)",
-        "transit Libra, house 4 (+)",
-        "Saturn aspects natal Mercury (Taurus) (\u2212)"
-       ]
-      },
-      {
-       "level": "Prana",
-       "lord": "Moon",
-       "parent": "Mercury",
-       "total": 4,
-       "verdict": "helps",
-       "to": "23 Nov 15:59",
-       "why": [
-        "Moon is 11th from Mercury (3/11) (+)",
-        "Moon regards Mercury as friend (+)",
-        "rules 1 (+)",
-        "natal house 9 (+)",
-        "transit Aries, house 10 (+)",
-        "Saturn on natal Moon (Pisces); Mars aspects natal Moon (Pisces) (\u2212)"
-       ]
-      }
-     ]
-    }
-   },
+   "chain": {},
    "jupven": "on",
    "author": {
     "rules": [
@@ -81566,14 +76769,14 @@
       "jup-ven": "on"
      },
      "all": {
-      "up1": 57.9,
-      "up5": 58.5,
-      "big": 2.9
+      "up1": 57.8,
+      "up5": 58.6,
+      "big": 3.4
      },
      "kept": {
       "up1": 57.3,
-      "up5": 57.5,
-      "big": 6.8
+      "up5": 58.6,
+      "big": 7.0
      },
      "base": {
       "up1": 53.7,
@@ -81666,80 +76869,34 @@
    }
   }
  ],
- "dctest": {
-  "USA hurts": {
-   "chart": "USA",
-   "level": "Prana",
-   "group": "daily chain (Pratyantar + Sookshma + Prana): hurts (\u2264 \u22123)",
-   "units": 5037,
-   "of": 24840,
-   "mean": 6.3,
-   "base": 7.8,
-   "down": 46.1,
-   "base_down": 46.3,
-   "t": -0.39,
-   "p": 0.6972,
-   "h1": -6.4,
-   "h2": 4.6,
-   "expect": -1,
-   "q": 0.96,
-   "holds": false
+ "sr_scores": [
+  {
+   "period": "NYSE solar month 20 Oct - 18 Nov 2026",
+   "status": "right",
+   "detail": "7,691 \u2192 7,324 (-4.8%)"
   },
-  "USA helps": {
-   "chart": "USA",
-   "level": "Prana",
-   "group": "daily chain: helps (\u2265 +3)",
-   "units": 7636,
-   "of": 24840,
-   "mean": 5.5,
-   "base": 7.8,
-   "down": 46.9,
-   "base_down": 46.3,
-   "t": -0.83,
-   "p": 0.4071,
-   "h1": -1.9,
-   "h2": -2.9,
-   "expect": 1,
-   "q": 0.96,
-   "holds": false
+  {
+   "period": "Mon 16 - Fri 20 Nov 2026",
+   "status": "partly right (4/5)",
+   "detail": "Mon 16 Nov: said down, -1.92% \u2713; Tue 17 Nov: said down, -1.03% \u2713; Wed 18 Nov: said down, -0.23% \u2713; Thu 19 Nov: said down, -2.02% \u2713; Fri 20 Nov: said up, -3.70% \u2717"
   },
-  "NYSE hurts": {
-   "chart": "NYSE",
-   "level": "Prana",
-   "group": "daily chain (Pratyantar + Sookshma + Prana): hurts (\u2264 \u22123)",
-   "units": 4757,
-   "of": 24840,
-   "mean": 12.1,
-   "base": 7.8,
-   "down": 44.4,
-   "base_down": 46.3,
-   "t": 1.12,
-   "p": 0.2628,
-   "h1": 2.1,
-   "h2": 6.9,
-   "expect": -1,
-   "q": 0.96,
-   "holds": false
+  {
+   "period": "NYSE solar month 19 Nov - 18 Dec 2026",
+   "status": "open",
+   "detail": "so far 7,324 \u2192 7,237 (-1.2%) to 2026-11-23"
   },
-  "NYSE helps": {
-   "chart": "NYSE",
-   "level": "Prana",
-   "group": "daily chain: helps (\u2265 +3)",
-   "units": 7459,
-   "of": 24840,
-   "mean": 6.7,
-   "base": 7.8,
-   "down": 46.5,
-   "base_down": 46.3,
-   "t": -0.4,
-   "p": 0.6861,
-   "h1": 1.1,
-   "h2": -3.4,
-   "expect": 1,
-   "q": 0.96,
-   "holds": false
+  {
+   "period": "Mon 23 - Fri 27 Nov 2026",
+   "status": "open (0/1)",
+   "detail": "Mon 23 Nov: said down, +4.73% \u2717; Tue 24 Nov: pending; Wed 25 Nov: pending; Fri 27 Nov: pending"
+  },
+  {
+   "period": "Oct 2026 - Oct 2027",
+   "status": "open",
+   "detail": "weak late 2026 to Feb 2027: open; bottom around Mar-May 2027 (the year's low falls in this window): open; advance from June through December 2027: open"
   }
- },
+ ],
+ "dctest": {},
  "atests": {
   "Sun square Mars (within 3\u00b0) \u2013 Solar return: bearish": {
    "n": 813,
@@ -81903,13 +77060,11 @@
    ],
    "up5": [
     "table",
-    "NYSE dasha",
     "NYSE gochara",
     "jup-ven"
    ],
    "big": [
     "bigmove",
-    "NYSE dasha",
     "USA tara",
     "NYSE tara",
     "jup-ven"
@@ -81950,35 +77105,35 @@
      "n": 3452,
      "actual": 54.5,
      "base": 52.8,
-     "brier": 0.2493,
+     "brier": 0.2491,
      "brier_base": 0.2483,
-     "skill": -0.42,
-     "avg_p": 53.0,
-     "calls_up": 1155,
-     "right_up": 54,
-     "calls_down": 1010,
-     "right_down": 47,
+     "skill": -0.34,
+     "avg_p": 53.1,
+     "calls_up": 1195,
+     "right_up": 55,
+     "calls_down": 962,
+     "right_down": 46,
      "hit": 51,
      "bands": {
       "40-45%": {
-       "n": 98,
-       "actual": 49
+       "n": 91,
+       "actual": 47
       },
       "45-50%": {
-       "n": 681,
-       "actual": 52
-      },
-      "50-55%": {
-       "n": 1570,
-       "actual": 56
-      },
-      "55-60%": {
-       "n": 976,
+       "n": 663,
        "actual": 53
       },
+      "50-55%": {
+       "n": 1543,
+       "actual": 55
+      },
+      "55-60%": {
+       "n": 1035,
+       "actual": 54
+      },
       "60-100%": {
-       "n": 127,
-       "actual": 59
+       "n": 120,
+       "actual": 58
       }
      }
     },
@@ -82018,37 +77173,37 @@
      "base": 53.6,
      "brier": 0.2441,
      "brier_base": 0.2436,
-     "skill": -0.22,
-     "avg_p": 54.1,
-     "calls_up": 1368,
+     "skill": -0.21,
+     "avg_p": 53.9,
+     "calls_up": 1327,
      "right_up": 62,
-     "calls_down": 1217,
+     "calls_down": 1258,
      "right_down": 41,
      "hit": 52,
      "bands": {
       "0-40%": {
-       "n": 5,
-       "actual": 40
+       "n": 3,
+       "actual": 33
       },
       "40-45%": {
-       "n": 141,
-       "actual": 57
+       "n": 146,
+       "actual": 58
       },
       "45-50%": {
-       "n": 693,
+       "n": 669,
        "actual": 59
       },
       "50-55%": {
-       "n": 1130,
+       "n": 1186,
        "actual": 61
       },
       "55-60%": {
-       "n": 947,
-       "actual": 59
+       "n": 944,
+       "actual": 61
       },
       "60-100%": {
-       "n": 536,
-       "actual": 66
+       "n": 504,
+       "actual": 64
       }
      }
     },
@@ -82059,11 +77214,11 @@
      "brier": 0.2425,
      "brier_base": 0.2436,
      "skill": 0.46,
-     "avg_p": 54.6,
-     "calls_up": 1453,
+     "avg_p": 54.5,
+     "calls_up": 1429,
      "right_up": 63,
-     "calls_down": 894,
-     "right_down": 41,
+     "calls_down": 806,
+     "right_down": 42,
      "hit": 55,
      "bands": {
       "40-45%": {
@@ -82071,20 +77226,20 @@
        "actual": 55
       },
       "45-50%": {
-       "n": 489,
-       "actual": 58
+       "n": 588,
+       "actual": 57
       },
       "50-55%": {
-       "n": 1345,
+       "n": 1143,
        "actual": 58
       },
       "55-60%": {
-       "n": 1247,
-       "actual": 64
+       "n": 1345,
+       "actual": 65
       },
       "60-100%": {
-       "n": 285,
-       "actual": 63
+       "n": 290,
+       "actual": 65
       }
      }
     }
@@ -82094,32 +77249,32 @@
      "n": 3452,
      "actual": 5.2,
      "base": 10.3,
-     "brier": 0.0583,
+     "brier": 0.0576,
      "brier_base": 0.0518,
-     "skill": -12.57,
-     "avg_p": 10.1,
-     "p_on_big": 9.7,
-     "p_on_other": 10.2,
+     "skill": -11.1,
+     "avg_p": 9.9,
+     "p_on_big": 9.6,
+     "p_on_other": 9.9,
      "bands": {
       "0-3%": {
-       "n": 529,
+       "n": 503,
        "actual": 5
       },
       "3-6%": {
-       "n": 822,
-       "actual": 6
+       "n": 903,
+       "actual": 7
       },
       "6-10%": {
-       "n": 786,
+       "n": 854,
        "actual": 5
       },
       "10-20%": {
-       "n": 825,
-       "actual": 5
+       "n": 680,
+       "actual": 3
       },
       "20-100%": {
-       "n": 490,
-       "actual": 5
+       "n": 512,
+       "actual": 6
       }
      }
     },
@@ -82127,19 +77282,19 @@
      "n": 3452,
      "actual": 5.2,
      "base": 10.3,
-     "brier": 0.0515,
+     "brier": 0.0516,
      "brier_base": 0.0518,
-     "skill": 0.57,
-     "avg_p": 10.0,
-     "p_on_big": 10.3,
-     "p_on_other": 10.0,
+     "skill": 0.46,
+     "avg_p": 10.1,
+     "p_on_big": 10.5,
+     "p_on_other": 10.1,
      "bands": {
       "6-10%": {
-       "n": 1624,
+       "n": 1716,
        "actual": 4
       },
       "10-20%": {
-       "n": 1828,
+       "n": 1736,
        "actual": 6
       }
      }
@@ -82557,9 +77712,9 @@
     "method": "Combined probability, all layers",
     "market": "spx",
     "d1_right": 5,
-    "d1_calls": 13,
-    "d5_right": 1,
-    "d5_calls": 6
+    "d1_calls": 12,
+    "d5_right": 2,
+    "d5_calls": 8
    },
    {
     "method": "Combined probability, kept layers",
@@ -82574,7 +77729,7 @@
     "market": "spx",
     "d1_right": 6,
     "d1_calls": 16,
-    "d5_right": 3,
+    "d5_right": 2,
     "d5_calls": 12
    },
    {
@@ -82592,14 +77747,6 @@
     "d1_calls": 8,
     "d5_right": 3,
     "d5_calls": 6
-   },
-   {
-    "method": "USA dasha condition",
-    "market": "spx",
-    "d1_right": 7,
-    "d1_calls": 10,
-    "d5_right": 5,
-    "d5_calls": 7
    },
    {
     "method": "USA Chandra bala",
@@ -82648,22 +77795,6 @@
     "d1_calls": 6,
     "d5_right": 2,
     "d5_calls": 5
-   },
-   {
-    "method": "USA dasha chain, classical reading (Pratyantar + Sookshma + Prana)",
-    "market": "spx",
-    "d1_right": 5,
-    "d1_calls": 10,
-    "d5_right": 3,
-    "d5_calls": 10
-   },
-   {
-    "method": "NYSE dasha chain, classical reading (Pratyantar + Sookshma + Prana)",
-    "market": "spx",
-    "d1_right": 3,
-    "d1_calls": 7,
-    "d5_right": 1,
-    "d5_calls": 6
    },
    {
     "method": "Signal table",
@@ -82818,14 +77949,6 @@
     "d5_calls": 4
    },
    {
-    "method": "NYSE dasha condition",
-    "market": "spx",
-    "d1_right": 1,
-    "d1_calls": 1,
-    "d5_right": 1,
-    "d5_calls": 1
-   },
-   {
     "method": "Solar return: day-by-day forecasts",
     "market": "spx",
     "d1_right": 4,
@@ -82844,16 +77967,16 @@
   ],
   "pooled": {
    "spx": {
-    "d1_right": 108,
-    "d1_calls": 213,
-    "d5_right": 69,
-    "d5_calls": 152
+    "d1_right": 92,
+    "d1_calls": 184,
+    "d5_right": 60,
+    "d5_calls": 130
    },
    "all": {
-    "d1_right": 179,
-    "d1_calls": 336,
-    "d5_right": 121,
-    "d5_calls": 257
+    "d1_right": 163,
+    "d1_calls": 307,
+    "d5_right": 112,
+    "d5_calls": 235
    },
    "sensex": {
     "d1_right": 35,
@@ -82902,8 +78025,8 @@
   },
   "big": {
    "spx": {
-    "p_big": 3.3,
-    "p_other": 3.9,
+    "p_big": 3.6,
+    "p_other": 4.2,
     "n_big": 5,
     "watch": [
      1,

@@ -2729,8 +2729,6 @@
    "layers": [
     "table",
     "bigmove",
-    "USA dasha",
-    "NYSE dasha",
     "USA gochara",
     "NYSE gochara",
     "USA chandra",
@@ -2745,35 +2743,35 @@
       "n": 3452,
       "actual": 54.5,
       "base": 52.8,
-      "brier": 0.2493,
+      "brier": 0.2491,
       "brier_base": 0.2483,
-      "skill": -0.42,
-      "avg_p": 53.0,
-      "calls_up": 1155,
-      "right_up": 54,
-      "calls_down": 1010,
-      "right_down": 47,
+      "skill": -0.34,
+      "avg_p": 53.1,
+      "calls_up": 1195,
+      "right_up": 55,
+      "calls_down": 962,
+      "right_down": 46,
       "hit": 51,
       "bands": {
        "40-45%": {
-        "n": 98,
-        "actual": 49
+        "n": 91,
+        "actual": 47
        },
        "45-50%": {
-        "n": 681,
-        "actual": 52
-       },
-       "50-55%": {
-        "n": 1570,
-        "actual": 56
-       },
-       "55-60%": {
-        "n": 976,
+        "n": 663,
         "actual": 53
        },
+       "50-55%": {
+        "n": 1543,
+        "actual": 55
+       },
+       "55-60%": {
+        "n": 1035,
+        "actual": 54
+       },
        "60-100%": {
-        "n": 127,
-        "actual": 59
+        "n": 120,
+        "actual": 58
        }
       }
      },
@@ -2813,37 +2811,37 @@
       "base": 53.6,
       "brier": 0.2441,
       "brier_base": 0.2436,
-      "skill": -0.22,
-      "avg_p": 54.1,
-      "calls_up": 1368,
+      "skill": -0.21,
+      "avg_p": 53.9,
+      "calls_up": 1327,
       "right_up": 62,
-      "calls_down": 1217,
+      "calls_down": 1258,
       "right_down": 41,
       "hit": 52,
       "bands": {
        "0-40%": {
-        "n": 5,
-        "actual": 40
+        "n": 3,
+        "actual": 33
        },
        "40-45%": {
-        "n": 141,
-        "actual": 57
+        "n": 146,
+        "actual": 58
        },
        "45-50%": {
-        "n": 693,
+        "n": 669,
         "actual": 59
        },
        "50-55%": {
-        "n": 1130,
+        "n": 1186,
         "actual": 61
        },
        "55-60%": {
-        "n": 947,
-        "actual": 59
+        "n": 944,
+        "actual": 61
        },
        "60-100%": {
-        "n": 536,
-        "actual": 66
+        "n": 504,
+        "actual": 64
        }
       }
      },
@@ -2854,11 +2852,11 @@
       "brier": 0.2425,
       "brier_base": 0.2436,
       "skill": 0.46,
-      "avg_p": 54.6,
-      "calls_up": 1453,
+      "avg_p": 54.5,
+      "calls_up": 1429,
       "right_up": 63,
-      "calls_down": 894,
-      "right_down": 41,
+      "calls_down": 806,
+      "right_down": 42,
       "hit": 55,
       "bands": {
        "40-45%": {
@@ -2866,20 +2864,20 @@
         "actual": 55
        },
        "45-50%": {
-        "n": 489,
-        "actual": 58
+        "n": 588,
+        "actual": 57
        },
        "50-55%": {
-        "n": 1345,
+        "n": 1143,
         "actual": 58
        },
        "55-60%": {
-        "n": 1247,
-        "actual": 64
+        "n": 1345,
+        "actual": 65
        },
        "60-100%": {
-        "n": 285,
-        "actual": 63
+        "n": 290,
+        "actual": 65
        }
       }
      }
@@ -2889,32 +2887,32 @@
       "n": 3452,
       "actual": 5.2,
       "base": 10.3,
-      "brier": 0.0583,
+      "brier": 0.0576,
       "brier_base": 0.0518,
-      "skill": -12.57,
-      "avg_p": 10.1,
-      "p_on_big": 9.7,
-      "p_on_other": 10.2,
+      "skill": -11.1,
+      "avg_p": 9.9,
+      "p_on_big": 9.6,
+      "p_on_other": 9.9,
       "bands": {
        "0-3%": {
-        "n": 529,
+        "n": 503,
         "actual": 5
        },
        "3-6%": {
-        "n": 822,
-        "actual": 6
+        "n": 903,
+        "actual": 7
        },
        "6-10%": {
-        "n": 786,
+        "n": 854,
         "actual": 5
        },
        "10-20%": {
-        "n": 825,
-        "actual": 5
+        "n": 680,
+        "actual": 3
        },
        "20-100%": {
-        "n": 490,
-        "actual": 5
+        "n": 512,
+        "actual": 6
        }
       }
      },
@@ -2922,19 +2920,19 @@
       "n": 3452,
       "actual": 5.2,
       "base": 10.3,
-      "brier": 0.0515,
+      "brier": 0.0516,
       "brier_base": 0.0518,
-      "skill": 0.57,
-      "avg_p": 10.0,
-      "p_on_big": 10.3,
-      "p_on_other": 10.0,
+      "skill": 0.46,
+      "avg_p": 10.1,
+      "p_on_big": 10.5,
+      "p_on_other": 10.1,
       "bands": {
        "6-10%": {
-        "n": 1624,
+        "n": 1716,
         "actual": 4
        },
        "10-20%": {
-        "n": 1828,
+        "n": 1736,
         "actual": 6
        }
       }
@@ -2947,22 +2945,22 @@
       "n": 43,
       "actual": 44.2,
       "base": 53.7,
-      "brier": 0.2566,
+      "brier": 0.2559,
       "brier_base": 0.2557,
-      "skill": -0.38,
+      "skill": -0.08,
       "avg_p": 53.1,
       "calls_up": 12,
-      "right_up": 33,
-      "calls_down": 19,
-      "right_down": 58,
+      "right_up": 42,
+      "calls_down": 15,
+      "right_down": 53,
       "hit": 48,
       "bands": {
        "45-50%": {
-        "n": 12,
-        "actual": 42
+        "n": 10,
+        "actual": 40
        },
        "50-55%": {
-        "n": 16,
+        "n": 18,
         "actual": 44
        },
        "55-60%": {
@@ -3009,31 +3007,31 @@
       "n": 39,
       "actual": 30.8,
       "base": 57.3,
-      "brier": 0.2713,
+      "brier": 0.2737,
       "brier_base": 0.2831,
-      "skill": 4.18,
-      "avg_p": 55.6,
-      "calls_up": 8,
-      "right_up": 38,
-      "calls_down": 17,
-      "right_down": 76,
+      "skill": 3.33,
+      "avg_p": 55.7,
+      "calls_up": 10,
+      "right_up": 40,
+      "calls_down": 15,
+      "right_down": 80,
       "hit": 64,
       "bands": {
        "45-50%": {
-        "n": 4,
-        "actual": 0
+        "n": 9,
+        "actual": 22
        },
        "50-55%": {
-        "n": 12,
-        "actual": 33
+        "n": 5,
+        "actual": 20
        },
        "55-60%": {
-        "n": 18,
-        "actual": 33
+        "n": 16,
+        "actual": 38
        },
        "60-100%": {
-        "n": 5,
-        "actual": 40
+        "n": 9,
+        "actual": 33
        }
       }
      },
@@ -3041,10 +3039,10 @@
       "n": 39,
       "actual": 30.8,
       "base": 57.3,
-      "brier": 0.279,
+      "brier": 0.2814,
       "brier_base": 0.2831,
-      "skill": 1.46,
-      "avg_p": 56.7,
+      "skill": 0.6,
+      "avg_p": 56.6,
       "calls_up": 15,
       "right_up": 27,
       "calls_down": 12,
@@ -3071,27 +3069,27 @@
       "n": 43,
       "actual": 11.6,
       "base": 7.7,
-      "brier": 0.1162,
+      "brier": 0.1145,
       "brier_base": 0.1043,
-      "skill": -11.36,
-      "avg_p": 7.8,
-      "p_on_big": 3.2,
-      "p_on_other": 8.4,
+      "skill": -9.8,
+      "avg_p": 7.5,
+      "p_on_big": 3.6,
+      "p_on_other": 8.0,
       "bands": {
        "0-3%": {
-        "n": 5,
-        "actual": 40
+        "n": 2,
+        "actual": 50
        },
        "3-6%": {
-        "n": 11,
-        "actual": 27
+        "n": 14,
+        "actual": 29
        },
        "6-10%": {
-        "n": 14,
+        "n": 15,
         "actual": 0
        },
        "10-20%": {
-        "n": 13,
+        "n": 12,
         "actual": 0
        }
       }
@@ -3100,23 +3098,19 @@
       "n": 43,
       "actual": 11.6,
       "base": 7.7,
-      "brier": 0.1068,
+      "brier": 0.1058,
       "brier_base": 0.1043,
-      "skill": -2.41,
-      "avg_p": 8.6,
-      "p_on_big": 7.3,
-      "p_on_other": 8.7,
+      "skill": -1.45,
+      "avg_p": 8.3,
+      "p_on_big": 7.6,
+      "p_on_other": 8.4,
       "bands": {
-       "3-6%": {
-        "n": 4,
-        "actual": 25
-       },
        "6-10%": {
-        "n": 30,
+        "n": 39,
         "actual": 13
        },
        "10-20%": {
-        "n": 9,
+        "n": 4,
         "actual": 0
        }
       }
@@ -3131,13 +3125,11 @@
     ],
     "up5": [
      "table",
-     "NYSE dasha",
      "NYSE gochara",
      "jup-ven"
     ],
     "big": [
      "bigmove",
-     "NYSE dasha",
      "USA tara",
      "NYSE tara",
      "jup-ven"
@@ -3176,46 +3168,6 @@
       "brier": 0.2482,
       "brier_base": 0.2483,
       "skill": 0.02,
-      "avg_p": 52.9,
-      "calls_up": 0,
-      "right_up": null,
-      "calls_down": 0,
-      "right_down": null,
-      "hit": null,
-      "bands": {
-       "50-55%": {
-        "n": 3452,
-        "actual": 54
-       }
-      }
-     },
-     "USA dasha": {
-      "n": 3452,
-      "actual": 54.5,
-      "base": 52.8,
-      "brier": 0.2485,
-      "brier_base": 0.2483,
-      "skill": -0.09,
-      "avg_p": 52.6,
-      "calls_up": 0,
-      "right_up": null,
-      "calls_down": 0,
-      "right_down": null,
-      "hit": null,
-      "bands": {
-       "50-55%": {
-        "n": 3452,
-        "actual": 54
-       }
-      }
-     },
-     "NYSE dasha": {
-      "n": 3452,
-      "actual": 54.5,
-      "base": 52.8,
-      "brier": 0.2482,
-      "brier_base": 0.2483,
-      "skill": 0.0,
       "avg_p": 52.9,
       "calls_up": 0,
       "right_up": null,
@@ -3411,50 +3363,6 @@
       "brier_base": 0.2436,
       "skill": -0.02,
       "avg_p": 53.6,
-      "calls_up": 0,
-      "right_up": null,
-      "calls_down": 0,
-      "right_down": null,
-      "hit": null,
-      "bands": {
-       "50-55%": {
-        "n": 3452,
-        "actual": 61
-       }
-      }
-     },
-     "USA dasha": {
-      "n": 3452,
-      "actual": 60.7,
-      "base": 53.6,
-      "brier": 0.2436,
-      "brier_base": 0.2436,
-      "skill": -0.0,
-      "avg_p": 53.6,
-      "calls_up": 0,
-      "right_up": null,
-      "calls_down": 0,
-      "right_down": null,
-      "hit": null,
-      "bands": {
-       "50-55%": {
-        "n": 2355,
-        "actual": 60
-       },
-       "55-60%": {
-        "n": 1097,
-        "actual": 62
-       }
-      }
-     },
-     "NYSE dasha": {
-      "n": 3452,
-      "actual": 60.7,
-      "base": 53.6,
-      "brier": 0.2435,
-      "brier_base": 0.2436,
-      "skill": 0.02,
-      "avg_p": 53.8,
       "calls_up": 0,
       "right_up": null,
       "calls_down": 0,
@@ -3663,48 +3571,6 @@
        }
       }
      },
-     "USA dasha": {
-      "n": 3452,
-      "actual": 5.2,
-      "base": 10.3,
-      "brier": 0.0526,
-      "brier_base": 0.0518,
-      "skill": -1.51,
-      "avg_p": 10.9,
-      "p_on_big": 10.9,
-      "p_on_other": 10.9,
-      "bands": {
-       "6-10%": {
-        "n": 1387,
-        "actual": 5
-       },
-       "10-20%": {
-        "n": 2065,
-        "actual": 5
-       }
-      }
-     },
-     "NYSE dasha": {
-      "n": 3452,
-      "actual": 5.2,
-      "base": 10.3,
-      "brier": 0.0517,
-      "brier_base": 0.0518,
-      "skill": 0.17,
-      "avg_p": 10.2,
-      "p_on_big": 10.2,
-      "p_on_other": 10.2,
-      "bands": {
-       "6-10%": {
-        "n": 1843,
-        "actual": 5
-       },
-       "10-20%": {
-        "n": 1609,
-        "actual": 5
-       }
-      }
-     },
      "USA gochara": {
       "n": 3452,
       "actual": 5.2,
@@ -3907,40 +3773,6 @@
         "shift": -0.029
        }
       },
-      "USA dasha": {
-       "afflicted": {
-        "n": 770,
-        "rate": 54.8,
-        "shift": 0.036
-       },
-       "mixed": {
-        "n": 2357,
-        "rate": 54.0,
-        "shift": 0.012
-       },
-       "strong": {
-        "n": 3593,
-        "rate": 53.2,
-        "shift": -0.017
-       }
-      },
-      "NYSE dasha": {
-       "afflicted": {
-        "n": 910,
-        "rate": 53.3,
-        "shift": -0.013
-       },
-       "mixed": {
-        "n": 2437,
-        "rate": 53.4,
-        "shift": -0.01
-       },
-       "strong": {
-        "n": 3373,
-        "rate": 54.0,
-        "shift": 0.011
-       }
-      },
       "USA gochara": {
        "adverse": {
         "n": 2742,
@@ -4097,40 +3929,6 @@
         "n": 3055,
         "rate": 56.0,
         "shift": -0.046
-       }
-      },
-      "USA dasha": {
-       "afflicted": {
-        "n": 770,
-        "rate": 55.8,
-        "shift": -0.045
-       },
-       "mixed": {
-        "n": 2357,
-        "rate": 58.4,
-        "shift": 0.043
-       },
-       "strong": {
-        "n": 3589,
-        "rate": 56.8,
-        "shift": -0.017
-       }
-      },
-      "NYSE dasha": {
-       "afflicted": {
-        "n": 906,
-        "rate": 58.5,
-        "shift": 0.042
-       },
-       "mixed": {
-        "n": 2437,
-        "rate": 56.0,
-        "shift": -0.047
-       },
-       "strong": {
-        "n": 3373,
-        "rate": 57.8,
-        "shift": 0.022
        }
       },
       "USA gochara": {
@@ -4291,40 +4089,6 @@
         "shift": 0.188
        }
       },
-      "USA dasha": {
-       "afflicted": {
-        "n": 770,
-        "rate": 7.4,
-        "shift": -0.033
-       },
-       "mixed": {
-        "n": 2357,
-        "rate": 6.7,
-        "shift": -0.13
-       },
-       "strong": {
-        "n": 3593,
-        "rate": 8.4,
-        "shift": 0.088
-       }
-      },
-      "NYSE dasha": {
-       "afflicted": {
-        "n": 910,
-        "rate": 9.6,
-        "shift": 0.198
-       },
-       "mixed": {
-        "n": 2437,
-        "rate": 7.4,
-        "shift": -0.035
-       },
-       "strong": {
-        "n": 3373,
-        "rate": 7.4,
-        "shift": -0.042
-       }
-      },
       "USA gochara": {
        "adverse": {
         "n": 2742,
@@ -4439,14 +4203,14 @@
      "r5": -0.71,
      "big": false,
      "p": {
-      "up1": 49.6,
-      "up5": 52.2,
-      "big": 10.2
+      "up1": 50.3,
+      "up5": 51.6,
+      "big": 7.9
      },
      "pk": {
       "up1": 49.9,
-      "up5": 51.2,
-      "big": 7.4
+      "up5": 50.2,
+      "big": 6.1
      },
      "st": {
       "table": "Bearish High",
@@ -4468,14 +4232,14 @@
      "r5": -0.49,
      "big": false,
      "p": {
-      "up1": 46.6,
-      "up5": 52.8,
-      "big": 11.2
+      "up1": 47.4,
+      "up5": 52.1,
+      "big": 8.7
      },
      "pk": {
       "up1": 49.9,
-      "up5": 51.2,
-      "big": 8.1
+      "up5": 50.2,
+      "big": 6.7
      },
      "st": {
       "table": "Bearish High",
@@ -4497,14 +4261,14 @@
      "r5": -0.27,
      "big": false,
      "p": {
-      "up1": 51.4,
-      "up5": 59.2,
-      "big": 8.6
+      "up1": 52.2,
+      "up5": 58.6,
+      "big": 6.6
      },
      "pk": {
       "up1": 54.0,
-      "up5": 57.7,
-      "big": 7.2
+      "up5": 56.7,
+      "big": 6.0
      },
      "st": {
       "table": "no signal",
@@ -4526,14 +4290,14 @@
      "r5": 1.17,
      "big": false,
      "p": {
-      "up1": 52.9,
-      "up5": 58.7,
-      "big": 9.8
+      "up1": 53.6,
+      "up5": 58.1,
+      "big": 7.5
      },
      "pk": {
       "up1": 54.0,
-      "up5": 57.7,
-      "big": 8.2
+      "up5": 56.7,
+      "big": 6.9
      },
      "st": {
       "table": "no signal",
@@ -4555,14 +4319,14 @@
      "r5": 1.93,
      "big": false,
      "p": {
-      "up1": 53.3,
-      "up5": 57.9,
-      "big": 8.2
+      "up1": 54.1,
+      "up5": 57.3,
+      "big": 6.3
      },
      "pk": {
       "up1": 54.0,
-      "up5": 57.7,
-      "big": 7.2
+      "up5": 56.7,
+      "big": 6.0
      },
      "st": {
       "table": "no signal",
@@ -4584,14 +4348,14 @@
      "r5": 1.96,
      "big": false,
      "p": {
-      "up1": 55.5,
-      "up5": 57.4,
-      "big": 8.3
+      "up1": 56.3,
+      "up5": 56.8,
+      "big": 6.4
      },
      "pk": {
       "up1": 54.0,
-      "up5": 57.7,
-      "big": 7.4
+      "up5": 56.7,
+      "big": 6.1
      },
      "st": {
       "table": "no signal",
@@ -4613,14 +4377,14 @@
      "r5": 1.29,
      "big": false,
      "p": {
-      "up1": 49.7,
-      "up5": 58.6,
-      "big": 8.7
+      "up1": 50.5,
+      "up5": 58.0,
+      "big": 6.7
      },
      "pk": {
       "up1": 54.0,
-      "up5": 57.7,
-      "big": 7.4
+      "up5": 56.7,
+      "big": 6.2
      },
      "st": {
       "table": "no signal",
@@ -4642,14 +4406,14 @@
      "r5": 1.15,
      "big": false,
      "p": {
-      "up1": 50.2,
-      "up5": 60.7,
-      "big": 12.0
+      "up1": 50.9,
+      "up5": 60.1,
+      "big": 9.3
      },
      "pk": {
       "up1": 52.8,
-      "up5": 61.2,
-      "big": 10.2
+      "up5": 60.2,
+      "big": 8.5
      },
      "st": {
       "table": "Bullish Moderate",
@@ -4671,14 +4435,14 @@
      "r5": 0.43,
      "big": false,
      "p": {
-      "up1": 51.0,
-      "up5": 61.2,
-      "big": 15.9
+      "up1": 51.7,
+      "up5": 60.6,
+      "big": 12.4
      },
      "pk": {
       "up1": 52.8,
-      "up5": 61.2,
-      "big": 13.5
+      "up5": 60.2,
+      "big": 11.4
      },
      "st": {
       "table": "Bullish Moderate",
@@ -4700,14 +4464,14 @@
      "r5": -0.17,
      "big": false,
      "p": {
-      "up1": 51.5,
-      "up5": 56.0,
-      "big": 11.6
+      "up1": 52.2,
+      "up5": 55.4,
+      "big": 9.0
      },
      "pk": {
       "up1": 52.7,
-      "up5": 57.7,
-      "big": 10.2
+      "up5": 56.7,
+      "big": 8.5
      },
      "st": {
       "table": "no signal",
@@ -4729,14 +4493,14 @@
      "r5": -1.06,
      "big": false,
      "p": {
-      "up1": 51.6,
-      "up5": 59.6,
-      "big": 11.6
+      "up1": 52.3,
+      "up5": 59.0,
+      "big": 9.0
      },
      "pk": {
       "up1": 52.8,
-      "up5": 61.2,
-      "big": 10.2
+      "up5": 60.2,
+      "big": 8.5
      },
      "st": {
       "table": "Bullish Moderate",
@@ -4758,14 +4522,14 @@
      "r5": -0.27,
      "big": false,
      "p": {
-      "up1": 54.3,
-      "up5": 59.0,
-      "big": 11.6
+      "up1": 55.0,
+      "up5": 58.4,
+      "big": 9.0
      },
      "pk": {
       "up1": 52.8,
-      "up5": 61.2,
-      "big": 10.3
+      "up5": 60.2,
+      "big": 8.6
      },
      "st": {
       "table": "Bullish Moderate",
@@ -4787,14 +4551,14 @@
      "r5": -1.95,
      "big": false,
      "p": {
-      "up1": 49.4,
-      "up5": 49.4,
-      "big": 11.3
+      "up1": 49.5,
+      "up5": 49.3,
+      "big": 10.9
      },
      "pk": {
       "up1": 48.6,
-      "up5": 50.7,
-      "big": 8.3
+      "up5": 50.2,
+      "big": 8.6
      },
      "st": {
       "table": "Bearish High",
@@ -4816,14 +4580,14 @@
      "r5": -1.49,
      "big": false,
      "p": {
-      "up1": 45.9,
-      "up5": 50.1,
-      "big": 12.6
+      "up1": 46.1,
+      "up5": 50.0,
+      "big": 12.1
      },
      "pk": {
       "up1": 48.6,
-      "up5": 50.7,
-      "big": 9.1
+      "up5": 50.2,
+      "big": 9.5
      },
      "st": {
       "table": "Bearish High",
@@ -4845,14 +4609,14 @@
      "r5": -1.19,
      "big": false,
      "p": {
-      "up1": 46.7,
-      "up5": 50.1,
-      "big": 11.3
+      "up1": 46.8,
+      "up5": 50.0,
+      "big": 10.9
      },
      "pk": {
       "up1": 48.6,
-      "up5": 50.7,
-      "big": 8.2
+      "up5": 50.2,
+      "big": 8.5
      },
      "st": {
       "table": "Bearish High",
@@ -4874,14 +4638,14 @@
      "r5": 0.5,
      "big": false,
      "p": {
-      "up1": 47.4,
-      "up5": 50.6,
-      "big": 15.0
+      "up1": 47.6,
+      "up5": 50.5,
+      "big": 14.4
      },
      "pk": {
       "up1": 48.6,
-      "up5": 50.7,
-      "big": 10.9
+      "up5": 50.2,
+      "big": 11.4
      },
      "st": {
       "table": "Bearish High",
@@ -4903,14 +4667,14 @@
      "r5": -1.04,
      "big": false,
      "p": {
-      "up1": 48.0,
-      "up5": 49.0,
-      "big": 10.9
+      "up1": 48.2,
+      "up5": 48.9,
+      "big": 10.5
      },
      "pk": {
       "up1": 48.6,
-      "up5": 50.7,
-      "big": 8.2
+      "up5": 50.2,
+      "big": 8.5
      },
      "st": {
       "table": "Bearish High",
@@ -4932,14 +4696,14 @@
      "r5": -0.47,
      "big": false,
      "p": {
-      "up1": 51.5,
-      "up5": 49.8,
-      "big": 9.0
+      "up1": 50.9,
+      "up5": 48.2,
+      "big": 10.5
      },
      "pk": {
       "up1": 48.6,
-      "up5": 50.7,
-      "big": 8.3
+      "up5": 50.2,
+      "big": 8.6
      },
      "st": {
       "table": "Bearish High",
@@ -4961,14 +4725,14 @@
      "r5": -0.18,
      "big": false,
      "p": {
-      "up1": 47.1,
-      "up5": 49.9,
-      "big": 9.0
+      "up1": 46.5,
+      "up5": 48.3,
+      "big": 10.6
      },
      "pk": {
       "up1": 48.6,
-      "up5": 50.7,
-      "big": 8.4
+      "up5": 50.2,
+      "big": 8.7
      },
      "st": {
       "table": "Bearish High",
@@ -4990,14 +4754,14 @@
      "r5": 0.13,
      "big": false,
      "p": {
-      "up1": 49.6,
-      "up5": 51.1,
-      "big": 9.5
+      "up1": 49.0,
+      "up5": 49.5,
+      "big": 11.0
      },
      "pk": {
       "up1": 48.6,
-      "up5": 50.7,
-      "big": 8.3
+      "up5": 50.2,
+      "big": 8.6
      },
      "st": {
       "table": "Bearish High",
@@ -5019,14 +4783,14 @@
      "r5": -0.17,
      "big": false,
      "p": {
-      "up1": 46.6,
-      "up5": 51.6,
-      "big": 10.4
+      "up1": 46.1,
+      "up5": 50.0,
+      "big": 12.1
      },
      "pk": {
       "up1": 48.6,
-      "up5": 50.7,
-      "big": 9.1
+      "up5": 50.2,
+      "big": 9.5
      },
      "st": {
       "table": "Bearish High",
@@ -5048,14 +4812,14 @@
      "r5": 0.74,
      "big": false,
      "p": {
-      "up1": 49.3,
-      "up5": 50.3,
-      "big": 8.8
+      "up1": 48.7,
+      "up5": 48.7,
+      "big": 10.3
      },
      "pk": {
       "up1": 48.6,
-      "up5": 50.7,
-      "big": 8.2
+      "up5": 50.2,
+      "big": 8.5
      },
      "st": {
       "table": "Bearish High",
@@ -5078,13 +4842,13 @@
      "big": false,
      "p": {
       "up1": 52.3,
-      "up5": 55.9,
-      "big": 9.1
+      "up5": 56.0,
+      "big": 10.6
      },
      "pk": {
       "up1": 52.7,
-      "up5": 55.5,
-      "big": 9.3
+      "up5": 56.7,
+      "big": 9.6
      },
      "st": {
       "table": "no signal",
@@ -5107,13 +4871,13 @@
      "big": false,
      "p": {
       "up1": 52.8,
-      "up5": 55.1,
-      "big": 7.6
+      "up5": 55.2,
+      "big": 8.9
      },
      "pk": {
       "up1": 52.7,
-      "up5": 55.5,
-      "big": 8.2
+      "up5": 56.7,
+      "big": 8.5
      },
      "st": {
       "table": "no signal",
@@ -5136,13 +4900,13 @@
      "big": false,
      "p": {
       "up1": 55.0,
-      "up5": 54.6,
-      "big": 7.8
+      "up5": 54.7,
+      "big": 9.0
      },
      "pk": {
       "up1": 52.7,
-      "up5": 55.5,
-      "big": 8.4
+      "up5": 56.7,
+      "big": 8.6
      },
      "st": {
       "table": "no signal",
@@ -5164,14 +4928,14 @@
      "r5": -0.71,
      "big": false,
      "p": {
-      "up1": 51.2,
-      "up5": 52.6,
-      "big": 8.5
+      "up1": 50.5,
+      "up5": 54.8,
+      "big": 9.1
      },
      "pk": {
       "up1": 52.7,
-      "up5": 55.5,
-      "big": 8.4
+      "up5": 56.7,
+      "big": 8.7
      },
      "st": {
       "table": "no signal",
@@ -5193,14 +4957,14 @@
      "r5": -4.75,
      "big": false,
      "p": {
-      "up1": 54.2,
-      "up5": 53.5,
-      "big": 8.8
+      "up1": 53.6,
+      "up5": 55.8,
+      "big": 9.4
      },
      "pk": {
       "up1": 52.7,
-      "up5": 55.5,
-      "big": 8.4
+      "up5": 56.7,
+      "big": 8.6
      },
      "st": {
       "table": "no signal",
@@ -5222,14 +4986,14 @@
      "r5": -2.68,
      "big": false,
      "p": {
-      "up1": 56.5,
-      "up5": 58.6,
-      "big": 5.4
+      "up1": 55.9,
+      "up5": 60.8,
+      "big": 5.7
      },
      "pk": {
       "up1": 56.1,
-      "up5": 61.0,
-      "big": 11.2
+      "up5": 62.1,
+      "big": 11.5
      },
      "st": {
       "table": "Bullish Moderate",
@@ -5251,14 +5015,14 @@
      "r5": 0.11,
      "big": false,
      "p": {
-      "up1": 57.0,
-      "up5": 53.4,
-      "big": 3.8
+      "up1": 56.3,
+      "up5": 55.7,
+      "big": 4.1
      },
      "pk": {
       "up1": 56.0,
-      "up5": 57.4,
-      "big": 8.4
+      "up5": 58.6,
+      "big": 8.6
      },
      "st": {
       "table": "no signal",
@@ -5280,14 +5044,14 @@
      "r5": -0.63,
      "big": false,
      "p": {
-      "up1": 58.5,
-      "up5": 56.6,
-      "big": 4.3
+      "up1": 57.9,
+      "up5": 58.8,
+      "big": 4.6
      },
      "pk": {
       "up1": 56.1,
-      "up5": 61.0,
-      "big": 9.5
+      "up5": 62.1,
+      "big": 9.8
      },
      "st": {
       "table": "Bullish Moderate",
@@ -5309,14 +5073,14 @@
      "r5": -0.9,
      "big": true,
      "p": {
-      "up1": 59.5,
-      "up5": 57.8,
-      "big": 3.4
+      "up1": 58.8,
+      "up5": 60.0,
+      "big": 3.7
      },
      "pk": {
       "up1": 58.0,
-      "up5": 61.9,
-      "big": 8.4
+      "up5": 63.0,
+      "big": 8.6
      },
      "st": {
       "table": "Bullish High",
@@ -5338,14 +5102,14 @@
      "r5": 3.25,
      "big": false,
      "p": {
-      "up1": 61.6,
-      "up5": 57.3,
-      "big": 3.5
+      "up1": 61.0,
+      "up5": 59.6,
+      "big": 3.8
      },
      "pk": {
       "up1": 58.0,
-      "up5": 61.9,
-      "big": 8.5
+      "up5": 63.0,
+      "big": 8.8
      },
      "st": {
       "table": "Bullish High",
@@ -5367,14 +5131,14 @@
      "r5": 2.51,
      "big": true,
      "p": {
-      "up1": 54.7,
-      "up5": 59.9,
-      "big": 4.1
+      "up1": 54.6,
+      "up5": 60.0,
+      "big": 4.8
      },
      "pk": {
       "up1": 56.0,
-      "up5": 60.9,
-      "big": 9.2
+      "up5": 62.0,
+      "big": 9.5
      },
      "st": {
       "table": "Bullish Low",
@@ -5396,14 +5160,14 @@
      "r5": -1.77,
      "big": false,
      "p": {
-      "up1": 54.9,
-      "up5": 60.1,
-      "big": 3.7
+      "up1": 54.8,
+      "up5": 60.2,
+      "big": 4.3
      },
      "pk": {
       "up1": 56.0,
-      "up5": 60.9,
-      "big": 8.2
+      "up5": 62.0,
+      "big": 8.5
      },
      "st": {
       "table": "Bullish Low",
@@ -5425,14 +5189,14 @@
      "r5": -2.4,
      "big": false,
      "p": {
-      "up1": 55.7,
-      "up5": 60.6,
-      "big": 5.0
+      "up1": 55.6,
+      "up5": 60.7,
+      "big": 5.8
      },
      "pk": {
       "up1": 56.0,
-      "up5": 60.9,
-      "big": 11.0
+      "up5": 62.0,
+      "big": 11.4
      },
      "st": {
       "table": "Bullish Low",
@@ -5455,13 +5219,13 @@
      "big": false,
      "p": {
       "up1": 56.2,
-      "up5": 59.1,
-      "big": 3.5
+      "up5": 59.2,
+      "big": 4.1
      },
      "pk": {
       "up1": 56.0,
-      "up5": 60.9,
-      "big": 8.2
+      "up5": 62.0,
+      "big": 8.5
      },
      "st": {
       "table": "Bullish Low",
@@ -5484,13 +5248,13 @@
      "big": false,
      "p": {
       "up1": 57.6,
-      "up5": 60.8,
-      "big": 5.0
+      "up5": 58.7,
+      "big": 4.7
      },
      "pk": {
       "up1": 56.0,
-      "up5": 63.0,
-      "big": 11.5
+      "up5": 62.0,
+      "big": 9.6
      },
      "st": {
       "table": "Bullish Low",
@@ -5512,14 +5276,14 @@
      "r5": -8.61,
      "big": false,
      "p": {
-      "up1": 60.8,
-      "up5": 58.3,
-      "big": 2.7
+      "up1": 60.1,
+      "up5": 60.5,
+      "big": 2.9
      },
      "pk": {
       "up1": 57.3,
-      "up5": 60.9,
-      "big": 5.9
+      "up5": 62.0,
+      "big": 6.1
      },
      "st": {
       "table": "Bullish Low",
@@ -5541,14 +5305,14 @@
      "r5": -2.42,
      "big": false,
      "p": {
-      "up1": 54.6,
-      "up5": 59.7,
-      "big": 2.9
+      "up1": 53.9,
+      "up5": 61.9,
+      "big": 3.1
      },
      "pk": {
       "up1": 57.3,
-      "up5": 60.9,
-      "big": 6.0
+      "up5": 62.0,
+      "big": 6.2
      },
      "st": {
       "table": "Bullish Low",
@@ -5570,14 +5334,14 @@
      "r5": null,
      "big": false,
      "p": {
-      "up1": 58.9,
-      "up5": 59.6,
-      "big": 2.9
+      "up1": 58.3,
+      "up5": 61.8,
+      "big": 3.1
      },
      "pk": {
       "up1": 57.3,
-      "up5": 60.9,
-      "big": 5.9
+      "up5": 62.0,
+      "big": 6.1
      },
      "st": {
       "table": "Bullish Low",
@@ -5599,14 +5363,14 @@
      "r5": null,
      "big": true,
      "p": {
-      "up1": 56.0,
-      "up5": 60.1,
-      "big": 3.2
+      "up1": 55.4,
+      "up5": 62.3,
+      "big": 3.4
      },
      "pk": {
       "up1": 57.3,
-      "up5": 60.9,
-      "big": 6.5
+      "up5": 62.0,
+      "big": 6.7
      },
      "st": {
       "table": "Bullish Low",
@@ -5628,14 +5392,14 @@
      "r5": null,
      "big": true,
      "p": {
-      "up1": 58.6,
-      "up5": 58.8,
-      "big": 2.7
+      "up1": 58.0,
+      "up5": 61.0,
+      "big": 2.8
      },
      "pk": {
       "up1": 57.3,
-      "up5": 60.9,
-      "big": 5.8
+      "up5": 62.0,
+      "big": 6.0
      },
      "st": {
       "table": "Bullish Low",
@@ -5657,14 +5421,14 @@
      "r5": null,
      "big": true,
      "p": {
-      "up1": 57.8,
-      "up5": 58.3,
-      "big": 2.9
+      "up1": 57.7,
+      "up5": 58.4,
+      "big": 3.4
      },
      "pk": {
       "up1": 57.3,
-      "up5": 57.4,
-      "big": 6.7
+      "up5": 58.6,
+      "big": 7.0
      },
      "st": {
       "table": "no signal",

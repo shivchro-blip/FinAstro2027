@@ -493,6 +493,18 @@
     "build/pdfref/dasha_combinations_ET.html",
     "tools/forward_daybyday.py"
    ]
+  },
+  {
+   "date": "2026-11-24",
+   "pr": "38",
+   "topic": "Dashas parked; back to the Solar return method",
+   "analysis": "User decision after the dasha tests: dashas are no longer used. Removed the USA/NYSE dasha layers from the combined model (tools/combined_probability.py) and switched the dasha blocks off in the day-by-day pages (USE_DASHA = False); the dasha reports stay as reference. Day-by-day pages gain the Solar return scorecard. Both day-by-day pages and the combined model rebuilt.",
+   "result": "Combined model without dashas: S&P walk-forward skill unchanged in sign (all layers -0.2 to -0.3%, kept +0.2 to +0.5%); last 60 days S&P 5-session calls 64% right (all layers). 1-23 Nov, all methods pooled: 53% same day (163/307), 48% over 5 sessions (112/235). Solar return scorecard: Oct-Nov month right; week of 16 Nov 4 of 5; month to 18 Dec open (-1.2% so far); week of 23 Nov 0 of 1 so far.",
+   "files": [
+    "tools/combined_probability.py",
+    "tools/forward_daybyday.py",
+    "CLAUDE.md"
+   ]
   }
  ]
 }

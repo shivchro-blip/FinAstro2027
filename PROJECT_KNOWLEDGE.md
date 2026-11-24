@@ -695,6 +695,12 @@ Results, as the share of calls right:
 - **Big days:** the model's average big-day probability was no higher on the 5 big S&P days (3.3% vs 3.9%).
 - **Reading:** a few bearish signals hit in a falling month. Their success matches the market's down share, and some (the Solar return month view) were bearish on every day, so this is no evidence of skill. Over 16 sessions none of it is significant.
 
+**Decision, 24 Nov 2026: dashas parked.** The user ended the dasha work after these results; work continues with the Solar return method.
+- The dasha reports (`dasha_transits_ET.html`, `dasha_combinations_ET.html`) stay as reference.
+- The combined model no longer uses the USA/NYSE dasha layers. Gochara, Chandra bala, Tara bala and the Solar return Jupiter sextile Venus remain.
+- The day-by-day pages no longer show or score dashas (`USE_DASHA = False`).
+- On 1–23 Nov, all methods pooled without dashas: 53% right the same day (163/307), 48% over 5 sessions (112/235).
+
 **Dasha combinations read classically** (user request, 24 Nov 2026: "Antardasha → Pratyantar → Sookshma → Prana compared with the charts"; `dasha_combinations_ET.html`)
 
 - **Natal charts (sidereal, whole sign):**

@@ -61,8 +61,9 @@ SIGNS = DT.SIGNS
 SHRINK = 200
 SPLIT = dt.date(2013, 1, 1)
 LAYERS = {"gold": ["table", "v1"], "silver": ["table"], "sensex": ["table", "bigmove"],
-          "spx": ["table", "bigmove", "USA dasha", "NYSE dasha", "USA gochara", "NYSE gochara", "USA chandra", "NYSE chandra",
+          "spx": ["table", "bigmove", "USA gochara", "NYSE gochara", "USA chandra", "NYSE chandra",
                   "USA tara", "NYSE tara", "jup-ven"]}
+# the "USA dasha" / "NYSE dasha" states are still computed but no longer used: dashas parked (user, 24 Nov 2026)
 CLASSICAL = {"USA gochara", "NYSE gochara", "USA chandra", "NYSE chandra", "USA tara", "NYSE tara"}
 DESC = {"table": "our signal table's label", "v1": "Model v1.0 bias (Ch.41 + Shadbala)", "bigmove": "robust big-move factor",
         "dasha": "dasha lords' condition (Antar + Pratyantar + Sookshma)", "gochara": "Jupiter, Saturn, Rahu from the natal Moon",
