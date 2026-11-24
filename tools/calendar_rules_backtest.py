@@ -209,7 +209,11 @@ def main():
     fwd = collections.defaultdict(set)
     for r in cal:
         if r["row_kind"] == "verdict" and (r["event"], INSTR.get(r["instrument"])) in good:
-            fwd[(r["event"], r["instrument"])].add(dt.datetime.strptime(r["date"], "%d-%b-%Y").date())
+            d0 = dt.datetime.strptime(r.get("first_held") or r["date"], "%d-%b-%Y").date()
+            d1 = dt.datetime.strptime(r.get("last_held") or r["date"], "%d-%b-%Y").date()
+            while d0 <= d1:                                   # a collapsed window row covers first_held..last_held
+                fwd[(r["event"], r["instrument"])].add(d0)
+                d0 += dt.timedelta(days=1)
     res["forward_2027"] = []
     for (rid, ins), ds in sorted(fwd.items()):
         ds = sorted(ds)

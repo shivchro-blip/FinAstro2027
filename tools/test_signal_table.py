@@ -255,6 +255,7 @@ def main():
     fast = json.load(open(OUT / f"{MC.METAL}_fast_triggers_2026-11-22_to_2027-12-31_ET.json"))
     leads_full = {L["factor"]: dict(lean=L["lean"], strong=L["both_halves"] and not L["outer"] and L["factor"] != "Event: full moon") for L in watch["leads"]}
     classify(days, leads_full, set(fast["passed"]))
+    recent = [dict(date=str(x["date"]), sig=x["sig"], st=x["st"], ret=round(x["ret"], 3)) for x in days if x["date"] >= dt.date(2026, 8, 1)]
     ins = evaluate(days, D, C, dt.date(2000, 11, 20), dt.date(2026, 11, 20))
     ins_h2 = evaluate(days, D, C, SPLIT, dt.date(2026, 11, 20))
     share_full = collections.Counter((x["sig"], x["st"]) for x in days)
@@ -288,7 +289,7 @@ def main():
             b = sum(r["base"] / 100 * r["decided"] for r in hm) / n
             out[sig] = dict(worked=w, decided=n, hit=round(w / n * 100), base=round(b * 100), p=round(binom_p(w, n, b), 3))
         return out
-    res = dict(pooled={k: pooled(v) for k, v in (("in_sample", ins), ("walk_forward", wf), ("source_only", src))}, in_sample=ins, in_sample_2013=ins_h2, walk_forward=wf, source_only=src, n_leads_h1=len(leads1), fast_h1=sorted(fast1),
+    res = dict(recent=recent, pooled={k: pooled(v) for k, v in (("in_sample", ins), ("walk_forward", wf), ("source_only", src))}, in_sample=ins, in_sample_2013=ins_h2, walk_forward=wf, source_only=src, n_leads_h1=len(leads1), fast_h1=sorted(fast1),
                day_share={f"{k[0]} {k[1]}": v for k, v in share_full.items() if k[0]})
     json.dump(res, open(STEM.with_suffix(".json"), "w"), indent=1, default=str)
     write(res)

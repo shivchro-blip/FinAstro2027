@@ -435,6 +435,19 @@
     "tools/author_forecasts.py",
     "build/pdfref/author_forecasts_ET.html"
    ]
+  },
+  {
+   "date": "2026-11-24",
+   "pr": "33",
+   "topic": "60-day check of our model; USA and NYSE dashas (five levels) with transits",
+   "analysis": "Model check: every label of the gold, silver, S&P and Sensex tables rebuilt for each day 24 Sep - 23 Nov 2026 (table definitions), against the day's move and the next 5 sessions; robust volatility factors vs big days. Fix: calendar windows (Three Saturdays in Shukla Paksha = whole fortnight) now used as windows in the market table and the check, as in the backtest. Dashas: Vimshottari from the natal Moon, all five levels, for the USA (Sibly) and NYSE (10:00 LMT); transit of each running lord; Pratyantar / Sookshma timelines with S&P moves; birth-time sensitivity; S&P daily returns by lord 1928-2026.",
+   "result": "60 days: gold -15.3% (bearish labels right 62-100% over 5 sessions; bullish low wrong), silver -32.6% (only bullish labels, wrong), S&P -6.1% (bearish high right 58% same day / 75% over 5; bullish low wrong), Sensex +10.2% (bullish labels right 78-100%); volatility factors no help. Dashas now: USA Rahu MD (2016-34) / Mercury AD (to 17 Feb 2027) / Saturn PD (23 Sep 2026 - 17 Feb 2027) / Venus SD; NYSE Mercury MD (2016-33) / Rahu AD (May 2026 - Dec 2028) / Jupiter PD (9 Oct 2026 - 10 Feb 2027, Jupiter with Mars and Ketu in Leo, NYSE 2nd house) / Mercury SD; S&P -11% in both current Pratyantars. Mahadashas hold within +/-3 h of birth time, smaller levels need minutes. No dasha lord shows an S&P effect 1928-2026 (all |t| < 2).",
+   "files": [
+    "tools/model_check_60d.py",
+    "tools/dasha_transits.py",
+    "build/pdfref/model_check_60d_ET.html",
+    "build/pdfref/dasha_transits_ET.html"
+   ]
   }
  ]
 }

@@ -63,6 +63,8 @@ SECTIONS = [
     ]),
     ("Stock market: S&P 500 and BSE Sensex, 2000-2026", [
         (B + "market_signals_2026-11-23_to_2027-12-31_ET.html", "S&P 500 and Sensex bullish / bearish days to end-2027", "Two simple tables: dates, signal, strength, why, and each rule's 26-year record on both indices."),
+        (B + "model_check_60d_ET.html", "Our model over the last 60 days", "Every label of the gold, silver, S&P and Sensex tables rebuilt for each past day, against the actual moves."),
+        (B + "dasha_transits_ET.html", "USA and NYSE dashas (five levels) with transits", "Maha / Antar / Pratyantar / Sookshma / Prana now, the transits of each dasha lord, Pratyantar and Sookshma timelines with S&P moves, and a 1928-2026 test of the lords."),
         (B + "author_forecasts_ET.html", "NYSE solar-return author: forecast scorecard and his rules tested", "Every forecast he made, scored against the S&P; his transit statements checked; his aspect rules tested 1928-2026."),
         (B + "nyse_usa_charts_ET.html", "NYSE and USA charts; NYSE monthly solar-return technique tested", "NYSE (1792) and USA (1776) natal charts, transits now, monthly solar-return charts (author's tropical and our sidereal) and a 98-year S&P backtest of the technique."),
         (B + "rule_tally_ET.html", "What the planets said on 20 and 23 Nov (rule tally)", "Net of active rules with a good record per day, and a walk-forward test of the tally."),

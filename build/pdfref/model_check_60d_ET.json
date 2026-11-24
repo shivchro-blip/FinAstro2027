@@ -1,0 +1,1734 @@
+{
+ "start": "2026-09-24",
+ "end": "2026-11-23",
+ "markets": {
+  "gold": {
+   "name": "Gold",
+   "rows": [
+    {
+     "date": "2026-09-24",
+     "sig": "No signal",
+     "st": "",
+     "r1": -0.47,
+     "r5": -3.05,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-09-25",
+     "sig": "No signal",
+     "st": "",
+     "r1": 0.54,
+     "r5": -2.23,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-09-28",
+     "sig": "Bearish",
+     "st": "Low",
+     "r1": -3.54,
+     "r5": -3.68,
+     "vol": false,
+     "big": true
+    },
+    {
+     "date": "2026-09-29",
+     "sig": "Bearish",
+     "st": "Low",
+     "r1": 0.27,
+     "r5": -0.28,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-09-30",
+     "sig": "Bearish",
+     "st": "Low",
+     "r1": 0.17,
+     "r5": 0.18,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-01",
+     "sig": "Bearish",
+     "st": "Low",
+     "r1": 0.37,
+     "r5": -1.1,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-02",
+     "sig": "Bearish",
+     "st": "Low",
+     "r1": -0.95,
+     "r5": -1.08,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-05",
+     "sig": "Bearish",
+     "st": "Low",
+     "r1": -0.13,
+     "r5": 1.3,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-06",
+     "sig": "Bearish",
+     "st": "Low",
+     "r1": 0.73,
+     "r5": 0.81,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-07",
+     "sig": "Bearish",
+     "st": "Moderate",
+     "r1": -1.11,
+     "r5": -0.23,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-08",
+     "sig": "Bearish",
+     "st": "Moderate",
+     "r1": 0.39,
+     "r5": -0.79,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-09",
+     "sig": "Bearish",
+     "st": "Low",
+     "r1": 1.43,
+     "r5": 0.32,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-12",
+     "sig": "Bearish",
+     "st": "Moderate",
+     "r1": -0.61,
+     "r5": -0.83,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-13",
+     "sig": "Bearish",
+     "st": "Low",
+     "r1": -0.32,
+     "r5": -0.73,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-14",
+     "sig": "Bearish",
+     "st": "Low",
+     "r1": -1.66,
+     "r5": -0.83,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-15",
+     "sig": "Bearish",
+     "st": "Low",
+     "r1": 1.51,
+     "r5": 1.02,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-16",
+     "sig": "Bearish",
+     "st": "Low",
+     "r1": 0.26,
+     "r5": -2.63,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-19",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": -0.5,
+     "r5": -4.14,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-20",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": -0.42,
+     "r5": -2.93,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-21",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": 0.18,
+     "r5": -1.64,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-22",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": -2.16,
+     "r5": -2.37,
+     "vol": false,
+     "big": true
+    },
+    {
+     "date": "2026-10-23",
+     "sig": "No signal",
+     "st": "",
+     "r1": -1.29,
+     "r5": -0.71,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-26",
+     "sig": "Bearish",
+     "st": "Low",
+     "r1": 0.76,
+     "r5": -2.72,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-27",
+     "sig": "No signal",
+     "st": "",
+     "r1": 0.9,
+     "r5": -1.7,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-28",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": -0.56,
+     "r5": -3.29,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-29",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": -0.5,
+     "r5": 0.53,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-30",
+     "sig": "Bullish",
+     "st": "Moderate",
+     "r1": -3.29,
+     "r5": 2.04,
+     "vol": false,
+     "big": true
+    },
+    {
+     "date": "2026-11-02",
+     "sig": "Bullish",
+     "st": "Moderate",
+     "r1": 1.81,
+     "r5": 4.51,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-11-03",
+     "sig": "Bullish",
+     "st": "High",
+     "r1": -0.74,
+     "r5": 3.65,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-11-04",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": 3.37,
+     "r5": 2.28,
+     "vol": false,
+     "big": true
+    },
+    {
+     "date": "2026-11-05",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": 0.99,
+     "r5": -1.78,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-11-06",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": -0.94,
+     "r5": -5.55,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-11-09",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": 0.97,
+     "r5": -4.63,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-11-10",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": -2.05,
+     "r5": -6.36,
+     "vol": false,
+     "big": true
+    },
+    {
+     "date": "2026-11-11",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": -0.74,
+     "r5": -4.12,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-11-12",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": -2.88,
+     "r5": -6.46,
+     "vol": false,
+     "big": true
+    },
+    {
+     "date": "2026-11-13",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": 0.03,
+     "r5": -5.14,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-11-16",
+     "sig": "Volatile",
+     "st": "Low",
+     "r1": -0.86,
+     "r5": -9.54,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-11-17",
+     "sig": "No signal",
+     "st": "",
+     "r1": 0.29,
+     "r5": -5.15,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-11-18",
+     "sig": "No signal",
+     "st": "",
+     "r1": -3.16,
+     "r5": null,
+     "vol": false,
+     "big": true
+    },
+    {
+     "date": "2026-11-19",
+     "sig": "No signal",
+     "st": "",
+     "r1": -1.51,
+     "r5": null,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-11-20",
+     "sig": "Bearish",
+     "st": "Low",
+     "r1": -4.62,
+     "r5": null,
+     "vol": false,
+     "big": true
+    },
+    {
+     "date": "2026-11-23",
+     "sig": "Bearish",
+     "st": "Low",
+     "r1": 3.96,
+     "r5": null,
+     "vol": false,
+     "big": true
+    }
+   ],
+   "summary": {
+    "Bearish Low": {
+     "days": 15,
+     "avg1": -0.12,
+     "right1": 40,
+     "right5": 62,
+     "up1": 60
+    },
+    "Bearish Moderate": {
+     "days": 3,
+     "avg1": -0.44,
+     "right1": 67,
+     "right5": 100,
+     "up1": 33
+    },
+    "Bullish High": {
+     "days": 1,
+     "avg1": -0.74,
+     "right1": 0,
+     "right5": 100,
+     "up1": 0
+    },
+    "Bullish Low": {
+     "days": 14,
+     "avg1": -0.37,
+     "right1": 36,
+     "right5": 14,
+     "up1": 36
+    },
+    "Bullish Moderate": {
+     "days": 2,
+     "avg1": -0.74,
+     "right1": 50,
+     "right5": 100,
+     "up1": 50
+    },
+    "No signal": {
+     "days": 7,
+     "avg1": -0.67,
+     "right1": null,
+     "right5": null,
+     "up1": 43
+    },
+    "Volatile Low": {
+     "days": 1,
+     "avg1": -0.86,
+     "right1": null,
+     "right5": null,
+     "up1": 0
+    }
+   },
+   "up_share": 44,
+   "move": -15.4,
+   "vol": {
+    "days": 0,
+    "big": 0,
+    "other_days": 43,
+    "other_big": 9
+   }
+  },
+  "silver": {
+   "name": "Silver",
+   "rows": [
+    {
+     "date": "2026-09-24",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": -1.44,
+     "r5": -6.65,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-09-25",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": 1.24,
+     "r5": -4.31,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-09-28",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": -4.71,
+     "r5": -6.64,
+     "vol": false,
+     "big": true
+    },
+    {
+     "date": "2026-09-29",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": -0.9,
+     "r5": -0.57,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-09-30",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": -0.94,
+     "r5": 0.82,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-01",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": 1.04,
+     "r5": -0.33,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-02",
+     "sig": "Bullish",
+     "st": "Moderate",
+     "r1": -1.23,
+     "r5": -2.74,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-05",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": 1.49,
+     "r5": 1.16,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-06",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": 0.49,
+     "r5": -1.2,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-07",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": -2.07,
+     "r5": -3.28,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-08",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": -1.39,
+     "r5": -7.26,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-09",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": 2.72,
+     "r5": -3.77,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-12",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": -0.87,
+     "r5": -6.06,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-13",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": -1.63,
+     "r5": -5.27,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-14",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": -6.1,
+     "r5": -2.46,
+     "vol": false,
+     "big": true
+    },
+    {
+     "date": "2026-10-15",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": 2.32,
+     "r5": 3.37,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-16",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": 0.28,
+     "r5": -3.65,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-19",
+     "sig": "No signal",
+     "st": "",
+     "r1": -0.04,
+     "r5": -5.76,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-20",
+     "sig": "No signal",
+     "st": "",
+     "r1": 1.28,
+     "r5": -5.03,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-21",
+     "sig": "No signal",
+     "st": "",
+     "r1": -0.49,
+     "r5": -5.91,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-22",
+     "sig": "No signal",
+     "st": "",
+     "r1": -4.63,
+     "r5": -6.91,
+     "vol": false,
+     "big": true
+    },
+    {
+     "date": "2026-10-23",
+     "sig": "No signal",
+     "st": "",
+     "r1": -1.92,
+     "r5": -4.7,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-26",
+     "sig": "Bullish",
+     "st": "High",
+     "r1": 0.74,
+     "r5": -8.59,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-27",
+     "sig": "Bullish",
+     "st": "High",
+     "r1": 0.34,
+     "r5": -6.26,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-28",
+     "sig": "Bullish",
+     "st": "High",
+     "r1": -1.54,
+     "r5": -8.67,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-29",
+     "sig": "Bullish",
+     "st": "High",
+     "r1": -2.37,
+     "r5": -2.5,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-30",
+     "sig": "Bullish",
+     "st": "High",
+     "r1": -5.93,
+     "r5": 0.08,
+     "vol": false,
+     "big": true
+    },
+    {
+     "date": "2026-11-02",
+     "sig": "Bullish",
+     "st": "High",
+     "r1": 3.31,
+     "r5": 5.51,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-11-03",
+     "sig": "Bullish",
+     "st": "High",
+     "r1": -2.23,
+     "r5": 3.64,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-11-04",
+     "sig": "Bullish",
+     "st": "High",
+     "r1": 5.11,
+     "r5": 3.05,
+     "vol": false,
+     "big": true
+    },
+    {
+     "date": "2026-11-05",
+     "sig": "Bullish",
+     "st": "High",
+     "r1": 0.22,
+     "r5": -0.46,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-11-06",
+     "sig": "Bullish",
+     "st": "High",
+     "r1": -0.82,
+     "r5": -4.33,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-11-09",
+     "sig": "Bullish",
+     "st": "High",
+     "r1": 1.47,
+     "r5": -5.35,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-11-10",
+     "sig": "Bullish",
+     "st": "High",
+     "r1": -2.78,
+     "r5": -10.99,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-11-11",
+     "sig": "Bullish",
+     "st": "High",
+     "r1": 1.53,
+     "r5": -7.46,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-11-12",
+     "sig": "Bullish",
+     "st": "High",
+     "r1": -3.68,
+     "r5": -13.26,
+     "vol": false,
+     "big": true
+    },
+    {
+     "date": "2026-11-13",
+     "sig": "Bullish",
+     "st": "High",
+     "r1": -1.88,
+     "r5": -11.31,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-11-16",
+     "sig": "No signal",
+     "st": "",
+     "r1": -4.58,
+     "r5": -16.31,
+     "vol": false,
+     "big": true
+    },
+    {
+     "date": "2026-11-17",
+     "sig": "No signal",
+     "st": "",
+     "r1": 1.08,
+     "r5": -7.45,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-11-18",
+     "sig": "No signal",
+     "st": "",
+     "r1": -4.84,
+     "r5": null,
+     "vol": false,
+     "big": true
+    },
+    {
+     "date": "2026-11-19",
+     "sig": "No signal",
+     "st": "",
+     "r1": -1.51,
+     "r5": null,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-11-20",
+     "sig": "No signal",
+     "st": "",
+     "r1": -7.41,
+     "r5": null,
+     "vol": false,
+     "big": true
+    },
+    {
+     "date": "2026-11-23",
+     "sig": "No signal",
+     "st": "",
+     "r1": 5.52,
+     "r5": null,
+     "vol": false,
+     "big": true
+    }
+   ],
+   "summary": {
+    "Bullish High": {
+     "days": 15,
+     "avg1": -0.57,
+     "right1": 47,
+     "right5": 27,
+     "up1": 47
+    },
+    "Bullish Low": {
+     "days": 16,
+     "avg1": -0.65,
+     "right1": 44,
+     "right5": 19,
+     "up1": 44
+    },
+    "Bullish Moderate": {
+     "days": 1,
+     "avg1": -1.23,
+     "right1": 0,
+     "right5": 0,
+     "up1": 0
+    },
+    "No signal": {
+     "days": 11,
+     "avg1": -1.59,
+     "right1": null,
+     "right5": null,
+     "up1": 27
+    }
+   },
+   "up_share": 40,
+   "move": -32.7,
+   "vol": {
+    "days": 0,
+    "big": 0,
+    "other_days": 43,
+    "other_big": 10
+   }
+  },
+  "spx": {
+   "name": "S&P 500",
+   "rows": [
+    {
+     "date": "2026-09-24",
+     "sig": "Bearish",
+     "st": "High",
+     "r1": -0.02,
+     "r5": -0.71,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-09-25",
+     "sig": "Bearish",
+     "st": "High",
+     "r1": 0.51,
+     "r5": -0.49,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-09-28",
+     "sig": "No signal",
+     "st": "",
+     "r1": -0.77,
+     "r5": -0.27,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-09-29",
+     "sig": "No signal",
+     "st": "",
+     "r1": -0.17,
+     "r5": 1.17,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-09-30",
+     "sig": "No signal",
+     "st": "",
+     "r1": -0.25,
+     "r5": 1.93,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-01",
+     "sig": "No signal",
+     "st": "",
+     "r1": 0.19,
+     "r5": 1.96,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-02",
+     "sig": "No signal",
+     "st": "",
+     "r1": 0.73,
+     "r5": 1.29,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-05",
+     "sig": "Bullish",
+     "st": "Moderate",
+     "r1": 0.66,
+     "r5": 1.15,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-06",
+     "sig": "Bullish",
+     "st": "Moderate",
+     "r1": 0.58,
+     "r5": 0.43,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-07",
+     "sig": "No signal",
+     "st": "",
+     "r1": -0.22,
+     "r5": -0.17,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-08",
+     "sig": "Bullish",
+     "st": "Moderate",
+     "r1": -0.47,
+     "r5": -1.06,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-09",
+     "sig": "Bullish",
+     "st": "Moderate",
+     "r1": 0.59,
+     "r5": -0.27,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-12",
+     "sig": "Bearish",
+     "st": "High",
+     "r1": -0.06,
+     "r5": -1.95,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-13",
+     "sig": "Bearish",
+     "st": "High",
+     "r1": -0.02,
+     "r5": -1.49,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-14",
+     "sig": "Bearish",
+     "st": "High",
+     "r1": -1.11,
+     "r5": -1.19,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-15",
+     "sig": "Bearish",
+     "st": "High",
+     "r1": 0.33,
+     "r5": 0.5,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-16",
+     "sig": "Bearish",
+     "st": "High",
+     "r1": -1.09,
+     "r5": -1.04,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-19",
+     "sig": "Bearish",
+     "st": "High",
+     "r1": 0.41,
+     "r5": -0.47,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-20",
+     "sig": "Bearish",
+     "st": "High",
+     "r1": 0.28,
+     "r5": -0.18,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-21",
+     "sig": "Bearish",
+     "st": "High",
+     "r1": 0.58,
+     "r5": 0.13,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-22",
+     "sig": "Bearish",
+     "st": "High",
+     "r1": -1.21,
+     "r5": -0.17,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-23",
+     "sig": "Bearish",
+     "st": "High",
+     "r1": -0.52,
+     "r5": 0.74,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-26",
+     "sig": "No signal",
+     "st": "",
+     "r1": 0.7,
+     "r5": -0.57,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-27",
+     "sig": "No signal",
+     "st": "",
+     "r1": 0.6,
+     "r5": -1.76,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-28",
+     "sig": "No signal",
+     "st": "",
+     "r1": 0.28,
+     "r5": -1.99,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-29",
+     "sig": "No signal",
+     "st": "",
+     "r1": -0.3,
+     "r5": -0.71,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-30",
+     "sig": "No signal",
+     "st": "",
+     "r1": -1.82,
+     "r5": -4.75,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-11-02",
+     "sig": "Bullish",
+     "st": "Moderate",
+     "r1": -0.51,
+     "r5": -2.68,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-11-03",
+     "sig": "No signal",
+     "st": "",
+     "r1": 0.36,
+     "r5": 0.11,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-11-04",
+     "sig": "Bullish",
+     "st": "Moderate",
+     "r1": 1.58,
+     "r5": -0.63,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-11-05",
+     "sig": "Bullish",
+     "st": "High",
+     "r1": -4.36,
+     "r5": -0.9,
+     "vol": true,
+     "big": true
+    },
+    {
+     "date": "2026-11-06",
+     "sig": "Bullish",
+     "st": "High",
+     "r1": 0.31,
+     "r5": 3.25,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-11-09",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": 2.35,
+     "r5": 2.51,
+     "vol": true,
+     "big": true
+    },
+    {
+     "date": "2026-11-10",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": -0.38,
+     "r5": -1.77,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-11-11",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": 1.31,
+     "r5": -2.4,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-11-12",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": -0.35,
+     "r5": -3.88,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-11-13",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": -0.4,
+     "r5": -5.49,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-11-16",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": -1.92,
+     "r5": -8.61,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-11-17",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": -1.03,
+     "r5": -2.42,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-11-18",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": -0.23,
+     "r5": null,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-11-19",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": -2.02,
+     "r5": null,
+     "vol": false,
+     "big": true
+    },
+    {
+     "date": "2026-11-20",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": -3.7,
+     "r5": null,
+     "vol": false,
+     "big": true
+    },
+    {
+     "date": "2026-11-23",
+     "sig": "No signal",
+     "st": "",
+     "r1": 4.73,
+     "r5": null,
+     "vol": false,
+     "big": true
+    }
+   ],
+   "summary": {
+    "Bearish High": {
+     "days": 12,
+     "avg1": -0.16,
+     "right1": 58,
+     "right5": 75,
+     "up1": 42
+    },
+    "Bullish High": {
+     "days": 2,
+     "avg1": -2.03,
+     "right1": 50,
+     "right5": 50,
+     "up1": 50
+    },
+    "Bullish Low": {
+     "days": 10,
+     "avg1": -0.64,
+     "right1": 20,
+     "right5": 14,
+     "up1": 20
+    },
+    "Bullish Moderate": {
+     "days": 6,
+     "avg1": 0.41,
+     "right1": 67,
+     "right5": 33,
+     "up1": 67
+    },
+    "No signal": {
+     "days": 13,
+     "avg1": 0.31,
+     "right1": null,
+     "right5": null,
+     "up1": 54
+    }
+   },
+   "up_share": 44,
+   "move": -6.1,
+   "vol": {
+    "days": 30,
+    "big": 2,
+    "other_days": 13,
+    "other_big": 3
+   }
+  },
+  "sensex": {
+   "name": "BSE Sensex",
+   "rows": [
+    {
+     "date": "2026-09-24",
+     "sig": "Bearish",
+     "st": "High",
+     "r1": -1.67,
+     "r5": -3.14,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-09-25",
+     "sig": "Bearish",
+     "st": "High",
+     "r1": 0.43,
+     "r5": -2.27,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-09-28",
+     "sig": "No signal",
+     "st": "",
+     "r1": -1.52,
+     "r5": -2.05,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-09-29",
+     "sig": "No signal",
+     "st": "",
+     "r1": -0.33,
+     "r5": 0.41,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-09-30",
+     "sig": "No signal",
+     "st": "",
+     "r1": -0.07,
+     "r5": 0.15,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-01",
+     "sig": "No signal",
+     "st": "",
+     "r1": -0.79,
+     "r5": -1.22,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-10-05",
+     "sig": "Bullish",
+     "st": "Moderate",
+     "r1": 0.66,
+     "r5": 0.78,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-06",
+     "sig": "Bullish",
+     "st": "Moderate",
+     "r1": 0.95,
+     "r5": -0.63,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-07",
+     "sig": "No signal",
+     "st": "",
+     "r1": -0.59,
+     "r5": -0.05,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-08",
+     "sig": "Bullish",
+     "st": "Moderate",
+     "r1": -1.44,
+     "r5": 0.2,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-09",
+     "sig": "Bullish",
+     "st": "Moderate",
+     "r1": 1.23,
+     "r5": 3.8,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-12",
+     "sig": "Bearish",
+     "st": "High",
+     "r1": -0.76,
+     "r5": 3.11,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-13",
+     "sig": "Bearish",
+     "st": "High",
+     "r1": 1.54,
+     "r5": 2.68,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-14",
+     "sig": "Bearish",
+     "st": "High",
+     "r1": -0.34,
+     "r5": 0.93,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-15",
+     "sig": "Bearish",
+     "st": "High",
+     "r1": 2.11,
+     "r5": 0.64,
+     "vol": true,
+     "big": true
+    },
+    {
+     "date": "2026-10-16",
+     "sig": "Bearish",
+     "st": "High",
+     "r1": 0.56,
+     "r5": -1.6,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-19",
+     "sig": "Bearish",
+     "st": "High",
+     "r1": -1.17,
+     "r5": -1.5,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-21",
+     "sig": "Bearish",
+     "st": "High",
+     "r1": -0.19,
+     "r5": -0.34,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-22",
+     "sig": "Bearish",
+     "st": "High",
+     "r1": -0.62,
+     "r5": -0.63,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-23",
+     "sig": "Bearish",
+     "st": "High",
+     "r1": -0.17,
+     "r5": 1.23,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-26",
+     "sig": "No signal",
+     "st": "",
+     "r1": 0.66,
+     "r5": 1.83,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-27",
+     "sig": "No signal",
+     "st": "",
+     "r1": -0.01,
+     "r5": 2.83,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-28",
+     "sig": "No signal",
+     "st": "",
+     "r1": -0.48,
+     "r5": 4.51,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-29",
+     "sig": "No signal",
+     "st": "",
+     "r1": 1.24,
+     "r5": 5.54,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-10-30",
+     "sig": "No signal",
+     "st": "",
+     "r1": 0.42,
+     "r5": 6.96,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-11-02",
+     "sig": "Bullish",
+     "st": "Moderate",
+     "r1": 1.66,
+     "r5": 8.82,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-11-03",
+     "sig": "No signal",
+     "st": "",
+     "r1": 1.62,
+     "r5": 7.15,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-11-04",
+     "sig": "Bullish",
+     "st": "Moderate",
+     "r1": 0.5,
+     "r5": 6.45,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-11-05",
+     "sig": "Bullish",
+     "st": "High",
+     "r1": 2.6,
+     "r5": 5.96,
+     "vol": true,
+     "big": true
+    },
+    {
+     "date": "2026-11-06",
+     "sig": "Bullish",
+     "st": "High",
+     "r1": 2.17,
+     "r5": 2.88,
+     "vol": true,
+     "big": true
+    },
+    {
+     "date": "2026-11-09",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": 0.1,
+     "r5": 1.33,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-11-11",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": 0.95,
+     "r5": 1.76,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-11-12",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": 0.04,
+     "r5": 0.19,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-11-13",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": -0.39,
+     "r5": 1.36,
+     "vol": true,
+     "big": false
+    },
+    {
+     "date": "2026-11-16",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": 0.63,
+     "r5": 2.85,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-11-17",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": 0.52,
+     "r5": 0.4,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-11-18",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": -0.61,
+     "r5": null,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-11-19",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": 1.21,
+     "r5": null,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-11-20",
+     "sig": "Bullish",
+     "st": "Low",
+     "r1": 1.08,
+     "r5": null,
+     "vol": false,
+     "big": false
+    },
+    {
+     "date": "2026-11-23",
+     "sig": "No signal",
+     "st": "",
+     "r1": -1.77,
+     "r5": null,
+     "vol": false,
+     "big": false
+    }
+   ],
+   "summary": {
+    "Bearish High": {
+     "days": 11,
+     "avg1": -0.03,
+     "right1": 64,
+     "right5": 55,
+     "up1": 36
+    },
+    "Bullish High": {
+     "days": 2,
+     "avg1": 2.38,
+     "right1": 100,
+     "right5": 100,
+     "up1": 100
+    },
+    "Bullish Low": {
+     "days": 9,
+     "avg1": 0.39,
+     "right1": 78,
+     "right5": 100,
+     "up1": 78
+    },
+    "Bullish Moderate": {
+     "days": 6,
+     "avg1": 0.59,
+     "right1": 83,
+     "right5": 83,
+     "up1": 83
+    },
+    "No signal": {
+     "days": 12,
+     "avg1": -0.13,
+     "right1": null,
+     "right5": null,
+     "up1": 33
+    }
+   },
+   "up_share": 55,
+   "move": 10.2,
+   "vol": {
+    "days": 28,
+    "big": 3,
+    "other_days": 12,
+    "other_big": 0
+   }
+  }
+ }
+}

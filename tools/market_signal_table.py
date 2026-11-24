@@ -11,8 +11,9 @@ rules (market_backtest_2000-2026_ET.json) and the calendar's own rules
   Moderate p < 0.05 on one and p < 0.15 on the other
   Low      p < 0.05 on one only
 Points per weekday (High 3, Moderate 2, Low 1; bullish +, bearish -); the net decides the
-signal and its size the strength (3+ High, 2 Moderate, 1 Low). Instants count for the 5
-sessions they were scored on; windows while they last. Robust big-move factors
+signal and its size the strength (3+ High, 2 Moderate, 1 Low). Instants and single-day
+calendar rows count for the 5 sessions they were scored on; windows (including calendar windows such as
+Three Saturdays in Shukla Paksha, a whole fortnight) while they last. Robust big-move factors
 (market_summary_2000-2026_ET.json) are shown as Volatile on days with no direction call.
 Check of the selection itself: picked the same way on 2000-2013, these rules gave 61.8% vs
 59.2% (S&P) and 57.3% vs 56.4% (Sensex) on 2013-2026 - a small edge, not significant.
@@ -93,10 +94,14 @@ def main():
         k = CAL_INSTR.get(f["instrument"])
         if not k or f["rule_id"] not in rules:
             continue
-        for a0, _ in f["windows"]:
-            d0 = dt.date.fromisoformat(a0)
-            start = d0 + dt.timedelta(days=(7 - d0.weekday()) % 7) if d0.weekday() >= 5 else d0
-            for d in sessions_from(start):
+        for a0, b0 in f["windows"]:
+            d0, d1 = dt.date.fromisoformat(a0), dt.date.fromisoformat(b0)
+            if (d1 - d0).days >= 2:                            # a window, scored entry -> last close inside (as in the backtest)
+                days = [d0 + dt.timedelta(days=i) for i in range((d1 - d0).days + 1)]
+            else:                                              # a single day, scored on the next 5 sessions
+                start = d0 + dt.timedelta(days=(7 - d0.weekday()) % 7) if d0.weekday() >= 5 else d0
+                days = sessions_from(start)
+            for d in days:
                 calls[k][d].append(f["rule_id"])
     vol = {k: collections.defaultdict(list) for k in NAMES}
     for k, m in ms["markets"].items():
