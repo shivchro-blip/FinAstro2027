@@ -389,6 +389,18 @@
     "build/pdfref/sky_changes_2026-11-20_to_2026-11-23_ET.html",
     "build/pdfref/sky_changes_2026-11-24_to_2026-11-24_ET.html"
    ]
+  },
+  {
+   "date": "2026-11-24",
+   "pr": "29",
+   "topic": "What triggered the 20 Nov 2026 fall and the 23 Nov rise (trigger study and market event log)",
+   "analysis": "News captured (Nvidia SEC-probe report and AI unwind; Huang reinstated). Twenty sky conditions present on the two days tested on the same-day move for every trading day 2000-2026 on S&P 500, Nasdaq, Sensex, gold and silver (up share vs same-year share, big days vs same-year expectation). Mars-Jupiter conjunctions with a node checked on the S&P since 1928. New market event log for big days.",
+   "result": "No day-level condition leans the way the market moved: Ekadashi on Friday up 64% vs 53% on the S&P (the 2026 doc calls it 90%+ bearish); Bhadra, Moon-Saturn, Moon in Pisces, Panchak at chance; Venus debilitated and Mercury alone slightly more big S&P falls (p~0.04 of 100 tests); Monday's conditions show no bullish lean. Background lead: Mars, Jupiter and Ketu together (also Feb-Mar 2020); Mars-Jupiter with a node since 1928: 3/13 episodes with 15%+ falls vs 3.5% of random windows, 5/13 with 8%+ vs 11.8%; bottoms in 2009 and 2020 within 3 sessions of the episode ending; this one loses Ketu on 5 Dec 2026. Chosen after the fact - a lead, not a rule. The news set the day.",
+   "files": [
+    "tools/trigger_study.py",
+    "build/pdfref/trigger_study_2000-2026_ET.html",
+    "build/pdfref/market_event_log.json"
+   ]
   }
  ]
 }
