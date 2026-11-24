@@ -10,7 +10,7 @@
    "text": "Full Moon\u2013Uranus alignment, challenged by Mars: sudden volatility, unexpected reversals, sharp market reversals.",
    "score": {
     "status": "open",
-    "detail": "no session closed yet. Big days: none; reversals of 1%+: none. In the last 250 sessions, 15% of windows this long had a big day or such a reversal.",
+    "detail": "Tue 24: -0.50%. Big days: none; reversals of 1%+: none. In the last 250 sessions, 15% of windows this long had a big day or such a reversal.",
     "base": 15
    }
   },
@@ -37,7 +37,7 @@
    "text": "A sudden rally followed by equally sharp selling pressure is one possible scenario; a recovery may be only a temporary relief rally (the 23 Nov rally of +4.7% is the test).",
    "score": {
     "status": "open",
-    "detail": "23 Nov rally 6,910 \u2192 7,237; latest close 7,237 (0% of the rally given back), window still open."
+    "detail": "23 Nov rally 6,910 \u2192 7,237; latest close 7,201 (11% of the rally given back), window still open."
    }
   }
  ],
@@ -176,5 +176,5 @@
    "eps_p": 0.2617
   }
  },
- "last_price": "2026-11-23"
+ "last_price": "2026-11-24"
 }
