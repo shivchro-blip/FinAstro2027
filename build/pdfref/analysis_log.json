@@ -448,6 +448,17 @@
     "build/pdfref/model_check_60d_ET.html",
     "build/pdfref/dasha_transits_ET.html"
    ]
+  },
+  {
+   "date": "2026-11-24",
+   "pr": "34",
+   "topic": "All layers together: a probability for every day, scored on the last 60 days",
+   "analysis": "Naive Bayes on log-odds (200-day shrinkage) joining: signal tables (all markets), Model v1.0 (gold), robust big-move factors (S&P, Sensex), and for the S&P on the USA and NYSE charts the dasha-lord condition (Antar+Pratyantar+Sookshma: dignity, house, combustion, Saturn/Mars/Jupiter influence, Shadbala), gochara of Jupiter/Saturn/Rahu from the natal Moon, Chandra bala, Tara bala, plus the author's Jupiter sextile Venus. Gochara, Chandra and Tara bala are classical practice not in our sources, included at the user's request. Targets: up today, up over 5 sessions, big day. Scored walk-forward (fit 2000-2012, test 2013-2026) and on 24 Sep - 23 Nov 2026 (fit to 23 Sep).",
+   "result": "60 days: S&P 5-session calls 64% right (down calls 76% in a falling market), Sensex 68-74%, gold 55%, silver no calls. Walk-forward 2013-2026: all layers together slightly worse than the base rate everywhere (skill -0.2 to -0.6%); kept layers +0.1 to +0.5%, hit rates 51-55%. Among Vedic layers only NYSE dasha and NYSE gochara helped the 5-session forecast, both tiny; none helped big days (S&P big-day probability 2.7-3.2% on 19-20 Nov). Probabilities stay near the base rate.",
+   "files": [
+    "tools/combined_probability.py",
+    "build/pdfref/combined_probability_60d_ET.html"
+   ]
   }
  ]
 }

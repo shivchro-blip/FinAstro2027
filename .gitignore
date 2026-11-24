@@ -62,3 +62,4 @@ build/pdfref/backtest/market_events_2000-2026.json.gz
 build/astronomy_1999*
 build/astronomy_2028*
 build/pdfref/backtest/calendar_verdicts/
+build/pdfref/backtest/*_label_history.json.gz
