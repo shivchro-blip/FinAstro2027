@@ -63,6 +63,7 @@ SECTIONS = [
     ]),
     ("Stock market: S&P 500 and BSE Sensex, 2000-2026", [
         (B + "market_signals_2026-11-23_to_2027-12-31_ET.html", "S&P 500 and Sensex bullish / bearish days to end-2027", "Two simple tables: dates, signal, strength, why, and each rule's 26-year record on both indices."),
+        (B + "author_forecasts_ET.html", "NYSE solar-return author: forecast scorecard and his rules tested", "Every forecast he made, scored against the S&P; his transit statements checked; his aspect rules tested 1928-2026."),
         (B + "nyse_usa_charts_ET.html", "NYSE and USA charts; NYSE monthly solar-return technique tested", "NYSE (1792) and USA (1776) natal charts, transits now, monthly solar-return charts (author's tropical and our sidereal) and a 98-year S&P backtest of the technique."),
         (B + "rule_tally_ET.html", "What the planets said on 20 and 23 Nov (rule tally)", "Net of active rules with a good record per day, and a walk-forward test of the tally."),
         (B + "trigger_study_2000-2026_ET.html", "Fall / rise triggers and the market event log", "The conditions of 20 and 23 Nov 2026 tested day by day 2000-2026 on five markets; Mars-Jupiter-node episodes since 1928; a running log of big days with prices and sky."),

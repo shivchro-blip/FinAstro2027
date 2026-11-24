@@ -89,6 +89,7 @@ Known data problems:
 | `tools/rule_tally.py [DATES]` | Net of active general-market rules with a good record per day, with a walk-forward test of the tally |
 | `tools/trigger_study.py [--log DATE]` | Tests candidate fall and rise conditions day by day 2000–2026 on the S&P 500, Nasdaq, Sensex, gold and silver (same-day move, same-year base); checks Mars–Jupiter-with-a-node episodes on the S&P since 1928; keeps the market event log `build/pdfref/market_event_log.json` (big days with prices, sky and conditions) |
 | `tools/nyse_charts.py` | NYSE (17 May 1792) and USA (4 Jul 1776, Sibly) natal charts, sidereal and tropical; transits to them; NYSE monthly solar returns (the author's tropical version and our sidereal one) with a 1928–2026 S&P backtest of the author's indications; the author's open forecasts |
+| `tools/author_forecasts.py` | Scorecard of the NYSE solar-return author's forecasts (kept in its FORECASTS list), astronomy check of his transit statements, and 1928–2026 S&P tests of his degree-aspect rules (all days and each episode once) |
 | `tools/gold_tracker.py [--metal silver]` | Trackers: findings, rule status, best-rule dates, analysis log |
 | `tools/build_year.py YEAR` | Astronomy layer for any year; 2000–2024 are git-ignored and rebuilt on demand |
 | `tools/fetch_prices.py` | Downloads GC=F and SI=F (Yahoo; the host must be allowed) |
@@ -117,6 +118,7 @@ Known data problems:
 | `market_signals_2026-11-23_to_2027-12-31_ET.html` | S&P 500 and Sensex signal tables |
 | `external_model_check_ET.html` | Outside-model check (23 Nov 2026) |
 | `nyse_usa_charts_ET.html` | NYSE / USA charts and the solar-return test. The shared chart image is kept in `Reference_materials/extracted/nyse_solar_return_charts_2026-10_2026-11.png` |
+| `author_forecasts_ET.html` | The author's forecast scorecard and rule tests |
 | `GOLD_TRACKER.html`, `SILVER_TRACKER.html` | Current status of every rule, best-rule dates, analysis log |
 | `REFERENCE_PDF_RULES.md`, `COMPLETION_REPORT.md`, `COVERAGE_AUDIT_GOLD_SILVER.md` | Rule lists and audits |
 
@@ -505,6 +507,42 @@ There are no TA S34 A9 windows between now and 31 Dec 2027.
 - **Transits now:** Mars, Jupiter and Ketu in Leo fall in the USA's 10th house, with Mars and Jupiter opposite the USA Moon. Transit Rahu is in the NYSE's 8th house. These are descriptive; no rule has been tested.
 - **Open forecast** (check on 19 Dec 2026): S&P net decline from 7,320 smaller than 4.8% over 19 Nov – 18 Dec.
 
+**The NYSE solar-return author's transit method and forecasts** (shared 24 Nov 2026), in `author_forecasts_ET.html`. His months start on the 18th or 19th (monthly NYSE solar returns), and he reads transits with degree aspects (square, sextile, conjunction).
+- **Forecast scorecard, as of 23 Nov 2026:**
+
+| Period | His call | Result |
+|---|---|---|
+| 20 Oct – 18 Nov | Bearish | **Right** (−4.8%) |
+| Week of 16 Nov | Lower Mon–Thu, Friday recovery | **4 of 5 days right** (Friday fell 3.7%) |
+| Week of 23 Nov | Pressure Mon–Wed, Friday recovery | Monday +4.7%, the wrong way; rest open |
+| 19 Nov – 18 Dec | Smaller decline than −4.8% | Open (−1.2% so far) |
+| Oct 2026 – Oct 2027 | Weak to spring 2027, bottom Mar–May, strong second half | Open |
+
+- **His transit statements, checked:**
+  - Right:
+    - Mars–Ketu conjunction (within 1° on 14–16 Nov 2026).
+    - Sun square Mars–Ketu (exact about 19 Nov).
+    - Jupiter–Venus sextile (within 1° 26–30 Nov).
+    - Retrograde Mars square Uranus (exact 16–17 Feb 2027).
+  - Wrong date: Mars turns retrograde on **10 Jan 2027**, not in February.
+  - Tropical only: Mercury in Pisces in February. Sidereally, Mercury is in Pisces only 5–21 Apr 2027.
+  - Close, not within 1°: Mars is 1.6° from Ketu (true node; 2.9° by the mean node) when it stations direct on 1 Apr 2027.
+- **His aspect rules on the S&P, 1928–2026:**
+  - **Jupiter sextile Venus (his bullish):** next 5 sessions up 63.6% of 198 episodes, against 55.8% (p = 0.03). It works, modestly; it is the best of his rules.
+  - **Sun square Mars:** no direction, but more big days (67 vs 51, p = 0.016). That fits volatility, not a fall.
+  - **At chance:** Mars–Ketu conjunction, Mars square Uranus, Mercury in Pisces (either zodiac).
+  - **Mars retrograde:** *fewer* big days than usual.
+- **His annual path against our S&P table:**
+
+| Period | His call | Our table (weekdays) |
+|---|---|---|
+| Nov 2026 – Feb 2027 | Weak | Bearish 34 vs bullish 10 |
+| Mar – May 2027 | Bottom | Turns bullish 24 vs 6, plus 18 volatile days |
+| Jun – Dec 2027 | Advance | Bullish 70 vs bearish 34 |
+
+  - Independent agreement on the shape of the year, though our table's edge is small and unproven.
+  - Also independent: **Mars, Jupiter and Ketu meet again in Cancer, 9 Mar – 26 Apr 2027.** That is our Mars–Jupiter-node lead, and in 2009 and 2020 the bottom came within 3 sessions of such an episode ending. This one ends on 26 Apr, inside his Mar–May bottom window.
+
 **Model v1.0 (Ch.41 + Shadbala + Ashtakavarga), 6,572 trading days:**
 - The correlation of the scarcity index with the next 5 days is −0.002.
 - The model leans bullish on 67% of days by construction.
@@ -512,6 +550,7 @@ There are no TA S34 A9 windows between now and 31 Dec 2027.
 
 ## 8. Open items
 
+- **External forecasts are tracked in `tools/author_forecasts.py`**: the week of 23–27 Nov (check 28 Nov), the solar month to 18 Dec (check 19 Dec), and the Oct 2026 – Oct 2027 path.
 - **External forecast to check on 19 Dec 2026:** the NYSE solar-return author expects a smaller net S&P decline over 19 Nov – 18 Dec 2026 than the previous month's −4.8% (from 7,320).
 
 - Brihat Samhita 41.12 has a translation ambiguity: Sastri reads "fetch good price and have great demand", another translation reads moderate prices and easy availability. Kept visible; V is not a stand-alone signal.

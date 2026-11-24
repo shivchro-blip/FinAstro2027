@@ -424,6 +424,17 @@
     "build/pdfref/nyse_usa_charts_ET.html",
     "Reference_materials/extracted/nyse_solar_return_charts_2026-10_2026-11.png"
    ]
+  },
+  {
+   "date": "2026-11-24",
+   "pr": "32",
+   "topic": "NYSE solar-return author: forecast scorecard, transit claims checked, his aspect rules tested 1928-2026",
+   "analysis": "Forecasts recorded and scored from S&P closes (monthly, weekly, annual path). His transit statements checked with the ephemeris (sidereal; signs also tropical). His degree-aspect rules tested on the S&P 1928-2026: same day, next 5 sessions (all days and each episode once), big days. His annual path compared with our S&P signal table and the Mars-Jupiter-node lead.",
+   "result": "Scorecard: Oct 20-Nov 18 bearish right (-4.8%); week of 16 Nov 4/5 days right (Friday wrong); week of 23 Nov Monday wrong (+4.7%), rest open; month to 18 Dec and annual path open. Transits: Mars-Ketu, Sun square Mars-Ketu, Jupiter-Venus sextile, Mars-Uranus square (16-17 Feb 2027) right; Mars retrograde is 10 Jan 2027 not February; Mercury in Pisces in Feb is tropical only; Mars-Ketu 1.6° (true node) at the 1 Apr 2027 direct station. Rules: Jupiter sextile Venus bullish next 5 sessions 63.6% vs 55.8% of 198 episodes (p 0.03); Sun square Mars more big days (67 vs 51, p 0.016) but no direction; Mars-Ketu, Mars-Uranus square, Mercury in Pisces at chance; Mars retrograde fewer big days. His annual shape agrees with our S&P table (Nov-Feb bearish 34:10, Mar-May bullish 24:6, Jun-Dec bullish 70:34) and with the Mars-Jupiter-Ketu episode in Cancer 9 Mar - 26 Apr 2027.",
+   "files": [
+    "tools/author_forecasts.py",
+    "build/pdfref/author_forecasts_ET.html"
+   ]
   }
  ]
 }
