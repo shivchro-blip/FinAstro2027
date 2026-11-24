@@ -85,6 +85,8 @@ SECTIONS = [
 
 def main():
     DEST.mkdir(exist_ok=True)
+    for f in sorted((ROOT / B).glob("sky_changes_*_ET.html"))[-2:]:          # the latest planetary-change lists (tools/sky_changes.py)
+        SECTIONS[0][1].insert(1, (B + f.name, f"Planetary changes {f.name[12:22]} to {f.name[26:36]}", "Every sign, nakshatra, pada, navamsa, tithi, karana, yoga, aspect and rule start / end, ET and IST."))
     days = sorted((ROOT / B).glob("day_report_*_ET.html"))
     if days:                                       # the most recent day report (tools/day_report.py)
         SECTIONS[0][1].insert(1, (B + days[-1].name, f"Day report {days[-1].name[11:21]}", "Planet positions, every active rule with its 26-year record, our signals and what markets did."))
