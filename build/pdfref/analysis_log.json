@@ -598,6 +598,16 @@
    "files": [
     "build/pdfref/day_report_2026-11-24_ET.html"
    ]
+  },
+  {
+   "date": "2026-11-24",
+   "pr": "47",
+   "topic": "Day report for Wed 25 Nov 2026",
+   "analysis": "tools/day_report.py 2026-11-25 (positions, panchang, every active rule with its record, calendar rows, table signals, big-move watch), with the 2026 calendar's layers for the day (combined probabilities, Solar return, Global Predictions, Paap Kartari, Mars-Jupiter-node lead).",
+   "result": "Gold Bearish Low with a big-move watch on the Sun-Uranus opposition (17:41 ET); no signal for S&P, Sensex, silver; combined model S&P 56% up (normal 54%), big-day chances S&P 3%, gold 11%; 146 rules active (21 supported); S&P calendar row Kshay Tithi Krishna 'Bullish' at chance (62% vs 59%); Moon perigee 16:01 ET; Solar return 'down'; Global Predictions volatility window open. Actual moves to be added after the close.",
+   "files": [
+    "build/pdfref/day_report_2026-11-25_ET.html"
+   ]
   }
  ]
 }
