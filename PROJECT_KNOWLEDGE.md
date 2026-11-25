@@ -730,6 +730,21 @@ Results, as the share of calls right:
 - **Next:** Mercury in Paap Kartari (B116) 1–15 Jan 2027 (Sun | Pluto), 25 Jan and 18 Feb – 16 Mar 2027.
 - **In the calendar:** shown in the 2026 calendar's key dates, read-first notes and each day's notes.
 
+**Solar return over the past year** (20 Nov 2025 – 24 Nov 2026, S&P closes; `solar_return_engine_ET.html` §5)
+
+| Method | Right | Always-bullish baseline |
+|---|---|---|
+| Monthly stated-indication reading, the Solar return way (27°18′, which reproduces the shared charts) | 4 of 10 monthly calls | 8 of 12 months up |
+| Rubric, model A | 3 of 6 | — |
+| Rubric, model B | 1 of 5 | — |
+| Rubric, model C | 3 of 6 | — |
+| Rubric, model D | 2 of 6 | — |
+| Daily calls, bearish (184 days): same day / next 5 sessions | 50% / 49% | 49% / 48% down |
+| Daily calls, bullish (25 days): same day / next 5 sessions | 56% / 64% | 51% / 52% up |
+
+- **Months the readings got wrong:** the "Bearish" Mar and Apr 2026 months rose 4.8% and 5.2%. The Oct 2026 bearish month was right (−4.8%).
+- **Solar return's own published calls** cover only Oct–Nov 2026: the month right, the week of 16 Nov 4 of 5, the week of 23 Nov 1 of 2 so far.
+
 **Solar return engine** (`solar_return_engine_ET.html`; built from the analysis the user pasted on 24 Nov 2026)
 
 - **Natal check:** at 10:10 LMT the NYSE Sun is 27°17′39″ Taurus tropical and 6°20′11″ Lahiri, which confirms the pasted figures.

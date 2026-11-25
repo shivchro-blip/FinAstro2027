@@ -620,6 +620,17 @@
     "build/pdfref/solar_return_engine_ET.html",
     "tools/calendar_2026.py"
    ]
+  },
+  {
+   "date": "2026-11-25",
+   "pr": "49",
+   "topic": "Solar return method over the past year (20 Nov 2025 - 24 Nov 2026)",
+   "analysis": "tools/solar_return_engine.py last_year(): the past 12 NYSE solar months on S&P closes - the stated-indication reading the Solar return way (27°18'), the rubric in models A-D, and the generated daily calls; against an always-bullish baseline.",
+   "result": "Stated-indication reading right 4 of 10 monthly calls while the S&P rose in 8 of 12 months (Mar and Apr 2026 'Bearish' months +4.8% and +5.2%; Oct right). Rubric A 3/6, B 1/5, C 3/6, D 2/6. Daily bearish calls 50%/49% vs 49%/48% down; bullish 56%/64% vs 51%/52% up (25 days). At or below chance; Solar return's own published calls (Oct-Nov 2026) are the ones that did well.",
+   "files": [
+    "tools/solar_return_engine.py",
+    "build/pdfref/solar_return_engine_ET.html"
+   ]
   }
  ]
 }
