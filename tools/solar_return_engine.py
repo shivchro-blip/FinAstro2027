@@ -271,6 +271,88 @@ def last_year(nat, lo=dt.date(2025, 11, 20)):
     return out
 
 
+def diagnose(nat, lo=dt.date(2025, 11, 15)):
+    """Month by month over the past year: what the Solar return reading rested on, how fragile it was, what the
+    transit rules and our own S&P table said inside the month, what the market did, and why the call missed."""
+    from model_check_60d import load, table_rows
+    AF = load(ROOT / "tools" / "author_forecasts.py", "af_dg")
+    SRG = load(ROOT / "tools" / "solar_return_generate.py", "srg_dg")
+    CP = load(ROOT / "tools" / "combined_probability.py", "cp_dg")
+    NC = SRG.NC
+    P = AF.prices()
+    D, C = list(P), [P[d] for d in P]
+    hi = D[-1]
+    hist = SRG.history()["by"]
+    atests = json.load(open(OUT / "author_forecasts_ET.json"))["tests"]
+    lab = CP.market_history(dt.date(2026, 11, 22))["spx"]
+    lab.update(table_rows(OUT / "market_signals_2026-11-23_to_2027-12-31_ET.json", "spx"))
+    mons = SRG.months(dt.datetime(2025, 10, 1), dt.datetime(2027, 1, 31))
+    bsA = boundaries("A", nat, dt.datetime(2025, 10, 1, tzinfo=UTC), dt.datetime(2027, 1, 31, tzinfo=UTC))
+    bsB = boundaries("B", nat, dt.datetime(2025, 10, 1, tzinfo=UTC), dt.datetime(2027, 1, 31, tzinfo=UTC))
+
+    def nc_reading(t, sid=False):
+        return SRG.reading(NC.features(NC.chart(jd(t), NC.NY[0], NC.NY[1], sid)))
+
+    def eng_reading(t, hs):
+        f = flags(chart(t, False), hs)
+        return SRG.reading({"Ascendant lord debilitated": f["Ascendant lord debilitated"], "Mars, Saturn, Rahu or Ketu in the 8th": f["Malefic in the 8th"],
+                            "Venus or Jupiter in the 10th": f["Venus or Jupiter in the 10th"]})
+    out = []
+    for m in mons:
+        if not m["end"] or m["start"].date() < lo or m["start"].date() > hi:
+            continue
+        t0, t1 = m["start"], m["end"]
+        i, j = close_idx(D, t0), min(close_idx(D, t1), len(D) - 1)
+        seg = C[i:j + 1]
+        ret = (C[j] / C[i] - 1) * 100
+        mid = i + (j - i) // 2
+        lean = SRG.LEAN[m["reading"]]
+        # fragility of the reading
+        alt = {}
+        alt["natal 27°17′39″ (10:10 LMT)"] = nc_reading(min(bsA, key=lambda x: abs((x - t0).total_seconds())))
+        for bt in ("07:52", "11:15"):
+            sh = (natal(bt)["trop"] - 57.3) / 0.9856 * 1440
+            alt[f"birth {bt}"] = nc_reading(t0 + dt.timedelta(minutes=sh))
+        alt["Placidus houses"] = eng_reading(t0, "placidus")
+        alt["sidereal (model B)"] = nc_reading(min(bsB, key=lambda x: abs((x - t0).total_seconds())), True)
+        flips = [k for k, v in alt.items() if SRG.LEAN[v] != lean]
+        # transit rules inside the month
+        eps = SRG.episodes(t0.date(), min(t1.date(), hi), atests)
+        tr = sorted({e["rule"] for e in eps})
+        # our S&P table inside the month
+        days = [D[k] for k in range(i + 1, j + 1)]
+        tb = {"Bullish": [0, 0], "Bearish": [0, 0]}
+        for k in range(i + 1, j + 1):
+            L = lab.get(D[k])
+            if L and L[0] in tb:
+                r1 = C[k] / C[k - 1] - 1
+                tb[L[0]][0] += (r1 > 0) == (L[0] == "Bullish")
+                tb[L[0]][1] += 1
+        h = hist.get(m["reading"], {})
+        right = None if lean == 0 else (ret > 0) == (lean > 0)
+        partial = t1.date() > hi
+        why = []
+        if lean and not right and not partial:
+            if h and h.get("up") is not None:
+                why.append(f"since 1928 months read “{m['reading']}” rose {h['up']}% of the time (avg {h['mean']:+.2f}%), about the same as or more than all months (60.5%): the reading had no edge to start with")
+            if flips:
+                why.append("the reading was fragile: it changes with " + ", ".join(flips))
+            bull_tr = [r for r in tr if r.startswith("Jupiter sextile Venus")]
+            if lean < 0 and bull_tr:
+                why.append("a bullish transit rule (Jupiter sextile Venus) ran inside the month")
+            if lean < 0 and tb["Bullish"][1] > tb["Bearish"][1]:
+                why.append(f"our own S&P table leaned bullish in the month ({tb['Bullish'][1]} bullish vs {tb['Bearish'][1]} bearish days)")
+            ups = sum(1 for k in range(i + 1, j + 1) if C[k] > C[k - 1])
+            why.append(f"the market rose on {ups} of {j - i} sessions; the drift was up")
+        out.append(dict(start=t0.strftime("%d %b %Y %H:%M"), end=t1.strftime("%d %b %Y"), asc=m["asc"], lord=m["lord"], lord_pos=m["lord_pos"],
+                        h8=m["h8"], h10=m["h10"], flags=[f for f in m["flags"] if not f.startswith("Both")], reading=m["reading"], lean=lean,
+                        ret=round(ret, 2), first=round((C[mid] / C[i] - 1) * 100, 2), second=round((C[j] / C[mid] - 1) * 100, 2),
+                        worst=round((min(seg) / C[i] - 1) * 100, 2), best=round((max(seg) / C[i] - 1) * 100, 2),
+                        big=sum(abs(C[k] / C[k - 1] - 1) >= 0.02 for k in range(i + 1, j + 1)), sessions=j - i,
+                        right=right, partial=partial, alt=alt, flips=flips, transits=tr, table=tb, hist=h, why=why))
+    return out
+
+
 # ------------------------------------------------------------------ market data and tests
 def spx():
     rows = [(dt.date.fromisoformat(r["date"]), float(r["close"])) for r in csv.DictReader(open(OUT / "backtest" / "spx_GSPC_daily_1928.csv"))]
@@ -394,6 +476,8 @@ def main():
     res["verify"] = ver
     res["sensitivity"] = sensitivity(D, C)
     res["last_year"] = last_year(nat)
+    sys.path.insert(0, str(ROOT / "tools"))
+    res["diagnosis"] = diagnose(nat)
     # forward: Dec 2026 - Dec 2027
     fw = {}
     for model in ("A", "B", "C", "D"):
@@ -494,7 +578,32 @@ td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap} .g{c
         o.append("</tbody></table></div>")
         rows = "".join(f"<tr><td class='n'>{E(r['start'])}</td><td>{E(r['asc'])}</td><td>{E(r['reading'])}</td><td class='n {'g' if r['ret'] > 0 else 'r'}'>{r['ret']:+.2f}%{' (so far)' if r['partial'] else ''}</td></tr>" for r in st["rows"])
         o.append(f"<details open><summary>The past year's solar months, read the Solar return way</summary><div class='wrap'><table><thead><tr><th>Month starts (ET)</th><th>Ascendant</th><th>Reading</th><th class='n'>S&amp;P in the month</th></tr></thead><tbody>{rows}</tbody></table></div></details>")
-    o.append("<h2>6. The charts ahead, Dec 2026 – Dec 2027</h2>")
+    dg = res.get("diagnosis")
+    if dg:
+        wrong = [x for x in dg if x["right"] is False]
+        rights = [x for x in dg if x["right"] is True]
+        fragile = [x for x in wrong if x["flips"]]
+        o.append("<h2>6. Month by month: why the reading missed</h2>")
+        o.append(f"<div class='callout' style='border-left:4px solid var(--dn);padding:8px 12px;background:var(--soft)'><b>In sum:</b> {len(rights)} right, {len(wrong)} wrong, "
+                 f"{sum(1 for x in dg if x['lean'] == 0)} with no stated indication, {sum(1 for x in dg if x['partial'])} still open. In every wrong month the reading had no historical "
+                 f"edge to begin with (bearish-type readings have been followed by rises 60–70% of the time since 1928). {len(fragile)} of the {len(wrong)} wrong readings were fragile "
+                 "(they change with the exact natal degree, the birth time, the house system or the zodiac). The method reads only the start-of-month chart, while the market rose on most "
+                 "sessions in the misses.</div>")
+        for x in dg:
+            res_ = "open" if x["partial"] else "no call" if x["lean"] == 0 else "right" if x["right"] else "WRONG"
+            cls = "g" if res_ == "right" else "r" if res_ == "WRONG" else ""
+            alt = "; ".join(f"{k}: {v}" for k, v in x["alt"].items())
+            tb = x["table"]
+            o.append(f"<h3>{E(x['start'])} → {E(x['end'])} — reading <b>{E(x['reading'])}</b>, S&amp;P {x['ret']:+.2f}%{' so far' if x['partial'] else ''} — <span class='{cls}'>{res_}</span></h3>"
+                     f"<ul><li><b>Chart:</b> {E(x['asc'])} rising; lord {E(x['lord'])} in {E(x['lord_pos'])}; 8th: {E(', '.join(x['h8']) or '–')}; 10th: {E(', '.join(x['h10']) or '–')}. "
+                     f"Indications: {E('; '.join(x['flags']) or 'none')}.</li>"
+                     f"<li><b>The month:</b> first half {x['first']:+.2f}%, second half {x['second']:+.2f}%; worst {x['worst']:+.2f}%, best {x['best']:+.2f}%; {x['big']} big days in {x['sessions']} sessions.</li>"
+                     f"<li><b>Same reading since 1928:</b> {x['hist'].get('n', '–')} months, up {x['hist'].get('up', '–')}%, average {x['hist'].get('mean', 0):+.2f}%.</li>"
+                     f"<li><b>Robustness:</b> {E(alt)}{' — <b>changes</b> with ' + E(', '.join(x['flips'])) if x['flips'] else ' — stable'}.</li>"
+                     f"<li><b>Inside the month:</b> Solar return transit rules {E(', '.join(x['transits']) or 'none')}; our S&amp;P table {tb['Bullish'][1]} bullish days ({tb['Bullish'][0]} right), "
+                     f"{tb['Bearish'][1]} bearish days ({tb['Bearish'][0]} right).</li>"
+                     + (f"<li><b>Why it missed:</b> {E('; '.join(x['why']))}.</li>" if x["why"] else "") + "</ul>")
+    o.append("<h2>7. The charts ahead, Dec 2026 – Dec 2027</h2>")
     for m, rows in res["forward"].items():
         body = ""
         for r in rows:

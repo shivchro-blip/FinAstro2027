@@ -1479,6 +1479,791 @@
    ]
   }
  },
+ "diagnosis": [
+  {
+   "start": "19 Nov 2025 04:25",
+   "end": "18 Dec 2025",
+   "asc": "Libra 28\u00b031'",
+   "lord": "Venus",
+   "lord_pos": "Scorpio 15\u00b036', house 2",
+   "h8": [
+    "Uranus"
+   ],
+   "h10": [
+    "Jupiter"
+   ],
+   "flags": [
+    "Venus or Jupiter in the 10th"
+   ],
+   "reading": "Supported",
+   "lean": 1,
+   "ret": 2.38,
+   "first": 3.51,
+   "second": -1.09,
+   "worst": -1.19,
+   "best": 4.29,
+   "big": 0,
+   "sessions": 21,
+   "right": true,
+   "partial": false,
+   "alt": {
+    "natal 27\u00b017\u203239\u2033 (10:10 LMT)": "Supported",
+    "birth 07:52": "Supported",
+    "birth 11:15": "No stated indication",
+    "Placidus houses": "No stated indication",
+    "sidereal (model B)": "No stated indication"
+   },
+   "flips": [
+    "birth 11:15",
+    "Placidus houses",
+    "sidereal (model B)"
+   ],
+   "transits": [],
+   "table": {
+    "Bullish": [
+     3,
+     9
+    ],
+    "Bearish": [
+     1,
+     7
+    ]
+   },
+   "hist": {
+    "n": 114,
+    "up": 57.0,
+    "mean": 0.11,
+    "fall5": 14.9
+   },
+   "why": []
+  },
+  {
+   "start": "18 Dec 2025 18:25",
+   "end": "17 Jan 2026",
+   "asc": "Cancer 23\u00b009'",
+   "lord": "Moon",
+   "lord_pos": "Sagittarius 15\u00b016', house 6",
+   "h8": [
+    "Pluto"
+   ],
+   "h10": [],
+   "flags": [],
+   "reading": "No stated indication",
+   "lean": 0,
+   "ret": 2.44,
+   "first": 1.24,
+   "second": 1.19,
+   "worst": 0.0,
+   "best": 2.99,
+   "big": 0,
+   "sessions": 19,
+   "right": null,
+   "partial": false,
+   "alt": {
+    "natal 27\u00b017\u203239\u2033 (10:10 LMT)": "No stated indication",
+    "birth 07:52": "Pressure",
+    "birth 11:15": "Pressure",
+    "Placidus houses": "No stated indication",
+    "sidereal (model B)": "Pressure"
+   },
+   "flips": [
+    "birth 07:52",
+    "birth 11:15",
+    "sidereal (model B)"
+   ],
+   "transits": [],
+   "table": {
+    "Bullish": [
+     7,
+     10
+    ],
+    "Bearish": [
+     4,
+     8
+    ]
+   },
+   "hist": {
+    "n": 650,
+    "up": 59.4,
+    "mean": 0.56,
+    "fall5": 10.0
+   },
+   "why": []
+  },
+  {
+   "start": "17 Jan 2026 05:07",
+   "end": "15 Feb 2026",
+   "asc": "Sagittarius 23\u00b030'",
+   "lord": "Jupiter",
+   "lord_pos": "Cancer 19\u00b009', house 8",
+   "h8": [
+    "Jupiter"
+   ],
+   "h10": [
+    "Ketu"
+   ],
+   "flags": [],
+   "reading": "No stated indication",
+   "lean": 0,
+   "ret": -1.5,
+   "first": -0.01,
+   "second": -1.48,
+   "worst": -2.06,
+   "best": 0.56,
+   "big": 1,
+   "sessions": 19,
+   "right": null,
+   "partial": false,
+   "alt": {
+    "natal 27\u00b017\u203239\u2033 (10:10 LMT)": "No stated indication",
+    "birth 07:52": "No stated indication",
+    "birth 11:15": "No stated indication",
+    "Placidus houses": "No stated indication",
+    "sidereal (model B)": "No stated indication"
+   },
+   "flips": [],
+   "transits": [
+    "Mercury in Pisces, tropical"
+   ],
+   "table": {
+    "Bullish": [
+     2,
+     6
+    ],
+    "Bearish": [
+     5,
+     10
+    ]
+   },
+   "hist": {
+    "n": 650,
+    "up": 59.4,
+    "mean": 0.56,
+    "fall5": 10.0
+   },
+   "why": []
+  },
+  {
+   "start": "15 Feb 2026 18:41",
+   "end": "17 Mar 2026",
+   "asc": "Virgo 11\u00b059'",
+   "lord": "Mercury",
+   "lord_pos": "Pisces 14\u00b040', house 7 (debilitated)",
+   "h8": [
+    "Saturn",
+    "Neptune"
+   ],
+   "h10": [],
+   "flags": [
+    "Ascendant lord debilitated",
+    "Mars, Saturn, Rahu or Ketu in the 8th"
+   ],
+   "reading": "Bearish",
+   "lean": -1,
+   "ret": -1.76,
+   "first": 0.66,
+   "second": -2.41,
+   "worst": -2.98,
+   "best": 1.61,
+   "big": 0,
+   "sessions": 21,
+   "right": true,
+   "partial": false,
+   "alt": {
+    "natal 27\u00b017\u203239\u2033 (10:10 LMT)": "Bearish",
+    "birth 07:52": "Pressure",
+    "birth 11:15": "Bearish",
+    "Placidus houses": "Pressure",
+    "sidereal (model B)": "No stated indication"
+   },
+   "flips": [
+    "sidereal (model B)"
+   ],
+   "transits": [
+    "Mars square Uranus (within 3\u00b0)",
+    "Mercury in Pisces, tropical"
+   ],
+   "table": {
+    "Bullish": [
+     0,
+     0
+    ],
+    "Bearish": [
+     11,
+     21
+    ]
+   },
+   "hist": {
+    "n": 23,
+    "up": 69.6,
+    "mean": 3.9,
+    "fall5": 4.3
+   },
+   "why": []
+  },
+  {
+   "start": "17 Mar 2026 17:37",
+   "end": "17 Apr 2026",
+   "asc": "Virgo 10\u00b051'",
+   "lord": "Mercury",
+   "lord_pos": "Pisces 8\u00b055', house 7 (debilitated)",
+   "h8": [
+    "Venus",
+    "Saturn",
+    "Neptune"
+   ],
+   "h10": [],
+   "flags": [
+    "Ascendant lord debilitated",
+    "Mars, Saturn, Rahu or Ketu in the 8th"
+   ],
+   "reading": "Bearish",
+   "lean": -1,
+   "ret": 4.84,
+   "first": -2.79,
+   "second": 7.85,
+   "worst": -5.54,
+   "best": 4.84,
+   "big": 2,
+   "sessions": 21,
+   "right": false,
+   "partial": false,
+   "alt": {
+    "natal 27\u00b017\u203239\u2033 (10:10 LMT)": "Bearish",
+    "birth 07:52": "Pressure",
+    "birth 11:15": "Bearish",
+    "Placidus houses": "Pressure",
+    "sidereal (model B)": "No stated indication"
+   },
+   "flips": [
+    "sidereal (model B)"
+   ],
+   "transits": [
+    "Jupiter sextile Venus (within 2\u00b0)",
+    "Mercury in Pisces, sidereal",
+    "Mercury in Pisces, tropical"
+   ],
+   "table": {
+    "Bullish": [
+     0,
+     0
+    ],
+    "Bearish": [
+     8,
+     17
+    ]
+   },
+   "hist": {
+    "n": 23,
+    "up": 69.6,
+    "mean": 3.9,
+    "fall5": 4.3
+   },
+   "why": [
+    "since 1928 months read \u201cBearish\u201d rose 69.6% of the time (avg +3.90%), about the same as or more than all months (60.5%): the reading had no edge to start with",
+    "the reading was fragile: it changes with sidereal (model B)",
+    "a bullish transit rule (Jupiter sextile Venus) ran inside the month",
+    "the market rose on 13 of 21 sessions; the drift was up"
+   ]
+  },
+  {
+   "start": "17 Apr 2026 03:22",
+   "end": "18 May 2026",
+   "asc": "Aquarius 15\u00b005'",
+   "lord": "Saturn",
+   "lord_pos": "Aries 7\u00b032', house 3 (debilitated)",
+   "h8": [
+    "Ketu"
+   ],
+   "h10": [],
+   "flags": [
+    "Ascendant lord debilitated",
+    "Mars, Saturn, Rahu or Ketu in the 8th"
+   ],
+   "reading": "Bearish",
+   "lean": -1,
+   "ret": 5.22,
+   "first": 2.38,
+   "second": 2.77,
+   "worst": 0.0,
+   "best": 6.53,
+   "big": 0,
+   "sessions": 21,
+   "right": false,
+   "partial": false,
+   "alt": {
+    "natal 27\u00b017\u203239\u2033 (10:10 LMT)": "Bearish",
+    "birth 07:52": "Pressure",
+    "birth 11:15": "No stated indication",
+    "Placidus houses": "Pressure",
+    "sidereal (model B)": "Pressure"
+   },
+   "flips": [
+    "birth 11:15"
+   ],
+   "transits": [
+    "Mercury in Pisces, sidereal"
+   ],
+   "table": {
+    "Bullish": [
+     3,
+     6
+    ],
+    "Bearish": [
+     2,
+     5
+    ]
+   },
+   "hist": {
+    "n": 23,
+    "up": 69.6,
+    "mean": 3.9,
+    "fall5": 4.3
+   },
+   "why": [
+    "since 1928 months read \u201cBearish\u201d rose 69.6% of the time (avg +3.90%), about the same as or more than all months (60.5%): the reading had no edge to start with",
+    "the reading was fragile: it changes with birth 11:15",
+    "our own S&P table leaned bullish in the month (6 bullish vs 5 bearish days)",
+    "the market rose on 12 of 21 sessions; the drift was up"
+   ]
+  },
+  {
+   "start": "18 May 2026 01:20",
+   "end": "18 Jun 2026",
+   "asc": "Aquarius 14\u00b051'",
+   "lord": "Saturn",
+   "lord_pos": "Aries 10\u00b058', house 3 (debilitated)",
+   "h8": [
+    "Ketu"
+   ],
+   "h10": [],
+   "flags": [
+    "Ascendant lord debilitated",
+    "Mars, Saturn, Rahu or Ketu in the 8th"
+   ],
+   "reading": "Bearish",
+   "lean": -1,
+   "ret": 0.16,
+   "first": 2.72,
+   "second": -2.49,
+   "worst": -1.91,
+   "best": 2.72,
+   "big": 1,
+   "sessions": 22,
+   "right": false,
+   "partial": false,
+   "alt": {
+    "natal 27\u00b017\u203239\u2033 (10:10 LMT)": "Bearish",
+    "birth 07:52": "Pressure",
+    "birth 11:15": "No stated indication",
+    "Placidus houses": "Pressure",
+    "sidereal (model B)": "Pressure"
+   },
+   "flips": [
+    "birth 11:15"
+   ],
+   "transits": [],
+   "table": {
+    "Bullish": [
+     3,
+     5
+    ],
+    "Bearish": [
+     6,
+     16
+    ]
+   },
+   "hist": {
+    "n": 23,
+    "up": 69.6,
+    "mean": 3.9,
+    "fall5": 4.3
+   },
+   "why": [
+    "since 1928 months read \u201cBearish\u201d rose 69.6% of the time (avg +3.90%), about the same as or more than all months (60.5%): the reading had no edge to start with",
+    "the reading was fragile: it changes with birth 11:15",
+    "the market rose on 14 of 22 sessions; the drift was up"
+   ]
+  },
+  {
+   "start": "18 Jun 2026 08:32",
+   "end": "19 Jul 2026",
+   "asc": "Leo 5\u00b032'",
+   "lord": "Sun",
+   "lord_pos": "Gemini 27\u00b018', house 11",
+   "h8": [
+    "Rahu"
+   ],
+   "h10": [
+    "Mars"
+   ],
+   "flags": [
+    "Mars, Saturn, Rahu or Ketu in the 8th"
+   ],
+   "reading": "Pressure",
+   "lean": -1,
+   "ret": 0.51,
+   "first": 0.85,
+   "second": -0.34,
+   "worst": -0.89,
+   "best": 2.09,
+   "big": 0,
+   "sessions": 20,
+   "right": false,
+   "partial": false,
+   "alt": {
+    "natal 27\u00b017\u203239\u2033 (10:10 LMT)": "Pressure",
+    "birth 07:52": "No stated indication",
+    "birth 11:15": "Pressure",
+    "Placidus houses": "Pressure",
+    "sidereal (model B)": "No stated indication"
+   },
+   "flips": [
+    "birth 07:52",
+    "sidereal (model B)"
+   ],
+   "transits": [],
+   "table": {
+    "Bullish": [
+     6,
+     9
+    ],
+    "Bearish": [
+     2,
+     2
+    ]
+   },
+   "hist": {
+    "n": 395,
+    "up": 62.8,
+    "mean": 0.76,
+    "fall5": 9.9
+   },
+   "why": [
+    "since 1928 months read \u201cPressure\u201d rose 62.8% of the time (avg +0.76%), about the same as or more than all months (60.5%): the reading had no edge to start with",
+    "the reading was fragile: it changes with birth 07:52, sidereal (model B)",
+    "our own S&P table leaned bullish in the month (9 bullish vs 2 bearish days)",
+    "the market rose on 9 of 20 sessions; the drift was up"
+   ]
+  },
+  {
+   "start": "19 Jul 2026 19:20",
+   "end": "20 Aug 2026",
+   "asc": "Capricorn 11\u00b030'",
+   "lord": "Saturn",
+   "lord_pos": "Aries 14\u00b042', house 4 (debilitated)",
+   "h8": [
+    "Jupiter"
+   ],
+   "h10": [
+    "Moon"
+   ],
+   "flags": [
+    "Ascendant lord debilitated"
+   ],
+   "reading": "Pressure",
+   "lean": -1,
+   "ret": 3.36,
+   "first": 1.91,
+   "second": 1.41,
+   "worst": -1.9,
+   "best": 4.58,
+   "big": 0,
+   "sessions": 23,
+   "right": false,
+   "partial": false,
+   "alt": {
+    "natal 27\u00b017\u203239\u2033 (10:10 LMT)": "Pressure",
+    "birth 07:52": "Supported",
+    "birth 11:15": "Pressure",
+    "Placidus houses": "Bearish",
+    "sidereal (model B)": "Pressure"
+   },
+   "flips": [
+    "birth 07:52"
+   ],
+   "transits": [
+    "Jupiter sextile Venus (within 2\u00b0)"
+   ],
+   "table": {
+    "Bullish": [
+     7,
+     15
+    ],
+    "Bearish": [
+     0,
+     0
+    ]
+   },
+   "hist": {
+    "n": 395,
+    "up": 62.8,
+    "mean": 0.76,
+    "fall5": 9.9
+   },
+   "why": [
+    "since 1928 months read \u201cPressure\u201d rose 62.8% of the time (avg +0.76%), about the same as or more than all months (60.5%): the reading had no edge to start with",
+    "the reading was fragile: it changes with birth 07:52",
+    "a bullish transit rule (Jupiter sextile Venus) ran inside the month",
+    "our own S&P table leaned bullish in the month (15 bullish vs 0 bearish days)",
+    "the market rose on 12 of 23 sessions; the drift was up"
+   ]
+  },
+  {
+   "start": "20 Aug 2026 03:01",
+   "end": "20 Sep 2026",
+   "asc": "Cancer 18\u00b052'",
+   "lord": "Moon",
+   "lord_pos": "Scorpio 29\u00b015', house 5 (debilitated)",
+   "h8": [
+    "Rahu",
+    "Pluto"
+   ],
+   "h10": [
+    "Saturn",
+    "Neptune"
+   ],
+   "flags": [
+    "Ascendant lord debilitated",
+    "Mars, Saturn, Rahu or Ketu in the 8th"
+   ],
+   "reading": "Bearish",
+   "lean": -1,
+   "ret": -0.75,
+   "first": -0.54,
+   "second": -0.21,
+   "worst": -2.03,
+   "best": 0.52,
+   "big": 0,
+   "sessions": 21,
+   "right": true,
+   "partial": false,
+   "alt": {
+    "natal 27\u00b017\u203239\u2033 (10:10 LMT)": "Bearish",
+    "birth 07:52": "No stated indication",
+    "birth 11:15": "Bearish",
+    "Placidus houses": "Bearish",
+    "sidereal (model B)": "Pressure"
+   },
+   "flips": [
+    "birth 07:52"
+   ],
+   "transits": [],
+   "table": {
+    "Bullish": [
+     6,
+     16
+    ],
+    "Bearish": [
+     3,
+     5
+    ]
+   },
+   "hist": {
+    "n": 23,
+    "up": 69.6,
+    "mean": 3.9,
+    "fall5": 4.3
+   },
+   "why": []
+  },
+  {
+   "start": "20 Sep 2026 01:47",
+   "end": "20 Oct 2026",
+   "asc": "Cancer 28\u00b038'",
+   "lord": "Moon",
+   "lord_pos": "Capricorn 12\u00b018', house 7",
+   "h8": [
+    "Rahu",
+    "Pluto"
+   ],
+   "h10": [
+    "Saturn",
+    "Neptune"
+   ],
+   "flags": [
+    "Mars, Saturn, Rahu or Ketu in the 8th"
+   ],
+   "reading": "Pressure",
+   "lean": -1,
+   "ret": 0.53,
+   "first": 0.94,
+   "second": -0.41,
+   "worst": 0.0,
+   "best": 2.2,
+   "big": 0,
+   "sessions": 21,
+   "right": false,
+   "partial": false,
+   "alt": {
+    "natal 27\u00b017\u203239\u2033 (10:10 LMT)": "Pressure",
+    "birth 07:52": "No stated indication",
+    "birth 11:15": "No stated indication",
+    "Placidus houses": "Pressure",
+    "sidereal (model B)": "Supported"
+   },
+   "flips": [
+    "birth 07:52",
+    "birth 11:15",
+    "sidereal (model B)"
+   ],
+   "transits": [],
+   "table": {
+    "Bullish": [
+     3,
+     4
+    ],
+    "Bearish": [
+     7,
+     11
+    ]
+   },
+   "hist": {
+    "n": 395,
+    "up": 62.8,
+    "mean": 0.76,
+    "fall5": 9.9
+   },
+   "why": [
+    "since 1928 months read \u201cPressure\u201d rose 62.8% of the time (avg +0.76%), about the same as or more than all months (60.5%): the reading had no edge to start with",
+    "the reading was fragile: it changes with birth 07:52, birth 11:15, sidereal (model B)",
+    "the market rose on 9 of 21 sessions; the drift was up"
+   ]
+  },
+  {
+   "start": "20 Oct 2026 12:28",
+   "end": "19 Nov 2026",
+   "asc": "Capricorn 0\u00b015'",
+   "lord": "Saturn",
+   "lord_pos": "Aries 10\u00b003', house 4 (debilitated)",
+   "h8": [
+    "Mars",
+    "Jupiter",
+    "Ketu"
+   ],
+   "h10": [
+    "Sun"
+   ],
+   "flags": [
+    "Ascendant lord debilitated",
+    "Mars with Ketu in the 8th",
+    "Mars, Saturn, Rahu or Ketu in the 8th",
+    "Sun in the 10th"
+   ],
+   "reading": "Bearish",
+   "lean": -1,
+   "ret": -4.77,
+   "first": -1.58,
+   "second": -3.24,
+   "worst": -4.77,
+   "best": 0.86,
+   "big": 2,
+   "sessions": 22,
+   "right": true,
+   "partial": false,
+   "alt": {
+    "natal 27\u00b017\u203239\u2033 (10:10 LMT)": "No stated indication",
+    "birth 07:52": "No stated indication",
+    "birth 11:15": "Bearish",
+    "Placidus houses": "Weak, moderated",
+    "sidereal (model B)": "No stated indication"
+   },
+   "flips": [
+    "natal 27\u00b017\u203239\u2033 (10:10 LMT)",
+    "birth 07:52",
+    "sidereal (model B)"
+   ],
+   "transits": [
+    "Jupiter sextile Venus (within 2\u00b0)",
+    "Mars conjunct Ketu (within 5\u00b0)",
+    "Sun square Mars (within 3\u00b0)",
+    "Sun square Mars with Mars-Ketu within 8\u00b0"
+   ],
+   "table": {
+    "Bullish": [
+     4,
+     12
+    ],
+    "Bearish": [
+     2,
+     4
+    ]
+   },
+   "hist": {
+    "n": 23,
+    "up": 69.6,
+    "mean": 3.9,
+    "fall5": 4.3
+   },
+   "why": []
+  },
+  {
+   "start": "19 Nov 2026 10:10",
+   "end": "19 Dec 2026",
+   "asc": "Capricorn 10\u00b001'",
+   "lord": "Saturn",
+   "lord_pos": "Aries 8\u00b020', house 4 (debilitated)",
+   "h8": [
+    "Mars",
+    "Jupiter",
+    "Ketu"
+   ],
+   "h10": [
+    "Venus"
+   ],
+   "flags": [
+    "Ascendant lord debilitated",
+    "Mars with Ketu in the 8th",
+    "Mars, Saturn, Rahu or Ketu in the 8th",
+    "Venus or Jupiter in the 10th"
+   ],
+   "reading": "Weak, moderated",
+   "lean": -1,
+   "ret": -1.67,
+   "first": -5.64,
+   "second": 4.21,
+   "worst": -5.64,
+   "best": 0.0,
+   "big": 3,
+   "sessions": 4,
+   "right": true,
+   "partial": true,
+   "alt": {
+    "natal 27\u00b017\u203239\u2033 (10:10 LMT)": "Weak, moderated",
+    "birth 07:52": "No stated indication",
+    "birth 11:15": "Weak, moderated",
+    "Placidus houses": "Bearish",
+    "sidereal (model B)": "No stated indication"
+   },
+   "flips": [
+    "birth 07:52",
+    "sidereal (model B)"
+   ],
+   "transits": [
+    "Jupiter sextile Venus (within 2\u00b0)",
+    "Mars conjunct Ketu (within 5\u00b0)",
+    "Sun square Mars (within 3\u00b0)",
+    "Sun square Mars with Mars-Ketu within 8\u00b0"
+   ],
+   "table": {
+    "Bullish": [
+     0,
+     2
+    ],
+    "Bearish": [
+     0,
+     0
+    ]
+   },
+   "hist": {
+    "n": 4,
+    "up": 75.0,
+    "mean": 2.38,
+    "fall5": 25.0
+   },
+   "why": []
+  }
+ ],
  "forward": {
   "A": [
    {
