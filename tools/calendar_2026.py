@@ -64,6 +64,7 @@ def gather(a, b):
     sr["gp"] = json.load(open(OUT / "global_predictions_ET.json"))
     sr["engine"] = json.load(open(OUT / "solar_return_engine_ET.json"))
     sr["gjc"] = json.load(open(OUT / "gold_jupiter_crash_ET.json"))
+    sr["turns"] = json.load(open(OUT / "gold_turns_ET.json"))
     sr["doc"] = doc_rows(json.load(open(OUT / "doc_dec2026_check_ET.json")), res)
     sr["kartari"] = [dict(key=r["key"], title=r["title"], tone=r["tone"], basis=r["basis"], record=r["record"],
                           spans=[(dt.datetime.fromisoformat(u["frm_iso"]), dt.datetime.fromisoformat(u["to_iso"]), u["pair"]) for u in r["upcoming"]])
@@ -516,6 +517,8 @@ def page(res, sr, track, checks, a, b, generated):
                     extra.append(f"Gold Jupiter note: “{k}” ends")
                 if a_ == x["date"] and x["date"] != str(a):
                     extra.append(f"Gold Jupiter note: “{k}” begins")
+        if x["date"] == "2026-12-11":
+            extra.append("Saturn stations direct (Pisces 13.7°): gold bottom-watch marker (Saturn direct station within ±30 days at 7 of 24 past gold bottoms)")
         for f in sr["gp"]["forecasts"]:
             if f["start"] == x["date"] and f["kind"] != "fade":
                 extra.append(f"Global Predictions window begins ({f['period']}): {f['text'][:90]}…")
@@ -864,6 +867,11 @@ def gjc_html(g):
              f"<br><b>When the current one ends:</b> Jupiter with Ketu in Leo ends on 5 Dec 2026 (Ketu enters Cancer). The pattern returns when Jupiter goes back into Cancer: "
              f"Jupiter with Ketu {lst('Jupiter with Rahu or Ketu')}; Jupiter–Saturn trine {lst('Jupiter–Saturn trine (5/9)')}; malefic Vedha on Jupiter {lst('Malefic vedha on Jupiter')}; "
              f"all together {lst('afflicted and malefic vedha')}.</div>")
+    o.append("<div class='callout'><b>Bottom and recovery watch (gold_turns_ET.html):</b> at gold's 24 bottoms since 1972, a Jupiter direct station within ±30 days (33% vs 15% of weeks) "
+             "and Jupiter–Saturn within 10° of trine / opposition / conjunction (42% vs 20%) were the most common features; a Saturn direct station within ±30 days was next (29% vs 16%). "
+             "For the current fall that points to two watch windows: <b>11 Nov 2026 – 10 Jan 2027</b> (Saturn stations direct 11 Dec at Pisces 13.7°) and <b>14 Mar – 13 May 2027</b> "
+             "(Jupiter stations direct 13 Apr at Cancer 22.75°, with Ketu within 0.5°, Mars nearby and Saturn trine within 1.4°). The Jupiter–Saturn trine was equally common at peaks, "
+             "and about 40 features were tested, so these are watch periods, not timing rules.</div>")
     return "".join(o)
 
 

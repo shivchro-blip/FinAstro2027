@@ -1,0 +1,5643 @@
+{
+ "turns": [
+  {
+   "kind": "peak",
+   "date": "1973-06-15",
+   "price": 120.0,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": true,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": true,
+    "Saturn station within \u00b130 days": false,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": false,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": false,
+    "Jupiter\u2013Saturn trine (5/9)": false,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": false,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": true,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Gemini",
+     "deg": 0.9,
+     "retro": false,
+     "nak": "Mrigashira"
+    },
+    "Mercury": {
+     "sign": "Gemini",
+     "deg": 24.68,
+     "retro": false,
+     "nak": "Punarvasu"
+    },
+    "Venus": {
+     "sign": "Gemini",
+     "deg": 18.57,
+     "retro": false,
+     "nak": "Ardra"
+    },
+    "Mars": {
+     "sign": "Pisces",
+     "deg": 3.07,
+     "retro": false,
+     "nak": "Purva Bhadrapada"
+    },
+    "Jupiter": {
+     "sign": "Capricorn",
+     "deg": 18.25,
+     "retro": true,
+     "nak": "Shravana"
+    },
+    "Saturn": {
+     "sign": "Gemini",
+     "deg": 0.66,
+     "retro": false,
+     "nak": "Mrigashira"
+    },
+    "Rahu": {
+     "sign": "Sagittarius",
+     "deg": 14.99,
+     "retro": true,
+     "nak": "Purva Ashadha"
+    },
+    "Uranus": {
+     "sign": "Virgo",
+     "deg": 25.5,
+     "retro": true,
+     "nak": "Chitra"
+    },
+    "Neptune": {
+     "sign": "Scorpio",
+     "deg": 12.07,
+     "retro": true,
+     "nak": "Anuradha"
+    },
+    "Pluto": {
+     "sign": "Virgo",
+     "deg": 8.19,
+     "retro": false,
+     "nak": "Uttara Phalguni"
+    }
+   },
+   "js_angle": 132.4
+  },
+  {
+   "kind": "bottom",
+   "date": "1973-11-15",
+   "price": 95.0,
+   "f": {
+    "Mercury station within \u00b17 days": true,
+    "Mercury direct station within \u00b17 days": true,
+    "Mercury retrograde": true,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": true,
+    "Mars direct station within \u00b115 days": true,
+    "Mars retrograde": true,
+    "Jupiter station within \u00b130 days": false,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": false,
+    "Saturn station within \u00b130 days": true,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": true,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": false,
+    "Jupiter\u2013Saturn trine (5/9)": false,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": false,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Libra",
+     "deg": 29.7,
+     "retro": false,
+     "nak": "Vishakha"
+    },
+    "Mercury": {
+     "sign": "Libra",
+     "deg": 18.51,
+     "retro": true,
+     "nak": "Swati"
+    },
+    "Venus": {
+     "sign": "Sagittarius",
+     "deg": 16.78,
+     "retro": false,
+     "nak": "Purva Ashadha"
+    },
+    "Mars": {
+     "sign": "Aries",
+     "deg": 2.53,
+     "retro": true,
+     "nak": "Ashwini"
+    },
+    "Jupiter": {
+     "sign": "Capricorn",
+     "deg": 12.38,
+     "retro": false,
+     "nak": "Shravana"
+    },
+    "Saturn": {
+     "sign": "Gemini",
+     "deg": 10.47,
+     "retro": true,
+     "nak": "Ardra"
+    },
+    "Rahu": {
+     "sign": "Sagittarius",
+     "deg": 6.88,
+     "retro": true,
+     "nak": "Mula"
+    },
+    "Uranus": {
+     "sign": "Libra",
+     "deg": 1.76,
+     "retro": false,
+     "nak": "Chitra"
+    },
+    "Neptune": {
+     "sign": "Scorpio",
+     "deg": 13.15,
+     "retro": false,
+     "nak": "Anuradha"
+    },
+    "Pluto": {
+     "sign": "Virgo",
+     "deg": 12.51,
+     "retro": false,
+     "nak": "Hasta"
+    }
+   },
+   "js_angle": 148.1
+  },
+  {
+   "kind": "peak",
+   "date": "1974-04-15",
+   "price": 172.0,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": false,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": false,
+    "Saturn station within \u00b130 days": false,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": false,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": true,
+    "Jupiter\u2013Saturn trine (5/9)": true,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Aries",
+     "deg": 1.8,
+     "retro": false,
+     "nak": "Ashwini"
+    },
+    "Mercury": {
+     "sign": "Pisces",
+     "deg": 13.15,
+     "retro": false,
+     "nak": "Uttara Bhadrapada"
+    },
+    "Venus": {
+     "sign": "Aquarius",
+     "deg": 15.78,
+     "retro": false,
+     "nak": "Shatabhisha"
+    },
+    "Mars": {
+     "sign": "Gemini",
+     "deg": 3.72,
+     "retro": false,
+     "nak": "Mrigashira"
+    },
+    "Jupiter": {
+     "sign": "Aquarius",
+     "deg": 14.9,
+     "retro": false,
+     "nak": "Shatabhisha"
+    },
+    "Saturn": {
+     "sign": "Gemini",
+     "deg": 6.23,
+     "retro": false,
+     "nak": "Mrigashira"
+    },
+    "Rahu": {
+     "sign": "Scorpio",
+     "deg": 28.88,
+     "retro": true,
+     "nak": "Jyeshtha"
+    },
+    "Uranus": {
+     "sign": "Libra",
+     "deg": 2.27,
+     "retro": true,
+     "nak": "Chitra"
+    },
+    "Neptune": {
+     "sign": "Scorpio",
+     "deg": 15.8,
+     "retro": true,
+     "nak": "Anuradha"
+    },
+    "Pluto": {
+     "sign": "Virgo",
+     "deg": 11.43,
+     "retro": true,
+     "nak": "Hasta"
+    }
+   },
+   "js_angle": 111.3
+  },
+  {
+   "kind": "bottom",
+   "date": "1974-07-15",
+   "price": 143.0,
+   "f": {
+    "Mercury station within \u00b17 days": true,
+    "Mercury direct station within \u00b17 days": true,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": true,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": true,
+    "Saturn station within \u00b130 days": false,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": false,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": true,
+    "Jupiter\u2013Saturn trine (5/9)": true,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": true,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Gemini",
+     "deg": 29.27,
+     "retro": false,
+     "nak": "Punarvasu"
+    },
+    "Mercury": {
+     "sign": "Gemini",
+     "deg": 11.46,
+     "retro": false,
+     "nak": "Ardra"
+    },
+    "Venus": {
+     "sign": "Taurus",
+     "deg": 29.87,
+     "retro": false,
+     "nak": "Mrigashira"
+    },
+    "Mars": {
+     "sign": "Cancer",
+     "deg": 29.06,
+     "retro": false,
+     "nak": "Ashlesha"
+    },
+    "Jupiter": {
+     "sign": "Aquarius",
+     "deg": 24.26,
+     "retro": true,
+     "nak": "Purva Bhadrapada"
+    },
+    "Saturn": {
+     "sign": "Gemini",
+     "deg": 16.79,
+     "retro": false,
+     "nak": "Ardra"
+    },
+    "Rahu": {
+     "sign": "Scorpio",
+     "deg": 24.06,
+     "retro": true,
+     "nak": "Jyeshtha"
+    },
+    "Uranus": {
+     "sign": "Libra",
+     "deg": 0.23,
+     "retro": false,
+     "nak": "Chitra"
+    },
+    "Neptune": {
+     "sign": "Scorpio",
+     "deg": 13.64,
+     "retro": true,
+     "nak": "Anuradha"
+    },
+    "Pluto": {
+     "sign": "Virgo",
+     "deg": 10.82,
+     "retro": false,
+     "nak": "Hasta"
+    }
+   },
+   "js_angle": 112.5
+  },
+  {
+   "kind": "peak",
+   "date": "1974-12-15",
+   "price": 184.0,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": false,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": false,
+    "Saturn station within \u00b130 days": false,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": true,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": true,
+    "Jupiter\u2013Saturn trine (5/9)": true,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Scorpio",
+     "deg": 29.83,
+     "retro": false,
+     "nak": "Jyeshtha"
+    },
+    "Mercury": {
+     "sign": "Scorpio",
+     "deg": 27.53,
+     "retro": false,
+     "nak": "Jyeshtha"
+    },
+    "Venus": {
+     "sign": "Sagittarius",
+     "deg": 9.41,
+     "retro": false,
+     "nak": "Mula"
+    },
+    "Mars": {
+     "sign": "Scorpio",
+     "deg": 9.86,
+     "retro": false,
+     "nak": "Anuradha"
+    },
+    "Jupiter": {
+     "sign": "Aquarius",
+     "deg": 17.36,
+     "retro": false,
+     "nak": "Shatabhisha"
+    },
+    "Saturn": {
+     "sign": "Gemini",
+     "deg": 23.63,
+     "retro": true,
+     "nak": "Punarvasu"
+    },
+    "Rahu": {
+     "sign": "Scorpio",
+     "deg": 15.95,
+     "retro": true,
+     "nak": "Anuradha"
+    },
+    "Uranus": {
+     "sign": "Libra",
+     "deg": 7.74,
+     "retro": false,
+     "nak": "Swati"
+    },
+    "Neptune": {
+     "sign": "Scorpio",
+     "deg": 16.34,
+     "retro": false,
+     "nak": "Anuradha"
+    },
+    "Pluto": {
+     "sign": "Virgo",
+     "deg": 15.53,
+     "retro": false,
+     "nak": "Hasta"
+    }
+   },
+   "js_angle": 126.3
+  },
+  {
+   "kind": "bottom",
+   "date": "1976-08-15",
+   "price": 110.0,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": false,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": false,
+    "Saturn station within \u00b130 days": false,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": false,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": false,
+    "Jupiter\u2013Saturn trine (5/9)": false,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": false,
+    "Malefic vedha on Jupiter": true,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Cancer",
+     "deg": 29.4,
+     "retro": false,
+     "nak": "Ashlesha"
+    },
+    "Mercury": {
+     "sign": "Leo",
+     "deg": 24.51,
+     "retro": false,
+     "nak": "Purva Phalguni"
+    },
+    "Venus": {
+     "sign": "Leo",
+     "deg": 15.46,
+     "retro": false,
+     "nak": "Purva Phalguni"
+    },
+    "Mars": {
+     "sign": "Virgo",
+     "deg": 1.01,
+     "retro": false,
+     "nak": "Uttara Phalguni"
+    },
+    "Jupiter": {
+     "sign": "Taurus",
+     "deg": 5.71,
+     "retro": false,
+     "nak": "Krittika"
+    },
+    "Saturn": {
+     "sign": "Cancer",
+     "deg": 15.21,
+     "retro": false,
+     "nak": "Pushya"
+    },
+    "Rahu": {
+     "sign": "Libra",
+     "deg": 13.68,
+     "retro": true,
+     "nak": "Swati"
+    },
+    "Uranus": {
+     "sign": "Libra",
+     "deg": 10.04,
+     "retro": false,
+     "nak": "Swati"
+    },
+    "Neptune": {
+     "sign": "Scorpio",
+     "deg": 17.68,
+     "retro": true,
+     "nak": "Jyeshtha"
+    },
+    "Pluto": {
+     "sign": "Virgo",
+     "deg": 16.28,
+     "retro": false,
+     "nak": "Hasta"
+    }
+   },
+   "js_angle": 69.5
+  },
+  {
+   "kind": "peak",
+   "date": "1980-01-15",
+   "price": 675.0,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": true,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": true,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": true,
+    "Saturn station within \u00b130 days": true,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": true,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": false,
+    "Jupiter\u2013Saturn trine (5/9)": false,
+    "Jupiter with Rahu or Ketu": true,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Capricorn",
+     "deg": 1.13,
+     "retro": false,
+     "nak": "Uttara Ashadha"
+    },
+    "Mercury": {
+     "sign": "Sagittarius",
+     "deg": 27.53,
+     "retro": false,
+     "nak": "Uttara Ashadha"
+    },
+    "Venus": {
+     "sign": "Aquarius",
+     "deg": 5.88,
+     "retro": false,
+     "nak": "Dhanishta"
+    },
+    "Mars": {
+     "sign": "Leo",
+     "deg": 21.77,
+     "retro": false,
+     "nak": "Purva Phalguni"
+    },
+    "Jupiter": {
+     "sign": "Leo",
+     "deg": 16.02,
+     "retro": true,
+     "nak": "Purva Phalguni"
+    },
+    "Saturn": {
+     "sign": "Virgo",
+     "deg": 3.37,
+     "retro": true,
+     "nak": "Uttara Phalguni"
+    },
+    "Rahu": {
+     "sign": "Leo",
+     "deg": 7.54,
+     "retro": true,
+     "nak": "Magha"
+    },
+    "Uranus": {
+     "sign": "Scorpio",
+     "deg": 1.11,
+     "retro": false,
+     "nak": "Vishakha"
+    },
+    "Neptune": {
+     "sign": "Scorpio",
+     "deg": 27.86,
+     "retro": false,
+     "nak": "Jyeshtha"
+    },
+    "Pluto": {
+     "sign": "Virgo",
+     "deg": 28.18,
+     "retro": false,
+     "nak": "Chitra"
+    }
+   },
+   "js_angle": 17.4
+  },
+  {
+   "kind": "bottom",
+   "date": "1980-05-15",
+   "price": 514.0,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": true,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": true,
+    "Jupiter direct station within \u00b130 days": true,
+    "Jupiter retrograde": false,
+    "Saturn station within \u00b130 days": true,
+    "Saturn direct station within \u00b130 days": true,
+    "Saturn retrograde": true,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": false,
+    "Jupiter\u2013Saturn trine (5/9)": false,
+    "Jupiter with Rahu or Ketu": true,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Taurus",
+     "deg": 1.38,
+     "retro": false,
+     "nak": "Krittika"
+    },
+    "Mercury": {
+     "sign": "Taurus",
+     "deg": 4.14,
+     "retro": false,
+     "nak": "Krittika"
+    },
+    "Venus": {
+     "sign": "Gemini",
+     "deg": 7.45,
+     "retro": false,
+     "nak": "Ardra"
+    },
+    "Mars": {
+     "sign": "Leo",
+     "deg": 10.05,
+     "retro": false,
+     "nak": "Magha"
+    },
+    "Jupiter": {
+     "sign": "Leo",
+     "deg": 7.22,
+     "retro": false,
+     "nak": "Magha"
+    },
+    "Saturn": {
+     "sign": "Leo",
+     "deg": 26.65,
+     "retro": true,
+     "nak": "Purva Phalguni"
+    },
+    "Rahu": {
+     "sign": "Leo",
+     "deg": 1.13,
+     "retro": true,
+     "nak": "Magha"
+    },
+    "Uranus": {
+     "sign": "Libra",
+     "deg": 29.92,
+     "retro": true,
+     "nak": "Vishakha"
+    },
+    "Neptune": {
+     "sign": "Scorpio",
+     "deg": 28.43,
+     "retro": true,
+     "nak": "Jyeshtha"
+    },
+    "Pluto": {
+     "sign": "Virgo",
+     "deg": 25.9,
+     "retro": true,
+     "nak": "Chitra"
+    }
+   },
+   "js_angle": 19.4
+  },
+  {
+   "kind": "peak",
+   "date": "1980-09-15",
+   "price": 674.0,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": false,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": false,
+    "Saturn station within \u00b130 days": false,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": false,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": true,
+    "Jupiter\u2013Saturn trine (5/9)": false,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": true,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Leo",
+     "deg": 29.37,
+     "retro": false,
+     "nak": "Uttara Phalguni"
+    },
+    "Mercury": {
+     "sign": "Virgo",
+     "deg": 15.51,
+     "retro": false,
+     "nak": "Hasta"
+    },
+    "Venus": {
+     "sign": "Cancer",
+     "deg": 14.85,
+     "retro": false,
+     "nak": "Pushya"
+    },
+    "Mars": {
+     "sign": "Libra",
+     "deg": 17.96,
+     "retro": false,
+     "nak": "Swati"
+    },
+    "Jupiter": {
+     "sign": "Leo",
+     "deg": 27.66,
+     "retro": false,
+     "nak": "Uttara Phalguni"
+    },
+    "Saturn": {
+     "sign": "Virgo",
+     "deg": 5.7,
+     "retro": false,
+     "nak": "Uttara Phalguni"
+    },
+    "Rahu": {
+     "sign": "Cancer",
+     "deg": 24.61,
+     "retro": true,
+     "nak": "Ashlesha"
+    },
+    "Uranus": {
+     "sign": "Libra",
+     "deg": 28.85,
+     "retro": false,
+     "nak": "Vishakha"
+    },
+    "Neptune": {
+     "sign": "Scorpio",
+     "deg": 26.38,
+     "retro": false,
+     "nak": "Jyeshtha"
+    },
+    "Pluto": {
+     "sign": "Virgo",
+     "deg": 26.98,
+     "retro": false,
+     "nak": "Chitra"
+    }
+   },
+   "js_angle": 8.0
+  },
+  {
+   "kind": "bottom",
+   "date": "1982-06-15",
+   "price": 315.0,
+   "f": {
+    "Mercury station within \u00b17 days": true,
+    "Mercury direct station within \u00b17 days": true,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": true,
+    "Jupiter direct station within \u00b130 days": true,
+    "Jupiter retrograde": true,
+    "Saturn station within \u00b130 days": true,
+    "Saturn direct station within \u00b130 days": true,
+    "Saturn retrograde": true,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": false,
+    "Jupiter\u2013Saturn trine (5/9)": false,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": true,
+    "Jupiter hemmed by malefics (12th and 2nd)": true,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Gemini",
+     "deg": 0.61,
+     "retro": false,
+     "nak": "Mrigashira"
+    },
+    "Mercury": {
+     "sign": "Taurus",
+     "deg": 13.12,
+     "retro": false,
+     "nak": "Rohini"
+    },
+    "Venus": {
+     "sign": "Aries",
+     "deg": 24.8,
+     "retro": false,
+     "nak": "Bharani"
+    },
+    "Mars": {
+     "sign": "Virgo",
+     "deg": 13.36,
+     "retro": false,
+     "nak": "Hasta"
+    },
+    "Jupiter": {
+     "sign": "Libra",
+     "deg": 7.05,
+     "retro": true,
+     "nak": "Swati"
+    },
+    "Saturn": {
+     "sign": "Virgo",
+     "deg": 21.9,
+     "retro": true,
+     "nak": "Hasta"
+    },
+    "Rahu": {
+     "sign": "Gemini",
+     "deg": 20.8,
+     "retro": true,
+     "nak": "Punarvasu"
+    },
+    "Uranus": {
+     "sign": "Scorpio",
+     "deg": 8.11,
+     "retro": true,
+     "nak": "Anuradha"
+    },
+    "Neptune": {
+     "sign": "Sagittarius",
+     "deg": 2.1,
+     "retro": true,
+     "nak": "Mula"
+    },
+    "Pluto": {
+     "sign": "Libra",
+     "deg": 0.61,
+     "retro": true,
+     "nak": "Chitra"
+    }
+   },
+   "js_angle": 15.2
+  },
+  {
+   "kind": "peak",
+   "date": "1983-02-15",
+   "price": 491.0,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": false,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": false,
+    "Saturn station within \u00b130 days": true,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": true,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": false,
+    "Jupiter\u2013Saturn trine (5/9)": false,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": true,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Aquarius",
+     "deg": 2.83,
+     "retro": false,
+     "nak": "Dhanishta"
+    },
+    "Mercury": {
+     "sign": "Capricorn",
+     "deg": 7.99,
+     "retro": false,
+     "nak": "Uttara Ashadha"
+    },
+    "Venus": {
+     "sign": "Aquarius",
+     "deg": 27.49,
+     "retro": false,
+     "nak": "Purva Bhadrapada"
+    },
+    "Mars": {
+     "sign": "Aquarius",
+     "deg": 29.18,
+     "retro": false,
+     "nak": "Purva Bhadrapada"
+    },
+    "Jupiter": {
+     "sign": "Scorpio",
+     "deg": 14.88,
+     "retro": false,
+     "nak": "Anuradha"
+    },
+    "Saturn": {
+     "sign": "Libra",
+     "deg": 10.81,
+     "retro": true,
+     "nak": "Swati"
+    },
+    "Rahu": {
+     "sign": "Gemini",
+     "deg": 7.82,
+     "retro": true,
+     "nak": "Ardra"
+    },
+    "Uranus": {
+     "sign": "Scorpio",
+     "deg": 15.17,
+     "retro": false,
+     "nak": "Anuradha"
+    },
+    "Neptune": {
+     "sign": "Sagittarius",
+     "deg": 5.08,
+     "retro": false,
+     "nak": "Mula"
+    },
+    "Pluto": {
+     "sign": "Libra",
+     "deg": 5.85,
+     "retro": true,
+     "nak": "Chitra"
+    }
+   },
+   "js_angle": 34.1
+  },
+  {
+   "kind": "bottom",
+   "date": "1985-02-15",
+   "price": 299.0,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": false,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": false,
+    "Saturn station within \u00b130 days": true,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": false,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": false,
+    "Jupiter\u2013Saturn trine (5/9)": false,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Aquarius",
+     "deg": 3.32,
+     "retro": false,
+     "nak": "Dhanishta"
+    },
+    "Mercury": {
+     "sign": "Aquarius",
+     "deg": 0.46,
+     "retro": false,
+     "nak": "Dhanishta"
+    },
+    "Venus": {
+     "sign": "Pisces",
+     "deg": 17.56,
+     "retro": false,
+     "nak": "Revati"
+    },
+    "Mars": {
+     "sign": "Pisces",
+     "deg": 16.09,
+     "retro": false,
+     "nak": "Uttara Bhadrapada"
+    },
+    "Jupiter": {
+     "sign": "Capricorn",
+     "deg": 8.41,
+     "retro": false,
+     "nak": "Uttara Ashadha"
+    },
+    "Saturn": {
+     "sign": "Scorpio",
+     "deg": 4.15,
+     "retro": false,
+     "nak": "Anuradha"
+    },
+    "Rahu": {
+     "sign": "Aries",
+     "deg": 29.08,
+     "retro": true,
+     "nak": "Krittika"
+    },
+    "Uranus": {
+     "sign": "Scorpio",
+     "deg": 23.8,
+     "retro": false,
+     "nak": "Jyeshtha"
+    },
+    "Neptune": {
+     "sign": "Sagittarius",
+     "deg": 9.34,
+     "retro": false,
+     "nak": "Mula"
+    },
+    "Pluto": {
+     "sign": "Libra",
+     "deg": 11.07,
+     "retro": true,
+     "nak": "Swati"
+    }
+   },
+   "js_angle": 64.3
+  },
+  {
+   "kind": "peak",
+   "date": "1987-12-15",
+   "price": 486.0,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": true,
+    "Jupiter direct station within \u00b130 days": true,
+    "Jupiter retrograde": false,
+    "Saturn station within \u00b130 days": false,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": false,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": true,
+    "Jupiter\u2013Saturn trine (5/9)": true,
+    "Jupiter with Rahu or Ketu": true,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": true,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Scorpio",
+     "deg": 29.49,
+     "retro": false,
+     "nak": "Jyeshtha"
+    },
+    "Mercury": {
+     "sign": "Scorpio",
+     "deg": 25.25,
+     "retro": false,
+     "nak": "Jyeshtha"
+    },
+    "Venus": {
+     "sign": "Sagittarius",
+     "deg": 28.19,
+     "retro": false,
+     "nak": "Uttara Ashadha"
+    },
+    "Mars": {
+     "sign": "Libra",
+     "deg": 20.46,
+     "retro": false,
+     "nak": "Vishakha"
+    },
+    "Jupiter": {
+     "sign": "Pisces",
+     "deg": 26.08,
+     "retro": false,
+     "nak": "Revati"
+    },
+    "Saturn": {
+     "sign": "Scorpio",
+     "deg": 29.86,
+     "retro": false,
+     "nak": "Jyeshtha"
+    },
+    "Rahu": {
+     "sign": "Pisces",
+     "deg": 4.34,
+     "retro": true,
+     "nak": "Uttara Bhadrapada"
+    },
+    "Uranus": {
+     "sign": "Sagittarius",
+     "deg": 2.99,
+     "retro": false,
+     "nak": "Mula"
+    },
+    "Neptune": {
+     "sign": "Sagittarius",
+     "deg": 13.48,
+     "retro": false,
+     "nak": "Purva Ashadha"
+    },
+    "Pluto": {
+     "sign": "Libra",
+     "deg": 17.84,
+     "retro": false,
+     "nak": "Swati"
+    }
+   },
+   "js_angle": 116.2
+  },
+  {
+   "kind": "bottom",
+   "date": "1989-09-15",
+   "price": 362.0,
+   "f": {
+    "Mercury station within \u00b17 days": true,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": true,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": false,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": false,
+    "Saturn station within \u00b130 days": true,
+    "Saturn direct station within \u00b130 days": true,
+    "Saturn retrograde": false,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": true,
+    "Jupiter\u2013Saturn trine (5/9)": false,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": true,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Leo",
+     "deg": 29.07,
+     "retro": false,
+     "nak": "Uttara Phalguni"
+    },
+    "Mercury": {
+     "sign": "Virgo",
+     "deg": 16.06,
+     "retro": true,
+     "nak": "Hasta"
+    },
+    "Venus": {
+     "sign": "Libra",
+     "deg": 9.95,
+     "retro": false,
+     "nak": "Swati"
+    },
+    "Mars": {
+     "sign": "Virgo",
+     "deg": 3.74,
+     "retro": false,
+     "nak": "Uttara Phalguni"
+    },
+    "Jupiter": {
+     "sign": "Gemini",
+     "deg": 14.25,
+     "retro": false,
+     "nak": "Ardra"
+    },
+    "Saturn": {
+     "sign": "Sagittarius",
+     "deg": 13.6,
+     "retro": false,
+     "nak": "Purva Ashadha"
+    },
+    "Rahu": {
+     "sign": "Aquarius",
+     "deg": 0.43,
+     "retro": true,
+     "nak": "Dhanishta"
+    },
+    "Uranus": {
+     "sign": "Sagittarius",
+     "deg": 7.63,
+     "retro": false,
+     "nak": "Mula"
+    },
+    "Neptune": {
+     "sign": "Sagittarius",
+     "deg": 15.9,
+     "retro": true,
+     "nak": "Purva Ashadha"
+    },
+    "Pluto": {
+     "sign": "Libra",
+     "deg": 19.47,
+     "retro": false,
+     "nak": "Swati"
+    }
+   },
+   "js_angle": 179.4
+  },
+  {
+   "kind": "peak",
+   "date": "1990-02-15",
+   "price": 417.0,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": true,
+    "Venus direct station within \u00b115 days": true,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": true,
+    "Jupiter direct station within \u00b130 days": true,
+    "Jupiter retrograde": true,
+    "Saturn station within \u00b130 days": false,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": false,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": false,
+    "Jupiter\u2013Saturn trine (5/9)": false,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Aquarius",
+     "deg": 3.03,
+     "retro": false,
+     "nak": "Dhanishta"
+    },
+    "Mercury": {
+     "sign": "Capricorn",
+     "deg": 11.35,
+     "retro": false,
+     "nak": "Shravana"
+    },
+    "Venus": {
+     "sign": "Sagittarius",
+     "deg": 28.24,
+     "retro": false,
+     "nak": "Uttara Ashadha"
+    },
+    "Mars": {
+     "sign": "Sagittarius",
+     "deg": 18.68,
+     "retro": false,
+     "nak": "Purva Ashadha"
+    },
+    "Jupiter": {
+     "sign": "Gemini",
+     "deg": 7.22,
+     "retro": true,
+     "nak": "Ardra"
+    },
+    "Saturn": {
+     "sign": "Sagittarius",
+     "deg": 27.09,
+     "retro": false,
+     "nak": "Uttara Ashadha"
+    },
+    "Rahu": {
+     "sign": "Capricorn",
+     "deg": 22.32,
+     "retro": true,
+     "nak": "Shravana"
+    },
+    "Uranus": {
+     "sign": "Sagittarius",
+     "deg": 14.52,
+     "retro": false,
+     "nak": "Purva Ashadha"
+    },
+    "Neptune": {
+     "sign": "Sagittarius",
+     "deg": 19.91,
+     "retro": false,
+     "nak": "Purva Ashadha"
+    },
+    "Pluto": {
+     "sign": "Libra",
+     "deg": 24.06,
+     "retro": false,
+     "nak": "Vishakha"
+    }
+   },
+   "js_angle": 160.1
+  },
+  {
+   "kind": "bottom",
+   "date": "1993-01-15",
+   "price": 329.0,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": true,
+    "Jupiter station within \u00b130 days": true,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": false,
+    "Saturn station within \u00b130 days": false,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": false,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": true,
+    "Jupiter\u2013Saturn trine (5/9)": true,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Capricorn",
+     "deg": 1.81,
+     "retro": false,
+     "nak": "Uttara Ashadha"
+    },
+    "Mercury": {
+     "sign": "Sagittarius",
+     "deg": 26.76,
+     "retro": false,
+     "nak": "Uttara Ashadha"
+    },
+    "Venus": {
+     "sign": "Aquarius",
+     "deg": 18.82,
+     "retro": false,
+     "nak": "Shatabhisha"
+    },
+    "Mars": {
+     "sign": "Gemini",
+     "deg": 20.9,
+     "retro": true,
+     "nak": "Punarvasu"
+    },
+    "Jupiter": {
+     "sign": "Virgo",
+     "deg": 20.65,
+     "retro": false,
+     "nak": "Hasta"
+    },
+    "Saturn": {
+     "sign": "Capricorn",
+     "deg": 24.21,
+     "retro": false,
+     "nak": "Dhanishta"
+    },
+    "Rahu": {
+     "sign": "Scorpio",
+     "deg": 25.88,
+     "retro": true,
+     "nak": "Jyeshtha"
+    },
+    "Uranus": {
+     "sign": "Sagittarius",
+     "deg": 24.78,
+     "retro": false,
+     "nak": "Purva Ashadha"
+    },
+    "Neptune": {
+     "sign": "Sagittarius",
+     "deg": 25.15,
+     "retro": false,
+     "nak": "Purva Ashadha"
+    },
+    "Pluto": {
+     "sign": "Scorpio",
+     "deg": 1.24,
+     "retro": false,
+     "nak": "Vishakha"
+    }
+   },
+   "js_angle": 123.6
+  },
+  {
+   "kind": "peak",
+   "date": "1996-02-15",
+   "price": 405.0,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": false,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": false,
+    "Saturn station within \u00b130 days": false,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": false,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": false,
+    "Jupiter\u2013Saturn trine (5/9)": false,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": true,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Aquarius",
+     "deg": 2.49,
+     "retro": false,
+     "nak": "Dhanishta"
+    },
+    "Mercury": {
+     "sign": "Capricorn",
+     "deg": 6.88,
+     "retro": false,
+     "nak": "Uttara Ashadha"
+    },
+    "Venus": {
+     "sign": "Pisces",
+     "deg": 13.98,
+     "retro": false,
+     "nak": "Uttara Bhadrapada"
+    },
+    "Mars": {
+     "sign": "Aquarius",
+     "deg": 6.37,
+     "retro": false,
+     "nak": "Dhanishta"
+    },
+    "Jupiter": {
+     "sign": "Sagittarius",
+     "deg": 15.38,
+     "retro": false,
+     "nak": "Purva Ashadha"
+    },
+    "Saturn": {
+     "sign": "Aquarius",
+     "deg": 29.9,
+     "retro": false,
+     "nak": "Purva Bhadrapada"
+    },
+    "Rahu": {
+     "sign": "Virgo",
+     "deg": 26.21,
+     "retro": true,
+     "nak": "Chitra"
+    },
+    "Uranus": {
+     "sign": "Capricorn",
+     "deg": 8.19,
+     "retro": false,
+     "nak": "Uttara Ashadha"
+    },
+    "Neptune": {
+     "sign": "Capricorn",
+     "deg": 2.56,
+     "retro": false,
+     "nak": "Uttara Ashadha"
+    },
+    "Pluto": {
+     "sign": "Scorpio",
+     "deg": 9.2,
+     "retro": false,
+     "nak": "Anuradha"
+    }
+   },
+   "js_angle": 74.5
+  },
+  {
+   "kind": "bottom",
+   "date": "1999-07-15",
+   "price": 256.0,
+   "f": {
+    "Mercury station within \u00b17 days": true,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": true,
+    "Venus station within \u00b115 days": true,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": false,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": false,
+    "Saturn station within \u00b130 days": false,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": false,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": false,
+    "Jupiter\u2013Saturn trine (5/9)": false,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Gemini",
+     "deg": 28.89,
+     "retro": false,
+     "nak": "Punarvasu"
+    },
+    "Mercury": {
+     "sign": "Cancer",
+     "deg": 15.36,
+     "retro": true,
+     "nak": "Pushya"
+    },
+    "Venus": {
+     "sign": "Leo",
+     "deg": 7.68,
+     "retro": false,
+     "nak": "Magha"
+    },
+    "Mars": {
+     "sign": "Libra",
+     "deg": 10.05,
+     "retro": false,
+     "nak": "Swati"
+    },
+    "Jupiter": {
+     "sign": "Aries",
+     "deg": 8.58,
+     "retro": false,
+     "nak": "Ashwini"
+    },
+    "Saturn": {
+     "sign": "Aries",
+     "deg": 21.59,
+     "retro": false,
+     "nak": "Bharani"
+    },
+    "Rahu": {
+     "sign": "Cancer",
+     "deg": 20.19,
+     "retro": true,
+     "nak": "Ashlesha"
+    },
+    "Uranus": {
+     "sign": "Capricorn",
+     "deg": 21.86,
+     "retro": true,
+     "nak": "Shravana"
+    },
+    "Neptune": {
+     "sign": "Capricorn",
+     "deg": 9.42,
+     "retro": true,
+     "nak": "Uttara Ashadha"
+    },
+    "Pluto": {
+     "sign": "Scorpio",
+     "deg": 14.2,
+     "retro": true,
+     "nak": "Anuradha"
+    }
+   },
+   "js_angle": 13.0
+  },
+  {
+   "kind": "peak",
+   "date": "1999-10-15",
+   "price": 311.0,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": false,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": true,
+    "Saturn station within \u00b130 days": false,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": true,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": false,
+    "Jupiter\u2013Saturn trine (5/9)": false,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Virgo",
+     "deg": 28.0,
+     "retro": false,
+     "nak": "Chitra"
+    },
+    "Mercury": {
+     "sign": "Libra",
+     "deg": 20.59,
+     "retro": false,
+     "nak": "Vishakha"
+    },
+    "Venus": {
+     "sign": "Leo",
+     "deg": 12.49,
+     "retro": false,
+     "nak": "Magha"
+    },
+    "Mars": {
+     "sign": "Sagittarius",
+     "deg": 5.14,
+     "retro": false,
+     "nak": "Mula"
+    },
+    "Jupiter": {
+     "sign": "Aries",
+     "deg": 7.17,
+     "retro": true,
+     "nak": "Ashwini"
+    },
+    "Saturn": {
+     "sign": "Aries",
+     "deg": 21.54,
+     "retro": true,
+     "nak": "Bharani"
+    },
+    "Rahu": {
+     "sign": "Cancer",
+     "deg": 15.31,
+     "retro": true,
+     "nak": "Pushya"
+    },
+    "Uranus": {
+     "sign": "Capricorn",
+     "deg": 19.04,
+     "retro": true,
+     "nak": "Shravana"
+    },
+    "Neptune": {
+     "sign": "Capricorn",
+     "deg": 7.74,
+     "retro": false,
+     "nak": "Uttara Ashadha"
+    },
+    "Pluto": {
+     "sign": "Scorpio",
+     "deg": 14.77,
+     "retro": false,
+     "nak": "Anuradha"
+    }
+   },
+   "js_angle": 14.4
+  },
+  {
+   "kind": "bottom",
+   "date": "2001-02-15",
+   "price": 255.10000610351562,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": true,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": true,
+    "Jupiter direct station within \u00b130 days": true,
+    "Jupiter retrograde": false,
+    "Saturn station within \u00b130 days": true,
+    "Saturn direct station within \u00b130 days": true,
+    "Saturn retrograde": false,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": true,
+    "Jupiter\u2013Saturn trine (5/9)": false,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Aquarius",
+     "deg": 3.21,
+     "retro": false,
+     "nak": "Dhanishta"
+    },
+    "Mercury": {
+     "sign": "Capricorn",
+     "deg": 27.39,
+     "retro": true,
+     "nak": "Dhanishta"
+    },
+    "Venus": {
+     "sign": "Pisces",
+     "deg": 16.05,
+     "retro": false,
+     "nak": "Uttara Bhadrapada"
+    },
+    "Mars": {
+     "sign": "Scorpio",
+     "deg": 6.59,
+     "retro": false,
+     "nak": "Anuradha"
+    },
+    "Jupiter": {
+     "sign": "Taurus",
+     "deg": 8.08,
+     "retro": false,
+     "nak": "Krittika"
+    },
+    "Saturn": {
+     "sign": "Taurus",
+     "deg": 0.63,
+     "retro": false,
+     "nak": "Krittika"
+    },
+    "Rahu": {
+     "sign": "Gemini",
+     "deg": 19.4,
+     "retro": true,
+     "nak": "Ardra"
+    },
+    "Uranus": {
+     "sign": "Capricorn",
+     "deg": 27.31,
+     "retro": false,
+     "nak": "Dhanishta"
+    },
+    "Neptune": {
+     "sign": "Capricorn",
+     "deg": 13.16,
+     "retro": false,
+     "nak": "Shravana"
+    },
+    "Pluto": {
+     "sign": "Scorpio",
+     "deg": 21.15,
+     "retro": false,
+     "nak": "Jyeshtha"
+    }
+   },
+   "js_angle": 7.5
+  },
+  {
+   "kind": "peak",
+   "date": "2003-02-04",
+   "price": 379.0,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": false,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": true,
+    "Saturn station within \u00b130 days": true,
+    "Saturn direct station within \u00b130 days": true,
+    "Saturn retrograde": true,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": false,
+    "Jupiter\u2013Saturn trine (5/9)": false,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": true,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": true
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Capricorn",
+     "deg": 21.56,
+     "retro": false,
+     "nak": "Shravana"
+    },
+    "Mercury": {
+     "sign": "Sagittarius",
+     "deg": 26.23,
+     "retro": false,
+     "nak": "Purva Ashadha"
+    },
+    "Venus": {
+     "sign": "Sagittarius",
+     "deg": 6.27,
+     "retro": false,
+     "nak": "Mula"
+    },
+    "Mars": {
+     "sign": "Scorpio",
+     "deg": 18.04,
+     "retro": false,
+     "nak": "Jyeshtha"
+    },
+    "Jupiter": {
+     "sign": "Cancer",
+     "deg": 18.9,
+     "retro": true,
+     "nak": "Ashlesha"
+    },
+    "Saturn": {
+     "sign": "Taurus",
+     "deg": 28.53,
+     "retro": true,
+     "nak": "Mrigashira"
+    },
+    "Rahu": {
+     "sign": "Taurus",
+     "deg": 11.3,
+     "retro": true,
+     "nak": "Rohini"
+    },
+    "Uranus": {
+     "sign": "Aquarius",
+     "deg": 4.15,
+     "retro": false,
+     "nak": "Dhanishta"
+    },
+    "Neptune": {
+     "sign": "Capricorn",
+     "deg": 16.95,
+     "retro": false,
+     "nak": "Shravana"
+    },
+    "Pluto": {
+     "sign": "Scorpio",
+     "deg": 25.46,
+     "retro": false,
+     "nak": "Jyeshtha"
+    }
+   },
+   "js_angle": 50.4
+  },
+  {
+   "kind": "bottom",
+   "date": "2003-04-07",
+   "price": 321.5,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": true,
+    "Jupiter direct station within \u00b130 days": true,
+    "Jupiter retrograde": false,
+    "Saturn station within \u00b130 days": false,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": false,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": false,
+    "Jupiter\u2013Saturn trine (5/9)": false,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": false,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": true,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Pisces",
+     "deg": 23.53,
+     "retro": false,
+     "nak": "Revati"
+    },
+    "Mercury": {
+     "sign": "Aries",
+     "deg": 9.73,
+     "retro": false,
+     "nak": "Ashwini"
+    },
+    "Venus": {
+     "sign": "Aquarius",
+     "deg": 19.2,
+     "retro": false,
+     "nak": "Shatabhisha"
+    },
+    "Mars": {
+     "sign": "Sagittarius",
+     "deg": 27.36,
+     "retro": false,
+     "nak": "Uttara Ashadha"
+    },
+    "Jupiter": {
+     "sign": "Cancer",
+     "deg": 14.18,
+     "retro": false,
+     "nak": "Pushya"
+    },
+    "Saturn": {
+     "sign": "Gemini",
+     "deg": 0.0,
+     "retro": false,
+     "nak": "Mrigashira"
+    },
+    "Rahu": {
+     "sign": "Taurus",
+     "deg": 8.01,
+     "retro": true,
+     "nak": "Krittika"
+    },
+    "Uranus": {
+     "sign": "Aquarius",
+     "deg": 7.5,
+     "retro": false,
+     "nak": "Shatabhisha"
+    },
+    "Neptune": {
+     "sign": "Capricorn",
+     "deg": 18.89,
+     "retro": false,
+     "nak": "Shravana"
+    },
+    "Pluto": {
+     "sign": "Scorpio",
+     "deg": 25.99,
+     "retro": true,
+     "nak": "Jyeshtha"
+    }
+   },
+   "js_angle": 44.2
+  },
+  {
+   "kind": "peak",
+   "date": "2006-05-11",
+   "price": 719.7999877929688,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": false,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": true,
+    "Saturn station within \u00b130 days": false,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": false,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": false,
+    "Jupiter\u2013Saturn trine (5/9)": false,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": false,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Aries",
+     "deg": 26.88,
+     "retro": false,
+     "nak": "Krittika"
+    },
+    "Mercury": {
+     "sign": "Aries",
+     "deg": 18.49,
+     "retro": false,
+     "nak": "Bharani"
+    },
+    "Venus": {
+     "sign": "Pisces",
+     "deg": 15.41,
+     "retro": false,
+     "nak": "Uttara Bhadrapada"
+    },
+    "Mars": {
+     "sign": "Gemini",
+     "deg": 22.23,
+     "retro": false,
+     "nak": "Punarvasu"
+    },
+    "Jupiter": {
+     "sign": "Libra",
+     "deg": 19.15,
+     "retro": true,
+     "nak": "Swati"
+    },
+    "Saturn": {
+     "sign": "Cancer",
+     "deg": 11.58,
+     "retro": false,
+     "nak": "Pushya"
+    },
+    "Rahu": {
+     "sign": "Pisces",
+     "deg": 8.13,
+     "retro": true,
+     "nak": "Uttara Bhadrapada"
+    },
+    "Uranus": {
+     "sign": "Aquarius",
+     "deg": 20.19,
+     "retro": false,
+     "nak": "Purva Bhadrapada"
+    },
+    "Neptune": {
+     "sign": "Capricorn",
+     "deg": 25.84,
+     "retro": false,
+     "nak": "Dhanishta"
+    },
+    "Pluto": {
+     "sign": "Sagittarius",
+     "deg": 2.35,
+     "retro": true,
+     "nak": "Mula"
+    }
+   },
+   "js_angle": 97.6
+  },
+  {
+   "kind": "bottom",
+   "date": "2006-06-14",
+   "price": 562.2999877929688,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": true,
+    "Jupiter direct station within \u00b130 days": true,
+    "Jupiter retrograde": true,
+    "Saturn station within \u00b130 days": false,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": false,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": false,
+    "Jupiter\u2013Saturn trine (5/9)": false,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": false,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Taurus",
+     "deg": 29.51,
+     "retro": false,
+     "nak": "Mrigashira"
+    },
+    "Mercury": {
+     "sign": "Gemini",
+     "deg": 23.39,
+     "retro": false,
+     "nak": "Punarvasu"
+    },
+    "Venus": {
+     "sign": "Aries",
+     "deg": 24.98,
+     "retro": false,
+     "nak": "Bharani"
+    },
+    "Mars": {
+     "sign": "Cancer",
+     "deg": 12.64,
+     "retro": false,
+     "nak": "Pushya"
+    },
+    "Jupiter": {
+     "sign": "Libra",
+     "deg": 15.73,
+     "retro": true,
+     "nak": "Swati"
+    },
+    "Saturn": {
+     "sign": "Cancer",
+     "deg": 14.44,
+     "retro": false,
+     "nak": "Pushya"
+    },
+    "Rahu": {
+     "sign": "Pisces",
+     "deg": 6.33,
+     "retro": true,
+     "nak": "Uttara Bhadrapada"
+    },
+    "Uranus": {
+     "sign": "Aquarius",
+     "deg": 20.77,
+     "retro": false,
+     "nak": "Purva Bhadrapada"
+    },
+    "Neptune": {
+     "sign": "Capricorn",
+     "deg": 25.73,
+     "retro": true,
+     "nak": "Dhanishta"
+    },
+    "Pluto": {
+     "sign": "Sagittarius",
+     "deg": 1.53,
+     "retro": true,
+     "nak": "Mula"
+    }
+   },
+   "js_angle": 91.3
+  },
+  {
+   "kind": "peak",
+   "date": "2006-07-14",
+   "price": 666.5999755859375,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": true,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": true,
+    "Jupiter direct station within \u00b130 days": true,
+    "Jupiter retrograde": false,
+    "Saturn station within \u00b130 days": false,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": false,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": false,
+    "Jupiter\u2013Saturn trine (5/9)": false,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": false,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Gemini",
+     "deg": 28.13,
+     "retro": false,
+     "nak": "Punarvasu"
+    },
+    "Mercury": {
+     "sign": "Cancer",
+     "deg": 3.98,
+     "retro": true,
+     "nak": "Pushya"
+    },
+    "Venus": {
+     "sign": "Gemini",
+     "deg": 0.7,
+     "retro": false,
+     "nak": "Mrigashira"
+    },
+    "Mars": {
+     "sign": "Leo",
+     "deg": 1.02,
+     "retro": false,
+     "nak": "Magha"
+    },
+    "Jupiter": {
+     "sign": "Libra",
+     "deg": 15.13,
+     "retro": false,
+     "nak": "Swati"
+    },
+    "Saturn": {
+     "sign": "Cancer",
+     "deg": 17.88,
+     "retro": false,
+     "nak": "Ashlesha"
+    },
+    "Rahu": {
+     "sign": "Pisces",
+     "deg": 4.74,
+     "retro": true,
+     "nak": "Uttara Bhadrapada"
+    },
+    "Uranus": {
+     "sign": "Aquarius",
+     "deg": 20.53,
+     "retro": true,
+     "nak": "Purva Bhadrapada"
+    },
+    "Neptune": {
+     "sign": "Capricorn",
+     "deg": 25.18,
+     "retro": true,
+     "nak": "Dhanishta"
+    },
+    "Pluto": {
+     "sign": "Sagittarius",
+     "deg": 0.78,
+     "retro": true,
+     "nak": "Mula"
+    }
+   },
+   "js_angle": 87.3
+  },
+  {
+   "kind": "bottom",
+   "date": "2006-10-04",
+   "price": 562.0,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": false,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": false,
+    "Saturn station within \u00b130 days": false,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": false,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": false,
+    "Jupiter\u2013Saturn trine (5/9)": false,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": false,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": true
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Virgo",
+     "deg": 17.34,
+     "retro": false,
+     "nak": "Hasta"
+    },
+    "Mercury": {
+     "sign": "Libra",
+     "deg": 9.44,
+     "retro": false,
+     "nak": "Swati"
+    },
+    "Venus": {
+     "sign": "Virgo",
+     "deg": 11.35,
+     "retro": false,
+     "nak": "Hasta"
+    },
+    "Mars": {
+     "sign": "Virgo",
+     "deg": 23.35,
+     "retro": false,
+     "nak": "Chitra"
+    },
+    "Jupiter": {
+     "sign": "Libra",
+     "deg": 25.26,
+     "retro": false,
+     "nak": "Vishakha"
+    },
+    "Saturn": {
+     "sign": "Cancer",
+     "deg": 27.78,
+     "retro": false,
+     "nak": "Ashlesha"
+    },
+    "Rahu": {
+     "sign": "Pisces",
+     "deg": 0.39,
+     "retro": true,
+     "nak": "Purva Bhadrapada"
+    },
+    "Uranus": {
+     "sign": "Aquarius",
+     "deg": 17.7,
+     "retro": true,
+     "nak": "Shatabhisha"
+    },
+    "Neptune": {
+     "sign": "Capricorn",
+     "deg": 23.25,
+     "retro": true,
+     "nak": "Shravana"
+    },
+    "Pluto": {
+     "sign": "Sagittarius",
+     "deg": 0.36,
+     "retro": false,
+     "nak": "Mula"
+    }
+   },
+   "js_angle": 87.5
+  },
+  {
+   "kind": "peak",
+   "date": "2008-03-18",
+   "price": 1003.2000122070312,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": false,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": false,
+    "Saturn station within \u00b130 days": false,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": true,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": false,
+    "Jupiter\u2013Saturn trine (5/9)": true,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": true,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": true,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Pisces",
+     "deg": 4.46,
+     "retro": false,
+     "nak": "Uttara Bhadrapada"
+    },
+    "Mercury": {
+     "sign": "Aquarius",
+     "deg": 11.32,
+     "retro": false,
+     "nak": "Shatabhisha"
+    },
+    "Venus": {
+     "sign": "Aquarius",
+     "deg": 13.09,
+     "retro": false,
+     "nak": "Shatabhisha"
+    },
+    "Mars": {
+     "sign": "Gemini",
+     "deg": 11.13,
+     "retro": false,
+     "nak": "Ardra"
+    },
+    "Jupiter": {
+     "sign": "Sagittarius",
+     "deg": 24.45,
+     "retro": false,
+     "nak": "Purva Ashadha"
+    },
+    "Saturn": {
+     "sign": "Leo",
+     "deg": 9.4,
+     "retro": true,
+     "nak": "Magha"
+    },
+    "Rahu": {
+     "sign": "Aquarius",
+     "deg": 2.26,
+     "retro": true,
+     "nak": "Dhanishta"
+    },
+    "Uranus": {
+     "sign": "Aquarius",
+     "deg": 25.23,
+     "retro": false,
+     "nak": "Purva Bhadrapada"
+    },
+    "Neptune": {
+     "sign": "Capricorn",
+     "deg": 29.06,
+     "retro": false,
+     "nak": "Dhanishta"
+    },
+    "Pluto": {
+     "sign": "Sagittarius",
+     "deg": 7.12,
+     "retro": false,
+     "nak": "Mula"
+    }
+   },
+   "js_angle": 135.0
+  },
+  {
+   "kind": "bottom",
+   "date": "2008-05-01",
+   "price": 848.9000244140625,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": true,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": false,
+    "Saturn station within \u00b130 days": true,
+    "Saturn direct station within \u00b130 days": true,
+    "Saturn retrograde": true,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": false,
+    "Jupiter\u2013Saturn trine (5/9)": true,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": true,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Aries",
+     "deg": 17.67,
+     "retro": false,
+     "nak": "Bharani"
+    },
+    "Mercury": {
+     "sign": "Taurus",
+     "deg": 3.98,
+     "retro": false,
+     "nak": "Krittika"
+    },
+    "Venus": {
+     "sign": "Aries",
+     "deg": 7.38,
+     "retro": false,
+     "nak": "Ashwini"
+    },
+    "Mars": {
+     "sign": "Cancer",
+     "deg": 1.7,
+     "retro": false,
+     "nak": "Punarvasu"
+    },
+    "Jupiter": {
+     "sign": "Sagittarius",
+     "deg": 28.3,
+     "retro": false,
+     "nak": "Uttara Ashadha"
+    },
+    "Saturn": {
+     "sign": "Leo",
+     "deg": 7.71,
+     "retro": true,
+     "nak": "Magha"
+    },
+    "Rahu": {
+     "sign": "Capricorn",
+     "deg": 29.92,
+     "retro": true,
+     "nak": "Dhanishta"
+    },
+    "Uranus": {
+     "sign": "Aquarius",
+     "deg": 27.45,
+     "retro": false,
+     "nak": "Purva Bhadrapada"
+    },
+    "Neptune": {
+     "sign": "Aquarius",
+     "deg": 0.11,
+     "retro": false,
+     "nak": "Dhanishta"
+    },
+    "Pluto": {
+     "sign": "Sagittarius",
+     "deg": 6.95,
+     "retro": true,
+     "nak": "Mula"
+    }
+   },
+   "js_angle": 140.6
+  },
+  {
+   "kind": "peak",
+   "date": "2008-07-15",
+   "price": 977.7000122070312,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": false,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": true,
+    "Saturn station within \u00b130 days": false,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": false,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": false,
+    "Jupiter\u2013Saturn trine (5/9)": true,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": true,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Gemini",
+     "deg": 29.54,
+     "retro": false,
+     "nak": "Punarvasu"
+    },
+    "Mercury": {
+     "sign": "Gemini",
+     "deg": 14.16,
+     "retro": false,
+     "nak": "Ardra"
+    },
+    "Venus": {
+     "sign": "Cancer",
+     "deg": 9.57,
+     "retro": false,
+     "nak": "Pushya"
+    },
+    "Mars": {
+     "sign": "Leo",
+     "deg": 14.43,
+     "retro": false,
+     "nak": "Purva Phalguni"
+    },
+    "Jupiter": {
+     "sign": "Sagittarius",
+     "deg": 22.68,
+     "retro": true,
+     "nak": "Purva Ashadha"
+    },
+    "Saturn": {
+     "sign": "Leo",
+     "deg": 11.96,
+     "retro": false,
+     "nak": "Magha"
+    },
+    "Rahu": {
+     "sign": "Capricorn",
+     "deg": 25.95,
+     "retro": true,
+     "nak": "Dhanishta"
+    },
+    "Uranus": {
+     "sign": "Aquarius",
+     "deg": 28.54,
+     "retro": true,
+     "nak": "Purva Bhadrapada"
+    },
+    "Neptune": {
+     "sign": "Capricorn",
+     "deg": 29.66,
+     "retro": true,
+     "nak": "Dhanishta"
+    },
+    "Pluto": {
+     "sign": "Sagittarius",
+     "deg": 5.23,
+     "retro": true,
+     "nak": "Mula"
+    }
+   },
+   "js_angle": 130.7
+  },
+  {
+   "kind": "bottom",
+   "date": "2008-09-11",
+   "price": 741.2999877929688,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": true,
+    "Jupiter direct station within \u00b130 days": true,
+    "Jupiter retrograde": false,
+    "Saturn station within \u00b130 days": false,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": false,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": true,
+    "Jupiter\u2013Saturn trine (5/9)": true,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": true,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Leo",
+     "deg": 25.3,
+     "retro": false,
+     "nak": "Purva Phalguni"
+    },
+    "Mercury": {
+     "sign": "Virgo",
+     "deg": 22.05,
+     "retro": false,
+     "nak": "Hasta"
+    },
+    "Venus": {
+     "sign": "Virgo",
+     "deg": 20.79,
+     "retro": false,
+     "nak": "Hasta"
+    },
+    "Mars": {
+     "sign": "Virgo",
+     "deg": 21.03,
+     "retro": false,
+     "nak": "Hasta"
+    },
+    "Jupiter": {
+     "sign": "Sagittarius",
+     "deg": 18.57,
+     "retro": false,
+     "nak": "Purva Ashadha"
+    },
+    "Saturn": {
+     "sign": "Leo",
+     "deg": 18.89,
+     "retro": false,
+     "nak": "Purva Phalguni"
+    },
+    "Rahu": {
+     "sign": "Capricorn",
+     "deg": 22.88,
+     "retro": true,
+     "nak": "Shravana"
+    },
+    "Uranus": {
+     "sign": "Aquarius",
+     "deg": 26.75,
+     "retro": true,
+     "nak": "Purva Bhadrapada"
+    },
+    "Neptune": {
+     "sign": "Capricorn",
+     "deg": 28.16,
+     "retro": true,
+     "nak": "Dhanishta"
+    },
+    "Pluto": {
+     "sign": "Sagittarius",
+     "deg": 4.52,
+     "retro": false,
+     "nak": "Mula"
+    }
+   },
+   "js_angle": 119.7
+  },
+  {
+   "kind": "peak",
+   "date": "2008-09-22",
+   "price": 903.9000244140625,
+   "f": {
+    "Mercury station within \u00b17 days": true,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": true,
+    "Jupiter direct station within \u00b130 days": true,
+    "Jupiter retrograde": false,
+    "Saturn station within \u00b130 days": false,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": false,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": true,
+    "Jupiter\u2013Saturn trine (5/9)": true,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": true,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Virgo",
+     "deg": 6.03,
+     "retro": false,
+     "nak": "Uttara Phalguni"
+    },
+    "Mercury": {
+     "sign": "Virgo",
+     "deg": 28.71,
+     "retro": false,
+     "nak": "Chitra"
+    },
+    "Venus": {
+     "sign": "Libra",
+     "deg": 4.24,
+     "retro": false,
+     "nak": "Chitra"
+    },
+    "Mars": {
+     "sign": "Virgo",
+     "deg": 28.29,
+     "retro": false,
+     "nak": "Chitra"
+    },
+    "Jupiter": {
+     "sign": "Sagittarius",
+     "deg": 18.88,
+     "retro": false,
+     "nak": "Purva Ashadha"
+    },
+    "Saturn": {
+     "sign": "Leo",
+     "deg": 20.26,
+     "retro": false,
+     "nak": "Purva Phalguni"
+    },
+    "Rahu": {
+     "sign": "Capricorn",
+     "deg": 22.29,
+     "retro": true,
+     "nak": "Shravana"
+    },
+    "Uranus": {
+     "sign": "Aquarius",
+     "deg": 26.31,
+     "retro": true,
+     "nak": "Purva Bhadrapada"
+    },
+    "Neptune": {
+     "sign": "Capricorn",
+     "deg": 27.92,
+     "retro": true,
+     "nak": "Dhanishta"
+    },
+    "Pluto": {
+     "sign": "Sagittarius",
+     "deg": 4.56,
+     "retro": false,
+     "nak": "Mula"
+    }
+   },
+   "js_angle": 118.6
+  },
+  {
+   "kind": "bottom",
+   "date": "2008-11-13",
+   "price": 704.9000244140625,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": false,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": false,
+    "Saturn station within \u00b130 days": false,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": false,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": true,
+    "Jupiter\u2013Saturn trine (5/9)": true,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": true,
+    "Jupiter hemmed by malefics (12th and 2nd)": true,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Libra",
+     "deg": 27.71,
+     "retro": false,
+     "nak": "Vishakha"
+    },
+    "Mercury": {
+     "sign": "Libra",
+     "deg": 20.68,
+     "retro": false,
+     "nak": "Vishakha"
+    },
+    "Venus": {
+     "sign": "Sagittarius",
+     "deg": 7.29,
+     "retro": false,
+     "nak": "Mula"
+    },
+    "Mars": {
+     "sign": "Scorpio",
+     "deg": 4.13,
+     "retro": false,
+     "nak": "Anuradha"
+    },
+    "Jupiter": {
+     "sign": "Sagittarius",
+     "deg": 24.93,
+     "retro": false,
+     "nak": "Purva Ashadha"
+    },
+    "Saturn": {
+     "sign": "Leo",
+     "deg": 25.76,
+     "retro": false,
+     "nak": "Purva Phalguni"
+    },
+    "Rahu": {
+     "sign": "Capricorn",
+     "deg": 19.54,
+     "retro": true,
+     "nak": "Shravana"
+    },
+    "Uranus": {
+     "sign": "Aquarius",
+     "deg": 24.84,
+     "retro": true,
+     "nak": "Purva Bhadrapada"
+    },
+    "Neptune": {
+     "sign": "Capricorn",
+     "deg": 27.52,
+     "retro": false,
+     "nak": "Dhanishta"
+    },
+    "Pluto": {
+     "sign": "Sagittarius",
+     "deg": 5.59,
+     "retro": false,
+     "nak": "Mula"
+    }
+   },
+   "js_angle": 119.2
+  },
+  {
+   "kind": "peak",
+   "date": "2011-08-22",
+   "price": 1888.699951171875,
+   "f": {
+    "Mercury station within \u00b17 days": true,
+    "Mercury direct station within \u00b17 days": true,
+    "Mercury retrograde": true,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": true,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": false,
+    "Saturn station within \u00b130 days": false,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": false,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": false,
+    "Jupiter\u2013Saturn trine (5/9)": false,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": true,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": true,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Leo",
+     "deg": 5.2,
+     "retro": false,
+     "nak": "Magha"
+    },
+    "Mercury": {
+     "sign": "Cancer",
+     "deg": 25.79,
+     "retro": true,
+     "nak": "Ashlesha"
+    },
+    "Venus": {
+     "sign": "Leo",
+     "deg": 6.89,
+     "retro": false,
+     "nak": "Magha"
+    },
+    "Mars": {
+     "sign": "Gemini",
+     "deg": 18.68,
+     "retro": false,
+     "nak": "Ardra"
+    },
+    "Jupiter": {
+     "sign": "Aries",
+     "deg": 16.23,
+     "retro": false,
+     "nak": "Bharani"
+    },
+    "Saturn": {
+     "sign": "Virgo",
+     "deg": 20.21,
+     "retro": false,
+     "nak": "Hasta"
+    },
+    "Rahu": {
+     "sign": "Scorpio",
+     "deg": 25.91,
+     "retro": true,
+     "nak": "Jyeshtha"
+    },
+    "Uranus": {
+     "sign": "Pisces",
+     "deg": 9.82,
+     "retro": true,
+     "nak": "Uttara Bhadrapada"
+    },
+    "Neptune": {
+     "sign": "Aquarius",
+     "deg": 5.51,
+     "retro": true,
+     "nak": "Dhanishta"
+    },
+    "Pluto": {
+     "sign": "Sagittarius",
+     "deg": 11.02,
+     "retro": true,
+     "nak": "Mula"
+    }
+   },
+   "js_angle": 154.0
+  },
+  {
+   "kind": "bottom",
+   "date": "2011-12-29",
+   "price": 1539.9000244140625,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": true,
+    "Jupiter direct station within \u00b130 days": true,
+    "Jupiter retrograde": false,
+    "Saturn station within \u00b130 days": false,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": false,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": true,
+    "Jupiter\u2013Saturn trine (5/9)": false,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": true,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": true,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Sagittarius",
+     "deg": 13.59,
+     "retro": false,
+     "nak": "Purva Ashadha"
+    },
+    "Mercury": {
+     "sign": "Scorpio",
+     "deg": 22.8,
+     "retro": false,
+     "nak": "Jyeshtha"
+    },
+    "Venus": {
+     "sign": "Capricorn",
+     "deg": 16.98,
+     "retro": false,
+     "nak": "Shravana"
+    },
+    "Mars": {
+     "sign": "Leo",
+     "deg": 25.51,
+     "retro": false,
+     "nak": "Purva Phalguni"
+    },
+    "Jupiter": {
+     "sign": "Aries",
+     "deg": 6.36,
+     "retro": false,
+     "nak": "Ashwini"
+    },
+    "Saturn": {
+     "sign": "Libra",
+     "deg": 4.11,
+     "retro": false,
+     "nak": "Chitra"
+    },
+    "Rahu": {
+     "sign": "Scorpio",
+     "deg": 19.07,
+     "retro": true,
+     "nak": "Jyeshtha"
+    },
+    "Uranus": {
+     "sign": "Pisces",
+     "deg": 6.77,
+     "retro": false,
+     "nak": "Uttara Bhadrapada"
+    },
+    "Neptune": {
+     "sign": "Aquarius",
+     "deg": 4.8,
+     "retro": false,
+     "nak": "Dhanishta"
+    },
+    "Pluto": {
+     "sign": "Sagittarius",
+     "deg": 13.21,
+     "retro": false,
+     "nak": "Mula"
+    }
+   },
+   "js_angle": 177.8
+  },
+  {
+   "kind": "peak",
+   "date": "2012-10-04",
+   "price": 1794.0999755859375,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": true,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": true,
+    "Saturn station within \u00b130 days": false,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": false,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": false,
+    "Jupiter\u2013Saturn trine (5/9)": false,
+    "Jupiter with Rahu or Ketu": true,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Virgo",
+     "deg": 17.79,
+     "retro": false,
+     "nak": "Hasta"
+    },
+    "Mercury": {
+     "sign": "Libra",
+     "deg": 4.8,
+     "retro": false,
+     "nak": "Chitra"
+    },
+    "Venus": {
+     "sign": "Leo",
+     "deg": 7.56,
+     "retro": false,
+     "nak": "Magha"
+    },
+    "Mars": {
+     "sign": "Scorpio",
+     "deg": 4.22,
+     "retro": false,
+     "nak": "Anuradha"
+    },
+    "Jupiter": {
+     "sign": "Taurus",
+     "deg": 22.34,
+     "retro": true,
+     "nak": "Rohini"
+    },
+    "Saturn": {
+     "sign": "Libra",
+     "deg": 5.82,
+     "retro": false,
+     "nak": "Chitra"
+    },
+    "Rahu": {
+     "sign": "Scorpio",
+     "deg": 4.24,
+     "retro": true,
+     "nak": "Anuradha"
+    },
+    "Uranus": {
+     "sign": "Pisces",
+     "deg": 12.3,
+     "retro": true,
+     "nak": "Uttara Bhadrapada"
+    },
+    "Neptune": {
+     "sign": "Aquarius",
+     "deg": 6.7,
+     "retro": true,
+     "nak": "Shatabhisha"
+    },
+    "Pluto": {
+     "sign": "Sagittarius",
+     "deg": 12.99,
+     "retro": false,
+     "nak": "Mula"
+    }
+   },
+   "js_angle": 133.5
+  },
+  {
+   "kind": "bottom",
+   "date": "2013-06-27",
+   "price": 1211.4000244140625,
+   "f": {
+    "Mercury station within \u00b17 days": true,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": true,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": false,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": false,
+    "Saturn station within \u00b130 days": true,
+    "Saturn direct station within \u00b130 days": true,
+    "Saturn retrograde": true,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": true,
+    "Jupiter\u2013Saturn trine (5/9)": true,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": true
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Gemini",
+     "deg": 12.11,
+     "retro": false,
+     "nak": "Ardra"
+    },
+    "Mercury": {
+     "sign": "Gemini",
+     "deg": 29.02,
+     "retro": true,
+     "nak": "Punarvasu"
+    },
+    "Venus": {
+     "sign": "Cancer",
+     "deg": 5.9,
+     "retro": false,
+     "nak": "Pushya"
+    },
+    "Mars": {
+     "sign": "Taurus",
+     "deg": 25.08,
+     "retro": false,
+     "nak": "Mrigashira"
+    },
+    "Jupiter": {
+     "sign": "Gemini",
+     "deg": 6.32,
+     "retro": false,
+     "nak": "Mrigashira"
+    },
+    "Saturn": {
+     "sign": "Libra",
+     "deg": 10.86,
+     "retro": true,
+     "nak": "Swati"
+    },
+    "Rahu": {
+     "sign": "Libra",
+     "deg": 20.14,
+     "retro": true,
+     "nak": "Vishakha"
+    },
+    "Uranus": {
+     "sign": "Pisces",
+     "deg": 18.31,
+     "retro": false,
+     "nak": "Revati"
+    },
+    "Neptune": {
+     "sign": "Aquarius",
+     "deg": 11.22,
+     "retro": true,
+     "nak": "Shatabhisha"
+    },
+    "Pluto": {
+     "sign": "Sagittarius",
+     "deg": 16.35,
+     "retro": true,
+     "nak": "Purva Ashadha"
+    }
+   },
+   "js_angle": 124.5
+  },
+  {
+   "kind": "peak",
+   "date": "2013-08-27",
+   "price": 1420.5999755859375,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": false,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": false,
+    "Saturn station within \u00b130 days": false,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": false,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": true,
+    "Jupiter\u2013Saturn trine (5/9)": true,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Leo",
+     "deg": 10.49,
+     "retro": false,
+     "nak": "Magha"
+    },
+    "Mercury": {
+     "sign": "Leo",
+     "deg": 13.24,
+     "retro": false,
+     "nak": "Magha"
+    },
+    "Venus": {
+     "sign": "Virgo",
+     "deg": 18.94,
+     "retro": false,
+     "nak": "Hasta"
+    },
+    "Mars": {
+     "sign": "Cancer",
+     "deg": 5.68,
+     "retro": false,
+     "nak": "Pushya"
+    },
+    "Jupiter": {
+     "sign": "Gemini",
+     "deg": 19.18,
+     "retro": false,
+     "nak": "Ardra"
+    },
+    "Saturn": {
+     "sign": "Libra",
+     "deg": 12.76,
+     "retro": false,
+     "nak": "Swati"
+    },
+    "Rahu": {
+     "sign": "Libra",
+     "deg": 16.91,
+     "retro": true,
+     "nak": "Swati"
+    },
+    "Uranus": {
+     "sign": "Pisces",
+     "deg": 17.83,
+     "retro": true,
+     "nak": "Revati"
+    },
+    "Neptune": {
+     "sign": "Aquarius",
+     "deg": 9.9,
+     "retro": true,
+     "nak": "Shatabhisha"
+    },
+    "Pluto": {
+     "sign": "Sagittarius",
+     "deg": 15.08,
+     "retro": true,
+     "nak": "Purva Ashadha"
+    }
+   },
+   "js_angle": 113.6
+  },
+  {
+   "kind": "bottom",
+   "date": "2013-12-19",
+   "price": 1195.0,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": true,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": false,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": true,
+    "Saturn station within \u00b130 days": false,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": false,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": true,
+    "Jupiter\u2013Saturn trine (5/9)": true,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": true,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Sagittarius",
+     "deg": 3.9,
+     "retro": false,
+     "nak": "Mula"
+    },
+    "Mercury": {
+     "sign": "Scorpio",
+     "deg": 28.54,
+     "retro": false,
+     "nak": "Jyeshtha"
+    },
+    "Venus": {
+     "sign": "Capricorn",
+     "deg": 4.83,
+     "retro": false,
+     "nak": "Uttara Ashadha"
+    },
+    "Mars": {
+     "sign": "Virgo",
+     "deg": 11.87,
+     "retro": false,
+     "nak": "Hasta"
+    },
+    "Jupiter": {
+     "sign": "Gemini",
+     "deg": 23.64,
+     "retro": true,
+     "nak": "Punarvasu"
+    },
+    "Saturn": {
+     "sign": "Libra",
+     "deg": 25.11,
+     "retro": false,
+     "nak": "Vishakha"
+    },
+    "Rahu": {
+     "sign": "Libra",
+     "deg": 10.86,
+     "retro": true,
+     "nak": "Swati"
+    },
+    "Uranus": {
+     "sign": "Pisces",
+     "deg": 14.54,
+     "retro": false,
+     "nak": "Uttara Bhadrapada"
+    },
+    "Neptune": {
+     "sign": "Aquarius",
+     "deg": 8.89,
+     "retro": false,
+     "nak": "Shatabhisha"
+    },
+    "Pluto": {
+     "sign": "Sagittarius",
+     "deg": 16.77,
+     "retro": false,
+     "nak": "Purva Ashadha"
+    }
+   },
+   "js_angle": 121.5
+  },
+  {
+   "kind": "peak",
+   "date": "2014-03-14",
+   "price": 1379.0,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": true,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": true,
+    "Jupiter station within \u00b130 days": true,
+    "Jupiter direct station within \u00b130 days": true,
+    "Jupiter retrograde": false,
+    "Saturn station within \u00b130 days": true,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": true,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": false,
+    "Jupiter\u2013Saturn trine (5/9)": true,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Aquarius",
+     "deg": 29.93,
+     "retro": false,
+     "nak": "Purva Bhadrapada"
+    },
+    "Mercury": {
+     "sign": "Aquarius",
+     "deg": 2.4,
+     "retro": false,
+     "nak": "Dhanishta"
+    },
+    "Venus": {
+     "sign": "Capricorn",
+     "deg": 13.7,
+     "retro": false,
+     "nak": "Shravana"
+    },
+    "Mars": {
+     "sign": "Libra",
+     "deg": 2.41,
+     "retro": true,
+     "nak": "Chitra"
+    },
+    "Jupiter": {
+     "sign": "Gemini",
+     "deg": 16.49,
+     "retro": false,
+     "nak": "Ardra"
+    },
+    "Saturn": {
+     "sign": "Libra",
+     "deg": 29.14,
+     "retro": true,
+     "nak": "Vishakha"
+    },
+    "Rahu": {
+     "sign": "Libra",
+     "deg": 6.36,
+     "retro": true,
+     "nak": "Chitra"
+    },
+    "Uranus": {
+     "sign": "Pisces",
+     "deg": 17.36,
+     "retro": false,
+     "nak": "Revati"
+    },
+    "Neptune": {
+     "sign": "Aquarius",
+     "deg": 11.7,
+     "retro": false,
+     "nak": "Shatabhisha"
+    },
+    "Pluto": {
+     "sign": "Sagittarius",
+     "deg": 19.27,
+     "retro": false,
+     "nak": "Purva Ashadha"
+    }
+   },
+   "js_angle": 132.6
+  },
+  {
+   "kind": "bottom",
+   "date": "2015-12-17",
+   "price": 1050.800048828125,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": true,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": false,
+    "Saturn station within \u00b130 days": false,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": false,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": false,
+    "Jupiter\u2013Saturn trine (5/9)": false,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Sagittarius",
+     "deg": 1.35,
+     "retro": false,
+     "nak": "Mula"
+    },
+    "Mercury": {
+     "sign": "Sagittarius",
+     "deg": 17.48,
+     "retro": false,
+     "nak": "Purva Ashadha"
+    },
+    "Venus": {
+     "sign": "Libra",
+     "deg": 20.76,
+     "retro": false,
+     "nak": "Vishakha"
+    },
+    "Mars": {
+     "sign": "Virgo",
+     "deg": 26.41,
+     "retro": false,
+     "nak": "Chitra"
+    },
+    "Jupiter": {
+     "sign": "Leo",
+     "deg": 28.43,
+     "retro": false,
+     "nak": "Uttara Phalguni"
+    },
+    "Saturn": {
+     "sign": "Scorpio",
+     "deg": 15.45,
+     "retro": false,
+     "nak": "Anuradha"
+    },
+    "Rahu": {
+     "sign": "Virgo",
+     "deg": 2.29,
+     "retro": true,
+     "nak": "Uttara Phalguni"
+    },
+    "Uranus": {
+     "sign": "Pisces",
+     "deg": 22.51,
+     "retro": true,
+     "nak": "Revati"
+    },
+    "Neptune": {
+     "sign": "Aquarius",
+     "deg": 13.18,
+     "retro": false,
+     "nak": "Shatabhisha"
+    },
+    "Pluto": {
+     "sign": "Sagittarius",
+     "deg": 20.48,
+     "retro": false,
+     "nak": "Purva Ashadha"
+    }
+   },
+   "js_angle": 77.0
+  },
+  {
+   "kind": "peak",
+   "date": "2016-07-06",
+   "price": 1364.9000244140625,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": true,
+    "Mars direct station within \u00b115 days": true,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": false,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": false,
+    "Saturn station within \u00b130 days": false,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": true,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": false,
+    "Jupiter\u2013Saturn trine (5/9)": false,
+    "Jupiter with Rahu or Ketu": true,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Gemini",
+     "deg": 20.91,
+     "retro": false,
+     "nak": "Punarvasu"
+    },
+    "Mercury": {
+     "sign": "Gemini",
+     "deg": 20.33,
+     "retro": false,
+     "nak": "Punarvasu"
+    },
+    "Venus": {
+     "sign": "Gemini",
+     "deg": 29.07,
+     "retro": false,
+     "nak": "Punarvasu"
+    },
+    "Mars": {
+     "sign": "Libra",
+     "deg": 29.28,
+     "retro": false,
+     "nak": "Vishakha"
+    },
+    "Jupiter": {
+     "sign": "Leo",
+     "deg": 23.78,
+     "retro": false,
+     "nak": "Purva Phalguni"
+    },
+    "Saturn": {
+     "sign": "Scorpio",
+     "deg": 16.78,
+     "retro": true,
+     "nak": "Jyeshtha"
+    },
+    "Rahu": {
+     "sign": "Leo",
+     "deg": 21.58,
+     "retro": true,
+     "nak": "Purva Phalguni"
+    },
+    "Uranus": {
+     "sign": "Aries",
+     "deg": 0.2,
+     "retro": false,
+     "nak": "Ashwini"
+    },
+    "Neptune": {
+     "sign": "Aquarius",
+     "deg": 17.82,
+     "retro": true,
+     "nak": "Shatabhisha"
+    },
+    "Pluto": {
+     "sign": "Sagittarius",
+     "deg": 22.15,
+     "retro": true,
+     "nak": "Purva Ashadha"
+    }
+   },
+   "js_angle": 83.0
+  },
+  {
+   "kind": "bottom",
+   "date": "2016-12-15",
+   "price": 1127.800048828125,
+   "f": {
+    "Mercury station within \u00b17 days": true,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": false,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": false,
+    "Saturn station within \u00b130 days": false,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": false,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": false,
+    "Jupiter\u2013Saturn trine (5/9)": false,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": false,
+    "Malefic vedha on Jupiter": true,
+    "Jupiter's affliction ends within 30 days": true,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Sagittarius",
+     "deg": 0.07,
+     "retro": false,
+     "nak": "Mula"
+    },
+    "Mercury": {
+     "sign": "Sagittarius",
+     "deg": 19.88,
+     "retro": false,
+     "nak": "Purva Ashadha"
+    },
+    "Venus": {
+     "sign": "Capricorn",
+     "deg": 15.22,
+     "retro": false,
+     "nak": "Shravana"
+    },
+    "Mars": {
+     "sign": "Aquarius",
+     "deg": 3.13,
+     "retro": false,
+     "nak": "Dhanishta"
+    },
+    "Jupiter": {
+     "sign": "Virgo",
+     "deg": 25.02,
+     "retro": false,
+     "nak": "Chitra"
+    },
+    "Saturn": {
+     "sign": "Scorpio",
+     "deg": 25.38,
+     "retro": false,
+     "nak": "Jyeshtha"
+    },
+    "Rahu": {
+     "sign": "Leo",
+     "deg": 13.0,
+     "retro": true,
+     "nak": "Magha"
+    },
+    "Uranus": {
+     "sign": "Pisces",
+     "deg": 26.55,
+     "retro": true,
+     "nak": "Revati"
+    },
+    "Neptune": {
+     "sign": "Aquarius",
+     "deg": 15.34,
+     "retro": false,
+     "nak": "Shatabhisha"
+    },
+    "Pluto": {
+     "sign": "Sagittarius",
+     "deg": 22.31,
+     "retro": false,
+     "nak": "Purva Ashadha"
+    }
+   },
+   "js_angle": 60.4
+  },
+  {
+   "kind": "peak",
+   "date": "2020-08-06",
+   "price": 2069.39990234375,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": false,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": true,
+    "Saturn station within \u00b130 days": false,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": true,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": true,
+    "Jupiter\u2013Saturn trine (5/9)": false,
+    "Jupiter with Rahu or Ketu": true,
+    "Jupiter with Pluto": true,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Cancer",
+     "deg": 20.5,
+     "retro": false,
+     "nak": "Ashlesha"
+    },
+    "Mercury": {
+     "sign": "Cancer",
+     "deg": 8.79,
+     "retro": false,
+     "nak": "Pushya"
+    },
+    "Venus": {
+     "sign": "Gemini",
+     "deg": 4.98,
+     "retro": false,
+     "nak": "Mrigashira"
+    },
+    "Mars": {
+     "sign": "Pisces",
+     "deg": 26.47,
+     "retro": false,
+     "nak": "Revati"
+    },
+    "Jupiter": {
+     "sign": "Sagittarius",
+     "deg": 25.38,
+     "retro": true,
+     "nak": "Purva Ashadha"
+    },
+    "Saturn": {
+     "sign": "Capricorn",
+     "deg": 3.29,
+     "retro": true,
+     "nak": "Uttara Ashadha"
+    },
+    "Rahu": {
+     "sign": "Gemini",
+     "deg": 2.52,
+     "retro": true,
+     "nak": "Mrigashira"
+    },
+    "Uranus": {
+     "sign": "Aries",
+     "deg": 16.52,
+     "retro": false,
+     "nak": "Bharani"
+    },
+    "Neptune": {
+     "sign": "Aquarius",
+     "deg": 26.32,
+     "retro": true,
+     "nak": "Purva Bhadrapada"
+    },
+    "Pluto": {
+     "sign": "Sagittarius",
+     "deg": 29.09,
+     "retro": true,
+     "nak": "Uttara Ashadha"
+    }
+   },
+   "js_angle": 7.9
+  },
+  {
+   "kind": "bottom",
+   "date": "2021-03-08",
+   "price": 1678.0,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": false,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": false,
+    "Saturn station within \u00b130 days": false,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": false,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": true,
+    "Jupiter\u2013Saturn trine (5/9)": false,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": true,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Aquarius",
+     "deg": 24.19,
+     "retro": false,
+     "nak": "Purva Bhadrapada"
+    },
+    "Mercury": {
+     "sign": "Capricorn",
+     "deg": 27.04,
+     "retro": false,
+     "nak": "Dhanishta"
+    },
+    "Venus": {
+     "sign": "Aquarius",
+     "deg": 19.79,
+     "retro": false,
+     "nak": "Shatabhisha"
+    },
+    "Mars": {
+     "sign": "Taurus",
+     "deg": 8.51,
+     "retro": false,
+     "nak": "Krittika"
+    },
+    "Jupiter": {
+     "sign": "Capricorn",
+     "deg": 24.19,
+     "retro": false,
+     "nak": "Dhanishta"
+    },
+    "Saturn": {
+     "sign": "Capricorn",
+     "deg": 15.12,
+     "retro": false,
+     "nak": "Shravana"
+    },
+    "Rahu": {
+     "sign": "Taurus",
+     "deg": 21.18,
+     "retro": true,
+     "nak": "Rohini"
+    },
+    "Uranus": {
+     "sign": "Aries",
+     "deg": 13.75,
+     "retro": false,
+     "nak": "Bharani"
+    },
+    "Neptune": {
+     "sign": "Aquarius",
+     "deg": 26.4,
+     "retro": false,
+     "nak": "Purva Bhadrapada"
+    },
+    "Pluto": {
+     "sign": "Capricorn",
+     "deg": 2.07,
+     "retro": false,
+     "nak": "Uttara Ashadha"
+    }
+   },
+   "js_angle": 9.1
+  },
+  {
+   "kind": "peak",
+   "date": "2022-03-08",
+   "price": 2043.300048828125,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": false,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": false,
+    "Saturn station within \u00b130 days": false,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": false,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": false,
+    "Jupiter\u2013Saturn trine (5/9)": false,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": false,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": true
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Aquarius",
+     "deg": 23.94,
+     "retro": false,
+     "nak": "Purva Bhadrapada"
+    },
+    "Mercury": {
+     "sign": "Aquarius",
+     "deg": 3.73,
+     "retro": false,
+     "nak": "Dhanishta"
+    },
+    "Venus": {
+     "sign": "Capricorn",
+     "deg": 7.99,
+     "retro": false,
+     "nak": "Uttara Ashadha"
+    },
+    "Mars": {
+     "sign": "Capricorn",
+     "deg": 7.66,
+     "retro": false,
+     "nak": "Uttara Ashadha"
+    },
+    "Jupiter": {
+     "sign": "Aquarius",
+     "deg": 21.57,
+     "retro": false,
+     "nak": "Purva Bhadrapada"
+    },
+    "Saturn": {
+     "sign": "Capricorn",
+     "deg": 25.5,
+     "retro": false,
+     "nak": "Dhanishta"
+    },
+    "Rahu": {
+     "sign": "Taurus",
+     "deg": 1.84,
+     "retro": true,
+     "nak": "Krittika"
+    },
+    "Uranus": {
+     "sign": "Aries",
+     "deg": 17.66,
+     "retro": false,
+     "nak": "Bharani"
+    },
+    "Neptune": {
+     "sign": "Aquarius",
+     "deg": 28.53,
+     "retro": false,
+     "nak": "Purva Bhadrapada"
+    },
+    "Pluto": {
+     "sign": "Capricorn",
+     "deg": 3.8,
+     "retro": false,
+     "nak": "Uttara Ashadha"
+    }
+   },
+   "js_angle": 26.1
+  },
+  {
+   "kind": "bottom",
+   "date": "2022-11-03",
+   "price": 1630.9000244140625,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": true,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": true,
+    "Jupiter station within \u00b130 days": true,
+    "Jupiter direct station within \u00b130 days": true,
+    "Jupiter retrograde": true,
+    "Saturn station within \u00b130 days": true,
+    "Saturn direct station within \u00b130 days": true,
+    "Saturn retrograde": false,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": false,
+    "Jupiter\u2013Saturn trine (5/9)": false,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Libra",
+     "deg": 17.04,
+     "retro": false,
+     "nak": "Swati"
+    },
+    "Mercury": {
+     "sign": "Libra",
+     "deg": 13.9,
+     "retro": false,
+     "nak": "Swati"
+    },
+    "Venus": {
+     "sign": "Libra",
+     "deg": 20.04,
+     "retro": false,
+     "nak": "Vishakha"
+    },
+    "Mars": {
+     "sign": "Gemini",
+     "deg": 1.32,
+     "retro": true,
+     "nak": "Mrigashira"
+    },
+    "Jupiter": {
+     "sign": "Pisces",
+     "deg": 5.33,
+     "retro": true,
+     "nak": "Uttara Bhadrapada"
+    },
+    "Saturn": {
+     "sign": "Capricorn",
+     "deg": 24.53,
+     "retro": false,
+     "nak": "Dhanishta"
+    },
+    "Rahu": {
+     "sign": "Aries",
+     "deg": 19.12,
+     "retro": true,
+     "nak": "Bharani"
+    },
+    "Uranus": {
+     "sign": "Aries",
+     "deg": 22.97,
+     "retro": true,
+     "nak": "Bharani"
+    },
+    "Neptune": {
+     "sign": "Aquarius",
+     "deg": 28.73,
+     "retro": true,
+     "nak": "Purva Bhadrapada"
+    },
+    "Pluto": {
+     "sign": "Capricorn",
+     "deg": 2.11,
+     "retro": false,
+     "nak": "Uttara Ashadha"
+    }
+   },
+   "js_angle": 40.8
+  },
+  {
+   "kind": "peak",
+   "date": "2026-01-29",
+   "price": 5318.39990234375,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": false,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": true,
+    "Saturn station within \u00b130 days": false,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": false,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": false,
+    "Jupiter\u2013Saturn trine (5/9)": false,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": false,
+    "afflicted": false,
+    "Malefic vedha on Jupiter": false,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Capricorn",
+     "deg": 15.58,
+     "retro": false,
+     "nak": "Shravana"
+    },
+    "Mercury": {
+     "sign": "Capricorn",
+     "deg": 21.22,
+     "retro": false,
+     "nak": "Shravana"
+    },
+    "Venus": {
+     "sign": "Capricorn",
+     "deg": 21.08,
+     "retro": false,
+     "nak": "Shravana"
+    },
+    "Mars": {
+     "sign": "Capricorn",
+     "deg": 10.71,
+     "retro": false,
+     "nak": "Shravana"
+    },
+    "Jupiter": {
+     "sign": "Gemini",
+     "deg": 23.4,
+     "retro": true,
+     "nak": "Punarvasu"
+    },
+    "Saturn": {
+     "sign": "Pisces",
+     "deg": 4.19,
+     "retro": false,
+     "nak": "Uttara Bhadrapada"
+    },
+    "Rahu": {
+     "sign": "Aquarius",
+     "deg": 16.43,
+     "retro": true,
+     "nak": "Shatabhisha"
+    },
+    "Uranus": {
+     "sign": "Taurus",
+     "deg": 3.25,
+     "retro": true,
+     "nak": "Krittika"
+    },
+    "Neptune": {
+     "sign": "Pisces",
+     "deg": 5.85,
+     "retro": false,
+     "nak": "Uttara Bhadrapada"
+    },
+    "Pluto": {
+     "sign": "Capricorn",
+     "deg": 9.4,
+     "retro": false,
+     "nak": "Uttara Ashadha"
+    }
+   },
+   "js_angle": 109.2
+  },
+  {
+   "kind": "bottom",
+   "date": "2026-07-16",
+   "price": 3992.10009765625,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": true,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": false,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": false,
+    "Saturn station within \u00b130 days": true,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": false,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": false,
+    "Jupiter\u2013Saturn trine (5/9)": true,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": true,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": true,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Gemini",
+     "deg": 29.91,
+     "retro": false,
+     "nak": "Punarvasu"
+    },
+    "Mercury": {
+     "sign": "Gemini",
+     "deg": 24.29,
+     "retro": true,
+     "nak": "Punarvasu"
+    },
+    "Venus": {
+     "sign": "Leo",
+     "deg": 13.44,
+     "retro": false,
+     "nak": "Purva Phalguni"
+    },
+    "Mars": {
+     "sign": "Taurus",
+     "deg": 18.34,
+     "retro": false,
+     "nak": "Rohini"
+    },
+    "Jupiter": {
+     "sign": "Cancer",
+     "deg": 9.34,
+     "retro": false,
+     "nak": "Pushya"
+    },
+    "Saturn": {
+     "sign": "Pisces",
+     "deg": 20.43,
+     "retro": false,
+     "nak": "Revati"
+    },
+    "Rahu": {
+     "sign": "Aquarius",
+     "deg": 7.53,
+     "retro": true,
+     "nak": "Shatabhisha"
+    },
+    "Uranus": {
+     "sign": "Taurus",
+     "deg": 10.2,
+     "retro": false,
+     "nak": "Rohini"
+    },
+    "Neptune": {
+     "sign": "Pisces",
+     "deg": 10.17,
+     "retro": true,
+     "nak": "Uttara Bhadrapada"
+    },
+    "Pluto": {
+     "sign": "Capricorn",
+     "deg": 10.3,
+     "retro": true,
+     "nak": "Shravana"
+    }
+   },
+   "js_angle": 108.9
+  },
+  {
+   "kind": "peak",
+   "date": "2026-08-24",
+   "price": 4697.7998046875,
+   "f": {
+    "Mercury station within \u00b17 days": false,
+    "Mercury direct station within \u00b17 days": false,
+    "Mercury retrograde": false,
+    "Venus station within \u00b115 days": false,
+    "Venus direct station within \u00b115 days": false,
+    "Venus retrograde": false,
+    "Mars station within \u00b115 days": false,
+    "Mars direct station within \u00b115 days": false,
+    "Mars retrograde": false,
+    "Jupiter station within \u00b130 days": false,
+    "Jupiter direct station within \u00b130 days": false,
+    "Jupiter retrograde": false,
+    "Saturn station within \u00b130 days": true,
+    "Saturn direct station within \u00b130 days": false,
+    "Saturn retrograde": true,
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": true,
+    "Jupiter\u2013Saturn trine (5/9)": true,
+    "Jupiter with Rahu or Ketu": false,
+    "Jupiter with Pluto": false,
+    "Jupiter hemmed by malefics (12th and 2nd)": true,
+    "afflicted": true,
+    "Malefic vedha on Jupiter": true,
+    "Jupiter's affliction ends within 30 days": false,
+    "Jupiter's affliction begins within 30 days": false
+   },
+   "pos": {
+    "Sun": {
+     "sign": "Leo",
+     "deg": 7.28,
+     "retro": false,
+     "nak": "Magha"
+    },
+    "Mercury": {
+     "sign": "Leo",
+     "deg": 4.18,
+     "retro": false,
+     "nak": "Magha"
+    },
+    "Venus": {
+     "sign": "Virgo",
+     "deg": 22.77,
+     "retro": false,
+     "nak": "Hasta"
+    },
+    "Mars": {
+     "sign": "Gemini",
+     "deg": 14.47,
+     "retro": false,
+     "nak": "Ardra"
+    },
+    "Jupiter": {
+     "sign": "Cancer",
+     "deg": 17.91,
+     "retro": false,
+     "nak": "Ashlesha"
+    },
+    "Saturn": {
+     "sign": "Pisces",
+     "deg": 19.83,
+     "retro": true,
+     "nak": "Revati"
+    },
+    "Rahu": {
+     "sign": "Aquarius",
+     "deg": 5.46,
+     "retro": true,
+     "nak": "Dhanishta"
+    },
+    "Uranus": {
+     "sign": "Taurus",
+     "deg": 11.34,
+     "retro": false,
+     "nak": "Rohini"
+    },
+    "Neptune": {
+     "sign": "Pisces",
+     "deg": 9.61,
+     "retro": true,
+     "nak": "Uttara Bhadrapada"
+    },
+    "Pluto": {
+     "sign": "Capricorn",
+     "deg": 9.42,
+     "retro": true,
+     "nak": "Uttara Ashadha"
+    }
+   },
+   "js_angle": 118.1
+  }
+ ],
+ "base_n": 2864,
+ "rec": {
+  "bottom": {
+   "Mercury station within \u00b17 days": {
+    "hits": 7,
+    "n": 24,
+    "share": 29,
+    "base": 25.9,
+    "p": 0.432
+   },
+   "Mercury direct station within \u00b17 days": {
+    "hits": 3,
+    "n": 24,
+    "share": 12,
+    "base": 12.9,
+    "p": 0.615
+   },
+   "Mercury retrograde": {
+    "hits": 6,
+    "n": 24,
+    "share": 25,
+    "base": 19.0,
+    "p": 0.3
+   },
+   "Venus station within \u00b115 days": {
+    "hits": 3,
+    "n": 24,
+    "share": 12,
+    "base": 10.3,
+    "p": 0.456
+   },
+   "Venus direct station within \u00b115 days": {
+    "hits": 0,
+    "n": 24,
+    "share": 0,
+    "base": 5.1,
+    "p": 1.0
+   },
+   "Venus retrograde": {
+    "hits": 0,
+    "n": 24,
+    "share": 0,
+    "base": 7.4,
+    "p": 1.0
+   },
+   "Mars station within \u00b115 days": {
+    "hits": 2,
+    "n": 24,
+    "share": 8,
+    "base": 7.7,
+    "p": 0.562
+   },
+   "Mars direct station within \u00b115 days": {
+    "hits": 1,
+    "n": 24,
+    "share": 4,
+    "base": 3.8,
+    "p": 0.602
+   },
+   "Mars retrograde": {
+    "hits": 3,
+    "n": 24,
+    "share": 12,
+    "base": 9.2,
+    "p": 0.381
+   },
+   "Jupiter station within \u00b130 days": {
+    "hits": 12,
+    "n": 24,
+    "share": 50,
+    "base": 30.4,
+    "p": 0.035
+   },
+   "Jupiter direct station within \u00b130 days": {
+    "hits": 8,
+    "n": 24,
+    "share": 33,
+    "base": 15.2,
+    "p": 0.021
+   },
+   "Jupiter retrograde": {
+    "hits": 5,
+    "n": 24,
+    "share": 21,
+    "base": 30.1,
+    "p": 0.89
+   },
+   "Saturn station within \u00b130 days": {
+    "hits": 10,
+    "n": 24,
+    "share": 42,
+    "base": 32.3,
+    "p": 0.219
+   },
+   "Saturn direct station within \u00b130 days": {
+    "hits": 7,
+    "n": 24,
+    "share": 29,
+    "base": 16.1,
+    "p": 0.078
+   },
+   "Saturn retrograde": {
+    "hits": 5,
+    "n": 24,
+    "share": 21,
+    "base": 36.5,
+    "p": 0.97
+   },
+   "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": {
+    "hits": 10,
+    "n": 24,
+    "share": 42,
+    "base": 20.2,
+    "p": 0.014
+   },
+   "Jupiter\u2013Saturn trine (5/9)": {
+    "hits": 8,
+    "n": 24,
+    "share": 33,
+    "base": 16.0,
+    "p": 0.028
+   },
+   "Jupiter with Rahu or Ketu": {
+    "hits": 1,
+    "n": 24,
+    "share": 4,
+    "base": 16.4,
+    "p": 0.986
+   },
+   "Jupiter with Pluto": {
+    "hits": 5,
+    "n": 24,
+    "share": 21,
+    "base": 9.8,
+    "p": 0.08
+   },
+   "Jupiter hemmed by malefics (12th and 2nd)": {
+    "hits": 4,
+    "n": 24,
+    "share": 17,
+    "base": 19.6,
+    "p": 0.72
+   },
+   "afflicted": {
+    "hits": 18,
+    "n": 24,
+    "share": 75,
+    "base": 68.7,
+    "p": 0.336
+   },
+   "Malefic vedha on Jupiter": {
+    "hits": 7,
+    "n": 24,
+    "share": 29,
+    "base": 29.5,
+    "p": 0.589
+   },
+   "Jupiter's affliction ends within 30 days": {
+    "hits": 2,
+    "n": 24,
+    "share": 8,
+    "base": 13.6,
+    "p": 0.856
+   },
+   "Jupiter's affliction begins within 30 days": {
+    "hits": 2,
+    "n": 24,
+    "share": 8,
+    "base": 13.7,
+    "p": 0.861
+   }
+  },
+  "peak": {
+   "Mercury station within \u00b17 days": {
+    "hits": 2,
+    "n": 25,
+    "share": 8,
+    "base": 25.9,
+    "p": 0.995
+   },
+   "Mercury direct station within \u00b17 days": {
+    "hits": 1,
+    "n": 25,
+    "share": 4,
+    "base": 12.9,
+    "p": 0.969
+   },
+   "Mercury retrograde": {
+    "hits": 2,
+    "n": 25,
+    "share": 8,
+    "base": 19.0,
+    "p": 0.965
+   },
+   "Venus station within \u00b115 days": {
+    "hits": 1,
+    "n": 25,
+    "share": 4,
+    "base": 10.3,
+    "p": 0.934
+   },
+   "Venus direct station within \u00b115 days": {
+    "hits": 1,
+    "n": 25,
+    "share": 4,
+    "base": 5.1,
+    "p": 0.732
+   },
+   "Venus retrograde": {
+    "hits": 0,
+    "n": 25,
+    "share": 0,
+    "base": 7.4,
+    "p": 1.0
+   },
+   "Mars station within \u00b115 days": {
+    "hits": 3,
+    "n": 25,
+    "share": 12,
+    "base": 7.7,
+    "p": 0.303
+   },
+   "Mars direct station within \u00b115 days": {
+    "hits": 1,
+    "n": 25,
+    "share": 4,
+    "base": 3.8,
+    "p": 0.617
+   },
+   "Mars retrograde": {
+    "hits": 1,
+    "n": 25,
+    "share": 4,
+    "base": 9.2,
+    "p": 0.91
+   },
+   "Jupiter station within \u00b130 days": {
+    "hits": 9,
+    "n": 25,
+    "share": 36,
+    "base": 30.4,
+    "p": 0.338
+   },
+   "Jupiter direct station within \u00b130 days": {
+    "hits": 5,
+    "n": 25,
+    "share": 20,
+    "base": 15.2,
+    "p": 0.326
+   },
+   "Jupiter retrograde": {
+    "hits": 10,
+    "n": 25,
+    "share": 40,
+    "base": 30.1,
+    "p": 0.191
+   },
+   "Saturn station within \u00b130 days": {
+    "hits": 5,
+    "n": 25,
+    "share": 20,
+    "base": 32.3,
+    "p": 0.942
+   },
+   "Saturn direct station within \u00b130 days": {
+    "hits": 1,
+    "n": 25,
+    "share": 4,
+    "base": 16.1,
+    "p": 0.988
+   },
+   "Saturn retrograde": {
+    "hits": 10,
+    "n": 25,
+    "share": 40,
+    "base": 36.5,
+    "p": 0.432
+   },
+   "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction": {
+    "hits": 8,
+    "n": 25,
+    "share": 32,
+    "base": 20.2,
+    "p": 0.115
+   },
+   "Jupiter\u2013Saturn trine (5/9)": {
+    "hits": 9,
+    "n": 25,
+    "share": 36,
+    "base": 16.0,
+    "p": 0.012
+   },
+   "Jupiter with Rahu or Ketu": {
+    "hits": 5,
+    "n": 25,
+    "share": 20,
+    "base": 16.4,
+    "p": 0.393
+   },
+   "Jupiter with Pluto": {
+    "hits": 4,
+    "n": 25,
+    "share": 16,
+    "base": 9.8,
+    "p": 0.226
+   },
+   "Jupiter hemmed by malefics (12th and 2nd)": {
+    "hits": 5,
+    "n": 25,
+    "share": 20,
+    "base": 19.6,
+    "p": 0.559
+   },
+   "afflicted": {
+    "hits": 20,
+    "n": 25,
+    "share": 80,
+    "base": 68.7,
+    "p": 0.157
+   },
+   "Malefic vedha on Jupiter": {
+    "hits": 5,
+    "n": 25,
+    "share": 20,
+    "base": 29.5,
+    "p": 0.9
+   },
+   "Jupiter's affliction ends within 30 days": {
+    "hits": 1,
+    "n": 25,
+    "share": 4,
+    "base": 13.6,
+    "p": 0.974
+   },
+   "Jupiter's affliction begins within 30 days": {
+    "hits": 2,
+    "n": 25,
+    "share": 8,
+    "base": 13.7,
+    "p": 0.876
+   }
+  }
+ },
+ "fav": [
+  "Jupiter station within \u00b130 days",
+  "Jupiter direct station within \u00b130 days",
+  "Saturn direct station within \u00b130 days",
+  "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction",
+  "Jupiter\u2013Saturn trine (5/9)",
+  "Jupiter with Pluto"
+ ],
+ "favp": [
+  "Jupiter\u2013Saturn trine (5/9)"
+ ],
+ "upcoming": [
+  {
+   "date": "2026-11-25",
+   "what": "begins: afflicted"
+  },
+  {
+   "date": "2026-11-25",
+   "what": "begins: Jupiter with Rahu or Ketu"
+  },
+  {
+   "date": "2026-12-05",
+   "what": "ends: afflicted"
+  },
+  {
+   "date": "2026-12-05",
+   "what": "ends: Jupiter with Rahu or Ketu"
+  },
+  {
+   "date": "2026-12-06",
+   "what": "begins: Malefic vedha on Jupiter"
+  },
+  {
+   "date": "2026-12-11",
+   "what": "Saturn stations direct"
+  },
+  {
+   "date": "2026-12-13",
+   "what": "Jupiter stations retrograde"
+  },
+  {
+   "date": "2027-01-11",
+   "what": "Mars stations retrograde"
+  },
+  {
+   "date": "2027-01-25",
+   "what": "begins: afflicted"
+  },
+  {
+   "date": "2027-01-25",
+   "what": "begins: afflicted and malefic vedha"
+  },
+  {
+   "date": "2027-01-25",
+   "what": "begins: Jupiter with Rahu or Ketu"
+  },
+  {
+   "date": "2027-01-25",
+   "what": "begins: Jupiter\u2013Saturn trine (5/9)"
+  },
+  {
+   "date": "2027-02-10",
+   "what": "Mercury stations retrograde"
+  },
+  {
+   "date": "2027-03-04",
+   "what": "Mercury stations direct"
+  },
+  {
+   "date": "2027-04-02",
+   "what": "Mars stations direct"
+  },
+  {
+   "date": "2027-04-09",
+   "what": "ends: afflicted and malefic vedha"
+  },
+  {
+   "date": "2027-04-09",
+   "what": "ends: Malefic vedha on Jupiter"
+  },
+  {
+   "date": "2027-04-13",
+   "what": "Jupiter stations direct"
+  },
+  {
+   "date": "2027-06-02",
+   "what": "ends: Jupiter\u2013Saturn trine (5/9)"
+  },
+  {
+   "date": "2027-06-11",
+   "what": "Mercury stations retrograde"
+  },
+  {
+   "date": "2027-06-25",
+   "what": "ends: Jupiter with Rahu or Ketu"
+  },
+  {
+   "date": "2027-06-26",
+   "what": "begins: afflicted and malefic vedha"
+  },
+  {
+   "date": "2027-06-26",
+   "what": "begins: Jupiter\u2013Saturn trine (5/9)"
+  },
+  {
+   "date": "2027-06-26",
+   "what": "begins: Malefic vedha on Jupiter"
+  },
+  {
+   "date": "2027-07-05",
+   "what": "Mercury stations direct"
+  },
+  {
+   "date": "2027-08-10",
+   "what": "Saturn stations retrograde"
+  },
+  {
+   "date": "2027-10-08",
+   "what": "Mercury stations retrograde"
+  },
+  {
+   "date": "2027-10-19",
+   "what": "ends: afflicted"
+  },
+  {
+   "date": "2027-10-19",
+   "what": "ends: afflicted and malefic vedha"
+  },
+  {
+   "date": "2027-10-19",
+   "what": "ends: Jupiter\u2013Saturn trine (5/9)"
+  },
+  {
+   "date": "2027-10-29",
+   "what": "Mercury stations direct"
+  },
+  {
+   "date": "2027-11-03",
+   "what": "ends: Malefic vedha on Jupiter"
+  },
+  {
+   "date": "2027-11-26",
+   "what": "begins: afflicted"
+  },
+  {
+   "date": "2027-12-24",
+   "what": "Saturn stations direct"
+  },
+  {
+   "date": "2027-12-24",
+   "what": "begins: afflicted and malefic vedha"
+  },
+  {
+   "date": "2027-12-24",
+   "what": "begins: Malefic vedha on Jupiter"
+  },
+  {
+   "date": "2027-12-31",
+   "what": "ends: afflicted"
+  },
+  {
+   "date": "2027-12-31",
+   "what": "ends: afflicted and malefic vedha"
+  },
+  {
+   "date": "2027-12-31",
+   "what": "ends: Malefic vedha on Jupiter"
+  }
+ ],
+ "weeks": [
+  {
+   "week": "2026-11-23",
+   "bottom_hits": [
+    "Jupiter station within \u00b130 days",
+    "Saturn direct station within \u00b130 days"
+   ],
+   "peak_hits": []
+  },
+  {
+   "week": "2026-11-30",
+   "bottom_hits": [
+    "Jupiter station within \u00b130 days",
+    "Saturn direct station within \u00b130 days"
+   ],
+   "peak_hits": []
+  },
+  {
+   "week": "2026-12-07",
+   "bottom_hits": [
+    "Jupiter station within \u00b130 days",
+    "Saturn direct station within \u00b130 days"
+   ],
+   "peak_hits": []
+  },
+  {
+   "week": "2026-12-14",
+   "bottom_hits": [
+    "Jupiter station within \u00b130 days",
+    "Saturn direct station within \u00b130 days"
+   ],
+   "peak_hits": []
+  },
+  {
+   "week": "2026-12-21",
+   "bottom_hits": [
+    "Jupiter station within \u00b130 days",
+    "Saturn direct station within \u00b130 days"
+   ],
+   "peak_hits": []
+  },
+  {
+   "week": "2026-12-28",
+   "bottom_hits": [
+    "Jupiter station within \u00b130 days",
+    "Saturn direct station within \u00b130 days"
+   ],
+   "peak_hits": []
+  },
+  {
+   "week": "2027-01-04",
+   "bottom_hits": [
+    "Jupiter station within \u00b130 days",
+    "Saturn direct station within \u00b130 days"
+   ],
+   "peak_hits": []
+  },
+  {
+   "week": "2027-01-11",
+   "bottom_hits": [
+    "Jupiter station within \u00b130 days"
+   ],
+   "peak_hits": []
+  },
+  {
+   "week": "2027-01-18",
+   "bottom_hits": [],
+   "peak_hits": []
+  },
+  {
+   "week": "2027-01-25",
+   "bottom_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-02-01",
+   "bottom_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-02-08",
+   "bottom_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-02-15",
+   "bottom_hits": [
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction",
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-02-22",
+   "bottom_hits": [
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction",
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-03-01",
+   "bottom_hits": [
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction",
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-03-08",
+   "bottom_hits": [
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction",
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-03-15",
+   "bottom_hits": [
+    "Jupiter station within \u00b130 days",
+    "Jupiter direct station within \u00b130 days",
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction",
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-03-22",
+   "bottom_hits": [
+    "Jupiter station within \u00b130 days",
+    "Jupiter direct station within \u00b130 days",
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction",
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-03-29",
+   "bottom_hits": [
+    "Jupiter station within \u00b130 days",
+    "Jupiter direct station within \u00b130 days",
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction",
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-04-05",
+   "bottom_hits": [
+    "Jupiter station within \u00b130 days",
+    "Jupiter direct station within \u00b130 days",
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction",
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-04-12",
+   "bottom_hits": [
+    "Jupiter station within \u00b130 days",
+    "Jupiter direct station within \u00b130 days",
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction",
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-04-19",
+   "bottom_hits": [
+    "Jupiter station within \u00b130 days",
+    "Jupiter direct station within \u00b130 days",
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction",
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-04-26",
+   "bottom_hits": [
+    "Jupiter station within \u00b130 days",
+    "Jupiter direct station within \u00b130 days",
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction",
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-05-03",
+   "bottom_hits": [
+    "Jupiter station within \u00b130 days",
+    "Jupiter direct station within \u00b130 days",
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction",
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-05-10",
+   "bottom_hits": [
+    "Jupiter station within \u00b130 days",
+    "Jupiter direct station within \u00b130 days",
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction",
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-05-17",
+   "bottom_hits": [
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction",
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-05-24",
+   "bottom_hits": [
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction",
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-05-31",
+   "bottom_hits": [
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction",
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-06-07",
+   "bottom_hits": [
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction"
+   ],
+   "peak_hits": []
+  },
+  {
+   "week": "2027-06-14",
+   "bottom_hits": [
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction"
+   ],
+   "peak_hits": []
+  },
+  {
+   "week": "2027-06-21",
+   "bottom_hits": [
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction"
+   ],
+   "peak_hits": []
+  },
+  {
+   "week": "2027-06-28",
+   "bottom_hits": [
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction",
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-07-05",
+   "bottom_hits": [
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction",
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-07-12",
+   "bottom_hits": [
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction",
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-07-19",
+   "bottom_hits": [
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction",
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-07-26",
+   "bottom_hits": [
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction",
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-08-02",
+   "bottom_hits": [
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction",
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-08-09",
+   "bottom_hits": [
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction",
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-08-16",
+   "bottom_hits": [
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction",
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-08-23",
+   "bottom_hits": [
+    "Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction",
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-08-30",
+   "bottom_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-09-06",
+   "bottom_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-09-13",
+   "bottom_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-09-20",
+   "bottom_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-09-27",
+   "bottom_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-10-04",
+   "bottom_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-10-11",
+   "bottom_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-10-18",
+   "bottom_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ],
+   "peak_hits": [
+    "Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "week": "2027-10-25",
+   "bottom_hits": [],
+   "peak_hits": []
+  },
+  {
+   "week": "2027-11-01",
+   "bottom_hits": [],
+   "peak_hits": []
+  },
+  {
+   "week": "2027-11-08",
+   "bottom_hits": [],
+   "peak_hits": []
+  },
+  {
+   "week": "2027-11-15",
+   "bottom_hits": [],
+   "peak_hits": []
+  },
+  {
+   "week": "2027-11-22",
+   "bottom_hits": [],
+   "peak_hits": []
+  },
+  {
+   "week": "2027-11-29",
+   "bottom_hits": [
+    "Saturn direct station within \u00b130 days"
+   ],
+   "peak_hits": []
+  },
+  {
+   "week": "2027-12-06",
+   "bottom_hits": [
+    "Saturn direct station within \u00b130 days"
+   ],
+   "peak_hits": []
+  },
+  {
+   "week": "2027-12-13",
+   "bottom_hits": [
+    "Jupiter station within \u00b130 days",
+    "Saturn direct station within \u00b130 days"
+   ],
+   "peak_hits": []
+  },
+  {
+   "week": "2027-12-20",
+   "bottom_hits": [
+    "Jupiter station within \u00b130 days",
+    "Saturn direct station within \u00b130 days"
+   ],
+   "peak_hits": []
+  },
+  {
+   "week": "2027-12-27",
+   "bottom_hits": [
+    "Jupiter station within \u00b130 days",
+    "Saturn direct station within \u00b130 days"
+   ],
+   "peak_hits": []
+  }
+ ]
+}
