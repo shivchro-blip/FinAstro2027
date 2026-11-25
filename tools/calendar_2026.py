@@ -63,6 +63,7 @@ def gather(a, b):
     sr["jan"] = json.load(open(OUT / "kartari_jan2027_ET.json"))
     sr["gp"] = json.load(open(OUT / "global_predictions_ET.json"))
     sr["engine"] = json.load(open(OUT / "solar_return_engine_ET.json"))
+    sr["gjc"] = json.load(open(OUT / "gold_jupiter_crash_ET.json"))
     sr["doc"] = doc_rows(json.load(open(OUT / "doc_dec2026_check_ET.json")), res)
     sr["kartari"] = [dict(key=r["key"], title=r["title"], tone=r["tone"], basis=r["basis"], record=r["record"],
                           spans=[(dt.datetime.fromisoformat(u["frm_iso"]), dt.datetime.fromisoformat(u["to_iso"]), u["pair"]) for u in r["upcoming"]])
@@ -509,6 +510,12 @@ def page(res, sr, track, checks, a, b, generated):
         for r in doc_on(sr["doc"], d):
             if any(v["ok"] for v in r["rec"].values()) and dt.date.fromisoformat(r["start"]) == d:
                 extra.append(f"2026 document: {r['event']} ({r['inference']}) — held up on the " + ", ".join(SHORT[k] for k, v in r["rec"].items() if v["ok"]) + " since 2000")
+        for k in GJC_KEYS:
+            for a_, b_ in sr["gjc"]["spans"].get(k, []):
+                if b_ == x["date"] and dt.date.fromisoformat(b_) < b:
+                    extra.append(f"Gold Jupiter note: “{k}” ends")
+                if a_ == x["date"] and x["date"] != str(a):
+                    extra.append(f"Gold Jupiter note: “{k}” begins")
         for f in sr["gp"]["forecasts"]:
             if f["start"] == x["date"] and f["kind"] != "fade":
                 extra.append(f"Global Predictions window begins ({f['period']}): {f['text'][:90]}…")
@@ -628,6 +635,7 @@ def page(res, sr, track, checks, a, b, generated):
     o.append(f"</tbody></table></div><p class='s'>Daily call rule: the bearish aspects (Sun square Mars within 3°, Mars–Ketu within 5°) come first; Jupiter sextile Venus within 1° is bullish; "
              f"Mars square Uranus alone is volatile; otherwise the month's reading. Over 1928–2026: bullish calls right {bt['Bullish']['d1']}% same day / {bt['Bullish']['d5']}% over 5 sessions; "
              f"bearish calls right {bt['Bearish']['d1']}% / {bt['Bearish']['d5']}%; the S&amp;P rose on {bt['_base']['up1']}% of days and over {bt['_base']['up5']}% of 5-session spans.</p>")
+    o.append(gjc_html(sr["gjc"]))
     o.append(gp_html(sr["gp"]))
     o.append(doc_html(sr["doc"]))
     o.append(jan_html(sr["jan"]))
@@ -693,6 +701,9 @@ def day_html(x, sr, res):
             if ws:
                 also.append(f"big-move watch ({len(ws)}): " + "; ".join(ws[:3]) + (" …" if len(ws) > 3 else ""))
             if mk == "gold":
+                gk = gjc_on(sr["gjc"], d)
+                if gk:
+                    also.append("Jupiter note: " + ", ".join(gk))
                 v1 = x["v1"]
                 also.append(f"Model v1.0: {v1['bias']} (confidence {v1['confidence']})")
             if mk == "spx" and x["mjn"]:
@@ -809,6 +820,50 @@ def jan_html(j):
              "On the Sensex the rule works overall (48% vs 41%, p 0.027), but mostly when no benefic aspects Mercury; in January Jupiter aspects Mercury in both windows, and the "
              "past windows like 1–15 Jan were right 42% vs 41%. The 25 Jan Sensex match (63% vs 43%) was picked from about 13 groups and is not reliable. "
              "Both of our market tables are bearish all January for other reasons (Venus–Uranus opposition, Mercury–Rahu conjunction).</div>")
+    return "".join(o)
+
+
+GJC_KEYS = ("Jupiter with Rahu or Ketu", "Jupiter–Saturn trine (5/9)", "Jupiter–Saturn opposite (7)", "Saturn aspects Jupiter", "Jupiter hemmed by malefics (12th and 2nd)",
+            "Malefic vedha on Jupiter")
+
+
+def gjc_on(g, d):
+    out = []
+    for k in GJC_KEYS:
+        for a_, b_ in g["spans"].get(k, []):
+            if dt.date.fromisoformat(a_) <= d <= dt.date.fromisoformat(b_):
+                out.append(k)
+    return out
+
+
+def gjc_html(g):
+    o = ["<h2 id='gjc'>Gold: Jupiter's afflictions in past crashes (your note)</h2>",
+         "<p class='s'>The note: in the gold crashes of 1974, 1980, 2008, 2011, 2020, 2022 and 2026 Jupiter was in trine / mutual aspect / conjunction with Saturn, or with a node "
+         "or Pluto, or hemmed by malefics, and under the Vedha of malefics. Checked with sidereal Lahiri positions; details in gold_jupiter_crash_ET.html.</p>",
+         "<div class='wrap'><table><thead><tr><th>Year</th><th>Crash (peak → low within 12 months)</th><th>Jupiter / Saturn at the peak</th><th>Held during the fall</th></tr></thead><tbody>"]
+    for c in g["claims"]:
+        for e in c["episodes"]:
+            a_ = e["at_peak"]
+            dur = "; ".join(f"{k} {v}%" for k, v in e["during"].items() if k != "afflicted")
+            o.append(f"<tr><td><b>{c['year']}</b><div class='s'>{E(c['claim'])}</div></td><td class='n'>{e['peak']} → {e['trough']} ({e['depth']}%)</td>"
+                     f"<td>Jupiter {E(a_['Jupiter sign'])}, Saturn {E(a_['Saturn sign'])}</td><td class='s'>{E(dur)}</td></tr>")
+    sp = g["spec"]
+    o.append("</tbody></table></div><div class='wrap'><table><thead><tr><th>Condition (monthly gold 1972–2026)</th><th class='n'>Share of months</th><th class='n'>At crash peaks</th>"
+             "<th class='n'>Next 6 months: on / off</th><th class='n'>Fell 10%+ in 6 months: on / off</th></tr></thead><tbody>")
+    for k, v in sp.items():
+        o.append(f"<tr><td>{E(k)}</td><td class='n'>{v['share']}%</td><td class='n'>{v['at_peaks']} of {v['peaks']}</td><td class='n'>{v['f6_on']:+.1f}% / {v['f6_off']:+.1f}%</td><td class='n'>{v['down6_on']}% / {v['down6_off']}%</td></tr>")
+    sps = g["spans"]
+
+    def lst(k):
+        return "; ".join(f"{a_} – {b_}" for a_, b_ in sps.get(k, [])) or "none"
+    o.append("</tbody></table></div><div class='callout'><b>Reading:</b> the positions are mostly right, with sidereal corrections: at the Jan 1980 peak Saturn was in Virgo "
+             "(it returned to Leo with Jupiter and Rahu from about March 1980); at the Aug 2011 peak Saturn was in Virgo (Libra only from 15 Nov 2011); at the Jan 2026 peak Jupiter "
+             "was retrograde in Gemini (in Cancer, trine Saturn, from June 2026). Malefic Vedha on Jupiter occurred at some point in every fall, but the fast Sun and Mars make that "
+             "true in most stretches. Taken together, “Jupiter afflicted” holds in 69% of all months, so it cannot single out crashes; the Jupiter–Saturn trine was present at 3 of 8 "
+             "crash peaks against 16% of months, a lead from a small sample. "
+             f"<br><b>When the current one ends:</b> Jupiter with Ketu in Leo ends on 5 Dec 2026 (Ketu enters Cancer). The pattern returns when Jupiter goes back into Cancer: "
+             f"Jupiter with Ketu {lst('Jupiter with Rahu or Ketu')}; Jupiter–Saturn trine {lst('Jupiter–Saturn trine (5/9)')}; malefic Vedha on Jupiter {lst('Malefic vedha on Jupiter')}; "
+             f"all together {lst('afflicted and malefic vedha')}.</div>")
     return "".join(o)
 
 

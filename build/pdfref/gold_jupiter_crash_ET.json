@@ -1,0 +1,610 @@
+{
+ "claims": [
+  {
+   "year": 1974,
+   "claim": "Jupiter in Aquarius, Saturn in Gemini: trine and aspect",
+   "episodes": [
+    {
+     "peak": "1974-12-15",
+     "trough": "1975-12-15",
+     "depth": -24.5,
+     "at_peak": {
+      "Jupiter sign": "Aquarius",
+      "Saturn sign": "Gemini",
+      "Jupiter\u2013Saturn conjunct": false,
+      "Jupiter\u2013Saturn trine (5/9)": true,
+      "Jupiter\u2013Saturn opposite (7)": false,
+      "Saturn aspects Jupiter": false,
+      "Jupiter with Rahu or Ketu": false,
+      "Jupiter with Pluto": false,
+      "Jupiter hemmed by malefics (12th and 2nd)": false,
+      "Malefic vedha on Jupiter": [],
+      "Jupiter nakshatra": "Shatabhisha",
+      "afflicted": true
+     },
+     "during": {
+      "Jupiter\u2013Saturn trine (5/9)": 48,
+      "afflicted": 100,
+      "Malefic vedha on Jupiter": 28,
+      "Saturn aspects Jupiter": 52,
+      "Jupiter hemmed by malefics (12th and 2nd)": 8
+     },
+     "vedha_by": [
+      "Mars",
+      "Saturn",
+      "Sun"
+     ],
+     "samples": 25
+    }
+   ]
+  },
+  {
+   "year": 1980,
+   "claim": "Jupiter and Saturn in Leo with Rahu; later with Pluto in Virgo",
+   "episodes": [
+    {
+     "peak": "1980-01-15",
+     "trough": "1980-05-15",
+     "depth": -23.9,
+     "at_peak": {
+      "Jupiter sign": "Leo",
+      "Saturn sign": "Virgo",
+      "Jupiter\u2013Saturn conjunct": false,
+      "Jupiter\u2013Saturn trine (5/9)": false,
+      "Jupiter\u2013Saturn opposite (7)": false,
+      "Saturn aspects Jupiter": false,
+      "Jupiter with Rahu or Ketu": true,
+      "Jupiter with Pluto": false,
+      "Jupiter hemmed by malefics (12th and 2nd)": false,
+      "Malefic vedha on Jupiter": [],
+      "Jupiter nakshatra": "Purva Phalguni",
+      "afflicted": true
+     },
+     "during": {
+      "Jupiter with Rahu or Ketu": 100,
+      "afflicted": 100,
+      "Jupiter\u2013Saturn conjunct": 56,
+      "Saturn aspects Jupiter": 56,
+      "Malefic vedha on Jupiter": 11
+     },
+     "vedha_by": [
+      "Sun"
+     ],
+     "samples": 9
+    }
+   ]
+  },
+  {
+   "year": 2008,
+   "claim": "Jupiter and Pluto in Sagittarius, Saturn in Leo: trine and aspect",
+   "episodes": [
+    {
+     "peak": "2008-03-18",
+     "trough": "2008-11-13",
+     "depth": -29.7,
+     "at_peak": {
+      "Jupiter sign": "Sagittarius",
+      "Saturn sign": "Leo",
+      "Jupiter\u2013Saturn conjunct": false,
+      "Jupiter\u2013Saturn trine (5/9)": true,
+      "Jupiter\u2013Saturn opposite (7)": false,
+      "Saturn aspects Jupiter": false,
+      "Jupiter with Rahu or Ketu": false,
+      "Jupiter with Pluto": true,
+      "Jupiter hemmed by malefics (12th and 2nd)": false,
+      "Malefic vedha on Jupiter": [
+       "Sun",
+       "Mars"
+      ],
+      "Jupiter nakshatra": "Purva Ashadha",
+      "afflicted": true
+     },
+     "during": {
+      "Jupiter\u2013Saturn trine (5/9)": 100,
+      "Jupiter with Pluto": 100,
+      "afflicted": 100,
+      "Malefic vedha on Jupiter": 20,
+      "Jupiter hemmed by malefics (12th and 2nd)": 2
+     },
+     "vedha_by": [
+      "Mars",
+      "Sun"
+     ],
+     "samples": 241
+    }
+   ]
+  },
+  {
+   "year": 2011,
+   "claim": "Jupiter in Aries, Saturn in Libra: mutual aspect (Pisces / Virgo early in the year)",
+   "episodes": [
+    {
+     "peak": "2011-08-22",
+     "trough": "2012-05-16",
+     "depth": -18.7,
+     "at_peak": {
+      "Jupiter sign": "Aries",
+      "Saturn sign": "Virgo",
+      "Jupiter\u2013Saturn conjunct": false,
+      "Jupiter\u2013Saturn trine (5/9)": false,
+      "Jupiter\u2013Saturn opposite (7)": false,
+      "Saturn aspects Jupiter": false,
+      "Jupiter with Rahu or Ketu": false,
+      "Jupiter with Pluto": false,
+      "Jupiter hemmed by malefics (12th and 2nd)": true,
+      "Malefic vedha on Jupiter": [
+       "Sun"
+      ],
+      "Jupiter nakshatra": "Bharani",
+      "afflicted": true
+     },
+     "during": {
+      "Jupiter hemmed by malefics (12th and 2nd)": 100,
+      "afflicted": 100,
+      "Malefic vedha on Jupiter": 82,
+      "Jupiter\u2013Saturn opposite (7)": 68,
+      "Saturn aspects Jupiter": 68
+     },
+     "vedha_by": [
+      "Ketu",
+      "Mars",
+      "Rahu",
+      "Sun"
+     ],
+     "samples": 269
+    }
+   ]
+  },
+  {
+   "year": 2020,
+   "claim": "Jupiter in Sagittarius with Ketu and Pluto",
+   "episodes": [
+    {
+     "peak": "2020-08-06",
+     "trough": "2021-03-08",
+     "depth": -18.9,
+     "at_peak": {
+      "Jupiter sign": "Sagittarius",
+      "Saturn sign": "Capricorn",
+      "Jupiter\u2013Saturn conjunct": false,
+      "Jupiter\u2013Saturn trine (5/9)": false,
+      "Jupiter\u2013Saturn opposite (7)": false,
+      "Saturn aspects Jupiter": false,
+      "Jupiter with Rahu or Ketu": true,
+      "Jupiter with Pluto": true,
+      "Jupiter hemmed by malefics (12th and 2nd)": false,
+      "Malefic vedha on Jupiter": [],
+      "Jupiter nakshatra": "Purva Ashadha",
+      "afflicted": true
+     },
+     "during": {
+      "Jupiter with Rahu or Ketu": 22,
+      "Jupiter with Pluto": 81,
+      "afflicted": 100,
+      "Jupiter hemmed by malefics (12th and 2nd)": 27,
+      "Malefic vedha on Jupiter": 44,
+      "Jupiter\u2013Saturn conjunct": 51,
+      "Saturn aspects Jupiter": 51
+     },
+     "vedha_by": [
+      "Mars",
+      "Rahu",
+      "Sun"
+     ],
+     "samples": 215
+    }
+   ]
+  },
+  {
+   "year": 2022,
+   "claim": "Jupiter in Pisces aspected by Saturn in Capricorn with Pluto; then hemmed by Rahu and Saturn",
+   "episodes": [
+    {
+     "peak": "2022-03-08",
+     "trough": "2022-11-03",
+     "depth": -20.2,
+     "at_peak": {
+      "Jupiter sign": "Aquarius",
+      "Saturn sign": "Capricorn",
+      "Jupiter\u2013Saturn conjunct": false,
+      "Jupiter\u2013Saturn trine (5/9)": false,
+      "Jupiter\u2013Saturn opposite (7)": false,
+      "Saturn aspects Jupiter": false,
+      "Jupiter with Rahu or Ketu": false,
+      "Jupiter with Pluto": false,
+      "Jupiter hemmed by malefics (12th and 2nd)": false,
+      "Malefic vedha on Jupiter": [],
+      "Jupiter nakshatra": "Purva Bhadrapada",
+      "afflicted": false
+     },
+     "during": {
+      "Jupiter hemmed by malefics (12th and 2nd)": 49,
+      "afflicted": 97,
+      "Saturn aspects Jupiter": 54,
+      "Malefic vedha on Jupiter": 12
+     },
+     "vedha_by": [
+      "Sun"
+     ],
+     "samples": 241
+    }
+   ]
+  },
+  {
+   "year": 2026,
+   "claim": "Jupiter in Cancer, Saturn in Pisces: trine and aspect; then Jupiter with Ketu in Leo",
+   "episodes": [
+    {
+     "peak": "2026-01-29",
+     "trough": "2026-11-20",
+     "depth": -33.9,
+     "at_peak": {
+      "Jupiter sign": "Gemini",
+      "Saturn sign": "Pisces",
+      "Jupiter\u2013Saturn conjunct": false,
+      "Jupiter\u2013Saturn trine (5/9)": false,
+      "Jupiter\u2013Saturn opposite (7)": false,
+      "Saturn aspects Jupiter": false,
+      "Jupiter with Rahu or Ketu": false,
+      "Jupiter with Pluto": false,
+      "Jupiter hemmed by malefics (12th and 2nd)": false,
+      "Malefic vedha on Jupiter": [],
+      "Jupiter nakshatra": "Punarvasu",
+      "afflicted": false
+     },
+     "during": {
+      "Malefic vedha on Jupiter": 50,
+      "Jupiter\u2013Saturn trine (5/9)": 51,
+      "afflicted": 58,
+      "Jupiter hemmed by malefics (12th and 2nd)": 26,
+      "Jupiter with Rahu or Ketu": 7
+     },
+     "vedha_by": [
+      "Ketu",
+      "Mars",
+      "Rahu",
+      "Sun"
+     ],
+     "samples": 296
+    }
+   ]
+  }
+ ],
+ "crashes_m": [
+  {
+   "peak": "1973-06-15",
+   "trough": "1973-11-15",
+   "depth": -20.8,
+   "p0": 120.0,
+   "p1": 95.0
+  },
+  {
+   "peak": "1974-04-15",
+   "trough": "1974-07-15",
+   "depth": -16.9,
+   "p0": 172.0,
+   "p1": 143.0
+  },
+  {
+   "peak": "1974-12-15",
+   "trough": "1976-08-15",
+   "depth": -40.2,
+   "p0": 184.0,
+   "p1": 110.0
+  },
+  {
+   "peak": "1980-01-15",
+   "trough": "1999-07-15",
+   "depth": -62.1,
+   "p0": 675.0,
+   "p1": 256.0
+  },
+  {
+   "peak": "2008-03-15",
+   "trough": "2008-11-15",
+   "depth": -21.4,
+   "p0": 968.0,
+   "p1": 761.0
+  },
+  {
+   "peak": "2011-09-15",
+   "trough": "2015-12-15",
+   "depth": -39.3,
+   "p0": 1772.0,
+   "p1": 1076.0
+  },
+  {
+   "peak": "2020-08-15",
+   "trough": "2022-10-15",
+   "depth": -15.5,
+   "p0": 1969.0,
+   "p1": 1664.0
+  },
+  {
+   "peak": "2026-02-15",
+   "trough": "2026-07-15",
+   "depth": -18.9,
+   "p0": 5020.0,
+   "p1": 4073.0,
+   "open": true
+  }
+ ],
+ "crashes_d": [
+  {
+   "peak": "2003-02-04",
+   "trough": "2003-04-07",
+   "depth": -15.2,
+   "p0": 379.0,
+   "p1": 321.5
+  },
+  {
+   "peak": "2004-04-01",
+   "trough": "2004-05-13",
+   "depth": -12.4,
+   "p0": 427.79998779296875,
+   "p1": 374.79998779296875
+  },
+  {
+   "peak": "2006-05-11",
+   "trough": "2006-10-04",
+   "depth": -21.9,
+   "p0": 719.7999877929688,
+   "p1": 562.0
+  },
+  {
+   "peak": "2008-03-18",
+   "trough": "2008-11-13",
+   "depth": -29.7,
+   "p0": 1003.2000122070312,
+   "p1": 704.9000244140625
+  },
+  {
+   "peak": "2009-12-03",
+   "trough": "2010-02-05",
+   "depth": -13.6,
+   "p0": 1217.4000244140625,
+   "p1": 1052.199951171875
+  },
+  {
+   "peak": "2011-08-22",
+   "trough": "2015-12-17",
+   "depth": -44.4,
+   "p0": 1888.699951171875,
+   "p1": 1050.800048828125
+  },
+  {
+   "peak": "2020-08-06",
+   "trough": "2022-11-03",
+   "depth": -21.2,
+   "p0": 2069.39990234375,
+   "p1": 1630.9000244140625
+  },
+  {
+   "peak": "2026-01-29",
+   "trough": "2026-11-20",
+   "depth": -33.9,
+   "p0": 5318.39990234375,
+   "p1": 3515.39990234375,
+   "open": true
+  }
+ ],
+ "spec": {
+  "Jupiter\u2013Saturn conjunct": {
+   "share": 9.3,
+   "at_peaks": 0,
+   "peaks": 8,
+   "f3_on": 2.98,
+   "f3_off": 2.52,
+   "f6_on": 0.9,
+   "f6_off": 5.7,
+   "down6_on": 21.3,
+   "down6_off": 9.1
+  },
+  "Jupiter\u2013Saturn trine (5/9)": {
+   "share": 16.3,
+   "at_peaks": 3,
+   "peaks": 8,
+   "f3_on": 1.76,
+   "f3_off": 2.72,
+   "f6_on": 1.9,
+   "f6_off": 5.88,
+   "down6_on": 6.9,
+   "down6_off": 10.9
+  },
+  "Jupiter\u2013Saturn opposite (7)": {
+   "share": 5.9,
+   "at_peaks": 0,
+   "peaks": 8,
+   "f3_on": 1.86,
+   "f3_off": 2.61,
+   "f6_on": 5.37,
+   "f6_off": 5.25,
+   "down6_on": 5.1,
+   "down6_off": 10.6
+  },
+  "Saturn aspects Jupiter": {
+   "share": 34.0,
+   "at_peaks": 0,
+   "peaks": 8,
+   "f3_on": 1.6,
+   "f3_off": 3.07,
+   "f6_on": 2.43,
+   "f6_off": 6.73,
+   "down6_on": 13.4,
+   "down6_off": 8.6
+  },
+  "Jupiter with Rahu or Ketu": {
+   "share": 16.4,
+   "at_peaks": 2,
+   "peaks": 8,
+   "f3_on": 4.17,
+   "f3_off": 2.25,
+   "f6_on": 7.52,
+   "f6_off": 4.81,
+   "down6_on": 6.5,
+   "down6_off": 11.0
+  },
+  "Jupiter with Pluto": {
+   "share": 9.9,
+   "at_peaks": 2,
+   "peaks": 8,
+   "f3_on": 1.35,
+   "f3_off": 2.7,
+   "f6_on": 2.44,
+   "f6_off": 5.57,
+   "down6_on": 20.0,
+   "down6_off": 9.2
+  },
+  "Jupiter hemmed by malefics (12th and 2nd)": {
+   "share": 20.4,
+   "at_peaks": 1,
+   "peaks": 8,
+   "f3_on": 3.76,
+   "f3_off": 2.27,
+   "f6_on": 6.95,
+   "f6_off": 4.83,
+   "down6_on": 13.1,
+   "down6_off": 9.6
+  },
+  "afflicted": {
+   "share": 69.3,
+   "at_peaks": 6,
+   "peaks": 8,
+   "f3_on": 2.1,
+   "f3_off": 3.62,
+   "f6_on": 3.94,
+   "f6_off": 8.2,
+   "down6_on": 11.5,
+   "down6_off": 7.5
+  },
+  "Malefic vedha on Jupiter": {
+   "share": 28.3,
+   "at_peaks": 1,
+   "peaks": 8,
+   "f3_on": 3.28,
+   "f3_off": 2.29,
+   "f6_on": 6.64,
+   "f6_off": 4.72,
+   "down6_on": 6.6,
+   "down6_off": 11.7
+  },
+  "afflicted and malefic vedha": {
+   "share": 19.5,
+   "at_peaks": 1,
+   "peaks": 8,
+   "f3_on": 1.96,
+   "f3_off": 2.71,
+   "f6_on": 4.05,
+   "f6_off": 5.54,
+   "down6_on": 5.6,
+   "down6_off": 11.4
+  }
+ },
+ "spans": {
+  "Jupiter\u2013Saturn conjunct": [],
+  "Jupiter\u2013Saturn trine (5/9)": [
+   [
+    "2027-01-25",
+    "2027-06-02"
+   ],
+   [
+    "2027-06-26",
+    "2027-10-19"
+   ]
+  ],
+  "Jupiter\u2013Saturn opposite (7)": [
+   [
+    "2027-11-26",
+    "2027-12-31"
+   ]
+  ],
+  "Saturn aspects Jupiter": [
+   [
+    "2027-11-26",
+    "2027-12-31"
+   ]
+  ],
+  "Jupiter with Rahu or Ketu": [
+   [
+    "2026-11-25",
+    "2026-12-05"
+   ],
+   [
+    "2027-01-25",
+    "2027-06-25"
+   ]
+  ],
+  "Jupiter with Pluto": [],
+  "Jupiter hemmed by malefics (12th and 2nd)": [
+   [
+    "2027-06-15",
+    "2027-06-25"
+   ],
+   [
+    "2027-07-05",
+    "2027-08-23"
+   ],
+   [
+    "2027-09-17",
+    "2027-10-17"
+   ]
+  ],
+  "afflicted": [
+   [
+    "2026-11-25",
+    "2026-12-05"
+   ],
+   [
+    "2027-01-25",
+    "2027-10-19"
+   ],
+   [
+    "2027-11-26",
+    "2027-12-31"
+   ]
+  ],
+  "Malefic vedha on Jupiter": [
+   [
+    "2026-12-06",
+    "2027-04-09"
+   ],
+   [
+    "2027-06-26",
+    "2027-11-03"
+   ],
+   [
+    "2027-12-24",
+    "2027-12-31"
+   ]
+  ],
+  "afflicted and malefic vedha": [
+   [
+    "2027-01-25",
+    "2027-04-09"
+   ],
+   [
+    "2027-06-26",
+    "2027-10-19"
+   ],
+   [
+    "2027-12-24",
+    "2027-12-31"
+   ]
+  ]
+ },
+ "now": {
+  "Jupiter sign": "Leo",
+  "Saturn sign": "Pisces",
+  "Jupiter\u2013Saturn conjunct": false,
+  "Jupiter\u2013Saturn trine (5/9)": false,
+  "Jupiter\u2013Saturn opposite (7)": false,
+  "Saturn aspects Jupiter": false,
+  "Jupiter with Rahu or Ketu": true,
+  "Jupiter with Pluto": false,
+  "Jupiter hemmed by malefics (12th and 2nd)": false,
+  "Malefic vedha on Jupiter": [],
+  "Jupiter nakshatra": "Magha",
+  "afflicted": true
+ },
+ "months": 658
+}
