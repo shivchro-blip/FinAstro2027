@@ -728,6 +728,32 @@ Results, as the share of calls right:
 - **Next:** Mercury in Paap Kartari (B116) 1–15 Jan 2027 (Sun | Pluto), 25 Jan and 18 Feb – 16 Mar 2027.
 - **In the calendar:** shown in the 2026 calendar's key dates, read-first notes and each day's notes.
 
+**Day report for Wed 25 Nov 2026** (`day_report_2026-11-25_ET.html`; made the evening before, ET)
+
+- **Signals:**
+  - Gold: Bearish Low (Sun in Anuradha, Mars aspects the Sun). Gold big-move watch on the Sun–Uranus opposition (exact 17:41 ET, after the close).
+  - S&P, Sensex and silver: no signal.
+- **Combined model, chance of a rise that day:**
+
+| Market | Model | Normal |
+|---|---|---|
+| S&P | 56% | 54% |
+| Sensex | 53% | 53% |
+| Gold | 53% | 53% |
+| Silver | 52% | 53% |
+
+  - Big-day chance: S&P 3%, gold 11%.
+- **Active rules:** 146 catalogue rules, 21 of them with a supported record.
+- **S&P calendar row:** "Kshay Tithi, Krishna paksha: Bullish". Record 62% vs 59% (p 0.25), so at chance.
+- **Also on the day:**
+  - Moon perigee (16:01 ET).
+  - Mercury enters Vishakha.
+  - Jupiter in Paap Kartari continues (Ketu | Mars).
+  - Mars–Jupiter–Ketu lead active.
+- **Solar return:** its day call is "down". Jupiter sextile Venus is within 2° but not yet within 1°, so the generated call follows the month reading, bearish.
+- **Global Predictions:** 24–27 Nov volatility window. History for Sun opposite Uranus: 23 sharp reversals vs 17 expected (p 0.10).
+- **Follow-up:** actual moves scheduled for 25 Nov after the close.
+
 **24 Nov 2026: what we said and what happened** (`day_report_2026-11-24_ET.html`, closes; the BSE was shut for Guru Nanak Jayanti)
 
 | Market | What we said | What happened |
