@@ -1,0 +1,952 @@
+{
+ "rows": [
+  {
+   "date": "11 Dec 2026",
+   "event": "Saturn turns direct (\u00b130 days)",
+   "lean": "bottom-leaning (weak)",
+   "basis": {
+    "bottom": 7,
+    "peak": 1
+   },
+   "phase": "station",
+   "note": "bottoms 7/24 vs tops 1/25; normal 16.1% of weeks"
+  },
+  {
+   "date": "14 Feb 2027",
+   "event": "Jupiter\u2013Saturn trine enters 10\u00b0 orb",
+   "lean": "a turn, either way",
+   "basis": {
+    "bottom": 2,
+    "peak": 3
+   },
+   "phase": "applying"
+  },
+  {
+   "date": "03 Apr 2027 08:59",
+   "event": "Exact trine (120\u00b0) \u2014 pass 1",
+   "lean": "a turn, either way",
+   "basis": {
+    "bottom": 4,
+    "peak": 4
+   },
+   "phase": "exact"
+  },
+  {
+   "date": "13 Apr 2027",
+   "event": "Jupiter turns direct (\u00b130 days)",
+   "lean": "bottom-leaning (weak)",
+   "basis": {
+    "bottom": 8,
+    "peak": 5
+   },
+   "phase": "station",
+   "note": "bottoms 8/24 vs tops 5/25; normal 15.2% of weeks"
+  },
+  {
+   "date": "11 Jul 2027 19:15",
+   "event": "Exact trine (120\u00b0) \u2014 pass 2",
+   "lean": "a turn, either way",
+   "basis": {
+    "bottom": 4,
+    "peak": 4
+   },
+   "phase": "exact"
+  },
+  {
+   "date": "30 Aug 2027",
+   "event": "Jupiter\u2013Saturn trine leaves 10\u00b0 orb",
+   "lean": "top-leaning",
+   "basis": {
+    "bottom": 1,
+    "peak": 4
+   },
+   "phase": "separating"
+  },
+  {
+   "date": "24 Dec 2027",
+   "event": "Saturn turns direct (\u00b130 days)",
+   "lean": "bottom-leaning (weak)",
+   "basis": {
+    "bottom": 7,
+    "peak": 1
+   },
+   "phase": "station",
+   "note": "bottoms 7/24 vs tops 1/25; normal 16.1% of weeks"
+  },
+  {
+   "date": "14 May 2028",
+   "event": "Jupiter turns direct (\u00b130 days)",
+   "lean": "bottom-leaning (weak)",
+   "basis": {
+    "bottom": 8,
+    "peak": 5
+   },
+   "phase": "station",
+   "note": "bottoms 8/24 vs tops 5/25; normal 15.2% of weeks"
+  },
+  {
+   "date": "27 Dec 2028",
+   "event": "Jupiter\u2013Saturn opposition enters 10\u00b0 orb",
+   "lean": "a turn, either way",
+   "basis": {
+    "bottom": 1,
+    "peak": 0
+   },
+   "phase": "applying"
+  },
+  {
+   "date": "06 Jan 2029",
+   "event": "Saturn turns direct (\u00b130 days)",
+   "lean": "bottom-leaning (weak)",
+   "basis": {
+    "bottom": 7,
+    "peak": 1
+   },
+   "phase": "station",
+   "note": "bottoms 7/24 vs tops 1/25; normal 16.1% of weeks"
+  },
+  {
+   "date": "27 Feb 2029",
+   "event": "Jupiter\u2013Saturn opposition leaves 10\u00b0 orb",
+   "lean": "a turn, either way",
+   "basis": {
+    "bottom": 0,
+    "peak": 0
+   },
+   "phase": "separating"
+  },
+  {
+   "date": "14 Jun 2029",
+   "event": "Jupiter turns direct (\u00b130 days)",
+   "lean": "bottom-leaning (weak)",
+   "basis": {
+    "bottom": 8,
+    "peak": 5
+   },
+   "phase": "station",
+   "note": "bottoms 8/24 vs tops 5/25; normal 15.2% of weeks"
+  },
+  {
+   "date": "15 Nov 2029",
+   "event": "Jupiter\u2013Saturn opposition enters 10\u00b0 orb",
+   "lean": "a turn, either way",
+   "basis": {
+    "bottom": 1,
+    "peak": 0
+   },
+   "phase": "applying"
+  },
+  {
+   "date": "22 Dec 2029 02:02",
+   "event": "Exact opposition (180\u00b0) \u2014 pass 1",
+   "lean": "a turn, either way",
+   "basis": {
+    "bottom": 1,
+    "peak": 0
+   },
+   "phase": "exact"
+  },
+  {
+   "date": "19 Jan 2030",
+   "event": "Saturn turns direct (\u00b130 days)",
+   "lean": "bottom-leaning (weak)",
+   "basis": {
+    "bottom": 7,
+    "peak": 1
+   },
+   "phase": "station",
+   "note": "bottoms 7/24 vs tops 1/25; normal 16.1% of weeks"
+  },
+  {
+   "date": "23 Apr 2030 21:57",
+   "event": "Exact opposition (180\u00b0) \u2014 pass 2",
+   "lean": "a turn, either way",
+   "basis": {
+    "bottom": 1,
+    "peak": 0
+   },
+   "phase": "exact"
+  },
+  {
+   "date": "02 Jun 2030",
+   "event": "Jupiter\u2013Saturn opposition leaves 10\u00b0 orb",
+   "lean": "a turn, either way",
+   "basis": {
+    "bottom": 0,
+    "peak": 0
+   },
+   "phase": "separating"
+  },
+  {
+   "date": "15 Jul 2030",
+   "event": "Jupiter turns direct (\u00b130 days)",
+   "lean": "bottom-leaning (weak)",
+   "basis": {
+    "bottom": 8,
+    "peak": 5
+   },
+   "phase": "station",
+   "note": "bottoms 8/24 vs tops 5/25; normal 15.2% of weeks"
+  },
+  {
+   "date": "14 Oct 2030",
+   "event": "Jupiter\u2013Saturn opposition enters 10\u00b0 orb",
+   "lean": "a turn, either way",
+   "basis": {
+    "bottom": 1,
+    "peak": 0
+   },
+   "phase": "applying"
+  },
+  {
+   "date": "19 Nov 2030 20:05",
+   "event": "Exact opposition (180\u00b0)",
+   "lean": "a turn, either way",
+   "basis": {
+    "bottom": 1,
+    "peak": 0
+   },
+   "phase": "exact"
+  },
+  {
+   "date": "23 Dec 2030",
+   "event": "Jupiter\u2013Saturn opposition leaves 10\u00b0 orb",
+   "lean": "a turn, either way",
+   "basis": {
+    "bottom": 0,
+    "peak": 0
+   },
+   "phase": "separating"
+  }
+ ],
+ "past": [
+  {
+   "aspect": "opposition",
+   "enter": "1972-08-16",
+   "leave": "1972-10-01",
+   "exact": [],
+   "move": null,
+   "applying_move": null,
+   "separating_move": null,
+   "turns": []
+  },
+  {
+   "aspect": "trine",
+   "enter": "1973-03-18",
+   "leave": "1973-05-31",
+   "exact": [],
+   "move": 12.1,
+   "applying_move": null,
+   "separating_move": null,
+   "turns": [
+    {
+     "kind": "peak",
+     "date": "1973-06-15",
+     "phase": "no exact pass",
+     "anchor": "leave",
+     "days_from_anchor": 15,
+     "jup_retro": true
+    }
+   ]
+  },
+  {
+   "aspect": "trine",
+   "enter": "1974-01-21",
+   "leave": "1974-04-28",
+   "exact": [
+    "1974-02-27"
+   ],
+   "move": 14.7,
+   "applying_move": null,
+   "separating_move": 2.4,
+   "turns": [
+    {
+     "kind": "peak",
+     "date": "1974-04-15",
+     "phase": "separating",
+     "anchor": "leave",
+     "days_from_anchor": -13,
+     "jup_retro": false
+    }
+   ]
+  },
+  {
+   "aspect": "trine",
+   "enter": "1974-06-24",
+   "leave": "1974-10-14",
+   "exact": [
+    "1974-08-22"
+   ],
+   "move": 6.3,
+   "applying_move": 8.4,
+   "separating_move": null,
+   "turns": [
+    {
+     "kind": "bottom",
+     "date": "1974-07-15",
+     "phase": "applying",
+     "anchor": "enter",
+     "days_from_anchor": 21,
+     "jup_retro": true
+    }
+   ]
+  },
+  {
+   "aspect": "trine",
+   "enter": "1974-11-21",
+   "leave": "1975-02-15",
+   "exact": [
+    "1975-01-10"
+   ],
+   "move": -2.2,
+   "applying_move": null,
+   "separating_move": 2.3,
+   "turns": [
+    {
+     "kind": "peak",
+     "date": "1974-12-15",
+     "phase": "applying",
+     "anchor": "enter",
+     "days_from_anchor": 24,
+     "jup_retro": false
+    }
+   ]
+  },
+  {
+   "aspect": "conjunction",
+   "enter": "1980-08-25",
+   "leave": "1981-11-14",
+   "exact": [
+    "1980-12-31",
+    "1981-03-04",
+    "1981-07-24"
+   ],
+   "move": -35.0,
+   "applying_move": -20.2,
+   "separating_move": 6.8,
+   "turns": [
+    {
+     "kind": "peak",
+     "date": "1980-09-15",
+     "phase": "applying",
+     "anchor": "enter",
+     "days_from_anchor": 21,
+     "jup_retro": false
+    }
+   ]
+  },
+  {
+   "aspect": "trine",
+   "enter": "1987-04-17",
+   "leave": "1987-07-02",
+   "exact": [
+    "1987-05-23"
+   ],
+   "move": -2.2,
+   "applying_move": null,
+   "separating_move": null,
+   "turns": []
+  },
+  {
+   "aspect": "trine",
+   "enter": "1987-10-06",
+   "leave": "1988-05-01",
+   "exact": [
+    "1987-11-21",
+    "1988-03-18"
+   ],
+   "move": -2.8,
+   "applying_move": 0.6,
+   "separating_move": null,
+   "turns": [
+    {
+     "kind": "peak",
+     "date": "1987-12-15",
+     "phase": "between passes",
+     "anchor": "exact",
+     "days_from_anchor": 24,
+     "jup_retro": true
+    }
+   ]
+  },
+  {
+   "aspect": "opposition",
+   "enter": "1989-07-26",
+   "leave": "1989-12-30",
+   "exact": [
+    "1989-09-10",
+    "1989-11-14"
+   ],
+   "move": 12.1,
+   "applying_move": null,
+   "separating_move": 3.8,
+   "turns": [
+    {
+     "kind": "bottom",
+     "date": "1989-09-15",
+     "phase": "between passes",
+     "anchor": "exact",
+     "days_from_anchor": 5,
+     "jup_retro": false
+    }
+   ]
+  },
+  {
+   "aspect": "opposition",
+   "enter": "1990-06-08",
+   "leave": "1990-08-17",
+   "exact": [
+    "1990-07-13"
+   ],
+   "move": 12.2,
+   "applying_move": null,
+   "separating_move": 8.8,
+   "turns": []
+  },
+  {
+   "aspect": "opposition",
+   "enter": "1991-01-27",
+   "leave": "1991-07-04",
+   "exact": [
+    "1991-03-16",
+    "1991-05-17"
+   ],
+   "move": 0.8,
+   "applying_move": -0.3,
+   "separating_move": null,
+   "turns": []
+  },
+  {
+   "aspect": "trine",
+   "enter": "1992-10-19",
+   "leave": "1993-02-28",
+   "exact": [],
+   "move": -1.8,
+   "applying_move": null,
+   "separating_move": null,
+   "turns": [
+    {
+     "kind": "bottom",
+     "date": "1993-01-15",
+     "phase": "no exact pass",
+     "anchor": "leave",
+     "days_from_anchor": -44,
+     "jup_retro": false
+    }
+   ]
+  },
+  {
+   "aspect": "trine",
+   "enter": "1993-09-04",
+   "leave": "1993-12-03",
+   "exact": [
+    "1993-10-12"
+   ],
+   "move": 5.4,
+   "applying_move": null,
+   "separating_move": 2.7,
+   "turns": []
+  },
+  {
+   "aspect": "trine",
+   "enter": "1994-03-07",
+   "leave": "1994-10-08",
+   "exact": [
+    "1994-04-28",
+    "1994-08-28"
+   ],
+   "move": 2.1,
+   "applying_move": -1.8,
+   "separating_move": null,
+   "turns": []
+  },
+  {
+   "aspect": "conjunction",
+   "enter": "2000-02-27",
+   "leave": "2000-09-16",
+   "exact": [
+    "2000-05-28"
+   ],
+   "move": -0.6,
+   "applying_move": null,
+   "separating_move": -0.6,
+   "turns": []
+  },
+  {
+   "aspect": "conjunction",
+   "enter": "2000-11-15",
+   "leave": "2001-04-03",
+   "exact": [],
+   "move": -3.1,
+   "applying_move": null,
+   "separating_move": null,
+   "turns": [
+    {
+     "kind": "bottom",
+     "date": "2001-02-15",
+     "phase": "no exact pass",
+     "anchor": "leave",
+     "days_from_anchor": -47,
+     "jup_retro": false
+    }
+   ]
+  },
+  {
+   "aspect": "trine",
+   "enter": "2007-01-25",
+   "leave": "2007-06-29",
+   "exact": [
+    "2007-03-16",
+    "2007-05-06"
+   ],
+   "move": 0.0,
+   "applying_move": 0.7,
+   "separating_move": -5.8,
+   "turns": []
+  },
+  {
+   "aspect": "trine",
+   "enter": "2007-12-12",
+   "leave": "2008-02-26",
+   "exact": [
+    "2008-01-21"
+   ],
+   "move": 16.3,
+   "applying_move": 8.3,
+   "separating_move": 6.4,
+   "turns": [
+    {
+     "kind": "peak",
+     "date": "2008-03-18",
+     "phase": "separating",
+     "anchor": "leave",
+     "days_from_anchor": 21,
+     "jup_retro": false
+    }
+   ]
+  },
+  {
+   "aspect": "trine",
+   "enter": "2008-07-18",
+   "leave": "2009-01-12",
+   "exact": [
+    "2008-09-08",
+    "2008-11-21"
+   ],
+   "move": -14.3,
+   "applying_move": -16.7,
+   "separating_move": 3.6,
+   "turns": [
+    {
+     "kind": "peak",
+     "date": "2008-07-15",
+     "phase": "applying",
+     "anchor": "enter",
+     "days_from_anchor": -3,
+     "jup_retro": true
+    },
+    {
+     "kind": "bottom",
+     "date": "2008-09-11",
+     "phase": "between passes",
+     "anchor": "exact",
+     "days_from_anchor": 3,
+     "jup_retro": false
+    },
+    {
+     "kind": "peak",
+     "date": "2008-09-22",
+     "phase": "between passes",
+     "anchor": "exact",
+     "days_from_anchor": 14,
+     "jup_retro": false
+    },
+    {
+     "kind": "bottom",
+     "date": "2008-11-13",
+     "phase": "between passes",
+     "anchor": "exact",
+     "days_from_anchor": -8,
+     "jup_retro": false
+    }
+   ]
+  },
+  {
+   "aspect": "opposition",
+   "enter": "2010-04-11",
+   "leave": "2010-09-28",
+   "exact": [
+    "2010-05-23",
+    "2010-08-16"
+   ],
+   "move": 12.5,
+   "applying_move": 1.2,
+   "separating_move": 6.7,
+   "turns": []
+  },
+  {
+   "aspect": "opposition",
+   "enter": "2011-02-23",
+   "leave": "2011-04-29",
+   "exact": [
+    "2011-03-28"
+   ],
+   "move": 10.1,
+   "applying_move": 0.5,
+   "separating_move": 9.6,
+   "turns": []
+  },
+  {
+   "aspect": "opposition",
+   "enter": "2011-11-11",
+   "leave": "2012-03-09",
+   "exact": [],
+   "move": -4.3,
+   "applying_move": null,
+   "separating_move": null,
+   "turns": [
+    {
+     "kind": "bottom",
+     "date": "2011-12-29",
+     "phase": "no exact pass",
+     "anchor": "enter",
+     "days_from_anchor": 48,
+     "jup_retro": false
+    }
+   ]
+  },
+  {
+   "aspect": "trine",
+   "enter": "2013-06-06",
+   "leave": "2014-01-29",
+   "exact": [
+    "2013-07-17",
+    "2013-12-13"
+   ],
+   "move": -10.8,
+   "applying_move": -9.7,
+   "separating_move": 2.1,
+   "turns": [
+    {
+     "kind": "bottom",
+     "date": "2013-06-27",
+     "phase": "applying",
+     "anchor": "exact",
+     "days_from_anchor": -20,
+     "jup_retro": false
+    },
+    {
+     "kind": "peak",
+     "date": "2013-08-27",
+     "phase": "between passes",
+     "anchor": "exact",
+     "days_from_anchor": 41,
+     "jup_retro": false
+    },
+    {
+     "kind": "bottom",
+     "date": "2013-12-19",
+     "phase": "separating",
+     "anchor": "exact",
+     "days_from_anchor": 6,
+     "jup_retro": true
+    }
+   ]
+  },
+  {
+   "aspect": "trine",
+   "enter": "2014-04-09",
+   "leave": "2014-07-02",
+   "exact": [
+    "2014-05-24"
+   ],
+   "move": 1.9,
+   "applying_move": -1.1,
+   "separating_move": 5.2,
+   "turns": [
+    {
+     "kind": "peak",
+     "date": "2014-03-14",
+     "phase": "applying",
+     "anchor": "enter",
+     "days_from_anchor": -26,
+     "jup_retro": false
+    }
+   ]
+  },
+  {
+   "aspect": "trine",
+   "enter": "2015-03-01",
+   "leave": "2015-04-29",
+   "exact": [],
+   "move": 0.2,
+   "applying_move": null,
+   "separating_move": null,
+   "turns": []
+  },
+  {
+   "aspect": "conjunction",
+   "enter": "2020-02-14",
+   "leave": "2021-03-16",
+   "exact": [
+    "2020-12-21"
+   ],
+   "move": 9.4,
+   "applying_move": 19.0,
+   "separating_move": -8.1,
+   "turns": [
+    {
+     "kind": "peak",
+     "date": "2020-08-06",
+     "phase": "applying",
+     "anchor": "exact",
+     "days_from_anchor": -137,
+     "jup_retro": true
+    },
+    {
+     "kind": "bottom",
+     "date": "2021-03-08",
+     "phase": "separating",
+     "anchor": "leave",
+     "days_from_anchor": -8,
+     "jup_retro": false
+    }
+   ]
+  },
+  {
+   "aspect": "trine",
+   "enter": "2025-09-09",
+   "leave": "2026-01-25",
+   "exact": [],
+   "move": 35.2,
+   "applying_move": null,
+   "separating_move": null,
+   "turns": [
+    {
+     "kind": "peak",
+     "date": "2026-01-29",
+     "phase": "no exact pass",
+     "anchor": "leave",
+     "days_from_anchor": 4,
+     "jup_retro": true
+    }
+   ]
+  },
+  {
+   "aspect": "trine",
+   "enter": "2026-07-21",
+   "leave": "2026-10-08",
+   "exact": [
+    "2026-08-31"
+   ],
+   "move": 2.0,
+   "applying_move": 9.9,
+   "separating_move": -7.2,
+   "turns": [
+    {
+     "kind": "bottom",
+     "date": "2026-07-16",
+     "phase": "applying",
+     "anchor": "enter",
+     "days_from_anchor": -5,
+     "jup_retro": false
+    },
+    {
+     "kind": "peak",
+     "date": "2026-08-24",
+     "phase": "applying",
+     "anchor": "exact",
+     "days_from_anchor": -7,
+     "jup_retro": false
+    }
+   ]
+  }
+ ],
+ "anchors": {
+  "trine|leave": {
+   "bottom": 1,
+   "peak": 4
+  },
+  "trine|enter": {
+   "bottom": 2,
+   "peak": 3
+  },
+  "conjunction|enter": {
+   "bottom": 0,
+   "peak": 1
+  },
+  "trine|exact": {
+   "bottom": 4,
+   "peak": 4
+  },
+  "opposition|exact": {
+   "bottom": 1,
+   "peak": 0
+  },
+  "conjunction|leave": {
+   "bottom": 2,
+   "peak": 0
+  },
+  "opposition|enter": {
+   "bottom": 1,
+   "peak": 0
+  },
+  "conjunction|exact": {
+   "bottom": 0,
+   "peak": 1
+  }
+ },
+ "tend": {
+  "trine|no exact pass": {
+   "bottom": 1,
+   "peak": 2
+  },
+  "trine|separating": {
+   "bottom": 1,
+   "peak": 2
+  },
+  "trine|applying": {
+   "bottom": 3,
+   "peak": 4
+  },
+  "conjunction|applying": {
+   "bottom": 0,
+   "peak": 2
+  },
+  "trine|between passes": {
+   "bottom": 2,
+   "peak": 3
+  },
+  "opposition|between passes": {
+   "bottom": 1,
+   "peak": 0
+  },
+  "conjunction|no exact pass": {
+   "bottom": 1,
+   "peak": 0
+  },
+  "opposition|no exact pass": {
+   "bottom": 1,
+   "peak": 0
+  },
+  "conjunction|separating": {
+   "bottom": 1,
+   "peak": 0
+  }
+ },
+ "tend_all": {
+  "trine": {
+   "bottom": 7,
+   "peak": 11
+  },
+  "conjunction": {
+   "bottom": 2,
+   "peak": 2
+  },
+  "opposition": {
+   "bottom": 2,
+   "peak": 0
+  }
+ },
+ "verify": [
+  {
+   "item": "Trine enters orb",
+   "given": "2027-02-14",
+   "ours": "2027-02-14"
+  },
+  {
+   "item": "Exact trine",
+   "given": "2027-04-03 08:59",
+   "ours": "2027-04-03 08:59"
+  },
+  {
+   "item": "Exact trine",
+   "given": "2027-07-11 19:16",
+   "ours": "2027-07-11 19:15"
+  },
+  {
+   "item": "Trine leaves orb",
+   "given": "2027-08-30",
+   "ours": "2027-08-30"
+  },
+  {
+   "item": "Opposition enters orb",
+   "given": "2028-12-27",
+   "ours": "2028-12-27"
+  },
+  {
+   "item": "Opposition leaves orb",
+   "given": "2029-02-27",
+   "ours": "2029-02-27"
+  },
+  {
+   "item": "Opposition enters orb",
+   "given": "2029-11-15",
+   "ours": "2029-11-15"
+  },
+  {
+   "item": "Exact opposition",
+   "given": "2029-12-22 02:02",
+   "ours": "2029-12-22 02:02"
+  },
+  {
+   "item": "Exact opposition",
+   "given": "2030-04-23 21:57",
+   "ours": "2030-04-23 21:57"
+  },
+  {
+   "item": "Opposition leaves orb",
+   "given": "2030-06-02",
+   "ours": "2030-06-02"
+  },
+  {
+   "item": "Opposition enters orb",
+   "given": "2030-10-14",
+   "ours": "2030-10-14"
+  },
+  {
+   "item": "Exact opposition",
+   "given": "2030-11-19 20:05",
+   "ours": "2030-11-19 20:05"
+  },
+  {
+   "item": "Opposition leaves orb",
+   "given": "2030-12-23",
+   "ours": "2030-12-23"
+  }
+ ],
+ "future": [
+  {
+   "aspect": "trine",
+   "enter": "2027-02-14 12:27:33.999999-05:00",
+   "exact": [
+    "2027-04-03 08:59:01.999999-04:00",
+    "2027-07-11 19:15:49.999999-04:00"
+   ],
+   "leave": "2027-08-30 07:34:13.999999-04:00"
+  },
+  {
+   "aspect": "opposition",
+   "enter": "2028-12-27 20:05:21.999999-05:00",
+   "exact": [],
+   "leave": "2029-02-27 20:37:10.999999-05:00"
+  },
+  {
+   "aspect": "opposition",
+   "enter": "2029-11-15 18:04:07.999999-05:00",
+   "exact": [
+    "2029-12-22 02:02:31.999999-05:00",
+    "2030-04-23 21:57:02.999999-04:00"
+   ],
+   "leave": "2030-06-02 23:10:47.999999-04:00"
+  },
+  {
+   "aspect": "opposition",
+   "enter": "2030-10-14 23:55:11.999999-04:00",
+   "exact": [
+    "2030-11-19 20:05:07.999999-05:00"
+   ],
+   "leave": "2030-12-23 00:40:48.999999-05:00"
+  }
+ ]
+}
