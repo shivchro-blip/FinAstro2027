@@ -959,6 +959,526 @@
   },
   "months": 322
  },
+ "last_year": {
+  "last_close": "2026-11-24",
+  "models": {
+   "A": {
+    "rows": [
+     {
+      "start": "19 Nov 2025",
+      "call": "Bullish",
+      "net": 2,
+      "ret": 2.38,
+      "partial": false
+     },
+     {
+      "start": "18 Dec 2025",
+      "call": "Bearish",
+      "net": -3,
+      "ret": 2.44,
+      "partial": false
+     },
+     {
+      "start": "17 Jan 2026",
+      "call": "Neutral",
+      "net": 0,
+      "ret": -1.5,
+      "partial": false
+     },
+     {
+      "start": "15 Feb 2026",
+      "call": "Bearish",
+      "net": -2,
+      "ret": -1.76,
+      "partial": false
+     },
+     {
+      "start": "17 Mar 2026",
+      "call": "Bearish",
+      "net": -2,
+      "ret": 4.84,
+      "partial": false
+     },
+     {
+      "start": "17 Apr 2026",
+      "call": "Bullish",
+      "net": 1,
+      "ret": 5.22,
+      "partial": false
+     },
+     {
+      "start": "18 May 2026",
+      "call": "Neutral",
+      "net": 0,
+      "ret": 0.16,
+      "partial": false
+     },
+     {
+      "start": "18 Jun 2026",
+      "call": "Neutral",
+      "net": 0,
+      "ret": 0.51,
+      "partial": false
+     },
+     {
+      "start": "19 Jul 2026",
+      "call": "Neutral",
+      "net": 0,
+      "ret": 3.36,
+      "partial": false
+     },
+     {
+      "start": "20 Aug 2026",
+      "call": "Bullish",
+      "net": 3,
+      "ret": -0.75,
+      "partial": false
+     },
+     {
+      "start": "20 Sep 2026",
+      "call": "Neutral",
+      "net": 0,
+      "ret": 0.53,
+      "partial": false
+     },
+     {
+      "start": "20 Oct 2026",
+      "call": "Neutral",
+      "net": 0,
+      "ret": -4.77,
+      "partial": false
+     },
+     {
+      "start": "19 Nov 2026",
+      "call": "Bearish",
+      "net": -4,
+      "ret": -1.67,
+      "partial": true
+     }
+    ],
+    "months": 12,
+    "up": 8,
+    "calls": 6,
+    "right": 3
+   },
+   "B": {
+    "rows": [
+     {
+      "start": "22 Nov 2025",
+      "call": "Neutral",
+      "net": 0,
+      "ret": 3.51,
+      "partial": false
+     },
+     {
+      "start": "21 Dec 2025",
+      "call": "Bearish",
+      "net": -1,
+      "ret": 1.54,
+      "partial": false
+     },
+     {
+      "start": "20 Jan 2026",
+      "call": "Neutral",
+      "net": 0,
+      "ret": -0.85,
+      "partial": false
+     },
+     {
+      "start": "19 Feb 2026",
+      "call": "Bullish",
+      "net": 1,
+      "ret": -5.45,
+      "partial": false
+     },
+     {
+      "start": "21 Mar 2026",
+      "call": "Bearish",
+      "net": -1,
+      "ret": 9.52,
+      "partial": false
+     },
+     {
+      "start": "20 Apr 2026",
+      "call": "Bearish",
+      "net": -2,
+      "ret": 4.31,
+      "partial": false
+     },
+     {
+      "start": "21 May 2026",
+      "call": "Neutral",
+      "net": 0,
+      "ret": 0.91,
+      "partial": false
+     },
+     {
+      "start": "21 Jun 2026",
+      "call": "Neutral",
+      "net": 0,
+      "ret": -0.02,
+      "partial": false
+     },
+     {
+      "start": "23 Jul 2026",
+      "call": "Neutral",
+      "net": 0,
+      "ret": 2.34,
+      "partial": false
+     },
+     {
+      "start": "23 Aug 2026",
+      "call": "Bullish",
+      "net": 1,
+      "ret": 1.18,
+      "partial": false
+     },
+     {
+      "start": "23 Sep 2026",
+      "call": "Neutral",
+      "net": 0,
+      "ret": -1.82,
+      "partial": false
+     },
+     {
+      "start": "23 Oct 2026",
+      "call": "Neutral",
+      "net": 0,
+      "ret": -9.36,
+      "partial": false
+     },
+     {
+      "start": "22 Nov 2026",
+      "call": "Bearish",
+      "net": -2,
+      "ret": 4.21,
+      "partial": true
+     }
+    ],
+    "months": 12,
+    "up": 7,
+    "calls": 5,
+    "right": 1
+   },
+   "C": {
+    "rows": [
+     {
+      "start": "16 Nov 2025",
+      "call": "Bullish",
+      "net": 4,
+      "ret": 0.98,
+      "partial": false
+     },
+     {
+      "start": "16 Dec 2025",
+      "call": "Bearish",
+      "net": -4,
+      "ret": 2.12,
+      "partial": false
+     },
+     {
+      "start": "16 Jan 2026",
+      "call": "Neutral",
+      "net": 0,
+      "ret": -1.56,
+      "partial": false
+     },
+     {
+      "start": "15 Feb 2026",
+      "call": "Bearish",
+      "net": -2,
+      "ret": -1.76,
+      "partial": false
+     },
+     {
+      "start": "18 Mar 2026",
+      "call": "Bearish",
+      "net": -2,
+      "ret": 4.84,
+      "partial": false
+     },
+     {
+      "start": "17 Apr 2026",
+      "call": "Bullish",
+      "net": 1,
+      "ret": 5.22,
+      "partial": false
+     },
+     {
+      "start": "18 May 2026",
+      "call": "Neutral",
+      "net": 0,
+      "ret": 1.39,
+      "partial": false
+     },
+     {
+      "start": "17 Jun 2026",
+      "call": "Neutral",
+      "net": 0,
+      "ret": -0.71,
+      "partial": false
+     },
+     {
+      "start": "17 Jul 2026",
+      "call": "Neutral",
+      "net": 0,
+      "ret": 4.4,
+      "partial": false
+     },
+     {
+      "start": "17 Aug 2026",
+      "call": "Bullish",
+      "net": 4,
+      "ret": -3.0,
+      "partial": false
+     },
+     {
+      "start": "16 Sep 2026",
+      "call": "Neutral",
+      "net": 0,
+      "ret": 1.43,
+      "partial": false
+     },
+     {
+      "start": "17 Oct 2026",
+      "call": "Neutral",
+      "net": 0,
+      "ret": -1.28,
+      "partial": false
+     },
+     {
+      "start": "16 Nov 2026",
+      "call": "Bearish",
+      "net": -5,
+      "ret": -4.77,
+      "partial": true
+     }
+    ],
+    "months": 12,
+    "up": 7,
+    "calls": 6,
+    "right": 3
+   },
+   "D": {
+    "rows": [
+     {
+      "start": "19 Nov 2025",
+      "call": "Bullish",
+      "net": 2,
+      "ret": 2.9,
+      "partial": false
+     },
+     {
+      "start": "20 Dec 2025",
+      "call": "Bearish",
+      "net": -1,
+      "ret": 1.54,
+      "partial": false
+     },
+     {
+      "start": "19 Jan 2026",
+      "call": "Neutral",
+      "net": 0,
+      "ret": -0.85,
+      "partial": false
+     },
+     {
+      "start": "19 Feb 2026",
+      "call": "Bullish",
+      "net": 1,
+      "ret": -5.45,
+      "partial": false
+     },
+     {
+      "start": "21 Mar 2026",
+      "call": "Bearish",
+      "net": -1,
+      "ret": 9.26,
+      "partial": false
+     },
+     {
+      "start": "21 Apr 2026",
+      "call": "Bearish",
+      "net": -2,
+      "ret": 4.56,
+      "partial": false
+     },
+     {
+      "start": "21 May 2026",
+      "call": "Neutral",
+      "net": 0,
+      "ret": 0.91,
+      "partial": false
+     },
+     {
+      "start": "20 Jun 2026",
+      "call": "Neutral",
+      "net": 0,
+      "ret": -0.76,
+      "partial": false
+     },
+     {
+      "start": "21 Jul 2026",
+      "call": "Neutral",
+      "net": 0,
+      "ret": 2.66,
+      "partial": false
+     },
+     {
+      "start": "20 Aug 2026",
+      "call": "Bullish",
+      "net": 2,
+      "ret": 0.12,
+      "partial": false
+     },
+     {
+      "start": "20 Sep 2026",
+      "call": "Neutral",
+      "net": 0,
+      "ret": 0.53,
+      "partial": false
+     },
+     {
+      "start": "20 Oct 2026",
+      "call": "Neutral",
+      "net": 0,
+      "ret": -6.7,
+      "partial": false
+     },
+     {
+      "start": "20 Nov 2026",
+      "call": "Bearish",
+      "net": -4,
+      "ret": 0.35,
+      "partial": true
+     }
+    ],
+    "months": 12,
+    "up": 8,
+    "calls": 6,
+    "right": 2
+   }
+  },
+  "stated": {
+   "rows": [
+    {
+     "start": "19 Nov 2025 04:25",
+     "asc": "Libra 28\u00b031'",
+     "reading": "Supported",
+     "ret": 2.38,
+     "partial": false
+    },
+    {
+     "start": "18 Dec 2025 18:25",
+     "asc": "Cancer 23\u00b009'",
+     "reading": "No stated indication",
+     "ret": 2.44,
+     "partial": false
+    },
+    {
+     "start": "17 Jan 2026 05:07",
+     "asc": "Sagittarius 23\u00b030'",
+     "reading": "No stated indication",
+     "ret": -1.5,
+     "partial": false
+    },
+    {
+     "start": "15 Feb 2026 18:41",
+     "asc": "Virgo 11\u00b059'",
+     "reading": "Bearish",
+     "ret": -1.76,
+     "partial": false
+    },
+    {
+     "start": "17 Mar 2026 17:37",
+     "asc": "Virgo 10\u00b051'",
+     "reading": "Bearish",
+     "ret": 4.84,
+     "partial": false
+    },
+    {
+     "start": "17 Apr 2026 03:22",
+     "asc": "Aquarius 15\u00b005'",
+     "reading": "Bearish",
+     "ret": 5.22,
+     "partial": false
+    },
+    {
+     "start": "18 May 2026 01:20",
+     "asc": "Aquarius 14\u00b051'",
+     "reading": "Bearish",
+     "ret": 0.16,
+     "partial": false
+    },
+    {
+     "start": "18 Jun 2026 08:32",
+     "asc": "Leo 5\u00b032'",
+     "reading": "Pressure",
+     "ret": 0.51,
+     "partial": false
+    },
+    {
+     "start": "19 Jul 2026 19:20",
+     "asc": "Capricorn 11\u00b030'",
+     "reading": "Pressure",
+     "ret": 3.36,
+     "partial": false
+    },
+    {
+     "start": "20 Aug 2026 03:01",
+     "asc": "Cancer 18\u00b052'",
+     "reading": "Bearish",
+     "ret": -0.75,
+     "partial": false
+    },
+    {
+     "start": "20 Sep 2026 01:47",
+     "asc": "Cancer 28\u00b038'",
+     "reading": "Pressure",
+     "ret": 0.53,
+     "partial": false
+    },
+    {
+     "start": "20 Oct 2026 12:28",
+     "asc": "Capricorn 0\u00b015'",
+     "reading": "Bearish",
+     "ret": -4.77,
+     "partial": false
+    },
+    {
+     "start": "19 Nov 2026 10:10",
+     "asc": "Capricorn 10\u00b001'",
+     "reading": "Weak, moderated",
+     "ret": -1.67,
+     "partial": true
+    }
+   ],
+   "calls": 10,
+   "right": 4
+  },
+  "daily": {
+   "calls": {
+    "Bullish": [
+     14,
+     25,
+     16,
+     25
+    ],
+    "Bearish": [
+     92,
+     184,
+     89,
+     180
+    ]
+   },
+   "base": [
+    130,
+    254,
+    130,
+    250
+   ]
+  }
+ },
  "forward": {
   "A": [
    {

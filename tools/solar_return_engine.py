@@ -208,6 +208,69 @@ def score(c):
     return dict(items=items, bull=bull, bear=bear, net=net, vol=vol, call="Bullish" if net > 0 else "Bearish" if net < 0 else "Neutral")
 
 
+def last_year(nat, lo=dt.date(2025, 11, 20)):
+    """The past 12 solar months: rubric calls (four models), the stated-indication reading the Solar return way (27°18',
+    which reproduced the shared charts) and the generated daily calls, on S&P closes to the latest session."""
+    sys.path.insert(0, str(ROOT / "tools"))
+    from model_check_60d import load
+    AF = load(ROOT / "tools" / "author_forecasts.py", "af_ly")
+    SRG = load(ROOT / "tools" / "solar_return_generate.py", "srg_ly")
+    P = AF.prices()
+    D, C = list(P), [P[d] for d in P]
+    hi = D[-1]
+    out = dict(last_close=str(hi), models={})
+    for m in ("A", "B", "C", "D"):
+        bs = boundaries(m, nat, dt.datetime(lo.year, lo.month, 1, tzinfo=UTC) - dt.timedelta(days=40), dt.datetime(hi.year + 1, 1, 31, tzinfo=UTC))
+        rows = []
+        for t0, t1 in zip(bs, bs[1:]):
+            if t0.date() < lo - dt.timedelta(days=5) or t0.date() > hi:
+                continue
+            i, j = close_idx(D, t0), min(close_idx(D, t1), len(D) - 1)
+            sc = score(chart(t0, m in ("B", "D")))
+            rows.append(dict(start=t0.astimezone(ET).strftime("%d %b %Y"), call=sc["call"], net=sc["net"], ret=round((C[j] / C[i] - 1) * 100, 2),
+                             partial=t1.astimezone(ET).date() > hi))
+        done = [r for r in rows if not r["partial"]]
+        calls = [r for r in done if r["call"] != "Neutral"]
+        out["models"][m] = dict(rows=rows, months=len(done), up=sum(r["ret"] > 0 for r in done), calls=len(calls),
+                                right=sum((r["ret"] > 0) == (r["call"] == "Bullish") for r in calls))
+    mons = SRG.months(dt.datetime(lo.year, lo.month, 1) - dt.timedelta(days=40), dt.datetime(hi.year + 1, 1, 31))
+    st = []
+    for mm in mons:
+        if not mm["end"] or mm["start"].date() < lo - dt.timedelta(days=5) or mm["start"].date() > hi:
+            continue
+        i, j = close_idx(D, mm["start"]), min(close_idx(D, mm["end"]), len(D) - 1)
+        st.append(dict(start=mm["start"].strftime("%d %b %Y %H:%M"), asc=mm["asc"], reading=mm["reading"], ret=round((C[j] / C[i] - 1) * 100, 2),
+                       partial=mm["end"].date() > hi))
+    sc_ = [r for r in st if SRG.LEAN[r["reading"]] and not r["partial"]]
+    out["stated"] = dict(rows=st, calls=len(sc_), right=sum((r["ret"] > 0) == (SRG.LEAN[r["reading"]] > 0) for r in sc_))
+    _, ms = SRG.NC.backtest("A")
+    SRG.START_DATES[:] = [x["start"].astimezone(SRG.ET).date() for x in ms]
+    t = {"Bullish": [0, 0, 0, 0], "Bearish": [0, 0, 0, 0]}
+    base = [0, 0, 0, 0]
+    for k in range(1, len(D)):
+        d = D[k]
+        if not lo <= d <= hi:
+            continue
+        mm = SRG.month_of(mons, d)
+        call = SRG.day_call(d, mm["reading"] if mm else "")[0]
+        r1 = C[k] / C[k - 1] - 1
+        r5 = C[k + 4] / C[k - 1] - 1 if k + 4 < len(D) else None
+        base[0] += r1 > 0
+        base[1] += 1
+        if r5 is not None:
+            base[2] += r5 > 0
+            base[3] += 1
+        if call in t:
+            x = t[call]
+            x[0] += (r1 > 0) == (call == "Bullish")
+            x[1] += 1
+            if r5 is not None:
+                x[2] += (r5 > 0) == (call == "Bullish")
+                x[3] += 1
+    out["daily"] = dict(calls=t, base=base)
+    return out
+
+
 # ------------------------------------------------------------------ market data and tests
 def spx():
     rows = [(dt.date.fromisoformat(r["date"]), float(r["close"])) for r in csv.DictReader(open(OUT / "backtest" / "spx_GSPC_daily_1928.csv"))]
@@ -330,6 +393,7 @@ def main():
         ver[model] = rows
     res["verify"] = ver
     res["sensitivity"] = sensitivity(D, C)
+    res["last_year"] = last_year(nat)
     # forward: Dec 2026 - Dec 2027
     fw = {}
     for model in ("A", "B", "C", "D"):
@@ -414,7 +478,23 @@ td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap} .g{c
         else:
             o.append(f"<tr><td>{E(k)}</td><td class='n'>{v['n']}</td><td colspan='3' class='s'>too few</td></tr>")
     o.append("</tbody></table></div>")
-    o.append("<h2>5. The charts ahead, Dec 2026 – Dec 2027</h2>")
+    ly = res.get("last_year")
+    if ly:
+        st = ly["stated"]
+        dd = ly["daily"]["calls"]
+        bz = ly["daily"]["base"]
+        o.append(f"<h2>5. The past year (20 Nov 2025 – {ly['last_close']})</h2><div class='wrap'><table><thead><tr><th>Method</th><th class='n'>Calls right</th><th class='n'>Always bullish</th></tr></thead><tbody>")
+        upm = sum(r["ret"] > 0 for r in st["rows"] if not r["partial"])
+        nm = sum(1 for r in st["rows"] if not r["partial"])
+        o.append(f"<tr><td>Stated-indication reading, the Solar return way (27°18′; reproduces the shared charts)</td><td class='n'>{st['right']} of {st['calls']}</td><td class='n'>{upm} of {nm} months up</td></tr>")
+        for m, v in ly["models"].items():
+            o.append(f"<tr><td>Rubric, model {m}</td><td class='n'>{v['right']} of {v['calls']}</td><td class='n'>{v['up']} of {v['months']} months up</td></tr>")
+        o.append(f"<tr><td>Daily calls, bearish (same day / 5 sessions)</td><td class='n'>{dd['Bearish'][0]}/{dd['Bearish'][1]} · {dd['Bearish'][2]}/{dd['Bearish'][3]}</td><td class='n'>down on {bz[1] - bz[0]}/{bz[1]} days · {bz[3] - bz[2]}/{bz[3]} spans</td></tr>")
+        o.append(f"<tr><td>Daily calls, bullish (same day / 5 sessions)</td><td class='n'>{dd['Bullish'][0]}/{dd['Bullish'][1]} · {dd['Bullish'][2]}/{dd['Bullish'][3]}</td><td class='n'>up on {bz[0]}/{bz[1]} days · {bz[2]}/{bz[3]} spans</td></tr>")
+        o.append("</tbody></table></div>")
+        rows = "".join(f"<tr><td class='n'>{E(r['start'])}</td><td>{E(r['asc'])}</td><td>{E(r['reading'])}</td><td class='n {'g' if r['ret'] > 0 else 'r'}'>{r['ret']:+.2f}%{' (so far)' if r['partial'] else ''}</td></tr>" for r in st["rows"])
+        o.append(f"<details open><summary>The past year's solar months, read the Solar return way</summary><div class='wrap'><table><thead><tr><th>Month starts (ET)</th><th>Ascendant</th><th>Reading</th><th class='n'>S&amp;P in the month</th></tr></thead><tbody>{rows}</tbody></table></div></details>")
+    o.append("<h2>6. The charts ahead, Dec 2026 – Dec 2027</h2>")
     for m, rows in res["forward"].items():
         body = ""
         for r in rows:
