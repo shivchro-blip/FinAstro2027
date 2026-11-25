@@ -65,6 +65,7 @@ def gather(a, b):
     sr["engine"] = json.load(open(OUT / "solar_return_engine_ET.json"))
     sr["gjc"] = json.load(open(OUT / "gold_jupiter_crash_ET.json"))
     sr["turns"] = json.load(open(OUT / "gold_turns_ET.json"))
+    sr["jsg"] = json.load(open(OUT / "jupiter_saturn_gold_ET.json"))
     sr["doc"] = doc_rows(json.load(open(OUT / "doc_dec2026_check_ET.json")), res)
     sr["kartari"] = [dict(key=r["key"], title=r["title"], tone=r["tone"], basis=r["basis"], record=r["record"],
                           spans=[(dt.datetime.fromisoformat(u["frm_iso"]), dt.datetime.fromisoformat(u["to_iso"]), u["pair"]) for u in r["upcoming"]])
@@ -638,6 +639,7 @@ def page(res, sr, track, checks, a, b, generated):
     o.append(f"</tbody></table></div><p class='s'>Daily call rule: the bearish aspects (Sun square Mars within 3°, Mars–Ketu within 5°) come first; Jupiter sextile Venus within 1° is bullish; "
              f"Mars square Uranus alone is volatile; otherwise the month's reading. Over 1928–2026: bullish calls right {bt['Bullish']['d1']}% same day / {bt['Bullish']['d5']}% over 5 sessions; "
              f"bearish calls right {bt['Bearish']['d1']}% / {bt['Bearish']['d5']}%; the S&amp;P rose on {bt['_base']['up1']}% of days and over {bt['_base']['up5']}% of 5-session spans.</p>")
+    sr_jsg[:] = [sr["jsg"]]
     o.append(gjc_html(sr["gjc"]))
     o.append(gp_html(sr["gp"]))
     o.append(doc_html(sr["doc"]))
@@ -839,6 +841,9 @@ def gjc_on(g, d):
     return out
 
 
+sr_jsg = []
+
+
 def gjc_html(g):
     o = ["<h2 id='gjc'>Gold: Jupiter's afflictions in past crashes (your note)</h2>",
          "<p class='s'>The note: in the gold crashes of 1974, 1980, 2008, 2011, 2020, 2022 and 2026 Jupiter was in trine / mutual aspect / conjunction with Saturn, or with a node "
@@ -872,6 +877,15 @@ def gjc_html(g):
              "For the current fall that points to two watch windows: <b>11 Nov 2026 – 10 Jan 2027</b> (Saturn stations direct 11 Dec at Pisces 13.7°) and <b>14 Mar – 13 May 2027</b> "
              "(Jupiter stations direct 13 Apr at Cancer 22.75°, with Ketu within 0.5°, Mars nearby and Saturn trine within 1.4°). The Jupiter–Saturn trine was equally common at peaks, "
              "and about 40 features were tested, so these are watch periods, not timing rules.</div>")
+    jsg = sr_jsg[0] if sr_jsg else None
+    if jsg:
+        o.append("<h3>Gold turn watch: Jupiter–Saturn aspects and stations, 2026–2030</h3><div class='wrap'><table><thead><tr><th>Date (New York)</th><th>Event</th><th>Gold: likely</th>"
+                 "<th>Past gold turns at this point</th></tr></thead><tbody>")
+        for r in jsg["rows"]:
+            cls = "up" if r["lean"].startswith("bottom") else "dn" if r["lean"].startswith("top") else "vo"
+            o.append(f"<tr><td class='n'>{E(r['date'])}</td><td>{E(r['event'])}</td><td>{chip(r['lean'], cls)}</td><td class='s'>{r['basis'].get('bottom', 0)} bottoms, {r['basis'].get('peak', 0)} tops</td></tr>")
+        o.append("</tbody></table></div><p class='s'>All Jupiter–Saturn dates you were given match our ephemeris to the minute (jupiter_saturn_gold_ET.html). A lean is shown only where past "
+                 "gold turns at the same point split at least 2 to 1 with three or more turns; samples are small.</p>")
     return "".join(o)
 
 

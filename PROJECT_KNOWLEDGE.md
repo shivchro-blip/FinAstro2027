@@ -104,6 +104,7 @@ Known data problems:
 | `tools/solar_return_engine.py` | Solar return in four models: A tropical and B sidereal monthly degree returns, C/D annual return ÷ 12. Natal: NYSE 10:10 LMT, with alternative birth times as sensitivity. Placidus and whole-sign houses, mean and true node. Applies an orb-weighted aspect rubric (the user's 24 Nov spec), tests it on the S&P 1928–2026 against an always-bullish baseline, verifies the given 2027 timestamps and casts charts to Dec 2027 |
 | `tools/gold_jupiter_crash.py` | The user's gold-crash note (Jupiter–Saturn trine/aspect/conjunction, Jupiter with a node or Pluto, Jupiter hemmed, malefic Vedha on Jupiter). Checks each claimed year from its peak to the low within 12 months, measures how common each condition is on monthly gold since 1972 (`backtest/gold_monthly_1833.csv`, datasets/gold-prices), and lists active spans to end-2027 |
 | `tools/gold_turns.py` | Gold's major peaks and bottoms (15% zigzag; monthly 1972–1999, daily 2000–2026): sidereal degrees of every body at each turn, station proximity, Jupiter–Saturn angle, Jupiter afflictions and Vedha. Tests which features recur at bottoms and peaks against all weeks, and gives watch windows for the current fall |
+| `tools/jupiter_saturn_gold.py` | Jupiter–Saturn aspects in a 10° orb (degree-based; exact passes to the minute) for Nov 2026 – Dec 2030, verified against the user's list. Shows every past window since 1972 with gold's turns, classified by the nearest anchor (orb entry / exact / exit). Gives a plain bottom-or-top table, which also includes Jupiter and Saturn direct stations |
 | `tools/gold_tracker.py [--metal silver]` | Trackers: findings, rule status, best-rule dates, analysis log |
 | `tools/build_year.py YEAR` | Astronomy layer for any year; 2000–2024 are git-ignored and rebuilt on demand |
 | `tools/fetch_prices.py` | Downloads GC=F and SI=F (Yahoo; the host must be allowed) |
@@ -135,6 +136,7 @@ Known data problems:
 | `author_forecasts_ET.html` | The Solar return forecast scorecard and rule tests |
 | `kartari_test_ET.html` | Paap and Shubh Kartari tested |
 | `kartari_jan2027_ET.html` | Mercury Paap Kartari in Jan 2027, S&P and Sensex (also inside the 2026 calendar) |
+| `jupiter_saturn_gold_ET.html` | Jupiter–Saturn aspects and gold: bottom or top, 2026–2030 |
 | `gold_turns_ET.html` | Gold turns since 1972 and the bottom-watch windows |
 | `gold_jupiter_crash_ET.html` | Gold crashes and Jupiter's afflictions, checked |
 | `solar_return_engine_ET.html` | Solar return engine: models, rubric, sensitivity, tests, charts to Dec 2027 |
@@ -733,6 +735,37 @@ Results, as the share of calls right:
 - **Active now:** Jupiter in Paap Kartari (Ketu | Mars), 16 Nov 2026 – 31 Jan 2027.
 - **Next:** Mercury in Paap Kartari (B116) 1–15 Jan 2027 (Sun | Pluto), 25 Jan and 18 Feb – 16 Mar 2027.
 - **In the calendar:** shown in the 2026 calendar's key dates, read-first notes and each day's notes.
+
+**Jupiter–Saturn aspects and gold, 2026–2030** (user list, 25 Nov 2026; `jupiter_saturn_gold_ET.html`; table also in the 2026 calendar's gold section)
+
+- **Verification:** every date the user gave matches our ephemeris to the minute: the trine window 14 Feb – 30 Aug 2027 (exact 3 Apr 08:59 and 11 Jul 19:15) and the three opposition windows of 2028–2030 (exact 22 Dec 2029, 23 Apr 2030, 19 Nov 2030).
+  - The degree-based trine differs from the earlier sign-based spans (25 Jan – 2 Jun and 26 Jun – 19 Oct 2027).
+- **Past windows since 1972: gold's turns by the nearest point of the window:**
+
+| Point of the window | Tops | Bottoms |
+|---|---|---|
+| Trine: orb exit | 4 (1973, 1974, Mar 2008, Jan 2026) | 1 |
+| Trine: orb entry | 3 | 2 |
+| Trine: exact passes | 4 | 4 |
+| Opposition | 0 | 2 |
+
+- **Stations within ±30 days:**
+  - Jupiter direct: 8 bottoms vs 5 tops.
+  - Saturn direct: 7 bottoms vs 1 top.
+- **The plain table:**
+
+| Date | Event | Reading |
+|---|---|---|
+| 11 Dec 2026 | Saturn direct | Bottom-leaning (weak) |
+| 14 Feb 2027 | Trine enters orb | Either way |
+| 3 Apr 2027 | Exact trine | Either way |
+| 13 Apr 2027 | Jupiter direct | Bottom-leaning (weak) |
+| 11 Jul 2027 | Exact trine | Either way |
+| 30 Aug 2027 | Trine leaves orb | Top-leaning |
+| Late 2027 – 2030 | Saturn and Jupiter direct stations | Bottom-leaning (weak) |
+| 2028–2030 | Oppositions | Either way (1 bottom, 0 tops in history) |
+
+- Small samples: leads, not rules.
 
 **Gold's peaks and bottoms since 1972, and the current fall** (user request 25 Nov 2026; `gold_turns_ET.html`)
 

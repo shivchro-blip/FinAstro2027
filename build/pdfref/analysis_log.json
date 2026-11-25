@@ -667,6 +667,18 @@
     "build/pdfref/gold_turns_ET.html",
     "tools/calendar_2026.py"
    ]
+  },
+  {
+   "date": "2026-11-25",
+   "pr": "54",
+   "topic": "Jupiter-Saturn aspects and gold: bottom or top, Nov 2026 - Dec 2030",
+   "analysis": "tools/jupiter_saturn_gold.py: degree-based Jupiter-Saturn conjunction / trine / opposition windows (10 deg orb, exact passes to the minute) Nov 2026 - Dec 2030 verified against the user's list; every past window 1972-2026 with gold's moves and its 15%-zigzag turns classified by the nearest anchor (orb entry, exact pass, orb exit); Jupiter and Saturn direct stations from gold_turns; a plain bottom/top table (lean only at a 2:1 split with 3+ turns). Added to the 2026 calendar.",
+   "result": "All given dates match to the minute (trine 14 Feb - 30 Aug 2027, exact 3 Apr 08:59 and 11 Jul 19:15; oppositions 2028-2030, exact 22 Dec 2029, 23 Apr 2030, 19 Nov 2030). Past trine windows: tops at the orb exit 4 vs 1 bottom (1973, 1974, Mar 2008, Jan 2026); entry 3 tops vs 2 bottoms; exact passes 4 vs 4. Jupiter direct station 8 bottoms vs 5 tops; Saturn direct 7 vs 1. Table: 11 Dec 2026 bottom-leaning (weak), 13 Apr 2027 bottom-leaning (weak), 30 Aug 2027 top-leaning, exact trines and oppositions either way.",
+   "files": [
+    "tools/jupiter_saturn_gold.py",
+    "build/pdfref/jupiter_saturn_gold_ET.html",
+    "tools/calendar_2026.py"
+   ]
   }
  ]
 }
