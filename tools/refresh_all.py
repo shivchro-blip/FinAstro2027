@@ -72,6 +72,7 @@ STEPS = [
     ["tools/kartari_jan2027.py"],
     ["tools/doc_dec2026_check.py"],
     ["tools/gold_jupiter_crash.py"],
+    ["tools/gold_turns.py"],
     ["tools/calendar_2026.py"],
     ["tools/rule_tally.py", "2026-11-20", "2026-11-23"],
     ["tools/md_to_html.py", "Reference_materials/extracted/OTHERS_FINANCIAL_REVIEW.md", "Others Financial Review"],

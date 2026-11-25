@@ -103,6 +103,7 @@ Known data problems:
 | `tools/global_predictions.py` | Global Predictions, an outside forecast of the US market for 24 Nov – 5 Dec 2026. Keeps the calls (FORECASTS), checks the astronomy, scores the calls against the S&P (volatility windows against the trailing default rate), and tests the same configurations since 1928 (big days, sharp reversals, direction) through `author_forecasts.tests(conds)` |
 | `tools/solar_return_engine.py` | Solar return in four models: A tropical and B sidereal monthly degree returns, C/D annual return ÷ 12. Natal: NYSE 10:10 LMT, with alternative birth times as sensitivity. Placidus and whole-sign houses, mean and true node. Applies an orb-weighted aspect rubric (the user's 24 Nov spec), tests it on the S&P 1928–2026 against an always-bullish baseline, verifies the given 2027 timestamps and casts charts to Dec 2027 |
 | `tools/gold_jupiter_crash.py` | The user's gold-crash note (Jupiter–Saturn trine/aspect/conjunction, Jupiter with a node or Pluto, Jupiter hemmed, malefic Vedha on Jupiter). Checks each claimed year from its peak to the low within 12 months, measures how common each condition is on monthly gold since 1972 (`backtest/gold_monthly_1833.csv`, datasets/gold-prices), and lists active spans to end-2027 |
+| `tools/gold_turns.py` | Gold's major peaks and bottoms (15% zigzag; monthly 1972–1999, daily 2000–2026): sidereal degrees of every body at each turn, station proximity, Jupiter–Saturn angle, Jupiter afflictions and Vedha. Tests which features recur at bottoms and peaks against all weeks, and gives watch windows for the current fall |
 | `tools/gold_tracker.py [--metal silver]` | Trackers: findings, rule status, best-rule dates, analysis log |
 | `tools/build_year.py YEAR` | Astronomy layer for any year; 2000–2024 are git-ignored and rebuilt on demand |
 | `tools/fetch_prices.py` | Downloads GC=F and SI=F (Yahoo; the host must be allowed) |
@@ -134,6 +135,7 @@ Known data problems:
 | `author_forecasts_ET.html` | The Solar return forecast scorecard and rule tests |
 | `kartari_test_ET.html` | Paap and Shubh Kartari tested |
 | `kartari_jan2027_ET.html` | Mercury Paap Kartari in Jan 2027, S&P and Sensex (also inside the 2026 calendar) |
+| `gold_turns_ET.html` | Gold turns since 1972 and the bottom-watch windows |
 | `gold_jupiter_crash_ET.html` | Gold crashes and Jupiter's afflictions, checked |
 | `solar_return_engine_ET.html` | Solar return engine: models, rubric, sensitivity, tests, charts to Dec 2027 |
 | `global_predictions_ET.html` | Global Predictions calls, astronomy and tests |
@@ -731,6 +733,27 @@ Results, as the share of calls right:
 - **Active now:** Jupiter in Paap Kartari (Ketu | Mars), 16 Nov 2026 – 31 Jan 2027.
 - **Next:** Mercury in Paap Kartari (B116) 1–15 Jan 2027 (Sun | Pluto), 25 Jan and 18 Feb – 16 Mar 2027.
 - **In the calendar:** shown in the 2026 calendar's key dates, read-first notes and each day's notes.
+
+**Gold's peaks and bottoms since 1972, and the current fall** (user request 25 Nov 2026; `gold_turns_ET.html`)
+
+- **Turns:** a 15% zigzag gives 24 bottoms and 25 peaks since 1972. The current fall from the 24 Aug 2026 peak (4,698) is −25% to 20 Nov and not yet a confirmed bottom.
+- **At bottoms, against all weeks:**
+
+| Feature | Bottoms | All weeks | p |
+|---|---|---|---|
+| Jupiter–Saturn within 10° of trine, opposition or conjunction | 42% | 20% | 0.014 |
+| Jupiter direct station within ±30 days | 33% | 15% | 0.02 |
+| Saturn direct station within ±30 days | 29% | 16% | 0.08 |
+
+- **At peaks:** the Jupiter–Saturn trine was at 36% vs 16% (p 0.012). The trine marks turns either way, not direction.
+- **Multiple testing:** about 40 features were tested, so these are leads.
+- **Watch windows for the current fall:**
+  - **11 Nov 2026 – 10 Jan 2027.** Saturn stations direct on 11 Dec at Pisces 13.7°. Jupiter stations retrograde on 13 Dec at Leo 2.8°.
+  - **14 Mar – 13 May 2027.** Jupiter stations direct on 13 Apr at Cancer 22.75° (Ashlesha), within 0.5° of Ketu, with Mars at Cancer 27.5° and Saturn trine within 1.4°.
+  - The second window coincides with:
+    - Solar return's Mar–May 2027 bottom.
+    - The Mars–Jupiter–Ketu-in-Cancer lead (9 Mar – 26 Apr).
+    - The end of malefic Vedha on Jupiter (9 Apr).
 
 **Gold crashes and Jupiter's afflictions** (user note, 25 Nov 2026; `gold_jupiter_crash_ET.html`; sidereal Lahiri; monthly gold since 1972 and daily COMEX since 2000)
 

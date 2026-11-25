@@ -655,6 +655,18 @@
     "build/pdfref/backtest/gold_monthly_1833.csv",
     "tools/calendar_2026.py"
    ]
+  },
+  {
+   "date": "2026-11-25",
+   "pr": "53",
+   "topic": "Gold's peaks and bottoms since 1972: the sky at each turn; bottom-watch windows for the current fall",
+   "analysis": "tools/gold_turns.py: 15% zigzag on monthly gold 1972-1999 and daily COMEX gold 2000-2026 (24 bottoms, 25 peaks); sidereal degrees of every body at each turn, station proximity (Mercury 7, Venus/Mars 15, Jupiter/Saturn 30 days), Jupiter-Saturn angle, Jupiter afflictions and malefic Vedha; each feature at bottoms and peaks against all weeks 1972-2026 (binomial p); upcoming stations and affliction changes; watch windows. Added to the 2026 calendar.",
+   "result": "At bottoms: Jupiter-Saturn within 10 deg of trine/opposition/conjunction 42% vs 20% (p 0.014), Jupiter direct station within 30 days 33% vs 15% (p 0.02), Saturn direct station 29% vs 16% (p 0.08); at peaks the Jupiter-Saturn trine 36% vs 16% (p 0.012) - marks turns, not direction; ~40 tests, leads only. Windows: 11 Nov 2026 - 10 Jan 2027 (Saturn direct 11 Dec, Pisces 13.7 deg) and 14 Mar - 13 May 2027 (Jupiter direct 13 Apr, Cancer 22.75 deg, with Ketu within 0.5 deg, Mars near, Saturn trine within 1.4 deg).",
+   "files": [
+    "tools/gold_turns.py",
+    "build/pdfref/gold_turns_ET.html",
+    "tools/calendar_2026.py"
+   ]
   }
  ]
 }
