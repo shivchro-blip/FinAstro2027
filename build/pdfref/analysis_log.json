@@ -642,6 +642,19 @@
     "tools/solar_return_engine.py",
     "build/pdfref/solar_return_engine_ET.html"
    ]
+  },
+  {
+   "date": "2026-11-25",
+   "pr": "52",
+   "topic": "Gold crashes and Jupiter's afflictions (user note) checked",
+   "analysis": "tools/gold_jupiter_crash.py: each claimed year (1974, 1980, 2008, 2011, 2020, 2022, 2026) from the year's gold high to the low within 12 months; Jupiter-Saturn relation, Saturn's aspect, Jupiter with a node / Pluto, hemming and malefic Sarvatobhadra Vedha on Jupiter at the peak and through the fall; how common each condition is on monthly gold 1972-2026 (new long series from datasets/gold-prices) with gold's next 3 and 6 months; active spans to end-2027. Added to the 2026 calendar.",
+   "result": "Positions mostly right with sidereal corrections (Saturn in Virgo at the Jan 1980 and Aug 2011 peaks; Jupiter in Gemini at the Jan 2026 peak). Malefic Vedha present in every fall but in 28% of all months. 'Jupiter afflicted' holds in 69% of months and at 6 of 8 crash peaks - not specific; Jupiter-Saturn trine 3 of 8 peaks vs 16% of months (lead; next-6-month gold +1.9% vs +5.9% but fewer 10% falls). Current Jupiter-Ketu in Leo ends 5 Dec 2026; returns in Cancer 25 Jan - 25 Jun 2027; trine 25 Jan - 2 Jun and 26 Jun - 19 Oct 2027; malefic Vedha 6 Dec 2026 - 9 Apr 2027; all together 25 Jan - 9 Apr 2027.",
+   "files": [
+    "tools/gold_jupiter_crash.py",
+    "build/pdfref/gold_jupiter_crash_ET.html",
+    "build/pdfref/backtest/gold_monthly_1833.csv",
+    "tools/calendar_2026.py"
+   ]
   }
  ]
 }
