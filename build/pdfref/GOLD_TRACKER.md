@@ -1,6 +1,6 @@
 # Gold findings tracker
 
-Generated 24 Nov 2026 19:47 EST by `tools/gold_tracker.py` (`--refresh` re-runs both backtests). HTML version: `GOLD_TRACKER.html`.
+Generated 24 Nov 2026 20:16 EST by `tools/gold_tracker.py` (`--refresh` re-runs both backtests). HTML version: `GOLD_TRACKER.html`.
 
 ## Recent findings
 
@@ -104,6 +104,7 @@ Best (from the 26 yr data): Mars aspected by Saturn while Jupiter retrograde, U2
 
 | Date | PR | Topic | Result |
 |---|---|---|---|
+| 2026-11-25 | #48 | Solar return engine: four calculation models, an aspect rubric, sensitivity and 1928-2026 tests | Natal 27°17'39" tropical / 6°20'11" Lahiri confirmed; pasted 'Ascendant 19°51' Aries' wrong (Leo 11.6°). Given 2027 timestamps reproduced within 1 minute. Houses Placidus vs whole sign change the indications in 32.6% of months. Rubric calls right A 44.6% / B 46.7% / C 45.0% / D 47.8% vs always-bullish 60.9-58.9% - worse in every model and period; no item significant after correction (Saturn square Sun 48.5% vs 39.5% fell). Now: all models bearish for the 19 Nov chart, bullish for December; 2027 model A bearish Feb, Mar, May, Jul, bullish Oct, Dec. |
 | 2026-11-24 | #47 | Day report for Wed 25 Nov 2026 | Gold Bearish Low with a big-move watch on the Sun-Uranus opposition (17:41 ET); no signal for S&P, Sensex, silver; combined model S&P 56% up (normal 54%), big-day chances S&P 3%, gold 11%; 146 rules active (21 supported); S&P calendar row Kshay Tithi Krishna 'Bullish' at chance (62% vs 59%); Moon perigee 16:01 ET; Solar return 'down'; Global Predictions volatility window open. Actual moves to be added after the close. |
 | 2026-11-24 | #46 | Day report for Tue 24 Nov 2026 updated with the actual moves | Gold -2.64% (bearish right; big day inside the full-Moon watch); silver -5.65% (big day, no call); S&P -0.50%, Nasdaq -1.48% (no signal; combined model 58% up - wrong by a hair); Sensex closed (Guru Nanak Jayanti). Solar return day call 'down' right (week 1 of 2); Global Predictions 24-27 Nov window open, no sharp reversal yet, 11% of the 23 Nov rally given back. |
 | 2026-11-24 | #45 | Global Predictions (outside forecast): US market 24 Nov - 5 Dec 2026 | Astronomy right (Full Moon conjunct Uranus 1.4 deg, Mars square, Sun-Uranus opposition 25 Nov 17:41 ET, Mars-Uranus square exact 4 Dec) except Venus-Mercury (no aspect, 24-28 deg apart). History: Full Moon near Uranus 14 sharp reversals vs 6.5 (p 0.007) but all in 1977-2026, big days normal - a lead; Sun opposite Uranus reversals 23 vs 17 (p 0.10); Mars square Uranus nothing; Venus conjunct Mercury more big days (p 0.01), no bullish tilt. Calls open; default rate for a 3-session volatility window 15%. |

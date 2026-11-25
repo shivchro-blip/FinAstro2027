@@ -1,0 +1,2385 @@
+{
+ "natal": {
+  "07:52": {
+   "trop": 57.20205284066998,
+   "sid": 36.24410936207958,
+   "asc": 103.85135860617532,
+   "moon": 18.64494230431701
+  },
+  "07:54": {
+   "trop": 57.20338880974377,
+   "sid": 36.24544530474162,
+   "asc": 104.27201233315265,
+   "moon": 18.66250873076313
+  },
+  "08:52": {
+   "trop": 57.2421316227826,
+   "sid": 36.284187346378424,
+   "asc": 116.15975530965568,
+   "moon": 19.17177169338844
+  },
+  "09:00": {
+   "trop": 57.247475419286616,
+   "sid": 36.28953103564743,
+   "asc": 117.7633105860046,
+   "moon": 19.241990115528353
+  },
+  "10:00": {
+   "trop": 57.287553581258216,
+   "sid": 36.329608386819054,
+   "asc": 129.63657592791125,
+   "moon": 19.76843813822683
+  },
+  "10:10": {
+   "trop": 57.29423322287628,
+   "sid": 36.33628789217308,
+   "asc": 131.59929711183045,
+   "moon": 19.856146935004546
+  },
+  "11:15": {
+   "trop": 57.337650515050264,
+   "sid": 36.37970429064791,
+   "asc": 144.33346734296538,
+   "moon": 20.42602862511895
+  }
+ },
+ "models": {
+  "A": {
+   "all": {
+    "months": 1186,
+    "up_share": 60.5,
+    "calls": 460,
+    "right": 205,
+    "hit": 44.6,
+    "always_bull": 60.9,
+    "bear_n": 315,
+    "bear_avg": 0.55,
+    "bear_up": 61.9,
+    "bull_n": 145,
+    "bull_avg": 1.07,
+    "bull_up": 58.6,
+    "rest_avg": 0.69,
+    "t_bear": -0.39,
+    "bear_worst": -3.32,
+    "rest_worst": -2.94,
+    "hv_n": 31,
+    "hv_big": 6.03,
+    "lv_big": 6.81
+   },
+   "h1": {
+    "months": 588,
+    "up_share": 56.8,
+    "calls": 225,
+    "right": 109,
+    "hit": 48.4,
+    "always_bull": 57.3,
+    "bear_n": 150,
+    "bear_avg": 0.19,
+    "bear_up": 56.7,
+    "bull_n": 75,
+    "bull_avg": 1.22,
+    "bull_up": 58.7,
+    "rest_avg": 0.58,
+    "t_bear": -0.68,
+    "bear_worst": -3.73,
+    "rest_worst": -3.25,
+    "hv_n": 14,
+    "hv_big": 8.66,
+    "lv_big": 7.75
+   },
+   "h2": {
+    "months": 598,
+    "up_share": 64.2,
+    "calls": 235,
+    "right": 96,
+    "hit": 40.9,
+    "always_bull": 64.3,
+    "bear_n": 165,
+    "bear_avg": 0.87,
+    "bear_up": 66.7,
+    "bull_n": 70,
+    "bull_avg": 0.91,
+    "bull_up": 58.6,
+    "rest_avg": 0.8,
+    "t_bear": 0.15,
+    "bear_worst": -2.95,
+    "rest_worst": -2.62,
+    "hv_n": 17,
+    "hv_big": 3.85,
+    "lv_big": 5.88
+   },
+   "since2010": {
+    "months": 202,
+    "up_share": 69.8,
+    "calls": 81,
+    "right": 33,
+    "hit": 40.7,
+    "always_bull": 65.4,
+    "bear_n": 58,
+    "bear_avg": 0.39,
+    "bear_up": 67.2,
+    "bull_n": 23,
+    "bull_avg": 1.31,
+    "bull_up": 60.9,
+    "rest_avg": 1.29,
+    "t_bear": -1.02,
+    "bear_worst": -3.39,
+    "rest_worst": -2.23,
+    "hv_n": 6,
+    "hv_big": 2.27,
+    "lv_big": 5.85
+   },
+   "items": {
+    "Sun square Mars": {
+     "n": 62,
+     "side": "bear",
+     "right": 40.3,
+     "base": 39.5,
+     "avg": 0.7,
+     "avg_off": 0.65
+    },
+    "Mars conjunct Ketu": {
+     "n": 37,
+     "side": "bear",
+     "right": 35.1,
+     "base": 39.5,
+     "avg": -0.1,
+     "avg_off": 0.68
+    },
+    "Mars square Uranus": {
+     "n": 65,
+     "side": "bear",
+     "right": 38.5,
+     "base": 39.5,
+     "avg": 0.28,
+     "avg_off": 0.68
+    },
+    "Saturn conjunct Sun": {
+     "n": 37,
+     "side": "bear",
+     "right": 43.2,
+     "base": 39.5,
+     "avg": 0.34,
+     "avg_off": 0.66
+    },
+    "Saturn square Sun": {
+     "n": 66,
+     "side": "bear",
+     "right": 48.5,
+     "base": 39.5,
+     "avg": -0.13,
+     "avg_off": 0.7
+    },
+    "Saturn opposite Sun": {
+     "n": 31,
+     "side": "bear",
+     "right": 45.2,
+     "base": 39.5,
+     "avg": 2.03,
+     "avg_off": 0.62
+    },
+    "Jupiter sextile Venus": {
+     "n": 74,
+     "side": "bull",
+     "right": 63.5,
+     "base": 60.5,
+     "avg": 2.29,
+     "avg_off": 0.54
+    },
+    "Jupiter trine Sun": {
+     "n": 63,
+     "side": "bull",
+     "right": 58.7,
+     "base": 60.5,
+     "avg": 0.94,
+     "avg_off": 0.64
+    },
+    "Venus trine Jupiter": {
+     "n": 55,
+     "side": "bull",
+     "right": 49.1,
+     "base": 60.5,
+     "avg": -0.45,
+     "avg_off": 0.71
+    },
+    "Mercury debilitated (Pisces)": {
+     "n": 97,
+     "side": "bear",
+     "right": 39.2,
+     "base": 39.5,
+     "avg": 0.64,
+     "avg_off": 0.65
+    }
+   },
+   "flags": {
+    "Ascendant lord debilitated": {
+     "n": 103,
+     "avg": 1.19
+    },
+    "Malefic in the 8th": {
+     "n": 345,
+     "avg": 0.94
+    },
+    "Mars with Ketu in the 8th": {
+     "n": 9,
+     "avg": 0.43
+    },
+    "Venus or Jupiter in the 10th": {
+     "n": 190,
+     "avg": 0.48
+    }
+   }
+  },
+  "B": {
+   "all": {
+    "months": 1186,
+    "up_share": 60.8,
+    "calls": 450,
+    "right": 210,
+    "hit": 46.7,
+    "always_bull": 59.1,
+    "bear_n": 312,
+    "bear_avg": 0.41,
+    "bear_up": 59.0,
+    "bull_n": 138,
+    "bull_avg": 0.94,
+    "bull_up": 59.4,
+    "rest_avg": 0.74,
+    "t_bear": -0.83,
+    "bear_worst": -3.4,
+    "rest_worst": -2.84,
+    "hv_n": 37,
+    "hv_big": 5.91,
+    "lv_big": 6.83
+   },
+   "h1": {
+    "months": 588,
+    "up_share": 58.3,
+    "calls": 223,
+    "right": 106,
+    "hit": 47.5,
+    "always_bull": 59.6,
+    "bear_n": 151,
+    "bear_avg": 0.49,
+    "bear_up": 58.9,
+    "bull_n": 72,
+    "bull_avg": 1.45,
+    "bull_up": 61.1,
+    "rest_avg": 0.48,
+    "t_bear": 0.01,
+    "bear_worst": -3.78,
+    "rest_worst": -3.1,
+    "hv_n": 20,
+    "hv_big": 5.49,
+    "lv_big": 7.86
+   },
+   "h2": {
+    "months": 598,
+    "up_share": 63.2,
+    "calls": 227,
+    "right": 104,
+    "hit": 45.8,
+    "always_bull": 58.6,
+    "bear_n": 161,
+    "bear_avg": 0.33,
+    "bear_up": 59.0,
+    "bull_n": 66,
+    "bull_avg": 0.38,
+    "bull_up": 57.6,
+    "rest_avg": 0.99,
+    "t_bear": -1.48,
+    "bear_worst": -3.04,
+    "rest_worst": -2.59,
+    "hv_n": 17,
+    "hv_big": 6.41,
+    "lv_big": 5.82
+   },
+   "since2010": {
+    "months": 202,
+    "up_share": 66.8,
+    "calls": 72,
+    "right": 34,
+    "hit": 47.2,
+    "always_bull": 59.7,
+    "bear_n": 53,
+    "bear_avg": -0.07,
+    "bear_up": 58.5,
+    "bull_n": 19,
+    "bull_avg": -0.31,
+    "bull_up": 63.2,
+    "rest_avg": 1.38,
+    "t_bear": -1.59,
+    "bear_worst": -3.57,
+    "rest_worst": -2.26,
+    "hv_n": 5,
+    "hv_big": 6.36,
+    "lv_big": 5.76
+   },
+   "items": {
+    "Sun square Mars": {
+     "n": 66,
+     "side": "bear",
+     "right": 47.0,
+     "base": 39.2,
+     "avg": 0.11,
+     "avg_off": 0.68
+    },
+    "Mars conjunct Ketu": {
+     "n": 37,
+     "side": "bear",
+     "right": 43.2,
+     "base": 39.2,
+     "avg": 0.11,
+     "avg_off": 0.67
+    },
+    "Mars square Uranus": {
+     "n": 66,
+     "side": "bear",
+     "right": 39.4,
+     "base": 39.2,
+     "avg": 0.47,
+     "avg_off": 0.66
+    },
+    "Saturn conjunct Sun": {
+     "n": 36,
+     "side": "bear",
+     "right": 41.7,
+     "base": 39.2,
+     "avg": 0.44,
+     "avg_off": 0.66
+    },
+    "Saturn square Sun": {
+     "n": 67,
+     "side": "bear",
+     "right": 52.2,
+     "base": 39.2,
+     "avg": -0.31,
+     "avg_off": 0.71
+    },
+    "Saturn opposite Sun": {
+     "n": 30,
+     "side": "bear",
+     "right": 30.0,
+     "base": 39.2,
+     "avg": 2.11,
+     "avg_off": 0.61
+    },
+    "Jupiter sextile Venus": {
+     "n": 72,
+     "side": "bull",
+     "right": 59.7,
+     "base": 60.8,
+     "avg": 1.43,
+     "avg_off": 0.6
+    },
+    "Jupiter trine Sun": {
+     "n": 56,
+     "side": "bull",
+     "right": 51.8,
+     "base": 60.8,
+     "avg": 0.68,
+     "avg_off": 0.65
+    },
+    "Venus trine Jupiter": {
+     "n": 57,
+     "side": "bull",
+     "right": 52.6,
+     "base": 60.8,
+     "avg": -0.18,
+     "avg_off": 0.69
+    },
+    "Mercury debilitated (Pisces)": {
+     "n": 95,
+     "side": "bear",
+     "right": 43.2,
+     "base": 39.2,
+     "avg": 0.2,
+     "avg_off": 0.69
+    }
+   },
+   "flags": {
+    "Ascendant lord debilitated": {
+     "n": 84,
+     "avg": 0.63
+    },
+    "Malefic in the 8th": {
+     "n": 331,
+     "avg": 0.78
+    },
+    "Mars with Ketu in the 8th": {
+     "n": 10,
+     "avg": -3.25
+    },
+    "Venus or Jupiter in the 10th": {
+     "n": 189,
+     "avg": 0.4
+    }
+   }
+  },
+  "C": {
+   "all": {
+    "months": 1186,
+    "up_share": 61.0,
+    "calls": 469,
+    "right": 211,
+    "hit": 45.0,
+    "always_bull": 60.1,
+    "bear_n": 321,
+    "bear_avg": 0.64,
+    "bear_up": 61.1,
+    "bull_n": 148,
+    "bull_avg": 1.16,
+    "bull_up": 58.1,
+    "rest_avg": 0.66,
+    "t_bear": -0.04,
+    "bear_worst": -3.19,
+    "rest_worst": -3.03,
+    "hv_n": 34,
+    "hv_big": 3.67,
+    "lv_big": 6.89
+   },
+   "h1": {
+    "months": 588,
+    "up_share": 58.5,
+    "calls": 226,
+    "right": 107,
+    "hit": 47.3,
+    "always_bull": 58.0,
+    "bear_n": 150,
+    "bear_avg": 0.62,
+    "bear_up": 58.0,
+    "bull_n": 76,
+    "bull_avg": 1.42,
+    "bull_up": 57.9,
+    "rest_avg": 0.45,
+    "t_bear": 0.3,
+    "bear_worst": -3.25,
+    "rest_worst": -3.45,
+    "hv_n": 14,
+    "hv_big": 3.81,
+    "lv_big": 7.91
+   },
+   "h2": {
+    "months": 598,
+    "up_share": 63.4,
+    "calls": 243,
+    "right": 104,
+    "hit": 42.8,
+    "always_bull": 62.1,
+    "bear_n": 171,
+    "bear_avg": 0.67,
+    "bear_up": 63.7,
+    "bull_n": 72,
+    "bull_avg": 0.89,
+    "bull_up": 58.3,
+    "rest_avg": 0.87,
+    "t_bear": -0.49,
+    "bear_worst": -3.14,
+    "rest_worst": -2.6,
+    "hv_n": 20,
+    "hv_big": 3.57,
+    "lv_big": 5.88
+   },
+   "since2010": {
+    "months": 202,
+    "up_share": 68.8,
+    "calls": 81,
+    "right": 36,
+    "hit": 44.4,
+    "always_bull": 61.7,
+    "bear_n": 58,
+    "bear_avg": 0.25,
+    "bear_up": 62.1,
+    "bull_n": 23,
+    "bull_avg": 1.41,
+    "bull_up": 60.9,
+    "rest_avg": 1.35,
+    "t_bear": -1.42,
+    "bear_worst": -3.63,
+    "rest_worst": -2.31,
+    "hv_n": 8,
+    "hv_big": 1.7,
+    "lv_big": 5.91
+   },
+   "items": {
+    "Sun square Mars": {
+     "n": 63,
+     "side": "bear",
+     "right": 46.0,
+     "base": 39.0,
+     "avg": 0.58,
+     "avg_off": 0.66
+    },
+    "Mars conjunct Ketu": {
+     "n": 39,
+     "side": "bear",
+     "right": 35.9,
+     "base": 39.0,
+     "avg": 0.61,
+     "avg_off": 0.65
+    },
+    "Mars square Uranus": {
+     "n": 63,
+     "side": "bear",
+     "right": 41.3,
+     "base": 39.0,
+     "avg": 0.15,
+     "avg_off": 0.68
+    },
+    "Saturn conjunct Sun": {
+     "n": 35,
+     "side": "bear",
+     "right": 42.9,
+     "base": 39.0,
+     "avg": 0.63,
+     "avg_off": 0.65
+    },
+    "Saturn square Sun": {
+     "n": 65,
+     "side": "bear",
+     "right": 49.2,
+     "base": 39.0,
+     "avg": -0.24,
+     "avg_off": 0.7
+    },
+    "Saturn opposite Sun": {
+     "n": 31,
+     "side": "bear",
+     "right": 38.7,
+     "base": 39.0,
+     "avg": -0.18,
+     "avg_off": 0.67
+    },
+    "Jupiter sextile Venus": {
+     "n": 73,
+     "side": "bull",
+     "right": 64.4,
+     "base": 61.0,
+     "avg": 2.36,
+     "avg_off": 0.54
+    },
+    "Jupiter trine Sun": {
+     "n": 60,
+     "side": "bull",
+     "right": 56.7,
+     "base": 61.0,
+     "avg": 0.25,
+     "avg_off": 0.67
+    },
+    "Venus trine Jupiter": {
+     "n": 58,
+     "side": "bull",
+     "right": 51.7,
+     "base": 61.0,
+     "avg": -0.17,
+     "avg_off": 0.69
+    },
+    "Mercury debilitated (Pisces)": {
+     "n": 100,
+     "side": "bear",
+     "right": 36.0,
+     "base": 39.0,
+     "avg": 1.01,
+     "avg_off": 0.62
+    }
+   },
+   "flags": {
+    "Ascendant lord debilitated": {
+     "n": 106,
+     "avg": -0.07
+    },
+    "Malefic in the 8th": {
+     "n": 347,
+     "avg": 0.46
+    },
+    "Mars with Ketu in the 8th": {
+     "n": 6,
+     "avg": 10.61
+    },
+    "Venus or Jupiter in the 10th": {
+     "n": 186,
+     "avg": 0.78
+    }
+   }
+  },
+  "D": {
+   "all": {
+    "months": 1186,
+    "up_share": 60.7,
+    "calls": 448,
+    "right": 214,
+    "hit": 47.8,
+    "always_bull": 58.9,
+    "bear_n": 312,
+    "bear_avg": 0.14,
+    "bear_up": 58.0,
+    "bull_n": 136,
+    "bull_avg": 1.05,
+    "bull_up": 61.0,
+    "rest_avg": 0.84,
+    "t_bear": -1.85,
+    "bear_worst": -3.4,
+    "rest_worst": -2.81,
+    "hv_n": 33,
+    "hv_big": 9.24,
+    "lv_big": 6.72
+   },
+   "h1": {
+    "months": 588,
+    "up_share": 57.7,
+    "calls": 223,
+    "right": 112,
+    "hit": 50.2,
+    "always_bull": 56.1,
+    "bear_n": 153,
+    "bear_avg": -0.16,
+    "bear_up": 54.2,
+    "bull_n": 70,
+    "bull_avg": 1.46,
+    "bull_up": 60.0,
+    "rest_avg": 0.71,
+    "t_bear": -1.45,
+    "bear_worst": -3.89,
+    "rest_worst": -3.07,
+    "hv_n": 19,
+    "hv_big": 10.16,
+    "lv_big": 7.7
+   },
+   "h2": {
+    "months": 598,
+    "up_share": 63.7,
+    "calls": 225,
+    "right": 102,
+    "hit": 45.3,
+    "always_bull": 61.8,
+    "bear_n": 159,
+    "bear_avg": 0.42,
+    "bear_up": 61.6,
+    "bull_n": 66,
+    "bull_avg": 0.6,
+    "bull_up": 62.1,
+    "rest_avg": 0.97,
+    "t_bear": -1.16,
+    "bear_worst": -2.93,
+    "rest_worst": -2.56,
+    "hv_n": 14,
+    "hv_big": 7.99,
+    "lv_big": 5.76
+   },
+   "since2010": {
+    "months": 202,
+    "up_share": 69.3,
+    "calls": 76,
+    "right": 37,
+    "hit": 48.7,
+    "always_bull": 61.8,
+    "bear_n": 54,
+    "bear_avg": -0.06,
+    "bear_up": 59.3,
+    "bull_n": 22,
+    "bull_avg": 0.24,
+    "bull_up": 68.2,
+    "rest_avg": 1.44,
+    "t_bear": -1.6,
+    "bear_worst": -3.43,
+    "rest_worst": -2.2,
+    "hv_n": 6,
+    "hv_big": 12.12,
+    "lv_big": 5.57
+   },
+   "items": {
+    "Sun square Mars": {
+     "n": 66,
+     "side": "bear",
+     "right": 40.9,
+     "base": 39.3,
+     "avg": 0.37,
+     "avg_off": 0.67
+    },
+    "Mars conjunct Ketu": {
+     "n": 39,
+     "side": "bear",
+     "right": 41.0,
+     "base": 39.3,
+     "avg": -0.77,
+     "avg_off": 0.7
+    },
+    "Mars square Uranus": {
+     "n": 66,
+     "side": "bear",
+     "right": 37.9,
+     "base": 39.3,
+     "avg": 0.23,
+     "avg_off": 0.68
+    },
+    "Saturn conjunct Sun": {
+     "n": 38,
+     "side": "bear",
+     "right": 39.5,
+     "base": 39.3,
+     "avg": 0.35,
+     "avg_off": 0.66
+    },
+    "Saturn square Sun": {
+     "n": 66,
+     "side": "bear",
+     "right": 51.5,
+     "base": 39.3,
+     "avg": 0.09,
+     "avg_off": 0.69
+    },
+    "Saturn opposite Sun": {
+     "n": 25,
+     "side": "bear",
+     "right": 36.0,
+     "base": 39.3,
+     "avg": 3.27,
+     "avg_off": 0.6
+    },
+    "Jupiter sextile Venus": {
+     "n": 70,
+     "side": "bull",
+     "right": 65.7,
+     "base": 60.7,
+     "avg": 2.11,
+     "avg_off": 0.56
+    },
+    "Jupiter trine Sun": {
+     "n": 57,
+     "side": "bull",
+     "right": 57.9,
+     "base": 60.7,
+     "avg": 1.03,
+     "avg_off": 0.64
+    },
+    "Venus trine Jupiter": {
+     "n": 55,
+     "side": "bull",
+     "right": 50.9,
+     "base": 60.7,
+     "avg": -0.33,
+     "avg_off": 0.7
+    },
+    "Mercury debilitated (Pisces)": {
+     "n": 96,
+     "side": "bear",
+     "right": 44.8,
+     "base": 39.3,
+     "avg": 0.23,
+     "avg_off": 0.69
+    }
+   },
+   "flags": {
+    "Ascendant lord debilitated": {
+     "n": 95,
+     "avg": -0.21
+    },
+    "Malefic in the 8th": {
+     "n": 379,
+     "avg": 0.44
+    },
+    "Mars with Ketu in the 8th": {
+     "n": 6,
+     "avg": 2.98
+    },
+    "Venus or Jupiter in the 10th": {
+     "n": 193,
+     "avg": 1.49
+    }
+   }
+  }
+ },
+ "verify": {
+  "A": [
+   {
+    "given": "2027-01-17 10:41",
+    "ours": "2027-01-17 10:41",
+    "diff": 0.9
+   },
+   {
+    "given": "2027-02-16 00:12",
+    "ours": "2027-02-16 00:12",
+    "diff": 0.5
+   },
+   {
+    "given": "2027-03-17 23:05",
+    "ours": "2027-03-17 23:05",
+    "diff": 0.5
+   },
+   {
+    "given": "2027-04-17 08:49",
+    "ours": "2027-04-17 08:49",
+    "diff": 0.8
+   },
+   {
+    "given": "2027-05-18 06:49",
+    "ours": "2027-05-18 06:49",
+    "diff": 0.9
+   },
+   {
+    "given": "2027-06-18 14:07",
+    "ours": "2027-06-18 14:07",
+    "diff": 0.3
+   },
+   {
+    "given": "2027-07-20 01:01",
+    "ours": "2027-07-20 01:01",
+    "diff": 0.5
+   },
+   {
+    "given": "2027-08-20 08:47",
+    "ours": "2027-08-20 08:47",
+    "diff": 0.4
+   },
+   {
+    "given": "2027-09-20 07:36",
+    "ours": "2027-09-20 07:36",
+    "diff": 0.2
+   },
+   {
+    "given": "2027-10-20 18:15",
+    "ours": "2027-10-20 18:15",
+    "diff": 0.9
+   },
+   {
+    "given": "2027-11-19 15:56",
+    "ours": "2027-11-19 15:56",
+    "diff": 0.9
+   },
+   {
+    "given": "2027-12-19 05:55",
+    "ours": "2027-12-19 05:55",
+    "diff": 0.3
+   }
+  ],
+  "B": [
+   {
+    "given": "2027-01-20 16:03",
+    "ours": "2027-01-20 16:02",
+    "diff": -0.0
+   },
+   {
+    "given": "2027-02-19 06:15",
+    "ours": "2027-02-19 06:15",
+    "diff": 0.9
+   },
+   {
+    "given": "2027-03-21 06:21",
+    "ours": "2027-03-21 06:21",
+    "diff": 0.0
+   },
+   {
+    "given": "2027-04-20 17:29",
+    "ours": "2027-04-20 17:29",
+    "diff": 0.8
+   },
+   {
+    "given": "2027-05-21 16:45",
+    "ours": "2027-05-21 16:45",
+    "diff": 0.0
+   },
+   {
+    "given": "2027-06-22 00:47",
+    "ours": "2027-06-22 00:47",
+    "diff": 0.3
+   },
+   {
+    "given": "2027-07-23 11:42",
+    "ours": "2027-07-23 11:42",
+    "diff": 0.8
+   },
+   {
+    "given": "2027-08-23 18:46",
+    "ours": "2027-08-23 18:46",
+    "diff": 0.0
+   },
+   {
+    "given": "2027-09-23 16:21",
+    "ours": "2027-09-23 16:21",
+    "diff": 0.5
+   },
+   {
+    "given": "2027-10-24 01:39",
+    "ours": "2027-10-24 01:39",
+    "diff": 0.4
+   },
+   {
+    "given": "2027-11-22 22:12",
+    "ours": "2027-11-22 22:12",
+    "diff": 0.2
+   },
+   {
+    "given": "2027-12-22 11:33",
+    "ours": "2027-12-22 11:33",
+    "diff": 0.5
+   }
+  ]
+ },
+ "sensitivity": {
+  "birth": {
+   "07:52": {
+    "sun": 57.20205284066998,
+    "asc": "Cancer 13.9\u00b0",
+    "shift_min": -5.6
+   },
+   "07:54": {
+    "sun": 57.20338880974377,
+    "asc": "Cancer 14.3\u00b0",
+    "shift_min": -5.5
+   },
+   "08:52": {
+    "sun": 57.2421316227826,
+    "asc": "Cancer 26.2\u00b0",
+    "shift_min": -3.2
+   },
+   "09:00": {
+    "sun": 57.247475419286616,
+    "asc": "Cancer 27.8\u00b0",
+    "shift_min": -2.8
+   },
+   "10:00": {
+    "sun": 57.287553581258216,
+    "asc": "Leo 9.6\u00b0",
+    "shift_min": -0.4
+   },
+   "10:10": {
+    "sun": 57.29423322287628,
+    "asc": "Leo 11.6\u00b0",
+    "shift_min": 0.0
+   },
+   "11:15": {
+    "sun": 57.337650515050264,
+    "asc": "Leo 24.3\u00b0",
+    "shift_min": 2.6
+   }
+  },
+  "flips": {
+   "Placidus vs whole sign": 32.6,
+   "true vs mean node": 1.6
+  },
+  "months": 322
+ },
+ "forward": {
+  "A": [
+   {
+    "start": "Thu 19 Nov 2026 10:02",
+    "end": "19 Dec 2026",
+    "asc": "Capricorn 8.0\u00b0",
+    "flags": [
+     "Ascendant lord debilitated",
+     "Malefic in the 8th",
+     "Mars with Ketu in the 8th",
+     "Venus or Jupiter in the 10th"
+    ],
+    "flags_p": [
+     "Ascendant lord debilitated",
+     "Malefic in the 8th",
+     "Mars with Ketu in the 8th"
+    ],
+    "score": {
+     "items": [
+      {
+       "name": "Sun square Mars",
+       "side": "bear",
+       "orb": 0.07,
+       "w": 4,
+       "applying": true
+      },
+      {
+       "name": "Mars conjunct Ketu",
+       "side": "bear",
+       "orb": 2.27,
+       "w": 2,
+       "applying": false
+      },
+      {
+       "name": "Jupiter sextile Venus",
+       "side": "bull",
+       "orb": 2.67,
+       "w": 2,
+       "applying": true
+      }
+     ],
+     "bull": 2,
+     "bear": 6,
+     "net": -4,
+     "vol": 6,
+     "call": "Bearish"
+    },
+    "mars": "Leo 27.4\u00b0"
+   },
+   {
+    "start": "Sat 19 Dec 2026 00:02",
+    "end": "17 Jan 2027",
+    "asc": "Virgo 29.5\u00b0",
+    "flags": [
+     "Malefic in the 8th"
+    ],
+    "flags_p": [],
+    "score": {
+     "items": [
+      {
+       "name": "Mars square Uranus",
+       "side": "bear",
+       "orb": 4.84,
+       "w": 1,
+       "applying": false
+      },
+      {
+       "name": "Jupiter trine Sun",
+       "side": "bull",
+       "orb": 0.33,
+       "w": 4,
+       "applying": false
+      }
+     ],
+     "bull": 4,
+     "bear": 1,
+     "net": 3,
+     "vol": 1,
+     "call": "Bullish"
+    },
+    "mars": "Virgo 7.6\u00b0"
+   },
+   {
+    "start": "Sun 17 Jan 2027 10:41",
+    "end": "16 Feb 2027",
+    "asc": "Aries 14.3\u00b0",
+    "flags": [],
+    "flags_p": [],
+    "score": {
+     "items": [],
+     "bull": 0,
+     "bear": 0,
+     "net": 0,
+     "vol": 0,
+     "call": "Neutral"
+    },
+    "mars": "Virgo 10.1\u00b0 R"
+   },
+   {
+    "start": "Tue 16 Feb 2027 00:12",
+    "end": "17 Mar 2027",
+    "asc": "Scorpio 17.3\u00b0",
+    "flags": [
+     "Venus or Jupiter in the 10th"
+    ],
+    "flags_p": [],
+    "score": {
+     "items": [
+      {
+       "name": "Mars square Uranus",
+       "side": "bear",
+       "orb": 0.42,
+       "w": 4,
+       "applying": true
+      },
+      {
+       "name": "Mercury debilitated (Pisces)",
+       "side": "bear",
+       "orb": null,
+       "w": 2,
+       "applying": null
+      }
+     ],
+     "bull": 0,
+     "bear": 6,
+     "net": -6,
+     "vol": 4,
+     "call": "Bearish"
+    },
+    "mars": "Virgo 2.1\u00b0 R"
+   },
+   {
+    "start": "Wed 17 Mar 2027 23:05",
+    "end": "17 Apr 2027",
+    "asc": "Scorpio 15.5\u00b0",
+    "flags": [
+     "Venus or Jupiter in the 10th"
+    ],
+    "flags_p": [],
+    "score": {
+     "items": [
+      {
+       "name": "Mars conjunct Ketu",
+       "side": "bear",
+       "orb": 3.44,
+       "w": 1,
+       "applying": true
+      }
+     ],
+     "bull": 0,
+     "bear": 1,
+     "net": -1,
+     "vol": 1,
+     "call": "Bearish"
+    },
+    "mars": "Leo 22.3\u00b0 R"
+   },
+   {
+    "start": "Sat 17 Apr 2027 08:49",
+    "end": "18 May 2027",
+    "asc": "Gemini 16.2\u00b0",
+    "flags": [
+     "Venus or Jupiter in the 10th"
+    ],
+    "flags_p": [],
+    "score": {
+     "items": [],
+     "bull": 0,
+     "bear": 0,
+     "net": 0,
+     "vol": 0,
+     "call": "Neutral"
+    },
+    "mars": "Leo 22.4\u00b0"
+   },
+   {
+    "start": "Tue 18 May 2027 06:49",
+    "end": "18 Jun 2027",
+    "asc": "Gemini 16.7\u00b0",
+    "flags": [],
+    "flags_p": [],
+    "score": {
+     "items": [
+      {
+       "name": "Sun square Mars",
+       "side": "bear",
+       "orb": 4.16,
+       "w": 1,
+       "applying": true
+      },
+      {
+       "name": "Mars square Uranus",
+       "side": "bear",
+       "orb": 3.79,
+       "w": 1,
+       "applying": true
+      }
+     ],
+     "bull": 0,
+     "bear": 2,
+     "net": -2,
+     "vol": 2,
+     "call": "Bearish"
+    },
+    "mars": "Virgo 1.5\u00b0"
+   },
+   {
+    "start": "Fri 18 Jun 2027 14:07",
+    "end": "20 Jul 2027",
+    "asc": "Libra 11.6\u00b0",
+    "flags": [],
+    "flags_p": [],
+    "score": {
+     "items": [],
+     "bull": 0,
+     "bear": 0,
+     "net": 0,
+     "vol": 0,
+     "call": "Neutral"
+    },
+    "mars": "Virgo 15.7\u00b0"
+   },
+   {
+    "start": "Tue 20 Jul 2027 01:01",
+    "end": "20 Aug 2027",
+    "asc": "Taurus 16.7\u00b0",
+    "flags": [],
+    "flags_p": [],
+    "score": {
+     "items": [
+      {
+       "name": "Saturn square Sun",
+       "side": "bear",
+       "orb": 0.22,
+       "w": 4,
+       "applying": true
+      }
+     ],
+     "bull": 0,
+     "bear": 4,
+     "net": -4,
+     "vol": 0,
+     "call": "Bearish"
+    },
+    "mars": "Libra 2.9\u00b0"
+   },
+   {
+    "start": "Fri 20 Aug 2027 08:47",
+    "end": "20 Sep 2027",
+    "asc": "Virgo 27.2\u00b0",
+    "flags": [
+     "Malefic in the 8th"
+    ],
+    "flags_p": [
+     "Malefic in the 8th"
+    ],
+    "score": {
+     "items": [],
+     "bull": 0,
+     "bear": 0,
+     "net": 0,
+     "vol": 0,
+     "call": "Neutral"
+    },
+    "mars": "Libra 21.9\u00b0"
+   },
+   {
+    "start": "Mon 20 Sep 2027 07:36",
+    "end": "20 Oct 2027",
+    "asc": "Libra 7.3\u00b0",
+    "flags": [],
+    "flags_p": [],
+    "score": {
+     "items": [],
+     "bull": 0,
+     "bear": 0,
+     "net": 0,
+     "vol": 0,
+     "call": "Neutral"
+    },
+    "mars": "Scorpio 12.3\u00b0"
+   },
+   {
+    "start": "Wed 20 Oct 2027 18:15",
+    "end": "19 Nov 2027",
+    "asc": "Taurus 2.0\u00b0",
+    "flags": [
+     "Malefic in the 8th"
+    ],
+    "flags_p": [],
+    "score": {
+     "items": [
+      {
+       "name": "Saturn opposite Sun",
+       "side": "bear",
+       "orb": 3.11,
+       "w": 1,
+       "applying": false
+      },
+      {
+       "name": "Jupiter sextile Venus",
+       "side": "bull",
+       "orb": 2.39,
+       "w": 2,
+       "applying": true
+      }
+     ],
+     "bull": 2,
+     "bear": 1,
+     "net": 1,
+     "vol": 0,
+     "call": "Bullish"
+    },
+    "mars": "Sagittarius 3.5\u00b0"
+   },
+   {
+    "start": "Fri 19 Nov 2027 15:56",
+    "end": "19 Dec 2027",
+    "asc": "Taurus 16.3\u00b0",
+    "flags": [
+     "Malefic in the 8th"
+    ],
+    "flags_p": [
+     "Malefic in the 8th"
+    ],
+    "score": {
+     "items": [],
+     "bull": 0,
+     "bear": 0,
+     "net": 0,
+     "vol": 0,
+     "call": "Neutral"
+    },
+    "mars": "Sagittarius 25.6\u00b0"
+   },
+   {
+    "start": "Sun 19 Dec 2027 05:55",
+    "end": "17 Jan 2028",
+    "asc": "Sagittarius 9.2\u00b0",
+    "flags": [
+     "Venus or Jupiter in the 10th"
+    ],
+    "flags_p": [
+     "Malefic in the 8th"
+    ],
+    "score": {
+     "items": [
+      {
+       "name": "Venus trine Jupiter",
+       "side": "bull",
+       "orb": 2.99,
+       "w": 2,
+       "applying": false
+      }
+     ],
+     "bull": 2,
+     "bear": 0,
+     "net": 2,
+     "vol": 0,
+     "call": "Bullish"
+    },
+    "mars": "Capricorn 18.1\u00b0"
+   }
+  ],
+  "B": [
+   {
+    "start": "Sun 22 Nov 2026 15:58",
+    "end": "22 Dec 2026",
+    "asc": "Aries 26.8\u00b0",
+    "flags": [],
+    "flags_p": [],
+    "score": {
+     "items": [
+      {
+       "name": "Sun square Mars",
+       "side": "bear",
+       "orb": 1.84,
+       "w": 3,
+       "applying": false
+      },
+      {
+       "name": "Mars conjunct Ketu",
+       "side": "bear",
+       "orb": 3.82,
+       "w": 1,
+       "applying": false
+      },
+      {
+       "name": "Jupiter sextile Venus",
+       "side": "bull",
+       "orb": 2.02,
+       "w": 2,
+       "applying": true
+      }
+     ],
+     "bull": 2,
+     "bear": 4,
+     "net": -2,
+     "vol": 4,
+     "call": "Bearish"
+    },
+    "mars": "Leo 4.5\u00b0"
+   },
+   {
+    "start": "Tue 22 Dec 2026 05:20",
+    "end": "20 Jan 2027",
+    "asc": "Scorpio 10.5\u00b0",
+    "flags": [
+     "Venus or Jupiter in the 10th"
+    ],
+    "flags_p": [],
+    "score": {
+     "items": [
+      {
+       "name": "Jupiter trine Sun",
+       "side": "bull",
+       "orb": 3.69,
+       "w": 1,
+       "applying": false
+      }
+     ],
+     "bull": 1,
+     "bear": 0,
+     "net": 1,
+     "vol": 0,
+     "call": "Bullish"
+    },
+    "mars": "Leo 14.1\u00b0"
+   },
+   {
+    "start": "Wed 20 Jan 2027 16:02",
+    "end": "19 Feb 2027",
+    "asc": "Gemini 26.1\u00b0",
+    "flags": [
+     "Malefic in the 8th"
+    ],
+    "flags_p": [
+     "Malefic in the 8th"
+    ],
+    "score": {
+     "items": [],
+     "bull": 0,
+     "bear": 0,
+     "net": 0,
+     "vol": 0,
+     "call": "Neutral"
+    },
+    "mars": "Leo 15.5\u00b0 R"
+   },
+   {
+    "start": "Fri 19 Feb 2027 06:15",
+    "end": "21 Mar 2027",
+    "asc": "Capricorn 23.7\u00b0",
+    "flags": [
+     "Malefic in the 8th"
+    ],
+    "flags_p": [],
+    "score": {
+     "items": [
+      {
+       "name": "Mars square Uranus",
+       "side": "bear",
+       "orb": 0.89,
+       "w": 4,
+       "applying": false
+      }
+     ],
+     "bull": 0,
+     "bear": 4,
+     "net": -4,
+     "vol": 4,
+     "call": "Bearish"
+    },
+    "mars": "Leo 6.6\u00b0 R"
+   },
+   {
+    "start": "Sun 21 Mar 2027 06:21",
+    "end": "20 Apr 2027",
+    "asc": "Aquarius 18.5\u00b0",
+    "flags": [],
+    "flags_p": [],
+    "score": {
+     "items": [
+      {
+       "name": "Mars conjunct Ketu",
+       "side": "bear",
+       "orb": 3.07,
+       "w": 1,
+       "applying": true
+      }
+     ],
+     "bull": 0,
+     "bear": 1,
+     "net": -1,
+     "vol": 1,
+     "call": "Bearish"
+    },
+    "mars": "Cancer 27.5\u00b0 R"
+   },
+   {
+    "start": "Tue 20 Apr 2027 17:29",
+    "end": "21 May 2027",
+    "asc": "Virgo 11.5\u00b0",
+    "flags": [
+     "Ascendant lord debilitated"
+    ],
+    "flags_p": [
+     "Ascendant lord debilitated"
+    ],
+    "score": {
+     "items": [
+      {
+       "name": "Mercury debilitated (Pisces)",
+       "side": "bear",
+       "orb": null,
+       "w": 2,
+       "applying": null
+      }
+     ],
+     "bull": 0,
+     "bear": 2,
+     "net": -2,
+     "vol": 0,
+     "call": "Bearish"
+    },
+    "mars": "Cancer 28.8\u00b0"
+   },
+   {
+    "start": "Fri 21 May 2027 16:45",
+    "end": "22 Jun 2027",
+    "asc": "Virgo 26.8\u00b0",
+    "flags": [],
+    "flags_p": [
+     "Venus or Jupiter in the 10th"
+    ],
+    "score": {
+     "items": [
+      {
+       "name": "Sun square Mars",
+       "side": "bear",
+       "orb": 2.24,
+       "w": 2,
+       "applying": true
+      },
+      {
+       "name": "Mars square Uranus",
+       "side": "bear",
+       "orb": 2.63,
+       "w": 2,
+       "applying": true
+      }
+     ],
+     "bull": 0,
+     "bear": 4,
+     "net": -4,
+     "vol": 4,
+     "call": "Bearish"
+    },
+    "mars": "Leo 8.6\u00b0"
+   },
+   {
+    "start": "Tue 22 Jun 2027 00:47",
+    "end": "23 Jul 2027",
+    "asc": "Pisces 2.2\u00b0",
+    "flags": [],
+    "flags_p": [],
+    "score": {
+     "items": [],
+     "bull": 0,
+     "bear": 0,
+     "net": 0,
+     "vol": 0,
+     "call": "Neutral"
+    },
+    "mars": "Leo 23.2\u00b0"
+   },
+   {
+    "start": "Fri 23 Jul 2027 11:42",
+    "end": "23 Aug 2027",
+    "asc": "Virgo 16.0\u00b0",
+    "flags": [
+     "Malefic in the 8th"
+    ],
+    "flags_p": [
+     "Venus or Jupiter in the 10th"
+    ],
+    "score": {
+     "items": [
+      {
+       "name": "Saturn square Sun",
+       "side": "bear",
+       "orb": 2.96,
+       "w": 2,
+       "applying": false
+      }
+     ],
+     "bull": 0,
+     "bear": 2,
+     "net": -2,
+     "vol": 0,
+     "call": "Bearish"
+    },
+    "mars": "Virgo 10.6\u00b0"
+   },
+   {
+    "start": "Mon 23 Aug 2027 18:46",
+    "end": "23 Sep 2027",
+    "asc": "Capricorn 17.2\u00b0",
+    "flags": [
+     "Ascendant lord debilitated"
+    ],
+    "flags_p": [
+     "Ascendant lord debilitated",
+     "Malefic in the 8th"
+    ],
+    "score": {
+     "items": [],
+     "bull": 0,
+     "bear": 0,
+     "net": 0,
+     "vol": 0,
+     "call": "Neutral"
+    },
+    "mars": "Virgo 29.9\u00b0"
+   },
+   {
+    "start": "Thu 23 Sep 2027 16:21",
+    "end": "24 Oct 2027",
+    "asc": "Capricorn 9.8\u00b0",
+    "flags": [
+     "Ascendant lord debilitated"
+    ],
+    "flags_p": [
+     "Ascendant lord debilitated"
+    ],
+    "score": {
+     "items": [],
+     "bull": 0,
+     "bear": 0,
+     "net": 0,
+     "vol": 0,
+     "call": "Neutral"
+    },
+    "mars": "Libra 20.3\u00b0"
+   },
+   {
+    "start": "Sun 24 Oct 2027 01:39",
+    "end": "22 Nov 2027",
+    "asc": "Cancer 28.9\u00b0",
+    "flags": [],
+    "flags_p": [],
+    "score": {
+     "items": [
+      {
+       "name": "Jupiter sextile Venus",
+       "side": "bull",
+       "orb": 1.09,
+       "w": 3,
+       "applying": false
+      }
+     ],
+     "bull": 3,
+     "bear": 0,
+     "net": 3,
+     "vol": 0,
+     "call": "Bullish"
+    },
+    "mars": "Scorpio 11.7\u00b0"
+   },
+   {
+    "start": "Mon 22 Nov 2027 22:12",
+    "end": "22 Dec 2027",
+    "asc": "Cancer 23.1\u00b0",
+    "flags": [],
+    "flags_p": [],
+    "score": {
+     "items": [],
+     "bull": 0,
+     "bear": 0,
+     "net": 0,
+     "vol": 0,
+     "call": "Neutral"
+    },
+    "mars": "Sagittarius 3.8\u00b0"
+   },
+   {
+    "start": "Wed 22 Dec 2027 11:33",
+    "end": "20 Jan 2028",
+    "asc": "Aquarius 27.7\u00b0",
+    "flags": [],
+    "flags_p": [],
+    "score": {
+     "items": [],
+     "bull": 0,
+     "bear": 0,
+     "net": 0,
+     "vol": 0,
+     "call": "Neutral"
+    },
+    "mars": "Sagittarius 26.4\u00b0"
+   }
+  ],
+  "C": [
+   {
+    "start": "Mon 16 Nov 2026 15:00",
+    "end": "17 Dec 2026",
+    "asc": "Aries 20.7\u00b0",
+    "flags": [],
+    "flags_p": [],
+    "score": {
+     "items": [
+      {
+       "name": "Sun square Mars",
+       "side": "bear",
+       "orb": 1.66,
+       "w": 3,
+       "applying": true
+      },
+      {
+       "name": "Mars conjunct Ketu",
+       "side": "bear",
+       "orb": 0.91,
+       "w": 4,
+       "applying": false
+      },
+      {
+       "name": "Jupiter sextile Venus",
+       "side": "bull",
+       "orb": 2.91,
+       "w": 2,
+       "applying": true
+      }
+     ],
+     "bull": 2,
+     "bear": 7,
+     "net": -5,
+     "vol": 7,
+     "call": "Bearish"
+    },
+    "mars": "Leo 26.1\u00b0"
+   },
+   {
+    "start": "Thu 17 Dec 2026 01:28",
+    "end": "16 Jan 2027",
+    "asc": "Libra 15.2\u00b0",
+    "flags": [],
+    "flags_p": [],
+    "score": {
+     "items": [
+      {
+       "name": "Mars square Uranus",
+       "side": "bear",
+       "orb": 4.28,
+       "w": 1,
+       "applying": false
+      },
+      {
+       "name": "Jupiter trine Sun",
+       "side": "bull",
+       "orb": 1.68,
+       "w": 3,
+       "applying": true
+      }
+     ],
+     "bull": 3,
+     "bear": 1,
+     "net": 2,
+     "vol": 1,
+     "call": "Bullish"
+    },
+    "mars": "Virgo 7.1\u00b0"
+   },
+   {
+    "start": "Sat 16 Jan 2027 11:57",
+    "end": "15 Feb 2027",
+    "asc": "Taurus 12.5\u00b0",
+    "flags": [],
+    "flags_p": [],
+    "score": {
+     "items": [],
+     "bull": 0,
+     "bear": 0,
+     "net": 0,
+     "vol": 0,
+     "call": "Neutral"
+    },
+    "mars": "Virgo 10.2\u00b0 R"
+   },
+   {
+    "start": "Mon 15 Feb 2027 22:25",
+    "end": "18 Mar 2027",
+    "asc": "Libra 26.3\u00b0",
+    "flags": [],
+    "flags_p": [
+     "Venus or Jupiter in the 10th"
+    ],
+    "score": {
+     "items": [
+      {
+       "name": "Mars square Uranus",
+       "side": "bear",
+       "orb": 0.45,
+       "w": 4,
+       "applying": true
+      },
+      {
+       "name": "Mercury debilitated (Pisces)",
+       "side": "bear",
+       "orb": null,
+       "w": 2,
+       "applying": null
+      }
+     ],
+     "bull": 0,
+     "bear": 6,
+     "net": -6,
+     "vol": 4,
+     "call": "Bearish"
+    },
+    "mars": "Virgo 2.2\u00b0 R"
+   },
+   {
+    "start": "Thu 18 Mar 2027 09:53",
+    "end": "17 Apr 2027",
+    "asc": "Gemini 1.1\u00b0",
+    "flags": [
+     "Ascendant lord debilitated"
+    ],
+    "flags_p": [
+     "Ascendant lord debilitated",
+     "Venus or Jupiter in the 10th"
+    ],
+    "score": {
+     "items": [
+      {
+       "name": "Mars conjunct Ketu",
+       "side": "bear",
+       "orb": 3.38,
+       "w": 1,
+       "applying": true
+      },
+      {
+       "name": "Mercury debilitated (Pisces)",
+       "side": "bear",
+       "orb": null,
+       "w": 2,
+       "applying": null
+      }
+     ],
+     "bull": 0,
+     "bear": 3,
+     "net": -3,
+     "vol": 1,
+     "call": "Bearish"
+    },
+    "mars": "Leo 22.2\u00b0 R"
+   },
+   {
+    "start": "Sat 17 Apr 2027 20:21",
+    "end": "18 May 2027",
+    "asc": "Scorpio 7.3\u00b0",
+    "flags": [
+     "Venus or Jupiter in the 10th"
+    ],
+    "flags_p": [
+     "Venus or Jupiter in the 10th"
+    ],
+    "score": {
+     "items": [],
+     "bull": 0,
+     "bear": 0,
+     "net": 0,
+     "vol": 0,
+     "call": "Neutral"
+    },
+    "mars": "Leo 22.5\u00b0"
+   },
+   {
+    "start": "Tue 18 May 2027 06:49",
+    "end": "17 Jun 2027",
+    "asc": "Gemini 16.7\u00b0",
+    "flags": [],
+    "flags_p": [],
+    "score": {
+     "items": [
+      {
+       "name": "Sun square Mars",
+       "side": "bear",
+       "orb": 4.16,
+       "w": 1,
+       "applying": true
+      },
+      {
+       "name": "Mars square Uranus",
+       "side": "bear",
+       "orb": 3.79,
+       "w": 1,
+       "applying": true
+      }
+     ],
+     "bull": 0,
+     "bear": 2,
+     "net": -2,
+     "vol": 2,
+     "call": "Bearish"
+    },
+    "mars": "Virgo 1.5\u00b0"
+   },
+   {
+    "start": "Thu 17 Jun 2027 17:19",
+    "end": "18 Jul 2027",
+    "asc": "Scorpio 18.6\u00b0",
+    "flags": [
+     "Venus or Jupiter in the 10th"
+    ],
+    "flags_p": [],
+    "score": {
+     "items": [],
+     "bull": 0,
+     "bear": 0,
+     "net": 0,
+     "vol": 0,
+     "call": "Neutral"
+    },
+    "mars": "Virgo 15.2\u00b0"
+   },
+   {
+    "start": "Sun 18 Jul 2027 03:48",
+    "end": "17 Aug 2027",
+    "asc": "Cancer 0.9\u00b0",
+    "flags": [
+     "Malefic in the 8th"
+    ],
+    "flags_p": [],
+    "score": {
+     "items": [
+      {
+       "name": "Saturn square Sun",
+       "side": "bear",
+       "orb": 1.95,
+       "w": 3,
+       "applying": true
+      }
+     ],
+     "bull": 0,
+     "bear": 3,
+     "net": -3,
+     "vol": 0,
+     "call": "Bearish"
+    },
+    "mars": "Libra 1.8\u00b0"
+   },
+   {
+    "start": "Tue 17 Aug 2027 14:18",
+    "end": "17 Sep 2027",
+    "asc": "Sagittarius 0.2\u00b0",
+    "flags": [
+     "Venus or Jupiter in the 10th"
+    ],
+    "flags_p": [],
+    "score": {
+     "items": [],
+     "bull": 0,
+     "bear": 0,
+     "net": 0,
+     "vol": 0,
+     "call": "Neutral"
+    },
+    "mars": "Libra 20.2\u00b0"
+   },
+   {
+    "start": "Fri 17 Sep 2027 00:47",
+    "end": "17 Oct 2027",
+    "asc": "Cancer 13.8\u00b0",
+    "flags": [
+     "Malefic in the 8th"
+    ],
+    "flags_p": [
+     "Malefic in the 8th"
+    ],
+    "score": {
+     "items": [],
+     "bull": 0,
+     "bear": 0,
+     "net": 0,
+     "vol": 0,
+     "call": "Neutral"
+    },
+    "mars": "Scorpio 10.0\u00b0"
+   },
+   {
+    "start": "Sun 17 Oct 2027 11:17",
+    "end": "16 Nov 2027",
+    "asc": "Sagittarius 12.1\u00b0",
+    "flags": [
+     "Venus or Jupiter in the 10th"
+    ],
+    "flags_p": [
+     "Malefic in the 8th"
+    ],
+    "score": {
+     "items": [
+      {
+       "name": "Saturn opposite Sun",
+       "side": "bear",
+       "orb": 0.42,
+       "w": 4,
+       "applying": true
+      }
+     ],
+     "bull": 0,
+     "bear": 4,
+     "net": -4,
+     "vol": 0,
+     "call": "Bearish"
+    },
+    "mars": "Sagittarius 1.2\u00b0"
+   },
+   {
+    "start": "Tue 16 Nov 2027 20:46",
+    "end": "17 Dec 2027",
+    "asc": "Cancer 25.9\u00b0",
+    "flags": [
+     "Malefic in the 8th"
+    ],
+    "flags_p": [],
+    "score": {
+     "items": [],
+     "bull": 0,
+     "bear": 0,
+     "net": 0,
+     "vol": 0,
+     "call": "Neutral"
+    },
+    "mars": "Sagittarius 23.5\u00b0"
+   },
+   {
+    "start": "Fri 17 Dec 2027 07:16",
+    "end": "16 Jan 2028",
+    "asc": "Sagittarius 24.6\u00b0",
+    "flags": [
+     "Venus or Jupiter in the 10th"
+    ],
+    "flags_p": [
+     "Malefic in the 8th"
+    ],
+    "score": {
+     "items": [
+      {
+       "name": "Venus trine Jupiter",
+       "side": "bull",
+       "orb": 0.74,
+       "w": 4,
+       "applying": false
+      }
+     ],
+     "bull": 4,
+     "bear": 0,
+     "net": 4,
+     "vol": 0,
+     "call": "Bullish"
+    },
+    "mars": "Capricorn 16.6\u00b0"
+   }
+  ],
+  "D": [
+   {
+    "start": "Fri 20 Nov 2026 00:42",
+    "end": "20 Dec 2026",
+    "asc": "Leo 20.6\u00b0",
+    "flags": [
+     "Malefic in the 8th"
+    ],
+    "flags_p": [],
+    "score": {
+     "items": [
+      {
+       "name": "Sun square Mars",
+       "side": "bear",
+       "orb": 0.29,
+       "w": 4,
+       "applying": false
+      },
+      {
+       "name": "Mars conjunct Ketu",
+       "side": "bear",
+       "orb": 2.57,
+       "w": 2,
+       "applying": false
+      },
+      {
+       "name": "Jupiter sextile Venus",
+       "side": "bull",
+       "orb": 2.58,
+       "w": 2,
+       "applying": true
+      }
+     ],
+     "bull": 2,
+     "bear": 6,
+     "net": -4,
+     "vol": 6,
+     "call": "Bearish"
+    },
+    "mars": "Leo 3.4\u00b0"
+   },
+   {
+    "start": "Sun 20 Dec 2026 11:13",
+    "end": "19 Jan 2027",
+    "asc": "Aquarius 16.1\u00b0",
+    "flags": [],
+    "flags_p": [],
+    "score": {
+     "items": [
+      {
+       "name": "Jupiter trine Sun",
+       "side": "bull",
+       "orb": 1.86,
+       "w": 3,
+       "applying": false
+      }
+     ],
+     "bull": 3,
+     "bear": 0,
+     "net": 3,
+     "vol": 0,
+     "call": "Bullish"
+    },
+    "mars": "Leo 13.7\u00b0"
+   },
+   {
+    "start": "Tue 19 Jan 2027 21:43",
+    "end": "19 Feb 2027",
+    "asc": "Virgo 2.7\u00b0",
+    "flags": [],
+    "flags_p": [],
+    "score": {
+     "items": [],
+     "bull": 0,
+     "bear": 0,
+     "net": 0,
+     "vol": 0,
+     "call": "Neutral"
+    },
+    "mars": "Leo 15.6\u00b0 R"
+   },
+   {
+    "start": "Fri 19 Feb 2027 08:13",
+    "end": "21 Mar 2027",
+    "asc": "Pisces 12.2\u00b0",
+    "flags": [
+     "Venus or Jupiter in the 10th"
+    ],
+    "flags_p": [
+     "Venus or Jupiter in the 10th"
+    ],
+    "score": {
+     "items": [
+      {
+       "name": "Mars square Uranus",
+       "side": "bear",
+       "orb": 0.93,
+       "w": 4,
+       "applying": false
+      }
+     ],
+     "bull": 0,
+     "bear": 4,
+     "net": -4,
+     "vol": 4,
+     "call": "Bearish"
+    },
+    "mars": "Leo 6.6\u00b0 R"
+   },
+   {
+    "start": "Sun 21 Mar 2027 19:44",
+    "end": "21 Apr 2027",
+    "asc": "Virgo 14.7\u00b0",
+    "flags": [],
+    "flags_p": [],
+    "score": {
+     "items": [
+      {
+       "name": "Mars conjunct Ketu",
+       "side": "bear",
+       "orb": 3.03,
+       "w": 1,
+       "applying": true
+      }
+     ],
+     "bull": 0,
+     "bear": 1,
+     "net": -1,
+     "vol": 1,
+     "call": "Bearish"
+    },
+    "mars": "Cancer 27.4\u00b0 R"
+   },
+   {
+    "start": "Wed 21 Apr 2027 06:14",
+    "end": "21 May 2027",
+    "asc": "Aries 7.4\u00b0",
+    "flags": [
+     "Ascendant lord debilitated"
+    ],
+    "flags_p": [
+     "Ascendant lord debilitated"
+    ],
+    "score": {
+     "items": [
+      {
+       "name": "Mercury debilitated (Pisces)",
+       "side": "bear",
+       "orb": null,
+       "w": 2,
+       "applying": null
+      }
+     ],
+     "bull": 0,
+     "bear": 2,
+     "net": -2,
+     "vol": 0,
+     "call": "Bearish"
+    },
+    "mars": "Cancer 28.9\u00b0"
+   },
+   {
+    "start": "Fri 21 May 2027 16:45",
+    "end": "21 Jun 2027",
+    "asc": "Virgo 26.8\u00b0",
+    "flags": [],
+    "flags_p": [
+     "Venus or Jupiter in the 10th"
+    ],
+    "score": {
+     "items": [
+      {
+       "name": "Sun square Mars",
+       "side": "bear",
+       "orb": 2.24,
+       "w": 2,
+       "applying": true
+      },
+      {
+       "name": "Mars square Uranus",
+       "side": "bear",
+       "orb": 2.63,
+       "w": 2,
+       "applying": true
+      }
+     ],
+     "bull": 0,
+     "bear": 4,
+     "net": -4,
+     "vol": 4,
+     "call": "Bearish"
+    },
+    "mars": "Leo 8.6\u00b0"
+   },
+   {
+    "start": "Mon 21 Jun 2027 03:16",
+    "end": "21 Jul 2027",
+    "asc": "Aries 29.3\u00b0",
+    "flags": [],
+    "flags_p": [],
+    "score": {
+     "items": [],
+     "bull": 0,
+     "bear": 0,
+     "net": 0,
+     "vol": 0,
+     "call": "Neutral"
+    },
+    "mars": "Leo 22.7\u00b0"
+   },
+   {
+    "start": "Wed 21 Jul 2027 13:47",
+    "end": "21 Aug 2027",
+    "asc": "Libra 9.0\u00b0",
+    "flags": [],
+    "flags_p": [
+     "Venus or Jupiter in the 10th"
+    ],
+    "score": {
+     "items": [
+      {
+       "name": "Saturn square Sun",
+       "side": "bear",
+       "orb": 1.19,
+       "w": 3,
+       "applying": false
+      }
+     ],
+     "bull": 0,
+     "bear": 3,
+     "net": -3,
+     "vol": 0,
+     "call": "Bearish"
+    },
+    "mars": "Virgo 9.5\u00b0"
+   },
+   {
+    "start": "Sat 21 Aug 2027 00:18",
+    "end": "20 Sep 2027",
+    "asc": "Taurus 17.7\u00b0",
+    "flags": [],
+    "flags_p": [],
+    "score": {
+     "items": [],
+     "bull": 0,
+     "bear": 0,
+     "net": 0,
+     "vol": 0,
+     "call": "Neutral"
+    },
+    "mars": "Virgo 28.1\u00b0"
+   },
+   {
+    "start": "Mon 20 Sep 2027 10:49",
+    "end": "20 Oct 2027",
+    "asc": "Libra 21.1\u00b0",
+    "flags": [
+     "Ascendant lord debilitated"
+    ],
+    "flags_p": [
+     "Ascendant lord debilitated",
+     "Venus or Jupiter in the 10th"
+    ],
+    "score": {
+     "items": [],
+     "bull": 0,
+     "bear": 0,
+     "net": 0,
+     "vol": 0,
+     "call": "Neutral"
+    },
+    "mars": "Libra 18.1\u00b0"
+   },
+   {
+    "start": "Wed 20 Oct 2027 21:20",
+    "end": "20 Nov 2027",
+    "asc": "Gemini 3.3\u00b0",
+    "flags": [
+     "Malefic in the 8th"
+    ],
+    "flags_p": [
+     "Malefic in the 8th"
+    ],
+    "score": {
+     "items": [
+      {
+       "name": "Saturn opposite Sun",
+       "side": "bear",
+       "orb": 3.25,
+       "w": 1,
+       "applying": false
+      },
+      {
+       "name": "Jupiter sextile Venus",
+       "side": "bull",
+       "orb": 2.26,
+       "w": 2,
+       "applying": true
+      }
+     ],
+     "bull": 2,
+     "bear": 1,
+     "net": 1,
+     "vol": 0,
+     "call": "Bullish"
+    },
+    "mars": "Scorpio 9.4\u00b0"
+   },
+   {
+    "start": "Sat 20 Nov 2027 06:51",
+    "end": "20 Dec 2027",
+    "asc": "Scorpio 3.3\u00b0",
+    "flags": [
+     "Venus or Jupiter in the 10th"
+    ],
+    "flags_p": [
+     "Venus or Jupiter in the 10th"
+    ],
+    "score": {
+     "items": [],
+     "bull": 0,
+     "bear": 0,
+     "net": 0,
+     "vol": 0,
+     "call": "Neutral"
+    },
+    "mars": "Sagittarius 1.8\u00b0"
+   },
+   {
+    "start": "Mon 20 Dec 2027 17:22",
+    "end": "20 Jan 2028",
+    "asc": "Gemini 17.1\u00b0",
+    "flags": [
+     "Malefic in the 8th"
+    ],
+    "flags_p": [
+     "Malefic in the 8th"
+    ],
+    "score": {
+     "items": [
+      {
+       "name": "Venus trine Jupiter",
+       "side": "bull",
+       "orb": 4.7,
+       "w": 1,
+       "applying": false
+      }
+     ],
+     "bull": 1,
+     "bear": 0,
+     "net": 1,
+     "vol": 0,
+     "call": "Bullish"
+    },
+    "mars": "Sagittarius 25.0\u00b0"
+   }
+  ]
+ }
+}
