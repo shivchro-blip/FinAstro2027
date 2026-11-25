@@ -2950,5 +2950,41 @@
    "exact": ""
   }
  ],
- "actual": []
+ "actual": [
+  {
+   "market": "S&P 500",
+   "prev": "2026-11-24",
+   "prev_close": 7201.09,
+   "close": 7182.78,
+   "change": -0.25
+  },
+  {
+   "market": "Nasdaq",
+   "prev": "2026-11-24",
+   "prev_close": 23733.54,
+   "close": 23585.8,
+   "change": -0.62
+  },
+  {
+   "market": "BSE Sensex",
+   "prev": "2026-11-23",
+   "prev_close": 82435.99,
+   "close": 83938.28,
+   "change": 1.82
+  },
+  {
+   "market": "Gold (GC=F)",
+   "prev": "2026-11-24",
+   "prev_close": 3561.9,
+   "close": 3617.8,
+   "change": 1.57
+  },
+  {
+   "market": "Silver (SI=F)",
+   "prev": "2026-11-24",
+   "prev_close": 40.76,
+   "close": 41.67,
+   "change": 2.23
+  }
+ ]
 }
