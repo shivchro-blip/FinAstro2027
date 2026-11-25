@@ -631,6 +631,17 @@
     "tools/solar_return_engine.py",
     "build/pdfref/solar_return_engine_ET.html"
    ]
+  },
+  {
+   "date": "2026-11-25",
+   "pr": "50",
+   "topic": "Why the Solar return reading missed, month by month (past year)",
+   "analysis": "tools/solar_return_engine.py diagnose(): each solar month 20 Nov 2025 - 24 Nov 2026 - chart and indications, the reading's 1928-2026 record, robustness to the exact natal degree, birth time (07:52, 11:15), Placidus houses and the sidereal zodiac, Solar return transit rules and our S&P table inside the month, the market's path (halves, worst, best, big days), and the reasons for each miss.",
+   "result": "4 right, 6 wrong (Mar, Apr, May, Jun, Jul, Sep 2026), 2 no indication, 1 open. Causes: (1) no edge - 'Bearish' months rose 69.6% and 'Pressure' 62.8% since 1928 vs 60.5% all; (2) fragile - 12 of 13 readings change with a plausible alternative, even the Oct success flips with the 10:10-LMT degree; (3) one start-of-month snapshot vs the month's path (Mar -2.8% then +7.9%); real misses Mar +4.8%, Apr +5.2%, Jul +3.4%, the other three near-flat; (4) Jupiter-Venus sextile inside missed months, our table not better.",
+   "files": [
+    "tools/solar_return_engine.py",
+    "build/pdfref/solar_return_engine_ET.html"
+   ]
   }
  ]
 }

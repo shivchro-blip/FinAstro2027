@@ -1,6 +1,6 @@
 # Gold findings tracker
 
-Generated 24 Nov 2026 21:23 EST by `tools/gold_tracker.py` (`--refresh` re-runs both backtests). HTML version: `GOLD_TRACKER.html`.
+Generated 24 Nov 2026 21:39 EST by `tools/gold_tracker.py` (`--refresh` re-runs both backtests). HTML version: `GOLD_TRACKER.html`.
 
 ## Recent findings
 
@@ -104,6 +104,7 @@ Best (from the 26 yr data): Mars aspected by Saturn while Jupiter retrograde, U2
 
 | Date | PR | Topic | Result |
 |---|---|---|---|
+| 2026-11-25 | #50 | Why the Solar return reading missed, month by month (past year) | 4 right, 6 wrong (Mar, Apr, May, Jun, Jul, Sep 2026), 2 no indication, 1 open. Causes: (1) no edge - 'Bearish' months rose 69.6% and 'Pressure' 62.8% since 1928 vs 60.5% all; (2) fragile - 12 of 13 readings change with a plausible alternative, even the Oct success flips with the 10:10-LMT degree; (3) one start-of-month snapshot vs the month's path (Mar -2.8% then +7.9%); real misses Mar +4.8%, Apr +5.2%, Jul +3.4%, the other three near-flat; (4) Jupiter-Venus sextile inside missed months, our table not better. |
 | 2026-11-25 | #49 | Solar return method over the past year (20 Nov 2025 - 24 Nov 2026) | Stated-indication reading right 4 of 10 monthly calls while the S&P rose in 8 of 12 months (Mar and Apr 2026 'Bearish' months +4.8% and +5.2%; Oct right). Rubric A 3/6, B 1/5, C 3/6, D 2/6. Daily bearish calls 50%/49% vs 49%/48% down; bullish 56%/64% vs 51%/52% up (25 days). At or below chance; Solar return's own published calls (Oct-Nov 2026) are the ones that did well. |
 | 2026-11-25 | #48 | Solar return engine: four calculation models, an aspect rubric, sensitivity and 1928-2026 tests | Natal 27°17'39" tropical / 6°20'11" Lahiri confirmed; pasted 'Ascendant 19°51' Aries' wrong (Leo 11.6°). Given 2027 timestamps reproduced within 1 minute. Houses Placidus vs whole sign change the indications in 32.6% of months. Rubric calls right A 44.6% / B 46.7% / C 45.0% / D 47.8% vs always-bullish 60.9-58.9% - worse in every model and period; no item significant after correction (Saturn square Sun 48.5% vs 39.5% fell). Now: all models bearish for the 19 Nov chart, bullish for December; 2027 model A bearish Feb, Mar, May, Jul, bullish Oct, Dec. |
 | 2026-11-24 | #47 | Day report for Wed 25 Nov 2026 | Gold Bearish Low with a big-move watch on the Sun-Uranus opposition (17:41 ET); no signal for S&P, Sensex, silver; combined model S&P 56% up (normal 54%), big-day chances S&P 3%, gold 11%; 146 rules active (21 supported); S&P calendar row Kshay Tithi Krishna 'Bullish' at chance (62% vs 59%); Moon perigee 16:01 ET; Solar return 'down'; Global Predictions volatility window open. Actual moves to be added after the close. |

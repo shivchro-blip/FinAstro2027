@@ -730,6 +730,23 @@ Results, as the share of calls right:
 - **Next:** Mercury in Paap Kartari (B116) 1–15 Jan 2027 (Sun | Pluto), 25 Jan and 18 Feb – 16 Mar 2027.
 - **In the calendar:** shown in the 2026 calendar's key dates, read-first notes and each day's notes.
 
+**Why the Solar return reading missed, month by month** (`solar_return_engine_ET.html` §6; 20 Nov 2025 – 24 Nov 2026; astrology and prices only)
+
+- **Scoreboard:** 4 right (Nov 2025 Supported; Feb, Aug and Oct 2026 Bearish), 6 wrong (Mar, Apr, May, Jun, Jul and Sep 2026), 2 with no stated indication, 1 still open.
+- **1. No edge to begin with.** Since 1928, months read "Bearish" rose 69.6% of the time and "Pressure" months 62.8%, against 60.5% for all months. The indications are not bearish in the data, so a run of misses in a rising year is what the record predicts.
+- **2. Fragile readings.**
+  - 12 of the 13 readings change under at least one plausible alternative: the exact natal degree (27°17′39″ vs 27°18′), the birth time (07:52 or 11:15), Placidus houses, or the sidereal zodiac.
+  - Even the Oct 2026 success flips to "no indication" with the 10:10-LMT natal degree, a shift of 9 minutes. Only Jan 2026 is stable.
+- **3. One snapshot for the whole month.** The reading comes from the start-of-month chart only, while the market path inside the month did the work:
+  - Mar 2026: −2.8% in the first half, then +7.9%.
+  - May 2026: +2.7%, then −2.5%.
+  - The misses that count: Mar (+4.8%), Apr (+5.2%) and Jul (+3.4%).
+  - May (+0.2%), Jun (+0.5%) and Sep (+0.5%) were near-flat. May is FLAT by the project's 0.5% rule.
+- **4. The transit layer and our tables did not rescue it.**
+  - Jupiter sextile Venus ran inside the missed Mar and Jul months.
+  - Our S&P table leaned bullish in Jun and Jul but bearish in Mar and May, and was wrong there too.
+- **What this means:** the problem is the method's foundation (indications with no record, house readings that depend on an unknown birth time), not a calculation error. Solar return's own published calls appear to add judgement that the stated indications do not capture.
+
 **Solar return over the past year** (20 Nov 2025 – 24 Nov 2026, S&P closes; `solar_return_engine_ET.html` §5)
 
 | Method | Right | Always-bullish baseline |
