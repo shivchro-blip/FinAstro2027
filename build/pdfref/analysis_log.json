@@ -679,6 +679,16 @@
     "build/pdfref/jupiter_saturn_gold_ET.html",
     "tools/calendar_2026.py"
    ]
+  },
+  {
+   "date": "2026-11-25",
+   "pr": "55",
+   "topic": "Day report for Wed 25 Nov 2026 updated with the actual moves",
+   "analysis": "tools/day_report.py 2026-11-25 rerun after the close; compared with the day's calls; Solar return and Global Predictions rescored; 2026 calendar rebuilt.",
+   "result": "Gold +1.57% (Bearish Low wrong; Sun-Uranus watch, no big day); silver +2.23% (no signal); S&P -0.25% (no signal; model 56% up - flat), Nasdaq -0.62%; Sensex +1.82% (no signal). Solar return 'down' right in sign but flat (week 2 of 3); Global Predictions window open, no big day or sharp reversal yet.",
+   "files": [
+    "build/pdfref/day_report_2026-11-25_ET.html"
+   ]
   }
  ]
 }

@@ -1,6 +1,6 @@
 # Gold findings tracker
 
-Generated 25 Nov 2026 16:01 EST by `tools/gold_tracker.py` (`--refresh` re-runs both backtests). HTML version: `GOLD_TRACKER.html`.
+Generated 25 Nov 2026 17:33 EST by `tools/gold_tracker.py` (`--refresh` re-runs both backtests). HTML version: `GOLD_TRACKER.html`.
 
 ## Recent findings
 
@@ -104,6 +104,7 @@ Best (from the 26 yr data): Mars aspected by Saturn while Jupiter retrograde, U2
 
 | Date | PR | Topic | Result |
 |---|---|---|---|
+| 2026-11-25 | #55 | Day report for Wed 25 Nov 2026 updated with the actual moves | Gold +1.57% (Bearish Low wrong; Sun-Uranus watch, no big day); silver +2.23% (no signal); S&P -0.25% (no signal; model 56% up - flat), Nasdaq -0.62%; Sensex +1.82% (no signal). Solar return 'down' right in sign but flat (week 2 of 3); Global Predictions window open, no big day or sharp reversal yet. |
 | 2026-11-25 | #54 | Jupiter-Saturn aspects and gold: bottom or top, Nov 2026 - Dec 2030 | All given dates match to the minute (trine 14 Feb - 30 Aug 2027, exact 3 Apr 08:59 and 11 Jul 19:15; oppositions 2028-2030, exact 22 Dec 2029, 23 Apr 2030, 19 Nov 2030). Past trine windows: tops at the orb exit 4 vs 1 bottom (1973, 1974, Mar 2008, Jan 2026); entry 3 tops vs 2 bottoms; exact passes 4 vs 4. Jupiter direct station 8 bottoms vs 5 tops; Saturn direct 7 vs 1. Table: 11 Dec 2026 bottom-leaning (weak), 13 Apr 2027 bottom-leaning (weak), 30 Aug 2027 top-leaning, exact trines and oppositions either way. |
 | 2026-11-25 | #53 | Gold's peaks and bottoms since 1972: the sky at each turn; bottom-watch windows for the current fall | At bottoms: Jupiter-Saturn within 10 deg of trine/opposition/conjunction 42% vs 20% (p 0.014), Jupiter direct station within 30 days 33% vs 15% (p 0.02), Saturn direct station 29% vs 16% (p 0.08); at peaks the Jupiter-Saturn trine 36% vs 16% (p 0.012) - marks turns, not direction; ~40 tests, leads only. Windows: 11 Nov 2026 - 10 Jan 2027 (Saturn direct 11 Dec, Pisces 13.7 deg) and 14 Mar - 13 May 2027 (Jupiter direct 13 Apr, Cancer 22.75 deg, with Ketu within 0.5 deg, Mars near, Saturn trine within 1.4 deg). |
 | 2026-11-25 | #52 | Gold crashes and Jupiter's afflictions (user note) checked | Positions mostly right with sidereal corrections (Saturn in Virgo at the Jan 1980 and Aug 2011 peaks; Jupiter in Gemini at the Jan 2026 peak). Malefic Vedha present in every fall but in 28% of all months. 'Jupiter afflicted' holds in 69% of months and at 6 of 8 crash peaks - not specific; Jupiter-Saturn trine 3 of 8 peaks vs 16% of months (lead; next-6-month gold +1.9% vs +5.9% but fewer 10% falls). Current Jupiter-Ketu in Leo ends 5 Dec 2026; returns in Cancer 25 Jan - 25 Jun 2027; trine 25 Jan - 2 Jun and 26 Jun - 19 Oct 2027; malefic Vedha 6 Dec 2026 - 9 Apr 2027; all together 25 Jan - 9 Apr 2027. |

@@ -904,6 +904,18 @@ Results, as the share of calls right:
   - This partly matches Solar return's own path (weak into spring, bottom Mar–May), but the rubric itself has no track record.
 - **In the calendar:** shown in the 2026 calendar's Solar return section.
 
+**25 Nov 2026: what we said and what happened** (closes)
+
+| Market | What we said | What happened |
+|---|---|---|
+| Gold | Bearish Low; big-move watch on the Sun–Uranus opposition | +1.57%. Bearish call wrong; not a big day |
+| Silver | No signal | +2.23% |
+| S&P 500 | No signal (model 56% up) | −0.25% (Nasdaq −0.62%). FLAT by the 0.5% rule |
+| Sensex | No signal | +1.82% |
+
+- **Solar return:** its day call ("down") was right in sign but within the flat band. Its week of 23–27 Nov now stands at 2 of 3.
+- **Global Predictions:** 24–25 Nov were −0.50% and −0.25%. Still no big day or sharp reversal; the window ends 27 Nov.
+
 **Day report for Wed 25 Nov 2026** (`day_report_2026-11-25_ET.html`; made the evening before, ET)
 
 - **Signals:**
