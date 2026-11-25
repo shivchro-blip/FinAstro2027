@@ -62,6 +62,7 @@ STEPS = [
     ["tools/author_forecasts.py"],
     ["tools/global_predictions.py"],
     ["tools/solar_return_generate.py"],
+    ["tools/solar_return_engine.py"],
     ["tools/dasha_transits.py"],
     ["tools/model_check_60d.py"],
     ["tools/combined_probability.py"],

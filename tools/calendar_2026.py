@@ -62,6 +62,7 @@ def gather(a, b):
     kart = json.load(open(OUT / "kartari_test_ET.json"))
     sr["jan"] = json.load(open(OUT / "kartari_jan2027_ET.json"))
     sr["gp"] = json.load(open(OUT / "global_predictions_ET.json"))
+    sr["engine"] = json.load(open(OUT / "solar_return_engine_ET.json"))
     sr["doc"] = doc_rows(json.load(open(OUT / "doc_dec2026_check_ET.json")), res)
     sr["kartari"] = [dict(key=r["key"], title=r["title"], tone=r["tone"], basis=r["basis"], record=r["record"],
                           spans=[(dt.datetime.fromisoformat(u["frm_iso"]), dt.datetime.fromisoformat(u["to_iso"]), u["pair"]) for u in r["upcoming"]])
@@ -591,6 +592,28 @@ def page(res, sr, track, checks, a, b, generated):
     allm = sr["hist"]["all"]
     o.append(f"</tbody></table></div><p class='s'>All {allm['n']} solar months 1928–2026: S&amp;P up {allm['up']}%, average {allm['mean']:+.2f}%. Readings use only the indications "
              "Solar return has stated (debilitated ascendant lord, Mars with Ketu or another malefic in the 8th: bearish; Venus or Jupiter in the 10th: moderates).</p>")
+    eng = sr.get("engine")
+    if eng:
+        names = {"A": "A tropical monthly", "B": "B sidereal monthly", "C": "C tropical annual ÷ 12", "D": "D sidereal annual ÷ 12"}
+        o.append("<h3>Solar return engine: four calculation models (your 24 Nov spec)</h3><div class='wrap'><table><thead><tr><th>Model</th><th>Chart now</th><th>Rubric</th>"
+                 "<th>Next chart</th><th>Rubric</th><th class='n'>1928–2026: calls right vs always bullish</th></tr></thead><tbody>")
+        for m in "ABCD":
+            rows = eng["forward"][m]
+            cur = [r for r in rows if dt.datetime.strptime(r["start"], "%a %d %b %Y %H:%M").date() <= a][-1:] or rows[:1]
+            nxt = [r for r in rows if dt.datetime.strptime(r["start"], "%a %d %b %Y %H:%M").date() > a][:1]
+            x = eng["models"][m]["all"]
+
+            def cell(r):
+                if not r:
+                    return "<td>–</td><td>–</td>"
+                r = r[0]
+                return (f"<td class='n'>{E(r['start'])} ({E(r['asc'])} rising)</td><td>{chip(r['score']['call'] + ' ' + format(r['score']['net'], '+d'), tone(r['score']['call']))}"
+                        f"<div class='s'>{E('; '.join(i['name'] for i in r['score']['items']) or 'no aspect in orb')}</div></td>")
+            o.append(f"<tr><td>{names[m]}</td>{cell(cur)}{cell(nxt)}<td class='n t-dn'>{x['hit']}% vs {x['always_bull']}%</td></tr>")
+        o.append("</tbody></table></div><p class='s'>Rubric: orb-weighted Sun□Mars, Mars☌Ketu, Mars□Uranus, Saturn–Sun hard aspects, Mercury in Pisces (bearish) against Jupiter⚹Venus, "
+                 "Jupiter△Sun, Venus△Jupiter (bullish). All four models call the 19 Nov chart bearish and the December chart bullish, but over 1,186 months every model's calls were "
+                 "right less often than simply calling every month up. With the working natal time (10:10 LMT, Sun 27°17′39″) the 19 Dec chart has Virgo rising; with 27°18′ "
+                 "(8 minutes later) Libra — so the house-based reading of that month depends on the birth time. Details in solar_return_engine_ET.html.</p>")
     o.append("<h3>Solar return's own forecasts</h3><div class='wrap'><table><thead><tr><th>Period</th><th>Forecast</th><th>Status</th><th>Detail</th></tr></thead><tbody>")
     for f in sr["scorecard"]:
         o.append(f"<tr><td>{E(f['period'])}<div class='s'>made {E(f['made'])}</div></td><td>{E(f['text'])}</td><td><b>{E(f['score']['status'])}</b></td><td class='s'>{E(f['score']['detail'])}</td></tr>")

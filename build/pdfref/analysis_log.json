@@ -608,6 +608,18 @@
    "files": [
     "build/pdfref/day_report_2026-11-25_ET.html"
    ]
+  },
+  {
+   "date": "2026-11-25",
+   "pr": "48",
+   "topic": "Solar return engine: four calculation models, an aspect rubric, sensitivity and 1928-2026 tests",
+   "analysis": "tools/solar_return_engine.py from the user's 24 Nov specification: NYSE natal at 10:10 LMT (alternatives 07:52-11:15), models A tropical / B sidereal monthly degree returns and C / D annual return divided into 12, New York charts with Placidus and whole-sign houses and mean/true node, an orb-weighted aspect rubric (bearish Sun-Mars square, Mars-Ketu, Mars-Uranus square, Saturn-Sun hard aspects, Mercury in Pisces; bullish Jupiter-Venus sextile, Jupiter-Sun trine, Venus-Jupiter trine), tested 1928-2026 against an always-bullish baseline, per item, by halves and since 2010; the given 2027 timestamps verified; charts to Dec 2027. Added to the 2026 calendar.",
+   "result": "Natal 27°17'39\" tropical / 6°20'11\" Lahiri confirmed; pasted 'Ascendant 19°51' Aries' wrong (Leo 11.6°). Given 2027 timestamps reproduced within 1 minute. Houses Placidus vs whole sign change the indications in 32.6% of months. Rubric calls right A 44.6% / B 46.7% / C 45.0% / D 47.8% vs always-bullish 60.9-58.9% - worse in every model and period; no item significant after correction (Saturn square Sun 48.5% vs 39.5% fell). Now: all models bearish for the 19 Nov chart, bullish for December; 2027 model A bearish Feb, Mar, May, Jul, bullish Oct, Dec.",
+   "files": [
+    "tools/solar_return_engine.py",
+    "build/pdfref/solar_return_engine_ET.html",
+    "tools/calendar_2026.py"
+   ]
   }
  ]
 }
