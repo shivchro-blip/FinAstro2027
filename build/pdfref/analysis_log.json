@@ -689,6 +689,16 @@
    "files": [
     "build/pdfref/day_report_2026-11-25_ET.html"
    ]
+  },
+  {
+   "date": "2026-11-25",
+   "pr": "56",
+   "topic": "Day report for Thu 26 Nov 2026 (Thanksgiving)",
+   "analysis": "tools/day_report.py 2026-11-26 run the evening before; layers taken from the 2026 calendar (combined model, calendar rows, Solar return, Bhadra, changes during the day).",
+   "result": "US stocks, gold and silver closed; Sensex only. Sensex: no signal, model 53.2% up vs 53.3% normal; calendar row Mrigsira on Thursday Bearish at chance (37% vs 42%, p 0.84). Gold Bearish Low (no session). Bhadra 13:00-23:19 ET, after the Sensex close. Jupiter sextile Venus 59.3 deg (within 1 deg; exact about 28 Nov 09:00 ET); generated Solar return call for Fri 27 Nov Bullish, matching its Friday recovery call.",
+   "files": [
+    "build/pdfref/day_report_2026-11-26_ET.html"
+   ]
   }
  ]
 }

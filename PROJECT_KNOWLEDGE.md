@@ -904,6 +904,39 @@ Results, as the share of calls right:
   - This partly matches Solar return's own path (weak into spring, bottom Mar–May), but the rubric itself has no track record.
 - **In the calendar:** shown in the 2026 calendar's Solar return section.
 
+**Day report for Thu 26 Nov 2026** (`day_report_2026-11-26_ET.html`; made the evening before, ET)
+
+- **Markets:** Thanksgiving. The S&P, gold and silver (COMEX) are closed. Only the BSE Sensex trades (09:15–15:30 IST = 22:45 Wed – 05:00 Thu ET).
+- **Signals:**
+  - Gold: Bearish Low (Sun in Anuradha, Mars aspects the Sun). No session to score.
+  - Sensex, S&P and silver: no signal.
+- **Combined model, Sensex:**
+
+| Measure | Model | Normal |
+|---|---|---|
+| Up that day | 53.2% | 53.3% |
+| Up over 5 sessions | 57.9% | 56.6% |
+| Big day | 9.2% | 10.4% |
+
+  - Supported rules for the Sensex: 6 bullish, 3 bearish. No call (under 2 points from the normal rate).
+- **Active rules:** 140 catalogue rules, 14 of them with a supported record.
+- **Calendar rows:**
+  - Sensex: "Mrigsira on Thursday: Bearish" (the Moon is in Mrigashira for the whole Sensex session). Record 37% down vs 42% normal (p 0.84): at chance, leans the wrong way.
+  - S&P (closed): "Chaturthi, Krishna paksha: Bearish" (43% vs 41%, p 0.32) and "Mrigsira on Thursday: Bearish" (47% vs 42%, p 0.19). Both are at chance.
+- **Changes during the day (ET):**
+  - 02:45: Tritiya begins.
+  - 07:17: the Moon enters Ardra. Ardra is a Rahu nakshatra, and the 2026 document's "Rahu/Ketu nakshatra on Thursday: Positive" tests at chance.
+  - 13:00–23:19: Bhadra. It starts after the Sensex close.
+  - 23:19: Chaturthi begins.
+  - Moon aspects: Jupiter sextile 00:30, Mars sextile 06:10, Neptune square 08:40, Saturn square 18:50.
+  - 17:14: yoga Sadhya → Shubha.
+- **Also on the day:**
+  - Jupiter in Paap Kartari continues (Ketu | Mars).
+  - Mars–Jupiter–Ketu lead active.
+  - Model v1.0 gold: Neutral / mixed.
+- **Solar return:** no day call, because the US is closed. Jupiter–Venus is at 59.3° (0.7° from exact), so the sextile is already within 1°. It is exact on about 28 Nov at 09:00 ET. The generated call for Fri 27 Nov is Bullish (Jupiter sextile Venus), which matches Solar return's Friday recovery call. From 30 Nov the call turns Volatile (Mars square Uranus).
+- **Follow-up:** the Sensex actual move is scheduled for 26 Nov at 07:00 ET.
+
 **25 Nov 2026: what we said and what happened** (closes)
 
 | Market | What we said | What happened |
