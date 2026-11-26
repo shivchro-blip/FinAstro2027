@@ -2845,5 +2845,27 @@
    "exact": ""
   }
  ],
- "actual": []
+ "actual": [
+  {
+   "market": "BSE Sensex",
+   "prev": "2026-11-25",
+   "prev_close": 83938.28,
+   "close": 84328.59,
+   "change": 0.46
+  },
+  {
+   "market": "Gold (GC=F)",
+   "prev": "2026-11-25",
+   "prev_close": 3535.8,
+   "close": 3594.6,
+   "change": 1.66
+  },
+  {
+   "market": "Silver (SI=F)",
+   "prev": "2026-11-25",
+   "prev_close": 40.05,
+   "close": 41.77,
+   "change": 4.29
+  }
+ ]
 }

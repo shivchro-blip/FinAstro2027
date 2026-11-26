@@ -904,6 +904,18 @@ Results, as the share of calls right:
   - This partly matches Solar return's own path (weak into spring, bottom Mar–May), but the rubric itself has no track record.
 - **In the calendar:** shown in the 2026 calendar's Solar return section.
 
+**26 Nov 2026: what we said and what happened** (Thanksgiving; only the Sensex traded)
+
+| Market | What we said | What happened |
+|---|---|---|
+| Sensex | No signal (model 53.2% up vs 53.3% normal); calendar row "Mrigsira on Thursday: Bearish" | +0.46% (83,938 → 84,329). Up, but FLAT by the 0.5% rule. The bearish row was wrong in sign. |
+| Gold | Bearish Low | No COMEX settlement. Electronic trading was +1.66% at 07:00 ET. Not scored; the 27 Nov settlement covers both days. |
+| Silver | No signal | No settlement. Electronic trading was +4.29% at 07:00 ET. Not scored. |
+| S&P 500 | (closed) | — |
+
+- **Gold Bearish Low:** wrong again on the electronic price, as on 25 Nov (+1.57%).
+- **Solar return and Global Predictions:** nothing to score, because the US was closed. Fri 27 Nov (early close) is Solar return's Bullish day and the last day of the Global Predictions window.
+
 **Day report for Thu 26 Nov 2026** (`day_report_2026-11-26_ET.html`; made the evening before, ET)
 
 - **Markets:** Thanksgiving. The S&P, gold and silver (COMEX) are closed. Only the BSE Sensex trades (09:15–15:30 IST = 22:45 Wed – 05:00 Thu ET).
