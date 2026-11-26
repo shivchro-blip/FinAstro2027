@@ -699,6 +699,16 @@
    "files": [
     "build/pdfref/day_report_2026-11-26_ET.html"
    ]
+  },
+  {
+   "date": "2026-11-26",
+   "pr": "57",
+   "topic": "Day report for Thu 26 Nov 2026 updated with the actual moves",
+   "analysis": "tools/day_report.py 2026-11-26 rerun after the BSE close (07:00 ET); compared with the day's calls; 2026 calendar rebuilt.",
+   "result": "Sensex +0.46% (no signal; model 53.2% up - flat by the 0.5% rule, up in sign; calendar row Mrigsira on Thursday Bearish wrong in sign). US closed for Thanksgiving. Gold and silver had no COMEX settlement: electronic +1.66% and +4.29% at 07:00 ET, not scored (gold Bearish Low wrong on the electronic price).",
+   "files": [
+    "build/pdfref/day_report_2026-11-26_ET.html"
+   ]
   }
  ]
 }
