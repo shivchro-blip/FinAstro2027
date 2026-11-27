@@ -111,6 +111,7 @@ Known data problems:
 | `tools/jupiter_saturn_gold.py` | Jupiter–Saturn aspects in a 10° orb (degree-based; exact passes to the minute) for Nov 2026 – Dec 2030, verified against the user's list. Shows every past window since 1972 with gold's turns, classified by the nearest anchor (orb entry / exact / exit). Gives a plain bottom-or-top table, which also includes Jupiter and Saturn direct stations |
 | `tools/new_sources_test.py` | Backtest of the rules from the three new books (BS Iyer, Tajika Nilakanthi, Hayanaratna): BS 42.6 with eclipses, Moon north/south, Mercury reappearance, nakshatra and lord rules, Tajika monthly and annual charts → `new_sources_test_ET.html` |
 | `tools/new_sources_leftover.py` | The leftover new-source rules (B5, B6, B7, B9, B10, B11, B13, T4, T6, T10), Tajika five-dignity strength and ruler of the year, and the calendar layer read by `calendar_2026.py` → `new_sources_leftover_ET.{html,json}` |
+| `tools/week_deep_dive.py [start] [end]` | One week, every sky event as an event class backtested on 4 markets (next session, 5 sessions, big days; BH) plus every active rule with its record → `deep_dive_*_ET.json`, shown in the 2026 calendar |
 | `tools/gold_tracker.py [--metal silver]` | Trackers: findings, rule status, best-rule dates, analysis log |
 | `tools/build_year.py YEAR` | Astronomy layer for any year; 2000–2024 are git-ignored and rebuilt on demand |
 | `tools/fetch_prices.py` | Downloads GC=F and SI=F (Yahoo; the host must be allowed) |
@@ -909,6 +910,26 @@ Results, as the share of calls right:
 
   - This partly matches Solar return's own path (weak into spring, bottom Mar–May), but the rubric itself has no track record.
 - **In the calendar:** shown in the 2026 calendar's Solar return section.
+
+**Deep dive, 1–7 Dec 2026 (27 Nov 2026)** (`tools/week_deep_dive.py`, `deep_dive_2026-12-01_to_2026-12-07_ET.json`, shown in the 2026 calendar under "Deep dive" and in each day)
+
+- **Events tested:** every sky event of the week, 59 event classes:
+  - 26 exact aspects, including the Moon's;
+  - Mercury–Rahu square, Mercury–Jupiter square, Mars–Uranus square (4 Dec 14:30 ET) and Mercury–Neptune trine;
+  - sign and nakshatra entries: Mercury into Scorpio (2 Dec), the Sun into Jyeshtha (2 Dec), Rahu into Capricorn and Ketu into Cancer (5 Dec), Venus into Swati (5 Dec);
+  - tithis, yogas, Bhadra and the last quarter (1 Dec).
+- **Method:** each class was scored on every occurrence since 2000 on the S&P, Sensex, gold and silver, over the next session and 5 sessions, two-sided, with big days, Benjamini–Hochberg across 460 tests.
+- **Result:** **0 pass**. 3 are nominal (about 23 expected by chance):
+  - Moon enters Anuradha: S&P next session 42% up vs 54% (p 0.001, q 0.64). It falls on Mon 7 Dec 05:18 ET.
+  - Moon enters Scorpio: S&P next session 46% vs 55%.
+  - Yoga Shobhana: gold next session 46% vs 54%.
+  - No event class changes the chance of a big day.
+- **Labels and model for the week:**
+  - S&P and Sensex Bullish Moderate on 2–4 Dec, from one rule (Moon–Rahu 6/8: S&P 61% vs 59%, Sensex 61% vs 58%).
+  - Gold Bullish Low from 2 Dec (Mercury with the Sun, at chance in the walk-forward test).
+  - The combined model has the S&P up 56–60% that day on 1–4 Dec (normal 54%).
+  - Solar return: Mars square Uranus, so volatility all week.
+- **How to read it:** a mild bullish lean for stocks early in the week, with nothing in the sky events themselves that has a measurable edge.
 
 **Gold Bearish Low on Fri 27 Nov 2026: why it was wrong (27 Nov 2026)**
 

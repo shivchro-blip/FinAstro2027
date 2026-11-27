@@ -1,6 +1,6 @@
 # Silver findings tracker
 
-Generated 27 Nov 2026 16:51 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
+Generated 27 Nov 2026 17:03 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
 
 ## Recent findings
 
@@ -111,6 +111,7 @@ Best (from the 26 yr data): Retrograde Mercury or Jupiter, Only Moon and Mercury
 
 | Date | PR | Topic | Result |
 |---|---|---|---|
+| 2026-11-27 | #64 | Deep dive 1-7 Dec 2026: every sky event backtested | 0 of 460 pass BH; 3 nominal (about 23 expected by chance): Moon enters Anuradha S&P next session 42% up vs 54% (7 Dec), Moon enters Scorpio S&P 46% vs 55%, Yoga Shobhana gold 46% vs 54%. Labels: S&P/Sensex Bullish Moderate 2-4 Dec (Moon-Rahu 6/8), gold Bullish Low from 2 Dec; model S&P 56-60% up on 1-4 Dec; Solar return volatile (Mars square Uranus). |
 | 2026-11-27 | #63 | Why gold's Bearish Low call failed on 27 Nov 2026; untested phase removed | Gold +3.75% (25->27 Nov), +4.4% since the label began; silver +9.0%. The label came only from a hand-added bearish phase (Sun in Anuradha + Mars aspect; U3 at chance 45% vs 43%; Bearish Low label 44% vs 44%). The combined model had gold 54.2% up; the big-move watch was right. Phase removed: gold now No signal 23 Nov-1 Dec; combined model and calendar rebuilt. |
 | 2026-11-27 | #62 | HTML cleanup: keep only the 2026 calendar and the 2027 calendar | Kept: calendar_2026-11-24_to_2026-12-31_ET.html, calendar_2027_NY_master.html (build/pdfref and reports), build/calendar_2027.html (tests read it) and the user's own source HTMLs. All JSON/MD/data kept; removed pages rebuild from their tools or git history. |
 | 2026-11-27 | #61 | Leftover new-source rules tested; new-source layer added to the 2026 calendar | No leftover rule holds. Nominal only: eclipse in Libra/Sagittarius (gold down 11/15, p 0.02, q 0.22) and eclipse in Chaitra (gold down 6/7, silver 8/8, 9 eclipses; none before 2028). Sun's Aries-ingress strength is constant (untestable). Calendar shows 13 new-source items in 24 Nov-31 Dec with their test results; lord of the year 2026-27 Mercury (US) / Jupiter (India); NYSE ruler of the year Moon. |

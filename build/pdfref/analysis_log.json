@@ -766,6 +766,18 @@
     "build/pdfref/gold_signals_2026-11-22_to_2027-12-31_ET.json",
     "reports/calendar_2026-11-24_to_2026-12-31_ET.html"
    ]
+  },
+  {
+   "date": "2026-11-27",
+   "pr": "64",
+   "topic": "Deep dive 1-7 Dec 2026: every sky event backtested",
+   "analysis": "tools/week_deep_dive.py: 59 event classes from the week (exact aspects, sign/nakshatra entries, tithi, yoga, Bhadra, last quarter) scored on every occurrence 2000-2026 on S&P, Sensex, gold, silver (next session, 5 sessions, two-sided; big days); BH over 460 tests; with each day's active rules, labels, model, Solar return and new-source items. Added to the 2026 calendar (section and per-day tables).",
+   "result": "0 of 460 pass BH; 3 nominal (about 23 expected by chance): Moon enters Anuradha S&P next session 42% up vs 54% (7 Dec), Moon enters Scorpio S&P 46% vs 55%, Yoga Shobhana gold 46% vs 54%. Labels: S&P/Sensex Bullish Moderate 2-4 Dec (Moon-Rahu 6/8), gold Bullish Low from 2 Dec; model S&P 56-60% up on 1-4 Dec; Solar return volatile (Mars square Uranus).",
+   "files": [
+    "build/pdfref/deep_dive_2026-12-01_to_2026-12-07_ET.json",
+    "tools/week_deep_dive.py",
+    "reports/calendar_2026-11-24_to_2026-12-31_ET.html"
+   ]
   }
  ]
 }

@@ -68,6 +68,8 @@ def gather(a, b):
     sr["jsg"] = json.load(open(OUT / "jupiter_saturn_gold_ET.json"))
     sr["nsl"] = json.load(open(OUT / "new_sources_leftover_ET.json"))
     sr["nst"] = json.load(open(OUT / "new_sources_test_ET.json"))
+    ddf = sorted(OUT.glob("deep_dive_*_ET.json"))
+    sr["dd"] = json.load(open(ddf[-1])) if ddf else None
     sr["doc"] = doc_rows(json.load(open(OUT / "doc_dec2026_check_ET.json")), res)
     sr["kartari"] = [dict(key=r["key"], title=r["title"], tone=r["tone"], basis=r["basis"], record=r["record"],
                           spans=[(dt.datetime.fromisoformat(u["frm_iso"]), dt.datetime.fromisoformat(u["to_iso"]), u["pair"]) for u in r["upcoming"]])
@@ -471,7 +473,7 @@ def page(res, sr, track, checks, a, b, generated):
     o = [f"<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>"
          f"<title>FinAstro Calendar 2026</title><style>{CSS}</style></head><body>"]
     o.append("<div class='top'><nav><b>FinAstro calendar</b><a href='#read'>Read first</a><a href='#keys'>Key dates</a><a href='#grid'>Calendar</a>"
-             "<a href='#spans'>Signal spans</a><a href='#sr'>Solar return</a><a href='#ns'>New sources</a><a href='#jan'>January 2027</a><a href='#days'>Day by day</a><a href='#trust'>Track record</a><a href='#checks'>Checks</a>"
+             "<a href='#spans'>Signal spans</a><a href='#sr'>Solar return</a><a href='#ns'>New sources</a><a href='#dd'>Deep dive</a><a href='#jan'>January 2027</a><a href='#days'>Day by day</a><a href='#trust'>Track record</a><a href='#checks'>Checks</a>"
              "<span style='flex:1'></span><button onclick='theme()'>Light / dark</button></nav></div><main>")
     o.append(f"<h1>Market astrology calendar, {a:%d %b} – {b:%d %b %Y}</h1>"
              f"<p class='mut'>S&amp;P 500, BSE Sensex, gold and silver. Dates and times US Eastern (IST also shown for changes). Sidereal Lahiri, mean node, whole-sign drishti; "
@@ -646,6 +648,8 @@ def page(res, sr, track, checks, a, b, generated):
     sr_jsg[:] = [sr["jsg"]]
     o.append(gjc_html(sr["gjc"]))
     o.append(ns_html(sr))
+    if sr.get("dd"):
+        o.append(dd_html(sr["dd"]))
     o.append(gp_html(sr["gp"]))
     o.append(doc_html(sr["doc"]))
     o.append(jan_html(sr["jan"]))
@@ -731,6 +735,8 @@ def day_html(x, sr, res):
     if nsd:
         o.append("<h3>New-source rules (tested; information only, not in the signals)</h3><ul class='s'>"
                  + "".join(f"<li>{E(i['when'])} {E(i['text'])} <span class='mut'>[{E(i['rule'])}: {E(i['verdict'])}]</span></li>" for i in nsd) + "</ul>")
+    if sr.get("dd"):
+        o.append(dd_day(sr["dd"], x["date"]))
     # solar return
     sr_lines = []
     if srd:
@@ -839,6 +845,71 @@ def jan_html(j):
 
 GJC_KEYS = ("Jupiter with Rahu or Ketu", "Jupiter–Saturn trine (5/9)", "Jupiter–Saturn opposite (7)", "Saturn aspects Jupiter", "Jupiter hemmed by malefics (12th and 2nd)",
             "Malefic vedha on Jupiter")
+
+
+DDM = (("spx", "S&P"), ("sensex", "Sensex"), ("gold", "Gold"), ("silver", "Silver"))
+
+
+def _dd_cell(st):
+    h1, h5, bg = st["h1"], st["h5"], st["big"]
+    if h1["up_pct"] is None:
+        return "<td class='s'>–</td>"
+    flag = " class='t-up'" if (h5["p2"] or 1) < 0.05 and h5["up_pct"] > h5["base"] else " class='t-dn'" if (h5["p2"] or 1) < 0.05 else ""
+    f1 = " ⚑" if (h1["p2"] or 1) < 0.05 else ""
+    return (f"<td class='s'>next: {h1['up_pct']}% up vs {h1['base']}%{f1}<br><span{flag}>5 sessions: {h5['up_pct']}% vs {h5['base']}%</span>"
+            f"<br>big day {bg['pct']}% (10% normal)</td>")
+
+
+def dd_day(dd, date):
+    day = next((d for d in dd["days"] if d["date"] == date), None)
+    if not day or not day["events"]:
+        return ""
+    rows = []
+    for e in day["events"]:
+        c = dd["classes"][e["key"]]
+        rows.append(f"<tr><td class='n'>{E(e['et'])}</td><td>{E(c['label'])}<div class='s'>{c['n_hist']} times since 2000</div></td>"
+                    + "".join(_dd_cell(c["stats"][k]) for k, _ in DDM) + "</tr>")
+    return (f"<details class='sub'><summary>Deep dive: every sky event today backtested ({len(day['events'])})</summary>"
+            "<p class='s'>Each event's class scored on every occurrence 20 Nov 2000 – 20 Nov 2026 (§6 timing). There is no stated direction, so the test is two-sided. "
+            "⚑ = next-session p &lt; 0.05; coloured = 5-session p &lt; 0.05. None passes the correction across the week.</p><div class='wrap'><table><thead><tr><th>ET</th><th>Event</th>"
+            + "".join(f"<th>{n}</th>" for _, n in DDM) + f"</tr></thead><tbody>{''.join(rows)}</tbody></table></div></details>")
+
+
+def dd_html(dd):
+    from datetime import date as _d
+    a, b = _d.fromisoformat(dd["start"]), _d.fromisoformat(dd["end"])
+    nom = "; ".join(f"{x['label']} ({x['market']}, {'next session' if x['horizon'] == 'h1' else '5 sessions'}: {x['up_pct']}% up vs {x['base']}%, p {x['p2']}, q {x.get('q')})" for x in dd["nominal"]) or "none"
+    o = [f"<h2 id='dd'>Deep dive: {a:%a %d %b} – {b:%a %d %b %Y}</h2>",
+         f"<div class='callout'><b>Every sky event of the week backtested.</b> {len(dd['classes'])} event classes (exact aspects, sign and nakshatra entries, tithi, yoga, Bhadra, the last quarter) "
+         f"were each scored on every occurrence since 2000 on the S&amp;P 500, Sensex, gold and silver: {dd['n_cells']} tests. "
+         f"<b>{len(dd['significant'])} pass the Benjamini–Hochberg correction</b>, and {len(dd['nominal'])} have a nominal p &lt; 0.05. By chance alone about {round(dd['n_cells'] * 0.05)} would be expected, "
+         f"so the week's events carry no measurable direction. Nominal ones: {E(nom)}. Big days: {len(dd['big_significant'])} classes pass.</div>",
+         "<h3>Day by day</h3><div class='wrap'><table><thead><tr><th>Day</th><th>Labels (table) and model: up that day / over 5 sessions vs normal</th>"
+         "<th>Catalogue rules active (with a supported record)</th><th>Solar return</th><th>New sources</th></tr></thead><tbody>"]
+    for d in dd["days"]:
+        lab = []
+        for k, nm in DDM:
+            sg = d["signals"].get({"spx": "S&P 500", "sensex": "BSE Sensex", "gold": "Gold", "silver": "Silver"}[k], {})
+            pr = d["prob"].get(k)
+            if pr:
+                lab.append(f"{nm}: {E((sg.get('sig', '') + ' ' + sg.get('st', '')).strip())} · {pr['all']['up1']:.0f}% / {pr['all']['up5']:.0f}% (normal {pr['base']['up1']:.0f}% / {pr['base']['up5']:.0f}%)")
+            else:
+                lab.append(f"{nm}: closed")
+        sup = []
+        for k, nm in DDM:
+            c = d["rules"].get(k, {})
+            good = sum(v for st_, v in c.items() if st_ in ("Strongest", "Supported", "Consistent"))
+            tot = sum(c.values())
+            sup.append(f"{nm} {good} of {tot}")
+        notable = "; ".join(d["notable"].get("spx", [])[:2])
+        o.append(f"<tr><td class='n'>{E(d['weekday'])} {E(d['date'][5:])}</td><td class='s'>{'<br>'.join(lab)}</td>"
+                 f"<td class='s'>{E(', '.join(sup))}<br><span class='mut'>{E(notable)}</span></td><td class='s'>{E('; '.join(d['solar_return']['rules']) or 'month reading')}</td>"
+                 f"<td class='s'>{E('; '.join(d['new_sources'][:3]))}</td></tr>")
+    o.append("</tbody></table></div><p class='s'>Reading the week: the only table labels are S&amp;P and Sensex Bullish Moderate on 2–4 Dec, from one rule (Moon–Rahu 6/8: "
+             "S&amp;P 61% vs 59%, Sensex 61% vs 58%), and gold Bullish Low from 2 Dec (Mercury with the Sun, 60% vs 57%, at chance in the walk-forward test). "
+             "The combined model leans up for the S&amp;P on 1–4 Dec (56–60% vs 54% that day). Solar return: Mars square Uranus means volatility all week. "
+             "Every event of the week is listed with its record in the day entries below (“Deep dive”).</p>")
+    return "".join(o)
 
 
 def ns_on(sr, d):
