@@ -12,7 +12,7 @@ Points per weekday:
   bullish  +1 U2 Mercury with the Sun (small edge)   +2 Venus combust in East (lead, p ~0.1)
            +1 volatility window leaning up            +1 narrowed trigger day in an up window
   bearish  +1 volatility window leaning down          +1 narrowed trigger day in a down window
-           +1 22 Nov - 2 Dec 2026 bearish phase (deep analysis; its rules were at chance)
+  (the untested 22 Nov - 1 Dec 2026 "bearish phase" was removed on 27 Nov 2026; see the note in main())
 Net > 0 bullish, < 0 bearish, 0 with a volatility window = volatile. Strength from the
 size of the net score: 3+ High, 2 Moderate, 1 Low. Consecutive weekdays with the same reasons,
 signal and strength are merged. Nothing here passed a strict significance test.
@@ -44,9 +44,9 @@ def main():
         for x in p["best"]:
             narrowed[x["date"]] = p["window_lean"]
     items = [dict(it, frm=dt.date.fromisoformat(it["frm"]), to=dt.date.fromisoformat(it["to"])) for it in outl["items"] if it["metal"] in (MC.METAL, "gold & silver")]
-    if MC.METAL == "gold":
-        items.append(dict(kind="Phase", title="Bearish phase: Sun in Anuradha (Saturn's nakshatra), Mars aspects the Sun", lean="down",
-                          frm=dt.date(2026, 11, 22), to=dt.date(2026, 12, 1)))
+    # The hand-added "22 Nov - 1 Dec 2026 bearish phase" (Sun in Anuradha, a Saturn nakshatra, with Mars aspecting the
+    # Sun; user note U3) was removed on 27 Nov 2026: U3 is at chance (60/134 = 45% vs 43% since 2000) and the phase was
+    # the only input behind the gold "Bearish Low" label of 23 Nov - 1 Dec, which gold contradicted (+4.4% to 27 Nov).
     days = []
     d = a
     while d <= b:

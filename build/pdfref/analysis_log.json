@@ -754,6 +754,18 @@
     "reports/calendar_2026-11-24_to_2026-12-31_ET.html",
     "reports/calendar_2027_NY_master.html"
    ]
+  },
+  {
+   "date": "2026-11-27",
+   "pr": "63",
+   "topic": "Why gold's Bearish Low call failed on 27 Nov 2026; untested phase removed",
+   "analysis": "Traced the gold label for 23 Nov-1 Dec to its inputs in tools/gold_signal_table.py; checked each input's record (user U3, label walk-forward), the combined model and the big-move watch; compared with gold settlements 20-27 Nov.",
+   "result": "Gold +3.75% (25->27 Nov), +4.4% since the label began; silver +9.0%. The label came only from a hand-added bearish phase (Sun in Anuradha + Mars aspect; U3 at chance 45% vs 43%; Bearish Low label 44% vs 44%). The combined model had gold 54.2% up; the big-move watch was right. Phase removed: gold now No signal 23 Nov-1 Dec; combined model and calendar rebuilt.",
+   "files": [
+    "tools/gold_signal_table.py",
+    "build/pdfref/gold_signals_2026-11-22_to_2027-12-31_ET.json",
+    "reports/calendar_2026-11-24_to_2026-12-31_ET.html"
+   ]
   }
  ]
 }
