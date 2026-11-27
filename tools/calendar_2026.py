@@ -68,8 +68,7 @@ def gather(a, b):
     sr["jsg"] = json.load(open(OUT / "jupiter_saturn_gold_ET.json"))
     sr["nsl"] = json.load(open(OUT / "new_sources_leftover_ET.json"))
     sr["nst"] = json.load(open(OUT / "new_sources_test_ET.json"))
-    ddf = sorted(OUT.glob("deep_dive_*_ET.json"))
-    sr["dd"] = json.load(open(ddf[-1])) if ddf else None
+    sr["dds"] = [json.load(open(f)) for f in sorted(OUT.glob("deep_dive_2026-*_ET.json"))]
     sr["doc"] = doc_rows(json.load(open(OUT / "doc_dec2026_check_ET.json")), res)
     sr["kartari"] = [dict(key=r["key"], title=r["title"], tone=r["tone"], basis=r["basis"], record=r["record"],
                           spans=[(dt.datetime.fromisoformat(u["frm_iso"]), dt.datetime.fromisoformat(u["to_iso"]), u["pair"]) for u in r["upcoming"]])
@@ -103,6 +102,9 @@ def verify(res, sr, a, b):
         checks.append(dict(name=name, ok=bool(ok), detail=detail))
     days = res["days"]
     ds = [dt.date.fromisoformat(x["date"]) for x in days]
+    dchk = [c for d in sr.get("dds", []) for c in d["checks"]]
+    add("Deep dive: every week's double checks pass (event times, counts, independent recount, coverage)", dchk and all(c["ok"] for c in dchk),
+        f"{sum(c['ok'] for c in dchk)}/{len(dchk)} across {len(sr.get('dds', []))} weeks")
     its = sr["nsl"]["calendar"]["items"]
     add("New-source layer loaded, every item carries its test result", its and all(i.get("verdict") for i in its), f"{len(its)} items (BS Iyer, Tajika Nilakanthi, Hayanaratna); none used in the signals")
     add("Every day present", ds == [a + dt.timedelta(days=i) for i in range((b - a).days + 1)], f"{len(ds)} days, {ds[0]} – {ds[-1]}")
@@ -648,8 +650,10 @@ def page(res, sr, track, checks, a, b, generated):
     sr_jsg[:] = [sr["jsg"]]
     o.append(gjc_html(sr["gjc"]))
     o.append(ns_html(sr))
-    if sr.get("dd"):
-        o.append(dd_html(sr["dd"]))
+    if sr.get("dds"):
+        o.append(dd_intro(sr["dds"]))
+        for dd in sr["dds"]:
+            o.append(dd_html(dd))
     o.append(gp_html(sr["gp"]))
     o.append(doc_html(sr["doc"]))
     o.append(jan_html(sr["jan"]))
@@ -735,8 +739,8 @@ def day_html(x, sr, res):
     if nsd:
         o.append("<h3>New-source rules (tested; information only, not in the signals)</h3><ul class='s'>"
                  + "".join(f"<li>{E(i['when'])} {E(i['text'])} <span class='mut'>[{E(i['rule'])}: {E(i['verdict'])}]</span></li>" for i in nsd) + "</ul>")
-    if sr.get("dd"):
-        o.append(dd_day(sr["dd"], x["date"]))
+    for dd in sr.get("dds", []):
+        o.append(dd_day(dd, x["date"]))
     # solar return
     sr_lines = []
     if srd:
@@ -875,16 +879,34 @@ def dd_day(dd, date):
             + "".join(f"<th>{n}</th>" for _, n in DDM) + f"</tr></thead><tbody>{''.join(rows)}</tbody></table></div></details>")
 
 
+def dd_intro(dds):
+    n = sum(d["n_cells"] for d in dds)
+    sig = sum(len(d["significant"]) for d in dds)
+    nom = sum(len(d["nominal"]) for d in dds)
+    big = sum(len(d["big_significant"]) for d in dds)
+    chk = [c for d in dds for c in d["checks"]]
+    weeks = "".join(f"<a href='#dd{d['start'][5:7]}{d['start'][8:]}'>{d['start'][8:]}–{d['end'][8:]} Dec</a> " for d in dds)
+    return (f"<h2 id='dd'>Deep dive, week by week to 31 Dec</h2><p class='s'>Weeks: {weeks}</p>"
+            f"<div class='callout'><b>Every sky event from 1 to 31 Dec backtested.</b> Each event of each week (exact aspects, sign and nakshatra entries, stations, combustion, "
+            "the Moon's perigee and apogee, tithi, yoga, Bhadra, lunations) was turned into its event class and scored on every occurrence since 2000 on the S&amp;P 500, Sensex, gold and silver, "
+            f"over the next session and over 5 sessions, two-sided, with big days, using Benjamini–Hochberg correction within each week. <b>{n} tests: {sig} pass the correction</b>, and {nom} have a nominal "
+            f"p &lt; 0.05, against about {round(n * 0.05)} expected by chance. Big days: {big} pass. <b>The sky events of December carry no measurable direction or big-day signal.</b> "
+            "The labels, the model and the rules with a supported record (below and in each day) are what is left.<br>"
+            f"<b>Double-checked:</b> {sum(c['ok'] for c in chk)} of {len(chk)} checks pass. Every event time was re-derived from the ephemeris, the occurrence counts were checked against "
+            "the expected frequencies, one result per week was recounted from raw prices with separate code, and every sky event was confirmed as classified. "
+            "Five sample results were also recomputed independently: all match.</div>")
+
+
 def dd_html(dd):
     from datetime import date as _d
     a, b = _d.fromisoformat(dd["start"]), _d.fromisoformat(dd["end"])
     nom = "; ".join(f"{x['label']} ({x['market']}, {'next session' if x['horizon'] == 'h1' else '5 sessions'}: {x['up_pct']}% up vs {x['base']}%, p {x['p2']}, q {x.get('q')})" for x in dd["nominal"]) or "none"
-    o = [f"<h2 id='dd'>Deep dive: {a:%a %d %b} – {b:%a %d %b %Y}</h2>",
+    o = [f"<h3 id='dd{a:%m%d}'>Week {a:%a %d %b} – {b:%a %d %b %Y}</h3>",
          f"<div class='callout'><b>Every sky event of the week backtested.</b> {len(dd['classes'])} event classes (exact aspects, sign and nakshatra entries, tithi, yoga, Bhadra, the last quarter) "
          f"were each scored on every occurrence since 2000 on the S&amp;P 500, Sensex, gold and silver: {dd['n_cells']} tests. "
          f"<b>{len(dd['significant'])} pass the Benjamini–Hochberg correction</b>, and {len(dd['nominal'])} have a nominal p &lt; 0.05. By chance alone about {round(dd['n_cells'] * 0.05)} would be expected, "
          f"so the week's events carry no measurable direction. Nominal ones: {E(nom)}. Big days: {len(dd['big_significant'])} classes pass.</div>",
-         "<h3>Day by day</h3><div class='wrap'><table><thead><tr><th>Day</th><th>Labels (table) and model: up that day / over 5 sessions vs normal</th>"
+         "<div class='wrap'><table><thead><tr><th>Day</th><th>Labels (table) and model: up that day / over 5 sessions vs normal</th>"
          "<th>Catalogue rules active (with a supported record)</th><th>Solar return</th><th>New sources</th></tr></thead><tbody>"]
     for d in dd["days"]:
         lab = []
@@ -905,10 +927,7 @@ def dd_html(dd):
         o.append(f"<tr><td class='n'>{E(d['weekday'])} {E(d['date'][5:])}</td><td class='s'>{'<br>'.join(lab)}</td>"
                  f"<td class='s'>{E(', '.join(sup))}<br><span class='mut'>{E(notable)}</span></td><td class='s'>{E('; '.join(d['solar_return']['rules']) or 'month reading')}</td>"
                  f"<td class='s'>{E('; '.join(d['new_sources'][:3]))}</td></tr>")
-    o.append("</tbody></table></div><p class='s'>Reading the week: the only table labels are S&amp;P and Sensex Bullish Moderate on 2–4 Dec, from one rule (Moon–Rahu 6/8: "
-             "S&amp;P 61% vs 59%, Sensex 61% vs 58%), and gold Bullish Low from 2 Dec (Mercury with the Sun, 60% vs 57%, at chance in the walk-forward test). "
-             "The combined model leans up for the S&amp;P on 1–4 Dec (56–60% vs 54% that day). Solar return: Mars square Uranus means volatility all week. "
-             "Every event of the week is listed with its record in the day entries below (“Deep dive”).</p>")
+    o.append("</tbody></table></div>")
     return "".join(o)
 
 

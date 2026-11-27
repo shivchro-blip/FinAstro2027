@@ -1,5 +1,5 @@
 {
- "made": "2026-11-27 17:01 ET",
+ "made": "2026-11-27 17:33 ET",
  "start": "2026-12-01",
  "end": "2026-12-07",
  "classes": {
@@ -7222,35 +7222,40 @@
      "ist": "11:38 IST",
      "kind": "lunation",
      "text": "Last Quarter in Leo / Purva Phalguni",
-     "key": "lun|270"
+     "key": "lun|270",
+     "utc": "2026-12-01T06:08:40+00:00"
     },
     {
      "et": "01:10 EST",
      "ist": "11:40 IST",
      "kind": "exact degree aspect",
      "text": "Sun\u2013Moon exact square (90\u00b0)",
-     "key": "asp|Sun|Moon|square"
+     "key": "asp|Sun|Moon|square",
+     "utc": "2026-12-01T06:10:00+00:00"
     },
     {
      "et": "01:45 EST",
      "ist": "12:15 IST",
      "kind": "yoga",
      "text": "Yoga Vaidhriti \u2192 Vishkambha",
-     "key": "yoga|0"
+     "key": "yoga|0",
+     "utc": "2026-12-01T06:45:14+00:00"
     },
     {
      "et": "12:44 EST",
      "ist": "23:14 IST",
      "kind": "tithi",
      "text": "Tithi Ashtami \u2192 Navami (Krishna paksha)",
-     "key": "tithi|23"
+     "key": "tithi|23",
+     "utc": "2026-12-01T17:44:22+00:00"
     },
     {
      "et": "22:25 EST",
      "ist": "08:55 IST",
      "kind": "nakshatra change",
      "text": "Moon enters Uttara Phalguni nakshatra (from Purva Phalguni) in Leo",
-     "key": "nak|Moon|Uttara Phalguni"
+     "key": "nak|Moon|Uttara Phalguni",
+     "utc": "2026-12-02T03:25:25+00:00"
     }
    ],
    "signals": {
@@ -7517,91 +7522,104 @@
      "ist": "10:31 IST",
      "kind": "yoga",
      "text": "Yoga Vishkambha \u2192 Priti",
-     "key": "yoga|1"
+     "key": "yoga|1",
+     "utc": "2026-12-02T05:01:49+00:00"
     },
     {
      "et": "04:20 EST",
      "ist": "14:50 IST",
      "kind": "exact degree aspect",
      "text": "Moon\u2013Mercury exact sextile (60\u00b0)",
-     "key": "asp|Moon|Mercury|sextile"
+     "key": "asp|Moon|Mercury|sextile",
+     "utc": "2026-12-02T09:20:00+00:00"
     },
     {
      "et": "04:29 EST",
      "ist": "14:59 IST",
      "kind": "sign change",
      "text": "Moon enters Virgo (from Leo)",
-     "key": "sign|Moon|Virgo"
+     "key": "sign|Moon|Virgo",
+     "utc": "2026-12-02T09:29:27+00:00"
     },
     {
      "et": "06:57 EST",
      "ist": "17:27 IST",
      "kind": "sign change",
      "text": "Mercury enters Scorpio (from Libra)",
-     "key": "sign|Mercury|Scorpio"
+     "key": "sign|Mercury|Scorpio",
+     "utc": "2026-12-02T11:57:32+00:00"
     },
     {
      "et": "09:40 EST",
      "ist": "20:10 IST",
      "kind": "exact degree aspect",
      "text": "Mercury\u2013Rahu exact square (90\u00b0)",
-     "key": "asp|Mercury|Rahu|square"
+     "key": "asp|Mercury|Rahu|square",
+     "utc": "2026-12-02T14:40:00+00:00"
     },
     {
      "et": "09:40 EST",
      "ist": "20:10 IST",
      "kind": "exact degree aspect",
      "text": "Mercury\u2013Ketu exact square (90\u00b0)",
-     "key": "asp|Mercury|Ketu|square"
+     "key": "asp|Mercury|Ketu|square",
+     "utc": "2026-12-02T14:40:00+00:00"
     },
     {
      "et": "12:22 EST",
      "ist": "22:52 IST",
      "kind": "tithi",
      "text": "Tithi Navami \u2192 Dashami (Krishna paksha)",
-     "key": "tithi|24"
+     "key": "tithi|24",
+     "utc": "2026-12-02T17:22:32+00:00"
     },
     {
      "et": "18:10 EST",
      "ist": "04:40 IST",
      "kind": "exact degree aspect",
      "text": "Moon\u2013Neptune exact opposition (180\u00b0)",
-     "key": "asp|Moon|Neptune|opposition"
+     "key": "asp|Moon|Neptune|opposition",
+     "utc": "2026-12-02T23:10:00+00:00"
     },
     {
      "et": "20:58 EST",
      "ist": "07:28 IST",
      "kind": "nakshatra change",
      "text": "Sun enters Jyeshtha nakshatra (from Anuradha) in Scorpio",
-     "key": "nak|Sun|Jyeshtha"
+     "key": "nak|Sun|Jyeshtha",
+     "utc": "2026-12-03T01:58:13+00:00"
     },
     {
      "et": "21:20 EST",
      "ist": "07:50 IST",
      "kind": "exact degree aspect",
      "text": "Moon\u2013Uranus exact trine (120\u00b0)",
-     "key": "asp|Moon|Uranus|trine"
+     "key": "asp|Moon|Uranus|trine",
+     "utc": "2026-12-03T02:20:00+00:00"
     },
     {
      "et": "21:50 EST",
      "ist": "08:20 IST",
      "kind": "exact degree aspect",
      "text": "Moon\u2013Pluto exact trine (120\u00b0)",
-     "key": "asp|Moon|Pluto|trine"
+     "key": "asp|Moon|Pluto|trine",
+     "utc": "2026-12-03T02:50:00+00:00"
     },
     {
      "et": "22:45 EST",
      "ist": "09:15 IST",
      "kind": "yoga",
      "text": "Yoga Priti \u2192 Ayushman",
-     "key": "yoga|2"
+     "key": "yoga|2",
+     "utc": "2026-12-03T03:45:29+00:00"
     },
     {
      "et": "22:53 EST",
      "ist": "09:23 IST",
      "kind": "nakshatra change",
      "text": "Moon enters Hasta nakshatra (from Uttara Phalguni) in Virgo",
-     "key": "nak|Moon|Hasta"
+     "key": "nak|Moon|Hasta",
+     "utc": "2026-12-03T03:53:53+00:00"
     }
    ],
    "signals": {
@@ -7879,42 +7897,48 @@
      "ist": "10:54 IST",
      "kind": "karana",
      "text": "Karana Vanija \u2192 Vishti \u2014 Bhadra (Vishti) begins",
-     "key": "bhadra"
+     "key": "bhadra",
+     "utc": "2026-12-03T05:24:20+00:00"
     },
     {
      "et": "06:00 EST",
      "ist": "16:30 IST",
      "kind": "exact degree aspect",
      "text": "Moon\u2013Saturn exact opposition (180\u00b0)",
-     "key": "asp|Moon|Saturn|opposition"
+     "key": "asp|Moon|Saturn|opposition",
+     "utc": "2026-12-03T11:00:00+00:00"
     },
     {
      "et": "12:34 EST",
      "ist": "23:04 IST",
      "kind": "tithi",
      "text": "Tithi Dashami \u2192 Ekadashi (Krishna paksha)",
-     "key": "tithi|25"
+     "key": "tithi|25",
+     "utc": "2026-12-03T17:34:02+00:00"
     },
     {
      "et": "12:40 EST",
      "ist": "23:10 IST",
      "kind": "exact degree aspect",
      "text": "Sun\u2013Moon exact sextile (60\u00b0)",
-     "key": "asp|Sun|Moon|sextile"
+     "key": "asp|Sun|Moon|sextile",
+     "utc": "2026-12-03T17:40:00+00:00"
     },
     {
      "et": "21:53 EST",
      "ist": "08:23 IST",
      "kind": "yoga",
      "text": "Yoga Ayushman \u2192 Saubhagya",
-     "key": "yoga|3"
+     "key": "yoga|3",
+     "utc": "2026-12-04T02:53:36+00:00"
     },
     {
      "et": "23:53 EST",
      "ist": "10:23 IST",
      "kind": "nakshatra change",
      "text": "Moon enters Chitra nakshatra (from Hasta) in Virgo",
-     "key": "nak|Moon|Chitra"
+     "key": "nak|Moon|Chitra",
+     "utc": "2026-12-04T04:53:04+00:00"
     }
    ],
    "signals": {
@@ -8180,63 +8204,72 @@
      "ist": "12:40 IST",
      "kind": "exact degree aspect",
      "text": "Mercury\u2013Jupiter exact square (90\u00b0)",
-     "key": "asp|Mercury|Jupiter|square"
+     "key": "asp|Mercury|Jupiter|square",
+     "utc": "2026-12-04T07:10:00+00:00"
     },
     {
      "et": "12:32 EST",
      "ist": "23:02 IST",
      "kind": "sign change",
      "text": "Moon enters Libra (from Virgo)",
-     "key": "sign|Moon|Libra"
+     "key": "sign|Moon|Libra",
+     "utc": "2026-12-04T17:32:57+00:00"
     },
     {
      "et": "12:40 EST",
      "ist": "23:10 IST",
      "kind": "exact degree aspect",
      "text": "Moon\u2013Rahu exact trine (120\u00b0)",
-     "key": "asp|Moon|Rahu|trine"
+     "key": "asp|Moon|Rahu|trine",
+     "utc": "2026-12-04T17:40:00+00:00"
     },
     {
      "et": "12:40 EST",
      "ist": "23:10 IST",
      "kind": "exact degree aspect",
      "text": "Moon\u2013Ketu exact sextile (60\u00b0)",
-     "key": "asp|Moon|Ketu|sextile"
+     "key": "asp|Moon|Ketu|sextile",
+     "utc": "2026-12-04T17:40:00+00:00"
     },
     {
      "et": "12:46 EST",
      "ist": "23:16 IST",
      "kind": "nakshatra change",
      "text": "Mercury enters Anuradha nakshatra (from Vishakha) in Scorpio",
-     "key": "nak|Mercury|Anuradha"
+     "key": "nak|Mercury|Anuradha",
+     "utc": "2026-12-04T17:46:55+00:00"
     },
     {
      "et": "13:15 EST",
      "ist": "23:45 IST",
      "kind": "tithi",
      "text": "Tithi Ekadashi \u2192 Dwadashi (Krishna paksha)",
-     "key": "tithi|26"
+     "key": "tithi|26",
+     "utc": "2026-12-04T18:15:14+00:00"
     },
     {
      "et": "14:30 EST",
      "ist": "01:00 IST",
      "kind": "exact degree aspect",
      "text": "Mars\u2013Uranus exact square (90\u00b0)",
-     "key": "asp|Mars|Uranus|square"
+     "key": "asp|Mars|Uranus|square",
+     "utc": "2026-12-04T19:30:00+00:00"
     },
     {
      "et": "17:50 EST",
      "ist": "04:20 IST",
      "kind": "exact degree aspect",
      "text": "Moon\u2013Jupiter exact sextile (60\u00b0)",
-     "key": "asp|Moon|Jupiter|sextile"
+     "key": "asp|Moon|Jupiter|sextile",
+     "utc": "2026-12-04T22:50:00+00:00"
     },
     {
      "et": "21:23 EST",
      "ist": "07:53 IST",
      "kind": "yoga",
      "text": "Yoga Saubhagya \u2192 Shobhana",
-     "key": "yoga|4"
+     "key": "yoga|4",
+     "utc": "2026-12-05T02:23:16+00:00"
     }
    ],
    "signals": {
@@ -8509,70 +8542,80 @@
      "ist": "11:20 IST",
      "kind": "exact degree aspect",
      "text": "Moon\u2013Venus exact conjunction (0\u00b0)",
-     "key": "asp|Moon|Venus|conjunction"
+     "key": "asp|Moon|Venus|conjunction",
+     "utc": "2026-12-05T05:50:00+00:00"
     },
     {
      "et": "01:19 EST",
      "ist": "11:49 IST",
      "kind": "nakshatra change",
      "text": "Moon enters Swati nakshatra (from Chitra) in Libra",
-     "key": "nak|Moon|Swati"
+     "key": "nak|Moon|Swati",
+     "utc": "2026-12-05T06:19:06+00:00"
     },
     {
      "et": "06:30 EST",
      "ist": "17:00 IST",
      "kind": "exact degree aspect",
      "text": "Moon\u2013Mars exact sextile (60\u00b0)",
-     "key": "asp|Moon|Mars|sextile"
+     "key": "asp|Moon|Mars|sextile",
+     "utc": "2026-12-05T11:30:00+00:00"
     },
     {
      "et": "06:40 EST",
      "ist": "17:10 IST",
      "kind": "exact degree aspect",
      "text": "Moon\u2013Pluto exact square (90\u00b0)",
-     "key": "asp|Moon|Pluto|square"
+     "key": "asp|Moon|Pluto|square",
+     "utc": "2026-12-05T11:40:00+00:00"
     },
     {
      "et": "12:02 EST",
      "ist": "22:32 IST",
      "kind": "nakshatra change",
      "text": "Ketu enters Ashlesha nakshatra (from Magha) in Cancer",
-     "key": "nak|Ketu|Ashlesha"
+     "key": "nak|Ketu|Ashlesha",
+     "utc": "2026-12-05T17:02:10+00:00"
     },
     {
      "et": "12:02 EST",
      "ist": "22:32 IST",
      "kind": "sign change",
      "text": "Ketu enters Cancer (from Leo)",
-     "key": "sign|Ketu|Cancer"
+     "key": "sign|Ketu|Cancer",
+     "utc": "2026-12-05T17:02:10+00:00"
     },
     {
      "et": "12:02 EST",
      "ist": "22:32 IST",
      "kind": "sign change",
      "text": "Rahu enters Capricorn (from Aquarius)",
-     "key": "sign|Rahu|Capricorn"
+     "key": "sign|Rahu|Capricorn",
+     "utc": "2026-12-05T17:02:10+00:00"
     },
     {
      "et": "12:28 EST",
      "ist": "22:58 IST",
      "kind": "nakshatra change",
      "text": "Venus enters Swati nakshatra (from Chitra) in Libra",
-     "key": "nak|Venus|Swati"
+     "key": "nak|Venus|Swati",
+     "utc": "2026-12-05T17:28:54+00:00"
     },
     {
      "et": "14:22 EST",
      "ist": "00:52 IST",
      "kind": "tithi",
      "text": "Tithi Dwadashi \u2192 Trayodashi (Krishna paksha)",
-     "key": "tithi|27"
+     "key": "tithi|27",
+     "utc": "2026-12-05T19:22:29+00:00"
     },
     {
      "et": "21:11 EST",
      "ist": "07:41 IST",
      "kind": "yoga",
      "text": "Yoga Shobhana \u2192 Atiganda",
-     "key": "yoga|5"
+     "key": "yoga|5",
+     "utc": "2026-12-06T02:11:45+00:00"
     }
    ],
    "signals": {
@@ -8754,49 +8797,56 @@
      "ist": "13:38 IST",
      "kind": "nakshatra change",
      "text": "Moon enters Vishakha nakshatra (from Swati) in Libra",
-     "key": "nak|Moon|Vishakha"
+     "key": "nak|Moon|Vishakha",
+     "utc": "2026-12-06T08:08:28+00:00"
     },
     {
      "et": "15:52 EST",
      "ist": "02:22 IST",
      "kind": "karana",
      "text": "Karana Vanija \u2192 Vishti \u2014 Bhadra (Vishti) begins",
-     "key": "bhadra"
+     "key": "bhadra",
+     "utc": "2026-12-06T20:52:35+00:00"
     },
     {
      "et": "15:52 EST",
      "ist": "02:22 IST",
      "kind": "tithi",
      "text": "Tithi Trayodashi \u2192 Chaturdashi (Krishna paksha)",
-     "key": "tithi|28"
+     "key": "tithi|28",
+     "utc": "2026-12-06T20:52:35+00:00"
     },
     {
      "et": "21:16 EST",
      "ist": "07:46 IST",
      "kind": "yoga",
      "text": "Yoga Atiganda \u2192 Sukarma",
-     "key": "yoga|6"
+     "key": "yoga|6",
+     "utc": "2026-12-07T02:16:49+00:00"
     },
     {
      "et": "22:40 EST",
      "ist": "09:10 IST",
      "kind": "exact degree aspect",
      "text": "Moon\u2013Rahu exact square (90\u00b0)",
-     "key": "asp|Moon|Rahu|square"
+     "key": "asp|Moon|Rahu|square",
+     "utc": "2026-12-07T03:40:00+00:00"
     },
     {
      "et": "22:40 EST",
      "ist": "09:10 IST",
      "kind": "exact degree aspect",
      "text": "Moon\u2013Ketu exact square (90\u00b0)",
-     "key": "asp|Moon|Ketu|square"
+     "key": "asp|Moon|Ketu|square",
+     "utc": "2026-12-07T03:40:00+00:00"
     },
     {
      "et": "22:44 EST",
      "ist": "09:14 IST",
      "kind": "sign change",
      "text": "Moon enters Scorpio (from Libra)",
-     "key": "sign|Moon|Scorpio"
+     "key": "sign|Moon|Scorpio",
+     "utc": "2026-12-07T03:44:04+00:00"
     }
    ],
    "signals": {
@@ -8971,70 +9021,80 @@
      "ist": "14:40 IST",
      "kind": "exact degree aspect",
      "text": "Moon\u2013Jupiter exact square (90\u00b0)",
-     "key": "asp|Moon|Jupiter|square"
+     "key": "asp|Moon|Jupiter|square",
+     "utc": "2026-12-07T09:10:00+00:00"
     },
     {
      "et": "05:18 EST",
      "ist": "15:48 IST",
      "kind": "nakshatra change",
      "text": "Moon enters Anuradha nakshatra (from Vishakha) in Scorpio",
-     "key": "nak|Moon|Anuradha"
+     "key": "nak|Moon|Anuradha",
+     "utc": "2026-12-07T10:18:20+00:00"
     },
     {
      "et": "05:20 EST",
      "ist": "15:50 IST",
      "kind": "exact degree aspect",
      "text": "Mercury\u2013Neptune exact trine (120\u00b0)",
-     "key": "asp|Mercury|Neptune|trine"
+     "key": "asp|Mercury|Neptune|trine",
+     "utc": "2026-12-07T10:20:00+00:00"
     },
     {
      "et": "13:20 EST",
      "ist": "23:50 IST",
      "kind": "exact degree aspect",
      "text": "Moon\u2013Neptune exact trine (120\u00b0)",
-     "key": "asp|Moon|Neptune|trine"
+     "key": "asp|Moon|Neptune|trine",
+     "utc": "2026-12-07T18:20:00+00:00"
     },
     {
      "et": "14:30 EST",
      "ist": "01:00 IST",
      "kind": "exact degree aspect",
      "text": "Moon\u2013Mercury exact conjunction (0\u00b0)",
-     "key": "asp|Moon|Mercury|conjunction"
+     "key": "asp|Moon|Mercury|conjunction",
+     "utc": "2026-12-07T19:30:00+00:00"
     },
     {
      "et": "16:30 EST",
      "ist": "03:00 IST",
      "kind": "exact degree aspect",
      "text": "Moon\u2013Uranus exact opposition (180\u00b0)",
-     "key": "asp|Moon|Uranus|opposition"
+     "key": "asp|Moon|Uranus|opposition",
+     "utc": "2026-12-07T21:30:00+00:00"
     },
     {
      "et": "17:30 EST",
      "ist": "04:00 IST",
      "kind": "exact degree aspect",
      "text": "Moon\u2013Pluto exact sextile (60\u00b0)",
-     "key": "asp|Moon|Pluto|sextile"
+     "key": "asp|Moon|Pluto|sextile",
+     "utc": "2026-12-07T22:30:00+00:00"
     },
     {
      "et": "17:43 EST",
      "ist": "04:13 IST",
      "kind": "tithi",
      "text": "Tithi Chaturdashi \u2192 Amavasya (Krishna paksha)",
-     "key": "tithi|29"
+     "key": "tithi|29",
+     "utc": "2026-12-07T22:43:04+00:00"
     },
     {
      "et": "18:50 EST",
      "ist": "05:20 IST",
      "kind": "exact degree aspect",
      "text": "Moon\u2013Mars exact square (90\u00b0)",
-     "key": "asp|Moon|Mars|square"
+     "key": "asp|Moon|Mars|square",
+     "utc": "2026-12-07T23:50:00+00:00"
     },
     {
      "et": "21:36 EST",
      "ist": "08:06 IST",
      "kind": "yoga",
      "text": "Yoga Sukarma \u2192 Dhriti",
-     "key": "yoga|7"
+     "key": "yoga|7",
+     "utc": "2026-12-08T02:36:44+00:00"
     }
    ],
    "signals": {
@@ -9268,6 +9328,29 @@
     "Lord of the lunar month (US time): Sun [B8m: tested: at chance]",
     "Lord of the lunar month (India time): Moon [B8m: tested: at chance]"
    ]
+  }
+ ],
+ "unclassified": [],
+ "checks": [
+  {
+   "name": "Every event time re-derived from the ephemeris (\u00b16 min; Moon aspects \u00b10.15\u00b0, stations \u00b112 h, apsides \u00b13 h)",
+   "ok": true,
+   "detail": "60 events checked"
+  },
+  {
+   "name": "Occurrence counts 2000-2026 within the expected range",
+   "ok": true,
+   "detail": "59 classes"
+  },
+  {
+   "name": "Independent recount of one result from raw prices",
+   "ok": true,
+   "detail": "Bhadra (Vishti) begins S&P 5 sessions: recount 1174 up / 805 down vs tool 1174 / 805"
+  },
+  {
+   "name": "Every sky event of the week classified (rule starts/ends, padas, navamsas and whole-sign aspect begin/end are covered by the rule records)",
+   "ok": true,
+   "detail": "0 not classified"
   }
  ],
  "n_cells": 460,

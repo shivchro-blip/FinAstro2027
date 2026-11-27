@@ -911,6 +911,31 @@ Results, as the share of calls right:
   - This partly matches Solar return's own path (weak into spring, bottom Mar–May), but the rubric itself has no track record.
 - **In the calendar:** shown in the 2026 calendar's Solar return section.
 
+**Deep dive, week by week to 31 Dec 2026 (27 Nov 2026)** (`tools/week_deep_dive.py`, `deep_dive_2026-12-*_ET.json`, calendar "Deep dive")
+
+- **Scope:** five weeks, 1–7, 8–14, 15–21, 22–28 and 29–31 Dec. Every sky event was tested; new event kinds were added:
+  - planet-planet exact aspects, which the calendar stores under a different kind;
+  - stations: Saturn direct 10 Dec; Neptune direct and Jupiter retrograde 12 Dec;
+  - combustion by the project's kalamsha method: Mercury, IST day 14 Dec;
+  - the Moon's perigee and apogee;
+  - the yoga spelt "Variyana".
+- **Result:** **2,083 tests, 0 pass** the Benjamini–Hochberg correction within their week. 36 are nominal (about 104 expected by chance), and no class changes the chance of a big day. The sky events of December carry no measurable direction.
+- **Double checks:** 20 of 20 pass.
+  - Every event time was re-derived from the ephemeris.
+  - Occurrence counts were checked against the expected frequencies. My first ranges were wrong for yogas (374 in 26 years: one every 25.4 days) and Bhadra (2,579: 8 per lunar month); the counts were right.
+  - One result per week was recounted from raw prices with separate code.
+  - Every sky event was confirmed as classified.
+  - Five sample nominal results were recomputed independently, and all match.
+- **What is left for December (labels and model):**
+
+| Market | Label | Basis and record |
+|---|---|---|
+| S&P and Sensex | Bullish Moderate on 2–4 Dec and 23–29 Dec | Moon–Rahu 6/8 (61% vs 59% and 58%) |
+| Silver | Bullish High from 14 Dec | Jupiter retrograde from 12 Dec, retrograde Mercury or Jupiter. Walk-forward 55% vs 52%, p 0.40 |
+| Gold | Bullish Low from 2 Dec | At chance |
+
+- **Model and Solar return:** the combined model leans up for the S&P on most December sessions (56–60% vs 54%). Solar return points to volatility (Mars square Uranus) until about 12 Dec.
+
 **Deep dive, 1–7 Dec 2026 (27 Nov 2026)** (`tools/week_deep_dive.py`, `deep_dive_2026-12-01_to_2026-12-07_ET.json`, shown in the 2026 calendar under "Deep dive" and in each day)
 
 - **Events tested:** every sky event of the week, 59 event classes:

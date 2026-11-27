@@ -1,8 +1,13 @@
 {
  "start": "2026-11-24",
  "end": "2026-12-31",
- "generated": "27 Nov 2026 17:02 ET",
+ "generated": "27 Nov 2026 17:36 ET",
  "checks": [
+  {
+   "name": "Deep dive: every week's double checks pass (event times, counts, independent recount, coverage)",
+   "ok": true,
+   "detail": "20/20 across 5 weeks"
+  },
   {
    "name": "New-source layer loaded, every item carries its test result",
    "ok": true,
