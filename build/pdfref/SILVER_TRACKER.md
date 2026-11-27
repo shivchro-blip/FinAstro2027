@@ -1,6 +1,6 @@
 # Silver findings tracker
 
-Generated 27 Nov 2026 17:03 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
+Generated 27 Nov 2026 17:37 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
 
 ## Recent findings
 
@@ -111,6 +111,7 @@ Best (from the 26 yr data): Retrograde Mercury or Jupiter, Only Moon and Mercury
 
 | Date | PR | Topic | Result |
 |---|---|---|---|
+| 2026-11-27 | #65 | Deep dive week by week to 31 Dec 2026, double-checked | 2,083 tests, 0 pass BH; 36 nominal vs about 104 expected; no big-day class. Checks 20/20 pass (expected-count ranges for yogas and Bhadra corrected); 5/5 independent recounts match. December labels: S&P/Sensex Bullish Moderate 2-4 and 23-29 Dec (Moon-Rahu 6/8, 61% vs 58-59%), silver Bullish High from 14 Dec (walk-forward 55% vs 52%), gold Bullish Low (at chance). |
 | 2026-11-27 | #64 | Deep dive 1-7 Dec 2026: every sky event backtested | 0 of 460 pass BH; 3 nominal (about 23 expected by chance): Moon enters Anuradha S&P next session 42% up vs 54% (7 Dec), Moon enters Scorpio S&P 46% vs 55%, Yoga Shobhana gold 46% vs 54%. Labels: S&P/Sensex Bullish Moderate 2-4 Dec (Moon-Rahu 6/8), gold Bullish Low from 2 Dec; model S&P 56-60% up on 1-4 Dec; Solar return volatile (Mars square Uranus). |
 | 2026-11-27 | #63 | Why gold's Bearish Low call failed on 27 Nov 2026; untested phase removed | Gold +3.75% (25->27 Nov), +4.4% since the label began; silver +9.0%. The label came only from a hand-added bearish phase (Sun in Anuradha + Mars aspect; U3 at chance 45% vs 43%; Bearish Low label 44% vs 44%). The combined model had gold 54.2% up; the big-move watch was right. Phase removed: gold now No signal 23 Nov-1 Dec; combined model and calendar rebuilt. |
 | 2026-11-27 | #62 | HTML cleanup: keep only the 2026 calendar and the 2027 calendar | Kept: calendar_2026-11-24_to_2026-12-31_ET.html, calendar_2027_NY_master.html (build/pdfref and reports), build/calendar_2027.html (tests read it) and the user's own source HTMLs. All JSON/MD/data kept; removed pages rebuild from their tools or git history. |

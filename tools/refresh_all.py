@@ -76,7 +76,7 @@ STEPS = [
     ["tools/jupiter_saturn_gold.py"],
     ["tools/new_sources_test.py"],
     ["tools/new_sources_leftover.py"],
-    ["tools/week_deep_dive.py", "2026-12-01", "2026-12-07"],
+    ["tools/week_deep_dive.py"],
     ["tools/calendar_2026.py"],
     ["tools/rule_tally.py", "2026-11-20", "2026-11-23"],
 ]
