@@ -46,9 +46,9 @@ The work is logged entry by entry in `build/pdfref/analysis_log.json`, which is 
 | `Reference_materials/Others` (45 files) | `extracted/OTHERS_FINANCIAL_REVIEW.md`; OCR of the 3 scanned books in `extracted/ocr/` | Only Brihat Samhita implemented (Section 5); BPHS used for Shadbala |
 | Brihat Samhita, tr. P.S. Sastri 1946 | `Others/jyotish_brihat-samhita…pdf` | 42.14a/b, 10.17, 42.6 in `finastro/pdfref/bs_rules.py`; 41.9–13 in `finastro/pdfref/bs41_model.py` |
 | BPHS, tr. R. Santhanam | `Others/BPHS/BPHS - 1 RSanthanam.pdf` Ch.27 | Shadbala in `finastro/pdfref/shadbala.py` |
-| Added 27 Nov 2026: Tajika Neelakanthi (Hindi/Sanskrit, Chowkhamba; legacy-font text, 300 pp.) | `Others/Tajikneelkanthi.pdf` | Not yet read. Tajika is the classical Vedic annual-return (Varshaphal) system, the same family as the Solar return method |
-| Added 27 Nov 2026: Balabhadra's Hayanaratna, "The Jewel of Annual Astrology", ed. and tr. M. Gansten (Brill 2020, Sanskrit–English, 1044 pp.) | `Others/9789004433717-57015.pdf` | Not yet read. Tajika annual astrology |
-| Added 27 Nov 2026: Brihat Samhita of Varahamihira (scanned edition, 496 pp.) | `Others/b29353130.pdf` | Not yet read. A second edition to cross-check the Sastri 1946 translation (e.g. 41.12) |
+| Added 27 Nov 2026: Tajika Neelakanthi (Hindi/Sanskrit, Chowkhamba; legacy-font text, 300 pp.) | `Others/Tajikneelkanthi.pdf`; OCR in `extracted/ocr/tajika_neelakanthi.txt` | Read 27 Nov 2026: `extracted/NEW_SOURCES_REVIEW_2026-11.md` (N1–N9, T-rules). Not implemented yet |
+| Added 27 Nov 2026: Balabhadra's Hayanaratna, "The Jewel of Annual Astrology", ed. and tr. M. Gansten (Brill 2020, Sanskrit–English, 1044 pp.) | `Others/9789004433717-57015.pdf` | Read 27 Nov 2026: `NEW_SOURCES_REVIEW_2026-11.md` (N4, N5, T1–T11). Not implemented yet |
+| Added 27 Nov 2026: Brihat Samhita of Varahamihira (scanned edition, 496 pp.) | `Others/b29353130.pdf` (N. Chidambaram Iyer's English translation, 1884) | Read 27 Nov 2026: `NEW_SOURCES_REVIEW_2026-11.md` (B1–B15). Not implemented yet |
 | Not added (over GitHub's 100 MB limit): Dreyer, *Vedic Astrology* (463 MB) and BPHS in Hindi (125 MB) | user's PC only | BPHS is already here in two English translations (Santhanam, G.C. Sharma) |
 
 Known data problems:
@@ -907,6 +907,32 @@ Results, as the share of calls right:
 
   - This partly matches Solar return's own path (weak into spring, bottom Mar–May), but the rubric itself has no track record.
 - **In the calendar:** shown in the 2026 calendar's Solar return section.
+
+**New sources review (27 Nov 2026)** (`Reference_materials/extracted/NEW_SOURCES_REVIEW_2026-11.md`)
+
+- **Files:** Tajika Nilakanthi (300 pages, OCR'd in Sanskrit+Hindi), Hayanaratna (1,044 pages, Gansten's English) and Brihat Samhita (Iyer 1884, 496 pages). All pages were scanned and the matching passages read. Nothing is implemented yet; the user picks the rules to move.
+- **World-level rules (new):**
+  - Nilakanthi, Prashna Tantra, Prakirna 36–43 (pp.298–299): the Aries-ingress chart and the lunation-chart lords give the year's tone and dear or cheap grain (N1–N3).
+  - The Aries-ingress ascendant counted from the natal ascendant (N4, also in Hayanaratna p.135).
+  - The "ascendant of the world" in the 8th or 12th from a chart or town is a bad year (N5, Hayanaratna p.137).
+- **Tajika annual and monthly chart rules (T1–T11):**
+  - The return is sidereal (supports Model B).
+  - Muntha, ruler of the year, sahams (wealth, trade, business), and the 2nd and 11th houses.
+  - Monthly-chart navamsha rules for wealth and business (Hayanaratna 8.4).
+  - These would apply to the NYSE annual and monthly charts.
+- **Brihat Samhita chapters not covered before (B1–B11):**
+  - The Moon passing north or south of Mercury, Jupiter and Venus: treasuries full or suffering (Ch.18).
+  - Mercury's reappearance as price disruption (7.1).
+  - Mars and Saturn in stated nakshatras.
+  - The lord of the year, month or day (Ch.19).
+  - Planetary war (Ch.17) and planetary meetings (Ch.20).
+  - Ch.47 combinations (Saturn–Rahu: commodities scarce; Mars and Saturn retrograde in Cancer, Leo or Pisces).
+  - Eclipse rules (eclipse in Chaitra: gold dealers suffer).
+- **Correction found (B12):** both translations make 42.6 (store gold and silver with the Sun in Leo, sell in the 5th month) conditional on portents such as an eclipse; BS4 was tested without that condition. 2026 qualifies (lunar eclipse 28 Aug, Sun in sidereal Leo), so the sell window is 16 Dec 2026 – 14 Jan 2027. This is the first suggested retest.
+- **Conflicts recorded:**
+  - Gold's planet: the Sun (BS 16.4) or Mercury (Hayanaratna, Nilakanthi 72).
+  - Silver's planet: Venus (BS 16.27, Hayanaratna) or the Moon.
+  - Grain price with the Sun in Sagittarius, Capricorn or Aquarius: Nilakanthi and BS 40.14 disagree.
 
 **26 Nov 2026: what we said and what happened** (Thanksgiving; only the Sensex traded)
 

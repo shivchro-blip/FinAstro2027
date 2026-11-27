@@ -92,6 +92,7 @@ SECTIONS = [
     ]),
     ("Source research and methodology", [
         (X + "OTHERS_FINANCIAL_REVIEW.html", "Review of Reference_materials/Others (45 files)", "Financial content of every document with page references; what was implemented and what was excluded."),
+        (X + "NEW_SOURCES_REVIEW_2026-11.html", "New sources review: Tajika Nilakanthi, Hayanaratna, Brihat Samhita (Iyer)", "Every rule from the three PDFs added 27 Nov 2026 with page references, overlap with the project, and a suggested order for adding them."),
         (X + "FINANCIAL_ASTROLOGY_MODEL_v1.html", "Financial Astrology Model v1.0 - methodology", "Locked method for Brihat Samhita 41.9-13 with Shadbala and Ashtakavarga."),
         (X + "TA_Tech_Astro_Analysis_2020.html", "TA - Tech Astro Analysis (2020), page by page", "Extraction of the reference PDF (page images live in Reference_materials/extracted/img)."),
         (X + "KD_Parth_Prophecies_2026.html", "KD - Parth Prophecies deck (2026), page by page", "Extraction of the reference PDF."),

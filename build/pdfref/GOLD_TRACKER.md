@@ -1,6 +1,6 @@
 # Gold findings tracker
 
-Generated 26 Nov 2026 07:04 EST by `tools/gold_tracker.py` (`--refresh` re-runs both backtests). HTML version: `GOLD_TRACKER.html`.
+Generated 26 Nov 2026 22:42 EST by `tools/gold_tracker.py` (`--refresh` re-runs both backtests). HTML version: `GOLD_TRACKER.html`.
 
 ## Recent findings
 
@@ -104,6 +104,7 @@ Best (from the 26 yr data): Mars aspected by Saturn while Jupiter retrograde, U2
 
 | Date | PR | Topic | Result |
 |---|---|---|---|
+| 2026-11-27 | #59 | New sources review: Tajika Nilakanthi, Hayanaratna, Brihat Samhita (Iyer 1884) | Listed 9 world-level rules (Aries ingress, lunation charts, dear/cheap grain), 11 Tajika annual/monthly chart rules (sidereal return supports Model B; muntha, ruler of year, sahams, monthly navamsha rules) and 15 Brihat Samhita rules (Moon north/south of planets, Mercury reappearance volatility, lord of year/month/day, planetary war and meetings, Ch.47 combinations, eclipse in Chaitra hurts gold dealers). Correction: BS 42.6 is conditional on portents; 2026 qualifies (eclipse 28 Aug in Leo), sell window 16 Dec 2026-14 Jan 2027. None implemented or tested yet. |
 | 2026-11-26 | #57 | Day report for Thu 26 Nov 2026 updated with the actual moves | Sensex +0.46% (no signal; model 53.2% up - flat by the 0.5% rule, up in sign; calendar row Mrigsira on Thursday Bearish wrong in sign). US closed for Thanksgiving. Gold and silver had no COMEX settlement: electronic +1.66% and +4.29% at 07:00 ET, not scored (gold Bearish Low wrong on the electronic price). |
 | 2026-11-25 | #56 | Day report for Thu 26 Nov 2026 (Thanksgiving) | US stocks, gold and silver closed; Sensex only. Sensex: no signal, model 53.2% up vs 53.3% normal; calendar row Mrigsira on Thursday Bearish at chance (37% vs 42%, p 0.84). Gold Bearish Low (no session). Bhadra 13:00-23:19 ET, after the Sensex close. Jupiter sextile Venus 59.3 deg (within 1 deg; exact about 28 Nov 09:00 ET); generated Solar return call for Fri 27 Nov Bullish, matching its Friday recovery call. |
 | 2026-11-25 | #55 | Day report for Wed 25 Nov 2026 updated with the actual moves | Gold +1.57% (Bearish Low wrong; Sun-Uranus watch, no big day); silver +2.23% (no signal); S&P -0.25% (no signal; model 56% up - flat), Nasdaq -0.62%; Sensex +1.82% (no signal). Solar return 'down' right in sign but flat (week 2 of 3); Global Predictions window open, no big day or sharp reversal yet. |
