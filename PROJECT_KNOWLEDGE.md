@@ -911,6 +911,15 @@ Results, as the share of calls right:
   - This partly matches Solar return's own path (weak into spring, bottom Mar–May), but the rubric itself has no track record.
 - **In the calendar:** shown in the 2026 calendar's Solar return section.
 
+**Cleanup of unused files (27 Nov 2026)**
+
+- **Removed 19 files nobody reads any more:**
+  - the 13 `.ics` calendar files of the removed reports (gold, silver, S&P and Sensex big-move watch; gold BS41 model; fast triggers; outlooks);
+  - the past day-report JSONs for 23–26 Nov;
+  - two partial planetary-change files duplicated by `sky_changes_2026-11-01_to_2026-11-23_ET.json` and `sky_changes_2026-11-24_to_2026-12-31_ET.json`. The 2026 document check gives the same result without them.
+- **Kept:** every JSON the tables, model or calendar read, the 2027 calendar's `.ics` files, and all project records (`.md`).
+- **Going forward:** `.gitignore` keeps these kinds of files out, and `reports/` now holds only the two calendars, the 2027 `.ics` and the README.
+
 **Deep dive, week by week to 31 Dec 2026 (27 Nov 2026)** (`tools/week_deep_dive.py`, `deep_dive_2026-12-*_ET.json`, calendar "Deep dive")
 
 - **Scope:** five weeks, 1–7, 8–14, 15–21, 22–28 and 29–31 Dec. Every sky event was tested; new event kinds were added:
