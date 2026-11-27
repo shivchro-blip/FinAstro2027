@@ -805,6 +805,23 @@
     ".gitignore",
     "tools/publish_reports.py"
    ]
+  },
+  {
+   "date": "2026-11-27",
+   "pr": "67",
+   "topic": "Deep dive January 2027 week by week, double-checked; added to the 2027 calendar",
+   "analysis": "tools/week_deep_dive.py jan: January day data from forward_daybyday.build (rules, labels, model, Solar return) plus Kartari, gold notes and new-source items; every sky event as an event class scored on every occurrence 2000-2026 on S&P, Sensex, gold, silver; BH per week; 4 automatic checks per week; 8 independent recounts. US/COMEX holidays 1 and 18 Jan, BSE 26 Jan. Rendered into calendar_2027_NY_master.html (rows unchanged).",
+   "result": "2,087 tests, 0 pass BH; 44 nominal vs about 104 expected; no big-day class. Checks 20/20, recounts 8/8. January labels: S&P/Sensex Bearish all month (Venus-Uranus opposition, Mercury-Rahu conjunction), silver Bullish High/Moderate, gold Bullish Low (at chance); model S&P 47-52% vs 54%.",
+   "files": [
+    "build/pdfref/deep_dive_2027-01-01_to_2027-01-07_ET.json",
+    "build/pdfref/deep_dive_2027-01-08_to_2027-01-14_ET.json",
+    "build/pdfref/deep_dive_2027-01-15_to_2027-01-21_ET.json",
+    "build/pdfref/deep_dive_2027-01-22_to_2027-01-28_ET.json",
+    "build/pdfref/deep_dive_2027-01-29_to_2027-01-31_ET.json",
+    "tools/week_deep_dive.py",
+    "tools/deep_dive_render.py",
+    "reports/calendar_2027_NY_master.html"
+   ]
   }
  ]
 }

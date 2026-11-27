@@ -46,10 +46,13 @@ UTC = dt.timezone.utc
 FIT_END = dt.date(2026, 11, 23)
 MKS = ("spx", "sensex", "gold", "silver")
 NAME = {"spx": "S&P 500", "sensex": "BSE Sensex", "gold": "Gold", "silver": "Silver"}
-CLOSED = {"spx": {dt.date(2026, 11, 26): "Thanksgiving", dt.date(2026, 12, 25): "Christmas"},   # COMEX: no settlement on either day
-          "gold": {dt.date(2026, 11, 26): "Thanksgiving", dt.date(2026, 12, 25): "Christmas"},
-          "silver": {dt.date(2026, 11, 26): "Thanksgiving", dt.date(2026, 12, 25): "Christmas"},
-          "sensex": {dt.date(2026, 11, 24): "Guru Nanak Jayanti", dt.date(2026, 12, 25): "Christmas"}}
+_US = {dt.date(2026, 11, 26): "Thanksgiving", dt.date(2026, 12, 25): "Christmas",
+       dt.date(2027, 1, 1): "New Year's Day", dt.date(2027, 1, 18): "Martin Luther King Jr. Day"}
+CLOSED = {"spx": dict(_US),             # COMEX has no settlement on these days either (no GC=F / SI=F bar on past MLK and New Year days)
+          "gold": dict(_US),
+          "silver": dict(_US),
+          "sensex": {dt.date(2026, 11, 24): "Guru Nanak Jayanti", dt.date(2026, 12, 25): "Christmas",
+                     dt.date(2027, 1, 26): "Republic Day"}}       # BSE's 2027 list is not out yet; Republic Day is fixed
 EARLY = {dt.date(2026, 11, 27): "US early close (13:00 ET)", dt.date(2026, 12, 24): "US early close (13:00 ET)"}
 GOOD = ("Strongest", "Supported", "Consistent")
 USE_DASHA = False            # dashas parked (user, 24 Nov 2026): tested in dasha_transits.py / dasha_combinations.py, no S&P edge

@@ -111,7 +111,8 @@ Known data problems:
 | `tools/jupiter_saturn_gold.py` | Jupiter–Saturn aspects in a 10° orb (degree-based; exact passes to the minute) for Nov 2026 – Dec 2030, verified against the user's list. Shows every past window since 1972 with gold's turns, classified by the nearest anchor (orb entry / exact / exit). Gives a plain bottom-or-top table, which also includes Jupiter and Saturn direct stations |
 | `tools/new_sources_test.py` | Backtest of the rules from the three new books (BS Iyer, Tajika Nilakanthi, Hayanaratna): BS 42.6 with eclipses, Moon north/south, Mercury reappearance, nakshatra and lord rules, Tajika monthly and annual charts → `new_sources_test_ET.html` |
 | `tools/new_sources_leftover.py` | The leftover new-source rules (B5, B6, B7, B9, B10, B11, B13, T4, T6, T10), Tajika five-dignity strength and ruler of the year, and the calendar layer read by `calendar_2026.py` → `new_sources_leftover_ET.{html,json}` |
-| `tools/week_deep_dive.py [start] [end]` | One week, every sky event as an event class backtested on 4 markets (next session, 5 sessions, big days; BH) plus every active rule with its record → `deep_dive_*_ET.json`, shown in the 2026 calendar |
+| `tools/week_deep_dive.py [dec] [jan]` | Every week of December 2026 (from the 2026 calendar) and January 2027 (built with `forward_daybyday.build`): every sky event as an event class backtested on 4 markets (next session, 5 sessions, big days; BH per week) with 4 automatic checks, plus each day's rules, labels, model, Solar return, Kartari, gold notes and new-source items → `deep_dive_*_ET.json` |
+| `tools/deep_dive_render.py` | Renders the January 2027 deep dive into `calendar_2027_NY_master.html` (called by `build_pdf_calendar.py`; `--html-only` re-renders from the JSON) |
 | `tools/gold_tracker.py [--metal silver]` | Trackers: findings, rule status, best-rule dates, analysis log |
 | `tools/build_year.py YEAR` | Astronomy layer for any year; 2000–2024 are git-ignored and rebuilt on demand |
 | `tools/fetch_prices.py` | Downloads GC=F and SI=F (Yahoo; the host must be allowed) |
@@ -910,6 +911,34 @@ Results, as the share of calls right:
 
   - This partly matches Solar return's own path (weak into spring, bottom Mar–May), but the rubric itself has no track record.
 - **In the calendar:** shown in the 2026 calendar's Solar return section.
+
+**Deep dive, January 2027, week by week (27 Nov 2026)** (`tools/week_deep_dive.py jan`, `deep_dive_2027-01-*_ET.json`, shown in `calendar_2027_NY_master.html` → "Deep dive: January 2027")
+
+- **How it was built:**
+  - The January day data comes from `forward_daybyday.build`, the same layers as the December days: the rules active with their records, the published table labels, the combined model, Solar return calls and the month reading.
+  - Added on top: Paap Kartari spans (B116, B117), the gold–Jupiter note, gold turn-watch markers, and the new-source items (`new_sources_leftover.calendar_layer` now takes a date range).
+  - January 2027 holidays were added to `forward_daybyday.CLOSED`. US stocks and COMEX are closed on 1 Jan (New Year's Day) and 18 Jan (MLK Day); past MLK and New Year days have no GC=F/SI=F bar. The BSE is closed on 26 Jan (Republic Day); its 2027 list is not out yet.
+  - The 2027 page is re-rendered from its JSON by `build_pdf_calendar.py --html-only`, using `tools/deep_dive_render.py`. Its 2,211 existing rows are byte-identical.
+- **New event kinds handled:**
+  - The Sun at perihelion (2 Jan).
+  - Mercury rising from combustion (17 Jan, kalamsha method).
+  - The "neighbour change" kind: these are the starts and ends of Mercury's Paap Kartari windows, already covered by the B116 record.
+- **Result:** 2,087 tests over 5 weeks, **0 pass** the Benjamini–Hochberg correction. 44 are nominal (about 104 expected by chance), and no class changes the chance of a big day.
+- **Double checks:** 20 of 20 pass, 8 of 8 independent recounts match, and the holidays are verified in the day data.
+- **What is left for January:**
+
+| Market | Label | Basis and record |
+|---|---|---|
+| S&P and Sensex | **Bearish all month** (High on 11–18, 22 and 26–27 Jan) | Venus opposite Uranus (S&P 58% vs 37%, p 0.03; Sensex 46% vs 38%), plus from 9 Jan Mercury with Rahu in Capricorn (S&P 47% vs 35%; Sensex 57% vs 40%, p 0.03) |
+| Silver | Bullish High or Moderate | Jupiter retrograde |
+| Gold | Bullish Low | U2, at chance |
+
+- **Model, Solar return and notes:**
+  - The combined model is below normal for the S&P on most January sessions (47–52% vs 54%).
+  - Solar return: "no stated indication" months, so no day calls.
+  - B116 Mercury Paap Kartari runs 1–15 Jan and on 25 Jan (Sensex 48% vs 41%, p 0.027).
+  - Jupiter enters Cancer on 24 Jan. The gold–Jupiter pattern (Jupiter–Saturn trine, Jupiter with Ketu) returns on 25 Jan.
+  - Mars stations retrograde on 10 Jan.
 
 **Cleanup of unused files (27 Nov 2026)**
 

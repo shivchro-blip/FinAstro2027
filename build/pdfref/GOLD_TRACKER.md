@@ -1,6 +1,6 @@
 # Gold findings tracker
 
-Generated 27 Nov 2026 17:42 EST by `tools/gold_tracker.py` (`--refresh` re-runs both backtests). HTML version: `GOLD_TRACKER.html`.
+Generated 27 Nov 2026 17:57 EST by `tools/gold_tracker.py` (`--refresh` re-runs both backtests). HTML version: `GOLD_TRACKER.html`.
 
 ## Recent findings
 
@@ -104,6 +104,7 @@ Best (from the 26 yr data): Mars aspected by Saturn while Jupiter retrograde, U2
 
 | Date | PR | Topic | Result |
 |---|---|---|---|
+| 2026-11-27 | #67 | Deep dive January 2027 week by week, double-checked; added to the 2027 calendar | 2,087 tests, 0 pass BH; 44 nominal vs about 104 expected; no big-day class. Checks 20/20, recounts 8/8. January labels: S&P/Sensex Bearish all month (Venus-Uranus opposition, Mercury-Rahu conjunction), silver Bullish High/Moderate, gold Bullish Low (at chance); model S&P 47-52% vs 54%. |
 | 2026-11-27 | #66 | Remove files that are no longer relevant | Removed 19 unused files (13 .ics of removed reports, 4 past day-report JSONs, 2 duplicate partial sky-change files; the 2026 document check is unchanged without them). Kept every JSON the pipeline reads and the 2027 .ics. .gitignore and publish_reports.py updated. |
 | 2026-11-27 | #65 | Deep dive week by week to 31 Dec 2026, double-checked | 2,083 tests, 0 pass BH; 36 nominal vs about 104 expected; no big-day class. Checks 20/20 pass (expected-count ranges for yogas and Bhadra corrected); 5/5 independent recounts match. December labels: S&P/Sensex Bullish Moderate 2-4 and 23-29 Dec (Moon-Rahu 6/8, 61% vs 58-59%), silver Bullish High from 14 Dec (walk-forward 55% vs 52%), gold Bullish Low (at chance). |
 | 2026-11-27 | #64 | Deep dive 1-7 Dec 2026: every sky event backtested | 0 of 460 pass BH; 3 nominal (about 23 expected by chance): Moon enters Anuradha S&P next session 42% up vs 54% (7 Dec), Moon enters Scorpio S&P 46% vs 55%, Yoga Shobhana gold 46% vs 54%. Labels: S&P/Sensex Bullish Moderate 2-4 Dec (Moon-Rahu 6/8), gold Bullish Low from 2 Dec; model S&P 56-60% up on 1-4 Dec; Solar return volatile (Mars square Uranus). |
