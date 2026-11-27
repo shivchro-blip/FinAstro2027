@@ -720,6 +720,17 @@
     "Reference_materials/extracted/NEW_SOURCES_REVIEW_2026-11.md",
     "Reference_materials/extracted/ocr/tajika_neelakanthi.txt"
    ]
+  },
+  {
+   "date": "2026-11-27",
+   "pr": "60",
+   "topic": "New sources backtest in the approved order (B12, B1, B2, B3, B4, B6, B8, T7-T9, N1-N5, T2-T7)",
+   "analysis": "tools/new_sources_test.py: section 6 method on S&P, Sensex, gold, silver 2000-2026 for daily rules; NYSE sidereal monthly returns on S&P 1928-2026; annual rules on S&P 1929-2026 and Sensex 2000-2026 vs the other years; Benjamini-Hochberg across all tests.",
+   "result": "No rule passes (0 of 113 results with q < 0.10); nothing added. BS 42.6 with an eclipse is worse (gold up by mid-Dec 6/14 eclipse years vs 22/39 others). Moon north/south, Mercury reappearance, nakshatra rules, lord of day/month and Tajika monthly rules at chance. Watch list: lord of the year (good lords 76% up vs 64%, p 0.047; p 0.10 with Indian-sunrise weekday) and N5 (41% down years vs 22%, p 0.01, but mean still +6.7%).",
+   "files": [
+    "build/pdfref/new_sources_test_ET.html",
+    "tools/new_sources_test.py"
+   ]
   }
  ]
 }

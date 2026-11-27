@@ -1,6 +1,6 @@
 # Gold findings tracker
 
-Generated 26 Nov 2026 22:42 EST by `tools/gold_tracker.py` (`--refresh` re-runs both backtests). HTML version: `GOLD_TRACKER.html`.
+Generated 27 Nov 2026 06:57 EST by `tools/gold_tracker.py` (`--refresh` re-runs both backtests). HTML version: `GOLD_TRACKER.html`.
 
 ## Recent findings
 
@@ -104,6 +104,7 @@ Best (from the 26 yr data): Mars aspected by Saturn while Jupiter retrograde, U2
 
 | Date | PR | Topic | Result |
 |---|---|---|---|
+| 2026-11-27 | #60 | New sources backtest in the approved order (B12, B1, B2, B3, B4, B6, B8, T7-T9, N1-N5, T2-T7) | No rule passes (0 of 113 results with q < 0.10); nothing added. BS 42.6 with an eclipse is worse (gold up by mid-Dec 6/14 eclipse years vs 22/39 others). Moon north/south, Mercury reappearance, nakshatra rules, lord of day/month and Tajika monthly rules at chance. Watch list: lord of the year (good lords 76% up vs 64%, p 0.047; p 0.10 with Indian-sunrise weekday) and N5 (41% down years vs 22%, p 0.01, but mean still +6.7%). |
 | 2026-11-27 | #59 | New sources review: Tajika Nilakanthi, Hayanaratna, Brihat Samhita (Iyer 1884) | Listed 9 world-level rules (Aries ingress, lunation charts, dear/cheap grain), 11 Tajika annual/monthly chart rules (sidereal return supports Model B; muntha, ruler of year, sahams, monthly navamsha rules) and 15 Brihat Samhita rules (Moon north/south of planets, Mercury reappearance volatility, lord of year/month/day, planetary war and meetings, Ch.47 combinations, eclipse in Chaitra hurts gold dealers). Correction: BS 42.6 is conditional on portents; 2026 qualifies (eclipse 28 Aug in Leo), sell window 16 Dec 2026-14 Jan 2027. None implemented or tested yet. |
 | 2026-11-26 | #57 | Day report for Thu 26 Nov 2026 updated with the actual moves | Sensex +0.46% (no signal; model 53.2% up - flat by the 0.5% rule, up in sign; calendar row Mrigsira on Thursday Bearish wrong in sign). US closed for Thanksgiving. Gold and silver had no COMEX settlement: electronic +1.66% and +4.29% at 07:00 ET, not scored (gold Bearish Low wrong on the electronic price). |
 | 2026-11-25 | #56 | Day report for Thu 26 Nov 2026 (Thanksgiving) | US stocks, gold and silver closed; Sensex only. Sensex: no signal, model 53.2% up vs 53.3% normal; calendar row Mrigsira on Thursday Bearish at chance (37% vs 42%, p 0.84). Gold Bearish Low (no session). Bhadra 13:00-23:19 ET, after the Sensex close. Jupiter sextile Venus 59.3 deg (within 1 deg; exact about 28 Nov 09:00 ET); generated Solar return call for Fri 27 Nov Bullish, matching its Friday recovery call. |
