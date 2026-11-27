@@ -1,6 +1,6 @@
 # FinAstro 2027: notes for Claude Code sessions
 
-Read `PROJECT_KNOWLEDGE.md` first. It holds the sources, conventions, user decisions, code map, findings and rebuild commands for all gold and silver work. Finished, ready-to-open reports are in `reports/` (start with `reports/index.html`); refresh them with `tools/refresh_all.py`, never by editing the copies. The original 2027 calendar build is described in `README.md` and `build/NEXT_SESSION.md`.
+Read `PROJECT_KNOWLEDGE.md` first. It holds the sources, conventions, user decisions, code map, findings and rebuild commands for all gold and silver work. Only two HTML pages are kept (user, 27 Nov 2026): `reports/calendar_2026-11-24_to_2026-12-31_ET.html` (now to the end of 2026) and `reports/calendar_2027_NY_master.html` (2027, New York time); `build/calendar_2027.html` stays because the tests read it. Every other generated HTML page is git-ignored and not published; tools still write their JSON (which the calendar reads). Refresh with `tools/refresh_all.py`, never by editing the copies. The original 2027 calendar build is described in `README.md` and `build/NEXT_SESSION.md`.
 
 ## Decisions to respect
 

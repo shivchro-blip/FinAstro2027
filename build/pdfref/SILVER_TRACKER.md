@@ -1,6 +1,6 @@
 # Silver findings tracker
 
-Generated 27 Nov 2026 08:41 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
+Generated 27 Nov 2026 09:29 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
 
 ## Recent findings
 
@@ -111,6 +111,7 @@ Best (from the 26 yr data): Retrograde Mercury or Jupiter, Only Moon and Mercury
 
 | Date | PR | Topic | Result |
 |---|---|---|---|
+| 2026-11-27 | #62 | HTML cleanup: keep only the 2026 calendar and the 2027 calendar | Kept: calendar_2026-11-24_to_2026-12-31_ET.html, calendar_2027_NY_master.html (build/pdfref and reports), build/calendar_2027.html (tests read it) and the user's own source HTMLs. All JSON/MD/data kept; removed pages rebuild from their tools or git history. |
 | 2026-11-27 | #61 | Leftover new-source rules tested; new-source layer added to the 2026 calendar | No leftover rule holds. Nominal only: eclipse in Libra/Sagittarius (gold down 11/15, p 0.02, q 0.22) and eclipse in Chaitra (gold down 6/7, silver 8/8, 9 eclipses; none before 2028). Sun's Aries-ingress strength is constant (untestable). Calendar shows 13 new-source items in 24 Nov-31 Dec with their test results; lord of the year 2026-27 Mercury (US) / Jupiter (India); NYSE ruler of the year Moon. |
 | 2026-11-27 | #60 | New sources backtest in the approved order (B12, B1, B2, B3, B4, B6, B8, T7-T9, N1-N5, T2-T7) | No rule passes (0 of 113 results with q < 0.10); nothing added. BS 42.6 with an eclipse is worse (gold up by mid-Dec 6/14 eclipse years vs 22/39 others). Moon north/south, Mercury reappearance, nakshatra rules, lord of day/month and Tajika monthly rules at chance. Watch list: lord of the year (good lords 76% up vs 64%, p 0.047; p 0.10 with Indian-sunrise weekday) and N5 (41% down years vs 22%, p 0.01, but mean still +6.7%). |
 | 2026-11-27 | #59 | New sources review: Tajika Nilakanthi, Hayanaratna, Brihat Samhita (Iyer 1884) | Listed 9 world-level rules (Aries ingress, lunation charts, dear/cheap grain), 11 Tajika annual/monthly chart rules (sidereal return supports Model B; muntha, ruler of year, sahams, monthly navamsha rules) and 15 Brihat Samhita rules (Moon north/south of planets, Mercury reappearance volatility, lord of year/month/day, planetary war and meetings, Ch.47 combinations, eclipse in Chaitra hurts gold dealers). Correction: BS 42.6 is conditional on portents; 2026 qualifies (eclipse 28 Aug in Leo), sell window 16 Dec 2026-14 Jan 2027. None implemented or tested yet. |
