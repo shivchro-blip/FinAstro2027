@@ -418,6 +418,9 @@ def write_ics(path, evs, calname):
 
 
 def write_html(path, evs, meta):
+    sys.path.insert(0, str(ROOT / "tools"))
+    import deep_dive_render as DDR                       # January 2027 deep dive (tools/week_deep_dive.py), if built
+    deep_dive = DDR.section(DDR.load(OUT / "deep_dive_2027-01-*_ET.json"))
     rows = []
     for e in evs:
         d = e["date_time"]
@@ -450,6 +453,7 @@ summary{{cursor:pointer;font-weight:600}} dl{{margin:6px 0 0}} dt{{font-weight:6
 </style></head><body>
 <h1>FinAstro 2027 &mdash; New York calendar</h1>
 <p class="m">{html.escape(meta['disclaimer'])} Times: {html.escape(meta['time_zone'])}. {c['new_events_major_yearly']} events from the two reference PDFs, {c['existing_rows_carried']} existing calendar rows ({c['existing_rows_with_pdf_text']} carry PDF text). Moon-only conditions ({c['new_events_moon_layer']}) are in the separate Moon-layer files.</p>
+{deep_dive}
 <div class="bar"><input id="q" placeholder="Filter text (e.g. Mercury, gold, Bearish)" size="34"><select id="src"><option value="">All sources</option><option value="pdf">PDF rules</option><option value="existing">Existing calendar</option></select><select id="mk"><option value="">All markets</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="sugar">Sugar</option><option value="general">General</option></select></div>
 <table><tbody id="t">{''.join(rows)}</tbody></table>
 <script>
@@ -460,5 +464,15 @@ q.oninput=f;s.onchange=f;m.onchange=f;
     path.write_text(doc, encoding="utf-8")
 
 
+def html_only():
+    """Re-render calendar_2027_NY_master.html from its JSON (used after tools/week_deep_dive.py adds January 2027)."""
+    j = json.load(open(OUT / "calendar_2027_NY_master.json", encoding="utf-8"))
+    write_html(OUT / "calendar_2027_NY_master.html", j["events"], j["meta"])
+    print("re-rendered calendar_2027_NY_master.html")
+
+
 if __name__ == "__main__":
-    main()
+    if "--html-only" in sys.argv:
+        html_only()
+    else:
+        main()

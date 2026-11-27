@@ -1,8 +1,9 @@
 """Deep dive for one week: every sky event backtested, every active rule with its record.
 
-    python tools/week_deep_dive.py [start] [end]        # default 2026-12-01 2026-12-07
+    python tools/week_deep_dive.py [dec] [jan]        # default: every week of December 2026 and January 2027
 
-For each day of the week (from the 2026 calendar JSON):
+For each day of the week (December 2026 from the 2026 calendar JSON; January 2027 built with forward_daybyday.build and
+the same extra layers, shown in the 2027 calendar):
   * every sky event (exact degree aspects, sign and nakshatra entries, tithi and yoga changes, Bhadra, lunations) is
     turned into its event class ("Moon-Saturn exact opposition", "Mercury enters Scorpio", "Krishna Dashami begins")
     and every occurrence of that class from 20 Nov 2000 to 20 Nov 2026 is scored on the S&P 500, Sensex, gold and
@@ -85,10 +86,27 @@ def speed(x, b):
 L_COMB = {"Mercury", "Venus", "Mars", "Jupiter", "Saturn"}
 
 
-def combust_times(b):
-    """Combustion starts by the project's classical kalamsha method (finastro/combustion.py, the same as the calendar)."""
+def combust_times(b, kind="combust"):
+    """Combustion starts (or rises) by the project's classical kalamsha method (finastro/combustion.py, as the calendar)."""
     from finastro import combustion as CB
-    return [e.instant for e in CB.find_events(b, H0.date(), H1.date()) if e.kind == "combust"]
+    key = f"_comb_{b}"
+    if key not in _series:
+        _series[key] = CB.find_events(b, H0.date(), H1.date())
+    return [e.instant for e in _series[key] if e.kind == kind]
+
+
+def sun_apsis_times(which):
+    """The Sun at perihelion (distance minimum, early January) or aphelion (maximum, early July)."""
+    out, x, end = [], T.jd(H0), T.jd(H1)
+    f = lambda y: swe.calc_ut(y, swe.SUN, swe.FLG_SWIEPH | swe.FLG_SPEED)[0][5]
+    fx = f(x)
+    while x < end:
+        y = x + 1.0
+        fy = f(y)
+        if (fx < 0 <= fy and which == "perihelion") or (fx >= 0 > fy and which == "aphelion"):
+            out.append(T.from_jd(T.solve(f, x, y, 40)))
+        x, fx = y, fy
+    return out
 
 
 def station_times(b, direction):
@@ -187,7 +205,14 @@ def classify(ch):
         if m and m.group(1) in L_COMB:
             p = m.group(1)
             return (f"comb|{p}", f"{p} becomes combust", lambda p=p: combust_times(p))
+        m = re.match(r"(\w+) rises from combustion", t)
+        if m and m.group(1) in L_COMB:
+            p = m.group(1)
+            return (f"rise|{p}", f"{p} rises from combustion", lambda p=p: combust_times(p, "rise"))
     if k == "apsis":
+        m = re.search(r"Sun \(orbit/(perihelion|aphelion)\)", t)
+        if m:
+            return (f"sunapsis|{m.group(1)}", f"Sun at {m.group(1)}", lambda w=m.group(1): sun_apsis_times(w))
         m = re.search(r"(perigee|apogee)", t)
         if m:
             return (f"apsis|{m.group(1)}", f"Moon at {m.group(1)}", lambda w=m.group(1): apsis_times(w))
@@ -230,11 +255,12 @@ def score_class(times, MK):
 
 
 SKIP_KINDS = {"rule starts (general)", "rule ends (general)", "rule starts (gold)", "rule ends (gold)", "rule starts (silver)", "rule ends (silver)",
-              "pada change", "navamsa change", "aspect begins", "aspect ends", "karana"}
+              "pada change", "navamsa change", "aspect begins", "aspect ends", "karana",
+              "neighbour change"}          # a planet's zodiac neighbours change = a Paap Kartari window starts or ends (B116/B117, tested in kartari_test.py)
 
 
-def week(a, b, cal, nsl, MK, cache):
-    days = [x for x in cal["days"] if a.isoformat() <= x["date"] <= b.isoformat()]
+def week(a, b, all_days, ns_items, MK, cache, context=None):
+    days = [x for x in all_days if a.isoformat() <= x["date"] <= b.isoformat()]
     classes, per_day, unclassified = {}, [], []
     for x in days:
         evs = []
@@ -274,19 +300,20 @@ def week(a, b, cal, nsl, MK, cache):
                     notable[mk].append(f"{r['title']} [{r['tone']}] {rec['text']} ({st})")
         d = dt.date.fromisoformat(x["date"])
         ns = []
-        for i in nsl["calendar"]["items"]:
+        for i in ns_items:
             s_, e_ = dt.datetime.fromisoformat(i["start"]), dt.datetime.fromisoformat(i["end"])
             if (i["kind"] == "instant" and s_.date() == d) or (i["kind"] != "instant" and s_.date() <= d <= e_.date()):
                 ns.append(f"{i['text']} [{i['rule']}: {i['verdict']}]")
         out_days.append(dict(date=x["date"], weekday=x["weekday"], closed=x["closed"], early=x["early"], panchang=x["panchang"], events=evs,
                              signals={k: v[0] for k, v in x["signals"].items()}, prob=x["prob"], tally={k: [len(v["bull"]), len(v["bear"])] for k, v in x["tally"].items()},
                              rules={k: dict(v) for k, v in rules.items()}, notable={k: list(dict.fromkeys(v)) for k, v in notable.items()},
-                             solar_return=x["author"], watch=list(dict.fromkeys(f"{w['market']}: {w['factor']}" for w in x["watch"])), new_sources=ns))
+                             solar_return=x["author"], watch=list(dict.fromkeys(f"{w['market']}: {w['factor']}" for w in x["watch"])), new_sources=ns,
+                             sr_call=x.get("sr_call"), sr_month=x.get("sr_month"), notes=x.get("notes", [])))
     sig = [(c["label"], k, h, c["stats"][k][h]) for c in classes.values() for k in MK for h in ("h1", "h5") if c["stats"][k][h].get("q", 1) < 0.10]
     nom = [(c["label"], k, h, c["stats"][k][h]) for c in classes.values() for k in MK for h in ("h1", "h5") if (c["stats"][k][h]["p2"] or 1) < 0.05]
     bigsig = [(c["label"], k, c["stats"][k]["big"]) for c in classes.values() for k in MK if c["stats"][k]["big"].get("q", 1) < 0.10]
     res = dict(made=dt.datetime.now(ET).strftime("%Y-%m-%d %H:%M ET"), start=a.isoformat(), end=b.isoformat(), classes=classes, days=out_days,
-               unclassified=unclassified, checks=checks(per_day, classes, cache, MK, unclassified),
+               unclassified=unclassified, checks=checks(per_day, classes, cache, MK, unclassified), context=context or {},
                n_cells=len(cells), significant=[dict(label=l, market=k, horizon=h, **s) for l, k, h, s in sig],
                nominal=[dict(label=l, market=k, horizon=h, **s) for l, k, h, s in nom],
                big_significant=[dict(label=l, market=k, **s) for l, k, s in bigsig])
@@ -321,6 +348,10 @@ def expect_range(key):
         return EXPECT["nak_moon"]
     if k[0] in ("tithi", "yoga", "bhadra", "apsis"):
         return EXPECT[k[0]]
+    if k[0] == "sunapsis":
+        return (25, 27)
+    if k[0] in ("comb", "rise") and k[1] == "Mercury":
+        return (120, 190)
     if k[0] == "lun":
         return EXPECT["lun"]
     return None
@@ -361,15 +392,21 @@ def checks(per_day, classes, cache, MK, unclassified):
             elif k[0] == "yoga":
                 if not (yoga_fn(y1) == int(k[1]) and yoga_fn(y0) != int(k[1])):
                     bad.append(f"{e['text']}: yoga {yoga_fn(y0)}->{yoga_fn(y1)}")
-            elif k[0] == "comb":
+            elif k[0] in ("comb", "rise"):
                 from finastro import combustion as CB
-                ev_ = [c.instant.date() for c in CB.find_events(k[1], t.date() - dt.timedelta(days=3), t.date() + dt.timedelta(days=3)) if c.kind == "combust"]
+                kind_ = "combust" if k[0] == "comb" else "rise"
+                ev_ = [c.instant.date() for c in CB.find_events(k[1], t.date() - dt.timedelta(days=3), t.date() + dt.timedelta(days=3)) if c.kind == kind_]
                 if t.astimezone(T.IST).date() not in ev_:      # combustion is resolved to the civil day in IST (00:00 IST), as the calendar shows it
                     bad.append(f"{e['text']}: kalamsha method gives {ev_}")
             elif k[0] == "station":
                 s0, s1 = speed(T.jd(t - dt.timedelta(hours=12)), k[1]), speed(T.jd(t + dt.timedelta(hours=12)), k[1])
                 if not ((s0 < 0 <= s1) if k[2] == "direct" else (s0 >= 0 > s1)):
                     bad.append(f"{e['text']}: speed {s0:.5f} -> {s1:.5f}")
+            elif k[0] == "sunapsis":
+                g = lambda y: swe.calc_ut(y, swe.SUN, swe.FLG_SWIEPH | swe.FLG_SPEED)[0][5]
+                a0, a1 = g(T.jd(t - dt.timedelta(hours=12))), g(T.jd(t + dt.timedelta(hours=12)))
+                if not ((a0 < 0 <= a1) if k[1] == "perihelion" else (a0 >= 0 > a1)):
+                    bad.append(f"{e['text']}: distance speed {a0:.6f} -> {a1:.6f}")
             elif k[0] == "apsis":
                 g = lambda y: swe.calc_ut(y, swe.MOON, swe.FLG_SWIEPH | swe.FLG_SPEED)[0][5]
                 a0, a1 = g(T.jd(t - dt.timedelta(hours=3))), g(T.jd(t + dt.timedelta(hours=3)))
@@ -378,7 +415,7 @@ def checks(per_day, classes, cache, MK, unclassified):
             elif k[0] == "bhadra":
                 if not (karana_fn(y1) == "Vishti" and karana_fn(y0) != "Vishti"):
                     bad.append(f"{e['text']}: karana {karana_fn(y0)}->{karana_fn(y1)}")
-    add("Every event time re-derived from the ephemeris (±6 min; Moon aspects ±0.15°, stations ±12 h, apsides ±3 h)", not bad, f"{n} events checked" + ("; " + "; ".join(bad[:5]) if bad else ""))
+    add("Every event time re-derived from the ephemeris (±6 min; Moon aspects ±0.15°, stations and the Sun's apsides ±12 h, Moon apsides ±3 h, combustion by IST day)", not bad, f"{n} events checked" + ("; " + "; ".join(bad[:5]) if bad else ""))
     # 2. history counts sensible
     off = []
     for key, c in classes.items():
@@ -404,25 +441,116 @@ def checks(per_day, classes, cache, MK, unclassified):
     add("Independent recount of one result from raw prices", (up, dn) == (st["up"], st["down"]),
         f"{classes[key]['label']} S&P 5 sessions: recount {up} up / {dn} down vs tool {st['up']} / {st['down']}")
     # 4. coverage
-    add("Every sky event of the week classified (rule starts/ends, padas, navamsas and whole-sign aspect begin/end are covered by the rule records)",
+    add("Every sky event of the week classified (rule starts/ends, padas, navamsas, whole-sign aspect begin/end and Paap Kartari neighbour changes are covered by the rule records)",
         not unclassified, f"{len(unclassified)} not classified" + ("; " + "; ".join(unclassified[:5]) if unclassified else ""))
     return out
+
+
+def load_tool(name):
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(f"wdd_{name}", ROOT / "tools" / f"{name}.py")
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    return m
+
+
+def month_days(a, b, nsl):
+    """Day data for a range beyond the 2026 calendar (January 2027): the same layers, built with forward_daybyday.build,
+    plus the Solar return day call and month reading, Paap Kartari spans, gold notes and the new-source items."""
+    cachef = OUT / "backtest" / f"days_{a}_to_{b}.json.gz"
+    if "--reuse-days" in sys.argv and cachef.exists():
+        import gzip
+        c = json.load(gzip.open(cachef, "rt", encoding="utf-8"))
+        print("reusing", cachef.name)
+        add_notes(c["days"])
+        return c["days"], c["items"], c["context"]
+    FD = load_tool("forward_daybyday")
+    res = FD.build(a, b)
+    days = res["days"]
+    SRG = load_tool("solar_return_generate")
+    _, ms = SRG.NC.backtest("A")
+    SRG.START_DATES[:] = [m["start"].astimezone(ET).date() for m in ms]
+    atests = json.load(open(OUT / "author_forecasts_ET.json"))["tests"]
+    mons = SRG.months(dt.datetime(2026, 10, 1), dt.datetime(2027, 3, 20))
+    srd = {r["d"]: r for r in SRG.daily(a, b, mons, atests)}
+    for x in days:
+        d = dt.date.fromisoformat(x["date"])
+        r = srd.get(d)
+        x["sr_call"] = f"{r['call']}: {r['why']}" if r else None
+        m = SRG.month_of(mons, d)
+        x["sr_month"] = f"Solar month {m['start']:%d %b} – {m['end']:%d %b}: {m['asc']} rising, {m['reading']}" if m else None
+    L = load_tool("new_sources_leftover")
+    vd = dict(L.VERDICTS)
+    for key, prefix in L.RULE_TEST.items():
+        mm = [t for t in nsl["daily"] if t["name"].startswith(prefix)]
+        if mm:
+            vd[key] = "tested: " + mm[0]["verdict"]
+    lay = L.calendar_layer(vd, dt.datetime.combine(a, dt.time(5), UTC), dt.datetime.combine(b + dt.timedelta(days=1), dt.time(5), UTC))
+    context = dict(months=lay["months"], year=lay["year"], holidays={x["date"]: x["closed"] for x in days if x["closed"]})
+    import gzip
+    with gzip.open(cachef, "wt", encoding="utf-8") as fh:
+        json.dump(dict(days=days, items=lay["items"], context=context), fh, default=str)
+    add_notes(days)
+    return days, lay["items"], context
+
+
+def krec(k):
+    """Short record of a Paap Kartari rule (kartari_test.py): S&P and Sensex, all windows."""
+    parts = []
+    for mk, nm in (("spx", "S&P"), ("sensex", "Sensex")):
+        r = k["record"].get(mk, {}).get("all")
+        if r:
+            parts.append(f"{nm} {r['worked']}/{r['worked'] + r['failed']} ({r['hit_rate']}% vs {r['base_rate']}%, p {r['p_value']})")
+    return "; ".join(parts)
+
+
+def add_notes(days):
+    """Paap Kartari spans, the gold-Jupiter note and the gold turn-watch markers for each day."""
+    kart = json.load(open(OUT / "kartari_test_ET.json"))
+    gjc = json.load(open(OUT / "gold_jupiter_crash_ET.json"))
+    turns = json.load(open(OUT / "gold_turns_ET.json"))
+    GJC_KEYS = ("Jupiter with Rahu or Ketu", "Jupiter–Saturn trine (5/9)", "Jupiter–Saturn opposite (7)", "Saturn aspects Jupiter",
+                "Jupiter hemmed by malefics (12th and 2nd)", "Malefic vedha on Jupiter")
+    for x in days:
+        d = dt.date.fromisoformat(x["date"])
+        notes = []
+        for k in kart["rules"]:
+            if k["key"] in ("b116", "b117"):
+                for u in k["upcoming"]:
+                    if dt.date.fromisoformat(u["frm_iso"][:10]) <= d <= dt.date.fromisoformat(u["to_iso"][:10]):
+                        notes.append(f"{k['title'].split(' (')[0]} ({u['pair']}), {k['tone']} per the 2026 document; record {krec(k)}")
+        for key in GJC_KEYS:
+            for s0, s1 in gjc["spans"].get(key, []):
+                if dt.date.fromisoformat(s0) <= d <= dt.date.fromisoformat(s1):
+                    notes.append(f"Gold–Jupiter note: {key} (holds in 69% of months, so not specific to crashes)")
+        wk = (d - dt.timedelta(days=d.weekday())).isoformat()
+        for w in turns["weeks"]:
+            if w["week"] == wk and (w["bottom_hits"] or w["peak_hits"]):
+                notes.append("Gold turn-watch markers this week: " + "; ".join([f"bottom: {h}" for h in w["bottom_hits"]] + [f"top: {h}" for h in w["peak_hits"]]))
+        x["notes"] = notes
 
 
 def main():
     cal = json.load(open(OUT / "calendar_2026-11-24_to_2026-12-31_ET.json"))
     nsl = json.load(open(OUT / "new_sources_leftover_ET.json"))
     MK = T.markets()
-    if len(sys.argv) > 2:
-        weeks = [(dt.date.fromisoformat(sys.argv[1]), dt.date.fromisoformat(sys.argv[2]))]
-    else:                                                    # every week from 1 Dec to 31 Dec 2026
-        weeks, a = [], dt.date(2026, 12, 1)
-        while a <= dt.date(2026, 12, 31):
-            weeks.append((a, min(a + dt.timedelta(days=6), dt.date(2026, 12, 31))))
+
+    def chunks(a, b):
+        out = []
+        while a <= b:
+            out.append((a, min(a + dt.timedelta(days=6), b)))
             a += dt.timedelta(days=7)
+        return out
     cache = {}
-    for a, b in weeks:
-        week(a, b, cal, nsl, MK, cache)
+    want = sys.argv[1:]
+    if not want or "dec" in want:                            # every week from 1 Dec to 31 Dec 2026, from the 2026 calendar
+        for a, b in chunks(dt.date(2026, 12, 1), dt.date(2026, 12, 31)):
+            week(a, b, cal["days"], nsl["calendar"]["items"], MK, cache)
+    if not want or "jan" in want:                            # January 2027, built with the same layers
+        a, b = dt.date(2027, 1, 1), dt.date(2027, 1, 31)
+        days, items, context = month_days(a, b, nsl)
+        for wa, wb in chunks(a, b):
+            week(wa, wb, days, items, MK, cache, context)
 
 
 if __name__ == "__main__":

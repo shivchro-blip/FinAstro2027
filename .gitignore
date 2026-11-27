@@ -89,3 +89,5 @@ build/pdfref/day_report_*.json
 build/pdfref/sky_changes_*.json
 !build/pdfref/sky_changes_2026-11-01_to_2026-11-23_ET.json
 !build/pdfref/sky_changes_2026-11-24_to_2026-12-31_ET.json
+# day-data cache of tools/week_deep_dive.py (rebuilt on demand)
+build/pdfref/backtest/days_*.json.gz

@@ -357,8 +357,9 @@ def annual_tests():
 
 
 # ------------------------------------------------------------------ calendar layer, 24 Nov - 31 Dec 2026
-def calendar_layer(verdicts):
-    a, b = dt.datetime(2026, 11, 24, 5, tzinfo=UTC), dt.datetime(2027, 1, 1, 5, tzinfo=UTC)
+def calendar_layer(verdicts, a=None, b=None):
+    a = a or dt.datetime(2026, 11, 24, 5, tzinfo=UTC)
+    b = b or dt.datetime(2027, 1, 1, 5, tzinfo=UTC)
     items = []
 
     def add(kind, start, end, text, rule):
