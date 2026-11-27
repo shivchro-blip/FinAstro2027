@@ -63,3 +63,19 @@ build/astronomy_1999*
 build/astronomy_2028*
 build/pdfref/backtest/calendar_verdicts/
 build/pdfref/backtest/*_label_history.json.gz
+
+# --- generated HTML pages (user, 27 Nov 2026: keep only the two calendars) ---
+# Tools still write their pages during a refresh; only these HTML files are tracked:
+#   build/pdfref/ and reports/calendar_2026-11-24_to_2026-12-31_ET.html  (now to end of 2026)
+#   build/pdfref/ and reports/calendar_2027_NY_master.html               (2027, New York time)
+#   build/calendar_2027.html (base 2027 master; tests read it), data/source_2026.html and the
+#   user's own Reference_materials/*.html sources.
+build/pdfref/*.html
+!build/pdfref/calendar_2026-11-24_to_2026-12-31_ET.html
+!build/pdfref/calendar_2027_NY_master.html
+reports/*.html
+!reports/calendar_2026-11-24_to_2026-12-31_ET.html
+!reports/calendar_2027_NY_master.html
+build/reference_*.html
+PROJECT_KNOWLEDGE.html
+Reference_materials/extracted/*.html

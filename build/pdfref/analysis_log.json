@@ -743,6 +743,17 @@
     "tools/new_sources_leftover.py",
     "build/pdfref/calendar_2026-11-24_to_2026-12-31_ET.html"
    ]
+  },
+  {
+   "date": "2026-11-27",
+   "pr": "62",
+   "topic": "HTML cleanup: keep only the 2026 calendar and the 2027 calendar",
+   "analysis": "git rm of 140 generated HTML pages; .gitignore for generated pages; publish_reports.py publishes only the two calendars and .ics; refresh_all.py drops the md_to_html steps.",
+   "result": "Kept: calendar_2026-11-24_to_2026-12-31_ET.html, calendar_2027_NY_master.html (build/pdfref and reports), build/calendar_2027.html (tests read it) and the user's own source HTMLs. All JSON/MD/data kept; removed pages rebuild from their tools or git history.",
+   "files": [
+    "reports/calendar_2026-11-24_to_2026-12-31_ET.html",
+    "reports/calendar_2027_NY_master.html"
+   ]
   }
  ]
 }

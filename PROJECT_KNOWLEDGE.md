@@ -115,10 +115,10 @@ Known data problems:
 | `tools/build_year.py YEAR` | Astronomy layer for any year; 2000–2024 are git-ignored and rebuilt on demand |
 | `tools/fetch_prices.py` | Downloads GC=F and SI=F (Yahoo; the host must be allowed) |
 | `tools/refresh_all.py [--prices]` | Rebuilds everything in order, runs the tests, re-publishes `reports/` |
-| `tools/publish_reports.py` | Copies the current HTML reports and calendar .ics files into `reports/` with an index |
+| `tools/publish_reports.py` | Copies the two kept calendars (2026 to year end, 2027 NY master) and the calendar .ics files into `reports/`; removes any other HTML there |
 | `tests/test_pdfref.py`, `tests/test_shadbala.py` | PDF-rule checks; Shadbala vs B.V. Raman's worked example |
 
-## 5. Outputs (`build/pdfref/`; ready-to-open copies in `reports/`, start with `reports/index.html`)
+## 5. Outputs (`build/pdfref/`; since 27 Nov 2026 only the two calendars are kept as HTML, in `reports/`; the other pages below are rebuilt locally by their tools but git-ignored)
 
 | File | Content |
 |---|---|
@@ -909,6 +909,25 @@ Results, as the share of calls right:
 
   - This partly matches Solar return's own path (weak into spring, bottom Mar–May), but the rubric itself has no track record.
 - **In the calendar:** shown in the 2026 calendar's Solar return section.
+
+**HTML cleanup (27 Nov 2026)**
+
+- **What was asked:** the user asked to keep only the now-to-year-end calendar and the 2027 calendar.
+- **Removed:** 140 generated HTML pages from git:
+  - the reports and their `build/pdfref/` sources, including the trackers, day reports, tests and reviews;
+  - `PROJECT_KNOWLEDGE.html`;
+  - the `Reference_materials/extracted/` pages;
+  - `build/reference_*.html`.
+- **Kept:**
+  - `calendar_2026-11-24_to_2026-12-31_ET.html` and `calendar_2027_NY_master.html` (in `build/pdfref/` and `reports/`);
+  - `build/calendar_2027.html` (tests read it);
+  - the user's own HTML sources (Kindle chapters, `data/source_2026.html`, `slv-trade-plan.html`);
+  - every MD, JSON and data file.
+- **Going forward:**
+  - `.gitignore` keeps any other generated page out of git.
+  - `publish_reports.py` publishes only the two calendars and the .ics files.
+  - `refresh_all.py` no longer renders the Markdown documents to HTML.
+  - Any removed page can be rebuilt by running its tool, or restored from git history.
 
 **Leftover new-source rules and calendar layer (27 Nov 2026)** (`new_sources_leftover_ET.html`, `tools/new_sources_leftover.py`)
 
