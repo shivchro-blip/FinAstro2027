@@ -1,5 +1,5 @@
-"""HTML section for a month of weekly deep dives (tools/week_deep_dive.py), used by tools/build_pdf_calendar.py to show
-January 2027 in calendar_2027_NY_master.html. Self-contained: scoped CSS under .dd27, the page's colour variables.
+"""HTML sections for months of weekly deep dives (tools/week_deep_dive.py), used by tools/build_pdf_calendar.py to show
+January and February 2027 in calendar_2027_NY_master.html. Self-contained: scoped CSS under .dd27, the page's colour variables.
 """
 from __future__ import annotations
 
@@ -74,9 +74,12 @@ def day_row(day):
             f"<td class='s'>{E('; '.join(day.get('notes', [])[:4]))}</td><td class='s'>{E('; '.join(day['new_sources'][:3]))}</td></tr>")
 
 
-def section(dds, title="Deep dive: January 2027", anchor="dd2027"):
+def section(dds, title=None, anchor="dd2027", css=True):
     if not dds:
         return ""
+    mon = dt.date.fromisoformat(dds[0]["start"])
+    month = f"{mon:%B}"
+    title = title or f"Deep dive: {mon:%B %Y}"
     n = sum(d["n_cells"] for d in dds)
     sig = sum(len(d["significant"]) for d in dds)
     nom = sum(len(d["nominal"]) for d in dds)
@@ -89,20 +92,20 @@ def section(dds, title="Deep dive: January 2027", anchor="dd2027"):
                     for k, c in sorted(ctx.get("holidays", {}).items()) for name in dict.fromkeys(c.values())) or "none"
     mons = "".join(f"<li>{E(m['start'])}: navamsha 2nd-house rule {E(m['t8a'][0] or 'no call')}, 11th-house rule {E(m['t8b'][0] or 'no call')}; sahams "
                    + E(", ".join(f"{k} {v[0] or 'no call'}" for k, v in m["sahams"].items() if k != "Fortune")) + f"; Sun in house {m['sun_house']}</li>" for m in ctx.get("months", []))
-    nav = "".join(f"<a href='#{anchor}-{d['start'][5:7]}{d['start'][8:]}'>{d['start'][8:]}–{d['end'][8:]} Jan</a>" for d in dds)
-    o = [CSS, f"<section class='dd27' id='{anchor}'><h2>{E(title)}: every sky event backtested</h2><p class='nav s'>Weeks: {nav}</p>",
+    nav = "".join(f"<a href='#{anchor}-{d['start'][5:7]}{d['start'][8:]}'>{d['start'][8:]}–{d['end'][8:]} {mon:%b}</a>" for d in dds)
+    o = [CSS if css else "", f"<section class='dd27' id='{anchor}'><h2>{E(title)}: every sky event backtested</h2><p class='nav s'>Weeks: {nav}</p>",
          f"<div class='call'><b>{n} tests over {len(dds)} weeks: {sig} pass the Benjamini–Hochberg correction</b> (within each week), and {nom} have a nominal p &lt; 0.05, "
-         f"against about {round(n * 0.05)} expected by chance. Big days: {big} event classes pass. <b>The sky events of January carry no measurable direction or big-day signal.</b> "
-         "Method: every event of each day (exact aspects, sign and nakshatra entries, stations, combustion, the Moon's perigee and apogee, tithi, yoga, Bhadra, lunations) is "
+         f"against about {round(n * 0.05)} expected by chance. Big days: {big} event classes pass. <b>" + ("The sky events of " + month + " carry no measurable direction or big-day signal." if not sig and not big else f"{sig + big} result(s) pass: see the week tables.") + "</b> "
+         "Method: every event of each day (exact aspects, sign and nakshatra entries, stations, combustion and rising, eclipses, speed overtakes, the Sun's and Moon's apsides, tithi, yoga, Bhadra, lunations) is "
          "turned into its event class and scored on every occurrence from 20 Nov 2000 to 20 Nov 2026 on the S&amp;P 500, Sensex, gold and silver: next session and 5 sessions, "
          "two-sided, plus big days. The labels, the model and the rules with a supported record are built the same way as the December days of the 2026 calendar.<br>"
          f"<b>Double-checked:</b> {sum(c['ok'] for c in chk)} of {len(chk)} checks pass (event times re-derived from the ephemeris, occurrence counts against expected "
          "frequencies, one result per week recounted from raw prices with separate code, every sky event classified).<br>"
-         f"<b>Holidays:</b> {E(hol)}. The BSE has not yet published its 2027 list; Republic Day is fixed.<br>"
+         f"<b>Holidays:</b> {E(hol)}. The BSE has not yet published its 2027 holiday list; only fixed holidays are assumed.<br>"
          f"<b>The year:</b> lord of the year 2026–27 {E(y.get('lord_of_year_us', '?'))} (US time) or {E(y.get('lord_of_year_india', '?'))} (Indian time), watch list only. "
          f"NYSE ruler of the year {E(y.get('ruler', '?'))}, strength {y.get('ruler_strength', '?')}, house {y.get('ruler_house', '?')}. Both test at chance.</div>"]
     if mons:
-        o.append(f"<p class='s'><b>NYSE monthly charts (Tajika, Model B) in January, all at chance on the S&amp;P 1928–2026:</b></p><ul class='s'>{mons}</ul>")
+        o.append(f"<p class='s'><b>NYSE monthly charts (Tajika, Model B) in force during {month}, all at chance on the S&amp;P 1928–2026:</b></p><ul class='s'>{mons}</ul>")
     for dd in dds:
         a, b = dt.date.fromisoformat(dd["start"]), dt.date.fromisoformat(dd["end"])
         noms = "; ".join(f"{x['label']} ({x['market']}, {'next session' if x['horizon'] == 'h1' else '5 sessions'}: {x['up_pct']}% up vs {x['base']}%, p {x['p2']})" for x in dd["nominal"]) or "none"
@@ -121,3 +124,19 @@ def section(dds, title="Deep dive: January 2027", anchor="dd2027"):
     o.append("<p class='s'>⚑ = next-session p &lt; 0.05; coloured 5-session figure = p &lt; 0.05 (up or down). Nothing in this section passes the multiple-testing correction. "
              "The model column is the combined model of the 2026 calendar (fitted to 23 Nov 2026); the labels are the published signal tables to the end of 2027.</p></section>")
     return "".join(o)
+
+
+def all_months(pattern_dir):
+    """Every 2027 month with deep dives, one section each (January keeps the anchor dd2027 that the 2026 calendar links to)."""
+    import collections
+    by = collections.OrderedDict()
+    for d in load(pathlib.Path(pattern_dir) / "deep_dive_2027-*_ET.json"):
+        by.setdefault(d["start"][:7], []).append(d)
+    if not by:
+        return ""
+    anchors = {k: ("dd2027" if k == "2027-01" else f"dd{k.replace('-', '')}") for k in by}
+    index = " · ".join(f"<a href='#{anchors[k]}'>{dt.date.fromisoformat(k + '-01'):%B %Y}</a>" for k in by)
+    out = [CSS, f"<p class='m'><b>Deep dives (every sky event backtested, week by week):</b> {index}</p>"]
+    for k, dds in by.items():
+        out.append(section(dds, anchor=anchors[k], css=False))
+    return "".join(out)
