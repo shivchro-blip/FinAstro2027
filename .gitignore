@@ -79,3 +79,13 @@ reports/*.html
 build/reference_*.html
 PROJECT_KNOWLEDGE.html
 Reference_materials/extracted/*.html
+# Calendar files and one-off outputs of the removed reports (user, 27 Nov 2026: remove what is no longer relevant).
+build/pdfref/*.ics
+!build/pdfref/calendar_2027_NY_master.ics
+!build/pdfref/calendar_2027_NY_moon_layer.ics
+reports/*.ics
+!reports/calendar_2027_NY_master.ics
+build/pdfref/day_report_*.json
+build/pdfref/sky_changes_*.json
+!build/pdfref/sky_changes_2026-11-01_to_2026-11-23_ET.json
+!build/pdfref/sky_changes_2026-11-24_to_2026-12-31_ET.json

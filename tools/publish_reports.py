@@ -1,4 +1,4 @@
-"""Copy the two kept calendars (and the calendar .ics files) into reports/.
+"""Copy the two kept calendars (and the 2027 calendar .ics) into reports/.
 
     python tools/publish_reports.py
 
@@ -17,8 +17,7 @@ import shutil
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DEST = ROOT / "reports"
 B = ROOT / "build" / "pdfref"
-ICS = ["calendar_2027_NY_master.ics", "gold_big_move_watch_2026-11-22_to_2027-12-31_ET.ics", "gold_bs41_model_2026-11-20_to_2027-12-31_ET.ics",
-       "gold_fast_triggers_2026-11-22_to_2027-12-31_ET.ics", "gold_outlook_2026-11-22_to_2027-12-31_ET.ics"]
+ICS = ["calendar_2027_NY_master.ics"]
 
 
 def main():
@@ -28,7 +27,7 @@ def main():
         if p.exists():
             shutil.copy2(p, DEST / p.name)
     names = {p.name for p in keep} | {"README.md"}
-    for p in DEST.glob("*.html"):                     # nothing else is published
+    for p in list(DEST.glob("*.html")) + list(DEST.glob("*.ics")):     # nothing else is published
         if p.name not in names:
             p.unlink()
     (DEST / "README.md").write_text(

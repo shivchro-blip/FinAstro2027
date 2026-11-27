@@ -794,6 +794,17 @@
     "tools/week_deep_dive.py",
     "reports/calendar_2026-11-24_to_2026-12-31_ET.html"
    ]
+  },
+  {
+   "date": "2026-11-27",
+   "pr": "66",
+   "topic": "Remove files that are no longer relevant",
+   "analysis": "Checked every tracked output in build/pdfref and reports for readers in tools/, finastro/ and tests/.",
+   "result": "Removed 19 unused files (13 .ics of removed reports, 4 past day-report JSONs, 2 duplicate partial sky-change files; the 2026 document check is unchanged without them). Kept every JSON the pipeline reads and the 2027 .ics. .gitignore and publish_reports.py updated.",
+   "files": [
+    ".gitignore",
+    "tools/publish_reports.py"
+   ]
   }
  ]
 }
