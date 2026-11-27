@@ -1,6 +1,6 @@
 """Deep dive for one week: every sky event backtested, every active rule with its record.
 
-    python tools/week_deep_dive.py [dec] [jan]        # default: every week of December 2026 and January 2027
+    python tools/week_deep_dive.py [dec] [jan] [feb] [--reuse-days]   # default: every week of Dec 2026, Jan and Feb 2027
 
 For each day of the week (December 2026 from the 2026 calendar JSON; January 2027 built with forward_daybyday.build and
 the same extra layers, shown in the 2027 calendar):
@@ -104,6 +104,40 @@ def sun_apsis_times(which):
         y = x + 1.0
         fy = f(y)
         if (fx < 0 <= fy and which == "perihelion") or (fx >= 0 > fy and which == "aphelion"):
+            out.append(T.from_jd(T.solve(f, x, y, 40)))
+        x, fx = y, fy
+    return out
+
+
+def eclipse_start(which, x):
+    """(start, maximum) of the next eclipse after jd x. The calendar (build_2027.py) marks an eclipse at the start of its window:
+    a solar eclipse at its global first contact (tret[2]), a lunar eclipse at its penumbral first contact (tret[6])."""
+    fn = swe.sol_eclipse_when_glob if which == "solar" else swe.lun_eclipse_when
+    tret = fn(x, swe.FLG_SWIEPH)[1]
+    st = tret[2] if which == "solar" else tret[6]
+    return (st or tret[0]), tret[0]
+
+
+def eclipse_times(which):
+    """Every solar (global) or lunar (penumbral included) eclipse, at its start, as the calendar counts them."""
+    out, x = [], T.jd(H0)
+    while True:
+        st, peak = eclipse_start(which, x)
+        if peak > T.jd(H1):
+            return out
+        out.append(T.from_jd(st))
+        x = peak + 1
+
+
+def overtake_times(fast, slow):
+    """Instants the signed longitude speed of `fast` rises through that of `slow` (ephem.relative_speed_crossings)."""
+    f = lambda y: speed(y, fast) - speed(y, slow)
+    out, x, end = [], T.jd(H0), T.jd(H1)
+    fx = f(x)
+    while x < end:
+        y = x + 0.25
+        fy = f(y)
+        if fx < 0 <= fy:
             out.append(T.from_jd(T.solve(f, x, y, 40)))
         x, fx = y, fy
     return out
@@ -216,6 +250,16 @@ def classify(ch):
         m = re.search(r"(perigee|apogee)", t)
         if m:
             return (f"apsis|{m.group(1)}", f"Moon at {m.group(1)}", lambda w=m.group(1): apsis_times(w))
+    if k == "eclipse":
+        m = re.match(r"(Solar|Lunar) eclipse", t)
+        if m:
+            w = m.group(1).lower()
+            return (f"eclipse|{w}", f"{m.group(1)} eclipse begins" + (" (penumbral contact)" if w == "lunar" else ""), lambda w=w: eclipse_times(w))
+    if k == "speed overtake":
+        m = re.search(r"motion/(\w+)_overtakes_(\w+)", t)
+        if m:
+            fa, sl = m.group(1).title(), m.group(2).title()
+            return (f"overtake|{fa}|{sl}", f"{fa} overtakes {sl} in speed", lambda fa=fa, sl=sl: overtake_times(fa, sl))
     if k == "lunation":
         for nm, ang in PHASE.items():
             if t.startswith(nm):
@@ -333,7 +377,7 @@ def week(a, b, all_days, ns_items, MK, cache, context=None):
 
 # ------------------------------------------------------------------ double checks
 EXPECT = {"asp_moon_0": (300, 360), "asp_moon_180": (300, 360), "asp_moon_x": (620, 720), "sign_moon": (330, 365), "nak_moon": (330, 365),
-          "tithi": (310, 335), "yoga": (360, 385), "bhadra": (2500, 2650), "lun": (310, 335), "apsis": (330, 360)}
+          "tithi": (310, 335), "yoga": (360, 385), "bhadra": (2500, 2650), "lun": (310, 335), "apsis": (330, 360), "eclipse": (50, 70)}
 
 
 def expect_range(key):
@@ -350,6 +394,10 @@ def expect_range(key):
         return EXPECT[k[0]]
     if k[0] == "sunapsis":
         return (25, 27)
+    if k[0] == "eclipse":
+        return EXPECT["eclipse"]
+    if k[0] == "overtake" and set(k[1:3]) == {"Mercury", "Venus"}:
+        return (75, 90)                 # once per Mercury synodic cycle (115.88 d): 26 x 365.25 / 115.88 = 82 each way
     if k[0] in ("comb", "rise") and k[1] == "Mercury":
         return (120, 190)
     if k[0] == "lun":
@@ -402,6 +450,16 @@ def checks(per_day, classes, cache, MK, unclassified):
                 s0, s1 = speed(T.jd(t - dt.timedelta(hours=12)), k[1]), speed(T.jd(t + dt.timedelta(hours=12)), k[1])
                 if not ((s0 < 0 <= s1) if k[2] == "direct" else (s0 >= 0 > s1)):
                     bad.append(f"{e['text']}: speed {s0:.5f} -> {s1:.5f}")
+            elif k[0] == "eclipse":
+                st, _ = eclipse_start(k[1], T.jd(t - dt.timedelta(days=2)))
+                st = T.from_jd(st)
+                if abs((st - t).total_seconds()) > 600:
+                    bad.append(f"{e['text']}: first contact at {st:%Y-%m-%d %H:%M} UT")
+            elif k[0] == "overtake":
+                d0 = speed(T.jd(t - dt.timedelta(hours=6)), k[1]) - speed(T.jd(t - dt.timedelta(hours=6)), k[2])
+                d1 = speed(T.jd(t + dt.timedelta(hours=6)), k[1]) - speed(T.jd(t + dt.timedelta(hours=6)), k[2])
+                if not (d0 < 0 <= d1):
+                    bad.append(f"{e['text']}: speed difference {d0:.4f} -> {d1:.4f}")
             elif k[0] == "sunapsis":
                 g = lambda y: swe.calc_ut(y, swe.SUN, swe.FLG_SWIEPH | swe.FLG_SPEED)[0][5]
                 a0, a1 = g(T.jd(t - dt.timedelta(hours=12))), g(T.jd(t + dt.timedelta(hours=12)))
@@ -415,7 +473,7 @@ def checks(per_day, classes, cache, MK, unclassified):
             elif k[0] == "bhadra":
                 if not (karana_fn(y1) == "Vishti" and karana_fn(y0) != "Vishti"):
                     bad.append(f"{e['text']}: karana {karana_fn(y0)}->{karana_fn(y1)}")
-    add("Every event time re-derived from the ephemeris (±6 min; Moon aspects ±0.15°, stations and the Sun's apsides ±12 h, Moon apsides ±3 h, combustion by IST day)", not bad, f"{n} events checked" + ("; " + "; ".join(bad[:5]) if bad else ""))
+    add("Every event time re-derived from the ephemeris (±6 min; Moon aspects ±0.15°, eclipse first contacts ±10 min, speed overtakes ±6 h, stations and the Sun's apsides ±12 h, Moon apsides ±3 h, combustion by IST day)", not bad, f"{n} events checked" + ("; " + "; ".join(bad[:5]) if bad else ""))
     # 2. history counts sensible
     off = []
     for key, c in classes.items():
@@ -542,16 +600,18 @@ def main():
             a += dt.timedelta(days=7)
         return out
     cache = {}
-    want = sys.argv[1:]
+    want = [w for w in sys.argv[1:] if not w.startswith("--")]
     if not want or "dec" in want:                            # every week from 1 Dec to 31 Dec 2026, from the 2026 calendar
         for a, b in chunks(dt.date(2026, 12, 1), dt.date(2026, 12, 31)):
             week(a, b, cal["days"], nsl["calendar"]["items"], MK, cache)
-    if not want or "jan" in want:                            # January 2027, built with the same layers
-        a, b = dt.date(2027, 1, 1), dt.date(2027, 1, 31)
-        days, items, context = month_days(a, b, nsl)
-        for wa, wb in chunks(a, b):
-            week(wa, wb, days, items, MK, cache, context)
+    for tok, (a, b) in MONTHS_2027.items():                  # 2027 months, built with the same layers
+        if not want or tok in want:
+            days, items, context = month_days(a, b, nsl)
+            for wa, wb in chunks(a, b):
+                week(wa, wb, days, items, MK, cache, context)
 
+
+MONTHS_2027 = {"jan": (dt.date(2027, 1, 1), dt.date(2027, 1, 31)), "feb": (dt.date(2027, 2, 1), dt.date(2027, 2, 28))}
 
 if __name__ == "__main__":
     main()

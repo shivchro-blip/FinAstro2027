@@ -111,8 +111,8 @@ Known data problems:
 | `tools/jupiter_saturn_gold.py` | Jupiter–Saturn aspects in a 10° orb (degree-based; exact passes to the minute) for Nov 2026 – Dec 2030, verified against the user's list. Shows every past window since 1972 with gold's turns, classified by the nearest anchor (orb entry / exact / exit). Gives a plain bottom-or-top table, which also includes Jupiter and Saturn direct stations |
 | `tools/new_sources_test.py` | Backtest of the rules from the three new books (BS Iyer, Tajika Nilakanthi, Hayanaratna): BS 42.6 with eclipses, Moon north/south, Mercury reappearance, nakshatra and lord rules, Tajika monthly and annual charts → `new_sources_test_ET.html` |
 | `tools/new_sources_leftover.py` | The leftover new-source rules (B5, B6, B7, B9, B10, B11, B13, T4, T6, T10), Tajika five-dignity strength and ruler of the year, and the calendar layer read by `calendar_2026.py` → `new_sources_leftover_ET.{html,json}` |
-| `tools/week_deep_dive.py [dec] [jan]` | Every week of December 2026 (from the 2026 calendar) and January 2027 (built with `forward_daybyday.build`): every sky event as an event class backtested on 4 markets (next session, 5 sessions, big days; BH per week) with 4 automatic checks, plus each day's rules, labels, model, Solar return, Kartari, gold notes and new-source items → `deep_dive_*_ET.json` |
-| `tools/deep_dive_render.py` | Renders the January 2027 deep dive into `calendar_2027_NY_master.html` (called by `build_pdf_calendar.py`; `--html-only` re-renders from the JSON) |
+| `tools/week_deep_dive.py [dec] [jan] [feb] [--reuse-days]` | Every week of December 2026 (from the 2026 calendar) and of January and February 2027 (built with `forward_daybyday.build`; `--reuse-days` reuses the cached day data): every sky event as an event class backtested on 4 markets (next session, 5 sessions, big days; BH per week) with 4 automatic checks, plus each day's rules, labels, model, Solar return, Kartari, gold notes and new-source items → `deep_dive_*_ET.json` |
+| `tools/deep_dive_render.py` | Renders the 2027 monthly deep dives (January, February) into `calendar_2027_NY_master.html` with a month index (called by `build_pdf_calendar.py`; `--html-only` re-renders from the JSON) |
 | `tools/gold_tracker.py [--metal silver]` | Trackers: findings, rule status, best-rule dates, analysis log |
 | `tools/build_year.py YEAR` | Astronomy layer for any year; 2000–2024 are git-ignored and rebuilt on demand |
 | `tools/fetch_prices.py` | Downloads GC=F and SI=F (Yahoo; the host must be allowed) |
@@ -911,6 +911,44 @@ Results, as the share of calls right:
 
   - This partly matches Solar return's own path (weak into spring, bottom Mar–May), but the rubric itself has no track record.
 - **In the calendar:** shown in the 2026 calendar's Solar return section.
+
+**Deep dive, February 2027, week by week (27 Nov 2026)** (`tools/week_deep_dive.py feb`, `deep_dive_2027-02-*_ET.json`, `calendar_2027_NY_master.html` → "Deep dive: February 2027"; the page now has a month index)
+
+- **Setup:**
+  - Holiday added: 15 Feb (Presidents' Day) for US stocks and COMEX. Past Presidents' Days have no ^GSPC/GC=F/SI=F bar.
+  - The BSE has no February holiday: Maha Shivaratri 2027 falls about 6–7 Mar, and Shivaji Jayanti (19 Feb) is a trading day in the past data.
+- **New event kinds:**
+  - Eclipses. The calendar marks a solar eclipse at its global first contact and a lunar eclipse at its penumbral first contact (`build_2027.py`), so the classes use the same instants. The first-pass check caught this: the maximum is 2–3 h later.
+  - Venus overtaking Mercury in speed (signed speeds, as in `ephem.relative_speed_crossings`). 82 times in 26 years, once per Mercury synodic cycle; my first expected range was wrong.
+- **Result:** 1,827 tests over 4 weeks, **0 pass** the Benjamini–Hochberg correction. 43 are nominal (about 91 expected by chance), and no class changes the chance of a big day. Nominal examples:
+  - The solar eclipse start: S&P next session 22 up / 7 down.
+  - Uranus stationing direct: Sensex 14 up / 2 down.
+- **Double checks:** 16 of 16 pass, 8 of 8 independent recounts match, and Presidents' Day is verified in the day data.
+- **What is left for February:**
+
+| Market | Label | Basis and record |
+|---|---|---|
+| S&P | Volatile on 1–5 Feb | Mercury–Saturn 2/12 big-move factor |
+| S&P and Sensex | **Bearish High on 8–19 Feb** | 2026 document: "Three Saturdays in Shukla Paksha" (S&P 56% vs 39%, p 0.002; Sensex 50% vs 39%) and "Shukla Shashthi on a Friday" (S&P 53% vs 41%, p 0.02; Sensex 53% vs 42%) |
+| S&P and Sensex | Bullish Moderate on 22 Feb | Moon–Rahu 6/8 |
+| S&P and Sensex | Bearish Moderate from 23 Feb | Mercury with Rahu again |
+| Silver | Bullish (High to Low) | – |
+| Gold | Bullish Low from 12 Feb | – |
+
+- **Model and Solar return:**
+  - The combined model has the S&P at 44–51% that day vs 54% normal for most of February (lowest 16 Feb).
+  - Solar return: volatile (Mars square Uranus, exact 17 Feb) on 9–23 Feb, then Bullish (month reading "Supported") from 24 Feb.
+- **February's main sky events:**
+  - Solar eclipse 6 Feb.
+  - Uranus direct 8 Feb.
+  - Mercury retrograde 9 Feb.
+  - Sun with Rahu 9 Feb.
+  - Sun opposite Jupiter 10 Feb.
+  - Sun into Aquarius 12 Feb.
+  - Mars square Uranus 17 Feb.
+  - Sun opposite Mars 19 Feb.
+  - Penumbral lunar eclipse 20 Feb.
+  - Mercury rises 23 Feb.
 
 **Deep dive, January 2027, week by week (27 Nov 2026)** (`tools/week_deep_dive.py jan`, `deep_dive_2027-01-*_ET.json`, shown in `calendar_2027_NY_master.html` → "Deep dive: January 2027")
 

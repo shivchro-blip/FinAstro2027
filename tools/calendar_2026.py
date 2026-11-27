@@ -822,7 +822,8 @@ def jan_html(j):
          "<p class='s'>2026 document B116: “negative event for financial markets”; with a benefic aspect, “very volatile and both side movement”. Past windows 2000–2026, "
          "each market in its own exchange time; a bearish call is right when the market fell more than 0.5% over the scored horizon.</p>"
          "<p class='s'><b>Every sky event of January 2027, backtested week by week</b>, is in the 2027 calendar: "
-         "<a href='calendar_2027_NY_master.html#dd2027'>calendar_2027_NY_master.html → Deep dive: January 2027</a>.</p>"]
+         "<a href='calendar_2027_NY_master.html#dd2027'>calendar_2027_NY_master.html → Deep dive: January 2027</a> "
+         "(and <a href='calendar_2027_NY_master.html#dd202702'>February 2027</a>).</p>"]
     for mk, m in j["markets"].items():
         o.append(f"<h3>{E(m['name'])}</h3><div class='wrap'><table><thead><tr><th>Window</th><th>Hemmed by</th><th>Mercury</th><th>Benefic aspect</th><th>Sessions</th></tr></thead><tbody>")
         for w in m["jan"]:
@@ -897,7 +898,8 @@ def dd_intro(dds):
             f"<b>Double-checked:</b> {sum(c['ok'] for c in chk)} of {len(chk)} checks pass. Every event time was re-derived from the ephemeris, the occurrence counts were checked against "
             "the expected frequencies, one result per week was recounted from raw prices with separate code, and every sky event was confirmed as classified. "
             "Five sample results were also recomputed independently: all match.<br>"
-            "<b>January 2027:</b> the same weekly deep dive is in the 2027 calendar: <a href='calendar_2027_NY_master.html#dd2027'>calendar_2027_NY_master.html → Deep dive: January 2027</a>.</div>")
+            "<b>2027:</b> the same weekly deep dive for <a href='calendar_2027_NY_master.html#dd2027'>January 2027</a> and "
+            "<a href='calendar_2027_NY_master.html#dd202702'>February 2027</a> is in the 2027 calendar (calendar_2027_NY_master.html).</div>")
 
 
 def dd_html(dd):

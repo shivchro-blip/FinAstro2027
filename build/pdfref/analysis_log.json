@@ -822,6 +822,22 @@
     "tools/deep_dive_render.py",
     "reports/calendar_2027_NY_master.html"
    ]
+  },
+  {
+   "date": "2026-11-27",
+   "pr": "68",
+   "topic": "Deep dive February 2027 week by week, double-checked; added to the 2027 calendar",
+   "analysis": "tools/week_deep_dive.py feb: February day data from forward_daybyday.build with Kartari, gold notes and new-source items; every sky event as an event class (new: eclipses at first contact as the calendar marks them, Venus overtaking Mercury in speed) scored on every occurrence 2000-2026 on S&P, Sensex, gold, silver; BH per week; 4 automatic checks per week; 8 independent recounts. Presidents' Day 15 Feb added for US stocks and COMEX.",
+   "result": "1,827 tests, 0 pass BH; 43 nominal vs about 91 expected; no big-day class. Checks 16/16 (eclipse instants and the speed-overtake count range corrected after the first pass), recounts 8/8. February labels: S&P/Sensex Bearish High 8-19 Feb (2026 document: three Saturdays in Shukla paksha, Shukla Shashthi on a Friday), Bearish Moderate from 23 Feb (Mercury-Rahu); model S&P 44-51% vs 54%; Solar return volatile 9-23 Feb, bullish from 24 Feb.",
+   "files": [
+    "build/pdfref/deep_dive_2027-02-01_to_2027-02-07_ET.json",
+    "build/pdfref/deep_dive_2027-02-08_to_2027-02-14_ET.json",
+    "build/pdfref/deep_dive_2027-02-15_to_2027-02-21_ET.json",
+    "build/pdfref/deep_dive_2027-02-22_to_2027-02-28_ET.json",
+    "tools/week_deep_dive.py",
+    "tools/deep_dive_render.py",
+    "reports/calendar_2027_NY_master.html"
+   ]
   }
  ]
 }

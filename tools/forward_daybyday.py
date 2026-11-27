@@ -47,7 +47,8 @@ FIT_END = dt.date(2026, 11, 23)
 MKS = ("spx", "sensex", "gold", "silver")
 NAME = {"spx": "S&P 500", "sensex": "BSE Sensex", "gold": "Gold", "silver": "Silver"}
 _US = {dt.date(2026, 11, 26): "Thanksgiving", dt.date(2026, 12, 25): "Christmas",
-       dt.date(2027, 1, 1): "New Year's Day", dt.date(2027, 1, 18): "Martin Luther King Jr. Day"}
+       dt.date(2027, 1, 1): "New Year's Day", dt.date(2027, 1, 18): "Martin Luther King Jr. Day",
+       dt.date(2027, 2, 15): "Presidents' Day"}           # no ^GSPC / GC=F / SI=F bar on past Presidents' Days
 CLOSED = {"spx": dict(_US),             # COMEX has no settlement on these days either (no GC=F / SI=F bar on past MLK and New Year days)
           "gold": dict(_US),
           "silver": dict(_US),

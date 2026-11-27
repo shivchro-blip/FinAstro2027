@@ -419,8 +419,8 @@ def write_ics(path, evs, calname):
 
 def write_html(path, evs, meta):
     sys.path.insert(0, str(ROOT / "tools"))
-    import deep_dive_render as DDR                       # January 2027 deep dive (tools/week_deep_dive.py), if built
-    deep_dive = DDR.section(DDR.load(OUT / "deep_dive_2027-01-*_ET.json"))
+    import deep_dive_render as DDR                       # 2027 monthly deep dives (tools/week_deep_dive.py), if built
+    deep_dive = DDR.all_months(OUT)
     rows = []
     for e in evs:
         d = e["date_time"]
