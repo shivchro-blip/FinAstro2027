@@ -1,6 +1,6 @@
 # Gold findings tracker
 
-Generated 27 Nov 2026 09:29 EST by `tools/gold_tracker.py` (`--refresh` re-runs both backtests). HTML version: `GOLD_TRACKER.html`.
+Generated 27 Nov 2026 16:51 EST by `tools/gold_tracker.py` (`--refresh` re-runs both backtests). HTML version: `GOLD_TRACKER.html`.
 
 ## Recent findings
 
@@ -104,6 +104,7 @@ Best (from the 26 yr data): Mars aspected by Saturn while Jupiter retrograde, U2
 
 | Date | PR | Topic | Result |
 |---|---|---|---|
+| 2026-11-27 | #63 | Why gold's Bearish Low call failed on 27 Nov 2026; untested phase removed | Gold +3.75% (25->27 Nov), +4.4% since the label began; silver +9.0%. The label came only from a hand-added bearish phase (Sun in Anuradha + Mars aspect; U3 at chance 45% vs 43%; Bearish Low label 44% vs 44%). The combined model had gold 54.2% up; the big-move watch was right. Phase removed: gold now No signal 23 Nov-1 Dec; combined model and calendar rebuilt. |
 | 2026-11-27 | #62 | HTML cleanup: keep only the 2026 calendar and the 2027 calendar | Kept: calendar_2026-11-24_to_2026-12-31_ET.html, calendar_2027_NY_master.html (build/pdfref and reports), build/calendar_2027.html (tests read it) and the user's own source HTMLs. All JSON/MD/data kept; removed pages rebuild from their tools or git history. |
 | 2026-11-27 | #61 | Leftover new-source rules tested; new-source layer added to the 2026 calendar | No leftover rule holds. Nominal only: eclipse in Libra/Sagittarius (gold down 11/15, p 0.02, q 0.22) and eclipse in Chaitra (gold down 6/7, silver 8/8, 9 eclipses; none before 2028). Sun's Aries-ingress strength is constant (untestable). Calendar shows 13 new-source items in 24 Nov-31 Dec with their test results; lord of the year 2026-27 Mercury (US) / Jupiter (India); NYSE ruler of the year Moon. |
 | 2026-11-27 | #60 | New sources backtest in the approved order (B12, B1, B2, B3, B4, B6, B8, T7-T9, N1-N5, T2-T7) | No rule passes (0 of 113 results with q < 0.10); nothing added. BS 42.6 with an eclipse is worse (gold up by mid-Dec 6/14 eclipse years vs 22/39 others). Moon north/south, Mercury reappearance, nakshatra rules, lord of day/month and Tajika monthly rules at chance. Watch list: lord of the year (good lords 76% up vs 64%, p 0.047; p 0.10 with Indian-sunrise weekday) and N5 (41% down years vs 22%, p 0.01, but mean still +6.7%). |

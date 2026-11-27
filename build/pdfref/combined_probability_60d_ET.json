@@ -122,9 +122,9 @@
       "n": 43,
       "actual": 44.2,
       "base": 52.7,
-      "brier": 0.2523,
+      "brier": 0.2525,
       "brier_base": 0.2539,
-      "skill": 0.65,
+      "skill": 0.56,
       "avg_p": 52.6,
       "calls_up": 1,
       "right_up": 100,
@@ -199,20 +199,20 @@
       "n": 43,
       "actual": 20.9,
       "base": 7.2,
-      "brier": 0.1823,
+      "brier": 0.1843,
       "brier_base": 0.1843,
-      "skill": 1.09,
-      "avg_p": 8.3,
-      "p_on_big": 8.2,
+      "skill": 0.02,
+      "avg_p": 8.2,
+      "p_on_big": 7.6,
       "p_on_other": 8.3,
       "bands": {
        "6-10%": {
-        "n": 33,
-        "actual": 21
+        "n": 34,
+        "actual": 24
        },
        "10-20%": {
-        "n": 10,
-        "actual": 20
+        "n": 9,
+        "actual": 11
        }
       }
      },
@@ -1439,9 +1439,9 @@
      "r5": null,
      "big": true,
      "p": {
-      "up1": 52.8,
-      "up5": 54.7,
-      "big": 11.0
+      "up1": 51.9,
+      "up5": 54.8,
+      "big": 6.3
      },
      "pk": {
       "up1": null,
@@ -1449,7 +1449,7 @@
       "big": null
      },
      "st": {
-      "table": "Bearish Low",
+      "table": "no signal",
       "v1": "mild bullish"
      }
     }

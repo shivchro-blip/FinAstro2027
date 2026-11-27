@@ -1,7 +1,7 @@
 {
  "start": "2026-11-24",
  "end": "2026-12-31",
- "generated": "27 Nov 2026 08:40 ET",
+ "generated": "27 Nov 2026 16:51 ET",
  "checks": [
   {
    "name": "New-source layer loaded, every item carries its test result",
@@ -2980,9 +2980,9 @@
    "signals": {
     "Gold": [
      {
-      "sig": "Bearish",
-      "st": "Low",
-      "why": "Sun in Anuradha, Mars aspects the Sun"
+      "sig": "No signal",
+      "st": "",
+      "why": "no tested rule active"
      }
     ],
     "Silver": [
@@ -3196,13 +3196,13 @@
     },
     "gold": {
      "st": {
-      "table": "Bearish Low",
+      "table": "no signal",
       "v1": "mild bullish"
      },
      "all": {
-      "up1": 52.9,
-      "up5": 53.9,
-      "big": 11.4
+      "up1": 51.8,
+      "up5": 54.2,
+      "big": 6.5
      },
      "kept": {
       "up1": null,
@@ -6455,9 +6455,9 @@
    "signals": {
     "Gold": [
      {
-      "sig": "Bearish",
-      "st": "Low",
-      "why": "Sun in Anuradha, Mars aspects the Sun"
+      "sig": "No signal",
+      "st": "",
+      "why": "no tested rule active"
      }
     ],
     "Silver": [
@@ -6699,13 +6699,13 @@
     },
     "gold": {
      "st": {
-      "table": "Bearish Low",
+      "table": "no signal",
       "v1": "mild bullish"
      },
      "all": {
-      "up1": 52.9,
-      "up5": 53.9,
-      "big": 11.4
+      "up1": 51.8,
+      "up5": 54.2,
+      "big": 6.5
      },
      "kept": {
       "up1": null,
@@ -9675,9 +9675,9 @@
    "signals": {
     "Gold": [
      {
-      "sig": "Bearish",
-      "st": "Low",
-      "why": "Sun in Anuradha, Mars aspects the Sun"
+      "sig": "No signal",
+      "st": "",
+      "why": "no tested rule active"
      }
     ],
     "Silver": [
@@ -13048,9 +13048,9 @@
    "signals": {
     "Gold": [
      {
-      "sig": "Bearish",
-      "st": "Low",
-      "why": "Sun in Anuradha, Mars aspects the Sun"
+      "sig": "No signal",
+      "st": "",
+      "why": "no tested rule active"
      }
     ],
     "Silver": [
@@ -13291,13 +13291,13 @@
     },
     "gold": {
      "st": {
-      "table": "Bearish Low",
+      "table": "no signal",
       "v1": "neutral"
      },
      "all": {
-      "up1": 54.2,
-      "up5": 54.9,
-      "big": 11.0
+      "up1": 53.1,
+      "up5": 55.2,
+      "big": 6.2
      },
      "kept": {
       "up1": null,
@@ -16084,9 +16084,9 @@
    "signals": {
     "Gold": [
      {
-      "sig": "Bearish",
-      "st": "Low",
-      "why": "Sun in Anuradha, Mars aspects the Sun"
+      "sig": "No signal",
+      "st": "",
+      "why": "no tested rule active"
      }
     ],
     "Silver": [
@@ -19578,9 +19578,9 @@
    "signals": {
     "Gold": [
      {
-      "sig": "Bearish",
-      "st": "Low",
-      "why": "Sun in Anuradha, Mars aspects the Sun"
+      "sig": "No signal",
+      "st": "",
+      "why": "no tested rule active"
      }
     ],
     "Silver": [
@@ -22628,9 +22628,9 @@
    "signals": {
     "Gold": [
      {
-      "sig": "Bearish",
-      "st": "Low",
-      "why": "Sun in Anuradha, Mars aspects the Sun"
+      "sig": "No signal",
+      "st": "",
+      "why": "no tested rule active"
      }
     ],
     "Silver": [
@@ -22862,13 +22862,13 @@
     },
     "gold": {
      "st": {
-      "table": "Bearish Low",
+      "table": "no signal",
       "v1": "mild bullish"
      },
      "all": {
-      "up1": 52.9,
-      "up5": 53.9,
-      "big": 11.4
+      "up1": 51.8,
+      "up5": 54.2,
+      "big": 6.5
      },
      "kept": {
       "up1": null,
@@ -25682,9 +25682,9 @@
    "signals": {
     "Gold": [
      {
-      "sig": "Bearish",
-      "st": "Low",
-      "why": "Sun in Anuradha, Mars aspects the Sun"
+      "sig": "No signal",
+      "st": "",
+      "why": "no tested rule active"
      }
     ],
     "Silver": [
@@ -25921,13 +25921,13 @@
     },
     "gold": {
      "st": {
-      "table": "Bearish Low",
+      "table": "no signal",
       "v1": "mild bullish"
      },
      "all": {
-      "up1": 52.9,
-      "up5": 53.9,
-      "big": 11.4
+      "up1": 51.8,
+      "up5": 54.2,
+      "big": 6.5
      },
      "kept": {
       "up1": null,
@@ -75981,9 +75981,9 @@
       "v1": "mild bullish"
      },
      "all": {
-      "up1": 51.7,
+      "up1": 51.8,
       "up5": 54.2,
-      "big": 6.4
+      "big": 6.5
      },
      "kept": {
       "up1": null,
@@ -79116,9 +79116,9 @@
       "v1": "mild bullish"
      },
      "all": {
-      "up1": 51.7,
+      "up1": 51.8,
       "up5": 54.2,
-      "big": 6.4
+      "big": 6.5
      },
      "kept": {
       "up1": null,
@@ -82336,9 +82336,9 @@
       "v1": "mild bullish"
      },
      "all": {
-      "up1": 51.7,
+      "up1": 51.8,
       "up5": 54.2,
-      "big": 6.4
+      "big": 6.5
      },
      "kept": {
       "up1": null,

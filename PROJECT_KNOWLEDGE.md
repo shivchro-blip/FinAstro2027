@@ -910,6 +910,31 @@ Results, as the share of calls right:
   - This partly matches Solar return's own path (weak into spring, bottom Mar–May), but the rubric itself has no track record.
 - **In the calendar:** shown in the 2026 calendar's Solar return section.
 
+**Gold Bearish Low on Fri 27 Nov 2026: why it was wrong (27 Nov 2026)**
+
+- **What happened:** gold settled at 3,668.5 on 27 Nov against 3,535.8 on 25 Nov, +3.75% (there was no settlement on Thanksgiving). Silver rose +9.0%.
+- **Since the label began:**
+
+| Day | Gold move | Bearish label |
+|---|---|---|
+| 23 Nov | +3.9% | wrong |
+| 24 Nov | −2.5% | right |
+| 25 Nov | −0.7% | right |
+| 27 Nov | +3.75% | wrong |
+| 20 → 27 Nov | +4.4% | wrong |
+
+- **Cause:** the "Bearish Low" label for 23 Nov – 1 Dec had a single input: a hand-added phase (Sun in Anuradha, a Saturn nakshatra, with Mars aspecting the Sun) from the 22 Nov deep analysis.
+  - That rests on the user note U3 (Sun in a Saturn or Rahu nakshatra = fall), which is at chance: 60 of 134 = 45% vs 43% since 2000, right in 10 of 26 years.
+  - The "Bearish Low" label itself has no edge in the walk-forward test (44% right vs 44% base), and gold rose on average after it (+0.31%).
+  - It had stayed in the table despite our own notes that its rules were at chance.
+- **What the other layers said:**
+  - The combined model put gold at 54.2% up for 27 Nov (base 52.7%), so it already leaned the other way.
+  - Model v1.0 was neutral.
+  - The big-move watch (Sun opposite Uranus, exact 25 Nov; full Moon, 24 Nov) was right that big days would come: +3.9%, −2.5% and +3.75%.
+- **Fix:** the phase is removed from `tools/gold_signal_table.py`. Gold now shows "No signal" for 23 Nov – 1 Dec. The combined model and the 2026 calendar were rebuilt, and the calendar checks pass.
+- **Next label:** from 2 Dec, Bullish Low (Mercury with the Sun, user note U2). That label is also at chance in the walk-forward test (54% vs 55%), so treat it as weak.
+- **Lesson:** a daily label with no tested edge should not be shown as a direction. The model's probability and the big-move watch carry the information.
+
 **HTML cleanup (27 Nov 2026)**
 
 - **What was asked:** the user asked to keep only the now-to-year-end calendar and the 2027 calendar.
