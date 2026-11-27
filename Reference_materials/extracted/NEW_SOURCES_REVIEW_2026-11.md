@@ -110,3 +110,20 @@ PDF page numbers are those of `b29353130.pdf`.
   - *Varsha Tantra* (and Tejahsimha's applying-aspect version): good for wealth.
   - Vamana: "no happiness from wealth".
   - Hayanaratna 6.3 (p.583) records both views.
+
+## 8. Test results (27 Nov 2026)
+
+All five steps of Section 6 were run with `tools/new_sources_test.py`; the report is `new_sources_test_ET.html`. The method is PROJECT_KNOWLEDGE §6, with Benjamini–Hochberg correction across all tests. **No rule passes, so nothing is added to the rule set or the calendar.**
+
+| Step | Rules | Result |
+|---|---|---|
+| 1 | B12: 42.6 with an eclipse while the Sun is in Leo | **Worse, not better.** Gold rose by mid-December in 6 of 14 eclipse years vs 22 of 39 other years (1972–2025). Silver (2000–2025): 3 of 7 vs 12 of 18. The 2026 eclipse condition does not support a December–January gain. |
+| 2 | B1: Moon north or south of Mercury, Jupiter, Venus | At chance on every market. Pooled S&P 53% vs 51% base (p 0.15); gold and silver slightly the wrong way. |
+| 2 | B2: Mercury reappearing as volatility | No excess. The 5-session move beat the year's median in 47% (S&P), 49% (Sensex) and 54% (gold, silver; p 0.20) of 164 cases. |
+| 3 | B3, B4: Mercury and Mars in the stated nakshatras | At chance (for example Mars "prosperity" nakshatras: S&P 63% vs 63%). Mars never passed south of Rohini in 2000–2026, so 6.11 could not be tested. |
+| 3 | B6: Saturn in stated nakshatras | Only 2–3 windows each since 2000. Too few to judge. |
+| 3 | B8: lord of the day and of the month | At chance. Day: S&P 53% vs 53%; gold one session 54% vs 53% (p 0.04, q 0.40). Month: S&P 51% vs 53%. |
+| 4 | T7, T8, T9: Tajika monthly-chart rules, NYSE Model B, 1928–2026 | At chance. Best: the monthly trade saham, 57% vs 53% (p 0.02, q 0.24). Navamsha 2nd-house rule 52% vs 51%; 11th 49% vs 52%. |
+| 5 | N1–N5, T2, T3, T5–T7: annual rules (S&P 1929–2026, Sensex 2000–2026) | None passes (best q 0.41). **Watch list:** (1) Lord of the year: years ruled by the Moon, Mercury, Jupiter or Venus were up in 76% vs 64% of the others, mean +12.1% vs +4.6% (p 0.047, right in both halves). It weakens to p 0.10 with the weekday taken at Indian sunrise, so it depends on a convention. (2) N5: 41% of "ascendant of the world in the 8th or 12th" years were down vs 22% (p 0.01). Those years still averaged +6.7%, so the rule does not meet the §6 verdict. |
+
+T4 (ruler of the year) was not tested: it needs the Tajika fivefold strength, which has not been built yet. The horary rules and the Mudda dashas were not proposed for testing (Section 6).

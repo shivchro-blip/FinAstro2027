@@ -109,6 +109,7 @@ Known data problems:
 | `tools/gold_jupiter_crash.py` | The user's gold-crash note (Jupiter–Saturn trine/aspect/conjunction, Jupiter with a node or Pluto, Jupiter hemmed, malefic Vedha on Jupiter). Checks each claimed year from its peak to the low within 12 months, measures how common each condition is on monthly gold since 1972 (`backtest/gold_monthly_1833.csv`, datasets/gold-prices), and lists active spans to end-2027 |
 | `tools/gold_turns.py` | Gold's major peaks and bottoms (15% zigzag; monthly 1972–1999, daily 2000–2026): sidereal degrees of every body at each turn, station proximity, Jupiter–Saturn angle, Jupiter afflictions and Vedha. Tests which features recur at bottoms and peaks against all weeks, and gives watch windows for the current fall |
 | `tools/jupiter_saturn_gold.py` | Jupiter–Saturn aspects in a 10° orb (degree-based; exact passes to the minute) for Nov 2026 – Dec 2030, verified against the user's list. Shows every past window since 1972 with gold's turns, classified by the nearest anchor (orb entry / exact / exit). Gives a plain bottom-or-top table, which also includes Jupiter and Saturn direct stations |
+| `tools/new_sources_test.py` | Backtest of the rules from the three new books (BS Iyer, Tajika Nilakanthi, Hayanaratna): BS 42.6 with eclipses, Moon north/south, Mercury reappearance, nakshatra and lord rules, Tajika monthly and annual charts → `new_sources_test_ET.html` |
 | `tools/gold_tracker.py [--metal silver]` | Trackers: findings, rule status, best-rule dates, analysis log |
 | `tools/build_year.py YEAR` | Astronomy layer for any year; 2000–2024 are git-ignored and rebuilt on demand |
 | `tools/fetch_prices.py` | Downloads GC=F and SI=F (Yahoo; the host must be allowed) |
@@ -907,6 +908,24 @@ Results, as the share of calls right:
 
   - This partly matches Solar return's own path (weak into spring, bottom Mar–May), but the rubric itself has no track record.
 - **In the calendar:** shown in the 2026 calendar's Solar return section.
+
+**New sources backtest (27 Nov 2026)** (`new_sources_test_ET.html`, `tools/new_sources_test.py`)
+
+- **Scope:** the user approved the suggested order. 73 daily and monthly results and 40 annual results were scored with the §6 method and Benjamini–Hochberg correction. **None passes, so nothing is added to the rule set or the calendar.**
+- **BS 42.6 with an eclipse (B12):** worse, not better. Gold rose by mid-December in 6 of 14 eclipse years vs 22 of 39 other years (1972–2025). The 2026 eclipse is not a reason to expect a gain in mid-December to mid-January.
+- **At chance:**
+  - The Moon passing north or south of Mercury, Jupiter or Venus (B1).
+  - Mercury's reappearance as volatility (B2).
+  - The Mercury and Mars nakshatra rules (B3, B4).
+  - The lord of the day and of the month (B8).
+  - The Tajika monthly-chart rules on the NYSE (T7–T9; best: trade saham 57% vs 53%, q 0.24).
+- **Watch list (annual, not significant after correction):**
+  - Lord of the year: years ruled by the Moon, Mercury, Jupiter or Venus were up 76% vs 64% on the S&P 1929–2026 (p 0.047, right in both halves). With the weekday taken at Indian sunrise it is p 0.10.
+  - Ascendant of the world in the 8th or 12th from the NYSE ascendant (N5): 41% of those years were down vs 22% (p 0.01), but they still averaged +6.7%.
+- **Not testable or not tested:**
+  - Mars never passed south of Rohini in 2000–2026.
+  - The Saturn nakshatra rules have only 2–3 windows each since 2000.
+  - T4 needs the Tajika fivefold strength.
 
 **New sources review (27 Nov 2026)** (`Reference_materials/extracted/NEW_SOURCES_REVIEW_2026-11.md`)
 
