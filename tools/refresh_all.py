@@ -77,6 +77,7 @@ STEPS = [
     ["tools/calendar_2026.py"],
     ["tools/rule_tally.py", "2026-11-20", "2026-11-23"],
     ["tools/md_to_html.py", "Reference_materials/extracted/OTHERS_FINANCIAL_REVIEW.md", "Others Financial Review"],
+    ["tools/md_to_html.py", "Reference_materials/extracted/NEW_SOURCES_REVIEW_2026-11.md", "New Sources Review"],
     ["tools/md_to_html.py", "Reference_materials/extracted/FINANCIAL_ASTROLOGY_MODEL_v1.md", "Financial Astrology Model v1"],
     ["tools/md_to_html.py", "PROJECT_KNOWLEDGE.md", "FinAstro Project Knowledge"],
 ]

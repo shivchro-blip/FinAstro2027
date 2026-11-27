@@ -709,6 +709,17 @@
    "files": [
     "build/pdfref/day_report_2026-11-26_ET.html"
    ]
+  },
+  {
+   "date": "2026-11-27",
+   "pr": "59",
+   "topic": "New sources review: Tajika Nilakanthi, Hayanaratna, Brihat Samhita (Iyer 1884)",
+   "analysis": "All pages of the three new PDFs scanned (Nilakanthi OCR'd with Tesseract san+hin; Hayanaratna and Iyer text layers); price/trade/metal/world passages read; each rule checked against bs_rules, Model v1.0 and the 734-rule catalogue for overlap.",
+   "result": "Listed 9 world-level rules (Aries ingress, lunation charts, dear/cheap grain), 11 Tajika annual/monthly chart rules (sidereal return supports Model B; muntha, ruler of year, sahams, monthly navamsha rules) and 15 Brihat Samhita rules (Moon north/south of planets, Mercury reappearance volatility, lord of year/month/day, planetary war and meetings, Ch.47 combinations, eclipse in Chaitra hurts gold dealers). Correction: BS 42.6 is conditional on portents; 2026 qualifies (eclipse 28 Aug in Leo), sell window 16 Dec 2026-14 Jan 2027. None implemented or tested yet.",
+   "files": [
+    "Reference_materials/extracted/NEW_SOURCES_REVIEW_2026-11.md",
+    "Reference_materials/extracted/ocr/tajika_neelakanthi.txt"
+   ]
   }
  ]
 }
