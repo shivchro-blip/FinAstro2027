@@ -110,6 +110,7 @@ Known data problems:
 | `tools/gold_turns.py` | Gold's major peaks and bottoms (15% zigzag; monthly 1972–1999, daily 2000–2026): sidereal degrees of every body at each turn, station proximity, Jupiter–Saturn angle, Jupiter afflictions and Vedha. Tests which features recur at bottoms and peaks against all weeks, and gives watch windows for the current fall |
 | `tools/jupiter_saturn_gold.py` | Jupiter–Saturn aspects in a 10° orb (degree-based; exact passes to the minute) for Nov 2026 – Dec 2030, verified against the user's list. Shows every past window since 1972 with gold's turns, classified by the nearest anchor (orb entry / exact / exit). Gives a plain bottom-or-top table, which also includes Jupiter and Saturn direct stations |
 | `tools/new_sources_test.py` | Backtest of the rules from the three new books (BS Iyer, Tajika Nilakanthi, Hayanaratna): BS 42.6 with eclipses, Moon north/south, Mercury reappearance, nakshatra and lord rules, Tajika monthly and annual charts → `new_sources_test_ET.html` |
+| `tools/new_sources_leftover.py` | The leftover new-source rules (B5, B6, B7, B9, B10, B11, B13, T4, T6, T10), Tajika five-dignity strength and ruler of the year, and the calendar layer read by `calendar_2026.py` → `new_sources_leftover_ET.{html,json}` |
 | `tools/gold_tracker.py [--metal silver]` | Trackers: findings, rule status, best-rule dates, analysis log |
 | `tools/build_year.py YEAR` | Astronomy layer for any year; 2000–2024 are git-ignored and rebuilt on demand |
 | `tools/fetch_prices.py` | Downloads GC=F and SI=F (Yahoo; the host must be allowed) |
@@ -908,6 +909,30 @@ Results, as the share of calls right:
 
   - This partly matches Solar return's own path (weak into spring, bottom Mar–May), but the rubric itself has no track record.
 - **In the calendar:** shown in the 2026 calendar's Solar return section.
+
+**Leftover new-source rules and calendar layer (27 Nov 2026)** (`new_sources_leftover_ET.html`, `tools/new_sources_leftover.py`)
+
+- **Tested:**
+  - B5 (Venus phases).
+  - B7 (planetary war).
+  - B9 (Kosha and Sammoha meetings).
+  - B10 (BS 47 combinations).
+  - B11 (eclipses).
+  - B13 (the Sun with benefics or malefics).
+  - B6 over 1928–2026.
+  - T4 and T6 (ruler of the year, using the Tajika five-dignity strength implemented from Hayanaratna 2.5).
+  - T10 (substance strength at the Aries ingress).
+- **Result:** none holds after correction. Nominal only:
+  - Eclipse in Libra or Sagittarius: gold down 11 of 15, p 0.02, q 0.22.
+  - Eclipse in the lunar month Chaitra: gold down 6 of 7 and silver 8 of 8, from 9 eclipses, too few to correct. None falls before 2028.
+- **Not testable:**
+  - The Sun's strength at the Aries ingress, which is constant.
+  - Saturn's nakshatras (5–9 windows each).
+  - Horary rules N7 and N8.
+- **Calendar:** the master calendar has a "New sources" section and a per-day line with every new-source item active (13 in 24 Nov – 31 Dec), each with its test result; none feeds the signals. It also shows:
+  - Lord of the year 2026–27: Mercury (US) or Jupiter (India), watch list only.
+  - NYSE ruler of the year: the Moon, strength 12.4, in house 1.
+  - The NYSE monthly-chart readings.
 
 **New sources backtest (27 Nov 2026)** (`new_sources_test_ET.html`, `tools/new_sources_test.py`)
 

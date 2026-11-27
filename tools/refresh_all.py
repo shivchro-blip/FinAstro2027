@@ -75,6 +75,7 @@ STEPS = [
     ["tools/gold_turns.py"],
     ["tools/jupiter_saturn_gold.py"],
     ["tools/new_sources_test.py"],
+    ["tools/new_sources_leftover.py"],
     ["tools/calendar_2026.py"],
     ["tools/rule_tally.py", "2026-11-20", "2026-11-23"],
     ["tools/md_to_html.py", "Reference_materials/extracted/OTHERS_FINANCIAL_REVIEW.md", "Others Financial Review"],

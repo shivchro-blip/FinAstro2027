@@ -1,8 +1,13 @@
 {
  "start": "2026-11-24",
  "end": "2026-12-31",
- "generated": "26 Nov 2026 07:05 ET",
+ "generated": "27 Nov 2026 08:40 ET",
  "checks": [
+  {
+   "name": "New-source layer loaded, every item carries its test result",
+   "ok": true,
+   "detail": "13 items (BS Iyer, Tajika Nilakanthi, Hayanaratna); none used in the signals"
+  },
   {
    "name": "Every day present",
    "ok": true,

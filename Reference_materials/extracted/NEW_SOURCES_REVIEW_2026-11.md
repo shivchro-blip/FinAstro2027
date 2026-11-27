@@ -127,3 +127,21 @@ All five steps of Section 6 were run with `tools/new_sources_test.py`; the repor
 | 5 | N1–N5, T2, T3, T5–T7: annual rules (S&P 1929–2026, Sensex 2000–2026) | None passes (best q 0.41). **Watch list:** (1) Lord of the year: years ruled by the Moon, Mercury, Jupiter or Venus were up in 76% vs 64% of the others, mean +12.1% vs +4.6% (p 0.047, right in both halves). It weakens to p 0.10 with the weekday taken at Indian sunrise, so it depends on a convention. (2) N5: 41% of "ascendant of the world in the 8th or 12th" years were down vs 22% (p 0.01). Those years still averaged +6.7%, so the rule does not meet the §6 verdict. |
 
 T4 (ruler of the year) was not tested: it needs the Tajika fivefold strength, which has not been built yet. The horary rules and the Mudda dashas were not proposed for testing (Section 6).
+
+### Leftover rules (27 Nov 2026, `new_sources_leftover_ET.html`)
+
+The rules the first pass did not cover were tested with the same method. **None holds after correction.** They now appear in the 2026 calendar as information, each with its test result, and are not used in the signals.
+
+| Rules | Result |
+|---|---|
+| B5: Venus disappearing or reappearing by path and mandala; Venus in Swati | At chance |
+| B7: planetary war (121 conjunctions within 1° since 2000; the loser is the planet with the lower latitude) | At chance (23 cases of the stated bearish defeats; Saturn beaten by Venus: 5 cases) |
+| B9: Kosha and Sammoha meetings; B10: five or more planets in one sign | At chance |
+| B10: Saturn–Rahu (4 windows); Mars or Saturn retrograde in Cancer, Leo or Pisces; Saturn–Mars–Jupiter mutual aspect; the Sun at the end of a sign with Jupiter and Mars; Jupiter or Saturn entering a sign while retrograde | At chance, or too few cases |
+| B11: eclipse in Libra or Sagittarius; eclipse in the lunar month Chaitra ("dealers in gold suffer") | **Nominal only.** Libra or Sagittarius: gold fell after 11 of 15 (73% vs 43%, p 0.02, q 0.22). Chaitra: gold fell after 6 of 7 and silver after 8 of 8 (p 0.006). The Chaitra rule rests on 9 eclipses in 2004–2023, too few for a correction. No such eclipse falls before 2028. |
+| B13: Sun in Scorpio with malefics in the 6th and 7th (1 case); Sun in Sagittarius, Capricorn or Aquarius with benefics or malefics (BS 40.14 vs Nilakanthi 36, with gold and silver standing in for grain) | At chance. The benefic case leans toward the BS reading (gold 62% vs 55%, p 0.15). |
+| B6: Saturn in the nakshatras, S&P 1928–2026 | Still too few: 5–9 windows each |
+| T4: ruler of the year (Tajika five-dignity strength), T6: Mercury as ruler in the 2nd or 11th | At chance (for example, a benefic ruler in a good house: 68% up vs 73%) |
+| T10: substance strength in the Aries-ingress chart | At chance for Mercury (gold), Venus and the Moon (silver). The **Sun cannot be tested**: it is exalted at every Aries ingress, so it is always "strong". |
+
+Not tested: N7 and N8 (horary; using the opening chart would be our invention), N9 (regional) and T11 (dashas parked).
