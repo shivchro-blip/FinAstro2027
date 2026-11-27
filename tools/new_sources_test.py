@@ -648,6 +648,10 @@ def _annual_compare(cases):
         if not sel:
             continue
         k = sum((x > 0) if tone == "Bullish" else (x < 0) for x in sel)
+        if not oth:
+            out[tone] = dict(n=len(sel), right=k, hit=round(k / len(sel) * 100), base=None, mean=round(statistics.fmean(sel), 2), mean_other=None,
+                             p_value=None, note="no comparison years: the condition holds every year, so it cannot be tested")
+            continue
         base = sum((x > 0) if tone == "Bullish" else (x < 0) for x in oth) / max(len(oth), 1)
         out[tone] = dict(n=len(sel), right=k, hit=round(k / len(sel) * 100), base=round(base * 100), mean=round(statistics.fmean(sel), 2),
                          mean_other=round(statistics.fmean(oth), 2) if oth else None, p_value=round(BM.binom_p(k, len(sel), base), 4))
@@ -835,7 +839,7 @@ def main():
         qs = BM.bh([r["p_value"] for _, r in items]) if items else []
         for (t, r), q in zip(items, qs):
             r["q"] = round(q, 4)
-    items = [v for t in res["step5"] for v in t["cmp"].values()]
+    items = [v for t in res["step5"] for v in t["cmp"].values() if v.get("p_value") is not None]
     for v, q in zip(items, BM.bh([v["p_value"] for v in items])):
         v["q"] = round(q, 4)
     (OUT / "new_sources_test_ET.json").write_text(json.dumps(res, indent=1, default=str))
@@ -907,8 +911,9 @@ def write(res):
     s5 = []
     for t in res["step5"]:
         c = t["cmp"]
-        cs = "<br>".join(f"<b>{tone}</b>: {v['right']}/{v['n']} right = {v['hit']}% vs {v['base']}% in the other years; mean {v['mean']:+.1f}% vs {v['mean_other']:+.1f}%; p {v['p_value']}, q {v.get('q')}; halves {' / '.join(v.get('halves', []))}" for tone, v in c.items()) or "no case"
-        good = any(v["p_value"] < 0.05 and v["hit"] > v["base"] for v in c.values())
+        cs = "<br>".join((f"<b>{tone}</b>: {v['right']}/{v['n']} right; {v['note']}" if v.get("note") else
+                          f"<b>{tone}</b>: {v['right']}/{v['n']} right = {v['hit']}% vs {v['base']}% in the other years; mean {v['mean']:+.1f}% vs {v['mean_other']:+.1f}%; p {v['p_value']}, q {v.get('q')}; halves {' / '.join(v.get('halves', []))}") for tone, v in c.items()) or "no case"
+        good = any(v.get("p_value") is not None and v["p_value"] < 0.05 and v["hit"] > v["base"] for v in c.values())
         yr = "".join(f"<tr><td>{y['start']}</td><td>{y['tone'] or '–'}</td><td class='n'>{y['ret'] if y['ret'] is not None else '–'}</td><td class='m'>{html.escape(str(y['why']))}</td></tr>" for y in t["years"])
         s5.append(f"<tr><td>{html.escape(t['name'])}</td><td>{t['market']}</td><td class='{'ok' if good else ''}'>{cs}<details><summary>years</summary><table>{yr}</table></details></td></tr>")
     mr = "".join(f"<li>{x['t'][:10]}: Mars latitude {x['mars_lat']}°, Aldebaran {x['star_lat']}°{' (south)' if x['mars_lat'] < x['star_lat'] else ''}</li>" for x in res["step3"]["mars_rohini"])
@@ -941,7 +946,7 @@ def write(res):
     watch = [(t["name"], k, r) for t in allt if not t.get("vol") for k, r in t["by"].items() if r.get("p_value") is not None and r["p_value"] < 0.05 and r["hit_rate"] > r["base_rate"]]
     ann = [(t["name"], t["market"], tone, v) for t in res["step5"] for tone, v in t["cmp"].items()]
     asig = [x for x in ann if x[3].get("q", 1) < 0.10 and x[3]["hit"] > x[3]["base"]]
-    awatch = [x for x in ann if x[3]["p_value"] < 0.05 and x[3]["hit"] > x[3]["base"]]
+    awatch = [x for x in ann if x[3].get("p_value") is not None and x[3]["p_value"] < 0.05 and x[3]["hit"] > x[3]["base"]]
     e1 = s1["gold_1972"]["eclipse years"]
     o1 = s1["gold_1972"]["other years"]
     li = "".join(f"<li>{html.escape(n)} ({MN[k]}): {r['worked']}/{r['worked'] + r['failed']} = {r['hit_rate']}% vs {r['base_rate']}%, p {r['p_value']}, q {r.get('q')}</li>" for n, k, r in watch)

@@ -1,0 +1,6292 @@
+{
+ "made": "2026-11-27 08:36 ET",
+ "daily": [
+  {
+   "name": "B5 Venus disappears or reappears in the northern path (Bharani-Magha): prosperity",
+   "src": "BS ch.9 (Iyer p.77)",
+   "by": {
+    "spx": {
+     "n": 21,
+     "worked": 8,
+     "failed": 7,
+     "flat": 6,
+     "hit_rate": 53,
+     "base_rate": 60,
+     "exp": 9.066531310101464,
+     "avg_dir_ret": -0.11,
+     "verdict": "Mixed",
+     "p_value": 0.7972,
+     "years_active": 13,
+     "years_right": 6,
+     "halves": [
+      57,
+      50
+     ],
+     "q": 0.8447
+    },
+    "sensex": {
+     "n": 21,
+     "worked": 10,
+     "failed": 8,
+     "flat": 3,
+     "hit_rate": 56,
+     "base_rate": 58,
+     "exp": 10.354171168313592,
+     "avg_dir_ret": 0.81,
+     "verdict": "Mixed",
+     "p_value": 0.6612,
+     "years_active": 13,
+     "years_right": 6,
+     "halves": [
+      64,
+      43
+     ],
+     "q": 0.9092
+    },
+    "gold": {
+     "n": 21,
+     "worked": 13,
+     "failed": 7,
+     "flat": 1,
+     "hit_rate": 65,
+     "base_rate": 57,
+     "exp": 11.479612961358727,
+     "avg_dir_ret": 0.55,
+     "verdict": "Mixed",
+     "p_value": 0.3261,
+     "years_active": 14,
+     "years_right": 7,
+     "halves": [
+      55,
+      78
+     ],
+     "q": 0.8049
+    },
+    "silver": {
+     "n": 21,
+     "worked": 10,
+     "failed": 10,
+     "flat": 1,
+     "hit_rate": 50,
+     "base_rate": 54,
+     "exp": 10.75599919926756,
+     "avg_dir_ret": -0.11,
+     "verdict": "Mixed",
+     "p_value": 0.7141,
+     "years_active": 14,
+     "years_right": 4,
+     "halves": [
+      50,
+      50
+     ],
+     "q": 0.8133
+    }
+   },
+   "verdict": "at chance"
+  },
+  {
+   "name": "B5 Venus disappears or reappears in the southern path (P.Ashadha-Ashwini): misery",
+   "src": "BS ch.9",
+   "by": {
+    "spx": {
+     "n": 24,
+     "worked": 9,
+     "failed": 9,
+     "flat": 6,
+     "hit_rate": 50,
+     "base_rate": 41,
+     "exp": 7.419502510388155,
+     "avg_dir_ret": -0.08,
+     "verdict": "Mixed",
+     "p_value": 0.2994,
+     "years_active": 13,
+     "years_right": 6,
+     "halves": [
+      38,
+      60
+     ],
+     "q": 0.8447
+    },
+    "sensex": {
+     "n": 24,
+     "worked": 10,
+     "failed": 10,
+     "flat": 4,
+     "hit_rate": 50,
+     "base_rate": 41,
+     "exp": 8.154940348253241,
+     "avg_dir_ret": -0.73,
+     "verdict": "Mixed",
+     "p_value": 0.2679,
+     "years_active": 14,
+     "years_right": 6,
+     "halves": [
+      50,
+      50
+     ],
+     "q": 0.9092
+    },
+    "gold": {
+     "n": 24,
+     "worked": 8,
+     "failed": 11,
+     "flat": 5,
+     "hit_rate": 42,
+     "base_rate": 45,
+     "exp": 8.537908961647812,
+     "avg_dir_ret": -0.37,
+     "verdict": "Mixed",
+     "p_value": 0.6811,
+     "years_active": 15,
+     "years_right": 6,
+     "halves": [
+      44,
+      40
+     ],
+     "q": 0.8049
+    },
+    "silver": {
+     "n": 24,
+     "worked": 12,
+     "failed": 8,
+     "flat": 4,
+     "hit_rate": 60,
+     "base_rate": 47,
+     "exp": 9.312329017070377,
+     "avg_dir_ret": -0.1,
+     "verdict": "Mixed",
+     "p_value": 0.1634,
+     "years_active": 17,
+     "years_right": 9,
+     "halves": [
+      56,
+      64
+     ],
+     "q": 0.8133
+    }
+   },
+   "verdict": "at chance"
+  },
+  {
+   "name": "B5 Venus reappears in the 6th mandala (Dhanishta + 5): wealth and prosperity",
+   "src": "BS ch.9 (Iyer p.79)",
+   "by": {
+    "spx": {
+     "n": 8,
+     "worked": 4,
+     "failed": 1,
+     "flat": 3,
+     "hit_rate": 80,
+     "base_rate": 54,
+     "exp": 2.7232383230005492,
+     "avg_dir_ret": 0.93,
+     "verdict": "Worked",
+     "p_value": 0.2483,
+     "years_active": 5,
+     "years_right": 4,
+     "halves": [
+      100,
+      50
+     ]
+    },
+    "sensex": {
+     "n": 8,
+     "worked": 4,
+     "failed": 2,
+     "flat": 2,
+     "hit_rate": 67,
+     "base_rate": 56,
+     "exp": 3.3382447537568893,
+     "avg_dir_ret": 0.96,
+     "verdict": "Worked",
+     "p_value": 0.4544,
+     "years_active": 6,
+     "years_right": 4,
+     "halves": [
+      75,
+      50
+     ]
+    },
+    "gold": {
+     "n": 8,
+     "worked": 3,
+     "failed": 3,
+     "flat": 2,
+     "hit_rate": 50,
+     "base_rate": 56,
+     "exp": 3.357515460737103,
+     "avg_dir_ret": 0.04,
+     "verdict": "Mixed",
+     "p_value": 0.7604,
+     "years_active": 6,
+     "years_right": 3,
+     "halves": [
+      50,
+      50
+     ]
+    },
+    "silver": {
+     "n": 8,
+     "worked": 3,
+     "failed": 3,
+     "flat": 2,
+     "hit_rate": 50,
+     "base_rate": 56,
+     "exp": 3.347467509352251,
+     "avg_dir_ret": 0.08,
+     "verdict": "Mixed",
+     "p_value": 0.7577,
+     "years_active": 6,
+     "years_right": 3,
+     "halves": [
+      67,
+      33
+     ]
+    }
+   },
+   "verdict": "at chance"
+  },
+  {
+   "name": "B5 Venus in Swati: merchants lawless (bearish)",
+   "src": "BS ch.9 (Iyer p.80)",
+   "by": {
+    "spx": {
+     "n": 30,
+     "worked": 12,
+     "failed": 14,
+     "flat": 4,
+     "hit_rate": 46,
+     "base_rate": 40,
+     "exp": 10.397018498478996,
+     "avg_dir_ret": 0.09,
+     "verdict": "Mixed",
+     "p_value": 0.3259,
+     "years_active": 17,
+     "years_right": 5,
+     "halves": [
+      38,
+      60
+     ],
+     "q": 0.8447
+    },
+    "sensex": {
+     "n": 30,
+     "worked": 8,
+     "failed": 20,
+     "flat": 2,
+     "hit_rate": 29,
+     "base_rate": 42,
+     "exp": 11.638310388846975,
+     "avg_dir_ret": -1.39,
+     "verdict": "Failed",
+     "p_value": 0.9466,
+     "years_active": 19,
+     "years_right": 3,
+     "halves": [
+      13,
+      46
+     ],
+     "q": 0.9466
+    },
+    "gold": {
+     "n": 30,
+     "worked": 12,
+     "failed": 15,
+     "flat": 3,
+     "hit_rate": 44,
+     "base_rate": 42,
+     "exp": 11.206419196957164,
+     "avg_dir_ret": -0.47,
+     "verdict": "Mixed",
+     "p_value": 0.4501,
+     "years_active": 19,
+     "years_right": 7,
+     "halves": [
+      33,
+      58
+     ],
+     "q": 0.8049
+    },
+    "silver": {
+     "n": 30,
+     "worked": 11,
+     "failed": 17,
+     "flat": 2,
+     "hit_rate": 39,
+     "base_rate": 46,
+     "exp": 12.851340007086707,
+     "avg_dir_ret": -0.91,
+     "verdict": "Mixed",
+     "p_value": 0.8133,
+     "years_active": 20,
+     "years_right": 6,
+     "halves": [
+      21,
+      57
+     ],
+     "q": 0.8133
+    }
+   },
+   "verdict": "at chance"
+  },
+  {
+   "name": "B7 planetary war: Mercury beaten by Jupiter/Saturn, Mars by Venus, Saturn by Mercury (bearish)",
+   "src": "BS 17.18-25",
+   "by": {
+    "spx": {
+     "n": 23,
+     "worked": 7,
+     "failed": 11,
+     "flat": 5,
+     "hit_rate": 39,
+     "base_rate": 42,
+     "exp": 7.572518485111277,
+     "avg_dir_ret": -0.04,
+     "verdict": "Mixed",
+     "p_value": 0.6916,
+     "years_active": 14,
+     "years_right": 4,
+     "halves": [
+      56,
+      22
+     ],
+     "q": 0.8447
+    },
+    "sensex": {
+     "n": 23,
+     "worked": 9,
+     "failed": 12,
+     "flat": 2,
+     "hit_rate": 43,
+     "base_rate": 41,
+     "exp": 8.53970497129117,
+     "avg_dir_ret": -0.3,
+     "verdict": "Mixed",
+     "p_value": 0.5014,
+     "years_active": 14,
+     "years_right": 5,
+     "halves": [
+      50,
+      36
+     ],
+     "q": 0.9092
+    },
+    "gold": {
+     "n": 23,
+     "worked": 6,
+     "failed": 11,
+     "flat": 6,
+     "hit_rate": 35,
+     "base_rate": 43,
+     "exp": 7.35117026205905,
+     "avg_dir_ret": -1.67,
+     "verdict": "Mixed",
+     "p_value": 0.8167,
+     "years_active": 11,
+     "years_right": 2,
+     "halves": [
+      12,
+      56
+     ],
+     "q": 0.8648
+    },
+    "silver": {
+     "n": 23,
+     "worked": 8,
+     "failed": 13,
+     "flat": 2,
+     "hit_rate": 38,
+     "base_rate": 45,
+     "exp": 9.489398143928906,
+     "avg_dir_ret": -2.11,
+     "verdict": "Mixed",
+     "p_value": 0.8077,
+     "years_active": 15,
+     "years_right": 5,
+     "halves": [
+      11,
+      58
+     ],
+     "q": 0.8133
+    }
+   },
+   "verdict": "at chance"
+  },
+  {
+   "name": "B7 planetary war: Saturn beaten by Venus, grain dear (commodities bullish)",
+   "src": "BS 17.25",
+   "by": {
+    "gold": {
+     "n": 5,
+     "worked": 1,
+     "failed": 2,
+     "flat": 2,
+     "hit_rate": 33,
+     "base_rate": 56,
+     "exp": 1.6743072612689756,
+     "avg_dir_ret": -0.14,
+     "verdict": "Failed",
+     "p_value": 0.9137,
+     "years_active": 3,
+     "years_right": 1,
+     "halves": [
+      null,
+      33
+     ]
+    },
+    "silver": {
+     "n": 5,
+     "worked": 2,
+     "failed": 1,
+     "flat": 2,
+     "hit_rate": 67,
+     "base_rate": 57,
+     "exp": 1.6965188386194565,
+     "avg_dir_ret": 0.48,
+     "verdict": "Worked",
+     "p_value": 0.5977,
+     "years_active": 3,
+     "years_right": 2,
+     "halves": [
+      100,
+      0
+     ]
+    }
+   },
+   "verdict": "too few cases"
+  },
+  {
+   "name": "B9 Kosha meeting (Saturn and Jupiter in one sign with another planet): disastrous",
+   "src": "BS 20.7-9",
+   "by": {
+    "spx": {
+     "n": 20,
+     "worked": 7,
+     "failed": 11,
+     "flat": 2,
+     "hit_rate": 39,
+     "base_rate": 37,
+     "exp": 6.725064853203468,
+     "avg_dir_ret": -0.72,
+     "verdict": "Mixed",
+     "p_value": 0.5352,
+     "years_active": 3,
+     "years_right": 1,
+     "halves": [
+      57,
+      27
+     ],
+     "q": 0.8447
+    },
+    "sensex": {
+     "n": 20,
+     "worked": 9,
+     "failed": 6,
+     "flat": 5,
+     "hit_rate": 60,
+     "base_rate": 41,
+     "exp": 6.148839536158021,
+     "avg_dir_ret": 0.71,
+     "verdict": "Worked",
+     "p_value": 0.1094,
+     "years_active": 3,
+     "years_right": 1,
+     "halves": [
+      83,
+      44
+     ],
+     "q": 0.9092
+    },
+    "gold": {
+     "n": 20,
+     "worked": 8,
+     "failed": 10,
+     "flat": 2,
+     "hit_rate": 44,
+     "base_rate": 44,
+     "exp": 7.976280533180404,
+     "avg_dir_ret": 0.02,
+     "verdict": "Mixed",
+     "p_value": 0.5856,
+     "years_active": 3,
+     "years_right": 1,
+     "halves": [
+      83,
+      25
+     ],
+     "q": 0.8049
+    },
+    "silver": {
+     "n": 20,
+     "worked": 9,
+     "failed": 9,
+     "flat": 2,
+     "hit_rate": 50,
+     "base_rate": 50,
+     "exp": 8.953683702348208,
+     "avg_dir_ret": -0.5,
+     "verdict": "Mixed",
+     "p_value": 0.5841,
+     "years_active": 3,
+     "years_right": 1,
+     "halves": [
+      71,
+      36
+     ],
+     "q": 0.8133
+    }
+   },
+   "verdict": "at chance"
+  },
+  {
+   "name": "B9 Sammoha meeting (4+ planets in one sign with Rahu or Ketu): disastrous",
+   "src": "BS 20.6-9",
+   "by": {
+    "spx": {
+     "n": 28,
+     "worked": 8,
+     "failed": 14,
+     "flat": 6,
+     "hit_rate": 36,
+     "base_rate": 38,
+     "exp": 8.305565780836943,
+     "avg_dir_ret": -0.05,
+     "verdict": "Mixed",
+     "p_value": 0.6319,
+     "years_active": 12,
+     "years_right": 3,
+     "halves": [
+      40,
+      29
+     ],
+     "q": 0.8447
+    },
+    "sensex": {
+     "n": 28,
+     "worked": 10,
+     "failed": 12,
+     "flat": 6,
+     "hit_rate": 45,
+     "base_rate": 43,
+     "exp": 9.465975185197426,
+     "avg_dir_ret": -0.32,
+     "verdict": "Mixed",
+     "p_value": 0.4901,
+     "years_active": 15,
+     "years_right": 6,
+     "halves": [
+      50,
+      33
+     ],
+     "q": 0.9092
+    },
+    "gold": {
+     "n": 28,
+     "worked": 12,
+     "failed": 16,
+     "flat": 0,
+     "hit_rate": 43,
+     "base_rate": 43,
+     "exp": 11.983645112225132,
+     "avg_dir_ret": -0.56,
+     "verdict": "Mixed",
+     "p_value": 0.5695,
+     "years_active": 17,
+     "years_right": 6,
+     "halves": [
+      44,
+      40
+     ],
+     "q": 0.8049
+    },
+    "silver": {
+     "n": 28,
+     "worked": 12,
+     "failed": 14,
+     "flat": 2,
+     "hit_rate": 46,
+     "base_rate": 45,
+     "exp": 11.798340636168358,
+     "avg_dir_ret": -0.4,
+     "verdict": "Mixed",
+     "p_value": 0.5442,
+     "years_active": 17,
+     "years_right": 7,
+     "halves": [
+      50,
+      38
+     ],
+     "q": 0.8133
+    }
+   },
+   "verdict": "at chance"
+  },
+  {
+   "name": "B10 five or more planets in one sign: famine",
+   "src": "BS 47 (Iyer p.228)",
+   "by": {
+    "spx": {
+     "n": 25,
+     "worked": 6,
+     "failed": 12,
+     "flat": 7,
+     "hit_rate": 33,
+     "base_rate": 40,
+     "exp": 7.120913653465727,
+     "avg_dir_ret": -0.29,
+     "verdict": "Mixed",
+     "p_value": 0.7802,
+     "years_active": 14,
+     "years_right": 3,
+     "halves": [
+      36,
+      29
+     ],
+     "q": 0.8447
+    },
+    "sensex": {
+     "n": 25,
+     "worked": 9,
+     "failed": 9,
+     "flat": 7,
+     "hit_rate": 50,
+     "base_rate": 44,
+     "exp": 7.912526977078276,
+     "avg_dir_ret": 0.47,
+     "verdict": "Mixed",
+     "p_value": 0.3872,
+     "years_active": 14,
+     "years_right": 8,
+     "halves": [
+      45,
+      57
+     ],
+     "q": 0.9092
+    },
+    "gold": {
+     "n": 25,
+     "worked": 10,
+     "failed": 12,
+     "flat": 3,
+     "hit_rate": 45,
+     "base_rate": 42,
+     "exp": 9.174520600143397,
+     "avg_dir_ret": -0.32,
+     "verdict": "Mixed",
+     "p_value": 0.4395,
+     "years_active": 15,
+     "years_right": 6,
+     "halves": [
+      47,
+      43
+     ],
+     "q": 0.8049
+    },
+    "silver": {
+     "n": 25,
+     "worked": 10,
+     "failed": 12,
+     "flat": 3,
+     "hit_rate": 45,
+     "base_rate": 44,
+     "exp": 9.663886213620122,
+     "avg_dir_ret": 0.31,
+     "verdict": "Mixed",
+     "p_value": 0.5244,
+     "years_active": 15,
+     "years_right": 6,
+     "halves": [
+      57,
+      25
+     ],
+     "q": 0.8133
+    }
+   },
+   "verdict": "at chance"
+  },
+  {
+   "name": "B10 Saturn and Rahu in one sign: commodities scarce (gold/silver bullish)",
+   "src": "BS 47 (Iyer p.229)",
+   "by": {
+    "gold": {
+     "n": 4,
+     "worked": 2,
+     "failed": 2,
+     "flat": 0,
+     "hit_rate": 50,
+     "base_rate": 69,
+     "exp": 2.7505023204333616,
+     "avg_dir_ret": -4.47,
+     "verdict": "Failed",
+     "p_value": 0.9066,
+     "years_active": 4,
+     "years_right": 2,
+     "halves": [
+      33,
+      100
+     ]
+    },
+    "silver": {
+     "n": 4,
+     "worked": 1,
+     "failed": 3,
+     "flat": 0,
+     "hit_rate": 25,
+     "base_rate": 59,
+     "exp": 2.360032001444794,
+     "avg_dir_ret": -9.24,
+     "verdict": "Failed",
+     "p_value": 0.9717,
+     "years_active": 4,
+     "years_right": 1,
+     "halves": [
+      33,
+      0
+     ]
+    }
+   },
+   "verdict": "too few cases"
+  },
+  {
+   "name": "B10 Saturn and Rahu in one sign: drought and famine (stocks bearish)",
+   "src": "BS 47",
+   "by": {
+    "spx": {
+     "n": 4,
+     "worked": 2,
+     "failed": 2,
+     "flat": 0,
+     "hit_rate": 50,
+     "base_rate": 32,
+     "exp": 1.2733952641165756,
+     "avg_dir_ret": -0.31,
+     "verdict": "Mixed",
+     "p_value": 0.3808,
+     "years_active": 4,
+     "years_right": 2,
+     "halves": [
+      67,
+      0
+     ]
+    },
+    "sensex": {
+     "n": 4,
+     "worked": 2,
+     "failed": 2,
+     "flat": 0,
+     "hit_rate": 50,
+     "base_rate": 30,
+     "exp": 1.2009195775586763,
+     "avg_dir_ret": 0.25,
+     "verdict": "Worked",
+     "p_value": 0.3487,
+     "years_active": 4,
+     "years_right": 2,
+     "halves": [
+      67,
+      0
+     ]
+    }
+   },
+   "verdict": "too few cases"
+  },
+  {
+   "name": "B10 Mars or Saturn retrograde in Cancer, Leo or Pisces: much suffering",
+   "src": "BS 47 (Iyer p.228)",
+   "by": {
+    "spx": {
+     "n": 11,
+     "worked": 4,
+     "failed": 6,
+     "flat": 1,
+     "hit_rate": 40,
+     "base_rate": 32,
+     "exp": 3.2217331884055485,
+     "avg_dir_ret": -1.88,
+     "verdict": "Mixed",
+     "p_value": 0.4103,
+     "years_active": 9,
+     "years_right": 3,
+     "halves": [
+      33,
+      50
+     ],
+     "q": 0.8447
+    },
+    "sensex": {
+     "n": 11,
+     "worked": 3,
+     "failed": 8,
+     "flat": 0,
+     "hit_rate": 27,
+     "base_rate": 37,
+     "exp": 4.037433241774456,
+     "avg_dir_ret": -7.0,
+     "verdict": "Failed",
+     "p_value": 0.831,
+     "years_active": 10,
+     "years_right": 2,
+     "halves": [
+      29,
+      25
+     ],
+     "q": 0.9141
+    },
+    "gold": {
+     "n": 11,
+     "worked": 3,
+     "failed": 8,
+     "flat": 0,
+     "hit_rate": 27,
+     "base_rate": 29,
+     "exp": 3.148797524792987,
+     "avg_dir_ret": -5.19,
+     "verdict": "Mixed",
+     "p_value": 0.6508,
+     "years_active": 10,
+     "years_right": 3,
+     "halves": [
+      14,
+      50
+     ],
+     "q": 0.8049
+    },
+    "silver": {
+     "n": 11,
+     "worked": 4,
+     "failed": 6,
+     "flat": 1,
+     "hit_rate": 40,
+     "base_rate": 34,
+     "exp": 3.427839425988526,
+     "avg_dir_ret": -8.71,
+     "verdict": "Mixed",
+     "p_value": 0.4665,
+     "years_active": 9,
+     "years_right": 3,
+     "halves": [
+      33,
+      50
+     ],
+     "q": 0.8133
+    }
+   },
+   "verdict": "at chance"
+  },
+  {
+   "name": "B10 Mars and Saturn both retrograde in Cancer, Leo or Pisces",
+   "src": "BS 47",
+   "by": {
+    "spx": {
+     "n": 0,
+     "worked": 0,
+     "failed": 0,
+     "flat": 0,
+     "hit_rate": null,
+     "base_rate": null,
+     "exp": 0.0,
+     "avg_dir_ret": null,
+     "verdict": "Mixed",
+     "p_value": null,
+     "years_active": 0,
+     "years_right": 0,
+     "halves": [
+      null,
+      null
+     ]
+    },
+    "sensex": {
+     "n": 0,
+     "worked": 0,
+     "failed": 0,
+     "flat": 0,
+     "hit_rate": null,
+     "base_rate": null,
+     "exp": 0.0,
+     "avg_dir_ret": null,
+     "verdict": "Mixed",
+     "p_value": null,
+     "years_active": 0,
+     "years_right": 0,
+     "halves": [
+      null,
+      null
+     ]
+    },
+    "gold": {
+     "n": 0,
+     "worked": 0,
+     "failed": 0,
+     "flat": 0,
+     "hit_rate": null,
+     "base_rate": null,
+     "exp": 0.0,
+     "avg_dir_ret": null,
+     "verdict": "Mixed",
+     "p_value": null,
+     "years_active": 0,
+     "years_right": 0,
+     "halves": [
+      null,
+      null
+     ]
+    },
+    "silver": {
+     "n": 0,
+     "worked": 0,
+     "failed": 0,
+     "flat": 0,
+     "hit_rate": null,
+     "base_rate": null,
+     "exp": 0.0,
+     "avg_dir_ret": null,
+     "verdict": "Mixed",
+     "p_value": null,
+     "years_active": 0,
+     "years_right": 0,
+     "halves": [
+      null,
+      null
+     ]
+    }
+   },
+   "verdict": "too few cases"
+  },
+  {
+   "name": "B10 Saturn, Mars and Jupiter in mutual aspect: hunger and weapons",
+   "src": "BS 47",
+   "by": {
+    "spx": {
+     "n": 24,
+     "worked": 7,
+     "failed": 13,
+     "flat": 4,
+     "hit_rate": 35,
+     "base_rate": 37,
+     "exp": 7.3909890154384685,
+     "avg_dir_ret": -0.4,
+     "verdict": "Mixed",
+     "p_value": 0.6532,
+     "years_active": 16,
+     "years_right": 5,
+     "halves": [
+      45,
+      22
+     ],
+     "q": 0.8447
+    },
+    "sensex": {
+     "n": 24,
+     "worked": 8,
+     "failed": 12,
+     "flat": 4,
+     "hit_rate": 40,
+     "base_rate": 42,
+     "exp": 8.31792586522035,
+     "avg_dir_ret": -0.89,
+     "verdict": "Mixed",
+     "p_value": 0.6399,
+     "years_active": 15,
+     "years_right": 5,
+     "halves": [
+      42,
+      38
+     ],
+     "q": 0.9092
+    },
+    "gold": {
+     "n": 24,
+     "worked": 10,
+     "failed": 14,
+     "flat": 0,
+     "hit_rate": 42,
+     "base_rate": 42,
+     "exp": 9.961549459667662,
+     "avg_dir_ret": -1.04,
+     "verdict": "Mixed",
+     "p_value": 0.571,
+     "years_active": 17,
+     "years_right": 6,
+     "halves": [
+      23,
+      64
+     ],
+     "q": 0.8049
+    },
+    "silver": {
+     "n": 24,
+     "worked": 11,
+     "failed": 12,
+     "flat": 1,
+     "hit_rate": 48,
+     "base_rate": 49,
+     "exp": 11.317496402295872,
+     "avg_dir_ret": -0.82,
+     "verdict": "Mixed",
+     "p_value": 0.6326,
+     "years_active": 17,
+     "years_right": 8,
+     "halves": [
+      38,
+      60
+     ],
+     "q": 0.8133
+    }
+   },
+   "verdict": "at chance"
+  },
+  {
+   "name": "B10 Sun at the end of Taurus/Gemini/Scorpio/Leo with Jupiter and Mars: famine",
+   "src": "BS 47",
+   "by": {
+    "spx": {
+     "n": 3,
+     "worked": 0,
+     "failed": 3,
+     "flat": 0,
+     "hit_rate": 0,
+     "base_rate": 37,
+     "exp": 1.123890860692103,
+     "avg_dir_ret": -0.81,
+     "verdict": "Failed",
+     "p_value": 1.0,
+     "years_active": 3,
+     "years_right": 0,
+     "halves": [
+      0,
+      0
+     ]
+    },
+    "sensex": {
+     "n": 3,
+     "worked": 1,
+     "failed": 1,
+     "flat": 1,
+     "hit_rate": 50,
+     "base_rate": 44,
+     "exp": 0.875,
+     "avg_dir_ret": -1.56,
+     "verdict": "Mixed",
+     "p_value": 0.6836,
+     "years_active": 2,
+     "years_right": 1,
+     "halves": [
+      50,
+      null
+     ]
+    },
+    "gold": {
+     "n": 3,
+     "worked": 1,
+     "failed": 2,
+     "flat": 0,
+     "hit_rate": 33,
+     "base_rate": 50,
+     "exp": 1.488119645171607,
+     "avg_dir_ret": -0.53,
+     "verdict": "Failed",
+     "p_value": 0.872,
+     "years_active": 3,
+     "years_right": 1,
+     "halves": [
+      50,
+      0
+     ]
+    },
+    "silver": {
+     "n": 3,
+     "worked": 2,
+     "failed": 1,
+     "flat": 0,
+     "hit_rate": 67,
+     "base_rate": 54,
+     "exp": 1.629428543840874,
+     "avg_dir_ret": 0.95,
+     "verdict": "Worked",
+     "p_value": 0.5646,
+     "years_active": 3,
+     "years_right": 2,
+     "halves": [
+      100,
+      0
+     ]
+    }
+   },
+   "verdict": "at chance"
+  },
+  {
+   "name": "B10 Jupiter or Saturn enters a sign while retrograde: kings lose glory / famine",
+   "src": "BS 47",
+   "by": {
+    "spx": {
+     "n": 12,
+     "worked": 5,
+     "failed": 7,
+     "flat": 0,
+     "hit_rate": 42,
+     "base_rate": 39,
+     "exp": 4.638313529601336,
+     "avg_dir_ret": -0.64,
+     "verdict": "Mixed",
+     "p_value": 0.5232,
+     "years_active": 12,
+     "years_right": 5,
+     "halves": [
+      33,
+      50
+     ],
+     "q": 0.8447
+    },
+    "sensex": {
+     "n": 12,
+     "worked": 3,
+     "failed": 7,
+     "flat": 2,
+     "hit_rate": 30,
+     "base_rate": 39,
+     "exp": 3.8984414463496706,
+     "avg_dir_ret": -1.19,
+     "verdict": "Mixed",
+     "p_value": 0.8158,
+     "years_active": 10,
+     "years_right": 3,
+     "halves": [
+      20,
+      40
+     ],
+     "q": 0.9141
+    },
+    "gold": {
+     "n": 12,
+     "worked": 3,
+     "failed": 7,
+     "flat": 2,
+     "hit_rate": 30,
+     "base_rate": 42,
+     "exp": 4.214054619520799,
+     "avg_dir_ret": -1.08,
+     "verdict": "Failed",
+     "p_value": 0.8648,
+     "years_active": 10,
+     "years_right": 3,
+     "halves": [
+      17,
+      50
+     ],
+     "q": 0.8648
+    },
+    "silver": {
+     "n": 12,
+     "worked": 5,
+     "failed": 6,
+     "flat": 1,
+     "hit_rate": 45,
+     "base_rate": 44,
+     "exp": 4.819520486367916,
+     "avg_dir_ret": -2.3,
+     "verdict": "Mixed",
+     "p_value": 0.5714,
+     "years_active": 11,
+     "years_right": 5,
+     "halves": [
+      40,
+      50
+     ],
+     "q": 0.8133
+    }
+   },
+   "verdict": "at chance"
+  },
+  {
+   "name": "B11 eclipse in sidereal Libra or Sagittarius: traders and merchants suffer",
+   "src": "BS 5.40-41",
+   "by": {
+    "spx": {
+     "n": 20,
+     "worked": 5,
+     "failed": 11,
+     "flat": 4,
+     "hit_rate": 31,
+     "base_rate": 41,
+     "exp": 6.4909331683925355,
+     "avg_dir_ret": -0.14,
+     "verdict": "Failed",
+     "p_value": 0.8447,
+     "years_active": 12,
+     "years_right": 4,
+     "halves": [
+      56,
+      0
+     ],
+     "q": 0.8447
+    },
+    "sensex": {
+     "n": 20,
+     "worked": 9,
+     "failed": 10,
+     "flat": 1,
+     "hit_rate": 47,
+     "base_rate": 44,
+     "exp": 8.30060003415089,
+     "avg_dir_ret": 0.5,
+     "verdict": "Mixed",
+     "p_value": 0.4595,
+     "years_active": 14,
+     "years_right": 6,
+     "halves": [
+      67,
+      14
+     ],
+     "q": 0.9092
+    },
+    "gold": {
+     "n": 20,
+     "worked": 11,
+     "failed": 4,
+     "flat": 5,
+     "hit_rate": 73,
+     "base_rate": 43,
+     "exp": 6.424784508556018,
+     "avg_dir_ret": 1.11,
+     "verdict": "Worked",
+     "p_value": 0.0168,
+     "years_active": 12,
+     "years_right": 9,
+     "halves": [
+      88,
+      57
+     ],
+     "q": 0.2184
+    },
+    "silver": {
+     "n": 20,
+     "worked": 12,
+     "failed": 5,
+     "flat": 3,
+     "hit_rate": 71,
+     "base_rate": 48,
+     "exp": 8.187430392237461,
+     "avg_dir_ret": 1.88,
+     "verdict": "Worked",
+     "p_value": 0.0531,
+     "years_active": 12,
+     "years_right": 8,
+     "halves": [
+      80,
+      57
+     ],
+     "q": 0.6903
+    }
+   },
+   "verdict": "nominal p < 0.05 only (gold), not significant after correction"
+  },
+  {
+   "name": "B11 eclipse in the lunar month Chaitra: dealers in gold suffer",
+   "src": "BS 5.74 (Iyer p.54)",
+   "by": {
+    "gold": {
+     "n": 9,
+     "worked": 6,
+     "failed": 1,
+     "flat": 2,
+     "hit_rate": 86,
+     "base_rate": 48,
+     "exp": 3.348699471180336,
+     "avg_dir_ret": 1.36,
+     "verdict": "Worked",
+     "p_value": 0.0495,
+     "years_active": 6,
+     "years_right": 5,
+     "halves": [
+      100,
+      75
+     ]
+    },
+    "silver": {
+     "n": 9,
+     "worked": 8,
+     "failed": 0,
+     "flat": 1,
+     "hit_rate": 100,
+     "base_rate": 53,
+     "exp": 4.253085502661361,
+     "avg_dir_ret": 4.09,
+     "verdict": "Worked",
+     "p_value": 0.0064,
+     "years_active": 7,
+     "years_right": 7,
+     "halves": [
+      100,
+      100
+     ]
+    }
+   },
+   "verdict": "nominal p < 0.05 only (gold, silver), not significant after correction"
+  },
+  {
+   "name": "B13 Sun in Scorpio with malefics in the 6th and 7th from it: commodity prices fall",
+   "src": "BS 40.11",
+   "by": {
+    "gold": {
+     "n": 1,
+     "worked": 1,
+     "failed": 0,
+     "flat": 0,
+     "hit_rate": 100,
+     "base_rate": 52,
+     "exp": 0.518716577540107,
+     "avg_dir_ret": 1.26,
+     "verdict": "Worked",
+     "p_value": 0.5187,
+     "years_active": 1,
+     "years_right": 1,
+     "halves": [
+      null,
+      100
+     ]
+    },
+    "silver": {
+     "n": 1,
+     "worked": 1,
+     "failed": 0,
+     "flat": 0,
+     "hit_rate": 100,
+     "base_rate": 53,
+     "exp": 0.5302325581395348,
+     "avg_dir_ret": 2.43,
+     "verdict": "Worked",
+     "p_value": 0.5302,
+     "years_active": 1,
+     "years_right": 1,
+     "halves": [
+      null,
+      100
+     ]
+    }
+   },
+   "verdict": "too few cases"
+  },
+  {
+   "name": "B13 Sun in Sag/Cap/Aqu with benefics: prices moderate or rise (BS 40.14); Nilakanthi 36 says cheap",
+   "src": "BS 40.14 vs Nilakanthi 36",
+   "by": {
+    "gold": {
+     "n": 86,
+     "worked": 45,
+     "failed": 28,
+     "flat": 13,
+     "hit_rate": 62,
+     "base_rate": 55,
+     "exp": 40.14238321708781,
+     "avg_dir_ret": 0.45,
+     "verdict": "Mixed",
+     "p_value": 0.1526,
+     "years_active": 20,
+     "years_right": 13,
+     "halves": [
+      55,
+      68
+     ],
+     "q": 0.8049
+    },
+    "silver": {
+     "n": 86,
+     "worked": 44,
+     "failed": 35,
+     "flat": 7,
+     "hit_rate": 56,
+     "base_rate": 53,
+     "exp": 42.08962624789343,
+     "avg_dir_ret": 0.48,
+     "verdict": "Mixed",
+     "p_value": 0.3762,
+     "years_active": 21,
+     "years_right": 12,
+     "halves": [
+      62,
+      51
+     ],
+     "q": 0.8133
+    }
+   },
+   "verdict": "at chance"
+  },
+  {
+   "name": "B13 Sun in Sag/Cap/Aqu with malefics: prices fall (BS 40.14); Nilakanthi 36 says dear",
+   "src": "BS 40.14 vs Nilakanthi 36",
+   "by": {
+    "gold": {
+     "n": 62,
+     "worked": 21,
+     "failed": 25,
+     "flat": 16,
+     "hit_rate": 46,
+     "base_rate": 42,
+     "exp": 19.384583590734543,
+     "avg_dir_ret": -0.19,
+     "verdict": "Mixed",
+     "p_value": 0.3671,
+     "years_active": 22,
+     "years_right": 9,
+     "halves": [
+      60,
+      29
+     ],
+     "q": 0.8049
+    },
+    "silver": {
+     "n": 62,
+     "worked": 24,
+     "failed": 29,
+     "flat": 9,
+     "hit_rate": 45,
+     "base_rate": 46,
+     "exp": 24.174192807758768,
+     "avg_dir_ret": -0.55,
+     "verdict": "Mixed",
+     "p_value": 0.5721,
+     "years_active": 22,
+     "years_right": 7,
+     "halves": [
+      44,
+      46
+     ],
+     "q": 0.8133
+    }
+   },
+   "verdict": "at chance"
+  },
+  {
+   "name": "B6 Saturn in Pushya: tradesmen suffer (S&P 1928-2026)",
+   "src": "BS 10.6-17",
+   "by": {
+    "spx1928": {
+     "n": 7,
+     "worked": 3,
+     "failed": 4,
+     "flat": 0,
+     "hit_rate": 43,
+     "base_rate": 36,
+     "exp": 2.523562533640283,
+     "avg_dir_ret": 1.76,
+     "verdict": "Mixed",
+     "p_value": 0.4918,
+     "years_active": 7,
+     "years_right": 3,
+     "halves": [
+      75,
+      0
+     ]
+    }
+   },
+   "verdict": "too few cases"
+  },
+  {
+   "name": "B6 Saturn in Magha: merchants suffer (S&P 1928-2026)",
+   "src": "BS 10.6-17",
+   "by": {
+    "spx1928": {
+     "n": 5,
+     "worked": 4,
+     "failed": 1,
+     "flat": 0,
+     "hit_rate": 80,
+     "base_rate": 62,
+     "exp": 3.0940160708131463,
+     "avg_dir_ret": 3.7,
+     "verdict": "Worked",
+     "p_value": 0.3702,
+     "years_active": 5,
+     "years_right": 4,
+     "halves": [
+      100,
+      67
+     ]
+    }
+   },
+   "verdict": "too few cases"
+  },
+  {
+   "name": "B6 Saturn in Dhanishta: treasury officers prosper (S&P 1928-2026)",
+   "src": "BS 10.6-17",
+   "by": {
+    "spx1928": {
+     "n": 9,
+     "worked": 5,
+     "failed": 3,
+     "flat": 1,
+     "hit_rate": 62,
+     "base_rate": 69,
+     "exp": 5.483290422144695,
+     "avg_dir_ret": 1.36,
+     "verdict": "Mixed",
+     "p_value": 0.7786,
+     "years_active": 7,
+     "years_right": 4,
+     "halves": [
+      60,
+      67
+     ]
+    }
+   },
+   "verdict": "too few cases"
+  },
+  {
+   "name": "B6 Saturn in Shatabhisha or P.Bhadrapada: tradesmen suffer (S&P 1928-2026)",
+   "src": "BS 10.6-17",
+   "by": {
+    "spx1928": {
+     "n": 8,
+     "worked": 2,
+     "failed": 6,
+     "flat": 0,
+     "hit_rate": 25,
+     "base_rate": 19,
+     "exp": 1.5154139295038442,
+     "avg_dir_ret": -13.04,
+     "verdict": "Mixed",
+     "p_value": 0.4652,
+     "years_active": 8,
+     "years_right": 2,
+     "halves": [
+      0,
+      50
+     ]
+    }
+   },
+   "verdict": "too few cases"
+  }
+ ],
+ "counts": {
+  "venus": 66,
+  "wars": 121,
+  "kosha": 21,
+  "sammoha": 28,
+  "five": 25,
+  "eclipses": 116,
+  "wars_list": [
+   "2001-07-15 Saturn beats Venus",
+   "2001-10-30 Mercury beats Venus",
+   "2001-11-03 Mercury beats Venus",
+   "2002-05-10 Venus beats Mars",
+   "2002-07-02 Saturn beats Mercury",
+   "2002-07-03 Mars beats Jupiter",
+   "2002-07-25 Mercury beats Mars",
+   "2003-06-21 Venus beats Mercury",
+   "2003-07-08 Venus beats Saturn",
+   "2003-07-26 Mercury beats Jupiter",
+   "2003-08-21 Venus beats Jupiter",
+   "2004-07-10 Mercury beats Mars",
+   "2004-09-27 Jupiter beats Mars",
+   "2004-09-29 Mercury beats Jupiter",
+   "2004-09-29 Mercury beats Mars",
+   "2004-11-05 Venus beats Jupiter",
+   "2005-01-14 Venus beats Mercury",
+   "2005-06-27 Venus beats Mercury",
+   "2006-06-18 Mars beats Saturn",
+   "2006-08-21 Mercury beats Saturn",
+   "2006-08-26 Venus beats Saturn",
+   "2006-09-15 Mars beats Mercury",
+   "2006-10-25 Venus beats Mars",
+   "2006-11-11 Mercury beats Mars",
+   "2006-11-15 Jupiter beats Venus",
+   "2006-12-10 Mercury beats Mars",
+   "2006-12-10 Mercury beats Jupiter",
+   "2006-12-11 Jupiter beats Mars",
+   "2007-07-01 Saturn beats Venus",
+   "2007-08-18 Mercury beats Saturn",
+   "2008-02-01 Venus beats Jupiter",
+   "2008-03-24 Venus beats Mercury",
+   "2008-07-10 Saturn beats Mars",
+   "2008-08-13 Saturn beats Venus",
+   "2008-08-15 Saturn beats Mercury",
+   "2008-08-21 Venus beats Mercury",
+   "2008-09-12 Venus beats Mars",
+   "2008-11-29 Mars beats Mercury",
+   "2009-02-17 Jupiter beats Mars",
+   "2009-02-24 Jupiter beats Mercury",
+   "2009-03-02 Mars beats Mercury",
+   "2009-10-08 Saturn beats Mercury",
+   "2009-10-13 Saturn beats Venus",
+   "2010-02-17 Jupiter beats Venus",
+   "2010-10-08 Saturn beats Mercury",
+   "2011-02-20 Mars beats Mercury",
+   "2011-04-19 Mercury beats Mars",
+   "2011-05-01 Mars beats Jupiter",
+   "2011-05-11 Jupiter beats Venus",
+   "2011-05-23 Mars beats Venus",
+   "2012-05-22 Mercury beats Jupiter",
+   "2012-06-01 Mercury beats Venus",
+   "2012-11-27 Saturn beats Venus",
+   "2013-02-08 Mercury beats Mars",
+   "2013-04-07 Mars beats Venus",
+   "2013-05-08 Mars beats Mercury",
+   "2013-05-28 Venus beats Jupiter",
+   "2013-07-22 Mars beats Jupiter",
+   "2013-11-26 Saturn beats Mercury",
+   "2014-08-02 Mercury beats Jupiter",
+   "2014-08-18 Venus beats Jupiter",
+   "2015-02-22 Mars beats Venus",
+   "2015-07-01 Jupiter beats Venus",
+   "2015-07-16 Mars beats Mercury",
+   "2015-08-07 Mercury beats Jupiter",
+   "2015-10-17 Mars beats Jupiter",
+   "2015-11-03 Mars beats Venus",
+   "2016-01-09 Venus beats Saturn",
+   "2016-05-13 Venus beats Mercury",
+   "2016-07-16 Mercury beats Venus",
+   "2016-08-27 Venus beats Jupiter",
+   "2016-10-11 Mercury beats Jupiter",
+   "2017-06-28 Mercury beats Mars",
+   "2017-09-16 Mercury beats Mars",
+   "2017-10-05 Venus beats Mars",
+   "2017-10-18 Jupiter beats Mercury",
+   "2017-11-13 Venus beats Jupiter",
+   "2018-01-07 Jupiter beats Mars",
+   "2018-01-13 Saturn beats Mercury",
+   "2018-11-27 Mercury beats Jupiter",
+   "2018-12-21 Mercury beats Jupiter",
+   "2019-06-18 Mercury beats Mars",
+   "2019-08-24 Venus beats Mars",
+   "2019-09-03 Mercury beats Mars",
+   "2019-09-13 Venus beats Mercury",
+   "2020-03-20 Jupiter beats Mars",
+   "2020-03-31 Saturn beats Mars",
+   "2020-05-22 Venus beats Mercury",
+   "2020-12-21 Saturn beats Jupiter",
+   "2021-02-06 Saturn beats Venus",
+   "2021-02-11 Jupiter beats Venus",
+   "2021-03-05 Mercury beats Jupiter",
+   "2021-05-29 Venus beats Mercury",
+   "2021-07-13 Venus beats Mars",
+   "2021-08-19 Mars beats Mercury",
+   "2021-11-10 Mercury beats Mars",
+   "2022-03-02 Saturn beats Mercury",
+   "2022-04-05 Saturn beats Mars",
+   "2022-04-30 Jupiter beats Venus",
+   "2022-05-29 Jupiter beats Mars",
+   "2023-01-22 Saturn beats Venus",
+   "2023-03-02 Venus beats Jupiter",
+   "2023-03-02 Saturn beats Mercury",
+   "2023-10-29 Mars beats Mercury",
+   "2024-01-27 Mercury beats Mars",
+   "2024-02-22 Venus beats Mars",
+   "2024-02-28 Saturn beats Mercury",
+   "2024-03-21 Venus beats Saturn",
+   "2024-04-10 Mars beats Saturn",
+   "2024-05-23 Venus beats Jupiter",
+   "2024-06-04 Jupiter beats Mercury",
+   "2024-06-17 Mercury beats Venus",
+   "2024-08-14 Mars beats Jupiter",
+   "2025-08-12 Jupiter beats Venus",
+   "2025-11-25 Mercury beats Venus",
+   "2026-01-08 Venus beats Mars",
+   "2026-01-18 Mars beats Mercury",
+   "2026-01-29 Venus beats Mercury",
+   "2026-03-08 Venus beats Saturn",
+   "2026-04-20 Saturn beats Mercury",
+   "2026-08-15 Mercury beats Jupiter"
+  ]
+ },
+ "annual": [
+  {
+   "name": "T4 ruler of the year: benefic in an angle, trine or 11th = good year; weak in 6th/8th/12th = evil year",
+   "market": "S&P 500 (1929-2026)",
+   "cmp": {
+    "Bullish": {
+     "n": 53,
+     "right": 36,
+     "hit": 68,
+     "base": 73,
+     "mean": 8.22,
+     "mean_other": 7.73,
+     "p_value": 0.827,
+     "halves": [
+      "15/26 vs 70%",
+      "21/27 vs 76%"
+     ],
+     "q": 1.0
+    }
+   },
+   "years": [
+    {
+     "start": "1929-05-20",
+     "tone": "Bullish",
+     "ret": -8.55,
+     "why": "Venus (Sun-sign lord), strength 8.66, house 9"
+    },
+    {
+     "start": "1930-05-21",
+     "tone": null,
+     "ret": -42.37,
+     "why": "Mars (annual ascendant lord), strength 13.98, house 5"
+    },
+    {
+     "start": "1931-05-21",
+     "tone": "Bullish",
+     "ret": -60.15,
+     "why": "Moon (natal ascendant lord), strength 9.31, house 5"
+    },
+    {
+     "start": "1932-05-20",
+     "tone": "Bullish",
+     "ret": 60.95,
+     "why": "Venus (Sun-sign lord), strength 8.4, house 1"
+    },
+    {
+     "start": "1933-05-20",
+     "tone": "Bullish",
+     "ret": 11.68,
+     "why": "Venus (Sun-sign lord), strength 14.01, house 9"
+    },
+    {
+     "start": "1934-05-21",
+     "tone": "Bullish",
+     "ret": 0.41,
+     "why": "Moon (triplicity lord), strength 14.16, house 9"
+    },
+    {
+     "start": "1935-05-21",
+     "tone": null,
+     "ret": 40.04,
+     "why": "Moon (triplicity lord), strength 9.53, house 10"
+    },
+    {
+     "start": "1936-05-20",
+     "tone": null,
+     "ret": 14.37,
+     "why": "Saturn (triplicity lord), strength 13.94, house 9"
+    },
+    {
+     "start": "1937-05-20",
+     "tone": null,
+     "ret": -37.12,
+     "why": "Mars (triplicity lord), strength 17.07, house 3"
+    },
+    {
+     "start": "1938-05-21",
+     "tone": null,
+     "ret": 10.34,
+     "why": "Moon (natal ascendant lord), strength 6.51, house 3"
+    },
+    {
+     "start": "1939-05-21",
+     "tone": "Bullish",
+     "ret": -9.46,
+     "why": "Jupiter (annual ascendant lord), strength 11.15, house 1"
+    },
+    {
+     "start": "1940-05-20",
+     "tone": "Bullish",
+     "ret": -5.53,
+     "why": "Moon (annual ascendant lord), strength 4.97, house 4"
+    },
+    {
+     "start": "1941-05-20",
+     "tone": "Bullish",
+     "ret": -16.06,
+     "why": "Venus (Sun-sign lord), strength 13.99, house 9"
+    },
+    {
+     "start": "1942-05-21",
+     "tone": "Bullish",
+     "ret": 50.82,
+     "why": "Moon (triplicity lord), strength 12.51, house 9"
+    },
+    {
+     "start": "1943-05-21",
+     "tone": null,
+     "ret": 1.85,
+     "why": "Jupiter (triplicity lord), strength 9.21, house 3"
+    },
+    {
+     "start": "1944-05-20",
+     "tone": null,
+     "ret": 22.69,
+     "why": "Moon (triplicity lord), strength 11.05, house 10"
+    },
+    {
+     "start": "1945-05-20",
+     "tone": null,
+     "ret": 25.35,
+     "why": "Mars (triplicity lord), strength 13.85, house 7"
+    },
+    {
+     "start": "1946-05-21",
+     "tone": "Bullish",
+     "ret": -25.8,
+     "why": "Venus (muntha lord), strength 10.66, house 7"
+    },
+    {
+     "start": "1947-05-21",
+     "tone": null,
+     "ret": 18.37,
+     "why": "Mars (annual ascendant lord), strength 14.33, house 1"
+    },
+    {
+     "start": "1948-05-20",
+     "tone": "Bullish",
+     "ret": -10.02,
+     "why": "Moon (muntha lord), strength 6.68, house 4"
+    },
+    {
+     "start": "1949-05-20",
+     "tone": "Bullish",
+     "ret": 26.82,
+     "why": "Venus (Sun-sign lord), strength 13.97, house 9"
+    },
+    {
+     "start": "1950-05-21",
+     "tone": "Bullish",
+     "ret": 15.15,
+     "why": "Moon (natal ascendant lord), strength 9.27, house 7"
+    },
+    {
+     "start": "1951-05-21",
+     "tone": null,
+     "ret": 9.76,
+     "why": "Venus (muntha lord), strength 8.36, house 3"
+    },
+    {
+     "start": "1952-05-20",
+     "tone": null,
+     "ret": 5.59,
+     "why": "Moon (triplicity lord), strength 11.52, house 9"
+    },
+    {
+     "start": "1953-05-20",
+     "tone": "Bullish",
+     "ret": 15.6,
+     "why": "Moon (natal ascendant lord), strength 7.99, house 11"
+    },
+    {
+     "start": "1954-05-21",
+     "tone": null,
+     "ret": 30.95,
+     "why": "Saturn (triplicity lord), strength 14.13, house 11"
+    },
+    {
+     "start": "1955-05-21",
+     "tone": null,
+     "ret": 22.92,
+     "why": "Venus (annual ascendant lord), strength 11.54, house 12"
+    },
+    {
+     "start": "1956-05-20",
+     "tone": "Bullish",
+     "ret": 2.07,
+     "why": "Jupiter (muntha lord), strength 11.5, house 1"
+    },
+    {
+     "start": "1957-05-20",
+     "tone": "Bullish",
+     "ret": -7.9,
+     "why": "Jupiter (triplicity lord), strength 11.64, house 11"
+    },
+    {
+     "start": "1958-05-21",
+     "tone": null,
+     "ret": 33.2,
+     "why": "Venus (muntha lord), strength 8.98, house 3"
+    },
+    {
+     "start": "1959-05-21",
+     "tone": null,
+     "ret": -4.15,
+     "why": "Mars (triplicity lord), strength 9.52, house 3"
+    },
+    {
+     "start": "1960-05-20",
+     "tone": "Bullish",
+     "ret": 20.82,
+     "why": "Venus (Sun-sign lord), strength 10.72, house 9"
+    },
+    {
+     "start": "1961-05-20",
+     "tone": null,
+     "ret": -5.13,
+     "why": "Saturn (triplicity lord), strength 14.13, house 4"
+    },
+    {
+     "start": "1962-05-21",
+     "tone": null,
+     "ret": 9.62,
+     "why": "Mars (Moon-sign lord), strength 16.38, house 4"
+    },
+    {
+     "start": "1963-05-21",
+     "tone": null,
+     "ret": 14.78,
+     "why": "Mars (Moon-sign lord), strength 7.57, house 4"
+    },
+    {
+     "start": "1964-05-20",
+     "tone": null,
+     "ret": 11.06,
+     "why": "Saturn (triplicity lord), strength 13.79, house 7"
+    },
+    {
+     "start": "1965-05-20",
+     "tone": null,
+     "ret": -4.2,
+     "why": "Saturn (triplicity lord), strength 10.97, house 5"
+    },
+    {
+     "start": "1966-05-21",
+     "tone": "Bullish",
+     "ret": 7.77,
+     "why": "Moon (triplicity lord), strength 11.19, house 5"
+    },
+    {
+     "start": "1967-05-21",
+     "tone": "Bullish",
+     "ret": 5.25,
+     "why": "Venus (Sun-sign lord), strength 8.34, house 1"
+    },
+    {
+     "start": "1968-05-20",
+     "tone": "Bullish",
+     "ret": 7.37,
+     "why": "Jupiter (muntha lord), strength 12.64, house 1"
+    },
+    {
+     "start": "1969-05-20",
+     "tone": null,
+     "ret": -29.33,
+     "why": "Mars (muntha lord), strength 14.36, house 1"
+    },
+    {
+     "start": "1970-05-21",
+     "tone": "Bullish",
+     "ret": 37.8,
+     "why": "Venus (muntha lord), strength 9.68, house 5"
+    },
+    {
+     "start": "1971-05-21",
+     "tone": "Bullish",
+     "ret": 7.57,
+     "why": "Venus (Sun-sign lord), strength 11.2, house 11"
+    },
+    {
+     "start": "1972-05-20",
+     "tone": "Bullish",
+     "ret": -4.7,
+     "why": "Venus (Sun-sign lord), strength 11.71, house 11"
+    },
+    {
+     "start": "1973-05-21",
+     "tone": "Bullish",
+     "ret": -15.41,
+     "why": "Venus (Sun-sign lord), strength 13.29, house 7"
+    },
+    {
+     "start": "1974-05-21",
+     "tone": null,
+     "ret": 2.52,
+     "why": "Moon (natal ascendant lord), strength 10.82, house 3"
+    },
+    {
+     "start": "1975-05-21",
+     "tone": "Bullish",
+     "ret": 12.33,
+     "why": "Jupiter (triplicity lord), strength 13.05, house 10"
+    },
+    {
+     "start": "1976-05-20",
+     "tone": "Bullish",
+     "ret": -1.71,
+     "why": "Mercury (annual ascendant lord), strength 10.16, house 9"
+    },
+    {
+     "start": "1977-05-21",
+     "tone": null,
+     "ret": -1.34,
+     "why": "Mars (annual ascendant lord), strength 13.75, house 5"
+    },
+    {
+     "start": "1978-05-21",
+     "tone": "Bullish",
+     "ret": 1.84,
+     "why": "Jupiter (annual ascendant lord), strength 11.59, house 4"
+    },
+    {
+     "start": "1979-05-21",
+     "tone": "Bullish",
+     "ret": 7.75,
+     "why": "Venus (Sun-sign lord), strength 11.18, house 10"
+    },
+    {
+     "start": "1980-05-20",
+     "tone": "Bullish",
+     "ret": 22.6,
+     "why": "Moon (natal ascendant lord), strength 14.9, house 11"
+    },
+    {
+     "start": "1981-05-21",
+     "tone": "Bullish",
+     "ret": -13.19,
+     "why": "Venus (Sun-sign lord), strength 13.28, house 7"
+    },
+    {
+     "start": "1982-05-21",
+     "tone": "Bullish",
+     "ret": 41.5,
+     "why": "Venus (muntha lord), strength 9.02, house 1"
+    },
+    {
+     "start": "1983-05-21",
+     "tone": null,
+     "ret": -3.92,
+     "why": "Moon (annual ascendant lord), strength 6.06, house 3"
+    },
+    {
+     "start": "1984-05-20",
+     "tone": null,
+     "ret": 21.79,
+     "why": "Moon (muntha lord), strength 6.38, house 5"
+    },
+    {
+     "start": "1985-05-21",
+     "tone": "Bullish",
+     "ret": 24.45,
+     "why": "Venus (Moon-sign lord), strength 8.95, house 4"
+    },
+    {
+     "start": "1986-05-21",
+     "tone": null,
+     "ret": 17.83,
+     "why": "Venus (Moon-sign lord), strength 11.52, house 3"
+    },
+    {
+     "start": "1987-05-21",
+     "tone": "Bullish",
+     "ret": -9.05,
+     "why": "Venus (Sun-sign lord), strength 11.17, house 10"
+    },
+    {
+     "start": "1988-05-20",
+     "tone": "Bullish",
+     "ret": 26.96,
+     "why": "Moon (natal ascendant lord), strength 13.9, house 11"
+    },
+    {
+     "start": "1989-05-21",
+     "tone": null,
+     "ret": 10.4,
+     "why": "Mars (Moon-sign lord), strength 9.81, house 7"
+    },
+    {
+     "start": "1990-05-21",
+     "tone": null,
+     "ret": 4.97,
+     "why": "Saturn (triplicity lord), strength 14.27, house 10"
+    },
+    {
+     "start": "1991-05-21",
+     "tone": null,
+     "ret": 11.58,
+     "why": "Saturn (muntha lord), strength 12.07, house 7"
+    },
+    {
+     "start": "1992-05-20",
+     "tone": null,
+     "ret": 8.47,
+     "why": "Saturn (triplicity lord), strength 14.56, house 4"
+    },
+    {
+     "start": "1993-05-21",
+     "tone": null,
+     "ret": 0.96,
+     "why": "Saturn (triplicity lord), strength 12.99, house 3"
+    },
+    {
+     "start": "1994-05-21",
+     "tone": "Bullish",
+     "ret": 14.13,
+     "why": "Mercury (Moon-sign lord), strength 10.12, house 1"
+    },
+    {
+     "start": "1995-05-21",
+     "tone": "Bullish",
+     "ret": 29.65,
+     "why": "Venus (Sun-sign lord), strength 11.15, house 10"
+    },
+    {
+     "start": "1996-05-20",
+     "tone": null,
+     "ret": 25.03,
+     "why": "Jupiter (triplicity lord), strength 10.95, house 3"
+    },
+    {
+     "start": "1997-05-21",
+     "tone": "Bullish",
+     "ret": 32.96,
+     "why": "Venus (Moon-sign lord), strength 13.24, house 5"
+    },
+    {
+     "start": "1998-05-21",
+     "tone": null,
+     "ret": 19.64,
+     "why": "Moon (triplicity lord), strength 9.35, house 11"
+    },
+    {
+     "start": "1999-05-21",
+     "tone": "Bullish",
+     "ret": 5.09,
+     "why": "Venus (Sun-sign lord), strength 8.31, house 11"
+    },
+    {
+     "start": "2000-05-20",
+     "tone": "Bullish",
+     "ret": -8.17,
+     "why": "Jupiter (triplicity lord), strength 9.67, house 7"
+    },
+    {
+     "start": "2001-05-21",
+     "tone": null,
+     "ret": -15.49,
+     "why": "Moon (triplicity lord), strength 11.61, house 4"
+    },
+    {
+     "start": "2002-05-21",
+     "tone": null,
+     "ret": -15.77,
+     "why": "Saturn (muntha lord), strength 11.2, house 1"
+    },
+    {
+     "start": "2003-05-21",
+     "tone": "Bullish",
+     "ret": 18.42,
+     "why": "Venus (Sun-sign lord), strength 9.26, house 9"
+    },
+    {
+     "start": "2004-05-20",
+     "tone": "Bullish",
+     "ret": 9.19,
+     "why": "Jupiter (triplicity lord), strength 11.69, house 11"
+    },
+    {
+     "start": "2005-05-21",
+     "tone": "Bullish",
+     "ret": 6.54,
+     "why": "Venus (Moon-sign lord), strength 13.23, house 5"
+    },
+    {
+     "start": "2006-05-21",
+     "tone": null,
+     "ret": 20.18,
+     "why": "Moon (natal ascendant lord), strength 9.87, house 9"
+    },
+    {
+     "start": "2007-05-21",
+     "tone": "Bullish",
+     "ret": -7.18,
+     "why": "Mercury (muntha lord), strength 9.15, house 10"
+    },
+    {
+     "start": "2008-05-20",
+     "tone": "Bullish",
+     "ret": -36.08,
+     "why": "Venus (Sun-sign lord), strength 17.18, house 7"
+    },
+    {
+     "start": "2009-05-21",
+     "tone": "Bullish",
+     "ret": 18.61,
+     "why": "Mercury (triplicity lord), strength 10.06, house 4"
+    },
+    {
+     "start": "2010-05-21",
+     "tone": "Bullish",
+     "ret": 24.42,
+     "why": "Venus (Sun-sign lord), strength 11.47, house 1"
+    },
+    {
+     "start": "2011-05-21",
+     "tone": "Bullish",
+     "ret": -2.85,
+     "why": "Venus (Sun-sign lord), strength 9.24, house 9"
+    },
+    {
+     "start": "2012-05-21",
+     "tone": "Bullish",
+     "ret": 28.65,
+     "why": "Venus (Sun-sign lord), strength 13.58, house 7"
+    },
+    {
+     "start": "2013-05-21",
+     "tone": null,
+     "ret": 12.4,
+     "why": "Saturn (annual ascendant lord), strength 14.17, house 9"
+    },
+    {
+     "start": "2014-05-21",
+     "tone": null,
+     "ret": 13.51,
+     "why": "Saturn (triplicity lord), strength 11.73, house 5"
+    },
+    {
+     "start": "2015-05-21",
+     "tone": null,
+     "ret": -3.46,
+     "why": "Saturn (muntha lord), strength 9.51, house 3"
+    },
+    {
+     "start": "2016-05-21",
+     "tone": "Bullish",
+     "ret": 16.05,
+     "why": "Venus (Sun-sign lord), strength 17.16, house 7"
+    },
+    {
+     "start": "2017-05-21",
+     "tone": "Bullish",
+     "ret": 13.91,
+     "why": "Jupiter (Moon-sign lord), strength 9.49, house 7"
+    },
+    {
+     "start": "2018-05-21",
+     "tone": "Bullish",
+     "ret": 4.69,
+     "why": "Venus (Sun-sign lord), strength 11.46, house 1"
+    },
+    {
+     "start": "2019-05-21",
+     "tone": null,
+     "ret": 4.63,
+     "why": "Moon (natal ascendant lord), strength 10.46, house 4"
+    },
+    {
+     "start": "2020-05-21",
+     "tone": "Bullish",
+     "ret": 39.96,
+     "why": "Venus (Sun-sign lord), strength 14.28, house 7"
+    },
+    {
+     "start": "2021-05-21",
+     "tone": null,
+     "ret": -6.2,
+     "why": "Sun (Moon-sign lord), strength 8.02, house 3"
+    },
+    {
+     "start": "2022-05-21",
+     "tone": "Bullish",
+     "ret": 7.45,
+     "why": "Mercury (muntha lord), strength 9.87, house 11"
+    },
+    {
+     "start": "2023-05-21",
+     "tone": null,
+     "ret": 26.63,
+     "why": "Mars (triplicity lord), strength 9.35, house 11"
+    },
+    {
+     "start": "2024-05-21",
+     "tone": null,
+     "ret": 11.91,
+     "why": "Mars (muntha lord), strength 13.83, house 4"
+    },
+    {
+     "start": "2025-05-21",
+     "tone": null,
+     "ret": 25.12,
+     "why": "Jupiter (triplicity lord), strength 9.69, house 3"
+    }
+   ]
+  },
+  {
+   "name": "T4 malefic ruler of the year strong in the 3rd/6th/11th = good; ruler in the 8th/12th = no good",
+   "market": "S&P 500 (1929-2026)",
+   "cmp": {
+    "Bullish": {
+     "n": 3,
+     "right": 2,
+     "hit": 67,
+     "base": 70,
+     "mean": -1.74,
+     "mean_other": 8.3,
+     "p_value": 0.7867,
+     "halves": [
+      "1/2 vs 64%",
+      "1/1 vs 77%"
+     ],
+     "q": 1.0
+    },
+    "Bearish": {
+     "n": 1,
+     "right": 0,
+     "hit": 0,
+     "base": 30,
+     "mean": 22.92,
+     "mean_other": 7.84,
+     "p_value": 1.0,
+     "halves": [
+      "0/1 vs 38%",
+      "\u2013"
+     ],
+     "q": 1.0
+    }
+   },
+   "years": [
+    {
+     "start": "1929-05-20",
+     "tone": null,
+     "ret": -8.55,
+     "why": "Venus (Sun-sign lord), strength 8.66, house 9"
+    },
+    {
+     "start": "1930-05-21",
+     "tone": null,
+     "ret": -42.37,
+     "why": "Mars (annual ascendant lord), strength 13.98, house 5"
+    },
+    {
+     "start": "1931-05-21",
+     "tone": null,
+     "ret": -60.15,
+     "why": "Moon (natal ascendant lord), strength 9.31, house 5"
+    },
+    {
+     "start": "1932-05-20",
+     "tone": null,
+     "ret": 60.95,
+     "why": "Venus (Sun-sign lord), strength 8.4, house 1"
+    },
+    {
+     "start": "1933-05-20",
+     "tone": null,
+     "ret": 11.68,
+     "why": "Venus (Sun-sign lord), strength 14.01, house 9"
+    },
+    {
+     "start": "1934-05-21",
+     "tone": null,
+     "ret": 0.41,
+     "why": "Moon (triplicity lord), strength 14.16, house 9"
+    },
+    {
+     "start": "1935-05-21",
+     "tone": null,
+     "ret": 40.04,
+     "why": "Moon (triplicity lord), strength 9.53, house 10"
+    },
+    {
+     "start": "1936-05-20",
+     "tone": null,
+     "ret": 14.37,
+     "why": "Saturn (triplicity lord), strength 13.94, house 9"
+    },
+    {
+     "start": "1937-05-20",
+     "tone": "Bullish",
+     "ret": -37.12,
+     "why": "Mars (triplicity lord), strength 17.07, house 3"
+    },
+    {
+     "start": "1938-05-21",
+     "tone": null,
+     "ret": 10.34,
+     "why": "Moon (natal ascendant lord), strength 6.51, house 3"
+    },
+    {
+     "start": "1939-05-21",
+     "tone": null,
+     "ret": -9.46,
+     "why": "Jupiter (annual ascendant lord), strength 11.15, house 1"
+    },
+    {
+     "start": "1940-05-20",
+     "tone": null,
+     "ret": -5.53,
+     "why": "Moon (annual ascendant lord), strength 4.97, house 4"
+    },
+    {
+     "start": "1941-05-20",
+     "tone": null,
+     "ret": -16.06,
+     "why": "Venus (Sun-sign lord), strength 13.99, house 9"
+    },
+    {
+     "start": "1942-05-21",
+     "tone": null,
+     "ret": 50.82,
+     "why": "Moon (triplicity lord), strength 12.51, house 9"
+    },
+    {
+     "start": "1943-05-21",
+     "tone": null,
+     "ret": 1.85,
+     "why": "Jupiter (triplicity lord), strength 9.21, house 3"
+    },
+    {
+     "start": "1944-05-20",
+     "tone": null,
+     "ret": 22.69,
+     "why": "Moon (triplicity lord), strength 11.05, house 10"
+    },
+    {
+     "start": "1945-05-20",
+     "tone": null,
+     "ret": 25.35,
+     "why": "Mars (triplicity lord), strength 13.85, house 7"
+    },
+    {
+     "start": "1946-05-21",
+     "tone": null,
+     "ret": -25.8,
+     "why": "Venus (muntha lord), strength 10.66, house 7"
+    },
+    {
+     "start": "1947-05-21",
+     "tone": null,
+     "ret": 18.37,
+     "why": "Mars (annual ascendant lord), strength 14.33, house 1"
+    },
+    {
+     "start": "1948-05-20",
+     "tone": null,
+     "ret": -10.02,
+     "why": "Moon (muntha lord), strength 6.68, house 4"
+    },
+    {
+     "start": "1949-05-20",
+     "tone": null,
+     "ret": 26.82,
+     "why": "Venus (Sun-sign lord), strength 13.97, house 9"
+    },
+    {
+     "start": "1950-05-21",
+     "tone": null,
+     "ret": 15.15,
+     "why": "Moon (natal ascendant lord), strength 9.27, house 7"
+    },
+    {
+     "start": "1951-05-21",
+     "tone": null,
+     "ret": 9.76,
+     "why": "Venus (muntha lord), strength 8.36, house 3"
+    },
+    {
+     "start": "1952-05-20",
+     "tone": null,
+     "ret": 5.59,
+     "why": "Moon (triplicity lord), strength 11.52, house 9"
+    },
+    {
+     "start": "1953-05-20",
+     "tone": null,
+     "ret": 15.6,
+     "why": "Moon (natal ascendant lord), strength 7.99, house 11"
+    },
+    {
+     "start": "1954-05-21",
+     "tone": "Bullish",
+     "ret": 30.95,
+     "why": "Saturn (triplicity lord), strength 14.13, house 11"
+    },
+    {
+     "start": "1955-05-21",
+     "tone": "Bearish",
+     "ret": 22.92,
+     "why": "Venus (annual ascendant lord), strength 11.54, house 12"
+    },
+    {
+     "start": "1956-05-20",
+     "tone": null,
+     "ret": 2.07,
+     "why": "Jupiter (muntha lord), strength 11.5, house 1"
+    },
+    {
+     "start": "1957-05-20",
+     "tone": null,
+     "ret": -7.9,
+     "why": "Jupiter (triplicity lord), strength 11.64, house 11"
+    },
+    {
+     "start": "1958-05-21",
+     "tone": null,
+     "ret": 33.2,
+     "why": "Venus (muntha lord), strength 8.98, house 3"
+    },
+    {
+     "start": "1959-05-21",
+     "tone": null,
+     "ret": -4.15,
+     "why": "Mars (triplicity lord), strength 9.52, house 3"
+    },
+    {
+     "start": "1960-05-20",
+     "tone": null,
+     "ret": 20.82,
+     "why": "Venus (Sun-sign lord), strength 10.72, house 9"
+    },
+    {
+     "start": "1961-05-20",
+     "tone": null,
+     "ret": -5.13,
+     "why": "Saturn (triplicity lord), strength 14.13, house 4"
+    },
+    {
+     "start": "1962-05-21",
+     "tone": null,
+     "ret": 9.62,
+     "why": "Mars (Moon-sign lord), strength 16.38, house 4"
+    },
+    {
+     "start": "1963-05-21",
+     "tone": null,
+     "ret": 14.78,
+     "why": "Mars (Moon-sign lord), strength 7.57, house 4"
+    },
+    {
+     "start": "1964-05-20",
+     "tone": null,
+     "ret": 11.06,
+     "why": "Saturn (triplicity lord), strength 13.79, house 7"
+    },
+    {
+     "start": "1965-05-20",
+     "tone": null,
+     "ret": -4.2,
+     "why": "Saturn (triplicity lord), strength 10.97, house 5"
+    },
+    {
+     "start": "1966-05-21",
+     "tone": null,
+     "ret": 7.77,
+     "why": "Moon (triplicity lord), strength 11.19, house 5"
+    },
+    {
+     "start": "1967-05-21",
+     "tone": null,
+     "ret": 5.25,
+     "why": "Venus (Sun-sign lord), strength 8.34, house 1"
+    },
+    {
+     "start": "1968-05-20",
+     "tone": null,
+     "ret": 7.37,
+     "why": "Jupiter (muntha lord), strength 12.64, house 1"
+    },
+    {
+     "start": "1969-05-20",
+     "tone": null,
+     "ret": -29.33,
+     "why": "Mars (muntha lord), strength 14.36, house 1"
+    },
+    {
+     "start": "1970-05-21",
+     "tone": null,
+     "ret": 37.8,
+     "why": "Venus (muntha lord), strength 9.68, house 5"
+    },
+    {
+     "start": "1971-05-21",
+     "tone": null,
+     "ret": 7.57,
+     "why": "Venus (Sun-sign lord), strength 11.2, house 11"
+    },
+    {
+     "start": "1972-05-20",
+     "tone": null,
+     "ret": -4.7,
+     "why": "Venus (Sun-sign lord), strength 11.71, house 11"
+    },
+    {
+     "start": "1973-05-21",
+     "tone": null,
+     "ret": -15.41,
+     "why": "Venus (Sun-sign lord), strength 13.29, house 7"
+    },
+    {
+     "start": "1974-05-21",
+     "tone": null,
+     "ret": 2.52,
+     "why": "Moon (natal ascendant lord), strength 10.82, house 3"
+    },
+    {
+     "start": "1975-05-21",
+     "tone": null,
+     "ret": 12.33,
+     "why": "Jupiter (triplicity lord), strength 13.05, house 10"
+    },
+    {
+     "start": "1976-05-20",
+     "tone": null,
+     "ret": -1.71,
+     "why": "Mercury (annual ascendant lord), strength 10.16, house 9"
+    },
+    {
+     "start": "1977-05-21",
+     "tone": null,
+     "ret": -1.34,
+     "why": "Mars (annual ascendant lord), strength 13.75, house 5"
+    },
+    {
+     "start": "1978-05-21",
+     "tone": null,
+     "ret": 1.84,
+     "why": "Jupiter (annual ascendant lord), strength 11.59, house 4"
+    },
+    {
+     "start": "1979-05-21",
+     "tone": null,
+     "ret": 7.75,
+     "why": "Venus (Sun-sign lord), strength 11.18, house 10"
+    },
+    {
+     "start": "1980-05-20",
+     "tone": null,
+     "ret": 22.6,
+     "why": "Moon (natal ascendant lord), strength 14.9, house 11"
+    },
+    {
+     "start": "1981-05-21",
+     "tone": null,
+     "ret": -13.19,
+     "why": "Venus (Sun-sign lord), strength 13.28, house 7"
+    },
+    {
+     "start": "1982-05-21",
+     "tone": null,
+     "ret": 41.5,
+     "why": "Venus (muntha lord), strength 9.02, house 1"
+    },
+    {
+     "start": "1983-05-21",
+     "tone": null,
+     "ret": -3.92,
+     "why": "Moon (annual ascendant lord), strength 6.06, house 3"
+    },
+    {
+     "start": "1984-05-20",
+     "tone": null,
+     "ret": 21.79,
+     "why": "Moon (muntha lord), strength 6.38, house 5"
+    },
+    {
+     "start": "1985-05-21",
+     "tone": null,
+     "ret": 24.45,
+     "why": "Venus (Moon-sign lord), strength 8.95, house 4"
+    },
+    {
+     "start": "1986-05-21",
+     "tone": null,
+     "ret": 17.83,
+     "why": "Venus (Moon-sign lord), strength 11.52, house 3"
+    },
+    {
+     "start": "1987-05-21",
+     "tone": null,
+     "ret": -9.05,
+     "why": "Venus (Sun-sign lord), strength 11.17, house 10"
+    },
+    {
+     "start": "1988-05-20",
+     "tone": null,
+     "ret": 26.96,
+     "why": "Moon (natal ascendant lord), strength 13.9, house 11"
+    },
+    {
+     "start": "1989-05-21",
+     "tone": null,
+     "ret": 10.4,
+     "why": "Mars (Moon-sign lord), strength 9.81, house 7"
+    },
+    {
+     "start": "1990-05-21",
+     "tone": null,
+     "ret": 4.97,
+     "why": "Saturn (triplicity lord), strength 14.27, house 10"
+    },
+    {
+     "start": "1991-05-21",
+     "tone": null,
+     "ret": 11.58,
+     "why": "Saturn (muntha lord), strength 12.07, house 7"
+    },
+    {
+     "start": "1992-05-20",
+     "tone": null,
+     "ret": 8.47,
+     "why": "Saturn (triplicity lord), strength 14.56, house 4"
+    },
+    {
+     "start": "1993-05-21",
+     "tone": "Bullish",
+     "ret": 0.96,
+     "why": "Saturn (triplicity lord), strength 12.99, house 3"
+    },
+    {
+     "start": "1994-05-21",
+     "tone": null,
+     "ret": 14.13,
+     "why": "Mercury (Moon-sign lord), strength 10.12, house 1"
+    },
+    {
+     "start": "1995-05-21",
+     "tone": null,
+     "ret": 29.65,
+     "why": "Venus (Sun-sign lord), strength 11.15, house 10"
+    },
+    {
+     "start": "1996-05-20",
+     "tone": null,
+     "ret": 25.03,
+     "why": "Jupiter (triplicity lord), strength 10.95, house 3"
+    },
+    {
+     "start": "1997-05-21",
+     "tone": null,
+     "ret": 32.96,
+     "why": "Venus (Moon-sign lord), strength 13.24, house 5"
+    },
+    {
+     "start": "1998-05-21",
+     "tone": null,
+     "ret": 19.64,
+     "why": "Moon (triplicity lord), strength 9.35, house 11"
+    },
+    {
+     "start": "1999-05-21",
+     "tone": null,
+     "ret": 5.09,
+     "why": "Venus (Sun-sign lord), strength 8.31, house 11"
+    },
+    {
+     "start": "2000-05-20",
+     "tone": null,
+     "ret": -8.17,
+     "why": "Jupiter (triplicity lord), strength 9.67, house 7"
+    },
+    {
+     "start": "2001-05-21",
+     "tone": null,
+     "ret": -15.49,
+     "why": "Moon (triplicity lord), strength 11.61, house 4"
+    },
+    {
+     "start": "2002-05-21",
+     "tone": null,
+     "ret": -15.77,
+     "why": "Saturn (muntha lord), strength 11.2, house 1"
+    },
+    {
+     "start": "2003-05-21",
+     "tone": null,
+     "ret": 18.42,
+     "why": "Venus (Sun-sign lord), strength 9.26, house 9"
+    },
+    {
+     "start": "2004-05-20",
+     "tone": null,
+     "ret": 9.19,
+     "why": "Jupiter (triplicity lord), strength 11.69, house 11"
+    },
+    {
+     "start": "2005-05-21",
+     "tone": null,
+     "ret": 6.54,
+     "why": "Venus (Moon-sign lord), strength 13.23, house 5"
+    },
+    {
+     "start": "2006-05-21",
+     "tone": null,
+     "ret": 20.18,
+     "why": "Moon (natal ascendant lord), strength 9.87, house 9"
+    },
+    {
+     "start": "2007-05-21",
+     "tone": null,
+     "ret": -7.18,
+     "why": "Mercury (muntha lord), strength 9.15, house 10"
+    },
+    {
+     "start": "2008-05-20",
+     "tone": null,
+     "ret": -36.08,
+     "why": "Venus (Sun-sign lord), strength 17.18, house 7"
+    },
+    {
+     "start": "2009-05-21",
+     "tone": null,
+     "ret": 18.61,
+     "why": "Mercury (triplicity lord), strength 10.06, house 4"
+    },
+    {
+     "start": "2010-05-21",
+     "tone": null,
+     "ret": 24.42,
+     "why": "Venus (Sun-sign lord), strength 11.47, house 1"
+    },
+    {
+     "start": "2011-05-21",
+     "tone": null,
+     "ret": -2.85,
+     "why": "Venus (Sun-sign lord), strength 9.24, house 9"
+    },
+    {
+     "start": "2012-05-21",
+     "tone": null,
+     "ret": 28.65,
+     "why": "Venus (Sun-sign lord), strength 13.58, house 7"
+    },
+    {
+     "start": "2013-05-21",
+     "tone": null,
+     "ret": 12.4,
+     "why": "Saturn (annual ascendant lord), strength 14.17, house 9"
+    },
+    {
+     "start": "2014-05-21",
+     "tone": null,
+     "ret": 13.51,
+     "why": "Saturn (triplicity lord), strength 11.73, house 5"
+    },
+    {
+     "start": "2015-05-21",
+     "tone": null,
+     "ret": -3.46,
+     "why": "Saturn (muntha lord), strength 9.51, house 3"
+    },
+    {
+     "start": "2016-05-21",
+     "tone": null,
+     "ret": 16.05,
+     "why": "Venus (Sun-sign lord), strength 17.16, house 7"
+    },
+    {
+     "start": "2017-05-21",
+     "tone": null,
+     "ret": 13.91,
+     "why": "Jupiter (Moon-sign lord), strength 9.49, house 7"
+    },
+    {
+     "start": "2018-05-21",
+     "tone": null,
+     "ret": 4.69,
+     "why": "Venus (Sun-sign lord), strength 11.46, house 1"
+    },
+    {
+     "start": "2019-05-21",
+     "tone": null,
+     "ret": 4.63,
+     "why": "Moon (natal ascendant lord), strength 10.46, house 4"
+    },
+    {
+     "start": "2020-05-21",
+     "tone": null,
+     "ret": 39.96,
+     "why": "Venus (Sun-sign lord), strength 14.28, house 7"
+    },
+    {
+     "start": "2021-05-21",
+     "tone": null,
+     "ret": -6.2,
+     "why": "Sun (Moon-sign lord), strength 8.02, house 3"
+    },
+    {
+     "start": "2022-05-21",
+     "tone": null,
+     "ret": 7.45,
+     "why": "Mercury (muntha lord), strength 9.87, house 11"
+    },
+    {
+     "start": "2023-05-21",
+     "tone": null,
+     "ret": 26.63,
+     "why": "Mars (triplicity lord), strength 9.35, house 11"
+    },
+    {
+     "start": "2024-05-21",
+     "tone": null,
+     "ret": 11.91,
+     "why": "Mars (muntha lord), strength 13.83, house 4"
+    },
+    {
+     "start": "2025-05-21",
+     "tone": null,
+     "ret": 25.12,
+     "why": "Jupiter (triplicity lord), strength 9.69, house 3"
+    }
+   ]
+  },
+  {
+   "name": "T4 Jupiter, Venus or Mercury as ruler of the year with strength (>10): great gain of wealth",
+   "market": "S&P 500 (1929-2026)",
+   "cmp": {
+    "Bullish": {
+     "n": 33,
+     "right": 23,
+     "hit": 70,
+     "base": 70,
+     "mean": 7.56,
+     "mean_other": 8.22,
+     "p_value": 0.6146,
+     "halves": [
+      "8/15 vs 68%",
+      "15/18 vs 73%"
+     ],
+     "q": 1.0
+    }
+   },
+   "years": [
+    {
+     "start": "1929-05-20",
+     "tone": null,
+     "ret": -8.55,
+     "why": "Venus (Sun-sign lord), strength 8.66, house 9"
+    },
+    {
+     "start": "1930-05-21",
+     "tone": null,
+     "ret": -42.37,
+     "why": "Mars (annual ascendant lord), strength 13.98, house 5"
+    },
+    {
+     "start": "1931-05-21",
+     "tone": null,
+     "ret": -60.15,
+     "why": "Moon (natal ascendant lord), strength 9.31, house 5"
+    },
+    {
+     "start": "1932-05-20",
+     "tone": null,
+     "ret": 60.95,
+     "why": "Venus (Sun-sign lord), strength 8.4, house 1"
+    },
+    {
+     "start": "1933-05-20",
+     "tone": "Bullish",
+     "ret": 11.68,
+     "why": "Venus (Sun-sign lord), strength 14.01, house 9"
+    },
+    {
+     "start": "1934-05-21",
+     "tone": null,
+     "ret": 0.41,
+     "why": "Moon (triplicity lord), strength 14.16, house 9"
+    },
+    {
+     "start": "1935-05-21",
+     "tone": null,
+     "ret": 40.04,
+     "why": "Moon (triplicity lord), strength 9.53, house 10"
+    },
+    {
+     "start": "1936-05-20",
+     "tone": null,
+     "ret": 14.37,
+     "why": "Saturn (triplicity lord), strength 13.94, house 9"
+    },
+    {
+     "start": "1937-05-20",
+     "tone": null,
+     "ret": -37.12,
+     "why": "Mars (triplicity lord), strength 17.07, house 3"
+    },
+    {
+     "start": "1938-05-21",
+     "tone": null,
+     "ret": 10.34,
+     "why": "Moon (natal ascendant lord), strength 6.51, house 3"
+    },
+    {
+     "start": "1939-05-21",
+     "tone": "Bullish",
+     "ret": -9.46,
+     "why": "Jupiter (annual ascendant lord), strength 11.15, house 1"
+    },
+    {
+     "start": "1940-05-20",
+     "tone": null,
+     "ret": -5.53,
+     "why": "Moon (annual ascendant lord), strength 4.97, house 4"
+    },
+    {
+     "start": "1941-05-20",
+     "tone": "Bullish",
+     "ret": -16.06,
+     "why": "Venus (Sun-sign lord), strength 13.99, house 9"
+    },
+    {
+     "start": "1942-05-21",
+     "tone": null,
+     "ret": 50.82,
+     "why": "Moon (triplicity lord), strength 12.51, house 9"
+    },
+    {
+     "start": "1943-05-21",
+     "tone": null,
+     "ret": 1.85,
+     "why": "Jupiter (triplicity lord), strength 9.21, house 3"
+    },
+    {
+     "start": "1944-05-20",
+     "tone": null,
+     "ret": 22.69,
+     "why": "Moon (triplicity lord), strength 11.05, house 10"
+    },
+    {
+     "start": "1945-05-20",
+     "tone": null,
+     "ret": 25.35,
+     "why": "Mars (triplicity lord), strength 13.85, house 7"
+    },
+    {
+     "start": "1946-05-21",
+     "tone": "Bullish",
+     "ret": -25.8,
+     "why": "Venus (muntha lord), strength 10.66, house 7"
+    },
+    {
+     "start": "1947-05-21",
+     "tone": null,
+     "ret": 18.37,
+     "why": "Mars (annual ascendant lord), strength 14.33, house 1"
+    },
+    {
+     "start": "1948-05-20",
+     "tone": null,
+     "ret": -10.02,
+     "why": "Moon (muntha lord), strength 6.68, house 4"
+    },
+    {
+     "start": "1949-05-20",
+     "tone": "Bullish",
+     "ret": 26.82,
+     "why": "Venus (Sun-sign lord), strength 13.97, house 9"
+    },
+    {
+     "start": "1950-05-21",
+     "tone": null,
+     "ret": 15.15,
+     "why": "Moon (natal ascendant lord), strength 9.27, house 7"
+    },
+    {
+     "start": "1951-05-21",
+     "tone": null,
+     "ret": 9.76,
+     "why": "Venus (muntha lord), strength 8.36, house 3"
+    },
+    {
+     "start": "1952-05-20",
+     "tone": null,
+     "ret": 5.59,
+     "why": "Moon (triplicity lord), strength 11.52, house 9"
+    },
+    {
+     "start": "1953-05-20",
+     "tone": null,
+     "ret": 15.6,
+     "why": "Moon (natal ascendant lord), strength 7.99, house 11"
+    },
+    {
+     "start": "1954-05-21",
+     "tone": null,
+     "ret": 30.95,
+     "why": "Saturn (triplicity lord), strength 14.13, house 11"
+    },
+    {
+     "start": "1955-05-21",
+     "tone": "Bullish",
+     "ret": 22.92,
+     "why": "Venus (annual ascendant lord), strength 11.54, house 12"
+    },
+    {
+     "start": "1956-05-20",
+     "tone": "Bullish",
+     "ret": 2.07,
+     "why": "Jupiter (muntha lord), strength 11.5, house 1"
+    },
+    {
+     "start": "1957-05-20",
+     "tone": "Bullish",
+     "ret": -7.9,
+     "why": "Jupiter (triplicity lord), strength 11.64, house 11"
+    },
+    {
+     "start": "1958-05-21",
+     "tone": null,
+     "ret": 33.2,
+     "why": "Venus (muntha lord), strength 8.98, house 3"
+    },
+    {
+     "start": "1959-05-21",
+     "tone": null,
+     "ret": -4.15,
+     "why": "Mars (triplicity lord), strength 9.52, house 3"
+    },
+    {
+     "start": "1960-05-20",
+     "tone": "Bullish",
+     "ret": 20.82,
+     "why": "Venus (Sun-sign lord), strength 10.72, house 9"
+    },
+    {
+     "start": "1961-05-20",
+     "tone": null,
+     "ret": -5.13,
+     "why": "Saturn (triplicity lord), strength 14.13, house 4"
+    },
+    {
+     "start": "1962-05-21",
+     "tone": null,
+     "ret": 9.62,
+     "why": "Mars (Moon-sign lord), strength 16.38, house 4"
+    },
+    {
+     "start": "1963-05-21",
+     "tone": null,
+     "ret": 14.78,
+     "why": "Mars (Moon-sign lord), strength 7.57, house 4"
+    },
+    {
+     "start": "1964-05-20",
+     "tone": null,
+     "ret": 11.06,
+     "why": "Saturn (triplicity lord), strength 13.79, house 7"
+    },
+    {
+     "start": "1965-05-20",
+     "tone": null,
+     "ret": -4.2,
+     "why": "Saturn (triplicity lord), strength 10.97, house 5"
+    },
+    {
+     "start": "1966-05-21",
+     "tone": null,
+     "ret": 7.77,
+     "why": "Moon (triplicity lord), strength 11.19, house 5"
+    },
+    {
+     "start": "1967-05-21",
+     "tone": null,
+     "ret": 5.25,
+     "why": "Venus (Sun-sign lord), strength 8.34, house 1"
+    },
+    {
+     "start": "1968-05-20",
+     "tone": "Bullish",
+     "ret": 7.37,
+     "why": "Jupiter (muntha lord), strength 12.64, house 1"
+    },
+    {
+     "start": "1969-05-20",
+     "tone": null,
+     "ret": -29.33,
+     "why": "Mars (muntha lord), strength 14.36, house 1"
+    },
+    {
+     "start": "1970-05-21",
+     "tone": null,
+     "ret": 37.8,
+     "why": "Venus (muntha lord), strength 9.68, house 5"
+    },
+    {
+     "start": "1971-05-21",
+     "tone": "Bullish",
+     "ret": 7.57,
+     "why": "Venus (Sun-sign lord), strength 11.2, house 11"
+    },
+    {
+     "start": "1972-05-20",
+     "tone": "Bullish",
+     "ret": -4.7,
+     "why": "Venus (Sun-sign lord), strength 11.71, house 11"
+    },
+    {
+     "start": "1973-05-21",
+     "tone": "Bullish",
+     "ret": -15.41,
+     "why": "Venus (Sun-sign lord), strength 13.29, house 7"
+    },
+    {
+     "start": "1974-05-21",
+     "tone": null,
+     "ret": 2.52,
+     "why": "Moon (natal ascendant lord), strength 10.82, house 3"
+    },
+    {
+     "start": "1975-05-21",
+     "tone": "Bullish",
+     "ret": 12.33,
+     "why": "Jupiter (triplicity lord), strength 13.05, house 10"
+    },
+    {
+     "start": "1976-05-20",
+     "tone": "Bullish",
+     "ret": -1.71,
+     "why": "Mercury (annual ascendant lord), strength 10.16, house 9"
+    },
+    {
+     "start": "1977-05-21",
+     "tone": null,
+     "ret": -1.34,
+     "why": "Mars (annual ascendant lord), strength 13.75, house 5"
+    },
+    {
+     "start": "1978-05-21",
+     "tone": "Bullish",
+     "ret": 1.84,
+     "why": "Jupiter (annual ascendant lord), strength 11.59, house 4"
+    },
+    {
+     "start": "1979-05-21",
+     "tone": "Bullish",
+     "ret": 7.75,
+     "why": "Venus (Sun-sign lord), strength 11.18, house 10"
+    },
+    {
+     "start": "1980-05-20",
+     "tone": null,
+     "ret": 22.6,
+     "why": "Moon (natal ascendant lord), strength 14.9, house 11"
+    },
+    {
+     "start": "1981-05-21",
+     "tone": "Bullish",
+     "ret": -13.19,
+     "why": "Venus (Sun-sign lord), strength 13.28, house 7"
+    },
+    {
+     "start": "1982-05-21",
+     "tone": null,
+     "ret": 41.5,
+     "why": "Venus (muntha lord), strength 9.02, house 1"
+    },
+    {
+     "start": "1983-05-21",
+     "tone": null,
+     "ret": -3.92,
+     "why": "Moon (annual ascendant lord), strength 6.06, house 3"
+    },
+    {
+     "start": "1984-05-20",
+     "tone": null,
+     "ret": 21.79,
+     "why": "Moon (muntha lord), strength 6.38, house 5"
+    },
+    {
+     "start": "1985-05-21",
+     "tone": null,
+     "ret": 24.45,
+     "why": "Venus (Moon-sign lord), strength 8.95, house 4"
+    },
+    {
+     "start": "1986-05-21",
+     "tone": "Bullish",
+     "ret": 17.83,
+     "why": "Venus (Moon-sign lord), strength 11.52, house 3"
+    },
+    {
+     "start": "1987-05-21",
+     "tone": "Bullish",
+     "ret": -9.05,
+     "why": "Venus (Sun-sign lord), strength 11.17, house 10"
+    },
+    {
+     "start": "1988-05-20",
+     "tone": null,
+     "ret": 26.96,
+     "why": "Moon (natal ascendant lord), strength 13.9, house 11"
+    },
+    {
+     "start": "1989-05-21",
+     "tone": null,
+     "ret": 10.4,
+     "why": "Mars (Moon-sign lord), strength 9.81, house 7"
+    },
+    {
+     "start": "1990-05-21",
+     "tone": null,
+     "ret": 4.97,
+     "why": "Saturn (triplicity lord), strength 14.27, house 10"
+    },
+    {
+     "start": "1991-05-21",
+     "tone": null,
+     "ret": 11.58,
+     "why": "Saturn (muntha lord), strength 12.07, house 7"
+    },
+    {
+     "start": "1992-05-20",
+     "tone": null,
+     "ret": 8.47,
+     "why": "Saturn (triplicity lord), strength 14.56, house 4"
+    },
+    {
+     "start": "1993-05-21",
+     "tone": null,
+     "ret": 0.96,
+     "why": "Saturn (triplicity lord), strength 12.99, house 3"
+    },
+    {
+     "start": "1994-05-21",
+     "tone": "Bullish",
+     "ret": 14.13,
+     "why": "Mercury (Moon-sign lord), strength 10.12, house 1"
+    },
+    {
+     "start": "1995-05-21",
+     "tone": "Bullish",
+     "ret": 29.65,
+     "why": "Venus (Sun-sign lord), strength 11.15, house 10"
+    },
+    {
+     "start": "1996-05-20",
+     "tone": "Bullish",
+     "ret": 25.03,
+     "why": "Jupiter (triplicity lord), strength 10.95, house 3"
+    },
+    {
+     "start": "1997-05-21",
+     "tone": "Bullish",
+     "ret": 32.96,
+     "why": "Venus (Moon-sign lord), strength 13.24, house 5"
+    },
+    {
+     "start": "1998-05-21",
+     "tone": null,
+     "ret": 19.64,
+     "why": "Moon (triplicity lord), strength 9.35, house 11"
+    },
+    {
+     "start": "1999-05-21",
+     "tone": null,
+     "ret": 5.09,
+     "why": "Venus (Sun-sign lord), strength 8.31, house 11"
+    },
+    {
+     "start": "2000-05-20",
+     "tone": null,
+     "ret": -8.17,
+     "why": "Jupiter (triplicity lord), strength 9.67, house 7"
+    },
+    {
+     "start": "2001-05-21",
+     "tone": null,
+     "ret": -15.49,
+     "why": "Moon (triplicity lord), strength 11.61, house 4"
+    },
+    {
+     "start": "2002-05-21",
+     "tone": null,
+     "ret": -15.77,
+     "why": "Saturn (muntha lord), strength 11.2, house 1"
+    },
+    {
+     "start": "2003-05-21",
+     "tone": null,
+     "ret": 18.42,
+     "why": "Venus (Sun-sign lord), strength 9.26, house 9"
+    },
+    {
+     "start": "2004-05-20",
+     "tone": "Bullish",
+     "ret": 9.19,
+     "why": "Jupiter (triplicity lord), strength 11.69, house 11"
+    },
+    {
+     "start": "2005-05-21",
+     "tone": "Bullish",
+     "ret": 6.54,
+     "why": "Venus (Moon-sign lord), strength 13.23, house 5"
+    },
+    {
+     "start": "2006-05-21",
+     "tone": null,
+     "ret": 20.18,
+     "why": "Moon (natal ascendant lord), strength 9.87, house 9"
+    },
+    {
+     "start": "2007-05-21",
+     "tone": null,
+     "ret": -7.18,
+     "why": "Mercury (muntha lord), strength 9.15, house 10"
+    },
+    {
+     "start": "2008-05-20",
+     "tone": "Bullish",
+     "ret": -36.08,
+     "why": "Venus (Sun-sign lord), strength 17.18, house 7"
+    },
+    {
+     "start": "2009-05-21",
+     "tone": "Bullish",
+     "ret": 18.61,
+     "why": "Mercury (triplicity lord), strength 10.06, house 4"
+    },
+    {
+     "start": "2010-05-21",
+     "tone": "Bullish",
+     "ret": 24.42,
+     "why": "Venus (Sun-sign lord), strength 11.47, house 1"
+    },
+    {
+     "start": "2011-05-21",
+     "tone": null,
+     "ret": -2.85,
+     "why": "Venus (Sun-sign lord), strength 9.24, house 9"
+    },
+    {
+     "start": "2012-05-21",
+     "tone": "Bullish",
+     "ret": 28.65,
+     "why": "Venus (Sun-sign lord), strength 13.58, house 7"
+    },
+    {
+     "start": "2013-05-21",
+     "tone": null,
+     "ret": 12.4,
+     "why": "Saturn (annual ascendant lord), strength 14.17, house 9"
+    },
+    {
+     "start": "2014-05-21",
+     "tone": null,
+     "ret": 13.51,
+     "why": "Saturn (triplicity lord), strength 11.73, house 5"
+    },
+    {
+     "start": "2015-05-21",
+     "tone": null,
+     "ret": -3.46,
+     "why": "Saturn (muntha lord), strength 9.51, house 3"
+    },
+    {
+     "start": "2016-05-21",
+     "tone": "Bullish",
+     "ret": 16.05,
+     "why": "Venus (Sun-sign lord), strength 17.16, house 7"
+    },
+    {
+     "start": "2017-05-21",
+     "tone": null,
+     "ret": 13.91,
+     "why": "Jupiter (Moon-sign lord), strength 9.49, house 7"
+    },
+    {
+     "start": "2018-05-21",
+     "tone": "Bullish",
+     "ret": 4.69,
+     "why": "Venus (Sun-sign lord), strength 11.46, house 1"
+    },
+    {
+     "start": "2019-05-21",
+     "tone": null,
+     "ret": 4.63,
+     "why": "Moon (natal ascendant lord), strength 10.46, house 4"
+    },
+    {
+     "start": "2020-05-21",
+     "tone": "Bullish",
+     "ret": 39.96,
+     "why": "Venus (Sun-sign lord), strength 14.28, house 7"
+    },
+    {
+     "start": "2021-05-21",
+     "tone": null,
+     "ret": -6.2,
+     "why": "Sun (Moon-sign lord), strength 8.02, house 3"
+    },
+    {
+     "start": "2022-05-21",
+     "tone": null,
+     "ret": 7.45,
+     "why": "Mercury (muntha lord), strength 9.87, house 11"
+    },
+    {
+     "start": "2023-05-21",
+     "tone": null,
+     "ret": 26.63,
+     "why": "Mars (triplicity lord), strength 9.35, house 11"
+    },
+    {
+     "start": "2024-05-21",
+     "tone": null,
+     "ret": 11.91,
+     "why": "Mars (muntha lord), strength 13.83, house 4"
+    },
+    {
+     "start": "2025-05-21",
+     "tone": null,
+     "ret": 25.12,
+     "why": "Jupiter (triplicity lord), strength 9.69, house 3"
+    }
+   ]
+  },
+  {
+   "name": "T4 ruler of the year combust or retrograde: loss of wealth in every undertaking",
+   "market": "S&P 500 (1929-2026)",
+   "cmp": {
+    "Bearish": {
+     "n": 25,
+     "right": 8,
+     "hit": 32,
+     "base": 29,
+     "mean": 6.22,
+     "mean_other": 8.61,
+     "p_value": 0.4514,
+     "halves": [
+      "5/11 vs 34%",
+      "3/14 vs 24%"
+     ],
+     "q": 1.0
+    }
+   },
+   "years": [
+    {
+     "start": "1929-05-20",
+     "tone": null,
+     "ret": -8.55,
+     "why": "Venus (Sun-sign lord), strength 8.66, house 9"
+    },
+    {
+     "start": "1930-05-21",
+     "tone": null,
+     "ret": -42.37,
+     "why": "Mars (annual ascendant lord), strength 13.98, house 5"
+    },
+    {
+     "start": "1931-05-21",
+     "tone": null,
+     "ret": -60.15,
+     "why": "Moon (natal ascendant lord), strength 9.31, house 5"
+    },
+    {
+     "start": "1932-05-20",
+     "tone": null,
+     "ret": 60.95,
+     "why": "Venus (Sun-sign lord), strength 8.4, house 1"
+    },
+    {
+     "start": "1933-05-20",
+     "tone": "Bearish",
+     "ret": 11.68,
+     "why": "Venus (Sun-sign lord), strength 14.01, house 9"
+    },
+    {
+     "start": "1934-05-21",
+     "tone": null,
+     "ret": 0.41,
+     "why": "Moon (triplicity lord), strength 14.16, house 9"
+    },
+    {
+     "start": "1935-05-21",
+     "tone": null,
+     "ret": 40.04,
+     "why": "Moon (triplicity lord), strength 9.53, house 10"
+    },
+    {
+     "start": "1936-05-20",
+     "tone": null,
+     "ret": 14.37,
+     "why": "Saturn (triplicity lord), strength 13.94, house 9"
+    },
+    {
+     "start": "1937-05-20",
+     "tone": "Bearish",
+     "ret": -37.12,
+     "why": "Mars (triplicity lord), strength 17.07, house 3"
+    },
+    {
+     "start": "1938-05-21",
+     "tone": null,
+     "ret": 10.34,
+     "why": "Moon (natal ascendant lord), strength 6.51, house 3"
+    },
+    {
+     "start": "1939-05-21",
+     "tone": null,
+     "ret": -9.46,
+     "why": "Jupiter (annual ascendant lord), strength 11.15, house 1"
+    },
+    {
+     "start": "1940-05-20",
+     "tone": null,
+     "ret": -5.53,
+     "why": "Moon (annual ascendant lord), strength 4.97, house 4"
+    },
+    {
+     "start": "1941-05-20",
+     "tone": "Bearish",
+     "ret": -16.06,
+     "why": "Venus (Sun-sign lord), strength 13.99, house 9"
+    },
+    {
+     "start": "1942-05-21",
+     "tone": null,
+     "ret": 50.82,
+     "why": "Moon (triplicity lord), strength 12.51, house 9"
+    },
+    {
+     "start": "1943-05-21",
+     "tone": null,
+     "ret": 1.85,
+     "why": "Jupiter (triplicity lord), strength 9.21, house 3"
+    },
+    {
+     "start": "1944-05-20",
+     "tone": null,
+     "ret": 22.69,
+     "why": "Moon (triplicity lord), strength 11.05, house 10"
+    },
+    {
+     "start": "1945-05-20",
+     "tone": null,
+     "ret": 25.35,
+     "why": "Mars (triplicity lord), strength 13.85, house 7"
+    },
+    {
+     "start": "1946-05-21",
+     "tone": null,
+     "ret": -25.8,
+     "why": "Venus (muntha lord), strength 10.66, house 7"
+    },
+    {
+     "start": "1947-05-21",
+     "tone": null,
+     "ret": 18.37,
+     "why": "Mars (annual ascendant lord), strength 14.33, house 1"
+    },
+    {
+     "start": "1948-05-20",
+     "tone": null,
+     "ret": -10.02,
+     "why": "Moon (muntha lord), strength 6.68, house 4"
+    },
+    {
+     "start": "1949-05-20",
+     "tone": "Bearish",
+     "ret": 26.82,
+     "why": "Venus (Sun-sign lord), strength 13.97, house 9"
+    },
+    {
+     "start": "1950-05-21",
+     "tone": null,
+     "ret": 15.15,
+     "why": "Moon (natal ascendant lord), strength 9.27, house 7"
+    },
+    {
+     "start": "1951-05-21",
+     "tone": null,
+     "ret": 9.76,
+     "why": "Venus (muntha lord), strength 8.36, house 3"
+    },
+    {
+     "start": "1952-05-20",
+     "tone": null,
+     "ret": 5.59,
+     "why": "Moon (triplicity lord), strength 11.52, house 9"
+    },
+    {
+     "start": "1953-05-20",
+     "tone": null,
+     "ret": 15.6,
+     "why": "Moon (natal ascendant lord), strength 7.99, house 11"
+    },
+    {
+     "start": "1954-05-21",
+     "tone": "Bearish",
+     "ret": 30.95,
+     "why": "Saturn (triplicity lord), strength 14.13, house 11"
+    },
+    {
+     "start": "1955-05-21",
+     "tone": null,
+     "ret": 22.92,
+     "why": "Venus (annual ascendant lord), strength 11.54, house 12"
+    },
+    {
+     "start": "1956-05-20",
+     "tone": null,
+     "ret": 2.07,
+     "why": "Jupiter (muntha lord), strength 11.5, house 1"
+    },
+    {
+     "start": "1957-05-20",
+     "tone": null,
+     "ret": -7.9,
+     "why": "Jupiter (triplicity lord), strength 11.64, house 11"
+    },
+    {
+     "start": "1958-05-21",
+     "tone": null,
+     "ret": 33.2,
+     "why": "Venus (muntha lord), strength 8.98, house 3"
+    },
+    {
+     "start": "1959-05-21",
+     "tone": null,
+     "ret": -4.15,
+     "why": "Mars (triplicity lord), strength 9.52, house 3"
+    },
+    {
+     "start": "1960-05-20",
+     "tone": "Bearish",
+     "ret": 20.82,
+     "why": "Venus (Sun-sign lord), strength 10.72, house 9"
+    },
+    {
+     "start": "1961-05-20",
+     "tone": "Bearish",
+     "ret": -5.13,
+     "why": "Saturn (triplicity lord), strength 14.13, house 4"
+    },
+    {
+     "start": "1962-05-21",
+     "tone": null,
+     "ret": 9.62,
+     "why": "Mars (Moon-sign lord), strength 16.38, house 4"
+    },
+    {
+     "start": "1963-05-21",
+     "tone": null,
+     "ret": 14.78,
+     "why": "Mars (Moon-sign lord), strength 7.57, house 4"
+    },
+    {
+     "start": "1964-05-20",
+     "tone": null,
+     "ret": 11.06,
+     "why": "Saturn (triplicity lord), strength 13.79, house 7"
+    },
+    {
+     "start": "1965-05-20",
+     "tone": null,
+     "ret": -4.2,
+     "why": "Saturn (triplicity lord), strength 10.97, house 5"
+    },
+    {
+     "start": "1966-05-21",
+     "tone": "Bearish",
+     "ret": 7.77,
+     "why": "Moon (triplicity lord), strength 11.19, house 5"
+    },
+    {
+     "start": "1967-05-21",
+     "tone": null,
+     "ret": 5.25,
+     "why": "Venus (Sun-sign lord), strength 8.34, house 1"
+    },
+    {
+     "start": "1968-05-20",
+     "tone": null,
+     "ret": 7.37,
+     "why": "Jupiter (muntha lord), strength 12.64, house 1"
+    },
+    {
+     "start": "1969-05-20",
+     "tone": "Bearish",
+     "ret": -29.33,
+     "why": "Mars (muntha lord), strength 14.36, house 1"
+    },
+    {
+     "start": "1970-05-21",
+     "tone": null,
+     "ret": 37.8,
+     "why": "Venus (muntha lord), strength 9.68, house 5"
+    },
+    {
+     "start": "1971-05-21",
+     "tone": null,
+     "ret": 7.57,
+     "why": "Venus (Sun-sign lord), strength 11.2, house 11"
+    },
+    {
+     "start": "1972-05-20",
+     "tone": null,
+     "ret": -4.7,
+     "why": "Venus (Sun-sign lord), strength 11.71, house 11"
+    },
+    {
+     "start": "1973-05-21",
+     "tone": null,
+     "ret": -15.41,
+     "why": "Venus (Sun-sign lord), strength 13.29, house 7"
+    },
+    {
+     "start": "1974-05-21",
+     "tone": "Bearish",
+     "ret": 2.52,
+     "why": "Moon (natal ascendant lord), strength 10.82, house 3"
+    },
+    {
+     "start": "1975-05-21",
+     "tone": null,
+     "ret": 12.33,
+     "why": "Jupiter (triplicity lord), strength 13.05, house 10"
+    },
+    {
+     "start": "1976-05-20",
+     "tone": "Bearish",
+     "ret": -1.71,
+     "why": "Mercury (annual ascendant lord), strength 10.16, house 9"
+    },
+    {
+     "start": "1977-05-21",
+     "tone": null,
+     "ret": -1.34,
+     "why": "Mars (annual ascendant lord), strength 13.75, house 5"
+    },
+    {
+     "start": "1978-05-21",
+     "tone": null,
+     "ret": 1.84,
+     "why": "Jupiter (annual ascendant lord), strength 11.59, house 4"
+    },
+    {
+     "start": "1979-05-21",
+     "tone": null,
+     "ret": 7.75,
+     "why": "Venus (Sun-sign lord), strength 11.18, house 10"
+    },
+    {
+     "start": "1980-05-20",
+     "tone": null,
+     "ret": 22.6,
+     "why": "Moon (natal ascendant lord), strength 14.9, house 11"
+    },
+    {
+     "start": "1981-05-21",
+     "tone": null,
+     "ret": -13.19,
+     "why": "Venus (Sun-sign lord), strength 13.28, house 7"
+    },
+    {
+     "start": "1982-05-21",
+     "tone": null,
+     "ret": 41.5,
+     "why": "Venus (muntha lord), strength 9.02, house 1"
+    },
+    {
+     "start": "1983-05-21",
+     "tone": null,
+     "ret": -3.92,
+     "why": "Moon (annual ascendant lord), strength 6.06, house 3"
+    },
+    {
+     "start": "1984-05-20",
+     "tone": null,
+     "ret": 21.79,
+     "why": "Moon (muntha lord), strength 6.38, house 5"
+    },
+    {
+     "start": "1985-05-21",
+     "tone": null,
+     "ret": 24.45,
+     "why": "Venus (Moon-sign lord), strength 8.95, house 4"
+    },
+    {
+     "start": "1986-05-21",
+     "tone": null,
+     "ret": 17.83,
+     "why": "Venus (Moon-sign lord), strength 11.52, house 3"
+    },
+    {
+     "start": "1987-05-21",
+     "tone": null,
+     "ret": -9.05,
+     "why": "Venus (Sun-sign lord), strength 11.17, house 10"
+    },
+    {
+     "start": "1988-05-20",
+     "tone": null,
+     "ret": 26.96,
+     "why": "Moon (natal ascendant lord), strength 13.9, house 11"
+    },
+    {
+     "start": "1989-05-21",
+     "tone": null,
+     "ret": 10.4,
+     "why": "Mars (Moon-sign lord), strength 9.81, house 7"
+    },
+    {
+     "start": "1990-05-21",
+     "tone": "Bearish",
+     "ret": 4.97,
+     "why": "Saturn (triplicity lord), strength 14.27, house 10"
+    },
+    {
+     "start": "1991-05-21",
+     "tone": "Bearish",
+     "ret": 11.58,
+     "why": "Saturn (muntha lord), strength 12.07, house 7"
+    },
+    {
+     "start": "1992-05-20",
+     "tone": null,
+     "ret": 8.47,
+     "why": "Saturn (triplicity lord), strength 14.56, house 4"
+    },
+    {
+     "start": "1993-05-21",
+     "tone": null,
+     "ret": 0.96,
+     "why": "Saturn (triplicity lord), strength 12.99, house 3"
+    },
+    {
+     "start": "1994-05-21",
+     "tone": null,
+     "ret": 14.13,
+     "why": "Mercury (Moon-sign lord), strength 10.12, house 1"
+    },
+    {
+     "start": "1995-05-21",
+     "tone": null,
+     "ret": 29.65,
+     "why": "Venus (Sun-sign lord), strength 11.15, house 10"
+    },
+    {
+     "start": "1996-05-20",
+     "tone": "Bearish",
+     "ret": 25.03,
+     "why": "Jupiter (triplicity lord), strength 10.95, house 3"
+    },
+    {
+     "start": "1997-05-21",
+     "tone": null,
+     "ret": 32.96,
+     "why": "Venus (Moon-sign lord), strength 13.24, house 5"
+    },
+    {
+     "start": "1998-05-21",
+     "tone": null,
+     "ret": 19.64,
+     "why": "Moon (triplicity lord), strength 9.35, house 11"
+    },
+    {
+     "start": "1999-05-21",
+     "tone": null,
+     "ret": 5.09,
+     "why": "Venus (Sun-sign lord), strength 8.31, house 11"
+    },
+    {
+     "start": "2000-05-20",
+     "tone": "Bearish",
+     "ret": -8.17,
+     "why": "Jupiter (triplicity lord), strength 9.67, house 7"
+    },
+    {
+     "start": "2001-05-21",
+     "tone": null,
+     "ret": -15.49,
+     "why": "Moon (triplicity lord), strength 11.61, house 4"
+    },
+    {
+     "start": "2002-05-21",
+     "tone": null,
+     "ret": -15.77,
+     "why": "Saturn (muntha lord), strength 11.2, house 1"
+    },
+    {
+     "start": "2003-05-21",
+     "tone": null,
+     "ret": 18.42,
+     "why": "Venus (Sun-sign lord), strength 9.26, house 9"
+    },
+    {
+     "start": "2004-05-20",
+     "tone": null,
+     "ret": 9.19,
+     "why": "Jupiter (triplicity lord), strength 11.69, house 11"
+    },
+    {
+     "start": "2005-05-21",
+     "tone": null,
+     "ret": 6.54,
+     "why": "Venus (Moon-sign lord), strength 13.23, house 5"
+    },
+    {
+     "start": "2006-05-21",
+     "tone": null,
+     "ret": 20.18,
+     "why": "Moon (natal ascendant lord), strength 9.87, house 9"
+    },
+    {
+     "start": "2007-05-21",
+     "tone": null,
+     "ret": -7.18,
+     "why": "Mercury (muntha lord), strength 9.15, house 10"
+    },
+    {
+     "start": "2008-05-20",
+     "tone": "Bearish",
+     "ret": -36.08,
+     "why": "Venus (Sun-sign lord), strength 17.18, house 7"
+    },
+    {
+     "start": "2009-05-21",
+     "tone": "Bearish",
+     "ret": 18.61,
+     "why": "Mercury (triplicity lord), strength 10.06, house 4"
+    },
+    {
+     "start": "2010-05-21",
+     "tone": null,
+     "ret": 24.42,
+     "why": "Venus (Sun-sign lord), strength 11.47, house 1"
+    },
+    {
+     "start": "2011-05-21",
+     "tone": null,
+     "ret": -2.85,
+     "why": "Venus (Sun-sign lord), strength 9.24, house 9"
+    },
+    {
+     "start": "2012-05-21",
+     "tone": "Bearish",
+     "ret": 28.65,
+     "why": "Venus (Sun-sign lord), strength 13.58, house 7"
+    },
+    {
+     "start": "2013-05-21",
+     "tone": "Bearish",
+     "ret": 12.4,
+     "why": "Saturn (annual ascendant lord), strength 14.17, house 9"
+    },
+    {
+     "start": "2014-05-21",
+     "tone": "Bearish",
+     "ret": 13.51,
+     "why": "Saturn (triplicity lord), strength 11.73, house 5"
+    },
+    {
+     "start": "2015-05-21",
+     "tone": "Bearish",
+     "ret": -3.46,
+     "why": "Saturn (muntha lord), strength 9.51, house 3"
+    },
+    {
+     "start": "2016-05-21",
+     "tone": "Bearish",
+     "ret": 16.05,
+     "why": "Venus (Sun-sign lord), strength 17.16, house 7"
+    },
+    {
+     "start": "2017-05-21",
+     "tone": "Bearish",
+     "ret": 13.91,
+     "why": "Jupiter (Moon-sign lord), strength 9.49, house 7"
+    },
+    {
+     "start": "2018-05-21",
+     "tone": null,
+     "ret": 4.69,
+     "why": "Venus (Sun-sign lord), strength 11.46, house 1"
+    },
+    {
+     "start": "2019-05-21",
+     "tone": null,
+     "ret": 4.63,
+     "why": "Moon (natal ascendant lord), strength 10.46, house 4"
+    },
+    {
+     "start": "2020-05-21",
+     "tone": "Bearish",
+     "ret": 39.96,
+     "why": "Venus (Sun-sign lord), strength 14.28, house 7"
+    },
+    {
+     "start": "2021-05-21",
+     "tone": null,
+     "ret": -6.2,
+     "why": "Sun (Moon-sign lord), strength 8.02, house 3"
+    },
+    {
+     "start": "2022-05-21",
+     "tone": "Bearish",
+     "ret": 7.45,
+     "why": "Mercury (muntha lord), strength 9.87, house 11"
+    },
+    {
+     "start": "2023-05-21",
+     "tone": null,
+     "ret": 26.63,
+     "why": "Mars (triplicity lord), strength 9.35, house 11"
+    },
+    {
+     "start": "2024-05-21",
+     "tone": null,
+     "ret": 11.91,
+     "why": "Mars (muntha lord), strength 13.83, house 4"
+    },
+    {
+     "start": "2025-05-21",
+     "tone": null,
+     "ret": 25.12,
+     "why": "Jupiter (triplicity lord), strength 9.69, house 3"
+    }
+   ]
+  },
+  {
+   "name": "T6 Mercury as ruler of the year in the 2nd or 11th aspected by benefics: gain from trade",
+   "market": "S&P 500 (1929-2026)",
+   "cmp": {
+    "Bullish": {
+     "n": 1,
+     "right": 1,
+     "hit": 100,
+     "base": 70,
+     "mean": 7.45,
+     "mean_other": 8.0,
+     "p_value": 0.6979,
+     "halves": [
+      "\u2013",
+      "1/1 vs 77%"
+     ],
+     "q": 1.0
+    }
+   },
+   "years": [
+    {
+     "start": "1929-05-20",
+     "tone": null,
+     "ret": -8.55,
+     "why": "Venus (Sun-sign lord), strength 8.66, house 9"
+    },
+    {
+     "start": "1930-05-21",
+     "tone": null,
+     "ret": -42.37,
+     "why": "Mars (annual ascendant lord), strength 13.98, house 5"
+    },
+    {
+     "start": "1931-05-21",
+     "tone": null,
+     "ret": -60.15,
+     "why": "Moon (natal ascendant lord), strength 9.31, house 5"
+    },
+    {
+     "start": "1932-05-20",
+     "tone": null,
+     "ret": 60.95,
+     "why": "Venus (Sun-sign lord), strength 8.4, house 1"
+    },
+    {
+     "start": "1933-05-20",
+     "tone": null,
+     "ret": 11.68,
+     "why": "Venus (Sun-sign lord), strength 14.01, house 9"
+    },
+    {
+     "start": "1934-05-21",
+     "tone": null,
+     "ret": 0.41,
+     "why": "Moon (triplicity lord), strength 14.16, house 9"
+    },
+    {
+     "start": "1935-05-21",
+     "tone": null,
+     "ret": 40.04,
+     "why": "Moon (triplicity lord), strength 9.53, house 10"
+    },
+    {
+     "start": "1936-05-20",
+     "tone": null,
+     "ret": 14.37,
+     "why": "Saturn (triplicity lord), strength 13.94, house 9"
+    },
+    {
+     "start": "1937-05-20",
+     "tone": null,
+     "ret": -37.12,
+     "why": "Mars (triplicity lord), strength 17.07, house 3"
+    },
+    {
+     "start": "1938-05-21",
+     "tone": null,
+     "ret": 10.34,
+     "why": "Moon (natal ascendant lord), strength 6.51, house 3"
+    },
+    {
+     "start": "1939-05-21",
+     "tone": null,
+     "ret": -9.46,
+     "why": "Jupiter (annual ascendant lord), strength 11.15, house 1"
+    },
+    {
+     "start": "1940-05-20",
+     "tone": null,
+     "ret": -5.53,
+     "why": "Moon (annual ascendant lord), strength 4.97, house 4"
+    },
+    {
+     "start": "1941-05-20",
+     "tone": null,
+     "ret": -16.06,
+     "why": "Venus (Sun-sign lord), strength 13.99, house 9"
+    },
+    {
+     "start": "1942-05-21",
+     "tone": null,
+     "ret": 50.82,
+     "why": "Moon (triplicity lord), strength 12.51, house 9"
+    },
+    {
+     "start": "1943-05-21",
+     "tone": null,
+     "ret": 1.85,
+     "why": "Jupiter (triplicity lord), strength 9.21, house 3"
+    },
+    {
+     "start": "1944-05-20",
+     "tone": null,
+     "ret": 22.69,
+     "why": "Moon (triplicity lord), strength 11.05, house 10"
+    },
+    {
+     "start": "1945-05-20",
+     "tone": null,
+     "ret": 25.35,
+     "why": "Mars (triplicity lord), strength 13.85, house 7"
+    },
+    {
+     "start": "1946-05-21",
+     "tone": null,
+     "ret": -25.8,
+     "why": "Venus (muntha lord), strength 10.66, house 7"
+    },
+    {
+     "start": "1947-05-21",
+     "tone": null,
+     "ret": 18.37,
+     "why": "Mars (annual ascendant lord), strength 14.33, house 1"
+    },
+    {
+     "start": "1948-05-20",
+     "tone": null,
+     "ret": -10.02,
+     "why": "Moon (muntha lord), strength 6.68, house 4"
+    },
+    {
+     "start": "1949-05-20",
+     "tone": null,
+     "ret": 26.82,
+     "why": "Venus (Sun-sign lord), strength 13.97, house 9"
+    },
+    {
+     "start": "1950-05-21",
+     "tone": null,
+     "ret": 15.15,
+     "why": "Moon (natal ascendant lord), strength 9.27, house 7"
+    },
+    {
+     "start": "1951-05-21",
+     "tone": null,
+     "ret": 9.76,
+     "why": "Venus (muntha lord), strength 8.36, house 3"
+    },
+    {
+     "start": "1952-05-20",
+     "tone": null,
+     "ret": 5.59,
+     "why": "Moon (triplicity lord), strength 11.52, house 9"
+    },
+    {
+     "start": "1953-05-20",
+     "tone": null,
+     "ret": 15.6,
+     "why": "Moon (natal ascendant lord), strength 7.99, house 11"
+    },
+    {
+     "start": "1954-05-21",
+     "tone": null,
+     "ret": 30.95,
+     "why": "Saturn (triplicity lord), strength 14.13, house 11"
+    },
+    {
+     "start": "1955-05-21",
+     "tone": null,
+     "ret": 22.92,
+     "why": "Venus (annual ascendant lord), strength 11.54, house 12"
+    },
+    {
+     "start": "1956-05-20",
+     "tone": null,
+     "ret": 2.07,
+     "why": "Jupiter (muntha lord), strength 11.5, house 1"
+    },
+    {
+     "start": "1957-05-20",
+     "tone": null,
+     "ret": -7.9,
+     "why": "Jupiter (triplicity lord), strength 11.64, house 11"
+    },
+    {
+     "start": "1958-05-21",
+     "tone": null,
+     "ret": 33.2,
+     "why": "Venus (muntha lord), strength 8.98, house 3"
+    },
+    {
+     "start": "1959-05-21",
+     "tone": null,
+     "ret": -4.15,
+     "why": "Mars (triplicity lord), strength 9.52, house 3"
+    },
+    {
+     "start": "1960-05-20",
+     "tone": null,
+     "ret": 20.82,
+     "why": "Venus (Sun-sign lord), strength 10.72, house 9"
+    },
+    {
+     "start": "1961-05-20",
+     "tone": null,
+     "ret": -5.13,
+     "why": "Saturn (triplicity lord), strength 14.13, house 4"
+    },
+    {
+     "start": "1962-05-21",
+     "tone": null,
+     "ret": 9.62,
+     "why": "Mars (Moon-sign lord), strength 16.38, house 4"
+    },
+    {
+     "start": "1963-05-21",
+     "tone": null,
+     "ret": 14.78,
+     "why": "Mars (Moon-sign lord), strength 7.57, house 4"
+    },
+    {
+     "start": "1964-05-20",
+     "tone": null,
+     "ret": 11.06,
+     "why": "Saturn (triplicity lord), strength 13.79, house 7"
+    },
+    {
+     "start": "1965-05-20",
+     "tone": null,
+     "ret": -4.2,
+     "why": "Saturn (triplicity lord), strength 10.97, house 5"
+    },
+    {
+     "start": "1966-05-21",
+     "tone": null,
+     "ret": 7.77,
+     "why": "Moon (triplicity lord), strength 11.19, house 5"
+    },
+    {
+     "start": "1967-05-21",
+     "tone": null,
+     "ret": 5.25,
+     "why": "Venus (Sun-sign lord), strength 8.34, house 1"
+    },
+    {
+     "start": "1968-05-20",
+     "tone": null,
+     "ret": 7.37,
+     "why": "Jupiter (muntha lord), strength 12.64, house 1"
+    },
+    {
+     "start": "1969-05-20",
+     "tone": null,
+     "ret": -29.33,
+     "why": "Mars (muntha lord), strength 14.36, house 1"
+    },
+    {
+     "start": "1970-05-21",
+     "tone": null,
+     "ret": 37.8,
+     "why": "Venus (muntha lord), strength 9.68, house 5"
+    },
+    {
+     "start": "1971-05-21",
+     "tone": null,
+     "ret": 7.57,
+     "why": "Venus (Sun-sign lord), strength 11.2, house 11"
+    },
+    {
+     "start": "1972-05-20",
+     "tone": null,
+     "ret": -4.7,
+     "why": "Venus (Sun-sign lord), strength 11.71, house 11"
+    },
+    {
+     "start": "1973-05-21",
+     "tone": null,
+     "ret": -15.41,
+     "why": "Venus (Sun-sign lord), strength 13.29, house 7"
+    },
+    {
+     "start": "1974-05-21",
+     "tone": null,
+     "ret": 2.52,
+     "why": "Moon (natal ascendant lord), strength 10.82, house 3"
+    },
+    {
+     "start": "1975-05-21",
+     "tone": null,
+     "ret": 12.33,
+     "why": "Jupiter (triplicity lord), strength 13.05, house 10"
+    },
+    {
+     "start": "1976-05-20",
+     "tone": null,
+     "ret": -1.71,
+     "why": "Mercury (annual ascendant lord), strength 10.16, house 9"
+    },
+    {
+     "start": "1977-05-21",
+     "tone": null,
+     "ret": -1.34,
+     "why": "Mars (annual ascendant lord), strength 13.75, house 5"
+    },
+    {
+     "start": "1978-05-21",
+     "tone": null,
+     "ret": 1.84,
+     "why": "Jupiter (annual ascendant lord), strength 11.59, house 4"
+    },
+    {
+     "start": "1979-05-21",
+     "tone": null,
+     "ret": 7.75,
+     "why": "Venus (Sun-sign lord), strength 11.18, house 10"
+    },
+    {
+     "start": "1980-05-20",
+     "tone": null,
+     "ret": 22.6,
+     "why": "Moon (natal ascendant lord), strength 14.9, house 11"
+    },
+    {
+     "start": "1981-05-21",
+     "tone": null,
+     "ret": -13.19,
+     "why": "Venus (Sun-sign lord), strength 13.28, house 7"
+    },
+    {
+     "start": "1982-05-21",
+     "tone": null,
+     "ret": 41.5,
+     "why": "Venus (muntha lord), strength 9.02, house 1"
+    },
+    {
+     "start": "1983-05-21",
+     "tone": null,
+     "ret": -3.92,
+     "why": "Moon (annual ascendant lord), strength 6.06, house 3"
+    },
+    {
+     "start": "1984-05-20",
+     "tone": null,
+     "ret": 21.79,
+     "why": "Moon (muntha lord), strength 6.38, house 5"
+    },
+    {
+     "start": "1985-05-21",
+     "tone": null,
+     "ret": 24.45,
+     "why": "Venus (Moon-sign lord), strength 8.95, house 4"
+    },
+    {
+     "start": "1986-05-21",
+     "tone": null,
+     "ret": 17.83,
+     "why": "Venus (Moon-sign lord), strength 11.52, house 3"
+    },
+    {
+     "start": "1987-05-21",
+     "tone": null,
+     "ret": -9.05,
+     "why": "Venus (Sun-sign lord), strength 11.17, house 10"
+    },
+    {
+     "start": "1988-05-20",
+     "tone": null,
+     "ret": 26.96,
+     "why": "Moon (natal ascendant lord), strength 13.9, house 11"
+    },
+    {
+     "start": "1989-05-21",
+     "tone": null,
+     "ret": 10.4,
+     "why": "Mars (Moon-sign lord), strength 9.81, house 7"
+    },
+    {
+     "start": "1990-05-21",
+     "tone": null,
+     "ret": 4.97,
+     "why": "Saturn (triplicity lord), strength 14.27, house 10"
+    },
+    {
+     "start": "1991-05-21",
+     "tone": null,
+     "ret": 11.58,
+     "why": "Saturn (muntha lord), strength 12.07, house 7"
+    },
+    {
+     "start": "1992-05-20",
+     "tone": null,
+     "ret": 8.47,
+     "why": "Saturn (triplicity lord), strength 14.56, house 4"
+    },
+    {
+     "start": "1993-05-21",
+     "tone": null,
+     "ret": 0.96,
+     "why": "Saturn (triplicity lord), strength 12.99, house 3"
+    },
+    {
+     "start": "1994-05-21",
+     "tone": null,
+     "ret": 14.13,
+     "why": "Mercury (Moon-sign lord), strength 10.12, house 1"
+    },
+    {
+     "start": "1995-05-21",
+     "tone": null,
+     "ret": 29.65,
+     "why": "Venus (Sun-sign lord), strength 11.15, house 10"
+    },
+    {
+     "start": "1996-05-20",
+     "tone": null,
+     "ret": 25.03,
+     "why": "Jupiter (triplicity lord), strength 10.95, house 3"
+    },
+    {
+     "start": "1997-05-21",
+     "tone": null,
+     "ret": 32.96,
+     "why": "Venus (Moon-sign lord), strength 13.24, house 5"
+    },
+    {
+     "start": "1998-05-21",
+     "tone": null,
+     "ret": 19.64,
+     "why": "Moon (triplicity lord), strength 9.35, house 11"
+    },
+    {
+     "start": "1999-05-21",
+     "tone": null,
+     "ret": 5.09,
+     "why": "Venus (Sun-sign lord), strength 8.31, house 11"
+    },
+    {
+     "start": "2000-05-20",
+     "tone": null,
+     "ret": -8.17,
+     "why": "Jupiter (triplicity lord), strength 9.67, house 7"
+    },
+    {
+     "start": "2001-05-21",
+     "tone": null,
+     "ret": -15.49,
+     "why": "Moon (triplicity lord), strength 11.61, house 4"
+    },
+    {
+     "start": "2002-05-21",
+     "tone": null,
+     "ret": -15.77,
+     "why": "Saturn (muntha lord), strength 11.2, house 1"
+    },
+    {
+     "start": "2003-05-21",
+     "tone": null,
+     "ret": 18.42,
+     "why": "Venus (Sun-sign lord), strength 9.26, house 9"
+    },
+    {
+     "start": "2004-05-20",
+     "tone": null,
+     "ret": 9.19,
+     "why": "Jupiter (triplicity lord), strength 11.69, house 11"
+    },
+    {
+     "start": "2005-05-21",
+     "tone": null,
+     "ret": 6.54,
+     "why": "Venus (Moon-sign lord), strength 13.23, house 5"
+    },
+    {
+     "start": "2006-05-21",
+     "tone": null,
+     "ret": 20.18,
+     "why": "Moon (natal ascendant lord), strength 9.87, house 9"
+    },
+    {
+     "start": "2007-05-21",
+     "tone": null,
+     "ret": -7.18,
+     "why": "Mercury (muntha lord), strength 9.15, house 10"
+    },
+    {
+     "start": "2008-05-20",
+     "tone": null,
+     "ret": -36.08,
+     "why": "Venus (Sun-sign lord), strength 17.18, house 7"
+    },
+    {
+     "start": "2009-05-21",
+     "tone": null,
+     "ret": 18.61,
+     "why": "Mercury (triplicity lord), strength 10.06, house 4"
+    },
+    {
+     "start": "2010-05-21",
+     "tone": null,
+     "ret": 24.42,
+     "why": "Venus (Sun-sign lord), strength 11.47, house 1"
+    },
+    {
+     "start": "2011-05-21",
+     "tone": null,
+     "ret": -2.85,
+     "why": "Venus (Sun-sign lord), strength 9.24, house 9"
+    },
+    {
+     "start": "2012-05-21",
+     "tone": null,
+     "ret": 28.65,
+     "why": "Venus (Sun-sign lord), strength 13.58, house 7"
+    },
+    {
+     "start": "2013-05-21",
+     "tone": null,
+     "ret": 12.4,
+     "why": "Saturn (annual ascendant lord), strength 14.17, house 9"
+    },
+    {
+     "start": "2014-05-21",
+     "tone": null,
+     "ret": 13.51,
+     "why": "Saturn (triplicity lord), strength 11.73, house 5"
+    },
+    {
+     "start": "2015-05-21",
+     "tone": null,
+     "ret": -3.46,
+     "why": "Saturn (muntha lord), strength 9.51, house 3"
+    },
+    {
+     "start": "2016-05-21",
+     "tone": null,
+     "ret": 16.05,
+     "why": "Venus (Sun-sign lord), strength 17.16, house 7"
+    },
+    {
+     "start": "2017-05-21",
+     "tone": null,
+     "ret": 13.91,
+     "why": "Jupiter (Moon-sign lord), strength 9.49, house 7"
+    },
+    {
+     "start": "2018-05-21",
+     "tone": null,
+     "ret": 4.69,
+     "why": "Venus (Sun-sign lord), strength 11.46, house 1"
+    },
+    {
+     "start": "2019-05-21",
+     "tone": null,
+     "ret": 4.63,
+     "why": "Moon (natal ascendant lord), strength 10.46, house 4"
+    },
+    {
+     "start": "2020-05-21",
+     "tone": null,
+     "ret": 39.96,
+     "why": "Venus (Sun-sign lord), strength 14.28, house 7"
+    },
+    {
+     "start": "2021-05-21",
+     "tone": null,
+     "ret": -6.2,
+     "why": "Sun (Moon-sign lord), strength 8.02, house 3"
+    },
+    {
+     "start": "2022-05-21",
+     "tone": "Bullish",
+     "ret": 7.45,
+     "why": "Mercury (muntha lord), strength 9.87, house 11"
+    },
+    {
+     "start": "2023-05-21",
+     "tone": null,
+     "ret": 26.63,
+     "why": "Mars (triplicity lord), strength 9.35, house 11"
+    },
+    {
+     "start": "2024-05-21",
+     "tone": null,
+     "ret": 11.91,
+     "why": "Mars (muntha lord), strength 13.83, house 4"
+    },
+    {
+     "start": "2025-05-21",
+     "tone": null,
+     "ret": 25.12,
+     "why": "Jupiter (triplicity lord), strength 9.69, house 3"
+    }
+   ]
+  },
+  {
+   "name": "T10 gold: Mercury strong (>10) in the Aries-ingress chart = gain, weak (<5) = loss",
+   "market": "Gold 1972-2026",
+   "cmp": {
+    "Bearish": {
+     "n": 15,
+     "right": 5,
+     "hit": 33,
+     "base": 38,
+     "mean": 5.29,
+     "mean_other": 13.93,
+     "p_value": 0.7451,
+     "halves": [
+      "4/8 vs 47%",
+      "1/7 vs 30%"
+     ],
+     "q": 1.0
+    }
+   },
+   "years": [
+    {
+     "start": "1972-04-13",
+     "tone": null,
+     "ret": 85.71,
+     "why": "Mercury 5.13"
+    },
+    {
+     "start": "1973-04-13",
+     "tone": null,
+     "ret": 89.01,
+     "why": "Mercury 5.66"
+    },
+    {
+     "start": "1974-04-13",
+     "tone": null,
+     "ret": -1.16,
+     "why": "Mercury 5.14"
+    },
+    {
+     "start": "1975-04-14",
+     "tone": "Bearish",
+     "ret": -24.71,
+     "why": "Mercury 4.33"
+    },
+    {
+     "start": "1976-04-13",
+     "tone": null,
+     "ret": 16.41,
+     "why": "Mercury 7.32"
+    },
+    {
+     "start": "1977-04-13",
+     "tone": null,
+     "ret": 17.45,
+     "why": "Mercury 8.44"
+    },
+    {
+     "start": "1978-04-13",
+     "tone": "Bearish",
+     "ret": 36.57,
+     "why": "Mercury 4.38"
+    },
+    {
+     "start": "1979-04-14",
+     "tone": null,
+     "ret": 116.32,
+     "why": "Mercury 5.61"
+    },
+    {
+     "start": "1980-04-13",
+     "tone": null,
+     "ret": -4.06,
+     "why": "Mercury 5.6"
+    },
+    {
+     "start": "1981-04-13",
+     "tone": "Bearish",
+     "ret": -29.44,
+     "why": "Mercury 3.77"
+    },
+    {
+     "start": "1982-04-13",
+     "tone": "Bearish",
+     "ret": 23.71,
+     "why": "Mercury 4.23"
+    },
+    {
+     "start": "1983-04-14",
+     "tone": null,
+     "ret": -12.01,
+     "why": "Mercury 8.41"
+    },
+    {
+     "start": "1984-04-13",
+     "tone": null,
+     "ret": -14.17,
+     "why": "Mercury 7.34"
+    },
+    {
+     "start": "1985-04-13",
+     "tone": "Bearish",
+     "ret": 3.98,
+     "why": "Mercury 3.79"
+    },
+    {
+     "start": "1986-04-13",
+     "tone": null,
+     "ret": 28.82,
+     "why": "Mercury 5.66"
+    },
+    {
+     "start": "1987-04-14",
+     "tone": null,
+     "ret": 3.2,
+     "why": "Mercury 6.43"
+    },
+    {
+     "start": "1988-04-13",
+     "tone": "Bearish",
+     "ret": -15.04,
+     "why": "Mercury 4.26"
+    },
+    {
+     "start": "1989-04-13",
+     "tone": null,
+     "ret": -2.6,
+     "why": "Mercury 6.32"
+    },
+    {
+     "start": "1990-04-13",
+     "tone": null,
+     "ret": -4.28,
+     "why": "Mercury 8.46"
+    },
+    {
+     "start": "1991-04-14",
+     "tone": "Bearish",
+     "ret": -5.31,
+     "why": "Mercury 4.2"
+    },
+    {
+     "start": "1992-04-13",
+     "tone": null,
+     "ret": 0.88,
+     "why": "Mercury 5.57"
+    },
+    {
+     "start": "1993-04-13",
+     "tone": null,
+     "ret": 10.23,
+     "why": "Mercury 5.63"
+    },
+    {
+     "start": "1994-04-13",
+     "tone": "Bearish",
+     "ret": 3.71,
+     "why": "Mercury 3.79"
+    },
+    {
+     "start": "1995-04-14",
+     "tone": null,
+     "ret": 0.51,
+     "why": "Mercury 5.09"
+    },
+    {
+     "start": "1996-04-13",
+     "tone": null,
+     "ret": -12.47,
+     "why": "Mercury 7.43"
+    },
+    {
+     "start": "1997-04-13",
+     "tone": null,
+     "ret": -10.47,
+     "why": "Mercury 7.42"
+    },
+    {
+     "start": "1998-04-13",
+     "tone": null,
+     "ret": -8.12,
+     "why": "Mercury 6.64"
+    },
+    {
+     "start": "1999-04-14",
+     "tone": null,
+     "ret": -1.06,
+     "why": "Mercury 5.66"
+    },
+    {
+     "start": "2000-04-13",
+     "tone": null,
+     "ret": -7.14,
+     "why": "Mercury 6.48"
+    },
+    {
+     "start": "2001-04-13",
+     "tone": "Bearish",
+     "ret": 16.15,
+     "why": "Mercury 3.88"
+    },
+    {
+     "start": "2002-04-14",
+     "tone": null,
+     "ret": 8.54,
+     "why": "Mercury 6.25"
+    },
+    {
+     "start": "2003-04-14",
+     "tone": null,
+     "ret": 28.12,
+     "why": "Mercury 8.45"
+    },
+    {
+     "start": "2004-04-13",
+     "tone": "Bearish",
+     "ret": 2.19,
+     "why": "Mercury 4.64"
+    },
+    {
+     "start": "2005-04-13",
+     "tone": null,
+     "ret": 38.95,
+     "why": "Mercury 6.45"
+    },
+    {
+     "start": "2006-04-14",
+     "tone": null,
+     "ret": 14.9,
+     "why": "Mercury 5.65"
+    },
+    {
+     "start": "2007-04-14",
+     "tone": null,
+     "ret": 34.75,
+     "why": "Mercury 5.09"
+    },
+    {
+     "start": "2008-04-13",
+     "tone": "Bearish",
+     "ret": -3.13,
+     "why": "Mercury 4.08"
+    },
+    {
+     "start": "2009-04-13",
+     "tone": null,
+     "ret": 28.85,
+     "why": "Mercury 7.37"
+    },
+    {
+     "start": "2010-04-14",
+     "tone": null,
+     "ret": 26.21,
+     "why": "Mercury 8.41"
+    },
+    {
+     "start": "2011-04-14",
+     "tone": "Bearish",
+     "ret": 15.44,
+     "why": "Mercury 4.26"
+    },
+    {
+     "start": "2012-04-13",
+     "tone": null,
+     "ret": -10.63,
+     "why": "Mercury 5.64"
+    },
+    {
+     "start": "2013-04-13",
+     "tone": null,
+     "ret": -12.15,
+     "why": "Mercury 5.57"
+    },
+    {
+     "start": "2014-04-14",
+     "tone": null,
+     "ret": -9.05,
+     "why": "Mercury 6.63"
+    },
+    {
+     "start": "2015-04-14",
+     "tone": "Bearish",
+     "ret": 5.01,
+     "why": "Mercury 4.61"
+    },
+    {
+     "start": "2016-04-13",
+     "tone": null,
+     "ret": 2.1,
+     "why": "Mercury 8.44"
+    },
+    {
+     "start": "2017-04-13",
+     "tone": null,
+     "ret": 4.58,
+     "why": "Mercury 6.32"
+    },
+    {
+     "start": "2018-04-14",
+     "tone": null,
+     "ret": -4.03,
+     "why": "Mercury 5.12"
+    },
+    {
+     "start": "2019-04-14",
+     "tone": null,
+     "ret": 34.53,
+     "why": "Mercury 5.66"
+    },
+    {
+     "start": "2020-04-13",
+     "tone": null,
+     "ret": 0.66,
+     "why": "Mercury 6.4"
+    },
+    {
+     "start": "2021-04-13",
+     "tone": "Bearish",
+     "ret": 13.57,
+     "why": "Mercury 4.32"
+    },
+    {
+     "start": "2022-04-14",
+     "tone": null,
+     "ret": 3.56,
+     "why": "Mercury 5.44"
+    },
+    {
+     "start": "2023-04-14",
+     "tone": null,
+     "ret": 15.51,
+     "why": "Mercury 8.44"
+    },
+    {
+     "start": "2024-04-13",
+     "tone": "Bearish",
+     "ret": 36.67,
+     "why": "Mercury 4.09"
+    },
+    {
+     "start": "2025-04-13",
+     "tone": null,
+     "ret": 46.93,
+     "why": "Mercury 5.61"
+    }
+   ]
+  },
+  {
+   "name": "T10 gold: Sun strong (>10) in the Aries-ingress chart = gain, weak (<5) = loss",
+   "market": "Gold 1972-2026",
+   "cmp": {
+    "Bullish": {
+     "n": 54,
+     "right": 34,
+     "hit": 63,
+     "base": null,
+     "mean": 11.53,
+     "mean_other": null,
+     "p_value": null,
+     "note": "no comparison years: the condition holds every year, so it cannot be tested",
+     "halves": [
+      "14/27 vs None%",
+      "20/27 vs None%"
+     ]
+    }
+   },
+   "years": [
+    {
+     "start": "1972-04-13",
+     "tone": "Bullish",
+     "ret": 85.71,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "1973-04-13",
+     "tone": "Bullish",
+     "ret": 89.01,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "1974-04-13",
+     "tone": "Bullish",
+     "ret": -1.16,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "1975-04-14",
+     "tone": "Bullish",
+     "ret": -24.71,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "1976-04-13",
+     "tone": "Bullish",
+     "ret": 16.41,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "1977-04-13",
+     "tone": "Bullish",
+     "ret": 17.45,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "1978-04-13",
+     "tone": "Bullish",
+     "ret": 36.57,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "1979-04-14",
+     "tone": "Bullish",
+     "ret": 116.32,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "1980-04-13",
+     "tone": "Bullish",
+     "ret": -4.06,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "1981-04-13",
+     "tone": "Bullish",
+     "ret": -29.44,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "1982-04-13",
+     "tone": "Bullish",
+     "ret": 23.71,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "1983-04-14",
+     "tone": "Bullish",
+     "ret": -12.01,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "1984-04-13",
+     "tone": "Bullish",
+     "ret": -14.17,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "1985-04-13",
+     "tone": "Bullish",
+     "ret": 3.98,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "1986-04-13",
+     "tone": "Bullish",
+     "ret": 28.82,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "1987-04-14",
+     "tone": "Bullish",
+     "ret": 3.2,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "1988-04-13",
+     "tone": "Bullish",
+     "ret": -15.04,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "1989-04-13",
+     "tone": "Bullish",
+     "ret": -2.6,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "1990-04-13",
+     "tone": "Bullish",
+     "ret": -4.28,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "1991-04-14",
+     "tone": "Bullish",
+     "ret": -5.31,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "1992-04-13",
+     "tone": "Bullish",
+     "ret": 0.88,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "1993-04-13",
+     "tone": "Bullish",
+     "ret": 10.23,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "1994-04-13",
+     "tone": "Bullish",
+     "ret": 3.71,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "1995-04-14",
+     "tone": "Bullish",
+     "ret": 0.51,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "1996-04-13",
+     "tone": "Bullish",
+     "ret": -12.47,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "1997-04-13",
+     "tone": "Bullish",
+     "ret": -10.47,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "1998-04-13",
+     "tone": "Bullish",
+     "ret": -8.12,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "1999-04-14",
+     "tone": "Bullish",
+     "ret": -1.06,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "2000-04-13",
+     "tone": "Bullish",
+     "ret": -7.14,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "2001-04-13",
+     "tone": "Bullish",
+     "ret": 16.15,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "2002-04-14",
+     "tone": "Bullish",
+     "ret": 8.54,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "2003-04-14",
+     "tone": "Bullish",
+     "ret": 28.12,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "2004-04-13",
+     "tone": "Bullish",
+     "ret": 2.19,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "2005-04-13",
+     "tone": "Bullish",
+     "ret": 38.95,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "2006-04-14",
+     "tone": "Bullish",
+     "ret": 14.9,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "2007-04-14",
+     "tone": "Bullish",
+     "ret": 34.75,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "2008-04-13",
+     "tone": "Bullish",
+     "ret": -3.13,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "2009-04-13",
+     "tone": "Bullish",
+     "ret": 28.85,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "2010-04-14",
+     "tone": "Bullish",
+     "ret": 26.21,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "2011-04-14",
+     "tone": "Bullish",
+     "ret": 15.44,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "2012-04-13",
+     "tone": "Bullish",
+     "ret": -10.63,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "2013-04-13",
+     "tone": "Bullish",
+     "ret": -12.15,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "2014-04-14",
+     "tone": "Bullish",
+     "ret": -9.05,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "2015-04-14",
+     "tone": "Bullish",
+     "ret": 5.01,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "2016-04-13",
+     "tone": "Bullish",
+     "ret": 2.1,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "2017-04-13",
+     "tone": "Bullish",
+     "ret": 4.58,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "2018-04-14",
+     "tone": "Bullish",
+     "ret": -4.03,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "2019-04-14",
+     "tone": "Bullish",
+     "ret": 34.53,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "2020-04-13",
+     "tone": "Bullish",
+     "ret": 0.66,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "2021-04-13",
+     "tone": "Bullish",
+     "ret": 13.57,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "2022-04-14",
+     "tone": "Bullish",
+     "ret": 3.56,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "2023-04-14",
+     "tone": "Bullish",
+     "ret": 15.51,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "2024-04-13",
+     "tone": "Bullish",
+     "ret": 36.67,
+     "why": "Sun 11.28"
+    },
+    {
+     "start": "2025-04-13",
+     "tone": "Bullish",
+     "ret": 46.93,
+     "why": "Sun 11.28"
+    }
+   ]
+  },
+  {
+   "name": "T10 silver: Venus strong (>10) in the Aries-ingress chart = gain, weak (<5) = loss",
+   "market": "Silver 2001-2026",
+   "cmp": {
+    "Bullish": {
+     "n": 19,
+     "right": 10,
+     "hit": 53,
+     "base": 67,
+     "mean": 21.34,
+     "mean_other": 9.1,
+     "p_value": 0.9352,
+     "halves": [
+      "6/10 vs 33%",
+      "4/9 vs 100%"
+     ],
+     "q": 1.0
+    }
+   },
+   "years": [
+    {
+     "start": "1972-04-13",
+     "tone": "Bullish",
+     "ret": null,
+     "why": "Venus 13.96"
+    },
+    {
+     "start": "1973-04-13",
+     "tone": null,
+     "ret": null,
+     "why": "Venus 8.64"
+    },
+    {
+     "start": "1974-04-13",
+     "tone": "Bullish",
+     "ret": null,
+     "why": "Venus 10.36"
+    },
+    {
+     "start": "1975-04-14",
+     "tone": "Bullish",
+     "ret": null,
+     "why": "Venus 17.02"
+    },
+    {
+     "start": "1976-04-13",
+     "tone": null,
+     "ret": null,
+     "why": "Venus 9.29"
+    },
+    {
+     "start": "1977-04-13",
+     "tone": null,
+     "ret": null,
+     "why": "Venus 9.45"
+    },
+    {
+     "start": "1978-04-13",
+     "tone": null,
+     "ret": null,
+     "why": "Venus 9.36"
+    },
+    {
+     "start": "1979-04-14",
+     "tone": "Bullish",
+     "ret": null,
+     "why": "Venus 11.63"
+    },
+    {
+     "start": "1980-04-13",
+     "tone": "Bullish",
+     "ret": null,
+     "why": "Venus 13.96"
+    },
+    {
+     "start": "1981-04-13",
+     "tone": null,
+     "ret": null,
+     "why": "Venus 8.62"
+    },
+    {
+     "start": "1982-04-13",
+     "tone": "Bullish",
+     "ret": null,
+     "why": "Venus 10.37"
+    },
+    {
+     "start": "1983-04-14",
+     "tone": "Bullish",
+     "ret": null,
+     "why": "Venus 16.7"
+    },
+    {
+     "start": "1984-04-13",
+     "tone": null,
+     "ret": null,
+     "why": "Venus 9.3"
+    },
+    {
+     "start": "1985-04-13",
+     "tone": null,
+     "ret": null,
+     "why": "Venus 8.41"
+    },
+    {
+     "start": "1986-04-13",
+     "tone": "Bullish",
+     "ret": null,
+     "why": "Venus 10.91"
+    },
+    {
+     "start": "1987-04-14",
+     "tone": "Bullish",
+     "ret": null,
+     "why": "Venus 11.64"
+    },
+    {
+     "start": "1988-04-13",
+     "tone": "Bullish",
+     "ret": null,
+     "why": "Venus 13.97"
+    },
+    {
+     "start": "1989-04-13",
+     "tone": null,
+     "ret": null,
+     "why": "Venus 8.6"
+    },
+    {
+     "start": "1990-04-13",
+     "tone": "Bullish",
+     "ret": null,
+     "why": "Venus 10.37"
+    },
+    {
+     "start": "1991-04-14",
+     "tone": "Bullish",
+     "ret": null,
+     "why": "Venus 16.68"
+    },
+    {
+     "start": "1992-04-13",
+     "tone": null,
+     "ret": null,
+     "why": "Venus 8.38"
+    },
+    {
+     "start": "1993-04-13",
+     "tone": "Bullish",
+     "ret": null,
+     "why": "Venus 12.07"
+    },
+    {
+     "start": "1994-04-13",
+     "tone": "Bullish",
+     "ret": null,
+     "why": "Venus 10.89"
+    },
+    {
+     "start": "1995-04-14",
+     "tone": "Bullish",
+     "ret": null,
+     "why": "Venus 11.66"
+    },
+    {
+     "start": "1996-04-13",
+     "tone": "Bullish",
+     "ret": null,
+     "why": "Venus 13.97"
+    },
+    {
+     "start": "1997-04-13",
+     "tone": null,
+     "ret": null,
+     "why": "Venus 8.59"
+    },
+    {
+     "start": "1998-04-13",
+     "tone": "Bullish",
+     "ret": null,
+     "why": "Venus 10.38"
+    },
+    {
+     "start": "1999-04-14",
+     "tone": "Bullish",
+     "ret": null,
+     "why": "Venus 14.79"
+    },
+    {
+     "start": "2000-04-13",
+     "tone": null,
+     "ret": null,
+     "why": "Venus 8.4"
+    },
+    {
+     "start": "2001-04-13",
+     "tone": "Bullish",
+     "ret": 5.28,
+     "why": "Venus 11.98"
+    },
+    {
+     "start": "2002-04-14",
+     "tone": "Bullish",
+     "ret": -2.16,
+     "why": "Venus 10.87"
+    },
+    {
+     "start": "2003-04-14",
+     "tone": "Bullish",
+     "ret": 78.77,
+     "why": "Venus 11.05"
+    },
+    {
+     "start": "2004-04-13",
+     "tone": "Bullish",
+     "ret": -10.02,
+     "why": "Venus 13.98"
+    },
+    {
+     "start": "2005-04-13",
+     "tone": null,
+     "ret": 77.65,
+     "why": "Venus 9.51"
+    },
+    {
+     "start": "2006-04-14",
+     "tone": "Bullish",
+     "ret": 9.59,
+     "why": "Venus 10.38"
+    },
+    {
+     "start": "2007-04-14",
+     "tone": "Bullish",
+     "ret": 25.68,
+     "why": "Venus 14.78"
+    },
+    {
+     "start": "2008-04-13",
+     "tone": null,
+     "ret": -27.76,
+     "why": "Venus 8.42"
+    },
+    {
+     "start": "2009-04-13",
+     "tone": "Bullish",
+     "ret": 42.9,
+     "why": "Venus 11.59"
+    },
+    {
+     "start": "2010-04-14",
+     "tone": "Bullish",
+     "ret": 120.61,
+     "why": "Venus 10.86"
+    },
+    {
+     "start": "2011-04-14",
+     "tone": "Bullish",
+     "ret": -19.19,
+     "why": "Venus 11.06"
+    },
+    {
+     "start": "2012-04-13",
+     "tone": "Bullish",
+     "ret": -19.05,
+     "why": "Venus 13.99"
+    },
+    {
+     "start": "2013-04-13",
+     "tone": null,
+     "ret": -24.27,
+     "why": "Venus 9.49"
+    },
+    {
+     "start": "2014-04-14",
+     "tone": "Bullish",
+     "ret": -18.33,
+     "why": "Venus 10.39"
+    },
+    {
+     "start": "2015-04-14",
+     "tone": "Bullish",
+     "ret": -0.37,
+     "why": "Venus 14.77"
+    },
+    {
+     "start": "2016-04-13",
+     "tone": null,
+     "ret": 13.99,
+     "why": "Venus 8.44"
+    },
+    {
+     "start": "2017-04-13",
+     "tone": "Bullish",
+     "ret": -10.07,
+     "why": "Venus 11.52"
+    },
+    {
+     "start": "2018-04-14",
+     "tone": "Bullish",
+     "ret": -10.27,
+     "why": "Venus 10.84"
+    },
+    {
+     "start": "2019-04-14",
+     "tone": "Bullish",
+     "ret": 7.21,
+     "why": "Venus 11.08"
+    },
+    {
+     "start": "2020-04-13",
+     "tone": "Bullish",
+     "ret": 58.91,
+     "why": "Venus 14.0"
+    },
+    {
+     "start": "2021-04-13",
+     "tone": null,
+     "ret": 2.37,
+     "why": "Venus 9.47"
+    },
+    {
+     "start": "2022-04-14",
+     "tone": "Bullish",
+     "ret": -0.56,
+     "why": "Venus 10.4"
+    },
+    {
+     "start": "2023-04-14",
+     "tone": "Bullish",
+     "ret": 9.2,
+     "why": "Venus 14.76"
+    },
+    {
+     "start": "2024-04-13",
+     "tone": null,
+     "ret": 12.63,
+     "why": "Venus 9.39"
+    },
+    {
+     "start": "2025-04-13",
+     "tone": "Bullish",
+     "ret": 137.31,
+     "why": "Venus 11.45"
+    }
+   ]
+  },
+  {
+   "name": "T10 silver: Moon strong (>10) in the Aries-ingress chart = gain, weak (<5) = loss",
+   "market": "Silver 2001-2026",
+   "cmp": {
+    "Bullish": {
+     "n": 5,
+     "right": 3,
+     "hit": 60,
+     "base": 55,
+     "mean": 20.05,
+     "mean_other": 17.99,
+     "p_value": 0.5931,
+     "halves": [
+      "1/3 vs 60%",
+      "2/2 vs 50%"
+     ],
+     "q": 1.0
+    }
+   },
+   "years": [
+    {
+     "start": "1972-04-13",
+     "tone": "Bullish",
+     "ret": null,
+     "why": "Moon 11.06"
+    },
+    {
+     "start": "1973-04-13",
+     "tone": null,
+     "ret": null,
+     "why": "Moon 9.42"
+    },
+    {
+     "start": "1974-04-13",
+     "tone": null,
+     "ret": null,
+     "why": "Moon 7.91"
+    },
+    {
+     "start": "1975-04-14",
+     "tone": "Bullish",
+     "ret": null,
+     "why": "Moon 10.78"
+    },
+    {
+     "start": "1976-04-13",
+     "tone": null,
+     "ret": null,
+     "why": "Moon 5.12"
+    },
+    {
+     "start": "1977-04-13",
+     "tone": null,
+     "ret": null,
+     "why": "Moon 6.61"
+    },
+    {
+     "start": "1978-04-13",
+     "tone": null,
+     "ret": null,
+     "why": "Moon 8.31"
+    },
+    {
+     "start": "1979-04-14",
+     "tone": null,
+     "ret": null,
+     "why": "Moon 5.4"
+    },
+    {
+     "start": "1980-04-13",
+     "tone": null,
+     "ret": null,
+     "why": "Moon 9.32"
+    },
+    {
+     "start": "1981-04-13",
+     "tone": "Bullish",
+     "ret": null,
+     "why": "Moon 14.88"
+    },
+    {
+     "start": "1982-04-13",
+     "tone": null,
+     "ret": null,
+     "why": "Moon 7.66"
+    },
+    {
+     "start": "1983-04-14",
+     "tone": "Bullish",
+     "ret": null,
+     "why": "Moon 10.61"
+    },
+    {
+     "start": "1984-04-13",
+     "tone": null,
+     "ret": null,
+     "why": "Moon 9.35"
+    },
+    {
+     "start": "1985-04-13",
+     "tone": null,
+     "ret": null,
+     "why": "Moon 6.44"
+    },
+    {
+     "start": "1986-04-13",
+     "tone": "Bullish",
+     "ret": null,
+     "why": "Moon 10.12"
+    },
+    {
+     "start": "1987-04-14",
+     "tone": null,
+     "ret": null,
+     "why": "Moon 6.52"
+    },
+    {
+     "start": "1988-04-13",
+     "tone": null,
+     "ret": null,
+     "why": "Moon 7.92"
+    },
+    {
+     "start": "1989-04-13",
+     "tone": "Bullish",
+     "ret": null,
+     "why": "Moon 12.56"
+    },
+    {
+     "start": "1990-04-13",
+     "tone": null,
+     "ret": null,
+     "why": "Moon 6.49"
+    },
+    {
+     "start": "1991-04-14",
+     "tone": "Bullish",
+     "ret": null,
+     "why": "Moon 11.04"
+    },
+    {
+     "start": "1992-04-13",
+     "tone": null,
+     "ret": null,
+     "why": "Moon 9.49"
+    },
+    {
+     "start": "1993-04-13",
+     "tone": null,
+     "ret": null,
+     "why": "Moon 7.48"
+    },
+    {
+     "start": "1994-04-13",
+     "tone": null,
+     "ret": null,
+     "why": "Moon 8.72"
+    },
+    {
+     "start": "1995-04-14",
+     "tone": null,
+     "ret": null,
+     "why": "Moon 5.46"
+    },
+    {
+     "start": "1996-04-13",
+     "tone": null,
+     "ret": null,
+     "why": "Moon 6.24"
+    },
+    {
+     "start": "1997-04-13",
+     "tone": null,
+     "ret": null,
+     "why": "Moon 9.35"
+    },
+    {
+     "start": "1998-04-13",
+     "tone": "Bearish",
+     "ret": null,
+     "why": "Moon 4.98"
+    },
+    {
+     "start": "1999-04-14",
+     "tone": null,
+     "ret": null,
+     "why": "Moon 9.9"
+    },
+    {
+     "start": "2000-04-13",
+     "tone": "Bullish",
+     "ret": null,
+     "why": "Moon 14.91"
+    },
+    {
+     "start": "2001-04-13",
+     "tone": null,
+     "ret": 5.28,
+     "why": "Moon 7.57"
+    },
+    {
+     "start": "2002-04-14",
+     "tone": "Bullish",
+     "ret": -2.16,
+     "why": "Moon 11.02"
+    },
+    {
+     "start": "2003-04-14",
+     "tone": null,
+     "ret": 78.77,
+     "why": "Moon 9.41"
+    },
+    {
+     "start": "2004-04-13",
+     "tone": null,
+     "ret": -10.02,
+     "why": "Moon 6.45"
+    },
+    {
+     "start": "2005-04-13",
+     "tone": null,
+     "ret": 77.65,
+     "why": "Moon 8.97"
+    },
+    {
+     "start": "2006-04-14",
+     "tone": null,
+     "ret": 9.59,
+     "why": "Moon 6.75"
+    },
+    {
+     "start": "2007-04-14",
+     "tone": null,
+     "ret": 25.68,
+     "why": "Moon 7.53"
+    },
+    {
+     "start": "2008-04-13",
+     "tone": "Bullish",
+     "ret": -27.76,
+     "why": "Moon 12.52"
+    },
+    {
+     "start": "2009-04-13",
+     "tone": null,
+     "ret": 42.9,
+     "why": "Moon 7.0"
+    },
+    {
+     "start": "2010-04-14",
+     "tone": "Bullish",
+     "ret": 120.61,
+     "why": "Moon 11.12"
+    },
+    {
+     "start": "2011-04-14",
+     "tone": null,
+     "ret": -19.19,
+     "why": "Moon 8.03"
+    },
+    {
+     "start": "2012-04-13",
+     "tone": null,
+     "ret": -19.05,
+     "why": "Moon 6.0"
+    },
+    {
+     "start": "2013-04-13",
+     "tone": null,
+     "ret": -24.27,
+     "why": "Moon 8.9"
+    },
+    {
+     "start": "2014-04-14",
+     "tone": null,
+     "ret": -18.33,
+     "why": "Moon 5.08"
+    },
+    {
+     "start": "2015-04-14",
+     "tone": null,
+     "ret": -0.37,
+     "why": "Moon 7.69"
+    },
+    {
+     "start": "2016-04-13",
+     "tone": null,
+     "ret": 13.99,
+     "why": "Moon 9.24"
+    },
+    {
+     "start": "2017-04-13",
+     "tone": null,
+     "ret": -10.07,
+     "why": "Moon 5.42"
+    },
+    {
+     "start": "2018-04-14",
+     "tone": null,
+     "ret": -10.27,
+     "why": "Moon 9.34"
+    },
+    {
+     "start": "2019-04-14",
+     "tone": "Bullish",
+     "ret": 7.21,
+     "why": "Moon 15.03"
+    },
+    {
+     "start": "2020-04-13",
+     "tone": null,
+     "ret": 58.91,
+     "why": "Moon 8.95"
+    },
+    {
+     "start": "2021-04-13",
+     "tone": "Bullish",
+     "ret": 2.37,
+     "why": "Moon 10.87"
+    },
+    {
+     "start": "2022-04-14",
+     "tone": null,
+     "ret": -0.56,
+     "why": "Moon 9.36"
+    },
+    {
+     "start": "2023-04-14",
+     "tone": null,
+     "ret": 9.2,
+     "why": "Moon 7.27"
+    },
+    {
+     "start": "2024-04-13",
+     "tone": null,
+     "ret": 12.63,
+     "why": "Moon 8.81"
+    },
+    {
+     "start": "2025-04-13",
+     "tone": null,
+     "ret": 137.31,
+     "why": "Moon 6.58"
+    }
+   ]
+  }
+ ],
+ "calendar": {
+  "items": [
+   {
+    "kind": "instant",
+    "start": "2026-12-07T14:28:31.732686-05:00",
+    "end": "2026-12-07T14:28:31.732686-05:00",
+    "text": "Moon passes south of Mercury",
+    "rule": "B1",
+    "verdict": "tested: at chance"
+   },
+   {
+    "kind": "instant",
+    "start": "2026-11-30T03:34:49.733478-05:00",
+    "end": "2026-11-30T03:34:49.733478-05:00",
+    "text": "Moon passes south of Jupiter",
+    "rule": "B1",
+    "verdict": "tested: at chance"
+   },
+   {
+    "kind": "instant",
+    "start": "2026-12-27T11:38:31.944035-05:00",
+    "end": "2026-12-27T11:38:31.944035-05:00",
+    "text": "Moon passes south of Jupiter",
+    "rule": "B1",
+    "verdict": "tested: at chance"
+   },
+   {
+    "kind": "instant",
+    "start": "2026-12-05T00:41:43.129426-05:00",
+    "end": "2026-12-05T00:41:43.129426-05:00",
+    "text": "Moon passes south of Venus",
+    "rule": "B1",
+    "verdict": "tested: at chance"
+   },
+   {
+    "kind": "span",
+    "start": "2026-11-24T00:00:00-05:00",
+    "end": "2026-11-25T03:11:17.893822-05:00",
+    "text": "Mercury in Swati (bullish per BS)",
+    "rule": "B3",
+    "verdict": "tested: at chance"
+   },
+   {
+    "kind": "span",
+    "start": "2026-12-21T21:09:42.274868-05:00",
+    "end": "2026-12-30T08:01:20.379273-05:00",
+    "text": "Mercury in Mula (bearish per BS)",
+    "rule": "B3",
+    "verdict": "tested: at chance"
+   },
+   {
+    "kind": "span",
+    "start": "2026-11-24T00:00:00-05:00",
+    "end": "2026-12-18T23:50:47.812785-05:00",
+    "text": "Mars in Magha (bullish per BS)",
+    "rule": "B4",
+    "verdict": "tested: at chance"
+   },
+   {
+    "kind": "span",
+    "start": "2026-12-05T12:28:57.137322-05:00",
+    "end": "2026-12-22T03:24:22.814288-05:00",
+    "text": "Venus in Swati (bearish per BS)",
+    "rule": "B5s",
+    "verdict": "tested: at chance"
+   },
+   {
+    "kind": "span",
+    "start": "2026-11-24T00:00:00-05:00",
+    "end": "2026-12-10T19:29:59.846041-05:00",
+    "text": "Mars or Saturn retrograde in Cancer, Leo or Pisces",
+    "rule": "B10r",
+    "verdict": "tested: at chance"
+   },
+   {
+    "kind": "span",
+    "start": "2026-11-24T00:00:00-05:00",
+    "end": "2026-12-08T19:51:51.281615-05:00",
+    "text": "Lord of the lunar month (US time): Sun",
+    "rule": "B8m",
+    "verdict": "tested: at chance"
+   },
+   {
+    "kind": "span",
+    "start": "2026-11-24T00:00:00-05:00",
+    "end": "2026-12-08T19:51:51.281615-05:00",
+    "text": "Lord of the lunar month (India time): Moon",
+    "rule": "B8m",
+    "verdict": "tested: at chance"
+   },
+   {
+    "kind": "span",
+    "start": "2026-12-08T19:51:51.281615-05:00",
+    "end": "2027-01-01T00:00:00-05:00",
+    "text": "Lord of the lunar month (US time): Mars",
+    "rule": "B8m",
+    "verdict": "tested: at chance"
+   },
+   {
+    "kind": "span",
+    "start": "2026-12-08T19:51:51.281615-05:00",
+    "end": "2027-01-01T00:00:00-05:00",
+    "text": "Lord of the lunar month (India time): Mercury",
+    "rule": "B8m",
+    "verdict": "tested: at chance"
+   }
+  ],
+  "year": {
+   "lord_of_year_us": "Mercury",
+   "lord_of_year_india": "Jupiter",
+   "chaitra": "2026-03-19",
+   "nyse_return": "2026-05-21 10:40 ET",
+   "ruler": "Moon",
+   "ruler_role": "triplicity lord",
+   "ruler_strength": 12.44,
+   "ruler_house": 1,
+   "muntha_house": 7
+  },
+  "months": [
+   {
+    "start": "2026-11-22 15:58 ET",
+    "t8a": [
+     "Bullish",
+     "Venus/Mercury friendly"
+    ],
+    "t8b": [
+     "Bullish",
+     "Venus/Mercury friendly"
+    ],
+    "sahams": {
+     "Fortune": [
+      null,
+      "Scorpio +2/-2"
+     ],
+     "Wealth": [
+      "Bullish",
+      "Sagittarius +4/-2"
+     ],
+     "Trade": [
+      null,
+      "Scorpio +2/-2"
+     ],
+     "Business": [
+      "Bullish",
+      "Aquarius +4/-2"
+     ]
+    },
+    "sun_house": 8
+   },
+   {
+    "start": "2026-12-22 05:20 ET",
+    "t8a": [
+     null,
+     "Sun/Moon none"
+    ],
+    "t8b": [
+     "Bullish",
+     "Sun/Mars friendly"
+    ],
+    "sahams": {
+     "Fortune": [
+      null,
+      "Gemini +3/-3"
+     ],
+     "Wealth": [
+      null,
+      "Pisces +2/-2"
+     ],
+     "Trade": [
+      null,
+      "Taurus +2/-2"
+     ],
+     "Business": [
+      "Bullish",
+      "Leo +5/-1"
+     ]
+    },
+    "sun_house": 2
+   }
+  ]
+ }
+}

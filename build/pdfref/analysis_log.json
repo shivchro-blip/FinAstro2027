@@ -731,6 +731,18 @@
     "build/pdfref/new_sources_test_ET.html",
     "tools/new_sources_test.py"
    ]
+  },
+  {
+   "date": "2026-11-27",
+   "pr": "61",
+   "topic": "Leftover new-source rules tested; new-source layer added to the 2026 calendar",
+   "analysis": "tools/new_sources_leftover.py: B5, B7, B9, B10, B11, B13 (2000-2026, S&P/Sensex/gold/silver), B6 on S&P 1928-2026, T4/T6 ruler of the year with Tajika five-dignity strength (NYSE annual chart, S&P 1929-2026), T10 substance strength at the Aries ingress (gold 1972-2026, silver 2001-2026); BH correction. calendar_2026.py gained a New sources section and per-day lines.",
+   "result": "No leftover rule holds. Nominal only: eclipse in Libra/Sagittarius (gold down 11/15, p 0.02, q 0.22) and eclipse in Chaitra (gold down 6/7, silver 8/8, 9 eclipses; none before 2028). Sun's Aries-ingress strength is constant (untestable). Calendar shows 13 new-source items in 24 Nov-31 Dec with their test results; lord of the year 2026-27 Mercury (US) / Jupiter (India); NYSE ruler of the year Moon.",
+   "files": [
+    "build/pdfref/new_sources_leftover_ET.html",
+    "tools/new_sources_leftover.py",
+    "build/pdfref/calendar_2026-11-24_to_2026-12-31_ET.html"
+   ]
   }
  ]
 }

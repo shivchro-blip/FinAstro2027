@@ -66,6 +66,8 @@ def gather(a, b):
     sr["gjc"] = json.load(open(OUT / "gold_jupiter_crash_ET.json"))
     sr["turns"] = json.load(open(OUT / "gold_turns_ET.json"))
     sr["jsg"] = json.load(open(OUT / "jupiter_saturn_gold_ET.json"))
+    sr["nsl"] = json.load(open(OUT / "new_sources_leftover_ET.json"))
+    sr["nst"] = json.load(open(OUT / "new_sources_test_ET.json"))
     sr["doc"] = doc_rows(json.load(open(OUT / "doc_dec2026_check_ET.json")), res)
     sr["kartari"] = [dict(key=r["key"], title=r["title"], tone=r["tone"], basis=r["basis"], record=r["record"],
                           spans=[(dt.datetime.fromisoformat(u["frm_iso"]), dt.datetime.fromisoformat(u["to_iso"]), u["pair"]) for u in r["upcoming"]])
@@ -99,6 +101,8 @@ def verify(res, sr, a, b):
         checks.append(dict(name=name, ok=bool(ok), detail=detail))
     days = res["days"]
     ds = [dt.date.fromisoformat(x["date"]) for x in days]
+    its = sr["nsl"]["calendar"]["items"]
+    add("New-source layer loaded, every item carries its test result", its and all(i.get("verdict") for i in its), f"{len(its)} items (BS Iyer, Tajika Nilakanthi, Hayanaratna); none used in the signals")
     add("Every day present", ds == [a + dt.timedelta(days=i) for i in range((b - a).days + 1)], f"{len(ds)} days, {ds[0]} – {ds[-1]}")
     bad = []
     for x in days:
@@ -467,7 +471,7 @@ def page(res, sr, track, checks, a, b, generated):
     o = [f"<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>"
          f"<title>FinAstro Calendar 2026</title><style>{CSS}</style></head><body>"]
     o.append("<div class='top'><nav><b>FinAstro calendar</b><a href='#read'>Read first</a><a href='#keys'>Key dates</a><a href='#grid'>Calendar</a>"
-             "<a href='#spans'>Signal spans</a><a href='#sr'>Solar return</a><a href='#jan'>January 2027</a><a href='#days'>Day by day</a><a href='#trust'>Track record</a><a href='#checks'>Checks</a>"
+             "<a href='#spans'>Signal spans</a><a href='#sr'>Solar return</a><a href='#ns'>New sources</a><a href='#jan'>January 2027</a><a href='#days'>Day by day</a><a href='#trust'>Track record</a><a href='#checks'>Checks</a>"
              "<span style='flex:1'></span><button onclick='theme()'>Light / dark</button></nav></div><main>")
     o.append(f"<h1>Market astrology calendar, {a:%d %b} – {b:%d %b %Y}</h1>"
              f"<p class='mut'>S&amp;P 500, BSE Sensex, gold and silver. Dates and times US Eastern (IST also shown for changes). Sidereal Lahiri, mean node, whole-sign drishti; "
@@ -641,6 +645,7 @@ def page(res, sr, track, checks, a, b, generated):
              f"bearish calls right {bt['Bearish']['d1']}% / {bt['Bearish']['d5']}%; the S&amp;P rose on {bt['_base']['up1']}% of days and over {bt['_base']['up5']}% of 5-session spans.</p>")
     sr_jsg[:] = [sr["jsg"]]
     o.append(gjc_html(sr["gjc"]))
+    o.append(ns_html(sr))
     o.append(gp_html(sr["gp"]))
     o.append(doc_html(sr["doc"]))
     o.append(jan_html(sr["jan"]))
@@ -722,6 +727,10 @@ def day_html(x, sr, res):
             o.append(f"<tr><td><b>{NAME[mk]}</b></td><td>{chip((sg['sig'] + ' ' + (sg['st'] or '')).strip(), tone(sg['sig']))}<div class='s'>{E(sg['why'])}</div></td>"
                      f"<td class='n'>{p('up1')}</td><td class='n'>{p('up5')}</td><td class='n'>{p('big')}</td><td>{sup}</td><td class='s'>{E('; '.join(also)) or '–'}</td></tr>")
         o.append("</tbody></table></div>")
+    nsd = ns_on(sr, d)
+    if nsd:
+        o.append("<h3>New-source rules (tested; information only, not in the signals)</h3><ul class='s'>"
+                 + "".join(f"<li>{E(i['when'])} {E(i['text'])} <span class='mut'>[{E(i['rule'])}: {E(i['verdict'])}]</span></li>" for i in nsd) + "</ul>")
     # solar return
     sr_lines = []
     if srd:
@@ -830,6 +839,60 @@ def jan_html(j):
 
 GJC_KEYS = ("Jupiter with Rahu or Ketu", "Jupiter–Saturn trine (5/9)", "Jupiter–Saturn opposite (7)", "Saturn aspects Jupiter", "Jupiter hemmed by malefics (12th and 2nd)",
             "Malefic vedha on Jupiter")
+
+
+def ns_on(sr, d):
+    """New-source items (BS Iyer, Tajika Nilakanthi, Hayanaratna) active on day d, ET."""
+    out = []
+    for i in sr["nsl"]["calendar"]["items"]:
+        s_, e_ = dt.datetime.fromisoformat(i["start"]), dt.datetime.fromisoformat(i["end"])
+        if i["kind"] == "instant":
+            if s_.date() == d:
+                out.append(dict(when=f"{s_:%H:%M} ET", text=i["text"], rule=i["rule"], verdict=i["verdict"]))
+        elif s_.date() <= d <= e_.date():
+            edge = " (starts " + f"{s_:%H:%M}" + ")" if s_.date() == d and s_.time() != dt.time(0) else " (ends " + f"{e_:%H:%M}" + ")" if e_.date() == d else ""
+            out.append(dict(when="all day" + edge, text=i["text"], rule=i["rule"], verdict=i["verdict"]))
+    return out
+
+
+def ns_html(sr):
+    nst, nsl = sr["nst"], sr["nsl"]
+    y, mons = nsl["calendar"]["year"], nsl["calendar"]["months"]
+    n1 = sum(len(t["by"]) for k in ("step2", "step3", "step4") for t in nst[k]["tests"]) + sum(len(t["cmp"]) for t in nst["step5"])
+    n2 = sum(len(t["by"]) for t in nsl["daily"]) + sum(len(t["cmp"]) for t in nsl["annual"])
+    o = ["<h2 id='ns'>New sources: Brihat Samhita (Iyer), Tajika Nilakanthi, Hayanaratna</h2>",
+         f"<p class='s'>Every computable rule from the three books added on 27 Nov 2026 was backtested: {n1} results in new_sources_test_ET.html and {n2} in new_sources_leftover_ET.html, "
+         "using the §6 method with Benjamini–Hochberg correction. <b>None holds, so none of them feeds the signals or the probabilities.</b> They are shown here and in each day "
+         "as information, each with its test result.</p>",
+         "<div class='callout'><b>Worth knowing:</b><ul>"
+         "<li><b>Brihat Samhita 42.6 with its eclipse condition:</b> 2026 qualifies (lunar eclipse of 28 Aug, Sun in sidereal Leo), so the stated sell window is 16 Dec 2026 – 14 Jan 2027. "
+         f"But eclipse years did worse than other years: gold rose by mid-December in {nst['step1']['gold_1972']['eclipse years']['up5']} of {nst['step1']['gold_1972']['eclipse years']['n']} eclipse years, "
+         f"against {nst['step1']['gold_1972']['other years']['up5']} of {nst['step1']['gold_1972']['other years']['n']} other years.</li>"
+         f"<li><b>Lord of the year 2026–27</b> (Chaitra new moon {y['chaitra']}): {E(y['lord_of_year_us'])} by US time, {E(y['lord_of_year_india'])} by Indian time; both are 'good' lords. "
+         "Watch list only: on the S&amp;P 1929–2026, years with good lords were up 76% vs 64% (p 0.047), but it weakens to p 0.10 with the Indian weekday.</li>"
+         f"<li><b>NYSE annual chart</b> ({E(y['nyse_return'])}): the Tajika ruler of the year is {E(y['ruler'])} ({E(y['ruler_role'])}), strength {y['ruler_strength']} of 20, in house {y['ruler_house']}; "
+         f"the muntha is in house {y['muntha_house']}. By the text that means a good year with the muntha in a weak house, but both rules test at chance.</li>"
+         "<li><b>Eclipse rules</b> (eclipse in Libra or Sagittarius; eclipse in the lunar month Chaitra, 'dealers in gold suffer'): nominal p &lt; 0.05 on gold and silver only, from 9–20 cases. "
+         "No such eclipse falls before 2028, so there is nothing to watch in this calendar.</li></ul></div>"]
+    o.append("<h3>NYSE monthly charts in this period (Tajika, Model B)</h3><div class='wrap'><table><thead><tr><th>Month starts</th><th>Navamsha 2nd-house rule</th><th>Navamsha 11th-house rule</th>"
+             "<th>Wealth / trade / business sahams</th><th>Sun's house</th></tr></thead><tbody>")
+    for m in mons:
+        sh = "; ".join(f"{k} {v[0] or 'no call'}" for k, v in m["sahams"].items() if k != "Fortune")
+        o.append(f"<tr><td>{E(m['start'])}</td><td>{chip(m['t8a'][0] or 'no call', tone(m['t8a'][0] or ''))} <span class='s'>{E(m['t8a'][1])}</span></td>"
+                 f"<td>{chip(m['t8b'][0] or 'no call', tone(m['t8b'][0] or ''))} <span class='s'>{E(m['t8b'][1])}</span></td><td class='s'>{E(sh)}</td><td class='n'>{m['sun_house']}</td></tr>")
+    o.append("</tbody></table></div><p class='s'>All of these monthly rules test at chance on the S&amp;P 1928–2026 (best: trade saham 57% vs 53%, q 0.24).</p>")
+    o.append("<h3>Dated items, 24 Nov – 31 Dec</h3><div class='wrap'><table><thead><tr><th>When (ET)</th><th>Item</th><th>Rule</th><th>Test result</th></tr></thead><tbody>")
+    seen = set()
+    for i in sorted(nsl["calendar"]["items"], key=lambda i: i["start"]):
+        key = (i["start"][:16], i["text"])
+        if key in seen:
+            continue
+        seen.add(key)
+        s_, e_ = dt.datetime.fromisoformat(i["start"]), dt.datetime.fromisoformat(i["end"])
+        when = f"{s_:%a %d %b %H:%M}" + ("" if i["kind"] == "instant" else f" – {e_:%a %d %b %H:%M}")
+        o.append(f"<tr><td class='n'>{E(when)}</td><td>{E(i['text'])}</td><td>{E(i['rule'])}</td><td class='s'>{E(i['verdict'])}</td></tr>")
+    o.append("</tbody></table></div>")
+    return "".join(o)
 
 
 def gjc_on(g, d):
