@@ -46,6 +46,10 @@ The work is logged entry by entry in `build/pdfref/analysis_log.json`, which is 
 | `Reference_materials/Others` (45 files) | `extracted/OTHERS_FINANCIAL_REVIEW.md`; OCR of the 3 scanned books in `extracted/ocr/` | Only Brihat Samhita implemented (Section 5); BPHS used for Shadbala |
 | Brihat Samhita, tr. P.S. Sastri 1946 | `Others/jyotish_brihat-samhita…pdf` | 42.14a/b, 10.17, 42.6 in `finastro/pdfref/bs_rules.py`; 41.9–13 in `finastro/pdfref/bs41_model.py` |
 | BPHS, tr. R. Santhanam | `Others/BPHS/BPHS - 1 RSanthanam.pdf` Ch.27 | Shadbala in `finastro/pdfref/shadbala.py` |
+| Added 27 Nov 2026: Tajika Neelakanthi (Hindi/Sanskrit, Chowkhamba; legacy-font text, 300 pp.) | `Others/Tajikneelkanthi.pdf` | Not yet read. Tajika is the classical Vedic annual-return (Varshaphal) system, the same family as the Solar return method |
+| Added 27 Nov 2026: Balabhadra's Hayanaratna, "The Jewel of Annual Astrology", ed. and tr. M. Gansten (Brill 2020, Sanskrit–English, 1044 pp.) | `Others/9789004433717-57015.pdf` | Not yet read. Tajika annual astrology |
+| Added 27 Nov 2026: Brihat Samhita of Varahamihira (scanned edition, 496 pp.) | `Others/b29353130.pdf` | Not yet read. A second edition to cross-check the Sastri 1946 translation (e.g. 41.12) |
+| Not added (over GitHub's 100 MB limit): Dreyer, *Vedic Astrology* (463 MB) and BPHS in Hindi (125 MB) | user's PC only | BPHS is already here in two English translations (Santhanam, G.C. Sharma) |
 
 Known data problems:
 - `bayer_all_48_rules.docx`: Rules 25–48 are not Bayer's 1940 rules.
