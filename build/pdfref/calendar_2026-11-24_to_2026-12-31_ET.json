@@ -1,7 +1,7 @@
 {
  "start": "2026-11-24",
  "end": "2026-12-31",
- "generated": "27 Nov 2026 16:51 ET",
+ "generated": "27 Nov 2026 17:02 ET",
  "checks": [
   {
    "name": "New-source layer loaded, every item carries its test result",
