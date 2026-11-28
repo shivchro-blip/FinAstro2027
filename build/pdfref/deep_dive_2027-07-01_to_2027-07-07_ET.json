@@ -1,5 +1,5 @@
 {
- "made": "2026-11-28 09:31 ET",
+ "made": "2026-11-28 09:34 ET",
  "start": "2027-07-01",
  "end": "2027-07-07",
  "classes": {
@@ -9647,8 +9647,8 @@
  "checks": [
   {
    "name": "Every event time re-derived from the ephemeris (\u00b16 min; Moon aspects \u00b10.15\u00b0, eclipse first contacts \u00b110 min, speed overtakes and fast-motion crossings \u00b16 h, stations and the Sun's apsides \u00b112 h, Moon apsides \u00b13 h, combustion by IST day)",
-   "ok": false,
-   "detail": "63 events checked; speed crossing: Venus (motion/fast_start): speed 1.2240 -> 1.2241 around level 1.223981"
+   "ok": true,
+   "detail": "63 events checked"
   },
   {
    "name": "Occurrence counts 2000-2026 within the expected range",
