@@ -1475,7 +1475,10 @@ Results, as the share of calls right:
 - **Scoring:**
   - A volatility window is right if it has a big day or a sharp reversal.
   - In the last 250 sessions, 15% of 3-session windows had one, so such calls are often right by default.
-  - Scheduled: score the 24–27 Nov window on 28 Nov; score 30 Nov – 5 Dec and the overall scenario on 5 Dec.
+  - **24–27 Nov: wrong** (scored 28 Nov by the scheduled check). Tue 24 −0.50%, Wed 25 −0.25%, Fri 27 +1.60%: no big day and no 1%+ reversal. Such a call is right by default about 15% of the time, so the miss is not unusual either way.
+    - The big move came the session before the window: Mon 23 Nov, +4.73%.
+    - Even with Monday included, Monday–Tuesday is not a sharp reversal by our definition: the −0.50% fall is under 1%.
+  - Scheduled: score 30 Nov – 5 Dec and the overall scenario on 5 Dec. The rally of 23 Nov has been 18% given back so far.
 
 **The 2026 document's December table, checked** (user request 24 Nov 2026; in the 2026 calendar's "Check against the 2026 document" section and on each December day)
 
