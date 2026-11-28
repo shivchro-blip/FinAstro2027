@@ -1,6 +1,7 @@
 """Deep dive for one week: every sky event backtested, every active rule with its record.
 
-    python tools/week_deep_dive.py [dec] [jan] [feb] [--reuse-days]   # default: every week of Dec 2026, Jan and Feb 2027
+    python tools/week_deep_dive.py [nov] [dec] [jan] [feb] [--reuse-days]   # default: every week of Nov and Dec 2026, Jan and Feb 2027
+                                                                              # (November uses history to 31 Oct 2026 only)
 
 For each day of the week (December 2026 from the 2026 calendar JSON; January 2027 built with forward_daybyday.build and
 the same extra layers, shown in the 2027 calendar):
@@ -609,6 +610,16 @@ def main():
             days, items, context = month_days(a, b, nsl)
             for wa, wb in chunks(a, b):
                 week(wa, wb, days, items, MK, cache, context)
+    if not want or "nov" in want:                            # November 2026, scored afterwards against what markets did
+        a, b = dt.date(2026, 11, 1), dt.date(2026, 11, 30)
+        MKN = T.markets()
+        for mk in MKN.values():                              # history ends 31 Oct 2026: no November occurrence scores itself
+            mk.p1 = dt.date(2026, 10, 31)
+        days, items, context = month_days(a, b, nsl)
+        context["history_end"] = "2026-10-31"
+        cache_n = {}
+        for wa, wb in chunks(a, b):
+            week(wa, wb, days, items, MKN, cache_n, context)
 
 
 MONTHS_2027 = {"jan": (dt.date(2027, 1, 1), dt.date(2027, 1, 31)), "feb": (dt.date(2027, 2, 1), dt.date(2027, 2, 28))}

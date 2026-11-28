@@ -23,6 +23,21 @@ CSS = """<style>
 </style>"""
 
 
+TUNE = dict(on=False, note="")
+
+
+def set_tuning(out_dir):
+    """The November 2026 review's changes (tools/november_review.py): Low labels are leans, the model's percentages are not coloured as calls."""
+    f = pathlib.Path(out_dir) / "november_review_2026-11_ET.json"
+    if not f.exists():
+        return
+    rec = {r["id"]: r for r in json.load(open(f)).get("recommendations", [])}
+    if rec.get("labels", {}).get("applied") and rec.get("model", {}).get("applied"):
+        TUNE.update(on=True, note=("After the November 2026 review (2026 calendar, section “November review”): Low labels are leans, not day calls, and the model's "
+                                   "percentages are no longer coloured. Tested out of sample (2013–2026, everything chosen on earlier years), neither the labels nor the model "
+                                   "beat chance on any market; treat both as leanings."))
+
+
 def load(pattern):
     return [json.load(open(f)) for f in sorted(glob.glob(str(pattern)))]
 
@@ -59,8 +74,9 @@ def day_row(day):
         elif pr:
             sig = (sg.get("sig", "") + " " + sg.get("st", "")).strip()
             lean = pr["all"]["up1"] - pr["base"]["up1"]
-            cls = " class='up'" if lean >= 2 else " class='dn'" if lean <= -2 else ""
-            lab.append(f"{short}: {E(sig)} · <span{cls}>{pr['all']['up1']:.0f}%</span> / {pr['all']['up5']:.0f}% (normal {pr['base']['up1']:.0f}% / {pr['base']['up5']:.0f}%)")
+            cls = "" if TUNE["on"] else " class='up'" if lean >= 2 else " class='dn'" if lean <= -2 else ""
+            sig_h = f"<span style='color:var(--mut)'>{E(sig)} (lean)</span>" if TUNE["on"] and sg.get("st") == "Low" else E(sig)
+            lab.append(f"{short}: {sig_h} · <span{cls}>{pr['all']['up1']:.0f}%</span> / {pr['all']['up5']:.0f}% (normal {pr['base']['up1']:.0f}% / {pr['base']['up5']:.0f}%)")
         else:
             lab.append(f"{short}: weekend")
     sup = []
@@ -102,6 +118,7 @@ def section(dds, title=None, anchor="dd2027", css=True):
          f"<b>Double-checked:</b> {sum(c['ok'] for c in chk)} of {len(chk)} checks pass (event times re-derived from the ephemeris, occurrence counts against expected "
          "frequencies, one result per week recounted from raw prices with separate code, every sky event classified).<br>"
          f"<b>Holidays:</b> {E(hol)}. The BSE has not yet published its 2027 holiday list; only fixed holidays are assumed.<br>"
+         + (f"<b>How far to trust the labels and the model:</b> {E(TUNE['note'])}<br>" if TUNE["on"] else "") +
          f"<b>The year:</b> lord of the year 2026–27 {E(y.get('lord_of_year_us', '?'))} (US time) or {E(y.get('lord_of_year_india', '?'))} (Indian time), watch list only. "
          f"NYSE ruler of the year {E(y.get('ruler', '?'))}, strength {y.get('ruler_strength', '?')}, house {y.get('ruler_house', '?')}. Both test at chance.</div>"]
     if mons:
@@ -122,13 +139,15 @@ def section(dds, title=None, anchor="dd2027", css=True):
                      + (f"<p class='s'>Solar return forecasts: {E('; '.join(d['solar_return']['forecasts']))}</p>" if d["solar_return"].get("forecasts") else "")
                      + "</details>")
     o.append("<p class='s'>⚑ = next-session p &lt; 0.05; coloured 5-session figure = p &lt; 0.05 (up or down). Nothing in this section passes the multiple-testing correction. "
-             "The model column is the combined model of the 2026 calendar (fitted to 23 Nov 2026); the labels are the published signal tables to the end of 2027.</p></section>")
+             "The model column is the combined model of the 2026 calendar (fitted to 23 Nov 2026); the labels are the published signal tables to the end of 2027."
+             + (" Grey “(lean)” = a Low label." if TUNE["on"] else "") + "</p></section>")
     return "".join(o)
 
 
 def all_months(pattern_dir):
     """Every 2027 month with deep dives, one section each (January keeps the anchor dd2027 that the 2026 calendar links to)."""
     import collections
+    set_tuning(pattern_dir)
     by = collections.OrderedDict()
     for d in load(pathlib.Path(pattern_dir) / "deep_dive_2027-*_ET.json"):
         by.setdefault(d["start"][:7], []).append(d)
