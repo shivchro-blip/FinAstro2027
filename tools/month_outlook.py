@@ -1,6 +1,6 @@
 """A coming month after the November review: what each call is worth, and the month's calls frozen for scoring.
 
-    python tools/month_outlook.py [2027-01] [2027-02]      # default: both; after week_deep_dive.py, bigday_clean_test.py, november_review.py
+    python tools/month_outlook.py [2027-01] [2027-02] [2027-03]      # default: all three; after week_deep_dive.py, bigday_clean_test.py, november_review.py
 
 For every kind of call the calendars make for the month it lists the calls and the best evidence there is for that
 kind of call, judged the way the November review judged November (against chance for the same up/down mix):
@@ -393,7 +393,7 @@ def headline(o, mname):
 
 
 def main():
-    keys = [k for k in sys.argv[1:] if not k.startswith("--")] or ["2027-01", "2027-02"]
+    keys = [k for k in sys.argv[1:] if not k.startswith("--")] or ["2027-01", "2027-02", "2027-03"]
     now = dt.datetime.now(ET)
     nov = json.load(open(OUT / "november_review_2026-11_ET.json"))
     t = nov["tuning"]

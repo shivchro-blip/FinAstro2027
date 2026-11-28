@@ -156,7 +156,7 @@ def section(dds, title=None, anchor="dd2027", css=True, extra=""):
          "two-sided, plus big days. The labels, the model and the rules with a supported record are built the same way as the December days of the 2026 calendar.<br>"
          f"<b>Double-checked:</b> {sum(c['ok'] for c in chk)} of {len(chk)} checks pass (event times re-derived from the ephemeris, occurrence counts against expected "
          "frequencies, one result per week recounted from raw prices with separate code, every sky event classified).<br>"
-         f"<b>Holidays:</b> {E(hol)}. The BSE has not yet published its 2027 holiday list; only fixed holidays are assumed.<br>"
+         f"<b>Holidays:</b> {E(hol)}. The BSE has not yet published its 2027 holiday list; only holidays with certain dates are assumed (lunar-calendar ones such as Holi are not).<br>"
          + (f"<b>How far to trust the labels and the model:</b> {E(TUNE['note'])}<br>" if TUNE["on"] else "") +
          f"<b>The year:</b> lord of the year 2026–27 {E(y.get('lord_of_year_us', '?'))} (US time) or {E(y.get('lord_of_year_india', '?'))} (Indian time), watch list only. "
          f"NYSE ruler of the year {E(y.get('ruler', '?'))}, strength {y.get('ruler_strength', '?')}, house {y.get('ruler_house', '?')}. Both test at chance.</div>"]

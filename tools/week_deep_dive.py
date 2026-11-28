@@ -1,6 +1,6 @@
 """Deep dive for one week: every sky event backtested, every active rule with its record.
 
-    python tools/week_deep_dive.py [nov] [dec] [jan] [feb] [--reuse-days]   # default: every week of Nov and Dec 2026, Jan and Feb 2027
+    python tools/week_deep_dive.py [nov] [dec] [jan] [feb] [mar] [--reuse-days]   # default: every week of Nov and Dec 2026, Jan to Mar 2027
                                                                               # (November uses history to 31 Oct 2026 only)
 
 For each day of the week (December 2026 from the 2026 calendar JSON; January 2027 built with forward_daybyday.build and
@@ -530,7 +530,7 @@ def month_days(a, b, nsl):
     _, ms = SRG.NC.backtest("A")
     SRG.START_DATES[:] = [m["start"].astimezone(ET).date() for m in ms]
     atests = json.load(open(OUT / "author_forecasts_ET.json"))["tests"]
-    mons = SRG.months(dt.datetime(2026, 10, 1), dt.datetime(2027, 3, 20))
+    mons = SRG.months(dt.datetime(2026, 10, 1), dt.datetime(b.year, b.month, b.day) + dt.timedelta(days=50))
     srd = {r["d"]: r for r in SRG.daily(a, b, mons, atests)}
     for x in days:
         d = dt.date.fromisoformat(x["date"])
@@ -622,7 +622,8 @@ def main():
             week(wa, wb, days, items, MKN, cache_n, context)
 
 
-MONTHS_2027 = {"jan": (dt.date(2027, 1, 1), dt.date(2027, 1, 31)), "feb": (dt.date(2027, 2, 1), dt.date(2027, 2, 28))}
+MONTHS_2027 = {"jan": (dt.date(2027, 1, 1), dt.date(2027, 1, 31)), "feb": (dt.date(2027, 2, 1), dt.date(2027, 2, 28)),
+               "mar": (dt.date(2027, 3, 1), dt.date(2027, 3, 31))}
 
 if __name__ == "__main__":
     main()
