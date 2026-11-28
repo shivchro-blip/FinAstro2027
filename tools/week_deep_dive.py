@@ -144,6 +144,22 @@ def overtake_times(fast, slow):
     return out
 
 
+def speed_levels():
+    """The calibrated Fast/Normal speed levels (config/conventions.yaml speed_classes; as build_2027.py emits speed_crossing records)."""
+    import yaml
+    conf = yaml.safe_load(open(ROOT / "config" / "conventions.yaml"))["speed_classes"]
+    return {b: v["threshold"] for b, v in conf.items() if isinstance(v, dict) and v.get("threshold") is not None}
+
+
+SPEED_LEVEL = speed_levels()
+
+
+def fast_times(body, fam):
+    """Instants the planet's speed crosses its Fast level going up (fast_start) or down (fast_end), ephem.speed_crossings."""
+    from finastro import ephem
+    return [inst for inst, kind, family, lvl in ephem.speed_crossings(body, H0, H1, SPEED_LEVEL[body]) if kind == "threshold" and family == f"motion/{fam}"]
+
+
 def station_times(b, direction):
     """Instants the planet's longitude speed changes sign (direct: - to +, retrograde: + to -)."""
     out, x, end = [], T.jd(H0), T.jd(H1)
@@ -256,6 +272,12 @@ def classify(ch):
         if m:
             w = m.group(1).lower()
             return (f"eclipse|{w}", f"{m.group(1)} eclipse begins" + (" (penumbral contact)" if w == "lunar" else ""), lambda w=w: eclipse_times(w))
+    if k == "speed crossing":
+        m = re.search(r"(\w+) \(motion/(fast_start|fast_end)\)", t)
+        if m and m.group(1) in SPEED_LEVEL:
+            b, fam = m.group(1), m.group(2)
+            return (f"fast|{b}|{fam}", f"{b} {'enters' if fam == 'fast_start' else 'leaves'} fast motion",
+                    lambda b=b, fam=fam: fast_times(b, fam))
     if k == "speed overtake":
         m = re.search(r"motion/(\w+)_overtakes_(\w+)", t)
         if m:
@@ -401,6 +423,8 @@ def expect_range(key):
         return (75, 90)                 # once per Mercury synodic cycle (115.88 d): 26 x 365.25 / 115.88 = 82 each way
     if k[0] in ("comb", "rise") and k[1] == "Mercury":
         return (120, 190)
+    if k[0] == "fast":                  # at most once per synodic cycle each way (Mercury 82, Venus 16.3, Mars 12.2 in 26 years);
+        return {"Mercury": (55, 85), "Venus": (14, 18), "Mars": (11, 14)}.get(k[1])   # Mercury's peak speed misses its level in some cycles
     if k[0] == "lun":
         return EXPECT["lun"]
     return None
@@ -461,6 +485,11 @@ def checks(per_day, classes, cache, MK, unclassified):
                 d1 = speed(T.jd(t + dt.timedelta(hours=6)), k[1]) - speed(T.jd(t + dt.timedelta(hours=6)), k[2])
                 if not (d0 < 0 <= d1):
                     bad.append(f"{e['text']}: speed difference {d0:.4f} -> {d1:.4f}")
+            elif k[0] == "fast":
+                lv = SPEED_LEVEL[k[1]]
+                s0, s1 = speed(T.jd(t - dt.timedelta(hours=6)), k[1]), speed(T.jd(t + dt.timedelta(hours=6)), k[1])
+                if not ((s0 < lv <= s1) if k[2] == "fast_start" else (s0 >= lv > s1)):
+                    bad.append(f"{e['text']}: speed {s0:.4f} -> {s1:.4f} around level {lv}")
             elif k[0] == "sunapsis":
                 g = lambda y: swe.calc_ut(y, swe.SUN, swe.FLG_SWIEPH | swe.FLG_SPEED)[0][5]
                 a0, a1 = g(T.jd(t - dt.timedelta(hours=12))), g(T.jd(t + dt.timedelta(hours=12)))
@@ -474,7 +503,7 @@ def checks(per_day, classes, cache, MK, unclassified):
             elif k[0] == "bhadra":
                 if not (karana_fn(y1) == "Vishti" and karana_fn(y0) != "Vishti"):
                     bad.append(f"{e['text']}: karana {karana_fn(y0)}->{karana_fn(y1)}")
-    add("Every event time re-derived from the ephemeris (±6 min; Moon aspects ±0.15°, eclipse first contacts ±10 min, speed overtakes ±6 h, stations and the Sun's apsides ±12 h, Moon apsides ±3 h, combustion by IST day)", not bad, f"{n} events checked" + ("; " + "; ".join(bad[:5]) if bad else ""))
+    add("Every event time re-derived from the ephemeris (±6 min; Moon aspects ±0.15°, eclipse first contacts ±10 min, speed overtakes and fast-motion crossings ±6 h, stations and the Sun's apsides ±12 h, Moon apsides ±3 h, combustion by IST day)", not bad, f"{n} events checked" + ("; " + "; ".join(bad[:5]) if bad else ""))
     # 2. history counts sensible
     off = []
     for key, c in classes.items():

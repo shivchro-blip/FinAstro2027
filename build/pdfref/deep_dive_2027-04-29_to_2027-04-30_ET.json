@@ -1,0 +1,2635 @@
+{
+ "made": "2026-11-28 09:25 ET",
+ "start": "2027-04-29",
+ "end": "2027-04-30",
+ "classes": {
+  "tithi|23": {
+   "label": "Krishna Navami begins",
+   "n_hist": 322,
+   "stats": {
+    "spx": {
+     "h1": {
+      "n": 321,
+      "up": 79,
+      "down": 82,
+      "up_pct": 49,
+      "base": 54,
+      "mean": -0.14,
+      "p2": 0.201,
+      "q": 0.9123
+     },
+     "h5": {
+      "n": 321,
+      "up": 159,
+      "down": 94,
+      "up_pct": 63,
+      "base": 59,
+      "mean": 0.3,
+      "p2": 0.2372,
+      "q": 0.9123
+     },
+     "big": {
+      "n": 321,
+      "big": 31,
+      "pct": 10,
+      "p": 0.6082,
+      "q": 0.9272
+     }
+    },
+    "sensex": {
+     "h1": {
+      "n": 321,
+      "up": 105,
+      "down": 85,
+      "up_pct": 55,
+      "base": 55,
+      "mean": 0.01,
+      "p2": 0.9494,
+      "q": 1.0
+     },
+     "h5": {
+      "n": 321,
+      "up": 170,
+      "down": 106,
+      "up_pct": 62,
+      "base": 58,
+      "mean": 0.27,
+      "p2": 0.2128,
+      "q": 0.9123
+     },
+     "big": {
+      "n": 321,
+      "big": 30,
+      "pct": 9,
+      "p": 0.6788,
+      "q": 0.9272
+     }
+    },
+    "gold": {
+     "h1": {
+      "n": 321,
+      "up": 96,
+      "down": 76,
+      "up_pct": 56,
+      "base": 55,
+      "mean": 0.13,
+      "p2": 0.8616,
+      "q": 1.0
+     },
+     "h5": {
+      "n": 321,
+      "up": 155,
+      "down": 105,
+      "up_pct": 60,
+      "base": 57,
+      "mean": 0.51,
+      "p2": 0.3686,
+      "q": 0.9123
+     },
+     "big": {
+      "n": 321,
+      "big": 32,
+      "pct": 10,
+      "p": 0.5346,
+      "q": 0.9272
+     }
+    },
+    "silver": {
+     "h1": {
+      "n": 321,
+      "up": 124,
+      "down": 106,
+      "up_pct": 54,
+      "base": 54,
+      "mean": 0.13,
+      "p2": 1.0,
+      "q": 1.0
+     },
+     "h5": {
+      "n": 321,
+      "up": 167,
+      "down": 123,
+      "up_pct": 58,
+      "base": 54,
+      "mean": 0.79,
+      "p2": 0.1884,
+      "q": 0.9123
+     },
+     "big": {
+      "n": 321,
+      "big": 30,
+      "pct": 9,
+      "p": 0.6788,
+      "q": 0.9272
+     }
+    }
+   }
+  },
+  "yoga|23": {
+   "label": "Yoga Shukla begins",
+   "n_hist": 374,
+   "stats": {
+    "spx": {
+     "h1": {
+      "n": 373,
+      "up": 92,
+      "down": 98,
+      "up_pct": 48,
+      "base": 54,
+      "mean": -0.08,
+      "p2": 0.1236,
+      "q": 0.9123
+     },
+     "h5": {
+      "n": 373,
+      "up": 156,
+      "down": 119,
+      "up_pct": 57,
+      "base": 59,
+      "mean": 0.01,
+      "p2": 0.501,
+      "q": 0.9731
+     },
+     "big": {
+      "n": 373,
+      "big": 33,
+      "pct": 9,
+      "p": 0.7943,
+      "q": 0.9532
+     }
+    },
+    "sensex": {
+     "h1": {
+      "n": 373,
+      "up": 119,
+      "down": 120,
+      "up_pct": 50,
+      "base": 55,
+      "mean": -0.07,
+      "p2": 0.131,
+      "q": 0.9123
+     },
+     "h5": {
+      "n": 373,
+      "up": 173,
+      "down": 145,
+      "up_pct": 54,
+      "base": 58,
+      "mean": 0.18,
+      "p2": 0.235,
+      "q": 0.9123
+     },
+     "big": {
+      "n": 373,
+      "big": 42,
+      "pct": 11,
+      "p": 0.2309,
+      "q": 0.9272
+     }
+    },
+    "gold": {
+     "h1": {
+      "n": 373,
+      "up": 113,
+      "down": 96,
+      "up_pct": 54,
+      "base": 55,
+      "mean": 0.03,
+      "p2": 0.9414,
+      "q": 1.0
+     },
+     "h5": {
+      "n": 373,
+      "up": 160,
+      "down": 130,
+      "up_pct": 55,
+      "base": 57,
+      "mean": 0.17,
+      "p2": 0.6764,
+      "q": 1.0
+     },
+     "big": {
+      "n": 373,
+      "big": 37,
+      "pct": 10,
+      "p": 0.5459,
+      "q": 0.9272
+     }
+    },
+    "silver": {
+     "h1": {
+      "n": 373,
+      "up": 136,
+      "down": 134,
+      "up_pct": 50,
+      "base": 54,
+      "mean": -0.02,
+      "p2": 0.263,
+      "q": 0.9123
+     },
+     "h5": {
+      "n": 373,
+      "up": 173,
+      "down": 150,
+      "up_pct": 54,
+      "base": 54,
+      "mean": 0.22,
+      "p2": 0.9776,
+      "q": 1.0
+     },
+     "big": {
+      "n": 373,
+      "big": 39,
+      "pct": 10,
+      "p": 0.4094,
+      "q": 0.9272
+     }
+    }
+   }
+  },
+  "asp|Moon|Rahu|conjunction": {
+   "label": "Moon\u2013Rahu exact conjunction",
+   "n_hist": 350,
+   "stats": {
+    "spx": {
+     "h1": {
+      "n": 349,
+      "up": 102,
+      "down": 83,
+      "up_pct": 55,
+      "base": 55,
+      "mean": -0.03,
+      "p2": 0.9532,
+      "q": 1.0
+     },
+     "h5": {
+      "n": 349,
+      "up": 156,
+      "down": 121,
+      "up_pct": 56,
+      "base": 59,
+      "mean": -0.0,
+      "p2": 0.3222,
+      "q": 0.9123
+     },
+     "big": {
+      "n": 349,
+      "big": 33,
+      "pct": 9,
+      "p": 0.6585,
+      "q": 0.9272
+     }
+    },
+    "sensex": {
+     "h1": {
+      "n": 349,
+      "up": 118,
+      "down": 88,
+      "up_pct": 57,
+      "base": 55,
+      "mean": 0.08,
+      "p2": 0.5236,
+      "q": 0.9736
+     },
+     "h5": {
+      "n": 349,
+      "up": 162,
+      "down": 135,
+      "up_pct": 55,
+      "base": 58,
+      "mean": 0.2,
+      "p2": 0.2052,
+      "q": 0.9123
+     },
+     "big": {
+      "n": 349,
+      "big": 43,
+      "pct": 12,
+      "p": 0.0903,
+      "q": 0.9233
+     }
+    },
+    "gold": {
+     "h1": {
+      "n": 349,
+      "up": 91,
+      "down": 89,
+      "up_pct": 51,
+      "base": 55,
+      "mean": 0.03,
+      "p2": 0.262,
+      "q": 0.9123
+     },
+     "h5": {
+      "n": 349,
+      "up": 161,
+      "down": 127,
+      "up_pct": 56,
+      "base": 57,
+      "mean": 0.21,
+      "p2": 0.8418,
+      "q": 1.0
+     },
+     "big": {
+      "n": 349,
+      "big": 31,
+      "pct": 9,
+      "p": 0.7811,
+      "q": 0.9532
+     }
+    },
+    "silver": {
+     "h1": {
+      "n": 349,
+      "up": 126,
+      "down": 122,
+      "up_pct": 51,
+      "base": 54,
+      "mean": 0.02,
+      "p2": 0.3486,
+      "q": 0.9123
+     },
+     "h5": {
+      "n": 349,
+      "up": 167,
+      "down": 148,
+      "up_pct": 53,
+      "base": 54,
+      "mean": 0.33,
+      "p2": 0.8894,
+      "q": 1.0
+     },
+     "big": {
+      "n": 349,
+      "big": 40,
+      "pct": 11,
+      "p": 0.2036,
+      "q": 0.9272
+     }
+    }
+   }
+  },
+  "asp|Moon|Ketu|opposition": {
+   "label": "Moon\u2013Ketu exact opposition",
+   "n_hist": 350,
+   "stats": {
+    "spx": {
+     "h1": {
+      "n": 349,
+      "up": 102,
+      "down": 83,
+      "up_pct": 55,
+      "base": 55,
+      "mean": -0.03,
+      "p2": 0.9532,
+      "q": 1.0
+     },
+     "h5": {
+      "n": 349,
+      "up": 156,
+      "down": 121,
+      "up_pct": 56,
+      "base": 59,
+      "mean": -0.0,
+      "p2": 0.3222,
+      "q": 0.9123
+     },
+     "big": {
+      "n": 349,
+      "big": 33,
+      "pct": 9,
+      "p": 0.6585,
+      "q": 0.9272
+     }
+    },
+    "sensex": {
+     "h1": {
+      "n": 349,
+      "up": 118,
+      "down": 88,
+      "up_pct": 57,
+      "base": 55,
+      "mean": 0.08,
+      "p2": 0.5236,
+      "q": 0.9736
+     },
+     "h5": {
+      "n": 349,
+      "up": 162,
+      "down": 135,
+      "up_pct": 55,
+      "base": 58,
+      "mean": 0.2,
+      "p2": 0.2052,
+      "q": 0.9123
+     },
+     "big": {
+      "n": 349,
+      "big": 43,
+      "pct": 12,
+      "p": 0.0903,
+      "q": 0.9233
+     }
+    },
+    "gold": {
+     "h1": {
+      "n": 349,
+      "up": 91,
+      "down": 89,
+      "up_pct": 51,
+      "base": 55,
+      "mean": 0.03,
+      "p2": 0.262,
+      "q": 0.9123
+     },
+     "h5": {
+      "n": 349,
+      "up": 161,
+      "down": 127,
+      "up_pct": 56,
+      "base": 57,
+      "mean": 0.21,
+      "p2": 0.8418,
+      "q": 1.0
+     },
+     "big": {
+      "n": 349,
+      "big": 31,
+      "pct": 9,
+      "p": 0.7811,
+      "q": 0.9532
+     }
+    },
+    "silver": {
+     "h1": {
+      "n": 349,
+      "up": 126,
+      "down": 122,
+      "up_pct": 51,
+      "base": 54,
+      "mean": 0.02,
+      "p2": 0.3486,
+      "q": 0.9123
+     },
+     "h5": {
+      "n": 349,
+      "up": 167,
+      "down": 148,
+      "up_pct": 53,
+      "base": 54,
+      "mean": 0.33,
+      "p2": 0.8894,
+      "q": 1.0
+     },
+     "big": {
+      "n": 349,
+      "big": 40,
+      "pct": 11,
+      "p": 0.2036,
+      "q": 0.9272
+     }
+    }
+   }
+  },
+  "asp|Moon|Jupiter|opposition": {
+   "label": "Moon\u2013Jupiter exact opposition",
+   "n_hist": 346,
+   "stats": {
+    "spx": {
+     "h1": {
+      "n": 346,
+      "up": 106,
+      "down": 84,
+      "up_pct": 56,
+      "base": 55,
+      "mean": 0.05,
+      "p2": 0.825,
+      "q": 1.0
+     },
+     "h5": {
+      "n": 346,
+      "up": 150,
+      "down": 117,
+      "up_pct": 56,
+      "base": 59,
+      "mean": 0.2,
+      "p2": 0.382,
+      "q": 0.9123
+     },
+     "big": {
+      "n": 346,
+      "big": 37,
+      "pct": 11,
+      "p": 0.3589,
+      "q": 0.9272
+     }
+    },
+    "sensex": {
+     "h1": {
+      "n": 346,
+      "up": 127,
+      "down": 93,
+      "up_pct": 58,
+      "base": 55,
+      "mean": 0.15,
+      "p2": 0.383,
+      "q": 0.9123
+     },
+     "h5": {
+      "n": 346,
+      "up": 175,
+      "down": 108,
+      "up_pct": 62,
+      "base": 58,
+      "mean": 0.48,
+      "p2": 0.1764,
+      "q": 0.9123
+     },
+     "big": {
+      "n": 346,
+      "big": 34,
+      "pct": 10,
+      "p": 0.569,
+      "q": 0.9272
+     }
+    },
+    "gold": {
+     "h1": {
+      "n": 346,
+      "up": 112,
+      "down": 88,
+      "up_pct": 56,
+      "base": 55,
+      "mean": 0.11,
+      "p2": 0.7638,
+      "q": 1.0
+     },
+     "h5": {
+      "n": 346,
+      "up": 155,
+      "down": 116,
+      "up_pct": 57,
+      "base": 56,
+      "mean": 0.15,
+      "p2": 0.7828,
+      "q": 1.0
+     },
+     "big": {
+      "n": 346,
+      "big": 37,
+      "pct": 11,
+      "p": 0.3589,
+      "q": 0.9272
+     }
+    },
+    "silver": {
+     "h1": {
+      "n": 346,
+      "up": 140,
+      "down": 126,
+      "up_pct": 53,
+      "base": 54,
+      "mean": 0.16,
+      "p2": 0.725,
+      "q": 1.0
+     },
+     "h5": {
+      "n": 346,
+      "up": 158,
+      "down": 133,
+      "up_pct": 54,
+      "base": 54,
+      "mean": 0.51,
+      "p2": 0.8908,
+      "q": 1.0
+     },
+     "big": {
+      "n": 346,
+      "big": 42,
+      "pct": 12,
+      "p": 0.1101,
+      "q": 0.9233
+     }
+    }
+   }
+  },
+  "nak|Moon|Dhanishta": {
+   "label": "Moon enters Dhanishta",
+   "n_hist": 349,
+   "stats": {
+    "spx": {
+     "h1": {
+      "n": 348,
+      "up": 103,
+      "down": 90,
+      "up_pct": 53,
+      "base": 55,
+      "mean": 0.03,
+      "p2": 0.7728,
+      "q": 1.0
+     },
+     "h5": {
+      "n": 348,
+      "up": 156,
+      "down": 109,
+      "up_pct": 59,
+      "base": 59,
+      "mean": 0.23,
+      "p2": 0.8828,
+      "q": 1.0
+     },
+     "big": {
+      "n": 348,
+      "big": 36,
+      "pct": 10,
+      "p": 0.441,
+      "q": 0.9272
+     }
+    },
+    "sensex": {
+     "h1": {
+      "n": 348,
+      "up": 98,
+      "down": 103,
+      "up_pct": 49,
+      "base": 55,
+      "mean": 0.02,
+      "p2": 0.0836,
+      "q": 0.9123
+     },
+     "h5": {
+      "n": 348,
+      "up": 155,
+      "down": 139,
+      "up_pct": 53,
+      "base": 58,
+      "mean": 0.08,
+      "p2": 0.0742,
+      "q": 0.9123
+     },
+     "big": {
+      "n": 348,
+      "big": 36,
+      "pct": 10,
+      "p": 0.441,
+      "q": 0.9272
+     }
+    },
+    "gold": {
+     "h1": {
+      "n": 348,
+      "up": 94,
+      "down": 98,
+      "up_pct": 49,
+      "base": 55,
+      "mean": -0.01,
+      "p2": 0.132,
+      "q": 0.9123
+     },
+     "h5": {
+      "n": 348,
+      "up": 160,
+      "down": 111,
+      "up_pct": 59,
+      "base": 57,
+      "mean": 0.36,
+      "p2": 0.4678,
+      "q": 0.9731
+     },
+     "big": {
+      "n": 348,
+      "big": 36,
+      "pct": 10,
+      "p": 0.441,
+      "q": 0.9272
+     }
+    },
+    "silver": {
+     "h1": {
+      "n": 348,
+      "up": 136,
+      "down": 120,
+      "up_pct": 53,
+      "base": 54,
+      "mean": 0.05,
+      "p2": 0.8184,
+      "q": 1.0
+     },
+     "h5": {
+      "n": 348,
+      "up": 183,
+      "down": 120,
+      "up_pct": 60,
+      "base": 54,
+      "mean": 0.82,
+      "p2": 0.0302,
+      "q": 0.9123
+     },
+     "big": {
+      "n": 348,
+      "big": 35,
+      "pct": 10,
+      "p": 0.5119,
+      "q": 0.9272
+     }
+    }
+   }
+  },
+  "asp|Moon|Saturn|sextile": {
+   "label": "Moon\u2013Saturn exact sextile",
+   "n_hist": 695,
+   "stats": {
+    "spx": {
+     "h1": {
+      "n": 693,
+      "up": 210,
+      "down": 163,
+      "up_pct": 56,
+      "base": 54,
+      "mean": 0.02,
+      "p2": 0.4894,
+      "q": 0.9731
+     },
+     "h5": {
+      "n": 693,
+      "up": 313,
+      "down": 230,
+      "up_pct": 58,
+      "base": 59,
+      "mean": 0.01,
+      "p2": 0.4662,
+      "q": 0.9731
+     },
+     "big": {
+      "n": 693,
+      "big": 79,
+      "pct": 11,
+      "p": 0.1231,
+      "q": 0.9233
+     }
+    },
+    "sensex": {
+     "h1": {
+      "n": 693,
+      "up": 243,
+      "down": 178,
+      "up_pct": 58,
+      "base": 55,
+      "mean": 0.11,
+      "p2": 0.2618,
+      "q": 0.9123
+     },
+     "h5": {
+      "n": 693,
+      "up": 350,
+      "down": 229,
+      "up_pct": 60,
+      "base": 58,
+      "mean": 0.31,
+      "p2": 0.2214,
+      "q": 0.9123
+     },
+     "big": {
+      "n": 693,
+      "big": 71,
+      "pct": 10,
+      "p": 0.4331,
+      "q": 0.9272
+     }
+    },
+    "gold": {
+     "h1": {
+      "n": 693,
+      "up": 203,
+      "down": 176,
+      "up_pct": 54,
+      "base": 55,
+      "mean": 0.02,
+      "p2": 0.7472,
+      "q": 1.0
+     },
+     "h5": {
+      "n": 693,
+      "up": 326,
+      "down": 237,
+      "up_pct": 58,
+      "base": 57,
+      "mean": 0.26,
+      "p2": 0.543,
+      "q": 0.9941
+     },
+     "big": {
+      "n": 693,
+      "big": 72,
+      "pct": 10,
+      "p": 0.3843,
+      "q": 0.9272
+     }
+    },
+    "silver": {
+     "h1": {
+      "n": 693,
+      "up": 264,
+      "down": 226,
+      "up_pct": 54,
+      "base": 54,
+      "mean": 0.07,
+      "p2": 1.0,
+      "q": 1.0
+     },
+     "h5": {
+      "n": 693,
+      "up": 334,
+      "down": 261,
+      "up_pct": 56,
+      "base": 54,
+      "mean": 0.35,
+      "p2": 0.2418,
+      "q": 0.9123
+     },
+     "big": {
+      "n": 693,
+      "big": 71,
+      "pct": 10,
+      "p": 0.4331,
+      "q": 0.9272
+     }
+    }
+   }
+  },
+  "sign|Moon|Aquarius": {
+   "label": "Moon enters Aquarius",
+   "n_hist": 349,
+   "stats": {
+    "spx": {
+     "h1": {
+      "n": 348,
+      "up": 99,
+      "down": 91,
+      "up_pct": 52,
+      "base": 55,
+      "mean": -0.0,
+      "p2": 0.5536,
+      "q": 0.9982
+     },
+     "h5": {
+      "n": 348,
+      "up": 159,
+      "down": 103,
+      "up_pct": 61,
+      "base": 59,
+      "mean": 0.26,
+      "p2": 0.7322,
+      "q": 1.0
+     },
+     "big": {
+      "n": 348,
+      "big": 26,
+      "pct": 7,
+      "p": 0.9565,
+      "q": 1.0
+     }
+    },
+    "sensex": {
+     "h1": {
+      "n": 348,
+      "up": 107,
+      "down": 99,
+      "up_pct": 52,
+      "base": 55,
+      "mean": 0.04,
+      "p2": 0.4128,
+      "q": 0.9313
+     },
+     "h5": {
+      "n": 348,
+      "up": 156,
+      "down": 134,
+      "up_pct": 54,
+      "base": 58,
+      "mean": 0.16,
+      "p2": 0.163,
+      "q": 0.9123
+     },
+     "big": {
+      "n": 348,
+      "big": 34,
+      "pct": 10,
+      "p": 0.583,
+      "q": 0.9272
+     }
+    },
+    "gold": {
+     "h1": {
+      "n": 348,
+      "up": 96,
+      "down": 95,
+      "up_pct": 50,
+      "base": 55,
+      "mean": 0.0,
+      "p2": 0.2136,
+      "q": 0.9123
+     },
+     "h5": {
+      "n": 348,
+      "up": 163,
+      "down": 110,
+      "up_pct": 60,
+      "base": 57,
+      "mean": 0.35,
+      "p2": 0.3638,
+      "q": 0.9123
+     },
+     "big": {
+      "n": 348,
+      "big": 38,
+      "pct": 11,
+      "p": 0.3083,
+      "q": 0.9272
+     }
+    },
+    "silver": {
+     "h1": {
+      "n": 348,
+      "up": 135,
+      "down": 115,
+      "up_pct": 54,
+      "base": 54,
+      "mean": 0.08,
+      "p2": 0.9918,
+      "q": 1.0
+     },
+     "h5": {
+      "n": 348,
+      "up": 183,
+      "down": 121,
+      "up_pct": 60,
+      "base": 54,
+      "mean": 0.76,
+      "p2": 0.0344,
+      "q": 0.9123
+     },
+     "big": {
+      "n": 348,
+      "big": 37,
+      "pct": 11,
+      "p": 0.3725,
+      "q": 0.9272
+     }
+    }
+   }
+  },
+  "asp|Moon|Mars|opposition": {
+   "label": "Moon\u2013Mars exact opposition",
+   "n_hist": 335,
+   "stats": {
+    "spx": {
+     "h1": {
+      "n": 334,
+      "up": 93,
+      "down": 84,
+      "up_pct": 53,
+      "base": 54,
+      "mean": 0.02,
+      "p2": 0.6666,
+      "q": 1.0
+     },
+     "h5": {
+      "n": 334,
+      "up": 161,
+      "down": 98,
+      "up_pct": 62,
+      "base": 59,
+      "mean": 0.26,
+      "p2": 0.3046,
+      "q": 0.9123
+     },
+     "big": {
+      "n": 334,
+      "big": 39,
+      "pct": 12,
+      "p": 0.1751,
+      "q": 0.9272
+     }
+    },
+    "sensex": {
+     "h1": {
+      "n": 334,
+      "up": 103,
+      "down": 98,
+      "up_pct": 51,
+      "base": 54,
+      "mean": -0.03,
+      "p2": 0.4156,
+      "q": 0.9313
+     },
+     "h5": {
+      "n": 334,
+      "up": 163,
+      "down": 121,
+      "up_pct": 57,
+      "base": 58,
+      "mean": 0.12,
+      "p2": 0.9078,
+      "q": 1.0
+     },
+     "big": {
+      "n": 334,
+      "big": 31,
+      "pct": 9,
+      "p": 0.6954,
+      "q": 0.9272
+     }
+    },
+    "gold": {
+     "h1": {
+      "n": 334,
+      "up": 103,
+      "down": 76,
+      "up_pct": 58,
+      "base": 54,
+      "mean": 0.11,
+      "p2": 0.4226,
+      "q": 0.9313
+     },
+     "h5": {
+      "n": 334,
+      "up": 160,
+      "down": 117,
+      "up_pct": 58,
+      "base": 56,
+      "mean": 0.27,
+      "p2": 0.6764,
+      "q": 1.0
+     },
+     "big": {
+      "n": 334,
+      "big": 36,
+      "pct": 11,
+      "p": 0.3432,
+      "q": 0.9272
+     }
+    },
+    "silver": {
+     "h1": {
+      "n": 334,
+      "up": 145,
+      "down": 106,
+      "up_pct": 58,
+      "base": 54,
+      "mean": 0.22,
+      "p2": 0.228,
+      "q": 0.9123
+     },
+     "h5": {
+      "n": 334,
+      "up": 171,
+      "down": 132,
+      "up_pct": 56,
+      "base": 54,
+      "mean": 0.61,
+      "p2": 0.3686,
+      "q": 0.9123
+     },
+     "big": {
+      "n": 334,
+      "big": 47,
+      "pct": 14,
+      "p": 0.0109,
+      "q": 0.654
+     }
+    }
+   }
+  },
+  "tithi|24": {
+   "label": "Krishna Dashami begins",
+   "n_hist": 322,
+   "stats": {
+    "spx": {
+     "h1": {
+      "n": 321,
+      "up": 92,
+      "down": 75,
+      "up_pct": 55,
+      "base": 54,
+      "mean": 0.01,
+      "p2": 0.8718,
+      "q": 1.0
+     },
+     "h5": {
+      "n": 321,
+      "up": 160,
+      "down": 90,
+      "up_pct": 64,
+      "base": 59,
+      "mean": 0.47,
+      "p2": 0.123,
+      "q": 0.9123
+     },
+     "big": {
+      "n": 321,
+      "big": 33,
+      "pct": 10,
+      "p": 0.4605,
+      "q": 0.9272
+     }
+    },
+    "sensex": {
+     "h1": {
+      "n": 321,
+      "up": 107,
+      "down": 88,
+      "up_pct": 55,
+      "base": 55,
+      "mean": -0.02,
+      "p2": 1.0,
+      "q": 1.0
+     },
+     "h5": {
+      "n": 321,
+      "up": 150,
+      "down": 106,
+      "up_pct": 59,
+      "base": 58,
+      "mean": 0.37,
+      "p2": 0.7988,
+      "q": 1.0
+     },
+     "big": {
+      "n": 321,
+      "big": 41,
+      "pct": 13,
+      "p": 0.0628,
+      "q": 0.9233
+     }
+    },
+    "gold": {
+     "h1": {
+      "n": 321,
+      "up": 86,
+      "down": 72,
+      "up_pct": 54,
+      "base": 55,
+      "mean": 0.04,
+      "p2": 1.0,
+      "q": 1.0
+     },
+     "h5": {
+      "n": 321,
+      "up": 146,
+      "down": 110,
+      "up_pct": 57,
+      "base": 56,
+      "mean": 0.45,
+      "p2": 0.906,
+      "q": 1.0
+     },
+     "big": {
+      "n": 321,
+      "big": 19,
+      "pct": 6,
+      "p": 0.9965,
+      "q": 1.0
+     }
+    },
+    "silver": {
+     "h1": {
+      "n": 321,
+      "up": 122,
+      "down": 106,
+      "up_pct": 54,
+      "base": 54,
+      "mean": 0.1,
+      "p2": 0.9782,
+      "q": 1.0
+     },
+     "h5": {
+      "n": 321,
+      "up": 168,
+      "down": 121,
+      "up_pct": 58,
+      "base": 54,
+      "mean": 0.79,
+      "p2": 0.1336,
+      "q": 0.9123
+     },
+     "big": {
+      "n": 321,
+      "big": 32,
+      "pct": 10,
+      "p": 0.5346,
+      "q": 0.9272
+     }
+    }
+   }
+  },
+  "yoga|24": {
+   "label": "Yoga Brahma begins",
+   "n_hist": 374,
+   "stats": {
+    "spx": {
+     "h1": {
+      "n": 373,
+      "up": 108,
+      "down": 94,
+      "up_pct": 53,
+      "base": 54,
+      "mean": -0.01,
+      "p2": 0.8294,
+      "q": 1.0
+     },
+     "h5": {
+      "n": 373,
+      "up": 160,
+      "down": 118,
+      "up_pct": 58,
+      "base": 59,
+      "mean": 0.09,
+      "p2": 0.6042,
+      "q": 1.0
+     },
+     "big": {
+      "n": 373,
+      "big": 32,
+      "pct": 9,
+      "p": 0.8418,
+      "q": 0.9612
+     }
+    },
+    "sensex": {
+     "h1": {
+      "n": 373,
+      "up": 134,
+      "down": 113,
+      "up_pct": 54,
+      "base": 55,
+      "mean": 0.05,
+      "p2": 0.8508,
+      "q": 1.0
+     },
+     "h5": {
+      "n": 373,
+      "up": 179,
+      "down": 144,
+      "up_pct": 55,
+      "base": 58,
+      "mean": 0.32,
+      "p2": 0.391,
+      "q": 0.9123
+     },
+     "big": {
+      "n": 373,
+      "big": 45,
+      "pct": 12,
+      "p": 0.109,
+      "q": 0.9233
+     }
+    },
+    "gold": {
+     "h1": {
+      "n": 373,
+      "up": 114,
+      "down": 109,
+      "up_pct": 51,
+      "base": 55,
+      "mean": -0.0,
+      "p2": 0.2886,
+      "q": 0.9123
+     },
+     "h5": {
+      "n": 373,
+      "up": 160,
+      "down": 140,
+      "up_pct": 53,
+      "base": 56,
+      "mean": 0.14,
+      "p2": 0.3088,
+      "q": 0.9123
+     },
+     "big": {
+      "n": 373,
+      "big": 43,
+      "pct": 12,
+      "p": 0.1834,
+      "q": 0.9272
+     }
+    },
+    "silver": {
+     "h1": {
+      "n": 373,
+      "up": 133,
+      "down": 136,
+      "up_pct": 49,
+      "base": 54,
+      "mean": -0.04,
+      "p2": 0.1696,
+      "q": 0.9123
+     },
+     "h5": {
+      "n": 373,
+      "up": 177,
+      "down": 156,
+      "up_pct": 53,
+      "base": 54,
+      "mean": 0.14,
+      "p2": 0.901,
+      "q": 1.0
+     },
+     "big": {
+      "n": 373,
+      "big": 36,
+      "pct": 10,
+      "p": 0.6139,
+      "q": 0.9272
+     }
+    }
+   }
+  },
+  "nak|Uranus|Rohini": {
+   "label": "Uranus enters Rohini",
+   "n_hist": 1,
+   "stats": {
+    "spx": {
+     "h1": {
+      "n": 1,
+      "up": 0,
+      "down": 1,
+      "up_pct": 0,
+      "base": 58,
+      "mean": -0.79,
+      "p2": 0.8308,
+      "q": 1.0
+     },
+     "h5": {
+      "n": 1,
+      "up": 0,
+      "down": 1,
+      "up_pct": 0,
+      "base": 54,
+      "mean": -1.55,
+      "p2": 0.9248,
+      "q": 1.0
+     },
+     "big": {
+      "n": 1,
+      "big": 0,
+      "pct": 0,
+      "p": 1.0,
+      "q": 1.0
+     }
+    },
+    "sensex": {
+     "h1": {
+      "n": 1,
+      "up": 0,
+      "down": 0,
+      "up_pct": null,
+      "base": null,
+      "mean": 0.06,
+      "p2": null
+     },
+     "h5": {
+      "n": 1,
+      "up": 1,
+      "down": 0,
+      "up_pct": 100,
+      "base": 43,
+      "mean": 0.75,
+      "p2": 0.8686,
+      "q": 1.0
+     },
+     "big": {
+      "n": 1,
+      "big": 0,
+      "pct": 0,
+      "p": 1.0,
+      "q": 1.0
+     }
+    },
+    "gold": {
+     "h1": {
+      "n": 1,
+      "up": 0,
+      "down": 1,
+      "up_pct": 0,
+      "base": 50,
+      "mean": -2.63,
+      "p2": 1.0,
+      "q": 1.0
+     },
+     "h5": {
+      "n": 1,
+      "up": 0,
+      "down": 1,
+      "up_pct": 0,
+      "base": 49,
+      "mean": -2.31,
+      "p2": 1.0,
+      "q": 1.0
+     },
+     "big": {
+      "n": 1,
+      "big": 0,
+      "pct": 0,
+      "p": 1.0,
+      "q": 1.0
+     }
+    },
+    "silver": {
+     "h1": {
+      "n": 1,
+      "up": 0,
+      "down": 1,
+      "up_pct": 0,
+      "base": 51,
+      "mean": -3.64,
+      "p2": 0.986,
+      "q": 1.0
+     },
+     "h5": {
+      "n": 1,
+      "up": 0,
+      "down": 1,
+      "up_pct": 0,
+      "base": 47,
+      "mean": -6.31,
+      "p2": 1.0,
+      "q": 1.0
+     },
+     "big": {
+      "n": 1,
+      "big": 0,
+      "pct": 0,
+      "p": 1.0,
+      "q": 1.0
+     }
+    }
+   }
+  },
+  "nak|Moon|Shatabhisha": {
+   "label": "Moon enters Shatabhisha",
+   "n_hist": 349,
+   "stats": {
+    "spx": {
+     "h1": {
+      "n": 348,
+      "up": 102,
+      "down": 85,
+      "up_pct": 55,
+      "base": 55,
+      "mean": 0.05,
+      "p2": 1.0,
+      "q": 1.0
+     },
+     "h5": {
+      "n": 348,
+      "up": 167,
+      "down": 96,
+      "up_pct": 63,
+      "base": 59,
+      "mean": 0.28,
+      "p2": 0.1866,
+      "q": 0.9123
+     },
+     "big": {
+      "n": 348,
+      "big": 34,
+      "pct": 10,
+      "p": 0.583,
+      "q": 0.9272
+     }
+    },
+    "sensex": {
+     "h1": {
+      "n": 348,
+      "up": 108,
+      "down": 99,
+      "up_pct": 52,
+      "base": 55,
+      "mean": 0.03,
+      "p2": 0.4556,
+      "q": 0.9731
+     },
+     "h5": {
+      "n": 348,
+      "up": 155,
+      "down": 137,
+      "up_pct": 53,
+      "base": 58,
+      "mean": 0.09,
+      "p2": 0.1196,
+      "q": 0.9123
+     },
+     "big": {
+      "n": 348,
+      "big": 32,
+      "pct": 9,
+      "p": 0.717,
+      "q": 0.9352
+     }
+    },
+    "gold": {
+     "h1": {
+      "n": 348,
+      "up": 103,
+      "down": 91,
+      "up_pct": 53,
+      "base": 55,
+      "mean": 0.0,
+      "p2": 0.7018,
+      "q": 1.0
+     },
+     "h5": {
+      "n": 348,
+      "up": 167,
+      "down": 112,
+      "up_pct": 60,
+      "base": 57,
+      "mean": 0.35,
+      "p2": 0.3178,
+      "q": 0.9123
+     },
+     "big": {
+      "n": 348,
+      "big": 40,
+      "pct": 11,
+      "p": 0.1984,
+      "q": 0.9272
+     }
+    },
+    "silver": {
+     "h1": {
+      "n": 348,
+      "up": 141,
+      "down": 111,
+      "up_pct": 56,
+      "base": 54,
+      "mean": 0.19,
+      "p2": 0.6342,
+      "q": 1.0
+     },
+     "h5": {
+      "n": 348,
+      "up": 179,
+      "down": 123,
+      "up_pct": 59,
+      "base": 54,
+      "mean": 0.77,
+      "p2": 0.0744,
+      "q": 0.9123
+     },
+     "big": {
+      "n": 348,
+      "big": 33,
+      "pct": 9,
+      "p": 0.652,
+      "q": 0.9272
+     }
+    }
+   }
+  },
+  "asp|Moon|Uranus|square": {
+   "label": "Moon\u2013Uranus exact square",
+   "n_hist": 696,
+   "stats": {
+    "spx": {
+     "h1": {
+      "n": 695,
+      "up": 193,
+      "down": 172,
+      "up_pct": 53,
+      "base": 54,
+      "mean": -0.02,
+      "p2": 0.5898,
+      "q": 1.0
+     },
+     "h5": {
+      "n": 695,
+      "up": 311,
+      "down": 234,
+      "up_pct": 57,
+      "base": 59,
+      "mean": 0.06,
+      "p2": 0.3838,
+      "q": 0.9123
+     },
+     "big": {
+      "n": 695,
+      "big": 55,
+      "pct": 8,
+      "p": 0.9742,
+      "q": 1.0
+     }
+    },
+    "sensex": {
+     "h1": {
+      "n": 695,
+      "up": 240,
+      "down": 178,
+      "up_pct": 57,
+      "base": 55,
+      "mean": 0.09,
+      "p2": 0.2996,
+      "q": 0.9123
+     },
+     "h5": {
+      "n": 695,
+      "up": 332,
+      "down": 257,
+      "up_pct": 56,
+      "base": 58,
+      "mean": 0.26,
+      "p2": 0.5026,
+      "q": 0.9731
+     },
+     "big": {
+      "n": 695,
+      "big": 66,
+      "pct": 9,
+      "p": 0.689,
+      "q": 0.9272
+     }
+    },
+    "gold": {
+     "h1": {
+      "n": 695,
+      "up": 183,
+      "down": 186,
+      "up_pct": 50,
+      "base": 55,
+      "mean": 0.0,
+      "p2": 0.0532,
+      "q": 0.9123
+     },
+     "h5": {
+      "n": 695,
+      "up": 308,
+      "down": 244,
+      "up_pct": 56,
+      "base": 57,
+      "mean": 0.11,
+      "p2": 0.7642,
+      "q": 1.0
+     },
+     "big": {
+      "n": 695,
+      "big": 66,
+      "pct": 9,
+      "p": 0.689,
+      "q": 0.9272
+     }
+    },
+    "silver": {
+     "h1": {
+      "n": 695,
+      "up": 245,
+      "down": 244,
+      "up_pct": 50,
+      "base": 54,
+      "mean": -0.02,
+      "p2": 0.0884,
+      "q": 0.9123
+     },
+     "h5": {
+      "n": 695,
+      "up": 318,
+      "down": 301,
+      "up_pct": 51,
+      "base": 54,
+      "mean": 0.15,
+      "p2": 0.247,
+      "q": 0.9123
+     },
+     "big": {
+      "n": 695,
+      "big": 62,
+      "pct": 9,
+      "p": 0.8443,
+      "q": 0.9612
+     }
+    }
+   }
+  },
+  "bhadra": {
+   "label": "Bhadra (Vishti) begins",
+   "n_hist": 2579,
+   "stats": {
+    "spx": {
+     "h1": {
+      "n": 2572,
+      "up": 732,
+      "down": 628,
+      "up_pct": 54,
+      "base": 55,
+      "mean": -0.0,
+      "p2": 0.6222,
+      "q": 1.0
+     },
+     "h5": {
+      "n": 2572,
+      "up": 1175,
+      "down": 806,
+      "up_pct": 59,
+      "base": 59,
+      "mean": 0.16,
+      "p2": 0.8158,
+      "q": 1.0
+     },
+     "big": {
+      "n": 2572,
+      "big": 277,
+      "pct": 11,
+      "p": 0.1032,
+      "q": 0.9233
+     }
+    },
+    "sensex": {
+     "h1": {
+      "n": 2572,
+      "up": 843,
+      "down": 684,
+      "up_pct": 55,
+      "base": 55,
+      "mean": 0.06,
+      "p2": 0.8148,
+      "q": 1.0
+     },
+     "h5": {
+      "n": 2572,
+      "up": 1225,
+      "down": 923,
+      "up_pct": 57,
+      "base": 58,
+      "mean": 0.29,
+      "p2": 0.4792,
+      "q": 0.9731
+     },
+     "big": {
+      "n": 2572,
+      "big": 265,
+      "pct": 10,
+      "p": 0.3133,
+      "q": 0.9272
+     }
+    },
+    "gold": {
+     "h1": {
+      "n": 2572,
+      "up": 774,
+      "down": 603,
+      "up_pct": 56,
+      "base": 55,
+      "mean": 0.06,
+      "p2": 0.2726,
+      "q": 0.9123
+     },
+     "h5": {
+      "n": 2572,
+      "up": 1193,
+      "down": 888,
+      "up_pct": 57,
+      "base": 57,
+      "mean": 0.26,
+      "p2": 0.507,
+      "q": 0.9731
+     },
+     "big": {
+      "n": 2572,
+      "big": 242,
+      "pct": 9,
+      "p": 0.8491,
+      "q": 0.9612
+     }
+    },
+    "silver": {
+     "h1": {
+      "n": 2572,
+      "up": 1015,
+      "down": 826,
+      "up_pct": 55,
+      "base": 54,
+      "mean": 0.09,
+      "p2": 0.3194,
+      "q": 0.9123
+     },
+     "h5": {
+      "n": 2572,
+      "up": 1234,
+      "down": 1036,
+      "up_pct": 54,
+      "base": 54,
+      "mean": 0.31,
+      "p2": 0.593,
+      "q": 1.0
+     },
+     "big": {
+      "n": 2572,
+      "big": 247,
+      "pct": 10,
+      "p": 0.7577,
+      "q": 0.9532
+     }
+    }
+   }
+  }
+ },
+ "days": [
+  {
+   "date": "2027-04-29",
+   "weekday": "Thu",
+   "closed": {},
+   "early": null,
+   "panchang": {
+    "weekday": "Thursday",
+    "day_lord": "Jupiter",
+    "tithi": 24,
+    "paksha": "Krishna",
+    "moon_nakshatra": "Dhanishta",
+    "yoga": 24,
+    "groups": {
+     "Aries": [
+      "Sun",
+      "Mercury"
+     ],
+     "Capricorn": [
+      "Moon",
+      "Rahu"
+     ],
+     "Pisces": [
+      "Venus",
+      "Saturn"
+     ],
+     "Cancer": [
+      "Jupiter",
+      "Ketu"
+     ]
+    }
+   },
+   "events": [
+    {
+     "et": "05:31 EDT",
+     "ist": "15:01 IST",
+     "kind": "tithi",
+     "text": "Tithi Ashtami \u2192 Navami (Krishna paksha)",
+     "key": "tithi|23",
+     "utc": "2027-04-29T09:31:57+00:00"
+    },
+    {
+     "et": "08:12 EDT",
+     "ist": "17:42 IST",
+     "kind": "yoga",
+     "text": "Yoga Shubha \u2192 Shukla",
+     "key": "yoga|23",
+     "utc": "2027-04-29T12:12:42+00:00"
+    },
+    {
+     "et": "09:00 EDT",
+     "ist": "18:30 IST",
+     "kind": "exact degree aspect",
+     "text": "Moon\u2013Rahu exact conjunction (0\u00b0)",
+     "key": "asp|Moon|Rahu|conjunction",
+     "utc": "2027-04-29T13:00:00+00:00"
+    },
+    {
+     "et": "09:00 EDT",
+     "ist": "18:30 IST",
+     "kind": "exact degree aspect",
+     "text": "Moon\u2013Ketu exact opposition (180\u00b0)",
+     "key": "asp|Moon|Ketu|opposition",
+     "utc": "2027-04-29T13:00:00+00:00"
+    },
+    {
+     "et": "10:50 EDT",
+     "ist": "20:20 IST",
+     "kind": "exact degree aspect",
+     "text": "Moon\u2013Jupiter exact opposition (180\u00b0)",
+     "key": "asp|Moon|Jupiter|opposition",
+     "utc": "2027-04-29T14:50:00+00:00"
+    },
+    {
+     "et": "11:00 EDT",
+     "ist": "20:30 IST",
+     "kind": "nakshatra change",
+     "text": "Moon enters Dhanishta nakshatra (from Shravana) in Capricorn",
+     "key": "nak|Moon|Dhanishta",
+     "utc": "2027-04-29T15:00:58+00:00"
+    },
+    {
+     "et": "16:50 EDT",
+     "ist": "02:20 IST",
+     "kind": "exact degree aspect",
+     "text": "Moon\u2013Saturn exact sextile (60\u00b0)",
+     "key": "asp|Moon|Saturn|sextile",
+     "utc": "2027-04-29T20:50:00+00:00"
+    }
+   ],
+   "signals": {
+    "Gold": {
+     "sig": "Bullish",
+     "st": "Low",
+     "why": "Mercury with the Sun"
+    },
+    "Silver": {
+     "sig": "Volatile",
+     "st": "Low",
+     "why": "Mercury in Aries or Virgo; fast-planet trigger day"
+    },
+    "S&P 500": {
+     "sig": "Bullish",
+     "st": "High",
+     "why": "Mars-Mercury Vedha; big-move factor: Mercury-Saturn 2/12 (Dwidwadash)"
+    },
+    "BSE Sensex": {
+     "sig": "Bullish",
+     "st": "High",
+     "why": "Mars-Mercury Vedha; big-move factor: Venus in Pisces"
+    }
+   },
+   "prob": {
+    "spx": {
+     "st": {
+      "table": "Bullish High",
+      "bigmove": "on",
+      "USA dasha": "strong",
+      "USA gochara": "adverse",
+      "USA chandra": "weak",
+      "USA tara": "janma",
+      "NYSE dasha": "strong",
+      "NYSE gochara": "favourable",
+      "NYSE chandra": "good",
+      "NYSE tara": "good",
+      "jup-ven": "off"
+     },
+     "all": {
+      "up1": 51.8,
+      "up5": 57.5,
+      "big": 15.1
+     },
+     "kept": {
+      "up1": 53.9,
+      "up5": 59.6,
+      "big": 8.6
+     },
+     "base": {
+      "up1": 53.6,
+      "up5": 57.1,
+      "big": 7.7
+     }
+    },
+    "sensex": {
+     "st": {
+      "table": "Bullish High",
+      "bigmove": "on"
+     },
+     "all": {
+      "up1": 56.4,
+      "up5": 62.5,
+      "big": 14.3
+     },
+     "kept": {
+      "up1": 55.9,
+      "up5": 62.5,
+      "big": 15.0
+     },
+     "base": {
+      "up1": 53.3,
+      "up5": 56.6,
+      "big": 10.4
+     }
+    },
+    "gold": {
+     "st": {
+      "table": "Bullish Low",
+      "v1": "bullish"
+     },
+     "all": {
+      "up1": 53.8,
+      "up5": 58.5,
+      "big": 5.9
+     },
+     "kept": {
+      "up1": null,
+      "up5": 58.8,
+      "big": null
+     },
+     "base": {
+      "up1": 52.7,
+      "up5": 55.6,
+      "big": 7.3
+     }
+    },
+    "silver": {
+     "st": {
+      "table": "Volatile"
+     },
+     "all": {
+      "up1": 51.4,
+      "up5": 53.1,
+      "big": 7.9
+     },
+     "kept": {
+      "up1": 51.4,
+      "up5": null,
+      "big": 7.9
+     },
+     "base": {
+      "up1": 52.8,
+      "up5": 53.3,
+      "big": 8.4
+     }
+    }
+   },
+   "tally": {
+    "spx": [
+     7,
+     3
+    ],
+    "sensex": [
+     6,
+     2
+    ],
+    "gold": [
+     1,
+     0
+    ],
+    "silver": [
+     0,
+     0
+    ]
+   },
+   "rules": {
+    "gold": {
+     "At chance": 3,
+     "Consistent": 1
+    },
+    "silver": {
+     "At chance": 2
+    },
+    "spx": {
+     "Consistent": 5,
+     "At chance": 54,
+     "no record": 45,
+     "Strongest": 6,
+     "Inconclusive": 5,
+     "Too few to judge (3/3, leans right)": 2,
+     "Too few to judge (2/4, even)": 1,
+     "Too few to judge (0/2, leans wrong)": 1,
+     "Did not hold up": 2,
+     "Too few to judge (1/3, leans wrong)": 1
+    },
+    "sensex": {
+     "At chance": 59,
+     "no record": 45,
+     "Consistent": 2,
+     "Strongest": 4,
+     "Supported": 2,
+     "Inconclusive": 5,
+     "Too few to judge (4/4, leans right)": 2,
+     "Too few to judge (2/4, even)": 1,
+     "Too few to judge (0/2, leans wrong)": 1,
+     "Too few to judge (1/4, leans wrong)": 1
+    }
+   },
+   "notable": {
+    "gold": [
+     "U2 - Mercury with the Sun [Bullish] 176/291 (60% vs 57%), p 0.115 (Consistent)"
+    ],
+    "spx": [
+     "Sun-Moon 4/10 (Kendra) [Bullish] 350/582 (60% vs 59%), p 0.3415 (Consistent)",
+     "Moon-Mercury 4/10 (Kendra) [Bullish] 351/587 (60% vs 59%), p 0.3368 (Consistent)",
+     "Moon-Neptune 3/11 (Trikadash) [Bullish] 331/533 (62% vs 59%), p 0.0841 (Strongest)",
+     "Mercury Paap Kartari Yog (TA definition) [Bearish] 31/63 (49% vs 39%), p 0.0654 (Strongest)",
+     "Mercury With Sun, Mars, Saturn, Rahu, Pluto, Herschel [Bullish] 285/463 (62% vs 61%), p 0.3537 (Consistent)",
+     "Jupiter With Mercury, Neptune, Ketu, Moon [Bearish] 29/61 (48% vs 36%), p 0.0406 (Strongest)",
+     "Mercury (benefic) faster than normal speed [Bullish] 46/62 (74% vs 65%), p 0.0784 (Strongest)",
+     "Venus in Pisces [Bearish] 13/26 (50% vs 35%), p 0.0767 (Strongest)",
+     "Sun-Moon conjunction in Navamsh (D9) [Bullish] 1528/2564 (60% vs 59%), p 0.2892 (Consistent)",
+     "Mars-Mercury Vedha [Bullish] 29/40 (72% vs 58%), p 0.0449 (Strongest)"
+    ],
+    "sensex": [
+     "Moon-Saturn 3/11 (Trikadash) [Bullish] 345/583 (59% vs 58%), p 0.2841 (Consistent)",
+     "Moon-Herschel 5/9 (Trine) [Bullish] 348/570 (61% vs 58%), p 0.068 (Strongest)",
+     "Mars-Herschel 4/10 (Kendra) [Bearish] 15/29 (52% vs 41%), p 0.1562 (Supported)",
+     "Mercury-Venus 2/12 (Dwidwadash) [Bullish] 169/284 (60% vs 59%), p 0.4529 (Consistent)",
+     "Herschel-Neptune 3/11 (Trikadash) [Bullish] 5/6 (83% vs 66%), p 0.3386 (Supported)",
+     "Venus in Pisces [Bearish] 16/25 (64% vs 38%), p 0.0084 (Strongest)",
+     "Mars-Pluto conjunction in Navamsh (D9) [Bullish] 72/111 (65% vs 57%), p 0.052 (Strongest)",
+     "Mars-Mercury Vedha [Bullish] 32/41 (78% vs 58%), p 0.0057 (Strongest)"
+    ]
+   },
+   "solar_return": {
+    "rules": [],
+    "detail": "Sun\u2013Mars 105.9\u00b0, Mars\u2013Ketu 8.6\u00b0, Jupiter\u2013Venus 125.7\u00b0, Mars\u2013Uranus 81.0\u00b0",
+    "forecasts": [
+     "Oct 2026 - Oct 2027: bottom around Mar-May 2027 (the year's low falls in this window)"
+    ]
+   },
+   "watch": [
+    "silver: State: Sun in Aries",
+    "silver: Rule: Mercury in Aries or Virgo [Bearish]",
+    "spx: Rule: Neptune With Sun, Mars, Venus, Saturn & Rahu [Bullish]",
+    "spx: Rule: Saturn-Rahu 3/11 (Trikadash) [Bullish]",
+    "spx: Rule: Saturn (malefic) faster than normal speed [Bearish]",
+    "spx: Rule: Jupiter-Ketu conjunction in Navamsh (D9) [Bullish]",
+    "spx: Rule: Venus in Pisces [Bearish]",
+    "spx: Rule: Venus-Rahu 3/11 (Trikadash) [Bullish]",
+    "spx: Rule: Mercury-Rahu 4/10 (Kendra) [Bearish]",
+    "spx: Rule: Mercury-Saturn 2/12 (Dwidwadash) [Bullish]",
+    "spx: Rule: Mars-Herschel 4/10 (Kendra) [Bearish]",
+    "spx: Rule: Sun-Moon 4/10 (Kendra) [Bullish]",
+    "sensex: Rule: Neptune With Sun, Mars, Venus, Saturn & Rahu [Bullish]",
+    "sensex: Rule: Saturn (malefic) faster than normal speed [Bearish]",
+    "sensex: Rule: Sun-Jupiter 4/10 (Kendra) [Bearish]",
+    "sensex: Rule: Venus in Pisces [Bearish]",
+    "sensex: Rule: Venus-Rahu 3/11 (Trikadash) [Bullish]",
+    "sensex: Rule: Mercury-Herschel 2/12 (Dwidwadash) (Strong Bullish Short Term Yoga'S) [Bullish]",
+    "sensex: Rule: Mercury-Herschel 2/12 (Dwidwadash) [Bullish]",
+    "sensex: Rule: Mercury-Saturn 2/12 (Dwidwadash) [Bullish]",
+    "sensex: Rule: Moon-Mercury 4/10 (Kendra) [Bullish]",
+    "sensex: Rule: Mars-Mercury Vedha [Bullish]"
+   ],
+   "new_sources": [
+    "Mercury in Bharani (bullish per BS) [B3: tested: at chance]",
+    "Mars in Magha (bullish per BS) [B4: tested: at chance]",
+    "Lord of the lunar month (US time): Mars [B8m: tested: at chance]",
+    "Lord of the lunar month (India time): Mars [B8m: tested: at chance]"
+   ],
+   "sr_call": "Bullish: month reading: Supported",
+   "sr_month": "Solar month 17 Apr \u2013 18 May: Gemini 18\u00b020' rising, Supported",
+   "notes": [
+    "Gold\u2013Jupiter note: Jupiter with Rahu or Ketu (holds in 69% of months, so not specific to crashes)",
+    "Gold\u2013Jupiter note: Jupiter\u2013Saturn trine (5/9) (holds in 69% of months, so not specific to crashes)",
+    "Gold turn-watch markers this week: bottom: Jupiter station within \u00b130 days; bottom: Jupiter direct station within \u00b130 days; bottom: Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction; bottom: Jupiter\u2013Saturn trine (5/9); top: Jupiter\u2013Saturn trine (5/9)"
+   ]
+  },
+  {
+   "date": "2027-04-30",
+   "weekday": "Fri",
+   "closed": {},
+   "early": null,
+   "panchang": {
+    "weekday": "Friday",
+    "day_lord": "Venus",
+    "tithi": 25,
+    "paksha": "Krishna",
+    "moon_nakshatra": "Dhanishta",
+    "yoga": 25,
+    "groups": {
+     "Aries": [
+      "Sun",
+      "Mercury"
+     ],
+     "Pisces": [
+      "Venus",
+      "Saturn"
+     ],
+     "Cancer": [
+      "Jupiter",
+      "Ketu"
+     ]
+    }
+   },
+   "events": [
+    {
+     "et": "00:24 EDT",
+     "ist": "09:54 IST",
+     "kind": "sign change",
+     "text": "Moon enters Aquarius (from Capricorn)",
+     "key": "sign|Moon|Aquarius",
+     "utc": "2027-04-30T04:24:08+00:00"
+    },
+    {
+     "et": "02:40 EDT",
+     "ist": "12:10 IST",
+     "kind": "exact degree aspect",
+     "text": "Moon\u2013Mars exact opposition (180\u00b0)",
+     "key": "asp|Moon|Mars|opposition",
+     "utc": "2027-04-30T06:40:00+00:00"
+    },
+    {
+     "et": "07:44 EDT",
+     "ist": "17:14 IST",
+     "kind": "tithi",
+     "text": "Tithi Navami \u2192 Dashami (Krishna paksha)",
+     "key": "tithi|24",
+     "utc": "2027-04-30T11:44:11+00:00"
+    },
+    {
+     "et": "08:55 EDT",
+     "ist": "18:25 IST",
+     "kind": "yoga",
+     "text": "Yoga Shukla \u2192 Brahma",
+     "key": "yoga|24",
+     "utc": "2027-04-30T12:55:38+00:00"
+    },
+    {
+     "et": "13:23 EDT",
+     "ist": "22:53 IST",
+     "kind": "nakshatra change",
+     "text": "Uranus enters Rohini nakshatra (from Krittika) in Taurus",
+     "key": "nak|Uranus|Rohini",
+     "utc": "2027-04-30T17:23:00+00:00"
+    },
+    {
+     "et": "13:40 EDT",
+     "ist": "23:10 IST",
+     "kind": "nakshatra change",
+     "text": "Moon enters Shatabhisha nakshatra (from Dhanishta) in Aquarius",
+     "key": "nak|Moon|Shatabhisha",
+     "utc": "2027-04-30T17:40:21+00:00"
+    },
+    {
+     "et": "20:20 EDT",
+     "ist": "05:50 IST",
+     "kind": "exact degree aspect",
+     "text": "Moon\u2013Uranus exact square (90\u00b0)",
+     "key": "asp|Moon|Uranus|square",
+     "utc": "2027-05-01T00:20:00+00:00"
+    },
+    {
+     "et": "20:38 EDT",
+     "ist": "06:08 IST",
+     "kind": "karana",
+     "text": "Karana Vanija \u2192 Vishti \u2014 Bhadra (Vishti) begins",
+     "key": "bhadra",
+     "utc": "2027-05-01T00:38:54+00:00"
+    }
+   ],
+   "signals": {
+    "Gold": {
+     "sig": "Bullish",
+     "st": "Low",
+     "why": "Mercury with the Sun"
+    },
+    "Silver": {
+     "sig": "Volatile",
+     "st": "Low",
+     "why": "Mercury in Aries or Virgo"
+    },
+    "S&P 500": {
+     "sig": "Bullish",
+     "st": "High",
+     "why": "Mars-Mercury Vedha; big-move factor: Mercury-Saturn 2/12 (Dwidwadash)"
+    },
+    "BSE Sensex": {
+     "sig": "Bullish",
+     "st": "High",
+     "why": "Mars-Mercury Vedha; big-move factor: Venus in Pisces"
+    }
+   },
+   "prob": {
+    "spx": {
+     "st": {
+      "table": "Bullish High",
+      "bigmove": "on",
+      "USA dasha": "strong",
+      "USA gochara": "adverse",
+      "USA chandra": "good",
+      "USA tara": "janma",
+      "NYSE dasha": "strong",
+      "NYSE gochara": "favourable",
+      "NYSE chandra": "weak",
+      "NYSE tara": "good",
+      "jup-ven": "off"
+     },
+     "all": {
+      "up1": 49.8,
+      "up5": 58.8,
+      "big": 15.8
+     },
+     "kept": {
+      "up1": 53.9,
+      "up5": 59.6,
+      "big": 8.6
+     },
+     "base": {
+      "up1": 53.6,
+      "up5": 57.1,
+      "big": 7.7
+     }
+    },
+    "sensex": {
+     "st": {
+      "table": "Bullish High",
+      "bigmove": "on"
+     },
+     "all": {
+      "up1": 56.4,
+      "up5": 62.5,
+      "big": 14.3
+     },
+     "kept": {
+      "up1": 55.9,
+      "up5": 62.5,
+      "big": 15.0
+     },
+     "base": {
+      "up1": 53.3,
+      "up5": 56.6,
+      "big": 10.4
+     }
+    },
+    "gold": {
+     "st": {
+      "table": "Bullish Low",
+      "v1": "bullish"
+     },
+     "all": {
+      "up1": 53.8,
+      "up5": 58.5,
+      "big": 5.9
+     },
+     "kept": {
+      "up1": null,
+      "up5": 58.8,
+      "big": null
+     },
+     "base": {
+      "up1": 52.7,
+      "up5": 55.6,
+      "big": 7.3
+     }
+    },
+    "silver": {
+     "st": {
+      "table": "Volatile"
+     },
+     "all": {
+      "up1": 51.4,
+      "up5": 53.1,
+      "big": 7.9
+     },
+     "kept": {
+      "up1": 51.4,
+      "up5": null,
+      "big": 7.9
+     },
+     "base": {
+      "up1": 52.8,
+      "up5": 53.3,
+      "big": 8.4
+     }
+    }
+   },
+   "tally": {
+    "spx": [
+     8,
+     3
+    ],
+    "sensex": [
+     7,
+     2
+    ],
+    "gold": [
+     1,
+     0
+    ],
+    "silver": [
+     0,
+     0
+    ]
+   },
+   "rules": {
+    "gold": {
+     "At chance": 3,
+     "Consistent": 1
+    },
+    "silver": {
+     "At chance": 2
+    },
+    "spx": {
+     "At chance": 63,
+     "Consistent": 6,
+     "no record": 47,
+     "Strongest": 6,
+     "Inconclusive": 5,
+     "Too few to judge (3/3, leans right)": 2,
+     "Too few to judge (2/4, even)": 1,
+     "Too few to judge (0/2, leans wrong)": 1,
+     "Did not hold up": 2,
+     "Too few to judge (1/3, leans wrong)": 1
+    },
+    "sensex": {
+     "At chance": 68,
+     "no record": 47,
+     "Consistent": 2,
+     "Strongest": 4,
+     "Supported": 3,
+     "Inconclusive": 5,
+     "Too few to judge (4/4, leans right)": 2,
+     "Too few to judge (2/4, even)": 1,
+     "Too few to judge (0/2, leans wrong)": 1,
+     "Too few to judge (1/4, leans wrong)": 1
+    }
+   },
+   "notable": {
+    "gold": [
+     "U2 - Mercury with the Sun [Bullish] 176/291 (60% vs 57%), p 0.115 (Consistent)"
+    ],
+    "spx": [
+     "Sun-Moon 4/10 (Kendra) [Bullish] 350/582 (60% vs 59%), p 0.3415 (Consistent)",
+     "Moon-Mars 7th (opposition) [Bullish] 166/273 (61% vs 59%), p 0.3044 (Consistent)",
+     "Moon-Mercury 4/10 (Kendra) [Bullish] 351/587 (60% vs 59%), p 0.3368 (Consistent)",
+     "Moon-Neptune 3/11 (Trikadash) [Bullish] 331/533 (62% vs 59%), p 0.0841 (Strongest)",
+     "Mercury Paap Kartari Yog (TA definition) [Bearish] 31/63 (49% vs 39%), p 0.0654 (Strongest)",
+     "Mercury With Sun, Mars, Saturn, Rahu, Pluto, Herschel [Bullish] 285/463 (62% vs 61%), p 0.3537 (Consistent)",
+     "Jupiter With Mercury, Neptune, Ketu, Moon [Bearish] 29/61 (48% vs 36%), p 0.0406 (Strongest)",
+     "Mercury (benefic) faster than normal speed [Bullish] 46/62 (74% vs 65%), p 0.0784 (Strongest)",
+     "Venus in Pisces [Bearish] 13/26 (50% vs 35%), p 0.0767 (Strongest)",
+     "Sun-Moon conjunction in Navamsh (D9) [Bullish] 1528/2564 (60% vs 59%), p 0.2892 (Consistent)",
+     "Mars-Mercury Vedha [Bullish] 29/40 (72% vs 58%), p 0.0449 (Strongest)"
+    ],
+    "sensex": [
+     "Moon-Saturn 3/11 (Trikadash) [Bullish] 345/583 (59% vs 58%), p 0.2841 (Consistent)",
+     "Moon-Herschel 5/9 (Trine) [Bullish] 348/570 (61% vs 58%), p 0.068 (Strongest)",
+     "Mars-Herschel 4/10 (Kendra) [Bearish] 15/29 (52% vs 41%), p 0.1562 (Supported)",
+     "Mercury-Venus 2/12 (Dwidwadash) [Bullish] 169/284 (60% vs 59%), p 0.4529 (Consistent)",
+     "Herschel-Neptune 3/11 (Trikadash) [Bullish] 5/6 (83% vs 66%), p 0.3386 (Supported)",
+     "Venus in Pisces [Bearish] 16/25 (64% vs 38%), p 0.0084 (Strongest)",
+     "Mars-Pluto conjunction in Navamsh (D9) [Bullish] 72/111 (65% vs 57%), p 0.052 (Strongest)",
+     "Herschel-Pluto conjunction in Navamsh (D9) [Bullish] 9/13 (69% vs 58%), p 0.2914 (Supported)",
+     "Mars-Mercury Vedha [Bullish] 32/41 (78% vs 58%), p 0.0057 (Strongest)"
+    ]
+   },
+   "solar_return": {
+    "rules": [],
+    "detail": "Sun\u2013Mars 105.2\u00b0, Mars\u2013Ketu 8.9\u00b0, Jupiter\u2013Venus 124.6\u00b0, Mars\u2013Uranus 81.2\u00b0",
+    "forecasts": [
+     "Oct 2026 - Oct 2027: bottom around Mar-May 2027 (the year's low falls in this window)"
+    ]
+   },
+   "watch": [
+    "silver: State: Sun in Aries",
+    "silver: Rule: Mercury in Aries or Virgo [Bearish]",
+    "spx: Rule: Neptune With Sun, Mars, Venus, Saturn & Rahu [Bullish]",
+    "spx: Rule: Saturn-Rahu 3/11 (Trikadash) [Bullish]",
+    "spx: Rule: Saturn (malefic) faster than normal speed [Bearish]",
+    "spx: Rule: Jupiter-Ketu conjunction in Navamsh (D9) [Bullish]",
+    "spx: Rule: Venus in Pisces [Bearish]",
+    "spx: Rule: Venus-Rahu 3/11 (Trikadash) [Bullish]",
+    "spx: Rule: Mercury-Rahu 4/10 (Kendra) [Bearish]",
+    "spx: Rule: Mercury-Saturn 2/12 (Dwidwadash) [Bullish]",
+    "spx: Rule: Mars-Herschel 4/10 (Kendra) [Bearish]",
+    "spx: Rule: Sun-Moon 4/10 (Kendra) [Bullish]",
+    "sensex: Rule: Neptune With Sun, Mars, Venus, Saturn & Rahu [Bullish]",
+    "sensex: Rule: Saturn (malefic) faster than normal speed [Bearish]",
+    "sensex: Rule: Sun-Jupiter 4/10 (Kendra) [Bearish]",
+    "sensex: Rule: Venus in Pisces [Bearish]",
+    "sensex: Rule: Venus-Rahu 3/11 (Trikadash) [Bullish]",
+    "sensex: Rule: Mercury-Herschel 2/12 (Dwidwadash) (Strong Bullish Short Term Yoga'S) [Bullish]",
+    "sensex: Rule: Mercury-Herschel 2/12 (Dwidwadash) [Bullish]",
+    "sensex: Rule: Mercury-Saturn 2/12 (Dwidwadash) [Bullish]",
+    "sensex: Rule: Moon-Mercury 4/10 (Kendra) [Bullish]",
+    "sensex: Rule: Mars-Mercury Vedha [Bullish]",
+    "sensex: Rule: Sun-Moon 3/11 (Trikadash) [Bearish]"
+   ],
+   "new_sources": [
+    "Mercury in Bharani (bullish per BS) [B3: tested: at chance]",
+    "Mars in Magha (bullish per BS) [B4: tested: at chance]",
+    "Lord of the lunar month (US time): Mars [B8m: tested: at chance]",
+    "Lord of the lunar month (India time): Mars [B8m: tested: at chance]"
+   ],
+   "sr_call": "Bullish: month reading: Supported",
+   "sr_month": "Solar month 17 Apr \u2013 18 May: Gemini 18\u00b020' rising, Supported",
+   "notes": [
+    "Gold\u2013Jupiter note: Jupiter with Rahu or Ketu (holds in 69% of months, so not specific to crashes)",
+    "Gold\u2013Jupiter note: Jupiter\u2013Saturn trine (5/9) (holds in 69% of months, so not specific to crashes)",
+    "Gold turn-watch markers this week: bottom: Jupiter station within \u00b130 days; bottom: Jupiter direct station within \u00b130 days; bottom: Jupiter\u2013Saturn within 10\u00b0 of trine/opposition/conjunction; bottom: Jupiter\u2013Saturn trine (5/9); top: Jupiter\u2013Saturn trine (5/9)"
+   ]
+  }
+ ],
+ "unclassified": [],
+ "checks": [
+  {
+   "name": "Every event time re-derived from the ephemeris (\u00b16 min; Moon aspects \u00b10.15\u00b0, eclipse first contacts \u00b110 min, speed overtakes \u00b16 h, stations and the Sun's apsides \u00b112 h, Moon apsides \u00b13 h, combustion by IST day)",
+   "ok": true,
+   "detail": "15 events checked"
+  },
+  {
+   "name": "Occurrence counts 2000-2026 within the expected range",
+   "ok": true,
+   "detail": "15 classes"
+  },
+  {
+   "name": "Independent recount of one result from raw prices",
+   "ok": true,
+   "detail": "Bhadra (Vishti) begins S&P 5 sessions: recount 1175 up / 806 down vs tool 1175 / 806"
+  },
+  {
+   "name": "Every sky event of the week classified (rule starts/ends, padas, navamsas, whole-sign aspect begin/end and Paap Kartari neighbour changes are covered by the rule records)",
+   "ok": true,
+   "detail": "0 not classified"
+  }
+ ],
+ "context": {
+  "months": [
+   {
+    "start": "2027-03-21 06:20 ET",
+    "t8a": [
+     null,
+     "Saturn/Jupiter friend"
+    ],
+    "t8b": [
+     "Bearish",
+     "Saturn/Mercury none, fallen or combust"
+    ],
+    "sahams": {
+     "Fortune": [
+      "Bearish",
+      "Virgo +2/-3"
+     ],
+     "Wealth": [
+      "Bullish",
+      "Libra +4/-1"
+     ],
+     "Trade": [
+      "Bearish",
+      "Virgo +2/-3"
+     ],
+     "Business": [
+      "Bullish",
+      "Leo +2/-0"
+     ]
+    },
+    "sun_house": 2
+   },
+   {
+    "start": "2027-04-20 17:29 ET",
+    "t8a": [
+     null,
+     "Jupiter/Saturn friend"
+    ],
+    "t8b": [
+     "Bullish",
+     "Jupiter/Venus friendly"
+    ],
+    "sahams": {
+     "Fortune": [
+      "Bullish",
+      "Pisces +3/-2"
+     ],
+     "Wealth": [
+      "Bullish",
+      "Aries +3/-1"
+     ],
+     "Trade": [
+      "Bullish",
+      "Pisces +3/-2"
+     ],
+     "Business": [
+      null,
+      "Aquarius +1/-1"
+     ]
+    },
+    "sun_house": 8
+   }
+  ],
+  "year": {
+   "lord_of_year_us": "Mercury",
+   "lord_of_year_india": "Jupiter",
+   "chaitra": "2026-03-19",
+   "nyse_return": "2026-05-21 10:40 ET",
+   "ruler": "Moon",
+   "ruler_role": "triplicity lord",
+   "ruler_strength": 12.44,
+   "ruler_house": 1,
+   "muntha_house": 7
+  },
+  "holidays": {
+   "2027-04-14": {
+    "sensex": "Dr. Ambedkar Jayanti"
+   }
+  }
+ },
+ "n_cells": 119,
+ "significant": [],
+ "nominal": [
+  {
+   "label": "Moon enters Dhanishta",
+   "market": "silver",
+   "horizon": "h5",
+   "n": 348,
+   "up": 183,
+   "down": 120,
+   "up_pct": 60,
+   "base": 54,
+   "mean": 0.82,
+   "p2": 0.0302,
+   "q": 0.9123
+  },
+  {
+   "label": "Moon enters Aquarius",
+   "market": "silver",
+   "horizon": "h5",
+   "n": 348,
+   "up": 183,
+   "down": 121,
+   "up_pct": 60,
+   "base": 54,
+   "mean": 0.76,
+   "p2": 0.0344,
+   "q": 0.9123
+  }
+ ],
+ "big_significant": []
+}
