@@ -86,7 +86,7 @@ def score(f, P):
         ok = mv < 0 if f["expect"] == "down" else (f["bound"] < mv < 0)
         return dict(status="right" if ok else "wrong", detail=f"{P[i]:,.0f} → {P[b]:,.0f} ({mv:+.1f}%)")
     if f["kind"] == "days":
-        res, hits, n = [], 0, 0
+        res, hits, n, r6, w6 = [], 0, 0, 0, 0
         for day, exp in f["days"].items():
             d = dt.date.fromisoformat(day)
             if d not in P:
@@ -97,9 +97,13 @@ def score(f, P):
             ok = (mv < 0) == (exp == "down")
             hits += ok
             n += 1
-            res.append(f"{d:%a %d %b}: said {exp}, {mv:+.2f}% {'✓' if ok else '✗'}")
+            if abs(mv) >= 0.5:                     # the 0.5% rule used everywhere else: smaller moves are too small to count
+                r6 += ok
+                w6 += not ok
+            res.append(f"{d:%a %d %b}: said {exp}, {mv:+.2f}% {'✓' if ok else '✗'}" + (" (too small to count)" if abs(mv) < 0.5 else ""))
         pending = n < len(f["days"])
-        return dict(status=("open" if pending else "right" if hits == n else "partly right" if hits else "wrong") + f" ({hits}/{n})", detail="; ".join(res))
+        return dict(status=("open" if pending else "right" if hits == n else "partly right" if hits else "wrong") + f" ({hits}/{n}; at 0.5%: {r6} right, {w6} wrong)",
+                    detail="; ".join(res))
     if f["kind"] == "path":
         out = []
         for a, b, exp, label in f["checkpoints"]:

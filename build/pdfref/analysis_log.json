@@ -965,6 +965,18 @@
     "reports/calendar_2027_NY_master.html",
     "reports/calendar_2026-11-24_to_2026-12-31_ET.html"
    ]
+  },
+  {
+   "date": "2026-11-28",
+   "pr": "75",
+   "topic": "Solar return's forecast for the week of 23-27 Nov 2026 scored (scheduled check)",
+   "analysis": "tools/author_forecasts.py scores w2026-11-23 from S&P closes (price files to 27 Nov 2026); also read with the 0.5% rule used everywhere else.",
+   "result": "Pressure Mon-Wed, Friday recovery: by sign 3 of 4 days; by the 0.5% rule 1 right (Fri +1.60%, the Jupiter-Venus sextile day), 1 wrong (Mon +4.73%), Tue -0.499% and Wed -0.25% too small to count; Mon-Wed together +3.9%, so the pressure did not come. Solar month 19 Nov - 18 Dec still open (-0.4% to 27 Nov).",
+   "files": [
+    "build/pdfref/author_forecasts_ET.json",
+    "PROJECT_KNOWLEDGE.md",
+    "reports/calendar_2026-11-24_to_2026-12-31_ET.html"
+   ]
   }
  ]
 }

@@ -547,14 +547,14 @@ There are no TA S34 A9 windows between now and 31 Dec 2027.
 - **Open forecast** (check on 19 Dec 2026): S&P net decline from 7,320 smaller than 4.8% over 19 Nov – 18 Dec.
 
 **Solar return: transit method and forecasts** (shared 24 Nov 2026), in `author_forecasts_ET.html`. Its months start on the 18th or 19th (monthly NYSE solar returns), and it reads transits with degree aspects (square, sextile, conjunction).
-- **Forecast scorecard, as of 23 Nov 2026:**
+- **Forecast scorecard, as of 27 Nov 2026** (week of 23 Nov scored on 28 Nov by the scheduled check):
 
 | Period | Solar return call | Result |
 |---|---|---|
 | 20 Oct – 18 Nov | Bearish | **Right** (−4.8%) |
-| Week of 16 Nov | Lower Mon–Thu, Friday recovery | **4 of 5 days right** (Friday fell 3.7%) |
-| Week of 23 Nov | Pressure Mon–Wed, Friday recovery | Monday +4.7%, the wrong way; rest open |
-| 19 Nov – 18 Dec | Smaller decline than −4.8% | Open (−1.2% so far) |
+| Week of 16 Nov | Lower Mon–Thu, Friday recovery | **4 of 5 days right by sign** (at 0.5%: 3 right, 1 wrong; Wednesday −0.23% too small; Friday fell 3.7%) |
+| Week of 23 Nov | Pressure Mon–Wed, Friday recovery (Jupiter–Venus sextile) | **3 of 4 days by sign, but only 1 right and 1 wrong by the 0.5% rule.** Monday +4.73% went the wrong way. Tuesday −0.50% (−0.499) and Wednesday −0.25% were too small to count. Friday +1.60% was right. Mon–Wed together rose 3.9%, so the "pressure" did not come |
+| 19 Nov – 18 Dec | Smaller decline than −4.8% | Open (−0.4% so far, to 27 Nov) |
 | Oct 2026 – Oct 2027 | Weak to spring 2027, bottom Mar–May, strong second half | Open |
 
 - **The Solar return transit statements, checked:**
