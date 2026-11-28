@@ -1,5 +1,5 @@
 {
- "made": "2026-11-28 00:47 UTC",
+ "made": "2026-11-28 01:04 UTC",
  "start": "2026-11-01",
  "last": "2026-11-27",
  "hist_end": "2026-10-31",
@@ -6106,14 +6106,20 @@
   {
    "id": "big_days",
    "applied": true,
-   "where": "the 2026 calendar",
-   "where_note": "the 2027 calendar shows no big-day chances",
+   "where": "both calendars",
    "supported": true,
-   "keep": [
-    "sensex"
-   ],
-   "title": "Big days: the volatility factors (S&P, Sensex) are the warning that holds up; the model's big-day chance counts only for the Sensex and is shown as untested elsewhere",
-   "evidence": "Walk-forward 2013-2026, days the model flags (2+ points above normal) vs other days: S&P big on 4.7% vs 5.3% (p 0.5049, 870 flagged days); Sensex big on 7.3% vs 3.1% (p 0.0, 908 flagged days); Gold big on 3.9% vs 6.5% (p 0.0873, 282 flagged days); Silver never flags a day. The volatility factors on their own: S&P 2000-2012: 12.0% big on factor days vs 8.9% (p 0.0033); S&P 2013-2026: 6.4% big on factor days vs 4.2% (p 0.004); Sensex 2000-2012: 22.8% big on factor days vs 13.2% (p 0.0); Sensex 2013-2026: 7.3% big on factor days vs 2.6% (p 0.0). The factors were chosen on 2000-2026, so the Sensex lift is not a clean out-of-sample result.",
+   "keep": [],
+   "vol_ok": {
+    "spx": [
+     "Venus retrograde",
+     "Jupiter-Pluto 5/9"
+    ],
+    "sensex": [
+     "Venus retrograde"
+    ]
+   },
+   "title": "Big days: only Venus retrograde (S&P and Sensex) and Jupiter-Pluto 5/9 (S&P) pass a clean test; the other volatility factors are in sample only, and the model's big-day chance is shown as untested",
+   "evidence": "Walk-forward 2013-2026, days the model flags (2+ points above normal) vs other days: S&P big on 4.7% vs 5.3% (p 0.5049, 870 flagged days); Sensex big on 7.3% vs 3.1% (p 0.0, 908 flagged days); Gold big on 3.9% vs 6.5% (p 0.0873, 282 flagged days); Silver never flags a day. The volatility factors on their own: S&P 2000-2012: 12.0% big on factor days vs 8.9% (p 0.0033); S&P 2013-2026: 6.4% big on factor days vs 4.2% (p 0.004); Sensex 2000-2012: 22.8% big on factor days vs 13.2% (p 0.0); Sensex 2013-2026: 7.3% big on factor days vs 2.6% (p 0.0). Clean test (tools/bigday_clean_test.py: the same choice made on 2000-2013 only, scored 2013-2026): S&P picks Venus retrograde, Jupiter-Pluto 5/9; 44 big days vs 31.0 expected (x1.42, p 0.0163; without Feb-May 2020 x1.6, p 0.0024; without 2025 x1.25, p 0.1158). Sensex: nothing is picked by 2013, but the S&P's two factors lift Sensex big days x1.5 (p 0.0113). Gold x0.68, silver x0.88: no.",
    "november": "S&P 5 big days, 0 flagged by the model, 2 on volatility-factor days (10 factor days); Sensex 2 big days, 2 flagged by the model, 2 on volatility-factor days (9 factor days); Gold 8 big days, 1 flagged by the model; Silver 8 big days, 0 flagged by the model"
   },
   {

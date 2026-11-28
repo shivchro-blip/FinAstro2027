@@ -861,6 +861,24 @@
     "reports/calendar_2026-11-24_to_2026-12-31_ET.html",
     "reports/calendar_2027_NY_master.html"
    ]
+  },
+  {
+   "date": "2026-11-28",
+   "pr": "70",
+   "topic": "Clean walk-forward test of the big-day volatility factors (chosen on 2000-2013 only, scored 2013-2026); calendars mark which factors passed",
+   "analysis": "tools/bigday_clean_test.py: for the S&P, Sensex, gold and silver, every factor of big_move_analysis.py; the published robust choice (q < 0.10, lift > 1 in both halves, p < 0.01 without Sep 2008 - Jun 2009) made on 20 Nov 2000 - 19 Nov 2013 only; picked factors scored on 20 Nov 2013 - 31 Oct 2026 against year-stratified expected big days (one-sided Poisson), without Feb-May 2020, leave one year out, each factor; the S&P's picks also scored on the Sensex; looser choices; the same choice on 2000-2026 reproduces the published robust sets.",
+   "result": "S&P: Venus retrograde and Jupiter-Pluto 5/9 picked by 2013; after 2013 44 big days vs 31.0 expected (x1.42, p 0.016; without Feb-May 2020 x1.60, p 0.002; without 2025 x1.25, p 0.12). Sensex: nothing picked by 2013; the S&P's two picks lift Sensex big days x1.50 (p 0.011), robust to dropping any year; Venus retrograde alone x1.87. Gold x0.68, silver x0.88: no. Looser choices dilute to chance. The other published volatility factors and the model's big-day chance are in sample only; the calendars now say so (model big-day chance untested for every market, Volatile labels and factor notes marked).",
+   "files": [
+    "tools/bigday_clean_test.py",
+    "tools/november_review.py",
+    "tools/calendar_2026.py",
+    "tools/deep_dive_render.py",
+    "tools/refresh_all.py",
+    "build/pdfref/bigday_clean_test_ET.json",
+    "build/pdfref/november_review_2026-11_ET.json",
+    "reports/calendar_2026-11-24_to_2026-12-31_ET.html",
+    "reports/calendar_2027_NY_master.html"
+   ]
   }
  ]
 }

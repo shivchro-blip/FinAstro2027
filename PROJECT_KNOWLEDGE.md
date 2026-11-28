@@ -113,7 +113,8 @@ Known data problems:
 | `tools/new_sources_leftover.py` | The leftover new-source rules (B5, B6, B7, B9, B10, B11, B13, T4, T6, T10), Tajika five-dignity strength and ruler of the year, and the calendar layer read by `calendar_2026.py` → `new_sources_leftover_ET.{html,json}` |
 | `tools/week_deep_dive.py [nov] [dec] [jan] [feb] [--reuse-days]` | Every week of November and December 2026 and of January and February 2027 (December from the 2026 calendar, the others built with `forward_daybyday.build`; `--reuse-days` reuses the cached day data): every sky event as an event class backtested on 4 markets (next session, 5 sessions, big days; BH per week) with 4 automatic checks, plus each day's rules, labels, model, Solar return, Kartari, gold notes and new-source items → `deep_dive_*_ET.json`. November uses history to 31 Oct 2026 only, so no November event scores itself |
 | `tools/november_review.py` | November 2026 review: every call of every layer scored against what the markets did (pass / fail at 0.5%, against chance for the same up/down mix; recount checked against `forward_daybyday.score`), where it failed (rules behind each label, spans, wrong calls, big days, deep-dive leans), and the tuning tests on the long records (clean walk-forward labels and model, label strengths, each table rule as a day call, big-day flags, volatility factors, 24 Sep – 27 Nov) → `november_review_2026-11_ET.json` with the recommendations the two calendars apply |
-| `tools/deep_dive_render.py` | Renders the 2027 monthly deep dives (January, February) into `calendar_2027_NY_master.html` with a month index (called by `build_pdf_calendar.py`; `--html-only` re-renders from the JSON). Applies the November review's changes (Low labels as leans, model percentages uncoloured) |
+| `tools/bigday_clean_test.py` | Clean walk-forward test of the big-day volatility factors: the published choice (q < 0.10, lift > 1 in both halves, p < 0.01 without the 2008–09 crash) made on 20 Nov 2000 – 19 Nov 2013 only for each market, over every factor of `big_move_analysis.py`, then scored 20 Nov 2013 – 31 Oct 2026 (year-stratified expected big days, without Feb–May 2020, leave one year out, each factor). Also: the S&P's picks on the Sensex, looser choices, and a check that the same choice on 2000–2026 reproduces the published robust sets → `bigday_clean_test_ET.json` (read by `november_review.py` and both calendars) |
+| `tools/deep_dive_render.py` | Renders the 2027 monthly deep dives (January, February) into `calendar_2027_NY_master.html` with a month index (called by `build_pdf_calendar.py`; `--html-only` re-renders from the JSON). Applies the November review's changes (Low labels as leans, model percentages uncoloured, Volatile labels marked by the clean big-day test) |
 | `tools/gold_tracker.py [--metal silver]` | Trackers: findings, rule status, best-rule dates, analysis log |
 | `tools/build_year.py YEAR` | Astronomy layer for any year; 2000–2024 are git-ignored and rebuilt on demand |
 | `tools/fetch_prices.py` | Downloads GC=F and SI=F (Yahoo; the host must be allowed) |
@@ -913,6 +914,42 @@ Results, as the share of calls right:
   - This partly matches Solar return's own path (weak into spring, bottom Mar–May), but the rubric itself has no track record.
 - **In the calendar:** shown in the 2026 calendar's Solar return section.
 
+**Clean test of the big-day volatility factors (28 Nov 2026)** (`tools/bigday_clean_test.py`, `bigday_clean_test_ET.json`; 2026 calendar → November review → "Clean test of the big-day volatility factors")
+
+- **Why:** the robust big-move factors (`market_summary.py`) behind the "volatility factor" notes, the tables' Volatile label and the model's big-move layer were chosen on all of 2000–2026, so their record after 2013 was partly in sample.
+- **Method:**
+  - Universe: every factor of `big_move_analysis.py` for the market (730 for the S&P and Sensex, 258 gold, 263 silver).
+  - Choice made on 20 Nov 2000 – 19 Nov 2013 only, with the published criteria moved inside that period: q < 0.10 over all factors, lift > 1 in both halves (split 20 May 2007), and p < 0.01 without Sep 2008 – Jun 2009.
+  - Score on 20 Nov 2013 – 31 Oct 2026: big days (±2%; silver 3.5%) on days with any picked factor, against the count expected from each year's own big-day rate (one-sided Poisson).
+  - Check: the same choice on all of 2000–2026 reproduces the published robust sets exactly (6 factors each for the S&P and Sensex).
+
+| Market | Chosen on 2000–2013 | Big days 2013–2026 | Without Feb–May 2020 | Verdict |
+|---|---|---|---|---|
+| S&P | Venus retrograde; Jupiter–Pluto 5/9 | 44 vs 31.0 (×1.42, p 0.016) | ×1.60 (p 0.002) | holds |
+| Sensex | nothing | – | – | no clean test of its own factors |
+| Sensex, with the S&P's two picks | Venus retrograde; Jupiter–Pluto 5/9 | 38 vs 25.4 (×1.50, p 0.011) | ×1.54 (p 0.013) | holds |
+| Gold | Sun–Uranus opposition | 2 vs 2.9 (×0.68) | ×0.73 | does not hold |
+| Silver | Sun in Aries | 22 vs 25.1 (×0.88) | ×0.85 | does not hold |
+
+- **Each factor after 2013:**
+  - S&P: Venus retrograde ×1.52 (p 0.04); Jupiter–Pluto 5/9 ×1.77 (p 0.002).
+  - Sensex: Venus retrograde ×1.87 (p 0.007); Jupiter–Pluto 5/9 ×1.39 (p 0.08).
+- **Caveats:**
+  - The S&P result leans on 2025: April's sell-off came during Venus retrograde. Without 2025 it is ×1.25 (p 0.12); without any other single year it stays significant.
+  - The Sensex cross-check survives dropping any one year (worst: without 2016, ×1.45, p 0.03).
+  - Looser choices dilute the result to chance: q < 0.20 gives the S&P 3 factors at ×1.11; every lead with p < 0.05 gives 43 factors at ×0.99. The finding rests on these two factors.
+  - The plain big-day rate on S&P factor days is 6.3% vs 5.1% on other days (p 0.22). The year-stratified count is the published method; the plain rate ignores which years were volatile.
+- **Not clean (in sample only):**
+  - S&P: Jupiter–Neptune 7th, Mercury–Saturn 2/12, Jupiter–Herschel 6/8.
+  - Sensex: Mars–Saturn conjunction, Mars with Saturn, Venus in Pisces, Mars–Herschel 5/9.
+  - The model's big-day chance, whose Sensex lift came through those factors.
+- **Applied:**
+  - The model's big-day chance is shown as untested for every market. This replaces "Sensex only" from the November review.
+  - "Volatility factor" notes and Volatile labels say "passes a clean test" or "in sample only"; a Volatile label is grey unless its factor passed.
+  - The 2027 deep-dive sections mark the S&P's Volatile days on 1–5 Feb 2027 (Mercury–Saturn 2/12) "in sample only".
+  - No clean factor is active in December 2026. Next: Jupiter–Pluto 5/9 for the S&P on 28–31 Dec 2027; Venus retrograde in 2028.
+  - The 2027 calendar's 2,211 rows are byte-identical.
+
 **November 2026 review: pass / fail against the markets, and what changes (28 Nov 2026)** (`tools/november_review.py`, `november_review_2026-11_ET.json`, `tools/week_deep_dive.py nov`; 2026 calendar → "November review")
 
 - **Method:**
@@ -959,7 +996,7 @@ Results, as the share of calls right:
 - **Changes applied (both calendars unless noted):**
   - Low labels are shown grey, as a lean, not a day call.
   - The combined model's probabilities are no longer coloured as calls.
-  - The big-day chance counts only for the Sensex; for the other markets it is shown as untested (2026 calendar).
+  - The big-day chance counts only for the Sensex; for the other markets it is shown as untested (2026 calendar). Superseded the same day by the clean big-day test (entry above): untested for every market.
   - Gold and silver big-move watch windows are marked "no proven lift" (2026 calendar).
   - "Read this first" and the track record now quote the clean walk-forward figures. The 2027 calendar's 2,211 rows are byte-identical.
 - **Not changed:** no rule was added, removed or reversed; the published tables are unchanged.

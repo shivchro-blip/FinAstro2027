@@ -47,7 +47,7 @@ E = html.escape
 
 
 # ------------------------------------------------------------------ tuning from the November 2026 review (tools/november_review.py)
-TUNE = dict(low_grey=False, model_colour=True, big_ok=set(MKS), watch_note="")
+TUNE = dict(low_grey=False, model_colour=True, big_ok=set(MKS), watch_note="", vol_clean=False, vol_ok={})
 
 
 def set_tuning(nov):
@@ -61,18 +61,35 @@ def set_tuning(nov):
         TUNE["model_colour"] = False
     if rec.get("big_days", {}).get("applied"):
         TUNE["big_ok"] = set(rec["big_days"].get("keep", []))
+        if rec["big_days"].get("vol_ok") is not None and (OUT / "bigday_clean_test_ET.json").exists():
+            TUNE["vol_clean"], TUNE["vol_ok"] = True, rec["big_days"]["vol_ok"]
     if rec.get("watch_windows", {}).get("applied"):
         TUNE["watch_note"] = " (no proven lift)"
 
 
-def lab_cls(sig):
+def vol_status(mk, text):
+    """Big-day factor status from the clean test: passes, or was chosen with data it is scored on."""
+    if not TUNE["vol_clean"]:
+        return ""
+    return "passes a clean test" if any(k in text for k in TUNE["vol_ok"].get(mk, [])) else "in sample only"
+
+
+def _why(sig):
+    return sig.get("why") if isinstance(sig.get("why"), str) else "; ".join(sig.get("why") or [])
+
+
+def lab_cls(sig, mk=None):
+    if sig.get("sig") == "Volatile" and TUNE["vol_clean"] and mk:
+        return "vo" if vol_status(mk, _why(sig)) == "passes a clean test" else "nt"
     return "nt" if TUNE["low_grey"] and sig.get("st") == "Low" else tone(sig["sig"])
 
 
-def lab_title(sig):
-    w = sig.get("why") if isinstance(sig.get("why"), str) else "; ".join(sig.get("why") or [])
+def lab_title(sig, mk=None):
+    w = _why(sig)
     if TUNE["low_grey"] and sig.get("st") == "Low":
         w += " | Low: a lean, not a day call (November 2026 review)"
+    if sig.get("sig") == "Volatile" and TUNE["vol_clean"] and mk:
+        w += f" | big-day factor: {vol_status(mk, w)}"
     return w
 
 
@@ -108,6 +125,8 @@ def gather(a, b):
     sr["dds_nov"] = [json.load(open(f)) for f in sorted(OUT.glob("deep_dive_2026-11-*_ET.json"))]
     nr = OUT / "november_review_2026-11_ET.json"
     sr["nov"] = json.load(open(nr)) if nr.exists() else None
+    bc = OUT / "bigday_clean_test_ET.json"
+    sr["bigclean"] = json.load(open(bc)) if bc.exists() else None
     set_tuning(sr["nov"])
     sr["doc"] = doc_rows(json.load(open(OUT / "doc_dec2026_check_ET.json")), res)
     sr["kartari"] = [dict(key=r["key"], title=r["title"], tone=r["tone"], basis=r["basis"], record=r["record"],
@@ -154,6 +173,11 @@ def verify(res, sr, a, b):
         add("November deep dive: every week's double checks pass; its history ends 31 Oct 2026", nchk and all(c["ok"] for c in nchk) and hist == {"2026-10-31"},
             f"{sum(c['ok'] for c in nchk)}/{len(nchk)} across {len(sr.get('dds_nov', []))} weeks; history end {', '.join(sorted(map(str, hist)))}")
         add("November review: the long records stop before November", nov.get("hist_end") == "2026-10-31", f"tuning tests use data to {nov.get('hist_end')}")
+    bcj = sr.get("bigclean")
+    if bcj:
+        rep = {mk: bcj["markets"][mk]["full"]["reproduces_published"] for mk in ("spx", "sensex")}
+        add("Big-day clean test: the same choice on all of 2000–2026 reproduces the published robust factors", all(rep.values()),
+            ", ".join(f"{SHORT[mk]} {'yes' if v else 'no'} ({len(bcj['markets'][mk]['full']['factors'])} factors)" for mk, v in rep.items()) + f"; test period {bcj['test']}")
     its = sr["nsl"]["calendar"]["items"]
     add("New-source layer loaded, every item carries its test result", its and all(i.get("verdict") for i in its), f"{len(its)} items (BS Iyer, Tajika Nilakanthi, Hayanaratna); none used in the signals")
     add("Every day present", ds == [a + dt.timedelta(days=i) for i in range((b - a).days + 1)], f"{len(ds)} days, {ds[0]} – {ds[-1]}")
@@ -512,8 +536,23 @@ def read_trust(sr, wf):
             "<li><b>How much to trust it:</b> tested out of sample (2013–2026, with everything chosen on earlier years), neither the labels nor the model beat chance on any market. "
             "Labels, right vs chance: " + ", ".join(f"{SHORT[mk]} {lab[mk]['hit']}% vs {lab[mk]['exp']}%" for mk in MKS)
             + ". Model: " + ", ".join(f"{SHORT[mk]} {md[mk]['hit']}% vs {md[mk]['exp']}%" for mk in MKS)
-            + ". November 2026 scored about what chance gives. Treat every label and probability as a leaning. "
-            + f"The big-day chance counts only for the {', '.join(SHORT[m] for m in keep) or '—'}; the volatility factors (S&amp;P, Sensex) did mark more big days in both halves of 2000–2026.</li>")
+            + ". November 2026 scored about what chance gives. Treat every label and probability as a leaning. " + big_sentence(nov, keep) + "</li>")
+
+
+def big_sentence(nov, keep):
+    rec = next((r for r in nov["recommendations"] if r["id"] == "big_days"), {})
+    ok = rec.get("vol_ok")
+    if ok is None:
+        return (f"The big-day chance counts only for the {', '.join(SHORT[m] for m in keep) or '—'}; the volatility factors (S&amp;P, Sensex) did mark more big days "
+                "in both halves of 2000–2026.")
+    by = {}
+    for mk, v in ok.items():
+        for f in v:
+            by.setdefault(f, []).append(SHORT[mk])
+    good = " and ".join(f"{E(f)} ({' and '.join(m)})" for f, m in by.items()) or "no factor"
+    model = (f"the model's big-day chance counts only for the {', '.join(SHORT[m] for m in keep)}" if keep else "the model's big-day chance is shown as untested for every market")
+    return (f"<b>Big days:</b> in a clean test (factors chosen on 2000–2013 only, scored 2013–2026) only {good} kept marking more big days; the other volatility factors "
+            f"are in sample only, and {model} (<a href='#bigclean'>details</a>).")
 
 
 def market_cell(x, mk, sr_day=None):
@@ -523,7 +562,7 @@ def market_cell(x, mk, sr_day=None):
         return f"<div class='row'><span class='k'>{SHORT[mk]}</span><span class='s'>{'closed' if mk in x['closed'] else ''}</span></div>"
     p5, b5 = pr["all"]["up5"], pr["base"]["up5"]
     pc = model_cls(p5, b5)
-    return (f"<div class='row'><span class='k'>{SHORT[mk]}</span>{chip(lab_short(sig), lab_cls(sig), lab_title(sig))}<span class='{pc}' title='chance of a rise over the next 5 sessions'>{p5:.0f}%</span></div>")
+    return (f"<div class='row'><span class='k'>{SHORT[mk]}</span>{chip(lab_short(sig), lab_cls(sig, mk), lab_title(sig, mk))}<span class='{pc}' title='chance of a rise over the next 5 sessions'>{p5:.0f}%</span></div>")
 
 
 def day_summary(x, sr_day):
@@ -563,7 +602,9 @@ def page(res, sr, track, checks, a, b, generated):
              "<li><b>Solar return</b> is the NYSE monthly solar-return method you shared. Its daily calls here are generated by us the Solar return way; they reproduce 8 of the 9 days "
              "Solar return called, but over 1928–2026 the same rule was at chance.</li>"
              "<li><b>What has shown some edge:</b> Jupiter sextile Venus (bullish over 5 sessions), the bearish calendar fortnight rule “Three Saturdays in Shukla Paksha”, "
-             "robust volatility factors (more big days, no direction) and the Mars–Jupiter–node lead (a lead, not proven).</li>"
+             + ("two volatility factors, Venus retrograde and Jupiter–Pluto 5/9 (more big days, no direction; they passed a clean test) "
+                if TUNE["vol_clean"] else "robust volatility factors (more big days, no direction) ")
+             + "and the Mars–Jupiter–node lead (a lead, not proven).</li>"
              "<li><b>Paap Kartari:</b> Jupiter is hemmed by Ketu and Mars (2026 document B117) from 16 Nov to 31 Jan 2027, and Mercury enters Paap Kartari "
              "(B116) on 1 Jan 2027. Their 2000–2026 records are in each day's notes, and January is checked market by market in the January 2027 section: Mercury's version held up as bearish on the Sensex only; Jupiter's showed more big days, "
              "not significant. Shubh Kartari is in none of our sources; tested anyway, it did not work and is not used.</li>"
@@ -787,7 +828,7 @@ def day_html(x, sr, res):
             if cal:
                 also.append("calendar: " + ", ".join(f"{c['verdict']}" for c in cal))
             if x["vol"].get(mk):
-                also.append("volatility factor: " + ", ".join(x["vol"][mk]))
+                also.append("volatility factor: " + ", ".join(f + (f" ({vol_status(mk, f)})" if TUNE["vol_clean"] else "") for f in x["vol"][mk]))
             ws = list(dict.fromkeys(w["factor"].replace("Event: ", "").replace("Rule: ", "").replace("State: ", "").split(" [")[0] for w in x["watch"] if w["market"] == mk))
             if ws:
                 also.append(f"big-move watch{TUNE['watch_note']} ({len(ws)}): " + "; ".join(ws[:3]) + (" …" if len(ws) > 3 else ""))
@@ -805,7 +846,7 @@ def day_html(x, sr, res):
             sup = (f"<span class='t-up'>{len(tl['bull'])}</span> / <span class='t-dn'>{len(tl['bear'])}</span>"
                    + (f"<div class='s'>{E('; '.join(tl['bull'][:4]))}{' …' if len(tl['bull']) > 4 else ''}</div>" if tl["bull"] else "")
                    + (f"<div class='s'>− {E('; '.join(tl['bear'][:4]))}</div>" if tl["bear"] else ""))
-            o.append(f"<tr><td><b>{NAME[mk]}</b></td><td>{chip((sg['sig'] + ' ' + (sg['st'] or '')).strip(), lab_cls(sg))}<div class='s'>{E(lab_title(sg))}</div></td>"
+            o.append(f"<tr><td><b>{NAME[mk]}</b></td><td>{chip((sg['sig'] + ' ' + (sg['st'] or '')).strip(), lab_cls(sg, mk))}<div class='s'>{E(lab_title(sg, mk))}</div></td>"
                      f"<td class='n'>{p('up1')}</td><td class='n'>{p('up5')}</td><td class='n'>{p('big')}</td><td>{sup}</td><td class='s'>{E('; '.join(also)) or '–'}</td></tr>")
         o.append("</tbody></table></div>")
     nsd = ns_on(sr, d)
@@ -985,6 +1026,43 @@ def nov_cell(r):
     return f"<td class='n'><span class='{cls}'><b>{head}</b></span><div class='s'>{vs}</div><div class='s'>{five}</div></td>"
 
 
+def bigclean_html(bc):
+    """The clean walk-forward test of the big-day volatility factors (tools/bigday_clean_test.py)."""
+    if not bc:
+        return ""
+    m = bc["markets"]
+    sp, sx = m["spx"], m["sensex"]
+    cx = sx.get("cross_from_spx") or {}
+
+    def t_(r):
+        return (f"{r['obs']} vs {r['exp']} expected (×{r['lift']}, p {r['p']})" if r.get("lift") is not None else "–")
+    o = ["<h3 id='bigclean'>Clean test of the big-day volatility factors</h3>",
+         "<div class='callout'>The volatility factors (more ±2% days, no direction) were chosen on all of 2000–2026, so their good record after 2013 was partly in sample. "
+         "Here the same choice (q &lt; 0.10 over every factor, more big days in both halves, still p &lt; 0.01 without the 2008–09 crash) was made on <b>20 Nov 2000 – 19 Nov 2013 only</b>, "
+         f"and the factors it picked were scored on <b>20 Nov 2013 – 31 Oct 2026</b>, against the number of big days expected from each year's own rate. "
+         f"<b>S&amp;P:</b> it picks {E(' and '.join(sp['clean_short']))}; after 2013 they marked {t_(sp['test'])}; without Feb–May 2020 ×{sp['test_no2020']['lift']} (p {sp['test_no2020']['p']}). "
+         f"The result leans on 2025 (April's sell-off came during Venus retrograde): without 2025 ×{sp['loyo']['worst']['lift']} (p {sp['loyo']['worst']['p']}). "
+         f"<b>Sensex:</b> nothing is picked by 2013, so its own factors have no clean test; but the S&amp;P's two factors, never fitted to the Sensex, marked {t_(cx.get('test', {}))} "
+         f"on the Sensex after 2013 (Venus retrograde alone ×{next((e['lift'] for e in cx.get('each', []) if 'Venus retrograde' in e['factor']), '–')}), and no single year carries it. "
+         f"<b>Gold and silver:</b> the factor picked by 2013 did not hold (gold ×{m['gold']['test']['lift']}, silver ×{m['silver']['test']['lift']}). "
+         "Looser choices (q &lt; 0.20, or every lead with p &lt; 0.05) add factors that dilute it to chance, so the finding rests on these two factors.</div>",
+         "<div class='wrap'><table><thead><tr><th>Market</th><th>Chosen on 2000–2013</th><th class='n'>Big days 2013–2026 on factor days</th><th class='n'>Without Feb–May 2020</th>"
+         "<th class='n'>Plain rate: factor days vs others</th><th>Verdict</th></tr></thead><tbody>"]
+    for mk in ("spx", "sensex", "gold", "silver"):
+        r = m[mk]
+        o.append(f"<tr><td>{NAME[mk]}</td><td class='s'>{E(', '.join(r['clean_short']) or 'nothing')}</td><td class='n'>{t_(r['test'])}</td><td class='n'>{t_(r['test_no2020'])}</td>"
+                 f"<td class='n'>{(str(r['test']['rate_on']) + '% vs ' + str(r['test']['rate_off']) + '%') if r['test']['rate_on'] is not None else '–'}</td>"
+                 f"<td class='{'ok' if r['verdict'] == 'holds out of sample' else 's'}'>{E(r['verdict'])}</td></tr>")
+    if cx:
+        o.append(f"<tr><td>BSE Sensex, with the S&amp;P's picks</td><td class='s'>{E(', '.join(sp['clean_short']))}</td><td class='n'>{t_(cx['test'])}</td><td class='n'>{t_(cx['test_no2020'])}</td>"
+                 f"<td class='n'>{cx['test']['rate_on']}% vs {cx['test']['rate_off']}%</td><td class='{'ok' if (cx['test']['p'] or 1) < 0.05 else 's'}'>"
+                 f"{'holds out of sample' if (cx['test']['p'] or 1) < 0.05 else 'does not hold'}</td></tr>")
+    o.append("</tbody></table></div><p class='s'>Expected counts use each calendar year's own big-day rate, as the published factor test does; the plain rates do not, which is why they differ. "
+             "The published sets, which the same choice on all of 2000–2026 reproduces exactly: S&amp;P " + E(", ".join(sp["full_short"])) + "; Sensex " + E(", ".join(sx["full_short"]))
+             + ". Only the factors named above have passed a clean test; the rest are marked “in sample only” in the calendars.</p>")
+    return "".join(o)
+
+
 def nov_html(sr):
     nov = sr.get("nov")
     if not nov:
@@ -1095,6 +1173,7 @@ def nov_html(sr):
              + "".join(f"<tr><td>{E(r['rule'])} <span class='s'>({E(r['tone'])}, {E(r['strength'])})</span></td><td>{SHORT[r['market']]}</td><td class='s'>{E(r['record'] or '–')}</td>"
                        f"<td class='n'>{_vs(r['day'], 1)}</td><td class='n'>{r['q']}</td><td class='n'>{_vs(r['first_half'], 1).split(' (')[0]}</td><td class='n'>{_vs(r['second_half'], 1).split(' (')[0]}</td></tr>" for r in t["rules_per_day"])
              + "</tbody></table></div><p class='s'>These rules were chosen on 2000–2026, so this is in sample; even so, only one of the 20 rule-and-market tests passes the correction.</p></details>")
+    o.append(bigclean_html(sr.get("bigclean")))
     w = t["window"]
     names = list(next(iter(w.values()))["rows"])
     o.append("<details class='sub'><summary>The same changes on 24 Sep – 27 Nov</summary><div class='wrap'><table><thead><tr><th>Rule</th>"

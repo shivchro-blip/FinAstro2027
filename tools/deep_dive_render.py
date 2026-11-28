@@ -23,7 +23,8 @@ CSS = """<style>
 </style>"""
 
 
-TUNE = dict(on=False, note="")
+TUNE = dict(on=False, note="", vol_ok=None)
+SHORTN = {"spx": "S&P", "sensex": "Sensex"}
 
 
 def set_tuning(out_dir):
@@ -36,6 +37,16 @@ def set_tuning(out_dir):
         TUNE.update(on=True, note=("After the November 2026 review (2026 calendar, section “November review”): Low labels are leans, not day calls, and the model's "
                                    "percentages are no longer coloured. Tested out of sample (2013–2026, everything chosen on earlier years), neither the labels nor the model "
                                    "beat chance on any market; treat both as leanings."))
+    ok = rec.get("big_days", {}).get("vol_ok")
+    if ok is not None and (pathlib.Path(out_dir) / "bigday_clean_test_ET.json").exists():
+        TUNE["vol_ok"] = ok
+        by = {}
+        for mk, v in ok.items():
+            for f_ in v:
+                by.setdefault(f_, []).append(SHORTN.get(mk, mk))
+        good = " and ".join(f"{f_} ({' and '.join(m)})" for f_, m in by.items()) or "no factor"
+        TUNE["note"] += (f" Big days: in a clean test (factors chosen on 2000–2013 only) only {good} kept marking more big days after 2013; "
+                         "a Volatile label from any other factor is marked “in sample only”.")
 
 
 def load(pattern):
@@ -76,6 +87,10 @@ def day_row(day):
             lean = pr["all"]["up1"] - pr["base"]["up1"]
             cls = "" if TUNE["on"] else " class='up'" if lean >= 2 else " class='dn'" if lean <= -2 else ""
             sig_h = f"<span style='color:var(--mut)'>{E(sig)} (lean)</span>" if TUNE["on"] and sg.get("st") == "Low" else E(sig)
+            if TUNE["vol_ok"] is not None and sg.get("sig") == "Volatile":
+                why = sg.get("why") if isinstance(sg.get("why"), str) else "; ".join(sg.get("why") or [])
+                good = any(f in why for f in TUNE["vol_ok"].get(k, []))
+                sig_h = E(sig) + (" (big-day factor passes a clean test)" if good else " <span style='color:var(--mut)'>(big-day factor in sample only)</span>")
             lab.append(f"{short}: {sig_h} · <span{cls}>{pr['all']['up1']:.0f}%</span> / {pr['all']['up5']:.0f}% (normal {pr['base']['up1']:.0f}% / {pr['base']['up5']:.0f}%)")
         else:
             lab.append(f"{short}: weekend")
