@@ -1,6 +1,6 @@
 """Deep dive for one week: every sky event backtested, every active rule with its record.
 
-    python tools/week_deep_dive.py [nov] [dec] [jan] [feb] [mar] [--reuse-days]   # default: every week of Nov and Dec 2026, Jan to Mar 2027
+    python tools/week_deep_dive.py [nov] [dec] [jan] [feb] [mar] [apr] [--reuse-days]   # default: every week of Nov and Dec 2026, Jan to Apr 2027
                                                                               # (November uses history to 31 Oct 2026 only)
 
 For each day of the week (December 2026 from the 2026 calendar JSON; January 2027 built with forward_daybyday.build and
@@ -623,7 +623,7 @@ def main():
 
 
 MONTHS_2027 = {"jan": (dt.date(2027, 1, 1), dt.date(2027, 1, 31)), "feb": (dt.date(2027, 2, 1), dt.date(2027, 2, 28)),
-               "mar": (dt.date(2027, 3, 1), dt.date(2027, 3, 31))}
+               "mar": (dt.date(2027, 3, 1), dt.date(2027, 3, 31)), "apr": (dt.date(2027, 4, 1), dt.date(2027, 4, 30))}
 
 if __name__ == "__main__":
     main()

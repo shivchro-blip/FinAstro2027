@@ -53,7 +53,8 @@ CLOSED = {"spx": dict(_US),             # COMEX has no settlement on these days 
           "gold": dict(_US),
           "silver": dict(_US),
           "sensex": {dt.date(2026, 11, 10): "Diwali Balipratipada", dt.date(2026, 11, 24): "Guru Nanak Jayanti", dt.date(2026, 12, 25): "Christmas",
-                     dt.date(2027, 1, 26): "Republic Day", dt.date(2027, 3, 26): "Good Friday"}}
+                     dt.date(2027, 1, 26): "Republic Day", dt.date(2027, 3, 26): "Good Friday",
+                     dt.date(2027, 4, 14): "Dr. Ambedkar Jayanti"}}   # fixed date; no ^BSESN bar on any weekday 14 Apr since 2015
 # BSE's 2027 list is not out yet: only holidays with certain dates are assumed (Republic Day; Good Friday, no ^BSESN bar on any of
 # the last six); lunar-calendar holidays such as Holi are not (their BSE dates shift by a day between calendars)
 EARLY = {dt.date(2026, 11, 27): "US early close (13:00 ET)", dt.date(2026, 12, 24): "US early close (13:00 ET)"}
