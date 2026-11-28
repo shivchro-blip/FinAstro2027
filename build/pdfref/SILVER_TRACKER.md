@@ -1,6 +1,6 @@
 # Silver findings tracker
 
-Generated 28 Nov 2026 10:02 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
+Generated 28 Nov 2026 10:33 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
 
 ## Recent findings
 
@@ -111,6 +111,7 @@ Best (from the 26 yr data): Retrograde Mercury or Jupiter, Only Moon and Mercury
 
 | Date | PR | Topic | Result |
 |---|---|---|---|
+| 2026-11-28 | #76 | Global Predictions' 24-27 Nov volatility call scored (scheduled check) | Wrong: Tue -0.50%, Wed -0.25%, Fri +1.60%; no big day, no 1%+ reversal. A volatility call of this length is right by default about 15% of the time. The big move came the session before (Mon 23 Nov +4.73%). 30 Nov - 5 Dec and the overall scenario are scored on 5 Dec; 18% of the 23 Nov rally given back so far. |
 | 2026-11-28 | #75 | Solar return's forecast for the week of 23-27 Nov 2026 scored (scheduled check) | Pressure Mon-Wed, Friday recovery: by sign 3 of 4 days; by the 0.5% rule 1 right (Fri +1.60%, the Jupiter-Venus sextile day), 1 wrong (Mon +4.73%), Tue -0.499% and Wed -0.25% too small to count; Mon-Wed together +3.9%, so the pressure did not come. Solar month 19 Nov - 18 Dec still open (-0.4% to 27 Nov). |
 | 2026-11-28 | #74 | Deep dives April to July 2027 week by week, double-checked; each month's update after the November review; calls frozen | April 2,035 tests, May 2,064, June 1,948, July 1,992: 0 pass BH in any month; nominal counts below chance; no big-day class; checks 20/20 and recounts 8/8 every month. Some support: May Mercury Paap Kartari 23-27 May without a benefic aspect (Sensex, p 0.03, source rule's 2000-2026 record); June Three Saturdays 14-18 Jun (Sensex) and July 9-15 Jul (S&P), the one table rule that held after 2013 on both indices (not proven, q 0.30/0.54). April: no call with support. Everything else at chance or in sample only; no clean big-day factor active. 2027 rows byte-identical. |
 | 2026-11-28 | #73 | Deep dive March 2027 week by week, double-checked; March update after the November review; March calls frozen | 1,950 tests, 0 pass BH; 40 nominal vs about 98 expected; no big-day class; checks 20/20, recounts 8/8. Update: S&P/Sensex labels Bearish Moderate to 8 Mar, Bullish 9-19 Mar (rules picked on 2000-2013 leaned the right way after 2013, none significantly); S&P Volatile 22 Mar - 5 Apr (in sample only); Mercury Paap Kartari to 16 Mar without a benefic aspect: Sensex past windows of this case bearish 50% vs 40% (p 0.03), the month's only call with some support; gold and silver labels, model, Solar return (Bearish 16 sessions from Mars conjunct Ketu) at chance; no clean big-day factor. 2027 rows byte-identical. |

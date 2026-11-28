@@ -977,6 +977,18 @@
     "PROJECT_KNOWLEDGE.md",
     "reports/calendar_2026-11-24_to_2026-12-31_ET.html"
    ]
+  },
+  {
+   "date": "2026-11-28",
+   "pr": "76",
+   "topic": "Global Predictions' 24-27 Nov volatility call scored (scheduled check)",
+   "analysis": "tools/global_predictions.py scores gp-a (volatility / sharp reversals, 24-27 Nov) on S&P closes to 27 Nov: right if the window has a big day (2%+) or a 1%+ reversal; default rate from the last 250 sessions.",
+   "result": "Wrong: Tue -0.50%, Wed -0.25%, Fri +1.60%; no big day, no 1%+ reversal. A volatility call of this length is right by default about 15% of the time. The big move came the session before (Mon 23 Nov +4.73%). 30 Nov - 5 Dec and the overall scenario are scored on 5 Dec; 18% of the 23 Nov rally given back so far.",
+   "files": [
+    "build/pdfref/global_predictions_ET.json",
+    "PROJECT_KNOWLEDGE.md",
+    "reports/calendar_2026-11-24_to_2026-12-31_ET.html"
+   ]
   }
  ]
 }

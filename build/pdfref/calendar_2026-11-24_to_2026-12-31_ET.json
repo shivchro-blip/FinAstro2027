@@ -1,7 +1,7 @@
 {
  "start": "2026-11-24",
  "end": "2026-12-31",
- "generated": "28 Nov 2026 10:04 ET",
+ "generated": "28 Nov 2026 10:33 ET",
  "checks": [
   {
    "name": "Deep dive: every week's double checks pass (event times, counts, independent recount, coverage)",
