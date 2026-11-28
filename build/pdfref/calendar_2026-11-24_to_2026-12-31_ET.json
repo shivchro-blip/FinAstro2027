@@ -1,7 +1,7 @@
 {
  "start": "2026-11-24",
  "end": "2026-12-31",
- "generated": "27 Nov 2026 20:06 ET",
+ "generated": "27 Nov 2026 22:07 ET",
  "checks": [
   {
    "name": "Deep dive: every week's double checks pass (event times, counts, independent recount, coverage)",
@@ -22,6 +22,11 @@
    "name": "November review: the long records stop before November",
    "ok": true,
    "detail": "tuning tests use data to 2026-10-31"
+  },
+  {
+   "name": "January 2027 calls frozen, and their labels equal the published tables",
+   "ok": true,
+   "detail": "frozen 2026-11-27 22:05 ET; 31 days, sessions S&P 19, Sensex 20, Gold 19, Silver 19"
   },
   {
    "name": "Big-day clean test: the same choice on all of 2000\u20132026 reproduces the published robust factors",

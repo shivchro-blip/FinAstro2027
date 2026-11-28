@@ -114,6 +114,7 @@ Known data problems:
 | `tools/week_deep_dive.py [nov] [dec] [jan] [feb] [--reuse-days]` | Every week of November and December 2026 and of January and February 2027 (December from the 2026 calendar, the others built with `forward_daybyday.build`; `--reuse-days` reuses the cached day data): every sky event as an event class backtested on 4 markets (next session, 5 sessions, big days; BH per week) with 4 automatic checks, plus each day's rules, labels, model, Solar return, Kartari, gold notes and new-source items → `deep_dive_*_ET.json`. November uses history to 31 Oct 2026 only, so no November event scores itself |
 | `tools/november_review.py` | November 2026 review: every call of every layer scored against what the markets did (pass / fail at 0.5%, against chance for the same up/down mix; recount checked against `forward_daybyday.score`), where it failed (rules behind each label, spans, wrong calls, big days, deep-dive leans), and the tuning tests on the long records (clean walk-forward labels and model, label strengths, each table rule as a day call, big-day flags, volatility factors, 24 Sep – 27 Nov) → `november_review_2026-11_ET.json` with the recommendations the two calendars apply |
 | `tools/bigday_clean_test.py` | Clean walk-forward test of the big-day volatility factors: the published choice (q < 0.10, lift > 1 in both halves, p < 0.01 without the 2008–09 crash) made on 20 Nov 2000 – 19 Nov 2013 only for each market, over every factor of `big_move_analysis.py`, then scored 20 Nov 2013 – 31 Oct 2026 (year-stratified expected big days, without Feb–May 2020, leave one year out, each factor). Also: the S&P's picks on the Sensex, looser choices, and a check that the same choice on 2000–2026 reproduces the published robust sets → `bigday_clean_test_ET.json` (read by `november_review.py` and both calendars) |
+| `tools/january_2027_outlook.py` | January 2027 after the November review: every kind of January call (labels and the rules behind them, combined model, Model v1.0, Solar return, Paap Kartari B116/B117 with a big-day test of B116's benefic-aspect case, big-day factors) with its best out-of-sample evidence → `january_2027_outlook_ET.json`; freezes January's calls (the fields the November scorer reads) into `january_2027_calls_ET.json`, rewritten until 31 Dec 2026 (ET) and never after |
 | `tools/deep_dive_render.py` | Renders the 2027 monthly deep dives (January, February) into `calendar_2027_NY_master.html` with a month index (called by `build_pdf_calendar.py`; `--html-only` re-renders from the JSON). Applies the November review's changes (Low labels as leans, model percentages uncoloured, Volatile labels marked by the clean big-day test) |
 | `tools/gold_tracker.py [--metal silver]` | Trackers: findings, rule status, best-rule dates, analysis log |
 | `tools/build_year.py YEAR` | Astronomy layer for any year; 2000–2024 are git-ignored and rebuilt on demand |
@@ -913,6 +914,30 @@ Results, as the share of calls right:
 
   - This partly matches Solar return's own path (weak into spring, bottom Mar–May), but the rubric itself has no track record.
 - **In the calendar:** shown in the 2026 calendar's Solar return section.
+
+**January 2027 after the November review (28 Nov 2026)** (`tools/january_2027_outlook.py`, `january_2027_outlook_ET.json`, `january_2027_calls_ET.json`; 2027 calendar → "Deep dive: January 2027" → Update; 2026 calendar → "January 2027")
+
+- **Result: no January call has a tested edge on any market.**
+
+| Call | January | What it is worth |
+|---|---|---|
+| S&P / Sensex labels | Bearish all month: Low 1–8 Jan (Venus–Herschel 7th); High 11–18, 22, 26–27 Jan (plus Mercury–Rahu conjunction); Low 19–21, 25, 28–29 Jan | Clean label record: S&P 52.4% vs 52.5% chance, Sensex 50.5% vs 52.2%. Venus–Herschel 7th day by day: S&P 50.0% vs 45.4% (in sample); not picked when rules are chosen on 2000–2013. Mercury–Rahu: 41.4% vs 42.1% after 2013 |
+| Gold labels | Bullish Low (Mercury with the Sun), 21 Dec – 8 Jan, 14–22 and 25–27 Jan | Gold labels out of sample 50.0% vs 50.1% |
+| Silver labels | Bullish High 1–13 Jan and 25 Jan – 5 Feb, Moderate 14–22 Jan | 53.3% vs 51.9% |
+| Combined model | Leans down on 13 S&P and 8 Sensex sessions; no gold or silver leans | No edge out of sample on any market |
+| Model v1.0 (gold) | Bullish to strong bullish on most sessions | 53.8% vs 53.6% (2000–2026) |
+| Solar return | No stated indication in either solar month (19 Dec – 17 Jan, 17 Jan – 16 Feb) | Day calls at chance since 1928 |
+| Big days | No factor that passed the clean test is active; Mercury–Saturn 2/12 on 4 S&P days is in sample only | – |
+
+- **Mercury in Paap Kartari (B116):** windows 1–15 Jan and 25 Jan (ET); in IST 1–16 Jan and 25–26 Jan.
+  - As a bearish rule it holds on the Sensex in general (48% vs 41%, p 0.027; both halves above chance) but not on the S&P (41% vs 39%).
+  - In January, Jupiter aspects Mercury in every window. B116 says a benefic aspect makes it "very volatile and both side movement".
+  - Past windows with a benefic aspect were not bearish (Sensex 46% vs 41%, p 0.21).
+  - Nor did they have more big days. Days of ±2% against each year's own rate: S&P 45 vs 60.7 (×0.74); Sensex 88 vs 78.3 (×1.12, p 0.15).
+  - Oddly, the windows *without* a benefic aspect had more big days: S&P ×1.25 (p 0.02), Sensex ×1.24 (p 0.02). That split is post hoc; it was found by looking and has not been tested.
+- **Jupiter in Paap Kartari (B117)**, to 31 Jan: its bearish record faded after 2013 (S&P 30% vs 29%). More big days in past windows (S&P 11.6% vs 7.5%) was not significant.
+- **Frozen calls:** January's calls are saved in `january_2027_calls_ET.json`: labels, model, rules tally, calendar verdicts, Model v1.0, Solar return, the Mars–Jupiter–node lead, big-day factors and watch windows. `refresh_all` rewrites the file until 31 Dec 2026 and never from 1 Jan 2027. January can then be scored afterwards with the November scorer, on the calls as published.
+- **Display:** the 2027 calendar's January section opens with the update (a call-by-call table). The 2026 calendar's January section opens with the summary and the B116 big-day table. A new verification check confirms the frozen labels equal the published tables (31 days). The 2027 calendar's 2,211 rows are byte-identical.
 
 **Clean test of the big-day volatility factors (28 Nov 2026)** (`tools/bigday_clean_test.py`, `bigday_clean_test_ET.json`; 2026 calendar → November review → "Clean test of the big-day volatility factors")
 

@@ -879,6 +879,23 @@
     "reports/calendar_2026-11-24_to_2026-12-31_ET.html",
     "reports/calendar_2027_NY_master.html"
    ]
+  },
+  {
+   "date": "2026-11-28",
+   "pr": "71",
+   "topic": "January 2027 after the November review: every call with its out-of-sample evidence; January's calls frozen for scoring",
+   "analysis": "tools/january_2027_outlook.py: January day data (week_deep_dive jan) read call by call against the November review's clean records (walk-forward labels, rules as day calls, clean model, Model v1.0, Solar return day calls), the clean big-day test, and Paap Kartari B116/B117; new test: days of +/-2% inside past B116 windows against each year's own rate, with and without a benefic aspect on Mercury (January's windows all have Jupiter aspecting Mercury). January's calls frozen into january_2027_calls_ET.json (rewritten until 31 Dec 2026 ET, never after).",
+   "result": "No January call has a tested edge on any market. S&P/Sensex labels bearish all month from Venus-Herschel 7th and Mercury-Rahu (clean label record at chance); gold Bullish Low and silver Bullish High/Moderate labels at chance; model no edge; Solar return no stated indication; no clean big-day factor active. B116 is bearish on the Sensex in general (48% vs 41%, p 0.027) but January's benefic-aspect windows were neither bearish (46% vs 41%, p 0.21) nor more volatile (S&P x0.74, Sensex x1.12, p 0.15); windows without a benefic aspect had more big days (x1.25 / x1.24, post hoc). Shown in both calendars; 2027 rows byte-identical.",
+   "files": [
+    "tools/january_2027_outlook.py",
+    "tools/deep_dive_render.py",
+    "tools/calendar_2026.py",
+    "tools/refresh_all.py",
+    "build/pdfref/january_2027_outlook_ET.json",
+    "build/pdfref/january_2027_calls_ET.json",
+    "reports/calendar_2026-11-24_to_2026-12-31_ET.html",
+    "reports/calendar_2027_NY_master.html"
+   ]
   }
  ]
 }
