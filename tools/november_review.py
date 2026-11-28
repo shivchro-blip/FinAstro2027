@@ -678,6 +678,15 @@ def pooled(rows):
     return round(sum(r["n"] * r["edge"] for r in rows) / n, 1) if n else None
 
 
+def factor_markets(ok):
+    """{'spx': ['Venus retrograde', 'Jupiter-Pluto 5/9'], 'sensex': ['Venus retrograde']} -> 'Venus retrograde (S&P and Sensex) and Jupiter-Pluto 5/9 (S&P)'."""
+    by = {}
+    for mk, v in ok.items():
+        for f in v:
+            by.setdefault(f, []).append(SHORT[mk])
+    return " and ".join(f"{f} ({' and '.join(m)})" for f, m in by.items()) or "no factor"
+
+
 def recommend(res):
     """What to change, from the long records (each with the evidence behind it); November is never the evidence.
     applied=True: the 2026 and 2027 calendars now show it this way."""
@@ -719,14 +728,31 @@ def recommend(res):
                     november=nv("Combined probability, all layers") + "; Model v1.0 " + nv("Model v1.0 (Ch.41 + Shadbala)", ("gold",))))
     bg, vf = t["big"], t["volatility_factors"]
     keep_big = [mk for mk in MKS if bg[mk]["p"] is not None and bg[mk]["p"] < 0.05 and (bg[mk]["warned_pct"] or 0) > (bg[mk]["other_pct"] or 0)]
-    rec.append(dict(id="big_days", applied=True, where="the 2026 calendar", where_note="the 2027 calendar shows no big-day chances", supported=True, keep=keep_big,
-                    title="Big days: the volatility factors (S&P, Sensex) are the warning that holds up; the model's big-day chance counts only for the "
-                          + (", ".join(SHORT[m] for m in keep_big) or "no market") + " and is shown as untested elsewhere",
+    cf = OUT / "bigday_clean_test_ET.json"
+    clean = json.load(open(cf))["markets"] if cf.exists() else None
+    if clean:                                                  # the model's big-day layer is built from the published factors: keep it only where they pass a clean test
+        keep_big = [mk for mk in keep_big if clean[mk]["verdict"] == "holds out of sample"]
+        sp, sx = clean["spx"], clean["sensex"]
+        cx = sx.get("cross_from_spx") or {}
+        ok = {"spx": list(sp["clean_short"]) if sp["verdict"] == "holds out of sample" else [],
+              "sensex": [e["factor"].split(": ", 1)[-1].split(" (")[0].split(" [")[0] for e in cx.get("each", []) if e["p"] < 0.05 and (e["lift"] or 0) > 1]}
+        clean_txt = (f" Clean test (tools/bigday_clean_test.py: the same choice made on 2000-2013 only, scored 2013-2026): S&P picks {', '.join(sp['clean_short'])}; "
+                     f"{sp['test']['obs']} big days vs {sp['test']['exp']} expected (x{sp['test']['lift']}, p {sp['test']['p']}; without Feb-May 2020 x{sp['test_no2020']['lift']}, "
+                     f"p {sp['test_no2020']['p']}; without 2025 x{sp['loyo']['worst']['lift']}, p {sp['loyo']['worst']['p']}). Sensex: nothing is picked by 2013, but the S&P's two "
+                     f"factors lift Sensex big days x{cx.get('test', {}).get('lift')} (p {cx.get('test', {}).get('p')}). Gold x{clean['gold']['test']['lift']}, "
+                     f"silver x{clean['silver']['test']['lift']}: no.")
+    else:
+        ok, clean_txt = {}, " The factors were chosen on 2000-2026, so the lift is not a clean out-of-sample result."
+    rec.append(dict(id="big_days", applied=True, where="both calendars" if clean else "the 2026 calendar", supported=True, keep=keep_big, vol_ok=ok,
+                    title=("Big days: only " + factor_markets(ok) + " pass a clean test; the other volatility factors are in sample only, "
+                           "and the model's big-day chance is shown as untested") if clean else
+                          ("Big days: the volatility factors (S&P, Sensex) are the warning that holds up; the model's big-day chance counts only for the "
+                           + (", ".join(SHORT[m] for m in keep_big) or "no market") + " and is shown as untested elsewhere"),
                     evidence=("Walk-forward 2013-2026, days the model flags (2+ points above normal) vs other days: "
                               + "; ".join(f"{SHORT[mk]} big on {bg[mk]['warned_pct']}% vs {bg[mk]['other_pct']}% (p {bg[mk]['p']}, {bg[mk]['warned']} flagged days)" if bg[mk]["warned"]
                                           else f"{SHORT[mk]} never flags a day" for mk in MKS)
                               + ". The volatility factors on their own: " + "; ".join(f"{SHORT[mk]} {nm}: {v['on_pct']}% big on factor days vs {v['off_pct']}% (p {v['p']})" for mk in vf for nm, v in vf[mk].items())
-                              + ". The factors were chosen on 2000-2026, so the Sensex lift is not a clean out-of-sample result."),
+                              + "." + clean_txt),
                     november="; ".join(f"{SHORT[mk]} {len(res['bigs'][mk]['big_days'])} big days, {sum(b['warned'] for b in res['bigs'][mk]['big_days'])} flagged by the model"
                                        + (f", {sum(b['vol'] for b in res['bigs'][mk]['big_days'])} on volatility-factor days ({res['bigs'][mk]['vol_days']} factor days)" if mk in ("spx", "sensex") else "")
                                        for mk in MKS)))

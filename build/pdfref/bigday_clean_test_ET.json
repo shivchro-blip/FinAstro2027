@@ -1,0 +1,1509 @@
+{
+ "made": "2026-11-28 01:01 UTC",
+ "pick": "2000-11-20 to 2013-11-19",
+ "test": "2013-11-20 to 2026-10-31",
+ "markets": {
+  "spx": {
+   "name": "S&P 500",
+   "threshold": 2.0,
+   "n_factors": 730,
+   "clean": [
+    {
+     "factor": "State: Venus retrograde",
+     "lift": 1.88,
+     "big": 39,
+     "exp": 20.7,
+     "p": 0.000217,
+     "q": 0.077,
+     "lift_a": 1.87,
+     "lift_b": 1.77,
+     "xc_p": 0.0037
+    },
+    {
+     "factor": "Rule: Jupiter-Pluto 5/9 (Trine) (Strong Bullish Permutation Combination) [Bullish]",
+     "lift": 1.49,
+     "big": 89,
+     "exp": 59.6,
+     "p": 0.000227,
+     "q": 0.077,
+     "lift_a": 1.6,
+     "lift_b": 1.35,
+     "xc_p": 0.0002
+    }
+   ],
+   "test": {
+    "days": 3255,
+    "factor_days": 698,
+    "share": 21.4,
+    "big": 175,
+    "obs": 44,
+    "exp": 31.0,
+    "lift": 1.42,
+    "p": 0.0163,
+    "rate_on": 6.3,
+    "rate_off": 5.1,
+    "p_rates": 0.2203
+   },
+   "test_no2020": {
+    "days": 3183,
+    "factor_days": 686,
+    "share": 21.6,
+    "big": 141,
+    "obs": 43,
+    "exp": 26.8,
+    "lift": 1.6,
+    "p": 0.0024,
+    "rate_on": 6.3,
+    "rate_off": 3.9,
+    "p_rates": 0.0082
+   },
+   "each": [
+    {
+     "factor": "State: Venus retrograde",
+     "big": 23,
+     "exp": 15.1,
+     "lift": 1.52,
+     "p": 0.0355,
+     "days": 253
+    },
+    {
+     "factor": "Rule: Jupiter-Pluto 5/9 (Trine) (Strong Bullish Permutation Combination) [Bullish]",
+     "big": 33,
+     "exp": 18.7,
+     "lift": 1.77,
+     "p": 0.0017,
+     "days": 505
+    }
+   ],
+   "first_half": {
+    "days": 3269,
+    "factor_days": 729,
+    "share": 22.3,
+    "big": 310,
+    "obs": 121,
+    "exp": 74.3,
+    "lift": 1.63,
+    "p": 0.0,
+    "rate_on": 16.6,
+    "rate_off": 7.4,
+    "p_rates": 0.0
+   },
+   "loose_q": {
+    "factors": [
+     "State: Venus retrograde",
+     "Rule: Jupiter-Pluto 5/9 (Trine) (Strong Bullish Permutation Combination) [Bullish]",
+     "Rule: Jupiter-Ketu conjunction in Navamsh (D9) [Bullish]"
+    ],
+    "test": {
+     "days": 3255,
+     "factor_days": 995,
+     "share": 30.6,
+     "big": 175,
+     "obs": 51,
+     "exp": 46.0,
+     "lift": 1.11,
+     "p": 0.2484,
+     "rate_on": 5.1,
+     "rate_off": 5.5,
+     "p_rates": 0.6739
+    }
+   },
+   "loose_leads": {
+    "factors": [
+     "Event: Mercury-Neptune opposition",
+     "Event: Venus stations retrograde",
+     "Rule: Jupiter-Herschel 6/8 (Shadashtak) (Strong Bullish Permutation Combination) [Bullish]",
+     "Rule: Jupiter-Herschel 6/8 (Shadashtak) [Bullish]",
+     "Rule: Jupiter-Ketu conjunction in Navamsh (D9) [Bullish]",
+     "Rule: Jupiter-Neptune 7th (opposition) [Bearish]",
+     "Rule: Jupiter-Pluto 5/9 (Trine) (Strong Bullish Permutation Combination) [Bullish]",
+     "Rule: Jupiter-Rahu 6/8 (Shadashtak) (Strong Bullish Permutation Combination) [Bullish]",
+     "Rule: Jupiter-Saturn 4/10 (Kendra) [Bullish]",
+     "Rule: Jupiter-Saturn 6/8 (Shadashtak) (Strong Bullish Permutation Combination) [Bullish]",
+     "Rule: Jupiter-Saturn 6/8 (Shadashtak) [Bullish]",
+     "Rule: Jupiter-Saturn conjunction in Navamsh (D9) [Bullish]",
+     "Rule: Jupiter-Venus 3/11 (Trikadash) [Mixed]",
+     "Rule: Mars-Herschel 4/10 (Kendra) [Bearish]",
+     "Rule: Mars-Saturn 4/10 (Kendra) [Bullish]",
+     "Rule: Mars-Venus 3/11 (Trikadash) [Bullish]",
+     "Rule: Mercury in middle of Venus (ahead) and Sun (behind) - contra rule [Bearish]",
+     "Rule: Mercury-Neptune 7th (opposition) [Bearish]",
+     "Rule: Mercury-Rahu 3/11 (Trikadash) [Bullish]",
+     "Rule: Mercury-Rahu 4/10 (Kendra) [Bearish]",
+     "Rule: Mercury-Saturn 2/12 (Dwidwadash) [Bullish]",
+     "Rule: Mercury-Saturn 3/11 (Trikadash) (Strong Bullish Short Term Yoga'S) [Bullish]",
+     "Rule: Mercury-Saturn 3/11 (Trikadash) [Bullish]",
+     "Rule: Mercury-Venus 3/11 (Trikadash) [Bullish]",
+     "Rule: Rahu-Herschel 2/12 (Dwidwadash) [Bearish]",
+     "Rule: Rahu-Neptune conjunction (same sign) [Bullish]",
+     "Rule: Saturn & Venus all retrograde together [Bullish]",
+     "Rule: Saturn-Rahu 3/11 (Trikadash) [Bullish]",
+     "Rule: Sun-Herschel 6/8 (Shadashtak) [Bearish]",
+     "Rule: Sun-Mars conjunction (same sign) [Bearish]",
+     "Rule: Venus-Herschel 7th (opposition) [Bearish]",
+     "Rule: Virgo: Saturn, Sun, Mars, Herschel, Rahu any 2 [Bullish]",
+     "State: Jupiter in Cancer",
+     "State: Mars in Libra",
+     "State: Mars in Scorpio",
+     "State: Mars with the Sun",
+     "State: Mars-Saturn in aspect",
+     "State: Rahu in Scorpio",
+     "State: Saturn in Leo",
+     "State: Saturn-Rahu in aspect",
+     "State: Sun in Libra",
+     "State: Sun in Virgo",
+     "State: Venus retrograde"
+    ],
+    "test": {
+     "days": 3255,
+     "factor_days": 3225,
+     "share": 99.1,
+     "big": 175,
+     "obs": 172,
+     "exp": 173.2,
+     "lift": 0.99,
+     "p": 0.5455,
+     "rate_on": 5.3,
+     "rate_off": 10.0,
+     "p_rates": 0.2593
+    }
+   },
+   "full": {
+    "factors": [
+     "Rule: Jupiter-Pluto 5/9 (Trine) (Strong Bullish Permutation Combination) [Bullish]",
+     "State: Venus retrograde",
+     "Rule: Jupiter-Neptune 7th (opposition) [Bearish]",
+     "Rule: Mercury-Saturn 2/12 (Dwidwadash) [Bullish]",
+     "Rule: Jupiter-Herschel 6/8 (Shadashtak) (Strong Bullish Permutation Combination) [Bullish]",
+     "Rule: Jupiter-Herschel 6/8 (Shadashtak) [Bullish]"
+    ],
+    "reproduces_published": true,
+    "published": [
+     "Rule: Jupiter-Herschel 6/8 (Shadashtak) (Strong Bullish Permutation Combination) [Bullish]",
+     "Rule: Jupiter-Herschel 6/8 (Shadashtak) [Bullish]",
+     "Rule: Jupiter-Neptune 7th (opposition) [Bearish]",
+     "Rule: Jupiter-Pluto 5/9 (Trine) (Strong Bullish Permutation Combination) [Bullish]",
+     "Rule: Mercury-Saturn 2/12 (Dwidwadash) [Bullish]",
+     "State: Venus retrograde"
+    ],
+    "test": {
+     "days": 3255,
+     "factor_days": 1528,
+     "share": 46.9,
+     "big": 175,
+     "obs": 98,
+     "exp": 65.0,
+     "lift": 1.51,
+     "p": 0.0001,
+     "rate_on": 6.4,
+     "rate_off": 4.5,
+     "p_rates": 0.0136
+    },
+    "test_no2020": {
+     "days": 3183,
+     "factor_days": 1480,
+     "share": 46.5,
+     "big": 141,
+     "obs": 73,
+     "exp": 50.8,
+     "lift": 1.44,
+     "p": 0.002,
+     "rate_on": 4.9,
+     "rate_off": 4.0,
+     "p_rates": 0.1988
+    }
+   },
+   "overlap": [
+    "Rule: Jupiter-Pluto 5/9 (Trine) (Strong Bullish Permutation Combination) [Bullish]",
+    "State: Venus retrograde"
+   ],
+   "by_year": [
+    {
+     "year": 2013,
+     "factor_days": 6,
+     "big": 0,
+     "exp": 0.0
+    },
+    {
+     "year": 2014,
+     "factor_days": 21,
+     "big": 1,
+     "exp": 0.5
+    },
+    {
+     "year": 2015,
+     "factor_days": 120,
+     "big": 9,
+     "exp": 4.8
+    },
+    {
+     "year": 2016,
+     "factor_days": 125,
+     "big": 7,
+     "exp": 4.5
+    },
+    {
+     "year": 2017,
+     "factor_days": 29,
+     "big": 0,
+     "exp": 0.0
+    },
+    {
+     "year": 2018,
+     "factor_days": 29,
+     "big": 5,
+     "exp": 2.3
+    },
+    {
+     "year": 2020,
+     "factor_days": 30,
+     "big": 4,
+     "exp": 5.2
+    },
+    {
+     "year": 2021,
+     "factor_days": 9,
+     "big": 0,
+     "exp": 0.2
+    },
+    {
+     "year": 2022,
+     "factor_days": 19,
+     "big": 1,
+     "exp": 3.5
+    },
+    {
+     "year": 2023,
+     "factor_days": 30,
+     "big": 0,
+     "exp": 0.2
+    },
+    {
+     "year": 2024,
+     "factor_days": 169,
+     "big": 6,
+     "exp": 4.7
+    },
+    {
+     "year": 2025,
+     "factor_days": 91,
+     "big": 11,
+     "exp": 4.7
+    },
+    {
+     "year": 2026,
+     "factor_days": 20,
+     "big": 0,
+     "exp": 0.4
+    }
+   ],
+   "loyo": {
+    "rows": [
+     {
+      "year": 2013,
+      "lift": 1.42,
+      "p": 0.0163,
+      "obs": 44,
+      "exp": 31.0
+     },
+     {
+      "year": 2014,
+      "lift": 1.41,
+      "p": 0.0192,
+      "obs": 43,
+      "exp": 30.5
+     },
+     {
+      "year": 2015,
+      "lift": 1.33,
+      "p": 0.0592,
+      "obs": 35,
+      "exp": 26.3
+     },
+     {
+      "year": 2016,
+      "lift": 1.39,
+      "p": 0.032,
+      "obs": 37,
+      "exp": 26.6
+     },
+     {
+      "year": 2017,
+      "lift": 1.42,
+      "p": 0.0163,
+      "obs": 44,
+      "exp": 31.0
+     },
+     {
+      "year": 2018,
+      "lift": 1.36,
+      "p": 0.039,
+      "obs": 39,
+      "exp": 28.7
+     },
+     {
+      "year": 2019,
+      "lift": 1.42,
+      "p": 0.0163,
+      "obs": 44,
+      "exp": 31.0
+     },
+     {
+      "year": 2020,
+      "lift": 1.55,
+      "p": 0.0058,
+      "obs": 40,
+      "exp": 25.8
+     },
+     {
+      "year": 2021,
+      "lift": 1.43,
+      "p": 0.0145,
+      "obs": 44,
+      "exp": 30.8
+     },
+     {
+      "year": 2022,
+      "lift": 1.56,
+      "p": 0.0039,
+      "obs": 43,
+      "exp": 27.6
+     },
+     {
+      "year": 2023,
+      "lift": 1.43,
+      "p": 0.0145,
+      "obs": 44,
+      "exp": 30.8
+     },
+     {
+      "year": 2024,
+      "lift": 1.44,
+      "p": 0.0191,
+      "obs": 38,
+      "exp": 26.3
+     },
+     {
+      "year": 2025,
+      "lift": 1.25,
+      "p": 0.1158,
+      "obs": 33,
+      "exp": 26.3
+     },
+     {
+      "year": 2026,
+      "lift": 1.44,
+      "p": 0.0136,
+      "obs": 44,
+      "exp": 30.7
+     }
+    ],
+    "worst": {
+     "year": 2025,
+     "lift": 1.25,
+     "p": 0.1158,
+     "obs": 33,
+     "exp": 26.3
+    }
+   },
+   "clean_short": [
+    "Venus retrograde",
+    "Jupiter-Pluto 5/9"
+   ],
+   "full_short": [
+    "Jupiter-Pluto 5/9",
+    "Venus retrograde",
+    "Jupiter-Neptune 7th",
+    "Mercury-Saturn 2/12",
+    "Jupiter-Herschel 6/8",
+    "Jupiter-Herschel 6/8"
+   ],
+   "verdict": "holds out of sample",
+   "verdict_no2020": "holds out of sample"
+  },
+  "sensex": {
+   "name": "BSE Sensex",
+   "threshold": 2.0,
+   "n_factors": 730,
+   "clean": [],
+   "test": {
+    "days": 3180,
+    "factor_days": 0,
+    "share": 0,
+    "big": 127,
+    "obs": 0,
+    "exp": 0,
+    "lift": null,
+    "p": null,
+    "rate_on": null,
+    "rate_off": null,
+    "p_rates": null
+   },
+   "test_no2020": {
+    "days": 3113,
+    "factor_days": 0,
+    "share": 0,
+    "big": 97,
+    "obs": 0,
+    "exp": 0,
+    "lift": null,
+    "p": null,
+    "rate_on": null,
+    "rate_off": null,
+    "p_rates": null
+   },
+   "each": [],
+   "first_half": {
+    "days": 3213,
+    "factor_days": 0,
+    "share": 0,
+    "big": 476,
+    "obs": 0,
+    "exp": 0,
+    "lift": null,
+    "p": null,
+    "rate_on": null,
+    "rate_off": null,
+    "p_rates": null
+   },
+   "loose_q": {
+    "factors": [],
+    "test": {
+     "days": 3180,
+     "factor_days": 0,
+     "share": 0,
+     "big": 127,
+     "obs": 0,
+     "exp": 0,
+     "lift": null,
+     "p": null,
+     "rate_on": null,
+     "rate_off": null,
+     "p_rates": null
+    }
+   },
+   "loose_leads": {
+    "factors": [
+     "Event: Venus leaves combustion",
+     "Event: Venus stations retrograde",
+     "Event: Venus-Jupiter opposition",
+     "Rule: Jupiter-Herschel 5/9 (Trine) [Bullish]",
+     "Rule: Jupiter-Herschel 7th (opposition) [Bearish]",
+     "Rule: Jupiter-Rahu 5/9 (Trine) (Strong Bullish Permutation Combination) [Bullish]",
+     "Rule: Jupiter-Rahu 5/9 (Trine) [Bullish]",
+     "Rule: Jupiter-Saturn conjunction in Navamsh (D9) [Bullish]",
+     "Rule: Jupiter-Venus 7th (opposition) [Mixed]",
+     "Rule: Mars-Herschel 5/9 (Trine) [Bullish]",
+     "Rule: Mars-Jupiter 4/10 (Kendra) (Strong Bearish Permutation & Combination) [Bearish]",
+     "Rule: Mars-Jupiter 4/10 (Kendra) [Mixed]",
+     "Rule: Mars-Rahu 4/10 (Kendra) (Strong Bearish Permutation & Combination) [Bearish]",
+     "Rule: Mars-Rahu 4/10 (Kendra) [Bearish]",
+     "Rule: Mars-Saturn conjunction (same sign) (Strong Bullish Permutation Combination) [Bullish]",
+     "Rule: Mars-Saturn conjunction (same sign) [Bullish]",
+     "Rule: Mercury-Herschel 2/12 (Dwidwadash) (Strong Bullish Short Term Yoga'S) [Bullish]",
+     "Rule: Mercury-Herschel 2/12 (Dwidwadash) [Bullish]",
+     "Rule: Mercury-Rahu 3/11 (Trikadash) [Bullish]",
+     "Rule: Mercury-Rahu conjunction (same sign) (Strong Bullish Short Term Yoga'S) [Bullish]",
+     "Rule: Mercury-Rahu conjunction (same sign) [Bearish]",
+     "Rule: Mercury-Venus 3/11 (Trikadash) [Bullish]",
+     "Rule: Moon-Mars 4/10 (Kendra) [Bearish]",
+     "Rule: Moon-Mercury 4/10 (Kendra) [Bullish]",
+     "Rule: Moon-Saturn 7th (opposition) [Bullish]",
+     "Rule: Rahu-Herschel 2/12 (Dwidwadash) [Bearish]",
+     "Rule: Sun enters Ashwini [Bullish]",
+     "Rule: Sun-Mars conjunction in Navamsh (D9) [Bullish]",
+     "Rule: Sun-Moon 3/11 (Trikadash) [Bearish]",
+     "Rule: Sun-Saturn conjunction in Navamsh (D9) [Bearish]",
+     "Rule: Venus in Mula [Bullish]",
+     "Rule: Venus in Pisces [Bearish]",
+     "Rule: Venus rises in West [Mixed]",
+     "Rule: Venus-Herschel conjunction (same sign) (Strong Bullish Short Term Yoga'S) [Bullish]",
+     "Rule: Venus-Herschel conjunction (same sign) [Mixed]",
+     "Rule: Venus-Ketu Vedha [Bearish]",
+     "Rule: Venus-Neptune 2/12 (Dwidwadash) [Bearish]",
+     "Rule: Venus-Rahu 3/11 (Trikadash) [Bullish]",
+     "State: Jupiter in Leo",
+     "State: Mars with Saturn",
+     "State: Venus retrograde"
+    ],
+    "test": {
+     "days": 3180,
+     "factor_days": 3125,
+     "share": 98.3,
+     "big": 127,
+     "obs": 126,
+     "exp": 125.1,
+     "lift": 1.01,
+     "p": 0.479,
+     "rate_on": 4.0,
+     "rate_off": 1.8,
+     "p_rates": 0.4059
+    }
+   },
+   "full": {
+    "factors": [
+     "State: Venus retrograde",
+     "Rule: Mars-Saturn conjunction (same sign) (Strong Bullish Permutation Combination) [Bullish]",
+     "Rule: Mars-Saturn conjunction (same sign) [Bullish]",
+     "Rule: Venus in Pisces [Bearish]",
+     "State: Mars with Saturn",
+     "Rule: Mars-Herschel 5/9 (Trine) [Bullish]"
+    ],
+    "reproduces_published": true,
+    "published": [
+     "Rule: Mars-Herschel 5/9 (Trine) [Bullish]",
+     "Rule: Mars-Saturn conjunction (same sign) (Strong Bullish Permutation Combination) [Bullish]",
+     "Rule: Mars-Saturn conjunction (same sign) [Bullish]",
+     "Rule: Venus in Pisces [Bearish]",
+     "State: Mars with Saturn",
+     "State: Venus retrograde"
+    ],
+    "test": {
+     "days": 3180,
+     "factor_days": 1103,
+     "share": 34.7,
+     "big": 127,
+     "obs": 77,
+     "exp": 42.0,
+     "lift": 1.83,
+     "p": 0.0,
+     "rate_on": 7.0,
+     "rate_off": 2.4,
+     "p_rates": 0.0
+    },
+    "test_no2020": {
+     "days": 3113,
+     "factor_days": 1042,
+     "share": 33.5,
+     "big": 97,
+     "obs": 47,
+     "exp": 28.8,
+     "lift": 1.63,
+     "p": 0.0011,
+     "rate_on": 4.5,
+     "rate_off": 2.4,
+     "p_rates": 0.0015
+    }
+   },
+   "overlap": [],
+   "by_year": [],
+   "loyo": null,
+   "clean_short": [],
+   "full_short": [
+    "Venus retrograde",
+    "Mars-Saturn conjunction",
+    "Mars-Saturn conjunction",
+    "Venus in Pisces",
+    "Mars with Saturn",
+    "Mars-Herschel 5/9"
+   ],
+   "cross_from_spx": {
+    "factors": [
+     "State: Venus retrograde",
+     "Rule: Jupiter-Pluto 5/9 (Trine) (Strong Bullish Permutation Combination) [Bullish]"
+    ],
+    "test": {
+     "days": 3180,
+     "factor_days": 682,
+     "share": 21.4,
+     "big": 127,
+     "obs": 38,
+     "exp": 25.4,
+     "lift": 1.5,
+     "p": 0.0113,
+     "rate_on": 5.6,
+     "rate_off": 3.6,
+     "p_rates": 0.0176
+    },
+    "test_no2020": {
+     "days": 3113,
+     "factor_days": 670,
+     "share": 21.5,
+     "big": 97,
+     "obs": 33,
+     "exp": 21.5,
+     "lift": 1.54,
+     "p": 0.0125,
+     "rate_on": 4.9,
+     "rate_off": 2.6,
+     "p_rates": 0.0023
+    },
+    "each": [
+     {
+      "factor": "State: Venus retrograde",
+      "big": 20,
+      "exp": 10.7,
+      "lift": 1.87,
+      "p": 0.007,
+      "days": 247
+     },
+     {
+      "factor": "Rule: Jupiter-Pluto 5/9 (Trine) (Strong Bullish Permutation Combination) [Bullish]",
+      "big": 23,
+      "exp": 16.6,
+      "lift": 1.39,
+      "p": 0.0783,
+      "days": 492
+     }
+    ],
+    "by_year": [
+     {
+      "year": 2013,
+      "factor_days": 6,
+      "big": 0,
+      "exp": 0.0
+     },
+     {
+      "year": 2014,
+      "factor_days": 23,
+      "big": 1,
+      "exp": 0.3
+     },
+     {
+      "year": 2015,
+      "factor_days": 115,
+      "big": 6,
+      "exp": 6.1
+     },
+     {
+      "year": 2016,
+      "factor_days": 122,
+      "big": 7,
+      "exp": 4.0
+     },
+     {
+      "year": 2017,
+      "factor_days": 27,
+      "big": 0,
+      "exp": 0.0
+     },
+     {
+      "year": 2018,
+      "factor_days": 27,
+      "big": 3,
+      "exp": 0.8
+     },
+     {
+      "year": 2020,
+      "factor_days": 30,
+      "big": 8,
+      "exp": 5.1
+     },
+     {
+      "year": 2021,
+      "factor_days": 10,
+      "big": 1,
+      "exp": 0.4
+     },
+     {
+      "year": 2022,
+      "factor_days": 19,
+      "big": 1,
+      "exp": 1.3
+     },
+     {
+      "year": 2023,
+      "factor_days": 29,
+      "big": 0,
+      "exp": 0.1
+     },
+     {
+      "year": 2024,
+      "factor_days": 166,
+      "big": 7,
+      "exp": 5.4
+     },
+     {
+      "year": 2025,
+      "factor_days": 89,
+      "big": 3,
+      "exp": 1.1
+     },
+     {
+      "year": 2026,
+      "factor_days": 19,
+      "big": 1,
+      "exp": 0.8
+     }
+    ],
+    "loyo": {
+     "rows": [
+      {
+       "year": 2013,
+       "lift": 1.5,
+       "p": 0.0113,
+       "obs": 38,
+       "exp": 25.4
+      },
+      {
+       "year": 2014,
+       "lift": 1.48,
+       "p": 0.0152,
+       "obs": 37,
+       "exp": 25.1
+      },
+      {
+       "year": 2015,
+       "lift": 1.66,
+       "p": 0.0048,
+       "obs": 32,
+       "exp": 19.3
+      },
+      {
+       "year": 2016,
+       "lift": 1.45,
+       "p": 0.0296,
+       "obs": 31,
+       "exp": 21.4
+      },
+      {
+       "year": 2017,
+       "lift": 1.5,
+       "p": 0.0113,
+       "obs": 38,
+       "exp": 25.4
+      },
+      {
+       "year": 2018,
+       "lift": 1.42,
+       "p": 0.0278,
+       "obs": 35,
+       "exp": 24.6
+      },
+      {
+       "year": 2019,
+       "lift": 1.5,
+       "p": 0.0113,
+       "obs": 38,
+       "exp": 25.4
+      },
+      {
+       "year": 2020,
+       "lift": 1.48,
+       "p": 0.0259,
+       "obs": 30,
+       "exp": 20.3
+      },
+      {
+       "year": 2021,
+       "lift": 1.48,
+       "p": 0.0142,
+       "obs": 37,
+       "exp": 25.0
+      },
+      {
+       "year": 2022,
+       "lift": 1.54,
+       "p": 0.0085,
+       "obs": 37,
+       "exp": 24.1
+      },
+      {
+       "year": 2023,
+       "lift": 1.51,
+       "p": 0.0106,
+       "obs": 38,
+       "exp": 25.2
+      },
+      {
+       "year": 2024,
+       "lift": 1.55,
+       "p": 0.013,
+       "obs": 31,
+       "exp": 19.9
+      },
+      {
+       "year": 2025,
+       "lift": 1.44,
+       "p": 0.0239,
+       "obs": 35,
+       "exp": 24.3
+      },
+      {
+       "year": 2026,
+       "lift": 1.51,
+       "p": 0.0112,
+       "obs": 37,
+       "exp": 24.5
+      }
+     ],
+     "worst": {
+      "year": 2016,
+      "lift": 1.45,
+      "p": 0.0296,
+      "obs": 31,
+      "exp": 21.4
+     }
+    }
+   },
+   "verdict": "nothing picked on 2000-2013",
+   "verdict_no2020": "nothing picked on 2000-2013"
+  },
+  "gold": {
+   "name": "Gold",
+   "threshold": 2.0,
+   "n_factors": 258,
+   "clean": [
+    {
+     "factor": "Event: Sun-Uranus opposition",
+     "lift": 2.92,
+     "big": 16,
+     "exp": 5.5,
+     "p": 0.000193,
+     "q": 0.045,
+     "lift_a": 2.24,
+     "lift_b": 3.26,
+     "xc_p": 0.0008
+    }
+   ],
+   "test": {
+    "days": 3255,
+    "factor_days": 60,
+    "share": 1.8,
+    "big": 198,
+    "obs": 2,
+    "exp": 2.9,
+    "lift": 0.68,
+    "p": 0.7915,
+    "rate_on": 3.3,
+    "rate_off": 6.1,
+    "p_rates": 0.3684
+   },
+   "test_no2020": {
+    "days": 3183,
+    "factor_days": 60,
+    "share": 1.9,
+    "big": 183,
+    "obs": 2,
+    "exp": 2.7,
+    "lift": 0.73,
+    "p": 0.7579,
+    "rate_on": 3.3,
+    "rate_off": 5.8,
+    "p_rates": 0.417
+   },
+   "each": [
+    {
+     "factor": "Event: Sun-Uranus opposition",
+     "big": 2,
+     "exp": 2.9,
+     "lift": 0.68,
+     "p": 0.7915,
+     "days": 60
+    }
+   ],
+   "first_half": {
+    "days": 3256,
+    "factor_days": 65,
+    "share": 2.0,
+    "big": 273,
+    "obs": 16,
+    "exp": 5.5,
+    "lift": 2.92,
+    "p": 0.0002,
+    "rate_on": 24.6,
+    "rate_off": 8.1,
+    "p_rates": 0.0
+   },
+   "loose_q": {
+    "factors": [
+     "Event: Sun-Uranus opposition"
+    ],
+    "test": {
+     "days": 3255,
+     "factor_days": 60,
+     "share": 1.8,
+     "big": 198,
+     "obs": 2,
+     "exp": 2.9,
+     "lift": 0.68,
+     "p": 0.7915,
+     "rate_on": 3.3,
+     "rate_off": 6.1,
+     "p_rates": 0.3684
+    }
+   },
+   "loose_leads": {
+    "factors": [
+     "Event: Jupiter changes nakshatra",
+     "Event: Saturn combustion begins",
+     "Event: Saturn leaves combustion",
+     "Event: Sun-Uranus opposition",
+     "Event: full moon",
+     "Rule: Mars in Pushya [Bullish]",
+     "Rule: Vedha of Punarvasu, Pushya, Chitra or Dhanishta (gold) [Bullish]",
+     "State: Jupiter in Capricorn",
+     "State: Venus retrograde"
+    ],
+    "test": {
+     "days": 3255,
+     "factor_days": 2353,
+     "share": 72.3,
+     "big": 198,
+     "obs": 156,
+     "exp": 157.8,
+     "lift": 0.99,
+     "p": 0.5663,
+     "rate_on": 6.6,
+     "rate_off": 4.7,
+     "p_rates": 0.035
+    }
+   },
+   "full": {
+    "factors": [],
+    "reproduces_published": null,
+    "published": null,
+    "test": {
+     "days": 3255,
+     "factor_days": 0,
+     "share": 0,
+     "big": 198,
+     "obs": 0,
+     "exp": 0,
+     "lift": null,
+     "p": null,
+     "rate_on": null,
+     "rate_off": null,
+     "p_rates": null
+    },
+    "test_no2020": {
+     "days": 3183,
+     "factor_days": 0,
+     "share": 0,
+     "big": 183,
+     "obs": 0,
+     "exp": 0,
+     "lift": null,
+     "p": null,
+     "rate_on": null,
+     "rate_off": null,
+     "p_rates": null
+    }
+   },
+   "overlap": [],
+   "by_year": [
+    {
+     "year": 2014,
+     "factor_days": 5,
+     "big": 0,
+     "exp": 0.2
+    },
+    {
+     "year": 2015,
+     "factor_days": 5,
+     "big": 0,
+     "exp": 0.3
+    },
+    {
+     "year": 2016,
+     "factor_days": 5,
+     "big": 0,
+     "exp": 0.2
+    },
+    {
+     "year": 2017,
+     "factor_days": 5,
+     "big": 0,
+     "exp": 0.0
+    },
+    {
+     "year": 2018,
+     "factor_days": 5,
+     "big": 0,
+     "exp": 0.1
+    },
+    {
+     "year": 2019,
+     "factor_days": 5,
+     "big": 0,
+     "exp": 0.1
+    },
+    {
+     "year": 2020,
+     "factor_days": 5,
+     "big": 0,
+     "exp": 0.5
+    },
+    {
+     "year": 2021,
+     "factor_days": 5,
+     "big": 0,
+     "exp": 0.2
+    },
+    {
+     "year": 2022,
+     "factor_days": 5,
+     "big": 2,
+     "exp": 0.3
+    },
+    {
+     "year": 2023,
+     "factor_days": 5,
+     "big": 0,
+     "exp": 0.2
+    },
+    {
+     "year": 2024,
+     "factor_days": 5,
+     "big": 0,
+     "exp": 0.2
+    },
+    {
+     "year": 2025,
+     "factor_days": 5,
+     "big": 0,
+     "exp": 0.6
+    }
+   ],
+   "loyo": {
+    "rows": [
+     {
+      "year": 2013,
+      "lift": 0.68,
+      "p": 0.7915,
+      "obs": 2,
+      "exp": 2.9
+     },
+     {
+      "year": 2014,
+      "lift": 0.74,
+      "p": 0.755,
+      "obs": 2,
+      "exp": 2.7
+     },
+     {
+      "year": 2015,
+      "lift": 0.76,
+      "p": 0.7404,
+      "obs": 2,
+      "exp": 2.6
+     },
+     {
+      "year": 2016,
+      "lift": 0.74,
+      "p": 0.7547,
+      "obs": 2,
+      "exp": 2.7
+     },
+     {
+      "year": 2017,
+      "lift": 0.69,
+      "p": 0.7884,
+      "obs": 2,
+      "exp": 2.9
+     },
+     {
+      "year": 2018,
+      "lift": 0.7,
+      "p": 0.7787,
+      "obs": 2,
+      "exp": 2.9
+     },
+     {
+      "year": 2019,
+      "lift": 0.7,
+      "p": 0.7788,
+      "obs": 2,
+      "exp": 2.9
+     },
+     {
+      "year": 2020,
+      "lift": 0.83,
+      "p": 0.6926,
+      "obs": 2,
+      "exp": 2.4
+     },
+     {
+      "year": 2021,
+      "lift": 0.74,
+      "p": 0.7514,
+      "obs": 2,
+      "exp": 2.7
+     },
+     {
+      "year": 2022,
+      "lift": 0.0,
+      "p": 1.0,
+      "obs": 0,
+      "exp": 2.7
+     },
+     {
+      "year": 2023,
+      "lift": 0.72,
+      "p": 0.7619,
+      "obs": 2,
+      "exp": 2.8
+     },
+     {
+      "year": 2024,
+      "lift": 0.73,
+      "p": 0.7585,
+      "obs": 2,
+      "exp": 2.7
+     },
+     {
+      "year": 2025,
+      "lift": 0.86,
+      "p": 0.6745,
+      "obs": 2,
+      "exp": 2.3
+     },
+     {
+      "year": 2026,
+      "lift": 0.68,
+      "p": 0.7915,
+      "obs": 2,
+      "exp": 2.9
+     }
+    ],
+    "worst": {
+     "year": 2022,
+     "lift": 0.0,
+     "p": 1.0,
+     "obs": 0,
+     "exp": 2.7
+    }
+   },
+   "clean_short": [
+    "Sun-Uranus opposition"
+   ],
+   "full_short": [],
+   "verdict": "does not hold out of sample",
+   "verdict_no2020": "does not hold out of sample"
+  },
+  "silver": {
+   "name": "Silver",
+   "threshold": 3.5,
+   "n_factors": 263,
+   "clean": [
+    {
+     "factor": "State: Sun in Aries",
+     "lift": 1.8,
+     "big": 42,
+     "exp": 23.3,
+     "p": 0.000321,
+     "q": 0.076,
+     "lift_a": 2.7,
+     "lift_b": 1.42,
+     "xc_p": 0.0002
+    }
+   ],
+   "test": {
+    "days": 3254,
+    "factor_days": 284,
+    "share": 8.7,
+    "big": 273,
+    "obs": 22,
+    "exp": 25.1,
+    "lift": 0.88,
+    "p": 0.7568,
+    "rate_on": 7.7,
+    "rate_off": 8.5,
+    "p_rates": 0.6824
+   },
+   "test_no2020": {
+    "days": 3182,
+    "factor_days": 261,
+    "share": 8.2,
+    "big": 255,
+    "obs": 18,
+    "exp": 21.1,
+    "lift": 0.85,
+    "p": 0.7773,
+    "rate_on": 6.9,
+    "rate_off": 8.1,
+    "p_rates": 0.4878
+   },
+   "each": [
+    {
+     "factor": "State: Sun in Aries",
+     "big": 22,
+     "exp": 25.1,
+     "lift": 0.88,
+     "p": 0.7568,
+     "days": 284
+    }
+   ],
+   "first_half": {
+    "days": 3258,
+    "factor_days": 281,
+    "share": 8.6,
+    "big": 268,
+    "obs": 42,
+    "exp": 23.3,
+    "lift": 1.8,
+    "p": 0.0003,
+    "rate_on": 14.9,
+    "rate_off": 7.6,
+    "p_rates": 0.0
+   },
+   "loose_q": {
+    "factors": [
+     "State: Sun in Aries"
+    ],
+    "test": {
+     "days": 3254,
+     "factor_days": 284,
+     "share": 8.7,
+     "big": 273,
+     "obs": 22,
+     "exp": 25.1,
+     "lift": 0.88,
+     "p": 0.7568,
+     "rate_on": 7.7,
+     "rate_off": 8.5,
+     "p_rates": 0.6824
+    }
+   },
+   "loose_leads": {
+    "factors": [
+     "Event: Jupiter changes sign",
+     "Rule: Mercury in Aries or Virgo [Bearish]",
+     "Rule: Shukla Paksha of 16 days or Krishna Paksha of 14 days [Bullish]",
+     "State: Jupiter in Gemini",
+     "State: Sun in Aries"
+    ],
+    "test": {
+     "days": 3254,
+     "factor_days": 1748,
+     "share": 53.7,
+     "big": 273,
+     "obs": 161,
+     "exp": 153.6,
+     "lift": 1.05,
+     "p": 0.2848,
+     "rate_on": 9.2,
+     "rate_off": 7.4,
+     "p_rates": 0.0688
+    }
+   },
+   "full": {
+    "factors": [],
+    "reproduces_published": null,
+    "published": null,
+    "test": {
+     "days": 3254,
+     "factor_days": 0,
+     "share": 0,
+     "big": 273,
+     "obs": 0,
+     "exp": 0,
+     "lift": null,
+     "p": null,
+     "rate_on": null,
+     "rate_off": null,
+     "p_rates": null
+    },
+    "test_no2020": {
+     "days": 3182,
+     "factor_days": 0,
+     "share": 0,
+     "big": 255,
+     "obs": 0,
+     "exp": 0,
+     "lift": null,
+     "p": null,
+     "rate_on": null,
+     "rate_off": null,
+     "p_rates": null
+    }
+   },
+   "overlap": [],
+   "by_year": [
+    {
+     "year": 2014,
+     "factor_days": 22,
+     "big": 0,
+     "exp": 1.0
+    },
+    {
+     "year": 2015,
+     "factor_days": 23,
+     "big": 2,
+     "exp": 1.6
+    },
+    {
+     "year": 2016,
+     "factor_days": 23,
+     "big": 1,
+     "exp": 1.3
+    },
+    {
+     "year": 2017,
+     "factor_days": 20,
+     "big": 0,
+     "exp": 0.1
+    },
+    {
+     "year": 2018,
+     "factor_days": 21,
+     "big": 0,
+     "exp": 0.3
+    },
+    {
+     "year": 2019,
+     "factor_days": 21,
+     "big": 0,
+     "exp": 0.6
+    },
+    {
+     "year": 2020,
+     "factor_days": 23,
+     "big": 4,
+     "exp": 4.0
+    },
+    {
+     "year": 2021,
+     "factor_days": 23,
+     "big": 2,
+     "exp": 1.8
+    },
+    {
+     "year": 2022,
+     "factor_days": 21,
+     "big": 1,
+     "exp": 1.6
+    },
+    {
+     "year": 2023,
+     "factor_days": 21,
+     "big": 1,
+     "exp": 1.2
+    },
+    {
+     "year": 2024,
+     "factor_days": 21,
+     "big": 2,
+     "exp": 2.2
+    },
+    {
+     "year": 2025,
+     "factor_days": 22,
+     "big": 0,
+     "exp": 2.4
+    },
+    {
+     "year": 2026,
+     "factor_days": 23,
+     "big": 9,
+     "exp": 7.2
+    }
+   ],
+   "loyo": {
+    "rows": [
+     {
+      "year": 2013,
+      "lift": 0.88,
+      "p": 0.7568,
+      "obs": 22,
+      "exp": 25.1
+     },
+     {
+      "year": 2014,
+      "lift": 0.91,
+      "p": 0.6936,
+      "obs": 22,
+      "exp": 24.1
+     },
+     {
+      "year": 2015,
+      "lift": 0.85,
+      "p": 0.7932,
+      "obs": 20,
+      "exp": 23.5
+     },
+     {
+      "year": 2016,
+      "lift": 0.88,
+      "p": 0.7433,
+      "obs": 21,
+      "exp": 23.8
+     },
+     {
+      "year": 2017,
+      "lift": 0.88,
+      "p": 0.7519,
+      "obs": 22,
+      "exp": 25.0
+     },
+     {
+      "year": 2018,
+      "lift": 0.89,
+      "p": 0.741,
+      "obs": 22,
+      "exp": 24.8
+     },
+     {
+      "year": 2019,
+      "lift": 0.9,
+      "p": 0.7194,
+      "obs": 22,
+      "exp": 24.5
+     },
+     {
+      "year": 2020,
+      "lift": 0.85,
+      "p": 0.7773,
+      "obs": 18,
+      "exp": 21.1
+     },
+     {
+      "year": 2021,
+      "lift": 0.86,
+      "p": 0.7771,
+      "obs": 20,
+      "exp": 23.2
+     },
+     {
+      "year": 2022,
+      "lift": 0.89,
+      "p": 0.7233,
+      "obs": 21,
+      "exp": 23.5
+     },
+     {
+      "year": 2023,
+      "lift": 0.88,
+      "p": 0.7505,
+      "obs": 21,
+      "exp": 23.9
+     },
+     {
+      "year": 2024,
+      "lift": 0.88,
+      "p": 0.7505,
+      "obs": 20,
+      "exp": 22.8
+     },
+     {
+      "year": 2025,
+      "lift": 0.97,
+      "p": 0.5873,
+      "obs": 22,
+      "exp": 22.7
+     },
+     {
+      "year": 2026,
+      "lift": 0.73,
+      "p": 0.9051,
+      "obs": 13,
+      "exp": 17.9
+     }
+    ],
+    "worst": {
+     "year": 2026,
+     "lift": 0.73,
+     "p": 0.9051,
+     "obs": 13,
+     "exp": 17.9
+    }
+   },
+   "clean_short": [
+    "Sun in Aries"
+   ],
+   "full_short": [],
+   "verdict": "does not hold out of sample",
+   "verdict_no2020": "does not hold out of sample"
+  }
+ }
+}
