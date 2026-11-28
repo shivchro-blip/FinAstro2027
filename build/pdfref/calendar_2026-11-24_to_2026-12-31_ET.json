@@ -1,7 +1,7 @@
 {
  "start": "2026-11-24",
  "end": "2026-12-31",
- "generated": "28 Nov 2026 04:46 ET",
+ "generated": "28 Nov 2026 04:56 ET",
  "checks": [
   {
    "name": "Deep dive: every week's double checks pass (event times, counts, independent recount, coverage)",
@@ -26,12 +26,17 @@
   {
    "name": "January 2027 calls frozen, and their labels equal the published tables",
    "ok": true,
-   "detail": "frozen 2026-11-28 04:45 ET; 31 days, sessions S&P 19, Sensex 20, Gold 19, Silver 19"
+   "detail": "frozen 2026-11-28 04:54 ET; 31 days, sessions S&P 19, Sensex 20, Gold 19, Silver 19"
   },
   {
    "name": "February 2027 calls frozen, and their labels equal the published tables",
    "ok": true,
-   "detail": "frozen 2026-11-28 04:45 ET; 28 days, sessions S&P 19, Sensex 20, Gold 19, Silver 19"
+   "detail": "frozen 2026-11-28 04:54 ET; 28 days, sessions S&P 19, Sensex 20, Gold 19, Silver 19"
+  },
+  {
+   "name": "March 2027 calls frozen, and their labels equal the published tables",
+   "ok": true,
+   "detail": "frozen 2026-11-28 04:54 ET; 31 days, sessions S&P 22, Sensex 22, Gold 22, Silver 22"
   },
   {
    "name": "Big-day clean test: the same choice on all of 2000\u20132026 reproduces the published robust factors",

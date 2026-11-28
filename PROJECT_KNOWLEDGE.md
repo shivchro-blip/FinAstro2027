@@ -915,6 +915,41 @@ Results, as the share of calls right:
   - This partly matches Solar return's own path (weak into spring, bottom Mar–May), but the rubric itself has no track record.
 - **In the calendar:** shown in the 2026 calendar's Solar return section.
 
+**Deep dive and update, March 2027 (28 Nov 2026)** (`tools/week_deep_dive.py mar`, `deep_dive_2027-03-*_ET.json`; `tools/month_outlook.py 2027-03`, `march_2027_outlook_ET.json`, `march_2027_calls_ET.json`; 2027 calendar → "Deep dive: March 2027")
+
+- **Setup:**
+  - Good Friday, 26 Mar 2027, is closed on all four markets. None of the last six Good Fridays has a ^GSPC, ^BSESN, GC=F or SI=F bar. It is assumed for the BSE as well because its date is certain.
+  - Holi is not assumed: its BSE date shifts by a day between calendars (2023 and 2026 show bars on the dates tried).
+  - The Solar return months now cover each run's range.
+- **Deep dive:** 1,950 tests over 5 weeks, **0 pass** the Benjamini–Hochberg correction. 40 are nominal (about 98 expected by chance) and no class changes the chance of a big day. Double checks: 20 of 20 pass; 8 of 8 independent recounts match.
+  - Nominal examples, all at chance after correction: Venus–Rahu exact conjunction (S&P next session 5 up / 14 down); Mercury entering Aquarius (gold 10 up / 0 down); the Moon entering Purva Bhadrapada (silver 162 up / 95 down).
+- **March's main sky events:**
+  - Jupiter opposite Rahu 1 Mar.
+  - Mercury direct 3 Mar.
+  - Venus with Pluto 6 Mar.
+  - New Moon 8 Mar.
+  - Mars into Cancer 9 Mar.
+  - Mercury opposite Mars 11 Mar.
+  - Sun into Pisces 14 Mar.
+  - Venus opposite Jupiter and with Rahu 16 Mar.
+  - Venus opposite Mars 19 Mar.
+  - Full Moon 22 Mar.
+  - Saturn combust 23 Mar.
+  - Sun with Neptune 24 Mar.
+- **Update (calls and their evidence):**
+
+| Call | March | What it is worth |
+|---|---|---|
+| S&P / Sensex labels | Bearish Moderate to 8 Mar (Mercury–Rahu); Bullish Low 9–11 Mar; Bullish High 12–19 Mar (Mars–Mercury Vedha, Moon–Rahu 6/8, Mrigashira on Monday) | Labels at chance out of sample. All four rules were picked on 2000–2013 and leaned the right way after 2013, but none significantly (best: Mars–Mercury Vedha on the Sensex, 75% vs 57%, p 0.08) |
+| S&P Volatile | 22 Mar – 5 Apr | From Mercury–Saturn 2/12, which has only an in-sample record |
+| Mercury in Paap Kartari (B116) | To 16 Mar ET (17 Mar IST); no benefic aspect | Sensex: some support (past windows of this case bearish 50% vs 40%, p 0.03). S&P: not bearish |
+| Gold / silver labels | Gold Bullish Low 11–12, Bearish Moderate 22–23, Bearish Low 24–25 Mar; silver Bullish High 8–31 Mar | At chance |
+| Combined model | S&P 9 down-lean sessions; Sensex 6 down, 6 up | No edge |
+| Solar return | Bearish 16 sessions (Mars conjunct Ketu, "disruption"), Bullish 6; both solar months "Supported" | Day calls at chance since 1928. Mars conjunct Ketu: up over 5 sessions 50.0% vs 56.2% (p 0.33), big days 72 vs 70.8 |
+| Big days | No factor that passed the clean test is active | – |
+
+- **Frozen calls:** March's calls are in `march_2027_calls_ET.json`, rewritten until 28 Feb 2027 and never after. The 2026 calendar checks the frozen labels against the tables (31 days). The 2027 calendar's 2,211 rows are byte-identical.
+
 **February 2027 after the November review (28 Nov 2026)** (`tools/month_outlook.py 2027-02`, `february_2027_outlook_ET.json`, `february_2027_calls_ET.json`; 2027 calendar → "Deep dive: February 2027" → Update)
 
 - **New check of single table rules** (`november_review.py` → `picked_rules`):

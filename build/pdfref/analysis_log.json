@@ -917,6 +917,29 @@
     "reports/calendar_2026-11-24_to_2026-12-31_ET.html",
     "reports/calendar_2027_NY_master.html"
    ]
+  },
+  {
+   "date": "2026-11-28",
+   "pr": "73",
+   "topic": "Deep dive March 2027 week by week, double-checked; March update after the November review; March calls frozen",
+   "analysis": "tools/week_deep_dive.py mar: March day data from forward_daybyday.build with Kartari, gold notes and new-source items; every sky event as an event class scored on every occurrence 2000-2026 on S&P, Sensex, gold, silver; BH per week; 4 automatic checks per week; 8 independent recounts. Good Friday 26 Mar 2027 closed on all four markets (no bar on the last six Good Fridays); Holi not assumed for the BSE. tools/month_outlook.py 2027-03: every March call with its out-of-sample evidence; calls frozen.",
+   "result": "1,950 tests, 0 pass BH; 40 nominal vs about 98 expected; no big-day class; checks 20/20, recounts 8/8. Update: S&P/Sensex labels Bearish Moderate to 8 Mar, Bullish 9-19 Mar (rules picked on 2000-2013 leaned the right way after 2013, none significantly); S&P Volatile 22 Mar - 5 Apr (in sample only); Mercury Paap Kartari to 16 Mar without a benefic aspect: Sensex past windows of this case bearish 50% vs 40% (p 0.03), the month's only call with some support; gold and silver labels, model, Solar return (Bearish 16 sessions from Mars conjunct Ketu) at chance; no clean big-day factor. 2027 rows byte-identical.",
+   "files": [
+    "tools/week_deep_dive.py",
+    "tools/forward_daybyday.py",
+    "tools/month_outlook.py",
+    "tools/deep_dive_render.py",
+    "tools/calendar_2026.py",
+    "build/pdfref/deep_dive_2027-03-01_to_2027-03-07_ET.json",
+    "build/pdfref/deep_dive_2027-03-08_to_2027-03-14_ET.json",
+    "build/pdfref/deep_dive_2027-03-15_to_2027-03-21_ET.json",
+    "build/pdfref/deep_dive_2027-03-22_to_2027-03-28_ET.json",
+    "build/pdfref/deep_dive_2027-03-29_to_2027-03-31_ET.json",
+    "build/pdfref/march_2027_outlook_ET.json",
+    "build/pdfref/march_2027_calls_ET.json",
+    "reports/calendar_2027_NY_master.html",
+    "reports/calendar_2026-11-24_to_2026-12-31_ET.html"
+   ]
   }
  ]
 }
