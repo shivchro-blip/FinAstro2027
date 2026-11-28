@@ -485,9 +485,10 @@ def checks(per_day, classes, cache, MK, unclassified):
                 d1 = speed(T.jd(t + dt.timedelta(hours=6)), k[1]) - speed(T.jd(t + dt.timedelta(hours=6)), k[2])
                 if not (d0 < 0 <= d1):
                     bad.append(f"{e['text']}: speed difference {d0:.4f} -> {d1:.4f}")
-            elif k[0] == "fast":
+            elif k[0] == "fast":                # the levels are crossed by the sidereal speed (ephem.position().speed), not the tropical one
+                from finastro import ephem
                 lv = SPEED_LEVEL[k[1]]
-                s0, s1 = speed(T.jd(t - dt.timedelta(hours=6)), k[1]), speed(T.jd(t + dt.timedelta(hours=6)), k[1])
+                s0, s1 = ephem.position(t - dt.timedelta(hours=6), k[1]).speed, ephem.position(t + dt.timedelta(hours=6), k[1]).speed
                 if not ((s0 < lv <= s1) if k[2] == "fast_start" else (s0 >= lv > s1)):
                     bad.append(f"{e['text']}: speed {s0:.4f} -> {s1:.4f} around level {lv}")
             elif k[0] == "sunapsis":
