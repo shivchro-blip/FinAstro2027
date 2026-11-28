@@ -52,7 +52,7 @@ _US = {dt.date(2026, 11, 26): "Thanksgiving", dt.date(2026, 12, 25): "Christmas"
 CLOSED = {"spx": dict(_US),             # COMEX has no settlement on these days either (no GC=F / SI=F bar on past MLK and New Year days)
           "gold": dict(_US),
           "silver": dict(_US),
-          "sensex": {dt.date(2026, 11, 24): "Guru Nanak Jayanti", dt.date(2026, 12, 25): "Christmas",
+          "sensex": {dt.date(2026, 11, 10): "Diwali Balipratipada", dt.date(2026, 11, 24): "Guru Nanak Jayanti", dt.date(2026, 12, 25): "Christmas",
                      dt.date(2027, 1, 26): "Republic Day"}}       # BSE's 2027 list is not out yet; Republic Day is fixed
 EARLY = {dt.date(2026, 11, 27): "US early close (13:00 ET)", dt.date(2026, 12, 24): "US early close (13:00 ET)"}
 GOOD = ("Strongest", "Supported", "Consistent")

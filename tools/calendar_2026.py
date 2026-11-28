@@ -46,6 +46,42 @@ SLOW = ("Jupiter", "Saturn", "Rahu", "Ketu", "Uranus", "Neptune", "Pluto")
 E = html.escape
 
 
+# ------------------------------------------------------------------ tuning from the November 2026 review (tools/november_review.py)
+TUNE = dict(low_grey=False, model_colour=True, big_ok=set(MKS), watch_note="")
+
+
+def set_tuning(nov):
+    """Apply the review's changes: Low labels grey, model probabilities uncoloured, big-day chance counted only where it held up."""
+    if not nov:
+        return
+    rec = {r["id"]: r for r in nov.get("recommendations", [])}
+    if rec.get("labels", {}).get("applied"):
+        TUNE["low_grey"] = True
+    if rec.get("model", {}).get("applied"):
+        TUNE["model_colour"] = False
+    if rec.get("big_days", {}).get("applied"):
+        TUNE["big_ok"] = set(rec["big_days"].get("keep", []))
+    if rec.get("watch_windows", {}).get("applied"):
+        TUNE["watch_note"] = " (no proven lift)"
+
+
+def lab_cls(sig):
+    return "nt" if TUNE["low_grey"] and sig.get("st") == "Low" else tone(sig["sig"])
+
+
+def lab_title(sig):
+    w = sig.get("why") if isinstance(sig.get("why"), str) else "; ".join(sig.get("why") or [])
+    if TUNE["low_grey"] and sig.get("st") == "Low":
+        w += " | Low: a lean, not a day call (November 2026 review)"
+    return w
+
+
+def model_cls(v, b):
+    if not TUNE["model_colour"]:
+        return ""
+    return "t-up" if v >= b + 2 else "t-dn" if v <= b - 2 else ""
+
+
 # ------------------------------------------------------------------ data
 def gather(a, b):
     FD = load(ROOT / "tools" / "forward_daybyday.py", "fd_cal")
@@ -68,7 +104,11 @@ def gather(a, b):
     sr["jsg"] = json.load(open(OUT / "jupiter_saturn_gold_ET.json"))
     sr["nsl"] = json.load(open(OUT / "new_sources_leftover_ET.json"))
     sr["nst"] = json.load(open(OUT / "new_sources_test_ET.json"))
-    sr["dds"] = [json.load(open(f)) for f in sorted(OUT.glob("deep_dive_2026-*_ET.json"))]
+    sr["dds"] = [json.load(open(f)) for f in sorted(OUT.glob("deep_dive_2026-12-*_ET.json"))]
+    sr["dds_nov"] = [json.load(open(f)) for f in sorted(OUT.glob("deep_dive_2026-11-*_ET.json"))]
+    nr = OUT / "november_review_2026-11_ET.json"
+    sr["nov"] = json.load(open(nr)) if nr.exists() else None
+    set_tuning(sr["nov"])
     sr["doc"] = doc_rows(json.load(open(OUT / "doc_dec2026_check_ET.json")), res)
     sr["kartari"] = [dict(key=r["key"], title=r["title"], tone=r["tone"], basis=r["basis"], record=r["record"],
                           spans=[(dt.datetime.fromisoformat(u["frm_iso"]), dt.datetime.fromisoformat(u["to_iso"]), u["pair"]) for u in r["upcoming"]])
@@ -105,6 +145,15 @@ def verify(res, sr, a, b):
     dchk = [c for d in sr.get("dds", []) for c in d["checks"]]
     add("Deep dive: every week's double checks pass (event times, counts, independent recount, coverage)", dchk and all(c["ok"] for c in dchk),
         f"{sum(c['ok'] for c in dchk)}/{len(dchk)} across {len(sr.get('dds', []))} weeks")
+    nov = sr.get("nov")
+    if nov:
+        add("November review: the scorecard recount equals the day-by-day scorer", nov["check_fd"]["matched"] == nov["check_fd"]["of"],
+            f"{nov['check_fd']['matched']} of {nov['check_fd']['of']} layer counts (that day and 5 sessions)")
+        nchk = [c for d in sr.get("dds_nov", []) for c in d["checks"]]
+        hist = {d.get("context", {}).get("history_end") for d in sr.get("dds_nov", [])}
+        add("November deep dive: every week's double checks pass; its history ends 31 Oct 2026", nchk and all(c["ok"] for c in nchk) and hist == {"2026-10-31"},
+            f"{sum(c['ok'] for c in nchk)}/{len(nchk)} across {len(sr.get('dds_nov', []))} weeks; history end {', '.join(sorted(map(str, hist)))}")
+        add("November review: the long records stop before November", nov.get("hist_end") == "2026-10-31", f"tuning tests use data to {nov.get('hist_end')}")
     its = sr["nsl"]["calendar"]["items"]
     add("New-source layer loaded, every item carries its test result", its and all(i.get("verdict") for i in its), f"{len(its)} items (BS Iyer, Tajika Nilakanthi, Hayanaratna); none used in the signals")
     add("Every day present", ds == [a + dt.timedelta(days=i) for i in range((b - a).days + 1)], f"{len(ds)} days, {ds[0]} – {ds[-1]}")
@@ -444,14 +493,37 @@ document.querySelectorAll('a[href^="#d"]').forEach(a=>a.addEventListener('click'
 """
 
 
+def read_trust(sr, wf):
+    nov = sr.get("nov")
+    if not nov:
+        return ("<li><b>What each market line shows:</b> our signal-table label (Bullish / Bearish with High, Moderate or Low strength), and the combined model's chance of a rise "
+                "over the next 5 sessions. Green and red mean at least 2 points above or below that market's normal rate.</li>"
+                f"<li><b>How much to trust it:</b> over 2013–2026 the combined model's calls were right {wf['spx']}% (S&amp;P), {wf['sensex']}% (Sensex), {wf['gold']}% (gold) and "
+                f"{wf['silver']}% (silver) of the time over 5 sessions: a small edge at best. Treat them as leanings.</li>")
+    t = nov["tuning"]
+    lab = {mk: (t["labels"][mk].get("walk_forward") or t["labels"][mk])["rows"]["Any strength|d1"] for mk in MKS}
+    CL = {"spx": "Model call, clean walk-forward (labels from rules picked on 2000-2013; fitted on 2000-2013)",
+          "sensex": "Model call, clean walk-forward (labels from rules picked on 2000-2013; fitted on 2000-2013)",
+          "gold": "Model call (2+ points from normal), all layers", "silver": "Model call (2+ points from normal), all layers"}
+    md = {mk: t["model"][mk]["rows"][CL[mk]] for mk in MKS}
+    keep = next((r.get("keep", []) for r in nov["recommendations"] if r["id"] == "big_days"), [])
+    return ("<li><b>What each market line shows:</b> our signal-table label (Bullish / Bearish with High, Moderate or Low strength; <b>Low labels are grey</b>: a lean, not a day call) "
+            "and the combined model's chance of a rise over the next 5 sessions, <b>no longer coloured</b> (changed after the <a href='#nov'>November 2026 review</a>).</li>"
+            "<li><b>How much to trust it:</b> tested out of sample (2013–2026, with everything chosen on earlier years), neither the labels nor the model beat chance on any market. "
+            "Labels, right vs chance: " + ", ".join(f"{SHORT[mk]} {lab[mk]['hit']}% vs {lab[mk]['exp']}%" for mk in MKS)
+            + ". Model: " + ", ".join(f"{SHORT[mk]} {md[mk]['hit']}% vs {md[mk]['exp']}%" for mk in MKS)
+            + ". November 2026 scored about what chance gives. Treat every label and probability as a leaning. "
+            + f"The big-day chance counts only for the {', '.join(SHORT[m] for m in keep) or '—'}; the volatility factors (S&amp;P, Sensex) did mark more big days in both halves of 2000–2026.</li>")
+
+
 def market_cell(x, mk, sr_day=None):
     pr = x["prob"].get(mk)
     sig = x["signals"][NAME[mk]][0]
     if not pr:
         return f"<div class='row'><span class='k'>{SHORT[mk]}</span><span class='s'>{'closed' if mk in x['closed'] else ''}</span></div>"
     p5, b5 = pr["all"]["up5"], pr["base"]["up5"]
-    pc = "t-up" if p5 >= b5 + 2 else "t-dn" if p5 <= b5 - 2 else ""
-    return (f"<div class='row'><span class='k'>{SHORT[mk]}</span>{chip(lab_short(sig), tone(sig['sig']), sig['why'])}<span class='{pc}' title='chance of a rise over the next 5 sessions'>{p5:.0f}%</span></div>")
+    pc = model_cls(p5, b5)
+    return (f"<div class='row'><span class='k'>{SHORT[mk]}</span>{chip(lab_short(sig), lab_cls(sig), lab_title(sig))}<span class='{pc}' title='chance of a rise over the next 5 sessions'>{p5:.0f}%</span></div>")
 
 
 def day_summary(x, sr_day):
@@ -474,7 +546,7 @@ def page(res, sr, track, checks, a, b, generated):
     nbusy = {mk: sum(1 for x in days if mk in x["prob"]) for mk in MKS}
     o = [f"<!doctype html><html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'>"
          f"<title>FinAstro Calendar 2026</title><style>{CSS}</style></head><body>"]
-    o.append("<div class='top'><nav><b>FinAstro calendar</b><a href='#read'>Read first</a><a href='#keys'>Key dates</a><a href='#grid'>Calendar</a>"
+    o.append("<div class='top'><nav><b>FinAstro calendar</b><a href='#read'>Read first</a><a href='#nov'>November review</a><a href='#keys'>Key dates</a><a href='#grid'>Calendar</a>"
              "<a href='#spans'>Signal spans</a><a href='#sr'>Solar return</a><a href='#ns'>New sources</a><a href='#dd'>Deep dive</a><a href='#jan'>January 2027</a><a href='#days'>Day by day</a><a href='#trust'>Track record</a><a href='#checks'>Checks</a>"
              "<span style='flex:1'></span><button onclick='theme()'>Light / dark</button></nav></div><main>")
     o.append(f"<h1>Market astrology calendar, {a:%d %b} – {b:%d %b %Y}</h1>"
@@ -487,11 +559,7 @@ def page(res, sr, track, checks, a, b, generated):
     # read first
     cp = track["cp"]["markets"]
     wf = {mk: (cp[mk]["walk_forward"]["up5"]["kept"] or cp[mk]["walk_forward"]["up5"]["all"])["hit"] for mk in MKS}
-    o.append("<h2 id='read'>Read this first</h2><div class='callout'><ul>"
-             "<li><b>What each market line shows:</b> our signal-table label (Bullish / Bearish with High, Moderate or Low strength), and the combined model's chance of a rise "
-             "over the next 5 sessions. Green and red mean at least 2 points above or below that market's normal rate.</li>"
-             f"<li><b>How much to trust it:</b> over 2013–2026 the combined model's calls were right {wf['spx']}% (S&amp;P), {wf['sensex']}% (Sensex), {wf['gold']}% (gold) and "
-             f"{wf['silver']}% (silver) of the time over 5 sessions: a small edge at best. Every probability in this calendar stays within a few points of normal. Treat them as leanings.</li>"
+    o.append("<h2 id='read'>Read this first</h2><div class='callout'><ul>" + read_trust(sr, wf) +
              "<li><b>Solar return</b> is the NYSE monthly solar-return method you shared. Its daily calls here are generated by us the Solar return way; they reproduce 8 of the 9 days "
              "Solar return called, but over 1928–2026 the same rule was at chance.</li>"
              "<li><b>What has shown some edge:</b> Jupiter sextile Venus (bullish over 5 sessions), the bearish calendar fortnight rule “Three Saturdays in Shukla Paksha”, "
@@ -500,6 +568,7 @@ def page(res, sr, track, checks, a, b, generated):
              "(B116) on 1 Jan 2027. Their 2000–2026 records are in each day's notes, and January is checked market by market in the January 2027 section: Mercury's version held up as bearish on the Sensex only; Jupiter's showed more big days, "
              "not significant. Shubh Kartari is in none of our sources; tested anyway, it did not work and is not used.</li>"
              "<li><b>Not used:</b> dashas (tested, no edge; parked at your request), news and fundamentals.</li></ul></div>")
+    o.append(nov_html(sr))
     # key dates
     o.append("<h2 id='keys'>Key dates</h2><div class='wrap'><table><thead><tr><th>Date</th><th>What happens</th><th>Markets</th></tr></thead><tbody>")
     for x in days:
@@ -551,8 +620,10 @@ def page(res, sr, track, checks, a, b, generated):
         o.append(f"<tr><td class='n'><a href='#d{x['date']}'>{d:%a %d %b}</a></td><td>{E('; '.join(ev + extra))}</td><td class='s'>{E(sig)}</td></tr>")
     o.append("</tbody></table></div>")
     # calendar grid
-    o.append("<h2 id='grid'>Calendar</h2><div class='legend'>" + chip("Bullish", "up") + chip("Bearish", "dn") + chip("Volatile", "vo") + chip("—", "nt") +
-             "<span>H / M / L = strength · % = chance of a rise over the next 5 sessions · ○ full Moon · ● new Moon · ⟲ station · → sign change</span></div>")
+    o.append("<h2 id='grid'>Calendar</h2><div class='legend'>" + chip("Bullish", "up") + chip("Bearish", "dn") + chip("Volatile", "vo") + chip("—", "nt")
+             + ("<span>H / M / L = strength; grey L = a Low label, a lean only · % = chance of a rise over the next 5 sessions (not coloured: no edge out of sample) · "
+                if TUNE["low_grey"] else "<span>H / M / L = strength · % = chance of a rise over the next 5 sessions · ")
+             + "○ full Moon · ● new Moon · ⟲ station · → sign change</span></div>")
     by = {x["date"]: x for x in days}
     mstart = dt.date(a.year, a.month, 1)
     while mstart <= b:
@@ -664,7 +735,7 @@ def page(res, sr, track, checks, a, b, generated):
     for x in days:
         o.append(day_html(x, sr, res))
     # track record
-    o.append(trust_html(track, sx))
+    o.append(trust_html(track, sx, sr.get("nov")))
     # checks
     o.append("<h2 id='checks'>Verification</h2><div class='wrap'><table><thead><tr><th>Check</th><th>Result</th><th>Detail</th></tr></thead><tbody>")
     for c in checks:
@@ -704,9 +775,11 @@ def day_html(x, sr, res):
                 continue
             sg = x["signals"][NAME[mk]][0]
 
-            def p(t, pr=pr):
+            def p(t, pr=pr, mk=mk):
                 v, bb, k = pr["all"][t], pr["base"][t], pr["kept"][t]
-                cls = "" if t == "big" else "t-up" if v >= bb + 2 else "t-dn" if v <= bb - 2 else ""
+                if t == "big" and mk not in TUNE["big_ok"]:
+                    return f"<span class='mut'>{v:.0f}%</span><div class='s'>normal {bb:.0f}% · untested</div>"
+                cls = "" if t == "big" else model_cls(v, bb)
                 return f"<span class='{cls}'>{v:.0f}%</span><div class='s'>normal {bb:.0f}%" + (f" · kept {k:.0f}%" if k is not None else "") + "</div>"
             tl = x["tally"][mk]
             also = []
@@ -717,7 +790,7 @@ def day_html(x, sr, res):
                 also.append("volatility factor: " + ", ".join(x["vol"][mk]))
             ws = list(dict.fromkeys(w["factor"].replace("Event: ", "").replace("Rule: ", "").replace("State: ", "").split(" [")[0] for w in x["watch"] if w["market"] == mk))
             if ws:
-                also.append(f"big-move watch ({len(ws)}): " + "; ".join(ws[:3]) + (" …" if len(ws) > 3 else ""))
+                also.append(f"big-move watch{TUNE['watch_note']} ({len(ws)}): " + "; ".join(ws[:3]) + (" …" if len(ws) > 3 else ""))
             if mk == "gold":
                 gk = gjc_on(sr["gjc"], d)
                 if gk:
@@ -732,7 +805,7 @@ def day_html(x, sr, res):
             sup = (f"<span class='t-up'>{len(tl['bull'])}</span> / <span class='t-dn'>{len(tl['bear'])}</span>"
                    + (f"<div class='s'>{E('; '.join(tl['bull'][:4]))}{' …' if len(tl['bull']) > 4 else ''}</div>" if tl["bull"] else "")
                    + (f"<div class='s'>− {E('; '.join(tl['bear'][:4]))}</div>" if tl["bear"] else ""))
-            o.append(f"<tr><td><b>{NAME[mk]}</b></td><td>{chip((sg['sig'] + ' ' + (sg['st'] or '')).strip(), tone(sg['sig']))}<div class='s'>{E(sg['why'])}</div></td>"
+            o.append(f"<tr><td><b>{NAME[mk]}</b></td><td>{chip((sg['sig'] + ' ' + (sg['st'] or '')).strip(), lab_cls(sg))}<div class='s'>{E(lab_title(sg))}</div></td>"
                      f"<td class='n'>{p('up1')}</td><td class='n'>{p('up5')}</td><td class='n'>{p('big')}</td><td>{sup}</td><td class='s'>{E('; '.join(also)) or '–'}</td></tr>")
         o.append("</tbody></table></div>")
     nsd = ns_on(sr, d)
@@ -882,6 +955,170 @@ def dd_day(dd, date):
             + "".join(f"<th>{n}</th>" for _, n in DDM) + f"</tr></thead><tbody>{''.join(rows)}</tbody></table></div></details>")
 
 
+NOV_LAYERS = [
+    ("Signal table", "Table label (any strength)"), ("Signal table: Low labels", "… Low labels"), ("Signal table: Moderate labels", "… Moderate labels"),
+    ("Signal table: High labels", "… High labels"), ("Combined probability, all layers", "Combined model, all layers"),
+    ("Combined probability, kept layers", "Combined model, kept layers"), ("Combined probability, all layers: up calls", "… its up calls"),
+    ("Combined probability, all layers: down calls", "… its down calls"), ("Model v1.0 (Ch.41 + Shadbala)", "Model v1.0 (gold)"),
+    ("Supported catalogue rules (net bullish - bearish)", "Catalogue rules with a supported record (net)"), ("Calendar-layer verdicts (net)", "2026 calendar-layer verdicts (net)"),
+    ("USA gochara", "USA gochara"), ("NYSE gochara", "NYSE gochara"), ("USA Chandra bala", "USA Chandra bala"), ("NYSE Chandra bala", "NYSE Chandra bala"),
+    ("USA Tara bala", "USA Tara bala"), ("NYSE Tara bala", "NYSE Tara bala"), ("Solar return: generated day call", "Solar return: day call (generated)"),
+    ("Solar return: day-by-day forecasts", "Solar return: its own day forecasts"), ("Solar return: month view (bearish)", "Solar return: month view (bearish)"),
+    ("Solar return: Jupiter sextile Venus (bullish)", "Solar return: Jupiter sextile Venus (bullish)"), ("Solar return: Sun square Mars (bearish)", "Solar return: Sun square Mars (bearish)"),
+    ("Mars-Jupiter-node lead (bearish)", "Mars–Jupiter–node lead (bearish)")]
+
+
+def _vs(j, digits=0):
+    if not j or not j.get("n"):
+        return "–"
+    return f"{j['hit']:.{digits}f}% vs {j['exp']:.{digits}f}%" + (f" (p {j['p']})" if j.get("p") is not None else "")
+
+
+def nov_cell(r):
+    if not r or not (r["d1"]["calls"] or r["d5"]["calls"]):
+        return "<td class='n s'>–</td>"
+    a, b = r["d1"], r["d5"]
+    cls = ("ok" if a["edge"] > 0 else "bad") if a["n"] and a["p"] is not None and a["p"] < 0.05 else ""
+    head = f"{a['right']} ✓ {a['wrong']} ✗" + (f" · {a['flat']} small" if a["flat"] else "")
+    five = f"5 sessions: {b['right']} ✓ {b['wrong']} ✗" if b["calls"] else ""
+    vs = f"{a['hit']:.0f}% vs {a['exp']:.0f}% by chance" if a["n"] else "no move of 0.5% or more"
+    return f"<td class='n'><span class='{cls}'><b>{head}</b></span><div class='s'>{vs}</div><div class='s'>{five}</div></td>"
+
+
+def nov_html(sr):
+    nov = sr.get("nov")
+    if not nov:
+        return ""
+    t = nov["tuning"]
+    by = {(r["layer"], r["market"]): r for r in nov["rows"]}
+    main_rows = [r for r in nov["rows"] if r["fd"] and not r["layer"].startswith("Combined lean")]
+    P = sum(r["d1"]["right"] for r in main_rows)
+    F = sum(r["d1"]["wrong"] for r in main_rows)
+    S = sum(r["d1"]["flat"] for r in main_rows)
+    n = P + F
+    exp = sum(r["d1"]["n"] * r["d1"]["exp"] for r in main_rows if r["d1"]["n"]) / n if n else 0
+    mo = nov["month"]
+    o = ["<h2 id='nov'>November 2026 review: what passed, what failed, what changes</h2>",
+         f"<div class='callout'><b>Every call the calendar made for 1–{dt.date.fromisoformat(nov['last']):%d} Nov, scored against the markets.</b> A call <b>passes</b> when the market moved its way "
+         "by 0.5% or more and <b>fails</b> when it moved the other way by 0.5% or more; smaller moves are too small to count (§6). “By chance” is what calls with the same up/down mix would score, "
+         "given how often that market rose in November. The combined model was fitted on data before 1 Nov, so November is out of sample for it."
+         f"<br><b>All main layers together: {P} passed, {F} failed ({round(P / n * 100) if n else 0}%), {S} too small; by chance {exp:.0f}%.</b> "
+         "Nearly every layer scored what chance gives. Where calls looked good (the Sensex), the calls were bullish and the Sensex rose; where they failed (the S&amp;P, gold, silver), "
+         "the same bullish calls met falling markets. The long records (below) say the same: out of sample, neither the labels nor the model beat chance.</div>",
+         "<div class='wrap'><table><thead><tr><th>Market</th><th class='n'>November</th><th class='n'>Sessions up / down</th><th class='n'>Moves under 0.5%</th><th class='n'>Big days</th></tr></thead><tbody>"]
+    for mk in MKS:
+        m = mo[mk]
+        o.append(f"<tr><td>{NAME[mk]}</td><td class='n {'t-up' if m['change'] > 0 else 't-dn'}'>{m['change']:+.2f}%</td><td class='n'>{m['up']} / {m['down']}</td><td class='n'>{m['small']}</td><td class='n'>{m['big']}</td></tr>")
+    o.append("</tbody></table></div>" + (f"<p class='s'>{E('; '.join(nov['marked']))}</p>" if nov["marked"] else ""))
+    # scorecard
+    o.append("<h3>Pass and fail, layer by layer (that day; 5 sessions underneath)</h3><div class='wrap'><table><thead><tr><th>Layer</th>"
+             + "".join(f"<th class='n'>{NAME[mk]}</th>" for mk in MKS) + "</tr></thead><tbody>")
+    for key, label in NOV_LAYERS:
+        if not any(by.get((key, mk)) for mk in MKS):
+            continue
+        o.append(f"<tr><td>{E(label)}</td>" + "".join(nov_cell(by.get((key, mk))) for mk in MKS) + "</tr>")
+    lv = nov["leans"]
+    o.append("<tr><td>Deep-dive leans (nominal p &lt; 0.05 on history to 31 Oct)</td>" + "".join(
+        f"<td class='n'><b>{lv[mk]['right']} ✓ {lv[mk]['wrong']} ✗</b><div class='s'>{_vs(lv[mk]).split(' (')[0]} by chance</div></td>" if lv.get(mk) and lv[mk]["n"] else "<td class='n s'>–</td>" for mk in MKS) + "</tr>")
+    chk = nov["check_fd"]
+    o.append(f"</tbody></table></div><p class='s'>Green / red: p &lt; 0.05 against chance (none in November). Recount check: {chk['matched']} of {chk['of']} layer counts equal the existing "
+             "day-by-day scorer's. The 5-session figures overlap from day to day, so they are not independent.</p>")
+    # where it failed
+    sp = nov["spans"]
+    o.append("<h3>Where it failed</h3><ul>")
+    vr = [x for x in sp if x["id"] == "ta_s25_venus_rahu_6"]
+    if vr:
+        s_ = {x["market"]: x for x in vr}
+        o.append(f"<li><b>S&amp;P labels: one span rule.</b> Venus–Rahu 6/8 (Shadashtak, Bullish, Low) labelled every day from {dt.date.fromisoformat(vr[0]['frm']).day} to "
+                 f"{dt.date.fromisoformat(vr[0]['to']).day} {dt.date.fromisoformat(vr[0]['to']):%b}. Over that span the S&amp;P fell {abs(s_['spx']['ret']):.1f}% and the Sensex rose {s_['sensex']['ret']:.1f}%: the same rule passed on one index and failed on the other. "
+                 "The table's record for it counts each span once; as a day-by-day call it never had a measured edge.</li>")
+    sl = by.get(("Signal table: Low labels", "spx"), {}).get("d1", {})
+    o.append(f"<li><b>Low labels</b> carried most S&amp;P calls ({sl.get('right', 0)} passed, {sl.get('wrong', 0)} failed). Out of sample they were below chance in three of the four markets.</li>")
+    ms = by.get(("Combined probability, all layers", "spx"), {}).get("d1", {})
+    o.append(f"<li><b>The combined model made only up calls on the S&amp;P</b> in a falling month ({ms.get('right', 0)} passed, {ms.get('wrong', 0)} failed) and almost no calls on gold and silver.</li>")
+    g, sv = by.get(("Signal table", "gold"), {}).get("d1", {}), by.get(("Signal table", "silver"), {}).get("d1", {})
+    v1 = by.get(("Model v1.0 (Ch.41 + Shadbala)", "gold"), {}).get("d1", {})
+    o.append(f"<li><b>Metals:</b> bullish labels in a month when gold fell {abs(mo['gold']['change']):.1f}% and silver {abs(mo['silver']['change']):.1f}%: gold labels {g.get('right', 0)} passed / {g.get('wrong', 0)} failed, "
+             f"silver {sv.get('right', 0)} / {sv.get('wrong', 0)}; Model v1.0 (gold) {v1.get('right', 0)} / {v1.get('wrong', 0)}.</li>")
+    bg = nov["bigs"]
+    nb = sum(len(bg[mk]["big_days"]) for mk in MKS)
+    fl = sum(b_["warned"] for mk in MKS for b_ in bg[mk]["big_days"])
+    o.append(f"<li><b>Big days:</b> {nb} across the four markets; the model flagged {fl} of them (" + ", ".join(f"{SHORT[mk]} {sum(b_['warned'] for b_ in bg[mk]['big_days'])} of {len(bg[mk]['big_days'])}" for mk in MKS)
+             + "). On volatility-factor days: " + ", ".join(f"{SHORT[mk]} {sum(b_['vol'] for b_ in bg[mk]['big_days'])} of {len(bg[mk]['big_days'])}" for mk in ("spx", "sensex"))
+             + f". Gold's big-move watch caught {bg['gold']['watch_big']} of {bg['gold']['watch_days']} watch days; over the long run it has no proven lift.</li>")
+    o.append(f"<li><b>Deep-dive leans:</b> {lv['all']['right']} of {lv['all']['n']} right ({lv['all']['hit']:.0f}% vs {lv['all']['exp']:.0f}% by chance); silver {lv['silver']['right']} of {lv['silver']['n']}.</li></ul>")
+    o.append("<details class='sub'><summary>Every table rule's November span</summary><div class='wrap'><table><thead><tr><th>Rule</th><th>Market</th><th class='n'>Span</th><th class='n'>Move</th><th>Result</th></tr></thead><tbody>"
+             + "".join(f"<tr><td>{E(x['rule'])} <span class='s'>({E(x['tone'])})</span></td><td>{SHORT[x['market']]}</td><td class='n'>{dt.date.fromisoformat(x['frm']):%d %b} – {dt.date.fromisoformat(x['to']):%d %b}</td>"
+                       f"<td class='n'>{x['ret']:+.2f}%</td><td class='{'ok' if x['result'] == 'passed' else 'bad' if x['result'] == 'failed' else 's'}'>{E(x['result'])}</td></tr>" for x in sp)
+             + "</tbody></table></div><p class='s'>Scored as the table's records are: from the last close before the span to its last day.</p></details>")
+    o.append("<details class='sub'><summary>The rules behind the labels, passed and failed</summary><div class='wrap'><table><thead><tr><th>Market</th><th>Behind the label</th><th>Call</th>"
+             "<th class='n'>Passed</th><th class='n'>Failed</th><th class='n'>Too small</th></tr></thead><tbody>"
+             + "".join(f"<tr><td>{SHORT[r['market']]}</td><td>{E(r['reason'])}</td><td>{E(r['call'])}</td><td class='n'>{r['passed']}</td><td class='n'>{r['failed']}</td><td class='n'>{r['small']}</td></tr>" for r in nov["reasons"])
+             + "</tbody></table></div></details>")
+    for mk in MKS:
+        w = nov["wrong"].get(mk, [])
+        if w:
+            o.append(f"<details class='sub'><summary>{NAME[mk]}: every failed label and model call ({len(w)})</summary><div class='wrap'><table><thead><tr><th class='n'>Day</th><th>Layer</th><th>Call</th><th class='n'>Move</th><th>Why</th></tr></thead><tbody>"
+                     + "".join(f"<tr><td class='n'>{E(x['weekday'][:3])} {dt.date.fromisoformat(x['date']):%d %b}</td><td>{E(x['layer'])}</td><td>{E(x['call'])}</td><td class='n'>{x['move']:+.2f}%</td><td class='s'>{E(x['why'] or '')}</td></tr>" for x in w)
+                     + "</tbody></table></div></details>")
+    o.append(f"<details class='sub'><summary>Deep-dive leans, one by one ({len(nov['lean_list'])})</summary><div class='wrap'><table><thead><tr><th class='n'>Day</th><th>Event</th><th>Market</th><th>Lean</th><th>History to 31 Oct</th><th class='n'>Move</th><th>Result</th></tr></thead><tbody>"
+             + "".join(f"<tr><td class='n'>{dt.date.fromisoformat(x['date']):%d %b}</td><td>{E(x['event'])}</td><td>{SHORT[x['market']]}</td><td>{E(x['lean'])}, {E(x['horizon'])}</td><td class='s'>{E(x['hist'])}</td>"
+                       f"<td class='n'>{x['move']:+.2f}%</td><td class='{'ok' if x['result'] == 'passed' else 'bad' if x['result'] == 'failed' else 's'}'>{E(x['result'])}</td></tr>" for x in nov["lean_list"])
+             + "</tbody></table></div></details>")
+    # tuning
+    o.append("<h3>What changes, and the long-run evidence for it</h3><p class='s'>Each change was tested on the long records (2000–2026; walk-forward 2013–2026 where one exists) "
+             "and on 24 Sep – 27 Nov, never on November alone. Nothing here adds a rule; it changes how far the existing calls are trusted.</p>")
+    for r in nov["recommendations"]:
+        st = (chip("now in " + r.get("where", "the calendars"), "up") + (f" <span class='s'>({E(r['where_note'])})</span>" if r.get("where_note") else "")) if r["applied"] else chip("information", "nt")
+        o.append(f"<div class='callout'><b>{E(r['title'])}</b> {st}<div class='s'><b>Evidence:</b> {E(r['evidence'])}</div>"
+                 + (f"<div class='s'><b>November:</b> {E(r['november'])}</div>" if r.get("november") else "") + "</div>")
+    # out of sample table
+    CL = {"spx": "Model call, clean walk-forward (labels from rules picked on 2000-2013; fitted on 2000-2013)",
+          "sensex": "Model call, clean walk-forward (labels from rules picked on 2000-2013; fitted on 2000-2013)",
+          "gold": "Model call (2+ points from normal), all layers", "silver": "Model call (2+ points from normal), all layers"}
+    o.append("<h3>Out of sample, 2013–2026: right vs chance, every day</h3><div class='wrap'><table><thead><tr><th>Market</th><th class='n'>Low labels</th><th class='n'>Moderate or High</th>"
+             "<th class='n'>All labels</th><th class='n'>Combined model</th><th class='n'>Big days on flagged days vs others</th></tr></thead><tbody>")
+    for mk in MKS:
+        L = (t["labels"][mk].get("walk_forward") or t["labels"][mk])["rows"]
+        b_ = t["big"][mk]
+        bigc = f"{b_['warned_pct']}% vs {b_['other_pct']}% (p {b_['p']})" if b_["warned"] else "never flags"
+        o.append(f"<tr><td>{NAME[mk]}</td><td class='n'>{_vs(L['Low|d1'], 1)}</td><td class='n'>{_vs(L['Moderate or High|d1'], 1)}</td><td class='n'>{_vs(L['Any strength|d1'], 1)}</td>"
+                 f"<td class='n'>{_vs(t['model'][mk]['rows'][CL[mk]], 1)}</td><td class='n'>{bigc}</td></tr>")
+    v1 = t["model_v1"]["all"]
+    o.append(f"</tbody></table></div><p class='s'>S&amp;P and Sensex labels: rules picked on their 2000–2013 records only ({E(', '.join(t['labels']['spx']['walk_forward']['rules']))}), "
+             "then every day 2013–2026 scored. Gold and silver labels: the tables' data-picked parts re-picked on 2000–2013. Combined model: fitted on earlier years only "
+             f"(S&amp;P and Sensex with the walk-forward labels). Model v1.0 (gold, a source model) over 2000–2026: {_vs(v1, 1)}. "
+             "Chance is what calls with the same up/down mix would score, from each year's share of up days. With the table's own rules chosen on all of 2000–2026, the S&amp;P "
+             f"labels look better ({_vs(t['labels']['spx']['rows']['Any strength|d1'], 1)}), but that is the selection, not an edge.</p>")
+    o.append("<details class='sub'><summary>Each S&amp;P / Sensex table rule as a day-by-day call, 2000–2026</summary><div class='wrap'><table><thead><tr><th>Rule</th><th>Market</th><th>Published record (per span)</th>"
+             "<th class='n'>Every day</th><th class='n'>q</th><th class='n'>2000–2012</th><th class='n'>2013–2026</th></tr></thead><tbody>"
+             + "".join(f"<tr><td>{E(r['rule'])} <span class='s'>({E(r['tone'])}, {E(r['strength'])})</span></td><td>{SHORT[r['market']]}</td><td class='s'>{E(r['record'] or '–')}</td>"
+                       f"<td class='n'>{_vs(r['day'], 1)}</td><td class='n'>{r['q']}</td><td class='n'>{_vs(r['first_half'], 1).split(' (')[0]}</td><td class='n'>{_vs(r['second_half'], 1).split(' (')[0]}</td></tr>" for r in t["rules_per_day"])
+             + "</tbody></table></div><p class='s'>These rules were chosen on 2000–2026, so this is in sample; even so, only one of the 20 rule-and-market tests passes the correction.</p></details>")
+    w = t["window"]
+    names = list(next(iter(w.values()))["rows"])
+    o.append("<details class='sub'><summary>The same changes on 24 Sep – 27 Nov</summary><div class='wrap'><table><thead><tr><th>Rule</th>"
+             + "".join(f"<th class='n'>{NAME[mk]} <span class='s'>(up {w[mk]['up_share']}%)</span></th>" for mk in MKS) + "</tr></thead><tbody>"
+             + "".join(f"<tr><td>{E(nm)}</td>" + "".join(f"<td class='n'>{w[mk]['rows'][nm]['right']} of {w[mk]['rows'][nm]['n']}<div class='s'>{_vs(w[mk]['rows'][nm]).split(' (')[0]}</div></td>" if w[mk]["rows"][nm]["n"] else "<td class='n s'>–</td>" for mk in MKS) + "</tr>" for nm in names)
+             + "</tbody></table></div><p class='s'>Too short to prove anything either way; nothing here passes p &lt; 0.05.</p></details>")
+    # November deep dive
+    dds = sr.get("dds_nov") or []
+    if dds:
+        n_ = sum(d["n_cells"] for d in dds)
+        sig = sum(len(d["significant"]) for d in dds)
+        nom = sum(len(d["nominal"]) for d in dds)
+        big = sum(len(d["big_significant"]) for d in dds)
+        ck = [c for d in dds for c in d["checks"]]
+        weeks = "".join(f"<a href='#dd{d['start'][5:7]}{d['start'][8:]}'>{d['start'][8:]}–{d['end'][8:]} Nov</a> " for d in dds)
+        o.append(f"<h3 id='ddnov'>November deep dive: every sky event backtested, week by week</h3><p class='s'>Weeks: {weeks}</p>"
+                 f"<div class='callout'>History ends 31 Oct 2026, so no November event scores itself. <b>{n_} tests: {sig} pass the correction</b>, {nom} have a nominal p &lt; 0.05 "
+                 f"(about {round(n_ * 0.05)} expected by chance); big days: {big} pass. <b>Double-checked:</b> {sum(c['ok'] for c in ck)} of {len(ck)} checks pass, and 10 sample results recounted "
+                 "from raw prices with separate code all match.</div>")
+        for dd in dds:
+            o.append(dd_html(dd, nov.get("moves")))
+    return "".join(o)
+
+
 def dd_intro(dds):
     n = sum(d["n_cells"] for d in dds)
     sig = sum(len(d["significant"]) for d in dds)
@@ -902,16 +1139,17 @@ def dd_intro(dds):
             "<a href='calendar_2027_NY_master.html#dd202702'>February 2027</a> is in the 2027 calendar (calendar_2027_NY_master.html).</div>")
 
 
-def dd_html(dd):
+def dd_html(dd, moves=None):
+    """One week of the deep dive; with moves ({market: {date: {r1}}}) each label also shows what the market did (✓ / ✗ at 0.5%)."""
     from datetime import date as _d
     a, b = _d.fromisoformat(dd["start"]), _d.fromisoformat(dd["end"])
     nom = "; ".join(f"{x['label']} ({x['market']}, {'next session' if x['horizon'] == 'h1' else '5 sessions'}: {x['up_pct']}% up vs {x['base']}%, p {x['p2']}, q {x.get('q')})" for x in dd["nominal"]) or "none"
     o = [f"<h3 id='dd{a:%m%d}'>Week {a:%a %d %b} – {b:%a %d %b %Y}</h3>",
-         f"<div class='callout'><b>Every sky event of the week backtested.</b> {len(dd['classes'])} event classes (exact aspects, sign and nakshatra entries, tithi, yoga, Bhadra, the last quarter) "
+         f"<div class='callout'><b>Every sky event of the week backtested.</b> {len(dd['classes'])} event classes (exact aspects, sign and nakshatra entries, stations, combustion, tithi, yoga, Bhadra, lunations) "
          f"were each scored on every occurrence since 2000 on the S&amp;P 500, Sensex, gold and silver: {dd['n_cells']} tests. "
          f"<b>{len(dd['significant'])} pass the Benjamini–Hochberg correction</b>, and {len(dd['nominal'])} have a nominal p &lt; 0.05. By chance alone about {round(dd['n_cells'] * 0.05)} would be expected, "
          f"so the week's events carry no measurable direction. Nominal ones: {E(nom)}. Big days: {len(dd['big_significant'])} classes pass.</div>",
-         "<div class='wrap'><table><thead><tr><th>Day</th><th>Labels (table) and model: up that day / over 5 sessions vs normal</th>"
+         "<div class='wrap'><table><thead><tr><th>Day</th><th>Labels (table) and model: up that day / over 5 sessions vs normal" + (" → what the market did" if moves else "") + "</th>"
          "<th>Catalogue rules active (with a supported record)</th><th>Solar return</th><th>New sources</th></tr></thead><tbody>"]
     for d in dd["days"]:
         lab = []
@@ -919,7 +1157,14 @@ def dd_html(dd):
             sg = d["signals"].get({"spx": "S&P 500", "sensex": "BSE Sensex", "gold": "Gold", "silver": "Silver"}[k], {})
             pr = d["prob"].get(k)
             if pr:
-                lab.append(f"{nm}: {E((sg.get('sig', '') + ' ' + sg.get('st', '')).strip())} · {pr['all']['up1']:.0f}% / {pr['all']['up5']:.0f}% (normal {pr['base']['up1']:.0f}% / {pr['base']['up5']:.0f}%)")
+                txt = f"{nm}: {E((sg.get('sig', '') + ' ' + sg.get('st', '')).strip())} · {pr['all']['up1']:.0f}% / {pr['all']['up5']:.0f}% (normal {pr['base']['up1']:.0f}% / {pr['base']['up5']:.0f}%)"
+                mv = (moves or {}).get(k, {}).get(d["date"])
+                if mv:
+                    c = 1 if sg.get("sig", "").startswith("Bullish") else -1 if sg.get("sig", "").startswith("Bearish") else 0
+                    r = mv["r1"]
+                    mark = "" if not c else " (too small)" if abs(r) < 0.5 else " ✓" if (r > 0) == (c > 0) else " ✗"
+                    txt += f" → <b class='{'t-up' if r > 0 else 't-dn'}'>{r:+.2f}%</b>{mark}"
+                lab.append(txt)
             else:
                 lab.append(f"{nm}: closed")
         sup = []
@@ -1076,21 +1321,28 @@ def gp_on(g, d):
     return out
 
 
-def trust_html(track, sx):
+def trust_html(track, sx, review=None):
     cp = track["cp"]["markets"]
     o = ["<h2 id='trust'>Track record</h2><div class='wrap'><table><thead><tr><th>Market</th><th class='n'>2013–2026 walk-forward, 5 sessions</th>"
-         "<th class='n'>Last 60 days (to 23 Nov), 5 sessions</th><th class='n'>1–23 Nov, all methods, same day</th><th class='n'>1–23 Nov, all methods, 5 sessions</th><th class='n'>Market up, 1–23 Nov</th></tr></thead><tbody>"]
+         + ("<th class='n'>Clean walk-forward 2013–2026, that day, vs chance</th>" if review else "")
+         + "<th class='n'>Last 60 days (to 23 Nov), 5 sessions</th><th class='n'>1–23 Nov, all methods, same day</th><th class='n'>1–23 Nov, all methods, 5 sessions</th><th class='n'>Market up, 1–23 Nov</th></tr></thead><tbody>"]
+    CL = {"spx": "Model call, clean walk-forward (labels from rules picked on 2000-2013; fitted on 2000-2013)",
+          "sensex": "Model call, clean walk-forward (labels from rules picked on 2000-2013; fitted on 2000-2013)",
+          "gold": "Model call (2+ points from normal), all layers", "silver": "Model call (2+ points from normal), all layers"}
     nov = track["nov"]["score"]
     for mk in MKS:
         w = cp[mk]["walk_forward"]["up5"]["kept"] or cp[mk]["walk_forward"]["up5"]["all"]
         w60 = cp[mk]["window"]["up5"]["all"]
         pl = nov["pooled"].get(mk, {})
         up = nov["ups"].get(mk, [0, 0, 0, 0])
+        cw = review["tuning"]["model"][mk]["rows"][CL[mk]] if review else None
         o.append(f"<tr><td>{NAME[mk]}</td><td class='n'>{w['hit']}% of {w['calls_up'] + w['calls_down']} calls</td>"
-                 f"<td class='n'>{'–' if w60['hit'] is None else str(w60['hit']) + '% of ' + str(w60['calls_up'] + w60['calls_down'])}</td>"
+                 + (f"<td class='n'>{cw['hit']}% vs {cw['exp']}% ({cw['n']} calls)</td>" if cw else "")
+                 + f"<td class='n'>{'–' if w60['hit'] is None else str(w60['hit']) + '% of ' + str(w60['calls_up'] + w60['calls_down'])}</td>"
                  f"<td class='n'>{round(pl['d1_right'] / pl['d1_calls'] * 100) if pl.get('d1_calls') else '–'}%</td><td class='n'>{round(pl['d5_right'] / pl['d5_calls'] * 100) if pl.get('d5_calls') else '–'}%</td>"
                  f"<td class='n'>{up[0]} of {up[1]} days</td></tr>")
-    o.append("</tbody></table></div>")
+    o.append("</tbody></table></div>" + ("<p class='s'>The first column uses the model's “kept” layers, which were chosen by how they scored on 2013–2026 itself; the clean column "
+                                          "chooses everything on earlier years (November 2026 review) and is the one to trust.</p>" if review else ""))
     o.append(f"<h3>Why the Sensex scored higher than the S&amp;P</h3><div class='callout'><ul>"
              f"<li><b>Same labels for both indices.</b> The market table only uses rules that held on <i>both</i> indices, so its label was identical for the S&amp;P and the Sensex on "
              f"{sx['same_nov']} of {sx['n_nov']} weekdays in 1–23 Nov and {sx['same60']} of {sx['n60']} labelled days in the last 60 days.</li>"

@@ -838,6 +838,29 @@
     "tools/deep_dive_render.py",
     "reports/calendar_2027_NY_master.html"
    ]
+  },
+  {
+   "date": "2026-11-28",
+   "pr": "69",
+   "topic": "November 2026 review: every call scored against the markets; where it failed; tuning tested on the long records and applied to both calendars",
+   "analysis": "tools/november_review.py: November day data (forward_daybyday.build, model fitted before 1 Nov) scored layer by layer against the price files; pass/fail at 0.5%, against chance for the same up/down mix (Poisson-binomial; 5-session overlap corrected); recount equals forward_daybyday.score on 33 of 33 layers. Failures traced to the rules behind each label and each table rule's November span; big days and deep-dive leans scored. Tuning tests on the long records: clean walk-forward labels (S&P/Sensex rules picked on 2000-2013 only; gold/silver re-picked parts), model walk-forward with layers chosen on 2000-2012 and with walk-forward labels, label strengths, each table rule as a day call (BH), big-day flags, volatility factors, Model v1.0, Solar return day calls, 24 Sep - 27 Nov. tools/week_deep_dive.py nov: November deep dive with history to 31 Oct 2026.",
+   "result": "November: 120 passed, 118 failed, 118 too small (50% vs 50% by chance); S&P 65/65, Sensex 25/9 (74% vs 74%), gold 18/25, silver 12/19; nothing significant. S&P labels failed on Venus-Rahu 6/8 (5-22 Nov: S&P -10.1%, Sensex +8.6%). Deep dive: 2,010 tests, 0 pass BH, 41 nominal; checks 20/20, recounts 10/10. Out of sample no layer beats chance: labels S&P 52.4% vs 52.5%, Sensex 50.5% vs 52.2%, gold 50.0% vs 50.1%, silver 53.3% vs 51.9%; model S&P 50.7% vs 49.8%, Sensex 51.3% vs 51.6%; Low labels below chance in 3 of 4 markets. The kept-layers result (S&P 56.6% vs 52.1%) was a selection effect. Big days: model flag works only on the Sensex (7.3% vs 3.1%); volatility factors lift big days on S&P and Sensex in both halves (chosen in sample). Applied: Low labels grey, model probabilities uncoloured, big-day chance counted only for the Sensex, watch windows marked no proven lift; 2027 rows byte-identical.",
+   "files": [
+    "tools/november_review.py",
+    "tools/week_deep_dive.py",
+    "tools/model_check_60d.py",
+    "tools/calendar_2026.py",
+    "tools/deep_dive_render.py",
+    "tools/refresh_all.py",
+    "build/pdfref/november_review_2026-11_ET.json",
+    "build/pdfref/deep_dive_2026-11-01_to_2026-11-07_ET.json",
+    "build/pdfref/deep_dive_2026-11-08_to_2026-11-14_ET.json",
+    "build/pdfref/deep_dive_2026-11-15_to_2026-11-21_ET.json",
+    "build/pdfref/deep_dive_2026-11-22_to_2026-11-28_ET.json",
+    "build/pdfref/deep_dive_2026-11-29_to_2026-11-30_ET.json",
+    "reports/calendar_2026-11-24_to_2026-12-31_ET.html",
+    "reports/calendar_2027_NY_master.html"
+   ]
   }
  ]
 }

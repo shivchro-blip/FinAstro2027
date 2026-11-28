@@ -111,8 +111,9 @@ Known data problems:
 | `tools/jupiter_saturn_gold.py` | Jupiter–Saturn aspects in a 10° orb (degree-based; exact passes to the minute) for Nov 2026 – Dec 2030, verified against the user's list. Shows every past window since 1972 with gold's turns, classified by the nearest anchor (orb entry / exact / exit). Gives a plain bottom-or-top table, which also includes Jupiter and Saturn direct stations |
 | `tools/new_sources_test.py` | Backtest of the rules from the three new books (BS Iyer, Tajika Nilakanthi, Hayanaratna): BS 42.6 with eclipses, Moon north/south, Mercury reappearance, nakshatra and lord rules, Tajika monthly and annual charts → `new_sources_test_ET.html` |
 | `tools/new_sources_leftover.py` | The leftover new-source rules (B5, B6, B7, B9, B10, B11, B13, T4, T6, T10), Tajika five-dignity strength and ruler of the year, and the calendar layer read by `calendar_2026.py` → `new_sources_leftover_ET.{html,json}` |
-| `tools/week_deep_dive.py [dec] [jan] [feb] [--reuse-days]` | Every week of December 2026 (from the 2026 calendar) and of January and February 2027 (built with `forward_daybyday.build`; `--reuse-days` reuses the cached day data): every sky event as an event class backtested on 4 markets (next session, 5 sessions, big days; BH per week) with 4 automatic checks, plus each day's rules, labels, model, Solar return, Kartari, gold notes and new-source items → `deep_dive_*_ET.json` |
-| `tools/deep_dive_render.py` | Renders the 2027 monthly deep dives (January, February) into `calendar_2027_NY_master.html` with a month index (called by `build_pdf_calendar.py`; `--html-only` re-renders from the JSON) |
+| `tools/week_deep_dive.py [nov] [dec] [jan] [feb] [--reuse-days]` | Every week of November and December 2026 and of January and February 2027 (December from the 2026 calendar, the others built with `forward_daybyday.build`; `--reuse-days` reuses the cached day data): every sky event as an event class backtested on 4 markets (next session, 5 sessions, big days; BH per week) with 4 automatic checks, plus each day's rules, labels, model, Solar return, Kartari, gold notes and new-source items → `deep_dive_*_ET.json`. November uses history to 31 Oct 2026 only, so no November event scores itself |
+| `tools/november_review.py` | November 2026 review: every call of every layer scored against what the markets did (pass / fail at 0.5%, against chance for the same up/down mix; recount checked against `forward_daybyday.score`), where it failed (rules behind each label, spans, wrong calls, big days, deep-dive leans), and the tuning tests on the long records (clean walk-forward labels and model, label strengths, each table rule as a day call, big-day flags, volatility factors, 24 Sep – 27 Nov) → `november_review_2026-11_ET.json` with the recommendations the two calendars apply |
+| `tools/deep_dive_render.py` | Renders the 2027 monthly deep dives (January, February) into `calendar_2027_NY_master.html` with a month index (called by `build_pdf_calendar.py`; `--html-only` re-renders from the JSON). Applies the November review's changes (Low labels as leans, model percentages uncoloured) |
 | `tools/gold_tracker.py [--metal silver]` | Trackers: findings, rule status, best-rule dates, analysis log |
 | `tools/build_year.py YEAR` | Astronomy layer for any year; 2000–2024 are git-ignored and rebuilt on demand |
 | `tools/fetch_prices.py` | Downloads GC=F and SI=F (Yahoo; the host must be allowed) |
@@ -911,6 +912,57 @@ Results, as the share of calls right:
 
   - This partly matches Solar return's own path (weak into spring, bottom Mar–May), but the rubric itself has no track record.
 - **In the calendar:** shown in the 2026 calendar's Solar return section.
+
+**November 2026 review: pass / fail against the markets, and what changes (28 Nov 2026)** (`tools/november_review.py`, `november_review_2026-11_ET.json`, `tools/week_deep_dive.py nov`; 2026 calendar → "November review")
+
+- **Method:**
+  - Every call the calendar's layers made for 1–27 Nov (combined model fitted before 1 Nov) scored against the price files. A call **passes** when the market moved its way by 0.5% or more and **fails** when it moved the other way by 0.5% or more; smaller moves are too small to count.
+  - "By chance" = what calls with the same up/down mix would score, from the up share of the same period (November; each Nov–Nov year on the long records). p-values are exact (Poisson-binomial); 5-session results on consecutive days use a 5× variance because they overlap.
+  - Recount check: 33 of 33 layer counts equal `forward_daybyday.score`. Sensex 27 Nov uses the Yahoo quote close (83,339.26) because the daily bar had none.
+- **November itself:** S&P −3.7% (7 up / 12 down sessions, 5 big days), Sensex +11.9% (14 / 4), gold −5.9%, silver −11.0% (8 big days each).
+
+| Layer (that day) | S&P | Sensex | Gold | Silver |
+|---|---|---|---|---|
+| Table label | 4 ✓ 6 ✗ (40% vs 46% chance) | 8 ✓ 2 ✗ (80% vs 77%) | 5 ✓ 5 ✗ (50% vs 38%) | 4 ✓ 5 ✗ (44% vs 39%) |
+| … Low labels | 2 ✓ 4 ✗ | 5 ✓ 1 ✗ | 4 ✓ 4 ✗ | – |
+| Combined model, all layers | 4 ✓ 4 ✗ (only up calls) | 4 ✓ 1 ✗ | 1 ✓ 0 ✗ | no calls |
+| Model v1.0 | – | – | 4 ✓ 9 ✗ (31% vs 35%) | – |
+| Solar return generated day call | 7 ✓ 4 ✗ (64% vs 52%, p 0.55) | – | – | – |
+| USA Tara bala | 2 ✓ 8 ✗ (20% vs 52%, p 0.06) | – | – | – |
+
+  - All main layers together: **120 passed, 118 failed (50%), 118 too small; chance 50%.** By market: S&P 65/65 (50% vs 50%), Sensex 25/9 (74% vs 74%), gold 18/25 (42% vs 36%), silver 12/19 (39% vs 40%). Nothing passes p < 0.05.
+  - The Sensex "worked" only because the calls were bullish and the Sensex rose; the same bullish calls failed on the falling S&P and metals.
+- **Where it failed:**
+  - **S&P labels came from one span rule.** Venus–Rahu 6/8 (Bullish, Low) labelled every day 5–22 Nov; over the span the S&P fell 10.1% and the Sensex rose 8.6%. Moon–Rahu 6/8 (4–7 Nov): S&P −2.5%, Sensex +5.3%. The table's records count each span once; as day-by-day calls these rules were never better than chance (Venus–Rahu S&P 56.0% vs 53.8%, p 0.27; Moon–Rahu 54.8% vs 54.6%, p 0.88; 2000–2026).
+  - The model made only up calls on the S&P in a falling month, and almost no calls on gold and silver.
+  - **Big days:** 23 across the four markets; the model flagged 3 (Sensex 2 of 2, gold 1 of 8, S&P 0 of 5, silver 0 of 8). Volatility-factor days held 2 of the S&P's 5 and both Sensex big days. Gold's watch windows caught 3 of 4 watch days (no long-run lift).
+  - **Deep-dive leans** (nominal p < 0.05 on history to 31 Oct): 9 of 30 right (30% vs 39% by chance); silver 2 of 13.
+- **November deep dive** (`deep_dive_2026-11-*_ET.json`, history to 31 Oct): 2,010 tests over 5 weeks, 0 pass BH, 41 nominal (about 100 expected). Checks 20/20; 10 of 10 independent recounts match (the recount takes the history end as an argument).
+- **Long records (the tuning evidence):**
+  - **Clean walk-forward labels, every day 2013–2026.** S&P/Sensex: rules picked on their 2000–2013 records only (both indices beat the base, p < 0.05 on one; 11 rules, 6 of them in today's table). Gold/silver: data-picked parts re-picked on 2000–2013.
+
+| Market | Low | Moderate or High | All labels | Combined model (clean) |
+|---|---|---|---|---|
+| S&P | 46.8% vs 50.1% | 55.5% vs 53.9% (p 0.39) | 52.4% vs 52.5% | 50.7% vs 49.8% (p 0.58) |
+| Sensex | 45.4% vs 50.2% (p 0.06) | 53.2% vs 53.3% | 50.5% vs 52.2% | 51.3% vs 51.6% (p 0.85) |
+| Gold | 47.9% vs 49.6% | 54.9% vs 51.1% (p 0.17) | 50.0% vs 50.1% | 47.1% vs 49.8% |
+| Silver | 53.9% vs 51.7% | 52.6% vs 52.2% | 53.3% vs 51.9% | 52.8% vs 50.6% |
+
+  - With the table's own rules (chosen on all of 2000–2026) the S&P labels look good (53.5% vs 50.0%, p 0.0005; Moderate or High 53.9% vs 49.8%): that is the selection, not an edge.
+  - The model's "kept layers" walk-forward (S&P 56.6% vs 52.1%, p 0.02) was a selection effect: those layers were chosen by how they scored on 2013–2026 itself. Chosen on 2000–2012 only, the S&P model scores 50.1% vs 51.6%.
+  - Up calls look right more often only because markets rise more often (S&P up calls 57.3% vs 57.0% up share; down calls 43.5% vs 42.7%). Gold's down calls were worse than chance (38.0% vs 46.5%, p 0.01).
+  - Model v1.0 (gold, 2000–2026): 53.8% vs 53.6% (p 0.87).
+  - Each of the 10 S&P/Sensex table rules as a day call (2000–2026, in sample): 1 of 20 rule-and-market tests passes BH: Three Saturdays in Shukla Paksha on the Sensex (52.6% vs 44.7%, q 0.02).
+  - **Big days**, walk-forward: the model's big-day flag works only for the Sensex (7.3% big on flagged days vs 3.1%, p < 0.0001); S&P 4.7% vs 5.3%, gold 3.9% vs 6.5%, silver never flags. The volatility factors alone: S&P 6.4% vs 4.2% (2013–2026, p 0.004) and 12.0% vs 8.9% (2000–2012); Sensex 7.3% vs 2.6% and 22.8% vs 13.2%. The factors were chosen on 2000–2026, so this is not a clean out-of-sample result.
+  - Solar return day calls since 1928: Bullish 53.4% right vs 52.4% up days; Bearish 47.0% vs 47.6% down days: November's 7 of 11 was luck.
+  - 24 Sep – 27 Nov: nothing passes p < 0.05 (S&P Moderate or High labels 9 of 13, Low 2 of 6).
+- **Changes applied (both calendars unless noted):**
+  - Low labels are shown grey, as a lean, not a day call.
+  - The combined model's probabilities are no longer coloured as calls.
+  - The big-day chance counts only for the Sensex; for the other markets it is shown as untested (2026 calendar).
+  - Gold and silver big-move watch windows are marked "no proven lift" (2026 calendar).
+  - "Read this first" and the track record now quote the clean walk-forward figures. The 2027 calendar's 2,211 rows are byte-identical.
+- **Not changed:** no rule was added, removed or reversed; the published tables are unchanged.
 
 **Deep dive, February 2027, week by week (27 Nov 2026)** (`tools/week_deep_dive.py feb`, `deep_dive_2027-02-*_ET.json`, `calendar_2027_NY_master.html` → "Deep dive: February 2027"; the page now has a month index)
 

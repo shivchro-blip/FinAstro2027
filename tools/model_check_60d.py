@@ -70,20 +70,25 @@ def table_rows(path, key=None):
     return out
 
 
-def market_labels(a, b):
-    """S&P / Sensex labels from the market table's qualifying rules, rebuilt for past days."""
+def market_labels(a, b, ids=False, pick=None):
+    """S&P / Sensex labels from the market table's qualifying rules, rebuilt for past days.
+    ids=True also returns the rules behind each day ({mk: {day: [rule ids]}}) and the rule definitions.
+    pick(spx_record, sensex_record) -> strength or None replaces the table's rule choice (used for walk-forward tests)."""
     MS = load(ROOT / "tools" / "market_signal_table.py", "mst")
     mb = json.load(open(OUT / "market_backtest_2000-2026_ET.json"))
     cb = json.load(open(OUT / "calendar_rules_backtest_2000-2026_ET.json"))
+    if pick is None:
+        def pick(s, n):
+            return MS.strength(s["p_value"], n["p_value"]) if MS.held(s) and MS.held(n) and min(s["p_value"], n["p_value"]) < 0.05 else None
     rules = {}
     for x in mb["rules"]:
         s, n = x["spx"], x["sensex"]
-        if MS.held(s) and MS.held(n) and min(s["p_value"], n["p_value"]) < 0.05:
-            rules[x["rule_id"]] = dict(title=x["title"], tone=x["tone"], st=MS.strength(s["p_value"], n["p_value"]))
+        if st := pick(s, n):
+            rules[x["rule_id"]] = dict(title=x["title"], tone=x["tone"], st=st)
     for x in cb["rules"]:
         s, n = x.get("spx"), x.get("sensex")
-        if s and n and s["kind"] == "direction" and MS.held(s) and MS.held(n) and min(s["p_value"], n["p_value"]) < 0.05:
-            rules[x["rule_id"]] = dict(title=x["provenance"].split(" p.")[0].split(" — ")[0], tone=x["tone"], st=MS.strength(s["p_value"], n["p_value"]))
+        if s and n and s["kind"] == "direction" and (st := pick(s, n)):
+            rules[x["rule_id"]] = dict(title=x["provenance"].split(" p.")[0].split(" — ")[0], tone=x["tone"], st=st)
     calls = collections.defaultdict(list)
     with gzip.open(OUT / "backtest" / "market_events_2000-2026.json.gz", "rt", encoding="utf-8") as fh:
         for e in json.load(fh):
@@ -122,18 +127,20 @@ def market_labels(a, b):
                 days = MS.sessions_from(start)
             for d in days:
                 cal_calls[mk][d].append(rid)
-    out = {}
+    out, why = {}, {}
     for mk in ("spx", "sensex"):
-        lab = {}
+        lab, why[mk] = {}, {}
         d = a
         while d <= b:
-            ids = list(dict.fromkeys(calls.get(d, []) + cal_calls[mk].get(d, [])))
-            net = sum(PTS[rules[i]["st"]] * (1 if rules[i]["tone"] == "Bullish" else -1) for i in ids)
+            on = list(dict.fromkeys(calls.get(d, []) + cal_calls[mk].get(d, [])))
+            net = sum(PTS[rules[i]["st"]] * (1 if rules[i]["tone"] == "Bullish" else -1) for i in on)
             if net:
                 lab[d] = ("Bullish" if net > 0 else "Bearish", "High" if abs(net) >= 3 else "Moderate" if abs(net) == 2 else "Low")
+            if on:
+                why[mk][d] = on
             d += dt.timedelta(days=1)
         out[mk] = lab
-    return out
+    return (out, why, rules) if ids else out
 
 
 def robust_vol(a, b):

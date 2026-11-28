@@ -77,7 +77,8 @@ STEPS = [
     ["tools/new_sources_test.py"],
     ["tools/new_sources_leftover.py"],
     ["tools/week_deep_dive.py"],
-    ["tools/build_pdf_calendar.py", "--html-only"],   # re-render the 2027 calendar with the January 2027 deep dive
+    ["tools/november_review.py"],                      # November 2026 scored against the markets; its changes are applied by the two calendars
+    ["tools/build_pdf_calendar.py", "--html-only"],   # re-render the 2027 calendar with the deep dives (and the November review's changes)
     ["tools/calendar_2026.py"],
     ["tools/rule_tally.py", "2026-11-20", "2026-11-23"],
 ]

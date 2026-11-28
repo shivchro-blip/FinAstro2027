@@ -1,0 +1,6154 @@
+{
+ "made": "2026-11-28 00:47 UTC",
+ "start": "2026-11-01",
+ "last": "2026-11-27",
+ "hist_end": "2026-10-31",
+ "marked": [],
+ "month": {
+  "spx": {
+   "sessions": 19,
+   "up": 7,
+   "down": 12,
+   "small": 8,
+   "big": 5,
+   "up_share": 45,
+   "up5_share": 21,
+   "change": -3.73
+  },
+  "sensex": {
+   "sessions": 18,
+   "up": 14,
+   "down": 4,
+   "small": 5,
+   "big": 2,
+   "up_share": 77,
+   "up5_share": 100,
+   "change": 11.93
+  },
+  "gold": {
+   "sessions": 19,
+   "up": 8,
+   "down": 11,
+   "small": 2,
+   "big": 8,
+   "up_share": 35,
+   "up5_share": 21,
+   "change": -5.91
+  },
+  "silver": {
+   "sessions": 19,
+   "up": 8,
+   "down": 11,
+   "small": 1,
+   "big": 8,
+   "up_share": 39,
+   "up5_share": 21,
+   "change": -10.99
+  }
+ },
+ "rows": [
+  {
+   "layer": "Signal table",
+   "market": "spx",
+   "fd": true,
+   "d1": {
+    "calls": 15,
+    "flat": 5,
+    "sign_right": 5,
+    "sign_n": 15,
+    "n": 10,
+    "right": 4,
+    "wrong": 6,
+    "hit": 40.0,
+    "exp": 45.5,
+    "edge": -5.5,
+    "p": 1.0,
+    "up_calls": 10,
+    "down_calls": 0
+   },
+   "d5": {
+    "calls": 14,
+    "flat": 0,
+    "sign_right": 3,
+    "sign_n": 14,
+    "n": 14,
+    "right": 3,
+    "wrong": 11,
+    "hit": 21.4,
+    "exp": 21.4,
+    "edge": 0.0,
+    "p": 1.0,
+    "up_calls": 14,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "Signal table: Moderate labels",
+   "market": "spx",
+   "fd": false,
+   "d1": {
+    "calls": 3,
+    "flat": 0,
+    "sign_right": 2,
+    "sign_n": 3,
+    "n": 3,
+    "right": 2,
+    "wrong": 1,
+    "hit": 66.7,
+    "exp": 45.5,
+    "edge": 21.2,
+    "p": 0.5943,
+    "up_calls": 3,
+    "down_calls": 0
+   },
+   "d5": {
+    "calls": 2,
+    "flat": 0,
+    "sign_right": 0,
+    "sign_n": 2,
+    "n": 2,
+    "right": 0,
+    "wrong": 2,
+    "hit": 0.0,
+    "exp": 21.4,
+    "edge": -21.4,
+    "p": 0.7412,
+    "up_calls": 2,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "Signal table: Moderate or High labels",
+   "market": "spx",
+   "fd": false,
+   "d1": {
+    "calls": 5,
+    "flat": 1,
+    "sign_right": 3,
+    "sign_n": 5,
+    "n": 4,
+    "right": 2,
+    "wrong": 2,
+    "hit": 50.0,
+    "exp": 45.5,
+    "edge": 4.5,
+    "p": 1.0,
+    "up_calls": 4,
+    "down_calls": 0
+   },
+   "d5": {
+    "calls": 4,
+    "flat": 0,
+    "sign_right": 1,
+    "sign_n": 4,
+    "n": 4,
+    "right": 1,
+    "wrong": 3,
+    "hit": 25.0,
+    "exp": 21.4,
+    "edge": 3.6,
+    "p": 0.9379,
+    "up_calls": 4,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "Combined probability, all layers",
+   "market": "spx",
+   "fd": true,
+   "d1": {
+    "calls": 15,
+    "flat": 7,
+    "sign_right": 6,
+    "sign_n": 15,
+    "n": 8,
+    "right": 4,
+    "wrong": 4,
+    "hit": 50.0,
+    "exp": 45.5,
+    "edge": 4.5,
+    "p": 1.0,
+    "up_calls": 8,
+    "down_calls": 0
+   },
+   "d5": {
+    "calls": 11,
+    "flat": 0,
+    "sign_right": 3,
+    "sign_n": 11,
+    "n": 11,
+    "right": 3,
+    "wrong": 8,
+    "hit": 27.3,
+    "exp": 21.4,
+    "edge": 5.8,
+    "p": 0.8327,
+    "up_calls": 11,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "Combined probability, kept layers",
+   "market": "spx",
+   "fd": true,
+   "d1": {
+    "calls": 19,
+    "flat": 8,
+    "sign_right": 7,
+    "sign_n": 19,
+    "n": 11,
+    "right": 5,
+    "wrong": 6,
+    "hit": 45.5,
+    "exp": 45.5,
+    "edge": 0.0,
+    "p": 1.0,
+    "up_calls": 11,
+    "down_calls": 0
+   },
+   "d5": {
+    "calls": 14,
+    "flat": 0,
+    "sign_right": 3,
+    "sign_n": 14,
+    "n": 14,
+    "right": 3,
+    "wrong": 11,
+    "hit": 21.4,
+    "exp": 21.4,
+    "edge": 0.0,
+    "p": 1.0,
+    "up_calls": 14,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "Combined lean, every day (above / below base)",
+   "market": "spx",
+   "fd": true,
+   "d1": {
+    "calls": 19,
+    "flat": 8,
+    "sign_right": 7,
+    "sign_n": 19,
+    "n": 11,
+    "right": 5,
+    "wrong": 6,
+    "hit": 45.5,
+    "exp": 45.5,
+    "edge": 0.0,
+    "p": 1.0,
+    "up_calls": 11,
+    "down_calls": 0
+   },
+   "d5": {
+    "calls": 15,
+    "flat": 1,
+    "sign_right": 3,
+    "sign_n": 15,
+    "n": 14,
+    "right": 3,
+    "wrong": 11,
+    "hit": 21.4,
+    "exp": 21.4,
+    "edge": 0.0,
+    "p": 1.0,
+    "up_calls": 14,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "Combined probability, all layers: up calls",
+   "market": "spx",
+   "fd": false,
+   "d1": {
+    "calls": 15,
+    "flat": 7,
+    "sign_right": 6,
+    "sign_n": 15,
+    "n": 8,
+    "right": 4,
+    "wrong": 4,
+    "hit": 50.0,
+    "exp": 45.5,
+    "edge": 4.5,
+    "p": 1.0,
+    "up_calls": 8,
+    "down_calls": 0
+   },
+   "d5": {
+    "calls": 0,
+    "flat": 0,
+    "sign_right": 0,
+    "sign_n": 0,
+    "n": 0,
+    "right": 0,
+    "wrong": 0,
+    "hit": null,
+    "exp": null,
+    "edge": null,
+    "p": null,
+    "up_calls": 0,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "Supported catalogue rules (net bullish - bearish)",
+   "market": "spx",
+   "fd": true,
+   "d1": {
+    "calls": 18,
+    "flat": 8,
+    "sign_right": 7,
+    "sign_n": 18,
+    "n": 10,
+    "right": 5,
+    "wrong": 5,
+    "hit": 50.0,
+    "exp": 45.5,
+    "edge": 4.5,
+    "p": 1.0,
+    "up_calls": 10,
+    "down_calls": 0
+   },
+   "d5": {
+    "calls": 14,
+    "flat": 1,
+    "sign_right": 3,
+    "sign_n": 14,
+    "n": 13,
+    "right": 2,
+    "wrong": 11,
+    "hit": 15.4,
+    "exp": 21.4,
+    "edge": -6.0,
+    "p": 0.8123,
+    "up_calls": 13,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "Calendar-layer verdicts (net)",
+   "market": "spx",
+   "fd": true,
+   "d1": {
+    "calls": 11,
+    "flat": 5,
+    "sign_right": 6,
+    "sign_n": 11,
+    "n": 6,
+    "right": 5,
+    "wrong": 1,
+    "hit": 83.3,
+    "exp": 53.0,
+    "edge": 30.3,
+    "p": 0.2226,
+    "up_calls": 1,
+    "down_calls": 5
+   },
+   "d5": {
+    "calls": 8,
+    "flat": 0,
+    "sign_right": 5,
+    "sign_n": 8,
+    "n": 8,
+    "right": 5,
+    "wrong": 3,
+    "hit": 62.5,
+    "exp": 57.1,
+    "edge": 5.4,
+    "p": 0.8688,
+    "up_calls": 3,
+    "down_calls": 5
+   }
+  },
+  {
+   "layer": "USA Chandra bala",
+   "market": "spx",
+   "fd": true,
+   "d1": {
+    "calls": 19,
+    "flat": 8,
+    "sign_right": 9,
+    "sign_n": 19,
+    "n": 11,
+    "right": 6,
+    "wrong": 5,
+    "hit": 54.5,
+    "exp": 49.6,
+    "edge": 5.0,
+    "p": 0.7717,
+    "up_calls": 6,
+    "down_calls": 5
+   },
+   "d5": {
+    "calls": 15,
+    "flat": 1,
+    "sign_right": 3,
+    "sign_n": 15,
+    "n": 14,
+    "right": 2,
+    "wrong": 12,
+    "hit": 14.3,
+    "exp": 41.8,
+    "edge": -27.6,
+    "p": 0.2612,
+    "up_calls": 9,
+    "down_calls": 5
+   }
+  },
+  {
+   "layer": "USA Tara bala",
+   "market": "spx",
+   "fd": true,
+   "d1": {
+    "calls": 17,
+    "flat": 7,
+    "sign_right": 5,
+    "sign_n": 17,
+    "n": 10,
+    "right": 2,
+    "wrong": 8,
+    "hit": 20.0,
+    "exp": 51.8,
+    "edge": -31.8,
+    "p": 0.0565,
+    "up_calls": 3,
+    "down_calls": 7
+   },
+   "d5": {
+    "calls": 14,
+    "flat": 1,
+    "sign_right": 8,
+    "sign_n": 14,
+    "n": 13,
+    "right": 7,
+    "wrong": 6,
+    "hit": 53.8,
+    "exp": 47.8,
+    "edge": 6.0,
+    "p": 0.8123,
+    "up_calls": 7,
+    "down_calls": 6
+   }
+  },
+  {
+   "layer": "NYSE gochara",
+   "market": "spx",
+   "fd": true,
+   "d1": {
+    "calls": 19,
+    "flat": 8,
+    "sign_right": 12,
+    "sign_n": 19,
+    "n": 11,
+    "right": 6,
+    "wrong": 5,
+    "hit": 54.5,
+    "exp": 54.5,
+    "edge": 0.0,
+    "p": 1.0,
+    "up_calls": 0,
+    "down_calls": 11
+   },
+   "d5": {
+    "calls": 15,
+    "flat": 1,
+    "sign_right": 11,
+    "sign_n": 15,
+    "n": 14,
+    "right": 11,
+    "wrong": 3,
+    "hit": 78.6,
+    "exp": 78.6,
+    "edge": 0.0,
+    "p": 1.0,
+    "up_calls": 0,
+    "down_calls": 14
+   }
+  },
+  {
+   "layer": "NYSE Chandra bala",
+   "market": "spx",
+   "fd": true,
+   "d1": {
+    "calls": 19,
+    "flat": 8,
+    "sign_right": 8,
+    "sign_n": 19,
+    "n": 11,
+    "right": 4,
+    "wrong": 7,
+    "hit": 36.4,
+    "exp": 51.2,
+    "edge": -14.9,
+    "p": 0.3753,
+    "up_calls": 4,
+    "down_calls": 7
+   },
+   "d5": {
+    "calls": 15,
+    "flat": 1,
+    "sign_right": 9,
+    "sign_n": 15,
+    "n": 14,
+    "right": 8,
+    "wrong": 6,
+    "hit": 57.1,
+    "exp": 50.0,
+    "edge": 7.1,
+    "p": 0.7708,
+    "up_calls": 7,
+    "down_calls": 7
+   }
+  },
+  {
+   "layer": "Solar return: month view (bearish)",
+   "market": "spx",
+   "fd": true,
+   "d1": {
+    "calls": 19,
+    "flat": 8,
+    "sign_right": 12,
+    "sign_n": 19,
+    "n": 11,
+    "right": 6,
+    "wrong": 5,
+    "hit": 54.5,
+    "exp": 54.5,
+    "edge": 0.0,
+    "p": 1.0,
+    "up_calls": 0,
+    "down_calls": 11
+   },
+   "d5": {
+    "calls": 15,
+    "flat": 1,
+    "sign_right": 11,
+    "sign_n": 15,
+    "n": 14,
+    "right": 11,
+    "wrong": 3,
+    "hit": 78.6,
+    "exp": 78.6,
+    "edge": 0.0,
+    "p": 1.0,
+    "up_calls": 0,
+    "down_calls": 14
+   }
+  },
+  {
+   "layer": "Solar return: Jupiter sextile Venus (bullish)",
+   "market": "spx",
+   "fd": true,
+   "d1": {
+    "calls": 9,
+    "flat": 4,
+    "sign_right": 5,
+    "sign_n": 9,
+    "n": 5,
+    "right": 3,
+    "wrong": 2,
+    "hit": 60.0,
+    "exp": 45.5,
+    "edge": 14.5,
+    "p": 0.6647,
+    "up_calls": 5,
+    "down_calls": 0
+   },
+   "d5": {
+    "calls": 5,
+    "flat": 1,
+    "sign_right": 2,
+    "sign_n": 5,
+    "n": 4,
+    "right": 1,
+    "wrong": 3,
+    "hit": 25.0,
+    "exp": 21.4,
+    "edge": 3.6,
+    "p": 0.9379,
+    "up_calls": 4,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "Solar return: generated day call",
+   "market": "spx",
+   "fd": false,
+   "d1": {
+    "calls": 19,
+    "flat": 8,
+    "sign_right": 14,
+    "sign_n": 19,
+    "n": 11,
+    "right": 7,
+    "wrong": 4,
+    "hit": 63.6,
+    "exp": 52.1,
+    "edge": 11.6,
+    "p": 0.5512,
+    "up_calls": 3,
+    "down_calls": 8
+   },
+   "d5": {
+    "calls": 15,
+    "flat": 1,
+    "sign_right": 10,
+    "sign_n": 15,
+    "n": 14,
+    "right": 9,
+    "wrong": 5,
+    "hit": 64.3,
+    "exp": 70.4,
+    "edge": -6.1,
+    "p": 0.8028,
+    "up_calls": 2,
+    "down_calls": 12
+   }
+  },
+  {
+   "layer": "Signal table",
+   "market": "sensex",
+   "fd": true,
+   "d1": {
+    "calls": 14,
+    "flat": 4,
+    "sign_right": 11,
+    "sign_n": 14,
+    "n": 10,
+    "right": 8,
+    "wrong": 2,
+    "hit": 80.0,
+    "exp": 76.9,
+    "edge": 3.1,
+    "p": 1.0,
+    "up_calls": 10,
+    "down_calls": 0
+   },
+   "d5": {
+    "calls": 13,
+    "flat": 3,
+    "sign_right": 13,
+    "sign_n": 13,
+    "n": 10,
+    "right": 10,
+    "wrong": 0,
+    "hit": 100.0,
+    "exp": 100.0,
+    "edge": 0.0,
+    "p": null,
+    "up_calls": 10,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "Signal table: Moderate labels",
+   "market": "sensex",
+   "fd": false,
+   "d1": {
+    "calls": 3,
+    "flat": 1,
+    "sign_right": 2,
+    "sign_n": 3,
+    "n": 2,
+    "right": 1,
+    "wrong": 1,
+    "hit": 50.0,
+    "exp": 76.9,
+    "edge": -26.9,
+    "p": 0.4083,
+    "up_calls": 2,
+    "down_calls": 0
+   },
+   "d5": {
+    "calls": 2,
+    "flat": 0,
+    "sign_right": 2,
+    "sign_n": 2,
+    "n": 2,
+    "right": 2,
+    "wrong": 0,
+    "hit": 100.0,
+    "exp": 100.0,
+    "edge": 0.0,
+    "p": null,
+    "up_calls": 2,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "Signal table: Moderate or High labels",
+   "market": "sensex",
+   "fd": false,
+   "d1": {
+    "calls": 5,
+    "flat": 1,
+    "sign_right": 4,
+    "sign_n": 5,
+    "n": 4,
+    "right": 3,
+    "wrong": 1,
+    "hit": 75.0,
+    "exp": 76.9,
+    "edge": -1.9,
+    "p": 1.0,
+    "up_calls": 4,
+    "down_calls": 0
+   },
+   "d5": {
+    "calls": 4,
+    "flat": 0,
+    "sign_right": 4,
+    "sign_n": 4,
+    "n": 4,
+    "right": 4,
+    "wrong": 0,
+    "hit": 100.0,
+    "exp": 100.0,
+    "edge": 0.0,
+    "p": null,
+    "up_calls": 4,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "Combined probability, all layers",
+   "market": "sensex",
+   "fd": true,
+   "d1": {
+    "calls": 9,
+    "flat": 4,
+    "sign_right": 7,
+    "sign_n": 9,
+    "n": 5,
+    "right": 4,
+    "wrong": 1,
+    "hit": 80.0,
+    "exp": 76.9,
+    "edge": 3.1,
+    "p": 1.0,
+    "up_calls": 5,
+    "down_calls": 0
+   },
+   "d5": {
+    "calls": 4,
+    "flat": 0,
+    "sign_right": 4,
+    "sign_n": 4,
+    "n": 4,
+    "right": 4,
+    "wrong": 0,
+    "hit": 100.0,
+    "exp": 100.0,
+    "edge": 0.0,
+    "p": null,
+    "up_calls": 4,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "Combined probability, kept layers",
+   "market": "sensex",
+   "fd": true,
+   "d1": {
+    "calls": 5,
+    "flat": 1,
+    "sign_right": 4,
+    "sign_n": 5,
+    "n": 4,
+    "right": 3,
+    "wrong": 1,
+    "hit": 75.0,
+    "exp": 76.9,
+    "edge": -1.9,
+    "p": 1.0,
+    "up_calls": 4,
+    "down_calls": 0
+   },
+   "d5": {
+    "calls": 4,
+    "flat": 0,
+    "sign_right": 4,
+    "sign_n": 4,
+    "n": 4,
+    "right": 4,
+    "wrong": 0,
+    "hit": 100.0,
+    "exp": 100.0,
+    "edge": 0.0,
+    "p": null,
+    "up_calls": 4,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "Combined lean, every day (above / below base)",
+   "market": "sensex",
+   "fd": true,
+   "d1": {
+    "calls": 18,
+    "flat": 5,
+    "sign_right": 13,
+    "sign_n": 18,
+    "n": 13,
+    "right": 10,
+    "wrong": 3,
+    "hit": 76.9,
+    "exp": 68.6,
+    "edge": 8.3,
+    "p": 0.7404,
+    "up_calls": 11,
+    "down_calls": 2
+   },
+   "d5": {
+    "calls": 14,
+    "flat": 3,
+    "sign_right": 14,
+    "sign_n": 14,
+    "n": 11,
+    "right": 11,
+    "wrong": 0,
+    "hit": 100.0,
+    "exp": 100.0,
+    "edge": 0.0,
+    "p": null,
+    "up_calls": 11,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "Combined probability, all layers: up calls",
+   "market": "sensex",
+   "fd": false,
+   "d1": {
+    "calls": 9,
+    "flat": 4,
+    "sign_right": 7,
+    "sign_n": 9,
+    "n": 5,
+    "right": 4,
+    "wrong": 1,
+    "hit": 80.0,
+    "exp": 76.9,
+    "edge": 3.1,
+    "p": 1.0,
+    "up_calls": 5,
+    "down_calls": 0
+   },
+   "d5": {
+    "calls": 0,
+    "flat": 0,
+    "sign_right": 0,
+    "sign_n": 0,
+    "n": 0,
+    "right": 0,
+    "wrong": 0,
+    "hit": null,
+    "exp": null,
+    "edge": null,
+    "p": null,
+    "up_calls": 0,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "Supported catalogue rules (net bullish - bearish)",
+   "market": "sensex",
+   "fd": true,
+   "d1": {
+    "calls": 18,
+    "flat": 5,
+    "sign_right": 14,
+    "sign_n": 18,
+    "n": 13,
+    "right": 10,
+    "wrong": 3,
+    "hit": 76.9,
+    "exp": 76.9,
+    "edge": 0.0,
+    "p": 1.0,
+    "up_calls": 13,
+    "down_calls": 0
+   },
+   "d5": {
+    "calls": 14,
+    "flat": 3,
+    "sign_right": 14,
+    "sign_n": 14,
+    "n": 11,
+    "right": 11,
+    "wrong": 0,
+    "hit": 100.0,
+    "exp": 100.0,
+    "edge": 0.0,
+    "p": null,
+    "up_calls": 11,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "Calendar-layer verdicts (net)",
+   "market": "sensex",
+   "fd": true,
+   "d1": {
+    "calls": 5,
+    "flat": 3,
+    "sign_right": 1,
+    "sign_n": 5,
+    "n": 2,
+    "right": 0,
+    "wrong": 2,
+    "hit": 0.0,
+    "exp": 23.1,
+    "edge": -23.1,
+    "p": 1.0,
+    "up_calls": 0,
+    "down_calls": 2
+   },
+   "d5": {
+    "calls": 4,
+    "flat": 2,
+    "sign_right": 2,
+    "sign_n": 4,
+    "n": 2,
+    "right": 1,
+    "wrong": 1,
+    "hit": 50.0,
+    "exp": 50.0,
+    "edge": 0.0,
+    "p": null,
+    "up_calls": 1,
+    "down_calls": 1
+   }
+  },
+  {
+   "layer": "Signal table",
+   "market": "gold",
+   "fd": true,
+   "d1": {
+    "calls": 11,
+    "flat": 1,
+    "sign_right": 6,
+    "sign_n": 11,
+    "n": 10,
+    "right": 5,
+    "wrong": 5,
+    "hit": 50.0,
+    "exp": 38.2,
+    "edge": 11.8,
+    "p": 0.5129,
+    "up_calls": 9,
+    "down_calls": 1
+   },
+   "d5": {
+    "calls": 11,
+    "flat": 1,
+    "sign_right": 4,
+    "sign_n": 11,
+    "n": 10,
+    "right": 3,
+    "wrong": 7,
+    "hit": 30.0,
+    "exp": 21.4,
+    "edge": 8.6,
+    "p": 0.7677,
+    "up_calls": 10,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "Signal table: Moderate labels",
+   "market": "gold",
+   "fd": false,
+   "d1": {
+    "calls": 1,
+    "flat": 0,
+    "sign_right": 1,
+    "sign_n": 1,
+    "n": 1,
+    "right": 1,
+    "wrong": 0,
+    "hit": 100.0,
+    "exp": 35.3,
+    "edge": 64.7,
+    "p": 0.3529,
+    "up_calls": 1,
+    "down_calls": 0
+   },
+   "d5": {
+    "calls": 1,
+    "flat": 0,
+    "sign_right": 1,
+    "sign_n": 1,
+    "n": 1,
+    "right": 1,
+    "wrong": 0,
+    "hit": 100.0,
+    "exp": 21.4,
+    "edge": 78.6,
+    "p": 0.3918,
+    "up_calls": 1,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "Signal table: Moderate or High labels",
+   "market": "gold",
+   "fd": false,
+   "d1": {
+    "calls": 2,
+    "flat": 0,
+    "sign_right": 1,
+    "sign_n": 2,
+    "n": 2,
+    "right": 1,
+    "wrong": 1,
+    "hit": 50.0,
+    "exp": 35.3,
+    "edge": 14.7,
+    "p": 1.0,
+    "up_calls": 2,
+    "down_calls": 0
+   },
+   "d5": {
+    "calls": 2,
+    "flat": 0,
+    "sign_right": 2,
+    "sign_n": 2,
+    "n": 2,
+    "right": 2,
+    "wrong": 0,
+    "hit": 100.0,
+    "exp": 21.4,
+    "edge": 78.6,
+    "p": 0.2259,
+    "up_calls": 2,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "Combined probability, all layers",
+   "market": "gold",
+   "fd": true,
+   "d1": {
+    "calls": 1,
+    "flat": 0,
+    "sign_right": 1,
+    "sign_n": 1,
+    "n": 1,
+    "right": 1,
+    "wrong": 0,
+    "hit": 100.0,
+    "exp": 35.3,
+    "edge": 64.7,
+    "p": 0.3529,
+    "up_calls": 1,
+    "down_calls": 0
+   },
+   "d5": {
+    "calls": 2,
+    "flat": 0,
+    "sign_right": 2,
+    "sign_n": 2,
+    "n": 2,
+    "right": 2,
+    "wrong": 0,
+    "hit": 100.0,
+    "exp": 50.0,
+    "edge": 50.0,
+    "p": 0.4409,
+    "up_calls": 1,
+    "down_calls": 1
+   }
+  },
+  {
+   "layer": "Combined probability, kept layers",
+   "market": "gold",
+   "fd": true,
+   "d1": {
+    "calls": 0,
+    "flat": 0,
+    "sign_right": 0,
+    "sign_n": 0,
+    "n": 0,
+    "right": 0,
+    "wrong": 0,
+    "hit": null,
+    "exp": null,
+    "edge": null,
+    "p": null,
+    "up_calls": 0,
+    "down_calls": 0
+   },
+   "d5": {
+    "calls": 1,
+    "flat": 0,
+    "sign_right": 1,
+    "sign_n": 1,
+    "n": 1,
+    "right": 1,
+    "wrong": 0,
+    "hit": 100.0,
+    "exp": 21.4,
+    "edge": 78.6,
+    "p": 0.3918,
+    "up_calls": 1,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "Combined lean, every day (above / below base)",
+   "market": "gold",
+   "fd": true,
+   "d1": {
+    "calls": 19,
+    "flat": 2,
+    "sign_right": 11,
+    "sign_n": 19,
+    "n": 17,
+    "right": 11,
+    "wrong": 6,
+    "hit": 64.7,
+    "exp": 57.8,
+    "edge": 6.9,
+    "p": 0.6191,
+    "up_calls": 4,
+    "down_calls": 13
+   },
+   "d5": {
+    "calls": 15,
+    "flat": 1,
+    "sign_right": 14,
+    "sign_n": 15,
+    "n": 14,
+    "right": 13,
+    "wrong": 1,
+    "hit": 92.9,
+    "exp": 70.4,
+    "edge": 22.4,
+    "p": 0.3599,
+    "up_calls": 2,
+    "down_calls": 12
+   }
+  },
+  {
+   "layer": "Combined probability, all layers: up calls",
+   "market": "gold",
+   "fd": false,
+   "d1": {
+    "calls": 1,
+    "flat": 0,
+    "sign_right": 1,
+    "sign_n": 1,
+    "n": 1,
+    "right": 1,
+    "wrong": 0,
+    "hit": 100.0,
+    "exp": 35.3,
+    "edge": 64.7,
+    "p": 0.3529,
+    "up_calls": 1,
+    "down_calls": 0
+   },
+   "d5": {
+    "calls": 0,
+    "flat": 0,
+    "sign_right": 0,
+    "sign_n": 0,
+    "n": 0,
+    "right": 0,
+    "wrong": 0,
+    "hit": null,
+    "exp": null,
+    "edge": null,
+    "p": null,
+    "up_calls": 0,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "Supported catalogue rules (net bullish - bearish)",
+   "market": "gold",
+   "fd": true,
+   "d1": {
+    "calls": 11,
+    "flat": 1,
+    "sign_right": 5,
+    "sign_n": 11,
+    "n": 10,
+    "right": 4,
+    "wrong": 6,
+    "hit": 40.0,
+    "exp": 35.3,
+    "edge": 4.7,
+    "p": 0.7494,
+    "up_calls": 10,
+    "down_calls": 0
+   },
+   "d5": {
+    "calls": 11,
+    "flat": 0,
+    "sign_right": 3,
+    "sign_n": 11,
+    "n": 11,
+    "right": 3,
+    "wrong": 8,
+    "hit": 27.3,
+    "exp": 21.4,
+    "edge": 5.8,
+    "p": 0.8327,
+    "up_calls": 11,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "Calendar-layer verdicts (net)",
+   "market": "gold",
+   "fd": true,
+   "d1": {
+    "calls": 9,
+    "flat": 0,
+    "sign_right": 4,
+    "sign_n": 9,
+    "n": 9,
+    "right": 4,
+    "wrong": 5,
+    "hit": 44.4,
+    "exp": 35.3,
+    "edge": 9.2,
+    "p": 0.729,
+    "up_calls": 9,
+    "down_calls": 0
+   },
+   "d5": {
+    "calls": 9,
+    "flat": 0,
+    "sign_right": 3,
+    "sign_n": 9,
+    "n": 9,
+    "right": 3,
+    "wrong": 6,
+    "hit": 33.3,
+    "exp": 21.4,
+    "edge": 11.9,
+    "p": 0.6971,
+    "up_calls": 9,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "Signal table",
+   "market": "silver",
+   "fd": true,
+   "d1": {
+    "calls": 10,
+    "flat": 1,
+    "sign_right": 5,
+    "sign_n": 10,
+    "n": 9,
+    "right": 4,
+    "wrong": 5,
+    "hit": 44.4,
+    "exp": 38.9,
+    "edge": 5.6,
+    "p": 0.7427,
+    "up_calls": 9,
+    "down_calls": 0
+   },
+   "d5": {
+    "calls": 10,
+    "flat": 1,
+    "sign_right": 3,
+    "sign_n": 10,
+    "n": 9,
+    "right": 3,
+    "wrong": 6,
+    "hit": 33.3,
+    "exp": 21.4,
+    "edge": 11.9,
+    "p": 0.6971,
+    "up_calls": 9,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "Signal table: High labels",
+   "market": "silver",
+   "fd": false,
+   "d1": {
+    "calls": 10,
+    "flat": 1,
+    "sign_right": 5,
+    "sign_n": 10,
+    "n": 9,
+    "right": 4,
+    "wrong": 5,
+    "hit": 44.4,
+    "exp": 38.9,
+    "edge": 5.6,
+    "p": 0.7427,
+    "up_calls": 9,
+    "down_calls": 0
+   },
+   "d5": {
+    "calls": 10,
+    "flat": 1,
+    "sign_right": 3,
+    "sign_n": 10,
+    "n": 9,
+    "right": 3,
+    "wrong": 6,
+    "hit": 33.3,
+    "exp": 21.4,
+    "edge": 11.9,
+    "p": 0.6971,
+    "up_calls": 9,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "Signal table: Moderate or High labels",
+   "market": "silver",
+   "fd": false,
+   "d1": {
+    "calls": 10,
+    "flat": 1,
+    "sign_right": 5,
+    "sign_n": 10,
+    "n": 9,
+    "right": 4,
+    "wrong": 5,
+    "hit": 44.4,
+    "exp": 38.9,
+    "edge": 5.6,
+    "p": 0.7427,
+    "up_calls": 9,
+    "down_calls": 0
+   },
+   "d5": {
+    "calls": 10,
+    "flat": 1,
+    "sign_right": 3,
+    "sign_n": 10,
+    "n": 9,
+    "right": 3,
+    "wrong": 6,
+    "hit": 33.3,
+    "exp": 21.4,
+    "edge": 11.9,
+    "p": 0.6971,
+    "up_calls": 9,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "Combined lean, every day (above / below base)",
+   "market": "silver",
+   "fd": true,
+   "d1": {
+    "calls": 19,
+    "flat": 1,
+    "sign_right": 11,
+    "sign_n": 19,
+    "n": 18,
+    "right": 10,
+    "wrong": 8,
+    "hit": 55.6,
+    "exp": 50.0,
+    "edge": 5.6,
+    "p": 0.8095,
+    "up_calls": 9,
+    "down_calls": 9
+   },
+   "d5": {
+    "calls": 15,
+    "flat": 1,
+    "sign_right": 8,
+    "sign_n": 15,
+    "n": 14,
+    "right": 8,
+    "wrong": 6,
+    "hit": 57.1,
+    "exp": 41.8,
+    "edge": 15.3,
+    "p": 0.5325,
+    "up_calls": 9,
+    "down_calls": 5
+   }
+  },
+  {
+   "layer": "Supported catalogue rules (net bullish - bearish)",
+   "market": "silver",
+   "fd": true,
+   "d1": {
+    "calls": 10,
+    "flat": 1,
+    "sign_right": 5,
+    "sign_n": 10,
+    "n": 9,
+    "right": 4,
+    "wrong": 5,
+    "hit": 44.4,
+    "exp": 38.9,
+    "edge": 5.6,
+    "p": 0.7427,
+    "up_calls": 9,
+    "down_calls": 0
+   },
+   "d5": {
+    "calls": 10,
+    "flat": 1,
+    "sign_right": 3,
+    "sign_n": 10,
+    "n": 9,
+    "right": 3,
+    "wrong": 6,
+    "hit": 33.3,
+    "exp": 21.4,
+    "edge": 11.9,
+    "p": 0.6971,
+    "up_calls": 9,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "NYSE Tara bala",
+   "market": "spx",
+   "fd": true,
+   "d1": {
+    "calls": 17,
+    "flat": 8,
+    "sign_right": 6,
+    "sign_n": 17,
+    "n": 9,
+    "right": 3,
+    "wrong": 6,
+    "hit": 33.3,
+    "exp": 48.5,
+    "edge": -15.2,
+    "p": 0.5078,
+    "up_calls": 6,
+    "down_calls": 3
+   },
+   "d5": {
+    "calls": 13,
+    "flat": 1,
+    "sign_right": 7,
+    "sign_n": 13,
+    "n": 12,
+    "right": 6,
+    "wrong": 6,
+    "hit": 50.0,
+    "exp": 45.2,
+    "edge": 4.8,
+    "p": 0.8573,
+    "up_calls": 7,
+    "down_calls": 5
+   }
+  },
+  {
+   "layer": "Signal table: High labels",
+   "market": "gold",
+   "fd": false,
+   "d1": {
+    "calls": 1,
+    "flat": 0,
+    "sign_right": 0,
+    "sign_n": 1,
+    "n": 1,
+    "right": 0,
+    "wrong": 1,
+    "hit": 0.0,
+    "exp": 35.3,
+    "edge": -35.3,
+    "p": 1.0,
+    "up_calls": 1,
+    "down_calls": 0
+   },
+   "d5": {
+    "calls": 1,
+    "flat": 0,
+    "sign_right": 1,
+    "sign_n": 1,
+    "n": 1,
+    "right": 1,
+    "wrong": 0,
+    "hit": 100.0,
+    "exp": 21.4,
+    "edge": 78.6,
+    "p": 0.3918,
+    "up_calls": 1,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "Model v1.0 (Ch.41 + Shadbala)",
+   "market": "gold",
+   "fd": true,
+   "d1": {
+    "calls": 15,
+    "flat": 2,
+    "sign_right": 6,
+    "sign_n": 15,
+    "n": 13,
+    "right": 4,
+    "wrong": 9,
+    "hit": 30.8,
+    "exp": 35.3,
+    "edge": -4.5,
+    "p": 1.0,
+    "up_calls": 13,
+    "down_calls": 0
+   },
+   "d5": {
+    "calls": 12,
+    "flat": 0,
+    "sign_right": 2,
+    "sign_n": 12,
+    "n": 12,
+    "right": 2,
+    "wrong": 10,
+    "hit": 16.7,
+    "exp": 21.4,
+    "edge": -4.8,
+    "p": 0.8573,
+    "up_calls": 12,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "Calendar-layer verdicts (net)",
+   "market": "silver",
+   "fd": true,
+   "d1": {
+    "calls": 14,
+    "flat": 1,
+    "sign_right": 4,
+    "sign_n": 14,
+    "n": 13,
+    "right": 4,
+    "wrong": 9,
+    "hit": 30.8,
+    "exp": 42.3,
+    "edge": -11.5,
+    "p": 0.5709,
+    "up_calls": 11,
+    "down_calls": 2
+   },
+   "d5": {
+    "calls": 12,
+    "flat": 1,
+    "sign_right": 1,
+    "sign_n": 12,
+    "n": 11,
+    "right": 0,
+    "wrong": 11,
+    "hit": 0.0,
+    "exp": 31.8,
+    "edge": -31.8,
+    "p": 0.2501,
+    "up_calls": 9,
+    "down_calls": 2
+   }
+  },
+  {
+   "layer": "Signal table: Low labels",
+   "market": "gold",
+   "fd": false,
+   "d1": {
+    "calls": 9,
+    "flat": 1,
+    "sign_right": 5,
+    "sign_n": 9,
+    "n": 8,
+    "right": 4,
+    "wrong": 4,
+    "hit": 50.0,
+    "exp": 39.0,
+    "edge": 11.0,
+    "p": 0.7128,
+    "up_calls": 7,
+    "down_calls": 1
+   },
+   "d5": {
+    "calls": 9,
+    "flat": 1,
+    "sign_right": 2,
+    "sign_n": 9,
+    "n": 8,
+    "right": 1,
+    "wrong": 7,
+    "hit": 12.5,
+    "exp": 21.4,
+    "edge": -8.9,
+    "p": 0.7831,
+    "up_calls": 8,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "Signal table: High labels",
+   "market": "spx",
+   "fd": false,
+   "d1": {
+    "calls": 2,
+    "flat": 1,
+    "sign_right": 1,
+    "sign_n": 2,
+    "n": 1,
+    "right": 0,
+    "wrong": 1,
+    "hit": 0.0,
+    "exp": 45.5,
+    "edge": -45.5,
+    "p": 1.0,
+    "up_calls": 1,
+    "down_calls": 0
+   },
+   "d5": {
+    "calls": 2,
+    "flat": 0,
+    "sign_right": 1,
+    "sign_n": 2,
+    "n": 2,
+    "right": 1,
+    "wrong": 1,
+    "hit": 50.0,
+    "exp": 21.4,
+    "edge": 28.6,
+    "p": 0.6597,
+    "up_calls": 2,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "Signal table: High labels",
+   "market": "sensex",
+   "fd": false,
+   "d1": {
+    "calls": 2,
+    "flat": 0,
+    "sign_right": 2,
+    "sign_n": 2,
+    "n": 2,
+    "right": 2,
+    "wrong": 0,
+    "hit": 100.0,
+    "exp": 76.9,
+    "edge": 23.1,
+    "p": 1.0,
+    "up_calls": 2,
+    "down_calls": 0
+   },
+   "d5": {
+    "calls": 2,
+    "flat": 0,
+    "sign_right": 2,
+    "sign_n": 2,
+    "n": 2,
+    "right": 2,
+    "wrong": 0,
+    "hit": 100.0,
+    "exp": 100.0,
+    "edge": 0.0,
+    "p": null,
+    "up_calls": 2,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "Signal table: Low labels",
+   "market": "spx",
+   "fd": false,
+   "d1": {
+    "calls": 10,
+    "flat": 4,
+    "sign_right": 2,
+    "sign_n": 10,
+    "n": 6,
+    "right": 2,
+    "wrong": 4,
+    "hit": 33.3,
+    "exp": 45.5,
+    "edge": -12.1,
+    "p": 0.6952,
+    "up_calls": 6,
+    "down_calls": 0
+   },
+   "d5": {
+    "calls": 10,
+    "flat": 0,
+    "sign_right": 2,
+    "sign_n": 10,
+    "n": 10,
+    "right": 2,
+    "wrong": 8,
+    "hit": 20.0,
+    "exp": 21.4,
+    "edge": -1.4,
+    "p": 0.9607,
+    "up_calls": 10,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "Signal table: Low labels",
+   "market": "sensex",
+   "fd": false,
+   "d1": {
+    "calls": 9,
+    "flat": 3,
+    "sign_right": 7,
+    "sign_n": 9,
+    "n": 6,
+    "right": 5,
+    "wrong": 1,
+    "hit": 83.3,
+    "exp": 76.9,
+    "edge": 6.4,
+    "p": 1.0,
+    "up_calls": 6,
+    "down_calls": 0
+   },
+   "d5": {
+    "calls": 9,
+    "flat": 3,
+    "sign_right": 9,
+    "sign_n": 9,
+    "n": 6,
+    "right": 6,
+    "wrong": 0,
+    "hit": 100.0,
+    "exp": 100.0,
+    "edge": 0.0,
+    "p": null,
+    "up_calls": 6,
+    "down_calls": 0
+   }
+  },
+  {
+   "layer": "Mars-Jupiter-node lead (bearish)",
+   "market": "spx",
+   "fd": true,
+   "d1": {
+    "calls": 11,
+    "flat": 5,
+    "sign_right": 9,
+    "sign_n": 11,
+    "n": 6,
+    "right": 4,
+    "wrong": 2,
+    "hit": 66.7,
+    "exp": 54.5,
+    "edge": 12.1,
+    "p": 0.6952,
+    "up_calls": 0,
+    "down_calls": 6
+   },
+   "d5": {
+    "calls": 7,
+    "flat": 0,
+    "sign_right": 6,
+    "sign_n": 7,
+    "n": 7,
+    "right": 6,
+    "wrong": 1,
+    "hit": 85.7,
+    "exp": 78.6,
+    "edge": 7.1,
+    "p": 0.8368,
+    "up_calls": 0,
+    "down_calls": 7
+   }
+  },
+  {
+   "layer": "Solar return: day-by-day forecasts",
+   "market": "spx",
+   "fd": true,
+   "d1": {
+    "calls": 9,
+    "flat": 3,
+    "sign_right": 7,
+    "sign_n": 9,
+    "n": 6,
+    "right": 4,
+    "wrong": 2,
+    "hit": 66.7,
+    "exp": 51.5,
+    "edge": 15.2,
+    "p": 0.687,
+    "up_calls": 2,
+    "down_calls": 4
+   },
+   "d5": {
+    "calls": 5,
+    "flat": 0,
+    "sign_right": 5,
+    "sign_n": 5,
+    "n": 5,
+    "right": 5,
+    "wrong": 0,
+    "hit": 100.0,
+    "exp": 67.1,
+    "edge": 32.9,
+    "p": 0.4233,
+    "up_calls": 1,
+    "down_calls": 4
+   }
+  },
+  {
+   "layer": "Solar return: Sun square Mars (bearish)",
+   "market": "spx",
+   "fd": true,
+   "d1": {
+    "calls": 7,
+    "flat": 2,
+    "sign_right": 6,
+    "sign_n": 7,
+    "n": 5,
+    "right": 4,
+    "wrong": 1,
+    "hit": 80.0,
+    "exp": 54.5,
+    "edge": 25.5,
+    "p": 0.3853,
+    "up_calls": 0,
+    "down_calls": 5
+   },
+   "d5": {
+    "calls": 5,
+    "flat": 0,
+    "sign_right": 4,
+    "sign_n": 5,
+    "n": 5,
+    "right": 4,
+    "wrong": 1,
+    "hit": 80.0,
+    "exp": 78.6,
+    "edge": 1.4,
+    "p": 0.9722,
+    "up_calls": 0,
+    "down_calls": 5
+   }
+  }
+ ],
+ "check_fd": {
+  "matched": 33,
+  "of": 33,
+  "diffs": []
+ },
+ "fd_pooled": {
+  "spx": {
+   "d1_right": 110,
+   "d1_calls": 224,
+   "d5_right": 83,
+   "d5_calls": 170
+  },
+  "all": {
+   "d1_right": 183,
+   "d1_calls": 356,
+   "d5_right": 142,
+   "d5_calls": 287
+  },
+  "sensex": {
+   "d1_right": 37,
+   "d1_calls": 51,
+   "d5_right": 37,
+   "d5_calls": 39
+  },
+  "gold": {
+   "d1_right": 22,
+   "d1_calls": 47,
+   "d5_right": 15,
+   "d5_calls": 46
+  },
+  "silver": {
+   "d1_right": 14,
+   "d1_calls": 34,
+   "d5_right": 7,
+   "d5_calls": 32
+  }
+ },
+ "leans": {
+  "spx": {
+   "n": 4,
+   "right": 2,
+   "wrong": 2,
+   "hit": 50.0,
+   "exp": 50.0,
+   "edge": 0.0,
+   "p": 1.0,
+   "up_calls": 2,
+   "down_calls": 2
+  },
+  "sensex": {
+   "n": 8,
+   "right": 3,
+   "wrong": 5,
+   "hit": 37.5,
+   "exp": 29.8,
+   "edge": 7.7,
+   "p": 0.6731,
+   "up_calls": 1,
+   "down_calls": 7
+  },
+  "gold": {
+   "n": 5,
+   "right": 2,
+   "wrong": 3,
+   "hit": 40.0,
+   "exp": 52.9,
+   "edge": -12.9,
+   "p": 0.654,
+   "up_calls": 2,
+   "down_calls": 3
+  },
+  "silver": {
+   "n": 13,
+   "right": 2,
+   "wrong": 11,
+   "hit": 15.4,
+   "exp": 35.6,
+   "edge": -20.2,
+   "p": 0.1382,
+   "up_calls": 11,
+   "down_calls": 2
+  },
+  "all": {
+   "n": 30,
+   "right": 9,
+   "wrong": 21,
+   "hit": 30.0,
+   "exp": 38.9,
+   "edge": -8.9,
+   "p": 0.3242,
+   "up_calls": 16,
+   "down_calls": 14
+  }
+ },
+ "lean_list": [
+  {
+   "date": "2026-11-01",
+   "event": "Yoga Shubha begins",
+   "market": "spx",
+   "horizon": "next session",
+   "lean": "down",
+   "hist": "45% up vs 54%, p 0.0158",
+   "move": -0.51,
+   "result": "passed"
+  },
+  {
+   "date": "2026-11-01",
+   "event": "Yoga Shubha begins",
+   "market": "sensex",
+   "horizon": "next session",
+   "lean": "down",
+   "hist": "48% up vs 55%, p 0.0326",
+   "move": 1.66,
+   "result": "failed"
+  },
+  {
+   "date": "2026-11-01",
+   "event": "Moon\u2013Pluto exact opposition",
+   "market": "gold",
+   "horizon": "next session",
+   "lean": "down",
+   "hist": "47% up vs 55%, p 0.0408",
+   "move": 1.81,
+   "result": "failed"
+  },
+  {
+   "date": "2026-11-01",
+   "event": "Moon\u2013Uranus exact sextile",
+   "market": "sensex",
+   "horizon": "next session",
+   "lean": "down",
+   "hist": "49% up vs 55%, p 0.0308",
+   "move": 1.66,
+   "result": "failed"
+  },
+  {
+   "date": "2026-11-01",
+   "event": "Moon enters Ashlesha",
+   "market": "silver",
+   "horizon": "next session",
+   "lean": "down",
+   "hist": "47% up vs 54%, p 0.0352",
+   "move": 3.31,
+   "result": "failed"
+  },
+  {
+   "date": "2026-11-04",
+   "event": "Venus\u2013Jupiter exact sextile",
+   "market": "sensex",
+   "horizon": "next session",
+   "lean": "down",
+   "hist": "34% up vs 54%, p 0.0328",
+   "move": 2.6,
+   "result": "failed"
+  },
+  {
+   "date": "2026-11-04",
+   "event": "Sun\u2013Mercury exact conjunction",
+   "market": "sensex",
+   "horizon": "next session",
+   "lean": "down",
+   "hist": "44% up vs 55%, p 0.0364",
+   "move": 2.6,
+   "result": "failed"
+  },
+  {
+   "date": "2026-11-06",
+   "event": "Sun enters Vishakha",
+   "market": "spx",
+   "horizon": "next session",
+   "lean": "up",
+   "hist": "85% up vs 53%, p 0.037",
+   "move": 0.31,
+   "result": "small"
+  },
+  {
+   "date": "2026-11-09",
+   "event": "Moon enters Scorpio",
+   "market": "spx",
+   "horizon": "next session",
+   "lean": "down",
+   "hist": "46% up vs 55%, p 0.0288",
+   "move": -0.38,
+   "result": "small"
+  },
+  {
+   "date": "2026-11-09",
+   "event": "Yoga Shobhana begins",
+   "market": "gold",
+   "horizon": "next session",
+   "lean": "down",
+   "hist": "46% up vs 54%, p 0.019",
+   "move": -2.05,
+   "result": "passed"
+  },
+  {
+   "date": "2026-11-09",
+   "event": "Moon enters Anuradha",
+   "market": "spx",
+   "horizon": "next session",
+   "lean": "down",
+   "hist": "42% up vs 54%, p 0.0014",
+   "move": -0.38,
+   "result": "small"
+  },
+  {
+   "date": "2026-11-14",
+   "event": "Moon enters Capricorn",
+   "market": "silver",
+   "horizon": "5 sessions",
+   "lean": "up",
+   "hist": "60% up vs 54%, p 0.0406",
+   "move": -16.31,
+   "result": "failed"
+  },
+  {
+   "date": "2026-11-15",
+   "event": "Moon enters Shravana",
+   "market": "silver",
+   "horizon": "5 sessions",
+   "lean": "up",
+   "hist": "62% up vs 54%, p 0.0042",
+   "move": -16.31,
+   "result": "failed"
+  },
+  {
+   "date": "2026-11-16",
+   "event": "Moon enters Dhanishta",
+   "market": "silver",
+   "horizon": "5 sessions",
+   "lean": "up",
+   "hist": "61% up vs 54%, p 0.026",
+   "move": -7.78,
+   "result": "failed"
+  },
+  {
+   "date": "2026-11-16",
+   "event": "Yoga Dhruva begins",
+   "market": "sensex",
+   "horizon": "5 sessions",
+   "lean": "up",
+   "hist": "64% up vs 58%, p 0.0334",
+   "move": 0.4,
+   "result": "small"
+  },
+  {
+   "date": "2026-11-17",
+   "event": "Moon enters Aquarius",
+   "market": "silver",
+   "horizon": "5 sessions",
+   "lean": "up",
+   "hist": "60% up vs 54%, p 0.0298",
+   "move": -7.78,
+   "result": "failed"
+  },
+  {
+   "date": "2026-11-17",
+   "event": "Yoga Vyaghata begins",
+   "market": "silver",
+   "horizon": "next session",
+   "lean": "up",
+   "hist": "61% up vs 54%, p 0.0366",
+   "move": -4.84,
+   "result": "failed"
+  },
+  {
+   "date": "2026-11-18",
+   "event": "Moon enters Purva Bhadrapada",
+   "market": "silver",
+   "horizon": "next session",
+   "lean": "up",
+   "hist": "63% up vs 54%, p 0.0034",
+   "move": -1.51,
+   "result": "failed"
+  },
+  {
+   "date": "2026-11-18",
+   "event": "Yoga Harshana begins",
+   "market": "spx",
+   "horizon": "next session",
+   "lean": "up",
+   "hist": "62% up vs 54%, p 0.0314",
+   "move": -2.02,
+   "result": "failed"
+  },
+  {
+   "date": "2026-11-19",
+   "event": "Moon enters Pisces",
+   "market": "silver",
+   "horizon": "next session",
+   "lean": "up",
+   "hist": "63% up vs 54%, p 0.0048",
+   "move": -7.41,
+   "result": "failed"
+  },
+  {
+   "date": "2026-11-19",
+   "event": "Sun enters Anuradha",
+   "market": "sensex",
+   "horizon": "next session",
+   "lean": "down",
+   "hist": "24% up vs 54%, p 0.0194",
+   "move": 1.08,
+   "result": "failed"
+  },
+  {
+   "date": "2026-11-19",
+   "event": "Yoga Vajra begins",
+   "market": "gold",
+   "horizon": "next session",
+   "lean": "up",
+   "hist": "65% up vs 55%, p 0.0032",
+   "move": -4.62,
+   "result": "failed"
+  },
+  {
+   "date": "2026-11-19",
+   "event": "Moon enters Uttara Bhadrapada",
+   "market": "silver",
+   "horizon": "next session",
+   "lean": "up",
+   "hist": "63% up vs 54%, p 0.004",
+   "move": -7.41,
+   "result": "failed"
+  },
+  {
+   "date": "2026-11-20",
+   "event": "Moon\u2013Neptune exact conjunction",
+   "market": "silver",
+   "horizon": "5 sessions",
+   "lean": "up",
+   "hist": "60% up vs 54%, p 0.0304",
+   "move": -1.39,
+   "result": "failed"
+  },
+  {
+   "date": "2026-11-20",
+   "event": "Moon\u2013Uranus exact sextile",
+   "market": "sensex",
+   "horizon": "next session",
+   "lean": "down",
+   "hist": "49% up vs 55%, p 0.0308",
+   "move": -1.77,
+   "result": "passed"
+  },
+  {
+   "date": "2026-11-20",
+   "event": "Yoga Siddhi begins",
+   "market": "silver",
+   "horizon": "next session",
+   "lean": "up",
+   "hist": "60% up vs 54%, p 0.0298",
+   "move": 5.15,
+   "result": "passed"
+  },
+  {
+   "date": "2026-11-21",
+   "event": "Shukla Trayodashi begins",
+   "market": "sensex",
+   "horizon": "next session",
+   "lean": "down",
+   "hist": "47% up vs 55%, p 0.0448",
+   "move": -1.77,
+   "result": "passed"
+  },
+  {
+   "date": "2026-11-22",
+   "event": "Venus enters Libra",
+   "market": "spx",
+   "horizon": "next session",
+   "lean": "up",
+   "hist": "92% up vs 52%, p 0.0054",
+   "move": 4.73,
+   "result": "passed"
+  },
+  {
+   "date": "2026-11-23",
+   "event": "Moon enters Taurus",
+   "market": "sensex",
+   "horizon": "next session",
+   "lean": "up",
+   "hist": "62% up vs 55%, p 0.0282",
+   "move": 1.82,
+   "result": "passed"
+  },
+  {
+   "date": "2026-11-25",
+   "event": "Krishna Dwitiya begins",
+   "market": "gold",
+   "horizon": "next session",
+   "lean": "up",
+   "hist": "64% up vs 55%, p 0.0122",
+   "move": -0.73,
+   "result": "failed"
+  },
+  {
+   "date": "2026-11-25",
+   "event": "Krishna Dwitiya begins",
+   "market": "silver",
+   "horizon": "next session",
+   "lean": "up",
+   "hist": "64% up vs 54%, p 0.0024",
+   "move": -1.74,
+   "result": "failed"
+  },
+  {
+   "date": "2026-11-25",
+   "event": "Sun\u2013Pluto exact sextile",
+   "market": "gold",
+   "horizon": "next session",
+   "lean": "down",
+   "hist": "30% up vs 55%, p 0.0068",
+   "move": -0.73,
+   "result": "passed"
+  },
+  {
+   "date": "2026-11-25",
+   "event": "Sun\u2013Pluto exact sextile",
+   "market": "silver",
+   "horizon": "next session",
+   "lean": "down",
+   "hist": "33% up vs 54%, p 0.0148",
+   "move": -1.74,
+   "result": "passed"
+  },
+  {
+   "date": "2026-11-26",
+   "event": "Yoga Shubha begins",
+   "market": "spx",
+   "horizon": "next session",
+   "lean": "down",
+   "hist": "45% up vs 54%, p 0.0158",
+   "move": 1.6,
+   "result": "failed"
+  }
+ ],
+ "bigs": {
+  "spx": {
+   "sessions": 19,
+   "big_days": [
+    {
+     "date": "2026-11-05",
+     "move": -4.356,
+     "warned": false,
+     "watch": false,
+     "vol": true
+    },
+    {
+     "date": "2026-11-09",
+     "move": 2.346,
+     "warned": false,
+     "watch": false,
+     "vol": true
+    },
+    {
+     "date": "2026-11-19",
+     "move": -2.018,
+     "warned": false,
+     "watch": false,
+     "vol": false
+    },
+    {
+     "date": "2026-11-20",
+     "move": -3.699,
+     "warned": false,
+     "watch": false,
+     "vol": false
+    },
+    {
+     "date": "2026-11-23",
+     "move": 4.729,
+     "warned": false,
+     "watch": true,
+     "vol": false
+    }
+   ],
+   "warned": 0,
+   "warned_big": 0,
+   "watch_days": 4,
+   "watch_big": 1,
+   "vol_days": 10,
+   "vol_big": 2
+  },
+  "sensex": {
+   "sessions": 18,
+   "big_days": [
+    {
+     "date": "2026-11-05",
+     "move": 2.598,
+     "warned": true,
+     "watch": false,
+     "vol": true
+    },
+    {
+     "date": "2026-11-06",
+     "move": 2.166,
+     "warned": true,
+     "watch": false,
+     "vol": true
+    }
+   ],
+   "warned": 5,
+   "warned_big": 2,
+   "watch_days": 4,
+   "watch_big": 0,
+   "vol_days": 9,
+   "vol_big": 2
+  },
+  "gold": {
+   "sessions": 19,
+   "big_days": [
+    {
+     "date": "2026-11-04",
+     "move": 3.365,
+     "warned": false,
+     "watch": false,
+     "vol": false
+    },
+    {
+     "date": "2026-11-10",
+     "move": -2.049,
+     "warned": false,
+     "watch": false,
+     "vol": false
+    },
+    {
+     "date": "2026-11-12",
+     "move": -2.88,
+     "warned": false,
+     "watch": false,
+     "vol": false
+    },
+    {
+     "date": "2026-11-18",
+     "move": -3.165,
+     "warned": false,
+     "watch": false,
+     "vol": false
+    },
+    {
+     "date": "2026-11-20",
+     "move": -4.615,
+     "warned": true,
+     "watch": false,
+     "vol": false
+    },
+    {
+     "date": "2026-11-23",
+     "move": 3.869,
+     "warned": false,
+     "watch": true,
+     "vol": false
+    },
+    {
+     "date": "2026-11-24",
+     "move": -2.451,
+     "warned": false,
+     "watch": true,
+     "vol": false
+    },
+    {
+     "date": "2026-11-27",
+     "move": 3.753,
+     "warned": false,
+     "watch": true,
+     "vol": false
+    }
+   ],
+   "warned": 2,
+   "warned_big": 1,
+   "watch_days": 4,
+   "watch_big": 3,
+   "vol_days": 0,
+   "vol_big": 0
+  },
+  "silver": {
+   "sessions": 19,
+   "big_days": [
+    {
+     "date": "2026-11-04",
+     "move": 5.108,
+     "warned": false,
+     "watch": false,
+     "vol": false
+    },
+    {
+     "date": "2026-11-12",
+     "move": -3.68,
+     "warned": false,
+     "watch": false,
+     "vol": false
+    },
+    {
+     "date": "2026-11-16",
+     "move": -4.581,
+     "warned": false,
+     "watch": false,
+     "vol": false
+    },
+    {
+     "date": "2026-11-18",
+     "move": -4.841,
+     "warned": false,
+     "watch": false,
+     "vol": false
+    },
+    {
+     "date": "2026-11-20",
+     "move": -7.408,
+     "warned": false,
+     "watch": false,
+     "vol": false
+    },
+    {
+     "date": "2026-11-23",
+     "move": 5.147,
+     "warned": false,
+     "watch": false,
+     "vol": false
+    },
+    {
+     "date": "2026-11-24",
+     "move": -5.532,
+     "warned": false,
+     "watch": false,
+     "vol": false
+    },
+    {
+     "date": "2026-11-27",
+     "move": 9.113,
+     "warned": false,
+     "watch": false,
+     "vol": false
+    }
+   ],
+   "warned": 0,
+   "warned_big": 0,
+   "watch_days": 0,
+   "watch_big": 0,
+   "vol_days": 0,
+   "vol_big": 0
+  }
+ },
+ "spans": [
+  {
+   "market": "sensex",
+   "rule": "Moon-Rahu 6/8 (Shadashtak)",
+   "id": "ta_s25_moon_rahu_6",
+   "tone": "Bullish",
+   "frm": "2026-10-31",
+   "to": "2026-11-02",
+   "open": false,
+   "entry": "2026-10-30",
+   "exit": "2026-11-02",
+   "ret": 1.66,
+   "result": "passed"
+  },
+  {
+   "market": "spx",
+   "rule": "Moon-Rahu 6/8 (Shadashtak)",
+   "id": "ta_s25_moon_rahu_6",
+   "tone": "Bullish",
+   "frm": "2026-10-31",
+   "to": "2026-11-02",
+   "open": false,
+   "entry": "2026-10-30",
+   "exit": "2026-11-02",
+   "ret": -0.51,
+   "result": "failed"
+  },
+  {
+   "market": "sensex",
+   "rule": "Moon-Rahu 6/8 (Shadashtak)",
+   "id": "ta_s25_moon_rahu_6",
+   "tone": "Bullish",
+   "frm": "2026-11-04",
+   "to": "2026-11-07",
+   "open": false,
+   "entry": "2026-11-03",
+   "exit": "2026-11-06",
+   "ret": 5.34,
+   "result": "passed"
+  },
+  {
+   "market": "spx",
+   "rule": "Moon-Rahu 6/8 (Shadashtak)",
+   "id": "ta_s25_moon_rahu_6",
+   "tone": "Bullish",
+   "frm": "2026-11-04",
+   "to": "2026-11-07",
+   "open": false,
+   "entry": "2026-11-03",
+   "exit": "2026-11-06",
+   "ret": -2.54,
+   "result": "failed"
+  },
+  {
+   "market": "sensex",
+   "rule": "Venus-Rahu 6/8 (Shadashtak)",
+   "id": "ta_s25_venus_rahu_6",
+   "tone": "Bullish",
+   "frm": "2026-11-05",
+   "to": "2026-11-22",
+   "open": false,
+   "entry": "2026-11-04",
+   "exit": "2026-11-20",
+   "ret": 8.56,
+   "result": "passed"
+  },
+  {
+   "market": "spx",
+   "rule": "Venus-Rahu 6/8 (Shadashtak)",
+   "id": "ta_s25_venus_rahu_6",
+   "tone": "Bullish",
+   "frm": "2026-11-05",
+   "to": "2026-11-22",
+   "open": false,
+   "entry": "2026-11-04",
+   "exit": "2026-11-20",
+   "ret": -10.12,
+   "result": "failed"
+  },
+  {
+   "market": "sensex",
+   "rule": "Moon-Rahu 6/8 (Shadashtak)",
+   "id": "ta_s25_moon_rahu_6",
+   "tone": "Bullish",
+   "frm": "2026-11-27",
+   "to": "2026-11-27",
+   "open": false,
+   "entry": "2026-11-26",
+   "exit": "2026-11-27",
+   "ret": -1.17,
+   "result": "failed"
+  },
+  {
+   "market": "spx",
+   "rule": "Moon-Rahu 6/8 (Shadashtak)",
+   "id": "ta_s25_moon_rahu_6",
+   "tone": "Bullish",
+   "frm": "2026-11-27",
+   "to": "2026-11-27",
+   "open": false,
+   "entry": "2026-11-25",
+   "exit": "2026-11-27",
+   "ret": 1.6,
+   "result": "passed"
+  }
+ ],
+ "wrong": {
+  "spx": [
+   {
+    "date": "2026-11-02",
+    "weekday": "Mon",
+    "layer": "table label",
+    "call": "Bullish Moderate",
+    "move": -0.51,
+    "why": "Moon-Rahu 6/8 (Shadashtak)"
+   },
+   {
+    "date": "2026-11-02",
+    "weekday": "Mon",
+    "layer": "combined model",
+    "move": -0.51,
+    "call": "up (56% vs normal 54%)",
+    "why": "table: Bullish Moderate, bigmove: on, NYSE gochara: adverse"
+   },
+   {
+    "date": "2026-11-05",
+    "weekday": "Thu",
+    "layer": "table label",
+    "call": "Bullish High",
+    "move": -4.356,
+    "why": "Moon-Rahu 6/8 (Shadashtak); Venus-Rahu 6/8 (Shadashtak)"
+   },
+   {
+    "date": "2026-11-05",
+    "weekday": "Thu",
+    "layer": "combined model",
+    "move": -4.356,
+    "call": "up (59% vs normal 54%)",
+    "why": "table: Bullish High, bigmove: on, NYSE gochara: adverse"
+   },
+   {
+    "date": "2026-11-16",
+    "weekday": "Mon",
+    "layer": "table label",
+    "call": "Bullish Low",
+    "move": -1.919,
+    "why": "Venus-Rahu 6/8 (Shadashtak)"
+   },
+   {
+    "date": "2026-11-16",
+    "weekday": "Mon",
+    "layer": "combined model",
+    "move": -1.919,
+    "call": "up (60% vs normal 54%)",
+    "why": "table: Bullish Low, bigmove: off, NYSE gochara: adverse"
+   },
+   {
+    "date": "2026-11-17",
+    "weekday": "Tue",
+    "layer": "table label",
+    "call": "Bullish Low",
+    "move": -1.026,
+    "why": "Venus-Rahu 6/8 (Shadashtak)"
+   },
+   {
+    "date": "2026-11-19",
+    "weekday": "Thu",
+    "layer": "table label",
+    "call": "Bullish Low",
+    "move": -2.018,
+    "why": "Venus-Rahu 6/8 (Shadashtak)"
+   },
+   {
+    "date": "2026-11-20",
+    "weekday": "Fri",
+    "layer": "table label",
+    "call": "Bullish Low",
+    "move": -3.699,
+    "why": "Venus-Rahu 6/8 (Shadashtak)"
+   },
+   {
+    "date": "2026-11-20",
+    "weekday": "Fri",
+    "layer": "combined model",
+    "move": -3.699,
+    "call": "up (58% vs normal 54%)",
+    "why": "table: Bullish Low, bigmove: off, NYSE gochara: adverse"
+   }
+  ],
+  "gold": [
+   {
+    "date": "2026-11-03",
+    "weekday": "Tue",
+    "layer": "table label",
+    "call": "Bullish High",
+    "move": -0.736,
+    "why": "(label rebuilt from the table's rules; the reasons are not stored for days before 22 Nov)"
+   },
+   {
+    "date": "2026-11-06",
+    "weekday": "Fri",
+    "layer": "table label",
+    "call": "Bullish Low",
+    "move": -0.938,
+    "why": "(label rebuilt from the table's rules; the reasons are not stored for days before 22 Nov)"
+   },
+   {
+    "date": "2026-11-10",
+    "weekday": "Tue",
+    "layer": "table label",
+    "call": "Bullish Low",
+    "move": -2.049,
+    "why": "(label rebuilt from the table's rules; the reasons are not stored for days before 22 Nov)"
+   },
+   {
+    "date": "2026-11-11",
+    "weekday": "Wed",
+    "layer": "table label",
+    "call": "Bullish Low",
+    "move": -0.737,
+    "why": "(label rebuilt from the table's rules; the reasons are not stored for days before 22 Nov)"
+   },
+   {
+    "date": "2026-11-12",
+    "weekday": "Thu",
+    "layer": "table label",
+    "call": "Bullish Low",
+    "move": -2.88,
+    "why": "(label rebuilt from the table's rules; the reasons are not stored for days before 22 Nov)"
+   }
+  ],
+  "silver": [
+   {
+    "date": "2026-11-03",
+    "weekday": "Tue",
+    "layer": "table label",
+    "call": "Bullish High",
+    "move": -2.234,
+    "why": "(label rebuilt from the table's rules; the reasons are not stored for days before 22 Nov)"
+   },
+   {
+    "date": "2026-11-06",
+    "weekday": "Fri",
+    "layer": "table label",
+    "call": "Bullish High",
+    "move": -0.823,
+    "why": "(label rebuilt from the table's rules; the reasons are not stored for days before 22 Nov)"
+   },
+   {
+    "date": "2026-11-10",
+    "weekday": "Tue",
+    "layer": "table label",
+    "call": "Bullish High",
+    "move": -2.783,
+    "why": "(label rebuilt from the table's rules; the reasons are not stored for days before 22 Nov)"
+   },
+   {
+    "date": "2026-11-12",
+    "weekday": "Thu",
+    "layer": "table label",
+    "call": "Bullish High",
+    "move": -3.68,
+    "why": "(label rebuilt from the table's rules; the reasons are not stored for days before 22 Nov)"
+   },
+   {
+    "date": "2026-11-13",
+    "weekday": "Fri",
+    "layer": "table label",
+    "call": "Bullish High",
+    "move": -1.883,
+    "why": "(label rebuilt from the table's rules; the reasons are not stored for days before 22 Nov)"
+   }
+  ],
+  "sensex": [
+   {
+    "date": "2026-11-18",
+    "weekday": "Wed",
+    "layer": "table label",
+    "call": "Bullish Low",
+    "move": -0.606,
+    "why": "Venus-Rahu 6/8 (Shadashtak)"
+   },
+   {
+    "date": "2026-11-27",
+    "weekday": "Fri",
+    "layer": "table label",
+    "call": "Bullish Moderate",
+    "move": -1.173,
+    "why": "Moon-Rahu 6/8 (Shadashtak)"
+   },
+   {
+    "date": "2026-11-27",
+    "weekday": "Fri",
+    "layer": "combined model",
+    "move": -1.173,
+    "call": "up (55% vs normal 53%)",
+    "why": "table: Bullish Moderate, bigmove: off"
+   }
+  ]
+ },
+ "moves": {
+  "spx": {
+   "2026-11-02": {
+    "r1": -0.51,
+    "r5": -2.681,
+    "big": false
+   },
+   "2026-11-03": {
+    "r1": 0.365,
+    "r5": 0.113,
+    "big": false
+   },
+   "2026-11-04": {
+    "r1": 1.581,
+    "r5": -0.634,
+    "big": false
+   },
+   "2026-11-05": {
+    "r1": -4.356,
+    "r5": -0.901,
+    "big": true
+   },
+   "2026-11-06": {
+    "r1": 0.315,
+    "r5": 3.246,
+    "big": false
+   },
+   "2026-11-09": {
+    "r1": 2.346,
+    "r5": 2.505,
+    "big": true
+   },
+   "2026-11-10": {
+    "r1": -0.384,
+    "r5": -1.766,
+    "big": false
+   },
+   "2026-11-11": {
+    "r1": 1.309,
+    "r5": -2.399,
+    "big": false
+   },
+   "2026-11-12": {
+    "r1": -0.354,
+    "r5": -3.882,
+    "big": false
+   },
+   "2026-11-13": {
+    "r1": -0.405,
+    "r5": -5.487,
+    "big": false
+   },
+   "2026-11-16": {
+    "r1": -1.919,
+    "r5": -8.613,
+    "big": false
+   },
+   "2026-11-17": {
+    "r1": -1.026,
+    "r5": -2.419,
+    "big": false
+   },
+   "2026-11-18": {
+    "r1": -0.23,
+    "r5": -1.9,
+    "big": false
+   },
+   "2026-11-19": {
+    "r1": -2.018,
+    "r5": -1.923,
+    "big": true
+   },
+   "2026-11-20": {
+    "r1": -3.699,
+    "r5": 1.695,
+    "big": true
+   },
+   "2026-11-23": {
+    "r1": 4.729,
+    "r5": null,
+    "big": true
+   },
+   "2026-11-24": {
+    "r1": -0.499,
+    "r5": null,
+    "big": false
+   },
+   "2026-11-25": {
+    "r1": -0.254,
+    "r5": null,
+    "big": false
+   },
+   "2026-11-27": {
+    "r1": 1.597,
+    "r5": null,
+    "big": false
+   }
+  },
+  "sensex": {
+   "2026-11-02": {
+    "r1": 1.656,
+    "r5": 8.822,
+    "big": false
+   },
+   "2026-11-03": {
+    "r1": 1.618,
+    "r5": 7.152,
+    "big": false
+   },
+   "2026-11-04": {
+    "r1": 0.499,
+    "r5": 6.45,
+    "big": false
+   },
+   "2026-11-05": {
+    "r1": 2.598,
+    "r5": 5.963,
+    "big": true
+   },
+   "2026-11-06": {
+    "r1": 2.166,
+    "r5": 2.878,
+    "big": true
+   },
+   "2026-11-09": {
+    "r1": 0.097,
+    "r5": 1.329,
+    "big": false
+   },
+   "2026-11-11": {
+    "r1": 0.953,
+    "r5": 1.758,
+    "big": false
+   },
+   "2026-11-12": {
+    "r1": 0.039,
+    "r5": 0.186,
+    "big": false
+   },
+   "2026-11-13": {
+    "r1": -0.389,
+    "r5": 1.356,
+    "big": false
+   },
+   "2026-11-16": {
+    "r1": 0.628,
+    "r5": 2.852,
+    "big": false
+   },
+   "2026-11-17": {
+    "r1": 0.521,
+    "r5": 0.403,
+    "big": false
+   },
+   "2026-11-18": {
+    "r1": -0.606,
+    "r5": 1.704,
+    "big": false
+   },
+   "2026-11-19": {
+    "r1": 1.207,
+    "r5": 2.8,
+    "big": false
+   },
+   "2026-11-20": {
+    "r1": 1.082,
+    "r5": 0.382,
+    "big": false
+   },
+   "2026-11-23": {
+    "r1": -1.768,
+    "r5": null,
+    "big": false
+   },
+   "2026-11-25": {
+    "r1": 1.822,
+    "r5": null,
+    "big": false
+   },
+   "2026-11-26": {
+    "r1": 0.465,
+    "r5": null,
+    "big": false
+   },
+   "2026-11-27": {
+    "r1": -1.173,
+    "r5": null,
+    "big": false
+   }
+  },
+  "gold": {
+   "2026-11-02": {
+    "r1": 1.813,
+    "r5": 4.514,
+    "big": false
+   },
+   "2026-11-03": {
+    "r1": -0.736,
+    "r5": 3.65,
+    "big": false
+   },
+   "2026-11-04": {
+    "r1": 3.365,
+    "r5": 2.279,
+    "big": true
+   },
+   "2026-11-05": {
+    "r1": 0.994,
+    "r5": -1.78,
+    "big": false
+   },
+   "2026-11-06": {
+    "r1": -0.938,
+    "r5": -5.548,
+    "big": false
+   },
+   "2026-11-09": {
+    "r1": 0.972,
+    "r5": -4.628,
+    "big": false
+   },
+   "2026-11-10": {
+    "r1": -2.049,
+    "r5": -6.356,
+    "big": true
+   },
+   "2026-11-11": {
+    "r1": -0.737,
+    "r5": -4.119,
+    "big": false
+   },
+   "2026-11-12": {
+    "r1": -2.88,
+    "r5": -6.464,
+    "big": true
+   },
+   "2026-11-13": {
+    "r1": 0.026,
+    "r5": -5.142,
+    "big": false
+   },
+   "2026-11-16": {
+    "r1": -0.857,
+    "r5": -9.544,
+    "big": false
+   },
+   "2026-11-17": {
+    "r1": 0.291,
+    "r5": -5.232,
+    "big": false
+   },
+   "2026-11-18": {
+    "r1": -3.165,
+    "r5": -7.823,
+    "big": true
+   },
+   "2026-11-19": {
+    "r1": -1.507,
+    "r5": -5.508,
+    "big": false
+   },
+   "2026-11-20": {
+    "r1": -4.615,
+    "r5": -0.461,
+    "big": true
+   },
+   "2026-11-23": {
+    "r1": 3.869,
+    "r5": null,
+    "big": true
+   },
+   "2026-11-24": {
+    "r1": -2.451,
+    "r5": null,
+    "big": true
+   },
+   "2026-11-25": {
+    "r1": -0.733,
+    "r5": null,
+    "big": false
+   },
+   "2026-11-27": {
+    "r1": 3.753,
+    "r5": null,
+    "big": true
+   }
+  },
+  "silver": {
+   "2026-11-02": {
+    "r1": 3.306,
+    "r5": 5.512,
+    "big": false
+   },
+   "2026-11-03": {
+    "r1": -2.234,
+    "r5": 3.636,
+    "big": false
+   },
+   "2026-11-04": {
+    "r1": 5.108,
+    "r5": 3.053,
+    "big": true
+   },
+   "2026-11-05": {
+    "r1": 0.217,
+    "r5": -0.459,
+    "big": false
+   },
+   "2026-11-06": {
+    "r1": -0.823,
+    "r5": -4.329,
+    "big": false
+   },
+   "2026-11-09": {
+    "r1": 1.469,
+    "r5": -5.351,
+    "big": false
+   },
+   "2026-11-10": {
+    "r1": -2.783,
+    "r5": -10.994,
+    "big": false
+   },
+   "2026-11-11": {
+    "r1": 1.526,
+    "r5": -7.462,
+    "big": false
+   },
+   "2026-11-12": {
+    "r1": -3.68,
+    "r5": -13.265,
+    "big": true
+   },
+   "2026-11-13": {
+    "r1": -1.883,
+    "r5": -11.314,
+    "big": false
+   },
+   "2026-11-16": {
+    "r1": -4.581,
+    "r5": -16.308,
+    "big": true
+   },
+   "2026-11-17": {
+    "r1": 1.075,
+    "r5": -7.776,
+    "big": false
+   },
+   "2026-11-18": {
+    "r1": -4.841,
+    "r5": -13.805,
+    "big": true
+   },
+   "2026-11-19": {
+    "r1": -1.513,
+    "r5": -10.994,
+    "big": false
+   },
+   "2026-11-20": {
+    "r1": -7.408,
+    "r5": -1.39,
+    "big": true
+   },
+   "2026-11-23": {
+    "r1": 5.147,
+    "r5": null,
+    "big": true
+   },
+   "2026-11-24": {
+    "r1": -5.532,
+    "r5": null,
+    "big": true
+   },
+   "2026-11-25": {
+    "r1": -1.737,
+    "r5": null,
+    "big": false
+   },
+   "2026-11-27": {
+    "r1": 9.113,
+    "r5": null,
+    "big": true
+   }
+  }
+ },
+ "reasons": [
+  {
+   "market": "spx",
+   "reason": "Venus-Rahu 6/8 (Shadashtak)",
+   "call": "Bullish",
+   "passed": 2,
+   "failed": 5,
+   "small": 5
+  },
+  {
+   "market": "sensex",
+   "reason": "Venus-Rahu 6/8 (Shadashtak)",
+   "call": "Bullish",
+   "passed": 7,
+   "failed": 1,
+   "small": 3
+  },
+  {
+   "market": "gold",
+   "reason": "(label rebuilt from the table's rules; the reasons are not stored for days before 22 Nov)",
+   "call": "Bullish",
+   "passed": 4,
+   "failed": 5,
+   "small": 1
+  },
+  {
+   "market": "silver",
+   "reason": "(label rebuilt from the table's rules; the reasons are not stored for days before 22 Nov)",
+   "call": "Bullish",
+   "passed": 4,
+   "failed": 5,
+   "small": 1
+  },
+  {
+   "market": "spx",
+   "reason": "Moon-Rahu 6/8 (Shadashtak)",
+   "call": "Bullish",
+   "passed": 2,
+   "failed": 2,
+   "small": 1
+  },
+  {
+   "market": "sensex",
+   "reason": "Moon-Rahu 6/8 (Shadashtak)",
+   "call": "Bullish",
+   "passed": 3,
+   "failed": 1,
+   "small": 1
+  },
+  {
+   "market": "gold",
+   "reason": "(label rebuilt from the table's rules; the reasons are not stored for days before 22 Nov)",
+   "call": "Bearish",
+   "passed": 1,
+   "failed": 0,
+   "small": 0
+  }
+ ],
+ "tuning": {
+  "rules_per_day": [
+   {
+    "id": "ta_s24_62_mrigashira_monday",
+    "rule": "Mrigashira on Monday",
+    "tone": "Bullish",
+    "strength": "Low",
+    "market": "spx",
+    "record": "S&P 26/40 (65% vs 58%, p 0.2516); Sensex 31/43 (72% vs 58%, p 0.0385)",
+    "day": {
+     "n": 141,
+     "right": 78,
+     "wrong": 63,
+     "hit": 55.3,
+     "exp": 54.2,
+     "edge": 1.1,
+     "p": 0.7994,
+     "up_calls": 141,
+     "down_calls": 0
+    },
+    "first_half": {
+     "n": 78,
+     "right": 43,
+     "wrong": 35,
+     "hit": 55.1,
+     "exp": 51.1,
+     "edge": 4.0,
+     "p": 0.4975,
+     "up_calls": 78,
+     "down_calls": 0
+    },
+    "second_half": {
+     "n": 63,
+     "right": 35,
+     "wrong": 28,
+     "hit": 55.6,
+     "exp": 58.0,
+     "edge": -2.5,
+     "p": 0.702,
+     "up_calls": 63,
+     "down_calls": 0
+    },
+    "five": {
+     "n": 200,
+     "right": 129,
+     "wrong": 71,
+     "hit": 64.5,
+     "exp": 58.9,
+     "edge": 5.6,
+     "p": 0.4633,
+     "up_calls": 200,
+     "down_calls": 0
+    },
+    "q": 0.9405
+   },
+   {
+    "id": "ta_s24_62_mrigashira_monday",
+    "rule": "Mrigashira on Monday",
+    "tone": "Bullish",
+    "strength": "Low",
+    "market": "sensex",
+    "record": "S&P 26/40 (65% vs 58%, p 0.2516); Sensex 31/43 (72% vs 58%, p 0.0385)",
+    "day": {
+     "n": 150,
+     "right": 83,
+     "wrong": 67,
+     "hit": 55.3,
+     "exp": 55.1,
+     "edge": 0.2,
+     "p": 1.0,
+     "up_calls": 150,
+     "down_calls": 0
+    },
+    "first_half": {
+     "n": 84,
+     "right": 46,
+     "wrong": 38,
+     "hit": 54.8,
+     "exp": 54.6,
+     "edge": 0.2,
+     "p": 1.0,
+     "up_calls": 84,
+     "down_calls": 0
+    },
+    "second_half": {
+     "n": 66,
+     "right": 37,
+     "wrong": 29,
+     "hit": 56.1,
+     "exp": 55.8,
+     "edge": 0.3,
+     "p": 1.0,
+     "up_calls": 66,
+     "down_calls": 0
+    },
+    "five": {
+     "n": 203,
+     "right": 125,
+     "wrong": 78,
+     "hit": 61.6,
+     "exp": 57.5,
+     "edge": 4.1,
+     "p": 0.5919,
+     "up_calls": 203,
+     "down_calls": 0
+    },
+    "q": 1.0
+   },
+   {
+    "id": "ta_s25_mars_saturn_2",
+    "rule": "Mars-Saturn 2/12 (Dwidwadash)",
+    "tone": "Bearish",
+    "strength": "Moderate",
+    "market": "spx",
+    "record": "S&P 17/34 (50% vs 38%, p 0.1027); Sensex 18/31 (58% vs 38%, p 0.0213)",
+    "day": {
+     "n": 592,
+     "right": 283,
+     "wrong": 309,
+     "hit": 47.8,
+     "exp": 46.2,
+     "edge": 1.6,
+     "p": 0.4558,
+     "up_calls": 0,
+     "down_calls": 592
+    },
+    "first_half": {
+     "n": 232,
+     "right": 114,
+     "wrong": 118,
+     "hit": 49.1,
+     "exp": 49.3,
+     "edge": -0.1,
+     "p": 1.0,
+     "up_calls": 0,
+     "down_calls": 232
+    },
+    "second_half": {
+     "n": 360,
+     "right": 169,
+     "wrong": 191,
+     "hit": 46.9,
+     "exp": 44.3,
+     "edge": 2.7,
+     "p": 0.3116,
+     "up_calls": 0,
+     "down_calls": 360
+    },
+    "five": {
+     "n": 900,
+     "right": 427,
+     "wrong": 473,
+     "hit": 47.4,
+     "exp": 42.1,
+     "edge": 5.3,
+     "p": 0.1419,
+     "up_calls": 0,
+     "down_calls": 900
+    },
+    "q": 0.6511
+   },
+   {
+    "id": "ta_s25_mars_saturn_2",
+    "rule": "Mars-Saturn 2/12 (Dwidwadash)",
+    "tone": "Bearish",
+    "strength": "Moderate",
+    "market": "sensex",
+    "record": "S&P 17/34 (50% vs 38%, p 0.1027); Sensex 18/31 (58% vs 38%, p 0.0213)",
+    "day": {
+     "n": 673,
+     "right": 329,
+     "wrong": 344,
+     "hit": 48.9,
+     "exp": 45.6,
+     "edge": 3.3,
+     "p": 0.0859,
+     "up_calls": 0,
+     "down_calls": 673
+    },
+    "first_half": {
+     "n": 300,
+     "right": 144,
+     "wrong": 156,
+     "hit": 48.0,
+     "exp": 47.5,
+     "edge": 0.5,
+     "p": 0.907,
+     "up_calls": 0,
+     "down_calls": 300
+    },
+    "second_half": {
+     "n": 373,
+     "right": 185,
+     "wrong": 188,
+     "hit": 49.6,
+     "exp": 44.1,
+     "edge": 5.5,
+     "p": 0.032,
+     "up_calls": 0,
+     "down_calls": 373
+    },
+    "five": {
+     "n": 944,
+     "right": 471,
+     "wrong": 473,
+     "hit": 49.9,
+     "exp": 42.3,
+     "edge": 7.6,
+     "p": 0.0315,
+     "up_calls": 0,
+     "down_calls": 944
+    },
+    "q": 0.305
+   },
+   {
+    "id": "ta_s25_mars_saturn_4",
+    "rule": "Mars-Saturn 4/10 (Kendra)",
+    "tone": "Bullish",
+    "strength": "Moderate",
+    "market": "spx",
+    "record": "S&P 27/31 (87% vs 68%, p 0.0124); Sensex 25/33 (76% vs 63%, p 0.0973)",
+    "day": {
+     "n": 520,
+     "right": 309,
+     "wrong": 211,
+     "hit": 59.4,
+     "exp": 55.6,
+     "edge": 3.9,
+     "p": 0.0757,
+     "up_calls": 520,
+     "down_calls": 0
+    },
+    "first_half": {
+     "n": 266,
+     "right": 151,
+     "wrong": 115,
+     "hit": 56.8,
+     "exp": 53.0,
+     "edge": 3.8,
+     "p": 0.2184,
+     "up_calls": 266,
+     "down_calls": 0
+    },
+    "second_half": {
+     "n": 254,
+     "right": 158,
+     "wrong": 96,
+     "hit": 62.2,
+     "exp": 58.2,
+     "edge": 4.0,
+     "p": 0.2009,
+     "up_calls": 254,
+     "down_calls": 0
+    },
+    "five": {
+     "n": 837,
+     "right": 565,
+     "wrong": 272,
+     "hit": 67.5,
+     "exp": 60.8,
+     "edge": 6.7,
+     "p": 0.0727,
+     "up_calls": 837,
+     "down_calls": 0
+    },
+    "q": 0.305
+   },
+   {
+    "id": "ta_s25_mars_saturn_4",
+    "rule": "Mars-Saturn 4/10 (Kendra)",
+    "tone": "Bullish",
+    "strength": "Moderate",
+    "market": "sensex",
+    "record": "S&P 27/31 (87% vs 68%, p 0.0124); Sensex 25/33 (76% vs 63%, p 0.0973)",
+    "day": {
+     "n": 611,
+     "right": 367,
+     "wrong": 244,
+     "hit": 60.1,
+     "exp": 56.0,
+     "edge": 4.0,
+     "p": 0.0424,
+     "up_calls": 611,
+     "down_calls": 0
+    },
+    "first_half": {
+     "n": 338,
+     "right": 207,
+     "wrong": 131,
+     "hit": 61.2,
+     "exp": 55.9,
+     "edge": 5.4,
+     "p": 0.0465,
+     "up_calls": 338,
+     "down_calls": 0
+    },
+    "second_half": {
+     "n": 273,
+     "right": 160,
+     "wrong": 113,
+     "hit": 58.6,
+     "exp": 56.2,
+     "edge": 2.4,
+     "p": 0.4627,
+     "up_calls": 273,
+     "down_calls": 0
+    },
+    "five": {
+     "n": 888,
+     "right": 567,
+     "wrong": 321,
+     "hit": 63.9,
+     "exp": 59.5,
+     "edge": 4.3,
+     "p": 0.2293,
+     "up_calls": 888,
+     "down_calls": 0
+    },
+    "q": 0.305
+   },
+   {
+    "id": "ta_s25_mercury_rahu_1",
+    "rule": "Mercury-Rahu conjunction (same sign)",
+    "tone": "Bearish",
+    "strength": "Moderate",
+    "market": "spx",
+    "record": "S&P 16/34 (47% vs 35%, p 0.1008); Sensex 20/35 (57% vs 40%, p 0.0289)",
+    "day": {
+     "n": 528,
+     "right": 247,
+     "wrong": 281,
+     "hit": 46.8,
+     "exp": 44.7,
+     "edge": 2.1,
+     "p": 0.3558,
+     "up_calls": 0,
+     "down_calls": 528
+    },
+    "first_half": {
+     "n": 255,
+     "right": 134,
+     "wrong": 121,
+     "hit": 52.5,
+     "exp": 47.5,
+     "edge": 5.0,
+     "p": 0.1156,
+     "up_calls": 0,
+     "down_calls": 255
+    },
+    "second_half": {
+     "n": 273,
+     "right": 113,
+     "wrong": 160,
+     "hit": 41.4,
+     "exp": 42.1,
+     "edge": -0.7,
+     "p": 0.8537,
+     "up_calls": 0,
+     "down_calls": 273
+    },
+    "five": {
+     "n": 757,
+     "right": 301,
+     "wrong": 456,
+     "hit": 39.8,
+     "exp": 40.1,
+     "edge": -0.3,
+     "p": 0.9322,
+     "up_calls": 0,
+     "down_calls": 757
+    },
+    "q": 0.5474
+   },
+   {
+    "id": "ta_s25_mercury_rahu_1",
+    "rule": "Mercury-Rahu conjunction (same sign)",
+    "tone": "Bearish",
+    "strength": "Moderate",
+    "market": "sensex",
+    "record": "S&P 16/34 (47% vs 35%, p 0.1008); Sensex 20/35 (57% vs 40%, p 0.0289)",
+    "day": {
+     "n": 570,
+     "right": 273,
+     "wrong": 297,
+     "hit": 47.9,
+     "exp": 45.5,
+     "edge": 2.4,
+     "p": 0.2533,
+     "up_calls": 0,
+     "down_calls": 570
+    },
+    "first_half": {
+     "n": 298,
+     "right": 157,
+     "wrong": 141,
+     "hit": 52.7,
+     "exp": 46.2,
+     "edge": 6.5,
+     "p": 0.026,
+     "up_calls": 0,
+     "down_calls": 298
+    },
+    "second_half": {
+     "n": 272,
+     "right": 116,
+     "wrong": 156,
+     "hit": 42.6,
+     "exp": 44.6,
+     "edge": -2.0,
+     "p": 0.5408,
+     "up_calls": 0,
+     "down_calls": 272
+    },
+    "five": {
+     "n": 773,
+     "right": 365,
+     "wrong": 408,
+     "hit": 47.2,
+     "exp": 43.4,
+     "edge": 3.8,
+     "p": 0.3302,
+     "up_calls": 0,
+     "down_calls": 773
+    },
+    "q": 0.4472
+   },
+   {
+    "id": "ta_s25_moon_rahu_6",
+    "rule": "Moon-Rahu 6/8 (Shadashtak)",
+    "tone": "Bullish",
+    "strength": "Moderate",
+    "market": "spx",
+    "record": "S&P 334/545 (61% vs 59%, p 0.1452); Sensex 359/585 (61% vs 58%, p 0.0349)",
+    "day": {
+     "n": 821,
+     "right": 450,
+     "wrong": 371,
+     "hit": 54.8,
+     "exp": 54.6,
+     "edge": 0.3,
+     "p": 0.882,
+     "up_calls": 821,
+     "down_calls": 0
+    },
+    "first_half": {
+     "n": 424,
+     "right": 226,
+     "wrong": 198,
+     "hit": 53.3,
+     "exp": 51.9,
+     "edge": 1.4,
+     "p": 0.5919,
+     "up_calls": 424,
+     "down_calls": 0
+    },
+    "second_half": {
+     "n": 397,
+     "right": 224,
+     "wrong": 173,
+     "hit": 56.4,
+     "exp": 57.4,
+     "edge": -0.9,
+     "p": 0.721,
+     "up_calls": 397,
+     "down_calls": 0
+    },
+    "five": {
+     "n": 1238,
+     "right": 746,
+     "wrong": 492,
+     "hit": 60.3,
+     "exp": 59.3,
+     "edge": 1.0,
+     "p": 0.7444,
+     "up_calls": 1238,
+     "down_calls": 0
+    },
+    "q": 0.98
+   },
+   {
+    "id": "ta_s25_moon_rahu_6",
+    "rule": "Moon-Rahu 6/8 (Shadashtak)",
+    "tone": "Bullish",
+    "strength": "Moderate",
+    "market": "sensex",
+    "record": "S&P 334/545 (61% vs 59%, p 0.1452); Sensex 359/585 (61% vs 58%, p 0.0349)",
+    "day": {
+     "n": 926,
+     "right": 511,
+     "wrong": 415,
+     "hit": 55.2,
+     "exp": 54.6,
+     "edge": 0.6,
+     "p": 0.7307,
+     "up_calls": 926,
+     "down_calls": 0
+    },
+    "first_half": {
+     "n": 502,
+     "right": 273,
+     "wrong": 229,
+     "hit": 54.4,
+     "exp": 53.9,
+     "edge": 0.4,
+     "p": 0.8567,
+     "up_calls": 502,
+     "down_calls": 0
+    },
+    "second_half": {
+     "n": 424,
+     "right": 238,
+     "wrong": 186,
+     "hit": 56.1,
+     "exp": 55.4,
+     "edge": 0.7,
+     "p": 0.8065,
+     "up_calls": 424,
+     "down_calls": 0
+    },
+    "five": {
+     "n": 1291,
+     "right": 785,
+     "wrong": 506,
+     "hit": 60.8,
+     "exp": 57.6,
+     "edge": 3.2,
+     "p": 0.2863,
+     "up_calls": 1291,
+     "down_calls": 0
+    },
+    "q": 0.9134
+   },
+   {
+    "id": "ta_s25_venus_herschel_7",
+    "rule": "Venus-Herschel 7th (opposition)",
+    "tone": "Bearish",
+    "strength": "Low",
+    "market": "spx",
+    "record": "S&P 14/24 (58% vs 37%, p 0.0307); Sensex 11/24 (46% vs 38%, p 0.2635)",
+    "day": {
+     "n": 290,
+     "right": 145,
+     "wrong": 145,
+     "hit": 50.0,
+     "exp": 45.4,
+     "edge": 4.6,
+     "p": 0.1231,
+     "up_calls": 0,
+     "down_calls": 290
+    },
+    "first_half": {
+     "n": 146,
+     "right": 75,
+     "wrong": 71,
+     "hit": 51.4,
+     "exp": 48.1,
+     "edge": 3.3,
+     "p": 0.4551,
+     "up_calls": 0,
+     "down_calls": 146
+    },
+    "second_half": {
+     "n": 144,
+     "right": 70,
+     "wrong": 74,
+     "hit": 48.6,
+     "exp": 42.8,
+     "edge": 5.8,
+     "p": 0.1752,
+     "up_calls": 0,
+     "down_calls": 144
+    },
+    "five": {
+     "n": 435,
+     "right": 230,
+     "wrong": 205,
+     "hit": 52.9,
+     "exp": 39.9,
+     "edge": 13.0,
+     "p": 0.0123,
+     "up_calls": 0,
+     "down_calls": 435
+    },
+    "q": 0.3209
+   },
+   {
+    "id": "ta_s25_venus_herschel_7",
+    "rule": "Venus-Herschel 7th (opposition)",
+    "tone": "Bearish",
+    "strength": "Low",
+    "market": "sensex",
+    "record": "S&P 14/24 (58% vs 37%, p 0.0307); Sensex 11/24 (46% vs 38%, p 0.2635)",
+    "day": {
+     "n": 311,
+     "right": 144,
+     "wrong": 167,
+     "hit": 46.3,
+     "exp": 44.8,
+     "edge": 1.5,
+     "p": 0.6061,
+     "up_calls": 0,
+     "down_calls": 311
+    },
+    "first_half": {
+     "n": 156,
+     "right": 74,
+     "wrong": 82,
+     "hit": 47.4,
+     "exp": 44.9,
+     "edge": 2.6,
+     "p": 0.5173,
+     "up_calls": 0,
+     "down_calls": 156
+    },
+    "second_half": {
+     "n": 155,
+     "right": 70,
+     "wrong": 85,
+     "hit": 45.2,
+     "exp": 44.7,
+     "edge": 0.5,
+     "p": 0.9356,
+     "up_calls": 0,
+     "down_calls": 155
+    },
+    "five": {
+     "n": 445,
+     "right": 199,
+     "wrong": 246,
+     "hit": 44.7,
+     "exp": 41.0,
+     "edge": 3.7,
+     "p": 0.4664,
+     "up_calls": 0,
+     "down_calls": 445
+    },
+    "q": 0.8081
+   },
+   {
+    "id": "ta_s25_venus_rahu_6",
+    "rule": "Venus-Rahu 6/8 (Shadashtak)",
+    "tone": "Bullish",
+    "strength": "Low",
+    "market": "spx",
+    "record": "S&P 40/52 (77% vs 64%, p 0.0382); Sensex 33/50 (66% vs 61%, p 0.287)",
+    "day": {
+     "n": 616,
+     "right": 345,
+     "wrong": 271,
+     "hit": 56.0,
+     "exp": 53.8,
+     "edge": 2.2,
+     "p": 0.2683,
+     "up_calls": 616,
+     "down_calls": 0
+    },
+    "first_half": {
+     "n": 331,
+     "right": 172,
+     "wrong": 159,
+     "hit": 52.0,
+     "exp": 51.0,
+     "edge": 1.0,
+     "p": 0.741,
+     "up_calls": 331,
+     "down_calls": 0
+    },
+    "second_half": {
+     "n": 285,
+     "right": 173,
+     "wrong": 112,
+     "hit": 60.7,
+     "exp": 57.1,
+     "edge": 3.6,
+     "p": 0.2271,
+     "up_calls": 285,
+     "down_calls": 0
+    },
+    "five": {
+     "n": 887,
+     "right": 544,
+     "wrong": 343,
+     "hit": 61.3,
+     "exp": 58.8,
+     "edge": 2.5,
+     "p": 0.483,
+     "up_calls": 887,
+     "down_calls": 0
+    },
+    "q": 0.4472
+   },
+   {
+    "id": "ta_s25_venus_rahu_6",
+    "rule": "Venus-Rahu 6/8 (Shadashtak)",
+    "tone": "Bullish",
+    "strength": "Low",
+    "market": "sensex",
+    "record": "S&P 40/52 (77% vs 64%, p 0.0382); Sensex 33/50 (66% vs 61%, p 0.287)",
+    "day": {
+     "n": 637,
+     "right": 370,
+     "wrong": 267,
+     "hit": 58.1,
+     "exp": 55.2,
+     "edge": 2.9,
+     "p": 0.1444,
+     "up_calls": 637,
+     "down_calls": 0
+    },
+    "first_half": {
+     "n": 345,
+     "right": 196,
+     "wrong": 149,
+     "hit": 56.8,
+     "exp": 54.4,
+     "edge": 2.4,
+     "p": 0.383,
+     "up_calls": 345,
+     "down_calls": 0
+    },
+    "second_half": {
+     "n": 292,
+     "right": 174,
+     "wrong": 118,
+     "hit": 59.6,
+     "exp": 56.2,
+     "edge": 3.4,
+     "p": 0.2609,
+     "up_calls": 292,
+     "down_calls": 0
+    },
+    "five": {
+     "n": 962,
+     "right": 580,
+     "wrong": 382,
+     "hit": 60.3,
+     "exp": 58.7,
+     "edge": 1.6,
+     "p": 0.6413,
+     "up_calls": 962,
+     "down_calls": 0
+    },
+    "q": 0.3209
+   },
+   {
+    "id": "ta_s32e_mars_mercury",
+    "rule": "Mars-Mercury Vedha",
+    "tone": "Bullish",
+    "strength": "High",
+    "market": "spx",
+    "record": "S&P 29/40 (72% vs 58%, p 0.0449); Sensex 32/41 (78% vs 58%, p 0.0057)",
+    "day": {
+     "n": 139,
+     "right": 76,
+     "wrong": 63,
+     "hit": 54.7,
+     "exp": 54.5,
+     "edge": 0.2,
+     "p": 1.0,
+     "up_calls": 139,
+     "down_calls": 0
+    },
+    "first_half": {
+     "n": 66,
+     "right": 39,
+     "wrong": 27,
+     "hit": 59.1,
+     "exp": 52.5,
+     "edge": 6.6,
+     "p": 0.3234,
+     "up_calls": 66,
+     "down_calls": 0
+    },
+    "second_half": {
+     "n": 73,
+     "right": 37,
+     "wrong": 36,
+     "hit": 50.7,
+     "exp": 56.2,
+     "edge": -5.5,
+     "p": 0.345,
+     "up_calls": 73,
+     "down_calls": 0
+    },
+    "five": {
+     "n": 236,
+     "right": 142,
+     "wrong": 94,
+     "hit": 60.2,
+     "exp": 59.4,
+     "edge": 0.8,
+     "p": 0.9124,
+     "up_calls": 236,
+     "down_calls": 0
+    },
+    "q": 1.0
+   },
+   {
+    "id": "ta_s32e_mars_mercury",
+    "rule": "Mars-Mercury Vedha",
+    "tone": "Bullish",
+    "strength": "High",
+    "market": "sensex",
+    "record": "S&P 29/40 (72% vs 58%, p 0.0449); Sensex 32/41 (78% vs 58%, p 0.0057)",
+    "day": {
+     "n": 183,
+     "right": 112,
+     "wrong": 71,
+     "hit": 61.2,
+     "exp": 55.7,
+     "edge": 5.5,
+     "p": 0.1354,
+     "up_calls": 183,
+     "down_calls": 0
+    },
+    "first_half": {
+     "n": 97,
+     "right": 63,
+     "wrong": 34,
+     "hit": 64.9,
+     "exp": 56.3,
+     "edge": 8.6,
+     "p": 0.0991,
+     "up_calls": 97,
+     "down_calls": 0
+    },
+    "second_half": {
+     "n": 86,
+     "right": 49,
+     "wrong": 37,
+     "hit": 57.0,
+     "exp": 54.9,
+     "edge": 2.0,
+     "p": 0.7451,
+     "up_calls": 86,
+     "down_calls": 0
+    },
+    "five": {
+     "n": 239,
+     "right": 168,
+     "wrong": 71,
+     "hit": 70.3,
+     "exp": 58.2,
+     "edge": 12.1,
+     "p": 0.086,
+     "up_calls": 239,
+     "down_calls": 0
+    },
+    "q": 0.3209
+   },
+   {
+    "id": "b100_shukla_shasthi_on_friday",
+    "rule": "Shukla Shasthi on a Friday",
+    "tone": "Bearish",
+    "strength": "High",
+    "market": "spx",
+    "record": "S&P 41/77 (53% vs 41%, p 0.0244); Sensex 40/76 (53% vs 42%, p 0.0446)",
+    "day": {
+     "n": 261,
+     "right": 133,
+     "wrong": 128,
+     "hit": 51.0,
+     "exp": 45.6,
+     "edge": 5.4,
+     "p": 0.0915,
+     "up_calls": 0,
+     "down_calls": 261
+    },
+    "first_half": {
+     "n": 129,
+     "right": 67,
+     "wrong": 62,
+     "hit": 51.9,
+     "exp": 48.3,
+     "edge": 3.7,
+     "p": 0.4269,
+     "up_calls": 0,
+     "down_calls": 129
+    },
+    "second_half": {
+     "n": 132,
+     "right": 66,
+     "wrong": 66,
+     "hit": 50.0,
+     "exp": 43.0,
+     "edge": 7.0,
+     "p": 0.1119,
+     "up_calls": 0,
+     "down_calls": 132
+    },
+    "five": {
+     "n": 344,
+     "right": 153,
+     "wrong": 191,
+     "hit": 44.5,
+     "exp": 41.7,
+     "edge": 2.8,
+     "p": 0.6359,
+     "up_calls": 0,
+     "down_calls": 344
+    },
+    "q": 0.305
+   },
+   {
+    "id": "b100_shukla_shasthi_on_friday",
+    "rule": "Shukla Shasthi on a Friday",
+    "tone": "Bearish",
+    "strength": "High",
+    "market": "sensex",
+    "record": "S&P 41/77 (53% vs 41%, p 0.0244); Sensex 40/76 (53% vs 42%, p 0.0446)",
+    "day": {
+     "n": 243,
+     "right": 119,
+     "wrong": 124,
+     "hit": 49.0,
+     "exp": 45.0,
+     "edge": 4.0,
+     "p": 0.2181,
+     "up_calls": 0,
+     "down_calls": 243
+    },
+    "first_half": {
+     "n": 121,
+     "right": 58,
+     "wrong": 63,
+     "hit": 47.9,
+     "exp": 45.5,
+     "edge": 2.4,
+     "p": 0.6452,
+     "up_calls": 0,
+     "down_calls": 121
+    },
+    "second_half": {
+     "n": 122,
+     "right": 61,
+     "wrong": 61,
+     "hit": 50.0,
+     "exp": 44.5,
+     "edge": 5.5,
+     "p": 0.2353,
+     "up_calls": 0,
+     "down_calls": 122
+    },
+    "five": {
+     "n": 349,
+     "right": 170,
+     "wrong": 179,
+     "hit": 48.7,
+     "exp": 42.2,
+     "edge": 6.5,
+     "p": 0.2656,
+     "up_calls": 0,
+     "down_calls": 349
+    },
+    "q": 0.4362
+   },
+   {
+    "id": "b101_three_saturdays_in_shukla_paksha",
+    "rule": "Three Saturday in Shukla Paksh",
+    "tone": "Bearish",
+    "strength": "High",
+    "market": "spx",
+    "record": "S&P 41/73 (56% vs 39%, p 0.0023); Sensex 33/66 (50% vs 39%, p 0.0395)",
+    "day": {
+     "n": 434,
+     "right": 218,
+     "wrong": 216,
+     "hit": 50.2,
+     "exp": 45.6,
+     "edge": 4.7,
+     "p": 0.0525,
+     "up_calls": 0,
+     "down_calls": 434
+    },
+    "first_half": {
+     "n": 207,
+     "right": 105,
+     "wrong": 102,
+     "hit": 50.7,
+     "exp": 48.0,
+     "edge": 2.7,
+     "p": 0.4434,
+     "up_calls": 0,
+     "down_calls": 207
+    },
+    "second_half": {
+     "n": 227,
+     "right": 113,
+     "wrong": 114,
+     "hit": 49.8,
+     "exp": 43.3,
+     "edge": 6.4,
+     "p": 0.0508,
+     "up_calls": 0,
+     "down_calls": 227
+    },
+    "five": {
+     "n": 638,
+     "right": 325,
+     "wrong": 313,
+     "hit": 50.9,
+     "exp": 41.1,
+     "edge": 9.8,
+     "p": 0.0225,
+     "up_calls": 0,
+     "down_calls": 638
+    },
+    "q": 0.305
+   },
+   {
+    "id": "b101_three_saturdays_in_shukla_paksha",
+    "rule": "Three Saturday in Shukla Paksh",
+    "tone": "Bearish",
+    "strength": "High",
+    "market": "sensex",
+    "record": "S&P 41/73 (56% vs 39%, p 0.0023); Sensex 33/66 (50% vs 39%, p 0.0395)",
+    "day": {
+     "n": 435,
+     "right": 229,
+     "wrong": 206,
+     "hit": 52.6,
+     "exp": 44.7,
+     "edge": 8.0,
+     "p": 0.001,
+     "up_calls": 0,
+     "down_calls": 435
+    },
+    "first_half": {
+     "n": 223,
+     "right": 122,
+     "wrong": 101,
+     "hit": 54.7,
+     "exp": 45.0,
+     "edge": 9.7,
+     "p": 0.0035,
+     "up_calls": 0,
+     "down_calls": 223
+    },
+    "second_half": {
+     "n": 212,
+     "right": 107,
+     "wrong": 105,
+     "hit": 50.5,
+     "exp": 44.4,
+     "edge": 6.1,
+     "p": 0.0829,
+     "up_calls": 0,
+     "down_calls": 212
+    },
+    "five": {
+     "n": 634,
+     "right": 314,
+     "wrong": 320,
+     "hit": 49.5,
+     "exp": 41.3,
+     "edge": 8.2,
+     "p": 0.0572,
+     "up_calls": 0,
+     "down_calls": 634
+    },
+    "q": 0.02
+   }
+  ],
+  "labels": {
+   "spx": {
+    "source": "rebuilt from the table's rules, 2000-2026 (the rules were chosen on this period)",
+    "rows": {
+     "Low|d1": {
+      "n": 561,
+      "right": 294,
+      "wrong": 267,
+      "hit": 52.4,
+      "exp": 50.6,
+      "edge": 1.8,
+      "p": 0.3947,
+      "up_calls": 323,
+      "down_calls": 238
+     },
+     "Low|d5": {
+      "n": 832,
+      "right": 462,
+      "wrong": 370,
+      "hit": 55.5,
+      "exp": 52.0,
+      "edge": 3.6,
+      "p": 0.3425,
+      "up_calls": 482,
+      "down_calls": 350
+     },
+     "Moderate|d1": {
+      "n": 916,
+      "right": 496,
+      "wrong": 420,
+      "hit": 54.1,
+      "exp": 50.0,
+      "edge": 4.1,
+      "p": 0.0113,
+      "up_calls": 432,
+      "down_calls": 484
+     },
+     "Moderate|d5": {
+      "n": 1422,
+      "right": 767,
+      "wrong": 655,
+      "hit": 53.9,
+      "exp": 50.0,
+      "edge": 4.0,
+      "p": 0.1682,
+      "up_calls": 675,
+      "down_calls": 747
+     },
+     "High|d1": {
+      "n": 879,
+      "right": 471,
+      "wrong": 408,
+      "hit": 53.6,
+      "exp": 49.5,
+      "edge": 4.1,
+      "p": 0.0144,
+      "up_calls": 376,
+      "down_calls": 503
+     },
+     "High|d5": {
+      "n": 1283,
+      "right": 747,
+      "wrong": 536,
+      "hit": 58.2,
+      "exp": 49.8,
+      "edge": 8.4,
+      "p": 0.0053,
+      "up_calls": 585,
+      "down_calls": 698
+     },
+     "Moderate or High|d1": {
+      "n": 1795,
+      "right": 967,
+      "wrong": 828,
+      "hit": 53.9,
+      "exp": 49.8,
+      "edge": 4.1,
+      "p": 0.0004,
+      "up_calls": 808,
+      "down_calls": 987
+     },
+     "Moderate or High|d5": {
+      "n": 2705,
+      "right": 1514,
+      "wrong": 1191,
+      "hit": 56.0,
+      "exp": 49.9,
+      "edge": 6.1,
+      "p": 0.0035,
+      "up_calls": 1260,
+      "down_calls": 1445
+     },
+     "Any strength|d1": {
+      "n": 2356,
+      "right": 1261,
+      "wrong": 1095,
+      "hit": 53.5,
+      "exp": 50.0,
+      "edge": 3.6,
+      "p": 0.0005,
+      "up_calls": 1131,
+      "down_calls": 1225
+     },
+     "Any strength|d5": {
+      "n": 3537,
+      "right": 1976,
+      "wrong": 1561,
+      "hit": 55.9,
+      "exp": 50.4,
+      "edge": 5.5,
+      "p": 0.0026,
+      "up_calls": 1742,
+      "down_calls": 1795
+     },
+     "Low, 2013-2026|d1": {
+      "n": 277,
+      "right": 151,
+      "wrong": 126,
+      "hit": 54.5,
+      "exp": 50.9,
+      "edge": 3.6,
+      "p": 0.2469,
+      "up_calls": 137,
+      "down_calls": 140
+     },
+     "Moderate or High, 2013-2026|d1": {
+      "n": 909,
+      "right": 481,
+      "wrong": 428,
+      "hit": 52.9,
+      "exp": 49.4,
+      "edge": 3.5,
+      "p": 0.0297,
+      "up_calls": 381,
+      "down_calls": 528
+     }
+    },
+    "walk_forward": {
+     "source": "walk-forward: rules picked on their 2000-2013 records only (both indices beat the base, p < 0.05 on one), labels scored every day 2013-2026",
+     "rules": [
+      "Mars-Mercury Vedha",
+      "Mars-Saturn 4/10 (Kendra)",
+      "Mercury-Jupiter 2/12 (Dwidwadash)",
+      "Mercury-Rahu conjunction (same sign)",
+      "Mercury-Saturn 4/10 (Kendra)",
+      "Mercury-Saturn conjunction in Navamsh (D9)",
+      "Moon-Rahu 6/8 (Shadashtak)",
+      "Mrigashira on Monday",
+      "Three Saturday in Shukla Paksh",
+      "Uttara Ashadha on Monday",
+      "Virgo: Saturn, Sun, Mars, Herschel, Rahu any 2"
+     ],
+     "rows": {
+      "Low|d1": {
+       "n": 393,
+       "right": 184,
+       "wrong": 209,
+       "hit": 46.8,
+       "exp": 50.1,
+       "edge": -3.3,
+       "p": 0.1843,
+       "up_calls": 205,
+       "down_calls": 188
+      },
+      "Low|d5": {
+       "n": 585,
+       "right": 295,
+       "wrong": 290,
+       "hit": 50.4,
+       "exp": 51.5,
+       "edge": -1.1,
+       "p": 0.8097,
+       "up_calls": 327,
+       "down_calls": 258
+      },
+      "Moderate|d1": {
+       "n": 452,
+       "right": 240,
+       "wrong": 212,
+       "hit": 53.1,
+       "exp": 52.7,
+       "edge": 0.4,
+       "p": 0.8861,
+       "up_calls": 302,
+       "down_calls": 150
+      },
+      "Moderate|d5": {
+       "n": 683,
+       "right": 386,
+       "wrong": 297,
+       "hit": 56.5,
+       "exp": 55.1,
+       "edge": 1.4,
+       "p": 0.7349,
+       "up_calls": 466,
+       "down_calls": 217
+      },
+      "High|d1": {
+       "n": 253,
+       "right": 151,
+       "wrong": 102,
+       "hit": 59.7,
+       "exp": 56.0,
+       "edge": 3.7,
+       "p": 0.2505,
+       "up_calls": 236,
+       "down_calls": 17
+      },
+      "High|d5": {
+       "n": 426,
+       "right": 293,
+       "wrong": 133,
+       "hit": 68.8,
+       "exp": 61.7,
+       "edge": 7.0,
+       "p": 0.1726,
+       "up_calls": 404,
+       "down_calls": 22
+      },
+      "Moderate or High|d1": {
+       "n": 705,
+       "right": 391,
+       "wrong": 314,
+       "hit": 55.5,
+       "exp": 53.9,
+       "edge": 1.6,
+       "p": 0.3945,
+       "up_calls": 538,
+       "down_calls": 167
+      },
+      "Moderate or High|d5": {
+       "n": 1109,
+       "right": 679,
+       "wrong": 430,
+       "hit": 61.2,
+       "exp": 57.7,
+       "edge": 3.6,
+       "p": 0.2671,
+       "up_calls": 870,
+       "down_calls": 239
+      },
+      "Any strength|d1": {
+       "n": 1098,
+       "right": 575,
+       "wrong": 523,
+       "hit": 52.4,
+       "exp": 52.5,
+       "edge": -0.2,
+       "p": 0.9077,
+       "up_calls": 743,
+       "down_calls": 355
+      },
+      "Any strength|d5": {
+       "n": 1694,
+       "right": 974,
+       "wrong": 720,
+       "hit": 57.5,
+       "exp": 55.5,
+       "edge": 2.0,
+       "p": 0.4507,
+       "up_calls": 1197,
+       "down_calls": 497
+      }
+     }
+    }
+   },
+   "sensex": {
+    "source": "rebuilt from the table's rules, 2000-2026 (the rules were chosen on this period)",
+    "rows": {
+     "Low|d1": {
+      "n": 573,
+      "right": 309,
+      "wrong": 264,
+      "hit": 53.9,
+      "exp": 51.5,
+      "edge": 2.4,
+      "p": 0.2546,
+      "up_calls": 350,
+      "down_calls": 223
+     },
+     "Low|d5": {
+      "n": 853,
+      "right": 451,
+      "wrong": 402,
+      "hit": 52.9,
+      "exp": 51.8,
+      "edge": 1.1,
+      "p": 0.7746,
+      "up_calls": 518,
+      "down_calls": 335
+     },
+     "Moderate|d1": {
+      "n": 1079,
+      "right": 573,
+      "wrong": 506,
+      "hit": 53.1,
+      "exp": 50.1,
+      "edge": 3.0,
+      "p": 0.0429,
+      "up_calls": 527,
+      "down_calls": 552
+     },
+     "Moderate|d5": {
+      "n": 1530,
+      "right": 852,
+      "wrong": 678,
+      "hit": 55.7,
+      "exp": 50.2,
+      "edge": 5.5,
+      "p": 0.0485,
+      "up_calls": 758,
+      "down_calls": 772
+     },
+     "High|d1": {
+      "n": 948,
+      "right": 534,
+      "wrong": 414,
+      "hit": 56.3,
+      "exp": 50.1,
+      "edge": 6.2,
+      "p": 0.0001,
+      "up_calls": 447,
+      "down_calls": 501
+     },
+     "High|d5": {
+      "n": 1346,
+      "right": 799,
+      "wrong": 547,
+      "hit": 59.4,
+      "exp": 49.9,
+      "edge": 9.4,
+      "p": 0.0014,
+      "up_calls": 626,
+      "down_calls": 720
+     },
+     "Moderate or High|d1": {
+      "n": 2027,
+      "right": 1107,
+      "wrong": 920,
+      "hit": 54.6,
+      "exp": 50.1,
+      "edge": 4.5,
+      "p": 0.0,
+      "up_calls": 974,
+      "down_calls": 1053
+     },
+     "Moderate or High|d5": {
+      "n": 2876,
+      "right": 1651,
+      "wrong": 1225,
+      "hit": 57.4,
+      "exp": 50.1,
+      "edge": 7.3,
+      "p": 0.0003,
+      "up_calls": 1384,
+      "down_calls": 1492
+     },
+     "Any strength|d1": {
+      "n": 2600,
+      "right": 1416,
+      "wrong": 1184,
+      "hit": 54.5,
+      "exp": 50.4,
+      "edge": 4.1,
+      "p": 0.0,
+      "up_calls": 1324,
+      "down_calls": 1276
+     },
+     "Any strength|d5": {
+      "n": 3729,
+      "right": 2102,
+      "wrong": 1627,
+      "hit": 56.4,
+      "exp": 50.5,
+      "edge": 5.9,
+      "p": 0.0009,
+      "up_calls": 1902,
+      "down_calls": 1827
+     },
+     "Low, 2013-2026|d1": {
+      "n": 263,
+      "right": 147,
+      "wrong": 116,
+      "hit": 55.9,
+      "exp": 50.9,
+      "edge": 5.0,
+      "p": 0.1063,
+      "up_calls": 151,
+      "down_calls": 112
+     },
+     "Moderate or High, 2013-2026|d1": {
+      "n": 956,
+      "right": 505,
+      "wrong": 451,
+      "hit": 52.8,
+      "exp": 49.4,
+      "edge": 3.4,
+      "p": 0.0325,
+      "up_calls": 428,
+      "down_calls": 528
+     }
+    },
+    "walk_forward": {
+     "source": "walk-forward: rules picked on their 2000-2013 records only (both indices beat the base, p < 0.05 on one), labels scored every day 2013-2026",
+     "rules": [
+      "Mars-Mercury Vedha",
+      "Mars-Saturn 4/10 (Kendra)",
+      "Mercury-Jupiter 2/12 (Dwidwadash)",
+      "Mercury-Rahu conjunction (same sign)",
+      "Mercury-Saturn 4/10 (Kendra)",
+      "Mercury-Saturn conjunction in Navamsh (D9)",
+      "Moon-Rahu 6/8 (Shadashtak)",
+      "Mrigashira on Monday",
+      "Three Saturday in Shukla Paksh",
+      "Uttara Ashadha on Monday",
+      "Virgo: Saturn, Sun, Mars, Herschel, Rahu any 2"
+     ],
+     "rows": {
+      "Low|d1": {
+       "n": 394,
+       "right": 179,
+       "wrong": 215,
+       "hit": 45.4,
+       "exp": 50.2,
+       "edge": -4.8,
+       "p": 0.0599,
+       "up_calls": 205,
+       "down_calls": 189
+      },
+      "Low|d5": {
+       "n": 616,
+       "right": 287,
+       "wrong": 329,
+       "hit": 46.6,
+       "exp": 50.4,
+       "edge": -3.8,
+       "p": 0.3914,
+       "up_calls": 313,
+       "down_calls": 303
+      },
+      "Moderate|d1": {
+       "n": 436,
+       "right": 228,
+       "wrong": 208,
+       "hit": 52.3,
+       "exp": 52.1,
+       "edge": 0.1,
+       "p": 0.9615,
+       "up_calls": 308,
+       "down_calls": 128
+      },
+      "Moderate|d5": {
+       "n": 669,
+       "right": 367,
+       "wrong": 302,
+       "hit": 54.9,
+       "exp": 53.7,
+       "edge": 1.1,
+       "p": 0.7876,
+       "up_calls": 480,
+       "down_calls": 189
+      },
+      "High|d1": {
+       "n": 295,
+       "right": 161,
+       "wrong": 134,
+       "hit": 54.6,
+       "exp": 55.0,
+       "edge": -0.4,
+       "p": 0.9064,
+       "up_calls": 272,
+       "down_calls": 23
+      },
+      "High|d5": {
+       "n": 477,
+       "right": 293,
+       "wrong": 184,
+       "hit": 61.4,
+       "exp": 57.2,
+       "edge": 4.3,
+       "p": 0.3922,
+       "up_calls": 441,
+       "down_calls": 36
+      },
+      "Moderate or High|d1": {
+       "n": 731,
+       "right": 389,
+       "wrong": 342,
+       "hit": 53.2,
+       "exp": 53.3,
+       "edge": -0.1,
+       "p": 0.9724,
+       "up_calls": 580,
+       "down_calls": 151
+      },
+      "Moderate or High|d5": {
+       "n": 1146,
+       "right": 660,
+       "wrong": 486,
+       "hit": 57.6,
+       "exp": 55.2,
+       "edge": 2.4,
+       "p": 0.4487,
+       "up_calls": 921,
+       "down_calls": 225
+      },
+      "Any strength|d1": {
+       "n": 1125,
+       "right": 568,
+       "wrong": 557,
+       "hit": 50.5,
+       "exp": 52.2,
+       "edge": -1.7,
+       "p": 0.2469,
+       "up_calls": 785,
+       "down_calls": 340
+      },
+      "Any strength|d5": {
+       "n": 1762,
+       "right": 947,
+       "wrong": 815,
+       "hit": 53.7,
+       "exp": 53.5,
+       "edge": 0.3,
+       "p": 0.9187,
+       "up_calls": 1234,
+       "down_calls": 528
+      }
+     }
+    }
+   },
+   "gold": {
+    "source": "walk-forward: the table's data-picked parts re-picked on 2000-2013, scored 2013-2026",
+    "rows": {
+     "Low|d1": {
+      "n": 768,
+      "right": 368,
+      "wrong": 400,
+      "hit": 47.9,
+      "exp": 49.6,
+      "edge": -1.7,
+      "p": 0.3348,
+      "up_calls": 381,
+      "down_calls": 387
+     },
+     "Low|d5": {
+      "n": 1222,
+      "right": 574,
+      "wrong": 648,
+      "hit": 47.0,
+      "exp": 49.5,
+      "edge": -2.5,
+      "p": 0.4277,
+      "up_calls": 604,
+      "down_calls": 618
+     },
+     "Moderate|d1": {
+      "n": 255,
+      "right": 136,
+      "wrong": 119,
+      "hit": 53.3,
+      "exp": 50.5,
+      "edge": 2.8,
+      "p": 0.3781,
+      "up_calls": 135,
+      "down_calls": 120
+     },
+     "Moderate|d5": {
+      "n": 393,
+      "right": 190,
+      "wrong": 203,
+      "hit": 48.3,
+      "exp": 49.9,
+      "edge": -1.6,
+      "p": 0.7778,
+      "up_calls": 207,
+      "down_calls": 186
+     },
+     "High|d1": {
+      "n": 80,
+      "right": 48,
+      "wrong": 32,
+      "hit": 60.0,
+      "exp": 52.9,
+      "edge": 7.1,
+      "p": 0.2175,
+      "up_calls": 75,
+      "down_calls": 5
+     },
+     "High|d5": {
+      "n": 126,
+      "right": 83,
+      "wrong": 43,
+      "hit": 65.9,
+      "exp": 52.3,
+      "edge": 13.6,
+      "p": 0.1685,
+      "up_calls": 119,
+      "down_calls": 7
+     },
+     "Moderate or High|d1": {
+      "n": 335,
+      "right": 184,
+      "wrong": 151,
+      "hit": 54.9,
+      "exp": 51.1,
+      "edge": 3.8,
+      "p": 0.1693,
+      "up_calls": 210,
+      "down_calls": 125
+     },
+     "Moderate or High|d5": {
+      "n": 519,
+      "right": 273,
+      "wrong": 246,
+      "hit": 52.6,
+      "exp": 50.5,
+      "edge": 2.1,
+      "p": 0.6631,
+      "up_calls": 326,
+      "down_calls": 193
+     },
+     "Any strength|d1": {
+      "n": 1103,
+      "right": 552,
+      "wrong": 551,
+      "hit": 50.0,
+      "exp": 50.1,
+      "edge": -0.0,
+      "p": 0.9787,
+      "up_calls": 591,
+      "down_calls": 512
+     },
+     "Any strength|d5": {
+      "n": 1741,
+      "right": 847,
+      "wrong": 894,
+      "hit": 48.7,
+      "exp": 49.8,
+      "edge": -1.1,
+      "p": 0.6711,
+      "up_calls": 930,
+      "down_calls": 811
+     }
+    }
+   },
+   "silver": {
+    "source": "walk-forward: the table's data-picked parts re-picked on 2000-2013, scored 2013-2026",
+    "rows": {
+     "Low|d1": {
+      "n": 929,
+      "right": 501,
+      "wrong": 428,
+      "hit": 53.9,
+      "exp": 51.7,
+      "edge": 2.3,
+      "p": 0.1639,
+      "up_calls": 811,
+      "down_calls": 118
+     },
+     "Low|d5": {
+      "n": 1157,
+      "right": 604,
+      "wrong": 553,
+      "hit": 52.2,
+      "exp": 51.7,
+      "edge": 0.5,
+      "p": 0.8887,
+      "up_calls": 1004,
+      "down_calls": 153
+     },
+     "Moderate|d1": {
+      "n": 539,
+      "right": 280,
+      "wrong": 259,
+      "hit": 51.9,
+      "exp": 52.1,
+      "edge": -0.2,
+      "p": 0.9655,
+      "up_calls": 539,
+      "down_calls": 0
+     },
+     "Moderate|d5": {
+      "n": 684,
+      "right": 363,
+      "wrong": 321,
+      "hit": 53.1,
+      "exp": 51.8,
+      "edge": 1.2,
+      "p": 0.7699,
+      "up_calls": 684,
+      "down_calls": 0
+     },
+     "High|d1": {
+      "n": 368,
+      "right": 197,
+      "wrong": 171,
+      "hit": 53.5,
+      "exp": 52.2,
+      "edge": 1.3,
+      "p": 0.6378,
+      "up_calls": 368,
+      "down_calls": 0
+     },
+     "High|d5": {
+      "n": 467,
+      "right": 252,
+      "wrong": 215,
+      "hit": 54.0,
+      "exp": 51.9,
+      "edge": 2.1,
+      "p": 0.6821,
+      "up_calls": 467,
+      "down_calls": 0
+     },
+     "Moderate or High|d1": {
+      "n": 907,
+      "right": 477,
+      "wrong": 430,
+      "hit": 52.6,
+      "exp": 52.2,
+      "edge": 0.4,
+      "p": 0.7992,
+      "up_calls": 907,
+      "down_calls": 0
+     },
+     "Moderate or High|d5": {
+      "n": 1151,
+      "right": 615,
+      "wrong": 536,
+      "hit": 53.4,
+      "exp": 51.8,
+      "edge": 1.6,
+      "p": 0.6265,
+      "up_calls": 1151,
+      "down_calls": 0
+     },
+     "Any strength|d1": {
+      "n": 1836,
+      "right": 978,
+      "wrong": 858,
+      "hit": 53.3,
+      "exp": 51.9,
+      "edge": 1.4,
+      "p": 0.2424,
+      "up_calls": 1718,
+      "down_calls": 118
+     },
+     "Any strength|d5": {
+      "n": 2308,
+      "right": 1219,
+      "wrong": 1089,
+      "hit": 52.8,
+      "exp": 51.8,
+      "edge": 1.0,
+      "p": 0.6579,
+      "up_calls": 2155,
+      "down_calls": 153
+     }
+    }
+   }
+  },
+  "model_v1": {
+   "all": {
+    "n": 2610,
+    "right": 1404,
+    "wrong": 1206,
+    "hit": 53.8,
+    "exp": 53.6,
+    "edge": 0.2,
+    "p": 0.868,
+    "up_calls": 2337,
+    "down_calls": 273
+   },
+   "a": {
+    "n": 1316,
+    "right": 729,
+    "wrong": 587,
+    "hit": 55.4,
+    "exp": 54.6,
+    "edge": 0.8,
+    "p": 0.5583,
+    "up_calls": 1198,
+    "down_calls": 118
+   },
+   "bull": {
+    "n": 2337,
+    "right": 1281,
+    "wrong": 1056,
+    "hit": 54.8,
+    "exp": 54.7,
+    "edge": 0.1,
+    "p": 0.906,
+    "up_calls": 2337,
+    "down_calls": 0
+   },
+   "bear": {
+    "n": 273,
+    "right": 123,
+    "wrong": 150,
+    "hit": 45.1,
+    "exp": 44.5,
+    "edge": 0.5,
+    "p": 0.9027,
+    "up_calls": 0,
+    "down_calls": 273
+   },
+   "b": {
+    "n": 1294,
+    "right": 675,
+    "wrong": 619,
+    "hit": 52.2,
+    "exp": 52.7,
+    "edge": -0.5,
+    "p": 0.7243,
+    "up_calls": 1139,
+    "down_calls": 155
+   }
+  },
+  "model": {
+   "gold": {
+    "kept": [],
+    "kept_clean": [],
+    "base": 53.8,
+    "rows": {
+     "Model call (2+ points from normal), all layers": {
+      "n": 425,
+      "right": 200,
+      "wrong": 225,
+      "hit": 47.1,
+      "exp": 49.8,
+      "edge": -2.7,
+      "p": 0.2617,
+      "up_calls": 217,
+      "down_calls": 208
+     },
+     "Model call, kept layers (chosen on 2013-2026: not a clean test)": {
+      "n": 0,
+      "right": 0,
+      "wrong": 0,
+      "hit": null,
+      "exp": null,
+      "edge": null,
+      "p": null,
+      "up_calls": 0,
+      "down_calls": 0
+     },
+     "Model call, layers chosen on 2000-2012 only": {
+      "n": 0,
+      "right": 0,
+      "wrong": 0,
+      "hit": null,
+      "exp": null,
+      "edge": null,
+      "p": null,
+      "up_calls": 0,
+      "down_calls": 0
+     },
+     "Model up calls only": {
+      "n": 217,
+      "right": 121,
+      "wrong": 96,
+      "hit": 55.8,
+      "exp": 53.0,
+      "edge": 2.8,
+      "p": 0.4138,
+      "up_calls": 217,
+      "down_calls": 0
+     },
+     "Model down calls only": {
+      "n": 208,
+      "right": 79,
+      "wrong": 129,
+      "hit": 38.0,
+      "exp": 46.5,
+      "edge": -8.5,
+      "p": 0.0143,
+      "up_calls": 0,
+      "down_calls": 208
+     },
+     "Model: down calls only at 5+ points": {
+      "n": 0,
+      "right": 0,
+      "wrong": 0,
+      "hit": null,
+      "exp": null,
+      "edge": null,
+      "p": null,
+      "up_calls": 0,
+      "down_calls": 0
+     },
+     "Model call, 5 sessions": {
+      "n": 1593,
+      "right": 804,
+      "wrong": 789,
+      "hit": 50.5,
+      "exp": 50.3,
+      "edge": 0.1,
+      "p": 0.9578,
+      "up_calls": 924,
+      "down_calls": 669
+     },
+     "Label and model agree": {
+      "n": 425,
+      "right": 200,
+      "wrong": 225,
+      "hit": 47.1,
+      "exp": 49.8,
+      "edge": -2.7,
+      "p": 0.2617,
+      "up_calls": 217,
+      "down_calls": 208
+     },
+     "Label and model disagree: the label's call": {
+      "n": 0,
+      "right": 0,
+      "wrong": 0,
+      "hit": null,
+      "exp": null,
+      "edge": null,
+      "p": null,
+      "up_calls": 0,
+      "down_calls": 0
+     },
+     "Label and model disagree: the model's call": {
+      "n": 0,
+      "right": 0,
+      "wrong": 0,
+      "hit": null,
+      "exp": null,
+      "edge": null,
+      "p": null,
+      "up_calls": 0,
+      "down_calls": 0
+     }
+    }
+   },
+   "silver": {
+    "kept": [
+     "table"
+    ],
+    "kept_clean": [
+     "table"
+    ],
+    "base": 54.6,
+    "rows": {
+     "Model call (2+ points from normal), all layers": {
+      "n": 407,
+      "right": 215,
+      "wrong": 192,
+      "hit": 52.8,
+      "exp": 50.6,
+      "edge": 2.2,
+      "p": 0.3975,
+      "up_calls": 257,
+      "down_calls": 150
+     },
+     "Model call, kept layers (chosen on 2013-2026: not a clean test)": {
+      "n": 407,
+      "right": 215,
+      "wrong": 192,
+      "hit": 52.8,
+      "exp": 50.6,
+      "edge": 2.2,
+      "p": 0.3975,
+      "up_calls": 257,
+      "down_calls": 150
+     },
+     "Model call, layers chosen on 2000-2012 only": {
+      "n": 407,
+      "right": 215,
+      "wrong": 192,
+      "hit": 52.8,
+      "exp": 50.6,
+      "edge": 2.2,
+      "p": 0.3975,
+      "up_calls": 257,
+      "down_calls": 150
+     },
+     "Model up calls only": {
+      "n": 257,
+      "right": 133,
+      "wrong": 124,
+      "hit": 51.8,
+      "exp": 51.7,
+      "edge": 0.0,
+      "p": 1.0,
+      "up_calls": 257,
+      "down_calls": 0
+     },
+     "Model down calls only": {
+      "n": 150,
+      "right": 82,
+      "wrong": 68,
+      "hit": 54.7,
+      "exp": 48.7,
+      "edge": 5.9,
+      "p": 0.1625,
+      "up_calls": 0,
+      "down_calls": 150
+     },
+     "Model: down calls only at 5+ points": {
+      "n": 0,
+      "right": 0,
+      "wrong": 0,
+      "hit": null,
+      "exp": null,
+      "edge": null,
+      "p": null,
+      "up_calls": 0,
+      "down_calls": 0
+     },
+     "Model call, 5 sessions": {
+      "n": 2110,
+      "right": 1057,
+      "wrong": 1053,
+      "hit": 50.1,
+      "exp": 50.7,
+      "edge": -0.6,
+      "p": 0.7909,
+      "up_calls": 1378,
+      "down_calls": 732
+     },
+     "Label and model agree": {
+      "n": 150,
+      "right": 82,
+      "wrong": 68,
+      "hit": 54.7,
+      "exp": 48.7,
+      "edge": 5.9,
+      "p": 0.1625,
+      "up_calls": 0,
+      "down_calls": 150
+     },
+     "Label and model disagree: the label's call": {
+      "n": 0,
+      "right": 0,
+      "wrong": 0,
+      "hit": null,
+      "exp": null,
+      "edge": null,
+      "p": null,
+      "up_calls": 0,
+      "down_calls": 0
+     },
+     "Label and model disagree: the model's call": {
+      "n": 0,
+      "right": 0,
+      "wrong": 0,
+      "hit": null,
+      "exp": null,
+      "edge": null,
+      "p": null,
+      "up_calls": 0,
+      "down_calls": 0
+     }
+    }
+   },
+   "spx": {
+    "kept": [
+     "table",
+     "bigmove",
+     "NYSE gochara"
+    ],
+    "kept_clean": [
+     "bigmove",
+     "NYSE gochara",
+     "USA chandra",
+     "NYSE chandra",
+     "USA tara"
+    ],
+    "base": 52.8,
+    "rows": {
+     "Model call (2+ points from normal), all layers": {
+      "n": 1033,
+      "right": 526,
+      "wrong": 507,
+      "hit": 50.9,
+      "exp": 50.3,
+      "edge": 0.6,
+      "p": 0.6922,
+      "up_calls": 553,
+      "down_calls": 480
+     },
+     "Model call, kept layers (chosen on 2013-2026: not a clean test)": {
+      "n": 634,
+      "right": 359,
+      "wrong": 275,
+      "hit": 56.6,
+      "exp": 52.1,
+      "edge": 4.5,
+      "p": 0.0207,
+      "up_calls": 385,
+      "down_calls": 249
+     },
+     "Model call, layers chosen on 2000-2012 only": {
+      "n": 859,
+      "right": 430,
+      "wrong": 429,
+      "hit": 50.1,
+      "exp": 51.6,
+      "edge": -1.5,
+      "p": 0.3647,
+      "up_calls": 519,
+      "down_calls": 340
+     },
+     "Model up calls only": {
+      "n": 553,
+      "right": 317,
+      "wrong": 236,
+      "hit": 57.3,
+      "exp": 57.0,
+      "edge": 0.4,
+      "p": 0.897,
+      "up_calls": 553,
+      "down_calls": 0
+     },
+     "Model down calls only": {
+      "n": 480,
+      "right": 209,
+      "wrong": 271,
+      "hit": 43.5,
+      "exp": 42.7,
+      "edge": 0.9,
+      "p": 0.7103,
+      "up_calls": 0,
+      "down_calls": 480
+     },
+     "Model: down calls only at 5+ points": {
+      "n": 149,
+      "right": 62,
+      "wrong": 87,
+      "hit": 41.6,
+      "exp": 42.5,
+      "edge": -0.8,
+      "p": 0.8676,
+      "up_calls": 0,
+      "down_calls": 149
+     },
+     "Model call, 5 sessions": {
+      "n": 1946,
+      "right": 1026,
+      "wrong": 920,
+      "hit": 52.7,
+      "exp": 50.1,
+      "edge": 2.6,
+      "p": 0.2736,
+      "up_calls": 998,
+      "down_calls": 948
+     },
+     "Label and model agree": {
+      "n": 457,
+      "right": 246,
+      "wrong": 211,
+      "hit": 53.8,
+      "exp": 49.7,
+      "edge": 4.1,
+      "p": 0.0781,
+      "up_calls": 211,
+      "down_calls": 246
+     },
+     "Label and model disagree: the label's call": {
+      "n": 271,
+      "right": 135,
+      "wrong": 136,
+      "hit": 49.8,
+      "exp": 49.2,
+      "edge": 0.6,
+      "p": 0.8534,
+      "up_calls": 100,
+      "down_calls": 171
+     },
+     "Label and model disagree: the model's call": {
+      "n": 271,
+      "right": 136,
+      "wrong": 135,
+      "hit": 50.2,
+      "exp": 50.8,
+      "edge": -0.6,
+      "p": 0.8534,
+      "up_calls": 171,
+      "down_calls": 100
+     },
+     "Model call, clean walk-forward (labels from rules picked on 2000-2013; fitted on 2000-2013)": {
+      "n": 1012,
+      "right": 513,
+      "wrong": 499,
+      "hit": 50.7,
+      "exp": 49.8,
+      "edge": 0.9,
+      "p": 0.5807,
+      "up_calls": 517,
+      "down_calls": 495
+     },
+     "Label and model agree, clean walk-forward": {
+      "n": 478,
+      "right": 249,
+      "wrong": 229,
+      "hit": 52.1,
+      "exp": 51.5,
+      "edge": 0.5,
+      "p": 0.8166,
+      "up_calls": 300,
+      "down_calls": 178
+     }
+    }
+   },
+   "sensex": {
+    "kept": [
+     "table"
+    ],
+    "kept_clean": [
+     "table"
+    ],
+    "base": 53.5,
+    "rows": {
+     "Model call (2+ points from normal), all layers": {
+      "n": 997,
+      "right": 524,
+      "wrong": 473,
+      "hit": 52.6,
+      "exp": 49.1,
+      "edge": 3.4,
+      "p": 0.0295,
+      "up_calls": 428,
+      "down_calls": 569
+     },
+     "Model call, kept layers (chosen on 2013-2026: not a clean test)": {
+      "n": 956,
+      "right": 505,
+      "wrong": 451,
+      "hit": 52.8,
+      "exp": 49.4,
+      "edge": 3.4,
+      "p": 0.0325,
+      "up_calls": 428,
+      "down_calls": 528
+     },
+     "Model call, layers chosen on 2000-2012 only": {
+      "n": 956,
+      "right": 505,
+      "wrong": 451,
+      "hit": 52.8,
+      "exp": 49.4,
+      "edge": 3.4,
+      "p": 0.0325,
+      "up_calls": 428,
+      "down_calls": 528
+     },
+     "Model up calls only": {
+      "n": 428,
+      "right": 251,
+      "wrong": 177,
+      "hit": 58.6,
+      "exp": 55.8,
+      "edge": 2.9,
+      "p": 0.2414,
+      "up_calls": 428,
+      "down_calls": 0
+     },
+     "Model down calls only": {
+      "n": 569,
+      "right": 273,
+      "wrong": 296,
+      "hit": 48.0,
+      "exp": 44.2,
+      "edge": 3.8,
+      "p": 0.0686,
+      "up_calls": 0,
+      "down_calls": 569
+     },
+     "Model: down calls only at 5+ points": {
+      "n": 0,
+      "right": 0,
+      "wrong": 0,
+      "hit": null,
+      "exp": null,
+      "edge": null,
+      "p": null,
+      "up_calls": 0,
+      "down_calls": 0
+     },
+     "Model call, 5 sessions": {
+      "n": 2233,
+      "right": 1221,
+      "wrong": 1012,
+      "hit": 54.7,
+      "exp": 51.1,
+      "edge": 3.6,
+      "p": 0.1213,
+      "up_calls": 1325,
+      "down_calls": 908
+     },
+     "Label and model agree": {
+      "n": 997,
+      "right": 524,
+      "wrong": 473,
+      "hit": 52.6,
+      "exp": 49.1,
+      "edge": 3.4,
+      "p": 0.0295,
+      "up_calls": 428,
+      "down_calls": 569
+     },
+     "Label and model disagree: the label's call": {
+      "n": 0,
+      "right": 0,
+      "wrong": 0,
+      "hit": null,
+      "exp": null,
+      "edge": null,
+      "p": null,
+      "up_calls": 0,
+      "down_calls": 0
+     },
+     "Label and model disagree: the model's call": {
+      "n": 0,
+      "right": 0,
+      "wrong": 0,
+      "hit": null,
+      "exp": null,
+      "edge": null,
+      "p": null,
+      "up_calls": 0,
+      "down_calls": 0
+     },
+     "Model call, clean walk-forward (labels from rules picked on 2000-2013; fitted on 2000-2013)": {
+      "n": 897,
+      "right": 460,
+      "wrong": 437,
+      "hit": 51.3,
+      "exp": 51.6,
+      "edge": -0.3,
+      "p": 0.8515,
+      "up_calls": 580,
+      "down_calls": 317
+     },
+     "Label and model agree, clean walk-forward": {
+      "n": 897,
+      "right": 460,
+      "wrong": 437,
+      "hit": 51.3,
+      "exp": 51.6,
+      "edge": -0.3,
+      "p": 0.8515,
+      "up_calls": 580,
+      "down_calls": 317
+     }
+    }
+   }
+  },
+  "big": {
+   "gold": {
+    "warned": 282,
+    "warned_big": 11,
+    "warned_pct": 3.9,
+    "other": 3197,
+    "other_big": 207,
+    "other_pct": 6.5,
+    "p": 0.0873
+   },
+   "silver": {
+    "warned": 0,
+    "warned_big": 0,
+    "warned_pct": null,
+    "other": 3478,
+    "other_big": 292,
+    "other_pct": 8.4,
+    "p": null
+   },
+   "spx": {
+    "warned": 870,
+    "warned_big": 41,
+    "warned_pct": 4.7,
+    "other": 2609,
+    "other_big": 138,
+    "other_pct": 5.3,
+    "p": 0.5049
+   },
+   "sensex": {
+    "warned": 908,
+    "warned_big": 66,
+    "warned_pct": 7.3,
+    "other": 2490,
+    "other_big": 77,
+    "other_pct": 3.1,
+    "p": 0.0
+   }
+  },
+  "volatility_factors": {
+   "spx": {
+    "2000-2012": {
+     "on": 1532,
+     "on_big": 184,
+     "on_pct": 12.0,
+     "off": 1736,
+     "off_big": 154,
+     "off_pct": 8.9,
+     "p": 0.0033
+    },
+    "2013-2026": {
+     "on": 1543,
+     "on_big": 98,
+     "on_pct": 6.4,
+     "off": 1936,
+     "off_big": 81,
+     "off_pct": 4.2,
+     "p": 0.004
+    }
+   },
+   "sensex": {
+    "2000-2012": {
+     "on": 1228,
+     "on_big": 280,
+     "on_pct": 22.8,
+     "off": 1987,
+     "off_big": 263,
+     "off_pct": 13.2,
+     "p": 0.0
+    },
+    "2013-2026": {
+     "on": 1133,
+     "on_big": 83,
+     "on_pct": 7.3,
+     "off": 2265,
+     "off_big": 60,
+     "off_pct": 2.6,
+     "p": 0.0
+    }
+   }
+  },
+  "window": {
+   "spx": {
+    "sessions": 46,
+    "up_share": 52,
+    "rows": {
+     "Model call (2+ points from normal), all layers": {
+      "n": 17,
+      "right": 8,
+      "wrong": 9,
+      "hit": 47.1,
+      "exp": 49.9,
+      "edge": -2.8,
+      "p": 1.0,
+      "up_calls": 8,
+      "down_calls": 9
+     },
+     "Model up calls only": {
+      "n": 8,
+      "right": 4,
+      "wrong": 4,
+      "hit": 50.0,
+      "exp": 52.0,
+      "edge": -2.0,
+      "p": 1.0,
+      "up_calls": 8,
+      "down_calls": 0
+     },
+     "Model down calls only": {
+      "n": 9,
+      "right": 4,
+      "wrong": 5,
+      "hit": 44.4,
+      "exp": 48.0,
+      "edge": -3.6,
+      "p": 1.0,
+      "up_calls": 0,
+      "down_calls": 9
+     },
+     "Table label, any strength": {
+      "n": 19,
+      "right": 11,
+      "wrong": 8,
+      "hit": 57.9,
+      "exp": 50.7,
+      "edge": 7.2,
+      "p": 0.6481,
+      "up_calls": 13,
+      "down_calls": 6
+     },
+     "Table label, Low": {
+      "n": 6,
+      "right": 2,
+      "wrong": 4,
+      "hit": 33.3,
+      "exp": 52.0,
+      "edge": -18.7,
+      "p": 0.4363,
+      "up_calls": 6,
+      "down_calls": 0
+     },
+     "Table label, Moderate or High": {
+      "n": 13,
+      "right": 9,
+      "wrong": 4,
+      "hit": 69.2,
+      "exp": 50.2,
+      "edge": 19.1,
+      "p": 0.2665,
+      "up_calls": 7,
+      "down_calls": 6
+     },
+     "Label and model agree": {
+      "n": 13,
+      "right": 7,
+      "wrong": 6,
+      "hit": 53.8,
+      "exp": 50.2,
+      "edge": 3.7,
+      "p": 1.0,
+      "up_calls": 7,
+      "down_calls": 6
+     }
+    }
+   },
+   "sensex": {
+    "sessions": 43,
+    "up_share": 62,
+    "rows": {
+     "Model call (2+ points from normal), all layers": {
+      "n": 16,
+      "right": 11,
+      "wrong": 5,
+      "hit": 68.8,
+      "exp": 51.5,
+      "edge": 17.2,
+      "p": 0.1993,
+      "up_calls": 9,
+      "down_calls": 7
+     },
+     "Model up calls only": {
+      "n": 9,
+      "right": 7,
+      "wrong": 2,
+      "hit": 77.8,
+      "exp": 62.1,
+      "edge": 15.7,
+      "p": 0.4976,
+      "up_calls": 9,
+      "down_calls": 0
+     },
+     "Model down calls only": {
+      "n": 7,
+      "right": 4,
+      "wrong": 3,
+      "hit": 57.1,
+      "exp": 37.9,
+      "edge": 19.2,
+      "p": 0.4382,
+      "up_calls": 0,
+      "down_calls": 7
+     },
+     "Table label, any strength": {
+      "n": 21,
+      "right": 15,
+      "wrong": 6,
+      "hit": 71.4,
+      "exp": 54.0,
+      "edge": 17.4,
+      "p": 0.1177,
+      "up_calls": 14,
+      "down_calls": 7
+     },
+     "Table label, Low": {
+      "n": 6,
+      "right": 5,
+      "wrong": 1,
+      "hit": 83.3,
+      "exp": 62.1,
+      "edge": 21.3,
+      "p": 0.4187,
+      "up_calls": 6,
+      "down_calls": 0
+     },
+     "Table label, Moderate or High": {
+      "n": 15,
+      "right": 10,
+      "wrong": 5,
+      "hit": 66.7,
+      "exp": 50.8,
+      "edge": 15.9,
+      "p": 0.2871,
+      "up_calls": 8,
+      "down_calls": 7
+     },
+     "Label and model agree": {
+      "n": 16,
+      "right": 11,
+      "wrong": 5,
+      "hit": 68.8,
+      "exp": 51.5,
+      "edge": 17.2,
+      "p": 0.1993,
+      "up_calls": 9,
+      "down_calls": 7
+     }
+    }
+   },
+   "gold": {
+    "sessions": 46,
+    "up_share": 35,
+    "rows": {
+     "Model call (2+ points from normal), all layers": {
+      "n": 3,
+      "right": 3,
+      "wrong": 0,
+      "hit": 100.0,
+      "exp": 54.9,
+      "edge": 45.1,
+      "p": 0.2284,
+      "up_calls": 1,
+      "down_calls": 2
+     },
+     "Model up calls only": {
+      "n": 1,
+      "right": 1,
+      "wrong": 0,
+      "hit": 100.0,
+      "exp": 35.3,
+      "edge": 64.7,
+      "p": 0.3529,
+      "up_calls": 1,
+      "down_calls": 0
+     },
+     "Model down calls only": {
+      "n": 2,
+      "right": 2,
+      "wrong": 0,
+      "hit": 100.0,
+      "exp": 64.7,
+      "edge": 35.3,
+      "p": 0.5433,
+      "up_calls": 0,
+      "down_calls": 2
+     },
+     "Table label, any strength": {
+      "n": 24,
+      "right": 10,
+      "wrong": 14,
+      "hit": 41.7,
+      "exp": 47.5,
+      "edge": -5.9,
+      "p": 0.6698,
+      "up_calls": 14,
+      "down_calls": 10
+     },
+     "Table label, Low": {
+      "n": 19,
+      "right": 7,
+      "wrong": 12,
+      "hit": 36.8,
+      "exp": 47.7,
+      "edge": -10.8,
+      "p": 0.3475,
+      "up_calls": 11,
+      "down_calls": 8
+     },
+     "Table label, Moderate or High": {
+      "n": 5,
+      "right": 3,
+      "wrong": 2,
+      "hit": 60.0,
+      "exp": 47.1,
+      "edge": 12.9,
+      "p": 0.654,
+      "up_calls": 3,
+      "down_calls": 2
+     },
+     "Label and model agree": {
+      "n": 3,
+      "right": 3,
+      "wrong": 0,
+      "hit": 100.0,
+      "exp": 54.9,
+      "edge": 45.1,
+      "p": 0.2284,
+      "up_calls": 1,
+      "down_calls": 2
+     }
+    }
+   },
+   "silver": {
+    "sessions": 46,
+    "up_share": 35,
+    "rows": {
+     "Model call (2+ points from normal), all layers": {
+      "n": 0,
+      "right": 0,
+      "wrong": 0,
+      "hit": null,
+      "exp": null,
+      "edge": null,
+      "p": null,
+      "up_calls": 0,
+      "down_calls": 0
+     },
+     "Model up calls only": {
+      "n": 0,
+      "right": 0,
+      "wrong": 0,
+      "hit": null,
+      "exp": null,
+      "edge": null,
+      "p": null,
+      "up_calls": 0,
+      "down_calls": 0
+     },
+     "Model down calls only": {
+      "n": 0,
+      "right": 0,
+      "wrong": 0,
+      "hit": null,
+      "exp": null,
+      "edge": null,
+      "p": null,
+      "up_calls": 0,
+      "down_calls": 0
+     },
+     "Table label, any strength": {
+      "n": 28,
+      "right": 10,
+      "wrong": 18,
+      "hit": 35.7,
+      "exp": 35.0,
+      "edge": 0.7,
+      "p": 1.0,
+      "up_calls": 28,
+      "down_calls": 0
+     },
+     "Table label, Low": {
+      "n": 14,
+      "right": 5,
+      "wrong": 9,
+      "hit": 35.7,
+      "exp": 35.0,
+      "edge": 0.7,
+      "p": 1.0,
+      "up_calls": 14,
+      "down_calls": 0
+     },
+     "Table label, Moderate or High": {
+      "n": 14,
+      "right": 5,
+      "wrong": 9,
+      "hit": 35.7,
+      "exp": 35.0,
+      "edge": 0.7,
+      "p": 1.0,
+      "up_calls": 14,
+      "down_calls": 0
+     },
+     "Label and model agree": {
+      "n": 0,
+      "right": 0,
+      "wrong": 0,
+      "hit": null,
+      "exp": null,
+      "edge": null,
+      "p": null,
+      "up_calls": 0,
+      "down_calls": 0
+     }
+    }
+   }
+  },
+  "solar_return": {
+   "bullish": {
+    "hit": 53.4,
+    "exp": 52.4,
+    "n": 2429,
+    "hit5": 56.8,
+    "exp5": 56.2
+   },
+   "bearish": {
+    "hit": 47.0,
+    "exp": 47.6,
+    "n": 9485,
+    "hit5": 42.9,
+    "exp5": 43.8
+   }
+  },
+  "watch_split": {
+   "gold": {
+    "split": "2013-11-20",
+    "n_leads": 23,
+    "n_held": 14,
+    "pooled_obs": 388,
+    "pooled_exp": 379.7,
+    "pooled_lift": 1.02,
+    "pooled_p": 0.34183600959644245
+   },
+   "silver": {
+    "split": "2013-11-20",
+    "n_leads": 17,
+    "n_held": 3,
+    "pooled_obs": 330,
+    "pooled_exp": 363.7,
+    "pooled_lift": 0.91,
+    "pooled_p": 0.965137117637765
+   }
+  }
+ },
+ "recommendations": [
+  {
+   "id": "labels",
+   "applied": true,
+   "where": "both calendars",
+   "supported": true,
+   "title": "Table labels are leans, not day calls; Low labels are now shown in grey",
+   "evidence": "Out of sample (walk-forward, every day 2013-2026: S&P and Sensex labels from rules picked on 2000-2013 only; gold and silver with their data-picked parts re-picked on 2000-2013): S&P Low 46.8% right vs 50.1% by chance, Moderate or High 55.5% vs 53.9% (p 0.3945), all labels 52.4% vs 52.5%; Sensex Low 45.4% right vs 50.2% by chance, Moderate or High 53.2% vs 53.3% (p 0.9724), all labels 50.5% vs 52.2%; Gold Low 47.9% right vs 49.6% by chance, Moderate or High 54.9% vs 51.1% (p 0.1693), all labels 50.0% vs 50.1%; Silver Low 53.9% right vs 51.7% by chance, Moderate or High 52.6% vs 52.2% (p 0.7992), all labels 53.3% vs 51.9%. Pooled edge: Low -0.9 points, Moderate or High +1.0 points; no strength beats chance in any market. The good figures in the published table (S&P Moderate or High 53.9% vs 49.8%, Sensex 54.6% vs 50.1%) come from choosing and scoring the rules on the same years.",
+   "november": "S&P 4 of 10; Sensex 8 of 10; Gold 5 of 10; Silver 4 of 9 (Low labels: S&P 2 of 6; Sensex 5 of 6; Gold 4 of 8)"
+  },
+  {
+   "id": "model",
+   "applied": true,
+   "where": "both calendars",
+   "supported": true,
+   "title": "Combined model: its probabilities stay, but they are no longer coloured as calls",
+   "evidence": "Walk-forward 2013-2026 (fitted on earlier years; S&P and Sensex also with labels from rules picked on 2000-2013): S&P 50.7% right vs 49.8% by chance (p 0.5807, 1012 calls); Sensex 51.3% right vs 51.6% by chance (p 0.8515, 897 calls); Gold 47.1% right vs 49.8% by chance (p 0.2617, 425 calls); Silver 52.8% right vs 50.6% by chance (p 0.3975, 407 calls). Up calls look right more often only because markets rise more often: S&P up 57.3% vs 57.0%, down 43.5% vs 42.7%; Sensex up 58.6% vs 55.8%, down 48.0% vs 44.2%; Gold up 55.8% vs 53.0%, down 38.0% vs 46.5%; Silver up 51.8% vs 51.7%, down 54.7% vs 48.7%. Model v1.0 (gold, a source model, 2000-2026): 53.8% vs 53.6% (p 0.868).",
+   "november": "S&P 4 of 8; Sensex 4 of 5; Gold 1 of 1; Model v1.0 Gold 4 of 13"
+  },
+  {
+   "id": "big_days",
+   "applied": true,
+   "where": "the 2026 calendar",
+   "where_note": "the 2027 calendar shows no big-day chances",
+   "supported": true,
+   "keep": [
+    "sensex"
+   ],
+   "title": "Big days: the volatility factors (S&P, Sensex) are the warning that holds up; the model's big-day chance counts only for the Sensex and is shown as untested elsewhere",
+   "evidence": "Walk-forward 2013-2026, days the model flags (2+ points above normal) vs other days: S&P big on 4.7% vs 5.3% (p 0.5049, 870 flagged days); Sensex big on 7.3% vs 3.1% (p 0.0, 908 flagged days); Gold big on 3.9% vs 6.5% (p 0.0873, 282 flagged days); Silver never flags a day. The volatility factors on their own: S&P 2000-2012: 12.0% big on factor days vs 8.9% (p 0.0033); S&P 2013-2026: 6.4% big on factor days vs 4.2% (p 0.004); Sensex 2000-2012: 22.8% big on factor days vs 13.2% (p 0.0); Sensex 2013-2026: 7.3% big on factor days vs 2.6% (p 0.0). The factors were chosen on 2000-2026, so the Sensex lift is not a clean out-of-sample result.",
+   "november": "S&P 5 big days, 0 flagged by the model, 2 on volatility-factor days (10 factor days); Sensex 2 big days, 2 flagged by the model, 2 on volatility-factor days (9 factor days); Gold 8 big days, 1 flagged by the model; Silver 8 big days, 0 flagged by the model"
+  },
+  {
+   "id": "solar_return_days",
+   "applied": false,
+   "supported": true,
+   "title": "Solar return day calls: November's run was luck; they stay as Solar return's view",
+   "evidence": "S&P since 1928: Bullish days 53.4% right vs 52.4% up days (2429 days); Bearish days 47.0% right vs 47.6% down days (9485 days)",
+   "november": "7 of 11 (63.6% vs 52.1% by chance, p 0.5512)"
+  },
+  {
+   "id": "deep_dive_leans",
+   "applied": false,
+   "supported": true,
+   "title": "Deep-dive leans are not calls; November confirms it",
+   "evidence": "No month's deep dive has a test that passes the multiple-testing correction, and the nominal counts are below what chance gives",
+   "november": "9 of 30 right (30.0% vs 38.9% by chance)"
+  },
+  {
+   "id": "watch_windows",
+   "applied": true,
+   "where": "the 2026 calendar",
+   "where_note": "the 2027 calendar shows no watch windows",
+   "supported": true,
+   "title": "Gold and silver big-move watch windows are marked 'no proven lift'",
+   "evidence": "gold: 14 of 23 leads held in the second half; there 388 big days vs 379.7 expected (lift 1.02, p 0.34); silver: 3 of 17 leads held in the second half; there 330 big days vs 363.7 expected (lift 0.91, p 0.97)",
+   "november": "Gold 3 big of 4 watch days; Silver 0 big of 0 watch days"
+  },
+  {
+   "id": "span_rules",
+   "applied": false,
+   "supported": true,
+   "title": "Span rules (Venus-Rahu and Moon-Rahu 6/8) are a lean over the whole span, not a call for each day",
+   "evidence": "Each S&P / Sensex table rule scored as a day-by-day call, 2000-2026: 1 of 20 pass the correction (q < 0.10): Three Saturday in Shukla Paksh on the Sensex (52.6% vs 44.7%); the table's records count each span once, from the close before it to its end",
+   "november": "Moon-Rahu 6/8 31 Oct\u201302 Nov Sensex +1.66% (passed); Moon-Rahu 6/8 31 Oct\u201302 Nov S&P -0.51% (failed); Moon-Rahu 6/8 04 Nov\u201307 Nov Sensex +5.34% (passed); Moon-Rahu 6/8 04 Nov\u201307 Nov S&P -2.54% (failed); Venus-Rahu 6/8 05 Nov\u201322 Nov Sensex +8.56% (passed); Venus-Rahu 6/8 05 Nov\u201322 Nov S&P -10.12% (failed); Moon-Rahu 6/8 27 Nov\u201327 Nov Sensex -1.17% (failed); Moon-Rahu 6/8 27 Nov\u201327 Nov S&P +1.60% (passed)"
+  }
+ ]
+}

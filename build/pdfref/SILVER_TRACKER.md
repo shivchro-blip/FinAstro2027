@@ -1,6 +1,6 @@
 # Silver findings tracker
 
-Generated 27 Nov 2026 18:57 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
+Generated 27 Nov 2026 19:51 EST by `tools/gold_tracker.py --metal silver` (`--refresh` re-runs both backtests). HTML version: `SILVER_TRACKER.html`.
 
 ## Recent findings
 
@@ -111,6 +111,7 @@ Best (from the 26 yr data): Retrograde Mercury or Jupiter, Only Moon and Mercury
 
 | Date | PR | Topic | Result |
 |---|---|---|---|
+| 2026-11-28 | #69 | November 2026 review: every call scored against the markets; where it failed; tuning tested on the long records and applied to both calendars | November: 120 passed, 118 failed, 118 too small (50% vs 50% by chance); S&P 65/65, Sensex 25/9 (74% vs 74%), gold 18/25, silver 12/19; nothing significant. S&P labels failed on Venus-Rahu 6/8 (5-22 Nov: S&P -10.1%, Sensex +8.6%). Deep dive: 2,010 tests, 0 pass BH, 41 nominal; checks 20/20, recounts 10/10. Out of sample no layer beats chance: labels S&P 52.4% vs 52.5%, Sensex 50.5% vs 52.2%, gold 50.0% vs 50.1%, silver 53.3% vs 51.9%; model S&P 50.7% vs 49.8%, Sensex 51.3% vs 51.6%; Low labels below chance in 3 of 4 markets. The kept-layers result (S&P 56.6% vs 52.1%) was a selection effect. Big days: model flag works only on the Sensex (7.3% vs 3.1%); volatility factors lift big days on S&P and Sensex in both halves (chosen in sample). Applied: Low labels grey, model probabilities uncoloured, big-day chance counted only for the Sensex, watch windows marked no proven lift; 2027 rows byte-identical. |
 | 2026-11-27 | #68 | Deep dive February 2027 week by week, double-checked; added to the 2027 calendar | 1,827 tests, 0 pass BH; 43 nominal vs about 91 expected; no big-day class. Checks 16/16 (eclipse instants and the speed-overtake count range corrected after the first pass), recounts 8/8. February labels: S&P/Sensex Bearish High 8-19 Feb (2026 document: three Saturdays in Shukla paksha, Shukla Shashthi on a Friday), Bearish Moderate from 23 Feb (Mercury-Rahu); model S&P 44-51% vs 54%; Solar return volatile 9-23 Feb, bullish from 24 Feb. |
 | 2026-11-27 | #67 | Deep dive January 2027 week by week, double-checked; added to the 2027 calendar | 2,087 tests, 0 pass BH; 44 nominal vs about 104 expected; no big-day class. Checks 20/20, recounts 8/8. January labels: S&P/Sensex Bearish all month (Venus-Uranus opposition, Mercury-Rahu conjunction), silver Bullish High/Moderate, gold Bullish Low (at chance); model S&P 47-52% vs 54%. |
 | 2026-11-27 | #66 | Remove files that are no longer relevant | Removed 19 unused files (13 .ics of removed reports, 4 past day-report JSONs, 2 duplicate partial sky-change files; the 2026 document check is unchanged without them). Kept every JSON the pipeline reads and the 2027 .ics. .gitignore and publish_reports.py updated. |

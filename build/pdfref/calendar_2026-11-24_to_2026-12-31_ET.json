@@ -1,12 +1,27 @@
 {
  "start": "2026-11-24",
  "end": "2026-12-31",
- "generated": "27 Nov 2026 18:56 ET",
+ "generated": "27 Nov 2026 19:49 ET",
  "checks": [
   {
    "name": "Deep dive: every week's double checks pass (event times, counts, independent recount, coverage)",
    "ok": true,
    "detail": "20/20 across 5 weeks"
+  },
+  {
+   "name": "November review: the scorecard recount equals the day-by-day scorer",
+   "ok": true,
+   "detail": "33 of 33 layer counts (that day and 5 sessions)"
+  },
+  {
+   "name": "November deep dive: every week's double checks pass; its history ends 31 Oct 2026",
+   "ok": true,
+   "detail": "20/20 across 5 weeks; history end 2026-10-31"
+  },
+  {
+   "name": "November review: the long records stop before November",
+   "ok": true,
+   "detail": "tuning tests use data to 2026-10-31"
   },
   {
    "name": "New-source layer loaded, every item carries its test result",
