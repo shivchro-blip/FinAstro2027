@@ -1,5 +1,5 @@
 {
- "made": "2026-11-28 09:25 ET",
+ "made": "2026-11-28 09:30 ET",
  "start": "2027-04-22",
  "end": "2027-04-28",
  "classes": {
@@ -9653,7 +9653,7 @@
  "unclassified": [],
  "checks": [
   {
-   "name": "Every event time re-derived from the ephemeris (\u00b16 min; Moon aspects \u00b10.15\u00b0, eclipse first contacts \u00b110 min, speed overtakes \u00b16 h, stations and the Sun's apsides \u00b112 h, Moon apsides \u00b13 h, combustion by IST day)",
+   "name": "Every event time re-derived from the ephemeris (\u00b16 min; Moon aspects \u00b10.15\u00b0, eclipse first contacts \u00b110 min, speed overtakes and fast-motion crossings \u00b16 h, stations and the Sun's apsides \u00b112 h, Moon apsides \u00b13 h, combustion by IST day)",
    "ok": true,
    "detail": "62 events checked"
   },
