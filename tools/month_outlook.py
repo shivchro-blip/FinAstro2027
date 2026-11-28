@@ -319,7 +319,7 @@ def verdicts(o, mname):
                 items.append(dict(topic="Mercury in Paap Kartari (B116, 2026 document)", why=(
                     f"past windows {c['case']}, B116's own case for this window, were bearish {dr['hit']}% vs {dr['base']}% (p {dr['p']}), "
                     "a 2000–2026 record of a source rule rather than a walk-forward test") if ok else None,
-                                  call=f"{c['window']}, bearish; " + (f"{', '.join(c['benefic'])} aspects Mercury, which B116 reads as “very volatile and both side movement”"
+                                  call=f"{c['window']}, bearish; " + (f"{' and '.join(c['benefic'])} aspect{'s' if len(c['benefic']) == 1 else ''} Mercury, which B116 reads as “very volatile and both side movement”"
                                                                       if c["benefic"] else "no benefic aspects Mercury, so B116 reads it as a negative event"),
                                   worth=f"as a bearish rule overall {k['all']['hit_rate']}% vs {k['all']['base_rate']}% (p {k['all']['p_value']}; halves {k['h1']['hit_rate']}% vs "
                                         f"{k['h1']['base_rate']}% and {k['h2']['hit_rate']}% vs {k['h2']['base_rate']}%), {k['verdict']}. Windows {c['case']}: bearish right "

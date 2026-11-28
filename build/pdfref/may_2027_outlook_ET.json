@@ -1,5 +1,5 @@
 {
- "made": "2026-11-28 09:33 ET",
+ "made": "2026-11-28 09:36 ET",
  "month": "2027-05",
  "name": "May 2027",
  "start": "2027-05-01",
@@ -775,10 +775,10 @@
       "flat": 46,
       "hit_rate": 41,
       "base_rate": 39,
-      "exp": 73.54236460262247,
+      "exp": 73.58065716740096,
       "avg_dir_ret": -0.25,
       "verdict": "Mixed",
-      "p_value": 0.2766,
+      "p_value": 0.2785,
       "years_active": 26,
       "years_right": 7
      },
@@ -803,10 +803,10 @@
       "flat": 22,
       "hit_rate": 36,
       "base_rate": 36,
-      "exp": 31.57979193764959,
+      "exp": 31.61808450242809,
       "avg_dir_ret": -0.37,
       "verdict": "Mixed",
-      "p_value": 0.5029,
+      "p_value": 0.5063,
       "years_active": 13,
       "years_right": 3
      },
@@ -856,7 +856,27 @@
        "p": 0.0209
       }
      },
-     "cases": []
+     "cases": [
+      {
+       "window": "23\u201327 May",
+       "benefic": [],
+       "case": "without a benefic aspect",
+       "direction": {
+        "hit": 41,
+        "base": 38,
+        "p": 0.322,
+        "ok": false
+       },
+       "volatility": {
+        "windows": 115,
+        "big": 92,
+        "exp": 73.5,
+        "lift": 1.25,
+        "p": 0.0209,
+        "ok": true
+       }
+      }
+     ]
     },
     "sensex": {
      "all": {
@@ -866,10 +886,10 @@
       "flat": 39,
       "hit_rate": 48,
       "base_rate": 41,
-      "exp": 80.12193992210155,
+      "exp": 80.0931306821124,
       "avg_dir_ret": -0.12,
       "verdict": "Mixed",
-      "p_value": 0.0268,
+      "p_value": 0.0265,
       "years_active": 26,
       "years_right": 11
      },
@@ -894,10 +914,10 @@
       "flat": 21,
       "hit_rate": 45,
       "base_rate": 39,
-      "exp": 35.07319660135633,
+      "exp": 35.0443873613672,
       "avg_dir_ret": -0.21,
       "verdict": "Mixed",
-      "p_value": 0.1683,
+      "p_value": 0.1667,
       "years_active": 13,
       "years_right": 3
      },
@@ -947,10 +967,60 @@
        "p": 0.0166
       }
      },
-     "cases": []
+     "cases": [
+      {
+       "window": "23\u201327 May",
+       "benefic": [],
+       "case": "without a benefic aspect",
+       "direction": {
+        "hit": 50,
+        "base": 40,
+        "p": 0.0317,
+        "ok": true
+       },
+       "volatility": {
+        "windows": 115,
+        "big": 108,
+        "exp": 87.1,
+        "lift": 1.24,
+        "p": 0.0166,
+        "ok": true
+       }
+      }
+     ]
     }
    },
-   "windows": []
+   "windows": [
+    {
+     "frm": "Sun 23 May 2027 09:02",
+     "to": "Thu 27 May 2027 02:11",
+     "pair": "Uranus | Ketu",
+     "sign": "Taurus",
+     "combust": false,
+     "benefic": [],
+     "local": {
+      "spx": {
+       "start": "2027-05-23 09:02",
+       "end": "2027-05-27 02:11",
+       "sessions": [
+        "2027-05-24",
+        "2027-05-25",
+        "2027-05-26"
+       ]
+      },
+      "sensex": {
+       "start": "2027-05-23 18:32",
+       "end": "2027-05-27 11:41",
+       "sessions": [
+        "2027-05-24",
+        "2027-05-25",
+        "2027-05-26",
+        "2027-05-27"
+       ]
+      }
+     }
+    }
+   ]
   },
   "b117": {
    "title": "Jupiter in Paap Kartari (2026 document B117)",
@@ -964,10 +1034,10 @@
       "flat": 2,
       "hit_rate": 48,
       "base_rate": 37,
-      "exp": 14.9185050485081,
+      "exp": 14.952141796812597,
       "avg_dir_ret": 0.83,
       "verdict": "Worked",
-      "p_value": 0.1216,
+      "p_value": 0.1238,
       "years_active": 19,
       "years_right": 6
      },
@@ -992,10 +1062,10 @@
       "flat": 1,
       "hit_rate": 30,
       "base_rate": 29,
-      "exp": 5.73926793588306,
+      "exp": 5.772904684187555,
       "avg_dir_ret": -0.79,
       "verdict": "Mixed",
-      "p_value": 0.5327,
+      "p_value": 0.5394,
       "years_active": 9,
       "years_right": 2
      },
@@ -1011,10 +1081,10 @@
       "flat": 2,
       "hit_rate": 48,
       "base_rate": 42,
-      "exp": 16.723441543596476,
+      "exp": 16.705606556484252,
       "avg_dir_ret": 0.94,
       "verdict": "Mixed",
-      "p_value": 0.2828,
+      "p_value": 0.2808,
       "years_active": 19,
       "years_right": 7
      },
@@ -1039,10 +1109,10 @@
       "flat": 1,
       "hit_rate": 35,
       "base_rate": 39,
-      "exp": 7.761542378918001,
+      "exp": 7.743707391805778,
       "avg_dir_ret": -0.5,
       "verdict": "Mixed",
-      "p_value": 0.714,
+      "p_value": 0.7112,
       "years_active": 9,
       "years_right": 3
      },
@@ -1051,7 +1121,74 @@
      "verdict": "not supported"
     }
    },
-   "windows": []
+   "windows": [
+    {
+     "frm": "Mon 19 Apr 2027 20:46",
+     "to": "Tue 03 Aug 2027 20:43",
+     "pair": "Ketu | Mars",
+     "sign": "Pisces",
+     "combust": true,
+     "benefic": [
+      "Jupiter",
+      "Venus"
+     ],
+     "local": {
+      "spx": {
+       "start": "2027-04-19 20:46",
+       "end": "2027-08-03 20:43",
+       "sessions": [
+        "2027-05-03",
+        "2027-05-04",
+        "2027-05-05",
+        "2027-05-06",
+        "2027-05-07",
+        "2027-05-10",
+        "2027-05-11",
+        "2027-05-12",
+        "2027-05-13",
+        "2027-05-14",
+        "2027-05-17",
+        "2027-05-18",
+        "2027-05-19",
+        "2027-05-20",
+        "2027-05-21",
+        "2027-05-24",
+        "2027-05-25",
+        "2027-05-26",
+        "2027-05-27",
+        "2027-05-28"
+       ]
+      },
+      "sensex": {
+       "start": "2027-04-20 06:16",
+       "end": "2027-08-04 06:13",
+       "sessions": [
+        "2027-05-03",
+        "2027-05-04",
+        "2027-05-05",
+        "2027-05-06",
+        "2027-05-07",
+        "2027-05-10",
+        "2027-05-11",
+        "2027-05-12",
+        "2027-05-13",
+        "2027-05-14",
+        "2027-05-17",
+        "2027-05-18",
+        "2027-05-19",
+        "2027-05-20",
+        "2027-05-21",
+        "2027-05-24",
+        "2027-05-25",
+        "2027-05-26",
+        "2027-05-27",
+        "2027-05-28",
+        "2027-05-31"
+       ]
+      }
+     }
+    }
+   ]
   }
  },
  "model_v1": {
@@ -1159,7 +1296,7 @@
  },
  "frozen": {
   "path": "may_2027_calls_ET.json",
-  "frozen_at": "2026-11-28 09:33 ET",
+  "frozen_at": "2026-11-28 09:36 ET",
   "rewritten": true,
   "sessions": {
    "spx": 20,
@@ -1190,6 +1327,19 @@
      "worth": "day by day 54.8% vs 54.6% (2000\u20132026, in sample); picked when the rules are chosen on 2000\u20132013 only; its span record after 2013: 63% vs 62% (p 0.4081, q 0.691): leaned the right way after 2013, not significant",
      "level": "none",
      "why": null
+    },
+    {
+     "topic": "Mercury in Paap Kartari (B116, 2026 document)",
+     "why": null,
+     "call": "23\u201327 May, bearish; no benefic aspects Mercury, so B116 reads it as a negative event",
+     "worth": "as a bearish rule overall 41% vs 39% (p 0.2785; halves 45% vs 41% and 36% vs 36%), not supported. Windows without a benefic aspect: bearish right 41% vs 38% (p 0.322); big days 92 vs 73.5 expected (\u00d71.25, p 0.0209). The 2000\u20132026 record is a source rule's, not chosen from data, but it is not a walk-forward test",
+     "level": "none"
+    },
+    {
+     "topic": "Jupiter in Paap Kartari (B117, 2026 document)",
+     "call": "Mon 19 Apr 2027 20:46 \u2013 Tue 03 Aug 2027 20:43, bearish",
+     "worth": "direction not supported (2000\u20132026 48% vs 37%, second half 30% vs 29%); 11.6% big days in past windows vs 7.5% overall, not significant in the earlier test",
+     "level": "none"
     },
     {
      "topic": "Combined model",
@@ -1237,6 +1387,19 @@
      "why": null
     },
     {
+     "topic": "Mercury in Paap Kartari (B116, 2026 document)",
+     "why": "past windows without a benefic aspect, B116's own case for this window, were bearish 50% vs 40% (p 0.0317), a 2000\u20132026 record of a source rule rather than a walk-forward test",
+     "call": "23\u201327 May, bearish; no benefic aspects Mercury, so B116 reads it as a negative event",
+     "worth": "as a bearish rule overall 48% vs 41% (p 0.0265; halves 50% vs 42% and 45% vs 39%), supported. Windows without a benefic aspect: bearish right 50% vs 40% (p 0.0317); big days 108 vs 87.1 expected (\u00d71.24, p 0.0166). The 2000\u20132026 record is a source rule's, not chosen from data, but it is not a walk-forward test",
+     "level": "some"
+    },
+    {
+     "topic": "Jupiter in Paap Kartari (B117, 2026 document)",
+     "call": "Mon 19 Apr 2027 20:46 \u2013 Tue 03 Aug 2027 20:43, bearish",
+     "worth": "direction not supported (2000\u20132026 48% vs 42%, second half 35% vs 39%); 14.4% big days in past windows vs 9.4% overall, not significant in the earlier test",
+     "level": "none"
+    },
+    {
      "topic": "Combined model",
      "call": "0 sessions lean down, 7 up, 14 near normal",
      "worth": "clean walk-forward 2013\u20132026 51.3% vs 51.6% by chance: no edge",
@@ -1250,8 +1413,8 @@
     }
    ],
    "edge": false,
-   "some": false,
-   "summary": "No May call has a tested edge on the Sensex: the labels, the model and Paap Kartari are leanings."
+   "some": true,
+   "summary": "May's best-supported call on the Sensex. Mercury in Paap Kartari (B116, 2026 document): past windows without a benefic aspect, B116's own case for this window, were bearish 50% vs 40% (p 0.0317), a 2000\u20132026 record of a source rule rather than a walk-forward test. Everything else is a leaning."
   },
   "gold": {
    "items": [
@@ -1310,5 +1473,5 @@
    "summary": "No May call has a tested edge on silver: the labels and the model are leanings."
   }
  },
- "headline": "No May call has a tested edge on any market. Out of sample the table labels as a whole and the combined model score what chance gives; treat the rest as leanings."
+ "headline": "May calls with some support: Mercury in Paap Kartari (B116) (Sensex). Mercury in Paap Kartari is a source rule; its record for this window's case (no benefic aspect) is bearish on the Sensex, but it is a 2000\u20132026 record, not a walk-forward test. Out of sample the table labels as a whole and the combined model score what chance gives; treat the rest as leanings."
 }

@@ -111,10 +111,10 @@ Known data problems:
 | `tools/jupiter_saturn_gold.py` | Jupiter–Saturn aspects in a 10° orb (degree-based; exact passes to the minute) for Nov 2026 – Dec 2030, verified against the user's list. Shows every past window since 1972 with gold's turns, classified by the nearest anchor (orb entry / exact / exit). Gives a plain bottom-or-top table, which also includes Jupiter and Saturn direct stations |
 | `tools/new_sources_test.py` | Backtest of the rules from the three new books (BS Iyer, Tajika Nilakanthi, Hayanaratna): BS 42.6 with eclipses, Moon north/south, Mercury reappearance, nakshatra and lord rules, Tajika monthly and annual charts → `new_sources_test_ET.html` |
 | `tools/new_sources_leftover.py` | The leftover new-source rules (B5, B6, B7, B9, B10, B11, B13, T4, T6, T10), Tajika five-dignity strength and ruler of the year, and the calendar layer read by `calendar_2026.py` → `new_sources_leftover_ET.{html,json}` |
-| `tools/week_deep_dive.py [nov] [dec] [jan] [feb] [mar] [apr] [--reuse-days]` | Every week of November and December 2026 and of January to April 2027 (December from the 2026 calendar, the others built with `forward_daybyday.build`; `--reuse-days` reuses the cached day data): every sky event as an event class backtested on 4 markets (next session, 5 sessions, big days; BH per week) with 4 automatic checks, plus each day's rules, labels, model, Solar return, Kartari, gold notes and new-source items → `deep_dive_*_ET.json`. November uses history to 31 Oct 2026 only, so no November event scores itself |
+| `tools/week_deep_dive.py [nov] [dec] [jan] [feb] [mar] [apr] [may] [jun] [jul] [--reuse-days]` | Every week of November and December 2026 and of January to July 2027 (December from the 2026 calendar, the others built with `forward_daybyday.build`; `--reuse-days` reuses the cached day data): every sky event as an event class backtested on 4 markets (next session, 5 sessions, big days; BH per week) with 4 automatic checks, plus each day's rules, labels, model, Solar return, Kartari, gold notes and new-source items → `deep_dive_*_ET.json`. November uses history to 31 Oct 2026 only, so no November event scores itself |
 | `tools/november_review.py` | November 2026 review: every call of every layer scored against what the markets did (pass / fail at 0.5%, against chance for the same up/down mix; recount checked against `forward_daybyday.score`), where it failed (rules behind each label, spans, wrong calls, big days, deep-dive leans), and the tuning tests on the long records (clean walk-forward labels and model, label strengths, each table rule as a day call, big-day flags, volatility factors, 24 Sep – 27 Nov) → `november_review_2026-11_ET.json` with the recommendations the two calendars apply |
 | `tools/bigday_clean_test.py` | Clean walk-forward test of the big-day volatility factors: the published choice (q < 0.10, lift > 1 in both halves, p < 0.01 without the 2008–09 crash) made on 20 Nov 2000 – 19 Nov 2013 only for each market, over every factor of `big_move_analysis.py`, then scored 20 Nov 2013 – 31 Oct 2026 (year-stratified expected big days, without Feb–May 2020, leave one year out, each factor). Also: the S&P's picks on the Sensex, looser choices, and a check that the same choice on 2000–2026 reproduces the published robust sets → `bigday_clean_test_ET.json` (read by `november_review.py` and both calendars) |
-| `tools/month_outlook.py [2027-01] [2027-02] [2027-03] [2027-04]` | A coming month after the November review (default: January to April 2027). Lists every kind of call — labels and the rules behind them, combined model, Model v1.0, Solar return and its transit rules, Paap Kartari B116/B117, big-day factors — with its best out-of-sample evidence. A table rule that the 2000–2013 choice picks is judged by its span record after 2013, with BH over the 22 tests. For B116 it tests the case that applies (with or without a benefic aspect) on direction and big days. Writes `<month>_<year>_outlook_ET.json`, and freezes the month's calls into `<month>_<year>_calls_ET.json`: rewritten until the day before the month starts (ET), never after. Replaced `january_2027_outlook.py` |
+| `tools/month_outlook.py [2027-MM ...]` | A coming month after the November review (default: every 2027 month whose day data is built; January to July so far). Lists every kind of call — labels and the rules behind them, combined model, Model v1.0, Solar return and its transit rules, Paap Kartari B116/B117, big-day factors — with its best out-of-sample evidence. A table rule that the 2000–2013 choice picks is judged by its span record after 2013, with BH over the 22 tests. For B116 it tests the case that applies (with or without a benefic aspect) on direction and big days. Writes `<month>_<year>_outlook_ET.json`, and freezes the month's calls into `<month>_<year>_calls_ET.json`: rewritten until the day before the month starts (ET), never after. Replaced `january_2027_outlook.py` |
 | `tools/deep_dive_render.py` | Renders the 2027 monthly deep dives (January, February) into `calendar_2027_NY_master.html` with a month index (called by `build_pdf_calendar.py`; `--html-only` re-renders from the JSON). Applies the November review's changes (Low labels as leans, model percentages uncoloured, Volatile labels marked by the clean big-day test) |
 | `tools/gold_tracker.py [--metal silver]` | Trackers: findings, rule status, best-rule dates, analysis log |
 | `tools/build_year.py YEAR` | Astronomy layer for any year; 2000–2024 are git-ignored and rebuilt on demand |
@@ -914,6 +914,46 @@ Results, as the share of calls right:
 
   - This partly matches Solar return's own path (weak into spring, bottom Mar–May), but the rubric itself has no track record.
 - **In the calendar:** shown in the 2026 calendar's Solar return section.
+
+**Deep dives and updates, April to July 2027 (28 Nov 2026)** (`tools/week_deep_dive.py apr may jun jul`, `deep_dive_2027-0[4-7]-*_ET.json`; `tools/month_outlook.py`, `<month>_2027_outlook_ET.json`, `<month>_2027_calls_ET.json`; 2027 calendar → "Deep dive: April … July 2027")
+
+- **Holidays.** Each was checked against the price files: no bar on any recent occurrence.
+  - Ambedkar Jayanti, 14 Apr (BSE): fixed date.
+  - Memorial Day, 31 May; Juneteenth, observed Friday 18 Jun; Independence Day, observed Monday 5 Jul (S&P, gold, silver). COMEX had a bar on 4 Jul 2025 only.
+  - Lunar-calendar BSE holidays are still not assumed.
+- **New event class.** Planets entering and leaving fast motion: the speed crossing its calibrated level, as `build_2027.py` emits `speed_crossing` records. The levels come from `config/conventions.yaml` `speed_classes`: Mercury 1.744909, Venus 1.223981, Mars 0.658287°/day.
+  - Occurrences 2000–2026, each way: Mercury 67, Venus 16, Mars 13. At most once per synodic cycle; Mercury's peak speed misses its level in some cycles.
+  - The time check reads the sidereal speed, which is the frame the levels are defined in. The tropical speed differs by about 7×10⁻⁵°/day, which near Venus's peak moves the crossing by hours. A first pass with the tropical speed failed July's Venus check; with the sidereal speed, all three such events in the months pass.
+  - April, May, June and July were rerun with the class from the cached day data.
+- **Paap Kartari windows to the end of 2027.** `kartari_test.py` previously listed windows only to 28 Feb 2027, so the later months' notes and updates were missing:
+  - Mercury (B116): 19–28 Apr, 23–27 May, 11 Dec 2027 – 7 Jan 2028.
+  - Jupiter (B117): 19 Apr – 3 Aug and 31 Aug – 17 Oct.
+  - The day notes in every 2027 deep-dive file were refreshed. The rerun also took in the newest prices, so the B116/B117 p-values moved slightly (Sensex B116 0.0268 → 0.0265).
+- **Deep dives.** Every week passes its 4 checks (20/20 per month) and every month's 8 independent recounts match. Nothing passes the Benjamini–Hochberg correction in any month, and no class changes the chance of a big day.
+
+| Month | Tests | Nominal (by chance) | Calls with some support |
+|---|---|---|---|
+| April | 2,035 | 41 (about 102) | none |
+| May | 2,064 | 44 (about 103) | Mercury Paap Kartari 23–27 May, no benefic aspect (Sensex: past windows of this case bearish 50% vs 40%, p 0.03) |
+| June | 1,948 | 34 (about 97) | Three Saturdays in Shukla Paksha, Bearish 14–18 Jun, Sensex only (held after 2013 on the Sensex: 55% vs 39%, p 0.049) |
+| July | 1,992 | 33 (about 100) | Three Saturdays in Shukla Paksha, Bearish High 9–15 Jul, S&P (held after 2013: 58% vs 37%, p 0.014) |
+
+- **Everything else is a leaning:**
+  - S&P/Sensex labels: April Bullish Moderate 12–16 Apr and Bullish High from 28 Apr (Mars–Mercury Vedha, Moon–Rahu 6/8), plus Volatile spans from in-sample factors (S&P Mercury–Saturn 2/12, Sensex Venus in Pisces). May bullish to 14 May. June S&P Bullish Moderate 7–11 Jun. July mixed.
+  - Mercury Paap Kartari 19–28 Apr: Jupiter and Venus aspect Mercury, B116's "volatile" case, which was neither bearish nor more volatile in the past.
+  - Jupiter Paap Kartari 19 Apr – 3 Aug: its bearish record faded after 2013.
+  - Gold and silver mostly bullish labels; the combined model; Model v1.0.
+  - Solar return: bearish 11 / bullish 11 sessions in April; bullish 11 / bearish 7 in May. Its Sun square Mars rule has had more big days since 1928 (67 vs 50.6, p 0.016), but the rule claims bearish, not volatile. Volatile 4 sessions in June; no call in July. All day calls are at chance.
+  - No factor that passed the clean big-day test is active in any of the four months.
+- **Main sky events:**
+  - April: Mars direct 1 Apr; Jupiter–Saturn trine 3 Apr; Mercury combust and into fast motion 11 Apr; Jupiter direct 12 Apr; Sun into Aries 14 Apr; Jupiter opposite Rahu 19 Apr; Mars into Leo 26 Apr; Saturn rises 27 Apr.
+  - May: Mercury rises 6 May; Pluto retrograde 8 May; Mercury leaves fast motion and Sun into Taurus 15 May.
+  - June: Saturn into Aries 2 Jun; Mercury retrograde 10 Jun; Sun into Gemini 15 Jun; Jupiter into Leo 25 Jun.
+  - July: Venus into fast motion and Mercury rises 1 Jul; Mercury direct and Mars into Virgo 4 Jul; Neptune retrograde 9 Jul; Jupiter–Saturn trine 11 Jul; Sun into Cancer 16 Jul; Venus combust 20 Jul.
+- **Frozen calls and checks:**
+  - Each month's calls are frozen (rewritten until the day before the month starts, never after).
+  - The 2026 calendar now finds every frozen month and deep-dive month on its own and checks each frozen file: 26 of 26 checks pass.
+  - The 2027 calendar's 2,211 rows are byte-identical.
 
 **Deep dive and update, March 2027 (28 Nov 2026)** (`tools/week_deep_dive.py mar`, `deep_dive_2027-03-*_ET.json`; `tools/month_outlook.py 2027-03`, `march_2027_outlook_ET.json`, `march_2027_calls_ET.json`; 2027 calendar → "Deep dive: March 2027")
 
