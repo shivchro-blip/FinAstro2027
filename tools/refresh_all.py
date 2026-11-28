@@ -79,7 +79,7 @@ STEPS = [
     ["tools/week_deep_dive.py"],
     ["tools/bigday_clean_test.py"],                    # big-day volatility factors chosen on 2000-2013 only, scored 2013-2026 (read by the review and calendars)
     ["tools/november_review.py"],                      # November 2026 scored against the markets; its changes are applied by the two calendars
-    ["tools/january_2027_outlook.py"],                 # January 2027 calls with their evidence; freezes the calls (rewritten until 31 Dec 2026 only)
+    ["tools/month_outlook.py"],                        # January and February 2027: calls with their evidence; freezes each month's calls until the month starts
     ["tools/build_pdf_calendar.py", "--html-only"],   # re-render the 2027 calendar with the deep dives (and the November review's changes)
     ["tools/calendar_2026.py"],
     ["tools/rule_tally.py", "2026-11-20", "2026-11-23"],
