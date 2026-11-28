@@ -130,13 +130,11 @@ def gather(a, b):
     jo, jf = OUT / "january_2027_outlook_ET.json", OUT / "january_2027_calls_ET.json"
     sr["jan_outlook"] = json.load(open(jo)) if jo.exists() else None
     sr["jan_frozen"] = json.load(open(jf)) if jf.exists() else None
-    fo, ff = OUT / "february_2027_outlook_ET.json", OUT / "february_2027_calls_ET.json"
-    sr["feb_outlook"] = json.load(open(fo)) if fo.exists() else None
-    sr["feb_frozen"] = json.load(open(ff)) if ff.exists() else None
-    mf = OUT / "march_2027_calls_ET.json"
-    sr["mar_frozen"] = json.load(open(mf)) if mf.exists() else None
-    af = OUT / "april_2027_calls_ET.json"
-    sr["apr_frozen"] = json.load(open(af)) if af.exists() else None
+    sr["frozen_months"] = []                    # every 2027 month whose calls are frozen (tools/month_outlook.py), in month order
+    for m in range(1, 13):
+        f = OUT / f"{dt.date(2027, m, 1):%B}".lower().__add__("_2027_calls_ET.json")
+        if f.exists():
+            sr["frozen_months"].append((m, json.load(open(f))))
     set_tuning(sr["nov"])
     sr["doc"] = doc_rows(json.load(open(OUT / "doc_dec2026_check_ET.json")), res)
     sr["kartari"] = [dict(key=r["key"], title=r["title"], tone=r["tone"], basis=r["basis"], record=r["record"],
@@ -183,9 +181,9 @@ def verify(res, sr, a, b):
         add("November deep dive: every week's double checks pass; its history ends 31 Oct 2026", nchk and all(c["ok"] for c in nchk) and hist == {"2026-10-31"},
             f"{sum(c['ok'] for c in nchk)}/{len(nchk)} across {len(sr.get('dds_nov', []))} weeks; history end {', '.join(sorted(map(str, hist)))}")
         add("November review: the long records stop before November", nov.get("hist_end") == "2026-10-31", f"tuning tests use data to {nov.get('hist_end')}")
-    for label, jf, ndays in (("January", sr.get("jan_frozen"), 31), ("February", sr.get("feb_frozen"), 28), ("March", sr.get("mar_frozen"), 31), ("April", sr.get("apr_frozen"), 30)):
-        if not jf:
-            continue
+    import calendar as _cal
+    for mnum, jf in sr.get("frozen_months", []):
+        label, ndays = f"{dt.date(2027, mnum, 1):%B}", _cal.monthrange(2027, mnum)[1]
         pubs = {mk: table_rows(OUT / f"{mk}_signals_2026-11-22_to_2027-12-31_ET.json") for mk in ("gold", "silver")}
         for mk in ("spx", "sensex"):
             pubs[mk] = table_rows(OUT / "market_signals_2026-11-23_to_2027-12-31_ET.json", mk)
@@ -1249,19 +1247,27 @@ def dd_intro(dds):
             f"<b>Double-checked:</b> {sum(c['ok'] for c in chk)} of {len(chk)} checks pass. Every event time was re-derived from the ephemeris, the occurrence counts were checked against "
             "the expected frequencies, one result per week was recounted from raw prices with separate code, and every sky event was confirmed as classified. "
             "Five sample results were also recomputed independently: all match.<br>"
-            "<b>2027:</b> the same weekly deep dive for <a href='calendar_2027_NY_master.html#dd2027'>January 2027</a>, "
-            "<a href='calendar_2027_NY_master.html#dd202702'>February 2027</a>, <a href='calendar_2027_NY_master.html#dd202703'>March 2027</a> and "
-            "<a href='calendar_2027_NY_master.html#dd202704'>April 2027</a> is in the 2027 calendar "
+            "<b>2027:</b> the same weekly deep dive for " + _month_links() + " is in the 2027 calendar "
             "(calendar_2027_NY_master.html); each month opens with an update after the November review (every call with its out-of-sample evidence; the calls frozen "
             "for scoring)." + "".join(f" {m}: {E(t)}" for m, t in _month_lines()) + "</div>")
 
 
+def _months_2027():
+    """2027 months with a weekly deep dive (deep_dive_2027-MM-*), in order."""
+    return sorted({int(f.name[15:17]) for f in OUT.glob("deep_dive_2027-*_ET.json")})
+
+
+def _month_links():
+    names = [f"<a href='calendar_2027_NY_master.html#{'dd2027' if m == 1 else f'dd2027{m:02d}'}'>{dt.date(2027, m, 1):%B} 2027</a>" for m in _months_2027()]
+    return ", ".join(names[:-1]) + (" and " if len(names) > 1 else "") + names[-1] if names else "2027"
+
+
 def _month_lines():
     out = []
-    for stem, m in (("february_2027", "February"), ("march_2027", "March"), ("april_2027", "April")):
-        f = OUT / f"{stem}_outlook_ET.json"
-        if f.exists():
-            out.append((m, json.load(open(f))["headline"].split(" When ")[0].split(" Out of sample")[0]))
+    for m in _months_2027():
+        f = OUT / (f"{dt.date(2027, m, 1):%B}".lower() + "_2027_outlook_ET.json")
+        if m > 1 and f.exists():
+            out.append((f"{dt.date(2027, m, 1):%B}", json.load(open(f))["headline"].split(" When ")[0].split(" Out of sample")[0]))
     return out
 
 
