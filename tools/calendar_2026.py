@@ -127,6 +127,9 @@ def gather(a, b):
     sr["nov"] = json.load(open(nr)) if nr.exists() else None
     bc = OUT / "bigday_clean_test_ET.json"
     sr["bigclean"] = json.load(open(bc)) if bc.exists() else None
+    jo, jf = OUT / "january_2027_outlook_ET.json", OUT / "january_2027_calls_ET.json"
+    sr["jan_outlook"] = json.load(open(jo)) if jo.exists() else None
+    sr["jan_frozen"] = json.load(open(jf)) if jf.exists() else None
     set_tuning(sr["nov"])
     sr["doc"] = doc_rows(json.load(open(OUT / "doc_dec2026_check_ET.json")), res)
     sr["kartari"] = [dict(key=r["key"], title=r["title"], tone=r["tone"], basis=r["basis"], record=r["record"],
@@ -173,6 +176,15 @@ def verify(res, sr, a, b):
         add("November deep dive: every week's double checks pass; its history ends 31 Oct 2026", nchk and all(c["ok"] for c in nchk) and hist == {"2026-10-31"},
             f"{sum(c['ok'] for c in nchk)}/{len(nchk)} across {len(sr.get('dds_nov', []))} weeks; history end {', '.join(sorted(map(str, hist)))}")
         add("November review: the long records stop before November", nov.get("hist_end") == "2026-10-31", f"tuning tests use data to {nov.get('hist_end')}")
+    jf = sr.get("jan_frozen")
+    if jf:
+        pubs = {mk: table_rows(OUT / f"{mk}_signals_2026-11-22_to_2027-12-31_ET.json") for mk in ("gold", "silver")}
+        for mk in ("spx", "sensex"):
+            pubs[mk] = table_rows(OUT / "market_signals_2026-11-23_to_2027-12-31_ET.json", mk)
+        bad = [f"{x['date']} {mk}" for x in jf["days"] for mk in MKS
+               if (pubs[mk].get(dt.date.fromisoformat(x["date"])) or ("No signal",))[0] != x["signals"][NAME[mk]][0]["sig"]]
+        add("January 2027 calls frozen, and their labels equal the published tables", not bad and len(jf["days"]) == 31,
+            f"frozen {jf['frozen_at']}; {len(jf['days'])} days, sessions " + ", ".join(f"{SHORT[k]} {v}" for k, v in jf["sessions"].items()) + ("; " + "; ".join(bad[:5]) if bad else ""))
     bcj = sr.get("bigclean")
     if bcj:
         rep = {mk: bcj["markets"][mk]["full"]["reproduces_published"] for mk in ("spx", "sensex")}
@@ -768,7 +780,7 @@ def page(res, sr, track, checks, a, b, generated):
             o.append(dd_html(dd))
     o.append(gp_html(sr["gp"]))
     o.append(doc_html(sr["doc"]))
-    o.append(jan_html(sr["jan"]))
+    o.append(jan_html(sr["jan"], sr.get("jan_outlook")))
     # day by day
     o.append("<h2 id='days'>Day by day</h2><div class='tool' style='display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:8px'>"
              "<button onclick='setAll(true)'>Open all</button><button onclick='setAll(false)'>Close all</button>"
@@ -930,9 +942,24 @@ def day_html(x, sr, res):
     return "".join(o)
 
 
-def jan_html(j):
-    """January 2027 preview: Mercury in Paap Kartari (B116) on the S&P and the Sensex (tools/kartari_jan2027.py)."""
-    o = ["<h2 id='jan'>January 2027: Mercury in Paap Kartari</h2>",
+def jan_html(j, jo=None):
+    """January 2027 preview: Mercury in Paap Kartari (B116) on the S&P and the Sensex (tools/kartari_jan2027.py), and the
+    update after the November review (tools/january_2027_outlook.py)."""
+    o = ["<h2 id='jan'>January 2027: Mercury in Paap Kartari</h2>"]
+    if jo:
+        v = jo["verdicts"]
+        o.append(f"<div class='callout'><b>Update ({E(jo['made'][:10])}), after the November review:</b><ul>"
+                 + "".join(f"<li><b>{NAME[mk]}:</b> {E(v[mk]['summary'])}</li>" for mk in MKS)
+                 + "</ul>Mercury's Paap Kartari is bearish on the Sensex in general, but in January Jupiter aspects Mercury in every window, which B116 reads as volatile "
+                   "both ways; past windows like that were neither bearish nor more volatile (table below). No big-day factor that passed the clean test is active in January. "
+                 + f"January's calls were frozen on {E(jo['frozen']['frozen_at'])} so the month can be scored afterwards like November. Call by call, with the evidence: "
+                   "<a href='calendar_2027_NY_master.html#dd2027'>2027 calendar → Deep dive: January 2027</a>.</div>")
+        kb = jo["kartari"]["b116"]["markets"]
+        o.append("<div class='wrap'><table><thead><tr><th>Mercury Paap Kartari windows 2000–2026</th><th class='n'>S&amp;P big days vs expected</th><th class='n'>Sensex big days vs expected</th></tr></thead><tbody>"
+                 + "".join(f"<tr><td>{E(name)}</td>" + "".join(f"<td class='n'>{kb[mk]['big_test'][name]['big']} vs {kb[mk]['big_test'][name]['exp']} (×{kb[mk]['big_test'][name]['lift']}, p {kb[mk]['big_test'][name]['p']})</td>" for mk in ("spx", "sensex")) + "</tr>"
+                           for name in kb["spx"]["big_test"])
+                 + "</tbody></table></div><p class='s'>Days of ±2% inside each window, against the number expected from that year's own rate.</p>")
+    o += [
          "<p class='s'>2026 document B116: “negative event for financial markets”; with a benefic aspect, “very volatile and both side movement”. Past windows 2000–2026, "
          "each market in its own exchange time; a bearish call is right when the market fell more than 0.5% over the scored horizon.</p>"
          "<p class='s'><b>Every sky event of January 2027, backtested week by week</b>, is in the 2027 calendar: "

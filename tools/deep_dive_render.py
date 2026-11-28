@@ -105,7 +105,34 @@ def day_row(day):
             f"<td class='s'>{E('; '.join(day.get('notes', [])[:4]))}</td><td class='s'>{E('; '.join(day['new_sources'][:3]))}</td></tr>")
 
 
-def section(dds, title=None, anchor="dd2027", css=True):
+def jan_update_html(out_dir):
+    """January 2027 after the November review (tools/january_2027_outlook.py): each kind of call, what it says, what it is worth."""
+    f = pathlib.Path(out_dir) / "january_2027_outlook_ET.json"
+    if not f.exists():
+        return ""
+    o = json.load(open(f))
+    v = o["verdicts"]
+    fr = o["frozen"]
+    edge = [mk for mk, x in v.items() if x["edge"]]
+    rows = []
+    for mk, name, _ in MKS:
+        items = v[mk]["items"]
+        for i, it in enumerate(items):
+            rows.append("<tr>" + (f"<td rowspan='{len(items)}'><b>{E(name)}</b><div class='s'>{E(v[mk]['summary'])}</div></td>" if i == 0 else "")
+                        + f"<td class='s'><b>{E(it['topic'])}</b>: {E(it['call'])}</td><td class='s'>{E(it['worth'])}</td></tr>")
+    dd = o["deep_dive"]
+    return (f"<div class='call'><b>Update ({E(o['made'][:10])}): January after the November review.</b> "
+            + ("No January call has a tested edge on any market. " if not edge else f"Calls with a tested edge: {E(', '.join(edge))}. ")
+            + "Out of sample the table labels and the combined model score what chance gives; Mercury's Paap Kartari (B116) is bearish on the Sensex in general, but in "
+              "January Jupiter aspects Mercury, which B116 itself reads as volatile both ways, and such windows were neither bearish nor more volatile; no big-day factor that "
+              "passed the clean test is active; Solar return has no stated indication. The week tables below are unchanged and read as leanings. "
+            + f"The sky-event deep dive: {dd['tests']} tests, {dd['significant']} pass the correction. "
+            + f"January's calls were frozen on {E(fr['frozen_at'])} ({E(fr['path'])}) so the month can be scored afterwards exactly as November was.</div>"
+            + "<div class='wrap'><table><thead><tr><th>Market</th><th>What January's calls say</th><th>What they are worth</th></tr></thead><tbody>"
+            + "".join(rows) + "</tbody></table></div>")
+
+
+def section(dds, title=None, anchor="dd2027", css=True, extra=""):
     if not dds:
         return ""
     mon = dt.date.fromisoformat(dds[0]["start"])
@@ -136,6 +163,8 @@ def section(dds, title=None, anchor="dd2027", css=True):
          + (f"<b>How far to trust the labels and the model:</b> {E(TUNE['note'])}<br>" if TUNE["on"] else "") +
          f"<b>The year:</b> lord of the year 2026–27 {E(y.get('lord_of_year_us', '?'))} (US time) or {E(y.get('lord_of_year_india', '?'))} (Indian time), watch list only. "
          f"NYSE ruler of the year {E(y.get('ruler', '?'))}, strength {y.get('ruler_strength', '?')}, house {y.get('ruler_house', '?')}. Both test at chance.</div>"]
+    if extra:
+        o.append(extra)
     if mons:
         o.append(f"<p class='s'><b>NYSE monthly charts (Tajika, Model B) in force during {month}, all at chance on the S&amp;P 1928–2026:</b></p><ul class='s'>{mons}</ul>")
     for dd in dds:
@@ -172,5 +201,5 @@ def all_months(pattern_dir):
     index = " · ".join(f"<a href='#{anchors[k]}'>{dt.date.fromisoformat(k + '-01'):%B %Y}</a>" for k in by)
     out = [CSS, f"<p class='m'><b>Deep dives (every sky event backtested, week by week):</b> {index}</p>"]
     for k, dds in by.items():
-        out.append(section(dds, anchor=anchors[k], css=False))
+        out.append(section(dds, anchor=anchors[k], css=False, extra=jan_update_html(pattern_dir) if k == "2027-01" else ""))
     return "".join(out)
