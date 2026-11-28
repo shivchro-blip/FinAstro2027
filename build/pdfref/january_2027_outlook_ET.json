@@ -1,5 +1,5 @@
 {
- "made": "2026-11-28 04:45 ET",
+ "made": "2026-11-28 04:54 ET",
  "month": "2027-01",
  "name": "January 2027",
  "start": "2027-01-01",
@@ -2184,7 +2184,7 @@
  },
  "frozen": {
   "path": "january_2027_calls_ET.json",
-  "frozen_at": "2026-11-28 04:45 ET",
+  "frozen_at": "2026-11-28 04:54 ET",
   "rewritten": true,
   "sessions": {
    "spx": 19,
