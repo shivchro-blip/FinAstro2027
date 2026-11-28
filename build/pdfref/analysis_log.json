@@ -896,6 +896,27 @@
     "reports/calendar_2026-11-24_to_2026-12-31_ET.html",
     "reports/calendar_2027_NY_master.html"
    ]
+  },
+  {
+   "date": "2026-11-28",
+   "pr": "72",
+   "topic": "February 2027 after the November review: calls with their evidence, frozen for scoring; clean test of each walk-forward-picked table rule",
+   "analysis": "tools/month_outlook.py (generalises the January tool to any month; January rebuilt with it): February's calls read against the November review's clean records; new in november_review.py: each of the 11 rules the 2000-2013 choice picks scored on its own span record after 2013 on both indices (BH over 22 tests; pooled per index); Paap Kartari B116's February window (no benefic aspect) tested on direction and big days for that case; Solar return transit rules' records; February calls frozen.",
+   "result": "Three Saturdays in Shukla Paksha held after 2013 on both indices (S&P 58% vs 37%, p 0.014; Sensex 55% vs 39%, p 0.049): 2 of 22 tests, about 1.1 by chance, q 0.30/0.54; pooled picked rules S&P 347 vs 326.6 (p 0.07), Sensex 344 vs 333.6 (p 0.39). February: Bearish 8-19 Feb rests on that rule (best-supported, not proven); B116 18 Feb - 16 Mar has no benefic aspect: Sensex past windows of this case bearish 50% vs 40% (p 0.03), big days x1.24 (p 0.02); S&P not bearish. Everything else at chance or in sample only. Both months' update blocks in the 2027 calendar; frozen-call checks in the 2026 calendar; 2027 rows byte-identical.",
+   "files": [
+    "tools/month_outlook.py",
+    "tools/november_review.py",
+    "tools/deep_dive_render.py",
+    "tools/calendar_2026.py",
+    "tools/refresh_all.py",
+    "build/pdfref/february_2027_outlook_ET.json",
+    "build/pdfref/february_2027_calls_ET.json",
+    "build/pdfref/january_2027_outlook_ET.json",
+    "build/pdfref/january_2027_calls_ET.json",
+    "build/pdfref/november_review_2026-11_ET.json",
+    "reports/calendar_2026-11-24_to_2026-12-31_ET.html",
+    "reports/calendar_2027_NY_master.html"
+   ]
   }
  ]
 }

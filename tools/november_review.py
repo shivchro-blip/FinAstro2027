@@ -528,6 +528,42 @@ def tune(days, act, MC):
         lab[mk]["walk_forward"] = dict(source="walk-forward: rules picked on their 2000-2013 records only (both indices beat the base, p < 0.05 on one), "
                                               "labels scored every day 2013-2026", rules=sorted(v["title"] for v in wf_rules.values()), rows=res)
     out["labels"] = lab
+    # the rules the 2000-2013 choice picks, each scored on its own span record after 2013 (the clean test of a single rule)
+    mb = json.load(open(OUT / "market_backtest_2000-2026_ET.json"))
+    cb = json.load(open(OUT / "calendar_rules_backtest_2000-2026_ET.json"))
+    recs = {}
+    for x in mb["rules"] + [y for y in cb["rules"] if y.get("spx") and y.get("sensex") and y["spx"].get("kind") == "direction"]:
+        if x["rule_id"] in wf_rules and x["rule_id"] not in recs:
+            recs[x["rule_id"]] = x
+
+    def half(h):
+        return dict(worked=h["worked"], failed=h["failed"], hit=h["hit_rate"], base=h["base_rate"], p=h["p_value"])
+    picked = []
+    for rid, ru in sorted(wf_rules.items()):
+        x = recs.get(rid)
+        row = dict(id=rid, title=ru["title"], tone=ru["tone"], strength_h1=ru["st"])
+        for mk in ("spx", "sensex"):
+            row[mk] = dict(h1=half(x[mk]["h1"]), h2=half(x[mk]["h2"])) if x and x.get(mk) else None
+        picked.append(row)
+    tests = [(r, mk) for r in picked for mk in ("spx", "sensex") if r[mk] and r[mk]["h2"]["p"] is not None]
+    for (r, mk), q in zip(tests, bh([r[mk]["h2"]["p"] for r, mk in tests])):
+        r[mk]["h2"]["q"] = q
+        h2 = r[mk]["h2"]
+        r[mk]["verdict"] = ("held after 2013" if h2["hit"] > h2["base"] and h2["p"] < 0.05 else
+                            "leaned the right way after 2013, not significant" if h2["hit"] > h2["base"] else "failed after 2013")
+    pooled = {}
+    for mk in ("spx", "sensex"):
+        W = E = V = 0.0
+        for r in picked:
+            if r[mk]:
+                h = r[mk]["h2"]
+                n, b = h["worked"] + h["failed"], h["base"] / 100
+                W, E, V = W + h["worked"], E + n * b, V + n * b * (1 - b)
+        pooled[mk] = dict(right=int(W), exp=round(E, 1), p=round(math.erfc(abs(W - E) / math.sqrt(V) / math.sqrt(2)), 4) if V else None)
+    out["picked_rules"] = dict(rules=picked, n_tests=len(tests), held=sum(1 for r, mk in tests if r[mk]["verdict"] == "held after 2013"), pooled=pooled,
+                               leaned=sum(1 for r, mk in tests if r[mk]["verdict"] != "failed after 2013"),
+                               held_both=[r["title"] for r in picked if all(r[mk] and r[mk].get("verdict") == "held after 2013" for mk in ("spx", "sensex"))],
+                               note="span records as in the table (from the close before each span to its end); picked on 20 Nov 2000 - 20 Nov 2013, scored 20 Nov 2013 - 20 Nov 2026")
 
     # 3. the combined model's calls, walk-forward: weights fitted on 2000-2012, every day 2013 - 31 Oct 2026 scored
     model, preds = {}, {}
@@ -800,6 +836,10 @@ def report(res):
         print(mk, "window:", {k[:40]: (v["right"], v["n"], v["hit"], v["exp"], v["p"]) for k, v in t["window"][mk]["rows"].items()}, t["window"][mk]["up_share"])
     print("big:", t["big"])
     print("vol factors:", t["volatility_factors"])
+    pk = t["picked_rules"]
+    print("picked rules:", pk["held"], "of", pk["n_tests"], "held; both:", pk["held_both"])
+    for r in pk["rules"]:
+        print("   ", r["title"][:40], {mk: (r[mk]["h2"]["hit"], r[mk]["h2"]["base"], r[mk]["h2"]["p"], r[mk]["h2"].get("q"), r[mk]["verdict"]) for mk in ("spx", "sensex") if r[mk]})
     print("model v1:", t["model_v1"])
     for mk in ("spx", "sensex"):
         print(mk, "clean model:", {k[:60]: (v["right"], v["n"], v["hit"], v["exp"], v["p"]) for k, v in t["model"][mk]["rows"].items() if "clean" in k})

@@ -105,31 +105,28 @@ def day_row(day):
             f"<td class='s'>{E('; '.join(day.get('notes', [])[:4]))}</td><td class='s'>{E('; '.join(day['new_sources'][:3]))}</td></tr>")
 
 
-def jan_update_html(out_dir):
-    """January 2027 after the November review (tools/january_2027_outlook.py): each kind of call, what it says, what it is worth."""
-    f = pathlib.Path(out_dir) / "january_2027_outlook_ET.json"
+def month_update_html(out_dir, key):
+    """A coming month after the November review (tools/month_outlook.py): each kind of call, what it says, what it is worth."""
+    y, m = map(int, key.split("-"))
+    stem = f"{dt.date(y, m, 1):%B}".lower() + f"_{y}"
+    f = pathlib.Path(out_dir) / f"{stem}_outlook_ET.json"
     if not f.exists():
         return ""
     o = json.load(open(f))
-    v = o["verdicts"]
-    fr = o["frozen"]
-    edge = [mk for mk, x in v.items() if x["edge"]]
+    v, fr, dd = o["verdicts"], o["frozen"], o["deep_dive"]
     rows = []
     for mk, name, _ in MKS:
         items = v[mk]["items"]
         for i, it in enumerate(items):
+            mark = " class='up'" if it.get("level") in ("edge", "some") else ""
             rows.append("<tr>" + (f"<td rowspan='{len(items)}'><b>{E(name)}</b><div class='s'>{E(v[mk]['summary'])}</div></td>" if i == 0 else "")
-                        + f"<td class='s'><b>{E(it['topic'])}</b>: {E(it['call'])}</td><td class='s'>{E(it['worth'])}</td></tr>")
-    dd = o["deep_dive"]
-    return (f"<div class='call'><b>Update ({E(o['made'][:10])}): January after the November review.</b> "
-            + ("No January call has a tested edge on any market. " if not edge else f"Calls with a tested edge: {E(', '.join(edge))}. ")
-            + "Out of sample the table labels and the combined model score what chance gives; Mercury's Paap Kartari (B116) is bearish on the Sensex in general, but in "
-              "January Jupiter aspects Mercury, which B116 itself reads as volatile both ways, and such windows were neither bearish nor more volatile; no big-day factor that "
-              "passed the clean test is active; Solar return has no stated indication. The week tables below are unchanged and read as leanings. "
-            + f"The sky-event deep dive: {dd['tests']} tests, {dd['significant']} pass the correction. "
-            + f"January's calls were frozen on {E(fr['frozen_at'])} ({E(fr['path'])}) so the month can be scored afterwards exactly as November was.</div>"
-            + "<div class='wrap'><table><thead><tr><th>Market</th><th>What January's calls say</th><th>What they are worth</th></tr></thead><tbody>"
-            + "".join(rows) + "</tbody></table></div>")
+                        + f"<td class='s'><b{mark}>{E(it['topic'])}</b>: {E(it['call'])}</td><td class='s'>{E(it['worth'])}</td></tr>")
+    return (f"<div class='call'><b>Update ({E(o['made'][:10])}): {E(o['name'])} after the November review.</b> {E(o['headline'])} "
+            "The week tables below are unchanged and read as leanings. "
+            f"The sky-event deep dive: {dd['tests']} tests, {dd['significant']} pass the correction. "
+            f"{E(o['name'].split()[0])}'s calls were frozen on {E(fr['frozen_at'])} ({E(fr['path'])}) so the month can be scored afterwards exactly as November was.</div>"
+            "<div class='wrap'><table><thead><tr><th>Market</th><th>What the month's calls say</th><th>What they are worth</th></tr></thead><tbody>"
+            + "".join(rows) + "</tbody></table></div><p class='s'>Green topic = some support (a clean test or a source rule's stated case); none is proven.</p>")
 
 
 def section(dds, title=None, anchor="dd2027", css=True, extra=""):
@@ -201,5 +198,5 @@ def all_months(pattern_dir):
     index = " · ".join(f"<a href='#{anchors[k]}'>{dt.date.fromisoformat(k + '-01'):%B %Y}</a>" for k in by)
     out = [CSS, f"<p class='m'><b>Deep dives (every sky event backtested, week by week):</b> {index}</p>"]
     for k, dds in by.items():
-        out.append(section(dds, anchor=anchors[k], css=False, extra=jan_update_html(pattern_dir) if k == "2027-01" else ""))
+        out.append(section(dds, anchor=anchors[k], css=False, extra=month_update_html(pattern_dir, k)))
     return "".join(out)

@@ -1,5 +1,7 @@
 {
- "made": "2026-11-27 22:05 ET",
+ "made": "2026-11-28 04:45 ET",
+ "month": "2027-01",
+ "name": "January 2027",
  "start": "2027-01-01",
  "end": "2027-01-31",
  "markets": {
@@ -57,18 +59,8 @@
         "up_calls": 0,
         "down_calls": 290
        },
-       "second_half": {
-        "n": 144,
-        "right": 70,
-        "wrong": 74,
-        "hit": 48.6,
-        "exp": 42.8,
-        "edge": 5.8,
-        "p": 0.1752,
-        "up_calls": 0,
-        "down_calls": 144
-       },
-       "picked_2000_2013": false
+       "picked_2000_2013": false,
+       "after_2013": null
       }
      ],
      "strength_record": {
@@ -110,18 +102,8 @@
         "up_calls": 0,
         "down_calls": 290
        },
-       "second_half": {
-        "n": 144,
-        "right": 70,
-        "wrong": 74,
-        "hit": 48.6,
-        "exp": 42.8,
-        "edge": 5.8,
-        "p": 0.1752,
-        "up_calls": 0,
-        "down_calls": 144
-       },
-       "picked_2000_2013": false
+       "picked_2000_2013": false,
+       "after_2013": null
       },
       {
        "id": "ta_s25_mercury_rahu_1",
@@ -140,18 +122,25 @@
         "up_calls": 0,
         "down_calls": 528
        },
-       "second_half": {
-        "n": 273,
-        "right": 113,
-        "wrong": 160,
-        "hit": 41.4,
-        "exp": 42.1,
-        "edge": -0.7,
-        "p": 0.8537,
-        "up_calls": 0,
-        "down_calls": 273
-       },
-       "picked_2000_2013": true
+       "picked_2000_2013": true,
+       "after_2013": {
+        "h1": {
+         "worked": 10,
+         "failed": 8,
+         "hit": 56,
+         "base": 39,
+         "p": 0.1111
+        },
+        "h2": {
+         "worked": 6,
+         "failed": 10,
+         "hit": 38,
+         "base": 31,
+         "p": 0.3729,
+         "q": 0.691
+        },
+        "verdict": "leaned the right way after 2013, not significant"
+       }
       }
      ],
      "strength_record": {
@@ -194,18 +183,8 @@
         "up_calls": 0,
         "down_calls": 290
        },
-       "second_half": {
-        "n": 144,
-        "right": 70,
-        "wrong": 74,
-        "hit": 48.6,
-        "exp": 42.8,
-        "edge": 5.8,
-        "p": 0.1752,
-        "up_calls": 0,
-        "down_calls": 144
-       },
-       "picked_2000_2013": false
+       "picked_2000_2013": false,
+       "after_2013": null
       },
       {
        "id": "ta_s25_mercury_rahu_1",
@@ -224,18 +203,25 @@
         "up_calls": 0,
         "down_calls": 528
        },
-       "second_half": {
-        "n": 273,
-        "right": 113,
-        "wrong": 160,
-        "hit": 41.4,
-        "exp": 42.1,
-        "edge": -0.7,
-        "p": 0.8537,
-        "up_calls": 0,
-        "down_calls": 273
-       },
-       "picked_2000_2013": true
+       "picked_2000_2013": true,
+       "after_2013": {
+        "h1": {
+         "worked": 10,
+         "failed": 8,
+         "hit": 56,
+         "base": 39,
+         "p": 0.1111
+        },
+        "h2": {
+         "worked": 6,
+         "failed": 10,
+         "hit": 38,
+         "base": 31,
+         "p": 0.3729,
+         "q": 0.691
+        },
+        "verdict": "leaned the right way after 2013, not significant"
+       }
       },
       {
        "id": "ta_s25_moon_rahu_6",
@@ -254,18 +240,25 @@
         "up_calls": 821,
         "down_calls": 0
        },
-       "second_half": {
-        "n": 397,
-        "right": 224,
-        "wrong": 173,
-        "hit": 56.4,
-        "exp": 57.4,
-        "edge": -0.9,
-        "p": 0.721,
-        "up_calls": 397,
-        "down_calls": 0
-       },
-       "picked_2000_2013": true
+       "picked_2000_2013": true,
+       "after_2013": {
+        "h1": {
+         "worked": 170,
+         "failed": 115,
+         "hit": 60,
+         "base": 56,
+         "p": 0.1214
+        },
+        "h2": {
+         "worked": 164,
+         "failed": 96,
+         "hit": 63,
+         "base": 62,
+         "p": 0.4081,
+         "q": 0.691
+        },
+        "verdict": "leaned the right way after 2013, not significant"
+       }
       }
      ],
      "strength_record": {
@@ -307,18 +300,8 @@
         "up_calls": 0,
         "down_calls": 290
        },
-       "second_half": {
-        "n": 144,
-        "right": 70,
-        "wrong": 74,
-        "hit": 48.6,
-        "exp": 42.8,
-        "edge": 5.8,
-        "p": 0.1752,
-        "up_calls": 0,
-        "down_calls": 144
-       },
-       "picked_2000_2013": false
+       "picked_2000_2013": false,
+       "after_2013": null
       },
       {
        "id": "ta_s25_mercury_rahu_1",
@@ -337,18 +320,25 @@
         "up_calls": 0,
         "down_calls": 528
        },
-       "second_half": {
-        "n": 273,
-        "right": 113,
-        "wrong": 160,
-        "hit": 41.4,
-        "exp": 42.1,
-        "edge": -0.7,
-        "p": 0.8537,
-        "up_calls": 0,
-        "down_calls": 273
-       },
-       "picked_2000_2013": true
+       "picked_2000_2013": true,
+       "after_2013": {
+        "h1": {
+         "worked": 10,
+         "failed": 8,
+         "hit": 56,
+         "base": 39,
+         "p": 0.1111
+        },
+        "h2": {
+         "worked": 6,
+         "failed": 10,
+         "hit": 38,
+         "base": 31,
+         "p": 0.3729,
+         "q": 0.691
+        },
+        "verdict": "leaned the right way after 2013, not significant"
+       }
       }
      ],
      "strength_record": {
@@ -391,18 +381,8 @@
         "up_calls": 0,
         "down_calls": 290
        },
-       "second_half": {
-        "n": 144,
-        "right": 70,
-        "wrong": 74,
-        "hit": 48.6,
-        "exp": 42.8,
-        "edge": 5.8,
-        "p": 0.1752,
-        "up_calls": 0,
-        "down_calls": 144
-       },
-       "picked_2000_2013": false
+       "picked_2000_2013": false,
+       "after_2013": null
       },
       {
        "id": "ta_s25_mercury_rahu_1",
@@ -421,18 +401,25 @@
         "up_calls": 0,
         "down_calls": 528
        },
-       "second_half": {
-        "n": 273,
-        "right": 113,
-        "wrong": 160,
-        "hit": 41.4,
-        "exp": 42.1,
-        "edge": -0.7,
-        "p": 0.8537,
-        "up_calls": 0,
-        "down_calls": 273
-       },
-       "picked_2000_2013": true
+       "picked_2000_2013": true,
+       "after_2013": {
+        "h1": {
+         "worked": 10,
+         "failed": 8,
+         "hit": 56,
+         "base": 39,
+         "p": 0.1111
+        },
+        "h2": {
+         "worked": 6,
+         "failed": 10,
+         "hit": 38,
+         "base": 31,
+         "p": 0.3729,
+         "q": 0.691
+        },
+        "verdict": "leaned the right way after 2013, not significant"
+       }
       },
       {
        "id": "ta_s25_moon_rahu_6",
@@ -451,18 +438,25 @@
         "up_calls": 821,
         "down_calls": 0
        },
-       "second_half": {
-        "n": 397,
-        "right": 224,
-        "wrong": 173,
-        "hit": 56.4,
-        "exp": 57.4,
-        "edge": -0.9,
-        "p": 0.721,
-        "up_calls": 397,
-        "down_calls": 0
-       },
-       "picked_2000_2013": true
+       "picked_2000_2013": true,
+       "after_2013": {
+        "h1": {
+         "worked": 170,
+         "failed": 115,
+         "hit": 60,
+         "base": 56,
+         "p": 0.1214
+        },
+        "h2": {
+         "worked": 164,
+         "failed": 96,
+         "hit": 63,
+         "base": 62,
+         "p": 0.4081,
+         "q": 0.691
+        },
+        "verdict": "leaned the right way after 2013, not significant"
+       }
       }
      ],
      "strength_record": {
@@ -504,18 +498,8 @@
         "up_calls": 0,
         "down_calls": 290
        },
-       "second_half": {
-        "n": 144,
-        "right": 70,
-        "wrong": 74,
-        "hit": 48.6,
-        "exp": 42.8,
-        "edge": 5.8,
-        "p": 0.1752,
-        "up_calls": 0,
-        "down_calls": 144
-       },
-       "picked_2000_2013": false
+       "picked_2000_2013": false,
+       "after_2013": null
       },
       {
        "id": "ta_s25_mercury_rahu_1",
@@ -534,18 +518,25 @@
         "up_calls": 0,
         "down_calls": 528
        },
-       "second_half": {
-        "n": 273,
-        "right": 113,
-        "wrong": 160,
-        "hit": 41.4,
-        "exp": 42.1,
-        "edge": -0.7,
-        "p": 0.8537,
-        "up_calls": 0,
-        "down_calls": 273
-       },
-       "picked_2000_2013": true
+       "picked_2000_2013": true,
+       "after_2013": {
+        "h1": {
+         "worked": 10,
+         "failed": 8,
+         "hit": 56,
+         "base": 39,
+         "p": 0.1111
+        },
+        "h2": {
+         "worked": 6,
+         "failed": 10,
+         "hit": 38,
+         "base": 31,
+         "p": 0.3729,
+         "q": 0.691
+        },
+        "verdict": "leaned the right way after 2013, not significant"
+       }
       }
      ],
      "strength_record": {
@@ -587,18 +578,8 @@
         "up_calls": 0,
         "down_calls": 290
        },
-       "second_half": {
-        "n": 144,
-        "right": 70,
-        "wrong": 74,
-        "hit": 48.6,
-        "exp": 42.8,
-        "edge": 5.8,
-        "p": 0.1752,
-        "up_calls": 0,
-        "down_calls": 144
-       },
-       "picked_2000_2013": false
+       "picked_2000_2013": false,
+       "after_2013": null
       }
      ],
      "strength_record": {
@@ -706,18 +687,8 @@
         "up_calls": 0,
         "down_calls": 311
        },
-       "second_half": {
-        "n": 155,
-        "right": 70,
-        "wrong": 85,
-        "hit": 45.2,
-        "exp": 44.7,
-        "edge": 0.5,
-        "p": 0.9356,
-        "up_calls": 0,
-        "down_calls": 155
-       },
-       "picked_2000_2013": false
+       "picked_2000_2013": false,
+       "after_2013": null
       }
      ],
      "strength_record": {
@@ -759,18 +730,8 @@
         "up_calls": 0,
         "down_calls": 311
        },
-       "second_half": {
-        "n": 155,
-        "right": 70,
-        "wrong": 85,
-        "hit": 45.2,
-        "exp": 44.7,
-        "edge": 0.5,
-        "p": 0.9356,
-        "up_calls": 0,
-        "down_calls": 155
-       },
-       "picked_2000_2013": false
+       "picked_2000_2013": false,
+       "after_2013": null
       },
       {
        "id": "ta_s25_mercury_rahu_1",
@@ -789,18 +750,25 @@
         "up_calls": 0,
         "down_calls": 570
        },
-       "second_half": {
-        "n": 272,
-        "right": 116,
-        "wrong": 156,
-        "hit": 42.6,
-        "exp": 44.6,
-        "edge": -2.0,
-        "p": 0.5408,
-        "up_calls": 0,
-        "down_calls": 272
-       },
-       "picked_2000_2013": true
+       "picked_2000_2013": true,
+       "after_2013": {
+        "h1": {
+         "worked": 13,
+         "failed": 7,
+         "hit": 65,
+         "base": 42,
+         "p": 0.0298
+        },
+        "h2": {
+         "worked": 7,
+         "failed": 8,
+         "hit": 47,
+         "base": 38,
+         "p": 0.3158,
+         "q": 0.691
+        },
+        "verdict": "leaned the right way after 2013, not significant"
+       }
       }
      ],
      "strength_record": {
@@ -843,18 +811,8 @@
         "up_calls": 0,
         "down_calls": 311
        },
-       "second_half": {
-        "n": 155,
-        "right": 70,
-        "wrong": 85,
-        "hit": 45.2,
-        "exp": 44.7,
-        "edge": 0.5,
-        "p": 0.9356,
-        "up_calls": 0,
-        "down_calls": 155
-       },
-       "picked_2000_2013": false
+       "picked_2000_2013": false,
+       "after_2013": null
       },
       {
        "id": "ta_s25_mercury_rahu_1",
@@ -873,18 +831,25 @@
         "up_calls": 0,
         "down_calls": 570
        },
-       "second_half": {
-        "n": 272,
-        "right": 116,
-        "wrong": 156,
-        "hit": 42.6,
-        "exp": 44.6,
-        "edge": -2.0,
-        "p": 0.5408,
-        "up_calls": 0,
-        "down_calls": 272
-       },
-       "picked_2000_2013": true
+       "picked_2000_2013": true,
+       "after_2013": {
+        "h1": {
+         "worked": 13,
+         "failed": 7,
+         "hit": 65,
+         "base": 42,
+         "p": 0.0298
+        },
+        "h2": {
+         "worked": 7,
+         "failed": 8,
+         "hit": 47,
+         "base": 38,
+         "p": 0.3158,
+         "q": 0.691
+        },
+        "verdict": "leaned the right way after 2013, not significant"
+       }
       },
       {
        "id": "ta_s25_moon_rahu_6",
@@ -903,18 +868,25 @@
         "up_calls": 926,
         "down_calls": 0
        },
-       "second_half": {
-        "n": 424,
-        "right": 238,
-        "wrong": 186,
-        "hit": 56.1,
-        "exp": 55.4,
-        "edge": 0.7,
-        "p": 0.8065,
-        "up_calls": 424,
-        "down_calls": 0
-       },
-       "picked_2000_2013": true
+       "picked_2000_2013": true,
+       "after_2013": {
+        "h1": {
+         "worked": 190,
+         "failed": 111,
+         "hit": 63,
+         "base": 57,
+         "p": 0.0263
+        },
+        "h2": {
+         "worked": 169,
+         "failed": 115,
+         "hit": 60,
+         "base": 58,
+         "p": 0.2922,
+         "q": 0.691
+        },
+        "verdict": "leaned the right way after 2013, not significant"
+       }
       }
      ],
      "strength_record": {
@@ -956,18 +928,8 @@
         "up_calls": 0,
         "down_calls": 311
        },
-       "second_half": {
-        "n": 155,
-        "right": 70,
-        "wrong": 85,
-        "hit": 45.2,
-        "exp": 44.7,
-        "edge": 0.5,
-        "p": 0.9356,
-        "up_calls": 0,
-        "down_calls": 155
-       },
-       "picked_2000_2013": false
+       "picked_2000_2013": false,
+       "after_2013": null
       },
       {
        "id": "ta_s25_mercury_rahu_1",
@@ -986,18 +948,25 @@
         "up_calls": 0,
         "down_calls": 570
        },
-       "second_half": {
-        "n": 272,
-        "right": 116,
-        "wrong": 156,
-        "hit": 42.6,
-        "exp": 44.6,
-        "edge": -2.0,
-        "p": 0.5408,
-        "up_calls": 0,
-        "down_calls": 272
-       },
-       "picked_2000_2013": true
+       "picked_2000_2013": true,
+       "after_2013": {
+        "h1": {
+         "worked": 13,
+         "failed": 7,
+         "hit": 65,
+         "base": 42,
+         "p": 0.0298
+        },
+        "h2": {
+         "worked": 7,
+         "failed": 8,
+         "hit": 47,
+         "base": 38,
+         "p": 0.3158,
+         "q": 0.691
+        },
+        "verdict": "leaned the right way after 2013, not significant"
+       }
       }
      ],
      "strength_record": {
@@ -1040,18 +1009,8 @@
         "up_calls": 0,
         "down_calls": 311
        },
-       "second_half": {
-        "n": 155,
-        "right": 70,
-        "wrong": 85,
-        "hit": 45.2,
-        "exp": 44.7,
-        "edge": 0.5,
-        "p": 0.9356,
-        "up_calls": 0,
-        "down_calls": 155
-       },
-       "picked_2000_2013": false
+       "picked_2000_2013": false,
+       "after_2013": null
       },
       {
        "id": "ta_s25_mercury_rahu_1",
@@ -1070,18 +1029,25 @@
         "up_calls": 0,
         "down_calls": 570
        },
-       "second_half": {
-        "n": 272,
-        "right": 116,
-        "wrong": 156,
-        "hit": 42.6,
-        "exp": 44.6,
-        "edge": -2.0,
-        "p": 0.5408,
-        "up_calls": 0,
-        "down_calls": 272
-       },
-       "picked_2000_2013": true
+       "picked_2000_2013": true,
+       "after_2013": {
+        "h1": {
+         "worked": 13,
+         "failed": 7,
+         "hit": 65,
+         "base": 42,
+         "p": 0.0298
+        },
+        "h2": {
+         "worked": 7,
+         "failed": 8,
+         "hit": 47,
+         "base": 38,
+         "p": 0.3158,
+         "q": 0.691
+        },
+        "verdict": "leaned the right way after 2013, not significant"
+       }
       },
       {
        "id": "ta_s25_moon_rahu_6",
@@ -1100,18 +1066,25 @@
         "up_calls": 926,
         "down_calls": 0
        },
-       "second_half": {
-        "n": 424,
-        "right": 238,
-        "wrong": 186,
-        "hit": 56.1,
-        "exp": 55.4,
-        "edge": 0.7,
-        "p": 0.8065,
-        "up_calls": 424,
-        "down_calls": 0
-       },
-       "picked_2000_2013": true
+       "picked_2000_2013": true,
+       "after_2013": {
+        "h1": {
+         "worked": 190,
+         "failed": 111,
+         "hit": 63,
+         "base": 57,
+         "p": 0.0263
+        },
+        "h2": {
+         "worked": 169,
+         "failed": 115,
+         "hit": 60,
+         "base": 58,
+         "p": 0.2922,
+         "q": 0.691
+        },
+        "verdict": "leaned the right way after 2013, not significant"
+       }
       }
      ],
      "strength_record": {
@@ -1153,18 +1126,8 @@
         "up_calls": 0,
         "down_calls": 311
        },
-       "second_half": {
-        "n": 155,
-        "right": 70,
-        "wrong": 85,
-        "hit": 45.2,
-        "exp": 44.7,
-        "edge": 0.5,
-        "p": 0.9356,
-        "up_calls": 0,
-        "down_calls": 155
-       },
-       "picked_2000_2013": false
+       "picked_2000_2013": false,
+       "after_2013": null
       },
       {
        "id": "ta_s25_mercury_rahu_1",
@@ -1183,18 +1146,25 @@
         "up_calls": 0,
         "down_calls": 570
        },
-       "second_half": {
-        "n": 272,
-        "right": 116,
-        "wrong": 156,
-        "hit": 42.6,
-        "exp": 44.6,
-        "edge": -2.0,
-        "p": 0.5408,
-        "up_calls": 0,
-        "down_calls": 272
-       },
-       "picked_2000_2013": true
+       "picked_2000_2013": true,
+       "after_2013": {
+        "h1": {
+         "worked": 13,
+         "failed": 7,
+         "hit": 65,
+         "base": 42,
+         "p": 0.0298
+        },
+        "h2": {
+         "worked": 7,
+         "failed": 8,
+         "hit": 47,
+         "base": 38,
+         "p": 0.3158,
+         "q": 0.691
+        },
+        "verdict": "leaned the right way after 2013, not significant"
+       }
       }
      ],
      "strength_record": {
@@ -1235,18 +1205,8 @@
         "up_calls": 0,
         "down_calls": 311
        },
-       "second_half": {
-        "n": 155,
-        "right": 70,
-        "wrong": 85,
-        "hit": 45.2,
-        "exp": 44.7,
-        "edge": 0.5,
-        "p": 0.9356,
-        "up_calls": 0,
-        "down_calls": 155
-       },
-       "picked_2000_2013": false
+       "picked_2000_2013": false,
+       "after_2013": null
       }
      ],
      "strength_record": {
@@ -1612,6 +1572,27 @@
    }
   }
  },
+ "picked_summary": {
+  "n_tests": 22,
+  "held": 2,
+  "pooled": {
+   "spx": {
+    "right": 347,
+    "exp": 326.6,
+    "p": 0.0747
+   },
+   "sensex": {
+    "right": 344,
+    "exp": 333.6,
+    "p": 0.3876
+   }
+  },
+  "leaned": 16,
+  "held_both": [
+   "Three Saturday in Shukla Paksh"
+  ],
+  "note": "span records as in the table (from the close before each span to its end); picked on 20 Nov 2000 - 20 Nov 2013, scored 20 Nov 2013 - 20 Nov 2026"
+ },
  "kartari": {
   "b116": {
    "title": "Mercury in Paap Kartari (2026 document B116)",
@@ -1663,7 +1644,13 @@
      "big_in": 7.1,
      "big_all": 7.5,
      "verdict": "not supported",
-     "benefic": {
+     "groups": {
+      "All B116 windows": {
+       "windows": 236,
+       "hit": 41,
+       "base": 39,
+       "p": 0.2766
+      },
       "A benefic aspects Mercury (B116: volatile, both sides)": {
        "windows": 121,
        "hit": 41,
@@ -1675,18 +1662,6 @@
        "hit": 41,
        "base": 38,
        "p": 0.322
-      },
-      "Like 01 Jan: Sun in pair, Mercury combust, benefic aspect": {
-       "windows": 70,
-       "hit": 36,
-       "base": 40,
-       "p": 0.7687
-      },
-      "Like 25 Jan: Sun in pair, Mercury not combust, benefic aspect": {
-       "windows": 32,
-       "hit": 42,
-       "base": 41,
-       "p": 0.514
       }
      },
      "big_test": {
@@ -1697,7 +1672,7 @@
        "lift": 1.02,
        "p": 0.4187
       },
-      "with a benefic aspect (January's case)": {
+      "with a benefic aspect": {
        "windows": 121,
        "big": 45,
        "exp": 60.7,
@@ -1712,11 +1687,50 @@
        "p": 0.0209
       }
      },
-     "january": {
-      "benefic_in_all_windows": true,
-      "direction": "not supported: a benefic aspects Mercury in every January window, and past windows with a benefic aspect were right 41% vs 39% (p 0.388)",
-      "volatility": "no more big days than expected"
-     }
+     "cases": [
+      {
+       "window": "1\u201315 Jan",
+       "benefic": [
+        "Jupiter"
+       ],
+       "case": "with a benefic aspect",
+       "direction": {
+        "hit": 41,
+        "base": 39,
+        "p": 0.388,
+        "ok": false
+       },
+       "volatility": {
+        "windows": 121,
+        "big": 45,
+        "exp": 60.7,
+        "lift": 0.74,
+        "p": 0.9849,
+        "ok": false
+       }
+      },
+      {
+       "window": "25 Jan",
+       "benefic": [
+        "Jupiter"
+       ],
+       "case": "with a benefic aspect",
+       "direction": {
+        "hit": 41,
+        "base": 39,
+        "p": 0.388,
+        "ok": false
+       },
+       "volatility": {
+        "windows": 121,
+        "big": 45,
+        "exp": 60.7,
+        "lift": 0.74,
+        "p": 0.9849,
+        "ok": false
+       }
+      }
+     ]
     },
     "sensex": {
      "all": {
@@ -1764,7 +1778,13 @@
      "big_in": 10.4,
      "big_all": 9.4,
      "verdict": "supported",
-     "benefic": {
+     "groups": {
+      "All B116 windows": {
+       "windows": 236,
+       "hit": 48,
+       "base": 41,
+       "p": 0.0268
+      },
       "A benefic aspects Mercury (B116: volatile, both sides)": {
        "windows": 121,
        "hit": 46,
@@ -1776,18 +1796,6 @@
        "hit": 50,
        "base": 40,
        "p": 0.0317
-      },
-      "Like 01 Jan: Sun in pair, Mercury combust, benefic aspect": {
-       "windows": 70,
-       "hit": 42,
-       "base": 41,
-       "p": 0.5331
-      },
-      "Like 25 Jan: Sun in pair, Mercury not combust, benefic aspect": {
-       "windows": 32,
-       "hit": 63,
-       "base": 43,
-       "p": 0.019
       }
      },
      "big_test": {
@@ -1798,7 +1806,7 @@
        "lift": 1.19,
        "p": 0.0111
       },
-      "with a benefic aspect (January's case)": {
+      "with a benefic aspect": {
        "windows": 121,
        "big": 88,
        "exp": 78.3,
@@ -1813,97 +1821,124 @@
        "p": 0.0166
       }
      },
-     "january": {
-      "benefic_in_all_windows": true,
-      "direction": "not supported: a benefic aspects Mercury in every January window, and past windows with a benefic aspect were right 46% vs 41% (p 0.2081)",
-      "volatility": "no more big days than expected"
-     }
+     "cases": [
+      {
+       "window": "1\u201316 Jan",
+       "benefic": [
+        "Jupiter"
+       ],
+       "case": "with a benefic aspect",
+       "direction": {
+        "hit": 46,
+        "base": 41,
+        "p": 0.2081,
+        "ok": false
+       },
+       "volatility": {
+        "windows": 121,
+        "big": 88,
+        "exp": 78.3,
+        "lift": 1.12,
+        "p": 0.1502,
+        "ok": false
+       }
+      },
+      {
+       "window": "25\u201326 Jan",
+       "benefic": [
+        "Jupiter"
+       ],
+       "case": "with a benefic aspect",
+       "direction": {
+        "hit": 46,
+        "base": 41,
+        "p": 0.2081,
+        "ok": false
+       },
+       "volatility": {
+        "windows": 121,
+        "big": 88,
+        "exp": 78.3,
+        "lift": 1.12,
+        "p": 0.1502,
+        "ok": false
+       }
+      }
+     ]
     }
    },
-   "spans": [
+   "windows": [
     {
      "frm": "Fri 01 Jan 2027 12:07",
      "to": "Fri 15 Jan 2027 21:48",
-     "pair": "Sun | Pluto"
+     "pair": "Sun | Pluto",
+     "sign": "Sagittarius",
+     "combust": true,
+     "benefic": [
+      "Jupiter"
+     ],
+     "local": {
+      "spx": {
+       "start": "2027-01-01 12:07",
+       "end": "2027-01-15 21:48",
+       "sessions": [
+        "2027-01-04",
+        "2027-01-05",
+        "2027-01-06",
+        "2027-01-07",
+        "2027-01-08",
+        "2027-01-11",
+        "2027-01-12",
+        "2027-01-13",
+        "2027-01-14",
+        "2027-01-15"
+       ]
+      },
+      "sensex": {
+       "start": "2027-01-01 22:37",
+       "end": "2027-01-16 08:18",
+       "sessions": [
+        "2027-01-04",
+        "2027-01-05",
+        "2027-01-06",
+        "2027-01-07",
+        "2027-01-08",
+        "2027-01-11",
+        "2027-01-12",
+        "2027-01-13",
+        "2027-01-14",
+        "2027-01-15"
+       ]
+      }
+     }
     },
     {
      "frm": "Mon 25 Jan 2027 03:01",
      "to": "Mon 25 Jan 2027 22:51",
-     "pair": "Sun | Rahu"
+     "pair": "Sun | Rahu",
+     "sign": "Capricorn",
+     "combust": false,
+     "benefic": [
+      "Jupiter"
+     ],
+     "local": {
+      "spx": {
+       "start": "2027-01-25 03:01",
+       "end": "2027-01-25 22:51",
+       "sessions": [
+        "2027-01-25"
+       ]
+      },
+      "sensex": {
+       "start": "2027-01-25 13:31",
+       "end": "2027-01-26 09:21",
+       "sessions": [
+        "2027-01-25"
+       ]
+      }
+     }
     }
-   ],
-   "windows": {
-    "spx": [
-     {
-      "start": "2027-01-01 12:07",
-      "end": "2027-01-15 21:48",
-      "pair": "Sun | Pluto",
-      "sessions": [
-       "2027-01-04",
-       "2027-01-05",
-       "2027-01-06",
-       "2027-01-07",
-       "2027-01-08",
-       "2027-01-11",
-       "2027-01-12",
-       "2027-01-13",
-       "2027-01-14",
-       "2027-01-15"
-      ],
-      "combust": true,
-      "benefic": [
-       "Jupiter"
-      ]
-     },
-     {
-      "start": "2027-01-25 03:01",
-      "end": "2027-01-25 22:51",
-      "pair": "Sun | Rahu",
-      "sessions": [
-       "2027-01-25"
-      ],
-      "combust": false,
-      "benefic": [
-       "Jupiter"
-      ]
-     }
-    ],
-    "sensex": [
-     {
-      "start": "2027-01-01 22:37",
-      "end": "2027-01-16 08:18",
-      "pair": "Sun | Pluto",
-      "sessions": [
-       "2027-01-04",
-       "2027-01-05",
-       "2027-01-06",
-       "2027-01-07",
-       "2027-01-08",
-       "2027-01-11",
-       "2027-01-12",
-       "2027-01-13",
-       "2027-01-14",
-       "2027-01-15"
-      ],
-      "combust": true,
-      "benefic": [
-       "Jupiter"
-      ]
-     },
-     {
-      "start": "2027-01-25 13:31",
-      "end": "2027-01-26 09:21",
-      "pair": "Sun | Rahu",
-      "sessions": [
-       "2027-01-25"
-      ],
-      "combust": false,
-      "benefic": [
-       "Jupiter"
-      ]
-     }
-    ]
-   }
+   ]
   },
   "b117": {
    "title": "Jupiter in Paap Kartari (2026 document B117)",
@@ -2004,11 +2039,67 @@
      "verdict": "not supported"
     }
    },
-   "spans": [
+   "windows": [
     {
      "frm": "Mon 16 Nov 2026 01:23",
      "to": "Sun 31 Jan 2027 13:30",
-     "pair": "Ketu | Mars"
+     "pair": "Ketu | Mars",
+     "sign": "Libra",
+     "combust": false,
+     "benefic": [],
+     "local": {
+      "spx": {
+       "start": "2026-11-16 01:23",
+       "end": "2027-01-31 13:30",
+       "sessions": [
+        "2027-01-04",
+        "2027-01-05",
+        "2027-01-06",
+        "2027-01-07",
+        "2027-01-08",
+        "2027-01-11",
+        "2027-01-12",
+        "2027-01-13",
+        "2027-01-14",
+        "2027-01-15",
+        "2027-01-19",
+        "2027-01-20",
+        "2027-01-21",
+        "2027-01-22",
+        "2027-01-25",
+        "2027-01-26",
+        "2027-01-27",
+        "2027-01-28",
+        "2027-01-29"
+       ]
+      },
+      "sensex": {
+       "start": "2026-11-16 11:53",
+       "end": "2027-02-01 00:00",
+       "sessions": [
+        "2027-01-01",
+        "2027-01-04",
+        "2027-01-05",
+        "2027-01-06",
+        "2027-01-07",
+        "2027-01-08",
+        "2027-01-11",
+        "2027-01-12",
+        "2027-01-13",
+        "2027-01-14",
+        "2027-01-15",
+        "2027-01-18",
+        "2027-01-19",
+        "2027-01-20",
+        "2027-01-21",
+        "2027-01-22",
+        "2027-01-25",
+        "2027-01-27",
+        "2027-01-28",
+        "2027-01-29"
+       ]
+      }
+     }
     }
    ]
   }
@@ -2055,7 +2146,33 @@
     "hit5": 42.9,
     "exp5": 43.8
    }
-  }
+  },
+  "rules": [
+   {
+    "rule": "Mars retrograde",
+    "sessions": 14,
+    "record": {
+     "rev": 102,
+     "exp_rev": 108.4,
+     "p_rev": 0.7441,
+     "n": 2327,
+     "up1": 52.3,
+     "exp1": 52.7,
+     "p1": 0.697,
+     "up5": 55.6,
+     "exp5": 56.5,
+     "p5": 0.4007,
+     "big": 127,
+     "exp_big": 156.3,
+     "p_big": 0.993,
+     "mean1": 0.03,
+     "eps": 46,
+     "eps_up5": 47.8,
+     "eps_exp5": 56.6,
+     "eps_p": 0.2279
+    }
+   }
+  ]
  },
  "deep_dive": {
   "weeks": 5,
@@ -2067,7 +2184,7 @@
  },
  "frozen": {
   "path": "january_2027_calls_ET.json",
-  "frozen_at": "2026-11-27 22:05 ET",
+  "frozen_at": "2026-11-28 04:45 ET",
   "rewritten": true,
   "sessions": {
    "spx": 19,
@@ -2083,59 +2200,71 @@
      "topic": "Table labels",
      "call": "Bearish Low 1\u20138 Jan; Bearish High 11\u201318 Jan; Bearish Low 19\u201321 Jan; Bearish High 22 Jan; Bearish Low 25 Jan; Bearish High 26\u201327 Jan; Bearish Low 28\u201329 Jan",
      "worth": "out of sample this market's labels were right 52.4% of the time vs 52.5% by chance: leanings, not calls",
-     "ok": false
+     "level": "none"
     },
     {
      "topic": "\u2026 Venus-Herschel 7th (opposition)",
      "call": "Bearish (Low); table record per span: S&P 14/24 (58% vs 37%, p 0.0307); Sensex 11/24 (46% vs 38%, p 0.2635)",
-     "worth": "day by day 50.0% vs 45.4% (2000\u20132026), 48.6% vs 42.8% after 2013; not picked when the rules are chosen on 2000\u20132013 only",
-     "ok": false
+     "worth": "day by day 50.0% vs 45.4% (2000\u20132026, in sample); not picked when the rules are chosen on 2000\u20132013 only, so it has no clean test",
+     "level": "none",
+     "why": null
     },
     {
      "topic": "\u2026 Mercury-Rahu conjunction (same sign)",
      "call": "Bearish (Moderate); table record per span: S&P 16/34 (47% vs 35%, p 0.1008); Sensex 20/35 (57% vs 40%, p 0.0289)",
-     "worth": "day by day 46.8% vs 44.7% (2000\u20132026), 41.4% vs 42.1% after 2013; picked when the rules are chosen on 2000\u20132013 only",
-     "ok": false
+     "worth": "day by day 46.8% vs 44.7% (2000\u20132026, in sample); picked when the rules are chosen on 2000\u20132013 only; its span record after 2013: 38% vs 31% (p 0.3729, q 0.691): leaned the right way after 2013, not significant",
+     "level": "none",
+     "why": null
     },
     {
      "topic": "\u2026 Moon-Rahu 6/8 (Shadashtak)",
      "call": "Bullish (Moderate); table record per span: S&P 334/545 (61% vs 59%, p 0.1452); Sensex 359/585 (61% vs 58%, p 0.0349)",
-     "worth": "day by day 54.8% vs 54.6% (2000\u20132026), 56.4% vs 57.4% after 2013; picked when the rules are chosen on 2000\u20132013 only",
-     "ok": false
+     "worth": "day by day 54.8% vs 54.6% (2000\u20132026, in sample); picked when the rules are chosen on 2000\u20132013 only; its span record after 2013: 63% vs 62% (p 0.4081, q 0.691): leaned the right way after 2013, not significant",
+     "level": "none",
+     "why": null
     },
     {
      "topic": "Mercury in Paap Kartari (B116, 2026 document)",
-     "call": "1\u201315 Jan, 25 Jan, bearish; Jupiter aspects Mercury in every window, which B116 reads as \u201cvery volatile and both side movement\u201d",
-     "worth": "as a bearish rule in general: 41% vs 39% (p 0.2766; halves 45% vs 41% and 36% vs 36%), not supported. January's case: direction not supported: a benefic aspects Mercury in every January window, and past windows with a benefic aspect were right 41% vs 39% (p 0.388); volatility 45 big days vs 60.7 expected (\u00d70.74, p 0.9849): no more big days than expected",
-     "ok": false
+     "why": null,
+     "call": "1\u201315 Jan, bearish; Jupiter aspects Mercury, which B116 reads as \u201cvery volatile and both side movement\u201d",
+     "worth": "as a bearish rule overall 41% vs 39% (p 0.2766; halves 45% vs 41% and 36% vs 36%), not supported. Windows with a benefic aspect: bearish right 41% vs 39% (p 0.388); big days 45 vs 60.7 expected (\u00d70.74, p 0.9849). The 2000\u20132026 record is a source rule's, not chosen from data, but it is not a walk-forward test",
+     "level": "none"
+    },
+    {
+     "topic": "Mercury in Paap Kartari (B116, 2026 document)",
+     "why": null,
+     "call": "25 Jan, bearish; Jupiter aspects Mercury, which B116 reads as \u201cvery volatile and both side movement\u201d",
+     "worth": "as a bearish rule overall 41% vs 39% (p 0.2766; halves 45% vs 41% and 36% vs 36%), not supported. Windows with a benefic aspect: bearish right 41% vs 39% (p 0.388); big days 45 vs 60.7 expected (\u00d70.74, p 0.9849). The 2000\u20132026 record is a source rule's, not chosen from data, but it is not a walk-forward test",
+     "level": "none"
     },
     {
      "topic": "Jupiter in Paap Kartari (B117, 2026 document)",
-     "call": "to 31 Jan (since 16 Nov), bearish",
+     "call": "Mon 16 Nov 2026 01:23 \u2013 Sun 31 Jan 2027 13:30, bearish",
      "worth": "direction not supported (2000\u20132026 48% vs 37%, second half 30% vs 29%); 11.6% big days in past windows vs 7.5% overall, not significant in the earlier test",
-     "ok": false
+     "level": "none"
     },
     {
      "topic": "Combined model",
      "call": "13 sessions lean down, 0 up, 6 near normal",
      "worth": "clean walk-forward 2013\u20132026 50.7% vs 49.8% by chance: no edge",
-     "ok": false
+     "level": "none"
     },
     {
      "topic": "Solar return",
-     "call": "no stated indication in either January solar month (Solar month 19 Dec \u2013 17 Jan; Solar month 17 Jan \u2013 16 Feb)",
+     "call": "day calls No call 19 sessions; solar months: 19 Dec \u2013 17 Jan: Libra 1\u00b008' rising, No stated indication; 17 Jan \u2013 16 Feb: Aries 17\u00b046' rising, No stated indication; transit rules: Mars retrograde (14 sessions: since 1928 big days 127 vs 156.3 expected (p 0.993), up over 5 sessions 47.8% vs 56.6% (p 0.2279))",
      "worth": "its generated day calls since 1928: bullish 53.4% vs 52.4%, bearish 47.0% vs 47.6%: no edge",
-     "ok": false
+     "level": "none"
     },
     {
      "topic": "Big days",
      "call": "no factor that passed the clean test is active; in sample only: Mercury-Saturn 2/12 (4 days)",
      "worth": "the clean factors are Venus retrograde (S&P, Sensex) and Jupiter\u2013Pluto 5/9 (S&P); the model's big-day chance is untested",
-     "ok": false
+     "level": "none"
     }
    ],
    "edge": false,
-   "summary": "No January call has a tested edge on the S&P: the bearish labels, the model and Paap Kartari are leanings."
+   "some": false,
+   "summary": "No January call has a tested edge on the S&P: the labels, the model and Paap Kartari are leanings."
   },
   "sensex": {
    "items": [
@@ -2143,83 +2272,96 @@
      "topic": "Table labels",
      "call": "Bearish Low 1\u20138 Jan; Bearish High 11\u201318 Jan; Bearish Low 19\u201321 Jan; Bearish High 22 Jan; Bearish Low 25 Jan; Bearish High 26\u201327 Jan; Bearish Low 28\u201329 Jan",
      "worth": "out of sample this market's labels were right 50.5% of the time vs 52.2% by chance: leanings, not calls",
-     "ok": false
+     "level": "none"
     },
     {
      "topic": "\u2026 Venus-Herschel 7th (opposition)",
      "call": "Bearish (Low); table record per span: S&P 14/24 (58% vs 37%, p 0.0307); Sensex 11/24 (46% vs 38%, p 0.2635)",
-     "worth": "day by day 46.3% vs 44.8% (2000\u20132026), 45.2% vs 44.7% after 2013; not picked when the rules are chosen on 2000\u20132013 only",
-     "ok": false
+     "worth": "day by day 46.3% vs 44.8% (2000\u20132026, in sample); not picked when the rules are chosen on 2000\u20132013 only, so it has no clean test",
+     "level": "none",
+     "why": null
     },
     {
      "topic": "\u2026 Mercury-Rahu conjunction (same sign)",
      "call": "Bearish (Moderate); table record per span: S&P 16/34 (47% vs 35%, p 0.1008); Sensex 20/35 (57% vs 40%, p 0.0289)",
-     "worth": "day by day 47.9% vs 45.5% (2000\u20132026), 42.6% vs 44.6% after 2013; picked when the rules are chosen on 2000\u20132013 only",
-     "ok": false
+     "worth": "day by day 47.9% vs 45.5% (2000\u20132026, in sample); picked when the rules are chosen on 2000\u20132013 only; its span record after 2013: 47% vs 38% (p 0.3158, q 0.691): leaned the right way after 2013, not significant",
+     "level": "none",
+     "why": null
     },
     {
      "topic": "\u2026 Moon-Rahu 6/8 (Shadashtak)",
      "call": "Bullish (Moderate); table record per span: S&P 334/545 (61% vs 59%, p 0.1452); Sensex 359/585 (61% vs 58%, p 0.0349)",
-     "worth": "day by day 55.2% vs 54.6% (2000\u20132026), 56.1% vs 55.4% after 2013; picked when the rules are chosen on 2000\u20132013 only",
-     "ok": false
+     "worth": "day by day 55.2% vs 54.6% (2000\u20132026, in sample); picked when the rules are chosen on 2000\u20132013 only; its span record after 2013: 60% vs 58% (p 0.2922, q 0.691): leaned the right way after 2013, not significant",
+     "level": "none",
+     "why": null
     },
     {
      "topic": "Mercury in Paap Kartari (B116, 2026 document)",
-     "call": "1\u201316 Jan, 25\u201326 Jan, bearish; Jupiter aspects Mercury in every window, which B116 reads as \u201cvery volatile and both side movement\u201d",
-     "worth": "as a bearish rule in general: 48% vs 41% (p 0.0268; halves 50% vs 42% and 45% vs 39%), supported. January's case: direction not supported: a benefic aspects Mercury in every January window, and past windows with a benefic aspect were right 46% vs 41% (p 0.2081); volatility 88 big days vs 78.3 expected (\u00d71.12, p 0.1502): no more big days than expected",
-     "ok": false
+     "why": null,
+     "call": "1\u201316 Jan, bearish; Jupiter aspects Mercury, which B116 reads as \u201cvery volatile and both side movement\u201d",
+     "worth": "as a bearish rule overall 48% vs 41% (p 0.0268; halves 50% vs 42% and 45% vs 39%), supported. Windows with a benefic aspect: bearish right 46% vs 41% (p 0.2081); big days 88 vs 78.3 expected (\u00d71.12, p 0.1502). The 2000\u20132026 record is a source rule's, not chosen from data, but it is not a walk-forward test",
+     "level": "none"
+    },
+    {
+     "topic": "Mercury in Paap Kartari (B116, 2026 document)",
+     "why": null,
+     "call": "25\u201326 Jan, bearish; Jupiter aspects Mercury, which B116 reads as \u201cvery volatile and both side movement\u201d",
+     "worth": "as a bearish rule overall 48% vs 41% (p 0.0268; halves 50% vs 42% and 45% vs 39%), supported. Windows with a benefic aspect: bearish right 46% vs 41% (p 0.2081); big days 88 vs 78.3 expected (\u00d71.12, p 0.1502). The 2000\u20132026 record is a source rule's, not chosen from data, but it is not a walk-forward test",
+     "level": "none"
     },
     {
      "topic": "Jupiter in Paap Kartari (B117, 2026 document)",
-     "call": "to 31 Jan (since 16 Nov), bearish",
+     "call": "Mon 16 Nov 2026 01:23 \u2013 Sun 31 Jan 2027 13:30, bearish",
      "worth": "direction not supported (2000\u20132026 48% vs 42%, second half 35% vs 39%); 14.4% big days in past windows vs 9.4% overall, not significant in the earlier test",
-     "ok": false
+     "level": "none"
     },
     {
      "topic": "Combined model",
      "call": "8 sessions lean down, 0 up, 12 near normal",
      "worth": "clean walk-forward 2013\u20132026 51.3% vs 51.6% by chance: no edge",
-     "ok": false
+     "level": "none"
     },
     {
      "topic": "Big days",
      "call": "no factor that passed the clean test is active",
      "worth": "the clean factors are Venus retrograde (S&P, Sensex) and Jupiter\u2013Pluto 5/9 (S&P); the model's big-day chance is untested",
-     "ok": false
+     "level": "none"
     }
    ],
    "edge": false,
-   "summary": "No January call has a tested edge on the Sensex: the bearish labels, the model and Paap Kartari are leanings."
+   "some": false,
+   "summary": "No January call has a tested edge on the Sensex: the labels, the model and Paap Kartari are leanings."
   },
   "gold": {
    "items": [
     {
      "topic": "Table labels",
-     "call": "Bullish Low 21 Dec \u2013 8 Jan; Bullish Low 14\u201320 Jan; Bullish Low 21 Jan; Bullish Low 22 Jan; Bullish Low 25\u201327 Jan",
+     "call": "Bullish Low 21 Dec \u2013 8 Jan; Bullish Low 14\u201327 Jan",
      "worth": "out of sample this market's labels were right 50.0% of the time vs 50.1% by chance: leanings, not calls",
-     "ok": false
+     "level": "none"
     },
     {
      "topic": "Combined model",
      "call": "0 sessions lean down, 0 up, 19 near normal",
      "worth": "clean walk-forward 2013\u20132026 47.1% vs 49.8% by chance: no edge",
-     "ok": false
+     "level": "none"
     },
     {
      "topic": "Model v1.0",
      "call": "Bullish 9, Strong bullish 2, Mild bullish 7, Neutral / mixed 1 sessions",
      "worth": "2000\u20132026 53.8% vs 53.6%: no edge",
-     "ok": false
+     "level": "none"
     },
     {
      "topic": "Big days",
      "call": "no factor that passed the clean test is active",
      "worth": "the clean factors are Venus retrograde (S&P, Sensex) and Jupiter\u2013Pluto 5/9 (S&P); the model's big-day chance is untested",
-     "ok": false
+     "level": "none"
     }
    ],
    "edge": false,
-   "summary": "No January call has a tested edge on gold: the bullish labels, the model and Model v1.0 are leanings."
+   "some": false,
+   "summary": "No January call has a tested edge on gold: the labels, the model and Model v1.0 are leanings."
   },
   "silver": {
    "items": [
@@ -2227,23 +2369,25 @@
      "topic": "Table labels",
      "call": "Bullish High 1\u201313 Jan; Bullish Moderate 14\u201322 Jan; Bullish High 25 Jan \u2013 5 Feb",
      "worth": "out of sample this market's labels were right 53.3% of the time vs 51.9% by chance: leanings, not calls",
-     "ok": false
+     "level": "none"
     },
     {
      "topic": "Combined model",
      "call": "0 sessions lean down, 0 up, 19 near normal",
      "worth": "clean walk-forward 2013\u20132026 52.8% vs 50.6% by chance: no edge",
-     "ok": false
+     "level": "none"
     },
     {
      "topic": "Big days",
      "call": "no factor that passed the clean test is active",
      "worth": "the clean factors are Venus retrograde (S&P, Sensex) and Jupiter\u2013Pluto 5/9 (S&P); the model's big-day chance is untested",
-     "ok": false
+     "level": "none"
     }
    ],
    "edge": false,
-   "summary": "No January call has a tested edge on silver: the bullish labels and the model are leanings."
+   "some": false,
+   "summary": "No January call has a tested edge on silver: the labels and the model are leanings."
   }
- }
+ },
+ "headline": "No January call has a tested edge on any market. Out of sample the table labels as a whole and the combined model score what chance gives; treat the rest as leanings."
 }

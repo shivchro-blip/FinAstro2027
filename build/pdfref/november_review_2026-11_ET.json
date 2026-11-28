@@ -1,5 +1,5 @@
 {
- "made": "2026-11-28 01:04 UTC",
+ "made": "2026-11-28 09:39 UTC",
  "start": "2026-11-01",
  "last": "2026-11-27",
  "hist_end": "2026-10-31",
@@ -5043,6 +5043,491 @@
      }
     }
    }
+  },
+  "picked_rules": {
+   "rules": [
+    {
+     "id": "b101_three_saturdays_in_shukla_paksha",
+     "title": "Three Saturday in Shukla Paksh",
+     "tone": "Bearish",
+     "strength_h1": "Low",
+     "spx": {
+      "h1": {
+       "worked": 22,
+       "failed": 18,
+       "hit": 55,
+       "base": 41,
+       "p": 0.0469
+      },
+      "h2": {
+       "worked": 19,
+       "failed": 14,
+       "hit": 58,
+       "base": 37,
+       "p": 0.0136,
+       "q": 0.2992
+      },
+      "verdict": "held after 2013"
+     },
+     "sensex": {
+      "h1": {
+       "worked": 15,
+       "failed": 18,
+       "hit": 45,
+       "base": 38,
+       "p": 0.2536
+      },
+      "h2": {
+       "worked": 18,
+       "failed": 15,
+       "hit": 55,
+       "base": 39,
+       "p": 0.049,
+       "q": 0.539
+      },
+      "verdict": "held after 2013"
+     }
+    },
+    {
+     "id": "ta_d9_mercury_saturn",
+     "title": "Mercury-Saturn conjunction in Navamsh (D9)",
+     "tone": "Bullish",
+     "strength_h1": "Moderate",
+     "spx": {
+      "h1": {
+       "worked": 78,
+       "failed": 44,
+       "hit": 64,
+       "base": 56,
+       "p": 0.0382
+      },
+      "h2": {
+       "worked": 71,
+       "failed": 40,
+       "hit": 64,
+       "base": 62,
+       "p": 0.3985,
+       "q": 0.691
+      },
+      "verdict": "leaned the right way after 2013, not significant"
+     },
+     "sensex": {
+      "h1": {
+       "worked": 87,
+       "failed": 51,
+       "hit": 63,
+       "base": 57,
+       "p": 0.094
+      },
+      "h2": {
+       "worked": 71,
+       "failed": 54,
+       "hit": 57,
+       "base": 58,
+       "p": 0.6272,
+       "q": 0.8117
+      },
+      "verdict": "failed after 2013"
+     }
+    },
+    {
+     "id": "ta_s13_virgo_1",
+     "title": "Virgo: Saturn, Sun, Mars, Herschel, Rahu any 2",
+     "tone": "Bullish",
+     "strength_h1": "Low",
+     "spx": {
+      "h1": {
+       "worked": 7,
+       "failed": 2,
+       "hit": 78,
+       "base": 62,
+       "p": 0.2623
+      },
+      "h2": {
+       "worked": 3,
+       "failed": 3,
+       "hit": 50,
+       "base": 63,
+       "p": 0.8586,
+       "q": 0.8586
+      },
+      "verdict": "failed after 2013"
+     },
+     "sensex": {
+      "h1": {
+       "worked": 9,
+       "failed": 0,
+       "hit": 100,
+       "base": 61,
+       "p": 0.0109
+      },
+      "h2": {
+       "worked": 3,
+       "failed": 3,
+       "hit": 50,
+       "base": 60,
+       "p": 0.8228,
+       "q": 0.8586
+      },
+      "verdict": "failed after 2013"
+     }
+    },
+    {
+     "id": "ta_s24_62_mrigashira_monday",
+     "title": "Mrigashira on Monday",
+     "tone": "Bullish",
+     "strength_h1": "Low",
+     "spx": {
+      "h1": {
+       "worked": 15,
+       "failed": 8,
+       "hit": 65,
+       "base": 56,
+       "p": 0.2373
+      },
+      "h2": {
+       "worked": 11,
+       "failed": 6,
+       "hit": 65,
+       "base": 62,
+       "p": 0.5307,
+       "q": 0.7297
+      },
+      "verdict": "leaned the right way after 2013, not significant"
+     },
+     "sensex": {
+      "h1": {
+       "worked": 19,
+       "failed": 5,
+       "hit": 79,
+       "base": 57,
+       "p": 0.0204
+      },
+      "h2": {
+       "worked": 12,
+       "failed": 7,
+       "hit": 63,
+       "base": 59,
+       "p": 0.4472,
+       "q": 0.7027
+      },
+      "verdict": "leaned the right way after 2013, not significant"
+     }
+    },
+    {
+     "id": "ta_s24_90_uttara_ashadha_monday",
+     "title": "Uttara Ashadha on Monday",
+     "tone": "Bearish",
+     "strength_h1": "Low",
+     "spx": {
+      "h1": {
+       "worked": 11,
+       "failed": 8,
+       "hit": 58,
+       "base": 45,
+       "p": 0.1828
+      },
+      "h2": {
+       "worked": 7,
+       "failed": 15,
+       "hit": 32,
+       "base": 40,
+       "p": 0.8341,
+       "q": 0.8586
+      },
+      "verdict": "failed after 2013"
+     },
+     "sensex": {
+      "h1": {
+       "worked": 14,
+       "failed": 8,
+       "hit": 64,
+       "base": 43,
+       "p": 0.041
+      },
+      "h2": {
+       "worked": 7,
+       "failed": 14,
+       "hit": 33,
+       "base": 42,
+       "p": 0.8375,
+       "q": 0.8586
+      },
+      "verdict": "failed after 2013"
+     }
+    },
+    {
+     "id": "ta_s25_mars_saturn_4",
+     "title": "Mars-Saturn 4/10 (Kendra)",
+     "tone": "Bullish",
+     "strength_h1": "Moderate",
+     "spx": {
+      "h1": {
+       "worked": 13,
+       "failed": 2,
+       "hit": 87,
+       "base": 62,
+       "p": 0.037
+      },
+      "h2": {
+       "worked": 14,
+       "failed": 2,
+       "hit": 88,
+       "base": 73,
+       "p": 0.155,
+       "q": 0.6508
+      },
+      "verdict": "leaned the right way after 2013, not significant"
+     },
+     "sensex": {
+      "h1": {
+       "worked": 13,
+       "failed": 3,
+       "hit": 81,
+       "base": 62,
+       "p": 0.0913
+      },
+      "h2": {
+       "worked": 12,
+       "failed": 5,
+       "hit": 71,
+       "base": 65,
+       "p": 0.4083,
+       "q": 0.691
+      },
+      "verdict": "leaned the right way after 2013, not significant"
+     }
+    },
+    {
+     "id": "ta_s25_mercury_jupiter_2",
+     "title": "Mercury-Jupiter 2/12 (Dwidwadash)",
+     "tone": "Bullish",
+     "strength_h1": "Low",
+     "spx": {
+      "h1": {
+       "worked": 23,
+       "failed": 15,
+       "hit": 61,
+       "base": 57,
+       "p": 0.413
+      },
+      "h2": {
+       "worked": 27,
+       "failed": 9,
+       "hit": 75,
+       "base": 65,
+       "p": 0.142,
+       "q": 0.6508
+      },
+      "verdict": "leaned the right way after 2013, not significant"
+     },
+     "sensex": {
+      "h1": {
+       "worked": 30,
+       "failed": 11,
+       "hit": 73,
+       "base": 59,
+       "p": 0.0483
+      },
+      "h2": {
+       "worked": 20,
+       "failed": 17,
+       "hit": 54,
+       "base": 60,
+       "p": 0.8307,
+       "q": 0.8586
+      },
+      "verdict": "failed after 2013"
+     }
+    },
+    {
+     "id": "ta_s25_mercury_rahu_1",
+     "title": "Mercury-Rahu conjunction (same sign)",
+     "tone": "Bearish",
+     "strength_h1": "Moderate",
+     "spx": {
+      "h1": {
+       "worked": 10,
+       "failed": 8,
+       "hit": 56,
+       "base": 39,
+       "p": 0.1111
+      },
+      "h2": {
+       "worked": 6,
+       "failed": 10,
+       "hit": 38,
+       "base": 31,
+       "p": 0.3729,
+       "q": 0.691
+      },
+      "verdict": "leaned the right way after 2013, not significant"
+     },
+     "sensex": {
+      "h1": {
+       "worked": 13,
+       "failed": 7,
+       "hit": 65,
+       "base": 42,
+       "p": 0.0298
+      },
+      "h2": {
+       "worked": 7,
+       "failed": 8,
+       "hit": 47,
+       "base": 38,
+       "p": 0.3158,
+       "q": 0.691
+      },
+      "verdict": "leaned the right way after 2013, not significant"
+     }
+    },
+    {
+     "id": "ta_s25_mercury_saturn_4",
+     "title": "Mercury-Saturn 4/10 (Kendra)",
+     "tone": "Bearish",
+     "strength_h1": "Low",
+     "spx": {
+      "h1": {
+       "worked": 15,
+       "failed": 15,
+       "hit": 50,
+       "base": 41,
+       "p": 0.1975
+      },
+      "h2": {
+       "worked": 12,
+       "failed": 15,
+       "hit": 44,
+       "base": 34,
+       "p": 0.1775,
+       "q": 0.6508
+      },
+      "verdict": "leaned the right way after 2013, not significant"
+     },
+     "sensex": {
+      "h1": {
+       "worked": 18,
+       "failed": 13,
+       "hit": 58,
+       "base": 42,
+       "p": 0.0485
+      },
+      "h2": {
+       "worked": 10,
+       "failed": 15,
+       "hit": 40,
+       "base": 38,
+       "p": 0.504,
+       "q": 0.7297
+      },
+      "verdict": "leaned the right way after 2013, not significant"
+     }
+    },
+    {
+     "id": "ta_s25_moon_rahu_6",
+     "title": "Moon-Rahu 6/8 (Shadashtak)",
+     "tone": "Bullish",
+     "strength_h1": "Moderate",
+     "spx": {
+      "h1": {
+       "worked": 170,
+       "failed": 115,
+       "hit": 60,
+       "base": 56,
+       "p": 0.1214
+      },
+      "h2": {
+       "worked": 164,
+       "failed": 96,
+       "hit": 63,
+       "base": 62,
+       "p": 0.4081,
+       "q": 0.691
+      },
+      "verdict": "leaned the right way after 2013, not significant"
+     },
+     "sensex": {
+      "h1": {
+       "worked": 190,
+       "failed": 111,
+       "hit": 63,
+       "base": 57,
+       "p": 0.0263
+      },
+      "h2": {
+       "worked": 169,
+       "failed": 115,
+       "hit": 60,
+       "base": 58,
+       "p": 0.2922,
+       "q": 0.691
+      },
+      "verdict": "leaned the right way after 2013, not significant"
+     }
+    },
+    {
+     "id": "ta_s32e_mars_mercury",
+     "title": "Mars-Mercury Vedha",
+     "tone": "Bullish",
+     "strength_h1": "High",
+     "spx": {
+      "h1": {
+       "worked": 16,
+       "failed": 4,
+       "hit": 80,
+       "base": 57,
+       "p": 0.0265
+      },
+      "h2": {
+       "worked": 13,
+       "failed": 7,
+       "hit": 65,
+       "base": 60,
+       "p": 0.4081,
+       "q": 0.691
+      },
+      "verdict": "leaned the right way after 2013, not significant"
+     },
+     "sensex": {
+      "h1": {
+       "worked": 17,
+       "failed": 4,
+       "hit": 81,
+       "base": 59,
+       "p": 0.0297
+      },
+      "h2": {
+       "worked": 15,
+       "failed": 5,
+       "hit": 75,
+       "base": 57,
+       "p": 0.0767,
+       "q": 0.5625
+      },
+      "verdict": "leaned the right way after 2013, not significant"
+     }
+    }
+   ],
+   "n_tests": 22,
+   "held": 2,
+   "pooled": {
+    "spx": {
+     "right": 347,
+     "exp": 326.6,
+     "p": 0.0747
+    },
+    "sensex": {
+     "right": 344,
+     "exp": 333.6,
+     "p": 0.3876
+    }
+   },
+   "leaned": 16,
+   "held_both": [
+    "Three Saturday in Shukla Paksh"
+   ],
+   "note": "span records as in the table (from the close before each span to its end); picked on 20 Nov 2000 - 20 Nov 2013, scored 20 Nov 2013 - 20 Nov 2026"
   },
   "model_v1": {
    "all": {
