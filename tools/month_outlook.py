@@ -1,6 +1,6 @@
 """A coming month after the November review: what each call is worth, and the month's calls frozen for scoring.
 
-    python tools/month_outlook.py [2027-01] [2027-02] [2027-03]      # default: all three; after week_deep_dive.py, bigday_clean_test.py, november_review.py
+    python tools/month_outlook.py [2027-MM ...]      # default: every 2027 month with day data; after week_deep_dive.py, bigday_clean_test.py, november_review.py
 
 For every kind of call the calendars make for the month it lists the calls and the best evidence there is for that
 kind of call, judged the way the November review judged November (against chance for the same up/down mix):
@@ -319,7 +319,7 @@ def verdicts(o, mname):
                 items.append(dict(topic="Mercury in Paap Kartari (B116, 2026 document)", why=(
                     f"past windows {c['case']}, B116's own case for this window, were bearish {dr['hit']}% vs {dr['base']}% (p {dr['p']}), "
                     "a 2000–2026 record of a source rule rather than a walk-forward test") if ok else None,
-                                  call=f"{c['window']}, bearish; " + (f"{', '.join(c['benefic'])} aspects Mercury, which B116 reads as “very volatile and both side movement”"
+                                  call=f"{c['window']}, bearish; " + (f"{' and '.join(c['benefic'])} aspect{'s' if len(c['benefic']) == 1 else ''} Mercury, which B116 reads as “very volatile and both side movement”"
                                                                       if c["benefic"] else "no benefic aspects Mercury, so B116 reads it as a negative event"),
                                   worth=f"as a bearish rule overall {k['all']['hit_rate']}% vs {k['all']['base_rate']}% (p {k['all']['p_value']}; halves {k['h1']['hit_rate']}% vs "
                                         f"{k['h1']['base_rate']}% and {k['h2']['hit_rate']}% vs {k['h2']['base_rate']}%), {k['verdict']}. Windows {c['case']}: bearish right "
@@ -393,7 +393,10 @@ def headline(o, mname):
 
 
 def main():
-    keys = [k for k in sys.argv[1:] if not k.startswith("--")] or ["2027-01", "2027-02", "2027-03"]
+    keys = [k for k in sys.argv[1:] if not k.startswith("--")]
+    if not keys:                                   # default: every 2027 month whose day data has been built (tools/week_deep_dive.py)
+        keys = [f"2027-{m:02d}" for m in range(1, 13)
+                if (OUT / "backtest" / f"days_{month(f'2027-{m:02d}')[0]}_to_{month(f'2027-{m:02d}')[1]}.json.gz").exists()]
     now = dt.datetime.now(ET)
     nov = json.load(open(OUT / "november_review_2026-11_ET.json"))
     t = nov["tuning"]

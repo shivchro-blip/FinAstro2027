@@ -15,10 +15,10 @@
       "flat": 46,
       "hit_rate": 41,
       "base_rate": 39,
-      "exp": 73.54236460262247,
+      "exp": 73.58065716740096,
       "avg_dir_ret": -0.25,
       "verdict": "Mixed",
-      "p_value": 0.2766,
+      "p_value": 0.2785,
       "years_active": 26,
       "years_right": 7
      },
@@ -43,10 +43,10 @@
       "flat": 22,
       "hit_rate": 36,
       "base_rate": 36,
-      "exp": 31.57979193764959,
+      "exp": 31.61808450242809,
       "avg_dir_ret": -0.37,
       "verdict": "Mixed",
-      "p_value": 0.5029,
+      "p_value": 0.5063,
       "years_active": 13,
       "years_right": 3
      },
@@ -62,10 +62,10 @@
       "flat": 39,
       "hit_rate": 48,
       "base_rate": 41,
-      "exp": 80.12193992210155,
+      "exp": 80.0931306821124,
       "avg_dir_ret": -0.12,
       "verdict": "Mixed",
-      "p_value": 0.0268,
+      "p_value": 0.0265,
       "years_active": 26,
       "years_right": 11
      },
@@ -90,10 +90,10 @@
       "flat": 21,
       "hit_rate": 45,
       "base_rate": 39,
-      "exp": 35.07319660135633,
+      "exp": 35.0443873613672,
       "avg_dir_ret": -0.21,
       "verdict": "Mixed",
-      "p_value": 0.1683,
+      "p_value": 0.1667,
       "years_active": 13,
       "years_right": 3
      },
@@ -222,6 +222,27 @@
      "pair": "Rahu | Sun",
      "frm_iso": "2027-02-18T11:39:02-05:00",
      "to_iso": "2027-03-16T21:57:04-04:00"
+    },
+    {
+     "frm": "Mon 19 Apr 2027 09:03",
+     "to": "Wed 28 Apr 2027 17:21",
+     "pair": "Saturn | Sun",
+     "frm_iso": "2027-04-19T09:03:12-04:00",
+     "to_iso": "2027-04-28T17:21:54-04:00"
+    },
+    {
+     "frm": "Sun 23 May 2027 09:02",
+     "to": "Thu 27 May 2027 02:11",
+     "pair": "Uranus | Ketu",
+     "frm_iso": "2027-05-23T09:02:21-04:00",
+     "to_iso": "2027-05-27T02:11:46-04:00"
+    },
+    {
+     "frm": "Sat 11 Dec 2027 17:16",
+     "to": "Fri 07 Jan 2028 11:46",
+     "pair": "Sun | Mars",
+     "frm_iso": "2027-12-11T17:16:45-05:00",
+     "to_iso": "2028-01-07T11:46:46-05:00"
     }
    ],
    "days": 10.9
@@ -241,10 +262,10 @@
       "flat": 2,
       "hit_rate": 48,
       "base_rate": 37,
-      "exp": 14.9185050485081,
+      "exp": 14.952141796812597,
       "avg_dir_ret": 0.83,
       "verdict": "Worked",
-      "p_value": 0.1216,
+      "p_value": 0.1238,
       "years_active": 19,
       "years_right": 6
      },
@@ -269,10 +290,10 @@
       "flat": 1,
       "hit_rate": 30,
       "base_rate": 29,
-      "exp": 5.73926793588306,
+      "exp": 5.772904684187555,
       "avg_dir_ret": -0.79,
       "verdict": "Mixed",
-      "p_value": 0.5327,
+      "p_value": 0.5394,
       "years_active": 9,
       "years_right": 2
      },
@@ -288,10 +309,10 @@
       "flat": 2,
       "hit_rate": 48,
       "base_rate": 42,
-      "exp": 16.723441543596476,
+      "exp": 16.705606556484252,
       "avg_dir_ret": 0.94,
       "verdict": "Mixed",
-      "p_value": 0.2828,
+      "p_value": 0.2808,
       "years_active": 19,
       "years_right": 7
      },
@@ -316,10 +337,10 @@
       "flat": 1,
       "hit_rate": 35,
       "base_rate": 39,
-      "exp": 7.761542378918001,
+      "exp": 7.743707391805778,
       "avg_dir_ret": -0.5,
       "verdict": "Mixed",
-      "p_value": 0.714,
+      "p_value": 0.7112,
       "years_active": 9,
       "years_right": 3
      },
@@ -331,12 +352,12 @@
      "spx": {
       "windows": 42,
       "above": 14,
-      "perm_p": 0.075
+      "perm_p": 0.07
      },
      "sensex": {
       "windows": 42,
       "above": 18,
-      "perm_p": 0.052
+      "perm_p": 0.055
      }
     }
    },
@@ -348,6 +369,20 @@
      "pair": "Ketu | Mars",
      "frm_iso": "2026-11-16T01:23:39-05:00",
      "to_iso": "2027-01-31T13:30:00-05:00"
+    },
+    {
+     "frm": "Mon 19 Apr 2027 20:46",
+     "to": "Tue 03 Aug 2027 20:43",
+     "pair": "Ketu | Mars",
+     "frm_iso": "2027-04-19T20:46:42-04:00",
+     "to_iso": "2027-08-03T20:43:02-04:00"
+    },
+    {
+     "frm": "Tue 31 Aug 2027 03:29",
+     "to": "Sun 17 Oct 2027 16:38",
+     "pair": "Ketu | Sun",
+     "frm_iso": "2027-08-31T03:29:31-04:00",
+     "to_iso": "2027-10-17T16:38:58-04:00"
     }
    ],
    "days": 33.9
@@ -455,7 +490,15 @@
     }
    },
    "combust_subset": null,
-   "upcoming": [],
+   "upcoming": [
+    {
+     "frm": "Wed 11 Aug 2027 20:20",
+     "to": "Thu 19 Aug 2027 18:46",
+     "pair": "Venus | Jupiter",
+     "frm_iso": "2027-08-11T20:20:54-04:00",
+     "to_iso": "2027-08-19T18:46:35-04:00"
+    }
+   ],
    "days": 8.7
   },
   {
@@ -473,10 +516,10 @@
       "flat": 3,
       "hit_rate": 50,
       "base_rate": 61,
-      "exp": 12.234595283116551,
+      "exp": 12.222675644550753,
       "avg_dir_ret": 0.32,
       "verdict": "Mixed",
-      "p_value": 0.894,
+      "p_value": 0.893,
       "years_active": 17,
       "years_right": 8
      },
@@ -501,10 +544,10 @@
       "flat": 1,
       "hit_rate": 58,
       "base_rate": 63,
-      "exp": 7.573738686557612,
+      "exp": 7.561819047991814,
       "avg_dir_ret": 0.63,
       "verdict": "Mixed",
-      "p_value": 0.744,
+      "p_value": 0.7416,
       "years_active": 9,
       "years_right": 5
      },
@@ -520,10 +563,10 @@
       "flat": 5,
       "hit_rate": 39,
       "base_rate": 57,
-      "exp": 10.243796040037758,
+      "exp": 10.252562038588833,
       "avg_dir_ret": 0.07,
       "verdict": "Mixed",
-      "p_value": 0.9621,
+      "p_value": 0.9625,
       "years_active": 15,
       "years_right": 6
      },
@@ -548,10 +591,10 @@
       "flat": 2,
       "hit_rate": 27,
       "base_rate": 55,
-      "exp": 6.085267680801203,
+      "exp": 6.094033679352278,
       "avg_dir_ret": 0.0,
       "verdict": "Mixed",
-      "p_value": 0.986,
+      "p_value": 0.9862,
       "years_active": 8,
       "years_right": 2
      },
@@ -561,7 +604,15 @@
     }
    },
    "combust_subset": null,
-   "upcoming": [],
+   "upcoming": [
+    {
+     "frm": "Thu 19 Aug 2027 18:46",
+     "to": "Wed 25 Aug 2027 22:59",
+     "pair": "Venus | Mercury",
+     "frm_iso": "2027-08-19T18:46:35-04:00",
+     "to_iso": "2027-08-25T22:59:42-04:00"
+    }
+   ],
    "days": 7.2
   }
  ],

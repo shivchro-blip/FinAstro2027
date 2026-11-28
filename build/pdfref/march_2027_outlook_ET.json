@@ -1,5 +1,5 @@
 {
- "made": "2026-11-28 04:54 ET",
+ "made": "2026-11-28 09:36 ET",
  "month": "2027-03",
  "name": "March 2027",
  "start": "2027-03-01",
@@ -1629,10 +1629,10 @@
       "flat": 46,
       "hit_rate": 41,
       "base_rate": 39,
-      "exp": 73.54236460262247,
+      "exp": 73.58065716740096,
       "avg_dir_ret": -0.25,
       "verdict": "Mixed",
-      "p_value": 0.2766,
+      "p_value": 0.2785,
       "years_active": 26,
       "years_right": 7
      },
@@ -1657,10 +1657,10 @@
       "flat": 22,
       "hit_rate": 36,
       "base_rate": 36,
-      "exp": 31.57979193764959,
+      "exp": 31.61808450242809,
       "avg_dir_ret": -0.37,
       "verdict": "Mixed",
-      "p_value": 0.5029,
+      "p_value": 0.5063,
       "years_active": 13,
       "years_right": 3
      },
@@ -1740,10 +1740,10 @@
       "flat": 39,
       "hit_rate": 48,
       "base_rate": 41,
-      "exp": 80.12193992210155,
+      "exp": 80.0931306821124,
       "avg_dir_ret": -0.12,
       "verdict": "Mixed",
-      "p_value": 0.0268,
+      "p_value": 0.0265,
       "years_active": 26,
       "years_right": 11
      },
@@ -1768,10 +1768,10 @@
       "flat": 21,
       "hit_rate": 45,
       "base_rate": 39,
-      "exp": 35.07319660135633,
+      "exp": 35.0443873613672,
       "avg_dir_ret": -0.21,
       "verdict": "Mixed",
-      "p_value": 0.1683,
+      "p_value": 0.1667,
       "years_active": 13,
       "years_right": 3
      },
@@ -1905,10 +1905,10 @@
       "flat": 2,
       "hit_rate": 48,
       "base_rate": 37,
-      "exp": 14.9185050485081,
+      "exp": 14.952141796812597,
       "avg_dir_ret": 0.83,
       "verdict": "Worked",
-      "p_value": 0.1216,
+      "p_value": 0.1238,
       "years_active": 19,
       "years_right": 6
      },
@@ -1933,10 +1933,10 @@
       "flat": 1,
       "hit_rate": 30,
       "base_rate": 29,
-      "exp": 5.73926793588306,
+      "exp": 5.772904684187555,
       "avg_dir_ret": -0.79,
       "verdict": "Mixed",
-      "p_value": 0.5327,
+      "p_value": 0.5394,
       "years_active": 9,
       "years_right": 2
      },
@@ -1952,10 +1952,10 @@
       "flat": 2,
       "hit_rate": 48,
       "base_rate": 42,
-      "exp": 16.723441543596476,
+      "exp": 16.705606556484252,
       "avg_dir_ret": 0.94,
       "verdict": "Mixed",
-      "p_value": 0.2828,
+      "p_value": 0.2808,
       "years_active": 19,
       "years_right": 7
      },
@@ -1980,10 +1980,10 @@
       "flat": 1,
       "hit_rate": 35,
       "base_rate": 39,
-      "exp": 7.761542378918001,
+      "exp": 7.743707391805778,
       "avg_dir_ret": -0.5,
       "verdict": "Mixed",
-      "p_value": 0.714,
+      "p_value": 0.7112,
       "years_active": 9,
       "years_right": 3
      },
@@ -2123,7 +2123,7 @@
  },
  "frozen": {
   "path": "march_2027_calls_ET.json",
-  "frozen_at": "2026-11-28 04:54 ET",
+  "frozen_at": "2026-11-28 09:36 ET",
   "rewritten": true,
   "sessions": {
    "spx": 22,
@@ -2173,7 +2173,7 @@
      "topic": "Mercury in Paap Kartari (B116, 2026 document)",
      "why": null,
      "call": "18 Feb \u2013 16 Mar, bearish; no benefic aspects Mercury, so B116 reads it as a negative event",
-     "worth": "as a bearish rule overall 41% vs 39% (p 0.2766; halves 45% vs 41% and 36% vs 36%), not supported. Windows without a benefic aspect: bearish right 41% vs 38% (p 0.322); big days 92 vs 73.5 expected (\u00d71.25, p 0.0209). The 2000\u20132026 record is a source rule's, not chosen from data, but it is not a walk-forward test",
+     "worth": "as a bearish rule overall 41% vs 39% (p 0.2785; halves 45% vs 41% and 36% vs 36%), not supported. Windows without a benefic aspect: bearish right 41% vs 38% (p 0.322); big days 92 vs 73.5 expected (\u00d71.25, p 0.0209). The 2000\u20132026 record is a source rule's, not chosen from data, but it is not a walk-forward test",
      "level": "none"
     },
     {
@@ -2239,7 +2239,7 @@
      "topic": "Mercury in Paap Kartari (B116, 2026 document)",
      "why": "past windows without a benefic aspect, B116's own case for this window, were bearish 50% vs 40% (p 0.0317), a 2000\u20132026 record of a source rule rather than a walk-forward test",
      "call": "18 Feb \u2013 17 Mar, bearish; no benefic aspects Mercury, so B116 reads it as a negative event",
-     "worth": "as a bearish rule overall 48% vs 41% (p 0.0268; halves 50% vs 42% and 45% vs 39%), supported. Windows without a benefic aspect: bearish right 50% vs 40% (p 0.0317); big days 108 vs 87.1 expected (\u00d71.24, p 0.0166). The 2000\u20132026 record is a source rule's, not chosen from data, but it is not a walk-forward test",
+     "worth": "as a bearish rule overall 48% vs 41% (p 0.0265; halves 50% vs 42% and 45% vs 39%), supported. Windows without a benefic aspect: bearish right 50% vs 40% (p 0.0317); big days 108 vs 87.1 expected (\u00d71.24, p 0.0166). The 2000\u20132026 record is a source rule's, not chosen from data, but it is not a walk-forward test",
      "level": "some"
     },
     {

@@ -162,7 +162,7 @@ def fmt(r):
 
 
 def main():
-    A, B = dt.datetime(2026, 11, 24, tzinfo=ET), dt.datetime(2027, 2, 28, tzinfo=ET)
+    A, B = dt.datetime(2026, 11, 24, tzinfo=ET), dt.datetime(2027, 12, 31, 23, 59, tzinfo=ET)    # every window to the end of the 2027 calendar
     defs = [("b116", "Mercury in Paap Kartari (2026 document B116)", "Mercury", "malefic", "Bearish", "source: “negative event for financial markets”"),
             ("b117", "Jupiter in Paap Kartari (2026 document B117)", "Jupiter", "malefic", "Bearish", "source prints no direction; tested as bearish (inferred from B116)"),
             ("sk_mercury", "Mercury in Shubh Kartari (not in our sources)", "Mercury", "benefic", "Bullish", "exploratory: no source states it"),

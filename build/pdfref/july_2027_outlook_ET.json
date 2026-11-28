@@ -1,0 +1,2087 @@
+{
+ "made": "2026-11-28 09:36 ET",
+ "month": "2027-07",
+ "name": "July 2027",
+ "start": "2027-07-01",
+ "end": "2027-07-31",
+ "markets": {
+  "spx": {
+   "name": "S&P 500",
+   "sessions": [
+    "2027-07-01",
+    "2027-07-02",
+    "2027-07-06",
+    "2027-07-07",
+    "2027-07-08",
+    "2027-07-09",
+    "2027-07-12",
+    "2027-07-13",
+    "2027-07-14",
+    "2027-07-15",
+    "2027-07-16",
+    "2027-07-19",
+    "2027-07-20",
+    "2027-07-21",
+    "2027-07-22",
+    "2027-07-23",
+    "2027-07-26",
+    "2027-07-27",
+    "2027-07-28",
+    "2027-07-29",
+    "2027-07-30"
+   ],
+   "closed": [
+    "2027-07-05 Independence Day (observed)"
+   ],
+   "spans": [
+    {
+     "frm": "2027-06-28",
+     "to": "2027-07-01",
+     "sig": "Bullish",
+     "st": "Low",
+     "why": [
+      "Venus-Rahu 6/8 (Shadashtak)"
+     ],
+     "rules": [
+      {
+       "id": "ta_s25_venus_rahu_6",
+       "title": "Venus-Rahu 6/8 (Shadashtak)",
+       "tone": "Bullish",
+       "strength": "Low",
+       "span_record": "S&P 40/52 (77% vs 64%, p 0.0382); Sensex 33/50 (66% vs 61%, p 0.287)",
+       "day": {
+        "n": 616,
+        "right": 345,
+        "wrong": 271,
+        "hit": 56.0,
+        "exp": 53.8,
+        "edge": 2.2,
+        "p": 0.2683,
+        "up_calls": 616,
+        "down_calls": 0
+       },
+       "picked_2000_2013": false,
+       "after_2013": null
+      }
+     ],
+     "strength_record": {
+      "n": 393,
+      "right": 184,
+      "wrong": 209,
+      "hit": 46.8,
+      "exp": 50.1,
+      "edge": -3.3,
+      "p": 0.1843,
+      "up_calls": 205,
+      "down_calls": 188
+     }
+    },
+    {
+     "frm": "2027-07-02",
+     "to": "2027-07-02",
+     "sig": "Bullish",
+     "st": "High",
+     "why": [
+      "Venus-Rahu 6/8 (Shadashtak)",
+      "Moon-Rahu 6/8 (Shadashtak)"
+     ],
+     "rules": [
+      {
+       "id": "ta_s25_venus_rahu_6",
+       "title": "Venus-Rahu 6/8 (Shadashtak)",
+       "tone": "Bullish",
+       "strength": "Low",
+       "span_record": "S&P 40/52 (77% vs 64%, p 0.0382); Sensex 33/50 (66% vs 61%, p 0.287)",
+       "day": {
+        "n": 616,
+        "right": 345,
+        "wrong": 271,
+        "hit": 56.0,
+        "exp": 53.8,
+        "edge": 2.2,
+        "p": 0.2683,
+        "up_calls": 616,
+        "down_calls": 0
+       },
+       "picked_2000_2013": false,
+       "after_2013": null
+      },
+      {
+       "id": "ta_s25_moon_rahu_6",
+       "title": "Moon-Rahu 6/8 (Shadashtak)",
+       "tone": "Bullish",
+       "strength": "Moderate",
+       "span_record": "S&P 334/545 (61% vs 59%, p 0.1452); Sensex 359/585 (61% vs 58%, p 0.0349)",
+       "day": {
+        "n": 821,
+        "right": 450,
+        "wrong": 371,
+        "hit": 54.8,
+        "exp": 54.6,
+        "edge": 0.3,
+        "p": 0.882,
+        "up_calls": 821,
+        "down_calls": 0
+       },
+       "picked_2000_2013": true,
+       "after_2013": {
+        "h1": {
+         "worked": 170,
+         "failed": 115,
+         "hit": 60,
+         "base": 56,
+         "p": 0.1214
+        },
+        "h2": {
+         "worked": 164,
+         "failed": 96,
+         "hit": 63,
+         "base": 62,
+         "p": 0.4081,
+         "q": 0.691
+        },
+        "verdict": "leaned the right way after 2013, not significant"
+       }
+      }
+     ],
+     "strength_record": {
+      "n": 253,
+      "right": 151,
+      "wrong": 102,
+      "hit": 59.7,
+      "exp": 56.0,
+      "edge": 3.7,
+      "p": 0.2505,
+      "up_calls": 236,
+      "down_calls": 17
+     }
+    },
+    {
+     "frm": "2027-07-05",
+     "to": "2027-07-05",
+     "sig": "Bearish",
+     "st": "Moderate",
+     "why": [
+      "Venus-Rahu 6/8 (Shadashtak)",
+      "Three Saturday in Shukla Paksh"
+     ],
+     "rules": [
+      {
+       "id": "ta_s25_venus_rahu_6",
+       "title": "Venus-Rahu 6/8 (Shadashtak)",
+       "tone": "Bullish",
+       "strength": "Low",
+       "span_record": "S&P 40/52 (77% vs 64%, p 0.0382); Sensex 33/50 (66% vs 61%, p 0.287)",
+       "day": {
+        "n": 616,
+        "right": 345,
+        "wrong": 271,
+        "hit": 56.0,
+        "exp": 53.8,
+        "edge": 2.2,
+        "p": 0.2683,
+        "up_calls": 616,
+        "down_calls": 0
+       },
+       "picked_2000_2013": false,
+       "after_2013": null
+      },
+      {
+       "id": "b101_three_saturdays_in_shukla_paksha",
+       "title": "Three Saturday in Shukla Paksh",
+       "tone": "Bearish",
+       "strength": "High",
+       "span_record": "S&P 41/73 (56% vs 39%, p 0.0023); Sensex 33/66 (50% vs 39%, p 0.0395)",
+       "day": {
+        "n": 434,
+        "right": 218,
+        "wrong": 216,
+        "hit": 50.2,
+        "exp": 45.6,
+        "edge": 4.7,
+        "p": 0.0525,
+        "up_calls": 0,
+        "down_calls": 434
+       },
+       "picked_2000_2013": true,
+       "after_2013": {
+        "h1": {
+         "worked": 22,
+         "failed": 18,
+         "hit": 55,
+         "base": 41,
+         "p": 0.0469
+        },
+        "h2": {
+         "worked": 19,
+         "failed": 14,
+         "hit": 58,
+         "base": 37,
+         "p": 0.0136,
+         "q": 0.2992
+        },
+        "verdict": "held after 2013"
+       }
+      }
+     ],
+     "strength_record": {
+      "n": 452,
+      "right": 240,
+      "wrong": 212,
+      "hit": 53.1,
+      "exp": 52.7,
+      "edge": 0.4,
+      "p": 0.8861,
+      "up_calls": 302,
+      "down_calls": 150
+     }
+    },
+    {
+     "frm": "2027-07-06",
+     "to": "2027-07-08",
+     "sig": "Volatile",
+     "st": "\u2013",
+     "why": [
+      "Venus-Rahu 6/8 (Shadashtak)",
+      "Moon-Rahu 6/8 (Shadashtak)",
+      "Three Saturday in Shukla Paksh"
+     ],
+     "rules": [
+      {
+       "id": "ta_s25_venus_rahu_6",
+       "title": "Venus-Rahu 6/8 (Shadashtak)",
+       "tone": "Bullish",
+       "strength": "Low",
+       "span_record": "S&P 40/52 (77% vs 64%, p 0.0382); Sensex 33/50 (66% vs 61%, p 0.287)",
+       "day": {
+        "n": 616,
+        "right": 345,
+        "wrong": 271,
+        "hit": 56.0,
+        "exp": 53.8,
+        "edge": 2.2,
+        "p": 0.2683,
+        "up_calls": 616,
+        "down_calls": 0
+       },
+       "picked_2000_2013": false,
+       "after_2013": null
+      },
+      {
+       "id": "ta_s25_moon_rahu_6",
+       "title": "Moon-Rahu 6/8 (Shadashtak)",
+       "tone": "Bullish",
+       "strength": "Moderate",
+       "span_record": "S&P 334/545 (61% vs 59%, p 0.1452); Sensex 359/585 (61% vs 58%, p 0.0349)",
+       "day": {
+        "n": 821,
+        "right": 450,
+        "wrong": 371,
+        "hit": 54.8,
+        "exp": 54.6,
+        "edge": 0.3,
+        "p": 0.882,
+        "up_calls": 821,
+        "down_calls": 0
+       },
+       "picked_2000_2013": true,
+       "after_2013": {
+        "h1": {
+         "worked": 170,
+         "failed": 115,
+         "hit": 60,
+         "base": 56,
+         "p": 0.1214
+        },
+        "h2": {
+         "worked": 164,
+         "failed": 96,
+         "hit": 63,
+         "base": 62,
+         "p": 0.4081,
+         "q": 0.691
+        },
+        "verdict": "leaned the right way after 2013, not significant"
+       }
+      },
+      {
+       "id": "b101_three_saturdays_in_shukla_paksha",
+       "title": "Three Saturday in Shukla Paksh",
+       "tone": "Bearish",
+       "strength": "High",
+       "span_record": "S&P 41/73 (56% vs 39%, p 0.0023); Sensex 33/66 (50% vs 39%, p 0.0395)",
+       "day": {
+        "n": 434,
+        "right": 218,
+        "wrong": 216,
+        "hit": 50.2,
+        "exp": 45.6,
+        "edge": 4.7,
+        "p": 0.0525,
+        "up_calls": 0,
+        "down_calls": 434
+       },
+       "picked_2000_2013": true,
+       "after_2013": {
+        "h1": {
+         "worked": 22,
+         "failed": 18,
+         "hit": 55,
+         "base": 41,
+         "p": 0.0469
+        },
+        "h2": {
+         "worked": 19,
+         "failed": 14,
+         "hit": 58,
+         "base": 37,
+         "p": 0.0136,
+         "q": 0.2992
+        },
+        "verdict": "held after 2013"
+       }
+      }
+     ],
+     "strength_record": null
+    },
+    {
+     "frm": "2027-07-09",
+     "to": "2027-07-15",
+     "sig": "Bearish",
+     "st": "High",
+     "why": [
+      "Venus-Rahu 6/8 (Shadashtak)",
+      "Shukla Shasthi on a Friday",
+      "Three Saturday in Shukla Paksh"
+     ],
+     "rules": [
+      {
+       "id": "ta_s25_venus_rahu_6",
+       "title": "Venus-Rahu 6/8 (Shadashtak)",
+       "tone": "Bullish",
+       "strength": "Low",
+       "span_record": "S&P 40/52 (77% vs 64%, p 0.0382); Sensex 33/50 (66% vs 61%, p 0.287)",
+       "day": {
+        "n": 616,
+        "right": 345,
+        "wrong": 271,
+        "hit": 56.0,
+        "exp": 53.8,
+        "edge": 2.2,
+        "p": 0.2683,
+        "up_calls": 616,
+        "down_calls": 0
+       },
+       "picked_2000_2013": false,
+       "after_2013": null
+      },
+      {
+       "id": "b100_shukla_shasthi_on_friday",
+       "title": "Shukla Shasthi on a Friday",
+       "tone": "Bearish",
+       "strength": "High",
+       "span_record": "S&P 41/77 (53% vs 41%, p 0.0244); Sensex 40/76 (53% vs 42%, p 0.0446)",
+       "day": {
+        "n": 261,
+        "right": 133,
+        "wrong": 128,
+        "hit": 51.0,
+        "exp": 45.6,
+        "edge": 5.4,
+        "p": 0.0915,
+        "up_calls": 0,
+        "down_calls": 261
+       },
+       "picked_2000_2013": false,
+       "after_2013": null
+      },
+      {
+       "id": "b101_three_saturdays_in_shukla_paksha",
+       "title": "Three Saturday in Shukla Paksh",
+       "tone": "Bearish",
+       "strength": "High",
+       "span_record": "S&P 41/73 (56% vs 39%, p 0.0023); Sensex 33/66 (50% vs 39%, p 0.0395)",
+       "day": {
+        "n": 434,
+        "right": 218,
+        "wrong": 216,
+        "hit": 50.2,
+        "exp": 45.6,
+        "edge": 4.7,
+        "p": 0.0525,
+        "up_calls": 0,
+        "down_calls": 434
+       },
+       "picked_2000_2013": true,
+       "after_2013": {
+        "h1": {
+         "worked": 22,
+         "failed": 18,
+         "hit": 55,
+         "base": 41,
+         "p": 0.0469
+        },
+        "h2": {
+         "worked": 19,
+         "failed": 14,
+         "hit": 58,
+         "base": 37,
+         "p": 0.0136,
+         "q": 0.2992
+        },
+        "verdict": "held after 2013"
+       }
+      }
+     ],
+     "strength_record": {
+      "n": 253,
+      "right": 151,
+      "wrong": 102,
+      "hit": 59.7,
+      "exp": 56.0,
+      "edge": 3.7,
+      "p": 0.2505,
+      "up_calls": 236,
+      "down_calls": 17
+     }
+    },
+    {
+     "frm": "2027-07-16",
+     "to": "2027-07-16",
+     "sig": "Bearish",
+     "st": "Moderate",
+     "why": [
+      "Venus-Rahu 6/8 (Shadashtak)",
+      "Three Saturday in Shukla Paksh"
+     ],
+     "rules": [
+      {
+       "id": "ta_s25_venus_rahu_6",
+       "title": "Venus-Rahu 6/8 (Shadashtak)",
+       "tone": "Bullish",
+       "strength": "Low",
+       "span_record": "S&P 40/52 (77% vs 64%, p 0.0382); Sensex 33/50 (66% vs 61%, p 0.287)",
+       "day": {
+        "n": 616,
+        "right": 345,
+        "wrong": 271,
+        "hit": 56.0,
+        "exp": 53.8,
+        "edge": 2.2,
+        "p": 0.2683,
+        "up_calls": 616,
+        "down_calls": 0
+       },
+       "picked_2000_2013": false,
+       "after_2013": null
+      },
+      {
+       "id": "b101_three_saturdays_in_shukla_paksha",
+       "title": "Three Saturday in Shukla Paksh",
+       "tone": "Bearish",
+       "strength": "High",
+       "span_record": "S&P 41/73 (56% vs 39%, p 0.0023); Sensex 33/66 (50% vs 39%, p 0.0395)",
+       "day": {
+        "n": 434,
+        "right": 218,
+        "wrong": 216,
+        "hit": 50.2,
+        "exp": 45.6,
+        "edge": 4.7,
+        "p": 0.0525,
+        "up_calls": 0,
+        "down_calls": 434
+       },
+       "picked_2000_2013": true,
+       "after_2013": {
+        "h1": {
+         "worked": 22,
+         "failed": 18,
+         "hit": 55,
+         "base": 41,
+         "p": 0.0469
+        },
+        "h2": {
+         "worked": 19,
+         "failed": 14,
+         "hit": 58,
+         "base": 37,
+         "p": 0.0136,
+         "q": 0.2992
+        },
+        "verdict": "held after 2013"
+       }
+      }
+     ],
+     "strength_record": {
+      "n": 452,
+      "right": 240,
+      "wrong": 212,
+      "hit": 53.1,
+      "exp": 52.7,
+      "edge": 0.4,
+      "p": 0.8861,
+      "up_calls": 302,
+      "down_calls": 150
+     }
+    },
+    {
+     "frm": "2027-07-19",
+     "to": "2027-07-22",
+     "sig": "Bullish",
+     "st": "Low",
+     "why": [
+      "Venus-Rahu 6/8 (Shadashtak)"
+     ],
+     "rules": [
+      {
+       "id": "ta_s25_venus_rahu_6",
+       "title": "Venus-Rahu 6/8 (Shadashtak)",
+       "tone": "Bullish",
+       "strength": "Low",
+       "span_record": "S&P 40/52 (77% vs 64%, p 0.0382); Sensex 33/50 (66% vs 61%, p 0.287)",
+       "day": {
+        "n": 616,
+        "right": 345,
+        "wrong": 271,
+        "hit": 56.0,
+        "exp": 53.8,
+        "edge": 2.2,
+        "p": 0.2683,
+        "up_calls": 616,
+        "down_calls": 0
+       },
+       "picked_2000_2013": false,
+       "after_2013": null
+      }
+     ],
+     "strength_record": {
+      "n": 393,
+      "right": 184,
+      "wrong": 209,
+      "hit": 46.8,
+      "exp": 50.1,
+      "edge": -3.3,
+      "p": 0.1843,
+      "up_calls": 205,
+      "down_calls": 188
+     }
+    },
+    {
+     "frm": "2027-07-30",
+     "to": "2027-07-30",
+     "sig": "Bullish",
+     "st": "Moderate",
+     "why": [
+      "Moon-Rahu 6/8 (Shadashtak)"
+     ],
+     "rules": [
+      {
+       "id": "ta_s25_moon_rahu_6",
+       "title": "Moon-Rahu 6/8 (Shadashtak)",
+       "tone": "Bullish",
+       "strength": "Moderate",
+       "span_record": "S&P 334/545 (61% vs 59%, p 0.1452); Sensex 359/585 (61% vs 58%, p 0.0349)",
+       "day": {
+        "n": 821,
+        "right": 450,
+        "wrong": 371,
+        "hit": 54.8,
+        "exp": 54.6,
+        "edge": 0.3,
+        "p": 0.882,
+        "up_calls": 821,
+        "down_calls": 0
+       },
+       "picked_2000_2013": true,
+       "after_2013": {
+        "h1": {
+         "worked": 170,
+         "failed": 115,
+         "hit": 60,
+         "base": 56,
+         "p": 0.1214
+        },
+        "h2": {
+         "worked": 164,
+         "failed": 96,
+         "hit": 63,
+         "base": 62,
+         "p": 0.4081,
+         "q": 0.691
+        },
+        "verdict": "leaned the right way after 2013, not significant"
+       }
+      }
+     ],
+     "strength_record": {
+      "n": 452,
+      "right": 240,
+      "wrong": 212,
+      "hit": 53.1,
+      "exp": 52.7,
+      "edge": 0.4,
+      "p": 0.8861,
+      "up_calls": 302,
+      "down_calls": 150
+     }
+    }
+   ],
+   "label_any": {
+    "n": 1098,
+    "right": 575,
+    "wrong": 523,
+    "hit": 52.4,
+    "exp": 52.5,
+    "edge": -0.2,
+    "p": 0.9077,
+    "up_calls": 743,
+    "down_calls": 355
+   },
+   "label_source": "walk-forward: rules picked on their 2000-2013 records only (both indices beat the base, p < 0.05 on one), labels scored every day 2013-2026",
+   "model": {
+    "lean": {
+     "up": 3,
+     "none": 13,
+     "down": 5
+    },
+    "record": {
+     "n": 1012,
+     "right": 513,
+     "wrong": 499,
+     "hit": 50.7,
+     "exp": 49.8,
+     "edge": 0.9,
+     "p": 0.5807,
+     "up_calls": 517,
+     "down_calls": 495
+    }
+   },
+   "big": {
+    "clean_active": {},
+    "insample_active": {},
+    "clean_test": "holds out of sample",
+    "model_big": "untested (November review)"
+   }
+  },
+  "sensex": {
+   "name": "BSE Sensex",
+   "sessions": [
+    "2027-07-01",
+    "2027-07-02",
+    "2027-07-05",
+    "2027-07-06",
+    "2027-07-07",
+    "2027-07-08",
+    "2027-07-09",
+    "2027-07-12",
+    "2027-07-13",
+    "2027-07-14",
+    "2027-07-15",
+    "2027-07-16",
+    "2027-07-19",
+    "2027-07-20",
+    "2027-07-21",
+    "2027-07-22",
+    "2027-07-23",
+    "2027-07-26",
+    "2027-07-27",
+    "2027-07-28",
+    "2027-07-29",
+    "2027-07-30"
+   ],
+   "closed": [],
+   "spans": [
+    {
+     "frm": "2027-06-28",
+     "to": "2027-07-01",
+     "sig": "Bullish",
+     "st": "Low",
+     "why": [
+      "Venus-Rahu 6/8 (Shadashtak)"
+     ],
+     "rules": [
+      {
+       "id": "ta_s25_venus_rahu_6",
+       "title": "Venus-Rahu 6/8 (Shadashtak)",
+       "tone": "Bullish",
+       "strength": "Low",
+       "span_record": "S&P 40/52 (77% vs 64%, p 0.0382); Sensex 33/50 (66% vs 61%, p 0.287)",
+       "day": {
+        "n": 637,
+        "right": 370,
+        "wrong": 267,
+        "hit": 58.1,
+        "exp": 55.2,
+        "edge": 2.9,
+        "p": 0.1444,
+        "up_calls": 637,
+        "down_calls": 0
+       },
+       "picked_2000_2013": false,
+       "after_2013": null
+      }
+     ],
+     "strength_record": {
+      "n": 394,
+      "right": 179,
+      "wrong": 215,
+      "hit": 45.4,
+      "exp": 50.2,
+      "edge": -4.8,
+      "p": 0.0599,
+      "up_calls": 205,
+      "down_calls": 189
+     }
+    },
+    {
+     "frm": "2027-07-02",
+     "to": "2027-07-02",
+     "sig": "Bullish",
+     "st": "High",
+     "why": [
+      "Venus-Rahu 6/8 (Shadashtak)",
+      "Moon-Rahu 6/8 (Shadashtak)"
+     ],
+     "rules": [
+      {
+       "id": "ta_s25_venus_rahu_6",
+       "title": "Venus-Rahu 6/8 (Shadashtak)",
+       "tone": "Bullish",
+       "strength": "Low",
+       "span_record": "S&P 40/52 (77% vs 64%, p 0.0382); Sensex 33/50 (66% vs 61%, p 0.287)",
+       "day": {
+        "n": 637,
+        "right": 370,
+        "wrong": 267,
+        "hit": 58.1,
+        "exp": 55.2,
+        "edge": 2.9,
+        "p": 0.1444,
+        "up_calls": 637,
+        "down_calls": 0
+       },
+       "picked_2000_2013": false,
+       "after_2013": null
+      },
+      {
+       "id": "ta_s25_moon_rahu_6",
+       "title": "Moon-Rahu 6/8 (Shadashtak)",
+       "tone": "Bullish",
+       "strength": "Moderate",
+       "span_record": "S&P 334/545 (61% vs 59%, p 0.1452); Sensex 359/585 (61% vs 58%, p 0.0349)",
+       "day": {
+        "n": 926,
+        "right": 511,
+        "wrong": 415,
+        "hit": 55.2,
+        "exp": 54.6,
+        "edge": 0.6,
+        "p": 0.7307,
+        "up_calls": 926,
+        "down_calls": 0
+       },
+       "picked_2000_2013": true,
+       "after_2013": {
+        "h1": {
+         "worked": 190,
+         "failed": 111,
+         "hit": 63,
+         "base": 57,
+         "p": 0.0263
+        },
+        "h2": {
+         "worked": 169,
+         "failed": 115,
+         "hit": 60,
+         "base": 58,
+         "p": 0.2922,
+         "q": 0.691
+        },
+        "verdict": "leaned the right way after 2013, not significant"
+       }
+      }
+     ],
+     "strength_record": {
+      "n": 295,
+      "right": 161,
+      "wrong": 134,
+      "hit": 54.6,
+      "exp": 55.0,
+      "edge": -0.4,
+      "p": 0.9064,
+      "up_calls": 272,
+      "down_calls": 23
+     }
+    },
+    {
+     "frm": "2027-07-05",
+     "to": "2027-07-05",
+     "sig": "Bullish",
+     "st": "Low",
+     "why": [
+      "Venus-Rahu 6/8 (Shadashtak)",
+      "big-move factor: Mars-Herschel 5/9 (Trine)"
+     ],
+     "rules": [
+      {
+       "id": "ta_s25_venus_rahu_6",
+       "title": "Venus-Rahu 6/8 (Shadashtak)",
+       "tone": "Bullish",
+       "strength": "Low",
+       "span_record": "S&P 40/52 (77% vs 64%, p 0.0382); Sensex 33/50 (66% vs 61%, p 0.287)",
+       "day": {
+        "n": 637,
+        "right": 370,
+        "wrong": 267,
+        "hit": 58.1,
+        "exp": 55.2,
+        "edge": 2.9,
+        "p": 0.1444,
+        "up_calls": 637,
+        "down_calls": 0
+       },
+       "picked_2000_2013": false,
+       "after_2013": null
+      }
+     ],
+     "strength_record": {
+      "n": 394,
+      "right": 179,
+      "wrong": 215,
+      "hit": 45.4,
+      "exp": 50.2,
+      "edge": -4.8,
+      "p": 0.0599,
+      "up_calls": 205,
+      "down_calls": 189
+     }
+    },
+    {
+     "frm": "2027-07-06",
+     "to": "2027-07-08",
+     "sig": "Bullish",
+     "st": "High",
+     "why": [
+      "Venus-Rahu 6/8 (Shadashtak)",
+      "Moon-Rahu 6/8 (Shadashtak)",
+      "big-move factor: Mars-Herschel 5/9 (Trine)"
+     ],
+     "rules": [
+      {
+       "id": "ta_s25_venus_rahu_6",
+       "title": "Venus-Rahu 6/8 (Shadashtak)",
+       "tone": "Bullish",
+       "strength": "Low",
+       "span_record": "S&P 40/52 (77% vs 64%, p 0.0382); Sensex 33/50 (66% vs 61%, p 0.287)",
+       "day": {
+        "n": 637,
+        "right": 370,
+        "wrong": 267,
+        "hit": 58.1,
+        "exp": 55.2,
+        "edge": 2.9,
+        "p": 0.1444,
+        "up_calls": 637,
+        "down_calls": 0
+       },
+       "picked_2000_2013": false,
+       "after_2013": null
+      },
+      {
+       "id": "ta_s25_moon_rahu_6",
+       "title": "Moon-Rahu 6/8 (Shadashtak)",
+       "tone": "Bullish",
+       "strength": "Moderate",
+       "span_record": "S&P 334/545 (61% vs 59%, p 0.1452); Sensex 359/585 (61% vs 58%, p 0.0349)",
+       "day": {
+        "n": 926,
+        "right": 511,
+        "wrong": 415,
+        "hit": 55.2,
+        "exp": 54.6,
+        "edge": 0.6,
+        "p": 0.7307,
+        "up_calls": 926,
+        "down_calls": 0
+       },
+       "picked_2000_2013": true,
+       "after_2013": {
+        "h1": {
+         "worked": 190,
+         "failed": 111,
+         "hit": 63,
+         "base": 57,
+         "p": 0.0263
+        },
+        "h2": {
+         "worked": 169,
+         "failed": 115,
+         "hit": 60,
+         "base": 58,
+         "p": 0.2922,
+         "q": 0.691
+        },
+        "verdict": "leaned the right way after 2013, not significant"
+       }
+      }
+     ],
+     "strength_record": {
+      "n": 295,
+      "right": 161,
+      "wrong": 134,
+      "hit": 54.6,
+      "exp": 55.0,
+      "edge": -0.4,
+      "p": 0.9064,
+      "up_calls": 272,
+      "down_calls": 23
+     }
+    },
+    {
+     "frm": "2027-07-09",
+     "to": "2027-07-15",
+     "sig": "Bearish",
+     "st": "Moderate",
+     "why": [
+      "Venus-Rahu 6/8 (Shadashtak)",
+      "Shukla Shasthi on a Friday",
+      "big-move factor: Mars-Herschel 5/9 (Trine)"
+     ],
+     "rules": [
+      {
+       "id": "ta_s25_venus_rahu_6",
+       "title": "Venus-Rahu 6/8 (Shadashtak)",
+       "tone": "Bullish",
+       "strength": "Low",
+       "span_record": "S&P 40/52 (77% vs 64%, p 0.0382); Sensex 33/50 (66% vs 61%, p 0.287)",
+       "day": {
+        "n": 637,
+        "right": 370,
+        "wrong": 267,
+        "hit": 58.1,
+        "exp": 55.2,
+        "edge": 2.9,
+        "p": 0.1444,
+        "up_calls": 637,
+        "down_calls": 0
+       },
+       "picked_2000_2013": false,
+       "after_2013": null
+      },
+      {
+       "id": "b100_shukla_shasthi_on_friday",
+       "title": "Shukla Shasthi on a Friday",
+       "tone": "Bearish",
+       "strength": "High",
+       "span_record": "S&P 41/77 (53% vs 41%, p 0.0244); Sensex 40/76 (53% vs 42%, p 0.0446)",
+       "day": {
+        "n": 243,
+        "right": 119,
+        "wrong": 124,
+        "hit": 49.0,
+        "exp": 45.0,
+        "edge": 4.0,
+        "p": 0.2181,
+        "up_calls": 0,
+        "down_calls": 243
+       },
+       "picked_2000_2013": false,
+       "after_2013": null
+      }
+     ],
+     "strength_record": {
+      "n": 436,
+      "right": 228,
+      "wrong": 208,
+      "hit": 52.3,
+      "exp": 52.1,
+      "edge": 0.1,
+      "p": 0.9615,
+      "up_calls": 308,
+      "down_calls": 128
+     }
+    },
+    {
+     "frm": "2027-07-16",
+     "to": "2027-07-22",
+     "sig": "Bullish",
+     "st": "Low",
+     "why": [
+      "Venus-Rahu 6/8 (Shadashtak)",
+      "big-move factor: Mars-Herschel 5/9 (Trine)"
+     ],
+     "rules": [
+      {
+       "id": "ta_s25_venus_rahu_6",
+       "title": "Venus-Rahu 6/8 (Shadashtak)",
+       "tone": "Bullish",
+       "strength": "Low",
+       "span_record": "S&P 40/52 (77% vs 64%, p 0.0382); Sensex 33/50 (66% vs 61%, p 0.287)",
+       "day": {
+        "n": 637,
+        "right": 370,
+        "wrong": 267,
+        "hit": 58.1,
+        "exp": 55.2,
+        "edge": 2.9,
+        "p": 0.1444,
+        "up_calls": 637,
+        "down_calls": 0
+       },
+       "picked_2000_2013": false,
+       "after_2013": null
+      }
+     ],
+     "strength_record": {
+      "n": 394,
+      "right": 179,
+      "wrong": 215,
+      "hit": 45.4,
+      "exp": 50.2,
+      "edge": -4.8,
+      "p": 0.0599,
+      "up_calls": 205,
+      "down_calls": 189
+     }
+    },
+    {
+     "frm": "2027-07-23",
+     "to": "2027-07-29",
+     "sig": "Volatile",
+     "st": "\u2013",
+     "why": [
+      "big-move factor: Mars-Herschel 5/9 (Trine)"
+     ],
+     "rules": [],
+     "strength_record": null
+    },
+    {
+     "frm": "2027-07-30",
+     "to": "2027-07-30",
+     "sig": "Bullish",
+     "st": "Moderate",
+     "why": [
+      "Moon-Rahu 6/8 (Shadashtak)",
+      "big-move factor: Mars-Herschel 5/9 (Trine)"
+     ],
+     "rules": [
+      {
+       "id": "ta_s25_moon_rahu_6",
+       "title": "Moon-Rahu 6/8 (Shadashtak)",
+       "tone": "Bullish",
+       "strength": "Moderate",
+       "span_record": "S&P 334/545 (61% vs 59%, p 0.1452); Sensex 359/585 (61% vs 58%, p 0.0349)",
+       "day": {
+        "n": 926,
+        "right": 511,
+        "wrong": 415,
+        "hit": 55.2,
+        "exp": 54.6,
+        "edge": 0.6,
+        "p": 0.7307,
+        "up_calls": 926,
+        "down_calls": 0
+       },
+       "picked_2000_2013": true,
+       "after_2013": {
+        "h1": {
+         "worked": 190,
+         "failed": 111,
+         "hit": 63,
+         "base": 57,
+         "p": 0.0263
+        },
+        "h2": {
+         "worked": 169,
+         "failed": 115,
+         "hit": 60,
+         "base": 58,
+         "p": 0.2922,
+         "q": 0.691
+        },
+        "verdict": "leaned the right way after 2013, not significant"
+       }
+      }
+     ],
+     "strength_record": {
+      "n": 436,
+      "right": 228,
+      "wrong": 208,
+      "hit": 52.3,
+      "exp": 52.1,
+      "edge": 0.1,
+      "p": 0.9615,
+      "up_calls": 308,
+      "down_calls": 128
+     }
+    }
+   ],
+   "label_any": {
+    "n": 1125,
+    "right": 568,
+    "wrong": 557,
+    "hit": 50.5,
+    "exp": 52.2,
+    "edge": -1.7,
+    "p": 0.2469,
+    "up_calls": 785,
+    "down_calls": 340
+   },
+   "label_source": "walk-forward: rules picked on their 2000-2013 records only (both indices beat the base, p < 0.05 on one), labels scored every day 2013-2026",
+   "model": {
+    "lean": {
+     "none": 11,
+     "up": 11
+    },
+    "record": {
+     "n": 897,
+     "right": 460,
+     "wrong": 437,
+     "hit": 51.3,
+     "exp": 51.6,
+     "edge": -0.3,
+     "p": 0.8515,
+     "up_calls": 580,
+     "down_calls": 317
+    }
+   },
+   "big": {
+    "clean_active": {},
+    "insample_active": {
+     "Mars-Uranus 5/9": 27
+    },
+    "clean_test": "nothing picked on 2000-2013",
+    "model_big": "untested (November review)"
+   }
+  },
+  "gold": {
+   "name": "Gold",
+   "sessions": [
+    "2027-07-01",
+    "2027-07-02",
+    "2027-07-06",
+    "2027-07-07",
+    "2027-07-08",
+    "2027-07-09",
+    "2027-07-12",
+    "2027-07-13",
+    "2027-07-14",
+    "2027-07-15",
+    "2027-07-16",
+    "2027-07-19",
+    "2027-07-20",
+    "2027-07-21",
+    "2027-07-22",
+    "2027-07-23",
+    "2027-07-26",
+    "2027-07-27",
+    "2027-07-28",
+    "2027-07-29",
+    "2027-07-30"
+   ],
+   "closed": [
+    "2027-07-05 Independence Day (observed)"
+   ],
+   "spans": [
+    {
+     "frm": "2027-06-29",
+     "to": "2027-07-16",
+     "sig": "Bullish",
+     "st": "Low",
+     "why": [
+      "Mercury with the Sun"
+     ],
+     "rules": [],
+     "strength_record": {
+      "n": 768,
+      "right": 368,
+      "wrong": 400,
+      "hit": 47.9,
+      "exp": 49.6,
+      "edge": -1.7,
+      "p": 0.3348,
+      "up_calls": 381,
+      "down_calls": 387
+     }
+    },
+    {
+     "frm": "2027-07-19",
+     "to": "2027-07-19",
+     "sig": "Bullish",
+     "st": "Low",
+     "why": [
+      "fast-planet trigger day"
+     ],
+     "rules": [],
+     "strength_record": {
+      "n": 768,
+      "right": 368,
+      "wrong": 400,
+      "hit": 47.9,
+      "exp": 49.6,
+      "edge": -1.7,
+      "p": 0.3348,
+      "up_calls": 381,
+      "down_calls": 387
+     }
+    },
+    {
+     "frm": "2027-07-20",
+     "to": "2027-07-20",
+     "sig": "Bullish",
+     "st": "High",
+     "why": [
+      "Venus combust in East",
+      "fast-planet trigger day"
+     ],
+     "rules": [],
+     "strength_record": {
+      "n": 80,
+      "right": 48,
+      "wrong": 32,
+      "hit": 60.0,
+      "exp": 52.9,
+      "edge": 7.1,
+      "p": 0.2175,
+      "up_calls": 75,
+      "down_calls": 5
+     }
+    },
+    {
+     "frm": "2027-07-21",
+     "to": "2027-07-29",
+     "sig": "Bullish",
+     "st": "Moderate",
+     "why": [
+      "Venus combust in East"
+     ],
+     "rules": [],
+     "strength_record": {
+      "n": 255,
+      "right": 136,
+      "wrong": 119,
+      "hit": 53.3,
+      "exp": 50.5,
+      "edge": 2.8,
+      "p": 0.3781,
+      "up_calls": 135,
+      "down_calls": 120
+     }
+    },
+    {
+     "frm": "2027-07-30",
+     "to": "2027-08-13",
+     "sig": "Bullish",
+     "st": "High",
+     "why": [
+      "Venus combust in East",
+      "Mercury with the Sun"
+     ],
+     "rules": [],
+     "strength_record": {
+      "n": 80,
+      "right": 48,
+      "wrong": 32,
+      "hit": 60.0,
+      "exp": 52.9,
+      "edge": 7.1,
+      "p": 0.2175,
+      "up_calls": 75,
+      "down_calls": 5
+     }
+    }
+   ],
+   "label_any": {
+    "n": 1103,
+    "right": 552,
+    "wrong": 551,
+    "hit": 50.0,
+    "exp": 50.1,
+    "edge": -0.0,
+    "p": 0.9787,
+    "up_calls": 591,
+    "down_calls": 512
+   },
+   "label_source": "walk-forward: the table's data-picked parts re-picked on 2000-2013, scored 2013-2026",
+   "model": {
+    "lean": {
+     "none": 17,
+     "up": 4
+    },
+    "record": {
+     "n": 425,
+     "right": 200,
+     "wrong": 225,
+     "hit": 47.1,
+     "exp": 49.8,
+     "edge": -2.7,
+     "p": 0.2617,
+     "up_calls": 217,
+     "down_calls": 208
+    }
+   },
+   "big": {
+    "clean_active": {},
+    "insample_active": {},
+    "clean_test": "does not hold out of sample",
+    "model_big": "untested (November review)"
+   }
+  },
+  "silver": {
+   "name": "Silver",
+   "sessions": [
+    "2027-07-01",
+    "2027-07-02",
+    "2027-07-06",
+    "2027-07-07",
+    "2027-07-08",
+    "2027-07-09",
+    "2027-07-12",
+    "2027-07-13",
+    "2027-07-14",
+    "2027-07-15",
+    "2027-07-16",
+    "2027-07-19",
+    "2027-07-20",
+    "2027-07-21",
+    "2027-07-22",
+    "2027-07-23",
+    "2027-07-26",
+    "2027-07-27",
+    "2027-07-28",
+    "2027-07-29",
+    "2027-07-30"
+   ],
+   "closed": [
+    "2027-07-05 Independence Day (observed)"
+   ],
+   "spans": [
+    {
+     "frm": "2027-06-14",
+     "to": "2027-07-02",
+     "sig": "Bullish",
+     "st": "High",
+     "why": [
+      "Retrograde Mercury or Jupiter",
+      "Saturn aspects the Sun",
+      "Venus with the Sun",
+      "Venus-Uranus conjunction"
+     ],
+     "rules": [],
+     "strength_record": {
+      "n": 368,
+      "right": 197,
+      "wrong": 171,
+      "hit": 53.5,
+      "exp": 52.2,
+      "edge": 1.3,
+      "p": 0.6378,
+      "up_calls": 368,
+      "down_calls": 0
+     }
+    },
+    {
+     "frm": "2027-07-20",
+     "to": "2027-07-29",
+     "sig": "Bullish",
+     "st": "Low",
+     "why": [
+      "Venus combust in East"
+     ],
+     "rules": [],
+     "strength_record": {
+      "n": 929,
+      "right": 501,
+      "wrong": 428,
+      "hit": 53.9,
+      "exp": 51.7,
+      "edge": 2.3,
+      "p": 0.1639,
+      "up_calls": 811,
+      "down_calls": 118
+     }
+    },
+    {
+     "frm": "2027-07-30",
+     "to": "2027-07-30",
+     "sig": "Bullish",
+     "st": "Moderate",
+     "why": [
+      "Venus combust in East",
+      "Only Moon and Mercury alone in a sign"
+     ],
+     "rules": [],
+     "strength_record": {
+      "n": 539,
+      "right": 280,
+      "wrong": 259,
+      "hit": 51.9,
+      "exp": 52.1,
+      "edge": -0.2,
+      "p": 0.9655,
+      "up_calls": 539,
+      "down_calls": 0
+     }
+    }
+   ],
+   "label_any": {
+    "n": 1836,
+    "right": 978,
+    "wrong": 858,
+    "hit": 53.3,
+    "exp": 51.9,
+    "edge": 1.4,
+    "p": 0.2424,
+    "up_calls": 1718,
+    "down_calls": 118
+   },
+   "label_source": "walk-forward: the table's data-picked parts re-picked on 2000-2013, scored 2013-2026",
+   "model": {
+    "lean": {
+     "none": 21
+    },
+    "record": {
+     "n": 407,
+     "right": 215,
+     "wrong": 192,
+     "hit": 52.8,
+     "exp": 50.6,
+     "edge": 2.2,
+     "p": 0.3975,
+     "up_calls": 257,
+     "down_calls": 150
+    }
+   },
+   "big": {
+    "clean_active": {},
+    "insample_active": {},
+    "clean_test": "does not hold out of sample",
+    "model_big": "untested (November review)"
+   }
+  }
+ },
+ "picked_summary": {
+  "n_tests": 22,
+  "held": 2,
+  "pooled": {
+   "spx": {
+    "right": 347,
+    "exp": 326.6,
+    "p": 0.0747
+   },
+   "sensex": {
+    "right": 344,
+    "exp": 333.6,
+    "p": 0.3876
+   }
+  },
+  "leaned": 16,
+  "held_both": [
+   "Three Saturday in Shukla Paksh"
+  ],
+  "note": "span records as in the table (from the close before each span to its end); picked on 20 Nov 2000 - 20 Nov 2013, scored 20 Nov 2013 - 20 Nov 2026"
+ },
+ "kartari": {
+  "b116": {
+   "title": "Mercury in Paap Kartari (2026 document B116)",
+   "tone": "Bearish",
+   "markets": {
+    "spx": {
+     "all": {
+      "n": 236,
+      "worked": 78,
+      "failed": 112,
+      "flat": 46,
+      "hit_rate": 41,
+      "base_rate": 39,
+      "exp": 73.58065716740096,
+      "avg_dir_ret": -0.25,
+      "verdict": "Mixed",
+      "p_value": 0.2785,
+      "years_active": 26,
+      "years_right": 7
+     },
+     "h1": {
+      "n": 126,
+      "worked": 46,
+      "failed": 56,
+      "flat": 24,
+      "hit_rate": 45,
+      "base_rate": 41,
+      "exp": 41.96257266497288,
+      "avg_dir_ret": -0.14,
+      "verdict": "Mixed",
+      "p_value": 0.2375,
+      "years_active": 13,
+      "years_right": 4
+     },
+     "h2": {
+      "n": 110,
+      "worked": 32,
+      "failed": 56,
+      "flat": 22,
+      "hit_rate": 36,
+      "base_rate": 36,
+      "exp": 31.61808450242809,
+      "avg_dir_ret": -0.37,
+      "verdict": "Mixed",
+      "p_value": 0.5063,
+      "years_active": 13,
+      "years_right": 3
+     },
+     "big_in": 7.1,
+     "big_all": 7.5,
+     "verdict": "not supported",
+     "groups": {
+      "All B116 windows": {
+       "windows": 236,
+       "hit": 41,
+       "base": 39,
+       "p": 0.2766
+      },
+      "A benefic aspects Mercury (B116: volatile, both sides)": {
+       "windows": 121,
+       "hit": 41,
+       "base": 39,
+       "p": 0.388
+      },
+      "No benefic aspect": {
+       "windows": 115,
+       "hit": 41,
+       "base": 38,
+       "p": 0.322
+      }
+     },
+     "big_test": {
+      "all windows": {
+       "windows": 236,
+       "big": 137,
+       "exp": 134.3,
+       "lift": 1.02,
+       "p": 0.4187
+      },
+      "with a benefic aspect": {
+       "windows": 121,
+       "big": 45,
+       "exp": 60.7,
+       "lift": 0.74,
+       "p": 0.9849
+      },
+      "without a benefic aspect": {
+       "windows": 115,
+       "big": 92,
+       "exp": 73.5,
+       "lift": 1.25,
+       "p": 0.0209
+      }
+     },
+     "cases": []
+    },
+    "sensex": {
+     "all": {
+      "n": 236,
+      "worked": 94,
+      "failed": 103,
+      "flat": 39,
+      "hit_rate": 48,
+      "base_rate": 41,
+      "exp": 80.0931306821124,
+      "avg_dir_ret": -0.12,
+      "verdict": "Mixed",
+      "p_value": 0.0265,
+      "years_active": 26,
+      "years_right": 11
+     },
+     "h1": {
+      "n": 126,
+      "worked": 54,
+      "failed": 54,
+      "flat": 18,
+      "hit_rate": 50,
+      "base_rate": 42,
+      "exp": 45.04874332074516,
+      "avg_dir_ret": -0.04,
+      "verdict": "Mixed",
+      "p_value": 0.0503,
+      "years_active": 13,
+      "years_right": 8
+     },
+     "h2": {
+      "n": 110,
+      "worked": 40,
+      "failed": 49,
+      "flat": 21,
+      "hit_rate": 45,
+      "base_rate": 39,
+      "exp": 35.0443873613672,
+      "avg_dir_ret": -0.21,
+      "verdict": "Mixed",
+      "p_value": 0.1667,
+      "years_active": 13,
+      "years_right": 3
+     },
+     "big_in": 10.4,
+     "big_all": 9.4,
+     "verdict": "supported",
+     "groups": {
+      "All B116 windows": {
+       "windows": 236,
+       "hit": 48,
+       "base": 41,
+       "p": 0.0268
+      },
+      "A benefic aspects Mercury (B116: volatile, both sides)": {
+       "windows": 121,
+       "hit": 46,
+       "base": 41,
+       "p": 0.2081
+      },
+      "No benefic aspect": {
+       "windows": 115,
+       "hit": 50,
+       "base": 40,
+       "p": 0.0317
+      }
+     },
+     "big_test": {
+      "all windows": {
+       "windows": 236,
+       "big": 196,
+       "exp": 165.4,
+       "lift": 1.19,
+       "p": 0.0111
+      },
+      "with a benefic aspect": {
+       "windows": 121,
+       "big": 88,
+       "exp": 78.3,
+       "lift": 1.12,
+       "p": 0.1502
+      },
+      "without a benefic aspect": {
+       "windows": 115,
+       "big": 108,
+       "exp": 87.1,
+       "lift": 1.24,
+       "p": 0.0166
+      }
+     },
+     "cases": []
+    }
+   },
+   "windows": []
+  },
+  "b117": {
+   "title": "Jupiter in Paap Kartari (2026 document B117)",
+   "tone": "Bearish",
+   "markets": {
+    "spx": {
+     "all": {
+      "n": 42,
+      "worked": 19,
+      "failed": 21,
+      "flat": 2,
+      "hit_rate": 48,
+      "base_rate": 37,
+      "exp": 14.952141796812597,
+      "avg_dir_ret": 0.83,
+      "verdict": "Worked",
+      "p_value": 0.1238,
+      "years_active": 19,
+      "years_right": 6
+     },
+     "h1": {
+      "n": 21,
+      "worked": 13,
+      "failed": 7,
+      "flat": 1,
+      "hit_rate": 65,
+      "base_rate": 46,
+      "exp": 9.179237112625037,
+      "avg_dir_ret": 2.44,
+      "verdict": "Worked",
+      "p_value": 0.0681,
+      "years_active": 10,
+      "years_right": 4
+     },
+     "h2": {
+      "n": 21,
+      "worked": 6,
+      "failed": 14,
+      "flat": 1,
+      "hit_rate": 30,
+      "base_rate": 29,
+      "exp": 5.772904684187555,
+      "avg_dir_ret": -0.79,
+      "verdict": "Mixed",
+      "p_value": 0.5394,
+      "years_active": 9,
+      "years_right": 2
+     },
+     "big_in": 11.6,
+     "big_all": 7.5,
+     "verdict": "not supported"
+    },
+    "sensex": {
+     "all": {
+      "n": 42,
+      "worked": 19,
+      "failed": 21,
+      "flat": 2,
+      "hit_rate": 48,
+      "base_rate": 42,
+      "exp": 16.705606556484252,
+      "avg_dir_ret": 0.94,
+      "verdict": "Mixed",
+      "p_value": 0.2808,
+      "years_active": 19,
+      "years_right": 7
+     },
+     "h1": {
+      "n": 21,
+      "worked": 12,
+      "failed": 8,
+      "flat": 1,
+      "hit_rate": 60,
+      "base_rate": 45,
+      "exp": 8.961899164678474,
+      "avg_dir_ret": 2.38,
+      "verdict": "Worked",
+      "p_value": 0.1271,
+      "years_active": 10,
+      "years_right": 4
+     },
+     "h2": {
+      "n": 21,
+      "worked": 7,
+      "failed": 13,
+      "flat": 1,
+      "hit_rate": 35,
+      "base_rate": 39,
+      "exp": 7.743707391805778,
+      "avg_dir_ret": -0.5,
+      "verdict": "Mixed",
+      "p_value": 0.7112,
+      "years_active": 9,
+      "years_right": 3
+     },
+     "big_in": 14.4,
+     "big_all": 9.4,
+     "verdict": "not supported"
+    }
+   },
+   "windows": [
+    {
+     "frm": "Mon 19 Apr 2027 20:46",
+     "to": "Tue 03 Aug 2027 20:43",
+     "pair": "Ketu | Mars",
+     "sign": "Pisces",
+     "combust": true,
+     "benefic": [
+      "Jupiter",
+      "Venus"
+     ],
+     "local": {
+      "spx": {
+       "start": "2027-04-19 20:46",
+       "end": "2027-08-03 20:43",
+       "sessions": [
+        "2027-07-01",
+        "2027-07-02",
+        "2027-07-06",
+        "2027-07-07",
+        "2027-07-08",
+        "2027-07-09",
+        "2027-07-12",
+        "2027-07-13",
+        "2027-07-14",
+        "2027-07-15",
+        "2027-07-16",
+        "2027-07-19",
+        "2027-07-20",
+        "2027-07-21",
+        "2027-07-22",
+        "2027-07-23",
+        "2027-07-26",
+        "2027-07-27",
+        "2027-07-28",
+        "2027-07-29",
+        "2027-07-30"
+       ]
+      },
+      "sensex": {
+       "start": "2027-04-20 06:16",
+       "end": "2027-08-04 06:13",
+       "sessions": [
+        "2027-07-01",
+        "2027-07-02",
+        "2027-07-05",
+        "2027-07-06",
+        "2027-07-07",
+        "2027-07-08",
+        "2027-07-09",
+        "2027-07-12",
+        "2027-07-13",
+        "2027-07-14",
+        "2027-07-15",
+        "2027-07-16",
+        "2027-07-19",
+        "2027-07-20",
+        "2027-07-21",
+        "2027-07-22",
+        "2027-07-23",
+        "2027-07-26",
+        "2027-07-27",
+        "2027-07-28",
+        "2027-07-29",
+        "2027-07-30"
+       ]
+      }
+     }
+    }
+   ]
+  }
+ },
+ "model_v1": {
+  "bias": {
+   "Neutral / mixed": 2,
+   "Mild bearish": 5,
+   "Bearish": 4,
+   "Mild bullish": 5,
+   "Bullish": 5
+  },
+  "record": {
+   "n": 2610,
+   "right": 1404,
+   "wrong": 1206,
+   "hit": 53.8,
+   "exp": 53.6,
+   "edge": 0.2,
+   "p": 0.868,
+   "up_calls": 2337,
+   "down_calls": 273
+  }
+ },
+ "solar_return": {
+  "day_calls": {
+   "No call": 21
+  },
+  "months": [
+   "Solar month 18 Jun \u2013 20 Jul: Libra 13\u00b017' rising, No stated indication",
+   "Solar month 20 Jul \u2013 20 Aug: Taurus 19\u00b038' rising, No stated indication"
+  ],
+  "record": {
+   "bullish": {
+    "hit": 53.4,
+    "exp": 52.4,
+    "n": 2429,
+    "hit5": 56.8,
+    "exp5": 56.2
+   },
+   "bearish": {
+    "hit": 47.0,
+    "exp": 47.6,
+    "n": 9485,
+    "hit5": 42.9,
+    "exp5": 43.8
+   }
+  },
+  "rules": []
+ },
+ "deep_dive": {
+  "weeks": 5,
+  "tests": 1992,
+  "significant": 0,
+  "nominal": 33,
+  "big": 0,
+  "checks": "20/20"
+ },
+ "frozen": {
+  "path": "july_2027_calls_ET.json",
+  "frozen_at": "2026-11-28 09:36 ET",
+  "rewritten": true,
+  "sessions": {
+   "spx": 21,
+   "sensex": 22,
+   "gold": 21,
+   "silver": 21
+  }
+ },
+ "verdicts": {
+  "spx": {
+   "items": [
+    {
+     "topic": "Table labels",
+     "call": "Bullish Low 28 Jun \u2013 1 Jul; Bullish High 2 Jul; Bearish Moderate 5 Jul; Volatile 6\u20138 Jul; Bearish High 9\u201315 Jul; Bearish Moderate 16 Jul; Bullish Low 19\u201322 Jul; Bullish Moderate 30 Jul",
+     "worth": "out of sample this market's labels were right 52.4% of the time vs 52.5% by chance: leanings, not calls",
+     "level": "none"
+    },
+    {
+     "topic": "\u2026 Venus-Rahu 6/8 (Shadashtak)",
+     "call": "Bullish (Low); table record per span: S&P 40/52 (77% vs 64%, p 0.0382); Sensex 33/50 (66% vs 61%, p 0.287)",
+     "worth": "day by day 56.0% vs 53.8% (2000\u20132026, in sample); not picked when the rules are chosen on 2000\u20132013 only, so it has no clean test",
+     "level": "none",
+     "why": null
+    },
+    {
+     "topic": "\u2026 Moon-Rahu 6/8 (Shadashtak)",
+     "call": "Bullish (Moderate); table record per span: S&P 334/545 (61% vs 59%, p 0.1452); Sensex 359/585 (61% vs 58%, p 0.0349)",
+     "worth": "day by day 54.8% vs 54.6% (2000\u20132026, in sample); picked when the rules are chosen on 2000\u20132013 only; its span record after 2013: 63% vs 62% (p 0.4081, q 0.691): leaned the right way after 2013, not significant",
+     "level": "none",
+     "why": null
+    },
+    {
+     "topic": "\u2026 Three Saturday in Shukla Paksh",
+     "call": "Bearish (High); table record per span: S&P 41/73 (56% vs 39%, p 0.0023); Sensex 33/66 (50% vs 39%, p 0.0395)",
+     "worth": "day by day 50.2% vs 45.6% (2000\u20132026, in sample); picked when the rules are chosen on 2000\u20132013 only; its span record after 2013: 58% vs 37% (p 0.0136, q 0.2992): held after 2013",
+     "level": "some",
+     "why": "picked on 2000\u20132013, it held after 2013 (58% vs 37%, p 0.0136), but not once all 22 such tests are counted (q 0.2992)"
+    },
+    {
+     "topic": "\u2026 Shukla Shasthi on a Friday",
+     "call": "Bearish (High); table record per span: S&P 41/77 (53% vs 41%, p 0.0244); Sensex 40/76 (53% vs 42%, p 0.0446)",
+     "worth": "day by day 51.0% vs 45.6% (2000\u20132026, in sample); not picked when the rules are chosen on 2000\u20132013 only, so it has no clean test",
+     "level": "none",
+     "why": null
+    },
+    {
+     "topic": "Jupiter in Paap Kartari (B117, 2026 document)",
+     "call": "Mon 19 Apr 2027 20:46 \u2013 Tue 03 Aug 2027 20:43, bearish",
+     "worth": "direction not supported (2000\u20132026 48% vs 37%, second half 30% vs 29%); 11.6% big days in past windows vs 7.5% overall, not significant in the earlier test",
+     "level": "none"
+    },
+    {
+     "topic": "Combined model",
+     "call": "5 sessions lean down, 3 up, 13 near normal",
+     "worth": "clean walk-forward 2013\u20132026 50.7% vs 49.8% by chance: no edge",
+     "level": "none"
+    },
+    {
+     "topic": "Solar return",
+     "call": "day calls No call 21 sessions; solar months: 18 Jun \u2013 20 Jul: Libra 13\u00b017' rising, No stated indication; 20 Jul \u2013 20 Aug: Taurus 19\u00b038' rising, No stated indication",
+     "worth": "its generated day calls since 1928: bullish 53.4% vs 52.4%, bearish 47.0% vs 47.6%: no edge",
+     "level": "none"
+    },
+    {
+     "topic": "Big days",
+     "call": "no factor that passed the clean test is active",
+     "worth": "the clean factors are Venus retrograde (S&P, Sensex) and Jupiter\u2013Pluto 5/9 (S&P); the model's big-day chance is untested",
+     "level": "none"
+    }
+   ],
+   "edge": false,
+   "some": true,
+   "summary": "July's best-supported call on the S&P. Three Saturday in Shukla Paksh: picked on 2000\u20132013, it held after 2013 (58% vs 37%, p 0.0136), but not once all 22 such tests are counted (q 0.2992). Everything else is a leaning."
+  },
+  "sensex": {
+   "items": [
+    {
+     "topic": "Table labels",
+     "call": "Bullish Low 28 Jun \u2013 1 Jul; Bullish High 2 Jul; Bullish Low 5 Jul; Bullish High 6\u20138 Jul; Bearish Moderate 9\u201315 Jul; Bullish Low 16\u201322 Jul; Volatile 23\u201329 Jul; Bullish Moderate 30 Jul",
+     "worth": "out of sample this market's labels were right 50.5% of the time vs 52.2% by chance: leanings, not calls",
+     "level": "none"
+    },
+    {
+     "topic": "\u2026 Venus-Rahu 6/8 (Shadashtak)",
+     "call": "Bullish (Low); table record per span: S&P 40/52 (77% vs 64%, p 0.0382); Sensex 33/50 (66% vs 61%, p 0.287)",
+     "worth": "day by day 58.1% vs 55.2% (2000\u20132026, in sample); not picked when the rules are chosen on 2000\u20132013 only, so it has no clean test",
+     "level": "none",
+     "why": null
+    },
+    {
+     "topic": "\u2026 Moon-Rahu 6/8 (Shadashtak)",
+     "call": "Bullish (Moderate); table record per span: S&P 334/545 (61% vs 59%, p 0.1452); Sensex 359/585 (61% vs 58%, p 0.0349)",
+     "worth": "day by day 55.2% vs 54.6% (2000\u20132026, in sample); picked when the rules are chosen on 2000\u20132013 only; its span record after 2013: 60% vs 58% (p 0.2922, q 0.691): leaned the right way after 2013, not significant",
+     "level": "none",
+     "why": null
+    },
+    {
+     "topic": "\u2026 Shukla Shasthi on a Friday",
+     "call": "Bearish (High); table record per span: S&P 41/77 (53% vs 41%, p 0.0244); Sensex 40/76 (53% vs 42%, p 0.0446)",
+     "worth": "day by day 49.0% vs 45.0% (2000\u20132026, in sample); not picked when the rules are chosen on 2000\u20132013 only, so it has no clean test",
+     "level": "none",
+     "why": null
+    },
+    {
+     "topic": "Jupiter in Paap Kartari (B117, 2026 document)",
+     "call": "Mon 19 Apr 2027 20:46 \u2013 Tue 03 Aug 2027 20:43, bearish",
+     "worth": "direction not supported (2000\u20132026 48% vs 42%, second half 35% vs 39%); 14.4% big days in past windows vs 9.4% overall, not significant in the earlier test",
+     "level": "none"
+    },
+    {
+     "topic": "Combined model",
+     "call": "0 sessions lean down, 11 up, 11 near normal",
+     "worth": "clean walk-forward 2013\u20132026 51.3% vs 51.6% by chance: no edge",
+     "level": "none"
+    },
+    {
+     "topic": "Big days",
+     "call": "no factor that passed the clean test is active; in sample only: Mars-Uranus 5/9 (27 days)",
+     "worth": "the clean factors are Venus retrograde (S&P, Sensex) and Jupiter\u2013Pluto 5/9 (S&P); the model's big-day chance is untested",
+     "level": "none"
+    }
+   ],
+   "edge": false,
+   "some": false,
+   "summary": "No July call has a tested edge on the Sensex: the labels, the model and Paap Kartari are leanings."
+  },
+  "gold": {
+   "items": [
+    {
+     "topic": "Table labels",
+     "call": "Bullish Low 29 Jun \u2013 19 Jul; Bullish High 20 Jul; Bullish Moderate 21\u201329 Jul; Bullish High 30 Jul \u2013 13 Aug",
+     "worth": "out of sample this market's labels were right 50.0% of the time vs 50.1% by chance: leanings, not calls",
+     "level": "none"
+    },
+    {
+     "topic": "Combined model",
+     "call": "0 sessions lean down, 4 up, 17 near normal",
+     "worth": "clean walk-forward 2013\u20132026 47.1% vs 49.8% by chance: no edge",
+     "level": "none"
+    },
+    {
+     "topic": "Model v1.0",
+     "call": "Neutral / mixed 2, Mild bearish 5, Bearish 4, Mild bullish 5, Bullish 5 sessions",
+     "worth": "2000\u20132026 53.8% vs 53.6%: no edge",
+     "level": "none"
+    },
+    {
+     "topic": "Big days",
+     "call": "no factor that passed the clean test is active",
+     "worth": "the clean factors are Venus retrograde (S&P, Sensex) and Jupiter\u2013Pluto 5/9 (S&P); the model's big-day chance is untested",
+     "level": "none"
+    }
+   ],
+   "edge": false,
+   "some": false,
+   "summary": "No July call has a tested edge on gold: the labels, the model and Model v1.0 are leanings."
+  },
+  "silver": {
+   "items": [
+    {
+     "topic": "Table labels",
+     "call": "Bullish High 14 Jun \u2013 2 Jul; Bullish Low 20\u201329 Jul; Bullish Moderate 30 Jul",
+     "worth": "out of sample this market's labels were right 53.3% of the time vs 51.9% by chance: leanings, not calls",
+     "level": "none"
+    },
+    {
+     "topic": "Combined model",
+     "call": "0 sessions lean down, 0 up, 21 near normal",
+     "worth": "clean walk-forward 2013\u20132026 52.8% vs 50.6% by chance: no edge",
+     "level": "none"
+    },
+    {
+     "topic": "Big days",
+     "call": "no factor that passed the clean test is active",
+     "worth": "the clean factors are Venus retrograde (S&P, Sensex) and Jupiter\u2013Pluto 5/9 (S&P); the model's big-day chance is untested",
+     "level": "none"
+    }
+   ],
+   "edge": false,
+   "some": false,
+   "summary": "No July call has a tested edge on silver: the labels and the model are leanings."
+  }
+ },
+ "headline": "July calls with some support: Three Saturday in Shukla Paksh (S&P). When the table's rules are chosen on 2000\u20132013 only, 2 of 22 rule-and-index tests held after 2013 (Three Saturday in Shukla Paksh on both indices); about 1.1 would by chance, so that is the best-supported table rule, not a proven one. Out of sample the table labels as a whole and the combined model score what chance gives; treat the rest as leanings."
+}

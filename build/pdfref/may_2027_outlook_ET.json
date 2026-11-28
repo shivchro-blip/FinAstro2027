@@ -1,0 +1,1477 @@
+{
+ "made": "2026-11-28 09:36 ET",
+ "month": "2027-05",
+ "name": "May 2027",
+ "start": "2027-05-01",
+ "end": "2027-05-31",
+ "markets": {
+  "spx": {
+   "name": "S&P 500",
+   "sessions": [
+    "2027-05-03",
+    "2027-05-04",
+    "2027-05-05",
+    "2027-05-06",
+    "2027-05-07",
+    "2027-05-10",
+    "2027-05-11",
+    "2027-05-12",
+    "2027-05-13",
+    "2027-05-14",
+    "2027-05-17",
+    "2027-05-18",
+    "2027-05-19",
+    "2027-05-20",
+    "2027-05-21",
+    "2027-05-24",
+    "2027-05-25",
+    "2027-05-26",
+    "2027-05-27",
+    "2027-05-28"
+   ],
+   "closed": [
+    "2027-05-31 Memorial Day"
+   ],
+   "spans": [
+    {
+     "frm": "2027-04-28",
+     "to": "2027-05-04",
+     "sig": "Bullish",
+     "st": "High",
+     "why": [
+      "Mars-Mercury Vedha",
+      "big-move factor: Mercury-Saturn 2/12 (Dwidwadash)"
+     ],
+     "rules": [
+      {
+       "id": "ta_s32e_mars_mercury",
+       "title": "Mars-Mercury Vedha",
+       "tone": "Bullish",
+       "strength": "High",
+       "span_record": "S&P 29/40 (72% vs 58%, p 0.0449); Sensex 32/41 (78% vs 58%, p 0.0057)",
+       "day": {
+        "n": 139,
+        "right": 76,
+        "wrong": 63,
+        "hit": 54.7,
+        "exp": 54.5,
+        "edge": 0.2,
+        "p": 1.0,
+        "up_calls": 139,
+        "down_calls": 0
+       },
+       "picked_2000_2013": true,
+       "after_2013": {
+        "h1": {
+         "worked": 16,
+         "failed": 4,
+         "hit": 80,
+         "base": 57,
+         "p": 0.0265
+        },
+        "h2": {
+         "worked": 13,
+         "failed": 7,
+         "hit": 65,
+         "base": 60,
+         "p": 0.4081,
+         "q": 0.691
+        },
+        "verdict": "leaned the right way after 2013, not significant"
+       }
+      }
+     ],
+     "strength_record": {
+      "n": 253,
+      "right": 151,
+      "wrong": 102,
+      "hit": 59.7,
+      "exp": 56.0,
+      "edge": 3.7,
+      "p": 0.2505,
+      "up_calls": 236,
+      "down_calls": 17
+     }
+    },
+    {
+     "frm": "2027-05-05",
+     "to": "2027-05-06",
+     "sig": "Volatile",
+     "st": "\u2013",
+     "why": [
+      "big-move factor: Mercury-Saturn 2/12 (Dwidwadash)"
+     ],
+     "rules": [],
+     "strength_record": null
+    },
+    {
+     "frm": "2027-05-10",
+     "to": "2027-05-14",
+     "sig": "Bullish",
+     "st": "Moderate",
+     "why": [
+      "Moon-Rahu 6/8 (Shadashtak)"
+     ],
+     "rules": [
+      {
+       "id": "ta_s25_moon_rahu_6",
+       "title": "Moon-Rahu 6/8 (Shadashtak)",
+       "tone": "Bullish",
+       "strength": "Moderate",
+       "span_record": "S&P 334/545 (61% vs 59%, p 0.1452); Sensex 359/585 (61% vs 58%, p 0.0349)",
+       "day": {
+        "n": 821,
+        "right": 450,
+        "wrong": 371,
+        "hit": 54.8,
+        "exp": 54.6,
+        "edge": 0.3,
+        "p": 0.882,
+        "up_calls": 821,
+        "down_calls": 0
+       },
+       "picked_2000_2013": true,
+       "after_2013": {
+        "h1": {
+         "worked": 170,
+         "failed": 115,
+         "hit": 60,
+         "base": 56,
+         "p": 0.1214
+        },
+        "h2": {
+         "worked": 164,
+         "failed": 96,
+         "hit": 63,
+         "base": 62,
+         "p": 0.4081,
+         "q": 0.691
+        },
+        "verdict": "leaned the right way after 2013, not significant"
+       }
+      }
+     ],
+     "strength_record": {
+      "n": 452,
+      "right": 240,
+      "wrong": 212,
+      "hit": 53.1,
+      "exp": 52.7,
+      "edge": 0.4,
+      "p": 0.8861,
+      "up_calls": 302,
+      "down_calls": 150
+     }
+    }
+   ],
+   "label_any": {
+    "n": 1098,
+    "right": 575,
+    "wrong": 523,
+    "hit": 52.4,
+    "exp": 52.5,
+    "edge": -0.2,
+    "p": 0.9077,
+    "up_calls": 743,
+    "down_calls": 355
+   },
+   "label_source": "walk-forward: rules picked on their 2000-2013 records only (both indices beat the base, p < 0.05 on one), labels scored every day 2013-2026",
+   "model": {
+    "lean": {
+     "none": 13,
+     "down": 7
+    },
+    "record": {
+     "n": 1012,
+     "right": 513,
+     "wrong": 499,
+     "hit": 50.7,
+     "exp": 49.8,
+     "edge": 0.9,
+     "p": 0.5807,
+     "up_calls": 517,
+     "down_calls": 495
+    }
+   },
+   "big": {
+    "clean_active": {},
+    "insample_active": {
+     "Mercury-Saturn 2/12": 5
+    },
+    "clean_test": "holds out of sample",
+    "model_big": "untested (November review)"
+   }
+  },
+  "sensex": {
+   "name": "BSE Sensex",
+   "sessions": [
+    "2027-05-03",
+    "2027-05-04",
+    "2027-05-05",
+    "2027-05-06",
+    "2027-05-07",
+    "2027-05-10",
+    "2027-05-11",
+    "2027-05-12",
+    "2027-05-13",
+    "2027-05-14",
+    "2027-05-17",
+    "2027-05-18",
+    "2027-05-19",
+    "2027-05-20",
+    "2027-05-21",
+    "2027-05-24",
+    "2027-05-25",
+    "2027-05-26",
+    "2027-05-27",
+    "2027-05-28",
+    "2027-05-31"
+   ],
+   "closed": [],
+   "spans": [
+    {
+     "frm": "2027-04-28",
+     "to": "2027-05-04",
+     "sig": "Bullish",
+     "st": "High",
+     "why": [
+      "Mars-Mercury Vedha",
+      "big-move factor: Venus in Pisces"
+     ],
+     "rules": [
+      {
+       "id": "ta_s32e_mars_mercury",
+       "title": "Mars-Mercury Vedha",
+       "tone": "Bullish",
+       "strength": "High",
+       "span_record": "S&P 29/40 (72% vs 58%, p 0.0449); Sensex 32/41 (78% vs 58%, p 0.0057)",
+       "day": {
+        "n": 183,
+        "right": 112,
+        "wrong": 71,
+        "hit": 61.2,
+        "exp": 55.7,
+        "edge": 5.5,
+        "p": 0.1354,
+        "up_calls": 183,
+        "down_calls": 0
+       },
+       "picked_2000_2013": true,
+       "after_2013": {
+        "h1": {
+         "worked": 17,
+         "failed": 4,
+         "hit": 81,
+         "base": 59,
+         "p": 0.0297
+        },
+        "h2": {
+         "worked": 15,
+         "failed": 5,
+         "hit": 75,
+         "base": 57,
+         "p": 0.0767,
+         "q": 0.5625
+        },
+        "verdict": "leaned the right way after 2013, not significant"
+       }
+      }
+     ],
+     "strength_record": {
+      "n": 295,
+      "right": 161,
+      "wrong": 134,
+      "hit": 54.6,
+      "exp": 55.0,
+      "edge": -0.4,
+      "p": 0.9064,
+      "up_calls": 272,
+      "down_calls": 23
+     }
+    },
+    {
+     "frm": "2027-05-05",
+     "to": "2027-05-07",
+     "sig": "Volatile",
+     "st": "\u2013",
+     "why": [
+      "big-move factor: Venus in Pisces"
+     ],
+     "rules": [],
+     "strength_record": null
+    },
+    {
+     "frm": "2027-05-10",
+     "to": "2027-05-14",
+     "sig": "Bullish",
+     "st": "Moderate",
+     "why": [
+      "Moon-Rahu 6/8 (Shadashtak)"
+     ],
+     "rules": [
+      {
+       "id": "ta_s25_moon_rahu_6",
+       "title": "Moon-Rahu 6/8 (Shadashtak)",
+       "tone": "Bullish",
+       "strength": "Moderate",
+       "span_record": "S&P 334/545 (61% vs 59%, p 0.1452); Sensex 359/585 (61% vs 58%, p 0.0349)",
+       "day": {
+        "n": 926,
+        "right": 511,
+        "wrong": 415,
+        "hit": 55.2,
+        "exp": 54.6,
+        "edge": 0.6,
+        "p": 0.7307,
+        "up_calls": 926,
+        "down_calls": 0
+       },
+       "picked_2000_2013": true,
+       "after_2013": {
+        "h1": {
+         "worked": 190,
+         "failed": 111,
+         "hit": 63,
+         "base": 57,
+         "p": 0.0263
+        },
+        "h2": {
+         "worked": 169,
+         "failed": 115,
+         "hit": 60,
+         "base": 58,
+         "p": 0.2922,
+         "q": 0.691
+        },
+        "verdict": "leaned the right way after 2013, not significant"
+       }
+      }
+     ],
+     "strength_record": {
+      "n": 436,
+      "right": 228,
+      "wrong": 208,
+      "hit": 52.3,
+      "exp": 52.1,
+      "edge": 0.1,
+      "p": 0.9615,
+      "up_calls": 308,
+      "down_calls": 128
+     }
+    }
+   ],
+   "label_any": {
+    "n": 1125,
+    "right": 568,
+    "wrong": 557,
+    "hit": 50.5,
+    "exp": 52.2,
+    "edge": -1.7,
+    "p": 0.2469,
+    "up_calls": 785,
+    "down_calls": 340
+   },
+   "label_source": "walk-forward: rules picked on their 2000-2013 records only (both indices beat the base, p < 0.05 on one), labels scored every day 2013-2026",
+   "model": {
+    "lean": {
+     "up": 7,
+     "none": 14
+    },
+    "record": {
+     "n": 897,
+     "right": 460,
+     "wrong": 437,
+     "hit": 51.3,
+     "exp": 51.6,
+     "edge": -0.3,
+     "p": 0.8515,
+     "up_calls": 580,
+     "down_calls": 317
+    }
+   },
+   "big": {
+    "clean_active": {},
+    "insample_active": {
+     "Venus in Pisces": 9
+    },
+    "clean_test": "nothing picked on 2000-2013",
+    "model_big": "untested (November review)"
+   }
+  },
+  "gold": {
+   "name": "Gold",
+   "sessions": [
+    "2027-05-03",
+    "2027-05-04",
+    "2027-05-05",
+    "2027-05-06",
+    "2027-05-07",
+    "2027-05-10",
+    "2027-05-11",
+    "2027-05-12",
+    "2027-05-13",
+    "2027-05-14",
+    "2027-05-17",
+    "2027-05-18",
+    "2027-05-19",
+    "2027-05-20",
+    "2027-05-21",
+    "2027-05-24",
+    "2027-05-25",
+    "2027-05-26",
+    "2027-05-27",
+    "2027-05-28"
+   ],
+   "closed": [
+    "2027-05-31 Memorial Day"
+   ],
+   "spans": [
+    {
+     "frm": "2027-04-21",
+     "to": "2027-05-03",
+     "sig": "Bullish",
+     "st": "Low",
+     "why": [
+      "Mercury with the Sun"
+     ],
+     "rules": [],
+     "strength_record": {
+      "n": 768,
+      "right": 368,
+      "wrong": 400,
+      "hit": 47.9,
+      "exp": 49.6,
+      "edge": -1.7,
+      "p": 0.3348,
+      "up_calls": 381,
+      "down_calls": 387
+     }
+    },
+    {
+     "frm": "2027-05-04",
+     "to": "2027-05-06",
+     "sig": "Volatile",
+     "st": "Low",
+     "why": [
+      "Mercury with the Sun",
+      "Venus-Saturn conjunction"
+     ],
+     "rules": [],
+     "strength_record": {
+      "n": 768,
+      "right": 368,
+      "wrong": 400,
+      "hit": 47.9,
+      "exp": 49.6,
+      "edge": -1.7,
+      "p": 0.3348,
+      "up_calls": 381,
+      "down_calls": 387
+     }
+    },
+    {
+     "frm": "2027-05-07",
+     "to": "2027-05-10",
+     "sig": "Bearish",
+     "st": "Low",
+     "why": [
+      "Venus-Saturn conjunction"
+     ],
+     "rules": [],
+     "strength_record": {
+      "n": 768,
+      "right": 368,
+      "wrong": 400,
+      "hit": 47.9,
+      "exp": 49.6,
+      "edge": -1.7,
+      "p": 0.3348,
+      "up_calls": 381,
+      "down_calls": 387
+     }
+    },
+    {
+     "frm": "2027-05-17",
+     "to": "2027-05-21",
+     "sig": "Bullish",
+     "st": "Low",
+     "why": [
+      "Mercury with the Sun"
+     ],
+     "rules": [],
+     "strength_record": {
+      "n": 768,
+      "right": 368,
+      "wrong": 400,
+      "hit": 47.9,
+      "exp": 49.6,
+      "edge": -1.7,
+      "p": 0.3348,
+      "up_calls": 381,
+      "down_calls": 387
+     }
+    }
+   ],
+   "label_any": {
+    "n": 1103,
+    "right": 552,
+    "wrong": 551,
+    "hit": 50.0,
+    "exp": 50.1,
+    "edge": -0.0,
+    "p": 0.9787,
+    "up_calls": 591,
+    "down_calls": 512
+   },
+   "label_source": "walk-forward: the table's data-picked parts re-picked on 2000-2013, scored 2013-2026",
+   "model": {
+    "lean": {
+     "none": 19,
+     "down": 1
+    },
+    "record": {
+     "n": 425,
+     "right": 200,
+     "wrong": 225,
+     "hit": 47.1,
+     "exp": 49.8,
+     "edge": -2.7,
+     "p": 0.2617,
+     "up_calls": 217,
+     "down_calls": 208
+    }
+   },
+   "big": {
+    "clean_active": {},
+    "insample_active": {},
+    "clean_test": "does not hold out of sample",
+    "model_big": "untested (November review)"
+   }
+  },
+  "silver": {
+   "name": "Silver",
+   "sessions": [
+    "2027-05-03",
+    "2027-05-04",
+    "2027-05-05",
+    "2027-05-06",
+    "2027-05-07",
+    "2027-05-10",
+    "2027-05-11",
+    "2027-05-12",
+    "2027-05-13",
+    "2027-05-14",
+    "2027-05-17",
+    "2027-05-18",
+    "2027-05-19",
+    "2027-05-20",
+    "2027-05-21",
+    "2027-05-24",
+    "2027-05-25",
+    "2027-05-26",
+    "2027-05-27",
+    "2027-05-28"
+   ],
+   "closed": [
+    "2027-05-31 Memorial Day"
+   ],
+   "spans": [
+    {
+     "frm": "2027-04-30",
+     "to": "2027-05-05",
+     "sig": "Volatile",
+     "st": "Low",
+     "why": [
+      "Mercury in Aries or Virgo"
+     ],
+     "rules": [],
+     "strength_record": {
+      "n": 929,
+      "right": 501,
+      "wrong": 428,
+      "hit": 53.9,
+      "exp": 51.7,
+      "edge": 2.3,
+      "p": 0.1639,
+      "up_calls": 811,
+      "down_calls": 118
+     }
+    },
+    {
+     "frm": "2027-05-06",
+     "to": "2027-05-06",
+     "sig": "Bullish",
+     "st": "Low",
+     "why": [
+      "Mercury in Aries or Virgo",
+      "Only Moon and Mercury alone in a sign"
+     ],
+     "rules": [],
+     "strength_record": {
+      "n": 929,
+      "right": 501,
+      "wrong": 428,
+      "hit": 53.9,
+      "exp": 51.7,
+      "edge": 2.3,
+      "p": 0.1639,
+      "up_calls": 811,
+      "down_calls": 118
+     }
+    },
+    {
+     "frm": "2027-05-07",
+     "to": "2027-05-07",
+     "sig": "Bullish",
+     "st": "Low",
+     "why": [
+      "Only Moon and Mercury alone in a sign"
+     ],
+     "rules": [],
+     "strength_record": {
+      "n": 929,
+      "right": 501,
+      "wrong": 428,
+      "hit": 53.9,
+      "exp": 51.7,
+      "edge": 2.3,
+      "p": 0.1639,
+      "up_calls": 811,
+      "down_calls": 118
+     }
+    },
+    {
+     "frm": "2027-05-17",
+     "to": "2027-05-26",
+     "sig": "Bullish",
+     "st": "Low",
+     "why": [
+      "Saturn aspects the Sun"
+     ],
+     "rules": [],
+     "strength_record": {
+      "n": 929,
+      "right": 501,
+      "wrong": 428,
+      "hit": 53.9,
+      "exp": 51.7,
+      "edge": 2.3,
+      "p": 0.1639,
+      "up_calls": 811,
+      "down_calls": 118
+     }
+    },
+    {
+     "frm": "2027-05-27",
+     "to": "2027-05-28",
+     "sig": "Bullish",
+     "st": "Moderate",
+     "why": [
+      "Saturn aspects the Sun",
+      "fast-planet trigger day"
+     ],
+     "rules": [],
+     "strength_record": {
+      "n": 539,
+      "right": 280,
+      "wrong": 259,
+      "hit": 51.9,
+      "exp": 52.1,
+      "edge": -0.2,
+      "p": 0.9655,
+      "up_calls": 539,
+      "down_calls": 0
+     }
+    },
+    {
+     "frm": "2027-05-31",
+     "to": "2027-06-02",
+     "sig": "Bullish",
+     "st": "Low",
+     "why": [
+      "Saturn aspects the Sun"
+     ],
+     "rules": [],
+     "strength_record": {
+      "n": 929,
+      "right": 501,
+      "wrong": 428,
+      "hit": 53.9,
+      "exp": 51.7,
+      "edge": 2.3,
+      "p": 0.1639,
+      "up_calls": 811,
+      "down_calls": 118
+     }
+    }
+   ],
+   "label_any": {
+    "n": 1836,
+    "right": 978,
+    "wrong": 858,
+    "hit": 53.3,
+    "exp": 51.9,
+    "edge": 1.4,
+    "p": 0.2424,
+    "up_calls": 1718,
+    "down_calls": 118
+   },
+   "label_source": "walk-forward: the table's data-picked parts re-picked on 2000-2013, scored 2013-2026",
+   "model": {
+    "lean": {
+     "none": 20
+    },
+    "record": {
+     "n": 407,
+     "right": 215,
+     "wrong": 192,
+     "hit": 52.8,
+     "exp": 50.6,
+     "edge": 2.2,
+     "p": 0.3975,
+     "up_calls": 257,
+     "down_calls": 150
+    }
+   },
+   "big": {
+    "clean_active": {},
+    "insample_active": {},
+    "clean_test": "does not hold out of sample",
+    "model_big": "untested (November review)"
+   }
+  }
+ },
+ "picked_summary": {
+  "n_tests": 22,
+  "held": 2,
+  "pooled": {
+   "spx": {
+    "right": 347,
+    "exp": 326.6,
+    "p": 0.0747
+   },
+   "sensex": {
+    "right": 344,
+    "exp": 333.6,
+    "p": 0.3876
+   }
+  },
+  "leaned": 16,
+  "held_both": [
+   "Three Saturday in Shukla Paksh"
+  ],
+  "note": "span records as in the table (from the close before each span to its end); picked on 20 Nov 2000 - 20 Nov 2013, scored 20 Nov 2013 - 20 Nov 2026"
+ },
+ "kartari": {
+  "b116": {
+   "title": "Mercury in Paap Kartari (2026 document B116)",
+   "tone": "Bearish",
+   "markets": {
+    "spx": {
+     "all": {
+      "n": 236,
+      "worked": 78,
+      "failed": 112,
+      "flat": 46,
+      "hit_rate": 41,
+      "base_rate": 39,
+      "exp": 73.58065716740096,
+      "avg_dir_ret": -0.25,
+      "verdict": "Mixed",
+      "p_value": 0.2785,
+      "years_active": 26,
+      "years_right": 7
+     },
+     "h1": {
+      "n": 126,
+      "worked": 46,
+      "failed": 56,
+      "flat": 24,
+      "hit_rate": 45,
+      "base_rate": 41,
+      "exp": 41.96257266497288,
+      "avg_dir_ret": -0.14,
+      "verdict": "Mixed",
+      "p_value": 0.2375,
+      "years_active": 13,
+      "years_right": 4
+     },
+     "h2": {
+      "n": 110,
+      "worked": 32,
+      "failed": 56,
+      "flat": 22,
+      "hit_rate": 36,
+      "base_rate": 36,
+      "exp": 31.61808450242809,
+      "avg_dir_ret": -0.37,
+      "verdict": "Mixed",
+      "p_value": 0.5063,
+      "years_active": 13,
+      "years_right": 3
+     },
+     "big_in": 7.1,
+     "big_all": 7.5,
+     "verdict": "not supported",
+     "groups": {
+      "All B116 windows": {
+       "windows": 236,
+       "hit": 41,
+       "base": 39,
+       "p": 0.2766
+      },
+      "A benefic aspects Mercury (B116: volatile, both sides)": {
+       "windows": 121,
+       "hit": 41,
+       "base": 39,
+       "p": 0.388
+      },
+      "No benefic aspect": {
+       "windows": 115,
+       "hit": 41,
+       "base": 38,
+       "p": 0.322
+      }
+     },
+     "big_test": {
+      "all windows": {
+       "windows": 236,
+       "big": 137,
+       "exp": 134.3,
+       "lift": 1.02,
+       "p": 0.4187
+      },
+      "with a benefic aspect": {
+       "windows": 121,
+       "big": 45,
+       "exp": 60.7,
+       "lift": 0.74,
+       "p": 0.9849
+      },
+      "without a benefic aspect": {
+       "windows": 115,
+       "big": 92,
+       "exp": 73.5,
+       "lift": 1.25,
+       "p": 0.0209
+      }
+     },
+     "cases": [
+      {
+       "window": "23\u201327 May",
+       "benefic": [],
+       "case": "without a benefic aspect",
+       "direction": {
+        "hit": 41,
+        "base": 38,
+        "p": 0.322,
+        "ok": false
+       },
+       "volatility": {
+        "windows": 115,
+        "big": 92,
+        "exp": 73.5,
+        "lift": 1.25,
+        "p": 0.0209,
+        "ok": true
+       }
+      }
+     ]
+    },
+    "sensex": {
+     "all": {
+      "n": 236,
+      "worked": 94,
+      "failed": 103,
+      "flat": 39,
+      "hit_rate": 48,
+      "base_rate": 41,
+      "exp": 80.0931306821124,
+      "avg_dir_ret": -0.12,
+      "verdict": "Mixed",
+      "p_value": 0.0265,
+      "years_active": 26,
+      "years_right": 11
+     },
+     "h1": {
+      "n": 126,
+      "worked": 54,
+      "failed": 54,
+      "flat": 18,
+      "hit_rate": 50,
+      "base_rate": 42,
+      "exp": 45.04874332074516,
+      "avg_dir_ret": -0.04,
+      "verdict": "Mixed",
+      "p_value": 0.0503,
+      "years_active": 13,
+      "years_right": 8
+     },
+     "h2": {
+      "n": 110,
+      "worked": 40,
+      "failed": 49,
+      "flat": 21,
+      "hit_rate": 45,
+      "base_rate": 39,
+      "exp": 35.0443873613672,
+      "avg_dir_ret": -0.21,
+      "verdict": "Mixed",
+      "p_value": 0.1667,
+      "years_active": 13,
+      "years_right": 3
+     },
+     "big_in": 10.4,
+     "big_all": 9.4,
+     "verdict": "supported",
+     "groups": {
+      "All B116 windows": {
+       "windows": 236,
+       "hit": 48,
+       "base": 41,
+       "p": 0.0268
+      },
+      "A benefic aspects Mercury (B116: volatile, both sides)": {
+       "windows": 121,
+       "hit": 46,
+       "base": 41,
+       "p": 0.2081
+      },
+      "No benefic aspect": {
+       "windows": 115,
+       "hit": 50,
+       "base": 40,
+       "p": 0.0317
+      }
+     },
+     "big_test": {
+      "all windows": {
+       "windows": 236,
+       "big": 196,
+       "exp": 165.4,
+       "lift": 1.19,
+       "p": 0.0111
+      },
+      "with a benefic aspect": {
+       "windows": 121,
+       "big": 88,
+       "exp": 78.3,
+       "lift": 1.12,
+       "p": 0.1502
+      },
+      "without a benefic aspect": {
+       "windows": 115,
+       "big": 108,
+       "exp": 87.1,
+       "lift": 1.24,
+       "p": 0.0166
+      }
+     },
+     "cases": [
+      {
+       "window": "23\u201327 May",
+       "benefic": [],
+       "case": "without a benefic aspect",
+       "direction": {
+        "hit": 50,
+        "base": 40,
+        "p": 0.0317,
+        "ok": true
+       },
+       "volatility": {
+        "windows": 115,
+        "big": 108,
+        "exp": 87.1,
+        "lift": 1.24,
+        "p": 0.0166,
+        "ok": true
+       }
+      }
+     ]
+    }
+   },
+   "windows": [
+    {
+     "frm": "Sun 23 May 2027 09:02",
+     "to": "Thu 27 May 2027 02:11",
+     "pair": "Uranus | Ketu",
+     "sign": "Taurus",
+     "combust": false,
+     "benefic": [],
+     "local": {
+      "spx": {
+       "start": "2027-05-23 09:02",
+       "end": "2027-05-27 02:11",
+       "sessions": [
+        "2027-05-24",
+        "2027-05-25",
+        "2027-05-26"
+       ]
+      },
+      "sensex": {
+       "start": "2027-05-23 18:32",
+       "end": "2027-05-27 11:41",
+       "sessions": [
+        "2027-05-24",
+        "2027-05-25",
+        "2027-05-26",
+        "2027-05-27"
+       ]
+      }
+     }
+    }
+   ]
+  },
+  "b117": {
+   "title": "Jupiter in Paap Kartari (2026 document B117)",
+   "tone": "Bearish",
+   "markets": {
+    "spx": {
+     "all": {
+      "n": 42,
+      "worked": 19,
+      "failed": 21,
+      "flat": 2,
+      "hit_rate": 48,
+      "base_rate": 37,
+      "exp": 14.952141796812597,
+      "avg_dir_ret": 0.83,
+      "verdict": "Worked",
+      "p_value": 0.1238,
+      "years_active": 19,
+      "years_right": 6
+     },
+     "h1": {
+      "n": 21,
+      "worked": 13,
+      "failed": 7,
+      "flat": 1,
+      "hit_rate": 65,
+      "base_rate": 46,
+      "exp": 9.179237112625037,
+      "avg_dir_ret": 2.44,
+      "verdict": "Worked",
+      "p_value": 0.0681,
+      "years_active": 10,
+      "years_right": 4
+     },
+     "h2": {
+      "n": 21,
+      "worked": 6,
+      "failed": 14,
+      "flat": 1,
+      "hit_rate": 30,
+      "base_rate": 29,
+      "exp": 5.772904684187555,
+      "avg_dir_ret": -0.79,
+      "verdict": "Mixed",
+      "p_value": 0.5394,
+      "years_active": 9,
+      "years_right": 2
+     },
+     "big_in": 11.6,
+     "big_all": 7.5,
+     "verdict": "not supported"
+    },
+    "sensex": {
+     "all": {
+      "n": 42,
+      "worked": 19,
+      "failed": 21,
+      "flat": 2,
+      "hit_rate": 48,
+      "base_rate": 42,
+      "exp": 16.705606556484252,
+      "avg_dir_ret": 0.94,
+      "verdict": "Mixed",
+      "p_value": 0.2808,
+      "years_active": 19,
+      "years_right": 7
+     },
+     "h1": {
+      "n": 21,
+      "worked": 12,
+      "failed": 8,
+      "flat": 1,
+      "hit_rate": 60,
+      "base_rate": 45,
+      "exp": 8.961899164678474,
+      "avg_dir_ret": 2.38,
+      "verdict": "Worked",
+      "p_value": 0.1271,
+      "years_active": 10,
+      "years_right": 4
+     },
+     "h2": {
+      "n": 21,
+      "worked": 7,
+      "failed": 13,
+      "flat": 1,
+      "hit_rate": 35,
+      "base_rate": 39,
+      "exp": 7.743707391805778,
+      "avg_dir_ret": -0.5,
+      "verdict": "Mixed",
+      "p_value": 0.7112,
+      "years_active": 9,
+      "years_right": 3
+     },
+     "big_in": 14.4,
+     "big_all": 9.4,
+     "verdict": "not supported"
+    }
+   },
+   "windows": [
+    {
+     "frm": "Mon 19 Apr 2027 20:46",
+     "to": "Tue 03 Aug 2027 20:43",
+     "pair": "Ketu | Mars",
+     "sign": "Pisces",
+     "combust": true,
+     "benefic": [
+      "Jupiter",
+      "Venus"
+     ],
+     "local": {
+      "spx": {
+       "start": "2027-04-19 20:46",
+       "end": "2027-08-03 20:43",
+       "sessions": [
+        "2027-05-03",
+        "2027-05-04",
+        "2027-05-05",
+        "2027-05-06",
+        "2027-05-07",
+        "2027-05-10",
+        "2027-05-11",
+        "2027-05-12",
+        "2027-05-13",
+        "2027-05-14",
+        "2027-05-17",
+        "2027-05-18",
+        "2027-05-19",
+        "2027-05-20",
+        "2027-05-21",
+        "2027-05-24",
+        "2027-05-25",
+        "2027-05-26",
+        "2027-05-27",
+        "2027-05-28"
+       ]
+      },
+      "sensex": {
+       "start": "2027-04-20 06:16",
+       "end": "2027-08-04 06:13",
+       "sessions": [
+        "2027-05-03",
+        "2027-05-04",
+        "2027-05-05",
+        "2027-05-06",
+        "2027-05-07",
+        "2027-05-10",
+        "2027-05-11",
+        "2027-05-12",
+        "2027-05-13",
+        "2027-05-14",
+        "2027-05-17",
+        "2027-05-18",
+        "2027-05-19",
+        "2027-05-20",
+        "2027-05-21",
+        "2027-05-24",
+        "2027-05-25",
+        "2027-05-26",
+        "2027-05-27",
+        "2027-05-28",
+        "2027-05-31"
+       ]
+      }
+     }
+    }
+   ]
+  }
+ },
+ "model_v1": {
+  "bias": {
+   "Bullish": 14,
+   "Strong bullish": 3,
+   "Mild bullish": 3
+  },
+  "record": {
+   "n": 2610,
+   "right": 1404,
+   "wrong": 1206,
+   "hit": 53.8,
+   "exp": 53.6,
+   "edge": 0.2,
+   "p": 0.868,
+   "up_calls": 2337,
+   "down_calls": 273
+  }
+ },
+ "solar_return": {
+  "day_calls": {
+   "Bullish": 11,
+   "No call": 2,
+   "Bearish": 7
+  },
+  "months": [
+   "Solar month 17 Apr \u2013 18 May: Gemini 18\u00b020' rising, Supported",
+   "Solar month 18 May \u2013 18 Jun: Gemini 18\u00b053' rising, No stated indication"
+  ],
+  "record": {
+   "bullish": {
+    "hit": 53.4,
+    "exp": 52.4,
+    "n": 2429,
+    "hit5": 56.8,
+    "exp5": 56.2
+   },
+   "bearish": {
+    "hit": 47.0,
+    "exp": 47.6,
+    "n": 9485,
+    "hit5": 42.9,
+    "exp5": 43.8
+   }
+  },
+  "rules": [
+   {
+    "rule": "Sun square Mars (within 3\u00b0) \u2013 Solar return: bearish",
+    "sessions": 7,
+    "record": {
+     "rev": 45,
+     "exp_rev": 33.9,
+     "p_rev": 0.0394,
+     "n": 813,
+     "up1": 52.4,
+     "exp1": 52.5,
+     "p1": 0.9622,
+     "up5": 56.2,
+     "exp5": 56.3,
+     "p5": 0.9786,
+     "big": 67,
+     "exp_big": 50.6,
+     "p_big": 0.0157,
+     "mean1": 0.017,
+     "eps": 92,
+     "eps_up5": 53.3,
+     "eps_exp5": 56.5,
+     "eps_p": 0.5355
+    }
+   },
+   {
+    "rule": "Mars square Uranus (within 3\u00b0) \u2013 Solar return: volatility",
+    "sessions": 7,
+    "record": {
+     "rev": 41,
+     "exp_rev": 35.1,
+     "p_rev": 0.1816,
+     "n": 837,
+     "up1": 50.3,
+     "exp1": 53.2,
+     "p1": 0.0975,
+     "up5": 55.6,
+     "exp5": 57.3,
+     "p5": 0.3138,
+     "big": 52,
+     "exp_big": 52.9,
+     "p_big": 0.5702,
+     "mean1": 0.024,
+     "eps": 114,
+     "eps_up5": 56.1,
+     "eps_exp5": 56.8,
+     "eps_p": 0.8828
+    }
+   }
+  ]
+ },
+ "deep_dive": {
+  "weeks": 5,
+  "tests": 2064,
+  "significant": 0,
+  "nominal": 44,
+  "big": 0,
+  "checks": "20/20"
+ },
+ "frozen": {
+  "path": "may_2027_calls_ET.json",
+  "frozen_at": "2026-11-28 09:36 ET",
+  "rewritten": true,
+  "sessions": {
+   "spx": 20,
+   "sensex": 21,
+   "gold": 20,
+   "silver": 20
+  }
+ },
+ "verdicts": {
+  "spx": {
+   "items": [
+    {
+     "topic": "Table labels",
+     "call": "Bullish High 28 Apr \u2013 4 May; Volatile 5\u20136 May; Bullish Moderate 10\u201314 May",
+     "worth": "out of sample this market's labels were right 52.4% of the time vs 52.5% by chance: leanings, not calls",
+     "level": "none"
+    },
+    {
+     "topic": "\u2026 Mars-Mercury Vedha",
+     "call": "Bullish (High); table record per span: S&P 29/40 (72% vs 58%, p 0.0449); Sensex 32/41 (78% vs 58%, p 0.0057)",
+     "worth": "day by day 54.7% vs 54.5% (2000\u20132026, in sample); picked when the rules are chosen on 2000\u20132013 only; its span record after 2013: 65% vs 60% (p 0.4081, q 0.691): leaned the right way after 2013, not significant",
+     "level": "none",
+     "why": null
+    },
+    {
+     "topic": "\u2026 Moon-Rahu 6/8 (Shadashtak)",
+     "call": "Bullish (Moderate); table record per span: S&P 334/545 (61% vs 59%, p 0.1452); Sensex 359/585 (61% vs 58%, p 0.0349)",
+     "worth": "day by day 54.8% vs 54.6% (2000\u20132026, in sample); picked when the rules are chosen on 2000\u20132013 only; its span record after 2013: 63% vs 62% (p 0.4081, q 0.691): leaned the right way after 2013, not significant",
+     "level": "none",
+     "why": null
+    },
+    {
+     "topic": "Mercury in Paap Kartari (B116, 2026 document)",
+     "why": null,
+     "call": "23\u201327 May, bearish; no benefic aspects Mercury, so B116 reads it as a negative event",
+     "worth": "as a bearish rule overall 41% vs 39% (p 0.2785; halves 45% vs 41% and 36% vs 36%), not supported. Windows without a benefic aspect: bearish right 41% vs 38% (p 0.322); big days 92 vs 73.5 expected (\u00d71.25, p 0.0209). The 2000\u20132026 record is a source rule's, not chosen from data, but it is not a walk-forward test",
+     "level": "none"
+    },
+    {
+     "topic": "Jupiter in Paap Kartari (B117, 2026 document)",
+     "call": "Mon 19 Apr 2027 20:46 \u2013 Tue 03 Aug 2027 20:43, bearish",
+     "worth": "direction not supported (2000\u20132026 48% vs 37%, second half 30% vs 29%); 11.6% big days in past windows vs 7.5% overall, not significant in the earlier test",
+     "level": "none"
+    },
+    {
+     "topic": "Combined model",
+     "call": "7 sessions lean down, 0 up, 13 near normal",
+     "worth": "clean walk-forward 2013\u20132026 50.7% vs 49.8% by chance: no edge",
+     "level": "none"
+    },
+    {
+     "topic": "Solar return",
+     "call": "day calls Bullish 11, No call 2, Bearish 7 sessions; solar months: 17 Apr \u2013 18 May: Gemini 18\u00b020' rising, Supported; 18 May \u2013 18 Jun: Gemini 18\u00b053' rising, No stated indication; transit rules: Sun square Mars (within 3\u00b0) (7 sessions: since 1928 big days 67 vs 50.6 expected (p 0.0157), up over 5 sessions 53.3% vs 56.5% (p 0.5355)); Mars square Uranus (within 3\u00b0) (7 sessions: since 1928 big days 52 vs 52.9 expected (p 0.5702), up over 5 sessions 56.1% vs 56.8% (p 0.8828))",
+     "worth": "its generated day calls since 1928: bullish 53.4% vs 52.4%, bearish 47.0% vs 47.6%: no edge",
+     "level": "none"
+    },
+    {
+     "topic": "Big days",
+     "call": "no factor that passed the clean test is active; in sample only: Mercury-Saturn 2/12 (5 days)",
+     "worth": "the clean factors are Venus retrograde (S&P, Sensex) and Jupiter\u2013Pluto 5/9 (S&P); the model's big-day chance is untested",
+     "level": "none"
+    }
+   ],
+   "edge": false,
+   "some": false,
+   "summary": "No May call has a tested edge on the S&P: the labels, the model and Paap Kartari are leanings."
+  },
+  "sensex": {
+   "items": [
+    {
+     "topic": "Table labels",
+     "call": "Bullish High 28 Apr \u2013 4 May; Volatile 5\u20137 May; Bullish Moderate 10\u201314 May",
+     "worth": "out of sample this market's labels were right 50.5% of the time vs 52.2% by chance: leanings, not calls",
+     "level": "none"
+    },
+    {
+     "topic": "\u2026 Mars-Mercury Vedha",
+     "call": "Bullish (High); table record per span: S&P 29/40 (72% vs 58%, p 0.0449); Sensex 32/41 (78% vs 58%, p 0.0057)",
+     "worth": "day by day 61.2% vs 55.7% (2000\u20132026, in sample); picked when the rules are chosen on 2000\u20132013 only; its span record after 2013: 75% vs 57% (p 0.0767, q 0.5625): leaned the right way after 2013, not significant",
+     "level": "none",
+     "why": null
+    },
+    {
+     "topic": "\u2026 Moon-Rahu 6/8 (Shadashtak)",
+     "call": "Bullish (Moderate); table record per span: S&P 334/545 (61% vs 59%, p 0.1452); Sensex 359/585 (61% vs 58%, p 0.0349)",
+     "worth": "day by day 55.2% vs 54.6% (2000\u20132026, in sample); picked when the rules are chosen on 2000\u20132013 only; its span record after 2013: 60% vs 58% (p 0.2922, q 0.691): leaned the right way after 2013, not significant",
+     "level": "none",
+     "why": null
+    },
+    {
+     "topic": "Mercury in Paap Kartari (B116, 2026 document)",
+     "why": "past windows without a benefic aspect, B116's own case for this window, were bearish 50% vs 40% (p 0.0317), a 2000\u20132026 record of a source rule rather than a walk-forward test",
+     "call": "23\u201327 May, bearish; no benefic aspects Mercury, so B116 reads it as a negative event",
+     "worth": "as a bearish rule overall 48% vs 41% (p 0.0265; halves 50% vs 42% and 45% vs 39%), supported. Windows without a benefic aspect: bearish right 50% vs 40% (p 0.0317); big days 108 vs 87.1 expected (\u00d71.24, p 0.0166). The 2000\u20132026 record is a source rule's, not chosen from data, but it is not a walk-forward test",
+     "level": "some"
+    },
+    {
+     "topic": "Jupiter in Paap Kartari (B117, 2026 document)",
+     "call": "Mon 19 Apr 2027 20:46 \u2013 Tue 03 Aug 2027 20:43, bearish",
+     "worth": "direction not supported (2000\u20132026 48% vs 42%, second half 35% vs 39%); 14.4% big days in past windows vs 9.4% overall, not significant in the earlier test",
+     "level": "none"
+    },
+    {
+     "topic": "Combined model",
+     "call": "0 sessions lean down, 7 up, 14 near normal",
+     "worth": "clean walk-forward 2013\u20132026 51.3% vs 51.6% by chance: no edge",
+     "level": "none"
+    },
+    {
+     "topic": "Big days",
+     "call": "no factor that passed the clean test is active; in sample only: Venus in Pisces (9 days)",
+     "worth": "the clean factors are Venus retrograde (S&P, Sensex) and Jupiter\u2013Pluto 5/9 (S&P); the model's big-day chance is untested",
+     "level": "none"
+    }
+   ],
+   "edge": false,
+   "some": true,
+   "summary": "May's best-supported call on the Sensex. Mercury in Paap Kartari (B116, 2026 document): past windows without a benefic aspect, B116's own case for this window, were bearish 50% vs 40% (p 0.0317), a 2000\u20132026 record of a source rule rather than a walk-forward test. Everything else is a leaning."
+  },
+  "gold": {
+   "items": [
+    {
+     "topic": "Table labels",
+     "call": "Bullish Low 21 Apr \u2013 3 May; Volatile Low 4\u20136 May; Bearish Low 7\u201310 May; Bullish Low 17\u201321 May",
+     "worth": "out of sample this market's labels were right 50.0% of the time vs 50.1% by chance: leanings, not calls",
+     "level": "none"
+    },
+    {
+     "topic": "Combined model",
+     "call": "1 sessions lean down, 0 up, 19 near normal",
+     "worth": "clean walk-forward 2013\u20132026 47.1% vs 49.8% by chance: no edge",
+     "level": "none"
+    },
+    {
+     "topic": "Model v1.0",
+     "call": "Bullish 14, Strong bullish 3, Mild bullish 3 sessions",
+     "worth": "2000\u20132026 53.8% vs 53.6%: no edge",
+     "level": "none"
+    },
+    {
+     "topic": "Big days",
+     "call": "no factor that passed the clean test is active",
+     "worth": "the clean factors are Venus retrograde (S&P, Sensex) and Jupiter\u2013Pluto 5/9 (S&P); the model's big-day chance is untested",
+     "level": "none"
+    }
+   ],
+   "edge": false,
+   "some": false,
+   "summary": "No May call has a tested edge on gold: the labels, the model and Model v1.0 are leanings."
+  },
+  "silver": {
+   "items": [
+    {
+     "topic": "Table labels",
+     "call": "Volatile Low 30 Apr \u2013 5 May; Bullish Low 6\u20137 May; Bullish Low 17\u201326 May; Bullish Moderate 27\u201328 May; Bullish Low 31 May \u2013 2 Jun",
+     "worth": "out of sample this market's labels were right 53.3% of the time vs 51.9% by chance: leanings, not calls",
+     "level": "none"
+    },
+    {
+     "topic": "Combined model",
+     "call": "0 sessions lean down, 0 up, 20 near normal",
+     "worth": "clean walk-forward 2013\u20132026 52.8% vs 50.6% by chance: no edge",
+     "level": "none"
+    },
+    {
+     "topic": "Big days",
+     "call": "no factor that passed the clean test is active",
+     "worth": "the clean factors are Venus retrograde (S&P, Sensex) and Jupiter\u2013Pluto 5/9 (S&P); the model's big-day chance is untested",
+     "level": "none"
+    }
+   ],
+   "edge": false,
+   "some": false,
+   "summary": "No May call has a tested edge on silver: the labels and the model are leanings."
+  }
+ },
+ "headline": "May calls with some support: Mercury in Paap Kartari (B116) (Sensex). Mercury in Paap Kartari is a source rule; its record for this window's case (no benefic aspect) is bearish on the Sensex, but it is a 2000\u20132026 record, not a walk-forward test. Out of sample the table labels as a whole and the combined model score what chance gives; treat the rest as leanings."
+}

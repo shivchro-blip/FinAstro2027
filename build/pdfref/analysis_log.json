@@ -940,6 +940,31 @@
     "reports/calendar_2027_NY_master.html",
     "reports/calendar_2026-11-24_to_2026-12-31_ET.html"
    ]
+  },
+  {
+   "date": "2026-11-28",
+   "pr": "74",
+   "topic": "Deep dives April to July 2027 week by week, double-checked; each month's update after the November review; calls frozen",
+   "analysis": "tools/week_deep_dive.py apr may jun jul (new event class: entering/leaving fast motion, Mercury/Venus/Mars, levels from config speed_classes, time check on the sidereal speed, counts against synodic cycles); holidays Ambedkar Jayanti 14 Apr (BSE), Memorial Day 31 May, Juneteenth observed 18 Jun, Independence Day observed 5 Jul (S&P, gold, silver), each checked against past price files; kartari_test windows extended to end-2027 and day notes refreshed; tools/month_outlook.py for every month (generic month handling in the outlook and the 2026 calendar); 8 independent recounts per month.",
+   "result": "April 2,035 tests, May 2,064, June 1,948, July 1,992: 0 pass BH in any month; nominal counts below chance; no big-day class; checks 20/20 and recounts 8/8 every month. Some support: May Mercury Paap Kartari 23-27 May without a benefic aspect (Sensex, p 0.03, source rule's 2000-2026 record); June Three Saturdays 14-18 Jun (Sensex) and July 9-15 Jul (S&P), the one table rule that held after 2013 on both indices (not proven, q 0.30/0.54). April: no call with support. Everything else at chance or in sample only; no clean big-day factor active. 2027 rows byte-identical.",
+   "files": [
+    "tools/week_deep_dive.py",
+    "tools/forward_daybyday.py",
+    "tools/kartari_test.py",
+    "tools/month_outlook.py",
+    "tools/calendar_2026.py",
+    "build/pdfref/kartari_test_ET.json",
+    "build/pdfref/april_2027_outlook_ET.json",
+    "build/pdfref/april_2027_calls_ET.json",
+    "build/pdfref/may_2027_outlook_ET.json",
+    "build/pdfref/may_2027_calls_ET.json",
+    "build/pdfref/june_2027_outlook_ET.json",
+    "build/pdfref/june_2027_calls_ET.json",
+    "build/pdfref/july_2027_outlook_ET.json",
+    "build/pdfref/july_2027_calls_ET.json",
+    "reports/calendar_2027_NY_master.html",
+    "reports/calendar_2026-11-24_to_2026-12-31_ET.html"
+   ]
   }
  ]
 }
